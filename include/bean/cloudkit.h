@@ -40,8 +40,8 @@ static const CKQuerySubscriptionOptions CKQuerySubscriptionOptionsFiresOnce = (C
 typedef NSInteger CKDatabaseScope;
 #endif
 static const CKDatabaseScope CKDatabaseScopePublic = (CKDatabaseScope)1;
-static const CKDatabaseScope CKDatabaseScopePrivate = (CKDatabaseScope)0;
-static const CKDatabaseScope CKDatabaseScopeShared = (CKDatabaseScope)0;
+static const CKDatabaseScope CKDatabaseScopePrivate = (CKDatabaseScope)2;
+static const CKDatabaseScope CKDatabaseScopeShared = (CKDatabaseScope)3;
 
 #ifndef BEAN_TYPEDEF_CKAccountStatus
 #define BEAN_TYPEDEF_CKAccountStatus
@@ -124,8 +124,8 @@ static const CKNotificationType CKNotificationTypeDatabase = (CKNotificationType
 typedef NSInteger CKQueryNotificationReason;
 #endif
 static const CKQueryNotificationReason CKQueryNotificationReasonRecordCreated = (CKQueryNotificationReason)1;
-static const CKQueryNotificationReason CKQueryNotificationReasonRecordUpdated = (CKQueryNotificationReason)0;
-static const CKQueryNotificationReason CKQueryNotificationReasonRecordDeleted = (CKQueryNotificationReason)0;
+static const CKQueryNotificationReason CKQueryNotificationReasonRecordUpdated = (CKQueryNotificationReason)2;
+static const CKQueryNotificationReason CKQueryNotificationReasonRecordDeleted = (CKQueryNotificationReason)3;
 
 #ifndef BEAN_TYPEDEF_CKRecordZoneCapabilities
 #define BEAN_TYPEDEF_CKRecordZoneCapabilities
@@ -141,25 +141,25 @@ static const CKRecordZoneCapabilities CKRecordZoneCapabilityZoneWideSharing = (C
 typedef NSInteger CKRecordZoneEncryptionScope;
 #endif
 static const CKRecordZoneEncryptionScope CKRecordZoneEncryptionScopePerRecord = (CKRecordZoneEncryptionScope)0;
-static const CKRecordZoneEncryptionScope CKRecordZoneEncryptionScopePerZone = (CKRecordZoneEncryptionScope)0;
+static const CKRecordZoneEncryptionScope CKRecordZoneEncryptionScopePerZone = (CKRecordZoneEncryptionScope)1;
 
 #ifndef BEAN_TYPEDEF_CKShareParticipantAcceptanceStatus
 #define BEAN_TYPEDEF_CKShareParticipantAcceptanceStatus
 typedef NSInteger CKShareParticipantAcceptanceStatus;
 #endif
 static const CKShareParticipantAcceptanceStatus CKShareParticipantAcceptanceStatusUnknown = (CKShareParticipantAcceptanceStatus)0;
-static const CKShareParticipantAcceptanceStatus CKShareParticipantAcceptanceStatusPending = (CKShareParticipantAcceptanceStatus)0;
-static const CKShareParticipantAcceptanceStatus CKShareParticipantAcceptanceStatusAccepted = (CKShareParticipantAcceptanceStatus)0;
-static const CKShareParticipantAcceptanceStatus CKShareParticipantAcceptanceStatusRemoved = (CKShareParticipantAcceptanceStatus)0;
+static const CKShareParticipantAcceptanceStatus CKShareParticipantAcceptanceStatusPending = (CKShareParticipantAcceptanceStatus)1;
+static const CKShareParticipantAcceptanceStatus CKShareParticipantAcceptanceStatusAccepted = (CKShareParticipantAcceptanceStatus)2;
+static const CKShareParticipantAcceptanceStatus CKShareParticipantAcceptanceStatusRemoved = (CKShareParticipantAcceptanceStatus)3;
 
 #ifndef BEAN_TYPEDEF_CKShareParticipantPermission
 #define BEAN_TYPEDEF_CKShareParticipantPermission
 typedef NSInteger CKShareParticipantPermission;
 #endif
 static const CKShareParticipantPermission CKShareParticipantPermissionUnknown = (CKShareParticipantPermission)0;
-static const CKShareParticipantPermission CKShareParticipantPermissionNone = (CKShareParticipantPermission)0;
-static const CKShareParticipantPermission CKShareParticipantPermissionReadOnly = (CKShareParticipantPermission)0;
-static const CKShareParticipantPermission CKShareParticipantPermissionReadWrite = (CKShareParticipantPermission)0;
+static const CKShareParticipantPermission CKShareParticipantPermissionNone = (CKShareParticipantPermission)1;
+static const CKShareParticipantPermission CKShareParticipantPermissionReadOnly = (CKShareParticipantPermission)2;
+static const CKShareParticipantPermission CKShareParticipantPermissionReadWrite = (CKShareParticipantPermission)3;
 
 #ifndef BEAN_TYPEDEF_CKShareParticipantRole
 #define BEAN_TYPEDEF_CKShareParticipantRole
@@ -193,13 +193,13 @@ static const CKRecordSavePolicy CKRecordSaveAllKeys = (CKRecordSavePolicy)2;
 typedef NSInteger CKOperationGroupTransferSize;
 #endif
 static const CKOperationGroupTransferSize CKOperationGroupTransferSizeUnknown = (CKOperationGroupTransferSize)0;
-static const CKOperationGroupTransferSize CKOperationGroupTransferSizeKilobytes = (CKOperationGroupTransferSize)0;
-static const CKOperationGroupTransferSize CKOperationGroupTransferSizeMegabytes = (CKOperationGroupTransferSize)0;
-static const CKOperationGroupTransferSize CKOperationGroupTransferSizeTensOfMegabytes = (CKOperationGroupTransferSize)0;
-static const CKOperationGroupTransferSize CKOperationGroupTransferSizeHundredsOfMegabytes = (CKOperationGroupTransferSize)0;
-static const CKOperationGroupTransferSize CKOperationGroupTransferSizeGigabytes = (CKOperationGroupTransferSize)0;
-static const CKOperationGroupTransferSize CKOperationGroupTransferSizeTensOfGigabytes = (CKOperationGroupTransferSize)0;
-static const CKOperationGroupTransferSize CKOperationGroupTransferSizeHundredsOfGigabytes = (CKOperationGroupTransferSize)0;
+static const CKOperationGroupTransferSize CKOperationGroupTransferSizeKilobytes = (CKOperationGroupTransferSize)1;
+static const CKOperationGroupTransferSize CKOperationGroupTransferSizeMegabytes = (CKOperationGroupTransferSize)2;
+static const CKOperationGroupTransferSize CKOperationGroupTransferSizeTensOfMegabytes = (CKOperationGroupTransferSize)3;
+static const CKOperationGroupTransferSize CKOperationGroupTransferSizeHundredsOfMegabytes = (CKOperationGroupTransferSize)4;
+static const CKOperationGroupTransferSize CKOperationGroupTransferSizeGigabytes = (CKOperationGroupTransferSize)5;
+static const CKOperationGroupTransferSize CKOperationGroupTransferSizeTensOfGigabytes = (CKOperationGroupTransferSize)6;
+static const CKOperationGroupTransferSize CKOperationGroupTransferSizeHundredsOfGigabytes = (CKOperationGroupTransferSize)7;
 
 #ifndef BEAN_TYPEDEF_CKSharingParticipantAccessOption
 #define BEAN_TYPEDEF_CKSharingParticipantAccessOption
@@ -222,54 +222,54 @@ static const CKSharingParticipantPermissionOption CKSharingParticipantPermission
 typedef NSInteger CKSyncEnginePendingRecordZoneChangeType;
 #endif
 static const CKSyncEnginePendingRecordZoneChangeType CKSyncEnginePendingRecordZoneChangeTypeSaveRecord = (CKSyncEnginePendingRecordZoneChangeType)0;
-static const CKSyncEnginePendingRecordZoneChangeType CKSyncEnginePendingRecordZoneChangeTypeDeleteRecord = (CKSyncEnginePendingRecordZoneChangeType)0;
+static const CKSyncEnginePendingRecordZoneChangeType CKSyncEnginePendingRecordZoneChangeTypeDeleteRecord = (CKSyncEnginePendingRecordZoneChangeType)1;
 
 #ifndef BEAN_TYPEDEF_CKSyncEnginePendingDatabaseChangeType
 #define BEAN_TYPEDEF_CKSyncEnginePendingDatabaseChangeType
 typedef NSInteger CKSyncEnginePendingDatabaseChangeType;
 #endif
 static const CKSyncEnginePendingDatabaseChangeType CKSyncEnginePendingDatabaseChangeTypeSaveZone = (CKSyncEnginePendingDatabaseChangeType)0;
-static const CKSyncEnginePendingDatabaseChangeType CKSyncEnginePendingDatabaseChangeTypeDeleteZone = (CKSyncEnginePendingDatabaseChangeType)0;
+static const CKSyncEnginePendingDatabaseChangeType CKSyncEnginePendingDatabaseChangeTypeDeleteZone = (CKSyncEnginePendingDatabaseChangeType)1;
 
 #ifndef BEAN_TYPEDEF_CKSyncEngineSyncReason
 #define BEAN_TYPEDEF_CKSyncEngineSyncReason
 typedef NSInteger CKSyncEngineSyncReason;
 #endif
 static const CKSyncEngineSyncReason CKSyncEngineSyncReasonScheduled = (CKSyncEngineSyncReason)0;
-static const CKSyncEngineSyncReason CKSyncEngineSyncReasonManual = (CKSyncEngineSyncReason)0;
+static const CKSyncEngineSyncReason CKSyncEngineSyncReasonManual = (CKSyncEngineSyncReason)1;
 
 #ifndef BEAN_TYPEDEF_CKSyncEngineEventType
 #define BEAN_TYPEDEF_CKSyncEngineEventType
 typedef NSInteger CKSyncEngineEventType;
 #endif
 static const CKSyncEngineEventType CKSyncEngineEventTypeStateUpdate = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeAccountChange = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeFetchedDatabaseChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeFetchedRecordZoneChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeSentDatabaseChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeSentRecordZoneChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeWillFetchChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeWillFetchRecordZoneChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeDidFetchRecordZoneChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeDidFetchChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeWillSendChanges = (CKSyncEngineEventType)0;
-static const CKSyncEngineEventType CKSyncEngineEventTypeDidSendChanges = (CKSyncEngineEventType)0;
+static const CKSyncEngineEventType CKSyncEngineEventTypeAccountChange = (CKSyncEngineEventType)1;
+static const CKSyncEngineEventType CKSyncEngineEventTypeFetchedDatabaseChanges = (CKSyncEngineEventType)2;
+static const CKSyncEngineEventType CKSyncEngineEventTypeFetchedRecordZoneChanges = (CKSyncEngineEventType)3;
+static const CKSyncEngineEventType CKSyncEngineEventTypeSentDatabaseChanges = (CKSyncEngineEventType)4;
+static const CKSyncEngineEventType CKSyncEngineEventTypeSentRecordZoneChanges = (CKSyncEngineEventType)5;
+static const CKSyncEngineEventType CKSyncEngineEventTypeWillFetchChanges = (CKSyncEngineEventType)6;
+static const CKSyncEngineEventType CKSyncEngineEventTypeWillFetchRecordZoneChanges = (CKSyncEngineEventType)7;
+static const CKSyncEngineEventType CKSyncEngineEventTypeDidFetchRecordZoneChanges = (CKSyncEngineEventType)8;
+static const CKSyncEngineEventType CKSyncEngineEventTypeDidFetchChanges = (CKSyncEngineEventType)9;
+static const CKSyncEngineEventType CKSyncEngineEventTypeWillSendChanges = (CKSyncEngineEventType)10;
+static const CKSyncEngineEventType CKSyncEngineEventTypeDidSendChanges = (CKSyncEngineEventType)11;
 
 #ifndef BEAN_TYPEDEF_CKSyncEngineAccountChangeType
 #define BEAN_TYPEDEF_CKSyncEngineAccountChangeType
 typedef NSInteger CKSyncEngineAccountChangeType;
 #endif
 static const CKSyncEngineAccountChangeType CKSyncEngineAccountChangeTypeSignIn = (CKSyncEngineAccountChangeType)0;
-static const CKSyncEngineAccountChangeType CKSyncEngineAccountChangeTypeSignOut = (CKSyncEngineAccountChangeType)0;
-static const CKSyncEngineAccountChangeType CKSyncEngineAccountChangeTypeSwitchAccounts = (CKSyncEngineAccountChangeType)0;
+static const CKSyncEngineAccountChangeType CKSyncEngineAccountChangeTypeSignOut = (CKSyncEngineAccountChangeType)1;
+static const CKSyncEngineAccountChangeType CKSyncEngineAccountChangeTypeSwitchAccounts = (CKSyncEngineAccountChangeType)2;
 
 #ifndef BEAN_TYPEDEF_CKSyncEngineZoneDeletionReason
 #define BEAN_TYPEDEF_CKSyncEngineZoneDeletionReason
 typedef NSInteger CKSyncEngineZoneDeletionReason;
 #endif
 static const CKSyncEngineZoneDeletionReason CKSyncEngineZoneDeletionReasonDeleted = (CKSyncEngineZoneDeletionReason)0;
-static const CKSyncEngineZoneDeletionReason CKSyncEngineZoneDeletionReasonPurged = (CKSyncEngineZoneDeletionReason)0;
-static const CKSyncEngineZoneDeletionReason CKSyncEngineZoneDeletionReasonEncryptedDataReset = (CKSyncEngineZoneDeletionReason)0;
+static const CKSyncEngineZoneDeletionReason CKSyncEngineZoneDeletionReasonPurged = (CKSyncEngineZoneDeletionReason)1;
+static const CKSyncEngineZoneDeletionReason CKSyncEngineZoneDeletionReasonEncryptedDataReset = (CKSyncEngineZoneDeletionReason)2;
 
 /* ===== forward typedefs ===== */
 #ifndef BEAN_TYPEDEF_CKDatabase
@@ -311,6 +311,10 @@ typedef bean_id CKShareMetadata;
 #ifndef BEAN_TYPEDEF_CKSyncEngineConfiguration
 #define BEAN_TYPEDEF_CKSyncEngineConfiguration
 typedef bean_id CKSyncEngineConfiguration;
+#endif
+#ifndef BEAN_TYPEDEF_CKSyncEngineEvent
+#define BEAN_TYPEDEF_CKSyncEngineEvent
+typedef bean_id CKSyncEngineEvent;
 #endif
 #ifndef BEAN_TYPEDEF_CKSyncEngineFetchChangesContext
 #define BEAN_TYPEDEF_CKSyncEngineFetchChangesContext
@@ -404,6 +408,10 @@ typedef bean_id NSByteCountFormatter;
 #define BEAN_TYPEDEF_NSCache
 typedef bean_id NSCache;
 #endif
+#ifndef BEAN_TYPEDEF_NSCacheDelegate
+#define BEAN_TYPEDEF_NSCacheDelegate
+typedef bean_id NSCacheDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCachedURLResponse
 #define BEAN_TYPEDEF_NSCachedURLResponse
 typedef bean_id NSCachedURLResponse;
@@ -436,6 +444,10 @@ typedef bean_id NSCloseCommand;
 #define BEAN_TYPEDEF_NSCoder
 typedef bean_id NSCoder;
 #endif
+#ifndef BEAN_TYPEDEF_NSCoding
+#define BEAN_TYPEDEF_NSCoding
+typedef bean_id NSCoding;
+#endif
 #ifndef BEAN_TYPEDEF_NSComparisonPredicate
 #define BEAN_TYPEDEF_NSComparisonPredicate
 typedef bean_id NSComparisonPredicate;
@@ -455,6 +467,14 @@ typedef bean_id NSConditionLock;
 #ifndef BEAN_TYPEDEF_NSConnection
 #define BEAN_TYPEDEF_NSConnection
 typedef bean_id NSConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSConnectionDelegate
+#define BEAN_TYPEDEF_NSConnectionDelegate
+typedef bean_id NSConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCopying
+#define BEAN_TYPEDEF_NSCopying
+typedef bean_id NSCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSCountedSet
 #define BEAN_TYPEDEF_NSCountedSet
@@ -500,6 +520,10 @@ typedef bean_id NSDateIntervalFormatter;
 #define BEAN_TYPEDEF_NSDecimalNumber
 typedef bean_id NSDecimalNumber;
 #endif
+#ifndef BEAN_TYPEDEF_NSDecimalNumberBehaviors
+#define BEAN_TYPEDEF_NSDecimalNumberBehaviors
+typedef bean_id NSDecimalNumberBehaviors;
+#endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumberHandler
 #define BEAN_TYPEDEF_NSDecimalNumberHandler
 typedef bean_id NSDecimalNumberHandler;
@@ -519,6 +543,10 @@ typedef bean_id NSDimension;
 #ifndef BEAN_TYPEDEF_NSDirectoryEnumerator
 #define BEAN_TYPEDEF_NSDirectoryEnumerator
 typedef bean_id NSDirectoryEnumerator;
+#endif
+#ifndef BEAN_TYPEDEF_NSDiscardableContent
+#define BEAN_TYPEDEF_NSDiscardableContent
+typedef bean_id NSDiscardableContent;
 #endif
 #ifndef BEAN_TYPEDEF_NSDistantObject
 #define BEAN_TYPEDEF_NSDistantObject
@@ -564,6 +592,14 @@ typedef bean_id NSExtensionContext;
 #define BEAN_TYPEDEF_NSExtensionItem
 typedef bean_id NSExtensionItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSExtensionRequestHandling
+#define BEAN_TYPEDEF_NSExtensionRequestHandling
+typedef bean_id NSExtensionRequestHandling;
+#endif
+#ifndef BEAN_TYPEDEF_NSFastEnumeration
+#define BEAN_TYPEDEF_NSFastEnumeration
+typedef bean_id NSFastEnumeration;
+#endif
 #ifndef BEAN_TYPEDEF_NSFileAccessIntent
 #define BEAN_TYPEDEF_NSFileAccessIntent
 typedef bean_id NSFileAccessIntent;
@@ -579,6 +615,14 @@ typedef bean_id NSFileHandle;
 #ifndef BEAN_TYPEDEF_NSFileManager
 #define BEAN_TYPEDEF_NSFileManager
 typedef bean_id NSFileManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSFileManagerDelegate
+#define BEAN_TYPEDEF_NSFileManagerDelegate
+typedef bean_id NSFileManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePresenter
+#define BEAN_TYPEDEF_NSFilePresenter
+typedef bean_id NSFilePresenter;
 #endif
 #ifndef BEAN_TYPEDEF_NSFileProviderService
 #define BEAN_TYPEDEF_NSFileProviderService
@@ -660,6 +704,14 @@ typedef bean_id NSInvocation;
 #define BEAN_TYPEDEF_NSInvocationOperation
 typedef bean_id NSInvocationOperation;
 #endif
+#ifndef BEAN_TYPEDEF_NSItemProviderReading
+#define BEAN_TYPEDEF_NSItemProviderReading
+typedef bean_id NSItemProviderReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSItemProviderWriting
+#define BEAN_TYPEDEF_NSItemProviderWriting
+typedef bean_id NSItemProviderWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSJSONSerialization
 #define BEAN_TYPEDEF_NSJSONSerialization
 typedef bean_id NSJSONSerialization;
@@ -676,9 +728,17 @@ typedef bean_id NSKeyValueSharedObserversSnapshot;
 #define BEAN_TYPEDEF_NSKeyedArchiver
 typedef bean_id NSKeyedArchiver;
 #endif
+#ifndef BEAN_TYPEDEF_NSKeyedArchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedArchiverDelegate
+typedef bean_id NSKeyedArchiverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiver
 #define BEAN_TYPEDEF_NSKeyedUnarchiver
 typedef bean_id NSKeyedUnarchiver;
+#endif
+#ifndef BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+typedef bean_id NSKeyedUnarchiverDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLengthFormatter
 #define BEAN_TYPEDEF_NSLengthFormatter
@@ -704,6 +764,10 @@ typedef bean_id NSLocalizedNumberFormatRule;
 #define BEAN_TYPEDEF_NSLock
 typedef bean_id NSLock;
 #endif
+#ifndef BEAN_TYPEDEF_NSLocking
+#define BEAN_TYPEDEF_NSLocking
+typedef bean_id NSLocking;
+#endif
 #ifndef BEAN_TYPEDEF_NSLogicalTest
 #define BEAN_TYPEDEF_NSLogicalTest
 typedef bean_id NSLogicalTest;
@@ -715,6 +779,10 @@ typedef bean_id NSMachBootstrapServer;
 #ifndef BEAN_TYPEDEF_NSMachPort
 #define BEAN_TYPEDEF_NSMachPort
 typedef bean_id NSMachPort;
+#endif
+#ifndef BEAN_TYPEDEF_NSMachPortDelegate
+#define BEAN_TYPEDEF_NSMachPortDelegate
+typedef bean_id NSMachPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMapTable
 #define BEAN_TYPEDEF_NSMapTable
@@ -747,6 +815,10 @@ typedef bean_id NSMetadataQuery;
 #ifndef BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 #define BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 typedef bean_id NSMetadataQueryAttributeValueTuple;
+#endif
+#ifndef BEAN_TYPEDEF_NSMetadataQueryDelegate
+#define BEAN_TYPEDEF_NSMetadataQueryDelegate
+typedef bean_id NSMetadataQueryDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMetadataQueryResultGroup
 #define BEAN_TYPEDEF_NSMetadataQueryResultGroup
@@ -783,6 +855,10 @@ typedef bean_id NSMutableAttributedString;
 #ifndef BEAN_TYPEDEF_NSMutableCharacterSet
 #define BEAN_TYPEDEF_NSMutableCharacterSet
 typedef bean_id NSMutableCharacterSet;
+#endif
+#ifndef BEAN_TYPEDEF_NSMutableCopying
+#define BEAN_TYPEDEF_NSMutableCopying
+typedef bean_id NSMutableCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSMutableData
 #define BEAN_TYPEDEF_NSMutableData
@@ -823,6 +899,14 @@ typedef bean_id NSNetService;
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowser
 #define BEAN_TYPEDEF_NSNetServiceBrowser
 typedef bean_id NSNetServiceBrowser;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+#define BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+typedef bean_id NSNetServiceBrowserDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceDelegate
+#define BEAN_TYPEDEF_NSNetServiceDelegate
+typedef bean_id NSNetServiceDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSNotification
 #define BEAN_TYPEDEF_NSNotification
@@ -908,6 +992,10 @@ typedef bean_id NSPort;
 #define BEAN_TYPEDEF_NSPortCoder
 typedef bean_id NSPortCoder;
 #endif
+#ifndef BEAN_TYPEDEF_NSPortDelegate
+#define BEAN_TYPEDEF_NSPortDelegate
+typedef bean_id NSPortDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSPortMessage
 #define BEAN_TYPEDEF_NSPortMessage
 typedef bean_id NSPortMessage;
@@ -936,6 +1024,10 @@ typedef bean_id NSProcessInfo;
 #define BEAN_TYPEDEF_NSProgress
 typedef bean_id NSProgress;
 #endif
+#ifndef BEAN_TYPEDEF_NSProgressReporting
+#define BEAN_TYPEDEF_NSProgressReporting
+typedef bean_id NSProgressReporting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPropertyListSerialization
 #define BEAN_TYPEDEF_NSPropertyListSerialization
 typedef bean_id NSPropertyListSerialization;
@@ -947,6 +1039,10 @@ typedef bean_id NSProtocolChecker;
 #ifndef BEAN_TYPEDEF_NSProxy
 #define BEAN_TYPEDEF_NSProxy
 typedef bean_id NSProxy;
+#endif
+#ifndef BEAN_TYPEDEF_NSPurgeableData
+#define BEAN_TYPEDEF_NSPurgeableData
+typedef bean_id NSPurgeableData;
 #endif
 #ifndef BEAN_TYPEDEF_NSQuitCommand
 #define BEAN_TYPEDEF_NSQuitCommand
@@ -1012,6 +1108,10 @@ typedef bean_id NSScriptSuiteRegistry;
 #define BEAN_TYPEDEF_NSScriptWhoseTest
 typedef bean_id NSScriptWhoseTest;
 #endif
+#ifndef BEAN_TYPEDEF_NSSecureCoding
+#define BEAN_TYPEDEF_NSSecureCoding
+typedef bean_id NSSecureCoding;
+#endif
 #ifndef BEAN_TYPEDEF_NSSecureUnarchiveFromDataTransformer
 #define BEAN_TYPEDEF_NSSecureUnarchiveFromDataTransformer
 typedef bean_id NSSecureUnarchiveFromDataTransformer;
@@ -1044,9 +1144,17 @@ typedef bean_id NSSpecifierTest;
 #define BEAN_TYPEDEF_NSSpellServer
 typedef bean_id NSSpellServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpellServerDelegate
+#define BEAN_TYPEDEF_NSSpellServerDelegate
+typedef bean_id NSSpellServerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSStream
 #define BEAN_TYPEDEF_NSStream
 typedef bean_id NSStream;
+#endif
+#ifndef BEAN_TYPEDEF_NSStreamDelegate
+#define BEAN_TYPEDEF_NSStreamDelegate
+typedef bean_id NSStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSString
 #define BEAN_TYPEDEF_NSString
@@ -1084,6 +1192,10 @@ typedef bean_id NSURL;
 #define BEAN_TYPEDEF_NSURLAuthenticationChallenge
 typedef bean_id NSURLAuthenticationChallenge;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+#define BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+typedef bean_id NSURLAuthenticationChallengeSender;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLCache
 #define BEAN_TYPEDEF_NSURLCache
 typedef bean_id NSURLCache;
@@ -1095,6 +1207,18 @@ typedef bean_id NSURLComponents;
 #ifndef BEAN_TYPEDEF_NSURLConnection
 #define BEAN_TYPEDEF_NSURLConnection
 typedef bean_id NSURLConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDataDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDataDelegate
+typedef bean_id NSURLConnectionDataDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDelegate
+typedef bean_id NSURLConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+typedef bean_id NSURLConnectionDownloadDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLCredential
 #define BEAN_TYPEDEF_NSURLCredential
@@ -1108,9 +1232,17 @@ typedef bean_id NSURLCredentialStorage;
 #define BEAN_TYPEDEF_NSURLDownload
 typedef bean_id NSURLDownload;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLDownloadDelegate
+#define BEAN_TYPEDEF_NSURLDownloadDelegate
+typedef bean_id NSURLDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLHandle
 #define BEAN_TYPEDEF_NSURLHandle
 typedef bean_id NSURLHandle;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLHandleClient
+#define BEAN_TYPEDEF_NSURLHandleClient
+typedef bean_id NSURLHandleClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLProtectionSpace
 #define BEAN_TYPEDEF_NSURLProtectionSpace
@@ -1119,6 +1251,10 @@ typedef bean_id NSURLProtectionSpace;
 #ifndef BEAN_TYPEDEF_NSURLProtocol
 #define BEAN_TYPEDEF_NSURLProtocol
 typedef bean_id NSURLProtocol;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLProtocolClient
+#define BEAN_TYPEDEF_NSURLProtocolClient
+typedef bean_id NSURLProtocolClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLQueryItem
 #define BEAN_TYPEDEF_NSURLQueryItem
@@ -1140,13 +1276,29 @@ typedef bean_id NSURLSession;
 #define BEAN_TYPEDEF_NSURLSessionConfiguration
 typedef bean_id NSURLSessionConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDataDelegate
+#define BEAN_TYPEDEF_NSURLSessionDataDelegate
+typedef bean_id NSURLSessionDataDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDataTask
 #define BEAN_TYPEDEF_NSURLSessionDataTask
 typedef bean_id NSURLSessionDataTask;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDelegate
+#define BEAN_TYPEDEF_NSURLSessionDelegate
+typedef bean_id NSURLSessionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+typedef bean_id NSURLSessionDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadTask
 #define BEAN_TYPEDEF_NSURLSessionDownloadTask
 typedef bean_id NSURLSessionDownloadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionStreamDelegate
+#define BEAN_TYPEDEF_NSURLSessionStreamDelegate
+typedef bean_id NSURLSessionStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionStreamTask
 #define BEAN_TYPEDEF_NSURLSessionStreamTask
@@ -1155,6 +1307,10 @@ typedef bean_id NSURLSessionStreamTask;
 #ifndef BEAN_TYPEDEF_NSURLSessionTask
 #define BEAN_TYPEDEF_NSURLSessionTask
 typedef bean_id NSURLSessionTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionTaskDelegate
+#define BEAN_TYPEDEF_NSURLSessionTaskDelegate
+typedef bean_id NSURLSessionTaskDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskMetrics
 #define BEAN_TYPEDEF_NSURLSessionTaskMetrics
@@ -1167,6 +1323,10 @@ typedef bean_id NSURLSessionTaskTransactionMetrics;
 #ifndef BEAN_TYPEDEF_NSURLSessionUploadTask
 #define BEAN_TYPEDEF_NSURLSessionUploadTask
 typedef bean_id NSURLSessionUploadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+#define BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+typedef bean_id NSURLSessionWebSocketDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketMessage
 #define BEAN_TYPEDEF_NSURLSessionWebSocketMessage
@@ -1300,6 +1460,10 @@ typedef bean_id NSUnitVolume;
 #define BEAN_TYPEDEF_NSUserActivity
 typedef bean_id NSUserActivity;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserActivityDelegate
+#define BEAN_TYPEDEF_NSUserActivityDelegate
+typedef bean_id NSUserActivityDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserAppleScriptTask
 #define BEAN_TYPEDEF_NSUserAppleScriptTask
 typedef bean_id NSUserAppleScriptTask;
@@ -1323,6 +1487,10 @@ typedef bean_id NSUserNotificationAction;
 #ifndef BEAN_TYPEDEF_NSUserNotificationCenter
 #define BEAN_TYPEDEF_NSUserNotificationCenter
 typedef bean_id NSUserNotificationCenter;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+#define BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+typedef bean_id NSUserNotificationCenterDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSUserScriptTask
 #define BEAN_TYPEDEF_NSUserScriptTask
@@ -1368,6 +1536,10 @@ typedef bean_id NSXMLNode;
 #define BEAN_TYPEDEF_NSXMLParser
 typedef bean_id NSXMLParser;
 #endif
+#ifndef BEAN_TYPEDEF_NSXMLParserDelegate
+#define BEAN_TYPEDEF_NSXMLParserDelegate
+typedef bean_id NSXMLParserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXPCCoder
 #define BEAN_TYPEDEF_NSXPCCoder
 typedef bean_id NSXPCCoder;
@@ -1383,6 +1555,18 @@ typedef bean_id NSXPCInterface;
 #ifndef BEAN_TYPEDEF_NSXPCListener
 #define BEAN_TYPEDEF_NSXPCListener
 typedef bean_id NSXPCListener;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerDelegate
+#define BEAN_TYPEDEF_NSXPCListenerDelegate
+typedef bean_id NSXPCListenerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
+#define BEAN_TYPEDEF_NSXPCListenerEndpoint
+typedef bean_id NSXPCListenerEndpoint;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCProxyCreating
+#define BEAN_TYPEDEF_NSXPCProxyCreating
+typedef bean_id NSXPCProxyCreating;
 #endif
 #ifndef BEAN_TYPEDEF_OS_object
 #define BEAN_TYPEDEF_OS_object
@@ -1400,10 +1584,6 @@ typedef bean_id OS_os_workgroup_interval;
 #define BEAN_TYPEDEF_OS_os_workgroup_parallel
 typedef bean_id OS_os_workgroup_parallel;
 #endif
-#ifndef BEAN_TYPEDEF_CKNotificationID
-#define BEAN_TYPEDEF_CKNotificationID
-typedef bean_id CKNotificationID;
-#endif
 #ifndef BEAN_TYPEDEF_CNContact
 #define BEAN_TYPEDEF_CNContact
 typedef bean_id CNContact;
@@ -1411,10 +1591,6 @@ typedef bean_id CNContact;
 #ifndef BEAN_TYPEDEF_NSImage
 #define BEAN_TYPEDEF_NSImage
 typedef bean_id NSImage;
-#endif
-#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
-#define BEAN_TYPEDEF_NSXPCListenerEndpoint
-typedef bean_id NSXPCListenerEndpoint;
 #endif
 
 #ifndef BEAN_TYPEDEF_NSImage
@@ -1435,21 +1611,21 @@ typedef NSUInteger NSStringEncoding;
 #define BEAN_TYPEDEF_CKAcceptSharesOperation
 typedef bean_id CKAcceptSharesOperation;
 #endif
-static inline id         CKAcceptSharesOperation_Init(CKAcceptSharesOperation self)                                                                 { return ((id (*)(CKAcceptSharesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKAcceptSharesOperation_InitWithShareMetadatas(CKAcceptSharesOperation self, NSArray shareMetadatas)                       { return ((id (*)(CKAcceptSharesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithShareMetadatas:"), shareMetadatas); }
-static inline NSArray    CKAcceptSharesOperation_ShareMetadatas(CKAcceptSharesOperation self)                                                       { return ((NSArray (*)(CKAcceptSharesOperation, SEL))bean_msgSend)(self, bean_sel("shareMetadatas")); }
-static inline void       CKAcceptSharesOperation_SetShareMetadatas(CKAcceptSharesOperation self, NSArray shareMetadatas)                            { ((void (*)(CKAcceptSharesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setShareMetadatas:"), shareMetadatas); }
-static inline void*      CKAcceptSharesOperation_PerShareCompletionBlock(CKAcceptSharesOperation self)                                              { return ((void* (*)(CKAcceptSharesOperation, SEL))bean_msgSend)(self, bean_sel("perShareCompletionBlock")); }
-static inline void       CKAcceptSharesOperation_SetPerShareCompletionBlock(CKAcceptSharesOperation self, void* perShareCompletionBlock)            { ((void (*)(CKAcceptSharesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerShareCompletionBlock:"), perShareCompletionBlock); }
-static inline void*      CKAcceptSharesOperation_AcceptSharesCompletionBlock(CKAcceptSharesOperation self)                                          { return ((void* (*)(CKAcceptSharesOperation, SEL))bean_msgSend)(self, bean_sel("acceptSharesCompletionBlock")); }
-static inline void       CKAcceptSharesOperation_SetAcceptSharesCompletionBlock(CKAcceptSharesOperation self, void* acceptSharesCompletionBlock)    { ((void (*)(CKAcceptSharesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setAcceptSharesCompletionBlock:"), acceptSharesCompletionBlock); }
+static inline CKAcceptSharesOperation    CKAcceptSharesOperation_Init(CKAcceptSharesOperation self)                                                                 { return ((CKAcceptSharesOperation (*)(CKAcceptSharesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKAcceptSharesOperation    CKAcceptSharesOperation_InitWithShareMetadatas(CKAcceptSharesOperation self, NSArray shareMetadatas)                       { return ((CKAcceptSharesOperation (*)(CKAcceptSharesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithShareMetadatas:"), shareMetadatas); }
+static inline NSArray                    CKAcceptSharesOperation_ShareMetadatas(CKAcceptSharesOperation self)                                                       { return ((NSArray (*)(CKAcceptSharesOperation, SEL))bean_msgSend)(self, bean_sel("shareMetadatas")); }
+static inline void                       CKAcceptSharesOperation_SetShareMetadatas(CKAcceptSharesOperation self, NSArray shareMetadatas)                            { ((void (*)(CKAcceptSharesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setShareMetadatas:"), shareMetadatas); }
+static inline void*                      CKAcceptSharesOperation_PerShareCompletionBlock(CKAcceptSharesOperation self)                                              { return ((void* (*)(CKAcceptSharesOperation, SEL))bean_msgSend)(self, bean_sel("perShareCompletionBlock")); }
+static inline void                       CKAcceptSharesOperation_SetPerShareCompletionBlock(CKAcceptSharesOperation self, void* perShareCompletionBlock)            { ((void (*)(CKAcceptSharesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerShareCompletionBlock:"), perShareCompletionBlock); }
+static inline void*                      CKAcceptSharesOperation_AcceptSharesCompletionBlock(CKAcceptSharesOperation self)                                          { return ((void* (*)(CKAcceptSharesOperation, SEL))bean_msgSend)(self, bean_sel("acceptSharesCompletionBlock")); }
+static inline void                       CKAcceptSharesOperation_SetAcceptSharesCompletionBlock(CKAcceptSharesOperation self, void* acceptSharesCompletionBlock)    { ((void (*)(CKAcceptSharesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setAcceptSharesCompletionBlock:"), acceptSharesCompletionBlock); }
 
 /* ===== CKAllowedSharingOptions ===== */
 #ifndef BEAN_TYPEDEF_CKAllowedSharingOptions
 #define BEAN_TYPEDEF_CKAllowedSharingOptions
 typedef bean_id CKAllowedSharingOptions;
 #endif
-static inline id                                      CKAllowedSharingOptions_InitWithAllowedParticipantPermissionOptions_AllowedParticipantAccessOptions(CKAllowedSharingOptions self, CKSharingParticipantPermissionOption allowedParticipantPermissionOptions, CKSharingParticipantAccessOption allowedParticipantAccessOptions)    { return ((id (*)(CKAllowedSharingOptions, SEL, CKSharingParticipantPermissionOption, CKSharingParticipantAccessOption))bean_msgSend)(self, bean_sel("initWithAllowedParticipantPermissionOptions:allowedParticipantAccessOptions:"), allowedParticipantPermissionOptions, allowedParticipantAccessOptions); }
+static inline CKAllowedSharingOptions                 CKAllowedSharingOptions_InitWithAllowedParticipantPermissionOptions_AllowedParticipantAccessOptions(CKAllowedSharingOptions self, CKSharingParticipantPermissionOption allowedParticipantPermissionOptions, CKSharingParticipantAccessOption allowedParticipantAccessOptions)    { return ((CKAllowedSharingOptions (*)(CKAllowedSharingOptions, SEL, CKSharingParticipantPermissionOption, CKSharingParticipantAccessOption))bean_msgSend)(self, bean_sel("initWithAllowedParticipantPermissionOptions:allowedParticipantAccessOptions:"), allowedParticipantPermissionOptions, allowedParticipantAccessOptions); }
 static inline CKSharingParticipantPermissionOption    CKAllowedSharingOptions_AllowedParticipantPermissionOptions(CKAllowedSharingOptions self)                                                                                                                                                                                        { return ((CKSharingParticipantPermissionOption (*)(CKAllowedSharingOptions, SEL))bean_msgSend)(self, bean_sel("allowedParticipantPermissionOptions")); }
 static inline void                                    CKAllowedSharingOptions_SetAllowedParticipantPermissionOptions(CKAllowedSharingOptions self, CKSharingParticipantPermissionOption allowedParticipantPermissionOptions)                                                                                                           { ((void (*)(CKAllowedSharingOptions, SEL, CKSharingParticipantPermissionOption))bean_msgSend)(self, bean_sel("setAllowedParticipantPermissionOptions:"), allowedParticipantPermissionOptions); }
 static inline CKSharingParticipantAccessOption        CKAllowedSharingOptions_AllowedParticipantAccessOptions(CKAllowedSharingOptions self)                                                                                                                                                                                            { return ((CKSharingParticipantAccessOption (*)(CKAllowedSharingOptions, SEL))bean_msgSend)(self, bean_sel("allowedParticipantAccessOptions")); }
@@ -1459,16 +1635,18 @@ static inline void                                    CKAllowedSharingOptions_Se
 static inline CKAllowedSharingOptions                 CKAllowedSharingOptions_StandardOptions(void)                                                                                                                                                                                                                                    { return ((CKAllowedSharingOptions (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKAllowedSharingOptions"), bean_sel("standardOptions")); }
 static inline BOOL                                    CKAllowedSharingOptions_AllowsAccessRequests(CKAllowedSharingOptions self)                                                                                                                                                                                                       { return ((BOOL (*)(CKAllowedSharingOptions, SEL))bean_msgSend)(self, bean_sel("allowsAccessRequests")); }
 static inline void                                    CKAllowedSharingOptions_SetAllowsAccessRequests(CKAllowedSharingOptions self, BOOL allowsAccessRequests)                                                                                                                                                                         { ((void (*)(CKAllowedSharingOptions, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsAccessRequests:"), allowsAccessRequests); }
+static inline BOOL                                    CKAllowedSharingOptions_SupportsSecureCoding(void)                                                                                                                                                                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKAllowedSharingOptions"), bean_sel("supportsSecureCoding")); }
+static inline id                                      CKAllowedSharingOptions_CopyWithZone(CKAllowedSharingOptions self, NSZone* zone)                                                                                                                                                                                                 { return ((id (*)(CKAllowedSharingOptions, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKAsset ===== */
 #ifndef BEAN_TYPEDEF_CKAsset
 #define BEAN_TYPEDEF_CKAsset
 typedef bean_id CKAsset;
 #endif
-static inline id       CKAsset_Init(CKAsset self)                              { return ((id (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id       CKAsset_New(void)                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKAsset"), bean_sel("new")); }
-static inline id       CKAsset_InitWithFileURL(CKAsset self, NSURL fileURL)    { return ((id (*)(CKAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithFileURL:"), fileURL); }
-static inline NSURL    CKAsset_FileURL(CKAsset self)                           { return ((NSURL (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("fileURL")); }
+static inline CKAsset    CKAsset_Init(CKAsset self)                              { return ((CKAsset (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKAsset    CKAsset_New(void)                                       { return ((CKAsset (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKAsset"), bean_sel("new")); }
+static inline CKAsset    CKAsset_InitWithFileURL(CKAsset self, NSURL fileURL)    { return ((CKAsset (*)(CKAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithFileURL:"), fileURL); }
+static inline NSURL      CKAsset_FileURL(CKAsset self)                           { return ((NSURL (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("fileURL")); }
 
 /* ===== CKDatabaseNotification ===== */
 #ifndef BEAN_TYPEDEF_CKDatabaseNotification
@@ -1482,225 +1660,235 @@ static inline CKDatabaseScope    CKDatabaseNotification_DatabaseScope(CKDatabase
 #define BEAN_TYPEDEF_CKDatabaseSubscription
 typedef bean_id CKDatabaseSubscription;
 #endif
-static inline id          CKDatabaseSubscription_Init(CKDatabaseSubscription self)                                               { return ((id (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          CKDatabaseSubscription_New(void)                                                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabaseSubscription"), bean_sel("new")); }
-static inline id          CKDatabaseSubscription_InitWithSubscriptionID(CKDatabaseSubscription self, NSString subscriptionID)    { return ((id (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSubscriptionID:"), subscriptionID); }
-static inline id          CKDatabaseSubscription_InitWithCoder(CKDatabaseSubscription self, NSCoder aDecoder)                    { return ((id (*)(CKDatabaseSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline NSString    CKDatabaseSubscription_RecordType(CKDatabaseSubscription self)                                         { return ((NSString (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
-static inline void        CKDatabaseSubscription_SetRecordType(CKDatabaseSubscription self, NSString recordType)                 { ((void (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
+static inline CKDatabaseSubscription    CKDatabaseSubscription_Init(CKDatabaseSubscription self)                                               { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKDatabaseSubscription    CKDatabaseSubscription_New(void)                                                                       { return ((CKDatabaseSubscription (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabaseSubscription"), bean_sel("new")); }
+static inline CKDatabaseSubscription    CKDatabaseSubscription_InitWithSubscriptionID(CKDatabaseSubscription self, NSString subscriptionID)    { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSubscriptionID:"), subscriptionID); }
+static inline CKDatabaseSubscription    CKDatabaseSubscription_InitWithCoder(CKDatabaseSubscription self, NSCoder aDecoder)                    { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline NSString                  CKDatabaseSubscription_RecordType(CKDatabaseSubscription self)                                         { return ((NSString (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
+static inline void                      CKDatabaseSubscription_SetRecordType(CKDatabaseSubscription self, NSString recordType)                 { ((void (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
+static inline BOOL                      CKDatabaseSubscription_SupportsSecureCoding(void)                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabaseSubscription"), bean_sel("supportsSecureCoding")); }
+static inline id                        CKDatabaseSubscription_CopyWithZone(CKDatabaseSubscription self, NSZone* zone)                         { return ((id (*)(CKDatabaseSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKDiscoverAllUserIdentitiesOperation ===== */
 #ifndef BEAN_TYPEDEF_CKDiscoverAllUserIdentitiesOperation
 #define BEAN_TYPEDEF_CKDiscoverAllUserIdentitiesOperation
 typedef bean_id CKDiscoverAllUserIdentitiesOperation;
 #endif
-static inline id       CKDiscoverAllUserIdentitiesOperation_Init(CKDiscoverAllUserIdentitiesOperation self)                                                                                           { return ((id (*)(CKDiscoverAllUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline void*    CKDiscoverAllUserIdentitiesOperation_UserIdentityDiscoveredBlock(CKDiscoverAllUserIdentitiesOperation self)                                                                    { return ((void* (*)(CKDiscoverAllUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("userIdentityDiscoveredBlock")); }
-static inline void     CKDiscoverAllUserIdentitiesOperation_SetUserIdentityDiscoveredBlock(CKDiscoverAllUserIdentitiesOperation self, void* userIdentityDiscoveredBlock)                              { ((void (*)(CKDiscoverAllUserIdentitiesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setUserIdentityDiscoveredBlock:"), userIdentityDiscoveredBlock); }
-static inline void*    CKDiscoverAllUserIdentitiesOperation_DiscoverAllUserIdentitiesCompletionBlock(CKDiscoverAllUserIdentitiesOperation self)                                                       { return ((void* (*)(CKDiscoverAllUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("discoverAllUserIdentitiesCompletionBlock")); }
-static inline void     CKDiscoverAllUserIdentitiesOperation_SetDiscoverAllUserIdentitiesCompletionBlock(CKDiscoverAllUserIdentitiesOperation self, void* discoverAllUserIdentitiesCompletionBlock)    { ((void (*)(CKDiscoverAllUserIdentitiesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setDiscoverAllUserIdentitiesCompletionBlock:"), discoverAllUserIdentitiesCompletionBlock); }
+static inline CKDiscoverAllUserIdentitiesOperation    CKDiscoverAllUserIdentitiesOperation_Init(CKDiscoverAllUserIdentitiesOperation self)                                                                                           { return ((CKDiscoverAllUserIdentitiesOperation (*)(CKDiscoverAllUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline void*                                   CKDiscoverAllUserIdentitiesOperation_UserIdentityDiscoveredBlock(CKDiscoverAllUserIdentitiesOperation self)                                                                    { return ((void* (*)(CKDiscoverAllUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("userIdentityDiscoveredBlock")); }
+static inline void                                    CKDiscoverAllUserIdentitiesOperation_SetUserIdentityDiscoveredBlock(CKDiscoverAllUserIdentitiesOperation self, void* userIdentityDiscoveredBlock)                              { ((void (*)(CKDiscoverAllUserIdentitiesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setUserIdentityDiscoveredBlock:"), userIdentityDiscoveredBlock); }
+static inline void*                                   CKDiscoverAllUserIdentitiesOperation_DiscoverAllUserIdentitiesCompletionBlock(CKDiscoverAllUserIdentitiesOperation self)                                                       { return ((void* (*)(CKDiscoverAllUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("discoverAllUserIdentitiesCompletionBlock")); }
+static inline void                                    CKDiscoverAllUserIdentitiesOperation_SetDiscoverAllUserIdentitiesCompletionBlock(CKDiscoverAllUserIdentitiesOperation self, void* discoverAllUserIdentitiesCompletionBlock)    { ((void (*)(CKDiscoverAllUserIdentitiesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setDiscoverAllUserIdentitiesCompletionBlock:"), discoverAllUserIdentitiesCompletionBlock); }
 
 /* ===== CKDiscoverUserIdentitiesOperation ===== */
 #ifndef BEAN_TYPEDEF_CKDiscoverUserIdentitiesOperation
 #define BEAN_TYPEDEF_CKDiscoverUserIdentitiesOperation
 typedef bean_id CKDiscoverUserIdentitiesOperation;
 #endif
-static inline id         CKDiscoverUserIdentitiesOperation_Init(CKDiscoverUserIdentitiesOperation self)                                                                                     { return ((id (*)(CKDiscoverUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKDiscoverUserIdentitiesOperation_InitWithUserIdentityLookupInfos(CKDiscoverUserIdentitiesOperation self, NSArray userIdentityLookupInfos)                         { return ((id (*)(CKDiscoverUserIdentitiesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithUserIdentityLookupInfos:"), userIdentityLookupInfos); }
-static inline NSArray    CKDiscoverUserIdentitiesOperation_UserIdentityLookupInfos(CKDiscoverUserIdentitiesOperation self)                                                                  { return ((NSArray (*)(CKDiscoverUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("userIdentityLookupInfos")); }
-static inline void       CKDiscoverUserIdentitiesOperation_SetUserIdentityLookupInfos(CKDiscoverUserIdentitiesOperation self, NSArray userIdentityLookupInfos)                              { ((void (*)(CKDiscoverUserIdentitiesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setUserIdentityLookupInfos:"), userIdentityLookupInfos); }
-static inline void*      CKDiscoverUserIdentitiesOperation_UserIdentityDiscoveredBlock(CKDiscoverUserIdentitiesOperation self)                                                              { return ((void* (*)(CKDiscoverUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("userIdentityDiscoveredBlock")); }
-static inline void       CKDiscoverUserIdentitiesOperation_SetUserIdentityDiscoveredBlock(CKDiscoverUserIdentitiesOperation self, void* userIdentityDiscoveredBlock)                        { ((void (*)(CKDiscoverUserIdentitiesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setUserIdentityDiscoveredBlock:"), userIdentityDiscoveredBlock); }
-static inline void*      CKDiscoverUserIdentitiesOperation_DiscoverUserIdentitiesCompletionBlock(CKDiscoverUserIdentitiesOperation self)                                                    { return ((void* (*)(CKDiscoverUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("discoverUserIdentitiesCompletionBlock")); }
-static inline void       CKDiscoverUserIdentitiesOperation_SetDiscoverUserIdentitiesCompletionBlock(CKDiscoverUserIdentitiesOperation self, void* discoverUserIdentitiesCompletionBlock)    { ((void (*)(CKDiscoverUserIdentitiesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setDiscoverUserIdentitiesCompletionBlock:"), discoverUserIdentitiesCompletionBlock); }
+static inline CKDiscoverUserIdentitiesOperation    CKDiscoverUserIdentitiesOperation_Init(CKDiscoverUserIdentitiesOperation self)                                                                                     { return ((CKDiscoverUserIdentitiesOperation (*)(CKDiscoverUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKDiscoverUserIdentitiesOperation    CKDiscoverUserIdentitiesOperation_InitWithUserIdentityLookupInfos(CKDiscoverUserIdentitiesOperation self, NSArray userIdentityLookupInfos)                         { return ((CKDiscoverUserIdentitiesOperation (*)(CKDiscoverUserIdentitiesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithUserIdentityLookupInfos:"), userIdentityLookupInfos); }
+static inline NSArray                              CKDiscoverUserIdentitiesOperation_UserIdentityLookupInfos(CKDiscoverUserIdentitiesOperation self)                                                                  { return ((NSArray (*)(CKDiscoverUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("userIdentityLookupInfos")); }
+static inline void                                 CKDiscoverUserIdentitiesOperation_SetUserIdentityLookupInfos(CKDiscoverUserIdentitiesOperation self, NSArray userIdentityLookupInfos)                              { ((void (*)(CKDiscoverUserIdentitiesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setUserIdentityLookupInfos:"), userIdentityLookupInfos); }
+static inline void*                                CKDiscoverUserIdentitiesOperation_UserIdentityDiscoveredBlock(CKDiscoverUserIdentitiesOperation self)                                                              { return ((void* (*)(CKDiscoverUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("userIdentityDiscoveredBlock")); }
+static inline void                                 CKDiscoverUserIdentitiesOperation_SetUserIdentityDiscoveredBlock(CKDiscoverUserIdentitiesOperation self, void* userIdentityDiscoveredBlock)                        { ((void (*)(CKDiscoverUserIdentitiesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setUserIdentityDiscoveredBlock:"), userIdentityDiscoveredBlock); }
+static inline void*                                CKDiscoverUserIdentitiesOperation_DiscoverUserIdentitiesCompletionBlock(CKDiscoverUserIdentitiesOperation self)                                                    { return ((void* (*)(CKDiscoverUserIdentitiesOperation, SEL))bean_msgSend)(self, bean_sel("discoverUserIdentitiesCompletionBlock")); }
+static inline void                                 CKDiscoverUserIdentitiesOperation_SetDiscoverUserIdentitiesCompletionBlock(CKDiscoverUserIdentitiesOperation self, void* discoverUserIdentitiesCompletionBlock)    { ((void (*)(CKDiscoverUserIdentitiesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setDiscoverUserIdentitiesCompletionBlock:"), discoverUserIdentitiesCompletionBlock); }
 
 /* ===== CKFetchRecordZoneChangesOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchRecordZoneChangesOperation
 #define BEAN_TYPEDEF_CKFetchRecordZoneChangesOperation
 typedef bean_id CKFetchRecordZoneChangesOperation;
 #endif
-static inline id              CKFetchRecordZoneChangesOperation_Init(CKFetchRecordZoneChangesOperation self)                                                                                                                    { return ((id (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id              CKFetchRecordZoneChangesOperation_InitWithRecordZoneIDs_ConfigurationsByRecordZoneID(CKFetchRecordZoneChangesOperation self, NSArray recordZoneIDs, NSDictionary configurationsByRecordZoneID)    { return ((id (*)(CKFetchRecordZoneChangesOperation, SEL, NSArray, NSDictionary))bean_msgSend)(self, bean_sel("initWithRecordZoneIDs:configurationsByRecordZoneID:"), recordZoneIDs, configurationsByRecordZoneID); }
-static inline NSArray         CKFetchRecordZoneChangesOperation_RecordZoneIDs(CKFetchRecordZoneChangesOperation self)                                                                                                           { return ((NSArray (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneIDs")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetRecordZoneIDs(CKFetchRecordZoneChangesOperation self, NSArray recordZoneIDs)                                                                                 { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordZoneIDs:"), recordZoneIDs); }
-static inline NSDictionary    CKFetchRecordZoneChangesOperation_ConfigurationsByRecordZoneID(CKFetchRecordZoneChangesOperation self)                                                                                            { return ((NSDictionary (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("configurationsByRecordZoneID")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetConfigurationsByRecordZoneID(CKFetchRecordZoneChangesOperation self, NSDictionary configurationsByRecordZoneID)                                              { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setConfigurationsByRecordZoneID:"), configurationsByRecordZoneID); }
-static inline BOOL            CKFetchRecordZoneChangesOperation_FetchAllChanges(CKFetchRecordZoneChangesOperation self)                                                                                                         { return ((BOOL (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchAllChanges")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetFetchAllChanges(CKFetchRecordZoneChangesOperation self, BOOL fetchAllChanges)                                                                                { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, BOOL))bean_msgSend)(self, bean_sel("setFetchAllChanges:"), fetchAllChanges); }
-static inline void*           CKFetchRecordZoneChangesOperation_RecordChangedBlock(CKFetchRecordZoneChangesOperation self)                                                                                                      { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordChangedBlock")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetRecordChangedBlock(CKFetchRecordZoneChangesOperation self, void* recordChangedBlock)                                                                         { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordChangedBlock:"), recordChangedBlock); }
-static inline void*           CKFetchRecordZoneChangesOperation_RecordWasChangedBlock(CKFetchRecordZoneChangesOperation self)                                                                                                   { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordWasChangedBlock")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetRecordWasChangedBlock(CKFetchRecordZoneChangesOperation self, void* recordWasChangedBlock)                                                                   { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordWasChangedBlock:"), recordWasChangedBlock); }
-static inline void*           CKFetchRecordZoneChangesOperation_RecordWithIDWasDeletedBlock(CKFetchRecordZoneChangesOperation self)                                                                                             { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordWithIDWasDeletedBlock")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetRecordWithIDWasDeletedBlock(CKFetchRecordZoneChangesOperation self, void* recordWithIDWasDeletedBlock)                                                       { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordWithIDWasDeletedBlock:"), recordWithIDWasDeletedBlock); }
-static inline void*           CKFetchRecordZoneChangesOperation_RecordZoneChangeTokensUpdatedBlock(CKFetchRecordZoneChangesOperation self)                                                                                      { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneChangeTokensUpdatedBlock")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetRecordZoneChangeTokensUpdatedBlock(CKFetchRecordZoneChangesOperation self, void* recordZoneChangeTokensUpdatedBlock)                                         { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneChangeTokensUpdatedBlock:"), recordZoneChangeTokensUpdatedBlock); }
-static inline void*           CKFetchRecordZoneChangesOperation_RecordZoneFetchCompletionBlock(CKFetchRecordZoneChangesOperation self)                                                                                          { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneFetchCompletionBlock")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetRecordZoneFetchCompletionBlock(CKFetchRecordZoneChangesOperation self, void* recordZoneFetchCompletionBlock)                                                 { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneFetchCompletionBlock:"), recordZoneFetchCompletionBlock); }
-static inline void*           CKFetchRecordZoneChangesOperation_FetchRecordZoneChangesCompletionBlock(CKFetchRecordZoneChangesOperation self)                                                                                   { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchRecordZoneChangesCompletionBlock")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetFetchRecordZoneChangesCompletionBlock(CKFetchRecordZoneChangesOperation self, void* fetchRecordZoneChangesCompletionBlock)                                   { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchRecordZoneChangesCompletionBlock:"), fetchRecordZoneChangesCompletionBlock); }
-static inline id              CKFetchRecordZoneChangesOperation_InitWithRecordZoneIDs_OptionsByRecordZoneID(CKFetchRecordZoneChangesOperation self, NSArray recordZoneIDs, NSDictionary optionsByRecordZoneID)                  { return ((id (*)(CKFetchRecordZoneChangesOperation, SEL, NSArray, NSDictionary))bean_msgSend)(self, bean_sel("initWithRecordZoneIDs:optionsByRecordZoneID:"), recordZoneIDs, optionsByRecordZoneID); }
-static inline NSDictionary    CKFetchRecordZoneChangesOperation_OptionsByRecordZoneID(CKFetchRecordZoneChangesOperation self)                                                                                                   { return ((NSDictionary (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("optionsByRecordZoneID")); }
-static inline void            CKFetchRecordZoneChangesOperation_SetOptionsByRecordZoneID(CKFetchRecordZoneChangesOperation self, NSDictionary optionsByRecordZoneID)                                                            { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setOptionsByRecordZoneID:"), optionsByRecordZoneID); }
+static inline CKFetchRecordZoneChangesOperation    CKFetchRecordZoneChangesOperation_Init(CKFetchRecordZoneChangesOperation self)                                                                                                                    { return ((CKFetchRecordZoneChangesOperation (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchRecordZoneChangesOperation    CKFetchRecordZoneChangesOperation_InitWithRecordZoneIDs_ConfigurationsByRecordZoneID(CKFetchRecordZoneChangesOperation self, NSArray recordZoneIDs, NSDictionary configurationsByRecordZoneID)    { return ((CKFetchRecordZoneChangesOperation (*)(CKFetchRecordZoneChangesOperation, SEL, NSArray, NSDictionary))bean_msgSend)(self, bean_sel("initWithRecordZoneIDs:configurationsByRecordZoneID:"), recordZoneIDs, configurationsByRecordZoneID); }
+static inline NSArray                              CKFetchRecordZoneChangesOperation_RecordZoneIDs(CKFetchRecordZoneChangesOperation self)                                                                                                           { return ((NSArray (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneIDs")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetRecordZoneIDs(CKFetchRecordZoneChangesOperation self, NSArray recordZoneIDs)                                                                                 { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordZoneIDs:"), recordZoneIDs); }
+static inline NSDictionary                         CKFetchRecordZoneChangesOperation_ConfigurationsByRecordZoneID(CKFetchRecordZoneChangesOperation self)                                                                                            { return ((NSDictionary (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("configurationsByRecordZoneID")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetConfigurationsByRecordZoneID(CKFetchRecordZoneChangesOperation self, NSDictionary configurationsByRecordZoneID)                                              { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setConfigurationsByRecordZoneID:"), configurationsByRecordZoneID); }
+static inline BOOL                                 CKFetchRecordZoneChangesOperation_FetchAllChanges(CKFetchRecordZoneChangesOperation self)                                                                                                         { return ((BOOL (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchAllChanges")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetFetchAllChanges(CKFetchRecordZoneChangesOperation self, BOOL fetchAllChanges)                                                                                { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, BOOL))bean_msgSend)(self, bean_sel("setFetchAllChanges:"), fetchAllChanges); }
+static inline void*                                CKFetchRecordZoneChangesOperation_RecordChangedBlock(CKFetchRecordZoneChangesOperation self)                                                                                                      { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordChangedBlock")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetRecordChangedBlock(CKFetchRecordZoneChangesOperation self, void* recordChangedBlock)                                                                         { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordChangedBlock:"), recordChangedBlock); }
+static inline void*                                CKFetchRecordZoneChangesOperation_RecordWasChangedBlock(CKFetchRecordZoneChangesOperation self)                                                                                                   { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordWasChangedBlock")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetRecordWasChangedBlock(CKFetchRecordZoneChangesOperation self, void* recordWasChangedBlock)                                                                   { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordWasChangedBlock:"), recordWasChangedBlock); }
+static inline void*                                CKFetchRecordZoneChangesOperation_RecordWithIDWasDeletedBlock(CKFetchRecordZoneChangesOperation self)                                                                                             { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordWithIDWasDeletedBlock")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetRecordWithIDWasDeletedBlock(CKFetchRecordZoneChangesOperation self, void* recordWithIDWasDeletedBlock)                                                       { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordWithIDWasDeletedBlock:"), recordWithIDWasDeletedBlock); }
+static inline void*                                CKFetchRecordZoneChangesOperation_RecordZoneChangeTokensUpdatedBlock(CKFetchRecordZoneChangesOperation self)                                                                                      { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneChangeTokensUpdatedBlock")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetRecordZoneChangeTokensUpdatedBlock(CKFetchRecordZoneChangesOperation self, void* recordZoneChangeTokensUpdatedBlock)                                         { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneChangeTokensUpdatedBlock:"), recordZoneChangeTokensUpdatedBlock); }
+static inline void*                                CKFetchRecordZoneChangesOperation_RecordZoneFetchCompletionBlock(CKFetchRecordZoneChangesOperation self)                                                                                          { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneFetchCompletionBlock")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetRecordZoneFetchCompletionBlock(CKFetchRecordZoneChangesOperation self, void* recordZoneFetchCompletionBlock)                                                 { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneFetchCompletionBlock:"), recordZoneFetchCompletionBlock); }
+static inline void*                                CKFetchRecordZoneChangesOperation_FetchRecordZoneChangesCompletionBlock(CKFetchRecordZoneChangesOperation self)                                                                                   { return ((void* (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchRecordZoneChangesCompletionBlock")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetFetchRecordZoneChangesCompletionBlock(CKFetchRecordZoneChangesOperation self, void* fetchRecordZoneChangesCompletionBlock)                                   { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchRecordZoneChangesCompletionBlock:"), fetchRecordZoneChangesCompletionBlock); }
+static inline CKFetchRecordZoneChangesOperation    CKFetchRecordZoneChangesOperation_InitWithRecordZoneIDs_OptionsByRecordZoneID(CKFetchRecordZoneChangesOperation self, NSArray recordZoneIDs, NSDictionary optionsByRecordZoneID)                  { return ((CKFetchRecordZoneChangesOperation (*)(CKFetchRecordZoneChangesOperation, SEL, NSArray, NSDictionary))bean_msgSend)(self, bean_sel("initWithRecordZoneIDs:optionsByRecordZoneID:"), recordZoneIDs, optionsByRecordZoneID); }
+static inline NSDictionary                         CKFetchRecordZoneChangesOperation_OptionsByRecordZoneID(CKFetchRecordZoneChangesOperation self)                                                                                                   { return ((NSDictionary (*)(CKFetchRecordZoneChangesOperation, SEL))bean_msgSend)(self, bean_sel("optionsByRecordZoneID")); }
+static inline void                                 CKFetchRecordZoneChangesOperation_SetOptionsByRecordZoneID(CKFetchRecordZoneChangesOperation self, NSDictionary optionsByRecordZoneID)                                                            { ((void (*)(CKFetchRecordZoneChangesOperation, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setOptionsByRecordZoneID:"), optionsByRecordZoneID); }
 
 /* ===== CKFetchRecordZonesOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchRecordZonesOperation
 #define BEAN_TYPEDEF_CKFetchRecordZonesOperation
 typedef bean_id CKFetchRecordZonesOperation;
 #endif
-static inline id         CKFetchRecordZonesOperation_FetchAllRecordZonesOperation(void)                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKFetchRecordZonesOperation"), bean_sel("fetchAllRecordZonesOperation")); }
-static inline id         CKFetchRecordZonesOperation_Init(CKFetchRecordZonesOperation self)                                                                         { return ((id (*)(CKFetchRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKFetchRecordZonesOperation_InitWithRecordZoneIDs(CKFetchRecordZonesOperation self, NSArray zoneIDs)                                       { return ((id (*)(CKFetchRecordZonesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithRecordZoneIDs:"), zoneIDs); }
-static inline NSArray    CKFetchRecordZonesOperation_RecordZoneIDs(CKFetchRecordZonesOperation self)                                                                { return ((NSArray (*)(CKFetchRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneIDs")); }
-static inline void       CKFetchRecordZonesOperation_SetRecordZoneIDs(CKFetchRecordZonesOperation self, NSArray recordZoneIDs)                                      { ((void (*)(CKFetchRecordZonesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordZoneIDs:"), recordZoneIDs); }
-static inline void*      CKFetchRecordZonesOperation_PerRecordZoneCompletionBlock(CKFetchRecordZonesOperation self)                                                 { return ((void* (*)(CKFetchRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("perRecordZoneCompletionBlock")); }
-static inline void       CKFetchRecordZonesOperation_SetPerRecordZoneCompletionBlock(CKFetchRecordZonesOperation self, void* perRecordZoneCompletionBlock)          { ((void (*)(CKFetchRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordZoneCompletionBlock:"), perRecordZoneCompletionBlock); }
-static inline void*      CKFetchRecordZonesOperation_FetchRecordZonesCompletionBlock(CKFetchRecordZonesOperation self)                                              { return ((void* (*)(CKFetchRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("fetchRecordZonesCompletionBlock")); }
-static inline void       CKFetchRecordZonesOperation_SetFetchRecordZonesCompletionBlock(CKFetchRecordZonesOperation self, void* fetchRecordZonesCompletionBlock)    { ((void (*)(CKFetchRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchRecordZonesCompletionBlock:"), fetchRecordZonesCompletionBlock); }
+static inline CKFetchRecordZonesOperation    CKFetchRecordZonesOperation_FetchAllRecordZonesOperation(void)                                                                             { return ((CKFetchRecordZonesOperation (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKFetchRecordZonesOperation"), bean_sel("fetchAllRecordZonesOperation")); }
+static inline CKFetchRecordZonesOperation    CKFetchRecordZonesOperation_Init(CKFetchRecordZonesOperation self)                                                                         { return ((CKFetchRecordZonesOperation (*)(CKFetchRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchRecordZonesOperation    CKFetchRecordZonesOperation_InitWithRecordZoneIDs(CKFetchRecordZonesOperation self, NSArray zoneIDs)                                       { return ((CKFetchRecordZonesOperation (*)(CKFetchRecordZonesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithRecordZoneIDs:"), zoneIDs); }
+static inline NSArray                        CKFetchRecordZonesOperation_RecordZoneIDs(CKFetchRecordZonesOperation self)                                                                { return ((NSArray (*)(CKFetchRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneIDs")); }
+static inline void                           CKFetchRecordZonesOperation_SetRecordZoneIDs(CKFetchRecordZonesOperation self, NSArray recordZoneIDs)                                      { ((void (*)(CKFetchRecordZonesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordZoneIDs:"), recordZoneIDs); }
+static inline void*                          CKFetchRecordZonesOperation_PerRecordZoneCompletionBlock(CKFetchRecordZonesOperation self)                                                 { return ((void* (*)(CKFetchRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("perRecordZoneCompletionBlock")); }
+static inline void                           CKFetchRecordZonesOperation_SetPerRecordZoneCompletionBlock(CKFetchRecordZonesOperation self, void* perRecordZoneCompletionBlock)          { ((void (*)(CKFetchRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordZoneCompletionBlock:"), perRecordZoneCompletionBlock); }
+static inline void*                          CKFetchRecordZonesOperation_FetchRecordZonesCompletionBlock(CKFetchRecordZonesOperation self)                                              { return ((void* (*)(CKFetchRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("fetchRecordZonesCompletionBlock")); }
+static inline void                           CKFetchRecordZonesOperation_SetFetchRecordZonesCompletionBlock(CKFetchRecordZonesOperation self, void* fetchRecordZonesCompletionBlock)    { ((void (*)(CKFetchRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchRecordZonesCompletionBlock:"), fetchRecordZonesCompletionBlock); }
 
 /* ===== CKFetchRecordsOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchRecordsOperation
 #define BEAN_TYPEDEF_CKFetchRecordsOperation
 typedef bean_id CKFetchRecordsOperation;
 #endif
-static inline id         CKFetchRecordsOperation_Init(CKFetchRecordsOperation self)                                                                 { return ((id (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKFetchRecordsOperation_InitWithRecordIDs(CKFetchRecordsOperation self, NSArray recordIDs)                                 { return ((id (*)(CKFetchRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithRecordIDs:"), recordIDs); }
-static inline id         CKFetchRecordsOperation_FetchCurrentUserRecordOperation(void)                                                              { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKFetchRecordsOperation"), bean_sel("fetchCurrentUserRecordOperation")); }
-static inline NSArray    CKFetchRecordsOperation_RecordIDs(CKFetchRecordsOperation self)                                                            { return ((NSArray (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("recordIDs")); }
-static inline void       CKFetchRecordsOperation_SetRecordIDs(CKFetchRecordsOperation self, NSArray recordIDs)                                      { ((void (*)(CKFetchRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordIDs:"), recordIDs); }
-static inline NSArray    CKFetchRecordsOperation_DesiredKeys(CKFetchRecordsOperation self)                                                          { return ((NSArray (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
-static inline void       CKFetchRecordsOperation_SetDesiredKeys(CKFetchRecordsOperation self, NSArray desiredKeys)                                  { ((void (*)(CKFetchRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
-static inline void*      CKFetchRecordsOperation_PerRecordProgressBlock(CKFetchRecordsOperation self)                                               { return ((void* (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordProgressBlock")); }
-static inline void       CKFetchRecordsOperation_SetPerRecordProgressBlock(CKFetchRecordsOperation self, void* perRecordProgressBlock)              { ((void (*)(CKFetchRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordProgressBlock:"), perRecordProgressBlock); }
-static inline void*      CKFetchRecordsOperation_PerRecordCompletionBlock(CKFetchRecordsOperation self)                                             { return ((void* (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordCompletionBlock")); }
-static inline void       CKFetchRecordsOperation_SetPerRecordCompletionBlock(CKFetchRecordsOperation self, void* perRecordCompletionBlock)          { ((void (*)(CKFetchRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordCompletionBlock:"), perRecordCompletionBlock); }
-static inline void*      CKFetchRecordsOperation_FetchRecordsCompletionBlock(CKFetchRecordsOperation self)                                          { return ((void* (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("fetchRecordsCompletionBlock")); }
-static inline void       CKFetchRecordsOperation_SetFetchRecordsCompletionBlock(CKFetchRecordsOperation self, void* fetchRecordsCompletionBlock)    { ((void (*)(CKFetchRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchRecordsCompletionBlock:"), fetchRecordsCompletionBlock); }
+static inline CKFetchRecordsOperation    CKFetchRecordsOperation_Init(CKFetchRecordsOperation self)                                                                 { return ((CKFetchRecordsOperation (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchRecordsOperation    CKFetchRecordsOperation_InitWithRecordIDs(CKFetchRecordsOperation self, NSArray recordIDs)                                 { return ((CKFetchRecordsOperation (*)(CKFetchRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithRecordIDs:"), recordIDs); }
+static inline CKFetchRecordsOperation    CKFetchRecordsOperation_FetchCurrentUserRecordOperation(void)                                                              { return ((CKFetchRecordsOperation (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKFetchRecordsOperation"), bean_sel("fetchCurrentUserRecordOperation")); }
+static inline NSArray                    CKFetchRecordsOperation_RecordIDs(CKFetchRecordsOperation self)                                                            { return ((NSArray (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("recordIDs")); }
+static inline void                       CKFetchRecordsOperation_SetRecordIDs(CKFetchRecordsOperation self, NSArray recordIDs)                                      { ((void (*)(CKFetchRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordIDs:"), recordIDs); }
+static inline NSArray                    CKFetchRecordsOperation_DesiredKeys(CKFetchRecordsOperation self)                                                          { return ((NSArray (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
+static inline void                       CKFetchRecordsOperation_SetDesiredKeys(CKFetchRecordsOperation self, NSArray desiredKeys)                                  { ((void (*)(CKFetchRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
+static inline void*                      CKFetchRecordsOperation_PerRecordProgressBlock(CKFetchRecordsOperation self)                                               { return ((void* (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordProgressBlock")); }
+static inline void                       CKFetchRecordsOperation_SetPerRecordProgressBlock(CKFetchRecordsOperation self, void* perRecordProgressBlock)              { ((void (*)(CKFetchRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordProgressBlock:"), perRecordProgressBlock); }
+static inline void*                      CKFetchRecordsOperation_PerRecordCompletionBlock(CKFetchRecordsOperation self)                                             { return ((void* (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordCompletionBlock")); }
+static inline void                       CKFetchRecordsOperation_SetPerRecordCompletionBlock(CKFetchRecordsOperation self, void* perRecordCompletionBlock)          { ((void (*)(CKFetchRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordCompletionBlock:"), perRecordCompletionBlock); }
+static inline void*                      CKFetchRecordsOperation_FetchRecordsCompletionBlock(CKFetchRecordsOperation self)                                          { return ((void* (*)(CKFetchRecordsOperation, SEL))bean_msgSend)(self, bean_sel("fetchRecordsCompletionBlock")); }
+static inline void                       CKFetchRecordsOperation_SetFetchRecordsCompletionBlock(CKFetchRecordsOperation self, void* fetchRecordsCompletionBlock)    { ((void (*)(CKFetchRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchRecordsCompletionBlock:"), fetchRecordsCompletionBlock); }
 
 /* ===== CKFetchShareMetadataOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchShareMetadataOperation
 #define BEAN_TYPEDEF_CKFetchShareMetadataOperation
 typedef bean_id CKFetchShareMetadataOperation;
 #endif
-static inline id         CKFetchShareMetadataOperation_Init(CKFetchShareMetadataOperation self)                                                                             { return ((id (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKFetchShareMetadataOperation_InitWithShareURLs(CKFetchShareMetadataOperation self, NSArray shareURLs)                                             { return ((id (*)(CKFetchShareMetadataOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithShareURLs:"), shareURLs); }
-static inline NSArray    CKFetchShareMetadataOperation_ShareURLs(CKFetchShareMetadataOperation self)                                                                        { return ((NSArray (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("shareURLs")); }
-static inline void       CKFetchShareMetadataOperation_SetShareURLs(CKFetchShareMetadataOperation self, NSArray shareURLs)                                                  { ((void (*)(CKFetchShareMetadataOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setShareURLs:"), shareURLs); }
-static inline BOOL       CKFetchShareMetadataOperation_ShouldFetchRootRecord(CKFetchShareMetadataOperation self)                                                            { return ((BOOL (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("shouldFetchRootRecord")); }
-static inline void       CKFetchShareMetadataOperation_SetShouldFetchRootRecord(CKFetchShareMetadataOperation self, BOOL shouldFetchRootRecord)                             { ((void (*)(CKFetchShareMetadataOperation, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldFetchRootRecord:"), shouldFetchRootRecord); }
-static inline NSArray    CKFetchShareMetadataOperation_RootRecordDesiredKeys(CKFetchShareMetadataOperation self)                                                            { return ((NSArray (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("rootRecordDesiredKeys")); }
-static inline void       CKFetchShareMetadataOperation_SetRootRecordDesiredKeys(CKFetchShareMetadataOperation self, NSArray rootRecordDesiredKeys)                          { ((void (*)(CKFetchShareMetadataOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRootRecordDesiredKeys:"), rootRecordDesiredKeys); }
-static inline void*      CKFetchShareMetadataOperation_PerShareMetadataBlock(CKFetchShareMetadataOperation self)                                                            { return ((void* (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("perShareMetadataBlock")); }
-static inline void       CKFetchShareMetadataOperation_SetPerShareMetadataBlock(CKFetchShareMetadataOperation self, void* perShareMetadataBlock)                            { ((void (*)(CKFetchShareMetadataOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerShareMetadataBlock:"), perShareMetadataBlock); }
-static inline void*      CKFetchShareMetadataOperation_FetchShareMetadataCompletionBlock(CKFetchShareMetadataOperation self)                                                { return ((void* (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("fetchShareMetadataCompletionBlock")); }
-static inline void       CKFetchShareMetadataOperation_SetFetchShareMetadataCompletionBlock(CKFetchShareMetadataOperation self, void* fetchShareMetadataCompletionBlock)    { ((void (*)(CKFetchShareMetadataOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchShareMetadataCompletionBlock:"), fetchShareMetadataCompletionBlock); }
+static inline CKFetchShareMetadataOperation    CKFetchShareMetadataOperation_Init(CKFetchShareMetadataOperation self)                                                                             { return ((CKFetchShareMetadataOperation (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchShareMetadataOperation    CKFetchShareMetadataOperation_InitWithShareURLs(CKFetchShareMetadataOperation self, NSArray shareURLs)                                             { return ((CKFetchShareMetadataOperation (*)(CKFetchShareMetadataOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithShareURLs:"), shareURLs); }
+static inline NSArray                          CKFetchShareMetadataOperation_ShareURLs(CKFetchShareMetadataOperation self)                                                                        { return ((NSArray (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("shareURLs")); }
+static inline void                             CKFetchShareMetadataOperation_SetShareURLs(CKFetchShareMetadataOperation self, NSArray shareURLs)                                                  { ((void (*)(CKFetchShareMetadataOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setShareURLs:"), shareURLs); }
+static inline BOOL                             CKFetchShareMetadataOperation_ShouldFetchRootRecord(CKFetchShareMetadataOperation self)                                                            { return ((BOOL (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("shouldFetchRootRecord")); }
+static inline void                             CKFetchShareMetadataOperation_SetShouldFetchRootRecord(CKFetchShareMetadataOperation self, BOOL shouldFetchRootRecord)                             { ((void (*)(CKFetchShareMetadataOperation, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldFetchRootRecord:"), shouldFetchRootRecord); }
+static inline NSArray                          CKFetchShareMetadataOperation_RootRecordDesiredKeys(CKFetchShareMetadataOperation self)                                                            { return ((NSArray (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("rootRecordDesiredKeys")); }
+static inline void                             CKFetchShareMetadataOperation_SetRootRecordDesiredKeys(CKFetchShareMetadataOperation self, NSArray rootRecordDesiredKeys)                          { ((void (*)(CKFetchShareMetadataOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRootRecordDesiredKeys:"), rootRecordDesiredKeys); }
+static inline void*                            CKFetchShareMetadataOperation_PerShareMetadataBlock(CKFetchShareMetadataOperation self)                                                            { return ((void* (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("perShareMetadataBlock")); }
+static inline void                             CKFetchShareMetadataOperation_SetPerShareMetadataBlock(CKFetchShareMetadataOperation self, void* perShareMetadataBlock)                            { ((void (*)(CKFetchShareMetadataOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerShareMetadataBlock:"), perShareMetadataBlock); }
+static inline void*                            CKFetchShareMetadataOperation_FetchShareMetadataCompletionBlock(CKFetchShareMetadataOperation self)                                                { return ((void* (*)(CKFetchShareMetadataOperation, SEL))bean_msgSend)(self, bean_sel("fetchShareMetadataCompletionBlock")); }
+static inline void                             CKFetchShareMetadataOperation_SetFetchShareMetadataCompletionBlock(CKFetchShareMetadataOperation self, void* fetchShareMetadataCompletionBlock)    { ((void (*)(CKFetchShareMetadataOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchShareMetadataCompletionBlock:"), fetchShareMetadataCompletionBlock); }
 
 /* ===== CKFetchShareParticipantsOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchShareParticipantsOperation
 #define BEAN_TYPEDEF_CKFetchShareParticipantsOperation
 typedef bean_id CKFetchShareParticipantsOperation;
 #endif
-static inline id         CKFetchShareParticipantsOperation_Init(CKFetchShareParticipantsOperation self)                                                                                     { return ((id (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKFetchShareParticipantsOperation_InitWithUserIdentityLookupInfos(CKFetchShareParticipantsOperation self, NSArray userIdentityLookupInfos)                         { return ((id (*)(CKFetchShareParticipantsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithUserIdentityLookupInfos:"), userIdentityLookupInfos); }
-static inline NSArray    CKFetchShareParticipantsOperation_UserIdentityLookupInfos(CKFetchShareParticipantsOperation self)                                                                  { return ((NSArray (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("userIdentityLookupInfos")); }
-static inline void       CKFetchShareParticipantsOperation_SetUserIdentityLookupInfos(CKFetchShareParticipantsOperation self, NSArray userIdentityLookupInfos)                              { ((void (*)(CKFetchShareParticipantsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setUserIdentityLookupInfos:"), userIdentityLookupInfos); }
-static inline void*      CKFetchShareParticipantsOperation_ShareParticipantFetchedBlock(CKFetchShareParticipantsOperation self)                                                             { return ((void* (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("shareParticipantFetchedBlock")); }
-static inline void       CKFetchShareParticipantsOperation_SetShareParticipantFetchedBlock(CKFetchShareParticipantsOperation self, void* shareParticipantFetchedBlock)                      { ((void (*)(CKFetchShareParticipantsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setShareParticipantFetchedBlock:"), shareParticipantFetchedBlock); }
-static inline void*      CKFetchShareParticipantsOperation_PerShareParticipantCompletionBlock(CKFetchShareParticipantsOperation self)                                                       { return ((void* (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("perShareParticipantCompletionBlock")); }
-static inline void       CKFetchShareParticipantsOperation_SetPerShareParticipantCompletionBlock(CKFetchShareParticipantsOperation self, void* perShareParticipantCompletionBlock)          { ((void (*)(CKFetchShareParticipantsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerShareParticipantCompletionBlock:"), perShareParticipantCompletionBlock); }
-static inline void*      CKFetchShareParticipantsOperation_FetchShareParticipantsCompletionBlock(CKFetchShareParticipantsOperation self)                                                    { return ((void* (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("fetchShareParticipantsCompletionBlock")); }
-static inline void       CKFetchShareParticipantsOperation_SetFetchShareParticipantsCompletionBlock(CKFetchShareParticipantsOperation self, void* fetchShareParticipantsCompletionBlock)    { ((void (*)(CKFetchShareParticipantsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchShareParticipantsCompletionBlock:"), fetchShareParticipantsCompletionBlock); }
+static inline CKFetchShareParticipantsOperation    CKFetchShareParticipantsOperation_Init(CKFetchShareParticipantsOperation self)                                                                                     { return ((CKFetchShareParticipantsOperation (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchShareParticipantsOperation    CKFetchShareParticipantsOperation_InitWithUserIdentityLookupInfos(CKFetchShareParticipantsOperation self, NSArray userIdentityLookupInfos)                         { return ((CKFetchShareParticipantsOperation (*)(CKFetchShareParticipantsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithUserIdentityLookupInfos:"), userIdentityLookupInfos); }
+static inline NSArray                              CKFetchShareParticipantsOperation_UserIdentityLookupInfos(CKFetchShareParticipantsOperation self)                                                                  { return ((NSArray (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("userIdentityLookupInfos")); }
+static inline void                                 CKFetchShareParticipantsOperation_SetUserIdentityLookupInfos(CKFetchShareParticipantsOperation self, NSArray userIdentityLookupInfos)                              { ((void (*)(CKFetchShareParticipantsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setUserIdentityLookupInfos:"), userIdentityLookupInfos); }
+static inline void*                                CKFetchShareParticipantsOperation_ShareParticipantFetchedBlock(CKFetchShareParticipantsOperation self)                                                             { return ((void* (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("shareParticipantFetchedBlock")); }
+static inline void                                 CKFetchShareParticipantsOperation_SetShareParticipantFetchedBlock(CKFetchShareParticipantsOperation self, void* shareParticipantFetchedBlock)                      { ((void (*)(CKFetchShareParticipantsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setShareParticipantFetchedBlock:"), shareParticipantFetchedBlock); }
+static inline void*                                CKFetchShareParticipantsOperation_PerShareParticipantCompletionBlock(CKFetchShareParticipantsOperation self)                                                       { return ((void* (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("perShareParticipantCompletionBlock")); }
+static inline void                                 CKFetchShareParticipantsOperation_SetPerShareParticipantCompletionBlock(CKFetchShareParticipantsOperation self, void* perShareParticipantCompletionBlock)          { ((void (*)(CKFetchShareParticipantsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerShareParticipantCompletionBlock:"), perShareParticipantCompletionBlock); }
+static inline void*                                CKFetchShareParticipantsOperation_FetchShareParticipantsCompletionBlock(CKFetchShareParticipantsOperation self)                                                    { return ((void* (*)(CKFetchShareParticipantsOperation, SEL))bean_msgSend)(self, bean_sel("fetchShareParticipantsCompletionBlock")); }
+static inline void                                 CKFetchShareParticipantsOperation_SetFetchShareParticipantsCompletionBlock(CKFetchShareParticipantsOperation self, void* fetchShareParticipantsCompletionBlock)    { ((void (*)(CKFetchShareParticipantsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchShareParticipantsCompletionBlock:"), fetchShareParticipantsCompletionBlock); }
 
 /* ===== CKFetchSubscriptionsOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchSubscriptionsOperation
 #define BEAN_TYPEDEF_CKFetchSubscriptionsOperation
 typedef bean_id CKFetchSubscriptionsOperation;
 #endif
-static inline id         CKFetchSubscriptionsOperation_FetchAllSubscriptionsOperation(void)                                                                               { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKFetchSubscriptionsOperation"), bean_sel("fetchAllSubscriptionsOperation")); }
-static inline id         CKFetchSubscriptionsOperation_Init(CKFetchSubscriptionsOperation self)                                                                           { return ((id (*)(CKFetchSubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKFetchSubscriptionsOperation_InitWithSubscriptionIDs(CKFetchSubscriptionsOperation self, NSArray subscriptionIDs)                               { return ((id (*)(CKFetchSubscriptionsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithSubscriptionIDs:"), subscriptionIDs); }
-static inline NSArray    CKFetchSubscriptionsOperation_SubscriptionIDs(CKFetchSubscriptionsOperation self)                                                                { return ((NSArray (*)(CKFetchSubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("subscriptionIDs")); }
-static inline void       CKFetchSubscriptionsOperation_SetSubscriptionIDs(CKFetchSubscriptionsOperation self, NSArray subscriptionIDs)                                    { ((void (*)(CKFetchSubscriptionsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubscriptionIDs:"), subscriptionIDs); }
-static inline void*      CKFetchSubscriptionsOperation_PerSubscriptionCompletionBlock(CKFetchSubscriptionsOperation self)                                                 { return ((void* (*)(CKFetchSubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("perSubscriptionCompletionBlock")); }
-static inline void       CKFetchSubscriptionsOperation_SetPerSubscriptionCompletionBlock(CKFetchSubscriptionsOperation self, void* perSubscriptionCompletionBlock)        { ((void (*)(CKFetchSubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerSubscriptionCompletionBlock:"), perSubscriptionCompletionBlock); }
-static inline void*      CKFetchSubscriptionsOperation_FetchSubscriptionCompletionBlock(CKFetchSubscriptionsOperation self)                                               { return ((void* (*)(CKFetchSubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("fetchSubscriptionCompletionBlock")); }
-static inline void       CKFetchSubscriptionsOperation_SetFetchSubscriptionCompletionBlock(CKFetchSubscriptionsOperation self, void* fetchSubscriptionCompletionBlock)    { ((void (*)(CKFetchSubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchSubscriptionCompletionBlock:"), fetchSubscriptionCompletionBlock); }
+static inline CKFetchSubscriptionsOperation    CKFetchSubscriptionsOperation_FetchAllSubscriptionsOperation(void)                                                                               { return ((CKFetchSubscriptionsOperation (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKFetchSubscriptionsOperation"), bean_sel("fetchAllSubscriptionsOperation")); }
+static inline CKFetchSubscriptionsOperation    CKFetchSubscriptionsOperation_Init(CKFetchSubscriptionsOperation self)                                                                           { return ((CKFetchSubscriptionsOperation (*)(CKFetchSubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchSubscriptionsOperation    CKFetchSubscriptionsOperation_InitWithSubscriptionIDs(CKFetchSubscriptionsOperation self, NSArray subscriptionIDs)                               { return ((CKFetchSubscriptionsOperation (*)(CKFetchSubscriptionsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithSubscriptionIDs:"), subscriptionIDs); }
+static inline NSArray                          CKFetchSubscriptionsOperation_SubscriptionIDs(CKFetchSubscriptionsOperation self)                                                                { return ((NSArray (*)(CKFetchSubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("subscriptionIDs")); }
+static inline void                             CKFetchSubscriptionsOperation_SetSubscriptionIDs(CKFetchSubscriptionsOperation self, NSArray subscriptionIDs)                                    { ((void (*)(CKFetchSubscriptionsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubscriptionIDs:"), subscriptionIDs); }
+static inline void*                            CKFetchSubscriptionsOperation_PerSubscriptionCompletionBlock(CKFetchSubscriptionsOperation self)                                                 { return ((void* (*)(CKFetchSubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("perSubscriptionCompletionBlock")); }
+static inline void                             CKFetchSubscriptionsOperation_SetPerSubscriptionCompletionBlock(CKFetchSubscriptionsOperation self, void* perSubscriptionCompletionBlock)        { ((void (*)(CKFetchSubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerSubscriptionCompletionBlock:"), perSubscriptionCompletionBlock); }
+static inline void*                            CKFetchSubscriptionsOperation_FetchSubscriptionCompletionBlock(CKFetchSubscriptionsOperation self)                                               { return ((void* (*)(CKFetchSubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("fetchSubscriptionCompletionBlock")); }
+static inline void                             CKFetchSubscriptionsOperation_SetFetchSubscriptionCompletionBlock(CKFetchSubscriptionsOperation self, void* fetchSubscriptionCompletionBlock)    { ((void (*)(CKFetchSubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchSubscriptionCompletionBlock:"), fetchSubscriptionCompletionBlock); }
 
 /* ===== CKFetchWebAuthTokenOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchWebAuthTokenOperation
 #define BEAN_TYPEDEF_CKFetchWebAuthTokenOperation
 typedef bean_id CKFetchWebAuthTokenOperation;
 #endif
-static inline id          CKFetchWebAuthTokenOperation_Init(CKFetchWebAuthTokenOperation self)                                                                           { return ((id (*)(CKFetchWebAuthTokenOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          CKFetchWebAuthTokenOperation_InitWithAPIToken(CKFetchWebAuthTokenOperation self, NSString APIToken)                                            { return ((id (*)(CKFetchWebAuthTokenOperation, SEL, NSString))bean_msgSend)(self, bean_sel("initWithAPIToken:"), APIToken); }
-static inline NSString    CKFetchWebAuthTokenOperation_APIToken(CKFetchWebAuthTokenOperation self)                                                                       { return ((NSString (*)(CKFetchWebAuthTokenOperation, SEL))bean_msgSend)(self, bean_sel("APIToken")); }
-static inline void        CKFetchWebAuthTokenOperation_SetAPIToken(CKFetchWebAuthTokenOperation self, NSString APIToken)                                                 { ((void (*)(CKFetchWebAuthTokenOperation, SEL, NSString))bean_msgSend)(self, bean_sel("setAPIToken:"), APIToken); }
-static inline void*       CKFetchWebAuthTokenOperation_FetchWebAuthTokenCompletionBlock(CKFetchWebAuthTokenOperation self)                                               { return ((void* (*)(CKFetchWebAuthTokenOperation, SEL))bean_msgSend)(self, bean_sel("fetchWebAuthTokenCompletionBlock")); }
-static inline void        CKFetchWebAuthTokenOperation_SetFetchWebAuthTokenCompletionBlock(CKFetchWebAuthTokenOperation self, void* fetchWebAuthTokenCompletionBlock)    { ((void (*)(CKFetchWebAuthTokenOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchWebAuthTokenCompletionBlock:"), fetchWebAuthTokenCompletionBlock); }
+static inline CKFetchWebAuthTokenOperation    CKFetchWebAuthTokenOperation_Init(CKFetchWebAuthTokenOperation self)                                                                           { return ((CKFetchWebAuthTokenOperation (*)(CKFetchWebAuthTokenOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchWebAuthTokenOperation    CKFetchWebAuthTokenOperation_InitWithAPIToken(CKFetchWebAuthTokenOperation self, NSString APIToken)                                            { return ((CKFetchWebAuthTokenOperation (*)(CKFetchWebAuthTokenOperation, SEL, NSString))bean_msgSend)(self, bean_sel("initWithAPIToken:"), APIToken); }
+static inline NSString                        CKFetchWebAuthTokenOperation_APIToken(CKFetchWebAuthTokenOperation self)                                                                       { return ((NSString (*)(CKFetchWebAuthTokenOperation, SEL))bean_msgSend)(self, bean_sel("APIToken")); }
+static inline void                            CKFetchWebAuthTokenOperation_SetAPIToken(CKFetchWebAuthTokenOperation self, NSString APIToken)                                                 { ((void (*)(CKFetchWebAuthTokenOperation, SEL, NSString))bean_msgSend)(self, bean_sel("setAPIToken:"), APIToken); }
+static inline void*                           CKFetchWebAuthTokenOperation_FetchWebAuthTokenCompletionBlock(CKFetchWebAuthTokenOperation self)                                               { return ((void* (*)(CKFetchWebAuthTokenOperation, SEL))bean_msgSend)(self, bean_sel("fetchWebAuthTokenCompletionBlock")); }
+static inline void                            CKFetchWebAuthTokenOperation_SetFetchWebAuthTokenCompletionBlock(CKFetchWebAuthTokenOperation self, void* fetchWebAuthTokenCompletionBlock)    { ((void (*)(CKFetchWebAuthTokenOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchWebAuthTokenCompletionBlock:"), fetchWebAuthTokenCompletionBlock); }
 
 /* ===== CKModifyRecordZonesOperation ===== */
 #ifndef BEAN_TYPEDEF_CKModifyRecordZonesOperation
 #define BEAN_TYPEDEF_CKModifyRecordZonesOperation
 typedef bean_id CKModifyRecordZonesOperation;
 #endif
-static inline id         CKModifyRecordZonesOperation_Init(CKModifyRecordZonesOperation self)                                                                                                         { return ((id (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKModifyRecordZonesOperation_InitWithRecordZonesToSave_RecordZoneIDsToDelete(CKModifyRecordZonesOperation self, NSArray recordZonesToSave, NSArray recordZoneIDsToDelete)    { return ((id (*)(CKModifyRecordZonesOperation, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithRecordZonesToSave:recordZoneIDsToDelete:"), recordZonesToSave, recordZoneIDsToDelete); }
-static inline NSArray    CKModifyRecordZonesOperation_RecordZonesToSave(CKModifyRecordZonesOperation self)                                                                                            { return ((NSArray (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("recordZonesToSave")); }
-static inline void       CKModifyRecordZonesOperation_SetRecordZonesToSave(CKModifyRecordZonesOperation self, NSArray recordZonesToSave)                                                              { ((void (*)(CKModifyRecordZonesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordZonesToSave:"), recordZonesToSave); }
-static inline NSArray    CKModifyRecordZonesOperation_RecordZoneIDsToDelete(CKModifyRecordZonesOperation self)                                                                                        { return ((NSArray (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneIDsToDelete")); }
-static inline void       CKModifyRecordZonesOperation_SetRecordZoneIDsToDelete(CKModifyRecordZonesOperation self, NSArray recordZoneIDsToDelete)                                                      { ((void (*)(CKModifyRecordZonesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordZoneIDsToDelete:"), recordZoneIDsToDelete); }
-static inline void*      CKModifyRecordZonesOperation_PerRecordZoneSaveBlock(CKModifyRecordZonesOperation self)                                                                                       { return ((void* (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("perRecordZoneSaveBlock")); }
-static inline void       CKModifyRecordZonesOperation_SetPerRecordZoneSaveBlock(CKModifyRecordZonesOperation self, void* perRecordZoneSaveBlock)                                                      { ((void (*)(CKModifyRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordZoneSaveBlock:"), perRecordZoneSaveBlock); }
-static inline void*      CKModifyRecordZonesOperation_PerRecordZoneDeleteBlock(CKModifyRecordZonesOperation self)                                                                                     { return ((void* (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("perRecordZoneDeleteBlock")); }
-static inline void       CKModifyRecordZonesOperation_SetPerRecordZoneDeleteBlock(CKModifyRecordZonesOperation self, void* perRecordZoneDeleteBlock)                                                  { ((void (*)(CKModifyRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordZoneDeleteBlock:"), perRecordZoneDeleteBlock); }
-static inline void*      CKModifyRecordZonesOperation_ModifyRecordZonesCompletionBlock(CKModifyRecordZonesOperation self)                                                                             { return ((void* (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("modifyRecordZonesCompletionBlock")); }
-static inline void       CKModifyRecordZonesOperation_SetModifyRecordZonesCompletionBlock(CKModifyRecordZonesOperation self, void* modifyRecordZonesCompletionBlock)                                  { ((void (*)(CKModifyRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setModifyRecordZonesCompletionBlock:"), modifyRecordZonesCompletionBlock); }
+static inline CKModifyRecordZonesOperation    CKModifyRecordZonesOperation_Init(CKModifyRecordZonesOperation self)                                                                                                         { return ((CKModifyRecordZonesOperation (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKModifyRecordZonesOperation    CKModifyRecordZonesOperation_InitWithRecordZonesToSave_RecordZoneIDsToDelete(CKModifyRecordZonesOperation self, NSArray recordZonesToSave, NSArray recordZoneIDsToDelete)    { return ((CKModifyRecordZonesOperation (*)(CKModifyRecordZonesOperation, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithRecordZonesToSave:recordZoneIDsToDelete:"), recordZonesToSave, recordZoneIDsToDelete); }
+static inline NSArray                         CKModifyRecordZonesOperation_RecordZonesToSave(CKModifyRecordZonesOperation self)                                                                                            { return ((NSArray (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("recordZonesToSave")); }
+static inline void                            CKModifyRecordZonesOperation_SetRecordZonesToSave(CKModifyRecordZonesOperation self, NSArray recordZonesToSave)                                                              { ((void (*)(CKModifyRecordZonesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordZonesToSave:"), recordZonesToSave); }
+static inline NSArray                         CKModifyRecordZonesOperation_RecordZoneIDsToDelete(CKModifyRecordZonesOperation self)                                                                                        { return ((NSArray (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneIDsToDelete")); }
+static inline void                            CKModifyRecordZonesOperation_SetRecordZoneIDsToDelete(CKModifyRecordZonesOperation self, NSArray recordZoneIDsToDelete)                                                      { ((void (*)(CKModifyRecordZonesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordZoneIDsToDelete:"), recordZoneIDsToDelete); }
+static inline void*                           CKModifyRecordZonesOperation_PerRecordZoneSaveBlock(CKModifyRecordZonesOperation self)                                                                                       { return ((void* (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("perRecordZoneSaveBlock")); }
+static inline void                            CKModifyRecordZonesOperation_SetPerRecordZoneSaveBlock(CKModifyRecordZonesOperation self, void* perRecordZoneSaveBlock)                                                      { ((void (*)(CKModifyRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordZoneSaveBlock:"), perRecordZoneSaveBlock); }
+static inline void*                           CKModifyRecordZonesOperation_PerRecordZoneDeleteBlock(CKModifyRecordZonesOperation self)                                                                                     { return ((void* (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("perRecordZoneDeleteBlock")); }
+static inline void                            CKModifyRecordZonesOperation_SetPerRecordZoneDeleteBlock(CKModifyRecordZonesOperation self, void* perRecordZoneDeleteBlock)                                                  { ((void (*)(CKModifyRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordZoneDeleteBlock:"), perRecordZoneDeleteBlock); }
+static inline void*                           CKModifyRecordZonesOperation_ModifyRecordZonesCompletionBlock(CKModifyRecordZonesOperation self)                                                                             { return ((void* (*)(CKModifyRecordZonesOperation, SEL))bean_msgSend)(self, bean_sel("modifyRecordZonesCompletionBlock")); }
+static inline void                            CKModifyRecordZonesOperation_SetModifyRecordZonesCompletionBlock(CKModifyRecordZonesOperation self, void* modifyRecordZonesCompletionBlock)                                  { ((void (*)(CKModifyRecordZonesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setModifyRecordZonesCompletionBlock:"), modifyRecordZonesCompletionBlock); }
 
 /* ===== CKModifyRecordsOperation ===== */
 #ifndef BEAN_TYPEDEF_CKModifyRecordsOperation
 #define BEAN_TYPEDEF_CKModifyRecordsOperation
 typedef bean_id CKModifyRecordsOperation;
 #endif
-static inline id                    CKModifyRecordsOperation_Init(CKModifyRecordsOperation self)                                                                           { return ((id (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                    CKModifyRecordsOperation_InitWithRecordsToSave_RecordIDsToDelete(CKModifyRecordsOperation self, NSArray records, NSArray recordIDs)    { return ((id (*)(CKModifyRecordsOperation, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithRecordsToSave:recordIDsToDelete:"), records, recordIDs); }
-static inline NSArray               CKModifyRecordsOperation_RecordsToSave(CKModifyRecordsOperation self)                                                                  { return ((NSArray (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("recordsToSave")); }
-static inline void                  CKModifyRecordsOperation_SetRecordsToSave(CKModifyRecordsOperation self, NSArray recordsToSave)                                        { ((void (*)(CKModifyRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordsToSave:"), recordsToSave); }
-static inline NSArray               CKModifyRecordsOperation_RecordIDsToDelete(CKModifyRecordsOperation self)                                                              { return ((NSArray (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("recordIDsToDelete")); }
-static inline void                  CKModifyRecordsOperation_SetRecordIDsToDelete(CKModifyRecordsOperation self, NSArray recordIDsToDelete)                                { ((void (*)(CKModifyRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordIDsToDelete:"), recordIDsToDelete); }
-static inline CKRecordSavePolicy    CKModifyRecordsOperation_SavePolicy(CKModifyRecordsOperation self)                                                                     { return ((CKRecordSavePolicy (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("savePolicy")); }
-static inline void                  CKModifyRecordsOperation_SetSavePolicy(CKModifyRecordsOperation self, CKRecordSavePolicy savePolicy)                                   { ((void (*)(CKModifyRecordsOperation, SEL, CKRecordSavePolicy))bean_msgSend)(self, bean_sel("setSavePolicy:"), savePolicy); }
-static inline NSData                CKModifyRecordsOperation_ClientChangeTokenData(CKModifyRecordsOperation self)                                                          { return ((NSData (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("clientChangeTokenData")); }
-static inline void                  CKModifyRecordsOperation_SetClientChangeTokenData(CKModifyRecordsOperation self, NSData clientChangeTokenData)                         { ((void (*)(CKModifyRecordsOperation, SEL, NSData))bean_msgSend)(self, bean_sel("setClientChangeTokenData:"), clientChangeTokenData); }
-static inline BOOL                  CKModifyRecordsOperation_Atomic(CKModifyRecordsOperation self)                                                                         { return ((BOOL (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("atomic")); }
-static inline void                  CKModifyRecordsOperation_SetAtomic(CKModifyRecordsOperation self, BOOL atomic)                                                         { ((void (*)(CKModifyRecordsOperation, SEL, BOOL))bean_msgSend)(self, bean_sel("setAtomic:"), atomic); }
-static inline void*                 CKModifyRecordsOperation_PerRecordProgressBlock(CKModifyRecordsOperation self)                                                         { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordProgressBlock")); }
-static inline void                  CKModifyRecordsOperation_SetPerRecordProgressBlock(CKModifyRecordsOperation self, void* perRecordProgressBlock)                        { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordProgressBlock:"), perRecordProgressBlock); }
-static inline void*                 CKModifyRecordsOperation_PerRecordCompletionBlock(CKModifyRecordsOperation self)                                                       { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordCompletionBlock")); }
-static inline void                  CKModifyRecordsOperation_SetPerRecordCompletionBlock(CKModifyRecordsOperation self, void* perRecordCompletionBlock)                    { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordCompletionBlock:"), perRecordCompletionBlock); }
-static inline void*                 CKModifyRecordsOperation_PerRecordSaveBlock(CKModifyRecordsOperation self)                                                             { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordSaveBlock")); }
-static inline void                  CKModifyRecordsOperation_SetPerRecordSaveBlock(CKModifyRecordsOperation self, void* perRecordSaveBlock)                                { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordSaveBlock:"), perRecordSaveBlock); }
-static inline void*                 CKModifyRecordsOperation_PerRecordDeleteBlock(CKModifyRecordsOperation self)                                                           { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordDeleteBlock")); }
-static inline void                  CKModifyRecordsOperation_SetPerRecordDeleteBlock(CKModifyRecordsOperation self, void* perRecordDeleteBlock)                            { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordDeleteBlock:"), perRecordDeleteBlock); }
-static inline void*                 CKModifyRecordsOperation_ModifyRecordsCompletionBlock(CKModifyRecordsOperation self)                                                   { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("modifyRecordsCompletionBlock")); }
-static inline void                  CKModifyRecordsOperation_SetModifyRecordsCompletionBlock(CKModifyRecordsOperation self, void* modifyRecordsCompletionBlock)            { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setModifyRecordsCompletionBlock:"), modifyRecordsCompletionBlock); }
+static inline CKModifyRecordsOperation    CKModifyRecordsOperation_Init(CKModifyRecordsOperation self)                                                                           { return ((CKModifyRecordsOperation (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKModifyRecordsOperation    CKModifyRecordsOperation_InitWithRecordsToSave_RecordIDsToDelete(CKModifyRecordsOperation self, NSArray records, NSArray recordIDs)    { return ((CKModifyRecordsOperation (*)(CKModifyRecordsOperation, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithRecordsToSave:recordIDsToDelete:"), records, recordIDs); }
+static inline NSArray                     CKModifyRecordsOperation_RecordsToSave(CKModifyRecordsOperation self)                                                                  { return ((NSArray (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("recordsToSave")); }
+static inline void                        CKModifyRecordsOperation_SetRecordsToSave(CKModifyRecordsOperation self, NSArray recordsToSave)                                        { ((void (*)(CKModifyRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordsToSave:"), recordsToSave); }
+static inline NSArray                     CKModifyRecordsOperation_RecordIDsToDelete(CKModifyRecordsOperation self)                                                              { return ((NSArray (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("recordIDsToDelete")); }
+static inline void                        CKModifyRecordsOperation_SetRecordIDsToDelete(CKModifyRecordsOperation self, NSArray recordIDsToDelete)                                { ((void (*)(CKModifyRecordsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecordIDsToDelete:"), recordIDsToDelete); }
+static inline CKRecordSavePolicy          CKModifyRecordsOperation_SavePolicy(CKModifyRecordsOperation self)                                                                     { return ((CKRecordSavePolicy (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("savePolicy")); }
+static inline void                        CKModifyRecordsOperation_SetSavePolicy(CKModifyRecordsOperation self, CKRecordSavePolicy savePolicy)                                   { ((void (*)(CKModifyRecordsOperation, SEL, CKRecordSavePolicy))bean_msgSend)(self, bean_sel("setSavePolicy:"), savePolicy); }
+static inline NSData                      CKModifyRecordsOperation_ClientChangeTokenData(CKModifyRecordsOperation self)                                                          { return ((NSData (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("clientChangeTokenData")); }
+static inline void                        CKModifyRecordsOperation_SetClientChangeTokenData(CKModifyRecordsOperation self, NSData clientChangeTokenData)                         { ((void (*)(CKModifyRecordsOperation, SEL, NSData))bean_msgSend)(self, bean_sel("setClientChangeTokenData:"), clientChangeTokenData); }
+static inline BOOL                        CKModifyRecordsOperation_Atomic(CKModifyRecordsOperation self)                                                                         { return ((BOOL (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("atomic")); }
+static inline void                        CKModifyRecordsOperation_SetAtomic(CKModifyRecordsOperation self, BOOL atomic)                                                         { ((void (*)(CKModifyRecordsOperation, SEL, BOOL))bean_msgSend)(self, bean_sel("setAtomic:"), atomic); }
+static inline void*                       CKModifyRecordsOperation_PerRecordProgressBlock(CKModifyRecordsOperation self)                                                         { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordProgressBlock")); }
+static inline void                        CKModifyRecordsOperation_SetPerRecordProgressBlock(CKModifyRecordsOperation self, void* perRecordProgressBlock)                        { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordProgressBlock:"), perRecordProgressBlock); }
+static inline void*                       CKModifyRecordsOperation_PerRecordCompletionBlock(CKModifyRecordsOperation self)                                                       { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordCompletionBlock")); }
+static inline void                        CKModifyRecordsOperation_SetPerRecordCompletionBlock(CKModifyRecordsOperation self, void* perRecordCompletionBlock)                    { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordCompletionBlock:"), perRecordCompletionBlock); }
+static inline void*                       CKModifyRecordsOperation_PerRecordSaveBlock(CKModifyRecordsOperation self)                                                             { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordSaveBlock")); }
+static inline void                        CKModifyRecordsOperation_SetPerRecordSaveBlock(CKModifyRecordsOperation self, void* perRecordSaveBlock)                                { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordSaveBlock:"), perRecordSaveBlock); }
+static inline void*                       CKModifyRecordsOperation_PerRecordDeleteBlock(CKModifyRecordsOperation self)                                                           { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("perRecordDeleteBlock")); }
+static inline void                        CKModifyRecordsOperation_SetPerRecordDeleteBlock(CKModifyRecordsOperation self, void* perRecordDeleteBlock)                            { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerRecordDeleteBlock:"), perRecordDeleteBlock); }
+static inline void*                       CKModifyRecordsOperation_ModifyRecordsCompletionBlock(CKModifyRecordsOperation self)                                                   { return ((void* (*)(CKModifyRecordsOperation, SEL))bean_msgSend)(self, bean_sel("modifyRecordsCompletionBlock")); }
+static inline void                        CKModifyRecordsOperation_SetModifyRecordsCompletionBlock(CKModifyRecordsOperation self, void* modifyRecordsCompletionBlock)            { ((void (*)(CKModifyRecordsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setModifyRecordsCompletionBlock:"), modifyRecordsCompletionBlock); }
 
 /* ===== CKModifySubscriptionsOperation ===== */
 #ifndef BEAN_TYPEDEF_CKModifySubscriptionsOperation
 #define BEAN_TYPEDEF_CKModifySubscriptionsOperation
 typedef bean_id CKModifySubscriptionsOperation;
 #endif
-static inline id         CKModifySubscriptionsOperation_Init(CKModifySubscriptionsOperation self)                                                                                                                 { return ((id (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKModifySubscriptionsOperation_InitWithSubscriptionsToSave_SubscriptionIDsToDelete(CKModifySubscriptionsOperation self, NSArray subscriptionsToSave, NSArray subscriptionIDsToDelete)    { return ((id (*)(CKModifySubscriptionsOperation, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithSubscriptionsToSave:subscriptionIDsToDelete:"), subscriptionsToSave, subscriptionIDsToDelete); }
-static inline NSArray    CKModifySubscriptionsOperation_SubscriptionsToSave(CKModifySubscriptionsOperation self)                                                                                                  { return ((NSArray (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("subscriptionsToSave")); }
-static inline void       CKModifySubscriptionsOperation_SetSubscriptionsToSave(CKModifySubscriptionsOperation self, NSArray subscriptionsToSave)                                                                  { ((void (*)(CKModifySubscriptionsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubscriptionsToSave:"), subscriptionsToSave); }
-static inline NSArray    CKModifySubscriptionsOperation_SubscriptionIDsToDelete(CKModifySubscriptionsOperation self)                                                                                              { return ((NSArray (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("subscriptionIDsToDelete")); }
-static inline void       CKModifySubscriptionsOperation_SetSubscriptionIDsToDelete(CKModifySubscriptionsOperation self, NSArray subscriptionIDsToDelete)                                                          { ((void (*)(CKModifySubscriptionsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubscriptionIDsToDelete:"), subscriptionIDsToDelete); }
-static inline void*      CKModifySubscriptionsOperation_PerSubscriptionSaveBlock(CKModifySubscriptionsOperation self)                                                                                             { return ((void* (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("perSubscriptionSaveBlock")); }
-static inline void       CKModifySubscriptionsOperation_SetPerSubscriptionSaveBlock(CKModifySubscriptionsOperation self, void* perSubscriptionSaveBlock)                                                          { ((void (*)(CKModifySubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerSubscriptionSaveBlock:"), perSubscriptionSaveBlock); }
-static inline void*      CKModifySubscriptionsOperation_PerSubscriptionDeleteBlock(CKModifySubscriptionsOperation self)                                                                                           { return ((void* (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("perSubscriptionDeleteBlock")); }
-static inline void       CKModifySubscriptionsOperation_SetPerSubscriptionDeleteBlock(CKModifySubscriptionsOperation self, void* perSubscriptionDeleteBlock)                                                      { ((void (*)(CKModifySubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerSubscriptionDeleteBlock:"), perSubscriptionDeleteBlock); }
-static inline void*      CKModifySubscriptionsOperation_ModifySubscriptionsCompletionBlock(CKModifySubscriptionsOperation self)                                                                                   { return ((void* (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("modifySubscriptionsCompletionBlock")); }
-static inline void       CKModifySubscriptionsOperation_SetModifySubscriptionsCompletionBlock(CKModifySubscriptionsOperation self, void* modifySubscriptionsCompletionBlock)                                      { ((void (*)(CKModifySubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setModifySubscriptionsCompletionBlock:"), modifySubscriptionsCompletionBlock); }
+static inline CKModifySubscriptionsOperation    CKModifySubscriptionsOperation_Init(CKModifySubscriptionsOperation self)                                                                                                                 { return ((CKModifySubscriptionsOperation (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKModifySubscriptionsOperation    CKModifySubscriptionsOperation_InitWithSubscriptionsToSave_SubscriptionIDsToDelete(CKModifySubscriptionsOperation self, NSArray subscriptionsToSave, NSArray subscriptionIDsToDelete)    { return ((CKModifySubscriptionsOperation (*)(CKModifySubscriptionsOperation, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithSubscriptionsToSave:subscriptionIDsToDelete:"), subscriptionsToSave, subscriptionIDsToDelete); }
+static inline NSArray                           CKModifySubscriptionsOperation_SubscriptionsToSave(CKModifySubscriptionsOperation self)                                                                                                  { return ((NSArray (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("subscriptionsToSave")); }
+static inline void                              CKModifySubscriptionsOperation_SetSubscriptionsToSave(CKModifySubscriptionsOperation self, NSArray subscriptionsToSave)                                                                  { ((void (*)(CKModifySubscriptionsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubscriptionsToSave:"), subscriptionsToSave); }
+static inline NSArray                           CKModifySubscriptionsOperation_SubscriptionIDsToDelete(CKModifySubscriptionsOperation self)                                                                                              { return ((NSArray (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("subscriptionIDsToDelete")); }
+static inline void                              CKModifySubscriptionsOperation_SetSubscriptionIDsToDelete(CKModifySubscriptionsOperation self, NSArray subscriptionIDsToDelete)                                                          { ((void (*)(CKModifySubscriptionsOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubscriptionIDsToDelete:"), subscriptionIDsToDelete); }
+static inline void*                             CKModifySubscriptionsOperation_PerSubscriptionSaveBlock(CKModifySubscriptionsOperation self)                                                                                             { return ((void* (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("perSubscriptionSaveBlock")); }
+static inline void                              CKModifySubscriptionsOperation_SetPerSubscriptionSaveBlock(CKModifySubscriptionsOperation self, void* perSubscriptionSaveBlock)                                                          { ((void (*)(CKModifySubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerSubscriptionSaveBlock:"), perSubscriptionSaveBlock); }
+static inline void*                             CKModifySubscriptionsOperation_PerSubscriptionDeleteBlock(CKModifySubscriptionsOperation self)                                                                                           { return ((void* (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("perSubscriptionDeleteBlock")); }
+static inline void                              CKModifySubscriptionsOperation_SetPerSubscriptionDeleteBlock(CKModifySubscriptionsOperation self, void* perSubscriptionDeleteBlock)                                                      { ((void (*)(CKModifySubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerSubscriptionDeleteBlock:"), perSubscriptionDeleteBlock); }
+static inline void*                             CKModifySubscriptionsOperation_ModifySubscriptionsCompletionBlock(CKModifySubscriptionsOperation self)                                                                                   { return ((void* (*)(CKModifySubscriptionsOperation, SEL))bean_msgSend)(self, bean_sel("modifySubscriptionsCompletionBlock")); }
+static inline void                              CKModifySubscriptionsOperation_SetModifySubscriptionsCompletionBlock(CKModifySubscriptionsOperation self, void* modifySubscriptionsCompletionBlock)                                      { ((void (*)(CKModifySubscriptionsOperation, SEL, void*))bean_msgSend)(self, bean_sel("setModifySubscriptionsCompletionBlock:"), modifySubscriptionsCompletionBlock); }
+
+/* ===== CKNotificationID ===== */
+#ifndef BEAN_TYPEDEF_CKNotificationID
+#define BEAN_TYPEDEF_CKNotificationID
+typedef bean_id CKNotificationID;
+#endif
+static inline id      CKNotificationID_CopyWithZone(CKNotificationID self, NSZone* zone)    { return ((id (*)(CKNotificationID, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL    CKNotificationID_SupportsSecureCoding(void)                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKNotificationID"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CKNotificationInfo ===== */
 #ifndef BEAN_TYPEDEF_CKNotificationInfo
@@ -1743,61 +1931,83 @@ static inline NSString    CKNotificationInfo_Category(CKNotificationInfo self)  
 static inline void        CKNotificationInfo_SetCategory(CKNotificationInfo self, NSString category)                                        { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setCategory:"), category); }
 static inline NSString    CKNotificationInfo_CollapseIDKey(CKNotificationInfo self)                                                         { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("collapseIDKey")); }
 static inline void        CKNotificationInfo_SetCollapseIDKey(CKNotificationInfo self, NSString collapseIDKey)                              { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setCollapseIDKey:"), collapseIDKey); }
+static inline BOOL        CKNotificationInfo_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKNotificationInfo"), bean_sel("supportsSecureCoding")); }
+static inline id          CKNotificationInfo_CopyWithZone(CKNotificationInfo self, NSZone* zone)                                            { return ((id (*)(CKNotificationInfo, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKQuery ===== */
 #ifndef BEAN_TYPEDEF_CKQuery
 #define BEAN_TYPEDEF_CKQuery
 typedef bean_id CKQuery;
 #endif
-static inline id             CKQuery_Init(CKQuery self)                                                                        { return ((id (*)(CKQuery, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id             CKQuery_New(void)                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQuery"), bean_sel("new")); }
-static inline id             CKQuery_InitWithCoder(CKQuery self, NSCoder aDecoder)                                             { return ((id (*)(CKQuery, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline id             CKQuery_InitWithRecordType_Predicate(CKQuery self, NSString recordType, NSPredicate predicate)    { return ((id (*)(CKQuery, SEL, NSString, NSPredicate))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:"), recordType, predicate); }
+static inline CKQuery        CKQuery_Init(CKQuery self)                                                                        { return ((CKQuery (*)(CKQuery, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKQuery        CKQuery_New(void)                                                                                 { return ((CKQuery (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQuery"), bean_sel("new")); }
+static inline CKQuery        CKQuery_InitWithCoder(CKQuery self, NSCoder aDecoder)                                             { return ((CKQuery (*)(CKQuery, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline CKQuery        CKQuery_InitWithRecordType_Predicate(CKQuery self, NSString recordType, NSPredicate predicate)    { return ((CKQuery (*)(CKQuery, SEL, NSString, NSPredicate))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:"), recordType, predicate); }
 static inline NSString       CKQuery_RecordType(CKQuery self)                                                                  { return ((NSString (*)(CKQuery, SEL))bean_msgSend)(self, bean_sel("recordType")); }
 static inline NSPredicate    CKQuery_Predicate(CKQuery self)                                                                   { return ((NSPredicate (*)(CKQuery, SEL))bean_msgSend)(self, bean_sel("predicate")); }
 static inline NSArray        CKQuery_SortDescriptors(CKQuery self)                                                             { return ((NSArray (*)(CKQuery, SEL))bean_msgSend)(self, bean_sel("sortDescriptors")); }
 static inline void           CKQuery_SetSortDescriptors(CKQuery self, NSArray sortDescriptors)                                 { ((void (*)(CKQuery, SEL, NSArray))bean_msgSend)(self, bean_sel("setSortDescriptors:"), sortDescriptors); }
+static inline BOOL           CKQuery_SupportsSecureCoding(void)                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQuery"), bean_sel("supportsSecureCoding")); }
+static inline id             CKQuery_CopyWithZone(CKQuery self, NSZone* zone)                                                  { return ((id (*)(CKQuery, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKQueryCursor ===== */
 #ifndef BEAN_TYPEDEF_CKQueryCursor
 #define BEAN_TYPEDEF_CKQueryCursor
 typedef bean_id CKQueryCursor;
 #endif
-static inline id    CKQueryCursor_Init(CKQueryCursor self)    { return ((id (*)(CKQueryCursor, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id    CKQueryCursor_New(void)                   { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQueryCursor"), bean_sel("new")); }
+static inline CKQueryCursor    CKQueryCursor_Init(CKQueryCursor self)                          { return ((CKQueryCursor (*)(CKQueryCursor, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKQueryCursor    CKQueryCursor_New(void)                                         { return ((CKQueryCursor (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQueryCursor"), bean_sel("new")); }
+static inline id               CKQueryCursor_CopyWithZone(CKQueryCursor self, NSZone* zone)    { return ((id (*)(CKQueryCursor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL             CKQueryCursor_SupportsSecureCoding(void)                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQueryCursor"), bean_sel("supportsSecureCoding")); }
+
+/* ===== CKRecordKeyValueSetting ===== */
+#ifndef BEAN_TYPEDEF_CKRecordKeyValueSetting
+#define BEAN_TYPEDEF_CKRecordKeyValueSetting
+typedef bean_id CKRecordKeyValueSetting;
+#endif
+static inline id         CKRecordKeyValueSetting_ObjectForKey(CKRecordKeyValueSetting self, NSString key)                              { return ((id (*)(CKRecordKeyValueSetting, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKey:"), key); }
+static inline void       CKRecordKeyValueSetting_SetObject_ForKey(CKRecordKeyValueSetting self, id object, NSString key)               { ((void (*)(CKRecordKeyValueSetting, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKey:"), object, key); }
+static inline id         CKRecordKeyValueSetting_ObjectForKeyedSubscript(CKRecordKeyValueSetting self, NSString key)                   { return ((id (*)(CKRecordKeyValueSetting, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), key); }
+static inline void       CKRecordKeyValueSetting_SetObject_ForKeyedSubscript(CKRecordKeyValueSetting self, id object, NSString key)    { ((void (*)(CKRecordKeyValueSetting, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), object, key); }
+static inline NSArray    CKRecordKeyValueSetting_AllKeys(CKRecordKeyValueSetting self)                                                 { return ((NSArray (*)(CKRecordKeyValueSetting, SEL))bean_msgSend)(self, bean_sel("allKeys")); }
+static inline NSArray    CKRecordKeyValueSetting_ChangedKeys(CKRecordKeyValueSetting self)                                             { return ((NSArray (*)(CKRecordKeyValueSetting, SEL))bean_msgSend)(self, bean_sel("changedKeys")); }
 
 /* ===== CKRecordZoneID ===== */
 #ifndef BEAN_TYPEDEF_CKRecordZoneID
 #define BEAN_TYPEDEF_CKRecordZoneID
 typedef bean_id CKRecordZoneID;
 #endif
-static inline id          CKRecordZoneID_Init(CKRecordZoneID self)                                                                 { return ((id (*)(CKRecordZoneID, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          CKRecordZoneID_New(void)                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZoneID"), bean_sel("new")); }
-static inline id          CKRecordZoneID_InitWithZoneName_OwnerName(CKRecordZoneID self, NSString zoneName, NSString ownerName)    { return ((id (*)(CKRecordZoneID, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("initWithZoneName:ownerName:"), zoneName, ownerName); }
-static inline NSString    CKRecordZoneID_ZoneName(CKRecordZoneID self)                                                             { return ((NSString (*)(CKRecordZoneID, SEL))bean_msgSend)(self, bean_sel("zoneName")); }
-static inline NSString    CKRecordZoneID_OwnerName(CKRecordZoneID self)                                                            { return ((NSString (*)(CKRecordZoneID, SEL))bean_msgSend)(self, bean_sel("ownerName")); }
+static inline CKRecordZoneID    CKRecordZoneID_Init(CKRecordZoneID self)                                                                 { return ((CKRecordZoneID (*)(CKRecordZoneID, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKRecordZoneID    CKRecordZoneID_New(void)                                                                                 { return ((CKRecordZoneID (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZoneID"), bean_sel("new")); }
+static inline CKRecordZoneID    CKRecordZoneID_InitWithZoneName_OwnerName(CKRecordZoneID self, NSString zoneName, NSString ownerName)    { return ((CKRecordZoneID (*)(CKRecordZoneID, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("initWithZoneName:ownerName:"), zoneName, ownerName); }
+static inline NSString          CKRecordZoneID_ZoneName(CKRecordZoneID self)                                                             { return ((NSString (*)(CKRecordZoneID, SEL))bean_msgSend)(self, bean_sel("zoneName")); }
+static inline NSString          CKRecordZoneID_OwnerName(CKRecordZoneID self)                                                            { return ((NSString (*)(CKRecordZoneID, SEL))bean_msgSend)(self, bean_sel("ownerName")); }
+static inline BOOL              CKRecordZoneID_SupportsSecureCoding(void)                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZoneID"), bean_sel("supportsSecureCoding")); }
+static inline id                CKRecordZoneID_CopyWithZone(CKRecordZoneID self, NSZone* zone)                                           { return ((id (*)(CKRecordZoneID, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKServerChangeToken ===== */
 #ifndef BEAN_TYPEDEF_CKServerChangeToken
 #define BEAN_TYPEDEF_CKServerChangeToken
 typedef bean_id CKServerChangeToken;
 #endif
-static inline id    CKServerChangeToken_Init(CKServerChangeToken self)    { return ((id (*)(CKServerChangeToken, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id    CKServerChangeToken_New(void)                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKServerChangeToken"), bean_sel("new")); }
+static inline CKServerChangeToken    CKServerChangeToken_Init(CKServerChangeToken self)                          { return ((CKServerChangeToken (*)(CKServerChangeToken, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKServerChangeToken    CKServerChangeToken_New(void)                                               { return ((CKServerChangeToken (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKServerChangeToken"), bean_sel("new")); }
+static inline id                     CKServerChangeToken_CopyWithZone(CKServerChangeToken self, NSZone* zone)    { return ((id (*)(CKServerChangeToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                   CKServerChangeToken_SupportsSecureCoding(void)                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKServerChangeToken"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CKShareRequestAccessOperation ===== */
 #ifndef BEAN_TYPEDEF_CKShareRequestAccessOperation
 #define BEAN_TYPEDEF_CKShareRequestAccessOperation
 typedef bean_id CKShareRequestAccessOperation;
 #endif
-static inline id         CKShareRequestAccessOperation_Init(CKShareRequestAccessOperation self)                                                                                   { return ((id (*)(CKShareRequestAccessOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKShareRequestAccessOperation_InitWithShareURLs(CKShareRequestAccessOperation self, NSArray shareURLs)                                                   { return ((id (*)(CKShareRequestAccessOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithShareURLs:"), shareURLs); }
-static inline NSArray    CKShareRequestAccessOperation_ShareURLs(CKShareRequestAccessOperation self)                                                                              { return ((NSArray (*)(CKShareRequestAccessOperation, SEL))bean_msgSend)(self, bean_sel("shareURLs")); }
-static inline void       CKShareRequestAccessOperation_SetShareURLs(CKShareRequestAccessOperation self, NSArray shareURLs)                                                        { ((void (*)(CKShareRequestAccessOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setShareURLs:"), shareURLs); }
-static inline void*      CKShareRequestAccessOperation_PerShareAccessRequestCompletionBlock(CKShareRequestAccessOperation self)                                                   { return ((void* (*)(CKShareRequestAccessOperation, SEL))bean_msgSend)(self, bean_sel("perShareAccessRequestCompletionBlock")); }
-static inline void       CKShareRequestAccessOperation_SetPerShareAccessRequestCompletionBlock(CKShareRequestAccessOperation self, void* perShareAccessRequestCompletionBlock)    { ((void (*)(CKShareRequestAccessOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerShareAccessRequestCompletionBlock:"), perShareAccessRequestCompletionBlock); }
-static inline void*      CKShareRequestAccessOperation_ShareRequestAccessCompletionBlock(CKShareRequestAccessOperation self)                                                      { return ((void* (*)(CKShareRequestAccessOperation, SEL))bean_msgSend)(self, bean_sel("shareRequestAccessCompletionBlock")); }
-static inline void       CKShareRequestAccessOperation_SetShareRequestAccessCompletionBlock(CKShareRequestAccessOperation self, void* shareRequestAccessCompletionBlock)          { ((void (*)(CKShareRequestAccessOperation, SEL, void*))bean_msgSend)(self, bean_sel("setShareRequestAccessCompletionBlock:"), shareRequestAccessCompletionBlock); }
+static inline CKShareRequestAccessOperation    CKShareRequestAccessOperation_Init(CKShareRequestAccessOperation self)                                                                                   { return ((CKShareRequestAccessOperation (*)(CKShareRequestAccessOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKShareRequestAccessOperation    CKShareRequestAccessOperation_InitWithShareURLs(CKShareRequestAccessOperation self, NSArray shareURLs)                                                   { return ((CKShareRequestAccessOperation (*)(CKShareRequestAccessOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithShareURLs:"), shareURLs); }
+static inline NSArray                          CKShareRequestAccessOperation_ShareURLs(CKShareRequestAccessOperation self)                                                                              { return ((NSArray (*)(CKShareRequestAccessOperation, SEL))bean_msgSend)(self, bean_sel("shareURLs")); }
+static inline void                             CKShareRequestAccessOperation_SetShareURLs(CKShareRequestAccessOperation self, NSArray shareURLs)                                                        { ((void (*)(CKShareRequestAccessOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setShareURLs:"), shareURLs); }
+static inline void*                            CKShareRequestAccessOperation_PerShareAccessRequestCompletionBlock(CKShareRequestAccessOperation self)                                                   { return ((void* (*)(CKShareRequestAccessOperation, SEL))bean_msgSend)(self, bean_sel("perShareAccessRequestCompletionBlock")); }
+static inline void                             CKShareRequestAccessOperation_SetPerShareAccessRequestCompletionBlock(CKShareRequestAccessOperation self, void* perShareAccessRequestCompletionBlock)    { ((void (*)(CKShareRequestAccessOperation, SEL, void*))bean_msgSend)(self, bean_sel("setPerShareAccessRequestCompletionBlock:"), perShareAccessRequestCompletionBlock); }
+static inline void*                            CKShareRequestAccessOperation_ShareRequestAccessCompletionBlock(CKShareRequestAccessOperation self)                                                      { return ((void* (*)(CKShareRequestAccessOperation, SEL))bean_msgSend)(self, bean_sel("shareRequestAccessCompletionBlock")); }
+static inline void                             CKShareRequestAccessOperation_SetShareRequestAccessCompletionBlock(CKShareRequestAccessOperation self, void* shareRequestAccessCompletionBlock)          { ((void (*)(CKShareRequestAccessOperation, SEL, void*))bean_msgSend)(self, bean_sel("setShareRequestAccessCompletionBlock:"), shareRequestAccessCompletionBlock); }
 
 /* ===== CKSyncEngineFetchedDatabaseChangesEvent ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineFetchedDatabaseChangesEvent
@@ -1820,14 +2030,14 @@ static inline NSArray    CKSyncEngineFetchedRecordZoneChangesEvent_Deletions(CKS
 #define BEAN_TYPEDEF_CKSyncEngineRecordZoneChangeBatch
 typedef bean_id CKSyncEngineRecordZoneChangeBatch;
 #endif
-static inline id         CKSyncEngineRecordZoneChangeBatch_InitWithPendingChanges_RecordProvider(CKSyncEngineRecordZoneChangeBatch self, NSArray pendingChanges, void* recordProvider)                                          { return ((id (*)(CKSyncEngineRecordZoneChangeBatch, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("initWithPendingChanges:recordProvider:"), pendingChanges, recordProvider); }
-static inline id         CKSyncEngineRecordZoneChangeBatch_InitWithRecordsToSave_RecordIDsToDelete_AtomicByZone(CKSyncEngineRecordZoneChangeBatch self, NSArray recordsToSave, NSArray recordIDsToDelete, BOOL atomicByZone)    { return ((id (*)(CKSyncEngineRecordZoneChangeBatch, SEL, NSArray, NSArray, BOOL))bean_msgSend)(self, bean_sel("initWithRecordsToSave:recordIDsToDelete:atomicByZone:"), recordsToSave, recordIDsToDelete, atomicByZone); }
-static inline id         CKSyncEngineRecordZoneChangeBatch_Init(CKSyncEngineRecordZoneChangeBatch self)                                                                                                                         { return ((id (*)(CKSyncEngineRecordZoneChangeBatch, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKSyncEngineRecordZoneChangeBatch_New(void)                                                                                                                                                            { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineRecordZoneChangeBatch"), bean_sel("new")); }
-static inline NSArray    CKSyncEngineRecordZoneChangeBatch_RecordsToSave(CKSyncEngineRecordZoneChangeBatch self)                                                                                                                { return ((NSArray (*)(CKSyncEngineRecordZoneChangeBatch, SEL))bean_msgSend)(self, bean_sel("recordsToSave")); }
-static inline NSArray    CKSyncEngineRecordZoneChangeBatch_RecordIDsToDelete(CKSyncEngineRecordZoneChangeBatch self)                                                                                                            { return ((NSArray (*)(CKSyncEngineRecordZoneChangeBatch, SEL))bean_msgSend)(self, bean_sel("recordIDsToDelete")); }
-static inline BOOL       CKSyncEngineRecordZoneChangeBatch_AtomicByZone(CKSyncEngineRecordZoneChangeBatch self)                                                                                                                 { return ((BOOL (*)(CKSyncEngineRecordZoneChangeBatch, SEL))bean_msgSend)(self, bean_sel("atomicByZone")); }
-static inline void       CKSyncEngineRecordZoneChangeBatch_SetAtomicByZone(CKSyncEngineRecordZoneChangeBatch self, BOOL atomicByZone)                                                                                           { ((void (*)(CKSyncEngineRecordZoneChangeBatch, SEL, BOOL))bean_msgSend)(self, bean_sel("setAtomicByZone:"), atomicByZone); }
+static inline CKSyncEngineRecordZoneChangeBatch    CKSyncEngineRecordZoneChangeBatch_InitWithPendingChanges_RecordProvider(CKSyncEngineRecordZoneChangeBatch self, NSArray pendingChanges, void* recordProvider)                                          { return ((CKSyncEngineRecordZoneChangeBatch (*)(CKSyncEngineRecordZoneChangeBatch, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("initWithPendingChanges:recordProvider:"), pendingChanges, recordProvider); }
+static inline CKSyncEngineRecordZoneChangeBatch    CKSyncEngineRecordZoneChangeBatch_InitWithRecordsToSave_RecordIDsToDelete_AtomicByZone(CKSyncEngineRecordZoneChangeBatch self, NSArray recordsToSave, NSArray recordIDsToDelete, BOOL atomicByZone)    { return ((CKSyncEngineRecordZoneChangeBatch (*)(CKSyncEngineRecordZoneChangeBatch, SEL, NSArray, NSArray, BOOL))bean_msgSend)(self, bean_sel("initWithRecordsToSave:recordIDsToDelete:atomicByZone:"), recordsToSave, recordIDsToDelete, atomicByZone); }
+static inline CKSyncEngineRecordZoneChangeBatch    CKSyncEngineRecordZoneChangeBatch_Init(CKSyncEngineRecordZoneChangeBatch self)                                                                                                                         { return ((CKSyncEngineRecordZoneChangeBatch (*)(CKSyncEngineRecordZoneChangeBatch, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineRecordZoneChangeBatch    CKSyncEngineRecordZoneChangeBatch_New(void)                                                                                                                                                            { return ((CKSyncEngineRecordZoneChangeBatch (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineRecordZoneChangeBatch"), bean_sel("new")); }
+static inline NSArray                              CKSyncEngineRecordZoneChangeBatch_RecordsToSave(CKSyncEngineRecordZoneChangeBatch self)                                                                                                                { return ((NSArray (*)(CKSyncEngineRecordZoneChangeBatch, SEL))bean_msgSend)(self, bean_sel("recordsToSave")); }
+static inline NSArray                              CKSyncEngineRecordZoneChangeBatch_RecordIDsToDelete(CKSyncEngineRecordZoneChangeBatch self)                                                                                                            { return ((NSArray (*)(CKSyncEngineRecordZoneChangeBatch, SEL))bean_msgSend)(self, bean_sel("recordIDsToDelete")); }
+static inline BOOL                                 CKSyncEngineRecordZoneChangeBatch_AtomicByZone(CKSyncEngineRecordZoneChangeBatch self)                                                                                                                 { return ((BOOL (*)(CKSyncEngineRecordZoneChangeBatch, SEL))bean_msgSend)(self, bean_sel("atomicByZone")); }
+static inline void                                 CKSyncEngineRecordZoneChangeBatch_SetAtomicByZone(CKSyncEngineRecordZoneChangeBatch self, BOOL atomicByZone)                                                                                           { ((void (*)(CKSyncEngineRecordZoneChangeBatch, SEL, BOOL))bean_msgSend)(self, bean_sel("setAtomicByZone:"), atomicByZone); }
 
 /* ===== CKSyncEngineSentDatabaseChangesEvent ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineSentDatabaseChangesEvent
@@ -1854,90 +2064,95 @@ static inline NSDictionary    CKSyncEngineSentRecordZoneChangesEvent_FailedRecor
 #define BEAN_TYPEDEF_CKSyncEngineState
 typedef bean_id CKSyncEngineState;
 #endif
-static inline id         CKSyncEngineState_Init(CKSyncEngineState self)                                                              { return ((id (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         CKSyncEngineState_New(void)                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineState"), bean_sel("new")); }
-static inline void       CKSyncEngineState_AddPendingRecordZoneChanges(CKSyncEngineState self, NSArray changes)                      { ((void (*)(CKSyncEngineState, SEL, NSArray))bean_msgSend)(self, bean_sel("addPendingRecordZoneChanges:"), changes); }
-static inline void       CKSyncEngineState_RemovePendingRecordZoneChanges(CKSyncEngineState self, NSArray changes)                   { ((void (*)(CKSyncEngineState, SEL, NSArray))bean_msgSend)(self, bean_sel("removePendingRecordZoneChanges:"), changes); }
-static inline void       CKSyncEngineState_AddPendingDatabaseChanges(CKSyncEngineState self, NSArray changes)                        { ((void (*)(CKSyncEngineState, SEL, NSArray))bean_msgSend)(self, bean_sel("addPendingDatabaseChanges:"), changes); }
-static inline void       CKSyncEngineState_RemovePendingDatabaseChanges(CKSyncEngineState self, NSArray changes)                     { ((void (*)(CKSyncEngineState, SEL, NSArray))bean_msgSend)(self, bean_sel("removePendingDatabaseChanges:"), changes); }
-static inline NSArray    CKSyncEngineState_PendingRecordZoneChanges(CKSyncEngineState self)                                          { return ((NSArray (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("pendingRecordZoneChanges")); }
-static inline NSArray    CKSyncEngineState_PendingDatabaseChanges(CKSyncEngineState self)                                            { return ((NSArray (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("pendingDatabaseChanges")); }
-static inline BOOL       CKSyncEngineState_HasPendingUntrackedChanges(CKSyncEngineState self)                                        { return ((BOOL (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("hasPendingUntrackedChanges")); }
-static inline void       CKSyncEngineState_SetHasPendingUntrackedChanges(CKSyncEngineState self, BOOL hasPendingUntrackedChanges)    { ((void (*)(CKSyncEngineState, SEL, BOOL))bean_msgSend)(self, bean_sel("setHasPendingUntrackedChanges:"), hasPendingUntrackedChanges); }
-static inline NSArray    CKSyncEngineState_ZoneIDsWithUnfetchedServerChanges(CKSyncEngineState self)                                 { return ((NSArray (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("zoneIDsWithUnfetchedServerChanges")); }
+static inline CKSyncEngineState    CKSyncEngineState_Init(CKSyncEngineState self)                                                              { return ((CKSyncEngineState (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineState    CKSyncEngineState_New(void)                                                                                 { return ((CKSyncEngineState (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineState"), bean_sel("new")); }
+static inline void                 CKSyncEngineState_AddPendingRecordZoneChanges(CKSyncEngineState self, NSArray changes)                      { ((void (*)(CKSyncEngineState, SEL, NSArray))bean_msgSend)(self, bean_sel("addPendingRecordZoneChanges:"), changes); }
+static inline void                 CKSyncEngineState_RemovePendingRecordZoneChanges(CKSyncEngineState self, NSArray changes)                   { ((void (*)(CKSyncEngineState, SEL, NSArray))bean_msgSend)(self, bean_sel("removePendingRecordZoneChanges:"), changes); }
+static inline void                 CKSyncEngineState_AddPendingDatabaseChanges(CKSyncEngineState self, NSArray changes)                        { ((void (*)(CKSyncEngineState, SEL, NSArray))bean_msgSend)(self, bean_sel("addPendingDatabaseChanges:"), changes); }
+static inline void                 CKSyncEngineState_RemovePendingDatabaseChanges(CKSyncEngineState self, NSArray changes)                     { ((void (*)(CKSyncEngineState, SEL, NSArray))bean_msgSend)(self, bean_sel("removePendingDatabaseChanges:"), changes); }
+static inline NSArray              CKSyncEngineState_PendingRecordZoneChanges(CKSyncEngineState self)                                          { return ((NSArray (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("pendingRecordZoneChanges")); }
+static inline NSArray              CKSyncEngineState_PendingDatabaseChanges(CKSyncEngineState self)                                            { return ((NSArray (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("pendingDatabaseChanges")); }
+static inline BOOL                 CKSyncEngineState_HasPendingUntrackedChanges(CKSyncEngineState self)                                        { return ((BOOL (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("hasPendingUntrackedChanges")); }
+static inline void                 CKSyncEngineState_SetHasPendingUntrackedChanges(CKSyncEngineState self, BOOL hasPendingUntrackedChanges)    { ((void (*)(CKSyncEngineState, SEL, BOOL))bean_msgSend)(self, bean_sel("setHasPendingUntrackedChanges:"), hasPendingUntrackedChanges); }
+static inline NSArray              CKSyncEngineState_ZoneIDsWithUnfetchedServerChanges(CKSyncEngineState self)                                 { return ((NSArray (*)(CKSyncEngineState, SEL))bean_msgSend)(self, bean_sel("zoneIDsWithUnfetchedServerChanges")); }
 
 /* ===== CKSyncEngineStateSerialization ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineStateSerialization
 #define BEAN_TYPEDEF_CKSyncEngineStateSerialization
 typedef bean_id CKSyncEngineStateSerialization;
 #endif
-static inline id    CKSyncEngineStateSerialization_Init(CKSyncEngineStateSerialization self)    { return ((id (*)(CKSyncEngineStateSerialization, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id    CKSyncEngineStateSerialization_New(void)                                    { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineStateSerialization"), bean_sel("new")); }
+static inline CKSyncEngineStateSerialization    CKSyncEngineStateSerialization_Init(CKSyncEngineStateSerialization self)    { return ((CKSyncEngineStateSerialization (*)(CKSyncEngineStateSerialization, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineStateSerialization    CKSyncEngineStateSerialization_New(void)                                    { return ((CKSyncEngineStateSerialization (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineStateSerialization"), bean_sel("new")); }
+static inline BOOL                              CKSyncEngineStateSerialization_SupportsSecureCoding(void)                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineStateSerialization"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CLFloor ===== */
 #ifndef BEAN_TYPEDEF_CLFloor
 #define BEAN_TYPEDEF_CLFloor
 typedef bean_id CLFloor;
 #endif
-static inline NSInteger    CLFloor_Level(CLFloor self)    { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
+static inline NSInteger    CLFloor_Level(CLFloor self)                         { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
+static inline id           CLFloor_CopyWithZone(CLFloor self, NSZone* zone)    { return ((id (*)(CLFloor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL         CLFloor_SupportsSecureCoding(void)                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLFloor"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CLLocationSourceInformation ===== */
 #ifndef BEAN_TYPEDEF_CLLocationSourceInformation
 #define BEAN_TYPEDEF_CLLocationSourceInformation
 typedef bean_id CLLocationSourceInformation;
 #endif
-static inline id      CLLocationSourceInformation_InitWithSoftwareSimulationState_AndExternalAccessoryState(CLLocationSourceInformation self, BOOL isSoftware, BOOL isAccessory)    { return ((id (*)(CLLocationSourceInformation, SEL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initWithSoftwareSimulationState:andExternalAccessoryState:"), isSoftware, isAccessory); }
-static inline BOOL    CLLocationSourceInformation_IsSimulatedBySoftware(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isSimulatedBySoftware")); }
-static inline BOOL    CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
+static inline CLLocationSourceInformation    CLLocationSourceInformation_InitWithSoftwareSimulationState_AndExternalAccessoryState(CLLocationSourceInformation self, BOOL isSoftware, BOOL isAccessory)    { return ((CLLocationSourceInformation (*)(CLLocationSourceInformation, SEL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initWithSoftwareSimulationState:andExternalAccessoryState:"), isSoftware, isAccessory); }
+static inline BOOL                           CLLocationSourceInformation_IsSimulatedBySoftware(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isSimulatedBySoftware")); }
+static inline BOOL                           CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
+static inline id                             CLLocationSourceInformation_CopyWithZone(CLLocationSourceInformation self, NSZone* zone)                                                                      { return ((id (*)(CLLocationSourceInformation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                           CLLocationSourceInformation_SupportsSecureCoding(void)                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocationSourceInformation"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CKFetchDatabaseChangesOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchDatabaseChangesOperation
 #define BEAN_TYPEDEF_CKFetchDatabaseChangesOperation
 typedef bean_id CKFetchDatabaseChangesOperation;
 #endif
-static inline id                     CKFetchDatabaseChangesOperation_Init(CKFetchDatabaseChangesOperation self)                                                                                                                               { return ((id (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                     CKFetchDatabaseChangesOperation_InitWithPreviousServerChangeToken(CKFetchDatabaseChangesOperation self, CKServerChangeToken previousServerChangeToken)                                                   { return ((id (*)(CKFetchDatabaseChangesOperation, SEL, CKServerChangeToken))bean_msgSend)(self, bean_sel("initWithPreviousServerChangeToken:"), previousServerChangeToken); }
-static inline CKServerChangeToken    CKFetchDatabaseChangesOperation_PreviousServerChangeToken(CKFetchDatabaseChangesOperation self)                                                                                                          { return ((CKServerChangeToken (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("previousServerChangeToken")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetPreviousServerChangeToken(CKFetchDatabaseChangesOperation self, CKServerChangeToken previousServerChangeToken)                                                        { ((void (*)(CKFetchDatabaseChangesOperation, SEL, CKServerChangeToken))bean_msgSend)(self, bean_sel("setPreviousServerChangeToken:"), previousServerChangeToken); }
-static inline NSUInteger             CKFetchDatabaseChangesOperation_ResultsLimit(CKFetchDatabaseChangesOperation self)                                                                                                                       { return ((NSUInteger (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("resultsLimit")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetResultsLimit(CKFetchDatabaseChangesOperation self, NSUInteger resultsLimit)                                                                                           { ((void (*)(CKFetchDatabaseChangesOperation, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setResultsLimit:"), resultsLimit); }
-static inline BOOL                   CKFetchDatabaseChangesOperation_FetchAllChanges(CKFetchDatabaseChangesOperation self)                                                                                                                    { return ((BOOL (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchAllChanges")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetFetchAllChanges(CKFetchDatabaseChangesOperation self, BOOL fetchAllChanges)                                                                                           { ((void (*)(CKFetchDatabaseChangesOperation, SEL, BOOL))bean_msgSend)(self, bean_sel("setFetchAllChanges:"), fetchAllChanges); }
-static inline void*                  CKFetchDatabaseChangesOperation_RecordZoneWithIDChangedBlock(CKFetchDatabaseChangesOperation self)                                                                                                       { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneWithIDChangedBlock")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetRecordZoneWithIDChangedBlock(CKFetchDatabaseChangesOperation self, void* recordZoneWithIDChangedBlock)                                                                { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneWithIDChangedBlock:"), recordZoneWithIDChangedBlock); }
-static inline void*                  CKFetchDatabaseChangesOperation_RecordZoneWithIDWasDeletedBlock(CKFetchDatabaseChangesOperation self)                                                                                                    { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneWithIDWasDeletedBlock")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetRecordZoneWithIDWasDeletedBlock(CKFetchDatabaseChangesOperation self, void* recordZoneWithIDWasDeletedBlock)                                                          { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneWithIDWasDeletedBlock:"), recordZoneWithIDWasDeletedBlock); }
-static inline void*                  CKFetchDatabaseChangesOperation_RecordZoneWithIDWasPurgedBlock(CKFetchDatabaseChangesOperation self)                                                                                                     { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneWithIDWasPurgedBlock")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetRecordZoneWithIDWasPurgedBlock(CKFetchDatabaseChangesOperation self, void* recordZoneWithIDWasPurgedBlock)                                                            { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneWithIDWasPurgedBlock:"), recordZoneWithIDWasPurgedBlock); }
-static inline void*                  CKFetchDatabaseChangesOperation_RecordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock(CKFetchDatabaseChangesOperation self)                                                                         { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetRecordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock(CKFetchDatabaseChangesOperation self, void* recordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock)    { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock:"), recordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock); }
-static inline void*                  CKFetchDatabaseChangesOperation_ChangeTokenUpdatedBlock(CKFetchDatabaseChangesOperation self)                                                                                                            { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("changeTokenUpdatedBlock")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetChangeTokenUpdatedBlock(CKFetchDatabaseChangesOperation self, void* changeTokenUpdatedBlock)                                                                          { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setChangeTokenUpdatedBlock:"), changeTokenUpdatedBlock); }
-static inline void*                  CKFetchDatabaseChangesOperation_FetchDatabaseChangesCompletionBlock(CKFetchDatabaseChangesOperation self)                                                                                                { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchDatabaseChangesCompletionBlock")); }
-static inline void                   CKFetchDatabaseChangesOperation_SetFetchDatabaseChangesCompletionBlock(CKFetchDatabaseChangesOperation self, void* fetchDatabaseChangesCompletionBlock)                                                  { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchDatabaseChangesCompletionBlock:"), fetchDatabaseChangesCompletionBlock); }
+static inline CKFetchDatabaseChangesOperation    CKFetchDatabaseChangesOperation_Init(CKFetchDatabaseChangesOperation self)                                                                                                                               { return ((CKFetchDatabaseChangesOperation (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchDatabaseChangesOperation    CKFetchDatabaseChangesOperation_InitWithPreviousServerChangeToken(CKFetchDatabaseChangesOperation self, CKServerChangeToken previousServerChangeToken)                                                   { return ((CKFetchDatabaseChangesOperation (*)(CKFetchDatabaseChangesOperation, SEL, CKServerChangeToken))bean_msgSend)(self, bean_sel("initWithPreviousServerChangeToken:"), previousServerChangeToken); }
+static inline CKServerChangeToken                CKFetchDatabaseChangesOperation_PreviousServerChangeToken(CKFetchDatabaseChangesOperation self)                                                                                                          { return ((CKServerChangeToken (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("previousServerChangeToken")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetPreviousServerChangeToken(CKFetchDatabaseChangesOperation self, CKServerChangeToken previousServerChangeToken)                                                        { ((void (*)(CKFetchDatabaseChangesOperation, SEL, CKServerChangeToken))bean_msgSend)(self, bean_sel("setPreviousServerChangeToken:"), previousServerChangeToken); }
+static inline NSUInteger                         CKFetchDatabaseChangesOperation_ResultsLimit(CKFetchDatabaseChangesOperation self)                                                                                                                       { return ((NSUInteger (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("resultsLimit")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetResultsLimit(CKFetchDatabaseChangesOperation self, NSUInteger resultsLimit)                                                                                           { ((void (*)(CKFetchDatabaseChangesOperation, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setResultsLimit:"), resultsLimit); }
+static inline BOOL                               CKFetchDatabaseChangesOperation_FetchAllChanges(CKFetchDatabaseChangesOperation self)                                                                                                                    { return ((BOOL (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchAllChanges")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetFetchAllChanges(CKFetchDatabaseChangesOperation self, BOOL fetchAllChanges)                                                                                           { ((void (*)(CKFetchDatabaseChangesOperation, SEL, BOOL))bean_msgSend)(self, bean_sel("setFetchAllChanges:"), fetchAllChanges); }
+static inline void*                              CKFetchDatabaseChangesOperation_RecordZoneWithIDChangedBlock(CKFetchDatabaseChangesOperation self)                                                                                                       { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneWithIDChangedBlock")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetRecordZoneWithIDChangedBlock(CKFetchDatabaseChangesOperation self, void* recordZoneWithIDChangedBlock)                                                                { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneWithIDChangedBlock:"), recordZoneWithIDChangedBlock); }
+static inline void*                              CKFetchDatabaseChangesOperation_RecordZoneWithIDWasDeletedBlock(CKFetchDatabaseChangesOperation self)                                                                                                    { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneWithIDWasDeletedBlock")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetRecordZoneWithIDWasDeletedBlock(CKFetchDatabaseChangesOperation self, void* recordZoneWithIDWasDeletedBlock)                                                          { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneWithIDWasDeletedBlock:"), recordZoneWithIDWasDeletedBlock); }
+static inline void*                              CKFetchDatabaseChangesOperation_RecordZoneWithIDWasPurgedBlock(CKFetchDatabaseChangesOperation self)                                                                                                     { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneWithIDWasPurgedBlock")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetRecordZoneWithIDWasPurgedBlock(CKFetchDatabaseChangesOperation self, void* recordZoneWithIDWasPurgedBlock)                                                            { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneWithIDWasPurgedBlock:"), recordZoneWithIDWasPurgedBlock); }
+static inline void*                              CKFetchDatabaseChangesOperation_RecordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock(CKFetchDatabaseChangesOperation self)                                                                         { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetRecordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock(CKFetchDatabaseChangesOperation self, void* recordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock)    { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock:"), recordZoneWithIDWasDeletedDueToUserEncryptedDataResetBlock); }
+static inline void*                              CKFetchDatabaseChangesOperation_ChangeTokenUpdatedBlock(CKFetchDatabaseChangesOperation self)                                                                                                            { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("changeTokenUpdatedBlock")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetChangeTokenUpdatedBlock(CKFetchDatabaseChangesOperation self, void* changeTokenUpdatedBlock)                                                                          { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setChangeTokenUpdatedBlock:"), changeTokenUpdatedBlock); }
+static inline void*                              CKFetchDatabaseChangesOperation_FetchDatabaseChangesCompletionBlock(CKFetchDatabaseChangesOperation self)                                                                                                { return ((void* (*)(CKFetchDatabaseChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchDatabaseChangesCompletionBlock")); }
+static inline void                               CKFetchDatabaseChangesOperation_SetFetchDatabaseChangesCompletionBlock(CKFetchDatabaseChangesOperation self, void* fetchDatabaseChangesCompletionBlock)                                                  { ((void (*)(CKFetchDatabaseChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchDatabaseChangesCompletionBlock:"), fetchDatabaseChangesCompletionBlock); }
 
 /* ===== CKFetchRecordChangesOperation ===== */
 #ifndef BEAN_TYPEDEF_CKFetchRecordChangesOperation
 #define BEAN_TYPEDEF_CKFetchRecordChangesOperation
 typedef bean_id CKFetchRecordChangesOperation;
 #endif
-static inline id                     CKFetchRecordChangesOperation_Init(CKFetchRecordChangesOperation self)                                                                                                                          { return ((id (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                     CKFetchRecordChangesOperation_InitWithRecordZoneID_PreviousServerChangeToken(CKFetchRecordChangesOperation self, CKRecordZoneID recordZoneID, CKServerChangeToken previousServerChangeToken)    { return ((id (*)(CKFetchRecordChangesOperation, SEL, CKRecordZoneID, CKServerChangeToken))bean_msgSend)(self, bean_sel("initWithRecordZoneID:previousServerChangeToken:"), recordZoneID, previousServerChangeToken); }
-static inline CKRecordZoneID         CKFetchRecordChangesOperation_RecordZoneID(CKFetchRecordChangesOperation self)                                                                                                                  { return ((CKRecordZoneID (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneID")); }
-static inline void                   CKFetchRecordChangesOperation_SetRecordZoneID(CKFetchRecordChangesOperation self, CKRecordZoneID recordZoneID)                                                                                  { ((void (*)(CKFetchRecordChangesOperation, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("setRecordZoneID:"), recordZoneID); }
-static inline CKServerChangeToken    CKFetchRecordChangesOperation_PreviousServerChangeToken(CKFetchRecordChangesOperation self)                                                                                                     { return ((CKServerChangeToken (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("previousServerChangeToken")); }
-static inline void                   CKFetchRecordChangesOperation_SetPreviousServerChangeToken(CKFetchRecordChangesOperation self, CKServerChangeToken previousServerChangeToken)                                                   { ((void (*)(CKFetchRecordChangesOperation, SEL, CKServerChangeToken))bean_msgSend)(self, bean_sel("setPreviousServerChangeToken:"), previousServerChangeToken); }
-static inline NSUInteger             CKFetchRecordChangesOperation_ResultsLimit(CKFetchRecordChangesOperation self)                                                                                                                  { return ((NSUInteger (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("resultsLimit")); }
-static inline void                   CKFetchRecordChangesOperation_SetResultsLimit(CKFetchRecordChangesOperation self, NSUInteger resultsLimit)                                                                                      { ((void (*)(CKFetchRecordChangesOperation, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setResultsLimit:"), resultsLimit); }
-static inline NSArray                CKFetchRecordChangesOperation_DesiredKeys(CKFetchRecordChangesOperation self)                                                                                                                   { return ((NSArray (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
-static inline void                   CKFetchRecordChangesOperation_SetDesiredKeys(CKFetchRecordChangesOperation self, NSArray desiredKeys)                                                                                           { ((void (*)(CKFetchRecordChangesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
-static inline void*                  CKFetchRecordChangesOperation_RecordChangedBlock(CKFetchRecordChangesOperation self)                                                                                                            { return ((void* (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordChangedBlock")); }
-static inline void                   CKFetchRecordChangesOperation_SetRecordChangedBlock(CKFetchRecordChangesOperation self, void* recordChangedBlock)                                                                               { ((void (*)(CKFetchRecordChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordChangedBlock:"), recordChangedBlock); }
-static inline void*                  CKFetchRecordChangesOperation_RecordWithIDWasDeletedBlock(CKFetchRecordChangesOperation self)                                                                                                   { return ((void* (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordWithIDWasDeletedBlock")); }
-static inline void                   CKFetchRecordChangesOperation_SetRecordWithIDWasDeletedBlock(CKFetchRecordChangesOperation self, void* recordWithIDWasDeletedBlock)                                                             { ((void (*)(CKFetchRecordChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordWithIDWasDeletedBlock:"), recordWithIDWasDeletedBlock); }
-static inline BOOL                   CKFetchRecordChangesOperation_MoreComing(CKFetchRecordChangesOperation self)                                                                                                                    { return ((BOOL (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("moreComing")); }
-static inline void*                  CKFetchRecordChangesOperation_FetchRecordChangesCompletionBlock(CKFetchRecordChangesOperation self)                                                                                             { return ((void* (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchRecordChangesCompletionBlock")); }
-static inline void                   CKFetchRecordChangesOperation_SetFetchRecordChangesCompletionBlock(CKFetchRecordChangesOperation self, void* fetchRecordChangesCompletionBlock)                                                 { ((void (*)(CKFetchRecordChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchRecordChangesCompletionBlock:"), fetchRecordChangesCompletionBlock); }
+static inline CKFetchRecordChangesOperation    CKFetchRecordChangesOperation_Init(CKFetchRecordChangesOperation self)                                                                                                                          { return ((CKFetchRecordChangesOperation (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKFetchRecordChangesOperation    CKFetchRecordChangesOperation_InitWithRecordZoneID_PreviousServerChangeToken(CKFetchRecordChangesOperation self, CKRecordZoneID recordZoneID, CKServerChangeToken previousServerChangeToken)    { return ((CKFetchRecordChangesOperation (*)(CKFetchRecordChangesOperation, SEL, CKRecordZoneID, CKServerChangeToken))bean_msgSend)(self, bean_sel("initWithRecordZoneID:previousServerChangeToken:"), recordZoneID, previousServerChangeToken); }
+static inline CKRecordZoneID                   CKFetchRecordChangesOperation_RecordZoneID(CKFetchRecordChangesOperation self)                                                                                                                  { return ((CKRecordZoneID (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordZoneID")); }
+static inline void                             CKFetchRecordChangesOperation_SetRecordZoneID(CKFetchRecordChangesOperation self, CKRecordZoneID recordZoneID)                                                                                  { ((void (*)(CKFetchRecordChangesOperation, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("setRecordZoneID:"), recordZoneID); }
+static inline CKServerChangeToken              CKFetchRecordChangesOperation_PreviousServerChangeToken(CKFetchRecordChangesOperation self)                                                                                                     { return ((CKServerChangeToken (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("previousServerChangeToken")); }
+static inline void                             CKFetchRecordChangesOperation_SetPreviousServerChangeToken(CKFetchRecordChangesOperation self, CKServerChangeToken previousServerChangeToken)                                                   { ((void (*)(CKFetchRecordChangesOperation, SEL, CKServerChangeToken))bean_msgSend)(self, bean_sel("setPreviousServerChangeToken:"), previousServerChangeToken); }
+static inline NSUInteger                       CKFetchRecordChangesOperation_ResultsLimit(CKFetchRecordChangesOperation self)                                                                                                                  { return ((NSUInteger (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("resultsLimit")); }
+static inline void                             CKFetchRecordChangesOperation_SetResultsLimit(CKFetchRecordChangesOperation self, NSUInteger resultsLimit)                                                                                      { ((void (*)(CKFetchRecordChangesOperation, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setResultsLimit:"), resultsLimit); }
+static inline NSArray                          CKFetchRecordChangesOperation_DesiredKeys(CKFetchRecordChangesOperation self)                                                                                                                   { return ((NSArray (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
+static inline void                             CKFetchRecordChangesOperation_SetDesiredKeys(CKFetchRecordChangesOperation self, NSArray desiredKeys)                                                                                           { ((void (*)(CKFetchRecordChangesOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
+static inline void*                            CKFetchRecordChangesOperation_RecordChangedBlock(CKFetchRecordChangesOperation self)                                                                                                            { return ((void* (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordChangedBlock")); }
+static inline void                             CKFetchRecordChangesOperation_SetRecordChangedBlock(CKFetchRecordChangesOperation self, void* recordChangedBlock)                                                                               { ((void (*)(CKFetchRecordChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordChangedBlock:"), recordChangedBlock); }
+static inline void*                            CKFetchRecordChangesOperation_RecordWithIDWasDeletedBlock(CKFetchRecordChangesOperation self)                                                                                                   { return ((void* (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("recordWithIDWasDeletedBlock")); }
+static inline void                             CKFetchRecordChangesOperation_SetRecordWithIDWasDeletedBlock(CKFetchRecordChangesOperation self, void* recordWithIDWasDeletedBlock)                                                             { ((void (*)(CKFetchRecordChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordWithIDWasDeletedBlock:"), recordWithIDWasDeletedBlock); }
+static inline BOOL                             CKFetchRecordChangesOperation_MoreComing(CKFetchRecordChangesOperation self)                                                                                                                    { return ((BOOL (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("moreComing")); }
+static inline void*                            CKFetchRecordChangesOperation_FetchRecordChangesCompletionBlock(CKFetchRecordChangesOperation self)                                                                                             { return ((void* (*)(CKFetchRecordChangesOperation, SEL))bean_msgSend)(self, bean_sel("fetchRecordChangesCompletionBlock")); }
+static inline void                             CKFetchRecordChangesOperation_SetFetchRecordChangesCompletionBlock(CKFetchRecordChangesOperation self, void* fetchRecordChangesCompletionBlock)                                                 { ((void (*)(CKFetchRecordChangesOperation, SEL, void*))bean_msgSend)(self, bean_sel("setFetchRecordChangesCompletionBlock:"), fetchRecordChangesCompletionBlock); }
 
 /* ===== CKFetchRecordZoneChangesConfiguration ===== */
 #ifndef BEAN_TYPEDEF_CKFetchRecordZoneChangesConfiguration
@@ -1950,6 +2165,8 @@ static inline NSUInteger             CKFetchRecordZoneChangesConfiguration_Resul
 static inline void                   CKFetchRecordZoneChangesConfiguration_SetResultsLimit(CKFetchRecordZoneChangesConfiguration self, NSUInteger resultsLimit)                                       { ((void (*)(CKFetchRecordZoneChangesConfiguration, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setResultsLimit:"), resultsLimit); }
 static inline NSArray                CKFetchRecordZoneChangesConfiguration_DesiredKeys(CKFetchRecordZoneChangesConfiguration self)                                                                    { return ((NSArray (*)(CKFetchRecordZoneChangesConfiguration, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
 static inline void                   CKFetchRecordZoneChangesConfiguration_SetDesiredKeys(CKFetchRecordZoneChangesConfiguration self, NSArray desiredKeys)                                            { ((void (*)(CKFetchRecordZoneChangesConfiguration, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
+static inline BOOL                   CKFetchRecordZoneChangesConfiguration_SupportsSecureCoding(void)                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKFetchRecordZoneChangesConfiguration"), bean_sel("supportsSecureCoding")); }
+static inline id                     CKFetchRecordZoneChangesConfiguration_CopyWithZone(CKFetchRecordZoneChangesConfiguration self, NSZone* zone)                                                     { return ((id (*)(CKFetchRecordZoneChangesConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKFetchRecordZoneChangesOptions ===== */
 #ifndef BEAN_TYPEDEF_CKFetchRecordZoneChangesOptions
@@ -1962,57 +2179,63 @@ static inline NSUInteger             CKFetchRecordZoneChangesOptions_ResultsLimi
 static inline void                   CKFetchRecordZoneChangesOptions_SetResultsLimit(CKFetchRecordZoneChangesOptions self, NSUInteger resultsLimit)                                       { ((void (*)(CKFetchRecordZoneChangesOptions, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setResultsLimit:"), resultsLimit); }
 static inline NSArray                CKFetchRecordZoneChangesOptions_DesiredKeys(CKFetchRecordZoneChangesOptions self)                                                                    { return ((NSArray (*)(CKFetchRecordZoneChangesOptions, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
 static inline void                   CKFetchRecordZoneChangesOptions_SetDesiredKeys(CKFetchRecordZoneChangesOptions self, NSArray desiredKeys)                                            { ((void (*)(CKFetchRecordZoneChangesOptions, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
+static inline BOOL                   CKFetchRecordZoneChangesOptions_SupportsSecureCoding(void)                                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKFetchRecordZoneChangesOptions"), bean_sel("supportsSecureCoding")); }
+static inline id                     CKFetchRecordZoneChangesOptions_CopyWithZone(CKFetchRecordZoneChangesOptions self, NSZone* zone)                                                     { return ((id (*)(CKFetchRecordZoneChangesOptions, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKQueryOperation ===== */
 #ifndef BEAN_TYPEDEF_CKQueryOperation
 #define BEAN_TYPEDEF_CKQueryOperation
 typedef bean_id CKQueryOperation;
 #endif
-static inline id                CKQueryOperation_Init(CKQueryOperation self)                                                   { return ((id (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                CKQueryOperation_InitWithQuery(CKQueryOperation self, CKQuery query)                           { return ((id (*)(CKQueryOperation, SEL, CKQuery))bean_msgSend)(self, bean_sel("initWithQuery:"), query); }
-static inline id                CKQueryOperation_InitWithCursor(CKQueryOperation self, CKQueryCursor cursor)                   { return ((id (*)(CKQueryOperation, SEL, CKQueryCursor))bean_msgSend)(self, bean_sel("initWithCursor:"), cursor); }
-static inline CKQuery           CKQueryOperation_Query(CKQueryOperation self)                                                  { return ((CKQuery (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("query")); }
-static inline void              CKQueryOperation_SetQuery(CKQueryOperation self, CKQuery query)                                { ((void (*)(CKQueryOperation, SEL, CKQuery))bean_msgSend)(self, bean_sel("setQuery:"), query); }
-static inline CKQueryCursor     CKQueryOperation_Cursor(CKQueryOperation self)                                                 { return ((CKQueryCursor (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("cursor")); }
-static inline void              CKQueryOperation_SetCursor(CKQueryOperation self, CKQueryCursor cursor)                        { ((void (*)(CKQueryOperation, SEL, CKQueryCursor))bean_msgSend)(self, bean_sel("setCursor:"), cursor); }
-static inline CKRecordZoneID    CKQueryOperation_ZoneID(CKQueryOperation self)                                                 { return ((CKRecordZoneID (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
-static inline void              CKQueryOperation_SetZoneID(CKQueryOperation self, CKRecordZoneID zoneID)                       { ((void (*)(CKQueryOperation, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("setZoneID:"), zoneID); }
-static inline NSUInteger        CKQueryOperation_ResultsLimit(CKQueryOperation self)                                           { return ((NSUInteger (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("resultsLimit")); }
-static inline void              CKQueryOperation_SetResultsLimit(CKQueryOperation self, NSUInteger resultsLimit)               { ((void (*)(CKQueryOperation, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setResultsLimit:"), resultsLimit); }
-static inline NSArray           CKQueryOperation_DesiredKeys(CKQueryOperation self)                                            { return ((NSArray (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
-static inline void              CKQueryOperation_SetDesiredKeys(CKQueryOperation self, NSArray desiredKeys)                    { ((void (*)(CKQueryOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
-static inline void*             CKQueryOperation_RecordFetchedBlock(CKQueryOperation self)                                     { return ((void* (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("recordFetchedBlock")); }
-static inline void              CKQueryOperation_SetRecordFetchedBlock(CKQueryOperation self, void* recordFetchedBlock)        { ((void (*)(CKQueryOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordFetchedBlock:"), recordFetchedBlock); }
-static inline void*             CKQueryOperation_RecordMatchedBlock(CKQueryOperation self)                                     { return ((void* (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("recordMatchedBlock")); }
-static inline void              CKQueryOperation_SetRecordMatchedBlock(CKQueryOperation self, void* recordMatchedBlock)        { ((void (*)(CKQueryOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordMatchedBlock:"), recordMatchedBlock); }
-static inline void*             CKQueryOperation_QueryCompletionBlock(CKQueryOperation self)                                   { return ((void* (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("queryCompletionBlock")); }
-static inline void              CKQueryOperation_SetQueryCompletionBlock(CKQueryOperation self, void* queryCompletionBlock)    { ((void (*)(CKQueryOperation, SEL, void*))bean_msgSend)(self, bean_sel("setQueryCompletionBlock:"), queryCompletionBlock); }
+static inline CKQueryOperation    CKQueryOperation_Init(CKQueryOperation self)                                                   { return ((CKQueryOperation (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKQueryOperation    CKQueryOperation_InitWithQuery(CKQueryOperation self, CKQuery query)                           { return ((CKQueryOperation (*)(CKQueryOperation, SEL, CKQuery))bean_msgSend)(self, bean_sel("initWithQuery:"), query); }
+static inline CKQueryOperation    CKQueryOperation_InitWithCursor(CKQueryOperation self, CKQueryCursor cursor)                   { return ((CKQueryOperation (*)(CKQueryOperation, SEL, CKQueryCursor))bean_msgSend)(self, bean_sel("initWithCursor:"), cursor); }
+static inline CKQuery             CKQueryOperation_Query(CKQueryOperation self)                                                  { return ((CKQuery (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("query")); }
+static inline void                CKQueryOperation_SetQuery(CKQueryOperation self, CKQuery query)                                { ((void (*)(CKQueryOperation, SEL, CKQuery))bean_msgSend)(self, bean_sel("setQuery:"), query); }
+static inline CKQueryCursor       CKQueryOperation_Cursor(CKQueryOperation self)                                                 { return ((CKQueryCursor (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("cursor")); }
+static inline void                CKQueryOperation_SetCursor(CKQueryOperation self, CKQueryCursor cursor)                        { ((void (*)(CKQueryOperation, SEL, CKQueryCursor))bean_msgSend)(self, bean_sel("setCursor:"), cursor); }
+static inline CKRecordZoneID      CKQueryOperation_ZoneID(CKQueryOperation self)                                                 { return ((CKRecordZoneID (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
+static inline void                CKQueryOperation_SetZoneID(CKQueryOperation self, CKRecordZoneID zoneID)                       { ((void (*)(CKQueryOperation, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("setZoneID:"), zoneID); }
+static inline NSUInteger          CKQueryOperation_ResultsLimit(CKQueryOperation self)                                           { return ((NSUInteger (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("resultsLimit")); }
+static inline void                CKQueryOperation_SetResultsLimit(CKQueryOperation self, NSUInteger resultsLimit)               { ((void (*)(CKQueryOperation, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setResultsLimit:"), resultsLimit); }
+static inline NSArray             CKQueryOperation_DesiredKeys(CKQueryOperation self)                                            { return ((NSArray (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
+static inline void                CKQueryOperation_SetDesiredKeys(CKQueryOperation self, NSArray desiredKeys)                    { ((void (*)(CKQueryOperation, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
+static inline void*               CKQueryOperation_RecordFetchedBlock(CKQueryOperation self)                                     { return ((void* (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("recordFetchedBlock")); }
+static inline void                CKQueryOperation_SetRecordFetchedBlock(CKQueryOperation self, void* recordFetchedBlock)        { ((void (*)(CKQueryOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordFetchedBlock:"), recordFetchedBlock); }
+static inline void*               CKQueryOperation_RecordMatchedBlock(CKQueryOperation self)                                     { return ((void* (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("recordMatchedBlock")); }
+static inline void                CKQueryOperation_SetRecordMatchedBlock(CKQueryOperation self, void* recordMatchedBlock)        { ((void (*)(CKQueryOperation, SEL, void*))bean_msgSend)(self, bean_sel("setRecordMatchedBlock:"), recordMatchedBlock); }
+static inline void*               CKQueryOperation_QueryCompletionBlock(CKQueryOperation self)                                   { return ((void* (*)(CKQueryOperation, SEL))bean_msgSend)(self, bean_sel("queryCompletionBlock")); }
+static inline void                CKQueryOperation_SetQueryCompletionBlock(CKQueryOperation self, void* queryCompletionBlock)    { ((void (*)(CKQueryOperation, SEL, void*))bean_msgSend)(self, bean_sel("setQueryCompletionBlock:"), queryCompletionBlock); }
 
 /* ===== CKQuerySubscription ===== */
 #ifndef BEAN_TYPEDEF_CKQuerySubscription
 #define BEAN_TYPEDEF_CKQuerySubscription
 typedef bean_id CKQuerySubscription;
 #endif
-static inline id                            CKQuerySubscription_InitWithRecordType_Predicate_Options(CKQuerySubscription self, NSString recordType, NSPredicate predicate, CKQuerySubscriptionOptions querySubscriptionOptions)                                            { return ((id (*)(CKQuerySubscription, SEL, NSString, NSPredicate, CKQuerySubscriptionOptions))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:options:"), recordType, predicate, querySubscriptionOptions); }
-static inline id                            CKQuerySubscription_InitWithRecordType_Predicate_SubscriptionID_Options(CKQuerySubscription self, NSString recordType, NSPredicate predicate, NSString subscriptionID, CKQuerySubscriptionOptions querySubscriptionOptions)    { return ((id (*)(CKQuerySubscription, SEL, NSString, NSPredicate, NSString, CKQuerySubscriptionOptions))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:subscriptionID:options:"), recordType, predicate, subscriptionID, querySubscriptionOptions); }
-static inline id                            CKQuerySubscription_InitWithCoder(CKQuerySubscription self, NSCoder aDecoder)                                                                                                                                                  { return ((id (*)(CKQuerySubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline CKQuerySubscription           CKQuerySubscription_InitWithRecordType_Predicate_Options(CKQuerySubscription self, NSString recordType, NSPredicate predicate, CKQuerySubscriptionOptions querySubscriptionOptions)                                            { return ((CKQuerySubscription (*)(CKQuerySubscription, SEL, NSString, NSPredicate, CKQuerySubscriptionOptions))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:options:"), recordType, predicate, querySubscriptionOptions); }
+static inline CKQuerySubscription           CKQuerySubscription_InitWithRecordType_Predicate_SubscriptionID_Options(CKQuerySubscription self, NSString recordType, NSPredicate predicate, NSString subscriptionID, CKQuerySubscriptionOptions querySubscriptionOptions)    { return ((CKQuerySubscription (*)(CKQuerySubscription, SEL, NSString, NSPredicate, NSString, CKQuerySubscriptionOptions))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:subscriptionID:options:"), recordType, predicate, subscriptionID, querySubscriptionOptions); }
+static inline CKQuerySubscription           CKQuerySubscription_InitWithCoder(CKQuerySubscription self, NSCoder aDecoder)                                                                                                                                                  { return ((CKQuerySubscription (*)(CKQuerySubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline NSString                      CKQuerySubscription_RecordType(CKQuerySubscription self)                                                                                                                                                                       { return ((NSString (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
 static inline NSPredicate                   CKQuerySubscription_Predicate(CKQuerySubscription self)                                                                                                                                                                        { return ((NSPredicate (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("predicate")); }
 static inline CKRecordZoneID                CKQuerySubscription_ZoneID(CKQuerySubscription self)                                                                                                                                                                           { return ((CKRecordZoneID (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
 static inline void                          CKQuerySubscription_SetZoneID(CKQuerySubscription self, CKRecordZoneID zoneID)                                                                                                                                                 { ((void (*)(CKQuerySubscription, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("setZoneID:"), zoneID); }
 static inline CKQuerySubscriptionOptions    CKQuerySubscription_QuerySubscriptionOptions(CKQuerySubscription self)                                                                                                                                                         { return ((CKQuerySubscriptionOptions (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("querySubscriptionOptions")); }
+static inline BOOL                          CKQuerySubscription_SupportsSecureCoding(void)                                                                                                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQuerySubscription"), bean_sel("supportsSecureCoding")); }
+static inline id                            CKQuerySubscription_CopyWithZone(CKQuerySubscription self, NSZone* zone)                                                                                                                                                       { return ((id (*)(CKQuerySubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKRecordID ===== */
 #ifndef BEAN_TYPEDEF_CKRecordID
 #define BEAN_TYPEDEF_CKRecordID
 typedef bean_id CKRecordID;
 #endif
-static inline id                CKRecordID_Init(CKRecordID self)                                                                     { return ((id (*)(CKRecordID, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                CKRecordID_New(void)                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordID"), bean_sel("new")); }
-static inline id                CKRecordID_InitWithRecordName(CKRecordID self, NSString recordName)                                  { return ((id (*)(CKRecordID, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordName:"), recordName); }
-static inline id                CKRecordID_InitWithRecordName_ZoneID(CKRecordID self, NSString recordName, CKRecordZoneID zoneID)    { return ((id (*)(CKRecordID, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordName:zoneID:"), recordName, zoneID); }
+static inline CKRecordID        CKRecordID_Init(CKRecordID self)                                                                     { return ((CKRecordID (*)(CKRecordID, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKRecordID        CKRecordID_New(void)                                                                                 { return ((CKRecordID (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordID"), bean_sel("new")); }
+static inline CKRecordID        CKRecordID_InitWithRecordName(CKRecordID self, NSString recordName)                                  { return ((CKRecordID (*)(CKRecordID, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordName:"), recordName); }
+static inline CKRecordID        CKRecordID_InitWithRecordName_ZoneID(CKRecordID self, NSString recordName, CKRecordZoneID zoneID)    { return ((CKRecordID (*)(CKRecordID, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordName:zoneID:"), recordName, zoneID); }
 static inline NSString          CKRecordID_RecordName(CKRecordID self)                                                               { return ((NSString (*)(CKRecordID, SEL))bean_msgSend)(self, bean_sel("recordName")); }
 static inline CKRecordZoneID    CKRecordID_ZoneID(CKRecordID self)                                                                   { return ((CKRecordZoneID (*)(CKRecordID, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
+static inline BOOL              CKRecordID_SupportsSecureCoding(void)                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordID"), bean_sel("supportsSecureCoding")); }
+static inline id                CKRecordID_CopyWithZone(CKRecordID self, NSZone* zone)                                               { return ((id (*)(CKRecordID, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKRecordZoneNotification ===== */
 #ifndef BEAN_TYPEDEF_CKRecordZoneNotification
@@ -2027,24 +2250,28 @@ static inline CKDatabaseScope    CKRecordZoneNotification_DatabaseScope(CKRecord
 #define BEAN_TYPEDEF_CKRecordZoneSubscription
 typedef bean_id CKRecordZoneSubscription;
 #endif
-static inline id                CKRecordZoneSubscription_InitWithZoneID(CKRecordZoneSubscription self, CKRecordZoneID zoneID)                                            { return ((id (*)(CKRecordZoneSubscription, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithZoneID:"), zoneID); }
-static inline id                CKRecordZoneSubscription_InitWithZoneID_SubscriptionID(CKRecordZoneSubscription self, CKRecordZoneID zoneID, NSString subscriptionID)    { return ((id (*)(CKRecordZoneSubscription, SEL, CKRecordZoneID, NSString))bean_msgSend)(self, bean_sel("initWithZoneID:subscriptionID:"), zoneID, subscriptionID); }
-static inline id                CKRecordZoneSubscription_InitWithCoder(CKRecordZoneSubscription self, NSCoder aDecoder)                                                  { return ((id (*)(CKRecordZoneSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline CKRecordZoneID    CKRecordZoneSubscription_ZoneID(CKRecordZoneSubscription self)                                                                           { return ((CKRecordZoneID (*)(CKRecordZoneSubscription, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
-static inline NSString          CKRecordZoneSubscription_RecordType(CKRecordZoneSubscription self)                                                                       { return ((NSString (*)(CKRecordZoneSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
-static inline void              CKRecordZoneSubscription_SetRecordType(CKRecordZoneSubscription self, NSString recordType)                                               { ((void (*)(CKRecordZoneSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
+static inline CKRecordZoneSubscription    CKRecordZoneSubscription_InitWithZoneID(CKRecordZoneSubscription self, CKRecordZoneID zoneID)                                            { return ((CKRecordZoneSubscription (*)(CKRecordZoneSubscription, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithZoneID:"), zoneID); }
+static inline CKRecordZoneSubscription    CKRecordZoneSubscription_InitWithZoneID_SubscriptionID(CKRecordZoneSubscription self, CKRecordZoneID zoneID, NSString subscriptionID)    { return ((CKRecordZoneSubscription (*)(CKRecordZoneSubscription, SEL, CKRecordZoneID, NSString))bean_msgSend)(self, bean_sel("initWithZoneID:subscriptionID:"), zoneID, subscriptionID); }
+static inline CKRecordZoneSubscription    CKRecordZoneSubscription_InitWithCoder(CKRecordZoneSubscription self, NSCoder aDecoder)                                                  { return ((CKRecordZoneSubscription (*)(CKRecordZoneSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline CKRecordZoneID              CKRecordZoneSubscription_ZoneID(CKRecordZoneSubscription self)                                                                           { return ((CKRecordZoneID (*)(CKRecordZoneSubscription, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
+static inline NSString                    CKRecordZoneSubscription_RecordType(CKRecordZoneSubscription self)                                                                       { return ((NSString (*)(CKRecordZoneSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
+static inline void                        CKRecordZoneSubscription_SetRecordType(CKRecordZoneSubscription self, NSString recordType)                                               { ((void (*)(CKRecordZoneSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
+static inline BOOL                        CKRecordZoneSubscription_SupportsSecureCoding(void)                                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZoneSubscription"), bean_sel("supportsSecureCoding")); }
+static inline id                          CKRecordZoneSubscription_CopyWithZone(CKRecordZoneSubscription self, NSZone* zone)                                                       { return ((id (*)(CKRecordZoneSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKSubscription ===== */
 #ifndef BEAN_TYPEDEF_CKSubscription
 #define BEAN_TYPEDEF_CKSubscription
 typedef bean_id CKSubscription;
 #endif
-static inline id                    CKSubscription_Init(CKSubscription self)                                                        { return ((id (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                    CKSubscription_New(void)                                                                        { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSubscription"), bean_sel("new")); }
+static inline CKSubscription        CKSubscription_Init(CKSubscription self)                                                        { return ((CKSubscription (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSubscription        CKSubscription_New(void)                                                                        { return ((CKSubscription (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSubscription"), bean_sel("new")); }
 static inline NSString              CKSubscription_SubscriptionID(CKSubscription self)                                              { return ((NSString (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("subscriptionID")); }
 static inline CKSubscriptionType    CKSubscription_SubscriptionType(CKSubscription self)                                            { return ((CKSubscriptionType (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("subscriptionType")); }
 static inline CKNotificationInfo    CKSubscription_NotificationInfo(CKSubscription self)                                            { return ((CKNotificationInfo (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("notificationInfo")); }
 static inline void                  CKSubscription_SetNotificationInfo(CKSubscription self, CKNotificationInfo notificationInfo)    { ((void (*)(CKSubscription, SEL, CKNotificationInfo))bean_msgSend)(self, bean_sel("setNotificationInfo:"), notificationInfo); }
+static inline BOOL                  CKSubscription_SupportsSecureCoding(void)                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSubscription"), bean_sel("supportsSecureCoding")); }
+static inline id                    CKSubscription_CopyWithZone(CKSubscription self, NSZone* zone)                                  { return ((id (*)(CKSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKSyncEngineDidFetchRecordZoneChangesEvent ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineDidFetchRecordZoneChangesEvent
@@ -2059,29 +2286,30 @@ static inline NSError           CKSyncEngineDidFetchRecordZoneChangesEvent_Error
 #define BEAN_TYPEDEF_CKSyncEngineFetchChangesScope
 typedef bean_id CKSyncEngineFetchChangesScope;
 #endif
-static inline id       CKSyncEngineFetchChangesScope_InitWithZoneIDs(CKSyncEngineFetchChangesScope self, NSSet zoneIDs)            { return ((id (*)(CKSyncEngineFetchChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithZoneIDs:"), zoneIDs); }
-static inline id       CKSyncEngineFetchChangesScope_InitWithExcludedZoneIDs(CKSyncEngineFetchChangesScope self, NSSet zoneIDs)    { return ((id (*)(CKSyncEngineFetchChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithExcludedZoneIDs:"), zoneIDs); }
-static inline BOOL     CKSyncEngineFetchChangesScope_ContainsZoneID(CKSyncEngineFetchChangesScope self, CKRecordZoneID zoneID)     { return ((BOOL (*)(CKSyncEngineFetchChangesScope, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("containsZoneID:"), zoneID); }
-static inline NSSet    CKSyncEngineFetchChangesScope_ZoneIDs(CKSyncEngineFetchChangesScope self)                                   { return ((NSSet (*)(CKSyncEngineFetchChangesScope, SEL))bean_msgSend)(self, bean_sel("zoneIDs")); }
-static inline NSSet    CKSyncEngineFetchChangesScope_ExcludedZoneIDs(CKSyncEngineFetchChangesScope self)                           { return ((NSSet (*)(CKSyncEngineFetchChangesScope, SEL))bean_msgSend)(self, bean_sel("excludedZoneIDs")); }
+static inline CKSyncEngineFetchChangesScope    CKSyncEngineFetchChangesScope_InitWithZoneIDs(CKSyncEngineFetchChangesScope self, NSSet zoneIDs)            { return ((CKSyncEngineFetchChangesScope (*)(CKSyncEngineFetchChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithZoneIDs:"), zoneIDs); }
+static inline CKSyncEngineFetchChangesScope    CKSyncEngineFetchChangesScope_InitWithExcludedZoneIDs(CKSyncEngineFetchChangesScope self, NSSet zoneIDs)    { return ((CKSyncEngineFetchChangesScope (*)(CKSyncEngineFetchChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithExcludedZoneIDs:"), zoneIDs); }
+static inline BOOL                             CKSyncEngineFetchChangesScope_ContainsZoneID(CKSyncEngineFetchChangesScope self, CKRecordZoneID zoneID)     { return ((BOOL (*)(CKSyncEngineFetchChangesScope, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("containsZoneID:"), zoneID); }
+static inline NSSet                            CKSyncEngineFetchChangesScope_ZoneIDs(CKSyncEngineFetchChangesScope self)                                   { return ((NSSet (*)(CKSyncEngineFetchChangesScope, SEL))bean_msgSend)(self, bean_sel("zoneIDs")); }
+static inline NSSet                            CKSyncEngineFetchChangesScope_ExcludedZoneIDs(CKSyncEngineFetchChangesScope self)                           { return ((NSSet (*)(CKSyncEngineFetchChangesScope, SEL))bean_msgSend)(self, bean_sel("excludedZoneIDs")); }
+static inline id                               CKSyncEngineFetchChangesScope_CopyWithZone(CKSyncEngineFetchChangesScope self, NSZone* zone)                { return ((id (*)(CKSyncEngineFetchChangesScope, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKSyncEngineFetchedZoneDeletion ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineFetchedZoneDeletion
 #define BEAN_TYPEDEF_CKSyncEngineFetchedZoneDeletion
 typedef bean_id CKSyncEngineFetchedZoneDeletion;
 #endif
-static inline id                                CKSyncEngineFetchedZoneDeletion_Init(CKSyncEngineFetchedZoneDeletion self)      { return ((id (*)(CKSyncEngineFetchedZoneDeletion, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                CKSyncEngineFetchedZoneDeletion_New(void)                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFetchedZoneDeletion"), bean_sel("new")); }
-static inline CKRecordZoneID                    CKSyncEngineFetchedZoneDeletion_ZoneID(CKSyncEngineFetchedZoneDeletion self)    { return ((CKRecordZoneID (*)(CKSyncEngineFetchedZoneDeletion, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
-static inline CKSyncEngineZoneDeletionReason    CKSyncEngineFetchedZoneDeletion_Reason(CKSyncEngineFetchedZoneDeletion self)    { return ((CKSyncEngineZoneDeletionReason (*)(CKSyncEngineFetchedZoneDeletion, SEL))bean_msgSend)(self, bean_sel("reason")); }
+static inline CKSyncEngineFetchedZoneDeletion    CKSyncEngineFetchedZoneDeletion_Init(CKSyncEngineFetchedZoneDeletion self)      { return ((CKSyncEngineFetchedZoneDeletion (*)(CKSyncEngineFetchedZoneDeletion, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineFetchedZoneDeletion    CKSyncEngineFetchedZoneDeletion_New(void)                                       { return ((CKSyncEngineFetchedZoneDeletion (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFetchedZoneDeletion"), bean_sel("new")); }
+static inline CKRecordZoneID                     CKSyncEngineFetchedZoneDeletion_ZoneID(CKSyncEngineFetchedZoneDeletion self)    { return ((CKRecordZoneID (*)(CKSyncEngineFetchedZoneDeletion, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
+static inline CKSyncEngineZoneDeletionReason     CKSyncEngineFetchedZoneDeletion_Reason(CKSyncEngineFetchedZoneDeletion self)    { return ((CKSyncEngineZoneDeletionReason (*)(CKSyncEngineFetchedZoneDeletion, SEL))bean_msgSend)(self, bean_sel("reason")); }
 
 /* ===== CKSyncEnginePendingDatabaseChange ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEnginePendingDatabaseChange
 #define BEAN_TYPEDEF_CKSyncEnginePendingDatabaseChange
 typedef bean_id CKSyncEnginePendingDatabaseChange;
 #endif
-static inline id                                       CKSyncEnginePendingDatabaseChange_Init(CKSyncEnginePendingDatabaseChange self)      { return ((id (*)(CKSyncEnginePendingDatabaseChange, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                       CKSyncEnginePendingDatabaseChange_New(void)                                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEnginePendingDatabaseChange"), bean_sel("new")); }
+static inline CKSyncEnginePendingDatabaseChange        CKSyncEnginePendingDatabaseChange_Init(CKSyncEnginePendingDatabaseChange self)      { return ((CKSyncEnginePendingDatabaseChange (*)(CKSyncEnginePendingDatabaseChange, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEnginePendingDatabaseChange        CKSyncEnginePendingDatabaseChange_New(void)                                         { return ((CKSyncEnginePendingDatabaseChange (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEnginePendingDatabaseChange"), bean_sel("new")); }
 static inline CKRecordZoneID                           CKSyncEnginePendingDatabaseChange_ZoneID(CKSyncEnginePendingDatabaseChange self)    { return ((CKRecordZoneID (*)(CKSyncEnginePendingDatabaseChange, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
 static inline CKSyncEnginePendingDatabaseChangeType    CKSyncEnginePendingDatabaseChange_Type(CKSyncEnginePendingDatabaseChange self)      { return ((CKSyncEnginePendingDatabaseChangeType (*)(CKSyncEnginePendingDatabaseChange, SEL))bean_msgSend)(self, bean_sel("type")); }
 
@@ -2090,7 +2318,7 @@ static inline CKSyncEnginePendingDatabaseChangeType    CKSyncEnginePendingDataba
 #define BEAN_TYPEDEF_CKSyncEnginePendingZoneDelete
 typedef bean_id CKSyncEnginePendingZoneDelete;
 #endif
-static inline id    CKSyncEnginePendingZoneDelete_InitWithZoneID(CKSyncEnginePendingZoneDelete self, CKRecordZoneID zoneID)    { return ((id (*)(CKSyncEnginePendingZoneDelete, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithZoneID:"), zoneID); }
+static inline CKSyncEnginePendingZoneDelete    CKSyncEnginePendingZoneDelete_InitWithZoneID(CKSyncEnginePendingZoneDelete self, CKRecordZoneID zoneID)    { return ((CKSyncEnginePendingZoneDelete (*)(CKSyncEnginePendingZoneDelete, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithZoneID:"), zoneID); }
 
 /* ===== CKSyncEngineStateUpdateEvent ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineStateUpdateEvent
@@ -2111,11 +2339,11 @@ static inline CKRecordZoneID    CKSyncEngineWillFetchRecordZoneChangesEvent_Zone
 #define BEAN_TYPEDEF_CLLocation
 typedef bean_id CLLocation;
 #endif
-static inline id                             CLLocation_InitWithLatitude_Longitude(CLLocation self, CGFloat latitude, CGFloat longitude)                                                                                                                                                                                                                                                                                                      { return ((id (*)(CLLocation, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLatitude:longitude:"), latitude, longitude); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, NSDate timestamp)                                                                                                                                                                               { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_Speed_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat speed, NSDate timestamp)                                                                                                                                   { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, speed, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp)                                                       { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp_SourceInfo(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp, CLLocationSourceInformation sourceInfo)    { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate, CLLocationSourceInformation))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:sourceInfo:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp, sourceInfo); }
+static inline CLLocation                     CLLocation_InitWithLatitude_Longitude(CLLocation self, CGFloat latitude, CGFloat longitude)                                                                                                                                                                                                                                                                                                      { return ((CLLocation (*)(CLLocation, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLatitude:longitude:"), latitude, longitude); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, NSDate timestamp)                                                                                                                                                                               { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_Speed_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat speed, NSDate timestamp)                                                                                                                                   { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, speed, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp)                                                       { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp_SourceInfo(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp, CLLocationSourceInformation sourceInfo)    { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate, CLLocationSourceInformation))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:sourceInfo:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp, sourceInfo); }
 static inline CGFloat                        CLLocation_GetDistanceFrom(CLLocation self, const CLLocation location)                                                                                                                                                                                                                                                                                                                           { return ((CGFloat (*)(CLLocation, SEL, const CLLocation))bean_msgSend_fpret)(self, bean_sel("getDistanceFrom:"), location); }
 static inline CGFloat                        CLLocation_DistanceFromLocation(CLLocation self, const CLLocation location)                                                                                                                                                                                                                                                                                                                      { return ((CGFloat (*)(CLLocation, SEL, const CLLocation))bean_msgSend_fpret)(self, bean_sel("distanceFromLocation:"), location); }
 static inline CLLocationCoordinate2D         CLLocation_Coordinate(CLLocation self)                                                                                                                                                                                                                                                                                                                                                           { return ((CLLocationCoordinate2D (*)(CLLocation, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
@@ -2130,25 +2358,28 @@ static inline CGFloat                        CLLocation_SpeedAccuracy(CLLocation
 static inline NSDate                         CLLocation_Timestamp(CLLocation self)                                                                                                                                                                                                                                                                                                                                                            { return ((NSDate (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
 static inline CLFloor                        CLLocation_Floor(CLLocation self)                                                                                                                                                                                                                                                                                                                                                                { return ((CLFloor (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("floor")); }
 static inline CLLocationSourceInformation    CLLocation_SourceInformation(CLLocation self)                                                                                                                                                                                                                                                                                                                                                    { return ((CLLocationSourceInformation (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("sourceInformation")); }
+static inline id                             CLLocation_CopyWithZone(CLLocation self, NSZone* zone)                                                                                                                                                                                                                                                                                                                                           { return ((id (*)(CLLocation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                           CLLocation_SupportsSecureCoding(void)                                                                                                                                                                                                                                                                                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocation"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CKLocationSortDescriptor ===== */
 #ifndef BEAN_TYPEDEF_CKLocationSortDescriptor
 #define BEAN_TYPEDEF_CKLocationSortDescriptor
 typedef bean_id CKLocationSortDescriptor;
 #endif
-static inline id            CKLocationSortDescriptor_Init(CKLocationSortDescriptor self)                                                                       { return ((id (*)(CKLocationSortDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id            CKLocationSortDescriptor_New(void)                                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKLocationSortDescriptor"), bean_sel("new")); }
-static inline id            CKLocationSortDescriptor_InitWithKey_RelativeLocation(CKLocationSortDescriptor self, NSString key, CLLocation relativeLocation)    { return ((id (*)(CKLocationSortDescriptor, SEL, NSString, CLLocation))bean_msgSend)(self, bean_sel("initWithKey:relativeLocation:"), key, relativeLocation); }
-static inline id            CKLocationSortDescriptor_InitWithCoder(CKLocationSortDescriptor self, NSCoder aDecoder)                                            { return ((id (*)(CKLocationSortDescriptor, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline CLLocation    CKLocationSortDescriptor_RelativeLocation(CKLocationSortDescriptor self)                                                           { return ((CLLocation (*)(CKLocationSortDescriptor, SEL))bean_msgSend)(self, bean_sel("relativeLocation")); }
+static inline CKLocationSortDescriptor    CKLocationSortDescriptor_Init(CKLocationSortDescriptor self)                                                                       { return ((CKLocationSortDescriptor (*)(CKLocationSortDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKLocationSortDescriptor    CKLocationSortDescriptor_New(void)                                                                                                 { return ((CKLocationSortDescriptor (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKLocationSortDescriptor"), bean_sel("new")); }
+static inline CKLocationSortDescriptor    CKLocationSortDescriptor_InitWithKey_RelativeLocation(CKLocationSortDescriptor self, NSString key, CLLocation relativeLocation)    { return ((CKLocationSortDescriptor (*)(CKLocationSortDescriptor, SEL, NSString, CLLocation))bean_msgSend)(self, bean_sel("initWithKey:relativeLocation:"), key, relativeLocation); }
+static inline CKLocationSortDescriptor    CKLocationSortDescriptor_InitWithCoder(CKLocationSortDescriptor self, NSCoder aDecoder)                                            { return ((CKLocationSortDescriptor (*)(CKLocationSortDescriptor, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline CLLocation                  CKLocationSortDescriptor_RelativeLocation(CKLocationSortDescriptor self)                                                           { return ((CLLocation (*)(CKLocationSortDescriptor, SEL))bean_msgSend)(self, bean_sel("relativeLocation")); }
+static inline BOOL                        CKLocationSortDescriptor_SupportsSecureCoding(void)                                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKLocationSortDescriptor"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CKNotification ===== */
 #ifndef BEAN_TYPEDEF_CKNotification
 #define BEAN_TYPEDEF_CKNotification
 typedef bean_id CKNotification;
 #endif
-static inline id                    CKNotification_Init(CKNotification self)                                                            { return ((id (*)(CKNotification, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                    CKNotification_New(void)                                                                            { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKNotification"), bean_sel("new")); }
+static inline CKNotification        CKNotification_Init(CKNotification self)                                                            { return ((CKNotification (*)(CKNotification, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKNotification        CKNotification_New(void)                                                                            { return ((CKNotification (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKNotification"), bean_sel("new")); }
 static inline CKNotification        CKNotification_NotificationFromRemoteNotificationDictionary(NSDictionary notificationDictionary)    { return ((CKNotification (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("CKNotification"), bean_sel("notificationFromRemoteNotificationDictionary:"), notificationDictionary); }
 static inline CKNotificationType    CKNotification_NotificationType(CKNotification self)                                                { return ((CKNotificationType (*)(CKNotification, SEL))bean_msgSend)(self, bean_sel("notificationType")); }
 static inline CKNotificationID      CKNotification_NotificationID(CKNotification self)                                                  { return ((CKNotificationID (*)(CKNotification, SEL))bean_msgSend)(self, bean_sel("notificationID")); }
@@ -2195,19 +2426,19 @@ static inline CKRecordID                       CKSyncEngineAccountChangeEvent_Cu
 #define BEAN_TYPEDEF_CKSyncEngineFetchedRecordDeletion
 typedef bean_id CKSyncEngineFetchedRecordDeletion;
 #endif
-static inline id            CKSyncEngineFetchedRecordDeletion_Init(CKSyncEngineFetchedRecordDeletion self)          { return ((id (*)(CKSyncEngineFetchedRecordDeletion, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id            CKSyncEngineFetchedRecordDeletion_New(void)                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFetchedRecordDeletion"), bean_sel("new")); }
-static inline CKRecordID    CKSyncEngineFetchedRecordDeletion_RecordID(CKSyncEngineFetchedRecordDeletion self)      { return ((CKRecordID (*)(CKSyncEngineFetchedRecordDeletion, SEL))bean_msgSend)(self, bean_sel("recordID")); }
-static inline NSString      CKSyncEngineFetchedRecordDeletion_RecordType(CKSyncEngineFetchedRecordDeletion self)    { return ((NSString (*)(CKSyncEngineFetchedRecordDeletion, SEL))bean_msgSend)(self, bean_sel("recordType")); }
+static inline CKSyncEngineFetchedRecordDeletion    CKSyncEngineFetchedRecordDeletion_Init(CKSyncEngineFetchedRecordDeletion self)          { return ((CKSyncEngineFetchedRecordDeletion (*)(CKSyncEngineFetchedRecordDeletion, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineFetchedRecordDeletion    CKSyncEngineFetchedRecordDeletion_New(void)                                             { return ((CKSyncEngineFetchedRecordDeletion (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFetchedRecordDeletion"), bean_sel("new")); }
+static inline CKRecordID                           CKSyncEngineFetchedRecordDeletion_RecordID(CKSyncEngineFetchedRecordDeletion self)      { return ((CKRecordID (*)(CKSyncEngineFetchedRecordDeletion, SEL))bean_msgSend)(self, bean_sel("recordID")); }
+static inline NSString                             CKSyncEngineFetchedRecordDeletion_RecordType(CKSyncEngineFetchedRecordDeletion self)    { return ((NSString (*)(CKSyncEngineFetchedRecordDeletion, SEL))bean_msgSend)(self, bean_sel("recordType")); }
 
 /* ===== CKSyncEnginePendingRecordZoneChange ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEnginePendingRecordZoneChange
 #define BEAN_TYPEDEF_CKSyncEnginePendingRecordZoneChange
 typedef bean_id CKSyncEnginePendingRecordZoneChange;
 #endif
-static inline id                                         CKSyncEnginePendingRecordZoneChange_InitWithRecordID_Type(CKSyncEnginePendingRecordZoneChange self, CKRecordID recordID, CKSyncEnginePendingRecordZoneChangeType type)    { return ((id (*)(CKSyncEnginePendingRecordZoneChange, SEL, CKRecordID, CKSyncEnginePendingRecordZoneChangeType))bean_msgSend)(self, bean_sel("initWithRecordID:type:"), recordID, type); }
-static inline id                                         CKSyncEnginePendingRecordZoneChange_Init(CKSyncEnginePendingRecordZoneChange self)                                                                                        { return ((id (*)(CKSyncEnginePendingRecordZoneChange, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                         CKSyncEnginePendingRecordZoneChange_New(void)                                                                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEnginePendingRecordZoneChange"), bean_sel("new")); }
+static inline CKSyncEnginePendingRecordZoneChange        CKSyncEnginePendingRecordZoneChange_InitWithRecordID_Type(CKSyncEnginePendingRecordZoneChange self, CKRecordID recordID, CKSyncEnginePendingRecordZoneChangeType type)    { return ((CKSyncEnginePendingRecordZoneChange (*)(CKSyncEnginePendingRecordZoneChange, SEL, CKRecordID, CKSyncEnginePendingRecordZoneChangeType))bean_msgSend)(self, bean_sel("initWithRecordID:type:"), recordID, type); }
+static inline CKSyncEnginePendingRecordZoneChange        CKSyncEnginePendingRecordZoneChange_Init(CKSyncEnginePendingRecordZoneChange self)                                                                                        { return ((CKSyncEnginePendingRecordZoneChange (*)(CKSyncEnginePendingRecordZoneChange, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEnginePendingRecordZoneChange        CKSyncEnginePendingRecordZoneChange_New(void)                                                                                                                             { return ((CKSyncEnginePendingRecordZoneChange (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEnginePendingRecordZoneChange"), bean_sel("new")); }
 static inline CKRecordID                                 CKSyncEnginePendingRecordZoneChange_RecordID(CKSyncEnginePendingRecordZoneChange self)                                                                                    { return ((CKRecordID (*)(CKSyncEnginePendingRecordZoneChange, SEL))bean_msgSend)(self, bean_sel("recordID")); }
 static inline CKSyncEnginePendingRecordZoneChangeType    CKSyncEnginePendingRecordZoneChange_Type(CKSyncEnginePendingRecordZoneChange self)                                                                                        { return ((CKSyncEnginePendingRecordZoneChangeType (*)(CKSyncEnginePendingRecordZoneChange, SEL))bean_msgSend)(self, bean_sel("type")); }
 
@@ -2216,74 +2447,83 @@ static inline CKSyncEnginePendingRecordZoneChangeType    CKSyncEnginePendingReco
 #define BEAN_TYPEDEF_CKUserIdentityLookupInfo
 typedef bean_id CKUserIdentityLookupInfo;
 #endif
-static inline id            CKUserIdentityLookupInfo_Init(CKUserIdentityLookupInfo self)                                             { return ((id (*)(CKUserIdentityLookupInfo, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id            CKUserIdentityLookupInfo_New(void)                                                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("new")); }
-static inline id            CKUserIdentityLookupInfo_InitWithEmailAddress(CKUserIdentityLookupInfo self, NSString emailAddress)      { return ((id (*)(CKUserIdentityLookupInfo, SEL, NSString))bean_msgSend)(self, bean_sel("initWithEmailAddress:"), emailAddress); }
-static inline id            CKUserIdentityLookupInfo_InitWithPhoneNumber(CKUserIdentityLookupInfo self, NSString phoneNumber)        { return ((id (*)(CKUserIdentityLookupInfo, SEL, NSString))bean_msgSend)(self, bean_sel("initWithPhoneNumber:"), phoneNumber); }
-static inline id            CKUserIdentityLookupInfo_InitWithUserRecordID(CKUserIdentityLookupInfo self, CKRecordID userRecordID)    { return ((id (*)(CKUserIdentityLookupInfo, SEL, CKRecordID))bean_msgSend)(self, bean_sel("initWithUserRecordID:"), userRecordID); }
-static inline NSArray       CKUserIdentityLookupInfo_LookupInfosWithEmails(NSArray emails)                                           { return ((NSArray (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("lookupInfosWithEmails:"), emails); }
-static inline NSArray       CKUserIdentityLookupInfo_LookupInfosWithPhoneNumbers(NSArray phoneNumbers)                               { return ((NSArray (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("lookupInfosWithPhoneNumbers:"), phoneNumbers); }
-static inline NSArray       CKUserIdentityLookupInfo_LookupInfosWithRecordIDs(NSArray recordIDs)                                     { return ((NSArray (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("lookupInfosWithRecordIDs:"), recordIDs); }
-static inline NSString      CKUserIdentityLookupInfo_EmailAddress(CKUserIdentityLookupInfo self)                                     { return ((NSString (*)(CKUserIdentityLookupInfo, SEL))bean_msgSend)(self, bean_sel("emailAddress")); }
-static inline NSString      CKUserIdentityLookupInfo_PhoneNumber(CKUserIdentityLookupInfo self)                                      { return ((NSString (*)(CKUserIdentityLookupInfo, SEL))bean_msgSend)(self, bean_sel("phoneNumber")); }
-static inline CKRecordID    CKUserIdentityLookupInfo_UserRecordID(CKUserIdentityLookupInfo self)                                     { return ((CKRecordID (*)(CKUserIdentityLookupInfo, SEL))bean_msgSend)(self, bean_sel("userRecordID")); }
+static inline CKUserIdentityLookupInfo    CKUserIdentityLookupInfo_Init(CKUserIdentityLookupInfo self)                                             { return ((CKUserIdentityLookupInfo (*)(CKUserIdentityLookupInfo, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKUserIdentityLookupInfo    CKUserIdentityLookupInfo_New(void)                                                                       { return ((CKUserIdentityLookupInfo (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("new")); }
+static inline CKUserIdentityLookupInfo    CKUserIdentityLookupInfo_InitWithEmailAddress(CKUserIdentityLookupInfo self, NSString emailAddress)      { return ((CKUserIdentityLookupInfo (*)(CKUserIdentityLookupInfo, SEL, NSString))bean_msgSend)(self, bean_sel("initWithEmailAddress:"), emailAddress); }
+static inline CKUserIdentityLookupInfo    CKUserIdentityLookupInfo_InitWithPhoneNumber(CKUserIdentityLookupInfo self, NSString phoneNumber)        { return ((CKUserIdentityLookupInfo (*)(CKUserIdentityLookupInfo, SEL, NSString))bean_msgSend)(self, bean_sel("initWithPhoneNumber:"), phoneNumber); }
+static inline CKUserIdentityLookupInfo    CKUserIdentityLookupInfo_InitWithUserRecordID(CKUserIdentityLookupInfo self, CKRecordID userRecordID)    { return ((CKUserIdentityLookupInfo (*)(CKUserIdentityLookupInfo, SEL, CKRecordID))bean_msgSend)(self, bean_sel("initWithUserRecordID:"), userRecordID); }
+static inline NSArray                     CKUserIdentityLookupInfo_LookupInfosWithEmails(NSArray emails)                                           { return ((NSArray (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("lookupInfosWithEmails:"), emails); }
+static inline NSArray                     CKUserIdentityLookupInfo_LookupInfosWithPhoneNumbers(NSArray phoneNumbers)                               { return ((NSArray (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("lookupInfosWithPhoneNumbers:"), phoneNumbers); }
+static inline NSArray                     CKUserIdentityLookupInfo_LookupInfosWithRecordIDs(NSArray recordIDs)                                     { return ((NSArray (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("lookupInfosWithRecordIDs:"), recordIDs); }
+static inline NSString                    CKUserIdentityLookupInfo_EmailAddress(CKUserIdentityLookupInfo self)                                     { return ((NSString (*)(CKUserIdentityLookupInfo, SEL))bean_msgSend)(self, bean_sel("emailAddress")); }
+static inline NSString                    CKUserIdentityLookupInfo_PhoneNumber(CKUserIdentityLookupInfo self)                                      { return ((NSString (*)(CKUserIdentityLookupInfo, SEL))bean_msgSend)(self, bean_sel("phoneNumber")); }
+static inline CKRecordID                  CKUserIdentityLookupInfo_UserRecordID(CKUserIdentityLookupInfo self)                                     { return ((CKRecordID (*)(CKUserIdentityLookupInfo, SEL))bean_msgSend)(self, bean_sel("userRecordID")); }
+static inline BOOL                        CKUserIdentityLookupInfo_SupportsSecureCoding(void)                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKUserIdentityLookupInfo"), bean_sel("supportsSecureCoding")); }
+static inline id                          CKUserIdentityLookupInfo_CopyWithZone(CKUserIdentityLookupInfo self, NSZone* zone)                       { return ((id (*)(CKUserIdentityLookupInfo, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKSyncEngineSendChangesScope ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineSendChangesScope
 #define BEAN_TYPEDEF_CKSyncEngineSendChangesScope
 typedef bean_id CKSyncEngineSendChangesScope;
 #endif
-static inline id       CKSyncEngineSendChangesScope_InitWithZoneIDs(CKSyncEngineSendChangesScope self, NSSet zoneIDs)                                                                  { return ((id (*)(CKSyncEngineSendChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithZoneIDs:"), zoneIDs); }
-static inline id       CKSyncEngineSendChangesScope_InitWithExcludedZoneIDs(CKSyncEngineSendChangesScope self, NSSet excludedZoneIDs)                                                  { return ((id (*)(CKSyncEngineSendChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithExcludedZoneIDs:"), excludedZoneIDs); }
-static inline id       CKSyncEngineSendChangesScope_InitWithRecordIDs(CKSyncEngineSendChangesScope self, NSSet recordIDs)                                                              { return ((id (*)(CKSyncEngineSendChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithRecordIDs:"), recordIDs); }
-static inline BOOL     CKSyncEngineSendChangesScope_ContainsRecordID(CKSyncEngineSendChangesScope self, CKRecordID recordID)                                                           { return ((BOOL (*)(CKSyncEngineSendChangesScope, SEL, CKRecordID))bean_msgSend)(self, bean_sel("containsRecordID:"), recordID); }
-static inline BOOL     CKSyncEngineSendChangesScope_ContainsPendingRecordZoneChange(CKSyncEngineSendChangesScope self, CKSyncEnginePendingRecordZoneChange pendingRecordZoneChange)    { return ((BOOL (*)(CKSyncEngineSendChangesScope, SEL, CKSyncEnginePendingRecordZoneChange))bean_msgSend)(self, bean_sel("containsPendingRecordZoneChange:"), pendingRecordZoneChange); }
-static inline NSSet    CKSyncEngineSendChangesScope_ZoneIDs(CKSyncEngineSendChangesScope self)                                                                                         { return ((NSSet (*)(CKSyncEngineSendChangesScope, SEL))bean_msgSend)(self, bean_sel("zoneIDs")); }
-static inline NSSet    CKSyncEngineSendChangesScope_ExcludedZoneIDs(CKSyncEngineSendChangesScope self)                                                                                 { return ((NSSet (*)(CKSyncEngineSendChangesScope, SEL))bean_msgSend)(self, bean_sel("excludedZoneIDs")); }
-static inline NSSet    CKSyncEngineSendChangesScope_RecordIDs(CKSyncEngineSendChangesScope self)                                                                                       { return ((NSSet (*)(CKSyncEngineSendChangesScope, SEL))bean_msgSend)(self, bean_sel("recordIDs")); }
+static inline CKSyncEngineSendChangesScope    CKSyncEngineSendChangesScope_InitWithZoneIDs(CKSyncEngineSendChangesScope self, NSSet zoneIDs)                                                                  { return ((CKSyncEngineSendChangesScope (*)(CKSyncEngineSendChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithZoneIDs:"), zoneIDs); }
+static inline CKSyncEngineSendChangesScope    CKSyncEngineSendChangesScope_InitWithExcludedZoneIDs(CKSyncEngineSendChangesScope self, NSSet excludedZoneIDs)                                                  { return ((CKSyncEngineSendChangesScope (*)(CKSyncEngineSendChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithExcludedZoneIDs:"), excludedZoneIDs); }
+static inline CKSyncEngineSendChangesScope    CKSyncEngineSendChangesScope_InitWithRecordIDs(CKSyncEngineSendChangesScope self, NSSet recordIDs)                                                              { return ((CKSyncEngineSendChangesScope (*)(CKSyncEngineSendChangesScope, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithRecordIDs:"), recordIDs); }
+static inline BOOL                            CKSyncEngineSendChangesScope_ContainsRecordID(CKSyncEngineSendChangesScope self, CKRecordID recordID)                                                           { return ((BOOL (*)(CKSyncEngineSendChangesScope, SEL, CKRecordID))bean_msgSend)(self, bean_sel("containsRecordID:"), recordID); }
+static inline BOOL                            CKSyncEngineSendChangesScope_ContainsPendingRecordZoneChange(CKSyncEngineSendChangesScope self, CKSyncEnginePendingRecordZoneChange pendingRecordZoneChange)    { return ((BOOL (*)(CKSyncEngineSendChangesScope, SEL, CKSyncEnginePendingRecordZoneChange))bean_msgSend)(self, bean_sel("containsPendingRecordZoneChange:"), pendingRecordZoneChange); }
+static inline NSSet                           CKSyncEngineSendChangesScope_ZoneIDs(CKSyncEngineSendChangesScope self)                                                                                         { return ((NSSet (*)(CKSyncEngineSendChangesScope, SEL))bean_msgSend)(self, bean_sel("zoneIDs")); }
+static inline NSSet                           CKSyncEngineSendChangesScope_ExcludedZoneIDs(CKSyncEngineSendChangesScope self)                                                                                 { return ((NSSet (*)(CKSyncEngineSendChangesScope, SEL))bean_msgSend)(self, bean_sel("excludedZoneIDs")); }
+static inline NSSet                           CKSyncEngineSendChangesScope_RecordIDs(CKSyncEngineSendChangesScope self)                                                                                       { return ((NSSet (*)(CKSyncEngineSendChangesScope, SEL))bean_msgSend)(self, bean_sel("recordIDs")); }
+static inline id                              CKSyncEngineSendChangesScope_CopyWithZone(CKSyncEngineSendChangesScope self, NSZone* zone)                                                                      { return ((id (*)(CKSyncEngineSendChangesScope, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKUserIdentity ===== */
 #ifndef BEAN_TYPEDEF_CKUserIdentity
 #define BEAN_TYPEDEF_CKUserIdentity
 typedef bean_id CKUserIdentity;
 #endif
-static inline id                          CKUserIdentity_Init(CKUserIdentity self)                  { return ((id (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                          CKUserIdentity_New(void)                                  { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKUserIdentity"), bean_sel("new")); }
-static inline CKRecordID                  CKUserIdentity_UserRecordID(CKUserIdentity self)          { return ((CKRecordID (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("userRecordID")); }
-static inline CKUserIdentityLookupInfo    CKUserIdentity_LookupInfo(CKUserIdentity self)            { return ((CKUserIdentityLookupInfo (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("lookupInfo")); }
-static inline NSPersonNameComponents      CKUserIdentity_NameComponents(CKUserIdentity self)        { return ((NSPersonNameComponents (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("nameComponents")); }
-static inline BOOL                        CKUserIdentity_HasiCloudAccount(CKUserIdentity self)      { return ((BOOL (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("hasiCloudAccount")); }
-static inline NSArray                     CKUserIdentity_ContactIdentifiers(CKUserIdentity self)    { return ((NSArray (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("contactIdentifiers")); }
+static inline CKUserIdentity              CKUserIdentity_Init(CKUserIdentity self)                          { return ((CKUserIdentity (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKUserIdentity              CKUserIdentity_New(void)                                          { return ((CKUserIdentity (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKUserIdentity"), bean_sel("new")); }
+static inline CKRecordID                  CKUserIdentity_UserRecordID(CKUserIdentity self)                  { return ((CKRecordID (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("userRecordID")); }
+static inline CKUserIdentityLookupInfo    CKUserIdentity_LookupInfo(CKUserIdentity self)                    { return ((CKUserIdentityLookupInfo (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("lookupInfo")); }
+static inline NSPersonNameComponents      CKUserIdentity_NameComponents(CKUserIdentity self)                { return ((NSPersonNameComponents (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("nameComponents")); }
+static inline BOOL                        CKUserIdentity_HasiCloudAccount(CKUserIdentity self)              { return ((BOOL (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("hasiCloudAccount")); }
+static inline NSArray                     CKUserIdentity_ContactIdentifiers(CKUserIdentity self)            { return ((NSArray (*)(CKUserIdentity, SEL))bean_msgSend)(self, bean_sel("contactIdentifiers")); }
+static inline BOOL                        CKUserIdentity_SupportsSecureCoding(void)                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKUserIdentity"), bean_sel("supportsSecureCoding")); }
+static inline id                          CKUserIdentity_CopyWithZone(CKUserIdentity self, NSZone* zone)    { return ((id (*)(CKUserIdentity, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKShareAccessRequester ===== */
 #ifndef BEAN_TYPEDEF_CKShareAccessRequester
 #define BEAN_TYPEDEF_CKShareAccessRequester
 typedef bean_id CKShareAccessRequester;
 #endif
-static inline id                          CKShareAccessRequester_New(void)                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareAccessRequester"), bean_sel("new")); }
-static inline id                          CKShareAccessRequester_Init(CKShareAccessRequester self)                     { return ((id (*)(CKShareAccessRequester, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline CKUserIdentity              CKShareAccessRequester_UserIdentity(CKShareAccessRequester self)             { return ((CKUserIdentity (*)(CKShareAccessRequester, SEL))bean_msgSend)(self, bean_sel("userIdentity")); }
-static inline CKUserIdentityLookupInfo    CKShareAccessRequester_ParticipantLookupInfo(CKShareAccessRequester self)    { return ((CKUserIdentityLookupInfo (*)(CKShareAccessRequester, SEL))bean_msgSend)(self, bean_sel("participantLookupInfo")); }
-static inline CNContact                   CKShareAccessRequester_Contact(CKShareAccessRequester self)                  { return ((CNContact (*)(CKShareAccessRequester, SEL))bean_msgSend)(self, bean_sel("contact")); }
+static inline CKShareAccessRequester      CKShareAccessRequester_New(void)                                                  { return ((CKShareAccessRequester (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareAccessRequester"), bean_sel("new")); }
+static inline CKShareAccessRequester      CKShareAccessRequester_Init(CKShareAccessRequester self)                          { return ((CKShareAccessRequester (*)(CKShareAccessRequester, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKUserIdentity              CKShareAccessRequester_UserIdentity(CKShareAccessRequester self)                  { return ((CKUserIdentity (*)(CKShareAccessRequester, SEL))bean_msgSend)(self, bean_sel("userIdentity")); }
+static inline CKUserIdentityLookupInfo    CKShareAccessRequester_ParticipantLookupInfo(CKShareAccessRequester self)         { return ((CKUserIdentityLookupInfo (*)(CKShareAccessRequester, SEL))bean_msgSend)(self, bean_sel("participantLookupInfo")); }
+static inline CNContact                   CKShareAccessRequester_Contact(CKShareAccessRequester self)                       { return ((CNContact (*)(CKShareAccessRequester, SEL))bean_msgSend)(self, bean_sel("contact")); }
+static inline BOOL                        CKShareAccessRequester_SupportsSecureCoding(void)                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareAccessRequester"), bean_sel("supportsSecureCoding")); }
+static inline id                          CKShareAccessRequester_CopyWithZone(CKShareAccessRequester self, NSZone* zone)    { return ((id (*)(CKShareAccessRequester, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKShareBlockedIdentity ===== */
 #ifndef BEAN_TYPEDEF_CKShareBlockedIdentity
 #define BEAN_TYPEDEF_CKShareBlockedIdentity
 typedef bean_id CKShareBlockedIdentity;
 #endif
-static inline id                CKShareBlockedIdentity_New(void)                                    { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareBlockedIdentity"), bean_sel("new")); }
-static inline id                CKShareBlockedIdentity_Init(CKShareBlockedIdentity self)            { return ((id (*)(CKShareBlockedIdentity, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline CKUserIdentity    CKShareBlockedIdentity_UserIdentity(CKShareBlockedIdentity self)    { return ((CKUserIdentity (*)(CKShareBlockedIdentity, SEL))bean_msgSend)(self, bean_sel("userIdentity")); }
-static inline CNContact         CKShareBlockedIdentity_Contact(CKShareBlockedIdentity self)         { return ((CNContact (*)(CKShareBlockedIdentity, SEL))bean_msgSend)(self, bean_sel("contact")); }
+static inline CKShareBlockedIdentity    CKShareBlockedIdentity_New(void)                                                  { return ((CKShareBlockedIdentity (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareBlockedIdentity"), bean_sel("new")); }
+static inline CKShareBlockedIdentity    CKShareBlockedIdentity_Init(CKShareBlockedIdentity self)                          { return ((CKShareBlockedIdentity (*)(CKShareBlockedIdentity, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKUserIdentity            CKShareBlockedIdentity_UserIdentity(CKShareBlockedIdentity self)                  { return ((CKUserIdentity (*)(CKShareBlockedIdentity, SEL))bean_msgSend)(self, bean_sel("userIdentity")); }
+static inline CNContact                 CKShareBlockedIdentity_Contact(CKShareBlockedIdentity self)                       { return ((CNContact (*)(CKShareBlockedIdentity, SEL))bean_msgSend)(self, bean_sel("contact")); }
+static inline BOOL                      CKShareBlockedIdentity_SupportsSecureCoding(void)                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareBlockedIdentity"), bean_sel("supportsSecureCoding")); }
+static inline id                        CKShareBlockedIdentity_CopyWithZone(CKShareBlockedIdentity self, NSZone* zone)    { return ((id (*)(CKShareBlockedIdentity, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKShareParticipant ===== */
 #ifndef BEAN_TYPEDEF_CKShareParticipant
 #define BEAN_TYPEDEF_CKShareParticipant
 typedef bean_id CKShareParticipant;
 #endif
-static inline id                                    CKShareParticipant_Init(CKShareParticipant self)                                                      { return ((id (*)(CKShareParticipant, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                    CKShareParticipant_New(void)                                                                          { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareParticipant"), bean_sel("new")); }
-static inline id                                    CKShareParticipant_OneTimeURLParticipant(void)                                                        { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareParticipant"), bean_sel("oneTimeURLParticipant")); }
+static inline CKShareParticipant                    CKShareParticipant_Init(CKShareParticipant self)                                                      { return ((CKShareParticipant (*)(CKShareParticipant, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKShareParticipant                    CKShareParticipant_New(void)                                                                          { return ((CKShareParticipant (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareParticipant"), bean_sel("new")); }
+static inline CKShareParticipant                    CKShareParticipant_OneTimeURLParticipant(void)                                                        { return ((CKShareParticipant (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareParticipant"), bean_sel("oneTimeURLParticipant")); }
 static inline CKUserIdentity                        CKShareParticipant_UserIdentity(CKShareParticipant self)                                              { return ((CKUserIdentity (*)(CKShareParticipant, SEL))bean_msgSend)(self, bean_sel("userIdentity")); }
 static inline CKShareParticipantRole                CKShareParticipant_Role(CKShareParticipant self)                                                      { return ((CKShareParticipantRole (*)(CKShareParticipant, SEL))bean_msgSend)(self, bean_sel("role")); }
 static inline void                                  CKShareParticipant_SetRole(CKShareParticipant self, CKShareParticipantRole role)                      { ((void (*)(CKShareParticipant, SEL, CKShareParticipantRole))bean_msgSend)(self, bean_sel("setRole:"), role); }
@@ -2295,14 +2535,16 @@ static inline void                                  CKShareParticipant_SetPermis
 static inline NSString                              CKShareParticipant_ParticipantID(CKShareParticipant self)                                             { return ((NSString (*)(CKShareParticipant, SEL))bean_msgSend)(self, bean_sel("participantID")); }
 static inline BOOL                                  CKShareParticipant_IsApprovedRequester(CKShareParticipant self)                                       { return ((BOOL (*)(CKShareParticipant, SEL))bean_msgSend)(self, bean_sel("isApprovedRequester")); }
 static inline NSDate                                CKShareParticipant_DateAddedToShare(CKShareParticipant self)                                          { return ((NSDate (*)(CKShareParticipant, SEL))bean_msgSend)(self, bean_sel("dateAddedToShare")); }
+static inline BOOL                                  CKShareParticipant_SupportsSecureCoding(void)                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareParticipant"), bean_sel("supportsSecureCoding")); }
+static inline id                                    CKShareParticipant_CopyWithZone(CKShareParticipant self, NSZone* zone)                                { return ((id (*)(CKShareParticipant, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKContainer ===== */
 #ifndef BEAN_TYPEDEF_CKContainer
 #define BEAN_TYPEDEF_CKContainer
 typedef bean_id CKContainer;
 #endif
-static inline id             CKContainer_Init(CKContainer self)                                                                                                                         { return ((id (*)(CKContainer, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id             CKContainer_New(void)                                                                                                                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKContainer"), bean_sel("new")); }
+static inline CKContainer    CKContainer_Init(CKContainer self)                                                                                                                         { return ((CKContainer (*)(CKContainer, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKContainer    CKContainer_New(void)                                                                                                                                      { return ((CKContainer (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKContainer"), bean_sel("new")); }
 static inline CKContainer    CKContainer_DefaultContainer(void)                                                                                                                         { return ((CKContainer (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKContainer"), bean_sel("defaultContainer")); }
 static inline CKContainer    CKContainer_ContainerWithIdentifier(NSString containerIdentifier)                                                                                          { return ((CKContainer (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CKContainer"), bean_sel("containerWithIdentifier:"), containerIdentifier); }
 static inline void           CKContainer_AddOperation(CKContainer self, CKOperation operation)                                                                                          { ((void (*)(CKContainer, SEL, CKOperation))bean_msgSend)(self, bean_sel("addOperation:"), operation); }
@@ -2328,8 +2570,8 @@ static inline void           CKContainer_FetchAllLongLivedOperationIDsWithComple
 static inline void           CKContainer_FetchLongLivedOperationWithID_CompletionHandler(CKContainer self, NSString operationID, void* completionHandler)                               { ((void (*)(CKContainer, SEL, NSString, void*))bean_msgSend)(self, bean_sel("fetchLongLivedOperationWithID:completionHandler:"), operationID, completionHandler); }
 
 /* ===== CKDatabase ===== */
-static inline id                 CKDatabase_Init(CKDatabase self)                                                                                                          { return ((id (*)(CKDatabase, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                 CKDatabase_New(void)                                                                                                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabase"), bean_sel("new")); }
+static inline CKDatabase         CKDatabase_Init(CKDatabase self)                                                                                                          { return ((CKDatabase (*)(CKDatabase, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKDatabase         CKDatabase_New(void)                                                                                                                      { return ((CKDatabase (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabase"), bean_sel("new")); }
 static inline void               CKDatabase_AddOperation(CKDatabase self, CKDatabaseOperation operation)                                                                   { ((void (*)(CKDatabase, SEL, CKDatabaseOperation))bean_msgSend)(self, bean_sel("addOperation:"), operation); }
 static inline CKDatabaseScope    CKDatabase_DatabaseScope(CKDatabase self)                                                                                                 { return ((CKDatabaseScope (*)(CKDatabase, SEL))bean_msgSend)(self, bean_sel("databaseScope")); }
 static inline void               CKDatabase_FetchRecordWithID_CompletionHandler(CKDatabase self, CKRecordID recordID, void* completionHandler)                             { ((void (*)(CKDatabase, SEL, CKRecordID, void*))bean_msgSend)(self, bean_sel("fetchRecordWithID:completionHandler:"), recordID, completionHandler); }
@@ -2350,7 +2592,7 @@ static inline CKDatabase    CKDatabaseOperation_Database(CKDatabaseOperation sel
 static inline void          CKDatabaseOperation_SetDatabase(CKDatabaseOperation self, CKDatabase database)    { ((void (*)(CKDatabaseOperation, SEL, CKDatabase))bean_msgSend)(self, bean_sel("setDatabase:"), database); }
 
 /* ===== CKOperation ===== */
-static inline id                          CKOperation_Init(CKOperation self)                                                                                 { return ((id (*)(CKOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKOperation                 CKOperation_Init(CKOperation self)                                                                                 { return ((CKOperation (*)(CKOperation, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline CKOperationConfiguration    CKOperation_Configuration(CKOperation self)                                                                        { return ((CKOperationConfiguration (*)(CKOperation, SEL))bean_msgSend)(self, bean_sel("configuration")); }
 static inline void                        CKOperation_SetConfiguration(CKOperation self, CKOperationConfiguration configuration)                             { ((void (*)(CKOperation, SEL, CKOperationConfiguration))bean_msgSend)(self, bean_sel("setConfiguration:"), configuration); }
 static inline CKOperationGroup            CKOperation_Group(CKOperation self)                                                                                { return ((CKOperationGroup (*)(CKOperation, SEL))bean_msgSend)(self, bean_sel("group")); }
@@ -2386,8 +2628,8 @@ static inline void                  CKOperationConfiguration_SetTimeoutIntervalF
 static inline BOOL                  CKOperationConfiguration_LongLived(CKOperationConfiguration self)                                                            { return ((BOOL (*)(CKOperationConfiguration, SEL))bean_msgSend)(self, bean_sel("longLived")); }
 
 /* ===== CKOperationGroup ===== */
-static inline id                              CKOperationGroup_Init(CKOperationGroup self)                                                                        { return ((id (*)(CKOperationGroup, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                              CKOperationGroup_InitWithCoder(CKOperationGroup self, NSCoder aDecoder)                                             { return ((id (*)(CKOperationGroup, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline CKOperationGroup                CKOperationGroup_Init(CKOperationGroup self)                                                                        { return ((CKOperationGroup (*)(CKOperationGroup, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKOperationGroup                CKOperationGroup_InitWithCoder(CKOperationGroup self, NSCoder aDecoder)                                             { return ((CKOperationGroup (*)(CKOperationGroup, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline NSString                        CKOperationGroup_OperationGroupID(CKOperationGroup self)                                                            { return ((NSString (*)(CKOperationGroup, SEL))bean_msgSend)(self, bean_sel("operationGroupID")); }
 static inline CKOperationConfiguration        CKOperationGroup_DefaultConfiguration(CKOperationGroup self)                                                        { return ((CKOperationConfiguration (*)(CKOperationGroup, SEL))bean_msgSend)(self, bean_sel("defaultConfiguration")); }
 static inline void                            CKOperationGroup_SetDefaultConfiguration(CKOperationGroup self, CKOperationConfiguration defaultConfiguration)      { ((void (*)(CKOperationGroup, SEL, CKOperationConfiguration))bean_msgSend)(self, bean_sel("setDefaultConfiguration:"), defaultConfiguration); }
@@ -2399,13 +2641,15 @@ static inline CKOperationGroupTransferSize    CKOperationGroup_ExpectedSendSize(
 static inline void                            CKOperationGroup_SetExpectedSendSize(CKOperationGroup self, CKOperationGroupTransferSize expectedSendSize)          { ((void (*)(CKOperationGroup, SEL, CKOperationGroupTransferSize))bean_msgSend)(self, bean_sel("setExpectedSendSize:"), expectedSendSize); }
 static inline CKOperationGroupTransferSize    CKOperationGroup_ExpectedReceiveSize(CKOperationGroup self)                                                         { return ((CKOperationGroupTransferSize (*)(CKOperationGroup, SEL))bean_msgSend)(self, bean_sel("expectedReceiveSize")); }
 static inline void                            CKOperationGroup_SetExpectedReceiveSize(CKOperationGroup self, CKOperationGroupTransferSize expectedReceiveSize)    { ((void (*)(CKOperationGroup, SEL, CKOperationGroupTransferSize))bean_msgSend)(self, bean_sel("setExpectedReceiveSize:"), expectedReceiveSize); }
+static inline BOOL                            CKOperationGroup_SupportsSecureCoding(void)                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKOperationGroup"), bean_sel("supportsSecureCoding")); }
+static inline id                              CKOperationGroup_CopyWithZone(CKOperationGroup self, NSZone* zone)                                                  { return ((id (*)(CKOperationGroup, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKRecord ===== */
-static inline id             CKRecord_Init(CKRecord self)                                                                     { return ((id (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id             CKRecord_New(void)                                                                               { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecord"), bean_sel("new")); }
-static inline id             CKRecord_InitWithRecordType(CKRecord self, NSString recordType)                                  { return ((id (*)(CKRecord, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordType:"), recordType); }
-static inline id             CKRecord_InitWithRecordType_RecordID(CKRecord self, NSString recordType, CKRecordID recordID)    { return ((id (*)(CKRecord, SEL, NSString, CKRecordID))bean_msgSend)(self, bean_sel("initWithRecordType:recordID:"), recordType, recordID); }
-static inline id             CKRecord_InitWithRecordType_ZoneID(CKRecord self, NSString recordType, CKRecordZoneID zoneID)    { return ((id (*)(CKRecord, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordType:zoneID:"), recordType, zoneID); }
+static inline CKRecord       CKRecord_Init(CKRecord self)                                                                     { return ((CKRecord (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKRecord       CKRecord_New(void)                                                                               { return ((CKRecord (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecord"), bean_sel("new")); }
+static inline CKRecord       CKRecord_InitWithRecordType(CKRecord self, NSString recordType)                                  { return ((CKRecord (*)(CKRecord, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordType:"), recordType); }
+static inline CKRecord       CKRecord_InitWithRecordType_RecordID(CKRecord self, NSString recordType, CKRecordID recordID)    { return ((CKRecord (*)(CKRecord, SEL, NSString, CKRecordID))bean_msgSend)(self, bean_sel("initWithRecordType:recordID:"), recordType, recordID); }
+static inline CKRecord       CKRecord_InitWithRecordType_ZoneID(CKRecord self, NSString recordType, CKRecordZoneID zoneID)    { return ((CKRecord (*)(CKRecord, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordType:zoneID:"), recordType, zoneID); }
 static inline id             CKRecord_ObjectForKey(CKRecord self, NSString key)                                               { return ((id (*)(CKRecord, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKey:"), key); }
 static inline void           CKRecord_SetObject_ForKey(CKRecord self, id object, NSString key)                                { ((void (*)(CKRecord, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKey:"), object, key); }
 static inline NSArray        CKRecord_AllKeys(CKRecord self)                                                                  { return ((NSArray (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("allKeys")); }
@@ -2427,44 +2671,50 @@ static inline CKReference    CKRecord_Share(CKRecord self)                      
 static inline CKReference    CKRecord_Parent(CKRecord self)                                                                   { return ((CKReference (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("parent")); }
 static inline void           CKRecord_SetParent(CKRecord self, CKReference parent)                                            { ((void (*)(CKRecord, SEL, CKReference))bean_msgSend)(self, bean_sel("setParent:"), parent); }
 static inline id             CKRecord_EncryptedValues(CKRecord self)                                                          { return ((id (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("encryptedValues")); }
+static inline BOOL           CKRecord_SupportsSecureCoding(void)                                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecord"), bean_sel("supportsSecureCoding")); }
+static inline id             CKRecord_CopyWithZone(CKRecord self, NSZone* zone)                                               { return ((id (*)(CKRecord, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKRecordZone ===== */
 static inline CKRecordZone                   CKRecordZone_DefaultRecordZone(void)                                                               { return ((CKRecordZone (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZone"), bean_sel("defaultRecordZone")); }
-static inline id                             CKRecordZone_Init(CKRecordZone self)                                                               { return ((id (*)(CKRecordZone, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                             CKRecordZone_New(void)                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZone"), bean_sel("new")); }
-static inline id                             CKRecordZone_InitWithZoneName(CKRecordZone self, NSString zoneName)                                { return ((id (*)(CKRecordZone, SEL, NSString))bean_msgSend)(self, bean_sel("initWithZoneName:"), zoneName); }
-static inline id                             CKRecordZone_InitWithZoneID(CKRecordZone self, CKRecordZoneID zoneID)                              { return ((id (*)(CKRecordZone, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithZoneID:"), zoneID); }
+static inline CKRecordZone                   CKRecordZone_Init(CKRecordZone self)                                                               { return ((CKRecordZone (*)(CKRecordZone, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKRecordZone                   CKRecordZone_New(void)                                                                             { return ((CKRecordZone (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZone"), bean_sel("new")); }
+static inline CKRecordZone                   CKRecordZone_InitWithZoneName(CKRecordZone self, NSString zoneName)                                { return ((CKRecordZone (*)(CKRecordZone, SEL, NSString))bean_msgSend)(self, bean_sel("initWithZoneName:"), zoneName); }
+static inline CKRecordZone                   CKRecordZone_InitWithZoneID(CKRecordZone self, CKRecordZoneID zoneID)                              { return ((CKRecordZone (*)(CKRecordZone, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithZoneID:"), zoneID); }
 static inline CKRecordZoneID                 CKRecordZone_ZoneID(CKRecordZone self)                                                             { return ((CKRecordZoneID (*)(CKRecordZone, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
 static inline CKRecordZoneCapabilities       CKRecordZone_Capabilities(CKRecordZone self)                                                       { return ((CKRecordZoneCapabilities (*)(CKRecordZone, SEL))bean_msgSend)(self, bean_sel("capabilities")); }
 static inline CKReference                    CKRecordZone_Share(CKRecordZone self)                                                              { return ((CKReference (*)(CKRecordZone, SEL))bean_msgSend)(self, bean_sel("share")); }
 static inline CKRecordZoneEncryptionScope    CKRecordZone_EncryptionScope(CKRecordZone self)                                                    { return ((CKRecordZoneEncryptionScope (*)(CKRecordZone, SEL))bean_msgSend)(self, bean_sel("encryptionScope")); }
 static inline void                           CKRecordZone_SetEncryptionScope(CKRecordZone self, CKRecordZoneEncryptionScope encryptionScope)    { ((void (*)(CKRecordZone, SEL, CKRecordZoneEncryptionScope))bean_msgSend)(self, bean_sel("setEncryptionScope:"), encryptionScope); }
+static inline BOOL                           CKRecordZone_SupportsSecureCoding(void)                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZone"), bean_sel("supportsSecureCoding")); }
+static inline id                             CKRecordZone_CopyWithZone(CKRecordZone self, NSZone* zone)                                         { return ((id (*)(CKRecordZone, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKReference ===== */
-static inline id                   CKReference_Init(CKReference self)                                                                      { return ((id (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                   CKReference_New(void)                                                                                   { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKReference"), bean_sel("new")); }
-static inline id                   CKReference_InitWithRecordID_Action(CKReference self, CKRecordID recordID, CKReferenceAction action)    { return ((id (*)(CKReference, SEL, CKRecordID, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecordID:action:"), recordID, action); }
-static inline id                   CKReference_InitWithRecord_Action(CKReference self, CKRecord record, CKReferenceAction action)          { return ((id (*)(CKReference, SEL, CKRecord, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecord:action:"), record, action); }
+static inline CKReference          CKReference_Init(CKReference self)                                                                      { return ((CKReference (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKReference          CKReference_New(void)                                                                                   { return ((CKReference (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKReference"), bean_sel("new")); }
+static inline CKReference          CKReference_InitWithRecordID_Action(CKReference self, CKRecordID recordID, CKReferenceAction action)    { return ((CKReference (*)(CKReference, SEL, CKRecordID, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecordID:action:"), recordID, action); }
+static inline CKReference          CKReference_InitWithRecord_Action(CKReference self, CKRecord record, CKReferenceAction action)          { return ((CKReference (*)(CKReference, SEL, CKRecord, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecord:action:"), record, action); }
 static inline CKReferenceAction    CKReference_ReferenceAction(CKReference self)                                                           { return ((CKReferenceAction (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("referenceAction")); }
 static inline CKRecordID           CKReference_RecordID(CKReference self)                                                                  { return ((CKRecordID (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("recordID")); }
+static inline BOOL                 CKReference_SupportsSecureCoding(void)                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKReference"), bean_sel("supportsSecureCoding")); }
+static inline id                   CKReference_CopyWithZone(CKReference self, NSZone* zone)                                                { return ((id (*)(CKReference, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKShare ===== */
 #ifndef BEAN_TYPEDEF_CKShare
 #define BEAN_TYPEDEF_CKShare
 typedef bean_id CKShare;
 #endif
-static inline id                              CKShare_InitWithRootRecord(CKShare self, CKRecord rootRecord)                                  { return ((id (*)(CKShare, SEL, CKRecord))bean_msgSend)(self, bean_sel("initWithRootRecord:"), rootRecord); }
-static inline id                              CKShare_InitWithRootRecord_ShareID(CKShare self, CKRecord rootRecord, CKRecordID shareID)      { return ((id (*)(CKShare, SEL, CKRecord, CKRecordID))bean_msgSend)(self, bean_sel("initWithRootRecord:shareID:"), rootRecord, shareID); }
-static inline id                              CKShare_InitWithRecordZoneID(CKShare self, CKRecordZoneID recordZoneID)                        { return ((id (*)(CKShare, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordZoneID:"), recordZoneID); }
-static inline id                              CKShare_InitWithCoder(CKShare self, NSCoder aDecoder)                                          { return ((id (*)(CKShare, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline CKShare                         CKShare_InitWithRootRecord(CKShare self, CKRecord rootRecord)                                  { return ((CKShare (*)(CKShare, SEL, CKRecord))bean_msgSend)(self, bean_sel("initWithRootRecord:"), rootRecord); }
+static inline CKShare                         CKShare_InitWithRootRecord_ShareID(CKShare self, CKRecord rootRecord, CKRecordID shareID)      { return ((CKShare (*)(CKShare, SEL, CKRecord, CKRecordID))bean_msgSend)(self, bean_sel("initWithRootRecord:shareID:"), rootRecord, shareID); }
+static inline CKShare                         CKShare_InitWithRecordZoneID(CKShare self, CKRecordZoneID recordZoneID)                        { return ((CKShare (*)(CKShare, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordZoneID:"), recordZoneID); }
+static inline CKShare                         CKShare_InitWithCoder(CKShare self, NSCoder aDecoder)                                          { return ((CKShare (*)(CKShare, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline void                            CKShare_AddParticipant(CKShare self, CKShareParticipant participant)                           { ((void (*)(CKShare, SEL, CKShareParticipant))bean_msgSend)(self, bean_sel("addParticipant:"), participant); }
 static inline void                            CKShare_RemoveParticipant(CKShare self, CKShareParticipant participant)                        { ((void (*)(CKShare, SEL, CKShareParticipant))bean_msgSend)(self, bean_sel("removeParticipant:"), participant); }
 static inline NSURL                           CKShare_OneTimeURLForParticipantID(CKShare self, NSString participantID)                       { return ((NSURL (*)(CKShare, SEL, NSString))bean_msgSend)(self, bean_sel("oneTimeURLForParticipantID:"), participantID); }
-static inline id                              CKShare_Init(CKShare self)                                                                     { return ((id (*)(CKShare, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                              CKShare_New(void)                                                                              { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShare"), bean_sel("new")); }
-static inline id                              CKShare_InitWithRecordType(CKShare self, NSString recordType)                                  { return ((id (*)(CKShare, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordType:"), recordType); }
-static inline id                              CKShare_InitWithRecordType_RecordID(CKShare self, NSString recordType, CKRecordID recordID)    { return ((id (*)(CKShare, SEL, NSString, CKRecordID))bean_msgSend)(self, bean_sel("initWithRecordType:recordID:"), recordType, recordID); }
-static inline id                              CKShare_InitWithRecordType_ZoneID(CKShare self, NSString recordType, CKRecordZoneID zoneID)    { return ((id (*)(CKShare, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordType:zoneID:"), recordType, zoneID); }
+static inline CKShare                         CKShare_Init(CKShare self)                                                                     { return ((CKShare (*)(CKShare, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKShare                         CKShare_New(void)                                                                              { return ((CKShare (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShare"), bean_sel("new")); }
+static inline CKShare                         CKShare_InitWithRecordType(CKShare self, NSString recordType)                                  { return ((CKShare (*)(CKShare, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordType:"), recordType); }
+static inline CKShare                         CKShare_InitWithRecordType_RecordID(CKShare self, NSString recordType, CKRecordID recordID)    { return ((CKShare (*)(CKShare, SEL, NSString, CKRecordID))bean_msgSend)(self, bean_sel("initWithRecordType:recordID:"), recordType, recordID); }
+static inline CKShare                         CKShare_InitWithRecordType_ZoneID(CKShare self, NSString recordType, CKRecordZoneID zoneID)    { return ((CKShare (*)(CKShare, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordType:zoneID:"), recordType, zoneID); }
 static inline void                            CKShare_DenyRequesters(CKShare self, NSArray requesters)                                       { ((void (*)(CKShare, SEL, NSArray))bean_msgSend)(self, bean_sel("denyRequesters:"), requesters); }
 static inline void                            CKShare_BlockRequesters(CKShare self, NSArray requesters)                                      { ((void (*)(CKShare, SEL, NSArray))bean_msgSend)(self, bean_sel("blockRequesters:"), requesters); }
 static inline void                            CKShare_UnblockIdentities(CKShare self, NSArray blockedIdentities)                             { ((void (*)(CKShare, SEL, NSArray))bean_msgSend)(self, bean_sel("unblockIdentities:"), blockedIdentities); }
@@ -2478,29 +2728,33 @@ static inline NSArray                         CKShare_Requesters(CKShare self)  
 static inline NSArray                         CKShare_BlockedIdentities(CKShare self)                                                        { return ((NSArray (*)(CKShare, SEL))bean_msgSend)(self, bean_sel("blockedIdentities")); }
 static inline BOOL                            CKShare_AllowsAccessRequests(CKShare self)                                                     { return ((BOOL (*)(CKShare, SEL))bean_msgSend)(self, bean_sel("allowsAccessRequests")); }
 static inline void                            CKShare_SetAllowsAccessRequests(CKShare self, BOOL allowsAccessRequests)                       { ((void (*)(CKShare, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsAccessRequests:"), allowsAccessRequests); }
+static inline BOOL                            CKShare_SupportsSecureCoding(void)                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShare"), bean_sel("supportsSecureCoding")); }
+static inline id                              CKShare_CopyWithZone(CKShare self, NSZone* zone)                                               { return ((id (*)(CKShare, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKShareMetadata ===== */
-static inline id                                    CKShareMetadata_Init(CKShareMetadata self)                        { return ((id (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                    CKShareMetadata_New(void)                                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareMetadata"), bean_sel("new")); }
-static inline NSString                              CKShareMetadata_ContainerIdentifier(CKShareMetadata self)         { return ((NSString (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
-static inline CKShare                               CKShareMetadata_Share(CKShareMetadata self)                       { return ((CKShare (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("share")); }
-static inline CKRecordID                            CKShareMetadata_HierarchicalRootRecordID(CKShareMetadata self)    { return ((CKRecordID (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("hierarchicalRootRecordID")); }
-static inline CKShareParticipantRole                CKShareMetadata_ParticipantRole(CKShareMetadata self)             { return ((CKShareParticipantRole (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("participantRole")); }
-static inline CKShareParticipantAcceptanceStatus    CKShareMetadata_ParticipantStatus(CKShareMetadata self)           { return ((CKShareParticipantAcceptanceStatus (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("participantStatus")); }
-static inline CKShareParticipantPermission          CKShareMetadata_ParticipantPermission(CKShareMetadata self)       { return ((CKShareParticipantPermission (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("participantPermission")); }
-static inline CKUserIdentity                        CKShareMetadata_OwnerIdentity(CKShareMetadata self)               { return ((CKUserIdentity (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("ownerIdentity")); }
-static inline CKRecord                              CKShareMetadata_RootRecord(CKShareMetadata self)                  { return ((CKRecord (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("rootRecord")); }
-static inline CKShareParticipantType                CKShareMetadata_ParticipantType(CKShareMetadata self)             { return ((CKShareParticipantType (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("participantType")); }
-static inline CKRecordID                            CKShareMetadata_RootRecordID(CKShareMetadata self)                { return ((CKRecordID (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("rootRecordID")); }
+static inline CKShareMetadata                       CKShareMetadata_Init(CKShareMetadata self)                          { return ((CKShareMetadata (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKShareMetadata                       CKShareMetadata_New(void)                                           { return ((CKShareMetadata (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareMetadata"), bean_sel("new")); }
+static inline NSString                              CKShareMetadata_ContainerIdentifier(CKShareMetadata self)           { return ((NSString (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
+static inline CKShare                               CKShareMetadata_Share(CKShareMetadata self)                         { return ((CKShare (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("share")); }
+static inline CKRecordID                            CKShareMetadata_HierarchicalRootRecordID(CKShareMetadata self)      { return ((CKRecordID (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("hierarchicalRootRecordID")); }
+static inline CKShareParticipantRole                CKShareMetadata_ParticipantRole(CKShareMetadata self)               { return ((CKShareParticipantRole (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("participantRole")); }
+static inline CKShareParticipantAcceptanceStatus    CKShareMetadata_ParticipantStatus(CKShareMetadata self)             { return ((CKShareParticipantAcceptanceStatus (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("participantStatus")); }
+static inline CKShareParticipantPermission          CKShareMetadata_ParticipantPermission(CKShareMetadata self)         { return ((CKShareParticipantPermission (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("participantPermission")); }
+static inline CKUserIdentity                        CKShareMetadata_OwnerIdentity(CKShareMetadata self)                 { return ((CKUserIdentity (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("ownerIdentity")); }
+static inline CKRecord                              CKShareMetadata_RootRecord(CKShareMetadata self)                    { return ((CKRecord (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("rootRecord")); }
+static inline CKShareParticipantType                CKShareMetadata_ParticipantType(CKShareMetadata self)               { return ((CKShareParticipantType (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("participantType")); }
+static inline CKRecordID                            CKShareMetadata_RootRecordID(CKShareMetadata self)                  { return ((CKRecordID (*)(CKShareMetadata, SEL))bean_msgSend)(self, bean_sel("rootRecordID")); }
+static inline id                                    CKShareMetadata_CopyWithZone(CKShareMetadata self, NSZone* zone)    { return ((id (*)(CKShareMetadata, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                                  CKShareMetadata_SupportsSecureCoding(void)                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKShareMetadata"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CKSyncEngine ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngine
 #define BEAN_TYPEDEF_CKSyncEngine
 typedef bean_id CKSyncEngine;
 #endif
-static inline id                   CKSyncEngine_InitWithConfiguration(CKSyncEngine self, CKSyncEngineConfiguration configuration)                                                 { return ((id (*)(CKSyncEngine, SEL, CKSyncEngineConfiguration))bean_msgSend)(self, bean_sel("initWithConfiguration:"), configuration); }
-static inline id                   CKSyncEngine_Init(CKSyncEngine self)                                                                                                           { return ((id (*)(CKSyncEngine, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                   CKSyncEngine_New(void)                                                                                                                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngine"), bean_sel("new")); }
+static inline CKSyncEngine         CKSyncEngine_InitWithConfiguration(CKSyncEngine self, CKSyncEngineConfiguration configuration)                                                 { return ((CKSyncEngine (*)(CKSyncEngine, SEL, CKSyncEngineConfiguration))bean_msgSend)(self, bean_sel("initWithConfiguration:"), configuration); }
+static inline CKSyncEngine         CKSyncEngine_Init(CKSyncEngine self)                                                                                                           { return ((CKSyncEngine (*)(CKSyncEngine, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngine         CKSyncEngine_New(void)                                                                                                                         { return ((CKSyncEngine (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngine"), bean_sel("new")); }
 static inline void                 CKSyncEngine_FetchChangesWithCompletionHandler(CKSyncEngine self, void* completionHandler)                                                     { ((void (*)(CKSyncEngine, SEL, void*))bean_msgSend)(self, bean_sel("fetchChangesWithCompletionHandler:"), completionHandler); }
 static inline void                 CKSyncEngine_FetchChangesWithOptions_CompletionHandler(CKSyncEngine self, CKSyncEngineFetchChangesOptions options, void* completionHandler)    { ((void (*)(CKSyncEngine, SEL, CKSyncEngineFetchChangesOptions, void*))bean_msgSend)(self, bean_sel("fetchChangesWithOptions:completionHandler:"), options, completionHandler); }
 static inline void                 CKSyncEngine_SendChangesWithCompletionHandler(CKSyncEngine self, void* completionHandler)                                                      { ((void (*)(CKSyncEngine, SEL, void*))bean_msgSend)(self, bean_sel("sendChangesWithCompletionHandler:"), completionHandler); }
@@ -2510,9 +2764,9 @@ static inline CKDatabase           CKSyncEngine_Database(CKSyncEngine self)     
 static inline CKSyncEngineState    CKSyncEngine_State(CKSyncEngine self)                                                                                                          { return ((CKSyncEngineState (*)(CKSyncEngine, SEL))bean_msgSend)(self, bean_sel("state")); }
 
 /* ===== CKSyncEngineConfiguration ===== */
-static inline id                                CKSyncEngineConfiguration_InitWithDatabase_StateSerialization_Delegate(CKSyncEngineConfiguration self, CKDatabase database, CKSyncEngineStateSerialization stateSerialization, id delegate)    { return ((id (*)(CKSyncEngineConfiguration, SEL, CKDatabase, CKSyncEngineStateSerialization, id))bean_msgSend)(self, bean_sel("initWithDatabase:stateSerialization:delegate:"), database, stateSerialization, delegate); }
-static inline id                                CKSyncEngineConfiguration_Init(CKSyncEngineConfiguration self)                                                                                                                                 { return ((id (*)(CKSyncEngineConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                CKSyncEngineConfiguration_New(void)                                                                                                                                                            { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineConfiguration"), bean_sel("new")); }
+static inline CKSyncEngineConfiguration         CKSyncEngineConfiguration_InitWithDatabase_StateSerialization_Delegate(CKSyncEngineConfiguration self, CKDatabase database, CKSyncEngineStateSerialization stateSerialization, id delegate)    { return ((CKSyncEngineConfiguration (*)(CKSyncEngineConfiguration, SEL, CKDatabase, CKSyncEngineStateSerialization, id))bean_msgSend)(self, bean_sel("initWithDatabase:stateSerialization:delegate:"), database, stateSerialization, delegate); }
+static inline CKSyncEngineConfiguration         CKSyncEngineConfiguration_Init(CKSyncEngineConfiguration self)                                                                                                                                 { return ((CKSyncEngineConfiguration (*)(CKSyncEngineConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineConfiguration         CKSyncEngineConfiguration_New(void)                                                                                                                                                            { return ((CKSyncEngineConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineConfiguration"), bean_sel("new")); }
 static inline CKDatabase                        CKSyncEngineConfiguration_Database(CKSyncEngineConfiguration self)                                                                                                                             { return ((CKDatabase (*)(CKSyncEngineConfiguration, SEL))bean_msgSend)(self, bean_sel("database")); }
 static inline void                              CKSyncEngineConfiguration_SetDatabase(CKSyncEngineConfiguration self, CKDatabase database)                                                                                                     { ((void (*)(CKSyncEngineConfiguration, SEL, CKDatabase))bean_msgSend)(self, bean_sel("setDatabase:"), database); }
 static inline CKSyncEngineStateSerialization    CKSyncEngineConfiguration_StateSerialization(CKSyncEngineConfiguration self)                                                                                                                   { return ((CKSyncEngineStateSerialization (*)(CKSyncEngineConfiguration, SEL))bean_msgSend)(self, bean_sel("stateSerialization")); }
@@ -2523,6 +2777,15 @@ static inline BOOL                              CKSyncEngineConfiguration_Automa
 static inline void                              CKSyncEngineConfiguration_SetAutomaticallySync(CKSyncEngineConfiguration self, BOOL automaticallySync)                                                                                         { ((void (*)(CKSyncEngineConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutomaticallySync:"), automaticallySync); }
 static inline NSString                          CKSyncEngineConfiguration_SubscriptionID(CKSyncEngineConfiguration self)                                                                                                                       { return ((NSString (*)(CKSyncEngineConfiguration, SEL))bean_msgSend)(self, bean_sel("subscriptionID")); }
 static inline void                              CKSyncEngineConfiguration_SetSubscriptionID(CKSyncEngineConfiguration self, NSString subscriptionID)                                                                                           { ((void (*)(CKSyncEngineConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setSubscriptionID:"), subscriptionID); }
+
+/* ===== CKSyncEngineDelegate ===== */
+#ifndef BEAN_TYPEDEF_CKSyncEngineDelegate
+#define BEAN_TYPEDEF_CKSyncEngineDelegate
+typedef bean_id CKSyncEngineDelegate;
+#endif
+static inline void                                 CKSyncEngineDelegate_SyncEngine_HandleEvent(CKSyncEngineDelegate self, CKSyncEngine syncEngine, CKSyncEngineEvent event)                                           { ((void (*)(CKSyncEngineDelegate, SEL, CKSyncEngine, CKSyncEngineEvent))bean_msgSend)(self, bean_sel("syncEngine:handleEvent:"), syncEngine, event); }
+static inline CKSyncEngineRecordZoneChangeBatch    CKSyncEngineDelegate_SyncEngine_NextRecordZoneChangeBatchForContext(CKSyncEngineDelegate self, CKSyncEngine syncEngine, CKSyncEngineSendChangesContext context)    { return ((CKSyncEngineRecordZoneChangeBatch (*)(CKSyncEngineDelegate, SEL, CKSyncEngine, CKSyncEngineSendChangesContext))bean_msgSend)(self, bean_sel("syncEngine:nextRecordZoneChangeBatchForContext:"), syncEngine, context); }
+static inline CKSyncEngineFetchChangesOptions      CKSyncEngineDelegate_SyncEngine_NextFetchChangesOptionsForContext(CKSyncEngineDelegate self, CKSyncEngine syncEngine, CKSyncEngineFetchChangesContext context)     { return ((CKSyncEngineFetchChangesOptions (*)(CKSyncEngineDelegate, SEL, CKSyncEngine, CKSyncEngineFetchChangesContext))bean_msgSend)(self, bean_sel("syncEngine:nextFetchChangesOptionsForContext:"), syncEngine, context); }
 
 /* ===== CKSyncEngineDidFetchChangesEvent ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineDidFetchChangesEvent
@@ -2539,12 +2802,8 @@ typedef bean_id CKSyncEngineDidSendChangesEvent;
 static inline CKSyncEngineSendChangesContext    CKSyncEngineDidSendChangesEvent_Context(CKSyncEngineDidSendChangesEvent self)    { return ((CKSyncEngineSendChangesContext (*)(CKSyncEngineDidSendChangesEvent, SEL))bean_msgSend)(self, bean_sel("context")); }
 
 /* ===== CKSyncEngineEvent ===== */
-#ifndef BEAN_TYPEDEF_CKSyncEngineEvent
-#define BEAN_TYPEDEF_CKSyncEngineEvent
-typedef bean_id CKSyncEngineEvent;
-#endif
-static inline id                                             CKSyncEngineEvent_Init(CKSyncEngineEvent self)                               { return ((id (*)(CKSyncEngineEvent, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                             CKSyncEngineEvent_New(void)                                                  { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineEvent"), bean_sel("new")); }
+static inline CKSyncEngineEvent                              CKSyncEngineEvent_Init(CKSyncEngineEvent self)                               { return ((CKSyncEngineEvent (*)(CKSyncEngineEvent, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineEvent                              CKSyncEngineEvent_New(void)                                                  { return ((CKSyncEngineEvent (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineEvent"), bean_sel("new")); }
 static inline CKSyncEngineEventType                          CKSyncEngineEvent_Type(CKSyncEngineEvent self)                               { return ((CKSyncEngineEventType (*)(CKSyncEngineEvent, SEL))bean_msgSend)(self, bean_sel("type")); }
 static inline CKSyncEngineStateUpdateEvent                   CKSyncEngineEvent_StateUpdateEvent(CKSyncEngineEvent self)                   { return ((CKSyncEngineStateUpdateEvent (*)(CKSyncEngineEvent, SEL))bean_msgSend)(self, bean_sel("stateUpdateEvent")); }
 static inline CKSyncEngineAccountChangeEvent                 CKSyncEngineEvent_AccountChangeEvent(CKSyncEngineEvent self)                 { return ((CKSyncEngineAccountChangeEvent (*)(CKSyncEngineEvent, SEL))bean_msgSend)(self, bean_sel("accountChangeEvent")); }
@@ -2564,56 +2823,58 @@ static inline CKSyncEngineDidSendChangesEvent                CKSyncEngineEvent_D
 #define BEAN_TYPEDEF_CKSyncEngineFailedRecordSave
 typedef bean_id CKSyncEngineFailedRecordSave;
 #endif
-static inline id          CKSyncEngineFailedRecordSave_Init(CKSyncEngineFailedRecordSave self)      { return ((id (*)(CKSyncEngineFailedRecordSave, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          CKSyncEngineFailedRecordSave_New(void)                                    { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFailedRecordSave"), bean_sel("new")); }
-static inline CKRecord    CKSyncEngineFailedRecordSave_Record(CKSyncEngineFailedRecordSave self)    { return ((CKRecord (*)(CKSyncEngineFailedRecordSave, SEL))bean_msgSend)(self, bean_sel("record")); }
-static inline NSError     CKSyncEngineFailedRecordSave_Error(CKSyncEngineFailedRecordSave self)     { return ((NSError (*)(CKSyncEngineFailedRecordSave, SEL))bean_msgSend)(self, bean_sel("error")); }
+static inline CKSyncEngineFailedRecordSave    CKSyncEngineFailedRecordSave_Init(CKSyncEngineFailedRecordSave self)      { return ((CKSyncEngineFailedRecordSave (*)(CKSyncEngineFailedRecordSave, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineFailedRecordSave    CKSyncEngineFailedRecordSave_New(void)                                    { return ((CKSyncEngineFailedRecordSave (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFailedRecordSave"), bean_sel("new")); }
+static inline CKRecord                        CKSyncEngineFailedRecordSave_Record(CKSyncEngineFailedRecordSave self)    { return ((CKRecord (*)(CKSyncEngineFailedRecordSave, SEL))bean_msgSend)(self, bean_sel("record")); }
+static inline NSError                         CKSyncEngineFailedRecordSave_Error(CKSyncEngineFailedRecordSave self)     { return ((NSError (*)(CKSyncEngineFailedRecordSave, SEL))bean_msgSend)(self, bean_sel("error")); }
 
 /* ===== CKSyncEngineFailedZoneSave ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEngineFailedZoneSave
 #define BEAN_TYPEDEF_CKSyncEngineFailedZoneSave
 typedef bean_id CKSyncEngineFailedZoneSave;
 #endif
-static inline id              CKSyncEngineFailedZoneSave_Init(CKSyncEngineFailedZoneSave self)          { return ((id (*)(CKSyncEngineFailedZoneSave, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id              CKSyncEngineFailedZoneSave_New(void)                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFailedZoneSave"), bean_sel("new")); }
-static inline CKRecordZone    CKSyncEngineFailedZoneSave_RecordZone(CKSyncEngineFailedZoneSave self)    { return ((CKRecordZone (*)(CKSyncEngineFailedZoneSave, SEL))bean_msgSend)(self, bean_sel("recordZone")); }
-static inline NSError         CKSyncEngineFailedZoneSave_Error(CKSyncEngineFailedZoneSave self)         { return ((NSError (*)(CKSyncEngineFailedZoneSave, SEL))bean_msgSend)(self, bean_sel("error")); }
+static inline CKSyncEngineFailedZoneSave    CKSyncEngineFailedZoneSave_Init(CKSyncEngineFailedZoneSave self)          { return ((CKSyncEngineFailedZoneSave (*)(CKSyncEngineFailedZoneSave, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineFailedZoneSave    CKSyncEngineFailedZoneSave_New(void)                                      { return ((CKSyncEngineFailedZoneSave (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFailedZoneSave"), bean_sel("new")); }
+static inline CKRecordZone                  CKSyncEngineFailedZoneSave_RecordZone(CKSyncEngineFailedZoneSave self)    { return ((CKRecordZone (*)(CKSyncEngineFailedZoneSave, SEL))bean_msgSend)(self, bean_sel("recordZone")); }
+static inline NSError                       CKSyncEngineFailedZoneSave_Error(CKSyncEngineFailedZoneSave self)         { return ((NSError (*)(CKSyncEngineFailedZoneSave, SEL))bean_msgSend)(self, bean_sel("error")); }
 
 /* ===== CKSyncEngineFetchChangesContext ===== */
-static inline id                                 CKSyncEngineFetchChangesContext_Init(CKSyncEngineFetchChangesContext self)       { return ((id (*)(CKSyncEngineFetchChangesContext, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                 CKSyncEngineFetchChangesContext_New(void)                                        { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFetchChangesContext"), bean_sel("new")); }
+static inline CKSyncEngineFetchChangesContext    CKSyncEngineFetchChangesContext_Init(CKSyncEngineFetchChangesContext self)       { return ((CKSyncEngineFetchChangesContext (*)(CKSyncEngineFetchChangesContext, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineFetchChangesContext    CKSyncEngineFetchChangesContext_New(void)                                        { return ((CKSyncEngineFetchChangesContext (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineFetchChangesContext"), bean_sel("new")); }
 static inline CKSyncEngineSyncReason             CKSyncEngineFetchChangesContext_Reason(CKSyncEngineFetchChangesContext self)     { return ((CKSyncEngineSyncReason (*)(CKSyncEngineFetchChangesContext, SEL))bean_msgSend)(self, bean_sel("reason")); }
 static inline CKSyncEngineFetchChangesOptions    CKSyncEngineFetchChangesContext_Options(CKSyncEngineFetchChangesContext self)    { return ((CKSyncEngineFetchChangesOptions (*)(CKSyncEngineFetchChangesContext, SEL))bean_msgSend)(self, bean_sel("options")); }
 
 /* ===== CKSyncEngineFetchChangesOptions ===== */
-static inline id                               CKSyncEngineFetchChangesOptions_InitWithScope(CKSyncEngineFetchChangesOptions self, CKSyncEngineFetchChangesScope scope)    { return ((id (*)(CKSyncEngineFetchChangesOptions, SEL, CKSyncEngineFetchChangesScope))bean_msgSend)(self, bean_sel("initWithScope:"), scope); }
-static inline CKSyncEngineFetchChangesScope    CKSyncEngineFetchChangesOptions_Scope(CKSyncEngineFetchChangesOptions self)                                                 { return ((CKSyncEngineFetchChangesScope (*)(CKSyncEngineFetchChangesOptions, SEL))bean_msgSend)(self, bean_sel("scope")); }
-static inline void                             CKSyncEngineFetchChangesOptions_SetScope(CKSyncEngineFetchChangesOptions self, CKSyncEngineFetchChangesScope scope)         { ((void (*)(CKSyncEngineFetchChangesOptions, SEL, CKSyncEngineFetchChangesScope))bean_msgSend)(self, bean_sel("setScope:"), scope); }
-static inline CKOperationGroup                 CKSyncEngineFetchChangesOptions_OperationGroup(CKSyncEngineFetchChangesOptions self)                                        { return ((CKOperationGroup (*)(CKSyncEngineFetchChangesOptions, SEL))bean_msgSend)(self, bean_sel("operationGroup")); }
-static inline void                             CKSyncEngineFetchChangesOptions_SetOperationGroup(CKSyncEngineFetchChangesOptions self, CKOperationGroup operationGroup)    { ((void (*)(CKSyncEngineFetchChangesOptions, SEL, CKOperationGroup))bean_msgSend)(self, bean_sel("setOperationGroup:"), operationGroup); }
-static inline NSArray                          CKSyncEngineFetchChangesOptions_PrioritizedZoneIDs(CKSyncEngineFetchChangesOptions self)                                    { return ((NSArray (*)(CKSyncEngineFetchChangesOptions, SEL))bean_msgSend)(self, bean_sel("prioritizedZoneIDs")); }
-static inline void                             CKSyncEngineFetchChangesOptions_SetPrioritizedZoneIDs(CKSyncEngineFetchChangesOptions self, NSArray prioritizedZoneIDs)     { ((void (*)(CKSyncEngineFetchChangesOptions, SEL, NSArray))bean_msgSend)(self, bean_sel("setPrioritizedZoneIDs:"), prioritizedZoneIDs); }
+static inline CKSyncEngineFetchChangesOptions    CKSyncEngineFetchChangesOptions_InitWithScope(CKSyncEngineFetchChangesOptions self, CKSyncEngineFetchChangesScope scope)    { return ((CKSyncEngineFetchChangesOptions (*)(CKSyncEngineFetchChangesOptions, SEL, CKSyncEngineFetchChangesScope))bean_msgSend)(self, bean_sel("initWithScope:"), scope); }
+static inline CKSyncEngineFetchChangesScope      CKSyncEngineFetchChangesOptions_Scope(CKSyncEngineFetchChangesOptions self)                                                 { return ((CKSyncEngineFetchChangesScope (*)(CKSyncEngineFetchChangesOptions, SEL))bean_msgSend)(self, bean_sel("scope")); }
+static inline void                               CKSyncEngineFetchChangesOptions_SetScope(CKSyncEngineFetchChangesOptions self, CKSyncEngineFetchChangesScope scope)         { ((void (*)(CKSyncEngineFetchChangesOptions, SEL, CKSyncEngineFetchChangesScope))bean_msgSend)(self, bean_sel("setScope:"), scope); }
+static inline CKOperationGroup                   CKSyncEngineFetchChangesOptions_OperationGroup(CKSyncEngineFetchChangesOptions self)                                        { return ((CKOperationGroup (*)(CKSyncEngineFetchChangesOptions, SEL))bean_msgSend)(self, bean_sel("operationGroup")); }
+static inline void                               CKSyncEngineFetchChangesOptions_SetOperationGroup(CKSyncEngineFetchChangesOptions self, CKOperationGroup operationGroup)    { ((void (*)(CKSyncEngineFetchChangesOptions, SEL, CKOperationGroup))bean_msgSend)(self, bean_sel("setOperationGroup:"), operationGroup); }
+static inline NSArray                            CKSyncEngineFetchChangesOptions_PrioritizedZoneIDs(CKSyncEngineFetchChangesOptions self)                                    { return ((NSArray (*)(CKSyncEngineFetchChangesOptions, SEL))bean_msgSend)(self, bean_sel("prioritizedZoneIDs")); }
+static inline void                               CKSyncEngineFetchChangesOptions_SetPrioritizedZoneIDs(CKSyncEngineFetchChangesOptions self, NSArray prioritizedZoneIDs)     { ((void (*)(CKSyncEngineFetchChangesOptions, SEL, NSArray))bean_msgSend)(self, bean_sel("setPrioritizedZoneIDs:"), prioritizedZoneIDs); }
+static inline id                                 CKSyncEngineFetchChangesOptions_CopyWithZone(CKSyncEngineFetchChangesOptions self, NSZone* zone)                            { return ((id (*)(CKSyncEngineFetchChangesOptions, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKSyncEnginePendingZoneSave ===== */
 #ifndef BEAN_TYPEDEF_CKSyncEnginePendingZoneSave
 #define BEAN_TYPEDEF_CKSyncEnginePendingZoneSave
 typedef bean_id CKSyncEnginePendingZoneSave;
 #endif
-static inline id              CKSyncEnginePendingZoneSave_InitWithZone(CKSyncEnginePendingZoneSave self, CKRecordZone zone)    { return ((id (*)(CKSyncEnginePendingZoneSave, SEL, CKRecordZone))bean_msgSend)(self, bean_sel("initWithZone:"), zone); }
-static inline CKRecordZone    CKSyncEnginePendingZoneSave_Zone(CKSyncEnginePendingZoneSave self)                               { return ((CKRecordZone (*)(CKSyncEnginePendingZoneSave, SEL))bean_msgSend)(self, bean_sel("zone")); }
+static inline CKSyncEnginePendingZoneSave    CKSyncEnginePendingZoneSave_InitWithZone(CKSyncEnginePendingZoneSave self, CKRecordZone zone)    { return ((CKSyncEnginePendingZoneSave (*)(CKSyncEnginePendingZoneSave, SEL, CKRecordZone))bean_msgSend)(self, bean_sel("initWithZone:"), zone); }
+static inline CKRecordZone                   CKSyncEnginePendingZoneSave_Zone(CKSyncEnginePendingZoneSave self)                               { return ((CKRecordZone (*)(CKSyncEnginePendingZoneSave, SEL))bean_msgSend)(self, bean_sel("zone")); }
 
 /* ===== CKSyncEngineSendChangesContext ===== */
-static inline id                                CKSyncEngineSendChangesContext_Init(CKSyncEngineSendChangesContext self)       { return ((id (*)(CKSyncEngineSendChangesContext, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                CKSyncEngineSendChangesContext_New(void)                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineSendChangesContext"), bean_sel("new")); }
+static inline CKSyncEngineSendChangesContext    CKSyncEngineSendChangesContext_Init(CKSyncEngineSendChangesContext self)       { return ((CKSyncEngineSendChangesContext (*)(CKSyncEngineSendChangesContext, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSyncEngineSendChangesContext    CKSyncEngineSendChangesContext_New(void)                                       { return ((CKSyncEngineSendChangesContext (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSyncEngineSendChangesContext"), bean_sel("new")); }
 static inline CKSyncEngineSyncReason            CKSyncEngineSendChangesContext_Reason(CKSyncEngineSendChangesContext self)     { return ((CKSyncEngineSyncReason (*)(CKSyncEngineSendChangesContext, SEL))bean_msgSend)(self, bean_sel("reason")); }
 static inline CKSyncEngineSendChangesOptions    CKSyncEngineSendChangesContext_Options(CKSyncEngineSendChangesContext self)    { return ((CKSyncEngineSendChangesOptions (*)(CKSyncEngineSendChangesContext, SEL))bean_msgSend)(self, bean_sel("options")); }
 
 /* ===== CKSyncEngineSendChangesOptions ===== */
-static inline id                              CKSyncEngineSendChangesOptions_InitWithScope(CKSyncEngineSendChangesOptions self, CKSyncEngineSendChangesScope scope)     { return ((id (*)(CKSyncEngineSendChangesOptions, SEL, CKSyncEngineSendChangesScope))bean_msgSend)(self, bean_sel("initWithScope:"), scope); }
-static inline CKSyncEngineSendChangesScope    CKSyncEngineSendChangesOptions_Scope(CKSyncEngineSendChangesOptions self)                                                 { return ((CKSyncEngineSendChangesScope (*)(CKSyncEngineSendChangesOptions, SEL))bean_msgSend)(self, bean_sel("scope")); }
-static inline void                            CKSyncEngineSendChangesOptions_SetScope(CKSyncEngineSendChangesOptions self, CKSyncEngineSendChangesScope scope)          { ((void (*)(CKSyncEngineSendChangesOptions, SEL, CKSyncEngineSendChangesScope))bean_msgSend)(self, bean_sel("setScope:"), scope); }
-static inline CKOperationGroup                CKSyncEngineSendChangesOptions_OperationGroup(CKSyncEngineSendChangesOptions self)                                        { return ((CKOperationGroup (*)(CKSyncEngineSendChangesOptions, SEL))bean_msgSend)(self, bean_sel("operationGroup")); }
-static inline void                            CKSyncEngineSendChangesOptions_SetOperationGroup(CKSyncEngineSendChangesOptions self, CKOperationGroup operationGroup)    { ((void (*)(CKSyncEngineSendChangesOptions, SEL, CKOperationGroup))bean_msgSend)(self, bean_sel("setOperationGroup:"), operationGroup); }
+static inline CKSyncEngineSendChangesOptions    CKSyncEngineSendChangesOptions_InitWithScope(CKSyncEngineSendChangesOptions self, CKSyncEngineSendChangesScope scope)     { return ((CKSyncEngineSendChangesOptions (*)(CKSyncEngineSendChangesOptions, SEL, CKSyncEngineSendChangesScope))bean_msgSend)(self, bean_sel("initWithScope:"), scope); }
+static inline CKSyncEngineSendChangesScope      CKSyncEngineSendChangesOptions_Scope(CKSyncEngineSendChangesOptions self)                                                 { return ((CKSyncEngineSendChangesScope (*)(CKSyncEngineSendChangesOptions, SEL))bean_msgSend)(self, bean_sel("scope")); }
+static inline void                              CKSyncEngineSendChangesOptions_SetScope(CKSyncEngineSendChangesOptions self, CKSyncEngineSendChangesScope scope)          { ((void (*)(CKSyncEngineSendChangesOptions, SEL, CKSyncEngineSendChangesScope))bean_msgSend)(self, bean_sel("setScope:"), scope); }
+static inline CKOperationGroup                  CKSyncEngineSendChangesOptions_OperationGroup(CKSyncEngineSendChangesOptions self)                                        { return ((CKOperationGroup (*)(CKSyncEngineSendChangesOptions, SEL))bean_msgSend)(self, bean_sel("operationGroup")); }
+static inline void                              CKSyncEngineSendChangesOptions_SetOperationGroup(CKSyncEngineSendChangesOptions self, CKOperationGroup operationGroup)    { ((void (*)(CKSyncEngineSendChangesOptions, SEL, CKOperationGroup))bean_msgSend)(self, bean_sel("setOperationGroup:"), operationGroup); }
+static inline id                                CKSyncEngineSendChangesOptions_CopyWithZone(CKSyncEngineSendChangesOptions self, NSZone* zone)                            { return ((id (*)(CKSyncEngineSendChangesOptions, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKSyncEngineWillFetchChangesEvent ===== */
 static inline CKSyncEngineFetchChangesContext    CKSyncEngineWillFetchChangesEvent_Context(CKSyncEngineWillFetchChangesEvent self)    { return ((CKSyncEngineFetchChangesContext (*)(CKSyncEngineWillFetchChangesEvent, SEL))bean_msgSend)(self, bean_sel("context")); }
@@ -2626,13 +2887,13 @@ static inline CKSyncEngineSendChangesContext    CKSyncEngineWillSendChangesEvent
 #define BEAN_TYPEDEF_CKSystemSharingUIObserver
 typedef bean_id CKSystemSharingUIObserver;
 #endif
-static inline id       CKSystemSharingUIObserver_Init(CKSystemSharingUIObserver self)                                                                               { return ((id (*)(CKSystemSharingUIObserver, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id       CKSystemSharingUIObserver_New(void)                                                                                                          { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSystemSharingUIObserver"), bean_sel("new")); }
-static inline id       CKSystemSharingUIObserver_InitWithContainer(CKSystemSharingUIObserver self, CKContainer container)                                           { return ((id (*)(CKSystemSharingUIObserver, SEL, CKContainer))bean_msgSend)(self, bean_sel("initWithContainer:"), container); }
-static inline void*    CKSystemSharingUIObserver_SystemSharingUIDidSaveShareBlock(CKSystemSharingUIObserver self)                                                   { return ((void* (*)(CKSystemSharingUIObserver, SEL))bean_msgSend)(self, bean_sel("systemSharingUIDidSaveShareBlock")); }
-static inline void     CKSystemSharingUIObserver_SetSystemSharingUIDidSaveShareBlock(CKSystemSharingUIObserver self, void* systemSharingUIDidSaveShareBlock)        { ((void (*)(CKSystemSharingUIObserver, SEL, void*))bean_msgSend)(self, bean_sel("setSystemSharingUIDidSaveShareBlock:"), systemSharingUIDidSaveShareBlock); }
-static inline void*    CKSystemSharingUIObserver_SystemSharingUIDidStopSharingBlock(CKSystemSharingUIObserver self)                                                 { return ((void* (*)(CKSystemSharingUIObserver, SEL))bean_msgSend)(self, bean_sel("systemSharingUIDidStopSharingBlock")); }
-static inline void     CKSystemSharingUIObserver_SetSystemSharingUIDidStopSharingBlock(CKSystemSharingUIObserver self, void* systemSharingUIDidStopSharingBlock)    { ((void (*)(CKSystemSharingUIObserver, SEL, void*))bean_msgSend)(self, bean_sel("setSystemSharingUIDidStopSharingBlock:"), systemSharingUIDidStopSharingBlock); }
+static inline CKSystemSharingUIObserver    CKSystemSharingUIObserver_Init(CKSystemSharingUIObserver self)                                                                               { return ((CKSystemSharingUIObserver (*)(CKSystemSharingUIObserver, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSystemSharingUIObserver    CKSystemSharingUIObserver_New(void)                                                                                                          { return ((CKSystemSharingUIObserver (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSystemSharingUIObserver"), bean_sel("new")); }
+static inline CKSystemSharingUIObserver    CKSystemSharingUIObserver_InitWithContainer(CKSystemSharingUIObserver self, CKContainer container)                                           { return ((CKSystemSharingUIObserver (*)(CKSystemSharingUIObserver, SEL, CKContainer))bean_msgSend)(self, bean_sel("initWithContainer:"), container); }
+static inline void*                        CKSystemSharingUIObserver_SystemSharingUIDidSaveShareBlock(CKSystemSharingUIObserver self)                                                   { return ((void* (*)(CKSystemSharingUIObserver, SEL))bean_msgSend)(self, bean_sel("systemSharingUIDidSaveShareBlock")); }
+static inline void                         CKSystemSharingUIObserver_SetSystemSharingUIDidSaveShareBlock(CKSystemSharingUIObserver self, void* systemSharingUIDidSaveShareBlock)        { ((void (*)(CKSystemSharingUIObserver, SEL, void*))bean_msgSend)(self, bean_sel("setSystemSharingUIDidSaveShareBlock:"), systemSharingUIDidSaveShareBlock); }
+static inline void*                        CKSystemSharingUIObserver_SystemSharingUIDidStopSharingBlock(CKSystemSharingUIObserver self)                                                 { return ((void* (*)(CKSystemSharingUIObserver, SEL))bean_msgSend)(self, bean_sel("systemSharingUIDidStopSharingBlock")); }
+static inline void                         CKSystemSharingUIObserver_SetSystemSharingUIDidStopSharingBlock(CKSystemSharingUIObserver self, void* systemSharingUIDidStopSharingBlock)    { ((void (*)(CKSystemSharingUIObserver, SEL, void*))bean_msgSend)(self, bean_sel("setSystemSharingUIDidStopSharingBlock:"), systemSharingUIDidStopSharingBlock); }
 
 /* ===== NSItemProvider ===== */
 #ifndef BEAN_TYPEDEF_NSItemProvider

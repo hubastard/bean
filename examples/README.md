@@ -34,7 +34,6 @@ GUI examples open a window and run `NSApplication` until you close it or press *
 | `mapkit/` | MapKit | `MKMapView` centered on SF |
 | `pdfkit/` | PDFKit | `PDFView` displaying `sample.pdf` |
 | `storekit/` | StoreKit | `canMakePayments` |
-| `quicklook/` | QuickLook | Header compiles (wrappers pending) |
 
 Shared window helpers live in `common/app_shell.h`.
 

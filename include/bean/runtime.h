@@ -47,6 +47,33 @@ static inline bean_id bean_init(bean_id obj) {
     return ((bean_id (*)(bean_id, bean_sel))objc_msgSend)(obj, bean_sel("init"));
 }
 
+static inline bean_id bean_new(bean_class cls) {
+    /* alloc + -init. Do not use when a designated initializer follows (e.g. initWithFrame:). */
+    return bean_init(bean_alloc(cls));
+}
+
+#define BEAN_AUTORELEASE_POOL \
+    for (bean_autorelease_pool_scope bean_pool__ = bean_autorelease_pool_push(), \
+         *bean_pool_ptr__ = &bean_pool__; \
+         bean_pool_ptr__; \
+         bean_autorelease_pool_pop(*bean_pool_ptr__), bean_pool_ptr__ = NULL)
+
+#define bean_super_struct(self, super_cls) \
+    ((struct objc_super){ (self), (Class)(super_cls) })
+
+/* Typed super calls — variadic casts break struct args (CGRect, CGSize) on arm64. */
+#define bean_super_call_obj(self, super_cls, cmd, obj) \
+    ((void (*)(struct objc_super*, SEL, bean_id))objc_msgSendSuper)( \
+        &bean_super_struct((self), (super_cls)), (cmd), (obj))
+
+#define bean_super_call_rect(self, super_cls, cmd, rect) \
+    ((void (*)(struct objc_super*, SEL, CGRect))objc_msgSendSuper)( \
+        &bean_super_struct((self), (super_cls)), (cmd), (rect))
+
+#define bean_super_call_size(self, super_cls, cmd, size) \
+    ((void (*)(struct objc_super*, SEL, CGSize))objc_msgSendSuper)( \
+        &bean_super_struct((self), (super_cls)), (cmd), (size))
+
 static inline bean_id bean_retain(bean_id obj) {
     return ((bean_id (*)(bean_id, bean_sel))objc_msgSend)(obj, bean_sel("retain"));
 }
@@ -93,6 +120,8 @@ static inline const char* bean_nsstring_to_utf8(bean_id str) {
     return ((const char* (*)(bean_id, bean_sel))objc_msgSend)(str, bean_sel("UTF8String"));
 }
 
+#define bean_str(cstr) bean_nsstring_from_utf8((cstr))
+
 typedef struct bean_method_spec {
     const char* selector;
     IMP implementation;
@@ -137,6 +166,17 @@ typedef void (*bean_block_fn0)(void* context, void* block);
 typedef void (*bean_block_fn1)(void* context, void* block, bean_id arg0);
 typedef void (*bean_block_fn2)(void* context, void* block, long arg0, bean_id arg1);
 typedef void (*bean_block_fn2_id)(void* context, void* block, bean_id arg0, bean_id arg1);
+typedef void (*bean_bool_error_fn)(void* context, void* block, BOOL ok, bean_id err);
+
+struct bean_block_literal_bool_error {
+    void* isa;
+    int flags;
+    int reserved;
+    void (*invoke)(struct bean_block_literal_bool_error*, BOOL ok, bean_id err);
+    struct bean_block_descriptor* descriptor;
+    void* context;
+    bean_bool_error_fn user_fn;
+};
 
 struct bean_block_descriptor {
     unsigned long int reserved;
@@ -211,6 +251,16 @@ static void bean_block_invoke_2_id(
     }
 }
 
+static void bean_block_invoke_bool_error(
+    struct bean_block_literal_bool_error* block,
+    BOOL ok,
+    bean_id err
+) {
+    if (block && block->user_fn) {
+        block->user_fn(block->context, block, ok, err);
+    }
+}
+
 static inline void* bean_block_stack_isa(void) {
     return _NSConcreteStackBlock;
 }
@@ -257,6 +307,18 @@ static inline void* bean_block_create_2_id(void* context, bean_block_fn2_id fn) 
     block.isa = bean_block_stack_isa();
     block.flags = 0;
     block.invoke = bean_block_invoke_2_id;
+    block.descriptor = &desc;
+    block.context = context;
+    block.user_fn = fn;
+    return Block_copy(&block);
+}
+
+static inline void* bean_block_bool_error(void* context, bean_bool_error_fn fn) {
+    static struct bean_block_descriptor desc = { 0, sizeof(struct bean_block_literal_bool_error) };
+    struct bean_block_literal_bool_error block = {0};
+    block.isa = bean_block_stack_isa();
+    block.flags = 0;
+    block.invoke = bean_block_invoke_bool_error;
     block.descriptor = &desc;
     block.context = context;
     block.user_fn = fn;

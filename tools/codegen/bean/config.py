@@ -154,12 +154,6 @@ FRAMEWORKS: tuple[FrameworkSpec, ...] = (
         depends_on=("appkit", "foundation", "cloudkit"),
     ),
     FrameworkSpec(
-        name="quicklook",
-        umbrella="QuickLook/QuickLook.h",
-        guard="BEAN_QUICKLOOK_H",
-        depends_on=("appkit", "foundation"),
-    ),
-    FrameworkSpec(
         name="storekit",
         umbrella="StoreKit/StoreKit.h",
         guard="BEAN_STOREKIT_H",
@@ -258,6 +252,5 @@ GENERATION_ORDER: tuple[str, ...] = (
     "gameplaykit",
     "mapkit",
     "pdfkit",
-    "quicklook",
     "storekit",
 )

@@ -34,9 +34,9 @@ static const SKANError SKANErrorImpressionTooShort = (SKANError)11;
 typedef NSInteger SKCloudServiceAuthorizationStatus;
 #endif
 static const SKCloudServiceAuthorizationStatus SKCloudServiceAuthorizationStatusNotDetermined = (SKCloudServiceAuthorizationStatus)0;
-static const SKCloudServiceAuthorizationStatus SKCloudServiceAuthorizationStatusDenied = (SKCloudServiceAuthorizationStatus)0;
-static const SKCloudServiceAuthorizationStatus SKCloudServiceAuthorizationStatusRestricted = (SKCloudServiceAuthorizationStatus)0;
-static const SKCloudServiceAuthorizationStatus SKCloudServiceAuthorizationStatusAuthorized = (SKCloudServiceAuthorizationStatus)0;
+static const SKCloudServiceAuthorizationStatus SKCloudServiceAuthorizationStatusDenied = (SKCloudServiceAuthorizationStatus)1;
+static const SKCloudServiceAuthorizationStatus SKCloudServiceAuthorizationStatusRestricted = (SKCloudServiceAuthorizationStatus)2;
+static const SKCloudServiceAuthorizationStatus SKCloudServiceAuthorizationStatusAuthorized = (SKCloudServiceAuthorizationStatus)3;
 
 #ifndef BEAN_TYPEDEF_SKCloudServiceCapability
 #define BEAN_TYPEDEF_SKCloudServiceCapability
@@ -52,37 +52,37 @@ static const SKCloudServiceCapability SKCloudServiceCapabilityAddToCloudMusicLib
 typedef NSInteger SKDownloadState;
 #endif
 static const SKDownloadState SKDownloadStateWaiting = (SKDownloadState)0;
-static const SKDownloadState SKDownloadStateActive = (SKDownloadState)0;
-static const SKDownloadState SKDownloadStatePaused = (SKDownloadState)0;
-static const SKDownloadState SKDownloadStateFinished = (SKDownloadState)0;
-static const SKDownloadState SKDownloadStateFailed = (SKDownloadState)0;
-static const SKDownloadState SKDownloadStateCancelled = (SKDownloadState)0;
+static const SKDownloadState SKDownloadStateActive = (SKDownloadState)1;
+static const SKDownloadState SKDownloadStatePaused = (SKDownloadState)2;
+static const SKDownloadState SKDownloadStateFinished = (SKDownloadState)3;
+static const SKDownloadState SKDownloadStateFailed = (SKDownloadState)4;
+static const SKDownloadState SKDownloadStateCancelled = (SKDownloadState)5;
 
 #ifndef BEAN_TYPEDEF_SKErrorCode
 #define BEAN_TYPEDEF_SKErrorCode
 typedef NSInteger SKErrorCode;
 #endif
 static const SKErrorCode SKErrorUnknown = (SKErrorCode)0;
-static const SKErrorCode SKErrorClientInvalid = (SKErrorCode)0;
-static const SKErrorCode SKErrorPaymentCancelled = (SKErrorCode)0;
-static const SKErrorCode SKErrorPaymentInvalid = (SKErrorCode)0;
-static const SKErrorCode SKErrorPaymentNotAllowed = (SKErrorCode)0;
-static const SKErrorCode SKErrorStoreProductNotAvailable = (SKErrorCode)0;
-static const SKErrorCode SKErrorCloudServicePermissionDenied = (SKErrorCode)0;
-static const SKErrorCode SKErrorCloudServiceNetworkConnectionFailed = (SKErrorCode)0;
-static const SKErrorCode SKErrorCloudServiceRevoked = (SKErrorCode)0;
-static const SKErrorCode SKErrorPrivacyAcknowledgementRequired = (SKErrorCode)0;
-static const SKErrorCode SKErrorUnauthorizedRequestData = (SKErrorCode)0;
-static const SKErrorCode SKErrorInvalidOfferIdentifier = (SKErrorCode)0;
-static const SKErrorCode SKErrorInvalidSignature = (SKErrorCode)0;
-static const SKErrorCode SKErrorMissingOfferParams = (SKErrorCode)0;
-static const SKErrorCode SKErrorInvalidOfferPrice = (SKErrorCode)0;
-static const SKErrorCode SKErrorOverlayCancelled = (SKErrorCode)0;
-static const SKErrorCode SKErrorOverlayInvalidConfiguration = (SKErrorCode)0;
-static const SKErrorCode SKErrorOverlayTimeout = (SKErrorCode)0;
-static const SKErrorCode SKErrorIneligibleForOffer = (SKErrorCode)0;
-static const SKErrorCode SKErrorUnsupportedPlatform = (SKErrorCode)0;
-static const SKErrorCode SKErrorOverlayPresentedInBackgroundScene = (SKErrorCode)0;
+static const SKErrorCode SKErrorClientInvalid = (SKErrorCode)1;
+static const SKErrorCode SKErrorPaymentCancelled = (SKErrorCode)2;
+static const SKErrorCode SKErrorPaymentInvalid = (SKErrorCode)3;
+static const SKErrorCode SKErrorPaymentNotAllowed = (SKErrorCode)4;
+static const SKErrorCode SKErrorStoreProductNotAvailable = (SKErrorCode)5;
+static const SKErrorCode SKErrorCloudServicePermissionDenied = (SKErrorCode)6;
+static const SKErrorCode SKErrorCloudServiceNetworkConnectionFailed = (SKErrorCode)7;
+static const SKErrorCode SKErrorCloudServiceRevoked = (SKErrorCode)8;
+static const SKErrorCode SKErrorPrivacyAcknowledgementRequired = (SKErrorCode)9;
+static const SKErrorCode SKErrorUnauthorizedRequestData = (SKErrorCode)10;
+static const SKErrorCode SKErrorInvalidOfferIdentifier = (SKErrorCode)11;
+static const SKErrorCode SKErrorInvalidSignature = (SKErrorCode)12;
+static const SKErrorCode SKErrorMissingOfferParams = (SKErrorCode)13;
+static const SKErrorCode SKErrorInvalidOfferPrice = (SKErrorCode)14;
+static const SKErrorCode SKErrorOverlayCancelled = (SKErrorCode)15;
+static const SKErrorCode SKErrorOverlayInvalidConfiguration = (SKErrorCode)16;
+static const SKErrorCode SKErrorOverlayTimeout = (SKErrorCode)17;
+static const SKErrorCode SKErrorIneligibleForOffer = (SKErrorCode)18;
+static const SKErrorCode SKErrorUnsupportedPlatform = (SKErrorCode)19;
+static const SKErrorCode SKErrorOverlayPresentedInBackgroundScene = (SKErrorCode)20;
 
 #ifndef BEAN_TYPEDEF_SKOverlayPosition
 #define BEAN_TYPEDEF_SKOverlayPosition
@@ -96,47 +96,63 @@ static const SKOverlayPosition SKOverlayPositionBottomRaised = (SKOverlayPositio
 typedef NSInteger SKPaymentTransactionState;
 #endif
 static const SKPaymentTransactionState SKPaymentTransactionStatePurchasing = (SKPaymentTransactionState)0;
-static const SKPaymentTransactionState SKPaymentTransactionStatePurchased = (SKPaymentTransactionState)0;
-static const SKPaymentTransactionState SKPaymentTransactionStateFailed = (SKPaymentTransactionState)0;
-static const SKPaymentTransactionState SKPaymentTransactionStateRestored = (SKPaymentTransactionState)0;
-static const SKPaymentTransactionState SKPaymentTransactionStateDeferred = (SKPaymentTransactionState)0;
+static const SKPaymentTransactionState SKPaymentTransactionStatePurchased = (SKPaymentTransactionState)1;
+static const SKPaymentTransactionState SKPaymentTransactionStateFailed = (SKPaymentTransactionState)2;
+static const SKPaymentTransactionState SKPaymentTransactionStateRestored = (SKPaymentTransactionState)3;
+static const SKPaymentTransactionState SKPaymentTransactionStateDeferred = (SKPaymentTransactionState)4;
 
 #ifndef BEAN_TYPEDEF_SKProductPeriodUnit
 #define BEAN_TYPEDEF_SKProductPeriodUnit
 typedef NSUInteger SKProductPeriodUnit;
 #endif
 static const SKProductPeriodUnit SKProductPeriodUnitDay = (SKProductPeriodUnit)0;
-static const SKProductPeriodUnit SKProductPeriodUnitWeek = (SKProductPeriodUnit)0;
-static const SKProductPeriodUnit SKProductPeriodUnitMonth = (SKProductPeriodUnit)0;
-static const SKProductPeriodUnit SKProductPeriodUnitYear = (SKProductPeriodUnit)0;
+static const SKProductPeriodUnit SKProductPeriodUnitWeek = (SKProductPeriodUnit)1;
+static const SKProductPeriodUnit SKProductPeriodUnitMonth = (SKProductPeriodUnit)2;
+static const SKProductPeriodUnit SKProductPeriodUnitYear = (SKProductPeriodUnit)3;
 
 #ifndef BEAN_TYPEDEF_SKProductDiscountPaymentMode
 #define BEAN_TYPEDEF_SKProductDiscountPaymentMode
 typedef NSUInteger SKProductDiscountPaymentMode;
 #endif
 static const SKProductDiscountPaymentMode SKProductDiscountPaymentModePayAsYouGo = (SKProductDiscountPaymentMode)0;
-static const SKProductDiscountPaymentMode SKProductDiscountPaymentModePayUpFront = (SKProductDiscountPaymentMode)0;
-static const SKProductDiscountPaymentMode SKProductDiscountPaymentModeFreeTrial = (SKProductDiscountPaymentMode)0;
+static const SKProductDiscountPaymentMode SKProductDiscountPaymentModePayUpFront = (SKProductDiscountPaymentMode)1;
+static const SKProductDiscountPaymentMode SKProductDiscountPaymentModeFreeTrial = (SKProductDiscountPaymentMode)2;
 
 #ifndef BEAN_TYPEDEF_SKProductDiscountType
 #define BEAN_TYPEDEF_SKProductDiscountType
 typedef NSUInteger SKProductDiscountType;
 #endif
 static const SKProductDiscountType SKProductDiscountTypeIntroductory = (SKProductDiscountType)0;
-static const SKProductDiscountType SKProductDiscountTypeSubscription = (SKProductDiscountType)0;
+static const SKProductDiscountType SKProductDiscountTypeSubscription = (SKProductDiscountType)1;
 
 #ifndef BEAN_TYPEDEF_SKProductStorePromotionVisibility
 #define BEAN_TYPEDEF_SKProductStorePromotionVisibility
 typedef NSInteger SKProductStorePromotionVisibility;
 #endif
 static const SKProductStorePromotionVisibility SKProductStorePromotionVisibilityDefault = (SKProductStorePromotionVisibility)0;
-static const SKProductStorePromotionVisibility SKProductStorePromotionVisibilityShow = (SKProductStorePromotionVisibility)0;
-static const SKProductStorePromotionVisibility SKProductStorePromotionVisibilityHide = (SKProductStorePromotionVisibility)0;
+static const SKProductStorePromotionVisibility SKProductStorePromotionVisibilityShow = (SKProductStorePromotionVisibility)1;
+static const SKProductStorePromotionVisibility SKProductStorePromotionVisibilityHide = (SKProductStorePromotionVisibility)2;
 
 /* ===== forward typedefs ===== */
+#ifndef BEAN_TYPEDEF_CAAction
+#define BEAN_TYPEDEF_CAAction
+typedef bean_id CAAction;
+#endif
 #ifndef BEAN_TYPEDEF_CALayer
 #define BEAN_TYPEDEF_CALayer
 typedef bean_id CALayer;
+#endif
+#ifndef BEAN_TYPEDEF_CALayerDelegate
+#define BEAN_TYPEDEF_CALayerDelegate
+typedef bean_id CALayerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_CALayoutManager
+#define BEAN_TYPEDEF_CALayoutManager
+typedef bean_id CALayoutManager;
+#endif
+#ifndef BEAN_TYPEDEF_CAMediaTiming
+#define BEAN_TYPEDEF_CAMediaTiming
+typedef bean_id CAMediaTiming;
 #endif
 #ifndef BEAN_TYPEDEF_CAOpenGLLayer
 #define BEAN_TYPEDEF_CAOpenGLLayer
@@ -154,9 +170,33 @@ typedef bean_id CIImage;
 #define BEAN_TYPEDEF_CIVector
 typedef bean_id CIVector;
 #endif
+#ifndef BEAN_TYPEDEF_CTAdaptiveImageProviding
+#define BEAN_TYPEDEF_CTAdaptiveImageProviding
+typedef bean_id CTAdaptiveImageProviding;
+#endif
 #ifndef BEAN_TYPEDEF_NSATSTypesetter
 #define BEAN_TYPEDEF_NSATSTypesetter
 typedef bean_id NSATSTypesetter;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibility
+#define BEAN_TYPEDEF_NSAccessibility
+typedef bean_id NSAccessibility;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityButton
+#define BEAN_TYPEDEF_NSAccessibilityButton
+typedef bean_id NSAccessibilityButton;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityCheckBox
+#define BEAN_TYPEDEF_NSAccessibilityCheckBox
+typedef bean_id NSAccessibilityCheckBox;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityColor
+#define BEAN_TYPEDEF_NSAccessibilityColor
+typedef bean_id NSAccessibilityColor;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityContainsTransientUI
+#define BEAN_TYPEDEF_NSAccessibilityContainsTransientUI
+typedef bean_id NSAccessibilityContainsTransientUI;
 #endif
 #ifndef BEAN_TYPEDEF_NSAccessibilityCustomAction
 #define BEAN_TYPEDEF_NSAccessibilityCustomAction
@@ -170,6 +210,10 @@ typedef bean_id NSAccessibilityCustomRotor;
 #define BEAN_TYPEDEF_NSAccessibilityCustomRotorItemResult
 typedef bean_id NSAccessibilityCustomRotorItemResult;
 #endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityCustomRotorItemSearchDelegate
+#define BEAN_TYPEDEF_NSAccessibilityCustomRotorItemSearchDelegate
+typedef bean_id NSAccessibilityCustomRotorItemSearchDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAccessibilityCustomRotorSearchParameters
 #define BEAN_TYPEDEF_NSAccessibilityCustomRotorSearchParameters
 typedef bean_id NSAccessibilityCustomRotorSearchParameters;
@@ -177,6 +221,58 @@ typedef bean_id NSAccessibilityCustomRotorSearchParameters;
 #ifndef BEAN_TYPEDEF_NSAccessibilityElement
 #define BEAN_TYPEDEF_NSAccessibilityElement
 typedef bean_id NSAccessibilityElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityElementLoading
+#define BEAN_TYPEDEF_NSAccessibilityElementLoading
+typedef bean_id NSAccessibilityElementLoading;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityImage
+#define BEAN_TYPEDEF_NSAccessibilityImage
+typedef bean_id NSAccessibilityImage;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityLayoutArea
+#define BEAN_TYPEDEF_NSAccessibilityLayoutArea
+typedef bean_id NSAccessibilityLayoutArea;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityLayoutItem
+#define BEAN_TYPEDEF_NSAccessibilityLayoutItem
+typedef bean_id NSAccessibilityLayoutItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityNavigableStaticText
+#define BEAN_TYPEDEF_NSAccessibilityNavigableStaticText
+typedef bean_id NSAccessibilityNavigableStaticText;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityProgressIndicator
+#define BEAN_TYPEDEF_NSAccessibilityProgressIndicator
+typedef bean_id NSAccessibilityProgressIndicator;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityRadioButton
+#define BEAN_TYPEDEF_NSAccessibilityRadioButton
+typedef bean_id NSAccessibilityRadioButton;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityRow
+#define BEAN_TYPEDEF_NSAccessibilityRow
+typedef bean_id NSAccessibilityRow;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilitySlider
+#define BEAN_TYPEDEF_NSAccessibilitySlider
+typedef bean_id NSAccessibilitySlider;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityStaticText
+#define BEAN_TYPEDEF_NSAccessibilityStaticText
+typedef bean_id NSAccessibilityStaticText;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityStepper
+#define BEAN_TYPEDEF_NSAccessibilityStepper
+typedef bean_id NSAccessibilityStepper;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilitySwitch
+#define BEAN_TYPEDEF_NSAccessibilitySwitch
+typedef bean_id NSAccessibilitySwitch;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityTable
+#define BEAN_TYPEDEF_NSAccessibilityTable
+typedef bean_id NSAccessibilityTable;
 #endif
 #ifndef BEAN_TYPEDEF_NSActionCell
 #define BEAN_TYPEDEF_NSActionCell
@@ -194,9 +290,17 @@ typedef bean_id NSAffineTransform;
 #define BEAN_TYPEDEF_NSAlert
 typedef bean_id NSAlert;
 #endif
+#ifndef BEAN_TYPEDEF_NSAlertDelegate
+#define BEAN_TYPEDEF_NSAlertDelegate
+typedef bean_id NSAlertDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAlignmentFeedbackFilter
 #define BEAN_TYPEDEF_NSAlignmentFeedbackFilter
 typedef bean_id NSAlignmentFeedbackFilter;
+#endif
+#ifndef BEAN_TYPEDEF_NSAnimatablePropertyContainer
+#define BEAN_TYPEDEF_NSAnimatablePropertyContainer
+typedef bean_id NSAnimatablePropertyContainer;
 #endif
 #ifndef BEAN_TYPEDEF_NSAnimation
 #define BEAN_TYPEDEF_NSAnimation
@@ -206,9 +310,17 @@ typedef bean_id NSAnimation;
 #define BEAN_TYPEDEF_NSAnimationContext
 typedef bean_id NSAnimationContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSAnimationDelegate
+#define BEAN_TYPEDEF_NSAnimationDelegate
+typedef bean_id NSAnimationDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAppearance
 #define BEAN_TYPEDEF_NSAppearance
 typedef bean_id NSAppearance;
+#endif
+#ifndef BEAN_TYPEDEF_NSAppearanceCustomization
+#define BEAN_TYPEDEF_NSAppearanceCustomization
+typedef bean_id NSAppearanceCustomization;
 #endif
 #ifndef BEAN_TYPEDEF_NSAppleEventDescriptor
 #define BEAN_TYPEDEF_NSAppleEventDescriptor
@@ -225,6 +337,10 @@ typedef bean_id NSAppleScript;
 #ifndef BEAN_TYPEDEF_NSApplication
 #define BEAN_TYPEDEF_NSApplication
 typedef bean_id NSApplication;
+#endif
+#ifndef BEAN_TYPEDEF_NSApplicationDelegate
+#define BEAN_TYPEDEF_NSApplicationDelegate
+typedef bean_id NSApplicationDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSArchiver
 #define BEAN_TYPEDEF_NSArchiver
@@ -298,6 +414,10 @@ typedef bean_id NSBrowser;
 #define BEAN_TYPEDEF_NSBrowserCell
 typedef bean_id NSBrowserCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSBrowserDelegate
+#define BEAN_TYPEDEF_NSBrowserDelegate
+typedef bean_id NSBrowserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSBundle
 #define BEAN_TYPEDEF_NSBundle
 typedef bean_id NSBundle;
@@ -330,6 +450,10 @@ typedef bean_id NSCIImageRep;
 #define BEAN_TYPEDEF_NSCache
 typedef bean_id NSCache;
 #endif
+#ifndef BEAN_TYPEDEF_NSCacheDelegate
+#define BEAN_TYPEDEF_NSCacheDelegate
+typedef bean_id NSCacheDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCachedImageRep
 #define BEAN_TYPEDEF_NSCachedImageRep
 typedef bean_id NSCachedImageRep;
@@ -350,9 +474,17 @@ typedef bean_id NSCalendarDate;
 #define BEAN_TYPEDEF_NSCandidateListTouchBarItem
 typedef bean_id NSCandidateListTouchBarItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSCandidateListTouchBarItemDelegate
+#define BEAN_TYPEDEF_NSCandidateListTouchBarItemDelegate
+typedef bean_id NSCandidateListTouchBarItemDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCell
 #define BEAN_TYPEDEF_NSCell
 typedef bean_id NSCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSChangeSpelling
+#define BEAN_TYPEDEF_NSChangeSpelling
+typedef bean_id NSChangeSpelling;
 #endif
 #ifndef BEAN_TYPEDEF_NSCharacterSet
 #define BEAN_TYPEDEF_NSCharacterSet
@@ -378,9 +510,21 @@ typedef bean_id NSCloneCommand;
 #define BEAN_TYPEDEF_NSCloseCommand
 typedef bean_id NSCloseCommand;
 #endif
+#ifndef BEAN_TYPEDEF_NSCloudSharingServiceDelegate
+#define BEAN_TYPEDEF_NSCloudSharingServiceDelegate
+typedef bean_id NSCloudSharingServiceDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCloudSharingValidation
+#define BEAN_TYPEDEF_NSCloudSharingValidation
+typedef bean_id NSCloudSharingValidation;
+#endif
 #ifndef BEAN_TYPEDEF_NSCoder
 #define BEAN_TYPEDEF_NSCoder
 typedef bean_id NSCoder;
+#endif
+#ifndef BEAN_TYPEDEF_NSCoding
+#define BEAN_TYPEDEF_NSCoding
+typedef bean_id NSCoding;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutAnchor
 #define BEAN_TYPEDEF_NSCollectionLayoutAnchor
@@ -389,6 +533,10 @@ typedef bean_id NSCollectionLayoutAnchor;
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutBoundarySupplementaryItem
 #define BEAN_TYPEDEF_NSCollectionLayoutBoundarySupplementaryItem
 typedef bean_id NSCollectionLayoutBoundarySupplementaryItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutContainer
+#define BEAN_TYPEDEF_NSCollectionLayoutContainer
+typedef bean_id NSCollectionLayoutContainer;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutDecorationItem
 #define BEAN_TYPEDEF_NSCollectionLayoutDecorationItem
@@ -401,6 +549,10 @@ typedef bean_id NSCollectionLayoutDimension;
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutEdgeSpacing
 #define BEAN_TYPEDEF_NSCollectionLayoutEdgeSpacing
 typedef bean_id NSCollectionLayoutEdgeSpacing;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutEnvironment
+#define BEAN_TYPEDEF_NSCollectionLayoutEnvironment
+typedef bean_id NSCollectionLayoutEnvironment;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutGroup
 #define BEAN_TYPEDEF_NSCollectionLayoutGroup
@@ -430,6 +582,10 @@ typedef bean_id NSCollectionLayoutSpacing;
 #define BEAN_TYPEDEF_NSCollectionLayoutSupplementaryItem
 typedef bean_id NSCollectionLayoutSupplementaryItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutVisibleItem
+#define BEAN_TYPEDEF_NSCollectionLayoutVisibleItem
+typedef bean_id NSCollectionLayoutVisibleItem;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionView
 #define BEAN_TYPEDEF_NSCollectionView
 typedef bean_id NSCollectionView;
@@ -442,9 +598,25 @@ typedef bean_id NSCollectionViewCompositionalLayout;
 #define BEAN_TYPEDEF_NSCollectionViewCompositionalLayoutConfiguration
 typedef bean_id NSCollectionViewCompositionalLayoutConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDataSource
+#define BEAN_TYPEDEF_NSCollectionViewDataSource
+typedef bean_id NSCollectionViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDelegate
+#define BEAN_TYPEDEF_NSCollectionViewDelegate
+typedef bean_id NSCollectionViewDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDelegateFlowLayout
+#define BEAN_TYPEDEF_NSCollectionViewDelegateFlowLayout
+typedef bean_id NSCollectionViewDelegateFlowLayout;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewDiffableDataSource
 #define BEAN_TYPEDEF_NSCollectionViewDiffableDataSource
 typedef bean_id NSCollectionViewDiffableDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewElement
+#define BEAN_TYPEDEF_NSCollectionViewElement
+typedef bean_id NSCollectionViewElement;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewFlowLayout
 #define BEAN_TYPEDEF_NSCollectionViewFlowLayout
@@ -474,6 +646,14 @@ typedef bean_id NSCollectionViewLayoutAttributes;
 #define BEAN_TYPEDEF_NSCollectionViewLayoutInvalidationContext
 typedef bean_id NSCollectionViewLayoutInvalidationContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewPrefetching
+#define BEAN_TYPEDEF_NSCollectionViewPrefetching
+typedef bean_id NSCollectionViewPrefetching;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewSectionHeaderView
+#define BEAN_TYPEDEF_NSCollectionViewSectionHeaderView
+typedef bean_id NSCollectionViewSectionHeaderView;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewTransitionLayout
 #define BEAN_TYPEDEF_NSCollectionViewTransitionLayout
 typedef bean_id NSCollectionViewTransitionLayout;
@@ -485,6 +665,10 @@ typedef bean_id NSCollectionViewUpdateItem;
 #ifndef BEAN_TYPEDEF_NSColor
 #define BEAN_TYPEDEF_NSColor
 typedef bean_id NSColor;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorChanging
+#define BEAN_TYPEDEF_NSColorChanging
+typedef bean_id NSColorChanging;
 #endif
 #ifndef BEAN_TYPEDEF_NSColorList
 #define BEAN_TYPEDEF_NSColorList
@@ -501,6 +685,14 @@ typedef bean_id NSColorPicker;
 #ifndef BEAN_TYPEDEF_NSColorPickerTouchBarItem
 #define BEAN_TYPEDEF_NSColorPickerTouchBarItem
 typedef bean_id NSColorPickerTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorPickingCustom
+#define BEAN_TYPEDEF_NSColorPickingCustom
+typedef bean_id NSColorPickingCustom;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorPickingDefault
+#define BEAN_TYPEDEF_NSColorPickingDefault
+typedef bean_id NSColorPickingDefault;
 #endif
 #ifndef BEAN_TYPEDEF_NSColorSampler
 #define BEAN_TYPEDEF_NSColorSampler
@@ -521,6 +713,18 @@ typedef bean_id NSComboBox;
 #ifndef BEAN_TYPEDEF_NSComboBoxCell
 #define BEAN_TYPEDEF_NSComboBoxCell
 typedef bean_id NSComboBoxCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxCellDataSource
+#define BEAN_TYPEDEF_NSComboBoxCellDataSource
+typedef bean_id NSComboBoxCellDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxDataSource
+#define BEAN_TYPEDEF_NSComboBoxDataSource
+typedef bean_id NSComboBoxDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxDelegate
+#define BEAN_TYPEDEF_NSComboBoxDelegate
+typedef bean_id NSComboBoxDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSComboButton
 #define BEAN_TYPEDEF_NSComboButton
@@ -546,13 +750,25 @@ typedef bean_id NSConditionLock;
 #define BEAN_TYPEDEF_NSConnection
 typedef bean_id NSConnection;
 #endif
+#ifndef BEAN_TYPEDEF_NSConnectionDelegate
+#define BEAN_TYPEDEF_NSConnectionDelegate
+typedef bean_id NSConnectionDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSControl
 #define BEAN_TYPEDEF_NSControl
 typedef bean_id NSControl;
 #endif
+#ifndef BEAN_TYPEDEF_NSControlTextEditingDelegate
+#define BEAN_TYPEDEF_NSControlTextEditingDelegate
+typedef bean_id NSControlTextEditingDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSController
 #define BEAN_TYPEDEF_NSController
 typedef bean_id NSController;
+#endif
+#ifndef BEAN_TYPEDEF_NSCopying
+#define BEAN_TYPEDEF_NSCopying
+typedef bean_id NSCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSCountedSet
 #define BEAN_TYPEDEF_NSCountedSet
@@ -618,9 +834,17 @@ typedef bean_id NSDatePicker;
 #define BEAN_TYPEDEF_NSDatePickerCell
 typedef bean_id NSDatePickerCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSDatePickerCellDelegate
+#define BEAN_TYPEDEF_NSDatePickerCellDelegate
+typedef bean_id NSDatePickerCellDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumber
 #define BEAN_TYPEDEF_NSDecimalNumber
 typedef bean_id NSDecimalNumber;
+#endif
+#ifndef BEAN_TYPEDEF_NSDecimalNumberBehaviors
+#define BEAN_TYPEDEF_NSDecimalNumberBehaviors
+typedef bean_id NSDecimalNumberBehaviors;
 #endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumberHandler
 #define BEAN_TYPEDEF_NSDecimalNumberHandler
@@ -654,6 +878,10 @@ typedef bean_id NSDimension;
 #define BEAN_TYPEDEF_NSDirectoryEnumerator
 typedef bean_id NSDirectoryEnumerator;
 #endif
+#ifndef BEAN_TYPEDEF_NSDiscardableContent
+#define BEAN_TYPEDEF_NSDiscardableContent
+typedef bean_id NSDiscardableContent;
+#endif
 #ifndef BEAN_TYPEDEF_NSDistantObject
 #define BEAN_TYPEDEF_NSDistantObject
 typedef bean_id NSDistantObject;
@@ -674,6 +902,10 @@ typedef bean_id NSDistributedNotificationCenter;
 #define BEAN_TYPEDEF_NSDockTile
 typedef bean_id NSDockTile;
 #endif
+#ifndef BEAN_TYPEDEF_NSDockTilePlugIn
+#define BEAN_TYPEDEF_NSDockTilePlugIn
+typedef bean_id NSDockTilePlugIn;
+#endif
 #ifndef BEAN_TYPEDEF_NSDocument
 #define BEAN_TYPEDEF_NSDocument
 typedef bean_id NSDocument;
@@ -682,9 +914,17 @@ typedef bean_id NSDocument;
 #define BEAN_TYPEDEF_NSDocumentController
 typedef bean_id NSDocumentController;
 #endif
+#ifndef BEAN_TYPEDEF_NSDraggingDestination
+#define BEAN_TYPEDEF_NSDraggingDestination
+typedef bean_id NSDraggingDestination;
+#endif
 #ifndef BEAN_TYPEDEF_NSDraggingImageComponent
 #define BEAN_TYPEDEF_NSDraggingImageComponent
 typedef bean_id NSDraggingImageComponent;
+#endif
+#ifndef BEAN_TYPEDEF_NSDraggingInfo
+#define BEAN_TYPEDEF_NSDraggingInfo
+typedef bean_id NSDraggingInfo;
 #endif
 #ifndef BEAN_TYPEDEF_NSDraggingItem
 #define BEAN_TYPEDEF_NSDraggingItem
@@ -694,13 +934,29 @@ typedef bean_id NSDraggingItem;
 #define BEAN_TYPEDEF_NSDraggingSession
 typedef bean_id NSDraggingSession;
 #endif
+#ifndef BEAN_TYPEDEF_NSDraggingSource
+#define BEAN_TYPEDEF_NSDraggingSource
+typedef bean_id NSDraggingSource;
+#endif
 #ifndef BEAN_TYPEDEF_NSDrawer
 #define BEAN_TYPEDEF_NSDrawer
 typedef bean_id NSDrawer;
 #endif
+#ifndef BEAN_TYPEDEF_NSDrawerDelegate
+#define BEAN_TYPEDEF_NSDrawerDelegate
+typedef bean_id NSDrawerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSEPSImageRep
 #define BEAN_TYPEDEF_NSEPSImageRep
 typedef bean_id NSEPSImageRep;
+#endif
+#ifndef BEAN_TYPEDEF_NSEditor
+#define BEAN_TYPEDEF_NSEditor
+typedef bean_id NSEditor;
+#endif
+#ifndef BEAN_TYPEDEF_NSEditorRegistration
+#define BEAN_TYPEDEF_NSEditorRegistration
+typedef bean_id NSEditorRegistration;
 #endif
 #ifndef BEAN_TYPEDEF_NSEnergyFormatter
 #define BEAN_TYPEDEF_NSEnergyFormatter
@@ -734,6 +990,14 @@ typedef bean_id NSExtensionContext;
 #define BEAN_TYPEDEF_NSExtensionItem
 typedef bean_id NSExtensionItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSExtensionRequestHandling
+#define BEAN_TYPEDEF_NSExtensionRequestHandling
+typedef bean_id NSExtensionRequestHandling;
+#endif
+#ifndef BEAN_TYPEDEF_NSFastEnumeration
+#define BEAN_TYPEDEF_NSFastEnumeration
+typedef bean_id NSFastEnumeration;
+#endif
 #ifndef BEAN_TYPEDEF_NSFileAccessIntent
 #define BEAN_TYPEDEF_NSFileAccessIntent
 typedef bean_id NSFileAccessIntent;
@@ -750,9 +1014,21 @@ typedef bean_id NSFileHandle;
 #define BEAN_TYPEDEF_NSFileManager
 typedef bean_id NSFileManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSFileManagerDelegate
+#define BEAN_TYPEDEF_NSFileManagerDelegate
+typedef bean_id NSFileManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePresenter
+#define BEAN_TYPEDEF_NSFilePresenter
+typedef bean_id NSFilePresenter;
+#endif
 #ifndef BEAN_TYPEDEF_NSFilePromiseProvider
 #define BEAN_TYPEDEF_NSFilePromiseProvider
 typedef bean_id NSFilePromiseProvider;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePromiseProviderDelegate
+#define BEAN_TYPEDEF_NSFilePromiseProviderDelegate
+typedef bean_id NSFilePromiseProviderDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSFilePromiseReceiver
 #define BEAN_TYPEDEF_NSFilePromiseReceiver
@@ -781,6 +1057,10 @@ typedef bean_id NSFont;
 #ifndef BEAN_TYPEDEF_NSFontAssetRequest
 #define BEAN_TYPEDEF_NSFontAssetRequest
 typedef bean_id NSFontAssetRequest;
+#endif
+#ifndef BEAN_TYPEDEF_NSFontChanging
+#define BEAN_TYPEDEF_NSFontChanging
+typedef bean_id NSFontChanging;
 #endif
 #ifndef BEAN_TYPEDEF_NSFontCollection
 #define BEAN_TYPEDEF_NSFontCollection
@@ -818,6 +1098,10 @@ typedef bean_id NSGarbageCollector;
 #define BEAN_TYPEDEF_NSGestureRecognizer
 typedef bean_id NSGestureRecognizer;
 #endif
+#ifndef BEAN_TYPEDEF_NSGestureRecognizerDelegate
+#define BEAN_TYPEDEF_NSGestureRecognizerDelegate
+typedef bean_id NSGestureRecognizerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSGlassEffectContainerView
 #define BEAN_TYPEDEF_NSGlassEffectContainerView
 typedef bean_id NSGlassEffectContainerView;
@@ -833,6 +1117,10 @@ typedef bean_id NSGlyphGenerator;
 #ifndef BEAN_TYPEDEF_NSGlyphInfo
 #define BEAN_TYPEDEF_NSGlyphInfo
 typedef bean_id NSGlyphInfo;
+#endif
+#ifndef BEAN_TYPEDEF_NSGlyphStorage
+#define BEAN_TYPEDEF_NSGlyphStorage
+typedef bean_id NSGlyphStorage;
 #endif
 #ifndef BEAN_TYPEDEF_NSGradient
 #define BEAN_TYPEDEF_NSGradient
@@ -878,6 +1166,10 @@ typedef bean_id NSHTTPURLResponse;
 #define BEAN_TYPEDEF_NSHapticFeedbackManager
 typedef bean_id NSHapticFeedbackManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSHapticFeedbackPerformer
+#define BEAN_TYPEDEF_NSHapticFeedbackPerformer
+typedef bean_id NSHapticFeedbackPerformer;
+#endif
 #ifndef BEAN_TYPEDEF_NSHashTable
 #define BEAN_TYPEDEF_NSHashTable
 typedef bean_id NSHashTable;
@@ -894,6 +1186,10 @@ typedef bean_id NSHost;
 #define BEAN_TYPEDEF_NSISO8601DateFormatter
 typedef bean_id NSISO8601DateFormatter;
 #endif
+#ifndef BEAN_TYPEDEF_NSIgnoreMisspelledWords
+#define BEAN_TYPEDEF_NSIgnoreMisspelledWords
+typedef bean_id NSIgnoreMisspelledWords;
+#endif
 #ifndef BEAN_TYPEDEF_NSImage
 #define BEAN_TYPEDEF_NSImage
 typedef bean_id NSImage;
@@ -901,6 +1197,10 @@ typedef bean_id NSImage;
 #ifndef BEAN_TYPEDEF_NSImageCell
 #define BEAN_TYPEDEF_NSImageCell
 typedef bean_id NSImageCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSImageDelegate
+#define BEAN_TYPEDEF_NSImageDelegate
+typedef bean_id NSImageDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSImageRep
 #define BEAN_TYPEDEF_NSImageRep
@@ -942,6 +1242,14 @@ typedef bean_id NSInputManager;
 #define BEAN_TYPEDEF_NSInputServer
 typedef bean_id NSInputServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSInputServerMouseTracker
+#define BEAN_TYPEDEF_NSInputServerMouseTracker
+typedef bean_id NSInputServerMouseTracker;
+#endif
+#ifndef BEAN_TYPEDEF_NSInputServiceProvider
+#define BEAN_TYPEDEF_NSInputServiceProvider
+typedef bean_id NSInputServiceProvider;
+#endif
 #ifndef BEAN_TYPEDEF_NSInputStream
 #define BEAN_TYPEDEF_NSInputStream
 typedef bean_id NSInputStream;
@@ -962,6 +1270,14 @@ typedef bean_id NSItemBadge;
 #define BEAN_TYPEDEF_NSItemProvider
 typedef bean_id NSItemProvider;
 #endif
+#ifndef BEAN_TYPEDEF_NSItemProviderReading
+#define BEAN_TYPEDEF_NSItemProviderReading
+typedef bean_id NSItemProviderReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSItemProviderWriting
+#define BEAN_TYPEDEF_NSItemProviderWriting
+typedef bean_id NSItemProviderWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSJSONSerialization
 #define BEAN_TYPEDEF_NSJSONSerialization
 typedef bean_id NSJSONSerialization;
@@ -978,9 +1294,17 @@ typedef bean_id NSKeyValueSharedObserversSnapshot;
 #define BEAN_TYPEDEF_NSKeyedArchiver
 typedef bean_id NSKeyedArchiver;
 #endif
+#ifndef BEAN_TYPEDEF_NSKeyedArchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedArchiverDelegate
+typedef bean_id NSKeyedArchiverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiver
 #define BEAN_TYPEDEF_NSKeyedUnarchiver
 typedef bean_id NSKeyedUnarchiver;
+#endif
+#ifndef BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+typedef bean_id NSKeyedUnarchiverDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLayoutAnchor
 #define BEAN_TYPEDEF_NSLayoutAnchor
@@ -1001,6 +1325,10 @@ typedef bean_id NSLayoutGuide;
 #ifndef BEAN_TYPEDEF_NSLayoutManager
 #define BEAN_TYPEDEF_NSLayoutManager
 typedef bean_id NSLayoutManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSLayoutManagerDelegate
+#define BEAN_TYPEDEF_NSLayoutManagerDelegate
+typedef bean_id NSLayoutManagerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLayoutXAxisAnchor
 #define BEAN_TYPEDEF_NSLayoutXAxisAnchor
@@ -1042,6 +1370,10 @@ typedef bean_id NSLocalizedNumberFormatRule;
 #define BEAN_TYPEDEF_NSLock
 typedef bean_id NSLock;
 #endif
+#ifndef BEAN_TYPEDEF_NSLocking
+#define BEAN_TYPEDEF_NSLocking
+typedef bean_id NSLocking;
+#endif
 #ifndef BEAN_TYPEDEF_NSLogicalTest
 #define BEAN_TYPEDEF_NSLogicalTest
 typedef bean_id NSLogicalTest;
@@ -1053,6 +1385,10 @@ typedef bean_id NSMachBootstrapServer;
 #ifndef BEAN_TYPEDEF_NSMachPort
 #define BEAN_TYPEDEF_NSMachPort
 typedef bean_id NSMachPort;
+#endif
+#ifndef BEAN_TYPEDEF_NSMachPortDelegate
+#define BEAN_TYPEDEF_NSMachPortDelegate
+typedef bean_id NSMachPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMagnificationGestureRecognizer
 #define BEAN_TYPEDEF_NSMagnificationGestureRecognizer
@@ -1090,6 +1426,10 @@ typedef bean_id NSMediaLibraryBrowserController;
 #define BEAN_TYPEDEF_NSMenu
 typedef bean_id NSMenu;
 #endif
+#ifndef BEAN_TYPEDEF_NSMenuDelegate
+#define BEAN_TYPEDEF_NSMenuDelegate
+typedef bean_id NSMenuDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSMenuItem
 #define BEAN_TYPEDEF_NSMenuItem
 typedef bean_id NSMenuItem;
@@ -1101,6 +1441,10 @@ typedef bean_id NSMenuItemBadge;
 #ifndef BEAN_TYPEDEF_NSMenuItemCell
 #define BEAN_TYPEDEF_NSMenuItemCell
 typedef bean_id NSMenuItemCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSMenuItemValidation
+#define BEAN_TYPEDEF_NSMenuItemValidation
+typedef bean_id NSMenuItemValidation;
 #endif
 #ifndef BEAN_TYPEDEF_NSMenuToolbarItem
 #define BEAN_TYPEDEF_NSMenuToolbarItem
@@ -1121,6 +1465,10 @@ typedef bean_id NSMetadataQuery;
 #ifndef BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 #define BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 typedef bean_id NSMetadataQueryAttributeValueTuple;
+#endif
+#ifndef BEAN_TYPEDEF_NSMetadataQueryDelegate
+#define BEAN_TYPEDEF_NSMetadataQueryDelegate
+typedef bean_id NSMetadataQueryDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMetadataQueryResultGroup
 #define BEAN_TYPEDEF_NSMetadataQueryResultGroup
@@ -1161,6 +1509,10 @@ typedef bean_id NSMutableAttributedString;
 #ifndef BEAN_TYPEDEF_NSMutableCharacterSet
 #define BEAN_TYPEDEF_NSMutableCharacterSet
 typedef bean_id NSMutableCharacterSet;
+#endif
+#ifndef BEAN_TYPEDEF_NSMutableCopying
+#define BEAN_TYPEDEF_NSMutableCopying
+typedef bean_id NSMutableCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSMutableData
 #define BEAN_TYPEDEF_NSMutableData
@@ -1209,6 +1561,14 @@ typedef bean_id NSNetService;
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowser
 #define BEAN_TYPEDEF_NSNetServiceBrowser
 typedef bean_id NSNetServiceBrowser;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+#define BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+typedef bean_id NSNetServiceBrowserDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceDelegate
+#define BEAN_TYPEDEF_NSNetServiceDelegate
+typedef bean_id NSNetServiceDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSNib
 #define BEAN_TYPEDEF_NSNib
@@ -1270,6 +1630,10 @@ typedef bean_id NSOpenGLView;
 #define BEAN_TYPEDEF_NSOpenPanel
 typedef bean_id NSOpenPanel;
 #endif
+#ifndef BEAN_TYPEDEF_NSOpenSavePanelDelegate
+#define BEAN_TYPEDEF_NSOpenSavePanelDelegate
+typedef bean_id NSOpenSavePanelDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSOperation
 #define BEAN_TYPEDEF_NSOperation
 typedef bean_id NSOperation;
@@ -1298,6 +1662,14 @@ typedef bean_id NSOrthography;
 #define BEAN_TYPEDEF_NSOutlineView
 typedef bean_id NSOutlineView;
 #endif
+#ifndef BEAN_TYPEDEF_NSOutlineViewDataSource
+#define BEAN_TYPEDEF_NSOutlineViewDataSource
+typedef bean_id NSOutlineViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSOutlineViewDelegate
+#define BEAN_TYPEDEF_NSOutlineViewDelegate
+typedef bean_id NSOutlineViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSOutputStream
 #define BEAN_TYPEDEF_NSOutputStream
 typedef bean_id NSOutputStream;
@@ -1321,6 +1693,10 @@ typedef bean_id NSPICTImageRep;
 #ifndef BEAN_TYPEDEF_NSPageController
 #define BEAN_TYPEDEF_NSPageController
 typedef bean_id NSPageController;
+#endif
+#ifndef BEAN_TYPEDEF_NSPageControllerDelegate
+#define BEAN_TYPEDEF_NSPageControllerDelegate
+typedef bean_id NSPageControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPageLayout
 #define BEAN_TYPEDEF_NSPageLayout
@@ -1346,9 +1722,29 @@ typedef bean_id NSPasteboard;
 #define BEAN_TYPEDEF_NSPasteboardItem
 typedef bean_id NSPasteboardItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSPasteboardItemDataProvider
+#define BEAN_TYPEDEF_NSPasteboardItemDataProvider
+typedef bean_id NSPasteboardItemDataProvider;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardReading
+#define BEAN_TYPEDEF_NSPasteboardReading
+typedef bean_id NSPasteboardReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardTypeOwner
+#define BEAN_TYPEDEF_NSPasteboardTypeOwner
+typedef bean_id NSPasteboardTypeOwner;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardWriting
+#define BEAN_TYPEDEF_NSPasteboardWriting
+typedef bean_id NSPasteboardWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPathCell
 #define BEAN_TYPEDEF_NSPathCell
 typedef bean_id NSPathCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSPathCellDelegate
+#define BEAN_TYPEDEF_NSPathCellDelegate
+typedef bean_id NSPathCellDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPathComponentCell
 #define BEAN_TYPEDEF_NSPathComponentCell
@@ -1357,6 +1753,10 @@ typedef bean_id NSPathComponentCell;
 #ifndef BEAN_TYPEDEF_NSPathControl
 #define BEAN_TYPEDEF_NSPathControl
 typedef bean_id NSPathControl;
+#endif
+#ifndef BEAN_TYPEDEF_NSPathControlDelegate
+#define BEAN_TYPEDEF_NSPathControlDelegate
+typedef bean_id NSPathControlDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPathControlItem
 #define BEAN_TYPEDEF_NSPathControlItem
@@ -1402,6 +1802,10 @@ typedef bean_id NSPopUpButtonCell;
 #define BEAN_TYPEDEF_NSPopover
 typedef bean_id NSPopover;
 #endif
+#ifndef BEAN_TYPEDEF_NSPopoverDelegate
+#define BEAN_TYPEDEF_NSPopoverDelegate
+typedef bean_id NSPopoverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSPopoverTouchBarItem
 #define BEAN_TYPEDEF_NSPopoverTouchBarItem
 typedef bean_id NSPopoverTouchBarItem;
@@ -1413,6 +1817,10 @@ typedef bean_id NSPort;
 #ifndef BEAN_TYPEDEF_NSPortCoder
 #define BEAN_TYPEDEF_NSPortCoder
 typedef bean_id NSPortCoder;
+#endif
+#ifndef BEAN_TYPEDEF_NSPortDelegate
+#define BEAN_TYPEDEF_NSPortDelegate
+typedef bean_id NSPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPortMessage
 #define BEAN_TYPEDEF_NSPortMessage
@@ -1450,6 +1858,10 @@ typedef bean_id NSPressGestureRecognizer;
 #define BEAN_TYPEDEF_NSPressureConfiguration
 typedef bean_id NSPressureConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSPreviewRepresentableActivityItem
+#define BEAN_TYPEDEF_NSPreviewRepresentableActivityItem
+typedef bean_id NSPreviewRepresentableActivityItem;
+#endif
 #ifndef BEAN_TYPEDEF_NSPreviewRepresentingActivityItem
 #define BEAN_TYPEDEF_NSPreviewRepresentingActivityItem
 typedef bean_id NSPreviewRepresentingActivityItem;
@@ -1465,6 +1877,10 @@ typedef bean_id NSPrintOperation;
 #ifndef BEAN_TYPEDEF_NSPrintPanel
 #define BEAN_TYPEDEF_NSPrintPanel
 typedef bean_id NSPrintPanel;
+#endif
+#ifndef BEAN_TYPEDEF_NSPrintPanelAccessorizing
+#define BEAN_TYPEDEF_NSPrintPanelAccessorizing
+typedef bean_id NSPrintPanelAccessorizing;
 #endif
 #ifndef BEAN_TYPEDEF_NSPrinter
 #define BEAN_TYPEDEF_NSPrinter
@@ -1482,6 +1898,10 @@ typedef bean_id NSProgress;
 #define BEAN_TYPEDEF_NSProgressIndicator
 typedef bean_id NSProgressIndicator;
 #endif
+#ifndef BEAN_TYPEDEF_NSProgressReporting
+#define BEAN_TYPEDEF_NSProgressReporting
+typedef bean_id NSProgressReporting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPropertyDescription
 #define BEAN_TYPEDEF_NSPropertyDescription
 typedef bean_id NSPropertyDescription;
@@ -1497,6 +1917,10 @@ typedef bean_id NSProtocolChecker;
 #ifndef BEAN_TYPEDEF_NSProxy
 #define BEAN_TYPEDEF_NSProxy
 typedef bean_id NSProxy;
+#endif
+#ifndef BEAN_TYPEDEF_NSPurgeableData
+#define BEAN_TYPEDEF_NSPurgeableData
+typedef bean_id NSPurgeableData;
 #endif
 #ifndef BEAN_TYPEDEF_NSQuitCommand
 #define BEAN_TYPEDEF_NSQuitCommand
@@ -1533,6 +1957,10 @@ typedef bean_id NSRotationGestureRecognizer;
 #ifndef BEAN_TYPEDEF_NSRuleEditor
 #define BEAN_TYPEDEF_NSRuleEditor
 typedef bean_id NSRuleEditor;
+#endif
+#ifndef BEAN_TYPEDEF_NSRuleEditorDelegate
+#define BEAN_TYPEDEF_NSRuleEditorDelegate
+typedef bean_id NSRuleEditorDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSRulerMarker
 #define BEAN_TYPEDEF_NSRulerMarker
@@ -1614,9 +2042,21 @@ typedef bean_id NSScrubber;
 #define BEAN_TYPEDEF_NSScrubberArrangedView
 typedef bean_id NSScrubberArrangedView;
 #endif
+#ifndef BEAN_TYPEDEF_NSScrubberDataSource
+#define BEAN_TYPEDEF_NSScrubberDataSource
+typedef bean_id NSScrubberDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSScrubberDelegate
+#define BEAN_TYPEDEF_NSScrubberDelegate
+typedef bean_id NSScrubberDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSScrubberFlowLayout
 #define BEAN_TYPEDEF_NSScrubberFlowLayout
 typedef bean_id NSScrubberFlowLayout;
+#endif
+#ifndef BEAN_TYPEDEF_NSScrubberFlowLayoutDelegate
+#define BEAN_TYPEDEF_NSScrubberFlowLayoutDelegate
+typedef bean_id NSScrubberFlowLayoutDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSScrubberImageItemView
 #define BEAN_TYPEDEF_NSScrubberImageItemView
@@ -1650,9 +2090,17 @@ typedef bean_id NSSearchField;
 #define BEAN_TYPEDEF_NSSearchFieldCell
 typedef bean_id NSSearchFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSSearchFieldDelegate
+#define BEAN_TYPEDEF_NSSearchFieldDelegate
+typedef bean_id NSSearchFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSearchToolbarItem
 #define BEAN_TYPEDEF_NSSearchToolbarItem
 typedef bean_id NSSearchToolbarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSSecureCoding
+#define BEAN_TYPEDEF_NSSecureCoding
+typedef bean_id NSSecureCoding;
 #endif
 #ifndef BEAN_TYPEDEF_NSSecureTextFieldCell
 #define BEAN_TYPEDEF_NSSecureTextFieldCell
@@ -1669,6 +2117,14 @@ typedef bean_id NSSegmentedCell;
 #ifndef BEAN_TYPEDEF_NSSegmentedControl
 #define BEAN_TYPEDEF_NSSegmentedControl
 typedef bean_id NSSegmentedControl;
+#endif
+#ifndef BEAN_TYPEDEF_NSSeguePerforming
+#define BEAN_TYPEDEF_NSSeguePerforming
+typedef bean_id NSSeguePerforming;
+#endif
+#ifndef BEAN_TYPEDEF_NSServicesMenuRequestor
+#define BEAN_TYPEDEF_NSServicesMenuRequestor
+typedef bean_id NSServicesMenuRequestor;
 #endif
 #ifndef BEAN_TYPEDEF_NSSet
 #define BEAN_TYPEDEF_NSSet
@@ -1690,17 +2146,33 @@ typedef bean_id NSSharingCollaborationModeRestriction;
 #define BEAN_TYPEDEF_NSSharingService
 typedef bean_id NSSharingService;
 #endif
+#ifndef BEAN_TYPEDEF_NSSharingServiceDelegate
+#define BEAN_TYPEDEF_NSSharingServiceDelegate
+typedef bean_id NSSharingServiceDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePicker
 #define BEAN_TYPEDEF_NSSharingServicePicker
 typedef bean_id NSSharingServicePicker;
+#endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerDelegate
+typedef bean_id NSSharingServicePickerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePickerToolbarItem
 #define BEAN_TYPEDEF_NSSharingServicePickerToolbarItem
 typedef bean_id NSSharingServicePickerToolbarItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerToolbarItemDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerToolbarItemDelegate
+typedef bean_id NSSharingServicePickerToolbarItemDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePickerTouchBarItem
 #define BEAN_TYPEDEF_NSSharingServicePickerTouchBarItem
 typedef bean_id NSSharingServicePickerTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerTouchBarItemDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerTouchBarItemDelegate
+typedef bean_id NSSharingServicePickerTouchBarItemDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSlider
 #define BEAN_TYPEDEF_NSSlider
@@ -1738,6 +2210,10 @@ typedef bean_id NSSortDescriptor;
 #define BEAN_TYPEDEF_NSSound
 typedef bean_id NSSound;
 #endif
+#ifndef BEAN_TYPEDEF_NSSoundDelegate
+#define BEAN_TYPEDEF_NSSoundDelegate
+typedef bean_id NSSoundDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSpecifierTest
 #define BEAN_TYPEDEF_NSSpecifierTest
 typedef bean_id NSSpecifierTest;
@@ -1746,9 +2222,17 @@ typedef bean_id NSSpecifierTest;
 #define BEAN_TYPEDEF_NSSpeechRecognizer
 typedef bean_id NSSpeechRecognizer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpeechRecognizerDelegate
+#define BEAN_TYPEDEF_NSSpeechRecognizerDelegate
+typedef bean_id NSSpeechRecognizerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSpeechSynthesizer
 #define BEAN_TYPEDEF_NSSpeechSynthesizer
 typedef bean_id NSSpeechSynthesizer;
+#endif
+#ifndef BEAN_TYPEDEF_NSSpeechSynthesizerDelegate
+#define BEAN_TYPEDEF_NSSpeechSynthesizerDelegate
+typedef bean_id NSSpeechSynthesizerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSpellChecker
 #define BEAN_TYPEDEF_NSSpellChecker
@@ -1758,6 +2242,10 @@ typedef bean_id NSSpellChecker;
 #define BEAN_TYPEDEF_NSSpellServer
 typedef bean_id NSSpellServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpellServerDelegate
+#define BEAN_TYPEDEF_NSSpellServerDelegate
+typedef bean_id NSSpellServerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSplitView
 #define BEAN_TYPEDEF_NSSplitView
 typedef bean_id NSSplitView;
@@ -1765,6 +2253,10 @@ typedef bean_id NSSplitView;
 #ifndef BEAN_TYPEDEF_NSSplitViewController
 #define BEAN_TYPEDEF_NSSplitViewController
 typedef bean_id NSSplitViewController;
+#endif
+#ifndef BEAN_TYPEDEF_NSSplitViewDelegate
+#define BEAN_TYPEDEF_NSSplitViewDelegate
+typedef bean_id NSSplitViewDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSplitViewItem
 #define BEAN_TYPEDEF_NSSplitViewItem
@@ -1774,9 +2266,21 @@ typedef bean_id NSSplitViewItem;
 #define BEAN_TYPEDEF_NSSplitViewItemAccessoryViewController
 typedef bean_id NSSplitViewItemAccessoryViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpringLoadingDestination
+#define BEAN_TYPEDEF_NSSpringLoadingDestination
+typedef bean_id NSSpringLoadingDestination;
+#endif
 #ifndef BEAN_TYPEDEF_NSStackView
 #define BEAN_TYPEDEF_NSStackView
 typedef bean_id NSStackView;
+#endif
+#ifndef BEAN_TYPEDEF_NSStackViewDelegate
+#define BEAN_TYPEDEF_NSStackViewDelegate
+typedef bean_id NSStackViewDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSStandardKeyBindingResponding
+#define BEAN_TYPEDEF_NSStandardKeyBindingResponding
+typedef bean_id NSStandardKeyBindingResponding;
 #endif
 #ifndef BEAN_TYPEDEF_NSStatusBar
 #define BEAN_TYPEDEF_NSStatusBar
@@ -1813,6 +2317,10 @@ typedef bean_id NSStoryboardSegue;
 #ifndef BEAN_TYPEDEF_NSStream
 #define BEAN_TYPEDEF_NSStream
 typedef bean_id NSStream;
+#endif
+#ifndef BEAN_TYPEDEF_NSStreamDelegate
+#define BEAN_TYPEDEF_NSStreamDelegate
+typedef bean_id NSStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSString
 #define BEAN_TYPEDEF_NSString
@@ -1902,6 +2410,10 @@ typedef bean_id NSTabView;
 #define BEAN_TYPEDEF_NSTabViewController
 typedef bean_id NSTabViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSTabViewDelegate
+#define BEAN_TYPEDEF_NSTabViewDelegate
+typedef bean_id NSTabViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTabViewItem
 #define BEAN_TYPEDEF_NSTabViewItem
 typedef bean_id NSTabViewItem;
@@ -1929,6 +2441,14 @@ typedef bean_id NSTableRowView;
 #ifndef BEAN_TYPEDEF_NSTableView
 #define BEAN_TYPEDEF_NSTableView
 typedef bean_id NSTableView;
+#endif
+#ifndef BEAN_TYPEDEF_NSTableViewDataSource
+#define BEAN_TYPEDEF_NSTableViewDataSource
+typedef bean_id NSTableViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSTableViewDelegate
+#define BEAN_TYPEDEF_NSTableViewDelegate
+typedef bean_id NSTableViewDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSTableViewDiffableDataSource
 #define BEAN_TYPEDEF_NSTableViewDiffableDataSource
@@ -1958,6 +2478,18 @@ typedef bean_id NSTextAlternatives;
 #define BEAN_TYPEDEF_NSTextAttachment
 typedef bean_id NSTextAttachment;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentCell
+#define BEAN_TYPEDEF_NSTextAttachmentCell
+typedef bean_id NSTextAttachmentCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentContainer
+#define BEAN_TYPEDEF_NSTextAttachmentContainer
+typedef bean_id NSTextAttachmentContainer;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentLayout
+#define BEAN_TYPEDEF_NSTextAttachmentLayout
+typedef bean_id NSTextAttachmentLayout;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextAttachmentViewProvider
 #define BEAN_TYPEDEF_NSTextAttachmentViewProvider
 typedef bean_id NSTextAttachmentViewProvider;
@@ -1965,6 +2497,10 @@ typedef bean_id NSTextAttachmentViewProvider;
 #ifndef BEAN_TYPEDEF_NSTextBlock
 #define BEAN_TYPEDEF_NSTextBlock
 typedef bean_id NSTextBlock;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextCheckingClient
+#define BEAN_TYPEDEF_NSTextCheckingClient
+typedef bean_id NSTextCheckingClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextCheckingController
 #define BEAN_TYPEDEF_NSTextCheckingController
@@ -1978,17 +2514,37 @@ typedef bean_id NSTextCheckingResult;
 #define BEAN_TYPEDEF_NSTextContainer
 typedef bean_id NSTextContainer;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextContent
+#define BEAN_TYPEDEF_NSTextContent
+typedef bean_id NSTextContent;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextContentManager
 #define BEAN_TYPEDEF_NSTextContentManager
 typedef bean_id NSTextContentManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextContentManagerDelegate
+#define BEAN_TYPEDEF_NSTextContentManagerDelegate
+typedef bean_id NSTextContentManagerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextContentStorage
 #define BEAN_TYPEDEF_NSTextContentStorage
 typedef bean_id NSTextContentStorage;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextContentStorageDelegate
+#define BEAN_TYPEDEF_NSTextContentStorageDelegate
+typedef bean_id NSTextContentStorageDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextDelegate
+#define BEAN_TYPEDEF_NSTextDelegate
+typedef bean_id NSTextDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextElement
 #define BEAN_TYPEDEF_NSTextElement
 typedef bean_id NSTextElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextElementProvider
+#define BEAN_TYPEDEF_NSTextElementProvider
+typedef bean_id NSTextElementProvider;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextField
 #define BEAN_TYPEDEF_NSTextField
@@ -1998,13 +2554,37 @@ typedef bean_id NSTextField;
 #define BEAN_TYPEDEF_NSTextFieldCell
 typedef bean_id NSTextFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextFieldDelegate
+#define BEAN_TYPEDEF_NSTextFieldDelegate
+typedef bean_id NSTextFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextFinder
 #define BEAN_TYPEDEF_NSTextFinder
 typedef bean_id NSTextFinder;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextFinderBarContainer
+#define BEAN_TYPEDEF_NSTextFinderBarContainer
+typedef bean_id NSTextFinderBarContainer;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextFinderClient
+#define BEAN_TYPEDEF_NSTextFinderClient
+typedef bean_id NSTextFinderClient;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInput
+#define BEAN_TYPEDEF_NSTextInput
+typedef bean_id NSTextInput;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInputClient
+#define BEAN_TYPEDEF_NSTextInputClient
+typedef bean_id NSTextInputClient;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextInputContext
 #define BEAN_TYPEDEF_NSTextInputContext
 typedef bean_id NSTextInputContext;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInputTraits
+#define BEAN_TYPEDEF_NSTextInputTraits
+typedef bean_id NSTextInputTraits;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextInsertionIndicator
 #define BEAN_TYPEDEF_NSTextInsertionIndicator
@@ -2018,6 +2598,14 @@ typedef bean_id NSTextLayoutFragment;
 #define BEAN_TYPEDEF_NSTextLayoutManager
 typedef bean_id NSTextLayoutManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextLayoutManagerDelegate
+#define BEAN_TYPEDEF_NSTextLayoutManagerDelegate
+typedef bean_id NSTextLayoutManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextLayoutOrientationProvider
+#define BEAN_TYPEDEF_NSTextLayoutOrientationProvider
+typedef bean_id NSTextLayoutOrientationProvider;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextLineFragment
 #define BEAN_TYPEDEF_NSTextLineFragment
 typedef bean_id NSTextLineFragment;
@@ -2029,6 +2617,10 @@ typedef bean_id NSTextList;
 #ifndef BEAN_TYPEDEF_NSTextListElement
 #define BEAN_TYPEDEF_NSTextListElement
 typedef bean_id NSTextListElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextLocation
+#define BEAN_TYPEDEF_NSTextLocation
+typedef bean_id NSTextLocation;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextParagraph
 #define BEAN_TYPEDEF_NSTextParagraph
@@ -2046,6 +2638,10 @@ typedef bean_id NSTextRange;
 #define BEAN_TYPEDEF_NSTextSelection
 typedef bean_id NSTextSelection;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextSelectionDataSource
+#define BEAN_TYPEDEF_NSTextSelectionDataSource
+typedef bean_id NSTextSelectionDataSource;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextSelectionNavigation
 #define BEAN_TYPEDEF_NSTextSelectionNavigation
 typedef bean_id NSTextSelectionNavigation;
@@ -2053,6 +2649,14 @@ typedef bean_id NSTextSelectionNavigation;
 #ifndef BEAN_TYPEDEF_NSTextStorage
 #define BEAN_TYPEDEF_NSTextStorage
 typedef bean_id NSTextStorage;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextStorageDelegate
+#define BEAN_TYPEDEF_NSTextStorageDelegate
+typedef bean_id NSTextStorageDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextStorageObserving
+#define BEAN_TYPEDEF_NSTextStorageObserving
+typedef bean_id NSTextStorageObserving;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextTab
 #define BEAN_TYPEDEF_NSTextTab
@@ -2070,9 +2674,17 @@ typedef bean_id NSTextTableBlock;
 #define BEAN_TYPEDEF_NSTextView
 typedef bean_id NSTextView;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextViewDelegate
+#define BEAN_TYPEDEF_NSTextViewDelegate
+typedef bean_id NSTextViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextViewportLayoutController
 #define BEAN_TYPEDEF_NSTextViewportLayoutController
 typedef bean_id NSTextViewportLayoutController;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextViewportLayoutControllerDelegate
+#define BEAN_TYPEDEF_NSTextViewportLayoutControllerDelegate
+typedef bean_id NSTextViewportLayoutControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSThread
 #define BEAN_TYPEDEF_NSThread
@@ -2102,9 +2714,21 @@ typedef bean_id NSTokenField;
 #define BEAN_TYPEDEF_NSTokenFieldCell
 typedef bean_id NSTokenFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSTokenFieldCellDelegate
+#define BEAN_TYPEDEF_NSTokenFieldCellDelegate
+typedef bean_id NSTokenFieldCellDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTokenFieldDelegate
+#define BEAN_TYPEDEF_NSTokenFieldDelegate
+typedef bean_id NSTokenFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSToolbar
 #define BEAN_TYPEDEF_NSToolbar
 typedef bean_id NSToolbar;
+#endif
+#ifndef BEAN_TYPEDEF_NSToolbarDelegate
+#define BEAN_TYPEDEF_NSToolbarDelegate
+typedef bean_id NSToolbarDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSToolbarItem
 #define BEAN_TYPEDEF_NSToolbarItem
@@ -2114,6 +2738,10 @@ typedef bean_id NSToolbarItem;
 #define BEAN_TYPEDEF_NSToolbarItemGroup
 typedef bean_id NSToolbarItemGroup;
 #endif
+#ifndef BEAN_TYPEDEF_NSToolbarItemValidation
+#define BEAN_TYPEDEF_NSToolbarItemValidation
+typedef bean_id NSToolbarItemValidation;
+#endif
 #ifndef BEAN_TYPEDEF_NSTouch
 #define BEAN_TYPEDEF_NSTouch
 typedef bean_id NSTouch;
@@ -2122,9 +2750,17 @@ typedef bean_id NSTouch;
 #define BEAN_TYPEDEF_NSTouchBar
 typedef bean_id NSTouchBar;
 #endif
+#ifndef BEAN_TYPEDEF_NSTouchBarDelegate
+#define BEAN_TYPEDEF_NSTouchBarDelegate
+typedef bean_id NSTouchBarDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTouchBarItem
 #define BEAN_TYPEDEF_NSTouchBarItem
 typedef bean_id NSTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSTouchBarProvider
+#define BEAN_TYPEDEF_NSTouchBarProvider
+typedef bean_id NSTouchBarProvider;
 #endif
 #ifndef BEAN_TYPEDEF_NSTrackingArea
 #define BEAN_TYPEDEF_NSTrackingArea
@@ -2154,6 +2790,10 @@ typedef bean_id NSURL;
 #define BEAN_TYPEDEF_NSURLAuthenticationChallenge
 typedef bean_id NSURLAuthenticationChallenge;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+#define BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+typedef bean_id NSURLAuthenticationChallengeSender;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLCache
 #define BEAN_TYPEDEF_NSURLCache
 typedef bean_id NSURLCache;
@@ -2165,6 +2805,18 @@ typedef bean_id NSURLComponents;
 #ifndef BEAN_TYPEDEF_NSURLConnection
 #define BEAN_TYPEDEF_NSURLConnection
 typedef bean_id NSURLConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDataDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDataDelegate
+typedef bean_id NSURLConnectionDataDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDelegate
+typedef bean_id NSURLConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+typedef bean_id NSURLConnectionDownloadDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLCredential
 #define BEAN_TYPEDEF_NSURLCredential
@@ -2178,9 +2830,17 @@ typedef bean_id NSURLCredentialStorage;
 #define BEAN_TYPEDEF_NSURLDownload
 typedef bean_id NSURLDownload;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLDownloadDelegate
+#define BEAN_TYPEDEF_NSURLDownloadDelegate
+typedef bean_id NSURLDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLHandle
 #define BEAN_TYPEDEF_NSURLHandle
 typedef bean_id NSURLHandle;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLHandleClient
+#define BEAN_TYPEDEF_NSURLHandleClient
+typedef bean_id NSURLHandleClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLProtectionSpace
 #define BEAN_TYPEDEF_NSURLProtectionSpace
@@ -2189,6 +2849,10 @@ typedef bean_id NSURLProtectionSpace;
 #ifndef BEAN_TYPEDEF_NSURLProtocol
 #define BEAN_TYPEDEF_NSURLProtocol
 typedef bean_id NSURLProtocol;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLProtocolClient
+#define BEAN_TYPEDEF_NSURLProtocolClient
+typedef bean_id NSURLProtocolClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLQueryItem
 #define BEAN_TYPEDEF_NSURLQueryItem
@@ -2210,13 +2874,29 @@ typedef bean_id NSURLSession;
 #define BEAN_TYPEDEF_NSURLSessionConfiguration
 typedef bean_id NSURLSessionConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDataDelegate
+#define BEAN_TYPEDEF_NSURLSessionDataDelegate
+typedef bean_id NSURLSessionDataDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDataTask
 #define BEAN_TYPEDEF_NSURLSessionDataTask
 typedef bean_id NSURLSessionDataTask;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDelegate
+#define BEAN_TYPEDEF_NSURLSessionDelegate
+typedef bean_id NSURLSessionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+typedef bean_id NSURLSessionDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadTask
 #define BEAN_TYPEDEF_NSURLSessionDownloadTask
 typedef bean_id NSURLSessionDownloadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionStreamDelegate
+#define BEAN_TYPEDEF_NSURLSessionStreamDelegate
+typedef bean_id NSURLSessionStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionStreamTask
 #define BEAN_TYPEDEF_NSURLSessionStreamTask
@@ -2225,6 +2905,10 @@ typedef bean_id NSURLSessionStreamTask;
 #ifndef BEAN_TYPEDEF_NSURLSessionTask
 #define BEAN_TYPEDEF_NSURLSessionTask
 typedef bean_id NSURLSessionTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionTaskDelegate
+#define BEAN_TYPEDEF_NSURLSessionTaskDelegate
+typedef bean_id NSURLSessionTaskDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskMetrics
 #define BEAN_TYPEDEF_NSURLSessionTaskMetrics
@@ -2237,6 +2921,10 @@ typedef bean_id NSURLSessionTaskTransactionMetrics;
 #ifndef BEAN_TYPEDEF_NSURLSessionUploadTask
 #define BEAN_TYPEDEF_NSURLSessionUploadTask
 typedef bean_id NSURLSessionUploadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+#define BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+typedef bean_id NSURLSessionWebSocketDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketMessage
 #define BEAN_TYPEDEF_NSURLSessionWebSocketMessage
@@ -2370,6 +3058,14 @@ typedef bean_id NSUnitVolume;
 #define BEAN_TYPEDEF_NSUserActivity
 typedef bean_id NSUserActivity;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserActivityDelegate
+#define BEAN_TYPEDEF_NSUserActivityDelegate
+typedef bean_id NSUserActivityDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserActivityRestoring
+#define BEAN_TYPEDEF_NSUserActivityRestoring
+typedef bean_id NSUserActivityRestoring;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserAppleScriptTask
 #define BEAN_TYPEDEF_NSUserAppleScriptTask
 typedef bean_id NSUserAppleScriptTask;
@@ -2386,9 +3082,25 @@ typedef bean_id NSUserDefaults;
 #define BEAN_TYPEDEF_NSUserDefaultsController
 typedef bean_id NSUserDefaultsController;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceCompression
+#define BEAN_TYPEDEF_NSUserInterfaceCompression
+typedef bean_id NSUserInterfaceCompression;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserInterfaceCompressionOptions
 #define BEAN_TYPEDEF_NSUserInterfaceCompressionOptions
 typedef bean_id NSUserInterfaceCompressionOptions;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceItemIdentification
+#define BEAN_TYPEDEF_NSUserInterfaceItemIdentification
+typedef bean_id NSUserInterfaceItemIdentification;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceItemSearching
+#define BEAN_TYPEDEF_NSUserInterfaceItemSearching
+typedef bean_id NSUserInterfaceItemSearching;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceValidations
+#define BEAN_TYPEDEF_NSUserInterfaceValidations
+typedef bean_id NSUserInterfaceValidations;
 #endif
 #ifndef BEAN_TYPEDEF_NSUserNotification
 #define BEAN_TYPEDEF_NSUserNotification
@@ -2402,6 +3114,10 @@ typedef bean_id NSUserNotificationAction;
 #define BEAN_TYPEDEF_NSUserNotificationCenter
 typedef bean_id NSUserNotificationCenter;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+#define BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+typedef bean_id NSUserNotificationCenterDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserScriptTask
 #define BEAN_TYPEDEF_NSUserScriptTask
 typedef bean_id NSUserScriptTask;
@@ -2409,6 +3125,10 @@ typedef bean_id NSUserScriptTask;
 #ifndef BEAN_TYPEDEF_NSUserUnixTask
 #define BEAN_TYPEDEF_NSUserUnixTask
 typedef bean_id NSUserUnixTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSValidatedUserInterfaceItem
+#define BEAN_TYPEDEF_NSValidatedUserInterfaceItem
+typedef bean_id NSValidatedUserInterfaceItem;
 #endif
 #ifndef BEAN_TYPEDEF_NSValue
 #define BEAN_TYPEDEF_NSValue
@@ -2426,13 +3146,29 @@ typedef bean_id NSView;
 #define BEAN_TYPEDEF_NSViewAnimation
 typedef bean_id NSViewAnimation;
 #endif
+#ifndef BEAN_TYPEDEF_NSViewContentSelectionInfo
+#define BEAN_TYPEDEF_NSViewContentSelectionInfo
+typedef bean_id NSViewContentSelectionInfo;
+#endif
 #ifndef BEAN_TYPEDEF_NSViewController
 #define BEAN_TYPEDEF_NSViewController
 typedef bean_id NSViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSViewControllerPresentationAnimator
+#define BEAN_TYPEDEF_NSViewControllerPresentationAnimator
+typedef bean_id NSViewControllerPresentationAnimator;
+#endif
+#ifndef BEAN_TYPEDEF_NSViewLayerContentScaleDelegate
+#define BEAN_TYPEDEF_NSViewLayerContentScaleDelegate
+typedef bean_id NSViewLayerContentScaleDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSViewLayoutRegion
 #define BEAN_TYPEDEF_NSViewLayoutRegion
 typedef bean_id NSViewLayoutRegion;
+#endif
+#ifndef BEAN_TYPEDEF_NSViewToolTipOwner
+#define BEAN_TYPEDEF_NSViewToolTipOwner
+typedef bean_id NSViewToolTipOwner;
 #endif
 #ifndef BEAN_TYPEDEF_NSVisualEffectView
 #define BEAN_TYPEDEF_NSVisualEffectView
@@ -2449,6 +3185,14 @@ typedef bean_id NSWindow;
 #ifndef BEAN_TYPEDEF_NSWindowController
 #define BEAN_TYPEDEF_NSWindowController
 typedef bean_id NSWindowController;
+#endif
+#ifndef BEAN_TYPEDEF_NSWindowDelegate
+#define BEAN_TYPEDEF_NSWindowDelegate
+typedef bean_id NSWindowDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSWindowRestoration
+#define BEAN_TYPEDEF_NSWindowRestoration
+typedef bean_id NSWindowRestoration;
 #endif
 #ifndef BEAN_TYPEDEF_NSWindowTab
 #define BEAN_TYPEDEF_NSWindowTab
@@ -2478,6 +3222,10 @@ typedef bean_id NSWritingToolsCoordinatorAnimationParameters;
 #define BEAN_TYPEDEF_NSWritingToolsCoordinatorContext
 typedef bean_id NSWritingToolsCoordinatorContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSWritingToolsCoordinatorDelegate
+#define BEAN_TYPEDEF_NSWritingToolsCoordinatorDelegate
+typedef bean_id NSWritingToolsCoordinatorDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXMLDTD
 #define BEAN_TYPEDEF_NSXMLDTD
 typedef bean_id NSXMLDTD;
@@ -2502,6 +3250,10 @@ typedef bean_id NSXMLNode;
 #define BEAN_TYPEDEF_NSXMLParser
 typedef bean_id NSXMLParser;
 #endif
+#ifndef BEAN_TYPEDEF_NSXMLParserDelegate
+#define BEAN_TYPEDEF_NSXMLParserDelegate
+typedef bean_id NSXMLParserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXPCCoder
 #define BEAN_TYPEDEF_NSXPCCoder
 typedef bean_id NSXPCCoder;
@@ -2518,6 +3270,18 @@ typedef bean_id NSXPCInterface;
 #define BEAN_TYPEDEF_NSXPCListener
 typedef bean_id NSXPCListener;
 #endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerDelegate
+#define BEAN_TYPEDEF_NSXPCListenerDelegate
+typedef bean_id NSXPCListenerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
+#define BEAN_TYPEDEF_NSXPCListenerEndpoint
+typedef bean_id NSXPCListenerEndpoint;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCProxyCreating
+#define BEAN_TYPEDEF_NSXPCProxyCreating
+typedef bean_id NSXPCProxyCreating;
+#endif
 #ifndef BEAN_TYPEDEF_OS_object
 #define BEAN_TYPEDEF_OS_object
 typedef bean_id OS_object;
@@ -2533,6 +3297,18 @@ typedef bean_id OS_os_workgroup_interval;
 #ifndef BEAN_TYPEDEF_OS_os_workgroup_parallel
 #define BEAN_TYPEDEF_OS_os_workgroup_parallel
 typedef bean_id OS_os_workgroup_parallel;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPanel
+#define BEAN_TYPEDEF_PDEPanel
+typedef bean_id PDEPanel;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPlugIn
+#define BEAN_TYPEDEF_PDEPlugIn
+typedef bean_id PDEPlugIn;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+#define BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+typedef bean_id PDEPlugInCallbackProtocol;
 #endif
 #ifndef BEAN_TYPEDEF_AVDepthData
 #define BEAN_TYPEDEF_AVDepthData
@@ -2581,6 +3357,10 @@ typedef bean_id CKContainer;
 #ifndef BEAN_TYPEDEF_CKShare
 #define BEAN_TYPEDEF_CKShare
 typedef bean_id CKShare;
+#endif
+#ifndef BEAN_TYPEDEF_CKShareMetadata
+#define BEAN_TYPEDEF_CKShareMetadata
+typedef bean_id CKShareMetadata;
 #endif
 #ifndef BEAN_TYPEDEF_NSEntityDescription
 #define BEAN_TYPEDEF_NSEntityDescription
@@ -2646,19 +3426,23 @@ typedef bean_id NSSymbolMagicReplaceContentTransition;
 #define BEAN_TYPEDEF_NSTextBlockid
 typedef bean_id NSTextBlockid;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextCheckingTypes
+#define BEAN_TYPEDEF_NSTextCheckingTypes
+typedef bean_id NSTextCheckingTypes;
+#endif
 #ifndef BEAN_TYPEDEF_NSWorkspaceAuthorization
 #define BEAN_TYPEDEF_NSWorkspaceAuthorization
 typedef bean_id NSWorkspaceAuthorization;
-#endif
-#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
-#define BEAN_TYPEDEF_NSXPCListenerEndpoint
-typedef bean_id NSXPCListenerEndpoint;
 #endif
 
 /* ===== fallback typedefs ===== */
 #ifndef BEAN_TYPEDEF_BADownloadState
 #define BEAN_TYPEDEF_BADownloadState
 typedef NSInteger BADownloadState;
+#endif
+#ifndef BEAN_TYPEDEF_OpaquePMPageFormat
+#define BEAN_TYPEDEF_OpaquePMPageFormat
+typedef NSInteger OpaquePMPageFormat;
 #endif
 #ifndef BEAN_TYPEDEF_UTType
 #define BEAN_TYPEDEF_UTType
@@ -2683,49 +3467,55 @@ typedef NSUInteger NSStringEncoding;
 #define BEAN_TYPEDEF_BAAppExtensionInfo
 typedef bean_id BAAppExtensionInfo;
 #endif
-static inline id          BAAppExtensionInfo_Init(BAAppExtensionInfo self)                                        { return ((id (*)(BAAppExtensionInfo, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          BAAppExtensionInfo_New(void)                                                            { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAppExtensionInfo"), bean_sel("new")); }
-static inline NSNumber    BAAppExtensionInfo_RestrictedDownloadSizeRemaining(BAAppExtensionInfo self)             { return ((NSNumber (*)(BAAppExtensionInfo, SEL))bean_msgSend)(self, bean_sel("restrictedDownloadSizeRemaining")); }
-static inline NSNumber    BAAppExtensionInfo_RestrictedEssentialDownloadSizeRemaining(BAAppExtensionInfo self)    { return ((NSNumber (*)(BAAppExtensionInfo, SEL))bean_msgSend)(self, bean_sel("restrictedEssentialDownloadSizeRemaining")); }
+static inline BAAppExtensionInfo    BAAppExtensionInfo_Init(BAAppExtensionInfo self)                                        { return ((BAAppExtensionInfo (*)(BAAppExtensionInfo, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BAAppExtensionInfo    BAAppExtensionInfo_New(void)                                                            { return ((BAAppExtensionInfo (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAppExtensionInfo"), bean_sel("new")); }
+static inline NSNumber              BAAppExtensionInfo_RestrictedDownloadSizeRemaining(BAAppExtensionInfo self)             { return ((NSNumber (*)(BAAppExtensionInfo, SEL))bean_msgSend)(self, bean_sel("restrictedDownloadSizeRemaining")); }
+static inline NSNumber              BAAppExtensionInfo_RestrictedEssentialDownloadSizeRemaining(BAAppExtensionInfo self)    { return ((NSNumber (*)(BAAppExtensionInfo, SEL))bean_msgSend)(self, bean_sel("restrictedEssentialDownloadSizeRemaining")); }
+static inline BOOL                  BAAppExtensionInfo_SupportsSecureCoding(void)                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAppExtensionInfo"), bean_sel("supportsSecureCoding")); }
 
 /* ===== BAAssetPackManifest ===== */
 #ifndef BEAN_TYPEDEF_BAAssetPackManifest
 #define BEAN_TYPEDEF_BAAssetPackManifest
 typedef bean_id BAAssetPackManifest;
 #endif
-static inline id       BAAssetPackManifest_Init(BAAssetPackManifest self)                                                                                                                     { return ((id (*)(BAAssetPackManifest, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id       BAAssetPackManifest_InitWithContentsOfURL_ApplicationGroupIdentifier_Error(BAAssetPackManifest self, NSURL URL, NSString applicationGroupIdentifier, NSError error)    { return ((id (*)(BAAssetPackManifest, SEL, NSURL, NSString, NSError))bean_msgSend)(self, bean_sel("initWithContentsOfURL:applicationGroupIdentifier:error:"), URL, applicationGroupIdentifier, error); }
-static inline id       BAAssetPackManifest_InitFromData_ApplicationGroupIdentifier_Error(BAAssetPackManifest self, NSData data, NSString applicationGroupIdentifier, NSError error)           { return ((id (*)(BAAssetPackManifest, SEL, NSData, NSString, NSError))bean_msgSend)(self, bean_sel("initFromData:applicationGroupIdentifier:error:"), data, applicationGroupIdentifier, error); }
-static inline id       BAAssetPackManifest_New(void)                                                                                                                                          { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAssetPackManifest"), bean_sel("new")); }
-static inline NSSet    BAAssetPackManifest_AllDownloads(BAAssetPackManifest self)                                                                                                             { return ((NSSet (*)(BAAssetPackManifest, SEL))bean_msgSend)(self, bean_sel("allDownloads")); }
-static inline NSSet    BAAssetPackManifest_AllDownloadsForContentRequest(BAAssetPackManifest self, BAContentRequest contentRequest)                                                           { return ((NSSet (*)(BAAssetPackManifest, SEL, BAContentRequest))bean_msgSend)(self, bean_sel("allDownloadsForContentRequest:"), contentRequest); }
-static inline NSSet    BAAssetPackManifest_AssetPacks(BAAssetPackManifest self)                                                                                                               { return ((NSSet (*)(BAAssetPackManifest, SEL))bean_msgSend)(self, bean_sel("assetPacks")); }
+static inline BAAssetPackManifest    BAAssetPackManifest_Init(BAAssetPackManifest self)                                                                                                                      { return ((BAAssetPackManifest (*)(BAAssetPackManifest, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BAAssetPackManifest    BAAssetPackManifest_InitWithContentsOfURL_ApplicationGroupIdentifier_Error(BAAssetPackManifest self, NSURL URL, NSString applicationGroupIdentifier, NSError* error)    { return ((BAAssetPackManifest (*)(BAAssetPackManifest, SEL, NSURL, NSString, NSError*))bean_msgSend)(self, bean_sel("initWithContentsOfURL:applicationGroupIdentifier:error:"), URL, applicationGroupIdentifier, error); }
+static inline BAAssetPackManifest    BAAssetPackManifest_InitFromData_ApplicationGroupIdentifier_Error(BAAssetPackManifest self, NSData data, NSString applicationGroupIdentifier, NSError* error)           { return ((BAAssetPackManifest (*)(BAAssetPackManifest, SEL, NSData, NSString, NSError*))bean_msgSend)(self, bean_sel("initFromData:applicationGroupIdentifier:error:"), data, applicationGroupIdentifier, error); }
+static inline BAAssetPackManifest    BAAssetPackManifest_New(void)                                                                                                                                           { return ((BAAssetPackManifest (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAssetPackManifest"), bean_sel("new")); }
+static inline NSSet                  BAAssetPackManifest_AllDownloads(BAAssetPackManifest self)                                                                                                              { return ((NSSet (*)(BAAssetPackManifest, SEL))bean_msgSend)(self, bean_sel("allDownloads")); }
+static inline NSSet                  BAAssetPackManifest_AllDownloadsForContentRequest(BAAssetPackManifest self, BAContentRequest contentRequest)                                                            { return ((NSSet (*)(BAAssetPackManifest, SEL, BAContentRequest))bean_msgSend)(self, bean_sel("allDownloadsForContentRequest:"), contentRequest); }
+static inline NSSet                  BAAssetPackManifest_AssetPacks(BAAssetPackManifest self)                                                                                                                { return ((NSSet (*)(BAAssetPackManifest, SEL))bean_msgSend)(self, bean_sel("assetPacks")); }
 
 /* ===== BADownload ===== */
 #ifndef BEAN_TYPEDEF_BADownload
 #define BEAN_TYPEDEF_BADownload
 typedef bean_id BADownload;
 #endif
-static inline id                 BADownload_CopyAsNonEssential(BADownload self)    { return ((id (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("copyAsNonEssential")); }
-static inline id                 BADownload_Init(BADownload self)                  { return ((id (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                 BADownload_New(void)                              { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("BADownload"), bean_sel("new")); }
-static inline BADownloadState    BADownload_State(BADownload self)                 { return ((BADownloadState (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("state")); }
-static inline NSString           BADownload_Identifier(BADownload self)            { return ((NSString (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("identifier")); }
-static inline NSString           BADownload_UniqueIdentifier(BADownload self)      { return ((NSString (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("uniqueIdentifier")); }
-static inline NSInteger          BADownload_Priority(BADownload self)              { return ((NSInteger (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("priority")); }
-static inline BOOL               BADownload_IsEssential(BADownload self)           { return ((BOOL (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("isEssential")); }
+static inline BADownload         BADownload_CopyAsNonEssential(BADownload self)                { return ((BADownload (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("copyAsNonEssential")); }
+static inline BADownload         BADownload_Init(BADownload self)                              { return ((BADownload (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BADownload         BADownload_New(void)                                          { return ((BADownload (*)(bean_class, SEL))bean_msgSend)(bean_cls("BADownload"), bean_sel("new")); }
+static inline BADownloadState    BADownload_State(BADownload self)                             { return ((BADownloadState (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("state")); }
+static inline NSString           BADownload_Identifier(BADownload self)                        { return ((NSString (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline NSString           BADownload_UniqueIdentifier(BADownload self)                  { return ((NSString (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("uniqueIdentifier")); }
+static inline NSInteger          BADownload_Priority(BADownload self)                          { return ((NSInteger (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("priority")); }
+static inline BOOL               BADownload_IsEssential(BADownload self)                       { return ((BOOL (*)(BADownload, SEL))bean_msgSend)(self, bean_sel("isEssential")); }
+static inline void               BADownload_EncodeWithCoder(BADownload self, NSCoder coder)    { ((void (*)(BADownload, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding           BADownload_InitWithCoder(BADownload self, NSCoder coder)      { return ((NSCoding (*)(BADownload, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline BOOL               BADownload_SupportsSecureCoding(void)                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("BADownload"), bean_sel("supportsSecureCoding")); }
+static inline id                 BADownload_CopyWithZone(BADownload self, NSZone* zone)        { return ((id (*)(BADownload, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== BAURLDownload ===== */
 #ifndef BEAN_TYPEDEF_BAURLDownload
 #define BEAN_TYPEDEF_BAURLDownload
 typedef bean_id BAURLDownload;
 #endif
-static inline id    BAURLDownload_New(void)                                                                                                                                                                                                                                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAURLDownload"), bean_sel("new")); }
-static inline id    BAURLDownload_Init(BAURLDownload self)                                                                                                                                                                                                                          { return ((id (*)(BAURLDownload, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id    BAURLDownload_InitWithIdentifier_Request_FileSize_ApplicationGroupIdentifier(BAURLDownload self, NSString identifier, NSURLRequest request, NSUInteger fileSize, NSString applicationGroupIdentifier)                                                           { return ((id (*)(BAURLDownload, SEL, NSString, NSURLRequest, NSUInteger, NSString))bean_msgSend)(self, bean_sel("initWithIdentifier:request:fileSize:applicationGroupIdentifier:"), identifier, request, fileSize, applicationGroupIdentifier); }
-static inline id    BAURLDownload_InitWithIdentifier_Request_Essential_FileSize_ApplicationGroupIdentifier_Priority(BAURLDownload self, NSString identifier, NSURLRequest request, BOOL essential, NSUInteger fileSize, NSString applicationGroupIdentifier, NSInteger priority)    { return ((id (*)(BAURLDownload, SEL, NSString, NSURLRequest, BOOL, NSUInteger, NSString, NSInteger))bean_msgSend)(self, bean_sel("initWithIdentifier:request:essential:fileSize:applicationGroupIdentifier:priority:"), identifier, request, essential, fileSize, applicationGroupIdentifier, priority); }
-static inline id    BAURLDownload_InitWithIdentifier_Request_ApplicationGroupIdentifier(BAURLDownload self, NSString identifier, NSURLRequest request, NSString applicationGroupIdentifier)                                                                                         { return ((id (*)(BAURLDownload, SEL, NSString, NSURLRequest, NSString))bean_msgSend)(self, bean_sel("initWithIdentifier:request:applicationGroupIdentifier:"), identifier, request, applicationGroupIdentifier); }
-static inline id    BAURLDownload_InitWithIdentifier_Request_ApplicationGroupIdentifier_Priority(BAURLDownload self, NSString identifier, NSURLRequest request, NSString applicationGroupIdentifier, NSInteger priority)                                                            { return ((id (*)(BAURLDownload, SEL, NSString, NSURLRequest, NSString, NSInteger))bean_msgSend)(self, bean_sel("initWithIdentifier:request:applicationGroupIdentifier:priority:"), identifier, request, applicationGroupIdentifier, priority); }
+static inline BAURLDownload    BAURLDownload_New(void)                                                                                                                                                                                                                                         { return ((BAURLDownload (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAURLDownload"), bean_sel("new")); }
+static inline BAURLDownload    BAURLDownload_Init(BAURLDownload self)                                                                                                                                                                                                                          { return ((BAURLDownload (*)(BAURLDownload, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BAURLDownload    BAURLDownload_InitWithIdentifier_Request_FileSize_ApplicationGroupIdentifier(BAURLDownload self, NSString identifier, NSURLRequest request, NSUInteger fileSize, NSString applicationGroupIdentifier)                                                           { return ((BAURLDownload (*)(BAURLDownload, SEL, NSString, NSURLRequest, NSUInteger, NSString))bean_msgSend)(self, bean_sel("initWithIdentifier:request:fileSize:applicationGroupIdentifier:"), identifier, request, fileSize, applicationGroupIdentifier); }
+static inline BAURLDownload    BAURLDownload_InitWithIdentifier_Request_Essential_FileSize_ApplicationGroupIdentifier_Priority(BAURLDownload self, NSString identifier, NSURLRequest request, BOOL essential, NSUInteger fileSize, NSString applicationGroupIdentifier, NSInteger priority)    { return ((BAURLDownload (*)(BAURLDownload, SEL, NSString, NSURLRequest, BOOL, NSUInteger, NSString, NSInteger))bean_msgSend)(self, bean_sel("initWithIdentifier:request:essential:fileSize:applicationGroupIdentifier:priority:"), identifier, request, essential, fileSize, applicationGroupIdentifier, priority); }
+static inline BAURLDownload    BAURLDownload_InitWithIdentifier_Request_ApplicationGroupIdentifier(BAURLDownload self, NSString identifier, NSURLRequest request, NSString applicationGroupIdentifier)                                                                                         { return ((BAURLDownload (*)(BAURLDownload, SEL, NSString, NSURLRequest, NSString))bean_msgSend)(self, bean_sel("initWithIdentifier:request:applicationGroupIdentifier:"), identifier, request, applicationGroupIdentifier); }
+static inline BAURLDownload    BAURLDownload_InitWithIdentifier_Request_ApplicationGroupIdentifier_Priority(BAURLDownload self, NSString identifier, NSURLRequest request, NSString applicationGroupIdentifier, NSInteger priority)                                                            { return ((BAURLDownload (*)(BAURLDownload, SEL, NSString, NSURLRequest, NSString, NSInteger))bean_msgSend)(self, bean_sel("initWithIdentifier:request:applicationGroupIdentifier:priority:"), identifier, request, applicationGroupIdentifier, priority); }
+static inline id               BAURLDownload_CopyWithZone(BAURLDownload self, NSZone* zone)                                                                                                                                                                                                    { return ((id (*)(BAURLDownload, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== SKAdImpression ===== */
 #ifndef BEAN_TYPEDEF_SKAdImpression
@@ -2793,52 +3583,52 @@ static inline void    SKCloudServiceSetupViewController_SetDelegate(SKCloudServi
 #define BEAN_TYPEDEF_SKOverlayAppClipConfiguration
 typedef bean_id SKOverlayAppClipConfiguration;
 #endif
-static inline id                   SKOverlayAppClipConfiguration_Init(SKOverlayAppClipConfiguration self)                                                                    { return ((id (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                   SKOverlayAppClipConfiguration_New(void)                                                                                                   { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlayAppClipConfiguration"), bean_sel("new")); }
-static inline id                   SKOverlayAppClipConfiguration_InitWithPosition(SKOverlayAppClipConfiguration self, SKOverlayPosition position)                            { return ((id (*)(SKOverlayAppClipConfiguration, SEL, SKOverlayPosition))bean_msgSend)(self, bean_sel("initWithPosition:"), position); }
-static inline void                 SKOverlayAppClipConfiguration_SetAdditionalValue_ForKey(SKOverlayAppClipConfiguration self, id value, NSString key)                       { ((void (*)(SKOverlayAppClipConfiguration, SEL, id, NSString))bean_msgSend)(self, bean_sel("setAdditionalValue:forKey:"), value, key); }
-static inline id                   SKOverlayAppClipConfiguration_AdditionalValueForKey(SKOverlayAppClipConfiguration self, NSString key)                                     { return ((id (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("additionalValueForKey:"), key); }
-static inline NSString             SKOverlayAppClipConfiguration_CampaignToken(SKOverlayAppClipConfiguration self)                                                           { return ((NSString (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("campaignToken")); }
-static inline void                 SKOverlayAppClipConfiguration_SetCampaignToken(SKOverlayAppClipConfiguration self, NSString campaignToken)                                { ((void (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setCampaignToken:"), campaignToken); }
-static inline NSString             SKOverlayAppClipConfiguration_ProviderToken(SKOverlayAppClipConfiguration self)                                                           { return ((NSString (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("providerToken")); }
-static inline void                 SKOverlayAppClipConfiguration_SetProviderToken(SKOverlayAppClipConfiguration self, NSString providerToken)                                { ((void (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setProviderToken:"), providerToken); }
-static inline NSString             SKOverlayAppClipConfiguration_CustomProductPageIdentifier(SKOverlayAppClipConfiguration self)                                             { return ((NSString (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("customProductPageIdentifier")); }
-static inline void                 SKOverlayAppClipConfiguration_SetCustomProductPageIdentifier(SKOverlayAppClipConfiguration self, NSString customProductPageIdentifier)    { ((void (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setCustomProductPageIdentifier:"), customProductPageIdentifier); }
-static inline NSString             SKOverlayAppClipConfiguration_LatestReleaseID(SKOverlayAppClipConfiguration self)                                                         { return ((NSString (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("latestReleaseID")); }
-static inline void                 SKOverlayAppClipConfiguration_SetLatestReleaseID(SKOverlayAppClipConfiguration self, NSString latestReleaseID)                            { ((void (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setLatestReleaseID:"), latestReleaseID); }
-static inline SKOverlayPosition    SKOverlayAppClipConfiguration_Position(SKOverlayAppClipConfiguration self)                                                                { return ((SKOverlayPosition (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("position")); }
-static inline void                 SKOverlayAppClipConfiguration_SetPosition(SKOverlayAppClipConfiguration self, SKOverlayPosition position)                                 { ((void (*)(SKOverlayAppClipConfiguration, SEL, SKOverlayPosition))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+static inline SKOverlayAppClipConfiguration    SKOverlayAppClipConfiguration_Init(SKOverlayAppClipConfiguration self)                                                                    { return ((SKOverlayAppClipConfiguration (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline SKOverlayAppClipConfiguration    SKOverlayAppClipConfiguration_New(void)                                                                                                   { return ((SKOverlayAppClipConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlayAppClipConfiguration"), bean_sel("new")); }
+static inline SKOverlayAppClipConfiguration    SKOverlayAppClipConfiguration_InitWithPosition(SKOverlayAppClipConfiguration self, SKOverlayPosition position)                            { return ((SKOverlayAppClipConfiguration (*)(SKOverlayAppClipConfiguration, SEL, SKOverlayPosition))bean_msgSend)(self, bean_sel("initWithPosition:"), position); }
+static inline void                             SKOverlayAppClipConfiguration_SetAdditionalValue_ForKey(SKOverlayAppClipConfiguration self, id value, NSString key)                       { ((void (*)(SKOverlayAppClipConfiguration, SEL, id, NSString))bean_msgSend)(self, bean_sel("setAdditionalValue:forKey:"), value, key); }
+static inline id                               SKOverlayAppClipConfiguration_AdditionalValueForKey(SKOverlayAppClipConfiguration self, NSString key)                                     { return ((id (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("additionalValueForKey:"), key); }
+static inline NSString                         SKOverlayAppClipConfiguration_CampaignToken(SKOverlayAppClipConfiguration self)                                                           { return ((NSString (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("campaignToken")); }
+static inline void                             SKOverlayAppClipConfiguration_SetCampaignToken(SKOverlayAppClipConfiguration self, NSString campaignToken)                                { ((void (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setCampaignToken:"), campaignToken); }
+static inline NSString                         SKOverlayAppClipConfiguration_ProviderToken(SKOverlayAppClipConfiguration self)                                                           { return ((NSString (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("providerToken")); }
+static inline void                             SKOverlayAppClipConfiguration_SetProviderToken(SKOverlayAppClipConfiguration self, NSString providerToken)                                { ((void (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setProviderToken:"), providerToken); }
+static inline NSString                         SKOverlayAppClipConfiguration_CustomProductPageIdentifier(SKOverlayAppClipConfiguration self)                                             { return ((NSString (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("customProductPageIdentifier")); }
+static inline void                             SKOverlayAppClipConfiguration_SetCustomProductPageIdentifier(SKOverlayAppClipConfiguration self, NSString customProductPageIdentifier)    { ((void (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setCustomProductPageIdentifier:"), customProductPageIdentifier); }
+static inline NSString                         SKOverlayAppClipConfiguration_LatestReleaseID(SKOverlayAppClipConfiguration self)                                                         { return ((NSString (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("latestReleaseID")); }
+static inline void                             SKOverlayAppClipConfiguration_SetLatestReleaseID(SKOverlayAppClipConfiguration self, NSString latestReleaseID)                            { ((void (*)(SKOverlayAppClipConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setLatestReleaseID:"), latestReleaseID); }
+static inline SKOverlayPosition                SKOverlayAppClipConfiguration_Position(SKOverlayAppClipConfiguration self)                                                                { return ((SKOverlayPosition (*)(SKOverlayAppClipConfiguration, SEL))bean_msgSend)(self, bean_sel("position")); }
+static inline void                             SKOverlayAppClipConfiguration_SetPosition(SKOverlayAppClipConfiguration self, SKOverlayPosition position)                                 { ((void (*)(SKOverlayAppClipConfiguration, SEL, SKOverlayPosition))bean_msgSend)(self, bean_sel("setPosition:"), position); }
 
 /* ===== SKOverlayConfiguration ===== */
 #ifndef BEAN_TYPEDEF_SKOverlayConfiguration
 #define BEAN_TYPEDEF_SKOverlayConfiguration
 typedef bean_id SKOverlayConfiguration;
 #endif
-static inline id    SKOverlayConfiguration_Init(SKOverlayConfiguration self)    { return ((id (*)(SKOverlayConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id    SKOverlayConfiguration_New(void)                            { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlayConfiguration"), bean_sel("new")); }
+static inline SKOverlayConfiguration    SKOverlayConfiguration_Init(SKOverlayConfiguration self)    { return ((SKOverlayConfiguration (*)(SKOverlayConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline SKOverlayConfiguration    SKOverlayConfiguration_New(void)                            { return ((SKOverlayConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlayConfiguration"), bean_sel("new")); }
 
 /* ===== SKOverlayTransitionContext ===== */
 #ifndef BEAN_TYPEDEF_SKOverlayTransitionContext
 #define BEAN_TYPEDEF_SKOverlayTransitionContext
 typedef bean_id SKOverlayTransitionContext;
 #endif
-static inline id        SKOverlayTransitionContext_Init(SKOverlayTransitionContext self)                              { return ((id (*)(SKOverlayTransitionContext, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id        SKOverlayTransitionContext_New(void)                                                          { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlayTransitionContext"), bean_sel("new")); }
-static inline void      SKOverlayTransitionContext_AddAnimationBlock(SKOverlayTransitionContext self, void* block)    { ((void (*)(SKOverlayTransitionContext, SEL, void*))bean_msgSend)(self, bean_sel("addAnimationBlock:"), block); }
-static inline CGRect    SKOverlayTransitionContext_StartFrame(SKOverlayTransitionContext self)                        { return ((CGRect (*)(SKOverlayTransitionContext, SEL))bean_msgSend_stret)(self, bean_sel("startFrame")); }
-static inline CGRect    SKOverlayTransitionContext_EndFrame(SKOverlayTransitionContext self)                          { return ((CGRect (*)(SKOverlayTransitionContext, SEL))bean_msgSend_stret)(self, bean_sel("endFrame")); }
+static inline SKOverlayTransitionContext    SKOverlayTransitionContext_Init(SKOverlayTransitionContext self)                              { return ((SKOverlayTransitionContext (*)(SKOverlayTransitionContext, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline SKOverlayTransitionContext    SKOverlayTransitionContext_New(void)                                                          { return ((SKOverlayTransitionContext (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlayTransitionContext"), bean_sel("new")); }
+static inline void                          SKOverlayTransitionContext_AddAnimationBlock(SKOverlayTransitionContext self, void* block)    { ((void (*)(SKOverlayTransitionContext, SEL, void*))bean_msgSend)(self, bean_sel("addAnimationBlock:"), block); }
+static inline CGRect                        SKOverlayTransitionContext_StartFrame(SKOverlayTransitionContext self)                        { return ((CGRect (*)(SKOverlayTransitionContext, SEL))bean_msgSend_stret)(self, bean_sel("startFrame")); }
+static inline CGRect                        SKOverlayTransitionContext_EndFrame(SKOverlayTransitionContext self)                          { return ((CGRect (*)(SKOverlayTransitionContext, SEL))bean_msgSend_stret)(self, bean_sel("endFrame")); }
 
 /* ===== SKPaymentDiscount ===== */
 #ifndef BEAN_TYPEDEF_SKPaymentDiscount
 #define BEAN_TYPEDEF_SKPaymentDiscount
 typedef bean_id SKPaymentDiscount;
 #endif
-static inline id          SKPaymentDiscount_InitWithIdentifier_KeyIdentifier_Nonce_Signature_Timestamp(SKPaymentDiscount self, NSString identifier, NSString keyIdentifier, NSUUID nonce, NSString signature, NSNumber timestamp)    { return ((id (*)(SKPaymentDiscount, SEL, NSString, NSString, NSUUID, NSString, NSNumber))bean_msgSend)(self, bean_sel("initWithIdentifier:keyIdentifier:nonce:signature:timestamp:"), identifier, keyIdentifier, nonce, signature, timestamp); }
-static inline NSString    SKPaymentDiscount_Identifier(SKPaymentDiscount self)                                                                                                                                                       { return ((NSString (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("identifier")); }
-static inline NSString    SKPaymentDiscount_KeyIdentifier(SKPaymentDiscount self)                                                                                                                                                    { return ((NSString (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("keyIdentifier")); }
-static inline NSUUID      SKPaymentDiscount_Nonce(SKPaymentDiscount self)                                                                                                                                                            { return ((NSUUID (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("nonce")); }
-static inline NSString    SKPaymentDiscount_Signature(SKPaymentDiscount self)                                                                                                                                                        { return ((NSString (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("signature")); }
-static inline NSNumber    SKPaymentDiscount_Timestamp(SKPaymentDiscount self)                                                                                                                                                        { return ((NSNumber (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
+static inline SKPaymentDiscount    SKPaymentDiscount_InitWithIdentifier_KeyIdentifier_Nonce_Signature_Timestamp(SKPaymentDiscount self, NSString identifier, NSString keyIdentifier, NSUUID nonce, NSString signature, NSNumber timestamp)    { return ((SKPaymentDiscount (*)(SKPaymentDiscount, SEL, NSString, NSString, NSUUID, NSString, NSNumber))bean_msgSend)(self, bean_sel("initWithIdentifier:keyIdentifier:nonce:signature:timestamp:"), identifier, keyIdentifier, nonce, signature, timestamp); }
+static inline NSString             SKPaymentDiscount_Identifier(SKPaymentDiscount self)                                                                                                                                                       { return ((NSString (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline NSString             SKPaymentDiscount_KeyIdentifier(SKPaymentDiscount self)                                                                                                                                                    { return ((NSString (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("keyIdentifier")); }
+static inline NSUUID               SKPaymentDiscount_Nonce(SKPaymentDiscount self)                                                                                                                                                            { return ((NSUUID (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("nonce")); }
+static inline NSString             SKPaymentDiscount_Signature(SKPaymentDiscount self)                                                                                                                                                        { return ((NSString (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("signature")); }
+static inline NSNumber             SKPaymentDiscount_Timestamp(SKPaymentDiscount self)                                                                                                                                                        { return ((NSNumber (*)(SKPaymentDiscount, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
 
 /* ===== SKProductSubscriptionPeriod ===== */
 #ifndef BEAN_TYPEDEF_SKProductSubscriptionPeriod
@@ -2853,9 +3643,9 @@ static inline SKProductPeriodUnit    SKProductSubscriptionPeriod_Unit(SKProductS
 #define BEAN_TYPEDEF_SKProductsRequest
 typedef bean_id SKProductsRequest;
 #endif
-static inline id      SKProductsRequest_InitWithProductIdentifiers(SKProductsRequest self, NSSet productIdentifiers)    { return ((id (*)(SKProductsRequest, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithProductIdentifiers:"), productIdentifiers); }
-static inline id      SKProductsRequest_Delegate(SKProductsRequest self)                                                { return ((id (*)(SKProductsRequest, SEL))bean_msgSend)(self, bean_sel("delegate")); }
-static inline void    SKProductsRequest_SetDelegate(SKProductsRequest self, id delegate)                                { ((void (*)(SKProductsRequest, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+static inline SKProductsRequest    SKProductsRequest_InitWithProductIdentifiers(SKProductsRequest self, NSSet productIdentifiers)    { return ((SKProductsRequest (*)(SKProductsRequest, SEL, NSSet))bean_msgSend)(self, bean_sel("initWithProductIdentifiers:"), productIdentifiers); }
+static inline id                   SKProductsRequest_Delegate(SKProductsRequest self)                                                { return ((id (*)(SKProductsRequest, SEL))bean_msgSend)(self, bean_sel("delegate")); }
+static inline void                 SKProductsRequest_SetDelegate(SKProductsRequest self, id delegate)                                { ((void (*)(SKProductsRequest, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
 
 /* ===== SKProductsResponse ===== */
 #ifndef BEAN_TYPEDEF_SKProductsResponse
@@ -2870,8 +3660,8 @@ static inline NSArray    SKProductsResponse_InvalidProductIdentifiers(SKProducts
 #define BEAN_TYPEDEF_SKReceiptRefreshRequest
 typedef bean_id SKReceiptRefreshRequest;
 #endif
-static inline id              SKReceiptRefreshRequest_InitWithReceiptProperties(SKReceiptRefreshRequest self, NSDictionary properties)    { return ((id (*)(SKReceiptRefreshRequest, SEL, NSDictionary))bean_msgSend)(self, bean_sel("initWithReceiptProperties:"), properties); }
-static inline NSDictionary    SKReceiptRefreshRequest_ReceiptProperties(SKReceiptRefreshRequest self)                                     { return ((NSDictionary (*)(SKReceiptRefreshRequest, SEL))bean_msgSend)(self, bean_sel("receiptProperties")); }
+static inline SKReceiptRefreshRequest    SKReceiptRefreshRequest_InitWithReceiptProperties(SKReceiptRefreshRequest self, NSDictionary properties)    { return ((SKReceiptRefreshRequest (*)(SKReceiptRefreshRequest, SEL, NSDictionary))bean_msgSend)(self, bean_sel("initWithReceiptProperties:"), properties); }
+static inline NSDictionary               SKReceiptRefreshRequest_ReceiptProperties(SKReceiptRefreshRequest self)                                     { return ((NSDictionary (*)(SKReceiptRefreshRequest, SEL))bean_msgSend)(self, bean_sel("receiptProperties")); }
 
 /* ===== SKRequest ===== */
 #ifndef BEAN_TYPEDEF_SKRequest
@@ -2903,32 +3693,55 @@ static inline NSString    SKStorefront_Identifier(SKStorefront self)     { retur
 #define BEAN_TYPEDEF_BAAssetPack
 typedef bean_id BAAssetPack;
 #endif
-static inline id            BAAssetPack_Init(BAAssetPack self)                                                          { return ((id (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id            BAAssetPack_New(void)                                                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAssetPack"), bean_sel("new")); }
-static inline BADownload    BAAssetPack_Download(BAAssetPack self)                                                      { return ((BADownload (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("download")); }
-static inline BADownload    BAAssetPack_DownloadForContentRequest(BAAssetPack self, BAContentRequest contentRequest)    { return ((BADownload (*)(BAAssetPack, SEL, BAContentRequest))bean_msgSend)(self, bean_sel("downloadForContentRequest:"), contentRequest); }
-static inline NSString      BAAssetPack_Identifier(BAAssetPack self)                                                    { return ((NSString (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("identifier")); }
-static inline NSInteger     BAAssetPack_DownloadSize(BAAssetPack self)                                                  { return ((NSInteger (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("downloadSize")); }
-static inline NSInteger     BAAssetPack_Version(BAAssetPack self)                                                       { return ((NSInteger (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("version")); }
-static inline NSData        BAAssetPack_UserInfo(BAAssetPack self)                                                      { return ((NSData (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
+static inline BAAssetPack    BAAssetPack_Init(BAAssetPack self)                                                          { return ((BAAssetPack (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BAAssetPack    BAAssetPack_New(void)                                                                       { return ((BAAssetPack (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAssetPack"), bean_sel("new")); }
+static inline BADownload     BAAssetPack_Download(BAAssetPack self)                                                      { return ((BADownload (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("download")); }
+static inline BADownload     BAAssetPack_DownloadForContentRequest(BAAssetPack self, BAContentRequest contentRequest)    { return ((BADownload (*)(BAAssetPack, SEL, BAContentRequest))bean_msgSend)(self, bean_sel("downloadForContentRequest:"), contentRequest); }
+static inline NSString       BAAssetPack_Identifier(BAAssetPack self)                                                    { return ((NSString (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline NSInteger      BAAssetPack_DownloadSize(BAAssetPack self)                                                  { return ((NSInteger (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("downloadSize")); }
+static inline NSInteger      BAAssetPack_Version(BAAssetPack self)                                                       { return ((NSInteger (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("version")); }
+static inline NSData         BAAssetPack_UserInfo(BAAssetPack self)                                                      { return ((NSData (*)(BAAssetPack, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
 
 /* ===== BADownloadManager ===== */
 #ifndef BEAN_TYPEDEF_BADownloadManager
 #define BEAN_TYPEDEF_BADownloadManager
 typedef bean_id BADownloadManager;
 #endif
-static inline id                   BADownloadManager_Init(BADownloadManager self)                                                                                       { return ((id (*)(BADownloadManager, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                   BADownloadManager_New(void)                                                                                                          { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("BADownloadManager"), bean_sel("new")); }
+static inline BADownloadManager    BADownloadManager_Init(BADownloadManager self)                                                                                       { return ((BADownloadManager (*)(BADownloadManager, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BADownloadManager    BADownloadManager_New(void)                                                                                                          { return ((BADownloadManager (*)(bean_class, SEL))bean_msgSend)(bean_cls("BADownloadManager"), bean_sel("new")); }
 static inline NSArray              BADownloadManager_FetchCurrentDownloads(BADownloadManager self, NSError error)                                                       { return ((NSArray (*)(BADownloadManager, SEL, NSError))bean_msgSend)(self, bean_sel("fetchCurrentDownloads:"), error); }
 static inline void                 BADownloadManager_FetchCurrentDownloadsWithCompletionHandler(BADownloadManager self, void* completionHandler)                        { ((void (*)(BADownloadManager, SEL, void*))bean_msgSend)(self, bean_sel("fetchCurrentDownloadsWithCompletionHandler:"), completionHandler); }
-static inline BOOL                 BADownloadManager_ScheduleDownload_Error(BADownloadManager self, BADownload download, NSError error)                                 { return ((BOOL (*)(BADownloadManager, SEL, BADownload, NSError))bean_msgSend)(self, bean_sel("scheduleDownload:error:"), download, error); }
+static inline BOOL                 BADownloadManager_ScheduleDownload_Error(BADownloadManager self, BADownload download, NSError* error)                                { return ((BOOL (*)(BADownloadManager, SEL, BADownload, NSError*))bean_msgSend)(self, bean_sel("scheduleDownload:error:"), download, error); }
 static inline void                 BADownloadManager_PerformWithExclusiveControl(BADownloadManager self, void* performHandler)                                          { ((void (*)(BADownloadManager, SEL, void*))bean_msgSend)(self, bean_sel("performWithExclusiveControl:"), performHandler); }
 static inline void                 BADownloadManager_PerformWithExclusiveControlBeforeDate_PerformHandler(BADownloadManager self, NSDate date, void* performHandler)    { ((void (*)(BADownloadManager, SEL, NSDate, void*))bean_msgSend)(self, bean_sel("performWithExclusiveControlBeforeDate:performHandler:"), date, performHandler); }
-static inline BOOL                 BADownloadManager_StartForegroundDownload_Error(BADownloadManager self, BADownload download, NSError error)                          { return ((BOOL (*)(BADownloadManager, SEL, BADownload, NSError))bean_msgSend)(self, bean_sel("startForegroundDownload:error:"), download, error); }
-static inline BOOL                 BADownloadManager_CancelDownload_Error(BADownloadManager self, BADownload download, NSError error)                                   { return ((BOOL (*)(BADownloadManager, SEL, BADownload, NSError))bean_msgSend)(self, bean_sel("cancelDownload:error:"), download, error); }
+static inline BOOL                 BADownloadManager_StartForegroundDownload_Error(BADownloadManager self, BADownload download, NSError* error)                         { return ((BOOL (*)(BADownloadManager, SEL, BADownload, NSError*))bean_msgSend)(self, bean_sel("startForegroundDownload:error:"), download, error); }
+static inline BOOL                 BADownloadManager_CancelDownload_Error(BADownloadManager self, BADownload download, NSError* error)                                  { return ((BOOL (*)(BADownloadManager, SEL, BADownload, NSError*))bean_msgSend)(self, bean_sel("cancelDownload:error:"), download, error); }
 static inline BADownloadManager    BADownloadManager_SharedManager(void)                                                                                                { return ((BADownloadManager (*)(bean_class, SEL))bean_msgSend)(bean_cls("BADownloadManager"), bean_sel("sharedManager")); }
 static inline id                   BADownloadManager_Delegate(BADownloadManager self)                                                                                   { return ((id (*)(BADownloadManager, SEL))bean_msgSend)(self, bean_sel("delegate")); }
 static inline void                 BADownloadManager_SetDelegate(BADownloadManager self, id delegate)                                                                   { ((void (*)(BADownloadManager, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+
+/* ===== BADownloadManagerDelegate ===== */
+#ifndef BEAN_TYPEDEF_BADownloadManagerDelegate
+#define BEAN_TYPEDEF_BADownloadManagerDelegate
+typedef bean_id BADownloadManagerDelegate;
+#endif
+static inline void    BADownloadManagerDelegate_DownloadDidBegin(BADownloadManagerDelegate self, BADownload download)                                                                                                                                         { ((void (*)(BADownloadManagerDelegate, SEL, BADownload))bean_msgSend)(self, bean_sel("downloadDidBegin:"), download); }
+static inline void    BADownloadManagerDelegate_DownloadDidPause(BADownloadManagerDelegate self, BADownload download)                                                                                                                                         { ((void (*)(BADownloadManagerDelegate, SEL, BADownload))bean_msgSend)(self, bean_sel("downloadDidPause:"), download); }
+static inline void    BADownloadManagerDelegate_Download_DidWriteBytes_TotalBytesWritten_TotalBytesExpectedToWrite(BADownloadManagerDelegate self, BADownload download, long long bytesWritten, long long totalBytesWritten, long long totalExpectedBytes)    { ((void (*)(BADownloadManagerDelegate, SEL, BADownload, long long, long long, long long))bean_msgSend)(self, bean_sel("download:didWriteBytes:totalBytesWritten:totalBytesExpectedToWrite:"), download, bytesWritten, totalBytesWritten, totalExpectedBytes); }
+static inline void    BADownloadManagerDelegate_Download_DidReceiveChallenge_CompletionHandler(BADownloadManagerDelegate self, BADownload download, NSURLAuthenticationChallenge challenge, void* completionHandler)                                          { ((void (*)(BADownloadManagerDelegate, SEL, BADownload, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("download:didReceiveChallenge:completionHandler:"), download, challenge, completionHandler); }
+static inline void    BADownloadManagerDelegate_Download_FailedWithError(BADownloadManagerDelegate self, BADownload download, NSError error)                                                                                                                  { ((void (*)(BADownloadManagerDelegate, SEL, BADownload, NSError))bean_msgSend)(self, bean_sel("download:failedWithError:"), download, error); }
+static inline void    BADownloadManagerDelegate_Download_FinishedWithFileURL(BADownloadManagerDelegate self, BADownload download, NSURL fileURL)                                                                                                              { ((void (*)(BADownloadManagerDelegate, SEL, BADownload, NSURL))bean_msgSend)(self, bean_sel("download:finishedWithFileURL:"), download, fileURL); }
+
+/* ===== BADownloaderExtension ===== */
+#ifndef BEAN_TYPEDEF_BADownloaderExtension
+#define BEAN_TYPEDEF_BADownloaderExtension
+typedef bean_id BADownloaderExtension;
+#endif
+static inline NSSet    BADownloaderExtension_DownloadsForRequest_ManifestURL_ExtensionInfo(BADownloaderExtension self, BAContentRequest contentRequest, NSURL manifestURL, BAAppExtensionInfo extensionInfo)               { return ((NSSet (*)(BADownloaderExtension, SEL, BAContentRequest, NSURL, BAAppExtensionInfo))bean_msgSend)(self, bean_sel("downloadsForRequest:manifestURL:extensionInfo:"), contentRequest, manifestURL, extensionInfo); }
+static inline void     BADownloaderExtension_BackgroundDownload_DidReceiveChallenge_CompletionHandler(BADownloaderExtension self, BADownload download, NSURLAuthenticationChallenge challenge, void* completionHandler)    { ((void (*)(BADownloaderExtension, SEL, BADownload, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("backgroundDownload:didReceiveChallenge:completionHandler:"), download, challenge, completionHandler); }
+static inline void     BADownloaderExtension_BackgroundDownload_FailedWithError(BADownloaderExtension self, BADownload download, NSError error)                                                                            { ((void (*)(BADownloaderExtension, SEL, BADownload, NSError))bean_msgSend)(self, bean_sel("backgroundDownload:failedWithError:"), download, error); }
+static inline void     BADownloaderExtension_BackgroundDownload_FinishedWithFileURL(BADownloaderExtension self, BADownload download, NSURL fileURL)                                                                        { ((void (*)(BADownloaderExtension, SEL, BADownload, NSURL))bean_msgSend)(self, bean_sel("backgroundDownload:finishedWithFileURL:"), download, fileURL); }
+static inline void     BADownloaderExtension_ExtensionWillTerminate(BADownloaderExtension self)                                                                                                                            { ((void (*)(BADownloaderExtension, SEL))bean_msgSend)(self, bean_sel("extensionWillTerminate")); }
 
 /* ===== SKAdNetwork ===== */
 #ifndef BEAN_TYPEDEF_SKAdNetwork
@@ -2942,6 +3755,13 @@ static inline void    SKAdNetwork_UpdateConversionValue(NSInteger conversionValu
 static inline void    SKAdNetwork_UpdatePostbackConversionValue_CompletionHandler(NSInteger conversionValue, void* completion)                                                            { ((void (*)(bean_class, SEL, NSInteger, void*))bean_msgSend)(bean_cls("SKAdNetwork"), bean_sel("updatePostbackConversionValue:completionHandler:"), conversionValue, completion); }
 static inline void    SKAdNetwork_UpdatePostbackConversionValue_CoarseValue_CompletionHandler(NSInteger fineValue, NSString coarseValue, void* completion)                                { ((void (*)(bean_class, SEL, NSInteger, NSString, void*))bean_msgSend)(bean_cls("SKAdNetwork"), bean_sel("updatePostbackConversionValue:coarseValue:completionHandler:"), fineValue, coarseValue, completion); }
 static inline void    SKAdNetwork_UpdatePostbackConversionValue_CoarseValue_LockWindow_CompletionHandler(NSInteger fineValue, NSString coarseValue, BOOL lockWindow, void* completion)    { ((void (*)(bean_class, SEL, NSInteger, NSString, BOOL, void*))bean_msgSend)(bean_cls("SKAdNetwork"), bean_sel("updatePostbackConversionValue:coarseValue:lockWindow:completionHandler:"), fineValue, coarseValue, lockWindow, completion); }
+
+/* ===== SKCloudServiceSetupViewControllerDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKCloudServiceSetupViewControllerDelegate
+#define BEAN_TYPEDEF_SKCloudServiceSetupViewControllerDelegate
+typedef bean_id SKCloudServiceSetupViewControllerDelegate;
+#endif
+static inline void    SKCloudServiceSetupViewControllerDelegate_CloudServiceSetupViewControllerDidDismiss(SKCloudServiceSetupViewControllerDelegate self, SKCloudServiceSetupViewController cloudServiceSetupViewController)    { ((void (*)(SKCloudServiceSetupViewControllerDelegate, SEL, SKCloudServiceSetupViewController))bean_msgSend)(self, bean_sel("cloudServiceSetupViewControllerDidDismiss:"), cloudServiceSetupViewController); }
 
 /* ===== SKMutablePayment ===== */
 #ifndef BEAN_TYPEDEF_SKMutablePayment
@@ -2966,9 +3786,9 @@ static inline void                 SKMutablePayment_SetSimulatesAskToBuyInSandbo
 #define BEAN_TYPEDEF_SKOverlay
 typedef bean_id SKOverlay;
 #endif
-static inline id                        SKOverlay_Init(SKOverlay self)                                                           { return ((id (*)(SKOverlay, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                        SKOverlay_New(void)                                                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlay"), bean_sel("new")); }
-static inline id                        SKOverlay_InitWithConfiguration(SKOverlay self, SKOverlayConfiguration configuration)    { return ((id (*)(SKOverlay, SEL, SKOverlayConfiguration))bean_msgSend)(self, bean_sel("initWithConfiguration:"), configuration); }
+static inline SKOverlay                 SKOverlay_Init(SKOverlay self)                                                           { return ((SKOverlay (*)(SKOverlay, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline SKOverlay                 SKOverlay_New(void)                                                                      { return ((SKOverlay (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlay"), bean_sel("new")); }
+static inline SKOverlay                 SKOverlay_InitWithConfiguration(SKOverlay self, SKOverlayConfiguration configuration)    { return ((SKOverlay (*)(SKOverlay, SEL, SKOverlayConfiguration))bean_msgSend)(self, bean_sel("initWithConfiguration:"), configuration); }
 static inline id                        SKOverlay_Delegate(SKOverlay self)                                                       { return ((id (*)(SKOverlay, SEL))bean_msgSend)(self, bean_sel("delegate")); }
 static inline void                      SKOverlay_SetDelegate(SKOverlay self, id delegate)                                       { ((void (*)(SKOverlay, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
 static inline SKOverlayConfiguration    SKOverlay_Configuration(SKOverlay self)                                                  { return ((SKOverlayConfiguration (*)(SKOverlay, SEL))bean_msgSend)(self, bean_sel("configuration")); }
@@ -2978,26 +3798,26 @@ static inline SKOverlayConfiguration    SKOverlay_Configuration(SKOverlay self) 
 #define BEAN_TYPEDEF_SKOverlayAppConfiguration
 typedef bean_id SKOverlayAppConfiguration;
 #endif
-static inline id                   SKOverlayAppConfiguration_Init(SKOverlayAppConfiguration self)                                                                                  { return ((id (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                   SKOverlayAppConfiguration_New(void)                                                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlayAppConfiguration"), bean_sel("new")); }
-static inline id                   SKOverlayAppConfiguration_InitWithAppIdentifier_Position(SKOverlayAppConfiguration self, NSString appIdentifier, SKOverlayPosition position)    { return ((id (*)(SKOverlayAppConfiguration, SEL, NSString, SKOverlayPosition))bean_msgSend)(self, bean_sel("initWithAppIdentifier:position:"), appIdentifier, position); }
-static inline void                 SKOverlayAppConfiguration_SetAdditionalValue_ForKey(SKOverlayAppConfiguration self, id value, NSString key)                                     { ((void (*)(SKOverlayAppConfiguration, SEL, id, NSString))bean_msgSend)(self, bean_sel("setAdditionalValue:forKey:"), value, key); }
-static inline id                   SKOverlayAppConfiguration_AdditionalValueForKey(SKOverlayAppConfiguration self, NSString key)                                                   { return ((id (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("additionalValueForKey:"), key); }
-static inline void                 SKOverlayAppConfiguration_SetAdImpression(SKOverlayAppConfiguration self, SKAdImpression impression)                                            { ((void (*)(SKOverlayAppConfiguration, SEL, SKAdImpression))bean_msgSend)(self, bean_sel("setAdImpression:"), impression); }
-static inline NSString             SKOverlayAppConfiguration_AppIdentifier(SKOverlayAppConfiguration self)                                                                         { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("appIdentifier")); }
-static inline void                 SKOverlayAppConfiguration_SetAppIdentifier(SKOverlayAppConfiguration self, NSString appIdentifier)                                              { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setAppIdentifier:"), appIdentifier); }
-static inline NSString             SKOverlayAppConfiguration_CampaignToken(SKOverlayAppConfiguration self)                                                                         { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("campaignToken")); }
-static inline void                 SKOverlayAppConfiguration_SetCampaignToken(SKOverlayAppConfiguration self, NSString campaignToken)                                              { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setCampaignToken:"), campaignToken); }
-static inline NSString             SKOverlayAppConfiguration_ProviderToken(SKOverlayAppConfiguration self)                                                                         { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("providerToken")); }
-static inline void                 SKOverlayAppConfiguration_SetProviderToken(SKOverlayAppConfiguration self, NSString providerToken)                                              { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setProviderToken:"), providerToken); }
-static inline NSString             SKOverlayAppConfiguration_CustomProductPageIdentifier(SKOverlayAppConfiguration self)                                                           { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("customProductPageIdentifier")); }
-static inline void                 SKOverlayAppConfiguration_SetCustomProductPageIdentifier(SKOverlayAppConfiguration self, NSString customProductPageIdentifier)                  { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setCustomProductPageIdentifier:"), customProductPageIdentifier); }
-static inline NSString             SKOverlayAppConfiguration_LatestReleaseID(SKOverlayAppConfiguration self)                                                                       { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("latestReleaseID")); }
-static inline void                 SKOverlayAppConfiguration_SetLatestReleaseID(SKOverlayAppConfiguration self, NSString latestReleaseID)                                          { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setLatestReleaseID:"), latestReleaseID); }
-static inline SKOverlayPosition    SKOverlayAppConfiguration_Position(SKOverlayAppConfiguration self)                                                                              { return ((SKOverlayPosition (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("position")); }
-static inline void                 SKOverlayAppConfiguration_SetPosition(SKOverlayAppConfiguration self, SKOverlayPosition position)                                               { ((void (*)(SKOverlayAppConfiguration, SEL, SKOverlayPosition))bean_msgSend)(self, bean_sel("setPosition:"), position); }
-static inline BOOL                 SKOverlayAppConfiguration_UserDismissible(SKOverlayAppConfiguration self)                                                                       { return ((BOOL (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("userDismissible")); }
-static inline void                 SKOverlayAppConfiguration_SetUserDismissible(SKOverlayAppConfiguration self, BOOL userDismissible)                                              { ((void (*)(SKOverlayAppConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setUserDismissible:"), userDismissible); }
+static inline SKOverlayAppConfiguration    SKOverlayAppConfiguration_Init(SKOverlayAppConfiguration self)                                                                                  { return ((SKOverlayAppConfiguration (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline SKOverlayAppConfiguration    SKOverlayAppConfiguration_New(void)                                                                                                             { return ((SKOverlayAppConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKOverlayAppConfiguration"), bean_sel("new")); }
+static inline SKOverlayAppConfiguration    SKOverlayAppConfiguration_InitWithAppIdentifier_Position(SKOverlayAppConfiguration self, NSString appIdentifier, SKOverlayPosition position)    { return ((SKOverlayAppConfiguration (*)(SKOverlayAppConfiguration, SEL, NSString, SKOverlayPosition))bean_msgSend)(self, bean_sel("initWithAppIdentifier:position:"), appIdentifier, position); }
+static inline void                         SKOverlayAppConfiguration_SetAdditionalValue_ForKey(SKOverlayAppConfiguration self, id value, NSString key)                                     { ((void (*)(SKOverlayAppConfiguration, SEL, id, NSString))bean_msgSend)(self, bean_sel("setAdditionalValue:forKey:"), value, key); }
+static inline id                           SKOverlayAppConfiguration_AdditionalValueForKey(SKOverlayAppConfiguration self, NSString key)                                                   { return ((id (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("additionalValueForKey:"), key); }
+static inline void                         SKOverlayAppConfiguration_SetAdImpression(SKOverlayAppConfiguration self, SKAdImpression impression)                                            { ((void (*)(SKOverlayAppConfiguration, SEL, SKAdImpression))bean_msgSend)(self, bean_sel("setAdImpression:"), impression); }
+static inline NSString                     SKOverlayAppConfiguration_AppIdentifier(SKOverlayAppConfiguration self)                                                                         { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("appIdentifier")); }
+static inline void                         SKOverlayAppConfiguration_SetAppIdentifier(SKOverlayAppConfiguration self, NSString appIdentifier)                                              { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setAppIdentifier:"), appIdentifier); }
+static inline NSString                     SKOverlayAppConfiguration_CampaignToken(SKOverlayAppConfiguration self)                                                                         { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("campaignToken")); }
+static inline void                         SKOverlayAppConfiguration_SetCampaignToken(SKOverlayAppConfiguration self, NSString campaignToken)                                              { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setCampaignToken:"), campaignToken); }
+static inline NSString                     SKOverlayAppConfiguration_ProviderToken(SKOverlayAppConfiguration self)                                                                         { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("providerToken")); }
+static inline void                         SKOverlayAppConfiguration_SetProviderToken(SKOverlayAppConfiguration self, NSString providerToken)                                              { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setProviderToken:"), providerToken); }
+static inline NSString                     SKOverlayAppConfiguration_CustomProductPageIdentifier(SKOverlayAppConfiguration self)                                                           { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("customProductPageIdentifier")); }
+static inline void                         SKOverlayAppConfiguration_SetCustomProductPageIdentifier(SKOverlayAppConfiguration self, NSString customProductPageIdentifier)                  { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setCustomProductPageIdentifier:"), customProductPageIdentifier); }
+static inline NSString                     SKOverlayAppConfiguration_LatestReleaseID(SKOverlayAppConfiguration self)                                                                       { return ((NSString (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("latestReleaseID")); }
+static inline void                         SKOverlayAppConfiguration_SetLatestReleaseID(SKOverlayAppConfiguration self, NSString latestReleaseID)                                          { ((void (*)(SKOverlayAppConfiguration, SEL, NSString))bean_msgSend)(self, bean_sel("setLatestReleaseID:"), latestReleaseID); }
+static inline SKOverlayPosition            SKOverlayAppConfiguration_Position(SKOverlayAppConfiguration self)                                                                              { return ((SKOverlayPosition (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("position")); }
+static inline void                         SKOverlayAppConfiguration_SetPosition(SKOverlayAppConfiguration self, SKOverlayPosition position)                                               { ((void (*)(SKOverlayAppConfiguration, SEL, SKOverlayPosition))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+static inline BOOL                         SKOverlayAppConfiguration_UserDismissible(SKOverlayAppConfiguration self)                                                                       { return ((BOOL (*)(SKOverlayAppConfiguration, SEL))bean_msgSend)(self, bean_sel("userDismissible")); }
+static inline void                         SKOverlayAppConfiguration_SetUserDismissible(SKOverlayAppConfiguration self, BOOL userDismissible)                                              { ((void (*)(SKOverlayAppConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setUserDismissible:"), userDismissible); }
 
 /* ===== SKProductDiscount ===== */
 #ifndef BEAN_TYPEDEF_SKProductDiscount
@@ -3011,6 +3831,21 @@ static inline SKProductSubscriptionPeriod     SKProductDiscount_SubscriptionPeri
 static inline NSUInteger                      SKProductDiscount_NumberOfPeriods(SKProductDiscount self)       { return ((NSUInteger (*)(SKProductDiscount, SEL))bean_msgSend)(self, bean_sel("numberOfPeriods")); }
 static inline SKProductDiscountPaymentMode    SKProductDiscount_PaymentMode(SKProductDiscount self)           { return ((SKProductDiscountPaymentMode (*)(SKProductDiscount, SEL))bean_msgSend)(self, bean_sel("paymentMode")); }
 static inline SKProductDiscountType           SKProductDiscount_Type(SKProductDiscount self)                  { return ((SKProductDiscountType (*)(SKProductDiscount, SEL))bean_msgSend)(self, bean_sel("type")); }
+
+/* ===== SKProductsRequestDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKProductsRequestDelegate
+#define BEAN_TYPEDEF_SKProductsRequestDelegate
+typedef bean_id SKProductsRequestDelegate;
+#endif
+static inline void    SKProductsRequestDelegate_ProductsRequest_DidReceiveResponse(SKProductsRequestDelegate self, SKProductsRequest request, SKProductsResponse response)    { ((void (*)(SKProductsRequestDelegate, SEL, SKProductsRequest, SKProductsResponse))bean_msgSend)(self, bean_sel("productsRequest:didReceiveResponse:"), request, response); }
+
+/* ===== SKRequestDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKRequestDelegate
+#define BEAN_TYPEDEF_SKRequestDelegate
+typedef bean_id SKRequestDelegate;
+#endif
+static inline void    SKRequestDelegate_RequestDidFinish(SKRequestDelegate self, SKRequest request)                           { ((void (*)(SKRequestDelegate, SEL, SKRequest))bean_msgSend)(self, bean_sel("requestDidFinish:"), request); }
+static inline void    SKRequestDelegate_Request_DidFailWithError(SKRequestDelegate self, SKRequest request, NSError error)    { ((void (*)(SKRequestDelegate, SEL, SKRequest, NSError))bean_msgSend)(self, bean_sel("request:didFailWithError:"), request, error); }
 
 /* ===== SKStoreProductViewController ===== */
 #ifndef BEAN_TYPEDEF_SKStoreProductViewController
@@ -3027,20 +3862,49 @@ static inline void    SKStoreProductViewController_SetDelegate(SKStoreProductVie
 #define BEAN_TYPEDEF_BAAssetPackManager
 typedef bean_id BAAssetPackManager;
 #endif
-static inline id                    BAAssetPackManager_Init(BAAssetPackManager self)                                                                                                                                                         { return ((id (*)(BAAssetPackManager, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                    BAAssetPackManager_New(void)                                                                                                                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAssetPackManager"), bean_sel("new")); }
-static inline void                  BAAssetPackManager_GetAllAssetPacksWithCompletionHandler(BAAssetPackManager self, void* completionHandler)                                                                                               { ((void (*)(BAAssetPackManager, SEL, void*))bean_msgSend)(self, bean_sel("getAllAssetPacksWithCompletionHandler:"), completionHandler); }
-static inline void                  BAAssetPackManager_GetAssetPackWithIdentifier_CompletionHandler(BAAssetPackManager self, NSString assetPackIdentifier, void* completionHandler)                                                          { ((void (*)(BAAssetPackManager, SEL, NSString, void*))bean_msgSend)(self, bean_sel("getAssetPackWithIdentifier:completionHandler:"), assetPackIdentifier, completionHandler); }
-static inline void                  BAAssetPackManager_GetStatusOfAssetPackWithIdentifier_CompletionHandler(BAAssetPackManager self, NSString assetPackIdentifier, void* completionHandler)                                                  { ((void (*)(BAAssetPackManager, SEL, NSString, void*))bean_msgSend)(self, bean_sel("getStatusOfAssetPackWithIdentifier:completionHandler:"), assetPackIdentifier, completionHandler); }
-static inline void                  BAAssetPackManager_EnsureLocalAvailabilityOfAssetPack_CompletionHandler(BAAssetPackManager self, BAAssetPack assetPack, void* completionHandler)                                                         { ((void (*)(BAAssetPackManager, SEL, BAAssetPack, void*))bean_msgSend)(self, bean_sel("ensureLocalAvailabilityOfAssetPack:completionHandler:"), assetPack, completionHandler); }
-static inline void                  BAAssetPackManager_CheckForUpdatesWithCompletionHandler(BAAssetPackManager self, void* completionHandler)                                                                                                { ((void (*)(BAAssetPackManager, SEL, void*))bean_msgSend)(self, bean_sel("checkForUpdatesWithCompletionHandler:"), completionHandler); }
-static inline NSData                BAAssetPackManager_ContentsAtPath_SearchingInAssetPackWithIdentifier_Options_Error(BAAssetPackManager self, NSString path, NSString assetPackIdentifier, NSDataReadingOptions options, NSError error)    { return ((NSData (*)(BAAssetPackManager, SEL, NSString, NSString, NSDataReadingOptions, NSError))bean_msgSend)(self, bean_sel("contentsAtPath:searchingInAssetPackWithIdentifier:options:error:"), path, assetPackIdentifier, options, error); }
-static inline int                   BAAssetPackManager_FileDescriptorForPath_SearchingInAssetPackWithIdentifier_Error(BAAssetPackManager self, NSString path, NSString assetPackIdentifier, NSError error)                                   { return ((int (*)(BAAssetPackManager, SEL, NSString, NSString, NSError))bean_msgSend)(self, bean_sel("fileDescriptorForPath:searchingInAssetPackWithIdentifier:error:"), path, assetPackIdentifier, error); }
-static inline NSURL                 BAAssetPackManager_URLForPath_Error(BAAssetPackManager self, NSString path, NSError error)                                                                                                               { return ((NSURL (*)(BAAssetPackManager, SEL, NSString, NSError))bean_msgSend)(self, bean_sel("URLForPath:error:"), path, error); }
-static inline void                  BAAssetPackManager_RemoveAssetPackWithIdentifier_CompletionHandler(BAAssetPackManager self, NSString assetPackIdentifier, void* completionHandler)                                                       { ((void (*)(BAAssetPackManager, SEL, NSString, void*))bean_msgSend)(self, bean_sel("removeAssetPackWithIdentifier:completionHandler:"), assetPackIdentifier, completionHandler); }
-static inline BAAssetPackManager    BAAssetPackManager_SharedManager(void)                                                                                                                                                                   { return ((BAAssetPackManager (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAssetPackManager"), bean_sel("sharedManager")); }
-static inline id                    BAAssetPackManager_Delegate(BAAssetPackManager self)                                                                                                                                                     { return ((id (*)(BAAssetPackManager, SEL))bean_msgSend)(self, bean_sel("delegate")); }
-static inline void                  BAAssetPackManager_SetDelegate(BAAssetPackManager self, id delegate)                                                                                                                                     { ((void (*)(BAAssetPackManager, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+static inline BAAssetPackManager    BAAssetPackManager_Init(BAAssetPackManager self)                                                                                                                                                          { return ((BAAssetPackManager (*)(BAAssetPackManager, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BAAssetPackManager    BAAssetPackManager_New(void)                                                                                                                                                                              { return ((BAAssetPackManager (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAssetPackManager"), bean_sel("new")); }
+static inline void                  BAAssetPackManager_GetAllAssetPacksWithCompletionHandler(BAAssetPackManager self, void* completionHandler)                                                                                                { ((void (*)(BAAssetPackManager, SEL, void*))bean_msgSend)(self, bean_sel("getAllAssetPacksWithCompletionHandler:"), completionHandler); }
+static inline void                  BAAssetPackManager_GetAssetPackWithIdentifier_CompletionHandler(BAAssetPackManager self, NSString assetPackIdentifier, void* completionHandler)                                                           { ((void (*)(BAAssetPackManager, SEL, NSString, void*))bean_msgSend)(self, bean_sel("getAssetPackWithIdentifier:completionHandler:"), assetPackIdentifier, completionHandler); }
+static inline void                  BAAssetPackManager_GetStatusOfAssetPackWithIdentifier_CompletionHandler(BAAssetPackManager self, NSString assetPackIdentifier, void* completionHandler)                                                   { ((void (*)(BAAssetPackManager, SEL, NSString, void*))bean_msgSend)(self, bean_sel("getStatusOfAssetPackWithIdentifier:completionHandler:"), assetPackIdentifier, completionHandler); }
+static inline void                  BAAssetPackManager_EnsureLocalAvailabilityOfAssetPack_CompletionHandler(BAAssetPackManager self, BAAssetPack assetPack, void* completionHandler)                                                          { ((void (*)(BAAssetPackManager, SEL, BAAssetPack, void*))bean_msgSend)(self, bean_sel("ensureLocalAvailabilityOfAssetPack:completionHandler:"), assetPack, completionHandler); }
+static inline void                  BAAssetPackManager_CheckForUpdatesWithCompletionHandler(BAAssetPackManager self, void* completionHandler)                                                                                                 { ((void (*)(BAAssetPackManager, SEL, void*))bean_msgSend)(self, bean_sel("checkForUpdatesWithCompletionHandler:"), completionHandler); }
+static inline NSData                BAAssetPackManager_ContentsAtPath_SearchingInAssetPackWithIdentifier_Options_Error(BAAssetPackManager self, NSString path, NSString assetPackIdentifier, NSDataReadingOptions options, NSError* error)    { return ((NSData (*)(BAAssetPackManager, SEL, NSString, NSString, NSDataReadingOptions, NSError*))bean_msgSend)(self, bean_sel("contentsAtPath:searchingInAssetPackWithIdentifier:options:error:"), path, assetPackIdentifier, options, error); }
+static inline int                   BAAssetPackManager_FileDescriptorForPath_SearchingInAssetPackWithIdentifier_Error(BAAssetPackManager self, NSString path, NSString assetPackIdentifier, NSError* error)                                   { return ((int (*)(BAAssetPackManager, SEL, NSString, NSString, NSError*))bean_msgSend)(self, bean_sel("fileDescriptorForPath:searchingInAssetPackWithIdentifier:error:"), path, assetPackIdentifier, error); }
+static inline NSURL                 BAAssetPackManager_URLForPath_Error(BAAssetPackManager self, NSString path, NSError* error)                                                                                                               { return ((NSURL (*)(BAAssetPackManager, SEL, NSString, NSError*))bean_msgSend)(self, bean_sel("URLForPath:error:"), path, error); }
+static inline void                  BAAssetPackManager_RemoveAssetPackWithIdentifier_CompletionHandler(BAAssetPackManager self, NSString assetPackIdentifier, void* completionHandler)                                                        { ((void (*)(BAAssetPackManager, SEL, NSString, void*))bean_msgSend)(self, bean_sel("removeAssetPackWithIdentifier:completionHandler:"), assetPackIdentifier, completionHandler); }
+static inline BAAssetPackManager    BAAssetPackManager_SharedManager(void)                                                                                                                                                                    { return ((BAAssetPackManager (*)(bean_class, SEL))bean_msgSend)(bean_cls("BAAssetPackManager"), bean_sel("sharedManager")); }
+static inline id                    BAAssetPackManager_Delegate(BAAssetPackManager self)                                                                                                                                                      { return ((id (*)(BAAssetPackManager, SEL))bean_msgSend)(self, bean_sel("delegate")); }
+static inline void                  BAAssetPackManager_SetDelegate(BAAssetPackManager self, id delegate)                                                                                                                                      { ((void (*)(BAAssetPackManager, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+
+/* ===== BAManagedAssetPackDownloadDelegate ===== */
+#ifndef BEAN_TYPEDEF_BAManagedAssetPackDownloadDelegate
+#define BEAN_TYPEDEF_BAManagedAssetPackDownloadDelegate
+typedef bean_id BAManagedAssetPackDownloadDelegate;
+#endif
+static inline void    BAManagedAssetPackDownloadDelegate_DownloadOfAssetPackBegan(BAManagedAssetPackDownloadDelegate self, BAAssetPack assetPack)                                { ((void (*)(BAManagedAssetPackDownloadDelegate, SEL, BAAssetPack))bean_msgSend)(self, bean_sel("downloadOfAssetPackBegan:"), assetPack); }
+static inline void    BAManagedAssetPackDownloadDelegate_DownloadOfAssetPackPaused(BAManagedAssetPackDownloadDelegate self, BAAssetPack assetPack)                               { ((void (*)(BAManagedAssetPackDownloadDelegate, SEL, BAAssetPack))bean_msgSend)(self, bean_sel("downloadOfAssetPackPaused:"), assetPack); }
+static inline void    BAManagedAssetPackDownloadDelegate_DownloadOfAssetPack_HasProgress(BAManagedAssetPackDownloadDelegate self, BAAssetPack assetPack, NSProgress progress)    { ((void (*)(BAManagedAssetPackDownloadDelegate, SEL, BAAssetPack, NSProgress))bean_msgSend)(self, bean_sel("downloadOfAssetPack:hasProgress:"), assetPack, progress); }
+static inline void    BAManagedAssetPackDownloadDelegate_DownloadOfAssetPackFinished(BAManagedAssetPackDownloadDelegate self, BAAssetPack assetPack)                             { ((void (*)(BAManagedAssetPackDownloadDelegate, SEL, BAAssetPack))bean_msgSend)(self, bean_sel("downloadOfAssetPackFinished:"), assetPack); }
+static inline void    BAManagedAssetPackDownloadDelegate_DownloadOfAssetPack_FailedWithError(BAManagedAssetPackDownloadDelegate self, BAAssetPack assetPack, NSError error)      { ((void (*)(BAManagedAssetPackDownloadDelegate, SEL, BAAssetPack, NSError))bean_msgSend)(self, bean_sel("downloadOfAssetPack:failedWithError:"), assetPack, error); }
+
+/* ===== BAManagedDownloaderExtension ===== */
+#ifndef BEAN_TYPEDEF_BAManagedDownloaderExtension
+#define BEAN_TYPEDEF_BAManagedDownloaderExtension
+typedef bean_id BAManagedDownloaderExtension;
+#endif
+static inline BOOL    BAManagedDownloaderExtension_ShouldDownloadAssetPack(BAManagedDownloaderExtension self, BAAssetPack assetPack)    { return ((BOOL (*)(BAManagedDownloaderExtension, SEL, BAAssetPack))bean_msgSend)(self, bean_sel("shouldDownloadAssetPack:"), assetPack); }
+
+/* ===== SKOverlayDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKOverlayDelegate
+#define BEAN_TYPEDEF_SKOverlayDelegate
+typedef bean_id SKOverlayDelegate;
+#endif
+static inline void    SKOverlayDelegate_StoreOverlay_DidFailToLoadWithError(SKOverlayDelegate self, SKOverlay overlay, NSError error)                                  { ((void (*)(SKOverlayDelegate, SEL, SKOverlay, NSError))bean_msgSend)(self, bean_sel("storeOverlay:didFailToLoadWithError:"), overlay, error); }
+static inline void    SKOverlayDelegate_StoreOverlay_WillStartPresentation(SKOverlayDelegate self, SKOverlay overlay, SKOverlayTransitionContext transitionContext)    { ((void (*)(SKOverlayDelegate, SEL, SKOverlay, SKOverlayTransitionContext))bean_msgSend)(self, bean_sel("storeOverlay:willStartPresentation:"), overlay, transitionContext); }
+static inline void    SKOverlayDelegate_StoreOverlay_DidFinishPresentation(SKOverlayDelegate self, SKOverlay overlay, SKOverlayTransitionContext transitionContext)    { ((void (*)(SKOverlayDelegate, SEL, SKOverlay, SKOverlayTransitionContext))bean_msgSend)(self, bean_sel("storeOverlay:didFinishPresentation:"), overlay, transitionContext); }
+static inline void    SKOverlayDelegate_StoreOverlay_WillStartDismissal(SKOverlayDelegate self, SKOverlay overlay, SKOverlayTransitionContext transitionContext)       { ((void (*)(SKOverlayDelegate, SEL, SKOverlay, SKOverlayTransitionContext))bean_msgSend)(self, bean_sel("storeOverlay:willStartDismissal:"), overlay, transitionContext); }
+static inline void    SKOverlayDelegate_StoreOverlay_DidFinishDismissal(SKOverlayDelegate self, SKOverlay overlay, SKOverlayTransitionContext transitionContext)       { ((void (*)(SKOverlayDelegate, SEL, SKOverlay, SKOverlayTransitionContext))bean_msgSend)(self, bean_sel("storeOverlay:didFinishDismissal:"), overlay, transitionContext); }
 
 /* ===== SKProduct ===== */
 #ifndef BEAN_TYPEDEF_SKProduct
@@ -3064,12 +3928,19 @@ static inline SKProductDiscount              SKProduct_IntroductoryPrice(SKProdu
 static inline NSString                       SKProduct_SubscriptionGroupIdentifier(SKProduct self)    { return ((NSString (*)(SKProduct, SEL))bean_msgSend)(self, bean_sel("subscriptionGroupIdentifier")); }
 static inline NSArray                        SKProduct_Discounts(SKProduct self)                      { return ((NSArray (*)(SKProduct, SEL))bean_msgSend)(self, bean_sel("discounts")); }
 
+/* ===== SKStoreProductViewControllerDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKStoreProductViewControllerDelegate
+#define BEAN_TYPEDEF_SKStoreProductViewControllerDelegate
+typedef bean_id SKStoreProductViewControllerDelegate;
+#endif
+static inline void    SKStoreProductViewControllerDelegate_ProductViewControllerDidFinish(SKStoreProductViewControllerDelegate self, SKStoreProductViewController viewController)    { ((void (*)(SKStoreProductViewControllerDelegate, SEL, SKStoreProductViewController))bean_msgSend)(self, bean_sel("productViewControllerDidFinish:"), viewController); }
+
 /* ===== SKPayment ===== */
 #ifndef BEAN_TYPEDEF_SKPayment
 #define BEAN_TYPEDEF_SKPayment
 typedef bean_id SKPayment;
 #endif
-static inline id                   SKPayment_PaymentWithProduct(SKProduct product)                { return ((id (*)(bean_class, SEL, SKProduct))bean_msgSend)(bean_cls("SKPayment"), bean_sel("paymentWithProduct:"), product); }
+static inline SKPayment            SKPayment_PaymentWithProduct(SKProduct product)                { return ((SKPayment (*)(bean_class, SEL, SKProduct))bean_msgSend)(bean_cls("SKPayment"), bean_sel("paymentWithProduct:"), product); }
 static inline id                   SKPayment_PaymentWithProductIdentifier(NSString identifier)    { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKPayment"), bean_sel("paymentWithProductIdentifier:"), identifier); }
 static inline NSString             SKPayment_ProductIdentifier(SKPayment self)                    { return ((NSString (*)(SKPayment, SEL))bean_msgSend)(self, bean_sel("productIdentifier")); }
 static inline NSData               SKPayment_RequestData(SKPayment self)                          { return ((NSData (*)(SKPayment, SEL))bean_msgSend)(self, bean_sel("requestData")); }
@@ -3077,17 +3948,19 @@ static inline NSInteger            SKPayment_Quantity(SKPayment self)           
 static inline NSString             SKPayment_ApplicationUsername(SKPayment self)                  { return ((NSString (*)(SKPayment, SEL))bean_msgSend)(self, bean_sel("applicationUsername")); }
 static inline BOOL                 SKPayment_SimulatesAskToBuyInSandbox(SKPayment self)           { return ((BOOL (*)(SKPayment, SEL))bean_msgSend)(self, bean_sel("simulatesAskToBuyInSandbox")); }
 static inline SKPaymentDiscount    SKPayment_PaymentDiscount(SKPayment self)                      { return ((SKPaymentDiscount (*)(SKPayment, SEL))bean_msgSend)(self, bean_sel("paymentDiscount")); }
+static inline id                   SKPayment_CopyWithZone(SKPayment self, NSZone* zone)           { return ((id (*)(SKPayment, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline id                   SKPayment_MutableCopyWithZone(SKPayment self, NSZone* zone)    { return ((id (*)(SKPayment, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 
 /* ===== SKProductStorePromotionController ===== */
 #ifndef BEAN_TYPEDEF_SKProductStorePromotionController
 #define BEAN_TYPEDEF_SKProductStorePromotionController
 typedef bean_id SKProductStorePromotionController;
 #endif
-static inline id      SKProductStorePromotionController_DefaultController(void)                                                                                                                                                                                   { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKProductStorePromotionController"), bean_sel("defaultController")); }
-static inline void    SKProductStorePromotionController_FetchStorePromotionVisibilityForProduct_CompletionHandler(SKProductStorePromotionController self, SKProduct product, void* completionHandler)                                                             { ((void (*)(SKProductStorePromotionController, SEL, SKProduct, void*))bean_msgSend)(self, bean_sel("fetchStorePromotionVisibilityForProduct:completionHandler:"), product, completionHandler); }
-static inline void    SKProductStorePromotionController_UpdateStorePromotionVisibility_ForProduct_CompletionHandler(SKProductStorePromotionController self, SKProductStorePromotionVisibility promotionVisibility, SKProduct product, void* completionHandler)    { ((void (*)(SKProductStorePromotionController, SEL, SKProductStorePromotionVisibility, SKProduct, void*))bean_msgSend)(self, bean_sel("updateStorePromotionVisibility:forProduct:completionHandler:"), promotionVisibility, product, completionHandler); }
-static inline void    SKProductStorePromotionController_FetchStorePromotionOrderWithCompletionHandler(SKProductStorePromotionController self, void* completionHandler)                                                                                            { ((void (*)(SKProductStorePromotionController, SEL, void*))bean_msgSend)(self, bean_sel("fetchStorePromotionOrderWithCompletionHandler:"), completionHandler); }
-static inline void    SKProductStorePromotionController_UpdateStorePromotionOrder_CompletionHandler(SKProductStorePromotionController self, NSArray promotionOrder, void* completionHandler)                                                                      { ((void (*)(SKProductStorePromotionController, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("updateStorePromotionOrder:completionHandler:"), promotionOrder, completionHandler); }
+static inline SKProductStorePromotionController    SKProductStorePromotionController_DefaultController(void)                                                                                                                                                                                   { return ((SKProductStorePromotionController (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKProductStorePromotionController"), bean_sel("defaultController")); }
+static inline void                                 SKProductStorePromotionController_FetchStorePromotionVisibilityForProduct_CompletionHandler(SKProductStorePromotionController self, SKProduct product, void* completionHandler)                                                             { ((void (*)(SKProductStorePromotionController, SEL, SKProduct, void*))bean_msgSend)(self, bean_sel("fetchStorePromotionVisibilityForProduct:completionHandler:"), product, completionHandler); }
+static inline void                                 SKProductStorePromotionController_UpdateStorePromotionVisibility_ForProduct_CompletionHandler(SKProductStorePromotionController self, SKProductStorePromotionVisibility promotionVisibility, SKProduct product, void* completionHandler)    { ((void (*)(SKProductStorePromotionController, SEL, SKProductStorePromotionVisibility, SKProduct, void*))bean_msgSend)(self, bean_sel("updateStorePromotionVisibility:forProduct:completionHandler:"), promotionVisibility, product, completionHandler); }
+static inline void                                 SKProductStorePromotionController_FetchStorePromotionOrderWithCompletionHandler(SKProductStorePromotionController self, void* completionHandler)                                                                                            { ((void (*)(SKProductStorePromotionController, SEL, void*))bean_msgSend)(self, bean_sel("fetchStorePromotionOrderWithCompletionHandler:"), completionHandler); }
+static inline void                                 SKProductStorePromotionController_UpdateStorePromotionOrder_CompletionHandler(SKProductStorePromotionController self, NSArray promotionOrder, void* completionHandler)                                                                      { ((void (*)(SKProductStorePromotionController, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("updateStorePromotionOrder:completionHandler:"), promotionOrder, completionHandler); }
 
 /* ===== SKPaymentTransaction ===== */
 #ifndef BEAN_TYPEDEF_SKPaymentTransaction
@@ -3127,25 +4000,47 @@ static inline SKPaymentTransaction    SKDownload_Transaction(SKDownload self)   
 #define BEAN_TYPEDEF_SKPaymentQueue
 typedef bean_id SKPaymentQueue;
 #endif
-static inline id              SKPaymentQueue_DefaultQueue(void)                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPaymentQueue"), bean_sel("defaultQueue")); }
-static inline BOOL            SKPaymentQueue_CanMakePayments(void)                                                                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPaymentQueue"), bean_sel("canMakePayments")); }
-static inline void            SKPaymentQueue_AddPayment(SKPaymentQueue self, SKPayment payment)                                             { ((void (*)(SKPaymentQueue, SEL, SKPayment))bean_msgSend)(self, bean_sel("addPayment:"), payment); }
-static inline void            SKPaymentQueue_RestoreCompletedTransactions(SKPaymentQueue self)                                              { ((void (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("restoreCompletedTransactions")); }
-static inline void            SKPaymentQueue_RestoreCompletedTransactionsWithApplicationUsername(SKPaymentQueue self, NSString username)    { ((void (*)(SKPaymentQueue, SEL, NSString))bean_msgSend)(self, bean_sel("restoreCompletedTransactionsWithApplicationUsername:"), username); }
-static inline void            SKPaymentQueue_FinishTransaction(SKPaymentQueue self, SKPaymentTransaction transaction)                       { ((void (*)(SKPaymentQueue, SEL, SKPaymentTransaction))bean_msgSend)(self, bean_sel("finishTransaction:"), transaction); }
-static inline void            SKPaymentQueue_StartDownloads(SKPaymentQueue self, NSArray downloads)                                         { ((void (*)(SKPaymentQueue, SEL, NSArray))bean_msgSend)(self, bean_sel("startDownloads:"), downloads); }
-static inline void            SKPaymentQueue_PauseDownloads(SKPaymentQueue self, NSArray downloads)                                         { ((void (*)(SKPaymentQueue, SEL, NSArray))bean_msgSend)(self, bean_sel("pauseDownloads:"), downloads); }
-static inline void            SKPaymentQueue_ResumeDownloads(SKPaymentQueue self, NSArray downloads)                                        { ((void (*)(SKPaymentQueue, SEL, NSArray))bean_msgSend)(self, bean_sel("resumeDownloads:"), downloads); }
-static inline void            SKPaymentQueue_CancelDownloads(SKPaymentQueue self, NSArray downloads)                                        { ((void (*)(SKPaymentQueue, SEL, NSArray))bean_msgSend)(self, bean_sel("cancelDownloads:"), downloads); }
-static inline void            SKPaymentQueue_AddTransactionObserver(SKPaymentQueue self, id observer)                                       { ((void (*)(SKPaymentQueue, SEL, id))bean_msgSend)(self, bean_sel("addTransactionObserver:"), observer); }
-static inline void            SKPaymentQueue_RemoveTransactionObserver(SKPaymentQueue self, id observer)                                    { ((void (*)(SKPaymentQueue, SEL, id))bean_msgSend)(self, bean_sel("removeTransactionObserver:"), observer); }
-static inline void            SKPaymentQueue_ShowPriceConsentIfNeeded(SKPaymentQueue self)                                                  { ((void (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("showPriceConsentIfNeeded")); }
-static inline void            SKPaymentQueue_PresentCodeRedemptionSheet(SKPaymentQueue self)                                                { ((void (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("presentCodeRedemptionSheet")); }
-static inline id              SKPaymentQueue_Delegate(SKPaymentQueue self)                                                                  { return ((id (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("delegate")); }
-static inline void            SKPaymentQueue_SetDelegate(SKPaymentQueue self, id delegate)                                                  { ((void (*)(SKPaymentQueue, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
-static inline SKStorefront    SKPaymentQueue_Storefront(SKPaymentQueue self)                                                                { return ((SKStorefront (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("storefront")); }
-static inline NSArray         SKPaymentQueue_TransactionObservers(SKPaymentQueue self)                                                      { return ((NSArray (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("transactionObservers")); }
-static inline NSArray         SKPaymentQueue_Transactions(SKPaymentQueue self)                                                              { return ((NSArray (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("transactions")); }
+static inline SKPaymentQueue    SKPaymentQueue_DefaultQueue(void)                                                                             { return ((SKPaymentQueue (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPaymentQueue"), bean_sel("defaultQueue")); }
+static inline BOOL              SKPaymentQueue_CanMakePayments(void)                                                                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPaymentQueue"), bean_sel("canMakePayments")); }
+static inline void              SKPaymentQueue_AddPayment(SKPaymentQueue self, SKPayment payment)                                             { ((void (*)(SKPaymentQueue, SEL, SKPayment))bean_msgSend)(self, bean_sel("addPayment:"), payment); }
+static inline void              SKPaymentQueue_RestoreCompletedTransactions(SKPaymentQueue self)                                              { ((void (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("restoreCompletedTransactions")); }
+static inline void              SKPaymentQueue_RestoreCompletedTransactionsWithApplicationUsername(SKPaymentQueue self, NSString username)    { ((void (*)(SKPaymentQueue, SEL, NSString))bean_msgSend)(self, bean_sel("restoreCompletedTransactionsWithApplicationUsername:"), username); }
+static inline void              SKPaymentQueue_FinishTransaction(SKPaymentQueue self, SKPaymentTransaction transaction)                       { ((void (*)(SKPaymentQueue, SEL, SKPaymentTransaction))bean_msgSend)(self, bean_sel("finishTransaction:"), transaction); }
+static inline void              SKPaymentQueue_StartDownloads(SKPaymentQueue self, NSArray downloads)                                         { ((void (*)(SKPaymentQueue, SEL, NSArray))bean_msgSend)(self, bean_sel("startDownloads:"), downloads); }
+static inline void              SKPaymentQueue_PauseDownloads(SKPaymentQueue self, NSArray downloads)                                         { ((void (*)(SKPaymentQueue, SEL, NSArray))bean_msgSend)(self, bean_sel("pauseDownloads:"), downloads); }
+static inline void              SKPaymentQueue_ResumeDownloads(SKPaymentQueue self, NSArray downloads)                                        { ((void (*)(SKPaymentQueue, SEL, NSArray))bean_msgSend)(self, bean_sel("resumeDownloads:"), downloads); }
+static inline void              SKPaymentQueue_CancelDownloads(SKPaymentQueue self, NSArray downloads)                                        { ((void (*)(SKPaymentQueue, SEL, NSArray))bean_msgSend)(self, bean_sel("cancelDownloads:"), downloads); }
+static inline void              SKPaymentQueue_AddTransactionObserver(SKPaymentQueue self, id observer)                                       { ((void (*)(SKPaymentQueue, SEL, id))bean_msgSend)(self, bean_sel("addTransactionObserver:"), observer); }
+static inline void              SKPaymentQueue_RemoveTransactionObserver(SKPaymentQueue self, id observer)                                    { ((void (*)(SKPaymentQueue, SEL, id))bean_msgSend)(self, bean_sel("removeTransactionObserver:"), observer); }
+static inline void              SKPaymentQueue_ShowPriceConsentIfNeeded(SKPaymentQueue self)                                                  { ((void (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("showPriceConsentIfNeeded")); }
+static inline void              SKPaymentQueue_PresentCodeRedemptionSheet(SKPaymentQueue self)                                                { ((void (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("presentCodeRedemptionSheet")); }
+static inline id                SKPaymentQueue_Delegate(SKPaymentQueue self)                                                                  { return ((id (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("delegate")); }
+static inline void              SKPaymentQueue_SetDelegate(SKPaymentQueue self, id delegate)                                                  { ((void (*)(SKPaymentQueue, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+static inline SKStorefront      SKPaymentQueue_Storefront(SKPaymentQueue self)                                                                { return ((SKStorefront (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("storefront")); }
+static inline NSArray           SKPaymentQueue_TransactionObservers(SKPaymentQueue self)                                                      { return ((NSArray (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("transactionObservers")); }
+static inline NSArray           SKPaymentQueue_Transactions(SKPaymentQueue self)                                                              { return ((NSArray (*)(SKPaymentQueue, SEL))bean_msgSend)(self, bean_sel("transactions")); }
+
+/* ===== SKPaymentQueueDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKPaymentQueueDelegate
+#define BEAN_TYPEDEF_SKPaymentQueueDelegate
+typedef bean_id SKPaymentQueueDelegate;
+#endif
+static inline BOOL    SKPaymentQueueDelegate_PaymentQueue_ShouldContinueTransaction_InStorefront(SKPaymentQueueDelegate self, SKPaymentQueue paymentQueue, SKPaymentTransaction transaction, SKStorefront newStorefront)    { return ((BOOL (*)(SKPaymentQueueDelegate, SEL, SKPaymentQueue, SKPaymentTransaction, SKStorefront))bean_msgSend)(self, bean_sel("paymentQueue:shouldContinueTransaction:inStorefront:"), paymentQueue, transaction, newStorefront); }
+static inline BOOL    SKPaymentQueueDelegate_PaymentQueueShouldShowPriceConsent(SKPaymentQueueDelegate self, SKPaymentQueue paymentQueue)                                                                                   { return ((BOOL (*)(SKPaymentQueueDelegate, SEL, SKPaymentQueue))bean_msgSend)(self, bean_sel("paymentQueueShouldShowPriceConsent:"), paymentQueue); }
+
+/* ===== SKPaymentTransactionObserver ===== */
+#ifndef BEAN_TYPEDEF_SKPaymentTransactionObserver
+#define BEAN_TYPEDEF_SKPaymentTransactionObserver
+typedef bean_id SKPaymentTransactionObserver;
+#endif
+static inline void    SKPaymentTransactionObserver_PaymentQueue_UpdatedTransactions(SKPaymentTransactionObserver self, SKPaymentQueue queue, NSArray transactions)                                 { ((void (*)(SKPaymentTransactionObserver, SEL, SKPaymentQueue, NSArray))bean_msgSend)(self, bean_sel("paymentQueue:updatedTransactions:"), queue, transactions); }
+static inline void    SKPaymentTransactionObserver_PaymentQueue_RemovedTransactions(SKPaymentTransactionObserver self, SKPaymentQueue queue, NSArray transactions)                                 { ((void (*)(SKPaymentTransactionObserver, SEL, SKPaymentQueue, NSArray))bean_msgSend)(self, bean_sel("paymentQueue:removedTransactions:"), queue, transactions); }
+static inline void    SKPaymentTransactionObserver_PaymentQueue_RestoreCompletedTransactionsFailedWithError(SKPaymentTransactionObserver self, SKPaymentQueue queue, NSError error)                { ((void (*)(SKPaymentTransactionObserver, SEL, SKPaymentQueue, NSError))bean_msgSend)(self, bean_sel("paymentQueue:restoreCompletedTransactionsFailedWithError:"), queue, error); }
+static inline void    SKPaymentTransactionObserver_PaymentQueueRestoreCompletedTransactionsFinished(SKPaymentTransactionObserver self, SKPaymentQueue queue)                                       { ((void (*)(SKPaymentTransactionObserver, SEL, SKPaymentQueue))bean_msgSend)(self, bean_sel("paymentQueueRestoreCompletedTransactionsFinished:"), queue); }
+static inline void    SKPaymentTransactionObserver_PaymentQueue_UpdatedDownloads(SKPaymentTransactionObserver self, SKPaymentQueue queue, NSArray downloads)                                       { ((void (*)(SKPaymentTransactionObserver, SEL, SKPaymentQueue, NSArray))bean_msgSend)(self, bean_sel("paymentQueue:updatedDownloads:"), queue, downloads); }
+static inline BOOL    SKPaymentTransactionObserver_PaymentQueue_ShouldAddStorePayment_ForProduct(SKPaymentTransactionObserver self, SKPaymentQueue queue, SKPayment payment, SKProduct product)    { return ((BOOL (*)(SKPaymentTransactionObserver, SEL, SKPaymentQueue, SKPayment, SKProduct))bean_msgSend)(self, bean_sel("paymentQueue:shouldAddStorePayment:forProduct:"), queue, payment, product); }
+static inline void    SKPaymentTransactionObserver_PaymentQueueDidChangeStorefront(SKPaymentTransactionObserver self, SKPaymentQueue queue)                                                        { ((void (*)(SKPaymentTransactionObserver, SEL, SKPaymentQueue))bean_msgSend)(self, bean_sel("paymentQueueDidChangeStorefront:"), queue); }
+static inline void    SKPaymentTransactionObserver_PaymentQueue_DidRevokeEntitlementsForProductIdentifiers(SKPaymentTransactionObserver self, SKPaymentQueue queue, NSArray productIdentifiers)    { ((void (*)(SKPaymentTransactionObserver, SEL, SKPaymentQueue, NSArray))bean_msgSend)(self, bean_sel("paymentQueue:didRevokeEntitlementsForProductIdentifiers:"), queue, productIdentifiers); }
 
 
 #ifdef __cplusplus

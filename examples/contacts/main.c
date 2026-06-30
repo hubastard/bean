@@ -3,25 +3,17 @@
 #include <bean/runtime.h>
 #include <stdio.h>
 
-enum {
-    BEAN_CN_AUTH_NOT_DETERMINED = 0,
-    BEAN_CN_AUTH_RESTRICTED = 1,
-    BEAN_CN_AUTH_DENIED = 2,
-    BEAN_CN_AUTH_AUTHORIZED = 3,
-    BEAN_CN_AUTH_LIMITED = 4,
-};
-
 static const char* bean_contacts_auth_status_name(CNAuthorizationStatus status) {
     switch ((int)status) {
-    case BEAN_CN_AUTH_NOT_DETERMINED:
+    case CNAuthorizationStatusNotDetermined:
         return "not determined (permission not requested yet)";
-    case BEAN_CN_AUTH_RESTRICTED:
+    case CNAuthorizationStatusRestricted:
         return "restricted (parental controls or policy)";
-    case BEAN_CN_AUTH_DENIED:
+    case CNAuthorizationStatusDenied:
         return "denied";
-    case BEAN_CN_AUTH_AUTHORIZED:
+    case CNAuthorizationStatusAuthorized:
         return "authorized";
-    case BEAN_CN_AUTH_LIMITED:
+    case CNAuthorizationStatusLimited:
         return "limited";
     default:
         return "unknown";
@@ -29,13 +21,13 @@ static const char* bean_contacts_auth_status_name(CNAuthorizationStatus status) 
 }
 
 static int bean_contacts_is_authorized(CNAuthorizationStatus status) {
-    return status == BEAN_CN_AUTH_AUTHORIZED || status == BEAN_CN_AUTH_LIMITED;
+    return status == CNAuthorizationStatusAuthorized || status == CNAuthorizationStatusLimited;
 }
 
 typedef struct {
     volatile int done;
     BOOL granted;
-    NSError* error;
+    NSError error;
 } bean_contacts_access_state;
 
 static void bean_contacts_access_done(void* context, void* block, long granted, bean_id error_obj) {
@@ -44,7 +36,7 @@ static void bean_contacts_access_done(void* context, void* block, long granted, 
     (void)block;
 
     state->granted = (BOOL)granted;
-    state->error = (NSError*)error_obj;
+    state->error = (NSError)error_obj;
     state->done = 1;
 }
 
@@ -64,7 +56,7 @@ static BOOL bean_contacts_request_access(CNContactStore store) {
     if (!state.granted) {
         const char* message = "access denied";
         if (state.error) {
-            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(*state.error));
+            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(state.error));
         }
         fprintf(stderr, "Contacts access request failed: %s\n", message ? message : "access denied");
         return NO;
@@ -116,7 +108,7 @@ static int bean_contacts_print_sample(CNContactStore store, int limit) {
     NSArray keys_to_fetch;
     bean_contacts_list_state state = { 0, limit };
     void* block;
-    NSError* error;
+    NSError error;
     BOOL ok;
 
     key_descriptor = CNContactFormatter_DescriptorForRequiredKeysForStyle(
@@ -124,15 +116,14 @@ static int bean_contacts_print_sample(CNContactStore store, int limit) {
     keys[0] = key_descriptor;
     keys_to_fetch = NSArray_ArrayWithObjects_Count(keys, 1);
 
-    request = (CNContactFetchRequest)CNContactFetchRequest_InitWithKeysToFetch(
+    request = CNContactFetchRequest_InitWithKeysToFetch(
         (CNContactFetchRequest)bean_alloc(bean_cls("CNContactFetchRequest")),
         keys_to_fetch);
 
     block = bean_block_create_2_id(&state, bean_contacts_print_contact);
     error = NULL;
-    ok = ((BOOL (*)(CNContactStore, SEL, CNContactFetchRequest, NSError**, void*))bean_msgSend)(
+    ok = CNContactStore_EnumerateContactsWithFetchRequest_Error_UsingBlock(
         store,
-        bean_sel("enumerateContactsWithFetchRequest:error:usingBlock:"),
         request,
         &error,
         block);
@@ -140,7 +131,7 @@ static int bean_contacts_print_sample(CNContactStore store, int limit) {
     if (!ok) {
         const char* message = "enumeration failed";
         if (error) {
-            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(*error));
+            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(error));
         }
         fprintf(stderr, "Contacts enumeration failed: %s\n", message ? message : "enumeration failed");
         return 1;
@@ -156,49 +147,35 @@ static int bean_contacts_print_sample(CNContactStore store, int limit) {
 }
 
 int main(void) {
-    CNAuthorizationStatus status;
-    CNContactStore store;
-
-    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
-
-    status = CNContactStore_AuthorizationStatusForEntityType(CNEntityTypeContacts);
-    printf(
-        "Contacts authorization: %s\n",
-        bean_contacts_auth_status_name(status));
-
-    store = (CNContactStore)bean_init((id)bean_alloc(bean_cls("CNContactStore")));
-
-    if (!bean_contacts_is_authorized(status)) {
-        if (status == BEAN_CN_AUTH_DENIED || status == BEAN_CN_AUTH_RESTRICTED) {
-            fprintf(
-                stderr,
-                "Grant Contacts access in System Settings > Privacy & Security > Contacts.\n");
-            bean_autorelease_pool_pop(pool);
-            return 1;
-        }
-
-        printf("Requesting Contacts access (check for a system prompt)...\n");
-        if (!bean_contacts_request_access(store)) {
-            bean_autorelease_pool_pop(pool);
-            return 1;
-        }
+    BEAN_AUTORELEASE_POOL {
+        CNAuthorizationStatus status;
+        CNContactStore store;
 
         status = CNContactStore_AuthorizationStatusForEntityType(CNEntityTypeContacts);
-        printf("Contacts authorization: %s\n", bean_contacts_auth_status_name(status));
-    }
+        printf(
+            "Contacts authorization: %s\n",
+            bean_contacts_auth_status_name(status));
 
-    if (!bean_contacts_is_authorized(status)) {
-        fprintf(stderr, "Contacts access is still unavailable.\n");
-        bean_autorelease_pool_pop(pool);
-        return 1;
-    }
+        store = (CNContactStore)bean_new(bean_cls("CNContactStore"));
 
-    printf("First contacts in your address book:\n");
-    if (bean_contacts_print_sample(store, 10) != 0) {
-        bean_autorelease_pool_pop(pool);
-        return 1;
-    }
+        if (!bean_contacts_is_authorized(status)) {
+            if (status == CNAuthorizationStatusDenied || status == CNAuthorizationStatusRestricted) {
+                fprintf(
+                    stderr,
+                    "Grant Contacts access in System Settings > Privacy & Security > Contacts.\n");
+                return 1;
+            }
 
-    bean_autorelease_pool_pop(pool);
+            printf("Requesting Contacts access (check for a system prompt)...\n");
+            if (!bean_contacts_request_access(store)) {
+                return 1;
+            }
+        }
+
+        printf("Sample contacts:\n");
+        if (bean_contacts_print_sample(store, 10) != 0) {
+            return 1;
+        }
+    }
     return 0;
 }

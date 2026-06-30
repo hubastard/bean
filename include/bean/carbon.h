@@ -37,6 +37,10 @@ typedef bean_id NSAttributedStringMarkdownInterpretedSyntax;
 #define BEAN_TYPEDEF_NSByteCountFormatterUnits
 typedef bean_id NSByteCountFormatterUnits;
 #endif
+#ifndef BEAN_TYPEDEF_NSCalculationError
+#define BEAN_TYPEDEF_NSCalculationError
+typedef bean_id NSCalculationError;
+#endif
 #ifndef BEAN_TYPEDEF_NSCalendarUnit
 #define BEAN_TYPEDEF_NSCalendarUnit
 typedef bean_id NSCalendarUnit;
@@ -185,6 +189,10 @@ typedef bean_id NSSearchPathDirectory;
 #define BEAN_TYPEDEF_NSSearchPathDomainMask
 typedef bean_id NSSearchPathDomainMask;
 #endif
+#ifndef BEAN_TYPEDEF_NSStreamEvent
+#define BEAN_TYPEDEF_NSStreamEvent
+typedef bean_id NSStreamEvent;
+#endif
 #ifndef BEAN_TYPEDEF_NSStreamStatus
 #define BEAN_TYPEDEF_NSStreamStatus
 typedef bean_id NSStreamStatus;
@@ -217,6 +225,10 @@ typedef bean_id NSURLSessionTaskMetricsDomainResolutionProtocol;
 #define BEAN_TYPEDEF_NSURLSessionWebSocketCloseCode
 typedef bean_id NSURLSessionWebSocketCloseCode;
 #endif
+#ifndef BEAN_TYPEDEF_NSView
+#define BEAN_TYPEDEF_NSView
+typedef bean_id NSView;
+#endif
 #ifndef BEAN_TYPEDEF_NSWhoseSubelementIdentifier
 #define BEAN_TYPEDEF_NSWhoseSubelementIdentifier
 typedef bean_id NSWhoseSubelementIdentifier;
@@ -232,10 +244,6 @@ typedef bean_id NSXMLDocumentContentKind;
 #ifndef BEAN_TYPEDEF_NSXMLNodeKind
 #define BEAN_TYPEDEF_NSXMLNodeKind
 typedef bean_id NSXMLNodeKind;
-#endif
-#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
-#define BEAN_TYPEDEF_NSXPCListenerEndpoint
-typedef bean_id NSXPCListenerEndpoint;
 #endif
 
 /* ===== fallback typedefs ===== */
@@ -570,6 +578,10 @@ typedef NSInteger NSXMLParserExternalEntityResolvingPolicy;
 #ifndef BEAN_TYPEDEF_NSXPCConnectionOptions
 #define BEAN_TYPEDEF_NSXPCConnectionOptions
 typedef NSInteger NSXPCConnectionOptions;
+#endif
+#ifndef BEAN_TYPEDEF_OpaquePMPageFormat
+#define BEAN_TYPEDEF_OpaquePMPageFormat
+typedef NSInteger OpaquePMPageFormat;
 #endif
 
 #ifndef BEAN_TYPEDEF_NSImage

@@ -87,7 +87,7 @@ static id bean_webkit_navigation_delegate(void) {
 
 static NSView bean_webkit_loading_label(void) {
     NSTextField label = (NSTextField)NSTextField_LabelWithString(
-        NSString_StringWithUTF8String("Loading..."));
+        bean_str("Loading..."));
     NSTextField_SetBezeled(label, NO);
     NSTextField_SetDrawsBackground(label, NO);
     NSTextField_SetEditable(label, NO);
@@ -97,34 +97,33 @@ static NSView bean_webkit_loading_label(void) {
 }
 
 int main(void) {
-    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
+    BEAN_AUTORELEASE_POOL {
+        NSWindow window = bean_example_window("Bean WebKit", 800.0, 600.0);
+        NSView content = NSWindow_ContentView(window);
+        CGRect bounds = NSView_Bounds(content);
 
-    NSWindow window = bean_example_window("Bean WebKit", 800.0, 600.0);
-    NSView content = NSWindow_ContentView(window);
-    CGRect bounds = NSView_Bounds(content);
+        WKWebViewConfiguration config = (WKWebViewConfiguration)bean_alloc(bean_cls("WKWebViewConfiguration"));
+        config = (WKWebViewConfiguration)bean_init(config);
 
-    WKWebViewConfiguration config = (WKWebViewConfiguration)bean_alloc(bean_cls("WKWebViewConfiguration"));
-    config = (WKWebViewConfiguration)bean_init(config);
+        WKWebView web_view = (WKWebView)bean_alloc(bean_cls("WKWebView"));
+        web_view = (WKWebView)WKWebView_InitWithFrame_Configuration(web_view, bounds, config);
+        bean_example_add_fill_subview(content, (NSView)web_view);
 
-    WKWebView web_view = (WKWebView)bean_alloc(bean_cls("WKWebView"));
-    web_view = (WKWebView)WKWebView_InitWithFrame_Configuration(web_view, bounds, config);
-    bean_example_add_fill_subview(content, (NSView)web_view);
+        g_loading_label = bean_webkit_loading_label();
+        NSView_AddSubview(content, g_loading_label);
+        bean_example_set_layout_handler(bean_webkit_layout);
+        bean_example_layout_subviews(content);
 
-    g_loading_label = bean_webkit_loading_label();
-    NSView_AddSubview(content, g_loading_label);
-    bean_example_set_layout_handler(bean_webkit_layout);
-    bean_example_layout_subviews(content);
+        WKWebView_SetNavigationDelegate(web_view, bean_webkit_navigation_delegate());
 
-    WKWebView_SetNavigationDelegate(web_view, bean_webkit_navigation_delegate());
+        NSURL url = NSURL_URLWithString(bean_str("https://github.com/hubastard/bean"));
+        NSURLRequest request = (NSURLRequest)NSURLRequest_RequestWithURL(url);
+        WKWebView_LoadRequest(web_view, request);
 
-    NSURL url = NSURL_URLWithString(NSString_StringWithUTF8String("https://github.com/hubastard/bean"));
-    NSURLRequest request = (NSURLRequest)NSURLRequest_RequestWithURL(url);
-    WKWebView_LoadRequest(web_view, request);
+        printf("WebKit: loading https://github.com/hubastard/bean\n");
+        bean_example_run(window);
 
-    printf("WebKit: loading https://github.com/hubastard/bean\n");
-    bean_example_run(window);
-
-    g_loading_label = NULL;
-    bean_autorelease_pool_pop(pool);
+        g_loading_label = NULL;
+    }
     return 0;
 }

@@ -50,15 +50,19 @@ static const CACornerMask kCALayerMaxXMaxYCorner = (CACornerMask)8;
 typedef int CAConstraintAttribute;
 #endif
 static const CAConstraintAttribute kCAConstraintMinX = (CAConstraintAttribute)0;
-static const CAConstraintAttribute kCAConstraintMidX = (CAConstraintAttribute)0;
-static const CAConstraintAttribute kCAConstraintMaxX = (CAConstraintAttribute)0;
-static const CAConstraintAttribute kCAConstraintWidth = (CAConstraintAttribute)0;
-static const CAConstraintAttribute kCAConstraintMinY = (CAConstraintAttribute)0;
-static const CAConstraintAttribute kCAConstraintMidY = (CAConstraintAttribute)0;
-static const CAConstraintAttribute kCAConstraintMaxY = (CAConstraintAttribute)0;
-static const CAConstraintAttribute kCAConstraintHeight = (CAConstraintAttribute)0;
+static const CAConstraintAttribute kCAConstraintMidX = (CAConstraintAttribute)1;
+static const CAConstraintAttribute kCAConstraintMaxX = (CAConstraintAttribute)2;
+static const CAConstraintAttribute kCAConstraintWidth = (CAConstraintAttribute)3;
+static const CAConstraintAttribute kCAConstraintMinY = (CAConstraintAttribute)4;
+static const CAConstraintAttribute kCAConstraintMidY = (CAConstraintAttribute)5;
+static const CAConstraintAttribute kCAConstraintMaxY = (CAConstraintAttribute)6;
+static const CAConstraintAttribute kCAConstraintHeight = (CAConstraintAttribute)7;
 
 /* ===== forward typedefs ===== */
+#ifndef BEAN_TYPEDEF_MTLDrawable
+#define BEAN_TYPEDEF_MTLDrawable
+typedef bean_id MTLDrawable;
+#endif
 #ifndef BEAN_TYPEDEF_NSAffineTransform
 #define BEAN_TYPEDEF_NSAffineTransform
 typedef bean_id NSAffineTransform;
@@ -127,6 +131,10 @@ typedef bean_id NSByteCountFormatter;
 #define BEAN_TYPEDEF_NSCache
 typedef bean_id NSCache;
 #endif
+#ifndef BEAN_TYPEDEF_NSCacheDelegate
+#define BEAN_TYPEDEF_NSCacheDelegate
+typedef bean_id NSCacheDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCachedURLResponse
 #define BEAN_TYPEDEF_NSCachedURLResponse
 typedef bean_id NSCachedURLResponse;
@@ -159,6 +167,10 @@ typedef bean_id NSCloseCommand;
 #define BEAN_TYPEDEF_NSCoder
 typedef bean_id NSCoder;
 #endif
+#ifndef BEAN_TYPEDEF_NSCoding
+#define BEAN_TYPEDEF_NSCoding
+typedef bean_id NSCoding;
+#endif
 #ifndef BEAN_TYPEDEF_NSComparisonPredicate
 #define BEAN_TYPEDEF_NSComparisonPredicate
 typedef bean_id NSComparisonPredicate;
@@ -178,6 +190,14 @@ typedef bean_id NSConditionLock;
 #ifndef BEAN_TYPEDEF_NSConnection
 #define BEAN_TYPEDEF_NSConnection
 typedef bean_id NSConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSConnectionDelegate
+#define BEAN_TYPEDEF_NSConnectionDelegate
+typedef bean_id NSConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCopying
+#define BEAN_TYPEDEF_NSCopying
+typedef bean_id NSCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSCountedSet
 #define BEAN_TYPEDEF_NSCountedSet
@@ -223,6 +243,10 @@ typedef bean_id NSDateIntervalFormatter;
 #define BEAN_TYPEDEF_NSDecimalNumber
 typedef bean_id NSDecimalNumber;
 #endif
+#ifndef BEAN_TYPEDEF_NSDecimalNumberBehaviors
+#define BEAN_TYPEDEF_NSDecimalNumberBehaviors
+typedef bean_id NSDecimalNumberBehaviors;
+#endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumberHandler
 #define BEAN_TYPEDEF_NSDecimalNumberHandler
 typedef bean_id NSDecimalNumberHandler;
@@ -242,6 +266,10 @@ typedef bean_id NSDimension;
 #ifndef BEAN_TYPEDEF_NSDirectoryEnumerator
 #define BEAN_TYPEDEF_NSDirectoryEnumerator
 typedef bean_id NSDirectoryEnumerator;
+#endif
+#ifndef BEAN_TYPEDEF_NSDiscardableContent
+#define BEAN_TYPEDEF_NSDiscardableContent
+typedef bean_id NSDiscardableContent;
 #endif
 #ifndef BEAN_TYPEDEF_NSDistantObject
 #define BEAN_TYPEDEF_NSDistantObject
@@ -287,6 +315,14 @@ typedef bean_id NSExtensionContext;
 #define BEAN_TYPEDEF_NSExtensionItem
 typedef bean_id NSExtensionItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSExtensionRequestHandling
+#define BEAN_TYPEDEF_NSExtensionRequestHandling
+typedef bean_id NSExtensionRequestHandling;
+#endif
+#ifndef BEAN_TYPEDEF_NSFastEnumeration
+#define BEAN_TYPEDEF_NSFastEnumeration
+typedef bean_id NSFastEnumeration;
+#endif
 #ifndef BEAN_TYPEDEF_NSFileAccessIntent
 #define BEAN_TYPEDEF_NSFileAccessIntent
 typedef bean_id NSFileAccessIntent;
@@ -302,6 +338,14 @@ typedef bean_id NSFileHandle;
 #ifndef BEAN_TYPEDEF_NSFileManager
 #define BEAN_TYPEDEF_NSFileManager
 typedef bean_id NSFileManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSFileManagerDelegate
+#define BEAN_TYPEDEF_NSFileManagerDelegate
+typedef bean_id NSFileManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePresenter
+#define BEAN_TYPEDEF_NSFilePresenter
+typedef bean_id NSFilePresenter;
 #endif
 #ifndef BEAN_TYPEDEF_NSFileProviderService
 #define BEAN_TYPEDEF_NSFileProviderService
@@ -387,6 +431,14 @@ typedef bean_id NSInvocationOperation;
 #define BEAN_TYPEDEF_NSItemProvider
 typedef bean_id NSItemProvider;
 #endif
+#ifndef BEAN_TYPEDEF_NSItemProviderReading
+#define BEAN_TYPEDEF_NSItemProviderReading
+typedef bean_id NSItemProviderReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSItemProviderWriting
+#define BEAN_TYPEDEF_NSItemProviderWriting
+typedef bean_id NSItemProviderWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSJSONSerialization
 #define BEAN_TYPEDEF_NSJSONSerialization
 typedef bean_id NSJSONSerialization;
@@ -403,9 +455,17 @@ typedef bean_id NSKeyValueSharedObserversSnapshot;
 #define BEAN_TYPEDEF_NSKeyedArchiver
 typedef bean_id NSKeyedArchiver;
 #endif
+#ifndef BEAN_TYPEDEF_NSKeyedArchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedArchiverDelegate
+typedef bean_id NSKeyedArchiverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiver
 #define BEAN_TYPEDEF_NSKeyedUnarchiver
 typedef bean_id NSKeyedUnarchiver;
+#endif
+#ifndef BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+typedef bean_id NSKeyedUnarchiverDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLengthFormatter
 #define BEAN_TYPEDEF_NSLengthFormatter
@@ -431,6 +491,10 @@ typedef bean_id NSLocalizedNumberFormatRule;
 #define BEAN_TYPEDEF_NSLock
 typedef bean_id NSLock;
 #endif
+#ifndef BEAN_TYPEDEF_NSLocking
+#define BEAN_TYPEDEF_NSLocking
+typedef bean_id NSLocking;
+#endif
 #ifndef BEAN_TYPEDEF_NSLogicalTest
 #define BEAN_TYPEDEF_NSLogicalTest
 typedef bean_id NSLogicalTest;
@@ -442,6 +506,10 @@ typedef bean_id NSMachBootstrapServer;
 #ifndef BEAN_TYPEDEF_NSMachPort
 #define BEAN_TYPEDEF_NSMachPort
 typedef bean_id NSMachPort;
+#endif
+#ifndef BEAN_TYPEDEF_NSMachPortDelegate
+#define BEAN_TYPEDEF_NSMachPortDelegate
+typedef bean_id NSMachPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMapTable
 #define BEAN_TYPEDEF_NSMapTable
@@ -474,6 +542,10 @@ typedef bean_id NSMetadataQuery;
 #ifndef BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 #define BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 typedef bean_id NSMetadataQueryAttributeValueTuple;
+#endif
+#ifndef BEAN_TYPEDEF_NSMetadataQueryDelegate
+#define BEAN_TYPEDEF_NSMetadataQueryDelegate
+typedef bean_id NSMetadataQueryDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMetadataQueryResultGroup
 #define BEAN_TYPEDEF_NSMetadataQueryResultGroup
@@ -510,6 +582,10 @@ typedef bean_id NSMutableAttributedString;
 #ifndef BEAN_TYPEDEF_NSMutableCharacterSet
 #define BEAN_TYPEDEF_NSMutableCharacterSet
 typedef bean_id NSMutableCharacterSet;
+#endif
+#ifndef BEAN_TYPEDEF_NSMutableCopying
+#define BEAN_TYPEDEF_NSMutableCopying
+typedef bean_id NSMutableCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSMutableData
 #define BEAN_TYPEDEF_NSMutableData
@@ -550,6 +626,14 @@ typedef bean_id NSNetService;
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowser
 #define BEAN_TYPEDEF_NSNetServiceBrowser
 typedef bean_id NSNetServiceBrowser;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+#define BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+typedef bean_id NSNetServiceBrowserDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceDelegate
+#define BEAN_TYPEDEF_NSNetServiceDelegate
+typedef bean_id NSNetServiceDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSNotification
 #define BEAN_TYPEDEF_NSNotification
@@ -631,6 +715,10 @@ typedef bean_id NSPort;
 #define BEAN_TYPEDEF_NSPortCoder
 typedef bean_id NSPortCoder;
 #endif
+#ifndef BEAN_TYPEDEF_NSPortDelegate
+#define BEAN_TYPEDEF_NSPortDelegate
+typedef bean_id NSPortDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSPortMessage
 #define BEAN_TYPEDEF_NSPortMessage
 typedef bean_id NSPortMessage;
@@ -659,6 +747,10 @@ typedef bean_id NSProcessInfo;
 #define BEAN_TYPEDEF_NSProgress
 typedef bean_id NSProgress;
 #endif
+#ifndef BEAN_TYPEDEF_NSProgressReporting
+#define BEAN_TYPEDEF_NSProgressReporting
+typedef bean_id NSProgressReporting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPropertyListSerialization
 #define BEAN_TYPEDEF_NSPropertyListSerialization
 typedef bean_id NSPropertyListSerialization;
@@ -670,6 +762,10 @@ typedef bean_id NSProtocolChecker;
 #ifndef BEAN_TYPEDEF_NSProxy
 #define BEAN_TYPEDEF_NSProxy
 typedef bean_id NSProxy;
+#endif
+#ifndef BEAN_TYPEDEF_NSPurgeableData
+#define BEAN_TYPEDEF_NSPurgeableData
+typedef bean_id NSPurgeableData;
 #endif
 #ifndef BEAN_TYPEDEF_NSQuitCommand
 #define BEAN_TYPEDEF_NSQuitCommand
@@ -735,6 +831,10 @@ typedef bean_id NSScriptSuiteRegistry;
 #define BEAN_TYPEDEF_NSScriptWhoseTest
 typedef bean_id NSScriptWhoseTest;
 #endif
+#ifndef BEAN_TYPEDEF_NSSecureCoding
+#define BEAN_TYPEDEF_NSSecureCoding
+typedef bean_id NSSecureCoding;
+#endif
 #ifndef BEAN_TYPEDEF_NSSecureUnarchiveFromDataTransformer
 #define BEAN_TYPEDEF_NSSecureUnarchiveFromDataTransformer
 typedef bean_id NSSecureUnarchiveFromDataTransformer;
@@ -767,9 +867,17 @@ typedef bean_id NSSpecifierTest;
 #define BEAN_TYPEDEF_NSSpellServer
 typedef bean_id NSSpellServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpellServerDelegate
+#define BEAN_TYPEDEF_NSSpellServerDelegate
+typedef bean_id NSSpellServerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSStream
 #define BEAN_TYPEDEF_NSStream
 typedef bean_id NSStream;
+#endif
+#ifndef BEAN_TYPEDEF_NSStreamDelegate
+#define BEAN_TYPEDEF_NSStreamDelegate
+typedef bean_id NSStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSString
 #define BEAN_TYPEDEF_NSString
@@ -807,6 +915,10 @@ typedef bean_id NSURL;
 #define BEAN_TYPEDEF_NSURLAuthenticationChallenge
 typedef bean_id NSURLAuthenticationChallenge;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+#define BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+typedef bean_id NSURLAuthenticationChallengeSender;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLCache
 #define BEAN_TYPEDEF_NSURLCache
 typedef bean_id NSURLCache;
@@ -818,6 +930,18 @@ typedef bean_id NSURLComponents;
 #ifndef BEAN_TYPEDEF_NSURLConnection
 #define BEAN_TYPEDEF_NSURLConnection
 typedef bean_id NSURLConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDataDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDataDelegate
+typedef bean_id NSURLConnectionDataDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDelegate
+typedef bean_id NSURLConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+typedef bean_id NSURLConnectionDownloadDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLCredential
 #define BEAN_TYPEDEF_NSURLCredential
@@ -831,9 +955,17 @@ typedef bean_id NSURLCredentialStorage;
 #define BEAN_TYPEDEF_NSURLDownload
 typedef bean_id NSURLDownload;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLDownloadDelegate
+#define BEAN_TYPEDEF_NSURLDownloadDelegate
+typedef bean_id NSURLDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLHandle
 #define BEAN_TYPEDEF_NSURLHandle
 typedef bean_id NSURLHandle;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLHandleClient
+#define BEAN_TYPEDEF_NSURLHandleClient
+typedef bean_id NSURLHandleClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLProtectionSpace
 #define BEAN_TYPEDEF_NSURLProtectionSpace
@@ -842,6 +974,10 @@ typedef bean_id NSURLProtectionSpace;
 #ifndef BEAN_TYPEDEF_NSURLProtocol
 #define BEAN_TYPEDEF_NSURLProtocol
 typedef bean_id NSURLProtocol;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLProtocolClient
+#define BEAN_TYPEDEF_NSURLProtocolClient
+typedef bean_id NSURLProtocolClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLQueryItem
 #define BEAN_TYPEDEF_NSURLQueryItem
@@ -863,13 +999,29 @@ typedef bean_id NSURLSession;
 #define BEAN_TYPEDEF_NSURLSessionConfiguration
 typedef bean_id NSURLSessionConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDataDelegate
+#define BEAN_TYPEDEF_NSURLSessionDataDelegate
+typedef bean_id NSURLSessionDataDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDataTask
 #define BEAN_TYPEDEF_NSURLSessionDataTask
 typedef bean_id NSURLSessionDataTask;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDelegate
+#define BEAN_TYPEDEF_NSURLSessionDelegate
+typedef bean_id NSURLSessionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+typedef bean_id NSURLSessionDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadTask
 #define BEAN_TYPEDEF_NSURLSessionDownloadTask
 typedef bean_id NSURLSessionDownloadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionStreamDelegate
+#define BEAN_TYPEDEF_NSURLSessionStreamDelegate
+typedef bean_id NSURLSessionStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionStreamTask
 #define BEAN_TYPEDEF_NSURLSessionStreamTask
@@ -878,6 +1030,10 @@ typedef bean_id NSURLSessionStreamTask;
 #ifndef BEAN_TYPEDEF_NSURLSessionTask
 #define BEAN_TYPEDEF_NSURLSessionTask
 typedef bean_id NSURLSessionTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionTaskDelegate
+#define BEAN_TYPEDEF_NSURLSessionTaskDelegate
+typedef bean_id NSURLSessionTaskDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskMetrics
 #define BEAN_TYPEDEF_NSURLSessionTaskMetrics
@@ -890,6 +1046,10 @@ typedef bean_id NSURLSessionTaskTransactionMetrics;
 #ifndef BEAN_TYPEDEF_NSURLSessionUploadTask
 #define BEAN_TYPEDEF_NSURLSessionUploadTask
 typedef bean_id NSURLSessionUploadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+#define BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+typedef bean_id NSURLSessionWebSocketDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketMessage
 #define BEAN_TYPEDEF_NSURLSessionWebSocketMessage
@@ -1019,6 +1179,10 @@ typedef bean_id NSUnitTemperature;
 #define BEAN_TYPEDEF_NSUnitVolume
 typedef bean_id NSUnitVolume;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserActivityDelegate
+#define BEAN_TYPEDEF_NSUserActivityDelegate
+typedef bean_id NSUserActivityDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserAppleScriptTask
 #define BEAN_TYPEDEF_NSUserAppleScriptTask
 typedef bean_id NSUserAppleScriptTask;
@@ -1042,6 +1206,10 @@ typedef bean_id NSUserNotificationAction;
 #ifndef BEAN_TYPEDEF_NSUserNotificationCenter
 #define BEAN_TYPEDEF_NSUserNotificationCenter
 typedef bean_id NSUserNotificationCenter;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+#define BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+typedef bean_id NSUserNotificationCenterDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSUserScriptTask
 #define BEAN_TYPEDEF_NSUserScriptTask
@@ -1083,6 +1251,10 @@ typedef bean_id NSXMLNode;
 #define BEAN_TYPEDEF_NSXMLParser
 typedef bean_id NSXMLParser;
 #endif
+#ifndef BEAN_TYPEDEF_NSXMLParserDelegate
+#define BEAN_TYPEDEF_NSXMLParserDelegate
+typedef bean_id NSXMLParserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXPCCoder
 #define BEAN_TYPEDEF_NSXPCCoder
 typedef bean_id NSXPCCoder;
@@ -1098,6 +1270,18 @@ typedef bean_id NSXPCInterface;
 #ifndef BEAN_TYPEDEF_NSXPCListener
 #define BEAN_TYPEDEF_NSXPCListener
 typedef bean_id NSXPCListener;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerDelegate
+#define BEAN_TYPEDEF_NSXPCListenerDelegate
+typedef bean_id NSXPCListenerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
+#define BEAN_TYPEDEF_NSXPCListenerEndpoint
+typedef bean_id NSXPCListenerEndpoint;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCProxyCreating
+#define BEAN_TYPEDEF_NSXPCProxyCreating
+typedef bean_id NSXPCProxyCreating;
 #endif
 #ifndef BEAN_TYPEDEF_OS_object
 #define BEAN_TYPEDEF_OS_object
@@ -1127,10 +1311,6 @@ typedef bean_id AVPortraitEffectsMatte;
 #define BEAN_TYPEDEF_AVSemanticSegmentationMatte
 typedef bean_id AVSemanticSegmentationMatte;
 #endif
-#ifndef BEAN_TYPEDEF_CIBarcodeDescriptor
-#define BEAN_TYPEDEF_CIBarcodeDescriptor
-typedef bean_id CIBarcodeDescriptor;
-#endif
 #ifndef BEAN_TYPEDEF_CIDataMatrixCodeECCVersion
 #define BEAN_TYPEDEF_CIDataMatrixCodeECCVersion
 typedef bean_id CIDataMatrixCodeECCVersion;
@@ -1139,9 +1319,9 @@ typedef bean_id CIDataMatrixCodeECCVersion;
 #define BEAN_TYPEDEF_NSImage
 typedef bean_id NSImage;
 #endif
-#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
-#define BEAN_TYPEDEF_NSXPCListenerEndpoint
-typedef bean_id NSXPCListenerEndpoint;
+#ifndef BEAN_TYPEDEF_NSView
+#define BEAN_TYPEDEF_NSView
+typedef bean_id NSView;
 #endif
 
 /* ===== fallback typedefs ===== */
@@ -1152,6 +1332,10 @@ typedef NSInteger CIQRCodeErrorCorrectionLevel;
 #ifndef BEAN_TYPEDEF_CIRenderDestinationAlphaMode
 #define BEAN_TYPEDEF_CIRenderDestinationAlphaMode
 typedef NSInteger CIRenderDestinationAlphaMode;
+#endif
+#ifndef BEAN_TYPEDEF_OpaquePMPageFormat
+#define BEAN_TYPEDEF_OpaquePMPageFormat
+typedef NSInteger OpaquePMPageFormat;
 #endif
 
 #ifndef BEAN_TYPEDEF_NSImage
@@ -1166,6 +1350,13 @@ typedef bean_id NSXPCListenerEndpoint;
 #define BEAN_TYPEDEF_NSStringEncoding
 typedef NSUInteger NSStringEncoding;
 #endif
+
+/* ===== CAAction ===== */
+#ifndef BEAN_TYPEDEF_CAAction
+#define BEAN_TYPEDEF_CAAction
+typedef bean_id CAAction;
+#endif
+static inline void    CAAction_RunActionForKey_Object_Arguments(CAAction self, NSString event, id anObject, NSDictionary dict)    { ((void (*)(CAAction, SEL, NSString, id, NSDictionary))bean_msgSend)(self, bean_sel("runActionForKey:object:arguments:"), event, anObject, dict); }
 
 /* ===== CAAnimationGroup ===== */
 #ifndef BEAN_TYPEDEF_CAAnimationGroup
@@ -1192,22 +1383,16 @@ static inline void    CABasicAnimation_SetByValue(CABasicAnimation self, id byVa
 #define BEAN_TYPEDEF_CAConstraint
 typedef bean_id CAConstraint;
 #endif
-static inline id                       CAConstraint_ConstraintWithAttribute_RelativeTo_Attribute_Scale_Offset(CAConstraintAttribute attr, NSString srcId, CAConstraintAttribute srcAttr, CGFloat m, CGFloat c)                 { return ((id (*)(bean_class, SEL, CAConstraintAttribute, NSString, CAConstraintAttribute, CGFloat, CGFloat))bean_msgSend)(bean_cls("CAConstraint"), bean_sel("constraintWithAttribute:relativeTo:attribute:scale:offset:"), attr, srcId, srcAttr, m, c); }
-static inline id                       CAConstraint_ConstraintWithAttribute_RelativeTo_Attribute_Offset(CAConstraintAttribute attr, NSString srcId, CAConstraintAttribute srcAttr, CGFloat c)                                  { return ((id (*)(bean_class, SEL, CAConstraintAttribute, NSString, CAConstraintAttribute, CGFloat))bean_msgSend)(bean_cls("CAConstraint"), bean_sel("constraintWithAttribute:relativeTo:attribute:offset:"), attr, srcId, srcAttr, c); }
-static inline id                       CAConstraint_ConstraintWithAttribute_RelativeTo_Attribute(CAConstraintAttribute attr, NSString srcId, CAConstraintAttribute srcAttr)                                                    { return ((id (*)(bean_class, SEL, CAConstraintAttribute, NSString, CAConstraintAttribute))bean_msgSend)(bean_cls("CAConstraint"), bean_sel("constraintWithAttribute:relativeTo:attribute:"), attr, srcId, srcAttr); }
-static inline id                       CAConstraint_InitWithAttribute_RelativeTo_Attribute_Scale_Offset(CAConstraint self, CAConstraintAttribute attr, NSString srcId, CAConstraintAttribute srcAttr, CGFloat m, CGFloat c)    { return ((id (*)(CAConstraint, SEL, CAConstraintAttribute, NSString, CAConstraintAttribute, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithAttribute:relativeTo:attribute:scale:offset:"), attr, srcId, srcAttr, m, c); }
+static inline CAConstraint             CAConstraint_ConstraintWithAttribute_RelativeTo_Attribute_Scale_Offset(CAConstraintAttribute attr, NSString srcId, CAConstraintAttribute srcAttr, CGFloat m, CGFloat c)                 { return ((CAConstraint (*)(bean_class, SEL, CAConstraintAttribute, NSString, CAConstraintAttribute, CGFloat, CGFloat))bean_msgSend)(bean_cls("CAConstraint"), bean_sel("constraintWithAttribute:relativeTo:attribute:scale:offset:"), attr, srcId, srcAttr, m, c); }
+static inline CAConstraint             CAConstraint_ConstraintWithAttribute_RelativeTo_Attribute_Offset(CAConstraintAttribute attr, NSString srcId, CAConstraintAttribute srcAttr, CGFloat c)                                  { return ((CAConstraint (*)(bean_class, SEL, CAConstraintAttribute, NSString, CAConstraintAttribute, CGFloat))bean_msgSend)(bean_cls("CAConstraint"), bean_sel("constraintWithAttribute:relativeTo:attribute:offset:"), attr, srcId, srcAttr, c); }
+static inline CAConstraint             CAConstraint_ConstraintWithAttribute_RelativeTo_Attribute(CAConstraintAttribute attr, NSString srcId, CAConstraintAttribute srcAttr)                                                    { return ((CAConstraint (*)(bean_class, SEL, CAConstraintAttribute, NSString, CAConstraintAttribute))bean_msgSend)(bean_cls("CAConstraint"), bean_sel("constraintWithAttribute:relativeTo:attribute:"), attr, srcId, srcAttr); }
+static inline CAConstraint             CAConstraint_InitWithAttribute_RelativeTo_Attribute_Scale_Offset(CAConstraint self, CAConstraintAttribute attr, NSString srcId, CAConstraintAttribute srcAttr, CGFloat m, CGFloat c)    { return ((CAConstraint (*)(CAConstraint, SEL, CAConstraintAttribute, NSString, CAConstraintAttribute, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithAttribute:relativeTo:attribute:scale:offset:"), attr, srcId, srcAttr, m, c); }
 static inline CAConstraintAttribute    CAConstraint_Attribute(CAConstraint self)                                                                                                                                               { return ((CAConstraintAttribute (*)(CAConstraint, SEL))bean_msgSend)(self, bean_sel("attribute")); }
 static inline NSString                 CAConstraint_SourceName(CAConstraint self)                                                                                                                                              { return ((NSString (*)(CAConstraint, SEL))bean_msgSend)(self, bean_sel("sourceName")); }
 static inline CAConstraintAttribute    CAConstraint_SourceAttribute(CAConstraint self)                                                                                                                                         { return ((CAConstraintAttribute (*)(CAConstraint, SEL))bean_msgSend)(self, bean_sel("sourceAttribute")); }
 static inline CGFloat                  CAConstraint_Scale(CAConstraint self)                                                                                                                                                   { return ((CGFloat (*)(CAConstraint, SEL))bean_msgSend_fpret)(self, bean_sel("scale")); }
 static inline CGFloat                  CAConstraint_Offset(CAConstraint self)                                                                                                                                                  { return ((CGFloat (*)(CAConstraint, SEL))bean_msgSend_fpret)(self, bean_sel("offset")); }
-
-/* ===== CAConstraintLayoutManager ===== */
-#ifndef BEAN_TYPEDEF_CAConstraintLayoutManager
-#define BEAN_TYPEDEF_CAConstraintLayoutManager
-typedef bean_id CAConstraintLayoutManager;
-#endif
-static inline id    CAConstraintLayoutManager_LayoutManager(void)    { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAConstraintLayoutManager"), bean_sel("layoutManager")); }
+static inline BOOL                     CAConstraint_SupportsSecureCoding(void)                                                                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAConstraint"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CADisplayLink ===== */
 #ifndef BEAN_TYPEDEF_CADisplayLink
@@ -1236,13 +1421,15 @@ static inline BOOL                CADisplayLink_Paused(CADisplayLink self)      
 #define BEAN_TYPEDEF_CAEDRMetadata
 typedef bean_id CAEDRMetadata;
 #endif
-static inline id               CAEDRMetadata_New(void)                                                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAEDRMetadata"), bean_sel("new")); }
-static inline id               CAEDRMetadata_Init(CAEDRMetadata self)                                                                                              { return ((id (*)(CAEDRMetadata, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CAEDRMetadata    CAEDRMetadata_New(void)                                                                                                             { return ((CAEDRMetadata (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAEDRMetadata"), bean_sel("new")); }
+static inline CAEDRMetadata    CAEDRMetadata_Init(CAEDRMetadata self)                                                                                              { return ((CAEDRMetadata (*)(CAEDRMetadata, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline CAEDRMetadata    CAEDRMetadata_HDR10MetadataWithDisplayInfo_ContentInfo_OpticalOutputScale(NSData displayData, NSData contentData, CGFloat scale)    { return ((CAEDRMetadata (*)(bean_class, SEL, NSData, NSData, CGFloat))bean_msgSend)(bean_cls("CAEDRMetadata"), bean_sel("HDR10MetadataWithDisplayInfo:contentInfo:opticalOutputScale:"), displayData, contentData, scale); }
 static inline CAEDRMetadata    CAEDRMetadata_HDR10MetadataWithMinLuminance_MaxLuminance_OpticalOutputScale(CGFloat minNits, CGFloat maxNits, CGFloat scale)        { return ((CAEDRMetadata (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CAEDRMetadata"), bean_sel("HDR10MetadataWithMinLuminance:maxLuminance:opticalOutputScale:"), minNits, maxNits, scale); }
 static inline CAEDRMetadata    CAEDRMetadata_HLGMetadataWithAmbientViewingEnvironment(NSData data)                                                                 { return ((CAEDRMetadata (*)(bean_class, SEL, NSData))bean_msgSend)(bean_cls("CAEDRMetadata"), bean_sel("HLGMetadataWithAmbientViewingEnvironment:"), data); }
 static inline CAEDRMetadata    CAEDRMetadata_HLGMetadata(void)                                                                                                     { return ((CAEDRMetadata (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAEDRMetadata"), bean_sel("HLGMetadata")); }
 static inline BOOL             CAEDRMetadata_IsAvailable(void)                                                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAEDRMetadata"), bean_sel("isAvailable")); }
+static inline id               CAEDRMetadata_CopyWithZone(CAEDRMetadata self, NSZone* zone)                                                                        { return ((id (*)(CAEDRMetadata, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL             CAEDRMetadata_SupportsSecureCoding(void)                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAEDRMetadata"), bean_sel("supportsSecureCoding")); }
 static inline BOOL             CAEDRMetadata_Available(CAEDRMetadata self)                                                                                         { return ((BOOL (*)(CAEDRMetadata, SEL))bean_msgSend)(self, bean_sel("available")); }
 
 /* ===== CAEmitterCell ===== */
@@ -1250,80 +1437,97 @@ static inline BOOL             CAEDRMetadata_Available(CAEDRMetadata self)      
 #define BEAN_TYPEDEF_CAEmitterCell
 typedef bean_id CAEmitterCell;
 #endif
-static inline id              CAEmitterCell_EmitterCell(void)                                                                { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAEmitterCell"), bean_sel("emitterCell")); }
-static inline id              CAEmitterCell_DefaultValueForKey(NSString key)                                                 { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAEmitterCell"), bean_sel("defaultValueForKey:"), key); }
-static inline BOOL            CAEmitterCell_ShouldArchiveValueForKey(CAEmitterCell self, NSString key)                       { return ((BOOL (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("shouldArchiveValueForKey:"), key); }
-static inline NSString        CAEmitterCell_Name(CAEmitterCell self)                                                         { return ((NSString (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void            CAEmitterCell_SetName(CAEmitterCell self, NSString name)                                       { ((void (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline BOOL            CAEmitterCell_IsEnabled(CAEmitterCell self)                                                    { return ((BOOL (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("isEnabled")); }
-static inline void            CAEmitterCell_SetEnabled(CAEmitterCell self, BOOL enabled)                                     { ((void (*)(CAEmitterCell, SEL, BOOL))bean_msgSend)(self, bean_sel("setEnabled:"), enabled); }
-static inline CGFloat         CAEmitterCell_BirthRate(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("birthRate")); }
-static inline void            CAEmitterCell_SetBirthRate(CAEmitterCell self, CGFloat birthRate)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBirthRate:"), birthRate); }
-static inline CGFloat         CAEmitterCell_Lifetime(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("lifetime")); }
-static inline void            CAEmitterCell_SetLifetime(CAEmitterCell self, CGFloat lifetime)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLifetime:"), lifetime); }
-static inline CGFloat         CAEmitterCell_LifetimeRange(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("lifetimeRange")); }
-static inline void            CAEmitterCell_SetLifetimeRange(CAEmitterCell self, CGFloat lifetimeRange)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLifetimeRange:"), lifetimeRange); }
-static inline CGFloat         CAEmitterCell_EmissionLatitude(CAEmitterCell self)                                             { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("emissionLatitude")); }
-static inline void            CAEmitterCell_SetEmissionLatitude(CAEmitterCell self, CGFloat emissionLatitude)                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setEmissionLatitude:"), emissionLatitude); }
-static inline CGFloat         CAEmitterCell_EmissionLongitude(CAEmitterCell self)                                            { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("emissionLongitude")); }
-static inline void            CAEmitterCell_SetEmissionLongitude(CAEmitterCell self, CGFloat emissionLongitude)              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setEmissionLongitude:"), emissionLongitude); }
-static inline CGFloat         CAEmitterCell_EmissionRange(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("emissionRange")); }
-static inline void            CAEmitterCell_SetEmissionRange(CAEmitterCell self, CGFloat emissionRange)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setEmissionRange:"), emissionRange); }
-static inline CGFloat         CAEmitterCell_Velocity(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("velocity")); }
-static inline void            CAEmitterCell_SetVelocity(CAEmitterCell self, CGFloat velocity)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setVelocity:"), velocity); }
-static inline CGFloat         CAEmitterCell_VelocityRange(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("velocityRange")); }
-static inline void            CAEmitterCell_SetVelocityRange(CAEmitterCell self, CGFloat velocityRange)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setVelocityRange:"), velocityRange); }
-static inline CGFloat         CAEmitterCell_XAcceleration(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("xAcceleration")); }
-static inline void            CAEmitterCell_SetXAcceleration(CAEmitterCell self, CGFloat xAcceleration)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setXAcceleration:"), xAcceleration); }
-static inline CGFloat         CAEmitterCell_YAcceleration(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("yAcceleration")); }
-static inline void            CAEmitterCell_SetYAcceleration(CAEmitterCell self, CGFloat yAcceleration)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setYAcceleration:"), yAcceleration); }
-static inline CGFloat         CAEmitterCell_ZAcceleration(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("zAcceleration")); }
-static inline void            CAEmitterCell_SetZAcceleration(CAEmitterCell self, CGFloat zAcceleration)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setZAcceleration:"), zAcceleration); }
-static inline CGFloat         CAEmitterCell_Scale(CAEmitterCell self)                                                        { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("scale")); }
-static inline void            CAEmitterCell_SetScale(CAEmitterCell self, CGFloat scale)                                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setScale:"), scale); }
-static inline CGFloat         CAEmitterCell_ScaleRange(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("scaleRange")); }
-static inline void            CAEmitterCell_SetScaleRange(CAEmitterCell self, CGFloat scaleRange)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setScaleRange:"), scaleRange); }
-static inline CGFloat         CAEmitterCell_ScaleSpeed(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("scaleSpeed")); }
-static inline void            CAEmitterCell_SetScaleSpeed(CAEmitterCell self, CGFloat scaleSpeed)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setScaleSpeed:"), scaleSpeed); }
-static inline CGFloat         CAEmitterCell_Spin(CAEmitterCell self)                                                         { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("spin")); }
-static inline void            CAEmitterCell_SetSpin(CAEmitterCell self, CGFloat spin)                                        { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpin:"), spin); }
-static inline CGFloat         CAEmitterCell_SpinRange(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("spinRange")); }
-static inline void            CAEmitterCell_SetSpinRange(CAEmitterCell self, CGFloat spinRange)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpinRange:"), spinRange); }
-static inline CGColorRef      CAEmitterCell_Color(CAEmitterCell self)                                                        { return ((CGColorRef (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("color")); }
-static inline void            CAEmitterCell_SetColor(CAEmitterCell self, CGColorRef color)                                   { ((void (*)(CAEmitterCell, SEL, CGColorRef))bean_msgSend)(self, bean_sel("setColor:"), color); }
-static inline CGFloat         CAEmitterCell_RedRange(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("redRange")); }
-static inline void            CAEmitterCell_SetRedRange(CAEmitterCell self, CGFloat redRange)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRedRange:"), redRange); }
-static inline CGFloat         CAEmitterCell_GreenRange(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("greenRange")); }
-static inline void            CAEmitterCell_SetGreenRange(CAEmitterCell self, CGFloat greenRange)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setGreenRange:"), greenRange); }
-static inline CGFloat         CAEmitterCell_BlueRange(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("blueRange")); }
-static inline void            CAEmitterCell_SetBlueRange(CAEmitterCell self, CGFloat blueRange)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBlueRange:"), blueRange); }
-static inline CGFloat         CAEmitterCell_AlphaRange(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("alphaRange")); }
-static inline void            CAEmitterCell_SetAlphaRange(CAEmitterCell self, CGFloat alphaRange)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setAlphaRange:"), alphaRange); }
-static inline CGFloat         CAEmitterCell_RedSpeed(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("redSpeed")); }
-static inline void            CAEmitterCell_SetRedSpeed(CAEmitterCell self, CGFloat redSpeed)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRedSpeed:"), redSpeed); }
-static inline CGFloat         CAEmitterCell_GreenSpeed(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("greenSpeed")); }
-static inline void            CAEmitterCell_SetGreenSpeed(CAEmitterCell self, CGFloat greenSpeed)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setGreenSpeed:"), greenSpeed); }
-static inline CGFloat         CAEmitterCell_BlueSpeed(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("blueSpeed")); }
-static inline void            CAEmitterCell_SetBlueSpeed(CAEmitterCell self, CGFloat blueSpeed)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBlueSpeed:"), blueSpeed); }
-static inline CGFloat         CAEmitterCell_AlphaSpeed(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("alphaSpeed")); }
-static inline void            CAEmitterCell_SetAlphaSpeed(CAEmitterCell self, CGFloat alphaSpeed)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setAlphaSpeed:"), alphaSpeed); }
-static inline id              CAEmitterCell_Contents(CAEmitterCell self)                                                     { return ((id (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("contents")); }
-static inline void            CAEmitterCell_SetContents(CAEmitterCell self, id contents)                                     { ((void (*)(CAEmitterCell, SEL, id))bean_msgSend)(self, bean_sel("setContents:"), contents); }
-static inline CGRect          CAEmitterCell_ContentsRect(CAEmitterCell self)                                                 { return ((CGRect (*)(CAEmitterCell, SEL))bean_msgSend_stret)(self, bean_sel("contentsRect")); }
-static inline void            CAEmitterCell_SetContentsRect(CAEmitterCell self, CGRect contentsRect)                         { ((void (*)(CAEmitterCell, SEL, CGRect))bean_msgSend)(self, bean_sel("setContentsRect:"), contentsRect); }
-static inline CGFloat         CAEmitterCell_ContentsScale(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("contentsScale")); }
-static inline void            CAEmitterCell_SetContentsScale(CAEmitterCell self, CGFloat contentsScale)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setContentsScale:"), contentsScale); }
-static inline NSString        CAEmitterCell_MinificationFilter(CAEmitterCell self)                                           { return ((NSString (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("minificationFilter")); }
-static inline void            CAEmitterCell_SetMinificationFilter(CAEmitterCell self, NSString minificationFilter)           { ((void (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("setMinificationFilter:"), minificationFilter); }
-static inline NSString        CAEmitterCell_MagnificationFilter(CAEmitterCell self)                                          { return ((NSString (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("magnificationFilter")); }
-static inline void            CAEmitterCell_SetMagnificationFilter(CAEmitterCell self, NSString magnificationFilter)         { ((void (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("setMagnificationFilter:"), magnificationFilter); }
-static inline CGFloat         CAEmitterCell_MinificationFilterBias(CAEmitterCell self)                                       { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("minificationFilterBias")); }
-static inline void            CAEmitterCell_SetMinificationFilterBias(CAEmitterCell self, CGFloat minificationFilterBias)    { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMinificationFilterBias:"), minificationFilterBias); }
-static inline NSArray         CAEmitterCell_EmitterCells(CAEmitterCell self)                                                 { return ((NSArray (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("emitterCells")); }
-static inline void            CAEmitterCell_SetEmitterCells(CAEmitterCell self, NSArray emitterCells)                        { ((void (*)(CAEmitterCell, SEL, NSArray))bean_msgSend)(self, bean_sel("setEmitterCells:"), emitterCells); }
-static inline NSDictionary    CAEmitterCell_Style(CAEmitterCell self)                                                        { return ((NSDictionary (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("style")); }
-static inline void            CAEmitterCell_SetStyle(CAEmitterCell self, NSDictionary style)                                 { ((void (*)(CAEmitterCell, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setStyle:"), style); }
-static inline BOOL            CAEmitterCell_Enabled(CAEmitterCell self)                                                      { return ((BOOL (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("enabled")); }
+static inline CAEmitterCell    CAEmitterCell_EmitterCell(void)                                                                { return ((CAEmitterCell (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAEmitterCell"), bean_sel("emitterCell")); }
+static inline id               CAEmitterCell_DefaultValueForKey(NSString key)                                                 { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAEmitterCell"), bean_sel("defaultValueForKey:"), key); }
+static inline BOOL             CAEmitterCell_ShouldArchiveValueForKey(CAEmitterCell self, NSString key)                       { return ((BOOL (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("shouldArchiveValueForKey:"), key); }
+static inline NSString         CAEmitterCell_Name(CAEmitterCell self)                                                         { return ((NSString (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void             CAEmitterCell_SetName(CAEmitterCell self, NSString name)                                       { ((void (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline BOOL             CAEmitterCell_IsEnabled(CAEmitterCell self)                                                    { return ((BOOL (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("isEnabled")); }
+static inline void             CAEmitterCell_SetEnabled(CAEmitterCell self, BOOL enabled)                                     { ((void (*)(CAEmitterCell, SEL, BOOL))bean_msgSend)(self, bean_sel("setEnabled:"), enabled); }
+static inline CGFloat          CAEmitterCell_BirthRate(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("birthRate")); }
+static inline void             CAEmitterCell_SetBirthRate(CAEmitterCell self, CGFloat birthRate)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBirthRate:"), birthRate); }
+static inline CGFloat          CAEmitterCell_Lifetime(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("lifetime")); }
+static inline void             CAEmitterCell_SetLifetime(CAEmitterCell self, CGFloat lifetime)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLifetime:"), lifetime); }
+static inline CGFloat          CAEmitterCell_LifetimeRange(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("lifetimeRange")); }
+static inline void             CAEmitterCell_SetLifetimeRange(CAEmitterCell self, CGFloat lifetimeRange)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLifetimeRange:"), lifetimeRange); }
+static inline CGFloat          CAEmitterCell_EmissionLatitude(CAEmitterCell self)                                             { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("emissionLatitude")); }
+static inline void             CAEmitterCell_SetEmissionLatitude(CAEmitterCell self, CGFloat emissionLatitude)                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setEmissionLatitude:"), emissionLatitude); }
+static inline CGFloat          CAEmitterCell_EmissionLongitude(CAEmitterCell self)                                            { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("emissionLongitude")); }
+static inline void             CAEmitterCell_SetEmissionLongitude(CAEmitterCell self, CGFloat emissionLongitude)              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setEmissionLongitude:"), emissionLongitude); }
+static inline CGFloat          CAEmitterCell_EmissionRange(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("emissionRange")); }
+static inline void             CAEmitterCell_SetEmissionRange(CAEmitterCell self, CGFloat emissionRange)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setEmissionRange:"), emissionRange); }
+static inline CGFloat          CAEmitterCell_Velocity(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("velocity")); }
+static inline void             CAEmitterCell_SetVelocity(CAEmitterCell self, CGFloat velocity)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setVelocity:"), velocity); }
+static inline CGFloat          CAEmitterCell_VelocityRange(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("velocityRange")); }
+static inline void             CAEmitterCell_SetVelocityRange(CAEmitterCell self, CGFloat velocityRange)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setVelocityRange:"), velocityRange); }
+static inline CGFloat          CAEmitterCell_XAcceleration(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("xAcceleration")); }
+static inline void             CAEmitterCell_SetXAcceleration(CAEmitterCell self, CGFloat xAcceleration)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setXAcceleration:"), xAcceleration); }
+static inline CGFloat          CAEmitterCell_YAcceleration(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("yAcceleration")); }
+static inline void             CAEmitterCell_SetYAcceleration(CAEmitterCell self, CGFloat yAcceleration)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setYAcceleration:"), yAcceleration); }
+static inline CGFloat          CAEmitterCell_ZAcceleration(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("zAcceleration")); }
+static inline void             CAEmitterCell_SetZAcceleration(CAEmitterCell self, CGFloat zAcceleration)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setZAcceleration:"), zAcceleration); }
+static inline CGFloat          CAEmitterCell_Scale(CAEmitterCell self)                                                        { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("scale")); }
+static inline void             CAEmitterCell_SetScale(CAEmitterCell self, CGFloat scale)                                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setScale:"), scale); }
+static inline CGFloat          CAEmitterCell_ScaleRange(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("scaleRange")); }
+static inline void             CAEmitterCell_SetScaleRange(CAEmitterCell self, CGFloat scaleRange)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setScaleRange:"), scaleRange); }
+static inline CGFloat          CAEmitterCell_ScaleSpeed(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("scaleSpeed")); }
+static inline void             CAEmitterCell_SetScaleSpeed(CAEmitterCell self, CGFloat scaleSpeed)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setScaleSpeed:"), scaleSpeed); }
+static inline CGFloat          CAEmitterCell_Spin(CAEmitterCell self)                                                         { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("spin")); }
+static inline void             CAEmitterCell_SetSpin(CAEmitterCell self, CGFloat spin)                                        { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpin:"), spin); }
+static inline CGFloat          CAEmitterCell_SpinRange(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("spinRange")); }
+static inline void             CAEmitterCell_SetSpinRange(CAEmitterCell self, CGFloat spinRange)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpinRange:"), spinRange); }
+static inline CGColorRef       CAEmitterCell_Color(CAEmitterCell self)                                                        { return ((CGColorRef (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("color")); }
+static inline void             CAEmitterCell_SetColor(CAEmitterCell self, CGColorRef color)                                   { ((void (*)(CAEmitterCell, SEL, CGColorRef))bean_msgSend)(self, bean_sel("setColor:"), color); }
+static inline CGFloat          CAEmitterCell_RedRange(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("redRange")); }
+static inline void             CAEmitterCell_SetRedRange(CAEmitterCell self, CGFloat redRange)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRedRange:"), redRange); }
+static inline CGFloat          CAEmitterCell_GreenRange(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("greenRange")); }
+static inline void             CAEmitterCell_SetGreenRange(CAEmitterCell self, CGFloat greenRange)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setGreenRange:"), greenRange); }
+static inline CGFloat          CAEmitterCell_BlueRange(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("blueRange")); }
+static inline void             CAEmitterCell_SetBlueRange(CAEmitterCell self, CGFloat blueRange)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBlueRange:"), blueRange); }
+static inline CGFloat          CAEmitterCell_AlphaRange(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("alphaRange")); }
+static inline void             CAEmitterCell_SetAlphaRange(CAEmitterCell self, CGFloat alphaRange)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setAlphaRange:"), alphaRange); }
+static inline CGFloat          CAEmitterCell_RedSpeed(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("redSpeed")); }
+static inline void             CAEmitterCell_SetRedSpeed(CAEmitterCell self, CGFloat redSpeed)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRedSpeed:"), redSpeed); }
+static inline CGFloat          CAEmitterCell_GreenSpeed(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("greenSpeed")); }
+static inline void             CAEmitterCell_SetGreenSpeed(CAEmitterCell self, CGFloat greenSpeed)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setGreenSpeed:"), greenSpeed); }
+static inline CGFloat          CAEmitterCell_BlueSpeed(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("blueSpeed")); }
+static inline void             CAEmitterCell_SetBlueSpeed(CAEmitterCell self, CGFloat blueSpeed)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBlueSpeed:"), blueSpeed); }
+static inline CGFloat          CAEmitterCell_AlphaSpeed(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("alphaSpeed")); }
+static inline void             CAEmitterCell_SetAlphaSpeed(CAEmitterCell self, CGFloat alphaSpeed)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setAlphaSpeed:"), alphaSpeed); }
+static inline id               CAEmitterCell_Contents(CAEmitterCell self)                                                     { return ((id (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("contents")); }
+static inline void             CAEmitterCell_SetContents(CAEmitterCell self, id contents)                                     { ((void (*)(CAEmitterCell, SEL, id))bean_msgSend)(self, bean_sel("setContents:"), contents); }
+static inline CGRect           CAEmitterCell_ContentsRect(CAEmitterCell self)                                                 { return ((CGRect (*)(CAEmitterCell, SEL))bean_msgSend_stret)(self, bean_sel("contentsRect")); }
+static inline void             CAEmitterCell_SetContentsRect(CAEmitterCell self, CGRect contentsRect)                         { ((void (*)(CAEmitterCell, SEL, CGRect))bean_msgSend)(self, bean_sel("setContentsRect:"), contentsRect); }
+static inline CGFloat          CAEmitterCell_ContentsScale(CAEmitterCell self)                                                { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("contentsScale")); }
+static inline void             CAEmitterCell_SetContentsScale(CAEmitterCell self, CGFloat contentsScale)                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setContentsScale:"), contentsScale); }
+static inline NSString         CAEmitterCell_MinificationFilter(CAEmitterCell self)                                           { return ((NSString (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("minificationFilter")); }
+static inline void             CAEmitterCell_SetMinificationFilter(CAEmitterCell self, NSString minificationFilter)           { ((void (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("setMinificationFilter:"), minificationFilter); }
+static inline NSString         CAEmitterCell_MagnificationFilter(CAEmitterCell self)                                          { return ((NSString (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("magnificationFilter")); }
+static inline void             CAEmitterCell_SetMagnificationFilter(CAEmitterCell self, NSString magnificationFilter)         { ((void (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("setMagnificationFilter:"), magnificationFilter); }
+static inline CGFloat          CAEmitterCell_MinificationFilterBias(CAEmitterCell self)                                       { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("minificationFilterBias")); }
+static inline void             CAEmitterCell_SetMinificationFilterBias(CAEmitterCell self, CGFloat minificationFilterBias)    { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMinificationFilterBias:"), minificationFilterBias); }
+static inline NSArray          CAEmitterCell_EmitterCells(CAEmitterCell self)                                                 { return ((NSArray (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("emitterCells")); }
+static inline void             CAEmitterCell_SetEmitterCells(CAEmitterCell self, NSArray emitterCells)                        { ((void (*)(CAEmitterCell, SEL, NSArray))bean_msgSend)(self, bean_sel("setEmitterCells:"), emitterCells); }
+static inline NSDictionary     CAEmitterCell_Style(CAEmitterCell self)                                                        { return ((NSDictionary (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("style")); }
+static inline void             CAEmitterCell_SetStyle(CAEmitterCell self, NSDictionary style)                                 { ((void (*)(CAEmitterCell, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setStyle:"), style); }
+static inline BOOL             CAEmitterCell_SupportsSecureCoding(void)                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAEmitterCell"), bean_sel("supportsSecureCoding")); }
+static inline CGFloat          CAEmitterCell_BeginTime(CAEmitterCell self)                                                    { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("beginTime")); }
+static inline void             CAEmitterCell_SetBeginTime(CAEmitterCell self, CGFloat beginTime)                              { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBeginTime:"), beginTime); }
+static inline CGFloat          CAEmitterCell_Duration(CAEmitterCell self)                                                     { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("duration")); }
+static inline void             CAEmitterCell_SetDuration(CAEmitterCell self, CGFloat duration)                                { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDuration:"), duration); }
+static inline CGFloat          CAEmitterCell_Speed(CAEmitterCell self)                                                        { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("speed")); }
+static inline void             CAEmitterCell_SetSpeed(CAEmitterCell self, CGFloat speed)                                      { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
+static inline CGFloat          CAEmitterCell_TimeOffset(CAEmitterCell self)                                                   { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("timeOffset")); }
+static inline void             CAEmitterCell_SetTimeOffset(CAEmitterCell self, CGFloat timeOffset)                            { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTimeOffset:"), timeOffset); }
+static inline CGFloat          CAEmitterCell_RepeatCount(CAEmitterCell self)                                                  { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("repeatCount")); }
+static inline void             CAEmitterCell_SetRepeatCount(CAEmitterCell self, CGFloat repeatCount)                          { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRepeatCount:"), repeatCount); }
+static inline CGFloat          CAEmitterCell_RepeatDuration(CAEmitterCell self)                                               { return ((CGFloat (*)(CAEmitterCell, SEL))bean_msgSend_fpret)(self, bean_sel("repeatDuration")); }
+static inline void             CAEmitterCell_SetRepeatDuration(CAEmitterCell self, CGFloat repeatDuration)                    { ((void (*)(CAEmitterCell, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRepeatDuration:"), repeatDuration); }
+static inline BOOL             CAEmitterCell_Autoreverses(CAEmitterCell self)                                                 { return ((BOOL (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("autoreverses")); }
+static inline void             CAEmitterCell_SetAutoreverses(CAEmitterCell self, BOOL autoreverses)                           { ((void (*)(CAEmitterCell, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutoreverses:"), autoreverses); }
+static inline NSString         CAEmitterCell_FillMode(CAEmitterCell self)                                                     { return ((NSString (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("fillMode")); }
+static inline void             CAEmitterCell_SetFillMode(CAEmitterCell self, NSString fillMode)                               { ((void (*)(CAEmitterCell, SEL, NSString))bean_msgSend)(self, bean_sel("setFillMode:"), fillMode); }
+static inline BOOL             CAEmitterCell_Enabled(CAEmitterCell self)                                                      { return ((BOOL (*)(CAEmitterCell, SEL))bean_msgSend)(self, bean_sel("enabled")); }
 
 /* ===== CAEmitterLayer ===== */
 #ifndef BEAN_TYPEDEF_CAEmitterLayer
@@ -1401,15 +1605,38 @@ static inline void              CAKeyframeAnimation_SetBiasValues(CAKeyframeAnim
 static inline NSString          CAKeyframeAnimation_RotationMode(CAKeyframeAnimation self)                                     { return ((NSString (*)(CAKeyframeAnimation, SEL))bean_msgSend)(self, bean_sel("rotationMode")); }
 static inline void              CAKeyframeAnimation_SetRotationMode(CAKeyframeAnimation self, NSString rotationMode)           { ((void (*)(CAKeyframeAnimation, SEL, NSString))bean_msgSend)(self, bean_sel("setRotationMode:"), rotationMode); }
 
+/* ===== CAMediaTiming ===== */
+#ifndef BEAN_TYPEDEF_CAMediaTiming
+#define BEAN_TYPEDEF_CAMediaTiming
+typedef bean_id CAMediaTiming;
+#endif
+static inline CGFloat     CAMediaTiming_BeginTime(CAMediaTiming self)                                    { return ((CGFloat (*)(CAMediaTiming, SEL))bean_msgSend_fpret)(self, bean_sel("beginTime")); }
+static inline void        CAMediaTiming_SetBeginTime(CAMediaTiming self, CGFloat beginTime)              { ((void (*)(CAMediaTiming, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBeginTime:"), beginTime); }
+static inline CGFloat     CAMediaTiming_Duration(CAMediaTiming self)                                     { return ((CGFloat (*)(CAMediaTiming, SEL))bean_msgSend_fpret)(self, bean_sel("duration")); }
+static inline void        CAMediaTiming_SetDuration(CAMediaTiming self, CGFloat duration)                { ((void (*)(CAMediaTiming, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDuration:"), duration); }
+static inline CGFloat     CAMediaTiming_Speed(CAMediaTiming self)                                        { return ((CGFloat (*)(CAMediaTiming, SEL))bean_msgSend_fpret)(self, bean_sel("speed")); }
+static inline void        CAMediaTiming_SetSpeed(CAMediaTiming self, CGFloat speed)                      { ((void (*)(CAMediaTiming, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
+static inline CGFloat     CAMediaTiming_TimeOffset(CAMediaTiming self)                                   { return ((CGFloat (*)(CAMediaTiming, SEL))bean_msgSend_fpret)(self, bean_sel("timeOffset")); }
+static inline void        CAMediaTiming_SetTimeOffset(CAMediaTiming self, CGFloat timeOffset)            { ((void (*)(CAMediaTiming, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTimeOffset:"), timeOffset); }
+static inline CGFloat     CAMediaTiming_RepeatCount(CAMediaTiming self)                                  { return ((CGFloat (*)(CAMediaTiming, SEL))bean_msgSend_fpret)(self, bean_sel("repeatCount")); }
+static inline void        CAMediaTiming_SetRepeatCount(CAMediaTiming self, CGFloat repeatCount)          { ((void (*)(CAMediaTiming, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRepeatCount:"), repeatCount); }
+static inline CGFloat     CAMediaTiming_RepeatDuration(CAMediaTiming self)                               { return ((CGFloat (*)(CAMediaTiming, SEL))bean_msgSend_fpret)(self, bean_sel("repeatDuration")); }
+static inline void        CAMediaTiming_SetRepeatDuration(CAMediaTiming self, CGFloat repeatDuration)    { ((void (*)(CAMediaTiming, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRepeatDuration:"), repeatDuration); }
+static inline BOOL        CAMediaTiming_Autoreverses(CAMediaTiming self)                                 { return ((BOOL (*)(CAMediaTiming, SEL))bean_msgSend)(self, bean_sel("autoreverses")); }
+static inline void        CAMediaTiming_SetAutoreverses(CAMediaTiming self, BOOL autoreverses)           { ((void (*)(CAMediaTiming, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutoreverses:"), autoreverses); }
+static inline NSString    CAMediaTiming_FillMode(CAMediaTiming self)                                     { return ((NSString (*)(CAMediaTiming, SEL))bean_msgSend)(self, bean_sel("fillMode")); }
+static inline void        CAMediaTiming_SetFillMode(CAMediaTiming self, NSString fillMode)               { ((void (*)(CAMediaTiming, SEL, NSString))bean_msgSend)(self, bean_sel("setFillMode:"), fillMode); }
+
 /* ===== CAMediaTimingFunction ===== */
 #ifndef BEAN_TYPEDEF_CAMediaTimingFunction
 #define BEAN_TYPEDEF_CAMediaTimingFunction
 typedef bean_id CAMediaTimingFunction;
 #endif
-static inline id      CAMediaTimingFunction_FunctionWithName(NSString name)                                                                          { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAMediaTimingFunction"), bean_sel("functionWithName:"), name); }
-static inline id      CAMediaTimingFunction_FunctionWithControlPoints(CGFloat c1x, CGFloat c1y, CGFloat c2x, CGFloat c2y)                            { return ((id (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CAMediaTimingFunction"), bean_sel("functionWithControlPoints::::"), c1x, c1y, c2x, c2y); }
-static inline id      CAMediaTimingFunction_InitWithControlPoints(CAMediaTimingFunction self, CGFloat c1x, CGFloat c1y, CGFloat c2x, CGFloat c2y)    { return ((id (*)(CAMediaTimingFunction, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithControlPoints::::"), c1x, c1y, c2x, c2y); }
-static inline void    CAMediaTimingFunction_GetControlPointAtIndex_Values(CAMediaTimingFunction self, NSUInteger idx, float* ptr)                    { ((void (*)(CAMediaTimingFunction, SEL, NSUInteger, float*))bean_msgSend)(self, bean_sel("getControlPointAtIndex:values:"), idx, ptr); }
+static inline CAMediaTimingFunction    CAMediaTimingFunction_FunctionWithName(NSString name)                                                                          { return ((CAMediaTimingFunction (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAMediaTimingFunction"), bean_sel("functionWithName:"), name); }
+static inline CAMediaTimingFunction    CAMediaTimingFunction_FunctionWithControlPoints(CGFloat c1x, CGFloat c1y, CGFloat c2x, CGFloat c2y)                            { return ((CAMediaTimingFunction (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CAMediaTimingFunction"), bean_sel("functionWithControlPoints::::"), c1x, c1y, c2x, c2y); }
+static inline CAMediaTimingFunction    CAMediaTimingFunction_InitWithControlPoints(CAMediaTimingFunction self, CGFloat c1x, CGFloat c1y, CGFloat c2x, CGFloat c2y)    { return ((CAMediaTimingFunction (*)(CAMediaTimingFunction, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithControlPoints::::"), c1x, c1y, c2x, c2y); }
+static inline void                     CAMediaTimingFunction_GetControlPointAtIndex_Values(CAMediaTimingFunction self, NSUInteger idx, float* ptr)                    { ((void (*)(CAMediaTimingFunction, SEL, NSUInteger, float*))bean_msgSend)(self, bean_sel("getControlPointAtIndex:values:"), idx, ptr); }
+static inline BOOL                     CAMediaTimingFunction_SupportsSecureCoding(void)                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAMediaTimingFunction"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CAMetalDisplayLinkUpdate ===== */
 #ifndef BEAN_TYPEDEF_CAMetalDisplayLinkUpdate
@@ -1516,20 +1743,20 @@ static inline void              CAShapeLayer_SetLineDashPattern(CAShapeLayer sel
 #define BEAN_TYPEDEF_CASpringAnimation
 typedef bean_id CASpringAnimation;
 #endif
-static inline id         CASpringAnimation_InitWithPerceptualDuration_Bounce(CASpringAnimation self, CGFloat perceptualDuration, CGFloat bounce)    { return ((id (*)(CASpringAnimation, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithPerceptualDuration:bounce:"), perceptualDuration, bounce); }
-static inline CGFloat    CASpringAnimation_Mass(CASpringAnimation self)                                                                             { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("mass")); }
-static inline void       CASpringAnimation_SetMass(CASpringAnimation self, CGFloat mass)                                                            { ((void (*)(CASpringAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMass:"), mass); }
-static inline CGFloat    CASpringAnimation_Stiffness(CASpringAnimation self)                                                                        { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("stiffness")); }
-static inline void       CASpringAnimation_SetStiffness(CASpringAnimation self, CGFloat stiffness)                                                  { ((void (*)(CASpringAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStiffness:"), stiffness); }
-static inline CGFloat    CASpringAnimation_Damping(CASpringAnimation self)                                                                          { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("damping")); }
-static inline void       CASpringAnimation_SetDamping(CASpringAnimation self, CGFloat damping)                                                      { ((void (*)(CASpringAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDamping:"), damping); }
-static inline CGFloat    CASpringAnimation_InitialVelocity(CASpringAnimation self)                                                                  { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("initialVelocity")); }
-static inline void       CASpringAnimation_SetInitialVelocity(CASpringAnimation self, CGFloat initialVelocity)                                      { ((void (*)(CASpringAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setInitialVelocity:"), initialVelocity); }
-static inline BOOL       CASpringAnimation_AllowsOverdamping(CASpringAnimation self)                                                                { return ((BOOL (*)(CASpringAnimation, SEL))bean_msgSend)(self, bean_sel("allowsOverdamping")); }
-static inline void       CASpringAnimation_SetAllowsOverdamping(CASpringAnimation self, BOOL allowsOverdamping)                                     { ((void (*)(CASpringAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsOverdamping:"), allowsOverdamping); }
-static inline CGFloat    CASpringAnimation_SettlingDuration(CASpringAnimation self)                                                                 { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("settlingDuration")); }
-static inline CGFloat    CASpringAnimation_PerceptualDuration(CASpringAnimation self)                                                               { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("perceptualDuration")); }
-static inline CGFloat    CASpringAnimation_Bounce(CASpringAnimation self)                                                                           { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("bounce")); }
+static inline CASpringAnimation    CASpringAnimation_InitWithPerceptualDuration_Bounce(CASpringAnimation self, CGFloat perceptualDuration, CGFloat bounce)    { return ((CASpringAnimation (*)(CASpringAnimation, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithPerceptualDuration:bounce:"), perceptualDuration, bounce); }
+static inline CGFloat              CASpringAnimation_Mass(CASpringAnimation self)                                                                             { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("mass")); }
+static inline void                 CASpringAnimation_SetMass(CASpringAnimation self, CGFloat mass)                                                            { ((void (*)(CASpringAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMass:"), mass); }
+static inline CGFloat              CASpringAnimation_Stiffness(CASpringAnimation self)                                                                        { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("stiffness")); }
+static inline void                 CASpringAnimation_SetStiffness(CASpringAnimation self, CGFloat stiffness)                                                  { ((void (*)(CASpringAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStiffness:"), stiffness); }
+static inline CGFloat              CASpringAnimation_Damping(CASpringAnimation self)                                                                          { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("damping")); }
+static inline void                 CASpringAnimation_SetDamping(CASpringAnimation self, CGFloat damping)                                                      { ((void (*)(CASpringAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDamping:"), damping); }
+static inline CASpringAnimation    CASpringAnimation_InitialVelocity(CASpringAnimation self)                                                                  { return ((CASpringAnimation (*)(CASpringAnimation, SEL))bean_msgSend)(self, bean_sel("initialVelocity")); }
+static inline void                 CASpringAnimation_SetInitialVelocity(CASpringAnimation self, CGFloat initialVelocity)                                      { ((void (*)(CASpringAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setInitialVelocity:"), initialVelocity); }
+static inline BOOL                 CASpringAnimation_AllowsOverdamping(CASpringAnimation self)                                                                { return ((BOOL (*)(CASpringAnimation, SEL))bean_msgSend)(self, bean_sel("allowsOverdamping")); }
+static inline void                 CASpringAnimation_SetAllowsOverdamping(CASpringAnimation self, BOOL allowsOverdamping)                                     { ((void (*)(CASpringAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsOverdamping:"), allowsOverdamping); }
+static inline CGFloat              CASpringAnimation_SettlingDuration(CASpringAnimation self)                                                                 { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("settlingDuration")); }
+static inline CGFloat              CASpringAnimation_PerceptualDuration(CASpringAnimation self)                                                               { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("perceptualDuration")); }
+static inline CGFloat              CASpringAnimation_Bounce(CASpringAnimation self)                                                                           { return ((CGFloat (*)(CASpringAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("bounce")); }
 
 /* ===== CATextLayer ===== */
 #ifndef BEAN_TYPEDEF_CATextLayer
@@ -1588,37 +1815,46 @@ static inline void        CATransition_SetFilter(CATransition self, id filter)  
 #define BEAN_TYPEDEF_CAValueFunction
 typedef bean_id CAValueFunction;
 #endif
-static inline id          CAValueFunction_FunctionWithName(NSString name)    { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAValueFunction"), bean_sel("functionWithName:"), name); }
-static inline NSString    CAValueFunction_Name(CAValueFunction self)         { return ((NSString (*)(CAValueFunction, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline CAValueFunction    CAValueFunction_FunctionWithName(NSString name)    { return ((CAValueFunction (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAValueFunction"), bean_sel("functionWithName:"), name); }
+static inline NSString           CAValueFunction_Name(CAValueFunction self)         { return ((NSString (*)(CAValueFunction, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline BOOL               CAValueFunction_SupportsSecureCoding(void)         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAValueFunction"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CIAztecCodeDescriptor ===== */
 #ifndef BEAN_TYPEDEF_CIAztecCodeDescriptor
 #define BEAN_TYPEDEF_CIAztecCodeDescriptor
 typedef bean_id CIAztecCodeDescriptor;
 #endif
-static inline id           CIAztecCodeDescriptor_InitWithPayload_IsCompact_LayerCount_DataCodewordCount(CIAztecCodeDescriptor self, NSData errorCorrectedPayload, BOOL isCompact, NSInteger layerCount, NSInteger dataCodewordCount)    { return ((id (*)(CIAztecCodeDescriptor, SEL, NSData, BOOL, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("initWithPayload:isCompact:layerCount:dataCodewordCount:"), errorCorrectedPayload, isCompact, layerCount, dataCodewordCount); }
-static inline id           CIAztecCodeDescriptor_DescriptorWithPayload_IsCompact_LayerCount_DataCodewordCount(NSData errorCorrectedPayload, BOOL isCompact, NSInteger layerCount, NSInteger dataCodewordCount)                          { return ((id (*)(bean_class, SEL, NSData, BOOL, NSInteger, NSInteger))bean_msgSend)(bean_cls("CIAztecCodeDescriptor"), bean_sel("descriptorWithPayload:isCompact:layerCount:dataCodewordCount:"), errorCorrectedPayload, isCompact, layerCount, dataCodewordCount); }
-static inline NSData       CIAztecCodeDescriptor_ErrorCorrectedPayload(CIAztecCodeDescriptor self)                                                                                                                                      { return ((NSData (*)(CIAztecCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("errorCorrectedPayload")); }
-static inline BOOL         CIAztecCodeDescriptor_IsCompact(CIAztecCodeDescriptor self)                                                                                                                                                  { return ((BOOL (*)(CIAztecCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("isCompact")); }
-static inline NSInteger    CIAztecCodeDescriptor_LayerCount(CIAztecCodeDescriptor self)                                                                                                                                                 { return ((NSInteger (*)(CIAztecCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("layerCount")); }
-static inline NSInteger    CIAztecCodeDescriptor_DataCodewordCount(CIAztecCodeDescriptor self)                                                                                                                                          { return ((NSInteger (*)(CIAztecCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("dataCodewordCount")); }
+static inline CIAztecCodeDescriptor    CIAztecCodeDescriptor_InitWithPayload_IsCompact_LayerCount_DataCodewordCount(CIAztecCodeDescriptor self, NSData errorCorrectedPayload, BOOL isCompact, NSInteger layerCount, NSInteger dataCodewordCount)    { return ((CIAztecCodeDescriptor (*)(CIAztecCodeDescriptor, SEL, NSData, BOOL, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("initWithPayload:isCompact:layerCount:dataCodewordCount:"), errorCorrectedPayload, isCompact, layerCount, dataCodewordCount); }
+static inline CIAztecCodeDescriptor    CIAztecCodeDescriptor_DescriptorWithPayload_IsCompact_LayerCount_DataCodewordCount(NSData errorCorrectedPayload, BOOL isCompact, NSInteger layerCount, NSInteger dataCodewordCount)                          { return ((CIAztecCodeDescriptor (*)(bean_class, SEL, NSData, BOOL, NSInteger, NSInteger))bean_msgSend)(bean_cls("CIAztecCodeDescriptor"), bean_sel("descriptorWithPayload:isCompact:layerCount:dataCodewordCount:"), errorCorrectedPayload, isCompact, layerCount, dataCodewordCount); }
+static inline NSData                   CIAztecCodeDescriptor_ErrorCorrectedPayload(CIAztecCodeDescriptor self)                                                                                                                                      { return ((NSData (*)(CIAztecCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("errorCorrectedPayload")); }
+static inline BOOL                     CIAztecCodeDescriptor_IsCompact(CIAztecCodeDescriptor self)                                                                                                                                                  { return ((BOOL (*)(CIAztecCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("isCompact")); }
+static inline NSInteger                CIAztecCodeDescriptor_LayerCount(CIAztecCodeDescriptor self)                                                                                                                                                 { return ((NSInteger (*)(CIAztecCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("layerCount")); }
+static inline NSInteger                CIAztecCodeDescriptor_DataCodewordCount(CIAztecCodeDescriptor self)                                                                                                                                          { return ((NSInteger (*)(CIAztecCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("dataCodewordCount")); }
+
+/* ===== CIBarcodeDescriptor ===== */
+#ifndef BEAN_TYPEDEF_CIBarcodeDescriptor
+#define BEAN_TYPEDEF_CIBarcodeDescriptor
+typedef bean_id CIBarcodeDescriptor;
+#endif
+static inline BOOL    CIBarcodeDescriptor_SupportsSecureCoding(void)                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIBarcodeDescriptor"), bean_sel("supportsSecureCoding")); }
+static inline id      CIBarcodeDescriptor_CopyWithZone(CIBarcodeDescriptor self, NSZone* zone)    { return ((id (*)(CIBarcodeDescriptor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CIColor ===== */
 #ifndef BEAN_TYPEDEF_CIColor
 #define BEAN_TYPEDEF_CIColor
 typedef bean_id CIColor;
 #endif
-static inline id                 CIColor_ColorWithCGColor(CGColorRef color)                                                                                                            { return ((id (*)(bean_class, SEL, CGColorRef))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithCGColor:"), color); }
-static inline id                 CIColor_ColorWithRed_Green_Blue_Alpha(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha)                                                        { return ((id (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithRed:green:blue:alpha:"), red, green, blue, alpha); }
-static inline id                 CIColor_ColorWithRed_Green_Blue(CGFloat red, CGFloat green, CGFloat blue)                                                                             { return ((id (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithRed:green:blue:"), red, green, blue); }
-static inline id                 CIColor_ColorWithRed_Green_Blue_Alpha_ColorSpace(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha, CGColorSpaceRef colorSpace)                 { return ((id (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGFloat, CGColorSpaceRef))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithRed:green:blue:alpha:colorSpace:"), red, green, blue, alpha, colorSpace); }
-static inline id                 CIColor_ColorWithRed_Green_Blue_ColorSpace(CGFloat red, CGFloat green, CGFloat blue, CGColorSpaceRef colorSpace)                                      { return ((id (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGColorSpaceRef))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithRed:green:blue:colorSpace:"), red, green, blue, colorSpace); }
-static inline id                 CIColor_ColorWithString(NSString representation)                                                                                                      { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithString:"), representation); }
-static inline id                 CIColor_InitWithCGColor(CIColor self, CGColorRef color)                                                                                               { return ((id (*)(CIColor, SEL, CGColorRef))bean_msgSend)(self, bean_sel("initWithCGColor:"), color); }
-static inline id                 CIColor_InitWithRed_Green_Blue_Alpha(CIColor self, CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha)                                           { return ((id (*)(CIColor, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithRed:green:blue:alpha:"), red, green, blue, alpha); }
-static inline id                 CIColor_InitWithRed_Green_Blue(CIColor self, CGFloat red, CGFloat green, CGFloat blue)                                                                { return ((id (*)(CIColor, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithRed:green:blue:"), red, green, blue); }
-static inline id                 CIColor_InitWithRed_Green_Blue_Alpha_ColorSpace(CIColor self, CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha, CGColorSpaceRef colorSpace)    { return ((id (*)(CIColor, SEL, CGFloat, CGFloat, CGFloat, CGFloat, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithRed:green:blue:alpha:colorSpace:"), red, green, blue, alpha, colorSpace); }
-static inline id                 CIColor_InitWithRed_Green_Blue_ColorSpace(CIColor self, CGFloat red, CGFloat green, CGFloat blue, CGColorSpaceRef colorSpace)                         { return ((id (*)(CIColor, SEL, CGFloat, CGFloat, CGFloat, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithRed:green:blue:colorSpace:"), red, green, blue, colorSpace); }
+static inline CIColor            CIColor_ColorWithCGColor(CGColorRef color)                                                                                                            { return ((CIColor (*)(bean_class, SEL, CGColorRef))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithCGColor:"), color); }
+static inline CIColor            CIColor_ColorWithRed_Green_Blue_Alpha(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha)                                                        { return ((CIColor (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithRed:green:blue:alpha:"), red, green, blue, alpha); }
+static inline CIColor            CIColor_ColorWithRed_Green_Blue(CGFloat red, CGFloat green, CGFloat blue)                                                                             { return ((CIColor (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithRed:green:blue:"), red, green, blue); }
+static inline CIColor            CIColor_ColorWithRed_Green_Blue_Alpha_ColorSpace(CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha, CGColorSpaceRef colorSpace)                 { return ((CIColor (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGFloat, CGColorSpaceRef))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithRed:green:blue:alpha:colorSpace:"), red, green, blue, alpha, colorSpace); }
+static inline CIColor            CIColor_ColorWithRed_Green_Blue_ColorSpace(CGFloat red, CGFloat green, CGFloat blue, CGColorSpaceRef colorSpace)                                      { return ((CIColor (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGColorSpaceRef))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithRed:green:blue:colorSpace:"), red, green, blue, colorSpace); }
+static inline CIColor            CIColor_ColorWithString(NSString representation)                                                                                                      { return ((CIColor (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIColor"), bean_sel("colorWithString:"), representation); }
+static inline CIColor            CIColor_InitWithCGColor(CIColor self, CGColorRef color)                                                                                               { return ((CIColor (*)(CIColor, SEL, CGColorRef))bean_msgSend)(self, bean_sel("initWithCGColor:"), color); }
+static inline CIColor            CIColor_InitWithRed_Green_Blue_Alpha(CIColor self, CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha)                                           { return ((CIColor (*)(CIColor, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithRed:green:blue:alpha:"), red, green, blue, alpha); }
+static inline CIColor            CIColor_InitWithRed_Green_Blue(CIColor self, CGFloat red, CGFloat green, CGFloat blue)                                                                { return ((CIColor (*)(CIColor, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithRed:green:blue:"), red, green, blue); }
+static inline CIColor            CIColor_InitWithRed_Green_Blue_Alpha_ColorSpace(CIColor self, CGFloat red, CGFloat green, CGFloat blue, CGFloat alpha, CGColorSpaceRef colorSpace)    { return ((CIColor (*)(CIColor, SEL, CGFloat, CGFloat, CGFloat, CGFloat, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithRed:green:blue:alpha:colorSpace:"), red, green, blue, alpha, colorSpace); }
+static inline CIColor            CIColor_InitWithRed_Green_Blue_ColorSpace(CIColor self, CGFloat red, CGFloat green, CGFloat blue, CGColorSpaceRef colorSpace)                         { return ((CIColor (*)(CIColor, SEL, CGFloat, CGFloat, CGFloat, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithRed:green:blue:colorSpace:"), red, green, blue, colorSpace); }
 static inline NSUInteger         CIColor_NumberOfComponents(CIColor self)                                                                                                              { return ((NSUInteger (*)(CIColor, SEL))bean_msgSend)(self, bean_sel("numberOfComponents")); }
 static inline CGFloat            CIColor_Components(CIColor self)                                                                                                                      { return ((CGFloat (*)(CIColor, SEL))bean_msgSend)(self, bean_sel("components")); }
 static inline CGFloat            CIColor_Alpha(CIColor self)                                                                                                                           { return ((CGFloat (*)(CIColor, SEL))bean_msgSend_fpret)(self, bean_sel("alpha")); }
@@ -1637,14 +1873,16 @@ static inline CIColor            CIColor_CyanColor(void)                        
 static inline CIColor            CIColor_MagentaColor(void)                                                                                                                            { return ((CIColor (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIColor"), bean_sel("magentaColor")); }
 static inline CIColor            CIColor_YellowColor(void)                                                                                                                             { return ((CIColor (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIColor"), bean_sel("yellowColor")); }
 static inline CIColor            CIColor_ClearColor(void)                                                                                                                              { return ((CIColor (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIColor"), bean_sel("clearColor")); }
+static inline BOOL               CIColor_SupportsSecureCoding(void)                                                                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIColor"), bean_sel("supportsSecureCoding")); }
+static inline id                 CIColor_CopyWithZone(CIColor self, NSZone* zone)                                                                                                      { return ((id (*)(CIColor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CIDataMatrixCodeDescriptor ===== */
 #ifndef BEAN_TYPEDEF_CIDataMatrixCodeDescriptor
 #define BEAN_TYPEDEF_CIDataMatrixCodeDescriptor
 typedef bean_id CIDataMatrixCodeDescriptor;
 #endif
-static inline id                            CIDataMatrixCodeDescriptor_InitWithPayload_RowCount_ColumnCount_EccVersion(CIDataMatrixCodeDescriptor self, NSData errorCorrectedPayload, NSInteger rowCount, NSInteger columnCount, CIDataMatrixCodeECCVersion eccVersion)    { return ((id (*)(CIDataMatrixCodeDescriptor, SEL, NSData, NSInteger, NSInteger, CIDataMatrixCodeECCVersion))bean_msgSend)(self, bean_sel("initWithPayload:rowCount:columnCount:eccVersion:"), errorCorrectedPayload, rowCount, columnCount, eccVersion); }
-static inline id                            CIDataMatrixCodeDescriptor_DescriptorWithPayload_RowCount_ColumnCount_EccVersion(NSData errorCorrectedPayload, NSInteger rowCount, NSInteger columnCount, CIDataMatrixCodeECCVersion eccVersion)                               { return ((id (*)(bean_class, SEL, NSData, NSInteger, NSInteger, CIDataMatrixCodeECCVersion))bean_msgSend)(bean_cls("CIDataMatrixCodeDescriptor"), bean_sel("descriptorWithPayload:rowCount:columnCount:eccVersion:"), errorCorrectedPayload, rowCount, columnCount, eccVersion); }
+static inline CIDataMatrixCodeDescriptor    CIDataMatrixCodeDescriptor_InitWithPayload_RowCount_ColumnCount_EccVersion(CIDataMatrixCodeDescriptor self, NSData errorCorrectedPayload, NSInteger rowCount, NSInteger columnCount, CIDataMatrixCodeECCVersion eccVersion)    { return ((CIDataMatrixCodeDescriptor (*)(CIDataMatrixCodeDescriptor, SEL, NSData, NSInteger, NSInteger, CIDataMatrixCodeECCVersion))bean_msgSend)(self, bean_sel("initWithPayload:rowCount:columnCount:eccVersion:"), errorCorrectedPayload, rowCount, columnCount, eccVersion); }
+static inline CIDataMatrixCodeDescriptor    CIDataMatrixCodeDescriptor_DescriptorWithPayload_RowCount_ColumnCount_EccVersion(NSData errorCorrectedPayload, NSInteger rowCount, NSInteger columnCount, CIDataMatrixCodeECCVersion eccVersion)                               { return ((CIDataMatrixCodeDescriptor (*)(bean_class, SEL, NSData, NSInteger, NSInteger, CIDataMatrixCodeECCVersion))bean_msgSend)(bean_cls("CIDataMatrixCodeDescriptor"), bean_sel("descriptorWithPayload:rowCount:columnCount:eccVersion:"), errorCorrectedPayload, rowCount, columnCount, eccVersion); }
 static inline NSData                        CIDataMatrixCodeDescriptor_ErrorCorrectedPayload(CIDataMatrixCodeDescriptor self)                                                                                                                                              { return ((NSData (*)(CIDataMatrixCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("errorCorrectedPayload")); }
 static inline NSInteger                     CIDataMatrixCodeDescriptor_RowCount(CIDataMatrixCodeDescriptor self)                                                                                                                                                           { return ((NSInteger (*)(CIDataMatrixCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("rowCount")); }
 static inline NSInteger                     CIDataMatrixCodeDescriptor_ColumnCount(CIDataMatrixCodeDescriptor self)                                                                                                                                                        { return ((NSInteger (*)(CIDataMatrixCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("columnCount")); }
@@ -1685,8 +1923,8 @@ static inline CGRect      CIFeature_Bounds(CIFeature self)    { return ((CGRect 
 #define BEAN_TYPEDEF_CIFilterShape
 typedef bean_id CIFilterShape;
 #endif
-static inline id               CIFilterShape_ShapeWithRect(CGRect r)                                                     { return ((id (*)(bean_class, SEL, CGRect))bean_msgSend)(bean_cls("CIFilterShape"), bean_sel("shapeWithRect:"), r); }
-static inline id               CIFilterShape_InitWithRect(CIFilterShape self, CGRect r)                                  { return ((id (*)(CIFilterShape, SEL, CGRect))bean_msgSend)(self, bean_sel("initWithRect:"), r); }
+static inline CIFilterShape    CIFilterShape_ShapeWithRect(CGRect r)                                                     { return ((CIFilterShape (*)(bean_class, SEL, CGRect))bean_msgSend)(bean_cls("CIFilterShape"), bean_sel("shapeWithRect:"), r); }
+static inline CIFilterShape    CIFilterShape_InitWithRect(CIFilterShape self, CGRect r)                                  { return ((CIFilterShape (*)(CIFilterShape, SEL, CGRect))bean_msgSend)(self, bean_sel("initWithRect:"), r); }
 static inline CIFilterShape    CIFilterShape_TransformBy_Interior(CIFilterShape self, CGAffineTransform m, BOOL flag)    { return ((CIFilterShape (*)(CIFilterShape, SEL, CGAffineTransform, BOOL))bean_msgSend)(self, bean_sel("transformBy:interior:"), m, flag); }
 static inline CIFilterShape    CIFilterShape_InsetByX_Y(CIFilterShape self, int dx, int dy)                              { return ((CIFilterShape (*)(CIFilterShape, SEL, int, int))bean_msgSend)(self, bean_sel("insetByX:Y:"), dx, dy); }
 static inline CIFilterShape    CIFilterShape_UnionWith(CIFilterShape self, CIFilterShape s2)                             { return ((CIFilterShape (*)(CIFilterShape, SEL, CIFilterShape))bean_msgSend)(self, bean_sel("unionWith:"), s2); }
@@ -1694,18 +1932,50 @@ static inline CIFilterShape    CIFilterShape_UnionWithRect(CIFilterShape self, C
 static inline CIFilterShape    CIFilterShape_IntersectWith(CIFilterShape self, CIFilterShape s2)                         { return ((CIFilterShape (*)(CIFilterShape, SEL, CIFilterShape))bean_msgSend)(self, bean_sel("intersectWith:"), s2); }
 static inline CIFilterShape    CIFilterShape_IntersectWithRect(CIFilterShape self, CGRect r)                             { return ((CIFilterShape (*)(CIFilterShape, SEL, CGRect))bean_msgSend)(self, bean_sel("intersectWithRect:"), r); }
 static inline CGRect           CIFilterShape_Extent(CIFilterShape self)                                                  { return ((CGRect (*)(CIFilterShape, SEL))bean_msgSend_stret)(self, bean_sel("extent")); }
+static inline id               CIFilterShape_CopyWithZone(CIFilterShape self, NSZone* zone)                              { return ((id (*)(CIFilterShape, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+
+/* ===== CIImageProcessorInput ===== */
+#ifndef BEAN_TYPEDEF_CIImageProcessorInput
+#define BEAN_TYPEDEF_CIImageProcessorInput
+typedef bean_id CIImageProcessorInput;
+#endif
+static inline CGRect                CIImageProcessorInput_Region(CIImageProcessorInput self)          { return ((CGRect (*)(CIImageProcessorInput, SEL))bean_msgSend_stret)(self, bean_sel("region")); }
+static inline NSUInteger            CIImageProcessorInput_BytesPerRow(CIImageProcessorInput self)     { return ((NSUInteger (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("bytesPerRow")); }
+static inline int                   CIImageProcessorInput_Format(CIImageProcessorInput self)          { return ((int (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("format")); }
+static inline void*                 CIImageProcessorInput_BaseAddress(CIImageProcessorInput self)     { return ((void* (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("baseAddress")); }
+static inline IOSurfaceRef          CIImageProcessorInput_Surface(CIImageProcessorInput self)         { return ((IOSurfaceRef (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("surface")); }
+static inline CVBufferRef           CIImageProcessorInput_PixelBuffer(CIImageProcessorInput self)     { return ((CVBufferRef (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("pixelBuffer")); }
+static inline id                    CIImageProcessorInput_MetalTexture(CIImageProcessorInput self)    { return ((id (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("metalTexture")); }
+static inline unsigned long long    CIImageProcessorInput_Digest(CIImageProcessorInput self)          { return ((unsigned long long (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("digest")); }
+static inline NSUInteger            CIImageProcessorInput_RoiTileIndex(CIImageProcessorInput self)    { return ((NSUInteger (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("roiTileIndex")); }
+static inline NSUInteger            CIImageProcessorInput_RoiTileCount(CIImageProcessorInput self)    { return ((NSUInteger (*)(CIImageProcessorInput, SEL))bean_msgSend)(self, bean_sel("roiTileCount")); }
+
+/* ===== CIImageProcessorOutput ===== */
+#ifndef BEAN_TYPEDEF_CIImageProcessorOutput
+#define BEAN_TYPEDEF_CIImageProcessorOutput
+typedef bean_id CIImageProcessorOutput;
+#endif
+static inline CGRect                CIImageProcessorOutput_Region(CIImageProcessorOutput self)                { return ((CGRect (*)(CIImageProcessorOutput, SEL))bean_msgSend_stret)(self, bean_sel("region")); }
+static inline NSUInteger            CIImageProcessorOutput_BytesPerRow(CIImageProcessorOutput self)           { return ((NSUInteger (*)(CIImageProcessorOutput, SEL))bean_msgSend)(self, bean_sel("bytesPerRow")); }
+static inline int                   CIImageProcessorOutput_Format(CIImageProcessorOutput self)                { return ((int (*)(CIImageProcessorOutput, SEL))bean_msgSend)(self, bean_sel("format")); }
+static inline void*                 CIImageProcessorOutput_BaseAddress(CIImageProcessorOutput self)           { return ((void* (*)(CIImageProcessorOutput, SEL))bean_msgSend)(self, bean_sel("baseAddress")); }
+static inline IOSurfaceRef          CIImageProcessorOutput_Surface(CIImageProcessorOutput self)               { return ((IOSurfaceRef (*)(CIImageProcessorOutput, SEL))bean_msgSend)(self, bean_sel("surface")); }
+static inline CVBufferRef           CIImageProcessorOutput_PixelBuffer(CIImageProcessorOutput self)           { return ((CVBufferRef (*)(CIImageProcessorOutput, SEL))bean_msgSend)(self, bean_sel("pixelBuffer")); }
+static inline id                    CIImageProcessorOutput_MetalTexture(CIImageProcessorOutput self)          { return ((id (*)(CIImageProcessorOutput, SEL))bean_msgSend)(self, bean_sel("metalTexture")); }
+static inline id                    CIImageProcessorOutput_MetalCommandBuffer(CIImageProcessorOutput self)    { return ((id (*)(CIImageProcessorOutput, SEL))bean_msgSend)(self, bean_sel("metalCommandBuffer")); }
+static inline unsigned long long    CIImageProcessorOutput_Digest(CIImageProcessorOutput self)                { return ((unsigned long long (*)(CIImageProcessorOutput, SEL))bean_msgSend)(self, bean_sel("digest")); }
 
 /* ===== CIPDF417CodeDescriptor ===== */
 #ifndef BEAN_TYPEDEF_CIPDF417CodeDescriptor
 #define BEAN_TYPEDEF_CIPDF417CodeDescriptor
 typedef bean_id CIPDF417CodeDescriptor;
 #endif
-static inline id           CIPDF417CodeDescriptor_InitWithPayload_IsCompact_RowCount_ColumnCount(CIPDF417CodeDescriptor self, NSData errorCorrectedPayload, BOOL isCompact, NSInteger rowCount, NSInteger columnCount)    { return ((id (*)(CIPDF417CodeDescriptor, SEL, NSData, BOOL, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("initWithPayload:isCompact:rowCount:columnCount:"), errorCorrectedPayload, isCompact, rowCount, columnCount); }
-static inline id           CIPDF417CodeDescriptor_DescriptorWithPayload_IsCompact_RowCount_ColumnCount(NSData errorCorrectedPayload, BOOL isCompact, NSInteger rowCount, NSInteger columnCount)                           { return ((id (*)(bean_class, SEL, NSData, BOOL, NSInteger, NSInteger))bean_msgSend)(bean_cls("CIPDF417CodeDescriptor"), bean_sel("descriptorWithPayload:isCompact:rowCount:columnCount:"), errorCorrectedPayload, isCompact, rowCount, columnCount); }
-static inline NSData       CIPDF417CodeDescriptor_ErrorCorrectedPayload(CIPDF417CodeDescriptor self)                                                                                                                      { return ((NSData (*)(CIPDF417CodeDescriptor, SEL))bean_msgSend)(self, bean_sel("errorCorrectedPayload")); }
-static inline BOOL         CIPDF417CodeDescriptor_IsCompact(CIPDF417CodeDescriptor self)                                                                                                                                  { return ((BOOL (*)(CIPDF417CodeDescriptor, SEL))bean_msgSend)(self, bean_sel("isCompact")); }
-static inline NSInteger    CIPDF417CodeDescriptor_RowCount(CIPDF417CodeDescriptor self)                                                                                                                                   { return ((NSInteger (*)(CIPDF417CodeDescriptor, SEL))bean_msgSend)(self, bean_sel("rowCount")); }
-static inline NSInteger    CIPDF417CodeDescriptor_ColumnCount(CIPDF417CodeDescriptor self)                                                                                                                                { return ((NSInteger (*)(CIPDF417CodeDescriptor, SEL))bean_msgSend)(self, bean_sel("columnCount")); }
+static inline CIPDF417CodeDescriptor    CIPDF417CodeDescriptor_InitWithPayload_IsCompact_RowCount_ColumnCount(CIPDF417CodeDescriptor self, NSData errorCorrectedPayload, BOOL isCompact, NSInteger rowCount, NSInteger columnCount)    { return ((CIPDF417CodeDescriptor (*)(CIPDF417CodeDescriptor, SEL, NSData, BOOL, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("initWithPayload:isCompact:rowCount:columnCount:"), errorCorrectedPayload, isCompact, rowCount, columnCount); }
+static inline CIPDF417CodeDescriptor    CIPDF417CodeDescriptor_DescriptorWithPayload_IsCompact_RowCount_ColumnCount(NSData errorCorrectedPayload, BOOL isCompact, NSInteger rowCount, NSInteger columnCount)                           { return ((CIPDF417CodeDescriptor (*)(bean_class, SEL, NSData, BOOL, NSInteger, NSInteger))bean_msgSend)(bean_cls("CIPDF417CodeDescriptor"), bean_sel("descriptorWithPayload:isCompact:rowCount:columnCount:"), errorCorrectedPayload, isCompact, rowCount, columnCount); }
+static inline NSData                    CIPDF417CodeDescriptor_ErrorCorrectedPayload(CIPDF417CodeDescriptor self)                                                                                                                      { return ((NSData (*)(CIPDF417CodeDescriptor, SEL))bean_msgSend)(self, bean_sel("errorCorrectedPayload")); }
+static inline BOOL                      CIPDF417CodeDescriptor_IsCompact(CIPDF417CodeDescriptor self)                                                                                                                                  { return ((BOOL (*)(CIPDF417CodeDescriptor, SEL))bean_msgSend)(self, bean_sel("isCompact")); }
+static inline NSInteger                 CIPDF417CodeDescriptor_RowCount(CIPDF417CodeDescriptor self)                                                                                                                                   { return ((NSInteger (*)(CIPDF417CodeDescriptor, SEL))bean_msgSend)(self, bean_sel("rowCount")); }
+static inline NSInteger                 CIPDF417CodeDescriptor_ColumnCount(CIPDF417CodeDescriptor self)                                                                                                                                { return ((NSInteger (*)(CIPDF417CodeDescriptor, SEL))bean_msgSend)(self, bean_sel("columnCount")); }
 
 /* ===== CIPlugIn ===== */
 #ifndef BEAN_TYPEDEF_CIPlugIn
@@ -1718,13 +1988,20 @@ static inline void    CIPlugIn_LoadPlugIn_AllowNonExecutable(NSURL url, BOOL all
 static inline void    CIPlugIn_LoadPlugIn_AllowExecutableCode(NSURL url, BOOL allowExecutableCode)    { ((void (*)(bean_class, SEL, NSURL, BOOL))bean_msgSend)(bean_cls("CIPlugIn"), bean_sel("loadPlugIn:allowExecutableCode:"), url, allowExecutableCode); }
 static inline void    CIPlugIn_LoadNonExecutablePlugIn(NSURL url)                                     { ((void (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("CIPlugIn"), bean_sel("loadNonExecutablePlugIn:"), url); }
 
+/* ===== CIPlugInRegistration ===== */
+#ifndef BEAN_TYPEDEF_CIPlugInRegistration
+#define BEAN_TYPEDEF_CIPlugInRegistration
+typedef bean_id CIPlugInRegistration;
+#endif
+static inline BOOL    CIPlugInRegistration_Load(CIPlugInRegistration self, void* host)    { return ((BOOL (*)(CIPlugInRegistration, SEL, void*))bean_msgSend)(self, bean_sel("load:"), host); }
+
 /* ===== CIQRCodeDescriptor ===== */
 #ifndef BEAN_TYPEDEF_CIQRCodeDescriptor
 #define BEAN_TYPEDEF_CIQRCodeDescriptor
 typedef bean_id CIQRCodeDescriptor;
 #endif
-static inline id                              CIQRCodeDescriptor_InitWithPayload_SymbolVersion_MaskPattern_ErrorCorrectionLevel(CIQRCodeDescriptor self, NSData errorCorrectedPayload, NSInteger symbolVersion, unsigned char maskPattern, CIQRCodeErrorCorrectionLevel errorCorrectionLevel)    { return ((id (*)(CIQRCodeDescriptor, SEL, NSData, NSInteger, unsigned char, CIQRCodeErrorCorrectionLevel))bean_msgSend)(self, bean_sel("initWithPayload:symbolVersion:maskPattern:errorCorrectionLevel:"), errorCorrectedPayload, symbolVersion, maskPattern, errorCorrectionLevel); }
-static inline id                              CIQRCodeDescriptor_DescriptorWithPayload_SymbolVersion_MaskPattern_ErrorCorrectionLevel(NSData errorCorrectedPayload, NSInteger symbolVersion, unsigned char maskPattern, CIQRCodeErrorCorrectionLevel errorCorrectionLevel)                       { return ((id (*)(bean_class, SEL, NSData, NSInteger, unsigned char, CIQRCodeErrorCorrectionLevel))bean_msgSend)(bean_cls("CIQRCodeDescriptor"), bean_sel("descriptorWithPayload:symbolVersion:maskPattern:errorCorrectionLevel:"), errorCorrectedPayload, symbolVersion, maskPattern, errorCorrectionLevel); }
+static inline CIQRCodeDescriptor              CIQRCodeDescriptor_InitWithPayload_SymbolVersion_MaskPattern_ErrorCorrectionLevel(CIQRCodeDescriptor self, NSData errorCorrectedPayload, NSInteger symbolVersion, unsigned char maskPattern, CIQRCodeErrorCorrectionLevel errorCorrectionLevel)    { return ((CIQRCodeDescriptor (*)(CIQRCodeDescriptor, SEL, NSData, NSInteger, unsigned char, CIQRCodeErrorCorrectionLevel))bean_msgSend)(self, bean_sel("initWithPayload:symbolVersion:maskPattern:errorCorrectionLevel:"), errorCorrectedPayload, symbolVersion, maskPattern, errorCorrectionLevel); }
+static inline CIQRCodeDescriptor              CIQRCodeDescriptor_DescriptorWithPayload_SymbolVersion_MaskPattern_ErrorCorrectionLevel(NSData errorCorrectedPayload, NSInteger symbolVersion, unsigned char maskPattern, CIQRCodeErrorCorrectionLevel errorCorrectionLevel)                       { return ((CIQRCodeDescriptor (*)(bean_class, SEL, NSData, NSInteger, unsigned char, CIQRCodeErrorCorrectionLevel))bean_msgSend)(bean_cls("CIQRCodeDescriptor"), bean_sel("descriptorWithPayload:symbolVersion:maskPattern:errorCorrectionLevel:"), errorCorrectedPayload, symbolVersion, maskPattern, errorCorrectionLevel); }
 static inline NSData                          CIQRCodeDescriptor_ErrorCorrectedPayload(CIQRCodeDescriptor self)                                                                                                                                                                                  { return ((NSData (*)(CIQRCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("errorCorrectedPayload")); }
 static inline NSInteger                       CIQRCodeDescriptor_SymbolVersion(CIQRCodeDescriptor self)                                                                                                                                                                                          { return ((NSInteger (*)(CIQRCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("symbolVersion")); }
 static inline unsigned char                   CIQRCodeDescriptor_MaskPattern(CIQRCodeDescriptor self)                                                                                                                                                                                            { return ((unsigned char (*)(CIQRCodeDescriptor, SEL))bean_msgSend)(self, bean_sel("maskPattern")); }
@@ -1768,24 +2045,24 @@ static inline NSArray    CITextFeature_SubFeatures(CITextFeature self)    { retu
 #define BEAN_TYPEDEF_CIVector
 typedef bean_id CIVector;
 #endif
-static inline id                   CIVector_VectorWithValues_Count(const CGFloat values, NSUInteger count)                 { return ((id (*)(bean_class, SEL, const CGFloat, NSUInteger))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithValues:count:"), values, count); }
-static inline id                   CIVector_VectorWithX(CGFloat x)                                                         { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithX:"), x); }
-static inline id                   CIVector_VectorWithX_Y(CGFloat x, CGFloat y)                                            { return ((id (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithX:Y:"), x, y); }
-static inline id                   CIVector_VectorWithX_Y_Z(CGFloat x, CGFloat y, CGFloat z)                               { return ((id (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithX:Y:Z:"), x, y, z); }
-static inline id                   CIVector_VectorWithX_Y_Z_W(CGFloat x, CGFloat y, CGFloat z, CGFloat w)                  { return ((id (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithX:Y:Z:W:"), x, y, z, w); }
-static inline id                   CIVector_VectorWithCGPoint(CGPoint p)                                                   { return ((id (*)(bean_class, SEL, CGPoint))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithCGPoint:"), p); }
-static inline id                   CIVector_VectorWithCGRect(CGRect r)                                                     { return ((id (*)(bean_class, SEL, CGRect))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithCGRect:"), r); }
-static inline id                   CIVector_VectorWithCGAffineTransform(CGAffineTransform t)                               { return ((id (*)(bean_class, SEL, CGAffineTransform))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithCGAffineTransform:"), t); }
-static inline id                   CIVector_VectorWithString(NSString representation)                                      { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithString:"), representation); }
-static inline id                   CIVector_InitWithValues_Count(CIVector self, const CGFloat values, NSUInteger count)    { return ((id (*)(CIVector, SEL, const CGFloat, NSUInteger))bean_msgSend)(self, bean_sel("initWithValues:count:"), values, count); }
-static inline id                   CIVector_InitWithX(CIVector self, CGFloat x)                                            { return ((id (*)(CIVector, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithX:"), x); }
-static inline id                   CIVector_InitWithX_Y(CIVector self, CGFloat x, CGFloat y)                               { return ((id (*)(CIVector, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithX:Y:"), x, y); }
-static inline id                   CIVector_InitWithX_Y_Z(CIVector self, CGFloat x, CGFloat y, CGFloat z)                  { return ((id (*)(CIVector, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithX:Y:Z:"), x, y, z); }
-static inline id                   CIVector_InitWithX_Y_Z_W(CIVector self, CGFloat x, CGFloat y, CGFloat z, CGFloat w)     { return ((id (*)(CIVector, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithX:Y:Z:W:"), x, y, z, w); }
-static inline id                   CIVector_InitWithCGPoint(CIVector self, CGPoint p)                                      { return ((id (*)(CIVector, SEL, CGPoint))bean_msgSend)(self, bean_sel("initWithCGPoint:"), p); }
-static inline id                   CIVector_InitWithCGRect(CIVector self, CGRect r)                                        { return ((id (*)(CIVector, SEL, CGRect))bean_msgSend)(self, bean_sel("initWithCGRect:"), r); }
-static inline id                   CIVector_InitWithCGAffineTransform(CIVector self, CGAffineTransform t)                  { return ((id (*)(CIVector, SEL, CGAffineTransform))bean_msgSend)(self, bean_sel("initWithCGAffineTransform:"), t); }
-static inline id                   CIVector_InitWithString(CIVector self, NSString representation)                         { return ((id (*)(CIVector, SEL, NSString))bean_msgSend)(self, bean_sel("initWithString:"), representation); }
+static inline CIVector             CIVector_VectorWithValues_Count(const CGFloat values, NSUInteger count)                 { return ((CIVector (*)(bean_class, SEL, const CGFloat, NSUInteger))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithValues:count:"), values, count); }
+static inline CIVector             CIVector_VectorWithX(CGFloat x)                                                         { return ((CIVector (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithX:"), x); }
+static inline CIVector             CIVector_VectorWithX_Y(CGFloat x, CGFloat y)                                            { return ((CIVector (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithX:Y:"), x, y); }
+static inline CIVector             CIVector_VectorWithX_Y_Z(CGFloat x, CGFloat y, CGFloat z)                               { return ((CIVector (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithX:Y:Z:"), x, y, z); }
+static inline CIVector             CIVector_VectorWithX_Y_Z_W(CGFloat x, CGFloat y, CGFloat z, CGFloat w)                  { return ((CIVector (*)(bean_class, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithX:Y:Z:W:"), x, y, z, w); }
+static inline CIVector             CIVector_VectorWithCGPoint(CGPoint p)                                                   { return ((CIVector (*)(bean_class, SEL, CGPoint))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithCGPoint:"), p); }
+static inline CIVector             CIVector_VectorWithCGRect(CGRect r)                                                     { return ((CIVector (*)(bean_class, SEL, CGRect))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithCGRect:"), r); }
+static inline CIVector             CIVector_VectorWithCGAffineTransform(CGAffineTransform t)                               { return ((CIVector (*)(bean_class, SEL, CGAffineTransform))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithCGAffineTransform:"), t); }
+static inline CIVector             CIVector_VectorWithString(NSString representation)                                      { return ((CIVector (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIVector"), bean_sel("vectorWithString:"), representation); }
+static inline CIVector             CIVector_InitWithValues_Count(CIVector self, const CGFloat values, NSUInteger count)    { return ((CIVector (*)(CIVector, SEL, const CGFloat, NSUInteger))bean_msgSend)(self, bean_sel("initWithValues:count:"), values, count); }
+static inline CIVector             CIVector_InitWithX(CIVector self, CGFloat x)                                            { return ((CIVector (*)(CIVector, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithX:"), x); }
+static inline CIVector             CIVector_InitWithX_Y(CIVector self, CGFloat x, CGFloat y)                               { return ((CIVector (*)(CIVector, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithX:Y:"), x, y); }
+static inline CIVector             CIVector_InitWithX_Y_Z(CIVector self, CGFloat x, CGFloat y, CGFloat z)                  { return ((CIVector (*)(CIVector, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithX:Y:Z:"), x, y, z); }
+static inline CIVector             CIVector_InitWithX_Y_Z_W(CIVector self, CGFloat x, CGFloat y, CGFloat z, CGFloat w)     { return ((CIVector (*)(CIVector, SEL, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithX:Y:Z:W:"), x, y, z, w); }
+static inline CIVector             CIVector_InitWithCGPoint(CIVector self, CGPoint p)                                      { return ((CIVector (*)(CIVector, SEL, CGPoint))bean_msgSend)(self, bean_sel("initWithCGPoint:"), p); }
+static inline CIVector             CIVector_InitWithCGRect(CIVector self, CGRect r)                                        { return ((CIVector (*)(CIVector, SEL, CGRect))bean_msgSend)(self, bean_sel("initWithCGRect:"), r); }
+static inline CIVector             CIVector_InitWithCGAffineTransform(CIVector self, CGAffineTransform t)                  { return ((CIVector (*)(CIVector, SEL, CGAffineTransform))bean_msgSend)(self, bean_sel("initWithCGAffineTransform:"), t); }
+static inline CIVector             CIVector_InitWithString(CIVector self, NSString representation)                         { return ((CIVector (*)(CIVector, SEL, NSString))bean_msgSend)(self, bean_sel("initWithString:"), representation); }
 static inline CGFloat              CIVector_ValueAtIndex(CIVector self, NSUInteger index)                                  { return ((CGFloat (*)(CIVector, SEL, NSUInteger))bean_msgSend_fpret)(self, bean_sel("valueAtIndex:"), index); }
 static inline NSUInteger           CIVector_Count(CIVector self)                                                           { return ((NSUInteger (*)(CIVector, SEL))bean_msgSend)(self, bean_sel("count")); }
 static inline CGFloat              CIVector_X(CIVector self)                                                               { return ((CGFloat (*)(CIVector, SEL))bean_msgSend_fpret)(self, bean_sel("X")); }
@@ -1796,13 +2073,22 @@ static inline CGPoint              CIVector_CGPointValue(CIVector self)         
 static inline CGRect               CIVector_CGRectValue(CIVector self)                                                     { return ((CGRect (*)(CIVector, SEL))bean_msgSend_stret)(self, bean_sel("CGRectValue")); }
 static inline CGAffineTransform    CIVector_CGAffineTransformValue(CIVector self)                                          { return ((CGAffineTransform (*)(CIVector, SEL))bean_msgSend_stret)(self, bean_sel("CGAffineTransformValue")); }
 static inline NSString             CIVector_StringRepresentation(CIVector self)                                            { return ((NSString (*)(CIVector, SEL))bean_msgSend)(self, bean_sel("stringRepresentation")); }
+static inline id                   CIVector_CopyWithZone(CIVector self, NSZone* zone)                                      { return ((id (*)(CIVector, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                 CIVector_SupportsSecureCoding(void)                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIVector"), bean_sel("supportsSecureCoding")); }
+
+/* ===== CTAdaptiveImageProviding ===== */
+#ifndef BEAN_TYPEDEF_CTAdaptiveImageProviding
+#define BEAN_TYPEDEF_CTAdaptiveImageProviding
+typedef bean_id CTAdaptiveImageProviding;
+#endif
+static inline CGImageRef    CTAdaptiveImageProviding_ImageForProposedSize_ScaleFactor_ImageOffset_ImageSize(CTAdaptiveImageProviding self, CGSize proposedSize, CGFloat scaleFactor, CGPoint* outImageOffset, CGSize* outImageSize)    { return ((CGImageRef (*)(CTAdaptiveImageProviding, SEL, CGSize, CGFloat, CGPoint*, CGSize*))bean_msgSend)(self, bean_sel("imageForProposedSize:scaleFactor:imageOffset:imageSize:"), proposedSize, scaleFactor, outImageOffset, outImageSize); }
 
 /* ===== IOSurface ===== */
 #ifndef BEAN_TYPEDEF_IOSurface
 #define BEAN_TYPEDEF_IOSurface
 typedef bean_id IOSurface;
 #endif
-static inline id              IOSurface_InitWithProperties(IOSurface self, NSDictionary properties)                                                        { return ((id (*)(IOSurface, SEL, NSDictionary))bean_msgSend)(self, bean_sel("initWithProperties:"), properties); }
+static inline IOSurface       IOSurface_InitWithProperties(IOSurface self, NSDictionary properties)                                                        { return ((IOSurface (*)(IOSurface, SEL, NSDictionary))bean_msgSend)(self, bean_sel("initWithProperties:"), properties); }
 static inline int             IOSurface_LockWithOptions_Seed(IOSurface self, IOSurfaceLockOptions options, uint32_t* seed)                                 { return ((int (*)(IOSurface, SEL, IOSurfaceLockOptions, uint32_t*))bean_msgSend)(self, bean_sel("lockWithOptions:seed:"), options, seed); }
 static inline int             IOSurface_UnlockWithOptions_Seed(IOSurface self, IOSurfaceLockOptions options, uint32_t* seed)                               { return ((int (*)(IOSurface, SEL, IOSurfaceLockOptions, uint32_t*))bean_msgSend)(self, bean_sel("unlockWithOptions:seed:"), options, seed); }
 static inline NSInteger       IOSurface_WidthOfPlaneAtIndex(IOSurface self, NSUInteger planeIndex)                                                         { return ((NSInteger (*)(IOSurface, SEL, NSUInteger))bean_msgSend)(self, bean_sel("widthOfPlaneAtIndex:"), planeIndex); }
@@ -1836,6 +2122,7 @@ static inline NSUInteger      IOSurface_PlaneCount(IOSurface self)              
 static inline BOOL            IOSurface_IsInUse(IOSurface self)                                                                                            { return ((BOOL (*)(IOSurface, SEL))bean_msgSend)(self, bean_sel("isInUse")); }
 static inline int             IOSurface_LocalUseCount(IOSurface self)                                                                                      { return ((int (*)(IOSurface, SEL))bean_msgSend)(self, bean_sel("localUseCount")); }
 static inline BOOL            IOSurface_AllowsPixelSizeCasting(IOSurface self)                                                                             { return ((BOOL (*)(IOSurface, SEL))bean_msgSend)(self, bean_sel("allowsPixelSizeCasting")); }
+static inline BOOL            IOSurface_SupportsSecureCoding(void)                                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("IOSurface"), bean_sel("supportsSecureCoding")); }
 static inline BOOL            IOSurface_InUse(IOSurface self)                                                                                              { return ((BOOL (*)(IOSurface, SEL))bean_msgSend)(self, bean_sel("inUse")); }
 
 /* ===== NSObject ===== */
@@ -1846,13 +2133,6 @@ typedef bean_id NSObject;
 static inline void    NSObject_ProvideImageData_BytesPerRow_Origin_Size_UserInfo(NSObject self, void* data, NSUInteger rowbytes, NSUInteger originx, NSUInteger originy, NSUInteger width, NSUInteger height, id info)                            { ((void (*)(NSObject, SEL, void*, NSUInteger, NSUInteger, NSUInteger, NSUInteger, NSUInteger, id))bean_msgSend)(self, bean_sel("provideImageData:bytesPerRow:origin::size::userInfo:"), data, rowbytes, originx, originy, width, height, info); }
 static inline void    NSObject_ProvideImageToMTLTexture_CommandBuffer_Originx_Originy_Width_Height_UserInfo(NSObject self, id texture, id commandBuffer, NSUInteger originx, NSUInteger originy, NSUInteger width, NSUInteger height, id info)    { ((void (*)(NSObject, SEL, id, id, NSUInteger, NSUInteger, NSUInteger, NSUInteger, id))bean_msgSend)(self, bean_sel("provideImageToMTLTexture:commandBuffer:originx:originy:width:height:userInfo:"), texture, commandBuffer, originx, originy, width, height, info); }
 
-/* ===== NSUserActivity ===== */
-#ifndef BEAN_TYPEDEF_NSUserActivity
-#define BEAN_TYPEDEF_NSUserActivity
-typedef bean_id NSUserActivity;
-#endif
-static inline CIBarcodeDescriptor    NSUserActivity_DetectedBarcodeDescriptor(NSUserActivity self)    { return ((CIBarcodeDescriptor (*)(NSUserActivity, SEL))bean_msgSend)(self, bean_sel("detectedBarcodeDescriptor")); }
-
 /* ===== NSValue ===== */
 #ifndef BEAN_TYPEDEF_NSValue
 #define BEAN_TYPEDEF_NSValue
@@ -1861,23 +2141,76 @@ typedef bean_id NSValue;
 static inline NSValue          NSValue_ValueWithCATransform3D(CATransform3D t)    { return ((NSValue (*)(bean_class, SEL, CATransform3D))bean_msgSend)(bean_cls("NSValue"), bean_sel("valueWithCATransform3D:"), t); }
 static inline CATransform3D    NSValue_CATransform3DValue(NSValue self)           { return ((CATransform3D (*)(NSValue, SEL))bean_msgSend_stret)(self, bean_sel("CATransform3DValue")); }
 
+/* ===== PDEPanel ===== */
+#ifndef BEAN_TYPEDEF_PDEPanel
+#define BEAN_TYPEDEF_PDEPanel
+typedef bean_id PDEPanel;
+#endif
+static inline void            PDEPanel_WillShow(PDEPanel self)                                                                  { ((void (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("willShow")); }
+static inline BOOL            PDEPanel_ShouldHide(PDEPanel self)                                                                { return ((BOOL (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("shouldHide")); }
+static inline BOOL            PDEPanel_SaveValuesAndReturnError(PDEPanel self, NSError* error)                                  { return ((BOOL (*)(PDEPanel, SEL, NSError*))bean_msgSend)(self, bean_sel("saveValuesAndReturnError:"), error); }
+static inline BOOL            PDEPanel_RestoreValuesAndReturnError(PDEPanel self, NSError* error)                               { return ((BOOL (*)(PDEPanel, SEL, NSError*))bean_msgSend)(self, bean_sel("restoreValuesAndReturnError:"), error); }
+static inline NSArray         PDEPanel_SupportedPPDOptionKeys(PDEPanel self)                                                    { return ((NSArray (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("supportedPPDOptionKeys")); }
+static inline void            PDEPanel_PPDOptionKeyValueDidChange_PpdChoice(PDEPanel self, NSString option, NSString choice)    { ((void (*)(PDEPanel, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("PPDOptionKeyValueDidChange:ppdChoice:"), option, choice); }
+static inline NSView          PDEPanel_PanelView(PDEPanel self)                                                                 { return ((NSView (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("panelView")); }
+static inline NSString        PDEPanel_PanelName(PDEPanel self)                                                                 { return ((NSString (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("panelName")); }
+static inline NSString        PDEPanel_PanelKind(PDEPanel self)                                                                 { return ((NSString (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("panelKind")); }
+static inline NSDictionary    PDEPanel_SummaryInfo(PDEPanel self)                                                               { return ((NSDictionary (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("summaryInfo")); }
+static inline BOOL            PDEPanel_ShouldShowHelp(PDEPanel self)                                                            { return ((BOOL (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("shouldShowHelp")); }
+static inline BOOL            PDEPanel_ShouldPrint(PDEPanel self)                                                               { return ((BOOL (*)(PDEPanel, SEL))bean_msgSend)(self, bean_sel("shouldPrint")); }
+static inline void            PDEPanel_PrintWindowWillClose(PDEPanel self, BOOL userCanceled)                                   { ((void (*)(PDEPanel, SEL, BOOL))bean_msgSend)(self, bean_sel("printWindowWillClose:"), userCanceled); }
+
+/* ===== PDEPlugIn ===== */
+#ifndef BEAN_TYPEDEF_PDEPlugIn
+#define BEAN_TYPEDEF_PDEPlugIn
+typedef bean_id PDEPlugIn;
+#endif
+static inline PDEPlugIn    PDEPlugIn_InitWithBundle(PDEPlugIn self, NSBundle theBundle)                          { return ((PDEPlugIn (*)(PDEPlugIn, SEL, NSBundle))bean_msgSend)(self, bean_sel("initWithBundle:"), theBundle); }
+static inline NSArray      PDEPlugIn_PDEPanelsForType_WithHostInfo(PDEPlugIn self, NSString pdeType, id host)    { return ((NSArray (*)(PDEPlugIn, SEL, NSString, id))bean_msgSend)(self, bean_sel("PDEPanelsForType:withHostInfo:"), pdeType, host); }
+
+/* ===== PDEPlugInCallbackProtocol ===== */
+#ifndef BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+#define BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+typedef bean_id PDEPlugInCallbackProtocol;
+#endif
+static inline BOOL    PDEPlugInCallbackProtocol_WillChangePPDOptionKeyValue_PpdChoice(PDEPlugInCallbackProtocol self, NSString option, NSString choice)    { return ((BOOL (*)(PDEPlugInCallbackProtocol, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("willChangePPDOptionKeyValue:ppdChoice:"), option, choice); }
+
 /* ===== CAAnimation ===== */
 #ifndef BEAN_TYPEDEF_CAAnimation
 #define BEAN_TYPEDEF_CAAnimation
 typedef bean_id CAAnimation;
 #endif
-static inline id                       CAAnimation_Animation(void)                                                                           { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAAnimation"), bean_sel("animation")); }
-static inline id                       CAAnimation_DefaultValueForKey(NSString key)                                                          { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAAnimation"), bean_sel("defaultValueForKey:"), key); }
-static inline BOOL                     CAAnimation_ShouldArchiveValueForKey(CAAnimation self, NSString key)                                  { return ((BOOL (*)(CAAnimation, SEL, NSString))bean_msgSend)(self, bean_sel("shouldArchiveValueForKey:"), key); }
-static inline CAMediaTimingFunction    CAAnimation_TimingFunction(CAAnimation self)                                                          { return ((CAMediaTimingFunction (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("timingFunction")); }
-static inline void                     CAAnimation_SetTimingFunction(CAAnimation self, CAMediaTimingFunction timingFunction)                 { ((void (*)(CAAnimation, SEL, CAMediaTimingFunction))bean_msgSend)(self, bean_sel("setTimingFunction:"), timingFunction); }
-static inline id                       CAAnimation_Delegate(CAAnimation self)                                                                { return ((id (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("delegate")); }
-static inline void                     CAAnimation_SetDelegate(CAAnimation self, id delegate)                                                { ((void (*)(CAAnimation, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
-static inline BOOL                     CAAnimation_IsRemovedOnCompletion(CAAnimation self)                                                   { return ((BOOL (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("isRemovedOnCompletion")); }
-static inline void                     CAAnimation_SetRemovedOnCompletion(CAAnimation self, BOOL removedOnCompletion)                        { ((void (*)(CAAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setRemovedOnCompletion:"), removedOnCompletion); }
-static inline CAFrameRateRange         CAAnimation_PreferredFrameRateRange(CAAnimation self)                                                 { return ((CAFrameRateRange (*)(CAAnimation, SEL))bean_msgSend_stret)(self, bean_sel("preferredFrameRateRange")); }
-static inline void                     CAAnimation_SetPreferredFrameRateRange(CAAnimation self, CAFrameRateRange preferredFrameRateRange)    { ((void (*)(CAAnimation, SEL, CAFrameRateRange))bean_msgSend)(self, bean_sel("setPreferredFrameRateRange:"), preferredFrameRateRange); }
-static inline BOOL                     CAAnimation_RemovedOnCompletion(CAAnimation self)                                                     { return ((BOOL (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("removedOnCompletion")); }
+static inline CAAnimation              CAAnimation_Animation(void)                                                                                       { return ((CAAnimation (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAAnimation"), bean_sel("animation")); }
+static inline id                       CAAnimation_DefaultValueForKey(NSString key)                                                                      { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAAnimation"), bean_sel("defaultValueForKey:"), key); }
+static inline BOOL                     CAAnimation_ShouldArchiveValueForKey(CAAnimation self, NSString key)                                              { return ((BOOL (*)(CAAnimation, SEL, NSString))bean_msgSend)(self, bean_sel("shouldArchiveValueForKey:"), key); }
+static inline CAMediaTimingFunction    CAAnimation_TimingFunction(CAAnimation self)                                                                      { return ((CAMediaTimingFunction (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("timingFunction")); }
+static inline void                     CAAnimation_SetTimingFunction(CAAnimation self, CAMediaTimingFunction timingFunction)                             { ((void (*)(CAAnimation, SEL, CAMediaTimingFunction))bean_msgSend)(self, bean_sel("setTimingFunction:"), timingFunction); }
+static inline id                       CAAnimation_Delegate(CAAnimation self)                                                                            { return ((id (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("delegate")); }
+static inline void                     CAAnimation_SetDelegate(CAAnimation self, id delegate)                                                            { ((void (*)(CAAnimation, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+static inline BOOL                     CAAnimation_IsRemovedOnCompletion(CAAnimation self)                                                               { return ((BOOL (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("isRemovedOnCompletion")); }
+static inline void                     CAAnimation_SetRemovedOnCompletion(CAAnimation self, BOOL removedOnCompletion)                                    { ((void (*)(CAAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setRemovedOnCompletion:"), removedOnCompletion); }
+static inline CAFrameRateRange         CAAnimation_PreferredFrameRateRange(CAAnimation self)                                                             { return ((CAFrameRateRange (*)(CAAnimation, SEL))bean_msgSend_stret)(self, bean_sel("preferredFrameRateRange")); }
+static inline void                     CAAnimation_SetPreferredFrameRateRange(CAAnimation self, CAFrameRateRange preferredFrameRateRange)                { ((void (*)(CAAnimation, SEL, CAFrameRateRange))bean_msgSend)(self, bean_sel("setPreferredFrameRateRange:"), preferredFrameRateRange); }
+static inline BOOL                     CAAnimation_SupportsSecureCoding(void)                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAAnimation"), bean_sel("supportsSecureCoding")); }
+static inline id                       CAAnimation_CopyWithZone(CAAnimation self, NSZone* zone)                                                          { return ((id (*)(CAAnimation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline CGFloat                  CAAnimation_BeginTime(CAAnimation self)                                                                           { return ((CGFloat (*)(CAAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("beginTime")); }
+static inline void                     CAAnimation_SetBeginTime(CAAnimation self, CGFloat beginTime)                                                     { ((void (*)(CAAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBeginTime:"), beginTime); }
+static inline CGFloat                  CAAnimation_Duration(CAAnimation self)                                                                            { return ((CGFloat (*)(CAAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("duration")); }
+static inline void                     CAAnimation_SetDuration(CAAnimation self, CGFloat duration)                                                       { ((void (*)(CAAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDuration:"), duration); }
+static inline CGFloat                  CAAnimation_Speed(CAAnimation self)                                                                               { return ((CGFloat (*)(CAAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("speed")); }
+static inline void                     CAAnimation_SetSpeed(CAAnimation self, CGFloat speed)                                                             { ((void (*)(CAAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
+static inline CGFloat                  CAAnimation_TimeOffset(CAAnimation self)                                                                          { return ((CGFloat (*)(CAAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("timeOffset")); }
+static inline void                     CAAnimation_SetTimeOffset(CAAnimation self, CGFloat timeOffset)                                                   { ((void (*)(CAAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTimeOffset:"), timeOffset); }
+static inline CGFloat                  CAAnimation_RepeatCount(CAAnimation self)                                                                         { return ((CGFloat (*)(CAAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("repeatCount")); }
+static inline void                     CAAnimation_SetRepeatCount(CAAnimation self, CGFloat repeatCount)                                                 { ((void (*)(CAAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRepeatCount:"), repeatCount); }
+static inline CGFloat                  CAAnimation_RepeatDuration(CAAnimation self)                                                                      { return ((CGFloat (*)(CAAnimation, SEL))bean_msgSend_fpret)(self, bean_sel("repeatDuration")); }
+static inline void                     CAAnimation_SetRepeatDuration(CAAnimation self, CGFloat repeatDuration)                                           { ((void (*)(CAAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRepeatDuration:"), repeatDuration); }
+static inline BOOL                     CAAnimation_Autoreverses(CAAnimation self)                                                                        { return ((BOOL (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("autoreverses")); }
+static inline void                     CAAnimation_SetAutoreverses(CAAnimation self, BOOL autoreverses)                                                  { ((void (*)(CAAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutoreverses:"), autoreverses); }
+static inline NSString                 CAAnimation_FillMode(CAAnimation self)                                                                            { return ((NSString (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("fillMode")); }
+static inline void                     CAAnimation_SetFillMode(CAAnimation self, NSString fillMode)                                                      { ((void (*)(CAAnimation, SEL, NSString))bean_msgSend)(self, bean_sel("setFillMode:"), fillMode); }
+static inline void                     CAAnimation_RunActionForKey_Object_Arguments(CAAnimation self, NSString event, id anObject, NSDictionary dict)    { ((void (*)(CAAnimation, SEL, NSString, id, NSDictionary))bean_msgSend)(self, bean_sel("runActionForKey:object:arguments:"), event, anObject, dict); }
+static inline BOOL                     CAAnimation_RemovedOnCompletion(CAAnimation self)                                                                 { return ((BOOL (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("removedOnCompletion")); }
 
 /* ===== CAMetalLayer ===== */
 #ifndef BEAN_TYPEDEF_CAMetalLayer
@@ -1917,17 +2250,17 @@ static inline id                 CAMetalLayer_ResidencySet(CAMetalLayer self)   
 #define BEAN_TYPEDEF_CAPropertyAnimation
 typedef bean_id CAPropertyAnimation;
 #endif
-static inline id                 CAPropertyAnimation_AnimationWithKeyPath(NSString path)                                          { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAPropertyAnimation"), bean_sel("animationWithKeyPath:"), path); }
-static inline NSString           CAPropertyAnimation_KeyPath(CAPropertyAnimation self)                                            { return ((NSString (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("keyPath")); }
-static inline void               CAPropertyAnimation_SetKeyPath(CAPropertyAnimation self, NSString keyPath)                       { ((void (*)(CAPropertyAnimation, SEL, NSString))bean_msgSend)(self, bean_sel("setKeyPath:"), keyPath); }
-static inline BOOL               CAPropertyAnimation_IsAdditive(CAPropertyAnimation self)                                         { return ((BOOL (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("isAdditive")); }
-static inline void               CAPropertyAnimation_SetAdditive(CAPropertyAnimation self, BOOL additive)                         { ((void (*)(CAPropertyAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setAdditive:"), additive); }
-static inline BOOL               CAPropertyAnimation_IsCumulative(CAPropertyAnimation self)                                       { return ((BOOL (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("isCumulative")); }
-static inline void               CAPropertyAnimation_SetCumulative(CAPropertyAnimation self, BOOL cumulative)                     { ((void (*)(CAPropertyAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setCumulative:"), cumulative); }
-static inline CAValueFunction    CAPropertyAnimation_ValueFunction(CAPropertyAnimation self)                                      { return ((CAValueFunction (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("valueFunction")); }
-static inline void               CAPropertyAnimation_SetValueFunction(CAPropertyAnimation self, CAValueFunction valueFunction)    { ((void (*)(CAPropertyAnimation, SEL, CAValueFunction))bean_msgSend)(self, bean_sel("setValueFunction:"), valueFunction); }
-static inline BOOL               CAPropertyAnimation_Additive(CAPropertyAnimation self)                                           { return ((BOOL (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("additive")); }
-static inline BOOL               CAPropertyAnimation_Cumulative(CAPropertyAnimation self)                                         { return ((BOOL (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("cumulative")); }
+static inline CAPropertyAnimation    CAPropertyAnimation_AnimationWithKeyPath(NSString path)                                          { return ((CAPropertyAnimation (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CAPropertyAnimation"), bean_sel("animationWithKeyPath:"), path); }
+static inline NSString               CAPropertyAnimation_KeyPath(CAPropertyAnimation self)                                            { return ((NSString (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("keyPath")); }
+static inline void                   CAPropertyAnimation_SetKeyPath(CAPropertyAnimation self, NSString keyPath)                       { ((void (*)(CAPropertyAnimation, SEL, NSString))bean_msgSend)(self, bean_sel("setKeyPath:"), keyPath); }
+static inline BOOL                   CAPropertyAnimation_IsAdditive(CAPropertyAnimation self)                                         { return ((BOOL (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("isAdditive")); }
+static inline void                   CAPropertyAnimation_SetAdditive(CAPropertyAnimation self, BOOL additive)                         { ((void (*)(CAPropertyAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setAdditive:"), additive); }
+static inline BOOL                   CAPropertyAnimation_IsCumulative(CAPropertyAnimation self)                                       { return ((BOOL (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("isCumulative")); }
+static inline void                   CAPropertyAnimation_SetCumulative(CAPropertyAnimation self, BOOL cumulative)                     { ((void (*)(CAPropertyAnimation, SEL, BOOL))bean_msgSend)(self, bean_sel("setCumulative:"), cumulative); }
+static inline CAValueFunction        CAPropertyAnimation_ValueFunction(CAPropertyAnimation self)                                      { return ((CAValueFunction (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("valueFunction")); }
+static inline void                   CAPropertyAnimation_SetValueFunction(CAPropertyAnimation self, CAValueFunction valueFunction)    { ((void (*)(CAPropertyAnimation, SEL, CAValueFunction))bean_msgSend)(self, bean_sel("setValueFunction:"), valueFunction); }
+static inline BOOL                   CAPropertyAnimation_Additive(CAPropertyAnimation self)                                           { return ((BOOL (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("additive")); }
+static inline BOOL                   CAPropertyAnimation_Cumulative(CAPropertyAnimation self)                                         { return ((BOOL (*)(CAPropertyAnimation, SEL))bean_msgSend)(self, bean_sel("cumulative")); }
 
 /* ===== CATransaction ===== */
 #ifndef BEAN_TYPEDEF_CATransaction
@@ -1976,27 +2309,27 @@ static inline CIImage                        CIImage_ImageWithIOSurface(IOSurfac
 static inline CIImage                        CIImage_ImageWithIOSurface_Options(IOSurfaceRef surface, NSDictionary options)                                                                                                                { return ((CIImage (*)(bean_class, SEL, IOSurfaceRef, NSDictionary))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithIOSurface:options:"), surface, options); }
 static inline CIImage                        CIImage_ImageWithColor(CIColor color)                                                                                                                                                         { return ((CIImage (*)(bean_class, SEL, CIColor))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithColor:"), color); }
 static inline CIImage                        CIImage_EmptyImage(void)                                                                                                                                                                      { return ((CIImage (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIImage"), bean_sel("emptyImage")); }
-static inline id                             CIImage_InitWithCGImage(CIImage self, CGImageRef image)                                                                                                                                       { return ((id (*)(CIImage, SEL, CGImageRef))bean_msgSend)(self, bean_sel("initWithCGImage:"), image); }
-static inline id                             CIImage_InitWithCGImage_Options(CIImage self, CGImageRef image, NSDictionary options)                                                                                                         { return ((id (*)(CIImage, SEL, CGImageRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithCGImage:options:"), image, options); }
-static inline id                             CIImage_InitWithCGImageSource_Index_Options(CIImage self, CGImageSourceRef source, NSUInteger index, NSDictionary dict)                                                                       { return ((id (*)(CIImage, SEL, CGImageSourceRef, NSUInteger, NSDictionary))bean_msgSend)(self, bean_sel("initWithCGImageSource:index:options:"), source, index, dict); }
-static inline id                             CIImage_InitWithCGLayer(CIImage self, CGLayerRef layer)                                                                                                                                       { return ((id (*)(CIImage, SEL, CGLayerRef))bean_msgSend)(self, bean_sel("initWithCGLayer:"), layer); }
-static inline id                             CIImage_InitWithCGLayer_Options(CIImage self, CGLayerRef layer, NSDictionary options)                                                                                                         { return ((id (*)(CIImage, SEL, CGLayerRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithCGLayer:options:"), layer, options); }
-static inline id                             CIImage_InitWithData(CIImage self, NSData data)                                                                                                                                               { return ((id (*)(CIImage, SEL, NSData))bean_msgSend)(self, bean_sel("initWithData:"), data); }
-static inline id                             CIImage_InitWithData_Options(CIImage self, NSData data, NSDictionary options)                                                                                                                 { return ((id (*)(CIImage, SEL, NSData, NSDictionary))bean_msgSend)(self, bean_sel("initWithData:options:"), data, options); }
-static inline id                             CIImage_InitWithBitmapData_BytesPerRow_Size_Format_ColorSpace(CIImage self, NSData data, NSUInteger bytesPerRow, CGSize size, int format, CGColorSpaceRef colorSpace)                         { return ((id (*)(CIImage, SEL, NSData, NSUInteger, CGSize, int, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithBitmapData:bytesPerRow:size:format:colorSpace:"), data, bytesPerRow, size, format, colorSpace); }
-static inline id                             CIImage_InitWithTexture_Size_Flipped_ColorSpace(CIImage self, NSUInteger name, CGSize size, BOOL flipped, CGColorSpaceRef colorSpace)                                                         { return ((id (*)(CIImage, SEL, NSUInteger, CGSize, BOOL, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithTexture:size:flipped:colorSpace:"), name, size, flipped, colorSpace); }
-static inline id                             CIImage_InitWithTexture_Size_Flipped_Options(CIImage self, NSUInteger name, CGSize size, BOOL flipped, NSDictionary options)                                                                  { return ((id (*)(CIImage, SEL, NSUInteger, CGSize, BOOL, NSDictionary))bean_msgSend)(self, bean_sel("initWithTexture:size:flipped:options:"), name, size, flipped, options); }
-static inline id                             CIImage_InitWithMTLTexture_Options(CIImage self, id texture, NSDictionary options)                                                                                                            { return ((id (*)(CIImage, SEL, id, NSDictionary))bean_msgSend)(self, bean_sel("initWithMTLTexture:options:"), texture, options); }
-static inline id                             CIImage_InitWithContentsOfURL(CIImage self, NSURL url)                                                                                                                                        { return ((id (*)(CIImage, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), url); }
-static inline id                             CIImage_InitWithContentsOfURL_Options(CIImage self, NSURL url, NSDictionary options)                                                                                                          { return ((id (*)(CIImage, SEL, NSURL, NSDictionary))bean_msgSend)(self, bean_sel("initWithContentsOfURL:options:"), url, options); }
-static inline id                             CIImage_InitWithIOSurface(CIImage self, IOSurfaceRef surface)                                                                                                                                 { return ((id (*)(CIImage, SEL, IOSurfaceRef))bean_msgSend)(self, bean_sel("initWithIOSurface:"), surface); }
-static inline id                             CIImage_InitWithIOSurface_Options(CIImage self, IOSurfaceRef surface, NSDictionary options)                                                                                                   { return ((id (*)(CIImage, SEL, IOSurfaceRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithIOSurface:options:"), surface, options); }
-static inline id                             CIImage_InitWithIOSurface_Plane_Format_Options(CIImage self, IOSurfaceRef surface, NSUInteger plane, int format, NSDictionary options)                                                        { return ((id (*)(CIImage, SEL, IOSurfaceRef, NSUInteger, int, NSDictionary))bean_msgSend)(self, bean_sel("initWithIOSurface:plane:format:options:"), surface, plane, format, options); }
-static inline id                             CIImage_InitWithCVImageBuffer(CIImage self, CVBufferRef imageBuffer)                                                                                                                          { return ((id (*)(CIImage, SEL, CVBufferRef))bean_msgSend)(self, bean_sel("initWithCVImageBuffer:"), imageBuffer); }
-static inline id                             CIImage_InitWithCVImageBuffer_Options(CIImage self, CVBufferRef imageBuffer, NSDictionary options)                                                                                            { return ((id (*)(CIImage, SEL, CVBufferRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithCVImageBuffer:options:"), imageBuffer, options); }
-static inline id                             CIImage_InitWithCVPixelBuffer(CIImage self, CVBufferRef pixelBuffer)                                                                                                                          { return ((id (*)(CIImage, SEL, CVBufferRef))bean_msgSend)(self, bean_sel("initWithCVPixelBuffer:"), pixelBuffer); }
-static inline id                             CIImage_InitWithCVPixelBuffer_Options(CIImage self, CVBufferRef pixelBuffer, NSDictionary options)                                                                                            { return ((id (*)(CIImage, SEL, CVBufferRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithCVPixelBuffer:options:"), pixelBuffer, options); }
-static inline id                             CIImage_InitWithColor(CIImage self, CIColor color)                                                                                                                                            { return ((id (*)(CIImage, SEL, CIColor))bean_msgSend)(self, bean_sel("initWithColor:"), color); }
+static inline CIImage                        CIImage_InitWithCGImage(CIImage self, CGImageRef image)                                                                                                                                       { return ((CIImage (*)(CIImage, SEL, CGImageRef))bean_msgSend)(self, bean_sel("initWithCGImage:"), image); }
+static inline CIImage                        CIImage_InitWithCGImage_Options(CIImage self, CGImageRef image, NSDictionary options)                                                                                                         { return ((CIImage (*)(CIImage, SEL, CGImageRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithCGImage:options:"), image, options); }
+static inline CIImage                        CIImage_InitWithCGImageSource_Index_Options(CIImage self, CGImageSourceRef source, NSUInteger index, NSDictionary dict)                                                                       { return ((CIImage (*)(CIImage, SEL, CGImageSourceRef, NSUInteger, NSDictionary))bean_msgSend)(self, bean_sel("initWithCGImageSource:index:options:"), source, index, dict); }
+static inline CIImage                        CIImage_InitWithCGLayer(CIImage self, CGLayerRef layer)                                                                                                                                       { return ((CIImage (*)(CIImage, SEL, CGLayerRef))bean_msgSend)(self, bean_sel("initWithCGLayer:"), layer); }
+static inline CIImage                        CIImage_InitWithCGLayer_Options(CIImage self, CGLayerRef layer, NSDictionary options)                                                                                                         { return ((CIImage (*)(CIImage, SEL, CGLayerRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithCGLayer:options:"), layer, options); }
+static inline CIImage                        CIImage_InitWithData(CIImage self, NSData data)                                                                                                                                               { return ((CIImage (*)(CIImage, SEL, NSData))bean_msgSend)(self, bean_sel("initWithData:"), data); }
+static inline CIImage                        CIImage_InitWithData_Options(CIImage self, NSData data, NSDictionary options)                                                                                                                 { return ((CIImage (*)(CIImage, SEL, NSData, NSDictionary))bean_msgSend)(self, bean_sel("initWithData:options:"), data, options); }
+static inline CIImage                        CIImage_InitWithBitmapData_BytesPerRow_Size_Format_ColorSpace(CIImage self, NSData data, NSUInteger bytesPerRow, CGSize size, int format, CGColorSpaceRef colorSpace)                         { return ((CIImage (*)(CIImage, SEL, NSData, NSUInteger, CGSize, int, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithBitmapData:bytesPerRow:size:format:colorSpace:"), data, bytesPerRow, size, format, colorSpace); }
+static inline CIImage                        CIImage_InitWithTexture_Size_Flipped_ColorSpace(CIImage self, NSUInteger name, CGSize size, BOOL flipped, CGColorSpaceRef colorSpace)                                                         { return ((CIImage (*)(CIImage, SEL, NSUInteger, CGSize, BOOL, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithTexture:size:flipped:colorSpace:"), name, size, flipped, colorSpace); }
+static inline CIImage                        CIImage_InitWithTexture_Size_Flipped_Options(CIImage self, NSUInteger name, CGSize size, BOOL flipped, NSDictionary options)                                                                  { return ((CIImage (*)(CIImage, SEL, NSUInteger, CGSize, BOOL, NSDictionary))bean_msgSend)(self, bean_sel("initWithTexture:size:flipped:options:"), name, size, flipped, options); }
+static inline CIImage                        CIImage_InitWithMTLTexture_Options(CIImage self, id texture, NSDictionary options)                                                                                                            { return ((CIImage (*)(CIImage, SEL, id, NSDictionary))bean_msgSend)(self, bean_sel("initWithMTLTexture:options:"), texture, options); }
+static inline CIImage                        CIImage_InitWithContentsOfURL(CIImage self, NSURL url)                                                                                                                                        { return ((CIImage (*)(CIImage, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), url); }
+static inline CIImage                        CIImage_InitWithContentsOfURL_Options(CIImage self, NSURL url, NSDictionary options)                                                                                                          { return ((CIImage (*)(CIImage, SEL, NSURL, NSDictionary))bean_msgSend)(self, bean_sel("initWithContentsOfURL:options:"), url, options); }
+static inline CIImage                        CIImage_InitWithIOSurface(CIImage self, IOSurfaceRef surface)                                                                                                                                 { return ((CIImage (*)(CIImage, SEL, IOSurfaceRef))bean_msgSend)(self, bean_sel("initWithIOSurface:"), surface); }
+static inline CIImage                        CIImage_InitWithIOSurface_Options(CIImage self, IOSurfaceRef surface, NSDictionary options)                                                                                                   { return ((CIImage (*)(CIImage, SEL, IOSurfaceRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithIOSurface:options:"), surface, options); }
+static inline CIImage                        CIImage_InitWithIOSurface_Plane_Format_Options(CIImage self, IOSurfaceRef surface, NSUInteger plane, int format, NSDictionary options)                                                        { return ((CIImage (*)(CIImage, SEL, IOSurfaceRef, NSUInteger, int, NSDictionary))bean_msgSend)(self, bean_sel("initWithIOSurface:plane:format:options:"), surface, plane, format, options); }
+static inline CIImage                        CIImage_InitWithCVImageBuffer(CIImage self, CVBufferRef imageBuffer)                                                                                                                          { return ((CIImage (*)(CIImage, SEL, CVBufferRef))bean_msgSend)(self, bean_sel("initWithCVImageBuffer:"), imageBuffer); }
+static inline CIImage                        CIImage_InitWithCVImageBuffer_Options(CIImage self, CVBufferRef imageBuffer, NSDictionary options)                                                                                            { return ((CIImage (*)(CIImage, SEL, CVBufferRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithCVImageBuffer:options:"), imageBuffer, options); }
+static inline CIImage                        CIImage_InitWithCVPixelBuffer(CIImage self, CVBufferRef pixelBuffer)                                                                                                                          { return ((CIImage (*)(CIImage, SEL, CVBufferRef))bean_msgSend)(self, bean_sel("initWithCVPixelBuffer:"), pixelBuffer); }
+static inline CIImage                        CIImage_InitWithCVPixelBuffer_Options(CIImage self, CVBufferRef pixelBuffer, NSDictionary options)                                                                                            { return ((CIImage (*)(CIImage, SEL, CVBufferRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithCVPixelBuffer:options:"), pixelBuffer, options); }
+static inline CIImage                        CIImage_InitWithColor(CIImage self, CIColor color)                                                                                                                                            { return ((CIImage (*)(CIImage, SEL, CIColor))bean_msgSend)(self, bean_sel("initWithColor:"), color); }
 static inline CIImage                        CIImage_ImageByApplyingTransform(CIImage self, CGAffineTransform matrix)                                                                                                                      { return ((CIImage (*)(CIImage, SEL, CGAffineTransform))bean_msgSend)(self, bean_sel("imageByApplyingTransform:"), matrix); }
 static inline CIImage                        CIImage_ImageByApplyingTransform_HighQualityDownsample(CIImage self, CGAffineTransform matrix, BOOL highQualityDownsample)                                                                    { return ((CIImage (*)(CIImage, SEL, CGAffineTransform, BOOL))bean_msgSend)(self, bean_sel("imageByApplyingTransform:highQualityDownsample:"), matrix, highQualityDownsample); }
 static inline CIImage                        CIImage_ImageByApplyingOrientation(CIImage self, int orientation)                                                                                                                             { return ((CIImage (*)(CIImage, SEL, int))bean_msgSend)(self, bean_sel("imageByApplyingOrientation:"), orientation); }
@@ -2050,23 +2383,25 @@ static inline NSArray                        CIImage_AutoAdjustmentFilters(CIIma
 static inline NSArray                        CIImage_AutoAdjustmentFiltersWithOptions(CIImage self, NSDictionary options)                                                                                                                  { return ((NSArray (*)(CIImage, SEL, NSDictionary))bean_msgSend)(self, bean_sel("autoAdjustmentFiltersWithOptions:"), options); }
 static inline CIImage                        CIImage_ImageByConvertingWorkingSpaceToLab(CIImage self)                                                                                                                                      { return ((CIImage (*)(CIImage, SEL))bean_msgSend)(self, bean_sel("imageByConvertingWorkingSpaceToLab")); }
 static inline CIImage                        CIImage_ImageByConvertingLabToWorkingSpace(CIImage self)                                                                                                                                      { return ((CIImage (*)(CIImage, SEL))bean_msgSend)(self, bean_sel("imageByConvertingLabToWorkingSpace")); }
-static inline id                             CIImage_InitWithDepthData_Options(CIImage self, AVDepthData data, NSDictionary options)                                                                                                       { return ((id (*)(CIImage, SEL, AVDepthData, NSDictionary))bean_msgSend)(self, bean_sel("initWithDepthData:options:"), data, options); }
-static inline id                             CIImage_InitWithDepthData(CIImage self, AVDepthData data)                                                                                                                                     { return ((id (*)(CIImage, SEL, AVDepthData))bean_msgSend)(self, bean_sel("initWithDepthData:"), data); }
-static inline id                             CIImage_ImageWithDepthData_Options(AVDepthData data, NSDictionary options)                                                                                                                    { return ((id (*)(bean_class, SEL, AVDepthData, NSDictionary))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithDepthData:options:"), data, options); }
-static inline id                             CIImage_ImageWithDepthData(AVDepthData data)                                                                                                                                                  { return ((id (*)(bean_class, SEL, AVDepthData))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithDepthData:"), data); }
+static inline CIImage                        CIImage_InitWithDepthData_Options(CIImage self, AVDepthData data, NSDictionary options)                                                                                                       { return ((CIImage (*)(CIImage, SEL, AVDepthData, NSDictionary))bean_msgSend)(self, bean_sel("initWithDepthData:options:"), data, options); }
+static inline CIImage                        CIImage_InitWithDepthData(CIImage self, AVDepthData data)                                                                                                                                     { return ((CIImage (*)(CIImage, SEL, AVDepthData))bean_msgSend)(self, bean_sel("initWithDepthData:"), data); }
+static inline CIImage                        CIImage_ImageWithDepthData_Options(AVDepthData data, NSDictionary options)                                                                                                                    { return ((CIImage (*)(bean_class, SEL, AVDepthData, NSDictionary))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithDepthData:options:"), data, options); }
+static inline CIImage                        CIImage_ImageWithDepthData(AVDepthData data)                                                                                                                                                  { return ((CIImage (*)(bean_class, SEL, AVDepthData))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithDepthData:"), data); }
 static inline AVDepthData                    CIImage_DepthData(CIImage self)                                                                                                                                                               { return ((AVDepthData (*)(CIImage, SEL))bean_msgSend)(self, bean_sel("depthData")); }
-static inline id                             CIImage_InitWithPortaitEffectsMatte_Options(CIImage self, AVPortraitEffectsMatte matte, NSDictionary options)                                                                                 { return ((id (*)(CIImage, SEL, AVPortraitEffectsMatte, NSDictionary))bean_msgSend)(self, bean_sel("initWithPortaitEffectsMatte:options:"), matte, options); }
-static inline id                             CIImage_InitWithPortaitEffectsMatte(CIImage self, AVPortraitEffectsMatte matte)                                                                                                               { return ((id (*)(CIImage, SEL, AVPortraitEffectsMatte))bean_msgSend)(self, bean_sel("initWithPortaitEffectsMatte:"), matte); }
-static inline id                             CIImage_ImageWithPortaitEffectsMatte_Options(AVPortraitEffectsMatte matte, NSDictionary options)                                                                                              { return ((id (*)(bean_class, SEL, AVPortraitEffectsMatte, NSDictionary))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithPortaitEffectsMatte:options:"), matte, options); }
-static inline id                             CIImage_ImageWithPortaitEffectsMatte(AVPortraitEffectsMatte matte)                                                                                                                            { return ((id (*)(bean_class, SEL, AVPortraitEffectsMatte))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithPortaitEffectsMatte:"), matte); }
+static inline CIImage                        CIImage_InitWithPortaitEffectsMatte_Options(CIImage self, AVPortraitEffectsMatte matte, NSDictionary options)                                                                                 { return ((CIImage (*)(CIImage, SEL, AVPortraitEffectsMatte, NSDictionary))bean_msgSend)(self, bean_sel("initWithPortaitEffectsMatte:options:"), matte, options); }
+static inline CIImage                        CIImage_InitWithPortaitEffectsMatte(CIImage self, AVPortraitEffectsMatte matte)                                                                                                               { return ((CIImage (*)(CIImage, SEL, AVPortraitEffectsMatte))bean_msgSend)(self, bean_sel("initWithPortaitEffectsMatte:"), matte); }
+static inline CIImage                        CIImage_ImageWithPortaitEffectsMatte_Options(AVPortraitEffectsMatte matte, NSDictionary options)                                                                                              { return ((CIImage (*)(bean_class, SEL, AVPortraitEffectsMatte, NSDictionary))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithPortaitEffectsMatte:options:"), matte, options); }
+static inline CIImage                        CIImage_ImageWithPortaitEffectsMatte(AVPortraitEffectsMatte matte)                                                                                                                            { return ((CIImage (*)(bean_class, SEL, AVPortraitEffectsMatte))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithPortaitEffectsMatte:"), matte); }
 static inline AVPortraitEffectsMatte         CIImage_PortraitEffectsMatte(CIImage self)                                                                                                                                                    { return ((AVPortraitEffectsMatte (*)(CIImage, SEL))bean_msgSend)(self, bean_sel("portraitEffectsMatte")); }
-static inline id                             CIImage_InitWithSemanticSegmentationMatte_Options(CIImage self, AVSemanticSegmentationMatte matte, NSDictionary options)                                                                      { return ((id (*)(CIImage, SEL, AVSemanticSegmentationMatte, NSDictionary))bean_msgSend)(self, bean_sel("initWithSemanticSegmentationMatte:options:"), matte, options); }
-static inline id                             CIImage_InitWithSemanticSegmentationMatte(CIImage self, AVSemanticSegmentationMatte matte)                                                                                                    { return ((id (*)(CIImage, SEL, AVSemanticSegmentationMatte))bean_msgSend)(self, bean_sel("initWithSemanticSegmentationMatte:"), matte); }
-static inline id                             CIImage_ImageWithSemanticSegmentationMatte_Options(AVSemanticSegmentationMatte matte, NSDictionary options)                                                                                   { return ((id (*)(bean_class, SEL, AVSemanticSegmentationMatte, NSDictionary))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithSemanticSegmentationMatte:options:"), matte, options); }
-static inline id                             CIImage_ImageWithSemanticSegmentationMatte(AVSemanticSegmentationMatte matte)                                                                                                                 { return ((id (*)(bean_class, SEL, AVSemanticSegmentationMatte))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithSemanticSegmentationMatte:"), matte); }
+static inline CIImage                        CIImage_InitWithSemanticSegmentationMatte_Options(CIImage self, AVSemanticSegmentationMatte matte, NSDictionary options)                                                                      { return ((CIImage (*)(CIImage, SEL, AVSemanticSegmentationMatte, NSDictionary))bean_msgSend)(self, bean_sel("initWithSemanticSegmentationMatte:options:"), matte, options); }
+static inline CIImage                        CIImage_InitWithSemanticSegmentationMatte(CIImage self, AVSemanticSegmentationMatte matte)                                                                                                    { return ((CIImage (*)(CIImage, SEL, AVSemanticSegmentationMatte))bean_msgSend)(self, bean_sel("initWithSemanticSegmentationMatte:"), matte); }
+static inline CIImage                        CIImage_ImageWithSemanticSegmentationMatte_Options(AVSemanticSegmentationMatte matte, NSDictionary options)                                                                                   { return ((CIImage (*)(bean_class, SEL, AVSemanticSegmentationMatte, NSDictionary))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithSemanticSegmentationMatte:options:"), matte, options); }
+static inline CIImage                        CIImage_ImageWithSemanticSegmentationMatte(AVSemanticSegmentationMatte matte)                                                                                                                 { return ((CIImage (*)(bean_class, SEL, AVSemanticSegmentationMatte))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithSemanticSegmentationMatte:"), matte); }
 static inline AVSemanticSegmentationMatte    CIImage_SemanticSegmentationMatte(CIImage self)                                                                                                                                               { return ((AVSemanticSegmentationMatte (*)(CIImage, SEL))bean_msgSend)(self, bean_sel("semanticSegmentationMatte")); }
 static inline CIImage                        CIImage_ImageWithImageProvider_Size_Format_ColorSpace_Options(id provider, NSUInteger width, NSUInteger height, int format, CGColorSpaceRef colorSpace, NSDictionary options)                 { return ((CIImage (*)(bean_class, SEL, id, NSUInteger, NSUInteger, int, CGColorSpaceRef, NSDictionary))bean_msgSend)(bean_cls("CIImage"), bean_sel("imageWithImageProvider:size::format:colorSpace:options:"), provider, width, height, format, colorSpace, options); }
-static inline id                             CIImage_InitWithImageProvider_Size_Format_ColorSpace_Options(CIImage self, id provider, NSUInteger width, NSUInteger height, int format, CGColorSpaceRef colorSpace, NSDictionary options)    { return ((id (*)(CIImage, SEL, id, NSUInteger, NSUInteger, int, CGColorSpaceRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithImageProvider:size::format:colorSpace:options:"), provider, width, height, format, colorSpace, options); }
+static inline CIImage                        CIImage_InitWithImageProvider_Size_Format_ColorSpace_Options(CIImage self, id provider, NSUInteger width, NSUInteger height, int format, CGColorSpaceRef colorSpace, NSDictionary options)    { return ((CIImage (*)(CIImage, SEL, id, NSUInteger, NSUInteger, int, CGColorSpaceRef, NSDictionary))bean_msgSend)(self, bean_sel("initWithImageProvider:size::format:colorSpace:options:"), provider, width, height, format, colorSpace, options); }
+static inline BOOL                           CIImage_SupportsSecureCoding(void)                                                                                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIImage"), bean_sel("supportsSecureCoding")); }
+static inline id                             CIImage_CopyWithZone(CIImage self, NSZone* zone)                                                                                                                                              { return ((id (*)(CIImage, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                           CIImage_Opaque(CIImage self)                                                                                                                                                                  { return ((BOOL (*)(CIImage, SEL))bean_msgSend)(self, bean_sel("opaque")); }
 
 /* ===== CIQRCodeFeature ===== */
@@ -2074,31 +2409,48 @@ static inline BOOL                           CIImage_Opaque(CIImage self)       
 #define BEAN_TYPEDEF_CIQRCodeFeature
 typedef bean_id CIQRCodeFeature;
 #endif
-static inline CGRect                CIQRCodeFeature_Bounds(CIQRCodeFeature self)              { return ((CGRect (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("bounds")); }
-static inline CGPoint               CIQRCodeFeature_TopLeft(CIQRCodeFeature self)             { return ((CGPoint (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("topLeft")); }
-static inline CGPoint               CIQRCodeFeature_TopRight(CIQRCodeFeature self)            { return ((CGPoint (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("topRight")); }
-static inline CGPoint               CIQRCodeFeature_BottomLeft(CIQRCodeFeature self)          { return ((CGPoint (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("bottomLeft")); }
-static inline CGPoint               CIQRCodeFeature_BottomRight(CIQRCodeFeature self)         { return ((CGPoint (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("bottomRight")); }
-static inline NSString              CIQRCodeFeature_MessageString(CIQRCodeFeature self)       { return ((NSString (*)(CIQRCodeFeature, SEL))bean_msgSend)(self, bean_sel("messageString")); }
-static inline CIQRCodeDescriptor    CIQRCodeFeature_SymbolDescriptor(CIQRCodeFeature self)    { return ((CIQRCodeDescriptor (*)(CIQRCodeFeature, SEL))bean_msgSend)(self, bean_sel("symbolDescriptor")); }
+static inline CGRect                CIQRCodeFeature_Bounds(CIQRCodeFeature self)                        { return ((CGRect (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("bounds")); }
+static inline CGPoint               CIQRCodeFeature_TopLeft(CIQRCodeFeature self)                       { return ((CGPoint (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("topLeft")); }
+static inline CGPoint               CIQRCodeFeature_TopRight(CIQRCodeFeature self)                      { return ((CGPoint (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("topRight")); }
+static inline CGPoint               CIQRCodeFeature_BottomLeft(CIQRCodeFeature self)                    { return ((CGPoint (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("bottomLeft")); }
+static inline CGPoint               CIQRCodeFeature_BottomRight(CIQRCodeFeature self)                   { return ((CGPoint (*)(CIQRCodeFeature, SEL))bean_msgSend_stret)(self, bean_sel("bottomRight")); }
+static inline NSString              CIQRCodeFeature_MessageString(CIQRCodeFeature self)                 { return ((NSString (*)(CIQRCodeFeature, SEL))bean_msgSend)(self, bean_sel("messageString")); }
+static inline CIQRCodeDescriptor    CIQRCodeFeature_SymbolDescriptor(CIQRCodeFeature self)              { return ((CIQRCodeDescriptor (*)(CIQRCodeFeature, SEL))bean_msgSend)(self, bean_sel("symbolDescriptor")); }
+static inline BOOL                  CIQRCodeFeature_SupportsSecureCoding(void)                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIQRCodeFeature"), bean_sel("supportsSecureCoding")); }
+static inline id                    CIQRCodeFeature_CopyWithZone(CIQRCodeFeature self, NSZone* zone)    { return ((id (*)(CIQRCodeFeature, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CIRenderTask ===== */
 #ifndef BEAN_TYPEDEF_CIRenderTask
 #define BEAN_TYPEDEF_CIRenderTask
 typedef bean_id CIRenderTask;
 #endif
-static inline CIRenderInfo    CIRenderTask_WaitUntilCompletedAndReturnError(CIRenderTask self, NSError error)    { return ((CIRenderInfo (*)(CIRenderTask, SEL, NSError))bean_msgSend)(self, bean_sel("waitUntilCompletedAndReturnError:"), error); }
+static inline CIRenderInfo    CIRenderTask_WaitUntilCompletedAndReturnError(CIRenderTask self, NSError* error)    { return ((CIRenderInfo (*)(CIRenderTask, SEL, NSError*))bean_msgSend)(self, bean_sel("waitUntilCompletedAndReturnError:"), error); }
+
+/* ===== NSUserActivity ===== */
+#ifndef BEAN_TYPEDEF_NSUserActivity
+#define BEAN_TYPEDEF_NSUserActivity
+typedef bean_id NSUserActivity;
+#endif
+static inline CIBarcodeDescriptor    NSUserActivity_DetectedBarcodeDescriptor(NSUserActivity self)    { return ((CIBarcodeDescriptor (*)(NSUserActivity, SEL))bean_msgSend)(self, bean_sel("detectedBarcodeDescriptor")); }
+
+/* ===== CAAnimationDelegate ===== */
+#ifndef BEAN_TYPEDEF_CAAnimationDelegate
+#define BEAN_TYPEDEF_CAAnimationDelegate
+typedef bean_id CAAnimationDelegate;
+#endif
+static inline void    CAAnimationDelegate_AnimationDidStart(CAAnimationDelegate self, CAAnimation anim)                       { ((void (*)(CAAnimationDelegate, SEL, CAAnimation))bean_msgSend)(self, bean_sel("animationDidStart:"), anim); }
+static inline void    CAAnimationDelegate_AnimationDidStop_Finished(CAAnimationDelegate self, CAAnimation anim, BOOL flag)    { ((void (*)(CAAnimationDelegate, SEL, CAAnimation, BOOL))bean_msgSend)(self, bean_sel("animationDidStop:finished:"), anim, flag); }
 
 /* ===== CALayer ===== */
 #ifndef BEAN_TYPEDEF_CALayer
 #define BEAN_TYPEDEF_CALayer
 typedef bean_id CALayer;
 #endif
-static inline id                        CALayer_Layer(void)                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CALayer"), bean_sel("layer")); }
-static inline id                        CALayer_Init(CALayer self)                                                                          { return ((id (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                        CALayer_InitWithLayer(CALayer self, id layer)                                                       { return ((id (*)(CALayer, SEL, id))bean_msgSend)(self, bean_sel("initWithLayer:"), layer); }
-static inline id                        CALayer_PresentationLayer(CALayer self)                                                             { return ((id (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("presentationLayer")); }
-static inline id                        CALayer_ModelLayer(CALayer self)                                                                    { return ((id (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("modelLayer")); }
+static inline CALayer                   CALayer_Layer(void)                                                                                 { return ((CALayer (*)(bean_class, SEL))bean_msgSend)(bean_cls("CALayer"), bean_sel("layer")); }
+static inline CALayer                   CALayer_Init(CALayer self)                                                                          { return ((CALayer (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CALayer                   CALayer_InitWithLayer(CALayer self, id layer)                                                       { return ((CALayer (*)(CALayer, SEL, id))bean_msgSend)(self, bean_sel("initWithLayer:"), layer); }
+static inline CALayer                   CALayer_PresentationLayer(CALayer self)                                                             { return ((CALayer (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("presentationLayer")); }
+static inline CALayer                   CALayer_ModelLayer(CALayer self)                                                                    { return ((CALayer (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("modelLayer")); }
 static inline id                        CALayer_DefaultValueForKey(NSString key)                                                            { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CALayer"), bean_sel("defaultValueForKey:"), key); }
 static inline BOOL                      CALayer_NeedsDisplayForKey(NSString key)                                                            { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CALayer"), bean_sel("needsDisplayForKey:"), key); }
 static inline BOOL                      CALayer_ShouldArchiveValueForKey(CALayer self, NSString key)                                        { return ((BOOL (*)(CALayer, SEL, NSString))bean_msgSend)(self, bean_sel("shouldArchiveValueForKey:"), key); }
@@ -2263,6 +2615,23 @@ static inline CALayer                   CALayer_LayerWithRemoteClientId(NSUInteg
 static inline void                      CALayer_ScrollPoint(CALayer self, CGPoint p)                                                        { ((void (*)(CALayer, SEL, CGPoint))bean_msgSend)(self, bean_sel("scrollPoint:"), p); }
 static inline void                      CALayer_ScrollRectToVisible(CALayer self, CGRect r)                                                 { ((void (*)(CALayer, SEL, CGRect))bean_msgSend)(self, bean_sel("scrollRectToVisible:"), r); }
 static inline CGRect                    CALayer_VisibleRect(CALayer self)                                                                   { return ((CGRect (*)(CALayer, SEL))bean_msgSend_stret)(self, bean_sel("visibleRect")); }
+static inline BOOL                      CALayer_SupportsSecureCoding(void)                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CALayer"), bean_sel("supportsSecureCoding")); }
+static inline CGFloat                   CALayer_BeginTime(CALayer self)                                                                     { return ((CGFloat (*)(CALayer, SEL))bean_msgSend_fpret)(self, bean_sel("beginTime")); }
+static inline void                      CALayer_SetBeginTime(CALayer self, CGFloat beginTime)                                               { ((void (*)(CALayer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBeginTime:"), beginTime); }
+static inline CGFloat                   CALayer_Duration(CALayer self)                                                                      { return ((CGFloat (*)(CALayer, SEL))bean_msgSend_fpret)(self, bean_sel("duration")); }
+static inline void                      CALayer_SetDuration(CALayer self, CGFloat duration)                                                 { ((void (*)(CALayer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDuration:"), duration); }
+static inline CGFloat                   CALayer_Speed(CALayer self)                                                                         { return ((CGFloat (*)(CALayer, SEL))bean_msgSend_fpret)(self, bean_sel("speed")); }
+static inline void                      CALayer_SetSpeed(CALayer self, CGFloat speed)                                                       { ((void (*)(CALayer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
+static inline CGFloat                   CALayer_TimeOffset(CALayer self)                                                                    { return ((CGFloat (*)(CALayer, SEL))bean_msgSend_fpret)(self, bean_sel("timeOffset")); }
+static inline void                      CALayer_SetTimeOffset(CALayer self, CGFloat timeOffset)                                             { ((void (*)(CALayer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTimeOffset:"), timeOffset); }
+static inline CGFloat                   CALayer_RepeatCount(CALayer self)                                                                   { return ((CGFloat (*)(CALayer, SEL))bean_msgSend_fpret)(self, bean_sel("repeatCount")); }
+static inline void                      CALayer_SetRepeatCount(CALayer self, CGFloat repeatCount)                                           { ((void (*)(CALayer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRepeatCount:"), repeatCount); }
+static inline CGFloat                   CALayer_RepeatDuration(CALayer self)                                                                { return ((CGFloat (*)(CALayer, SEL))bean_msgSend_fpret)(self, bean_sel("repeatDuration")); }
+static inline void                      CALayer_SetRepeatDuration(CALayer self, CGFloat repeatDuration)                                     { ((void (*)(CALayer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRepeatDuration:"), repeatDuration); }
+static inline BOOL                      CALayer_Autoreverses(CALayer self)                                                                  { return ((BOOL (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("autoreverses")); }
+static inline void                      CALayer_SetAutoreverses(CALayer self, BOOL autoreverses)                                            { ((void (*)(CALayer, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutoreverses:"), autoreverses); }
+static inline NSString                  CALayer_FillMode(CALayer self)                                                                      { return ((NSString (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("fillMode")); }
+static inline void                      CALayer_SetFillMode(CALayer self, NSString fillMode)                                                { ((void (*)(CALayer, SEL, NSString))bean_msgSend)(self, bean_sel("setFillMode:"), fillMode); }
 static inline BOOL                      CALayer_Hidden(CALayer self)                                                                        { return ((BOOL (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("hidden")); }
 static inline BOOL                      CALayer_DoubleSided(CALayer self)                                                                   { return ((BOOL (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("doubleSided")); }
 static inline BOOL                      CALayer_GeometryFlipped(CALayer self)                                                               { return ((BOOL (*)(CALayer, SEL))bean_msgSend)(self, bean_sel("geometryFlipped")); }
@@ -2273,26 +2642,34 @@ static inline BOOL                      CALayer_Opaque(CALayer self)            
 #define BEAN_TYPEDEF_CAMetalDisplayLink
 typedef bean_id CAMetalDisplayLink;
 #endif
-static inline id                  CAMetalDisplayLink_InitWithMetalLayer(CAMetalDisplayLink self, CAMetalLayer layer)                                  { return ((id (*)(CAMetalDisplayLink, SEL, CAMetalLayer))bean_msgSend)(self, bean_sel("initWithMetalLayer:"), layer); }
-static inline void                CAMetalDisplayLink_AddToRunLoop_ForMode(CAMetalDisplayLink self, NSRunLoop runloop, NSString mode)                  { ((void (*)(CAMetalDisplayLink, SEL, NSRunLoop, NSString))bean_msgSend)(self, bean_sel("addToRunLoop:forMode:"), runloop, mode); }
-static inline void                CAMetalDisplayLink_RemoveFromRunLoop_ForMode(CAMetalDisplayLink self, NSRunLoop runloop, NSString mode)             { ((void (*)(CAMetalDisplayLink, SEL, NSRunLoop, NSString))bean_msgSend)(self, bean_sel("removeFromRunLoop:forMode:"), runloop, mode); }
-static inline void                CAMetalDisplayLink_Invalidate(CAMetalDisplayLink self)                                                              { ((void (*)(CAMetalDisplayLink, SEL))bean_msgSend)(self, bean_sel("invalidate")); }
-static inline id                  CAMetalDisplayLink_Delegate(CAMetalDisplayLink self)                                                                { return ((id (*)(CAMetalDisplayLink, SEL))bean_msgSend)(self, bean_sel("delegate")); }
-static inline void                CAMetalDisplayLink_SetDelegate(CAMetalDisplayLink self, id delegate)                                                { ((void (*)(CAMetalDisplayLink, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
-static inline CGFloat             CAMetalDisplayLink_PreferredFrameLatency(CAMetalDisplayLink self)                                                   { return ((CGFloat (*)(CAMetalDisplayLink, SEL))bean_msgSend_fpret)(self, bean_sel("preferredFrameLatency")); }
-static inline void                CAMetalDisplayLink_SetPreferredFrameLatency(CAMetalDisplayLink self, CGFloat preferredFrameLatency)                 { ((void (*)(CAMetalDisplayLink, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPreferredFrameLatency:"), preferredFrameLatency); }
-static inline CAFrameRateRange    CAMetalDisplayLink_PreferredFrameRateRange(CAMetalDisplayLink self)                                                 { return ((CAFrameRateRange (*)(CAMetalDisplayLink, SEL))bean_msgSend_stret)(self, bean_sel("preferredFrameRateRange")); }
-static inline void                CAMetalDisplayLink_SetPreferredFrameRateRange(CAMetalDisplayLink self, CAFrameRateRange preferredFrameRateRange)    { ((void (*)(CAMetalDisplayLink, SEL, CAFrameRateRange))bean_msgSend)(self, bean_sel("setPreferredFrameRateRange:"), preferredFrameRateRange); }
-static inline BOOL                CAMetalDisplayLink_IsPaused(CAMetalDisplayLink self)                                                                { return ((BOOL (*)(CAMetalDisplayLink, SEL))bean_msgSend)(self, bean_sel("isPaused")); }
-static inline void                CAMetalDisplayLink_SetPaused(CAMetalDisplayLink self, BOOL paused)                                                  { ((void (*)(CAMetalDisplayLink, SEL, BOOL))bean_msgSend)(self, bean_sel("setPaused:"), paused); }
-static inline BOOL                CAMetalDisplayLink_Paused(CAMetalDisplayLink self)                                                                  { return ((BOOL (*)(CAMetalDisplayLink, SEL))bean_msgSend)(self, bean_sel("paused")); }
+static inline CAMetalDisplayLink    CAMetalDisplayLink_InitWithMetalLayer(CAMetalDisplayLink self, CAMetalLayer layer)                                  { return ((CAMetalDisplayLink (*)(CAMetalDisplayLink, SEL, CAMetalLayer))bean_msgSend)(self, bean_sel("initWithMetalLayer:"), layer); }
+static inline void                  CAMetalDisplayLink_AddToRunLoop_ForMode(CAMetalDisplayLink self, NSRunLoop runloop, NSString mode)                  { ((void (*)(CAMetalDisplayLink, SEL, NSRunLoop, NSString))bean_msgSend)(self, bean_sel("addToRunLoop:forMode:"), runloop, mode); }
+static inline void                  CAMetalDisplayLink_RemoveFromRunLoop_ForMode(CAMetalDisplayLink self, NSRunLoop runloop, NSString mode)             { ((void (*)(CAMetalDisplayLink, SEL, NSRunLoop, NSString))bean_msgSend)(self, bean_sel("removeFromRunLoop:forMode:"), runloop, mode); }
+static inline void                  CAMetalDisplayLink_Invalidate(CAMetalDisplayLink self)                                                              { ((void (*)(CAMetalDisplayLink, SEL))bean_msgSend)(self, bean_sel("invalidate")); }
+static inline id                    CAMetalDisplayLink_Delegate(CAMetalDisplayLink self)                                                                { return ((id (*)(CAMetalDisplayLink, SEL))bean_msgSend)(self, bean_sel("delegate")); }
+static inline void                  CAMetalDisplayLink_SetDelegate(CAMetalDisplayLink self, id delegate)                                                { ((void (*)(CAMetalDisplayLink, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+static inline CGFloat               CAMetalDisplayLink_PreferredFrameLatency(CAMetalDisplayLink self)                                                   { return ((CGFloat (*)(CAMetalDisplayLink, SEL))bean_msgSend_fpret)(self, bean_sel("preferredFrameLatency")); }
+static inline void                  CAMetalDisplayLink_SetPreferredFrameLatency(CAMetalDisplayLink self, CGFloat preferredFrameLatency)                 { ((void (*)(CAMetalDisplayLink, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPreferredFrameLatency:"), preferredFrameLatency); }
+static inline CAFrameRateRange      CAMetalDisplayLink_PreferredFrameRateRange(CAMetalDisplayLink self)                                                 { return ((CAFrameRateRange (*)(CAMetalDisplayLink, SEL))bean_msgSend_stret)(self, bean_sel("preferredFrameRateRange")); }
+static inline void                  CAMetalDisplayLink_SetPreferredFrameRateRange(CAMetalDisplayLink self, CAFrameRateRange preferredFrameRateRange)    { ((void (*)(CAMetalDisplayLink, SEL, CAFrameRateRange))bean_msgSend)(self, bean_sel("setPreferredFrameRateRange:"), preferredFrameRateRange); }
+static inline BOOL                  CAMetalDisplayLink_IsPaused(CAMetalDisplayLink self)                                                                { return ((BOOL (*)(CAMetalDisplayLink, SEL))bean_msgSend)(self, bean_sel("isPaused")); }
+static inline void                  CAMetalDisplayLink_SetPaused(CAMetalDisplayLink self, BOOL paused)                                                  { ((void (*)(CAMetalDisplayLink, SEL, BOOL))bean_msgSend)(self, bean_sel("setPaused:"), paused); }
+static inline BOOL                  CAMetalDisplayLink_Paused(CAMetalDisplayLink self)                                                                  { return ((BOOL (*)(CAMetalDisplayLink, SEL))bean_msgSend)(self, bean_sel("paused")); }
+
+/* ===== CAMetalDrawable ===== */
+#ifndef BEAN_TYPEDEF_CAMetalDrawable
+#define BEAN_TYPEDEF_CAMetalDrawable
+typedef bean_id CAMetalDrawable;
+#endif
+static inline id              CAMetalDrawable_Texture(CAMetalDrawable self)    { return ((id (*)(CAMetalDrawable, SEL))bean_msgSend)(self, bean_sel("texture")); }
+static inline CAMetalLayer    CAMetalDrawable_Layer(CAMetalDrawable self)      { return ((CAMetalLayer (*)(CAMetalDrawable, SEL))bean_msgSend)(self, bean_sel("layer")); }
 
 /* ===== CIBlendKernel ===== */
 #ifndef BEAN_TYPEDEF_CIBlendKernel
 #define BEAN_TYPEDEF_CIBlendKernel
 typedef bean_id CIBlendKernel;
 #endif
-static inline id               CIBlendKernel_KernelWithString(NSString string)                                                                                                    { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIBlendKernel"), bean_sel("kernelWithString:"), string); }
+static inline CIBlendKernel    CIBlendKernel_KernelWithString(NSString string)                                                                                                    { return ((CIBlendKernel (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIBlendKernel"), bean_sel("kernelWithString:"), string); }
 static inline CIImage          CIBlendKernel_ApplyWithForeground_Background(CIBlendKernel self, CIImage foreground, CIImage background)                                           { return ((CIImage (*)(CIBlendKernel, SEL, CIImage, CIImage))bean_msgSend)(self, bean_sel("applyWithForeground:background:"), foreground, background); }
 static inline CIImage          CIBlendKernel_ApplyWithForeground_Background_ColorSpace(CIBlendKernel self, CIImage foreground, CIImage background, CGColorSpaceRef colorSpace)    { return ((CIImage (*)(CIBlendKernel, SEL, CIImage, CIImage, CGColorSpaceRef))bean_msgSend)(self, bean_sel("applyWithForeground:background:colorSpace:"), foreground, background, colorSpace); }
 static inline CIBlendKernel    CIBlendKernel_ComponentAdd(void)                                                                                                                   { return ((CIBlendKernel (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIBlendKernel"), bean_sel("componentAdd")); }
@@ -2342,89 +2719,127 @@ static inline CIBlendKernel    CIBlendKernel_LighterColor(void)                 
 #define BEAN_TYPEDEF_CIColorKernel
 typedef bean_id CIColorKernel;
 #endif
-static inline id         CIColorKernel_KernelWithString(NSString string)                                             { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIColorKernel"), bean_sel("kernelWithString:"), string); }
-static inline CIImage    CIColorKernel_ApplyWithExtent_Arguments(CIColorKernel self, CGRect extent, NSArray args)    { return ((CIImage (*)(CIColorKernel, SEL, CGRect, NSArray))bean_msgSend)(self, bean_sel("applyWithExtent:arguments:"), extent, args); }
+static inline CIColorKernel    CIColorKernel_KernelWithString(NSString string)                                             { return ((CIColorKernel (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIColorKernel"), bean_sel("kernelWithString:"), string); }
+static inline CIImage          CIColorKernel_ApplyWithExtent_Arguments(CIColorKernel self, CGRect extent, NSArray args)    { return ((CIImage (*)(CIColorKernel, SEL, CGRect, NSArray))bean_msgSend)(self, bean_sel("applyWithExtent:arguments:"), extent, args); }
 
 /* ===== CIImageAccumulator ===== */
 #ifndef BEAN_TYPEDEF_CIImageAccumulator
 #define BEAN_TYPEDEF_CIImageAccumulator
 typedef bean_id CIImageAccumulator;
 #endif
-static inline id         CIImageAccumulator_ImageAccumulatorWithExtent_Format(CGRect extent, int format)                                                        { return ((id (*)(bean_class, SEL, CGRect, int))bean_msgSend)(bean_cls("CIImageAccumulator"), bean_sel("imageAccumulatorWithExtent:format:"), extent, format); }
-static inline id         CIImageAccumulator_ImageAccumulatorWithExtent_Format_ColorSpace(CGRect extent, int format, CGColorSpaceRef colorSpace)                 { return ((id (*)(bean_class, SEL, CGRect, int, CGColorSpaceRef))bean_msgSend)(bean_cls("CIImageAccumulator"), bean_sel("imageAccumulatorWithExtent:format:colorSpace:"), extent, format, colorSpace); }
-static inline id         CIImageAccumulator_InitWithExtent_Format(CIImageAccumulator self, CGRect extent, int format)                                           { return ((id (*)(CIImageAccumulator, SEL, CGRect, int))bean_msgSend)(self, bean_sel("initWithExtent:format:"), extent, format); }
-static inline id         CIImageAccumulator_InitWithExtent_Format_ColorSpace(CIImageAccumulator self, CGRect extent, int format, CGColorSpaceRef colorSpace)    { return ((id (*)(CIImageAccumulator, SEL, CGRect, int, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithExtent:format:colorSpace:"), extent, format, colorSpace); }
-static inline CIImage    CIImageAccumulator_Image(CIImageAccumulator self)                                                                                      { return ((CIImage (*)(CIImageAccumulator, SEL))bean_msgSend)(self, bean_sel("image")); }
-static inline void       CIImageAccumulator_SetImage(CIImageAccumulator self, CIImage image)                                                                    { ((void (*)(CIImageAccumulator, SEL, CIImage))bean_msgSend)(self, bean_sel("setImage:"), image); }
-static inline void       CIImageAccumulator_SetImage_DirtyRect(CIImageAccumulator self, CIImage image, CGRect dirtyRect)                                        { ((void (*)(CIImageAccumulator, SEL, CIImage, CGRect))bean_msgSend)(self, bean_sel("setImage:dirtyRect:"), image, dirtyRect); }
-static inline void       CIImageAccumulator_Clear(CIImageAccumulator self)                                                                                      { ((void (*)(CIImageAccumulator, SEL))bean_msgSend)(self, bean_sel("clear")); }
-static inline CGRect     CIImageAccumulator_Extent(CIImageAccumulator self)                                                                                     { return ((CGRect (*)(CIImageAccumulator, SEL))bean_msgSend_stret)(self, bean_sel("extent")); }
-static inline int        CIImageAccumulator_Format(CIImageAccumulator self)                                                                                     { return ((int (*)(CIImageAccumulator, SEL))bean_msgSend)(self, bean_sel("format")); }
+static inline CIImageAccumulator    CIImageAccumulator_ImageAccumulatorWithExtent_Format(CGRect extent, int format)                                                        { return ((CIImageAccumulator (*)(bean_class, SEL, CGRect, int))bean_msgSend)(bean_cls("CIImageAccumulator"), bean_sel("imageAccumulatorWithExtent:format:"), extent, format); }
+static inline CIImageAccumulator    CIImageAccumulator_ImageAccumulatorWithExtent_Format_ColorSpace(CGRect extent, int format, CGColorSpaceRef colorSpace)                 { return ((CIImageAccumulator (*)(bean_class, SEL, CGRect, int, CGColorSpaceRef))bean_msgSend)(bean_cls("CIImageAccumulator"), bean_sel("imageAccumulatorWithExtent:format:colorSpace:"), extent, format, colorSpace); }
+static inline CIImageAccumulator    CIImageAccumulator_InitWithExtent_Format(CIImageAccumulator self, CGRect extent, int format)                                           { return ((CIImageAccumulator (*)(CIImageAccumulator, SEL, CGRect, int))bean_msgSend)(self, bean_sel("initWithExtent:format:"), extent, format); }
+static inline CIImageAccumulator    CIImageAccumulator_InitWithExtent_Format_ColorSpace(CIImageAccumulator self, CGRect extent, int format, CGColorSpaceRef colorSpace)    { return ((CIImageAccumulator (*)(CIImageAccumulator, SEL, CGRect, int, CGColorSpaceRef))bean_msgSend)(self, bean_sel("initWithExtent:format:colorSpace:"), extent, format, colorSpace); }
+static inline CIImage               CIImageAccumulator_Image(CIImageAccumulator self)                                                                                      { return ((CIImage (*)(CIImageAccumulator, SEL))bean_msgSend)(self, bean_sel("image")); }
+static inline void                  CIImageAccumulator_SetImage(CIImageAccumulator self, CIImage image)                                                                    { ((void (*)(CIImageAccumulator, SEL, CIImage))bean_msgSend)(self, bean_sel("setImage:"), image); }
+static inline void                  CIImageAccumulator_SetImage_DirtyRect(CIImageAccumulator self, CIImage image, CGRect dirtyRect)                                        { ((void (*)(CIImageAccumulator, SEL, CIImage, CGRect))bean_msgSend)(self, bean_sel("setImage:dirtyRect:"), image, dirtyRect); }
+static inline void                  CIImageAccumulator_Clear(CIImageAccumulator self)                                                                                      { ((void (*)(CIImageAccumulator, SEL))bean_msgSend)(self, bean_sel("clear")); }
+static inline CGRect                CIImageAccumulator_Extent(CIImageAccumulator self)                                                                                     { return ((CGRect (*)(CIImageAccumulator, SEL))bean_msgSend_stret)(self, bean_sel("extent")); }
+static inline int                   CIImageAccumulator_Format(CIImageAccumulator self)                                                                                     { return ((int (*)(CIImageAccumulator, SEL))bean_msgSend)(self, bean_sel("format")); }
 
 /* ===== CIImageProcessorKernel ===== */
 #ifndef BEAN_TYPEDEF_CIImageProcessorKernel
 #define BEAN_TYPEDEF_CIImageProcessorKernel
 typedef bean_id CIImageProcessorKernel;
 #endif
-static inline BOOL       CIImageProcessorKernel_ProcessWithInputs_Arguments_Output_Error(NSArray inputs, NSDictionary arguments, id output, NSError error)           { return ((BOOL (*)(bean_class, SEL, NSArray, NSDictionary, id, NSError))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("processWithInputs:arguments:output:error:"), inputs, arguments, output, error); }
-static inline CGRect     CIImageProcessorKernel_RoiForInput_Arguments_OutputRect(int inputIndex, NSDictionary arguments, CGRect outputRect)                          { return ((CGRect (*)(bean_class, SEL, int, NSDictionary, CGRect))bean_msgSend_stret)(bean_cls("CIImageProcessorKernel"), bean_sel("roiForInput:arguments:outputRect:"), inputIndex, arguments, outputRect); }
-static inline NSArray    CIImageProcessorKernel_RoiTileArrayForInput_Arguments_OutputRect(int inputIndex, NSDictionary arguments, CGRect outputRect)                 { return ((NSArray (*)(bean_class, SEL, int, NSDictionary, CGRect))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("roiTileArrayForInput:arguments:outputRect:"), inputIndex, arguments, outputRect); }
-static inline int        CIImageProcessorKernel_FormatForInputAtIndex(int inputIndex)                                                                                { return ((int (*)(bean_class, SEL, int))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("formatForInputAtIndex:"), inputIndex); }
-static inline CIImage    CIImageProcessorKernel_ApplyWithExtent_Inputs_Arguments_Error(CGRect extent, NSArray inputs, NSDictionary arguments, NSError error)         { return ((CIImage (*)(bean_class, SEL, CGRect, NSArray, NSDictionary, NSError))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("applyWithExtent:inputs:arguments:error:"), extent, inputs, arguments, error); }
-static inline int        CIImageProcessorKernel_OutputFormat(void)                                                                                                   { return ((int (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("outputFormat")); }
-static inline BOOL       CIImageProcessorKernel_OutputIsOpaque(void)                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("outputIsOpaque")); }
-static inline BOOL       CIImageProcessorKernel_SynchronizeInputs(void)                                                                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("synchronizeInputs")); }
-static inline BOOL       CIImageProcessorKernel_ProcessWithInputs_Arguments_Outputs_Error(NSArray inputs, NSDictionary arguments, NSArray outputs, NSError error)    { return ((BOOL (*)(bean_class, SEL, NSArray, NSDictionary, NSArray, NSError))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("processWithInputs:arguments:outputs:error:"), inputs, arguments, outputs, error); }
-static inline int        CIImageProcessorKernel_OutputFormatAtIndex_Arguments(int outputIndex, NSDictionary arguments)                                               { return ((int (*)(bean_class, SEL, int, NSDictionary))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("outputFormatAtIndex:arguments:"), outputIndex, arguments); }
-static inline NSArray    CIImageProcessorKernel_ApplyWithExtents_Inputs_Arguments_Error(NSArray extents, NSArray inputs, NSDictionary arguments, NSError error)      { return ((NSArray (*)(bean_class, SEL, NSArray, NSArray, NSDictionary, NSError))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("applyWithExtents:inputs:arguments:error:"), extents, inputs, arguments, error); }
+static inline BOOL       CIImageProcessorKernel_ProcessWithInputs_Arguments_Output_Error(NSArray inputs, NSDictionary arguments, id output, NSError* error)           { return ((BOOL (*)(bean_class, SEL, NSArray, NSDictionary, id, NSError*))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("processWithInputs:arguments:output:error:"), inputs, arguments, output, error); }
+static inline CGRect     CIImageProcessorKernel_RoiForInput_Arguments_OutputRect(int inputIndex, NSDictionary arguments, CGRect outputRect)                           { return ((CGRect (*)(bean_class, SEL, int, NSDictionary, CGRect))bean_msgSend_stret)(bean_cls("CIImageProcessorKernel"), bean_sel("roiForInput:arguments:outputRect:"), inputIndex, arguments, outputRect); }
+static inline NSArray    CIImageProcessorKernel_RoiTileArrayForInput_Arguments_OutputRect(int inputIndex, NSDictionary arguments, CGRect outputRect)                  { return ((NSArray (*)(bean_class, SEL, int, NSDictionary, CGRect))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("roiTileArrayForInput:arguments:outputRect:"), inputIndex, arguments, outputRect); }
+static inline int        CIImageProcessorKernel_FormatForInputAtIndex(int inputIndex)                                                                                 { return ((int (*)(bean_class, SEL, int))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("formatForInputAtIndex:"), inputIndex); }
+static inline CIImage    CIImageProcessorKernel_ApplyWithExtent_Inputs_Arguments_Error(CGRect extent, NSArray inputs, NSDictionary arguments, NSError* error)         { return ((CIImage (*)(bean_class, SEL, CGRect, NSArray, NSDictionary, NSError*))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("applyWithExtent:inputs:arguments:error:"), extent, inputs, arguments, error); }
+static inline int        CIImageProcessorKernel_OutputFormat(void)                                                                                                    { return ((int (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("outputFormat")); }
+static inline BOOL       CIImageProcessorKernel_OutputIsOpaque(void)                                                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("outputIsOpaque")); }
+static inline BOOL       CIImageProcessorKernel_SynchronizeInputs(void)                                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("synchronizeInputs")); }
+static inline BOOL       CIImageProcessorKernel_ProcessWithInputs_Arguments_Outputs_Error(NSArray inputs, NSDictionary arguments, NSArray outputs, NSError* error)    { return ((BOOL (*)(bean_class, SEL, NSArray, NSDictionary, NSArray, NSError*))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("processWithInputs:arguments:outputs:error:"), inputs, arguments, outputs, error); }
+static inline int        CIImageProcessorKernel_OutputFormatAtIndex_Arguments(int outputIndex, NSDictionary arguments)                                                { return ((int (*)(bean_class, SEL, int, NSDictionary))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("outputFormatAtIndex:arguments:"), outputIndex, arguments); }
+static inline NSArray    CIImageProcessorKernel_ApplyWithExtents_Inputs_Arguments_Error(NSArray extents, NSArray inputs, NSDictionary arguments, NSError* error)      { return ((NSArray (*)(bean_class, SEL, NSArray, NSArray, NSDictionary, NSError*))bean_msgSend)(bean_cls("CIImageProcessorKernel"), bean_sel("applyWithExtents:inputs:arguments:error:"), extents, inputs, arguments, error); }
 
 /* ===== CIKernel ===== */
 #ifndef BEAN_TYPEDEF_CIKernel
 #define BEAN_TYPEDEF_CIKernel
 typedef bean_id CIKernel;
 #endif
-static inline NSArray     CIKernel_KernelsWithString(NSString string)                                                                                            { return ((NSArray (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelsWithString:"), string); }
-static inline NSArray     CIKernel_KernelsWithMetalString_Error(NSString source, NSError error)                                                                  { return ((NSArray (*)(bean_class, SEL, NSString, NSError))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelsWithMetalString:error:"), source, error); }
-static inline id          CIKernel_KernelWithString(NSString string)                                                                                             { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelWithString:"), string); }
-static inline id          CIKernel_KernelWithFunctionName_FromMetalLibraryData_Error(NSString name, NSData data, NSError error)                                  { return ((id (*)(bean_class, SEL, NSString, NSData, NSError))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelWithFunctionName:fromMetalLibraryData:error:"), name, data, error); }
-static inline id          CIKernel_KernelWithFunctionName_FromMetalLibraryData_OutputPixelFormat_Error(NSString name, NSData data, int format, NSError error)    { return ((id (*)(bean_class, SEL, NSString, NSData, int, NSError))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelWithFunctionName:fromMetalLibraryData:outputPixelFormat:error:"), name, data, format, error); }
-static inline NSArray     CIKernel_KernelNamesFromMetalLibraryData(NSData data)                                                                                  { return ((NSArray (*)(bean_class, SEL, NSData))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelNamesFromMetalLibraryData:"), data); }
-static inline void        CIKernel_SetROISelector(CIKernel self, SEL method)                                                                                     { ((void (*)(CIKernel, SEL, SEL))bean_msgSend)(self, bean_sel("setROISelector:"), method); }
-static inline CIImage     CIKernel_ApplyWithExtent_RoiCallback_Arguments(CIKernel self, CGRect extent, void* callback, NSArray args)                             { return ((CIImage (*)(CIKernel, SEL, CGRect, void*, NSArray))bean_msgSend)(self, bean_sel("applyWithExtent:roiCallback:arguments:"), extent, callback, args); }
-static inline NSString    CIKernel_Name(CIKernel self)                                                                                                           { return ((NSString (*)(CIKernel, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline NSArray     CIKernel_KernelsWithString(NSString string)                                                                                             { return ((NSArray (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelsWithString:"), string); }
+static inline NSArray     CIKernel_KernelsWithMetalString_Error(NSString source, NSError* error)                                                                  { return ((NSArray (*)(bean_class, SEL, NSString, NSError*))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelsWithMetalString:error:"), source, error); }
+static inline CIKernel    CIKernel_KernelWithString(NSString string)                                                                                              { return ((CIKernel (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelWithString:"), string); }
+static inline CIKernel    CIKernel_KernelWithFunctionName_FromMetalLibraryData_Error(NSString name, NSData data, NSError* error)                                  { return ((CIKernel (*)(bean_class, SEL, NSString, NSData, NSError*))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelWithFunctionName:fromMetalLibraryData:error:"), name, data, error); }
+static inline CIKernel    CIKernel_KernelWithFunctionName_FromMetalLibraryData_OutputPixelFormat_Error(NSString name, NSData data, int format, NSError* error)    { return ((CIKernel (*)(bean_class, SEL, NSString, NSData, int, NSError*))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelWithFunctionName:fromMetalLibraryData:outputPixelFormat:error:"), name, data, format, error); }
+static inline NSArray     CIKernel_KernelNamesFromMetalLibraryData(NSData data)                                                                                   { return ((NSArray (*)(bean_class, SEL, NSData))bean_msgSend)(bean_cls("CIKernel"), bean_sel("kernelNamesFromMetalLibraryData:"), data); }
+static inline void        CIKernel_SetROISelector(CIKernel self, SEL method)                                                                                      { ((void (*)(CIKernel, SEL, SEL))bean_msgSend)(self, bean_sel("setROISelector:"), method); }
+static inline CIImage     CIKernel_ApplyWithExtent_RoiCallback_Arguments(CIKernel self, CGRect extent, void* callback, NSArray args)                              { return ((CIImage (*)(CIKernel, SEL, CGRect, void*, NSArray))bean_msgSend)(self, bean_sel("applyWithExtent:roiCallback:arguments:"), extent, callback, args); }
+static inline NSString    CIKernel_Name(CIKernel self)                                                                                                            { return ((NSString (*)(CIKernel, SEL))bean_msgSend)(self, bean_sel("name")); }
 
 /* ===== CISampler ===== */
 #ifndef BEAN_TYPEDEF_CISampler
 #define BEAN_TYPEDEF_CISampler
 typedef bean_id CISampler;
 #endif
-static inline id               CISampler_SamplerWithImage(CIImage im)                                            { return ((id (*)(bean_class, SEL, CIImage))bean_msgSend)(bean_cls("CISampler"), bean_sel("samplerWithImage:"), im); }
-static inline id               CISampler_SamplerWithImage_KeysAndValues(CIImage im, id key0)                     { return ((id (*)(bean_class, SEL, CIImage, id))bean_msgSend)(bean_cls("CISampler"), bean_sel("samplerWithImage:keysAndValues:"), im, key0); }
-static inline id               CISampler_SamplerWithImage_Options(CIImage im, NSDictionary dict)                 { return ((id (*)(bean_class, SEL, CIImage, NSDictionary))bean_msgSend)(bean_cls("CISampler"), bean_sel("samplerWithImage:options:"), im, dict); }
-static inline id               CISampler_InitWithImage(CISampler self, CIImage im)                               { return ((id (*)(CISampler, SEL, CIImage))bean_msgSend)(self, bean_sel("initWithImage:"), im); }
-static inline id               CISampler_InitWithImage_KeysAndValues(CISampler self, CIImage im, id key0)        { return ((id (*)(CISampler, SEL, CIImage, id))bean_msgSend)(self, bean_sel("initWithImage:keysAndValues:"), im, key0); }
-static inline id               CISampler_InitWithImage_Options(CISampler self, CIImage im, NSDictionary dict)    { return ((id (*)(CISampler, SEL, CIImage, NSDictionary))bean_msgSend)(self, bean_sel("initWithImage:options:"), im, dict); }
+static inline CISampler        CISampler_SamplerWithImage(CIImage im)                                            { return ((CISampler (*)(bean_class, SEL, CIImage))bean_msgSend)(bean_cls("CISampler"), bean_sel("samplerWithImage:"), im); }
+static inline CISampler        CISampler_SamplerWithImage_KeysAndValues(CIImage im, id key0)                     { return ((CISampler (*)(bean_class, SEL, CIImage, id))bean_msgSend)(bean_cls("CISampler"), bean_sel("samplerWithImage:keysAndValues:"), im, key0); }
+static inline CISampler        CISampler_SamplerWithImage_Options(CIImage im, NSDictionary dict)                 { return ((CISampler (*)(bean_class, SEL, CIImage, NSDictionary))bean_msgSend)(bean_cls("CISampler"), bean_sel("samplerWithImage:options:"), im, dict); }
+static inline CISampler        CISampler_InitWithImage(CISampler self, CIImage im)                               { return ((CISampler (*)(CISampler, SEL, CIImage))bean_msgSend)(self, bean_sel("initWithImage:"), im); }
+static inline CISampler        CISampler_InitWithImage_KeysAndValues(CISampler self, CIImage im, id key0)        { return ((CISampler (*)(CISampler, SEL, CIImage, id))bean_msgSend)(self, bean_sel("initWithImage:keysAndValues:"), im, key0); }
+static inline CISampler        CISampler_InitWithImage_Options(CISampler self, CIImage im, NSDictionary dict)    { return ((CISampler (*)(CISampler, SEL, CIImage, NSDictionary))bean_msgSend)(self, bean_sel("initWithImage:options:"), im, dict); }
 static inline CIFilterShape    CISampler_Definition(CISampler self)                                              { return ((CIFilterShape (*)(CISampler, SEL))bean_msgSend)(self, bean_sel("definition")); }
 static inline CGRect           CISampler_Extent(CISampler self)                                                  { return ((CGRect (*)(CISampler, SEL))bean_msgSend_stret)(self, bean_sel("extent")); }
+static inline id               CISampler_CopyWithZone(CISampler self, NSZone* zone)                              { return ((id (*)(CISampler, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CIWarpKernel ===== */
 #ifndef BEAN_TYPEDEF_CIWarpKernel
 #define BEAN_TYPEDEF_CIWarpKernel
 typedef bean_id CIWarpKernel;
 #endif
-static inline id         CIWarpKernel_KernelWithString(NSString string)                                                                                                  { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIWarpKernel"), bean_sel("kernelWithString:"), string); }
-static inline CIImage    CIWarpKernel_ApplyWithExtent_RoiCallback_InputImage_Arguments(CIWarpKernel self, CGRect extent, void* callback, CIImage image, NSArray args)    { return ((CIImage (*)(CIWarpKernel, SEL, CGRect, void*, CIImage, NSArray))bean_msgSend)(self, bean_sel("applyWithExtent:roiCallback:inputImage:arguments:"), extent, callback, image, args); }
+static inline CIWarpKernel    CIWarpKernel_KernelWithString(NSString string)                                                                                                  { return ((CIWarpKernel (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIWarpKernel"), bean_sel("kernelWithString:"), string); }
+static inline CIImage         CIWarpKernel_ApplyWithExtent_RoiCallback_InputImage_Arguments(CIWarpKernel self, CGRect extent, void* callback, CIImage image, NSArray args)    { return ((CIImage (*)(CIWarpKernel, SEL, CGRect, void*, CIImage, NSArray))bean_msgSend)(self, bean_sel("applyWithExtent:roiCallback:inputImage:arguments:"), extent, callback, image, args); }
+
+/* ===== CAConstraintLayoutManager ===== */
+#ifndef BEAN_TYPEDEF_CAConstraintLayoutManager
+#define BEAN_TYPEDEF_CAConstraintLayoutManager
+typedef bean_id CAConstraintLayoutManager;
+#endif
+static inline CAConstraintLayoutManager    CAConstraintLayoutManager_LayoutManager(void)                                                       { return ((CAConstraintLayoutManager (*)(bean_class, SEL))bean_msgSend)(bean_cls("CAConstraintLayoutManager"), bean_sel("layoutManager")); }
+static inline CGSize                       CAConstraintLayoutManager_PreferredSizeOfLayer(CAConstraintLayoutManager self, CALayer layer)       { return ((CGSize (*)(CAConstraintLayoutManager, SEL, CALayer))bean_msgSend_stret)(self, bean_sel("preferredSizeOfLayer:"), layer); }
+static inline void                         CAConstraintLayoutManager_InvalidateLayoutOfLayer(CAConstraintLayoutManager self, CALayer layer)    { ((void (*)(CAConstraintLayoutManager, SEL, CALayer))bean_msgSend)(self, bean_sel("invalidateLayoutOfLayer:"), layer); }
+static inline void                         CAConstraintLayoutManager_LayoutSublayersOfLayer(CAConstraintLayoutManager self, CALayer layer)     { ((void (*)(CAConstraintLayoutManager, SEL, CALayer))bean_msgSend)(self, bean_sel("layoutSublayersOfLayer:"), layer); }
+
+/* ===== CALayerDelegate ===== */
+#ifndef BEAN_TYPEDEF_CALayerDelegate
+#define BEAN_TYPEDEF_CALayerDelegate
+typedef bean_id CALayerDelegate;
+#endif
+static inline void    CALayerDelegate_DisplayLayer(CALayerDelegate self, CALayer layer)                             { ((void (*)(CALayerDelegate, SEL, CALayer))bean_msgSend)(self, bean_sel("displayLayer:"), layer); }
+static inline void    CALayerDelegate_DrawLayer_InContext(CALayerDelegate self, CALayer layer, CGContextRef ctx)    { ((void (*)(CALayerDelegate, SEL, CALayer, CGContextRef))bean_msgSend)(self, bean_sel("drawLayer:inContext:"), layer, ctx); }
+static inline void    CALayerDelegate_LayerWillDraw(CALayerDelegate self, CALayer layer)                            { ((void (*)(CALayerDelegate, SEL, CALayer))bean_msgSend)(self, bean_sel("layerWillDraw:"), layer); }
+static inline void    CALayerDelegate_LayoutSublayersOfLayer(CALayerDelegate self, CALayer layer)                   { ((void (*)(CALayerDelegate, SEL, CALayer))bean_msgSend)(self, bean_sel("layoutSublayersOfLayer:"), layer); }
+static inline id      CALayerDelegate_ActionForLayer_ForKey(CALayerDelegate self, CALayer layer, NSString event)    { return ((id (*)(CALayerDelegate, SEL, CALayer, NSString))bean_msgSend)(self, bean_sel("actionForLayer:forKey:"), layer, event); }
+
+/* ===== CALayoutManager ===== */
+#ifndef BEAN_TYPEDEF_CALayoutManager
+#define BEAN_TYPEDEF_CALayoutManager
+typedef bean_id CALayoutManager;
+#endif
+static inline CGSize    CALayoutManager_PreferredSizeOfLayer(CALayoutManager self, CALayer layer)       { return ((CGSize (*)(CALayoutManager, SEL, CALayer))bean_msgSend_stret)(self, bean_sel("preferredSizeOfLayer:"), layer); }
+static inline void      CALayoutManager_InvalidateLayoutOfLayer(CALayoutManager self, CALayer layer)    { ((void (*)(CALayoutManager, SEL, CALayer))bean_msgSend)(self, bean_sel("invalidateLayoutOfLayer:"), layer); }
+static inline void      CALayoutManager_LayoutSublayersOfLayer(CALayoutManager self, CALayer layer)     { ((void (*)(CALayoutManager, SEL, CALayer))bean_msgSend)(self, bean_sel("layoutSublayersOfLayer:"), layer); }
+
+/* ===== CAMetalDisplayLinkDelegate ===== */
+#ifndef BEAN_TYPEDEF_CAMetalDisplayLinkDelegate
+#define BEAN_TYPEDEF_CAMetalDisplayLinkDelegate
+typedef bean_id CAMetalDisplayLinkDelegate;
+#endif
+static inline void    CAMetalDisplayLinkDelegate_MetalDisplayLink_NeedsUpdate(CAMetalDisplayLinkDelegate self, CAMetalDisplayLink link, CAMetalDisplayLinkUpdate update)    { ((void (*)(CAMetalDisplayLinkDelegate, SEL, CAMetalDisplayLink, CAMetalDisplayLinkUpdate))bean_msgSend)(self, bean_sel("metalDisplayLink:needsUpdate:"), link, update); }
 
 /* ===== CARemoteLayerClient ===== */
 #ifndef BEAN_TYPEDEF_CARemoteLayerClient
 #define BEAN_TYPEDEF_CARemoteLayerClient
 typedef bean_id CARemoteLayerClient;
 #endif
-static inline id            CARemoteLayerClient_InitWithServerPort(CARemoteLayerClient self, NSUInteger port)    { return ((id (*)(CARemoteLayerClient, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithServerPort:"), port); }
-static inline void          CARemoteLayerClient_Invalidate(CARemoteLayerClient self)                             { ((void (*)(CARemoteLayerClient, SEL))bean_msgSend)(self, bean_sel("invalidate")); }
-static inline NSUInteger    CARemoteLayerClient_ClientId(CARemoteLayerClient self)                               { return ((NSUInteger (*)(CARemoteLayerClient, SEL))bean_msgSend)(self, bean_sel("clientId")); }
-static inline CALayer       CARemoteLayerClient_Layer(CARemoteLayerClient self)                                  { return ((CALayer (*)(CARemoteLayerClient, SEL))bean_msgSend)(self, bean_sel("layer")); }
-static inline void          CARemoteLayerClient_SetLayer(CARemoteLayerClient self, CALayer layer)                { ((void (*)(CARemoteLayerClient, SEL, CALayer))bean_msgSend)(self, bean_sel("setLayer:"), layer); }
+static inline CARemoteLayerClient    CARemoteLayerClient_InitWithServerPort(CARemoteLayerClient self, NSUInteger port)    { return ((CARemoteLayerClient (*)(CARemoteLayerClient, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithServerPort:"), port); }
+static inline void                   CARemoteLayerClient_Invalidate(CARemoteLayerClient self)                             { ((void (*)(CARemoteLayerClient, SEL))bean_msgSend)(self, bean_sel("invalidate")); }
+static inline NSUInteger             CARemoteLayerClient_ClientId(CARemoteLayerClient self)                               { return ((NSUInteger (*)(CARemoteLayerClient, SEL))bean_msgSend)(self, bean_sel("clientId")); }
+static inline CALayer                CARemoteLayerClient_Layer(CARemoteLayerClient self)                                  { return ((CALayer (*)(CARemoteLayerClient, SEL))bean_msgSend)(self, bean_sel("layer")); }
+static inline void                   CARemoteLayerClient_SetLayer(CARemoteLayerClient self, CALayer layer)                { ((void (*)(CARemoteLayerClient, SEL, CALayer))bean_msgSend)(self, bean_sel("setLayer:"), layer); }
 
 /* ===== CARenderer ===== */
 #ifndef BEAN_TYPEDEF_CARenderer
@@ -2472,11 +2887,14 @@ static inline NSString        CIFilter_LocalizedNameForCategory(NSString categor
 static inline NSString        CIFilter_LocalizedDescriptionForFilterName(NSString filterName)                                                                { return ((NSString (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIFilter"), bean_sel("localizedDescriptionForFilterName:"), filterName); }
 static inline NSURL           CIFilter_LocalizedReferenceDocumentationForFilterName(NSString filterName)                                                     { return ((NSURL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CIFilter"), bean_sel("localizedReferenceDocumentationForFilterName:"), filterName); }
 static inline NSData          CIFilter_SerializedXMPFromFilters_InputImageExtent(NSArray filters, CGRect extent)                                             { return ((NSData (*)(bean_class, SEL, NSArray, CGRect))bean_msgSend)(bean_cls("CIFilter"), bean_sel("serializedXMPFromFilters:inputImageExtent:"), filters, extent); }
-static inline NSArray         CIFilter_FilterArrayFromSerializedXMP_InputImageExtent_Error(NSData xmpData, CGRect extent, NSError outError)                  { return ((NSArray (*)(bean_class, SEL, NSData, CGRect, NSError))bean_msgSend)(bean_cls("CIFilter"), bean_sel("filterArrayFromSerializedXMP:inputImageExtent:error:"), xmpData, extent, outError); }
+static inline NSArray         CIFilter_FilterArrayFromSerializedXMP_InputImageExtent_Error(NSData xmpData, CGRect extent, NSError* outError)                 { return ((NSArray (*)(bean_class, SEL, NSData, CGRect, NSError*))bean_msgSend)(bean_cls("CIFilter"), bean_sel("filterArrayFromSerializedXMP:inputImageExtent:error:"), xmpData, extent, outError); }
 static inline CIFilter        CIFilter_FilterWithImageURL_Options(NSURL url, NSDictionary options)                                                           { return ((CIFilter (*)(bean_class, SEL, NSURL, NSDictionary))bean_msgSend)(bean_cls("CIFilter"), bean_sel("filterWithImageURL:options:"), url, options); }
 static inline CIFilter        CIFilter_FilterWithImageData_Options(NSData data, NSDictionary options)                                                        { return ((CIFilter (*)(bean_class, SEL, NSData, NSDictionary))bean_msgSend)(bean_cls("CIFilter"), bean_sel("filterWithImageData:options:"), data, options); }
 static inline CIFilter        CIFilter_FilterWithCVPixelBuffer_Properties_Options(CVBufferRef pixelBuffer, NSDictionary properties, NSDictionary options)    { return ((CIFilter (*)(bean_class, SEL, CVBufferRef, NSDictionary, NSDictionary))bean_msgSend)(bean_cls("CIFilter"), bean_sel("filterWithCVPixelBuffer:properties:options:"), pixelBuffer, properties, options); }
 static inline NSArray         CIFilter_SupportedRawCameraModels(void)                                                                                        { return ((NSArray (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIFilter"), bean_sel("supportedRawCameraModels")); }
+static inline NSDictionary    CIFilter_CustomAttributes(void)                                                                                                { return ((NSDictionary (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIFilter"), bean_sel("customAttributes")); }
+static inline BOOL            CIFilter_SupportsSecureCoding(void)                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIFilter"), bean_sel("supportsSecureCoding")); }
+static inline id              CIFilter_CopyWithZone(CIFilter self, NSZone* zone)                                                                             { return ((id (*)(CIFilter, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL            CIFilter_Enabled(CIFilter self)                                                                                                { return ((BOOL (*)(CIFilter, SEL))bean_msgSend)(self, bean_sel("enabled")); }
 
 /* ===== CIRenderDestination ===== */
@@ -2484,12 +2902,12 @@ static inline BOOL            CIFilter_Enabled(CIFilter self)                   
 #define BEAN_TYPEDEF_CIRenderDestination
 typedef bean_id CIRenderDestination;
 #endif
-static inline id                              CIRenderDestination_InitWithPixelBuffer(CIRenderDestination self, CVBufferRef pixelBuffer)                                                                                                                         { return ((id (*)(CIRenderDestination, SEL, CVBufferRef))bean_msgSend)(self, bean_sel("initWithPixelBuffer:"), pixelBuffer); }
-static inline id                              CIRenderDestination_InitWithIOSurface(CIRenderDestination self, IOSurface surface)                                                                                                                                 { return ((id (*)(CIRenderDestination, SEL, IOSurface))bean_msgSend)(self, bean_sel("initWithIOSurface:"), surface); }
-static inline id                              CIRenderDestination_InitWithMTLTexture_CommandBuffer(CIRenderDestination self, id texture, id commandBuffer)                                                                                                       { return ((id (*)(CIRenderDestination, SEL, id, id))bean_msgSend)(self, bean_sel("initWithMTLTexture:commandBuffer:"), texture, commandBuffer); }
-static inline id                              CIRenderDestination_InitWithWidth_Height_PixelFormat_CommandBuffer_MtlTextureProvider(CIRenderDestination self, NSUInteger width, NSUInteger height, MTLPixelFormat pixelFormat, id commandBuffer, void* block)    { return ((id (*)(CIRenderDestination, SEL, NSUInteger, NSUInteger, MTLPixelFormat, id, void*))bean_msgSend)(self, bean_sel("initWithWidth:height:pixelFormat:commandBuffer:mtlTextureProvider:"), width, height, pixelFormat, commandBuffer, block); }
-static inline id                              CIRenderDestination_InitWithGLTexture_Target_Width_Height(CIRenderDestination self, NSUInteger texture, NSUInteger target, NSUInteger width, NSUInteger height)                                                    { return ((id (*)(CIRenderDestination, SEL, NSUInteger, NSUInteger, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("initWithGLTexture:target:width:height:"), texture, target, width, height); }
-static inline id                              CIRenderDestination_InitWithBitmapData_Width_Height_BytesPerRow_Format(CIRenderDestination self, void* data, NSUInteger width, NSUInteger height, NSUInteger bytesPerRow, int format)                              { return ((id (*)(CIRenderDestination, SEL, void*, NSUInteger, NSUInteger, NSUInteger, int))bean_msgSend)(self, bean_sel("initWithBitmapData:width:height:bytesPerRow:format:"), data, width, height, bytesPerRow, format); }
+static inline CIRenderDestination             CIRenderDestination_InitWithPixelBuffer(CIRenderDestination self, CVBufferRef pixelBuffer)                                                                                                                         { return ((CIRenderDestination (*)(CIRenderDestination, SEL, CVBufferRef))bean_msgSend)(self, bean_sel("initWithPixelBuffer:"), pixelBuffer); }
+static inline CIRenderDestination             CIRenderDestination_InitWithIOSurface(CIRenderDestination self, IOSurface surface)                                                                                                                                 { return ((CIRenderDestination (*)(CIRenderDestination, SEL, IOSurface))bean_msgSend)(self, bean_sel("initWithIOSurface:"), surface); }
+static inline CIRenderDestination             CIRenderDestination_InitWithMTLTexture_CommandBuffer(CIRenderDestination self, id texture, id commandBuffer)                                                                                                       { return ((CIRenderDestination (*)(CIRenderDestination, SEL, id, id))bean_msgSend)(self, bean_sel("initWithMTLTexture:commandBuffer:"), texture, commandBuffer); }
+static inline CIRenderDestination             CIRenderDestination_InitWithWidth_Height_PixelFormat_CommandBuffer_MtlTextureProvider(CIRenderDestination self, NSUInteger width, NSUInteger height, MTLPixelFormat pixelFormat, id commandBuffer, void* block)    { return ((CIRenderDestination (*)(CIRenderDestination, SEL, NSUInteger, NSUInteger, MTLPixelFormat, id, void*))bean_msgSend)(self, bean_sel("initWithWidth:height:pixelFormat:commandBuffer:mtlTextureProvider:"), width, height, pixelFormat, commandBuffer, block); }
+static inline CIRenderDestination             CIRenderDestination_InitWithGLTexture_Target_Width_Height(CIRenderDestination self, NSUInteger texture, NSUInteger target, NSUInteger width, NSUInteger height)                                                    { return ((CIRenderDestination (*)(CIRenderDestination, SEL, NSUInteger, NSUInteger, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("initWithGLTexture:target:width:height:"), texture, target, width, height); }
+static inline CIRenderDestination             CIRenderDestination_InitWithBitmapData_Width_Height_BytesPerRow_Format(CIRenderDestination self, void* data, NSUInteger width, NSUInteger height, NSUInteger bytesPerRow, int format)                              { return ((CIRenderDestination (*)(CIRenderDestination, SEL, void*, NSUInteger, NSUInteger, NSUInteger, int))bean_msgSend)(self, bean_sel("initWithBitmapData:width:height:bytesPerRow:format:"), data, width, height, bytesPerRow, format); }
 static inline NSUInteger                      CIRenderDestination_Width(CIRenderDestination self)                                                                                                                                                                { return ((NSUInteger (*)(CIRenderDestination, SEL))bean_msgSend)(self, bean_sel("width")); }
 static inline NSUInteger                      CIRenderDestination_Height(CIRenderDestination self)                                                                                                                                                               { return ((NSUInteger (*)(CIRenderDestination, SEL))bean_msgSend)(self, bean_sel("height")); }
 static inline CIRenderDestinationAlphaMode    CIRenderDestination_AlphaMode(CIRenderDestination self)                                                                                                                                                            { return ((CIRenderDestinationAlphaMode (*)(CIRenderDestination, SEL))bean_msgSend)(self, bean_sel("alphaMode")); }
@@ -2522,8 +2940,8 @@ static inline CIContext          CIContext_ContextWithCGLContext_PixelFormat_Opt
 static inline CIContext          CIContext_ContextWithCGContext_Options(CGContextRef cgctx, NSDictionary options)                                                                                                                                                                                                                                                                                             { return ((CIContext (*)(bean_class, SEL, CGContextRef, NSDictionary))bean_msgSend)(bean_cls("CIContext"), bean_sel("contextWithCGContext:options:"), cgctx, options); }
 static inline CIContext          CIContext_ContextWithOptions(NSDictionary options)                                                                                                                                                                                                                                                                                                                           { return ((CIContext (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("CIContext"), bean_sel("contextWithOptions:"), options); }
 static inline CIContext          CIContext_Context(void)                                                                                                                                                                                                                                                                                                                                                      { return ((CIContext (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIContext"), bean_sel("context")); }
-static inline id                 CIContext_InitWithOptions(CIContext self, NSDictionary options)                                                                                                                                                                                                                                                                                                              { return ((id (*)(CIContext, SEL, NSDictionary))bean_msgSend)(self, bean_sel("initWithOptions:"), options); }
-static inline id                 CIContext_Init(CIContext self)                                                                                                                                                                                                                                                                                                                                               { return ((id (*)(CIContext, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CIContext          CIContext_InitWithOptions(CIContext self, NSDictionary options)                                                                                                                                                                                                                                                                                                              { return ((CIContext (*)(CIContext, SEL, NSDictionary))bean_msgSend)(self, bean_sel("initWithOptions:"), options); }
+static inline CIContext          CIContext_Init(CIContext self)                                                                                                                                                                                                                                                                                                                                               { return ((CIContext (*)(CIContext, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline CIContext          CIContext_ContextWithMTLDevice(id device)                                                                                                                                                                                                                                                                                                                                    { return ((CIContext (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("CIContext"), bean_sel("contextWithMTLDevice:"), device); }
 static inline CIContext          CIContext_ContextWithMTLDevice_Options(id device, NSDictionary options)                                                                                                                                                                                                                                                                                                      { return ((CIContext (*)(bean_class, SEL, id, NSDictionary))bean_msgSend)(bean_cls("CIContext"), bean_sel("contextWithMTLDevice:options:"), device, options); }
 static inline CIContext          CIContext_ContextWithMTLCommandQueue(id commandQueue)                                                                                                                                                                                                                                                                                                                        { return ((CIContext (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("CIContext"), bean_sel("contextWithMTLCommandQueue:"), commandQueue); }
@@ -2569,10 +2987,17 @@ static inline CIFilter           CIContext_DepthBlurEffectFilterForImageData_Opt
 static inline CIFilter           CIContext_DepthBlurEffectFilterForImage_DisparityImage_PortraitEffectsMatte_Orientation_Options(CIContext self, CIImage image, CIImage disparityImage, CIImage portraitEffectsMatte, CGImagePropertyOrientation orientation, NSDictionary options)                                                                                                                           { return ((CIFilter (*)(CIContext, SEL, CIImage, CIImage, CIImage, CGImagePropertyOrientation, NSDictionary))bean_msgSend)(self, bean_sel("depthBlurEffectFilterForImage:disparityImage:portraitEffectsMatte:orientation:options:"), image, disparityImage, portraitEffectsMatte, orientation, options); }
 static inline CIFilter           CIContext_DepthBlurEffectFilterForImage_DisparityImage_PortraitEffectsMatte_HairSemanticSegmentation_Orientation_Options(CIContext self, CIImage image, CIImage disparityImage, CIImage portraitEffectsMatte, CIImage hairSemanticSegmentation, CGImagePropertyOrientation orientation, NSDictionary options)                                                                { return ((CIFilter (*)(CIContext, SEL, CIImage, CIImage, CIImage, CIImage, CGImagePropertyOrientation, NSDictionary))bean_msgSend)(self, bean_sel("depthBlurEffectFilterForImage:disparityImage:portraitEffectsMatte:hairSemanticSegmentation:orientation:options:"), image, disparityImage, portraitEffectsMatte, hairSemanticSegmentation, orientation, options); }
 static inline CIFilter           CIContext_DepthBlurEffectFilterForImage_DisparityImage_PortraitEffectsMatte_HairSemanticSegmentation_GlassesMatte_GainMap_Orientation_Options(CIContext self, CIImage image, CIImage disparityImage, CIImage portraitEffectsMatte, CIImage hairSemanticSegmentation, CIImage glassesMatte, CIImage gainMap, CGImagePropertyOrientation orientation, NSDictionary options)    { return ((CIFilter (*)(CIContext, SEL, CIImage, CIImage, CIImage, CIImage, CIImage, CIImage, CGImagePropertyOrientation, NSDictionary))bean_msgSend)(self, bean_sel("depthBlurEffectFilterForImage:disparityImage:portraitEffectsMatte:hairSemanticSegmentation:glassesMatte:gainMap:orientation:options:"), image, disparityImage, portraitEffectsMatte, hairSemanticSegmentation, glassesMatte, gainMap, orientation, options); }
-static inline CIRenderTask       CIContext_StartTaskToRender_FromRect_ToDestination_AtPoint_Error(CIContext self, CIImage image, CGRect fromRect, CIRenderDestination destination, CGPoint atPoint, NSError error)                                                                                                                                                                                            { return ((CIRenderTask (*)(CIContext, SEL, CIImage, CGRect, CIRenderDestination, CGPoint, NSError))bean_msgSend)(self, bean_sel("startTaskToRender:fromRect:toDestination:atPoint:error:"), image, fromRect, destination, atPoint, error); }
-static inline CIRenderTask       CIContext_StartTaskToRender_ToDestination_Error(CIContext self, CIImage image, CIRenderDestination destination, NSError error)                                                                                                                                                                                                                                               { return ((CIRenderTask (*)(CIContext, SEL, CIImage, CIRenderDestination, NSError))bean_msgSend)(self, bean_sel("startTaskToRender:toDestination:error:"), image, destination, error); }
-static inline BOOL               CIContext_PrepareRender_FromRect_ToDestination_AtPoint_Error(CIContext self, CIImage image, CGRect fromRect, CIRenderDestination destination, CGPoint atPoint, NSError error)                                                                                                                                                                                                { return ((BOOL (*)(CIContext, SEL, CIImage, CGRect, CIRenderDestination, CGPoint, NSError))bean_msgSend)(self, bean_sel("prepareRender:fromRect:toDestination:atPoint:error:"), image, fromRect, destination, atPoint, error); }
-static inline CIRenderTask       CIContext_StartTaskToClear_Error(CIContext self, CIRenderDestination destination, NSError error)                                                                                                                                                                                                                                                                             { return ((CIRenderTask (*)(CIContext, SEL, CIRenderDestination, NSError))bean_msgSend)(self, bean_sel("startTaskToClear:error:"), destination, error); }
+static inline CIRenderTask       CIContext_StartTaskToRender_FromRect_ToDestination_AtPoint_Error(CIContext self, CIImage image, CGRect fromRect, CIRenderDestination destination, CGPoint atPoint, NSError* error)                                                                                                                                                                                           { return ((CIRenderTask (*)(CIContext, SEL, CIImage, CGRect, CIRenderDestination, CGPoint, NSError*))bean_msgSend)(self, bean_sel("startTaskToRender:fromRect:toDestination:atPoint:error:"), image, fromRect, destination, atPoint, error); }
+static inline CIRenderTask       CIContext_StartTaskToRender_ToDestination_Error(CIContext self, CIImage image, CIRenderDestination destination, NSError* error)                                                                                                                                                                                                                                              { return ((CIRenderTask (*)(CIContext, SEL, CIImage, CIRenderDestination, NSError*))bean_msgSend)(self, bean_sel("startTaskToRender:toDestination:error:"), image, destination, error); }
+static inline BOOL               CIContext_PrepareRender_FromRect_ToDestination_AtPoint_Error(CIContext self, CIImage image, CGRect fromRect, CIRenderDestination destination, CGPoint atPoint, NSError* error)                                                                                                                                                                                               { return ((BOOL (*)(CIContext, SEL, CIImage, CGRect, CIRenderDestination, CGPoint, NSError*))bean_msgSend)(self, bean_sel("prepareRender:fromRect:toDestination:atPoint:error:"), image, fromRect, destination, atPoint, error); }
+static inline CIRenderTask       CIContext_StartTaskToClear_Error(CIContext self, CIRenderDestination destination, NSError* error)                                                                                                                                                                                                                                                                            { return ((CIRenderTask (*)(CIContext, SEL, CIRenderDestination, NSError*))bean_msgSend)(self, bean_sel("startTaskToClear:error:"), destination, error); }
+
+/* ===== CIFilterConstructor ===== */
+#ifndef BEAN_TYPEDEF_CIFilterConstructor
+#define BEAN_TYPEDEF_CIFilterConstructor
+typedef bean_id CIFilterConstructor;
+#endif
+static inline CIFilter    CIFilterConstructor_FilterWithName(CIFilterConstructor self, NSString name)    { return ((CIFilter (*)(CIFilterConstructor, SEL, NSString))bean_msgSend)(self, bean_sel("filterWithName:"), name); }
 
 /* ===== CIFilterGenerator ===== */
 #ifndef BEAN_TYPEDEF_CIFilterGenerator
@@ -2581,7 +3006,7 @@ typedef bean_id CIFilterGenerator;
 #endif
 static inline CIFilterGenerator    CIFilterGenerator_FilterGenerator(void)                                                                                                                          { return ((CIFilterGenerator (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIFilterGenerator"), bean_sel("filterGenerator")); }
 static inline CIFilterGenerator    CIFilterGenerator_FilterGeneratorWithContentsOfURL(NSURL aURL)                                                                                                   { return ((CIFilterGenerator (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("CIFilterGenerator"), bean_sel("filterGeneratorWithContentsOfURL:"), aURL); }
-static inline id                   CIFilterGenerator_InitWithContentsOfURL(CIFilterGenerator self, NSURL aURL)                                                                                      { return ((id (*)(CIFilterGenerator, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), aURL); }
+static inline CIFilterGenerator    CIFilterGenerator_InitWithContentsOfURL(CIFilterGenerator self, NSURL aURL)                                                                                      { return ((CIFilterGenerator (*)(CIFilterGenerator, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), aURL); }
 static inline void                 CIFilterGenerator_ConnectObject_WithKey_ToObject_WithKey(CIFilterGenerator self, id sourceObject, NSString sourceKey, id targetObject, NSString targetKey)       { ((void (*)(CIFilterGenerator, SEL, id, NSString, id, NSString))bean_msgSend)(self, bean_sel("connectObject:withKey:toObject:withKey:"), sourceObject, sourceKey, targetObject, targetKey); }
 static inline void                 CIFilterGenerator_DisconnectObject_WithKey_ToObject_WithKey(CIFilterGenerator self, id sourceObject, NSString sourceKey, id targetObject, NSString targetKey)    { ((void (*)(CIFilterGenerator, SEL, id, NSString, id, NSString))bean_msgSend)(self, bean_sel("disconnectObject:withKey:toObject:withKey:"), sourceObject, sourceKey, targetObject, targetKey); }
 static inline void                 CIFilterGenerator_ExportKey_FromObject_WithName(CIFilterGenerator self, NSString key, id targetObject, NSString exportedKeyName)                                 { ((void (*)(CIFilterGenerator, SEL, NSString, id, NSString))bean_msgSend)(self, bean_sel("exportKey:fromObject:withName:"), key, targetObject, exportedKeyName); }
@@ -2593,15 +3018,18 @@ static inline BOOL                 CIFilterGenerator_WriteToURL_Atomically(CIFil
 static inline NSDictionary         CIFilterGenerator_ExportedKeys(CIFilterGenerator self)                                                                                                           { return ((NSDictionary (*)(CIFilterGenerator, SEL))bean_msgSend)(self, bean_sel("exportedKeys")); }
 static inline NSDictionary         CIFilterGenerator_ClassAttributes(CIFilterGenerator self)                                                                                                        { return ((NSDictionary (*)(CIFilterGenerator, SEL))bean_msgSend)(self, bean_sel("classAttributes")); }
 static inline void                 CIFilterGenerator_SetClassAttributes(CIFilterGenerator self, NSDictionary classAttributes)                                                                       { ((void (*)(CIFilterGenerator, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setClassAttributes:"), classAttributes); }
+static inline BOOL                 CIFilterGenerator_SupportsSecureCoding(void)                                                                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIFilterGenerator"), bean_sel("supportsSecureCoding")); }
+static inline id                   CIFilterGenerator_CopyWithZone(CIFilterGenerator self, NSZone* zone)                                                                                             { return ((id (*)(CIFilterGenerator, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline CIFilter             CIFilterGenerator_FilterWithName(CIFilterGenerator self, NSString name)                                                                                          { return ((CIFilter (*)(CIFilterGenerator, SEL, NSString))bean_msgSend)(self, bean_sel("filterWithName:"), name); }
 
 /* ===== CIRAWFilter ===== */
 #ifndef BEAN_TYPEDEF_CIRAWFilter
 #define BEAN_TYPEDEF_CIRAWFilter
 typedef bean_id CIRAWFilter;
 #endif
-static inline id                            CIRAWFilter_FilterWithImageURL(NSURL url)                                                                { return ((id (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("CIRAWFilter"), bean_sel("filterWithImageURL:"), url); }
-static inline id                            CIRAWFilter_FilterWithImageData_IdentifierHint(NSData data, NSString identifierHint)                     { return ((id (*)(bean_class, SEL, NSData, NSString))bean_msgSend)(bean_cls("CIRAWFilter"), bean_sel("filterWithImageData:identifierHint:"), data, identifierHint); }
-static inline id                            CIRAWFilter_FilterWithCVPixelBuffer_Properties(CVBufferRef buffer, NSDictionary properties)              { return ((id (*)(bean_class, SEL, CVBufferRef, NSDictionary))bean_msgSend)(bean_cls("CIRAWFilter"), bean_sel("filterWithCVPixelBuffer:properties:"), buffer, properties); }
+static inline CIRAWFilter                   CIRAWFilter_FilterWithImageURL(NSURL url)                                                                { return ((CIRAWFilter (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("CIRAWFilter"), bean_sel("filterWithImageURL:"), url); }
+static inline CIRAWFilter                   CIRAWFilter_FilterWithImageData_IdentifierHint(NSData data, NSString identifierHint)                     { return ((CIRAWFilter (*)(bean_class, SEL, NSData, NSString))bean_msgSend)(bean_cls("CIRAWFilter"), bean_sel("filterWithImageData:identifierHint:"), data, identifierHint); }
+static inline CIRAWFilter                   CIRAWFilter_FilterWithCVPixelBuffer_Properties(CVBufferRef buffer, NSDictionary properties)              { return ((CIRAWFilter (*)(bean_class, SEL, CVBufferRef, NSDictionary))bean_msgSend)(bean_cls("CIRAWFilter"), bean_sel("filterWithCVPixelBuffer:properties:"), buffer, properties); }
 static inline NSArray                       CIRAWFilter_SupportedCameraModels(void)                                                                  { return ((NSArray (*)(bean_class, SEL))bean_msgSend)(bean_cls("CIRAWFilter"), bean_sel("supportedCameraModels")); }
 static inline NSArray                       CIRAWFilter_SupportedDecoderVersions(CIRAWFilter self)                                                   { return ((NSArray (*)(CIRAWFilter, SEL))bean_msgSend)(self, bean_sel("supportedDecoderVersions")); }
 static inline CGSize                        CIRAWFilter_NativeSize(CIRAWFilter self)                                                                 { return ((CGSize (*)(CIRAWFilter, SEL))bean_msgSend_stret)(self, bean_sel("nativeSize")); }

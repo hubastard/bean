@@ -72,7 +72,7 @@ static void bean_metal_layer_tick(id self, SEL _cmd, CADisplayLink link) {
         return;
     }
 
-    texture = ((id (*)(id, SEL))bean_msgSend)(drawable, bean_sel("texture"));
+    texture = CAMetalDrawable_Texture((CAMetalDrawable)drawable);
     pass = MTLRenderPassDescriptor_RenderPassDescriptor();
     color_attachment = MTLRenderPassColorAttachmentDescriptorArray_ObjectAtIndexedSubscript(
         MTLRenderPassDescriptor_ColorAttachments(pass),

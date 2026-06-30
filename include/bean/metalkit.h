@@ -30,26 +30,26 @@ static const MDLIndexBitDepth MDLIndexBitDepthUint32 = (MDLIndexBitDepth)32;
 typedef NSInteger MDLGeometryType;
 #endif
 static const MDLGeometryType MDLGeometryTypePoints = (MDLGeometryType)0;
-static const MDLGeometryType MDLGeometryTypeLines = (MDLGeometryType)0;
-static const MDLGeometryType MDLGeometryTypeTriangles = (MDLGeometryType)0;
-static const MDLGeometryType MDLGeometryTypeTriangleStrips = (MDLGeometryType)0;
-static const MDLGeometryType MDLGeometryTypeQuads = (MDLGeometryType)0;
-static const MDLGeometryType MDLGeometryTypeVariableTopology = (MDLGeometryType)0;
+static const MDLGeometryType MDLGeometryTypeLines = (MDLGeometryType)1;
+static const MDLGeometryType MDLGeometryTypeTriangles = (MDLGeometryType)2;
+static const MDLGeometryType MDLGeometryTypeTriangleStrips = (MDLGeometryType)3;
+static const MDLGeometryType MDLGeometryTypeQuads = (MDLGeometryType)4;
+static const MDLGeometryType MDLGeometryTypeVariableTopology = (MDLGeometryType)5;
 
 #ifndef BEAN_TYPEDEF_MDLProbePlacement
 #define BEAN_TYPEDEF_MDLProbePlacement
 typedef NSInteger MDLProbePlacement;
 #endif
 static const MDLProbePlacement MDLProbePlacementUniformGrid = (MDLProbePlacement)0;
-static const MDLProbePlacement MDLProbePlacementIrradianceDistribution = (MDLProbePlacement)0;
+static const MDLProbePlacement MDLProbePlacementIrradianceDistribution = (MDLProbePlacement)1;
 
 #ifndef BEAN_TYPEDEF_MDLDataPrecision
 #define BEAN_TYPEDEF_MDLDataPrecision
 typedef NSUInteger MDLDataPrecision;
 #endif
 static const MDLDataPrecision MDLDataPrecisionUndefined = (MDLDataPrecision)0;
-static const MDLDataPrecision MDLDataPrecisionFloat = (MDLDataPrecision)0;
-static const MDLDataPrecision MDLDataPrecisionDouble = (MDLDataPrecision)0;
+static const MDLDataPrecision MDLDataPrecisionFloat = (MDLDataPrecision)1;
+static const MDLDataPrecision MDLDataPrecisionDouble = (MDLDataPrecision)2;
 
 #ifndef BEAN_TYPEDEF_MDLMeshBufferType
 #define BEAN_TYPEDEF_MDLMeshBufferType
@@ -133,7 +133,7 @@ static const MDLVertexFormat MDLVertexFormatUInt1010102Normalized = (MDLVertexFo
 typedef NSUInteger MDLAnimatedValueInterpolation;
 #endif
 static const MDLAnimatedValueInterpolation MDLAnimatedValueInterpolationConstant = (MDLAnimatedValueInterpolation)0;
-static const MDLAnimatedValueInterpolation MDLAnimatedValueInterpolationLinear = (MDLAnimatedValueInterpolation)0;
+static const MDLAnimatedValueInterpolation MDLAnimatedValueInterpolationLinear = (MDLAnimatedValueInterpolation)1;
 
 #ifndef BEAN_TYPEDEF_MDLCameraProjection
 #define BEAN_TYPEDEF_MDLCameraProjection
@@ -147,46 +147,46 @@ static const MDLCameraProjection MDLCameraProjectionOrthographic = (MDLCameraPro
 typedef NSUInteger MDLLightType;
 #endif
 static const MDLLightType MDLLightTypeUnknown = (MDLLightType)0;
-static const MDLLightType MDLLightTypeAmbient = (MDLLightType)0;
-static const MDLLightType MDLLightTypeDirectional = (MDLLightType)0;
-static const MDLLightType MDLLightTypeSpot = (MDLLightType)0;
-static const MDLLightType MDLLightTypePoint = (MDLLightType)0;
-static const MDLLightType MDLLightTypeLinear = (MDLLightType)0;
-static const MDLLightType MDLLightTypeDiscArea = (MDLLightType)0;
-static const MDLLightType MDLLightTypeRectangularArea = (MDLLightType)0;
-static const MDLLightType MDLLightTypeSuperElliptical = (MDLLightType)0;
-static const MDLLightType MDLLightTypePhotometric = (MDLLightType)0;
-static const MDLLightType MDLLightTypeProbe = (MDLLightType)0;
-static const MDLLightType MDLLightTypeEnvironment = (MDLLightType)0;
+static const MDLLightType MDLLightTypeAmbient = (MDLLightType)1;
+static const MDLLightType MDLLightTypeDirectional = (MDLLightType)2;
+static const MDLLightType MDLLightTypeSpot = (MDLLightType)3;
+static const MDLLightType MDLLightTypePoint = (MDLLightType)4;
+static const MDLLightType MDLLightTypeLinear = (MDLLightType)5;
+static const MDLLightType MDLLightTypeDiscArea = (MDLLightType)6;
+static const MDLLightType MDLLightTypeRectangularArea = (MDLLightType)7;
+static const MDLLightType MDLLightTypeSuperElliptical = (MDLLightType)8;
+static const MDLLightType MDLLightTypePhotometric = (MDLLightType)9;
+static const MDLLightType MDLLightTypeProbe = (MDLLightType)10;
+static const MDLLightType MDLLightTypeEnvironment = (MDLLightType)11;
 
 #ifndef BEAN_TYPEDEF_MDLMaterialSemantic
 #define BEAN_TYPEDEF_MDLMaterialSemantic
 typedef NSUInteger MDLMaterialSemantic;
 #endif
 static const MDLMaterialSemantic MDLMaterialSemanticBaseColor = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticSubsurface = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticMetallic = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticSpecular = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticSpecularExponent = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticSpecularTint = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticRoughness = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticAnisotropic = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticAnisotropicRotation = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticSheen = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticSheenTint = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticClearcoat = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticClearcoatGloss = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticEmission = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticBump = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticOpacity = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticInterfaceIndexOfRefraction = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticMaterialIndexOfRefraction = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticObjectSpaceNormal = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticTangentSpaceNormal = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticDisplacement = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticDisplacementScale = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticAmbientOcclusion = (MDLMaterialSemantic)0;
-static const MDLMaterialSemantic MDLMaterialSemanticAmbientOcclusionScale = (MDLMaterialSemantic)0;
+static const MDLMaterialSemantic MDLMaterialSemanticSubsurface = (MDLMaterialSemantic)1;
+static const MDLMaterialSemantic MDLMaterialSemanticMetallic = (MDLMaterialSemantic)2;
+static const MDLMaterialSemantic MDLMaterialSemanticSpecular = (MDLMaterialSemantic)3;
+static const MDLMaterialSemantic MDLMaterialSemanticSpecularExponent = (MDLMaterialSemantic)4;
+static const MDLMaterialSemantic MDLMaterialSemanticSpecularTint = (MDLMaterialSemantic)5;
+static const MDLMaterialSemantic MDLMaterialSemanticRoughness = (MDLMaterialSemantic)6;
+static const MDLMaterialSemantic MDLMaterialSemanticAnisotropic = (MDLMaterialSemantic)7;
+static const MDLMaterialSemantic MDLMaterialSemanticAnisotropicRotation = (MDLMaterialSemantic)8;
+static const MDLMaterialSemantic MDLMaterialSemanticSheen = (MDLMaterialSemantic)9;
+static const MDLMaterialSemantic MDLMaterialSemanticSheenTint = (MDLMaterialSemantic)10;
+static const MDLMaterialSemantic MDLMaterialSemanticClearcoat = (MDLMaterialSemantic)11;
+static const MDLMaterialSemantic MDLMaterialSemanticClearcoatGloss = (MDLMaterialSemantic)12;
+static const MDLMaterialSemantic MDLMaterialSemanticEmission = (MDLMaterialSemantic)13;
+static const MDLMaterialSemantic MDLMaterialSemanticBump = (MDLMaterialSemantic)14;
+static const MDLMaterialSemantic MDLMaterialSemanticOpacity = (MDLMaterialSemantic)15;
+static const MDLMaterialSemantic MDLMaterialSemanticInterfaceIndexOfRefraction = (MDLMaterialSemantic)16;
+static const MDLMaterialSemantic MDLMaterialSemanticMaterialIndexOfRefraction = (MDLMaterialSemantic)17;
+static const MDLMaterialSemantic MDLMaterialSemanticObjectSpaceNormal = (MDLMaterialSemantic)18;
+static const MDLMaterialSemantic MDLMaterialSemanticTangentSpaceNormal = (MDLMaterialSemantic)19;
+static const MDLMaterialSemantic MDLMaterialSemanticDisplacement = (MDLMaterialSemantic)20;
+static const MDLMaterialSemantic MDLMaterialSemanticDisplacementScale = (MDLMaterialSemantic)21;
+static const MDLMaterialSemantic MDLMaterialSemanticAmbientOcclusion = (MDLMaterialSemantic)22;
+static const MDLMaterialSemantic MDLMaterialSemanticAmbientOcclusionScale = (MDLMaterialSemantic)23;
 static const MDLMaterialSemantic MDLMaterialSemanticNone = (MDLMaterialSemantic)32768;
 static const MDLMaterialSemantic MDLMaterialSemanticUserDefined = (MDLMaterialSemantic)32769;
 
@@ -195,46 +195,46 @@ static const MDLMaterialSemantic MDLMaterialSemanticUserDefined = (MDLMaterialSe
 typedef NSUInteger MDLMaterialPropertyType;
 #endif
 static const MDLMaterialPropertyType MDLMaterialPropertyTypeNone = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeString = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeURL = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeTexture = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeColor = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeFloat = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeFloat2 = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeFloat3 = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeFloat4 = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeMatrix44 = (MDLMaterialPropertyType)0;
-static const MDLMaterialPropertyType MDLMaterialPropertyTypeBuffer = (MDLMaterialPropertyType)0;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeString = (MDLMaterialPropertyType)1;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeURL = (MDLMaterialPropertyType)2;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeTexture = (MDLMaterialPropertyType)3;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeColor = (MDLMaterialPropertyType)4;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeFloat = (MDLMaterialPropertyType)5;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeFloat2 = (MDLMaterialPropertyType)6;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeFloat3 = (MDLMaterialPropertyType)7;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeFloat4 = (MDLMaterialPropertyType)8;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeMatrix44 = (MDLMaterialPropertyType)9;
+static const MDLMaterialPropertyType MDLMaterialPropertyTypeBuffer = (MDLMaterialPropertyType)10;
 
 #ifndef BEAN_TYPEDEF_MDLMaterialTextureWrapMode
 #define BEAN_TYPEDEF_MDLMaterialTextureWrapMode
 typedef NSUInteger MDLMaterialTextureWrapMode;
 #endif
 static const MDLMaterialTextureWrapMode MDLMaterialTextureWrapModeClamp = (MDLMaterialTextureWrapMode)0;
-static const MDLMaterialTextureWrapMode MDLMaterialTextureWrapModeRepeat = (MDLMaterialTextureWrapMode)0;
-static const MDLMaterialTextureWrapMode MDLMaterialTextureWrapModeMirror = (MDLMaterialTextureWrapMode)0;
+static const MDLMaterialTextureWrapMode MDLMaterialTextureWrapModeRepeat = (MDLMaterialTextureWrapMode)1;
+static const MDLMaterialTextureWrapMode MDLMaterialTextureWrapModeMirror = (MDLMaterialTextureWrapMode)2;
 
 #ifndef BEAN_TYPEDEF_MDLMaterialTextureFilterMode
 #define BEAN_TYPEDEF_MDLMaterialTextureFilterMode
 typedef NSUInteger MDLMaterialTextureFilterMode;
 #endif
 static const MDLMaterialTextureFilterMode MDLMaterialTextureFilterModeNearest = (MDLMaterialTextureFilterMode)0;
-static const MDLMaterialTextureFilterMode MDLMaterialTextureFilterModeLinear = (MDLMaterialTextureFilterMode)0;
+static const MDLMaterialTextureFilterMode MDLMaterialTextureFilterModeLinear = (MDLMaterialTextureFilterMode)1;
 
 #ifndef BEAN_TYPEDEF_MDLMaterialMipMapFilterMode
 #define BEAN_TYPEDEF_MDLMaterialMipMapFilterMode
 typedef NSUInteger MDLMaterialMipMapFilterMode;
 #endif
 static const MDLMaterialMipMapFilterMode MDLMaterialMipMapFilterModeNearest = (MDLMaterialMipMapFilterMode)0;
-static const MDLMaterialMipMapFilterMode MDLMaterialMipMapFilterModeLinear = (MDLMaterialMipMapFilterMode)0;
+static const MDLMaterialMipMapFilterMode MDLMaterialMipMapFilterModeLinear = (MDLMaterialMipMapFilterMode)1;
 
 #ifndef BEAN_TYPEDEF_MDLMaterialFace
 #define BEAN_TYPEDEF_MDLMaterialFace
 typedef NSUInteger MDLMaterialFace;
 #endif
 static const MDLMaterialFace MDLMaterialFaceFront = (MDLMaterialFace)0;
-static const MDLMaterialFace MDLMaterialFaceBack = (MDLMaterialFace)0;
-static const MDLMaterialFace MDLMaterialFaceDoubleSided = (MDLMaterialFace)0;
+static const MDLMaterialFace MDLMaterialFaceBack = (MDLMaterialFace)1;
+static const MDLMaterialFace MDLMaterialFaceDoubleSided = (MDLMaterialFace)2;
 
 #ifndef BEAN_TYPEDEF_MDLTextureChannelEncoding
 #define BEAN_TYPEDEF_MDLTextureChannelEncoding
@@ -257,11 +257,11 @@ static const MDLTextureChannelEncoding MDLTextureChannelEncodingFloat32 = (MDLTe
 typedef NSUInteger MDLTransformOpRotationOrder;
 #endif
 static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderXYZ = (MDLTransformOpRotationOrder)1;
-static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderXZY = (MDLTransformOpRotationOrder)0;
-static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderYXZ = (MDLTransformOpRotationOrder)0;
-static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderYZX = (MDLTransformOpRotationOrder)0;
-static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderZXY = (MDLTransformOpRotationOrder)0;
-static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderZYX = (MDLTransformOpRotationOrder)0;
+static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderXZY = (MDLTransformOpRotationOrder)2;
+static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderYXZ = (MDLTransformOpRotationOrder)3;
+static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderYZX = (MDLTransformOpRotationOrder)4;
+static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderZXY = (MDLTransformOpRotationOrder)5;
+static const MDLTransformOpRotationOrder MDLTransformOpRotationOrderZYX = (MDLTransformOpRotationOrder)6;
 
 /* ===== structs ===== */
 typedef struct MDLAxisAlignedBoundingBox {
@@ -275,6 +275,10 @@ typedef struct MDLVoxelIndexExtent {
 } MDLVoxelIndexExtent;
 
 /* ===== forward typedefs ===== */
+#ifndef BEAN_TYPEDEF_CAAction
+#define BEAN_TYPEDEF_CAAction
+typedef bean_id CAAction;
+#endif
 #ifndef BEAN_TYPEDEF_CAEDRMetadata
 #define BEAN_TYPEDEF_CAEDRMetadata
 typedef bean_id CAEDRMetadata;
@@ -282,6 +286,22 @@ typedef bean_id CAEDRMetadata;
 #ifndef BEAN_TYPEDEF_CALayer
 #define BEAN_TYPEDEF_CALayer
 typedef bean_id CALayer;
+#endif
+#ifndef BEAN_TYPEDEF_CALayerDelegate
+#define BEAN_TYPEDEF_CALayerDelegate
+typedef bean_id CALayerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_CALayoutManager
+#define BEAN_TYPEDEF_CALayoutManager
+typedef bean_id CALayoutManager;
+#endif
+#ifndef BEAN_TYPEDEF_CAMediaTiming
+#define BEAN_TYPEDEF_CAMediaTiming
+typedef bean_id CAMediaTiming;
+#endif
+#ifndef BEAN_TYPEDEF_CAMetalDrawable
+#define BEAN_TYPEDEF_CAMetalDrawable
+typedef bean_id CAMetalDrawable;
 #endif
 #ifndef BEAN_TYPEDEF_CAMetalLayer
 #define BEAN_TYPEDEF_CAMetalLayer
@@ -302,6 +322,10 @@ typedef bean_id CIImage;
 #ifndef BEAN_TYPEDEF_CIVector
 #define BEAN_TYPEDEF_CIVector
 typedef bean_id CIVector;
+#endif
+#ifndef BEAN_TYPEDEF_CTAdaptiveImageProviding
+#define BEAN_TYPEDEF_CTAdaptiveImageProviding
+typedef bean_id CTAdaptiveImageProviding;
 #endif
 #ifndef BEAN_TYPEDEF_MDLSubmeshTopology
 #define BEAN_TYPEDEF_MDLSubmeshTopology
@@ -335,45 +359,97 @@ typedef bean_id MTL4AccelerationStructureMotionTriangleGeometryDescriptor;
 #define BEAN_TYPEDEF_MTL4AccelerationStructureTriangleGeometryDescriptor
 typedef bean_id MTL4AccelerationStructureTriangleGeometryDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4Archive
+#define BEAN_TYPEDEF_MTL4Archive
+typedef bean_id MTL4Archive;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4ArgumentTable
+#define BEAN_TYPEDEF_MTL4ArgumentTable
+typedef bean_id MTL4ArgumentTable;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4ArgumentTableDescriptor
 #define BEAN_TYPEDEF_MTL4ArgumentTableDescriptor
 typedef bean_id MTL4ArgumentTableDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4BinaryFunction
+#define BEAN_TYPEDEF_MTL4BinaryFunction
+typedef bean_id MTL4BinaryFunction;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4BinaryFunctionDescriptor
 #define BEAN_TYPEDEF_MTL4BinaryFunctionDescriptor
 typedef bean_id MTL4BinaryFunctionDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4CommandAllocator
+#define BEAN_TYPEDEF_MTL4CommandAllocator
+typedef bean_id MTL4CommandAllocator;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4CommandAllocatorDescriptor
 #define BEAN_TYPEDEF_MTL4CommandAllocatorDescriptor
 typedef bean_id MTL4CommandAllocatorDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4CommandBuffer
+#define BEAN_TYPEDEF_MTL4CommandBuffer
+typedef bean_id MTL4CommandBuffer;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4CommandBufferOptions
 #define BEAN_TYPEDEF_MTL4CommandBufferOptions
 typedef bean_id MTL4CommandBufferOptions;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4CommandEncoder
+#define BEAN_TYPEDEF_MTL4CommandEncoder
+typedef bean_id MTL4CommandEncoder;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4CommandQueue
+#define BEAN_TYPEDEF_MTL4CommandQueue
+typedef bean_id MTL4CommandQueue;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4CommandQueueDescriptor
 #define BEAN_TYPEDEF_MTL4CommandQueueDescriptor
 typedef bean_id MTL4CommandQueueDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4CommitFeedback
+#define BEAN_TYPEDEF_MTL4CommitFeedback
+typedef bean_id MTL4CommitFeedback;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4CommitOptions
 #define BEAN_TYPEDEF_MTL4CommitOptions
 typedef bean_id MTL4CommitOptions;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4Compiler
+#define BEAN_TYPEDEF_MTL4Compiler
+typedef bean_id MTL4Compiler;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4CompilerDescriptor
 #define BEAN_TYPEDEF_MTL4CompilerDescriptor
 typedef bean_id MTL4CompilerDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4CompilerTask
+#define BEAN_TYPEDEF_MTL4CompilerTask
+typedef bean_id MTL4CompilerTask;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4CompilerTaskOptions
 #define BEAN_TYPEDEF_MTL4CompilerTaskOptions
 typedef bean_id MTL4CompilerTaskOptions;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4ComputeCommandEncoder
+#define BEAN_TYPEDEF_MTL4ComputeCommandEncoder
+typedef bean_id MTL4ComputeCommandEncoder;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4ComputePipelineDescriptor
 #define BEAN_TYPEDEF_MTL4ComputePipelineDescriptor
 typedef bean_id MTL4ComputePipelineDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4CounterHeap
+#define BEAN_TYPEDEF_MTL4CounterHeap
+typedef bean_id MTL4CounterHeap;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4CounterHeapDescriptor
 #define BEAN_TYPEDEF_MTL4CounterHeapDescriptor
 typedef bean_id MTL4CounterHeapDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4FunctionDescriptor
+#define BEAN_TYPEDEF_MTL4FunctionDescriptor
+typedef bean_id MTL4FunctionDescriptor;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4IndirectInstanceAccelerationStructureDescriptor
 #define BEAN_TYPEDEF_MTL4IndirectInstanceAccelerationStructureDescriptor
@@ -391,6 +467,10 @@ typedef bean_id MTL4LibraryDescriptor;
 #define BEAN_TYPEDEF_MTL4LibraryFunctionDescriptor
 typedef bean_id MTL4LibraryFunctionDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4MachineLearningCommandEncoder
+#define BEAN_TYPEDEF_MTL4MachineLearningCommandEncoder
+typedef bean_id MTL4MachineLearningCommandEncoder;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4MachineLearningPipelineDescriptor
 #define BEAN_TYPEDEF_MTL4MachineLearningPipelineDescriptor
 typedef bean_id MTL4MachineLearningPipelineDescriptor;
@@ -399,9 +479,17 @@ typedef bean_id MTL4MachineLearningPipelineDescriptor;
 #define BEAN_TYPEDEF_MTL4MachineLearningPipelineReflection
 typedef bean_id MTL4MachineLearningPipelineReflection;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4MachineLearningPipelineState
+#define BEAN_TYPEDEF_MTL4MachineLearningPipelineState
+typedef bean_id MTL4MachineLearningPipelineState;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4MeshRenderPipelineDescriptor
 #define BEAN_TYPEDEF_MTL4MeshRenderPipelineDescriptor
 typedef bean_id MTL4MeshRenderPipelineDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4PipelineDataSetSerializer
+#define BEAN_TYPEDEF_MTL4PipelineDataSetSerializer
+typedef bean_id MTL4PipelineDataSetSerializer;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4PipelineDataSetSerializerDescriptor
 #define BEAN_TYPEDEF_MTL4PipelineDataSetSerializerDescriptor
@@ -422,6 +510,10 @@ typedef bean_id MTL4PipelineStageDynamicLinkingDescriptor;
 #ifndef BEAN_TYPEDEF_MTL4PrimitiveAccelerationStructureDescriptor
 #define BEAN_TYPEDEF_MTL4PrimitiveAccelerationStructureDescriptor
 typedef bean_id MTL4PrimitiveAccelerationStructureDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4RenderCommandEncoder
+#define BEAN_TYPEDEF_MTL4RenderCommandEncoder
+typedef bean_id MTL4RenderCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4RenderPassDescriptor
 #define BEAN_TYPEDEF_MTL4RenderPassDescriptor
@@ -463,9 +555,17 @@ typedef bean_id MTL4StitchedFunctionDescriptor;
 #define BEAN_TYPEDEF_MTL4TileRenderPipelineDescriptor
 typedef bean_id MTL4TileRenderPipelineDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLAccelerationStructure
+#define BEAN_TYPEDEF_MTLAccelerationStructure
+typedef bean_id MTLAccelerationStructure;
+#endif
 #ifndef BEAN_TYPEDEF_MTLAccelerationStructureBoundingBoxGeometryDescriptor
 #define BEAN_TYPEDEF_MTLAccelerationStructureBoundingBoxGeometryDescriptor
 typedef bean_id MTLAccelerationStructureBoundingBoxGeometryDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLAccelerationStructureCommandEncoder
+#define BEAN_TYPEDEF_MTLAccelerationStructureCommandEncoder
+typedef bean_id MTLAccelerationStructureCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLAccelerationStructureCurveGeometryDescriptor
 #define BEAN_TYPEDEF_MTLAccelerationStructureCurveGeometryDescriptor
@@ -507,6 +607,10 @@ typedef bean_id MTLAccelerationStructurePassSampleBufferAttachmentDescriptorArra
 #define BEAN_TYPEDEF_MTLAccelerationStructureTriangleGeometryDescriptor
 typedef bean_id MTLAccelerationStructureTriangleGeometryDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLAllocation
+#define BEAN_TYPEDEF_MTLAllocation
+typedef bean_id MTLAllocation;
+#endif
 #ifndef BEAN_TYPEDEF_MTLArchitecture
 #define BEAN_TYPEDEF_MTLArchitecture
 typedef bean_id MTLArchitecture;
@@ -518,6 +622,10 @@ typedef bean_id MTLArgument;
 #ifndef BEAN_TYPEDEF_MTLArgumentDescriptor
 #define BEAN_TYPEDEF_MTLArgumentDescriptor
 typedef bean_id MTLArgumentDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLArgumentEncoder
+#define BEAN_TYPEDEF_MTLArgumentEncoder
+typedef bean_id MTLArgumentEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLArrayType
 #define BEAN_TYPEDEF_MTLArrayType
@@ -535,9 +643,21 @@ typedef bean_id MTLAttributeDescriptor;
 #define BEAN_TYPEDEF_MTLAttributeDescriptorArray
 typedef bean_id MTLAttributeDescriptorArray;
 #endif
+#ifndef BEAN_TYPEDEF_MTLBinaryArchive
+#define BEAN_TYPEDEF_MTLBinaryArchive
+typedef bean_id MTLBinaryArchive;
+#endif
 #ifndef BEAN_TYPEDEF_MTLBinaryArchiveDescriptor
 #define BEAN_TYPEDEF_MTLBinaryArchiveDescriptor
 typedef bean_id MTLBinaryArchiveDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLBinding
+#define BEAN_TYPEDEF_MTLBinding
+typedef bean_id MTLBinding;
+#endif
+#ifndef BEAN_TYPEDEF_MTLBlitCommandEncoder
+#define BEAN_TYPEDEF_MTLBlitCommandEncoder
+typedef bean_id MTLBlitCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLBlitPassDescriptor
 #define BEAN_TYPEDEF_MTLBlitPassDescriptor
@@ -550,6 +670,14 @@ typedef bean_id MTLBlitPassSampleBufferAttachmentDescriptor;
 #ifndef BEAN_TYPEDEF_MTLBlitPassSampleBufferAttachmentDescriptorArray
 #define BEAN_TYPEDEF_MTLBlitPassSampleBufferAttachmentDescriptorArray
 typedef bean_id MTLBlitPassSampleBufferAttachmentDescriptorArray;
+#endif
+#ifndef BEAN_TYPEDEF_MTLBuffer
+#define BEAN_TYPEDEF_MTLBuffer
+typedef bean_id MTLBuffer;
+#endif
+#ifndef BEAN_TYPEDEF_MTLBufferBinding
+#define BEAN_TYPEDEF_MTLBufferBinding
+typedef bean_id MTLBufferBinding;
 #endif
 #ifndef BEAN_TYPEDEF_MTLBufferLayoutDescriptor
 #define BEAN_TYPEDEF_MTLBufferLayoutDescriptor
@@ -567,9 +695,29 @@ typedef bean_id MTLCaptureDescriptor;
 #define BEAN_TYPEDEF_MTLCaptureManager
 typedef bean_id MTLCaptureManager;
 #endif
+#ifndef BEAN_TYPEDEF_MTLCaptureScope
+#define BEAN_TYPEDEF_MTLCaptureScope
+typedef bean_id MTLCaptureScope;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCommandBuffer
+#define BEAN_TYPEDEF_MTLCommandBuffer
+typedef bean_id MTLCommandBuffer;
+#endif
 #ifndef BEAN_TYPEDEF_MTLCommandBufferDescriptor
 #define BEAN_TYPEDEF_MTLCommandBufferDescriptor
 typedef bean_id MTLCommandBufferDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCommandBufferEncoderInfo
+#define BEAN_TYPEDEF_MTLCommandBufferEncoderInfo
+typedef bean_id MTLCommandBufferEncoderInfo;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCommandEncoder
+#define BEAN_TYPEDEF_MTLCommandEncoder
+typedef bean_id MTLCommandEncoder;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCommandQueue
+#define BEAN_TYPEDEF_MTLCommandQueue
+typedef bean_id MTLCommandQueue;
 #endif
 #ifndef BEAN_TYPEDEF_MTLCommandQueueDescriptor
 #define BEAN_TYPEDEF_MTLCommandQueueDescriptor
@@ -578,6 +726,10 @@ typedef bean_id MTLCommandQueueDescriptor;
 #ifndef BEAN_TYPEDEF_MTLCompileOptions
 #define BEAN_TYPEDEF_MTLCompileOptions
 typedef bean_id MTLCompileOptions;
+#endif
+#ifndef BEAN_TYPEDEF_MTLComputeCommandEncoder
+#define BEAN_TYPEDEF_MTLComputeCommandEncoder
+typedef bean_id MTLComputeCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLComputePassDescriptor
 #define BEAN_TYPEDEF_MTLComputePassDescriptor
@@ -599,13 +751,57 @@ typedef bean_id MTLComputePipelineDescriptor;
 #define BEAN_TYPEDEF_MTLComputePipelineReflection
 typedef bean_id MTLComputePipelineReflection;
 #endif
+#ifndef BEAN_TYPEDEF_MTLComputePipelineState
+#define BEAN_TYPEDEF_MTLComputePipelineState
+typedef bean_id MTLComputePipelineState;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCounter
+#define BEAN_TYPEDEF_MTLCounter
+typedef bean_id MTLCounter;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCounterSampleBuffer
+#define BEAN_TYPEDEF_MTLCounterSampleBuffer
+typedef bean_id MTLCounterSampleBuffer;
+#endif
 #ifndef BEAN_TYPEDEF_MTLCounterSampleBufferDescriptor
 #define BEAN_TYPEDEF_MTLCounterSampleBufferDescriptor
 typedef bean_id MTLCounterSampleBufferDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLCounterSet
+#define BEAN_TYPEDEF_MTLCounterSet
+typedef bean_id MTLCounterSet;
+#endif
 #ifndef BEAN_TYPEDEF_MTLDepthStencilDescriptor
 #define BEAN_TYPEDEF_MTLDepthStencilDescriptor
 typedef bean_id MTLDepthStencilDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLDepthStencilState
+#define BEAN_TYPEDEF_MTLDepthStencilState
+typedef bean_id MTLDepthStencilState;
+#endif
+#ifndef BEAN_TYPEDEF_MTLDevice
+#define BEAN_TYPEDEF_MTLDevice
+typedef bean_id MTLDevice;
+#endif
+#ifndef BEAN_TYPEDEF_MTLDrawable
+#define BEAN_TYPEDEF_MTLDrawable
+typedef bean_id MTLDrawable;
+#endif
+#ifndef BEAN_TYPEDEF_MTLDynamicLibrary
+#define BEAN_TYPEDEF_MTLDynamicLibrary
+typedef bean_id MTLDynamicLibrary;
+#endif
+#ifndef BEAN_TYPEDEF_MTLEvent
+#define BEAN_TYPEDEF_MTLEvent
+typedef bean_id MTLEvent;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFence
+#define BEAN_TYPEDEF_MTLFence
+typedef bean_id MTLFence;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFunction
+#define BEAN_TYPEDEF_MTLFunction
+typedef bean_id MTLFunction;
 #endif
 #ifndef BEAN_TYPEDEF_MTLFunctionConstant
 #define BEAN_TYPEDEF_MTLFunctionConstant
@@ -618,6 +814,18 @@ typedef bean_id MTLFunctionConstantValues;
 #ifndef BEAN_TYPEDEF_MTLFunctionDescriptor
 #define BEAN_TYPEDEF_MTLFunctionDescriptor
 typedef bean_id MTLFunctionDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFunctionHandle
+#define BEAN_TYPEDEF_MTLFunctionHandle
+typedef bean_id MTLFunctionHandle;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFunctionLog
+#define BEAN_TYPEDEF_MTLFunctionLog
+typedef bean_id MTLFunctionLog;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFunctionLogDebugLocation
+#define BEAN_TYPEDEF_MTLFunctionLogDebugLocation
+typedef bean_id MTLFunctionLogDebugLocation;
 #endif
 #ifndef BEAN_TYPEDEF_MTLFunctionReflection
 #define BEAN_TYPEDEF_MTLFunctionReflection
@@ -635,33 +843,85 @@ typedef bean_id MTLFunctionStitchingGraph;
 #define BEAN_TYPEDEF_MTLFunctionStitchingInputNode
 typedef bean_id MTLFunctionStitchingInputNode;
 #endif
+#ifndef BEAN_TYPEDEF_MTLHeap
+#define BEAN_TYPEDEF_MTLHeap
+typedef bean_id MTLHeap;
+#endif
 #ifndef BEAN_TYPEDEF_MTLHeapDescriptor
 #define BEAN_TYPEDEF_MTLHeapDescriptor
 typedef bean_id MTLHeapDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIOCommandBuffer
+#define BEAN_TYPEDEF_MTLIOCommandBuffer
+typedef bean_id MTLIOCommandBuffer;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIOCommandQueue
+#define BEAN_TYPEDEF_MTLIOCommandQueue
+typedef bean_id MTLIOCommandQueue;
 #endif
 #ifndef BEAN_TYPEDEF_MTLIOCommandQueueDescriptor
 #define BEAN_TYPEDEF_MTLIOCommandQueueDescriptor
 typedef bean_id MTLIOCommandQueueDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLIOFileHandle
+#define BEAN_TYPEDEF_MTLIOFileHandle
+typedef bean_id MTLIOFileHandle;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIOScratchBuffer
+#define BEAN_TYPEDEF_MTLIOScratchBuffer
+typedef bean_id MTLIOScratchBuffer;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIOScratchBufferAllocator
+#define BEAN_TYPEDEF_MTLIOScratchBufferAllocator
+typedef bean_id MTLIOScratchBufferAllocator;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIndirectCommandBuffer
+#define BEAN_TYPEDEF_MTLIndirectCommandBuffer
+typedef bean_id MTLIndirectCommandBuffer;
+#endif
 #ifndef BEAN_TYPEDEF_MTLIndirectCommandBufferDescriptor
 #define BEAN_TYPEDEF_MTLIndirectCommandBufferDescriptor
 typedef bean_id MTLIndirectCommandBufferDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIndirectComputeCommand
+#define BEAN_TYPEDEF_MTLIndirectComputeCommand
+typedef bean_id MTLIndirectComputeCommand;
 #endif
 #ifndef BEAN_TYPEDEF_MTLIndirectInstanceAccelerationStructureDescriptor
 #define BEAN_TYPEDEF_MTLIndirectInstanceAccelerationStructureDescriptor
 typedef bean_id MTLIndirectInstanceAccelerationStructureDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLIndirectRenderCommand
+#define BEAN_TYPEDEF_MTLIndirectRenderCommand
+typedef bean_id MTLIndirectRenderCommand;
+#endif
 #ifndef BEAN_TYPEDEF_MTLInstanceAccelerationStructureDescriptor
 #define BEAN_TYPEDEF_MTLInstanceAccelerationStructureDescriptor
 typedef bean_id MTLInstanceAccelerationStructureDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIntersectionFunctionDescriptor
+#define BEAN_TYPEDEF_MTLIntersectionFunctionDescriptor
+typedef bean_id MTLIntersectionFunctionDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIntersectionFunctionTable
+#define BEAN_TYPEDEF_MTLIntersectionFunctionTable
+typedef bean_id MTLIntersectionFunctionTable;
 #endif
 #ifndef BEAN_TYPEDEF_MTLIntersectionFunctionTableDescriptor
 #define BEAN_TYPEDEF_MTLIntersectionFunctionTableDescriptor
 typedef bean_id MTLIntersectionFunctionTableDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLLibrary
+#define BEAN_TYPEDEF_MTLLibrary
+typedef bean_id MTLLibrary;
+#endif
 #ifndef BEAN_TYPEDEF_MTLLinkedFunctions
 #define BEAN_TYPEDEF_MTLLinkedFunctions
 typedef bean_id MTLLinkedFunctions;
+#endif
+#ifndef BEAN_TYPEDEF_MTLLogState
+#define BEAN_TYPEDEF_MTLLogState
+typedef bean_id MTLLogState;
 #endif
 #ifndef BEAN_TYPEDEF_MTLLogStateDescriptor
 #define BEAN_TYPEDEF_MTLLogStateDescriptor
@@ -678,6 +938,14 @@ typedef bean_id MTLMeshRenderPipelineDescriptor;
 #ifndef BEAN_TYPEDEF_MTLMotionKeyframeData
 #define BEAN_TYPEDEF_MTLMotionKeyframeData
 typedef bean_id MTLMotionKeyframeData;
+#endif
+#ifndef BEAN_TYPEDEF_MTLObjectPayloadBinding
+#define BEAN_TYPEDEF_MTLObjectPayloadBinding
+typedef bean_id MTLObjectPayloadBinding;
+#endif
+#ifndef BEAN_TYPEDEF_MTLParallelRenderCommandEncoder
+#define BEAN_TYPEDEF_MTLParallelRenderCommandEncoder
+typedef bean_id MTLParallelRenderCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLPipelineBufferDescriptor
 #define BEAN_TYPEDEF_MTLPipelineBufferDescriptor
@@ -703,6 +971,10 @@ typedef bean_id MTLRasterizationRateLayerArray;
 #define BEAN_TYPEDEF_MTLRasterizationRateLayerDescriptor
 typedef bean_id MTLRasterizationRateLayerDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLRasterizationRateMap
+#define BEAN_TYPEDEF_MTLRasterizationRateMap
+typedef bean_id MTLRasterizationRateMap;
+#endif
 #ifndef BEAN_TYPEDEF_MTLRasterizationRateMapDescriptor
 #define BEAN_TYPEDEF_MTLRasterizationRateMapDescriptor
 typedef bean_id MTLRasterizationRateMapDescriptor;
@@ -710,6 +982,10 @@ typedef bean_id MTLRasterizationRateMapDescriptor;
 #ifndef BEAN_TYPEDEF_MTLRasterizationRateSampleArray
 #define BEAN_TYPEDEF_MTLRasterizationRateSampleArray
 typedef bean_id MTLRasterizationRateSampleArray;
+#endif
+#ifndef BEAN_TYPEDEF_MTLRenderCommandEncoder
+#define BEAN_TYPEDEF_MTLRenderCommandEncoder
+typedef bean_id MTLRenderCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLRenderPassAttachmentDescriptor
 #define BEAN_TYPEDEF_MTLRenderPassAttachmentDescriptor
@@ -763,9 +1039,25 @@ typedef bean_id MTLRenderPipelineFunctionsDescriptor;
 #define BEAN_TYPEDEF_MTLRenderPipelineReflection
 typedef bean_id MTLRenderPipelineReflection;
 #endif
+#ifndef BEAN_TYPEDEF_MTLRenderPipelineState
+#define BEAN_TYPEDEF_MTLRenderPipelineState
+typedef bean_id MTLRenderPipelineState;
+#endif
+#ifndef BEAN_TYPEDEF_MTLResidencySet
+#define BEAN_TYPEDEF_MTLResidencySet
+typedef bean_id MTLResidencySet;
+#endif
 #ifndef BEAN_TYPEDEF_MTLResidencySetDescriptor
 #define BEAN_TYPEDEF_MTLResidencySetDescriptor
 typedef bean_id MTLResidencySetDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLResource
+#define BEAN_TYPEDEF_MTLResource
+typedef bean_id MTLResource;
+#endif
+#ifndef BEAN_TYPEDEF_MTLResourceStateCommandEncoder
+#define BEAN_TYPEDEF_MTLResourceStateCommandEncoder
+typedef bean_id MTLResourceStateCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLResourceStatePassDescriptor
 #define BEAN_TYPEDEF_MTLResourceStatePassDescriptor
@@ -779,6 +1071,10 @@ typedef bean_id MTLResourceStatePassSampleBufferAttachmentDescriptor;
 #define BEAN_TYPEDEF_MTLResourceStatePassSampleBufferAttachmentDescriptorArray
 typedef bean_id MTLResourceStatePassSampleBufferAttachmentDescriptorArray;
 #endif
+#ifndef BEAN_TYPEDEF_MTLResourceViewPool
+#define BEAN_TYPEDEF_MTLResourceViewPool
+typedef bean_id MTLResourceViewPool;
+#endif
 #ifndef BEAN_TYPEDEF_MTLResourceViewPoolDescriptor
 #define BEAN_TYPEDEF_MTLResourceViewPoolDescriptor
 typedef bean_id MTLResourceViewPoolDescriptor;
@@ -786,6 +1082,14 @@ typedef bean_id MTLResourceViewPoolDescriptor;
 #ifndef BEAN_TYPEDEF_MTLSamplerDescriptor
 #define BEAN_TYPEDEF_MTLSamplerDescriptor
 typedef bean_id MTLSamplerDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLSamplerState
+#define BEAN_TYPEDEF_MTLSamplerState
+typedef bean_id MTLSamplerState;
+#endif
+#ifndef BEAN_TYPEDEF_MTLSharedEvent
+#define BEAN_TYPEDEF_MTLSharedEvent
+typedef bean_id MTLSharedEvent;
 #endif
 #ifndef BEAN_TYPEDEF_MTLSharedEventHandle
 #define BEAN_TYPEDEF_MTLSharedEventHandle
@@ -819,6 +1123,14 @@ typedef bean_id MTLStructMember;
 #define BEAN_TYPEDEF_MTLStructType
 typedef bean_id MTLStructType;
 #endif
+#ifndef BEAN_TYPEDEF_MTLTensor
+#define BEAN_TYPEDEF_MTLTensor
+typedef bean_id MTLTensor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLTensorBinding
+#define BEAN_TYPEDEF_MTLTensorBinding
+typedef bean_id MTLTensorBinding;
+#endif
 #ifndef BEAN_TYPEDEF_MTLTensorDescriptor
 #define BEAN_TYPEDEF_MTLTensorDescriptor
 typedef bean_id MTLTensorDescriptor;
@@ -831,6 +1143,14 @@ typedef bean_id MTLTensorExtents;
 #define BEAN_TYPEDEF_MTLTensorReferenceType
 typedef bean_id MTLTensorReferenceType;
 #endif
+#ifndef BEAN_TYPEDEF_MTLTexture
+#define BEAN_TYPEDEF_MTLTexture
+typedef bean_id MTLTexture;
+#endif
+#ifndef BEAN_TYPEDEF_MTLTextureBinding
+#define BEAN_TYPEDEF_MTLTextureBinding
+typedef bean_id MTLTextureBinding;
+#endif
 #ifndef BEAN_TYPEDEF_MTLTextureDescriptor
 #define BEAN_TYPEDEF_MTLTextureDescriptor
 typedef bean_id MTLTextureDescriptor;
@@ -842,6 +1162,14 @@ typedef bean_id MTLTextureReferenceType;
 #ifndef BEAN_TYPEDEF_MTLTextureViewDescriptor
 #define BEAN_TYPEDEF_MTLTextureViewDescriptor
 typedef bean_id MTLTextureViewDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLTextureViewPool
+#define BEAN_TYPEDEF_MTLTextureViewPool
+typedef bean_id MTLTextureViewPool;
+#endif
+#ifndef BEAN_TYPEDEF_MTLThreadgroupBinding
+#define BEAN_TYPEDEF_MTLThreadgroupBinding
+typedef bean_id MTLThreadgroupBinding;
 #endif
 #ifndef BEAN_TYPEDEF_MTLTileRenderPipelineColorAttachmentDescriptor
 #define BEAN_TYPEDEF_MTLTileRenderPipelineColorAttachmentDescriptor
@@ -883,6 +1211,10 @@ typedef bean_id MTLVertexBufferLayoutDescriptorArray;
 #define BEAN_TYPEDEF_MTLVertexDescriptor
 typedef bean_id MTLVertexDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLVisibleFunctionTable
+#define BEAN_TYPEDEF_MTLVisibleFunctionTable
+typedef bean_id MTLVisibleFunctionTable;
+#endif
 #ifndef BEAN_TYPEDEF_MTLVisibleFunctionTableDescriptor
 #define BEAN_TYPEDEF_MTLVisibleFunctionTableDescriptor
 typedef bean_id MTLVisibleFunctionTableDescriptor;
@@ -890,6 +1222,26 @@ typedef bean_id MTLVisibleFunctionTableDescriptor;
 #ifndef BEAN_TYPEDEF_NSATSTypesetter
 #define BEAN_TYPEDEF_NSATSTypesetter
 typedef bean_id NSATSTypesetter;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibility
+#define BEAN_TYPEDEF_NSAccessibility
+typedef bean_id NSAccessibility;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityButton
+#define BEAN_TYPEDEF_NSAccessibilityButton
+typedef bean_id NSAccessibilityButton;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityCheckBox
+#define BEAN_TYPEDEF_NSAccessibilityCheckBox
+typedef bean_id NSAccessibilityCheckBox;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityColor
+#define BEAN_TYPEDEF_NSAccessibilityColor
+typedef bean_id NSAccessibilityColor;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityContainsTransientUI
+#define BEAN_TYPEDEF_NSAccessibilityContainsTransientUI
+typedef bean_id NSAccessibilityContainsTransientUI;
 #endif
 #ifndef BEAN_TYPEDEF_NSAccessibilityCustomAction
 #define BEAN_TYPEDEF_NSAccessibilityCustomAction
@@ -903,6 +1255,10 @@ typedef bean_id NSAccessibilityCustomRotor;
 #define BEAN_TYPEDEF_NSAccessibilityCustomRotorItemResult
 typedef bean_id NSAccessibilityCustomRotorItemResult;
 #endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityCustomRotorItemSearchDelegate
+#define BEAN_TYPEDEF_NSAccessibilityCustomRotorItemSearchDelegate
+typedef bean_id NSAccessibilityCustomRotorItemSearchDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAccessibilityCustomRotorSearchParameters
 #define BEAN_TYPEDEF_NSAccessibilityCustomRotorSearchParameters
 typedef bean_id NSAccessibilityCustomRotorSearchParameters;
@@ -910,6 +1266,58 @@ typedef bean_id NSAccessibilityCustomRotorSearchParameters;
 #ifndef BEAN_TYPEDEF_NSAccessibilityElement
 #define BEAN_TYPEDEF_NSAccessibilityElement
 typedef bean_id NSAccessibilityElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityElementLoading
+#define BEAN_TYPEDEF_NSAccessibilityElementLoading
+typedef bean_id NSAccessibilityElementLoading;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityImage
+#define BEAN_TYPEDEF_NSAccessibilityImage
+typedef bean_id NSAccessibilityImage;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityLayoutArea
+#define BEAN_TYPEDEF_NSAccessibilityLayoutArea
+typedef bean_id NSAccessibilityLayoutArea;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityLayoutItem
+#define BEAN_TYPEDEF_NSAccessibilityLayoutItem
+typedef bean_id NSAccessibilityLayoutItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityNavigableStaticText
+#define BEAN_TYPEDEF_NSAccessibilityNavigableStaticText
+typedef bean_id NSAccessibilityNavigableStaticText;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityProgressIndicator
+#define BEAN_TYPEDEF_NSAccessibilityProgressIndicator
+typedef bean_id NSAccessibilityProgressIndicator;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityRadioButton
+#define BEAN_TYPEDEF_NSAccessibilityRadioButton
+typedef bean_id NSAccessibilityRadioButton;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityRow
+#define BEAN_TYPEDEF_NSAccessibilityRow
+typedef bean_id NSAccessibilityRow;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilitySlider
+#define BEAN_TYPEDEF_NSAccessibilitySlider
+typedef bean_id NSAccessibilitySlider;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityStaticText
+#define BEAN_TYPEDEF_NSAccessibilityStaticText
+typedef bean_id NSAccessibilityStaticText;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityStepper
+#define BEAN_TYPEDEF_NSAccessibilityStepper
+typedef bean_id NSAccessibilityStepper;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilitySwitch
+#define BEAN_TYPEDEF_NSAccessibilitySwitch
+typedef bean_id NSAccessibilitySwitch;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityTable
+#define BEAN_TYPEDEF_NSAccessibilityTable
+typedef bean_id NSAccessibilityTable;
 #endif
 #ifndef BEAN_TYPEDEF_NSActionCell
 #define BEAN_TYPEDEF_NSActionCell
@@ -927,9 +1335,17 @@ typedef bean_id NSAffineTransform;
 #define BEAN_TYPEDEF_NSAlert
 typedef bean_id NSAlert;
 #endif
+#ifndef BEAN_TYPEDEF_NSAlertDelegate
+#define BEAN_TYPEDEF_NSAlertDelegate
+typedef bean_id NSAlertDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAlignmentFeedbackFilter
 #define BEAN_TYPEDEF_NSAlignmentFeedbackFilter
 typedef bean_id NSAlignmentFeedbackFilter;
+#endif
+#ifndef BEAN_TYPEDEF_NSAnimatablePropertyContainer
+#define BEAN_TYPEDEF_NSAnimatablePropertyContainer
+typedef bean_id NSAnimatablePropertyContainer;
 #endif
 #ifndef BEAN_TYPEDEF_NSAnimation
 #define BEAN_TYPEDEF_NSAnimation
@@ -939,9 +1355,17 @@ typedef bean_id NSAnimation;
 #define BEAN_TYPEDEF_NSAnimationContext
 typedef bean_id NSAnimationContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSAnimationDelegate
+#define BEAN_TYPEDEF_NSAnimationDelegate
+typedef bean_id NSAnimationDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAppearance
 #define BEAN_TYPEDEF_NSAppearance
 typedef bean_id NSAppearance;
+#endif
+#ifndef BEAN_TYPEDEF_NSAppearanceCustomization
+#define BEAN_TYPEDEF_NSAppearanceCustomization
+typedef bean_id NSAppearanceCustomization;
 #endif
 #ifndef BEAN_TYPEDEF_NSAppleEventDescriptor
 #define BEAN_TYPEDEF_NSAppleEventDescriptor
@@ -958,6 +1382,10 @@ typedef bean_id NSAppleScript;
 #ifndef BEAN_TYPEDEF_NSApplication
 #define BEAN_TYPEDEF_NSApplication
 typedef bean_id NSApplication;
+#endif
+#ifndef BEAN_TYPEDEF_NSApplicationDelegate
+#define BEAN_TYPEDEF_NSApplicationDelegate
+typedef bean_id NSApplicationDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSArchiver
 #define BEAN_TYPEDEF_NSArchiver
@@ -1031,6 +1459,10 @@ typedef bean_id NSBrowser;
 #define BEAN_TYPEDEF_NSBrowserCell
 typedef bean_id NSBrowserCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSBrowserDelegate
+#define BEAN_TYPEDEF_NSBrowserDelegate
+typedef bean_id NSBrowserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSBundle
 #define BEAN_TYPEDEF_NSBundle
 typedef bean_id NSBundle;
@@ -1063,6 +1495,10 @@ typedef bean_id NSCIImageRep;
 #define BEAN_TYPEDEF_NSCache
 typedef bean_id NSCache;
 #endif
+#ifndef BEAN_TYPEDEF_NSCacheDelegate
+#define BEAN_TYPEDEF_NSCacheDelegate
+typedef bean_id NSCacheDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCachedImageRep
 #define BEAN_TYPEDEF_NSCachedImageRep
 typedef bean_id NSCachedImageRep;
@@ -1083,9 +1519,17 @@ typedef bean_id NSCalendarDate;
 #define BEAN_TYPEDEF_NSCandidateListTouchBarItem
 typedef bean_id NSCandidateListTouchBarItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSCandidateListTouchBarItemDelegate
+#define BEAN_TYPEDEF_NSCandidateListTouchBarItemDelegate
+typedef bean_id NSCandidateListTouchBarItemDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCell
 #define BEAN_TYPEDEF_NSCell
 typedef bean_id NSCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSChangeSpelling
+#define BEAN_TYPEDEF_NSChangeSpelling
+typedef bean_id NSChangeSpelling;
 #endif
 #ifndef BEAN_TYPEDEF_NSCharacterSet
 #define BEAN_TYPEDEF_NSCharacterSet
@@ -1111,9 +1555,21 @@ typedef bean_id NSCloneCommand;
 #define BEAN_TYPEDEF_NSCloseCommand
 typedef bean_id NSCloseCommand;
 #endif
+#ifndef BEAN_TYPEDEF_NSCloudSharingServiceDelegate
+#define BEAN_TYPEDEF_NSCloudSharingServiceDelegate
+typedef bean_id NSCloudSharingServiceDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCloudSharingValidation
+#define BEAN_TYPEDEF_NSCloudSharingValidation
+typedef bean_id NSCloudSharingValidation;
+#endif
 #ifndef BEAN_TYPEDEF_NSCoder
 #define BEAN_TYPEDEF_NSCoder
 typedef bean_id NSCoder;
+#endif
+#ifndef BEAN_TYPEDEF_NSCoding
+#define BEAN_TYPEDEF_NSCoding
+typedef bean_id NSCoding;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutAnchor
 #define BEAN_TYPEDEF_NSCollectionLayoutAnchor
@@ -1122,6 +1578,10 @@ typedef bean_id NSCollectionLayoutAnchor;
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutBoundarySupplementaryItem
 #define BEAN_TYPEDEF_NSCollectionLayoutBoundarySupplementaryItem
 typedef bean_id NSCollectionLayoutBoundarySupplementaryItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutContainer
+#define BEAN_TYPEDEF_NSCollectionLayoutContainer
+typedef bean_id NSCollectionLayoutContainer;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutDecorationItem
 #define BEAN_TYPEDEF_NSCollectionLayoutDecorationItem
@@ -1134,6 +1594,10 @@ typedef bean_id NSCollectionLayoutDimension;
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutEdgeSpacing
 #define BEAN_TYPEDEF_NSCollectionLayoutEdgeSpacing
 typedef bean_id NSCollectionLayoutEdgeSpacing;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutEnvironment
+#define BEAN_TYPEDEF_NSCollectionLayoutEnvironment
+typedef bean_id NSCollectionLayoutEnvironment;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutGroup
 #define BEAN_TYPEDEF_NSCollectionLayoutGroup
@@ -1163,6 +1627,10 @@ typedef bean_id NSCollectionLayoutSpacing;
 #define BEAN_TYPEDEF_NSCollectionLayoutSupplementaryItem
 typedef bean_id NSCollectionLayoutSupplementaryItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutVisibleItem
+#define BEAN_TYPEDEF_NSCollectionLayoutVisibleItem
+typedef bean_id NSCollectionLayoutVisibleItem;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionView
 #define BEAN_TYPEDEF_NSCollectionView
 typedef bean_id NSCollectionView;
@@ -1175,9 +1643,25 @@ typedef bean_id NSCollectionViewCompositionalLayout;
 #define BEAN_TYPEDEF_NSCollectionViewCompositionalLayoutConfiguration
 typedef bean_id NSCollectionViewCompositionalLayoutConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDataSource
+#define BEAN_TYPEDEF_NSCollectionViewDataSource
+typedef bean_id NSCollectionViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDelegate
+#define BEAN_TYPEDEF_NSCollectionViewDelegate
+typedef bean_id NSCollectionViewDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDelegateFlowLayout
+#define BEAN_TYPEDEF_NSCollectionViewDelegateFlowLayout
+typedef bean_id NSCollectionViewDelegateFlowLayout;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewDiffableDataSource
 #define BEAN_TYPEDEF_NSCollectionViewDiffableDataSource
 typedef bean_id NSCollectionViewDiffableDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewElement
+#define BEAN_TYPEDEF_NSCollectionViewElement
+typedef bean_id NSCollectionViewElement;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewFlowLayout
 #define BEAN_TYPEDEF_NSCollectionViewFlowLayout
@@ -1207,6 +1691,14 @@ typedef bean_id NSCollectionViewLayoutAttributes;
 #define BEAN_TYPEDEF_NSCollectionViewLayoutInvalidationContext
 typedef bean_id NSCollectionViewLayoutInvalidationContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewPrefetching
+#define BEAN_TYPEDEF_NSCollectionViewPrefetching
+typedef bean_id NSCollectionViewPrefetching;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewSectionHeaderView
+#define BEAN_TYPEDEF_NSCollectionViewSectionHeaderView
+typedef bean_id NSCollectionViewSectionHeaderView;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewTransitionLayout
 #define BEAN_TYPEDEF_NSCollectionViewTransitionLayout
 typedef bean_id NSCollectionViewTransitionLayout;
@@ -1218,6 +1710,10 @@ typedef bean_id NSCollectionViewUpdateItem;
 #ifndef BEAN_TYPEDEF_NSColor
 #define BEAN_TYPEDEF_NSColor
 typedef bean_id NSColor;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorChanging
+#define BEAN_TYPEDEF_NSColorChanging
+typedef bean_id NSColorChanging;
 #endif
 #ifndef BEAN_TYPEDEF_NSColorList
 #define BEAN_TYPEDEF_NSColorList
@@ -1234,6 +1730,14 @@ typedef bean_id NSColorPicker;
 #ifndef BEAN_TYPEDEF_NSColorPickerTouchBarItem
 #define BEAN_TYPEDEF_NSColorPickerTouchBarItem
 typedef bean_id NSColorPickerTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorPickingCustom
+#define BEAN_TYPEDEF_NSColorPickingCustom
+typedef bean_id NSColorPickingCustom;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorPickingDefault
+#define BEAN_TYPEDEF_NSColorPickingDefault
+typedef bean_id NSColorPickingDefault;
 #endif
 #ifndef BEAN_TYPEDEF_NSColorSampler
 #define BEAN_TYPEDEF_NSColorSampler
@@ -1254,6 +1758,18 @@ typedef bean_id NSComboBox;
 #ifndef BEAN_TYPEDEF_NSComboBoxCell
 #define BEAN_TYPEDEF_NSComboBoxCell
 typedef bean_id NSComboBoxCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxCellDataSource
+#define BEAN_TYPEDEF_NSComboBoxCellDataSource
+typedef bean_id NSComboBoxCellDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxDataSource
+#define BEAN_TYPEDEF_NSComboBoxDataSource
+typedef bean_id NSComboBoxDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxDelegate
+#define BEAN_TYPEDEF_NSComboBoxDelegate
+typedef bean_id NSComboBoxDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSComboButton
 #define BEAN_TYPEDEF_NSComboButton
@@ -1279,13 +1795,25 @@ typedef bean_id NSConditionLock;
 #define BEAN_TYPEDEF_NSConnection
 typedef bean_id NSConnection;
 #endif
+#ifndef BEAN_TYPEDEF_NSConnectionDelegate
+#define BEAN_TYPEDEF_NSConnectionDelegate
+typedef bean_id NSConnectionDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSControl
 #define BEAN_TYPEDEF_NSControl
 typedef bean_id NSControl;
 #endif
+#ifndef BEAN_TYPEDEF_NSControlTextEditingDelegate
+#define BEAN_TYPEDEF_NSControlTextEditingDelegate
+typedef bean_id NSControlTextEditingDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSController
 #define BEAN_TYPEDEF_NSController
 typedef bean_id NSController;
+#endif
+#ifndef BEAN_TYPEDEF_NSCopying
+#define BEAN_TYPEDEF_NSCopying
+typedef bean_id NSCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSCountedSet
 #define BEAN_TYPEDEF_NSCountedSet
@@ -1351,9 +1879,17 @@ typedef bean_id NSDatePicker;
 #define BEAN_TYPEDEF_NSDatePickerCell
 typedef bean_id NSDatePickerCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSDatePickerCellDelegate
+#define BEAN_TYPEDEF_NSDatePickerCellDelegate
+typedef bean_id NSDatePickerCellDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumber
 #define BEAN_TYPEDEF_NSDecimalNumber
 typedef bean_id NSDecimalNumber;
+#endif
+#ifndef BEAN_TYPEDEF_NSDecimalNumberBehaviors
+#define BEAN_TYPEDEF_NSDecimalNumberBehaviors
+typedef bean_id NSDecimalNumberBehaviors;
 #endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumberHandler
 #define BEAN_TYPEDEF_NSDecimalNumberHandler
@@ -1387,6 +1923,10 @@ typedef bean_id NSDimension;
 #define BEAN_TYPEDEF_NSDirectoryEnumerator
 typedef bean_id NSDirectoryEnumerator;
 #endif
+#ifndef BEAN_TYPEDEF_NSDiscardableContent
+#define BEAN_TYPEDEF_NSDiscardableContent
+typedef bean_id NSDiscardableContent;
+#endif
 #ifndef BEAN_TYPEDEF_NSDistantObject
 #define BEAN_TYPEDEF_NSDistantObject
 typedef bean_id NSDistantObject;
@@ -1407,6 +1947,10 @@ typedef bean_id NSDistributedNotificationCenter;
 #define BEAN_TYPEDEF_NSDockTile
 typedef bean_id NSDockTile;
 #endif
+#ifndef BEAN_TYPEDEF_NSDockTilePlugIn
+#define BEAN_TYPEDEF_NSDockTilePlugIn
+typedef bean_id NSDockTilePlugIn;
+#endif
 #ifndef BEAN_TYPEDEF_NSDocument
 #define BEAN_TYPEDEF_NSDocument
 typedef bean_id NSDocument;
@@ -1415,9 +1959,17 @@ typedef bean_id NSDocument;
 #define BEAN_TYPEDEF_NSDocumentController
 typedef bean_id NSDocumentController;
 #endif
+#ifndef BEAN_TYPEDEF_NSDraggingDestination
+#define BEAN_TYPEDEF_NSDraggingDestination
+typedef bean_id NSDraggingDestination;
+#endif
 #ifndef BEAN_TYPEDEF_NSDraggingImageComponent
 #define BEAN_TYPEDEF_NSDraggingImageComponent
 typedef bean_id NSDraggingImageComponent;
+#endif
+#ifndef BEAN_TYPEDEF_NSDraggingInfo
+#define BEAN_TYPEDEF_NSDraggingInfo
+typedef bean_id NSDraggingInfo;
 #endif
 #ifndef BEAN_TYPEDEF_NSDraggingItem
 #define BEAN_TYPEDEF_NSDraggingItem
@@ -1427,13 +1979,29 @@ typedef bean_id NSDraggingItem;
 #define BEAN_TYPEDEF_NSDraggingSession
 typedef bean_id NSDraggingSession;
 #endif
+#ifndef BEAN_TYPEDEF_NSDraggingSource
+#define BEAN_TYPEDEF_NSDraggingSource
+typedef bean_id NSDraggingSource;
+#endif
 #ifndef BEAN_TYPEDEF_NSDrawer
 #define BEAN_TYPEDEF_NSDrawer
 typedef bean_id NSDrawer;
 #endif
+#ifndef BEAN_TYPEDEF_NSDrawerDelegate
+#define BEAN_TYPEDEF_NSDrawerDelegate
+typedef bean_id NSDrawerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSEPSImageRep
 #define BEAN_TYPEDEF_NSEPSImageRep
 typedef bean_id NSEPSImageRep;
+#endif
+#ifndef BEAN_TYPEDEF_NSEditor
+#define BEAN_TYPEDEF_NSEditor
+typedef bean_id NSEditor;
+#endif
+#ifndef BEAN_TYPEDEF_NSEditorRegistration
+#define BEAN_TYPEDEF_NSEditorRegistration
+typedef bean_id NSEditorRegistration;
 #endif
 #ifndef BEAN_TYPEDEF_NSEnergyFormatter
 #define BEAN_TYPEDEF_NSEnergyFormatter
@@ -1467,6 +2035,14 @@ typedef bean_id NSExtensionContext;
 #define BEAN_TYPEDEF_NSExtensionItem
 typedef bean_id NSExtensionItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSExtensionRequestHandling
+#define BEAN_TYPEDEF_NSExtensionRequestHandling
+typedef bean_id NSExtensionRequestHandling;
+#endif
+#ifndef BEAN_TYPEDEF_NSFastEnumeration
+#define BEAN_TYPEDEF_NSFastEnumeration
+typedef bean_id NSFastEnumeration;
+#endif
 #ifndef BEAN_TYPEDEF_NSFileAccessIntent
 #define BEAN_TYPEDEF_NSFileAccessIntent
 typedef bean_id NSFileAccessIntent;
@@ -1483,9 +2059,21 @@ typedef bean_id NSFileHandle;
 #define BEAN_TYPEDEF_NSFileManager
 typedef bean_id NSFileManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSFileManagerDelegate
+#define BEAN_TYPEDEF_NSFileManagerDelegate
+typedef bean_id NSFileManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePresenter
+#define BEAN_TYPEDEF_NSFilePresenter
+typedef bean_id NSFilePresenter;
+#endif
 #ifndef BEAN_TYPEDEF_NSFilePromiseProvider
 #define BEAN_TYPEDEF_NSFilePromiseProvider
 typedef bean_id NSFilePromiseProvider;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePromiseProviderDelegate
+#define BEAN_TYPEDEF_NSFilePromiseProviderDelegate
+typedef bean_id NSFilePromiseProviderDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSFilePromiseReceiver
 #define BEAN_TYPEDEF_NSFilePromiseReceiver
@@ -1514,6 +2102,10 @@ typedef bean_id NSFont;
 #ifndef BEAN_TYPEDEF_NSFontAssetRequest
 #define BEAN_TYPEDEF_NSFontAssetRequest
 typedef bean_id NSFontAssetRequest;
+#endif
+#ifndef BEAN_TYPEDEF_NSFontChanging
+#define BEAN_TYPEDEF_NSFontChanging
+typedef bean_id NSFontChanging;
 #endif
 #ifndef BEAN_TYPEDEF_NSFontCollection
 #define BEAN_TYPEDEF_NSFontCollection
@@ -1551,6 +2143,10 @@ typedef bean_id NSGarbageCollector;
 #define BEAN_TYPEDEF_NSGestureRecognizer
 typedef bean_id NSGestureRecognizer;
 #endif
+#ifndef BEAN_TYPEDEF_NSGestureRecognizerDelegate
+#define BEAN_TYPEDEF_NSGestureRecognizerDelegate
+typedef bean_id NSGestureRecognizerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSGlassEffectContainerView
 #define BEAN_TYPEDEF_NSGlassEffectContainerView
 typedef bean_id NSGlassEffectContainerView;
@@ -1566,6 +2162,10 @@ typedef bean_id NSGlyphGenerator;
 #ifndef BEAN_TYPEDEF_NSGlyphInfo
 #define BEAN_TYPEDEF_NSGlyphInfo
 typedef bean_id NSGlyphInfo;
+#endif
+#ifndef BEAN_TYPEDEF_NSGlyphStorage
+#define BEAN_TYPEDEF_NSGlyphStorage
+typedef bean_id NSGlyphStorage;
 #endif
 #ifndef BEAN_TYPEDEF_NSGradient
 #define BEAN_TYPEDEF_NSGradient
@@ -1611,6 +2211,10 @@ typedef bean_id NSHTTPURLResponse;
 #define BEAN_TYPEDEF_NSHapticFeedbackManager
 typedef bean_id NSHapticFeedbackManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSHapticFeedbackPerformer
+#define BEAN_TYPEDEF_NSHapticFeedbackPerformer
+typedef bean_id NSHapticFeedbackPerformer;
+#endif
 #ifndef BEAN_TYPEDEF_NSHashTable
 #define BEAN_TYPEDEF_NSHashTable
 typedef bean_id NSHashTable;
@@ -1627,6 +2231,10 @@ typedef bean_id NSHost;
 #define BEAN_TYPEDEF_NSISO8601DateFormatter
 typedef bean_id NSISO8601DateFormatter;
 #endif
+#ifndef BEAN_TYPEDEF_NSIgnoreMisspelledWords
+#define BEAN_TYPEDEF_NSIgnoreMisspelledWords
+typedef bean_id NSIgnoreMisspelledWords;
+#endif
 #ifndef BEAN_TYPEDEF_NSImage
 #define BEAN_TYPEDEF_NSImage
 typedef bean_id NSImage;
@@ -1634,6 +2242,10 @@ typedef bean_id NSImage;
 #ifndef BEAN_TYPEDEF_NSImageCell
 #define BEAN_TYPEDEF_NSImageCell
 typedef bean_id NSImageCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSImageDelegate
+#define BEAN_TYPEDEF_NSImageDelegate
+typedef bean_id NSImageDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSImageRep
 #define BEAN_TYPEDEF_NSImageRep
@@ -1675,6 +2287,14 @@ typedef bean_id NSInputManager;
 #define BEAN_TYPEDEF_NSInputServer
 typedef bean_id NSInputServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSInputServerMouseTracker
+#define BEAN_TYPEDEF_NSInputServerMouseTracker
+typedef bean_id NSInputServerMouseTracker;
+#endif
+#ifndef BEAN_TYPEDEF_NSInputServiceProvider
+#define BEAN_TYPEDEF_NSInputServiceProvider
+typedef bean_id NSInputServiceProvider;
+#endif
 #ifndef BEAN_TYPEDEF_NSInputStream
 #define BEAN_TYPEDEF_NSInputStream
 typedef bean_id NSInputStream;
@@ -1695,6 +2315,14 @@ typedef bean_id NSItemBadge;
 #define BEAN_TYPEDEF_NSItemProvider
 typedef bean_id NSItemProvider;
 #endif
+#ifndef BEAN_TYPEDEF_NSItemProviderReading
+#define BEAN_TYPEDEF_NSItemProviderReading
+typedef bean_id NSItemProviderReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSItemProviderWriting
+#define BEAN_TYPEDEF_NSItemProviderWriting
+typedef bean_id NSItemProviderWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSJSONSerialization
 #define BEAN_TYPEDEF_NSJSONSerialization
 typedef bean_id NSJSONSerialization;
@@ -1711,9 +2339,17 @@ typedef bean_id NSKeyValueSharedObserversSnapshot;
 #define BEAN_TYPEDEF_NSKeyedArchiver
 typedef bean_id NSKeyedArchiver;
 #endif
+#ifndef BEAN_TYPEDEF_NSKeyedArchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedArchiverDelegate
+typedef bean_id NSKeyedArchiverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiver
 #define BEAN_TYPEDEF_NSKeyedUnarchiver
 typedef bean_id NSKeyedUnarchiver;
+#endif
+#ifndef BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+typedef bean_id NSKeyedUnarchiverDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLayoutAnchor
 #define BEAN_TYPEDEF_NSLayoutAnchor
@@ -1734,6 +2370,10 @@ typedef bean_id NSLayoutGuide;
 #ifndef BEAN_TYPEDEF_NSLayoutManager
 #define BEAN_TYPEDEF_NSLayoutManager
 typedef bean_id NSLayoutManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSLayoutManagerDelegate
+#define BEAN_TYPEDEF_NSLayoutManagerDelegate
+typedef bean_id NSLayoutManagerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLayoutXAxisAnchor
 #define BEAN_TYPEDEF_NSLayoutXAxisAnchor
@@ -1775,6 +2415,10 @@ typedef bean_id NSLocalizedNumberFormatRule;
 #define BEAN_TYPEDEF_NSLock
 typedef bean_id NSLock;
 #endif
+#ifndef BEAN_TYPEDEF_NSLocking
+#define BEAN_TYPEDEF_NSLocking
+typedef bean_id NSLocking;
+#endif
 #ifndef BEAN_TYPEDEF_NSLogicalTest
 #define BEAN_TYPEDEF_NSLogicalTest
 typedef bean_id NSLogicalTest;
@@ -1786,6 +2430,10 @@ typedef bean_id NSMachBootstrapServer;
 #ifndef BEAN_TYPEDEF_NSMachPort
 #define BEAN_TYPEDEF_NSMachPort
 typedef bean_id NSMachPort;
+#endif
+#ifndef BEAN_TYPEDEF_NSMachPortDelegate
+#define BEAN_TYPEDEF_NSMachPortDelegate
+typedef bean_id NSMachPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMagnificationGestureRecognizer
 #define BEAN_TYPEDEF_NSMagnificationGestureRecognizer
@@ -1823,6 +2471,10 @@ typedef bean_id NSMediaLibraryBrowserController;
 #define BEAN_TYPEDEF_NSMenu
 typedef bean_id NSMenu;
 #endif
+#ifndef BEAN_TYPEDEF_NSMenuDelegate
+#define BEAN_TYPEDEF_NSMenuDelegate
+typedef bean_id NSMenuDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSMenuItem
 #define BEAN_TYPEDEF_NSMenuItem
 typedef bean_id NSMenuItem;
@@ -1834,6 +2486,10 @@ typedef bean_id NSMenuItemBadge;
 #ifndef BEAN_TYPEDEF_NSMenuItemCell
 #define BEAN_TYPEDEF_NSMenuItemCell
 typedef bean_id NSMenuItemCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSMenuItemValidation
+#define BEAN_TYPEDEF_NSMenuItemValidation
+typedef bean_id NSMenuItemValidation;
 #endif
 #ifndef BEAN_TYPEDEF_NSMenuToolbarItem
 #define BEAN_TYPEDEF_NSMenuToolbarItem
@@ -1854,6 +2510,10 @@ typedef bean_id NSMetadataQuery;
 #ifndef BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 #define BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 typedef bean_id NSMetadataQueryAttributeValueTuple;
+#endif
+#ifndef BEAN_TYPEDEF_NSMetadataQueryDelegate
+#define BEAN_TYPEDEF_NSMetadataQueryDelegate
+typedef bean_id NSMetadataQueryDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMetadataQueryResultGroup
 #define BEAN_TYPEDEF_NSMetadataQueryResultGroup
@@ -1894,6 +2554,10 @@ typedef bean_id NSMutableAttributedString;
 #ifndef BEAN_TYPEDEF_NSMutableCharacterSet
 #define BEAN_TYPEDEF_NSMutableCharacterSet
 typedef bean_id NSMutableCharacterSet;
+#endif
+#ifndef BEAN_TYPEDEF_NSMutableCopying
+#define BEAN_TYPEDEF_NSMutableCopying
+typedef bean_id NSMutableCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSMutableData
 #define BEAN_TYPEDEF_NSMutableData
@@ -1942,6 +2606,14 @@ typedef bean_id NSNetService;
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowser
 #define BEAN_TYPEDEF_NSNetServiceBrowser
 typedef bean_id NSNetServiceBrowser;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+#define BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+typedef bean_id NSNetServiceBrowserDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceDelegate
+#define BEAN_TYPEDEF_NSNetServiceDelegate
+typedef bean_id NSNetServiceDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSNib
 #define BEAN_TYPEDEF_NSNib
@@ -2003,6 +2675,10 @@ typedef bean_id NSOpenGLView;
 #define BEAN_TYPEDEF_NSOpenPanel
 typedef bean_id NSOpenPanel;
 #endif
+#ifndef BEAN_TYPEDEF_NSOpenSavePanelDelegate
+#define BEAN_TYPEDEF_NSOpenSavePanelDelegate
+typedef bean_id NSOpenSavePanelDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSOperation
 #define BEAN_TYPEDEF_NSOperation
 typedef bean_id NSOperation;
@@ -2031,6 +2707,14 @@ typedef bean_id NSOrthography;
 #define BEAN_TYPEDEF_NSOutlineView
 typedef bean_id NSOutlineView;
 #endif
+#ifndef BEAN_TYPEDEF_NSOutlineViewDataSource
+#define BEAN_TYPEDEF_NSOutlineViewDataSource
+typedef bean_id NSOutlineViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSOutlineViewDelegate
+#define BEAN_TYPEDEF_NSOutlineViewDelegate
+typedef bean_id NSOutlineViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSOutputStream
 #define BEAN_TYPEDEF_NSOutputStream
 typedef bean_id NSOutputStream;
@@ -2054,6 +2738,10 @@ typedef bean_id NSPICTImageRep;
 #ifndef BEAN_TYPEDEF_NSPageController
 #define BEAN_TYPEDEF_NSPageController
 typedef bean_id NSPageController;
+#endif
+#ifndef BEAN_TYPEDEF_NSPageControllerDelegate
+#define BEAN_TYPEDEF_NSPageControllerDelegate
+typedef bean_id NSPageControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPageLayout
 #define BEAN_TYPEDEF_NSPageLayout
@@ -2079,9 +2767,29 @@ typedef bean_id NSPasteboard;
 #define BEAN_TYPEDEF_NSPasteboardItem
 typedef bean_id NSPasteboardItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSPasteboardItemDataProvider
+#define BEAN_TYPEDEF_NSPasteboardItemDataProvider
+typedef bean_id NSPasteboardItemDataProvider;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardReading
+#define BEAN_TYPEDEF_NSPasteboardReading
+typedef bean_id NSPasteboardReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardTypeOwner
+#define BEAN_TYPEDEF_NSPasteboardTypeOwner
+typedef bean_id NSPasteboardTypeOwner;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardWriting
+#define BEAN_TYPEDEF_NSPasteboardWriting
+typedef bean_id NSPasteboardWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPathCell
 #define BEAN_TYPEDEF_NSPathCell
 typedef bean_id NSPathCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSPathCellDelegate
+#define BEAN_TYPEDEF_NSPathCellDelegate
+typedef bean_id NSPathCellDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPathComponentCell
 #define BEAN_TYPEDEF_NSPathComponentCell
@@ -2090,6 +2798,10 @@ typedef bean_id NSPathComponentCell;
 #ifndef BEAN_TYPEDEF_NSPathControl
 #define BEAN_TYPEDEF_NSPathControl
 typedef bean_id NSPathControl;
+#endif
+#ifndef BEAN_TYPEDEF_NSPathControlDelegate
+#define BEAN_TYPEDEF_NSPathControlDelegate
+typedef bean_id NSPathControlDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPathControlItem
 #define BEAN_TYPEDEF_NSPathControlItem
@@ -2135,6 +2847,10 @@ typedef bean_id NSPopUpButtonCell;
 #define BEAN_TYPEDEF_NSPopover
 typedef bean_id NSPopover;
 #endif
+#ifndef BEAN_TYPEDEF_NSPopoverDelegate
+#define BEAN_TYPEDEF_NSPopoverDelegate
+typedef bean_id NSPopoverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSPopoverTouchBarItem
 #define BEAN_TYPEDEF_NSPopoverTouchBarItem
 typedef bean_id NSPopoverTouchBarItem;
@@ -2146,6 +2862,10 @@ typedef bean_id NSPort;
 #ifndef BEAN_TYPEDEF_NSPortCoder
 #define BEAN_TYPEDEF_NSPortCoder
 typedef bean_id NSPortCoder;
+#endif
+#ifndef BEAN_TYPEDEF_NSPortDelegate
+#define BEAN_TYPEDEF_NSPortDelegate
+typedef bean_id NSPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPortMessage
 #define BEAN_TYPEDEF_NSPortMessage
@@ -2183,6 +2903,10 @@ typedef bean_id NSPressGestureRecognizer;
 #define BEAN_TYPEDEF_NSPressureConfiguration
 typedef bean_id NSPressureConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSPreviewRepresentableActivityItem
+#define BEAN_TYPEDEF_NSPreviewRepresentableActivityItem
+typedef bean_id NSPreviewRepresentableActivityItem;
+#endif
 #ifndef BEAN_TYPEDEF_NSPreviewRepresentingActivityItem
 #define BEAN_TYPEDEF_NSPreviewRepresentingActivityItem
 typedef bean_id NSPreviewRepresentingActivityItem;
@@ -2198,6 +2922,10 @@ typedef bean_id NSPrintOperation;
 #ifndef BEAN_TYPEDEF_NSPrintPanel
 #define BEAN_TYPEDEF_NSPrintPanel
 typedef bean_id NSPrintPanel;
+#endif
+#ifndef BEAN_TYPEDEF_NSPrintPanelAccessorizing
+#define BEAN_TYPEDEF_NSPrintPanelAccessorizing
+typedef bean_id NSPrintPanelAccessorizing;
 #endif
 #ifndef BEAN_TYPEDEF_NSPrinter
 #define BEAN_TYPEDEF_NSPrinter
@@ -2215,6 +2943,10 @@ typedef bean_id NSProgress;
 #define BEAN_TYPEDEF_NSProgressIndicator
 typedef bean_id NSProgressIndicator;
 #endif
+#ifndef BEAN_TYPEDEF_NSProgressReporting
+#define BEAN_TYPEDEF_NSProgressReporting
+typedef bean_id NSProgressReporting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPropertyDescription
 #define BEAN_TYPEDEF_NSPropertyDescription
 typedef bean_id NSPropertyDescription;
@@ -2230,6 +2962,10 @@ typedef bean_id NSProtocolChecker;
 #ifndef BEAN_TYPEDEF_NSProxy
 #define BEAN_TYPEDEF_NSProxy
 typedef bean_id NSProxy;
+#endif
+#ifndef BEAN_TYPEDEF_NSPurgeableData
+#define BEAN_TYPEDEF_NSPurgeableData
+typedef bean_id NSPurgeableData;
 #endif
 #ifndef BEAN_TYPEDEF_NSQuitCommand
 #define BEAN_TYPEDEF_NSQuitCommand
@@ -2266,6 +3002,10 @@ typedef bean_id NSRotationGestureRecognizer;
 #ifndef BEAN_TYPEDEF_NSRuleEditor
 #define BEAN_TYPEDEF_NSRuleEditor
 typedef bean_id NSRuleEditor;
+#endif
+#ifndef BEAN_TYPEDEF_NSRuleEditorDelegate
+#define BEAN_TYPEDEF_NSRuleEditorDelegate
+typedef bean_id NSRuleEditorDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSRulerMarker
 #define BEAN_TYPEDEF_NSRulerMarker
@@ -2347,9 +3087,21 @@ typedef bean_id NSScrubber;
 #define BEAN_TYPEDEF_NSScrubberArrangedView
 typedef bean_id NSScrubberArrangedView;
 #endif
+#ifndef BEAN_TYPEDEF_NSScrubberDataSource
+#define BEAN_TYPEDEF_NSScrubberDataSource
+typedef bean_id NSScrubberDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSScrubberDelegate
+#define BEAN_TYPEDEF_NSScrubberDelegate
+typedef bean_id NSScrubberDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSScrubberFlowLayout
 #define BEAN_TYPEDEF_NSScrubberFlowLayout
 typedef bean_id NSScrubberFlowLayout;
+#endif
+#ifndef BEAN_TYPEDEF_NSScrubberFlowLayoutDelegate
+#define BEAN_TYPEDEF_NSScrubberFlowLayoutDelegate
+typedef bean_id NSScrubberFlowLayoutDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSScrubberImageItemView
 #define BEAN_TYPEDEF_NSScrubberImageItemView
@@ -2383,9 +3135,17 @@ typedef bean_id NSSearchField;
 #define BEAN_TYPEDEF_NSSearchFieldCell
 typedef bean_id NSSearchFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSSearchFieldDelegate
+#define BEAN_TYPEDEF_NSSearchFieldDelegate
+typedef bean_id NSSearchFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSearchToolbarItem
 #define BEAN_TYPEDEF_NSSearchToolbarItem
 typedef bean_id NSSearchToolbarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSSecureCoding
+#define BEAN_TYPEDEF_NSSecureCoding
+typedef bean_id NSSecureCoding;
 #endif
 #ifndef BEAN_TYPEDEF_NSSecureTextFieldCell
 #define BEAN_TYPEDEF_NSSecureTextFieldCell
@@ -2402,6 +3162,14 @@ typedef bean_id NSSegmentedCell;
 #ifndef BEAN_TYPEDEF_NSSegmentedControl
 #define BEAN_TYPEDEF_NSSegmentedControl
 typedef bean_id NSSegmentedControl;
+#endif
+#ifndef BEAN_TYPEDEF_NSSeguePerforming
+#define BEAN_TYPEDEF_NSSeguePerforming
+typedef bean_id NSSeguePerforming;
+#endif
+#ifndef BEAN_TYPEDEF_NSServicesMenuRequestor
+#define BEAN_TYPEDEF_NSServicesMenuRequestor
+typedef bean_id NSServicesMenuRequestor;
 #endif
 #ifndef BEAN_TYPEDEF_NSSet
 #define BEAN_TYPEDEF_NSSet
@@ -2423,17 +3191,33 @@ typedef bean_id NSSharingCollaborationModeRestriction;
 #define BEAN_TYPEDEF_NSSharingService
 typedef bean_id NSSharingService;
 #endif
+#ifndef BEAN_TYPEDEF_NSSharingServiceDelegate
+#define BEAN_TYPEDEF_NSSharingServiceDelegate
+typedef bean_id NSSharingServiceDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePicker
 #define BEAN_TYPEDEF_NSSharingServicePicker
 typedef bean_id NSSharingServicePicker;
+#endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerDelegate
+typedef bean_id NSSharingServicePickerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePickerToolbarItem
 #define BEAN_TYPEDEF_NSSharingServicePickerToolbarItem
 typedef bean_id NSSharingServicePickerToolbarItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerToolbarItemDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerToolbarItemDelegate
+typedef bean_id NSSharingServicePickerToolbarItemDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePickerTouchBarItem
 #define BEAN_TYPEDEF_NSSharingServicePickerTouchBarItem
 typedef bean_id NSSharingServicePickerTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerTouchBarItemDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerTouchBarItemDelegate
+typedef bean_id NSSharingServicePickerTouchBarItemDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSlider
 #define BEAN_TYPEDEF_NSSlider
@@ -2471,6 +3255,10 @@ typedef bean_id NSSortDescriptor;
 #define BEAN_TYPEDEF_NSSound
 typedef bean_id NSSound;
 #endif
+#ifndef BEAN_TYPEDEF_NSSoundDelegate
+#define BEAN_TYPEDEF_NSSoundDelegate
+typedef bean_id NSSoundDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSpecifierTest
 #define BEAN_TYPEDEF_NSSpecifierTest
 typedef bean_id NSSpecifierTest;
@@ -2479,9 +3267,17 @@ typedef bean_id NSSpecifierTest;
 #define BEAN_TYPEDEF_NSSpeechRecognizer
 typedef bean_id NSSpeechRecognizer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpeechRecognizerDelegate
+#define BEAN_TYPEDEF_NSSpeechRecognizerDelegate
+typedef bean_id NSSpeechRecognizerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSpeechSynthesizer
 #define BEAN_TYPEDEF_NSSpeechSynthesizer
 typedef bean_id NSSpeechSynthesizer;
+#endif
+#ifndef BEAN_TYPEDEF_NSSpeechSynthesizerDelegate
+#define BEAN_TYPEDEF_NSSpeechSynthesizerDelegate
+typedef bean_id NSSpeechSynthesizerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSpellChecker
 #define BEAN_TYPEDEF_NSSpellChecker
@@ -2491,6 +3287,10 @@ typedef bean_id NSSpellChecker;
 #define BEAN_TYPEDEF_NSSpellServer
 typedef bean_id NSSpellServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpellServerDelegate
+#define BEAN_TYPEDEF_NSSpellServerDelegate
+typedef bean_id NSSpellServerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSplitView
 #define BEAN_TYPEDEF_NSSplitView
 typedef bean_id NSSplitView;
@@ -2498,6 +3298,10 @@ typedef bean_id NSSplitView;
 #ifndef BEAN_TYPEDEF_NSSplitViewController
 #define BEAN_TYPEDEF_NSSplitViewController
 typedef bean_id NSSplitViewController;
+#endif
+#ifndef BEAN_TYPEDEF_NSSplitViewDelegate
+#define BEAN_TYPEDEF_NSSplitViewDelegate
+typedef bean_id NSSplitViewDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSplitViewItem
 #define BEAN_TYPEDEF_NSSplitViewItem
@@ -2507,9 +3311,21 @@ typedef bean_id NSSplitViewItem;
 #define BEAN_TYPEDEF_NSSplitViewItemAccessoryViewController
 typedef bean_id NSSplitViewItemAccessoryViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpringLoadingDestination
+#define BEAN_TYPEDEF_NSSpringLoadingDestination
+typedef bean_id NSSpringLoadingDestination;
+#endif
 #ifndef BEAN_TYPEDEF_NSStackView
 #define BEAN_TYPEDEF_NSStackView
 typedef bean_id NSStackView;
+#endif
+#ifndef BEAN_TYPEDEF_NSStackViewDelegate
+#define BEAN_TYPEDEF_NSStackViewDelegate
+typedef bean_id NSStackViewDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSStandardKeyBindingResponding
+#define BEAN_TYPEDEF_NSStandardKeyBindingResponding
+typedef bean_id NSStandardKeyBindingResponding;
 #endif
 #ifndef BEAN_TYPEDEF_NSStatusBar
 #define BEAN_TYPEDEF_NSStatusBar
@@ -2546,6 +3362,10 @@ typedef bean_id NSStoryboardSegue;
 #ifndef BEAN_TYPEDEF_NSStream
 #define BEAN_TYPEDEF_NSStream
 typedef bean_id NSStream;
+#endif
+#ifndef BEAN_TYPEDEF_NSStreamDelegate
+#define BEAN_TYPEDEF_NSStreamDelegate
+typedef bean_id NSStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSString
 #define BEAN_TYPEDEF_NSString
@@ -2635,6 +3455,10 @@ typedef bean_id NSTabView;
 #define BEAN_TYPEDEF_NSTabViewController
 typedef bean_id NSTabViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSTabViewDelegate
+#define BEAN_TYPEDEF_NSTabViewDelegate
+typedef bean_id NSTabViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTabViewItem
 #define BEAN_TYPEDEF_NSTabViewItem
 typedef bean_id NSTabViewItem;
@@ -2662,6 +3486,14 @@ typedef bean_id NSTableRowView;
 #ifndef BEAN_TYPEDEF_NSTableView
 #define BEAN_TYPEDEF_NSTableView
 typedef bean_id NSTableView;
+#endif
+#ifndef BEAN_TYPEDEF_NSTableViewDataSource
+#define BEAN_TYPEDEF_NSTableViewDataSource
+typedef bean_id NSTableViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSTableViewDelegate
+#define BEAN_TYPEDEF_NSTableViewDelegate
+typedef bean_id NSTableViewDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSTableViewDiffableDataSource
 #define BEAN_TYPEDEF_NSTableViewDiffableDataSource
@@ -2691,6 +3523,18 @@ typedef bean_id NSTextAlternatives;
 #define BEAN_TYPEDEF_NSTextAttachment
 typedef bean_id NSTextAttachment;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentCell
+#define BEAN_TYPEDEF_NSTextAttachmentCell
+typedef bean_id NSTextAttachmentCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentContainer
+#define BEAN_TYPEDEF_NSTextAttachmentContainer
+typedef bean_id NSTextAttachmentContainer;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentLayout
+#define BEAN_TYPEDEF_NSTextAttachmentLayout
+typedef bean_id NSTextAttachmentLayout;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextAttachmentViewProvider
 #define BEAN_TYPEDEF_NSTextAttachmentViewProvider
 typedef bean_id NSTextAttachmentViewProvider;
@@ -2698,6 +3542,10 @@ typedef bean_id NSTextAttachmentViewProvider;
 #ifndef BEAN_TYPEDEF_NSTextBlock
 #define BEAN_TYPEDEF_NSTextBlock
 typedef bean_id NSTextBlock;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextCheckingClient
+#define BEAN_TYPEDEF_NSTextCheckingClient
+typedef bean_id NSTextCheckingClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextCheckingController
 #define BEAN_TYPEDEF_NSTextCheckingController
@@ -2711,17 +3559,37 @@ typedef bean_id NSTextCheckingResult;
 #define BEAN_TYPEDEF_NSTextContainer
 typedef bean_id NSTextContainer;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextContent
+#define BEAN_TYPEDEF_NSTextContent
+typedef bean_id NSTextContent;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextContentManager
 #define BEAN_TYPEDEF_NSTextContentManager
 typedef bean_id NSTextContentManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextContentManagerDelegate
+#define BEAN_TYPEDEF_NSTextContentManagerDelegate
+typedef bean_id NSTextContentManagerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextContentStorage
 #define BEAN_TYPEDEF_NSTextContentStorage
 typedef bean_id NSTextContentStorage;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextContentStorageDelegate
+#define BEAN_TYPEDEF_NSTextContentStorageDelegate
+typedef bean_id NSTextContentStorageDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextDelegate
+#define BEAN_TYPEDEF_NSTextDelegate
+typedef bean_id NSTextDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextElement
 #define BEAN_TYPEDEF_NSTextElement
 typedef bean_id NSTextElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextElementProvider
+#define BEAN_TYPEDEF_NSTextElementProvider
+typedef bean_id NSTextElementProvider;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextField
 #define BEAN_TYPEDEF_NSTextField
@@ -2731,13 +3599,37 @@ typedef bean_id NSTextField;
 #define BEAN_TYPEDEF_NSTextFieldCell
 typedef bean_id NSTextFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextFieldDelegate
+#define BEAN_TYPEDEF_NSTextFieldDelegate
+typedef bean_id NSTextFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextFinder
 #define BEAN_TYPEDEF_NSTextFinder
 typedef bean_id NSTextFinder;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextFinderBarContainer
+#define BEAN_TYPEDEF_NSTextFinderBarContainer
+typedef bean_id NSTextFinderBarContainer;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextFinderClient
+#define BEAN_TYPEDEF_NSTextFinderClient
+typedef bean_id NSTextFinderClient;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInput
+#define BEAN_TYPEDEF_NSTextInput
+typedef bean_id NSTextInput;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInputClient
+#define BEAN_TYPEDEF_NSTextInputClient
+typedef bean_id NSTextInputClient;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextInputContext
 #define BEAN_TYPEDEF_NSTextInputContext
 typedef bean_id NSTextInputContext;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInputTraits
+#define BEAN_TYPEDEF_NSTextInputTraits
+typedef bean_id NSTextInputTraits;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextInsertionIndicator
 #define BEAN_TYPEDEF_NSTextInsertionIndicator
@@ -2751,6 +3643,14 @@ typedef bean_id NSTextLayoutFragment;
 #define BEAN_TYPEDEF_NSTextLayoutManager
 typedef bean_id NSTextLayoutManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextLayoutManagerDelegate
+#define BEAN_TYPEDEF_NSTextLayoutManagerDelegate
+typedef bean_id NSTextLayoutManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextLayoutOrientationProvider
+#define BEAN_TYPEDEF_NSTextLayoutOrientationProvider
+typedef bean_id NSTextLayoutOrientationProvider;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextLineFragment
 #define BEAN_TYPEDEF_NSTextLineFragment
 typedef bean_id NSTextLineFragment;
@@ -2762,6 +3662,10 @@ typedef bean_id NSTextList;
 #ifndef BEAN_TYPEDEF_NSTextListElement
 #define BEAN_TYPEDEF_NSTextListElement
 typedef bean_id NSTextListElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextLocation
+#define BEAN_TYPEDEF_NSTextLocation
+typedef bean_id NSTextLocation;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextParagraph
 #define BEAN_TYPEDEF_NSTextParagraph
@@ -2779,6 +3683,10 @@ typedef bean_id NSTextRange;
 #define BEAN_TYPEDEF_NSTextSelection
 typedef bean_id NSTextSelection;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextSelectionDataSource
+#define BEAN_TYPEDEF_NSTextSelectionDataSource
+typedef bean_id NSTextSelectionDataSource;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextSelectionNavigation
 #define BEAN_TYPEDEF_NSTextSelectionNavigation
 typedef bean_id NSTextSelectionNavigation;
@@ -2786,6 +3694,14 @@ typedef bean_id NSTextSelectionNavigation;
 #ifndef BEAN_TYPEDEF_NSTextStorage
 #define BEAN_TYPEDEF_NSTextStorage
 typedef bean_id NSTextStorage;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextStorageDelegate
+#define BEAN_TYPEDEF_NSTextStorageDelegate
+typedef bean_id NSTextStorageDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextStorageObserving
+#define BEAN_TYPEDEF_NSTextStorageObserving
+typedef bean_id NSTextStorageObserving;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextTab
 #define BEAN_TYPEDEF_NSTextTab
@@ -2803,9 +3719,17 @@ typedef bean_id NSTextTableBlock;
 #define BEAN_TYPEDEF_NSTextView
 typedef bean_id NSTextView;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextViewDelegate
+#define BEAN_TYPEDEF_NSTextViewDelegate
+typedef bean_id NSTextViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextViewportLayoutController
 #define BEAN_TYPEDEF_NSTextViewportLayoutController
 typedef bean_id NSTextViewportLayoutController;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextViewportLayoutControllerDelegate
+#define BEAN_TYPEDEF_NSTextViewportLayoutControllerDelegate
+typedef bean_id NSTextViewportLayoutControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSThread
 #define BEAN_TYPEDEF_NSThread
@@ -2835,9 +3759,21 @@ typedef bean_id NSTokenField;
 #define BEAN_TYPEDEF_NSTokenFieldCell
 typedef bean_id NSTokenFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSTokenFieldCellDelegate
+#define BEAN_TYPEDEF_NSTokenFieldCellDelegate
+typedef bean_id NSTokenFieldCellDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTokenFieldDelegate
+#define BEAN_TYPEDEF_NSTokenFieldDelegate
+typedef bean_id NSTokenFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSToolbar
 #define BEAN_TYPEDEF_NSToolbar
 typedef bean_id NSToolbar;
+#endif
+#ifndef BEAN_TYPEDEF_NSToolbarDelegate
+#define BEAN_TYPEDEF_NSToolbarDelegate
+typedef bean_id NSToolbarDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSToolbarItem
 #define BEAN_TYPEDEF_NSToolbarItem
@@ -2847,6 +3783,10 @@ typedef bean_id NSToolbarItem;
 #define BEAN_TYPEDEF_NSToolbarItemGroup
 typedef bean_id NSToolbarItemGroup;
 #endif
+#ifndef BEAN_TYPEDEF_NSToolbarItemValidation
+#define BEAN_TYPEDEF_NSToolbarItemValidation
+typedef bean_id NSToolbarItemValidation;
+#endif
 #ifndef BEAN_TYPEDEF_NSTouch
 #define BEAN_TYPEDEF_NSTouch
 typedef bean_id NSTouch;
@@ -2855,9 +3795,17 @@ typedef bean_id NSTouch;
 #define BEAN_TYPEDEF_NSTouchBar
 typedef bean_id NSTouchBar;
 #endif
+#ifndef BEAN_TYPEDEF_NSTouchBarDelegate
+#define BEAN_TYPEDEF_NSTouchBarDelegate
+typedef bean_id NSTouchBarDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTouchBarItem
 #define BEAN_TYPEDEF_NSTouchBarItem
 typedef bean_id NSTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSTouchBarProvider
+#define BEAN_TYPEDEF_NSTouchBarProvider
+typedef bean_id NSTouchBarProvider;
 #endif
 #ifndef BEAN_TYPEDEF_NSTrackingArea
 #define BEAN_TYPEDEF_NSTrackingArea
@@ -2887,6 +3835,10 @@ typedef bean_id NSURL;
 #define BEAN_TYPEDEF_NSURLAuthenticationChallenge
 typedef bean_id NSURLAuthenticationChallenge;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+#define BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+typedef bean_id NSURLAuthenticationChallengeSender;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLCache
 #define BEAN_TYPEDEF_NSURLCache
 typedef bean_id NSURLCache;
@@ -2898,6 +3850,18 @@ typedef bean_id NSURLComponents;
 #ifndef BEAN_TYPEDEF_NSURLConnection
 #define BEAN_TYPEDEF_NSURLConnection
 typedef bean_id NSURLConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDataDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDataDelegate
+typedef bean_id NSURLConnectionDataDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDelegate
+typedef bean_id NSURLConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+typedef bean_id NSURLConnectionDownloadDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLCredential
 #define BEAN_TYPEDEF_NSURLCredential
@@ -2911,9 +3875,17 @@ typedef bean_id NSURLCredentialStorage;
 #define BEAN_TYPEDEF_NSURLDownload
 typedef bean_id NSURLDownload;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLDownloadDelegate
+#define BEAN_TYPEDEF_NSURLDownloadDelegate
+typedef bean_id NSURLDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLHandle
 #define BEAN_TYPEDEF_NSURLHandle
 typedef bean_id NSURLHandle;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLHandleClient
+#define BEAN_TYPEDEF_NSURLHandleClient
+typedef bean_id NSURLHandleClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLProtectionSpace
 #define BEAN_TYPEDEF_NSURLProtectionSpace
@@ -2922,6 +3894,10 @@ typedef bean_id NSURLProtectionSpace;
 #ifndef BEAN_TYPEDEF_NSURLProtocol
 #define BEAN_TYPEDEF_NSURLProtocol
 typedef bean_id NSURLProtocol;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLProtocolClient
+#define BEAN_TYPEDEF_NSURLProtocolClient
+typedef bean_id NSURLProtocolClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLQueryItem
 #define BEAN_TYPEDEF_NSURLQueryItem
@@ -2943,13 +3919,29 @@ typedef bean_id NSURLSession;
 #define BEAN_TYPEDEF_NSURLSessionConfiguration
 typedef bean_id NSURLSessionConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDataDelegate
+#define BEAN_TYPEDEF_NSURLSessionDataDelegate
+typedef bean_id NSURLSessionDataDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDataTask
 #define BEAN_TYPEDEF_NSURLSessionDataTask
 typedef bean_id NSURLSessionDataTask;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDelegate
+#define BEAN_TYPEDEF_NSURLSessionDelegate
+typedef bean_id NSURLSessionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+typedef bean_id NSURLSessionDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadTask
 #define BEAN_TYPEDEF_NSURLSessionDownloadTask
 typedef bean_id NSURLSessionDownloadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionStreamDelegate
+#define BEAN_TYPEDEF_NSURLSessionStreamDelegate
+typedef bean_id NSURLSessionStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionStreamTask
 #define BEAN_TYPEDEF_NSURLSessionStreamTask
@@ -2958,6 +3950,10 @@ typedef bean_id NSURLSessionStreamTask;
 #ifndef BEAN_TYPEDEF_NSURLSessionTask
 #define BEAN_TYPEDEF_NSURLSessionTask
 typedef bean_id NSURLSessionTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionTaskDelegate
+#define BEAN_TYPEDEF_NSURLSessionTaskDelegate
+typedef bean_id NSURLSessionTaskDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskMetrics
 #define BEAN_TYPEDEF_NSURLSessionTaskMetrics
@@ -2970,6 +3966,10 @@ typedef bean_id NSURLSessionTaskTransactionMetrics;
 #ifndef BEAN_TYPEDEF_NSURLSessionUploadTask
 #define BEAN_TYPEDEF_NSURLSessionUploadTask
 typedef bean_id NSURLSessionUploadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+#define BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+typedef bean_id NSURLSessionWebSocketDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketMessage
 #define BEAN_TYPEDEF_NSURLSessionWebSocketMessage
@@ -3103,6 +4103,14 @@ typedef bean_id NSUnitVolume;
 #define BEAN_TYPEDEF_NSUserActivity
 typedef bean_id NSUserActivity;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserActivityDelegate
+#define BEAN_TYPEDEF_NSUserActivityDelegate
+typedef bean_id NSUserActivityDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserActivityRestoring
+#define BEAN_TYPEDEF_NSUserActivityRestoring
+typedef bean_id NSUserActivityRestoring;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserAppleScriptTask
 #define BEAN_TYPEDEF_NSUserAppleScriptTask
 typedef bean_id NSUserAppleScriptTask;
@@ -3119,9 +4127,25 @@ typedef bean_id NSUserDefaults;
 #define BEAN_TYPEDEF_NSUserDefaultsController
 typedef bean_id NSUserDefaultsController;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceCompression
+#define BEAN_TYPEDEF_NSUserInterfaceCompression
+typedef bean_id NSUserInterfaceCompression;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserInterfaceCompressionOptions
 #define BEAN_TYPEDEF_NSUserInterfaceCompressionOptions
 typedef bean_id NSUserInterfaceCompressionOptions;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceItemIdentification
+#define BEAN_TYPEDEF_NSUserInterfaceItemIdentification
+typedef bean_id NSUserInterfaceItemIdentification;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceItemSearching
+#define BEAN_TYPEDEF_NSUserInterfaceItemSearching
+typedef bean_id NSUserInterfaceItemSearching;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceValidations
+#define BEAN_TYPEDEF_NSUserInterfaceValidations
+typedef bean_id NSUserInterfaceValidations;
 #endif
 #ifndef BEAN_TYPEDEF_NSUserNotification
 #define BEAN_TYPEDEF_NSUserNotification
@@ -3135,6 +4159,10 @@ typedef bean_id NSUserNotificationAction;
 #define BEAN_TYPEDEF_NSUserNotificationCenter
 typedef bean_id NSUserNotificationCenter;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+#define BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+typedef bean_id NSUserNotificationCenterDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserScriptTask
 #define BEAN_TYPEDEF_NSUserScriptTask
 typedef bean_id NSUserScriptTask;
@@ -3142,6 +4170,10 @@ typedef bean_id NSUserScriptTask;
 #ifndef BEAN_TYPEDEF_NSUserUnixTask
 #define BEAN_TYPEDEF_NSUserUnixTask
 typedef bean_id NSUserUnixTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSValidatedUserInterfaceItem
+#define BEAN_TYPEDEF_NSValidatedUserInterfaceItem
+typedef bean_id NSValidatedUserInterfaceItem;
 #endif
 #ifndef BEAN_TYPEDEF_NSValue
 #define BEAN_TYPEDEF_NSValue
@@ -3159,13 +4191,29 @@ typedef bean_id NSView;
 #define BEAN_TYPEDEF_NSViewAnimation
 typedef bean_id NSViewAnimation;
 #endif
+#ifndef BEAN_TYPEDEF_NSViewContentSelectionInfo
+#define BEAN_TYPEDEF_NSViewContentSelectionInfo
+typedef bean_id NSViewContentSelectionInfo;
+#endif
 #ifndef BEAN_TYPEDEF_NSViewController
 #define BEAN_TYPEDEF_NSViewController
 typedef bean_id NSViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSViewControllerPresentationAnimator
+#define BEAN_TYPEDEF_NSViewControllerPresentationAnimator
+typedef bean_id NSViewControllerPresentationAnimator;
+#endif
+#ifndef BEAN_TYPEDEF_NSViewLayerContentScaleDelegate
+#define BEAN_TYPEDEF_NSViewLayerContentScaleDelegate
+typedef bean_id NSViewLayerContentScaleDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSViewLayoutRegion
 #define BEAN_TYPEDEF_NSViewLayoutRegion
 typedef bean_id NSViewLayoutRegion;
+#endif
+#ifndef BEAN_TYPEDEF_NSViewToolTipOwner
+#define BEAN_TYPEDEF_NSViewToolTipOwner
+typedef bean_id NSViewToolTipOwner;
 #endif
 #ifndef BEAN_TYPEDEF_NSVisualEffectView
 #define BEAN_TYPEDEF_NSVisualEffectView
@@ -3182,6 +4230,14 @@ typedef bean_id NSWindow;
 #ifndef BEAN_TYPEDEF_NSWindowController
 #define BEAN_TYPEDEF_NSWindowController
 typedef bean_id NSWindowController;
+#endif
+#ifndef BEAN_TYPEDEF_NSWindowDelegate
+#define BEAN_TYPEDEF_NSWindowDelegate
+typedef bean_id NSWindowDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSWindowRestoration
+#define BEAN_TYPEDEF_NSWindowRestoration
+typedef bean_id NSWindowRestoration;
 #endif
 #ifndef BEAN_TYPEDEF_NSWindowTab
 #define BEAN_TYPEDEF_NSWindowTab
@@ -3211,6 +4267,10 @@ typedef bean_id NSWritingToolsCoordinatorAnimationParameters;
 #define BEAN_TYPEDEF_NSWritingToolsCoordinatorContext
 typedef bean_id NSWritingToolsCoordinatorContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSWritingToolsCoordinatorDelegate
+#define BEAN_TYPEDEF_NSWritingToolsCoordinatorDelegate
+typedef bean_id NSWritingToolsCoordinatorDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXMLDTD
 #define BEAN_TYPEDEF_NSXMLDTD
 typedef bean_id NSXMLDTD;
@@ -3235,6 +4295,10 @@ typedef bean_id NSXMLNode;
 #define BEAN_TYPEDEF_NSXMLParser
 typedef bean_id NSXMLParser;
 #endif
+#ifndef BEAN_TYPEDEF_NSXMLParserDelegate
+#define BEAN_TYPEDEF_NSXMLParserDelegate
+typedef bean_id NSXMLParserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXPCCoder
 #define BEAN_TYPEDEF_NSXPCCoder
 typedef bean_id NSXPCCoder;
@@ -3251,6 +4315,18 @@ typedef bean_id NSXPCInterface;
 #define BEAN_TYPEDEF_NSXPCListener
 typedef bean_id NSXPCListener;
 #endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerDelegate
+#define BEAN_TYPEDEF_NSXPCListenerDelegate
+typedef bean_id NSXPCListenerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
+#define BEAN_TYPEDEF_NSXPCListenerEndpoint
+typedef bean_id NSXPCListenerEndpoint;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCProxyCreating
+#define BEAN_TYPEDEF_NSXPCProxyCreating
+typedef bean_id NSXPCProxyCreating;
+#endif
 #ifndef BEAN_TYPEDEF_OS_object
 #define BEAN_TYPEDEF_OS_object
 typedef bean_id OS_object;
@@ -3266,6 +4342,18 @@ typedef bean_id OS_os_workgroup_interval;
 #ifndef BEAN_TYPEDEF_OS_os_workgroup_parallel
 #define BEAN_TYPEDEF_OS_os_workgroup_parallel
 typedef bean_id OS_os_workgroup_parallel;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPanel
+#define BEAN_TYPEDEF_PDEPanel
+typedef bean_id PDEPanel;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPlugIn
+#define BEAN_TYPEDEF_PDEPlugIn
+typedef bean_id PDEPlugIn;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+#define BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+typedef bean_id PDEPlugInCallbackProtocol;
 #endif
 #ifndef BEAN_TYPEDEF_AVDepthData
 #define BEAN_TYPEDEF_AVDepthData
@@ -3311,9 +4399,29 @@ typedef bean_id CKContainer;
 #define BEAN_TYPEDEF_CKShare
 typedef bean_id CKShare;
 #endif
-#ifndef BEAN_TYPEDEF_MTL4FunctionDescriptor
-#define BEAN_TYPEDEF_MTL4FunctionDescriptor
-typedef bean_id MTL4FunctionDescriptor;
+#ifndef BEAN_TYPEDEF_CKShareMetadata
+#define BEAN_TYPEDEF_CKShareMetadata
+typedef bean_id CKShareMetadata;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4AccelerationStructureDescriptor
+#define BEAN_TYPEDEF_MTL4AccelerationStructureDescriptor
+typedef bean_id MTL4AccelerationStructureDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLAutoreleasedArgument
+#define BEAN_TYPEDEF_MTLAutoreleasedArgument
+typedef bean_id MTLAutoreleasedArgument;
+#endif
+#ifndef BEAN_TYPEDEF_MTLAutoreleasedComputePipelineReflection
+#define BEAN_TYPEDEF_MTLAutoreleasedComputePipelineReflection
+typedef bean_id MTLAutoreleasedComputePipelineReflection;
+#endif
+#ifndef BEAN_TYPEDEF_MTLAutoreleasedRenderPipelineReflection
+#define BEAN_TYPEDEF_MTLAutoreleasedRenderPipelineReflection
+typedef bean_id MTLAutoreleasedRenderPipelineReflection;
+#endif
+#ifndef BEAN_TYPEDEF_MTLTimestamp
+#define BEAN_TYPEDEF_MTLTimestamp
+typedef bean_id MTLTimestamp;
 #endif
 #ifndef BEAN_TYPEDEF_NSEntityDescription
 #define BEAN_TYPEDEF_NSEntityDescription
@@ -3379,16 +4487,20 @@ typedef bean_id NSSymbolMagicReplaceContentTransition;
 #define BEAN_TYPEDEF_NSTextBlockid
 typedef bean_id NSTextBlockid;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextCheckingTypes
+#define BEAN_TYPEDEF_NSTextCheckingTypes
+typedef bean_id NSTextCheckingTypes;
+#endif
 #ifndef BEAN_TYPEDEF_NSWorkspaceAuthorization
 #define BEAN_TYPEDEF_NSWorkspaceAuthorization
 typedef bean_id NSWorkspaceAuthorization;
 #endif
-#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
-#define BEAN_TYPEDEF_NSXPCListenerEndpoint
-typedef bean_id NSXPCListenerEndpoint;
-#endif
 
 /* ===== fallback typedefs ===== */
+#ifndef BEAN_TYPEDEF_OpaquePMPageFormat
+#define BEAN_TYPEDEF_OpaquePMPageFormat
+typedef NSInteger OpaquePMPageFormat;
+#endif
 #ifndef BEAN_TYPEDEF_UTType
 #define BEAN_TYPEDEF_UTType
 typedef NSInteger UTType;
@@ -3440,16 +4552,16 @@ static inline NSUInteger    MDLAnimatedQuaternion_GetDoubleQuaternionArray_MaxCo
 #define BEAN_TYPEDEF_MDLAnimatedQuaternionArray
 typedef bean_id MDLAnimatedQuaternionArray;
 #endif
-static inline id            MDLAnimatedQuaternionArray_InitWithElementCount(MDLAnimatedQuaternionArray self, NSUInteger arrayElementCount)                                                                                                                   { return ((id (*)(MDLAnimatedQuaternionArray, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithElementCount:"), arrayElementCount); }
-static inline void          MDLAnimatedQuaternionArray_SetFloatQuaternionArray_Count_AtTime(MDLAnimatedQuaternionArray self, const simd_quatf* array, NSUInteger count, CGFloat time)                                                                        { ((void (*)(MDLAnimatedQuaternionArray, SEL, const simd_quatf*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setFloatQuaternionArray:count:atTime:"), array, count, time); }
-static inline void          MDLAnimatedQuaternionArray_SetDoubleQuaternionArray_Count_AtTime(MDLAnimatedQuaternionArray self, const simd_quatd* array, NSUInteger count, CGFloat time)                                                                       { ((void (*)(MDLAnimatedQuaternionArray, SEL, const simd_quatd*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setDoubleQuaternionArray:count:atTime:"), array, count, time); }
-static inline NSUInteger    MDLAnimatedQuaternionArray_GetFloatQuaternionArray_MaxCount_AtTime(MDLAnimatedQuaternionArray self, simd_quatf* array, NSUInteger maxCount, CGFloat time)                                                                        { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL, simd_quatf*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getFloatQuaternionArray:maxCount:atTime:"), array, maxCount, time); }
-static inline NSUInteger    MDLAnimatedQuaternionArray_GetDoubleQuaternionArray_MaxCount_AtTime(MDLAnimatedQuaternionArray self, simd_quatd* array, NSUInteger maxCount, CGFloat time)                                                                       { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL, simd_quatd*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getDoubleQuaternionArray:maxCount:atTime:"), array, maxCount, time); }
-static inline void          MDLAnimatedQuaternionArray_ResetWithFloatQuaternionArray_Count_AtTimes_Count(MDLAnimatedQuaternionArray self, const simd_quatf* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)     { ((void (*)(MDLAnimatedQuaternionArray, SEL, const simd_quatf*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithFloatQuaternionArray:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
-static inline void          MDLAnimatedQuaternionArray_ResetWithDoubleQuaternionArray_Count_AtTimes_Count(MDLAnimatedQuaternionArray self, const simd_quatd* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)    { ((void (*)(MDLAnimatedQuaternionArray, SEL, const simd_quatd*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithDoubleQuaternionArray:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
-static inline NSUInteger    MDLAnimatedQuaternionArray_GetFloatQuaternionArray_MaxCount(MDLAnimatedQuaternionArray self, simd_quatf* valuesArray, NSUInteger maxCount)                                                                                       { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL, simd_quatf*, NSUInteger))bean_msgSend)(self, bean_sel("getFloatQuaternionArray:maxCount:"), valuesArray, maxCount); }
-static inline NSUInteger    MDLAnimatedQuaternionArray_GetDoubleQuaternionArray_MaxCount(MDLAnimatedQuaternionArray self, simd_quatd* valuesArray, NSUInteger maxCount)                                                                                      { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL, simd_quatd*, NSUInteger))bean_msgSend)(self, bean_sel("getDoubleQuaternionArray:maxCount:"), valuesArray, maxCount); }
-static inline NSUInteger    MDLAnimatedQuaternionArray_ElementCount(MDLAnimatedQuaternionArray self)                                                                                                                                                         { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL))bean_msgSend)(self, bean_sel("elementCount")); }
+static inline MDLAnimatedQuaternionArray    MDLAnimatedQuaternionArray_InitWithElementCount(MDLAnimatedQuaternionArray self, NSUInteger arrayElementCount)                                                                                                                   { return ((MDLAnimatedQuaternionArray (*)(MDLAnimatedQuaternionArray, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithElementCount:"), arrayElementCount); }
+static inline void                          MDLAnimatedQuaternionArray_SetFloatQuaternionArray_Count_AtTime(MDLAnimatedQuaternionArray self, const simd_quatf* array, NSUInteger count, CGFloat time)                                                                        { ((void (*)(MDLAnimatedQuaternionArray, SEL, const simd_quatf*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setFloatQuaternionArray:count:atTime:"), array, count, time); }
+static inline void                          MDLAnimatedQuaternionArray_SetDoubleQuaternionArray_Count_AtTime(MDLAnimatedQuaternionArray self, const simd_quatd* array, NSUInteger count, CGFloat time)                                                                       { ((void (*)(MDLAnimatedQuaternionArray, SEL, const simd_quatd*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setDoubleQuaternionArray:count:atTime:"), array, count, time); }
+static inline NSUInteger                    MDLAnimatedQuaternionArray_GetFloatQuaternionArray_MaxCount_AtTime(MDLAnimatedQuaternionArray self, simd_quatf* array, NSUInteger maxCount, CGFloat time)                                                                        { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL, simd_quatf*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getFloatQuaternionArray:maxCount:atTime:"), array, maxCount, time); }
+static inline NSUInteger                    MDLAnimatedQuaternionArray_GetDoubleQuaternionArray_MaxCount_AtTime(MDLAnimatedQuaternionArray self, simd_quatd* array, NSUInteger maxCount, CGFloat time)                                                                       { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL, simd_quatd*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getDoubleQuaternionArray:maxCount:atTime:"), array, maxCount, time); }
+static inline void                          MDLAnimatedQuaternionArray_ResetWithFloatQuaternionArray_Count_AtTimes_Count(MDLAnimatedQuaternionArray self, const simd_quatf* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)     { ((void (*)(MDLAnimatedQuaternionArray, SEL, const simd_quatf*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithFloatQuaternionArray:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
+static inline void                          MDLAnimatedQuaternionArray_ResetWithDoubleQuaternionArray_Count_AtTimes_Count(MDLAnimatedQuaternionArray self, const simd_quatd* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)    { ((void (*)(MDLAnimatedQuaternionArray, SEL, const simd_quatd*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithDoubleQuaternionArray:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
+static inline NSUInteger                    MDLAnimatedQuaternionArray_GetFloatQuaternionArray_MaxCount(MDLAnimatedQuaternionArray self, simd_quatf* valuesArray, NSUInteger maxCount)                                                                                       { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL, simd_quatf*, NSUInteger))bean_msgSend)(self, bean_sel("getFloatQuaternionArray:maxCount:"), valuesArray, maxCount); }
+static inline NSUInteger                    MDLAnimatedQuaternionArray_GetDoubleQuaternionArray_MaxCount(MDLAnimatedQuaternionArray self, simd_quatd* valuesArray, NSUInteger maxCount)                                                                                      { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL, simd_quatd*, NSUInteger))bean_msgSend)(self, bean_sel("getDoubleQuaternionArray:maxCount:"), valuesArray, maxCount); }
+static inline NSUInteger                    MDLAnimatedQuaternionArray_ElementCount(MDLAnimatedQuaternionArray self)                                                                                                                                                         { return ((NSUInteger (*)(MDLAnimatedQuaternionArray, SEL))bean_msgSend)(self, bean_sel("elementCount")); }
 
 /* ===== MDLAnimatedScalar ===== */
 #ifndef BEAN_TYPEDEF_MDLAnimatedScalar
@@ -3470,16 +4582,16 @@ static inline NSUInteger    MDLAnimatedScalar_GetDoubleArray_MaxCount(MDLAnimate
 #define BEAN_TYPEDEF_MDLAnimatedScalarArray
 typedef bean_id MDLAnimatedScalarArray;
 #endif
-static inline id            MDLAnimatedScalarArray_InitWithElementCount(MDLAnimatedScalarArray self, NSUInteger arrayElementCount)                                                                                                     { return ((id (*)(MDLAnimatedScalarArray, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithElementCount:"), arrayElementCount); }
-static inline void          MDLAnimatedScalarArray_SetFloatArray_Count_AtTime(MDLAnimatedScalarArray self, const float* array, NSUInteger count, CGFloat time)                                                                         { ((void (*)(MDLAnimatedScalarArray, SEL, const float*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setFloatArray:count:atTime:"), array, count, time); }
-static inline void          MDLAnimatedScalarArray_SetDoubleArray_Count_AtTime(MDLAnimatedScalarArray self, const double* array, NSUInteger count, CGFloat time)                                                                       { ((void (*)(MDLAnimatedScalarArray, SEL, const double*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setDoubleArray:count:atTime:"), array, count, time); }
-static inline NSUInteger    MDLAnimatedScalarArray_GetFloatArray_MaxCount_AtTime(MDLAnimatedScalarArray self, float* array, NSUInteger maxCount, CGFloat time)                                                                         { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL, float*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getFloatArray:maxCount:atTime:"), array, maxCount, time); }
-static inline NSUInteger    MDLAnimatedScalarArray_GetDoubleArray_MaxCount_AtTime(MDLAnimatedScalarArray self, double* array, NSUInteger maxCount, CGFloat time)                                                                       { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL, double*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getDoubleArray:maxCount:atTime:"), array, maxCount, time); }
-static inline void          MDLAnimatedScalarArray_ResetWithFloatArray_Count_AtTimes_Count(MDLAnimatedScalarArray self, const float* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)      { ((void (*)(MDLAnimatedScalarArray, SEL, const float*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithFloatArray:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
-static inline void          MDLAnimatedScalarArray_ResetWithDoubleArray_Count_AtTimes_Count(MDLAnimatedScalarArray self, const double* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)    { ((void (*)(MDLAnimatedScalarArray, SEL, const double*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithDoubleArray:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
-static inline NSUInteger    MDLAnimatedScalarArray_GetFloatArray_MaxCount(MDLAnimatedScalarArray self, float* valuesArray, NSUInteger maxCount)                                                                                        { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL, float*, NSUInteger))bean_msgSend)(self, bean_sel("getFloatArray:maxCount:"), valuesArray, maxCount); }
-static inline NSUInteger    MDLAnimatedScalarArray_GetDoubleArray_MaxCount(MDLAnimatedScalarArray self, double* valuesArray, NSUInteger maxCount)                                                                                      { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL, double*, NSUInteger))bean_msgSend)(self, bean_sel("getDoubleArray:maxCount:"), valuesArray, maxCount); }
-static inline NSUInteger    MDLAnimatedScalarArray_ElementCount(MDLAnimatedScalarArray self)                                                                                                                                           { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL))bean_msgSend)(self, bean_sel("elementCount")); }
+static inline MDLAnimatedScalarArray    MDLAnimatedScalarArray_InitWithElementCount(MDLAnimatedScalarArray self, NSUInteger arrayElementCount)                                                                                                     { return ((MDLAnimatedScalarArray (*)(MDLAnimatedScalarArray, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithElementCount:"), arrayElementCount); }
+static inline void                      MDLAnimatedScalarArray_SetFloatArray_Count_AtTime(MDLAnimatedScalarArray self, const float* array, NSUInteger count, CGFloat time)                                                                         { ((void (*)(MDLAnimatedScalarArray, SEL, const float*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setFloatArray:count:atTime:"), array, count, time); }
+static inline void                      MDLAnimatedScalarArray_SetDoubleArray_Count_AtTime(MDLAnimatedScalarArray self, const double* array, NSUInteger count, CGFloat time)                                                                       { ((void (*)(MDLAnimatedScalarArray, SEL, const double*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setDoubleArray:count:atTime:"), array, count, time); }
+static inline NSUInteger                MDLAnimatedScalarArray_GetFloatArray_MaxCount_AtTime(MDLAnimatedScalarArray self, float* array, NSUInteger maxCount, CGFloat time)                                                                         { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL, float*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getFloatArray:maxCount:atTime:"), array, maxCount, time); }
+static inline NSUInteger                MDLAnimatedScalarArray_GetDoubleArray_MaxCount_AtTime(MDLAnimatedScalarArray self, double* array, NSUInteger maxCount, CGFloat time)                                                                       { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL, double*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getDoubleArray:maxCount:atTime:"), array, maxCount, time); }
+static inline void                      MDLAnimatedScalarArray_ResetWithFloatArray_Count_AtTimes_Count(MDLAnimatedScalarArray self, const float* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)      { ((void (*)(MDLAnimatedScalarArray, SEL, const float*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithFloatArray:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
+static inline void                      MDLAnimatedScalarArray_ResetWithDoubleArray_Count_AtTimes_Count(MDLAnimatedScalarArray self, const double* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)    { ((void (*)(MDLAnimatedScalarArray, SEL, const double*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithDoubleArray:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
+static inline NSUInteger                MDLAnimatedScalarArray_GetFloatArray_MaxCount(MDLAnimatedScalarArray self, float* valuesArray, NSUInteger maxCount)                                                                                        { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL, float*, NSUInteger))bean_msgSend)(self, bean_sel("getFloatArray:maxCount:"), valuesArray, maxCount); }
+static inline NSUInteger                MDLAnimatedScalarArray_GetDoubleArray_MaxCount(MDLAnimatedScalarArray self, double* valuesArray, NSUInteger maxCount)                                                                                      { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL, double*, NSUInteger))bean_msgSend)(self, bean_sel("getDoubleArray:maxCount:"), valuesArray, maxCount); }
+static inline NSUInteger                MDLAnimatedScalarArray_ElementCount(MDLAnimatedScalarArray self)                                                                                                                                           { return ((NSUInteger (*)(MDLAnimatedScalarArray, SEL))bean_msgSend)(self, bean_sel("elementCount")); }
 
 /* ===== MDLAnimatedValue ===== */
 #ifndef BEAN_TYPEDEF_MDLAnimatedValue
@@ -3496,6 +4608,7 @@ static inline CGFloat                          MDLAnimatedValue_MaximumTime(MDLA
 static inline MDLAnimatedValueInterpolation    MDLAnimatedValue_Interpolation(MDLAnimatedValue self)                                                        { return ((MDLAnimatedValueInterpolation (*)(MDLAnimatedValue, SEL))bean_msgSend)(self, bean_sel("interpolation")); }
 static inline void                             MDLAnimatedValue_SetInterpolation(MDLAnimatedValue self, MDLAnimatedValueInterpolation interpolation)        { ((void (*)(MDLAnimatedValue, SEL, MDLAnimatedValueInterpolation))bean_msgSend)(self, bean_sel("setInterpolation:"), interpolation); }
 static inline NSArray                          MDLAnimatedValue_KeyTimes(MDLAnimatedValue self)                                                             { return ((NSArray (*)(MDLAnimatedValue, SEL))bean_msgSend)(self, bean_sel("keyTimes")); }
+static inline id                               MDLAnimatedValue_CopyWithZone(MDLAnimatedValue self, NSZone* zone)                                           { return ((id (*)(MDLAnimatedValue, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== MDLAnimatedVector2 ===== */
 #ifndef BEAN_TYPEDEF_MDLAnimatedVector2
@@ -3530,16 +4643,16 @@ static inline NSUInteger    MDLAnimatedVector3_GetDouble3Array_MaxCount(MDLAnima
 #define BEAN_TYPEDEF_MDLAnimatedVector3Array
 typedef bean_id MDLAnimatedVector3Array;
 #endif
-static inline id            MDLAnimatedVector3Array_InitWithElementCount(MDLAnimatedVector3Array self, NSUInteger arrayElementCount)                                                                                                              { return ((id (*)(MDLAnimatedVector3Array, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithElementCount:"), arrayElementCount); }
-static inline void          MDLAnimatedVector3Array_SetFloat3Array_Count_AtTime(MDLAnimatedVector3Array self, const vector_float3* array, NSUInteger count, CGFloat time)                                                                         { ((void (*)(MDLAnimatedVector3Array, SEL, const vector_float3*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setFloat3Array:count:atTime:"), array, count, time); }
-static inline void          MDLAnimatedVector3Array_SetDouble3Array_Count_AtTime(MDLAnimatedVector3Array self, const vector_double3* array, NSUInteger count, CGFloat time)                                                                       { ((void (*)(MDLAnimatedVector3Array, SEL, const vector_double3*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setDouble3Array:count:atTime:"), array, count, time); }
-static inline NSUInteger    MDLAnimatedVector3Array_GetFloat3Array_MaxCount_AtTime(MDLAnimatedVector3Array self, vector_float3* array, NSUInteger maxCount, CGFloat time)                                                                         { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL, vector_float3*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getFloat3Array:maxCount:atTime:"), array, maxCount, time); }
-static inline NSUInteger    MDLAnimatedVector3Array_GetDouble3Array_MaxCount_AtTime(MDLAnimatedVector3Array self, vector_double3* array, NSUInteger maxCount, CGFloat time)                                                                       { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL, vector_double3*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getDouble3Array:maxCount:atTime:"), array, maxCount, time); }
-static inline void          MDLAnimatedVector3Array_ResetWithFloat3Array_Count_AtTimes_Count(MDLAnimatedVector3Array self, const vector_float3* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)      { ((void (*)(MDLAnimatedVector3Array, SEL, const vector_float3*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithFloat3Array:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
-static inline void          MDLAnimatedVector3Array_ResetWithDouble3Array_Count_AtTimes_Count(MDLAnimatedVector3Array self, const vector_double3* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)    { ((void (*)(MDLAnimatedVector3Array, SEL, const vector_double3*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithDouble3Array:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
-static inline NSUInteger    MDLAnimatedVector3Array_GetFloat3Array_MaxCount(MDLAnimatedVector3Array self, vector_float3* valuesArray, NSUInteger maxCount)                                                                                        { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL, vector_float3*, NSUInteger))bean_msgSend)(self, bean_sel("getFloat3Array:maxCount:"), valuesArray, maxCount); }
-static inline NSUInteger    MDLAnimatedVector3Array_GetDouble3Array_MaxCount(MDLAnimatedVector3Array self, vector_double3* valuesArray, NSUInteger maxCount)                                                                                      { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL, vector_double3*, NSUInteger))bean_msgSend)(self, bean_sel("getDouble3Array:maxCount:"), valuesArray, maxCount); }
-static inline NSUInteger    MDLAnimatedVector3Array_ElementCount(MDLAnimatedVector3Array self)                                                                                                                                                    { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL))bean_msgSend)(self, bean_sel("elementCount")); }
+static inline MDLAnimatedVector3Array    MDLAnimatedVector3Array_InitWithElementCount(MDLAnimatedVector3Array self, NSUInteger arrayElementCount)                                                                                                              { return ((MDLAnimatedVector3Array (*)(MDLAnimatedVector3Array, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithElementCount:"), arrayElementCount); }
+static inline void                       MDLAnimatedVector3Array_SetFloat3Array_Count_AtTime(MDLAnimatedVector3Array self, const vector_float3* array, NSUInteger count, CGFloat time)                                                                         { ((void (*)(MDLAnimatedVector3Array, SEL, const vector_float3*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setFloat3Array:count:atTime:"), array, count, time); }
+static inline void                       MDLAnimatedVector3Array_SetDouble3Array_Count_AtTime(MDLAnimatedVector3Array self, const vector_double3* array, NSUInteger count, CGFloat time)                                                                       { ((void (*)(MDLAnimatedVector3Array, SEL, const vector_double3*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("setDouble3Array:count:atTime:"), array, count, time); }
+static inline NSUInteger                 MDLAnimatedVector3Array_GetFloat3Array_MaxCount_AtTime(MDLAnimatedVector3Array self, vector_float3* array, NSUInteger maxCount, CGFloat time)                                                                         { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL, vector_float3*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getFloat3Array:maxCount:atTime:"), array, maxCount, time); }
+static inline NSUInteger                 MDLAnimatedVector3Array_GetDouble3Array_MaxCount_AtTime(MDLAnimatedVector3Array self, vector_double3* array, NSUInteger maxCount, CGFloat time)                                                                       { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL, vector_double3*, NSUInteger, CGFloat))bean_msgSend)(self, bean_sel("getDouble3Array:maxCount:atTime:"), array, maxCount, time); }
+static inline void                       MDLAnimatedVector3Array_ResetWithFloat3Array_Count_AtTimes_Count(MDLAnimatedVector3Array self, const vector_float3* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)      { ((void (*)(MDLAnimatedVector3Array, SEL, const vector_float3*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithFloat3Array:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
+static inline void                       MDLAnimatedVector3Array_ResetWithDouble3Array_Count_AtTimes_Count(MDLAnimatedVector3Array self, const vector_double3* valuesArray, NSUInteger valuesCount, const NSTimeInterval timesArray, NSUInteger timesCount)    { ((void (*)(MDLAnimatedVector3Array, SEL, const vector_double3*, NSUInteger, const NSTimeInterval, NSUInteger))bean_msgSend)(self, bean_sel("resetWithDouble3Array:count:atTimes:count:"), valuesArray, valuesCount, timesArray, timesCount); }
+static inline NSUInteger                 MDLAnimatedVector3Array_GetFloat3Array_MaxCount(MDLAnimatedVector3Array self, vector_float3* valuesArray, NSUInteger maxCount)                                                                                        { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL, vector_float3*, NSUInteger))bean_msgSend)(self, bean_sel("getFloat3Array:maxCount:"), valuesArray, maxCount); }
+static inline NSUInteger                 MDLAnimatedVector3Array_GetDouble3Array_MaxCount(MDLAnimatedVector3Array self, vector_double3* valuesArray, NSUInteger maxCount)                                                                                      { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL, vector_double3*, NSUInteger))bean_msgSend)(self, bean_sel("getDouble3Array:maxCount:"), valuesArray, maxCount); }
+static inline NSUInteger                 MDLAnimatedVector3Array_ElementCount(MDLAnimatedVector3Array self)                                                                                                                                                    { return ((NSUInteger (*)(MDLAnimatedVector3Array, SEL))bean_msgSend)(self, bean_sel("elementCount")); }
 
 /* ===== MDLAnimatedVector4 ===== */
 #ifndef BEAN_TYPEDEF_MDLAnimatedVector4
@@ -3567,35 +4680,45 @@ static inline void       MDLAreaLight_SetSuperEllipticPower(MDLAreaLight self, v
 static inline CGFloat    MDLAreaLight_Aspect(MDLAreaLight self)                                             { return ((CGFloat (*)(MDLAreaLight, SEL))bean_msgSend_fpret)(self, bean_sel("aspect")); }
 static inline void       MDLAreaLight_SetAspect(MDLAreaLight self, CGFloat aspect)                          { ((void (*)(MDLAreaLight, SEL, CGFloat))bean_msgSend)(self, bean_sel("setAspect:"), aspect); }
 
+/* ===== MDLAssetResolver ===== */
+#ifndef BEAN_TYPEDEF_MDLAssetResolver
+#define BEAN_TYPEDEF_MDLAssetResolver
+typedef bean_id MDLAssetResolver;
+#endif
+static inline BOOL     MDLAssetResolver_CanResolveAssetNamed(MDLAssetResolver self, NSString name)    { return ((BOOL (*)(MDLAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("canResolveAssetNamed:"), name); }
+static inline NSURL    MDLAssetResolver_ResolveAssetNamed(MDLAssetResolver self, NSString name)       { return ((NSURL (*)(MDLAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("resolveAssetNamed:"), name); }
+
 /* ===== MDLBundleAssetResolver ===== */
 #ifndef BEAN_TYPEDEF_MDLBundleAssetResolver
 #define BEAN_TYPEDEF_MDLBundleAssetResolver
 typedef bean_id MDLBundleAssetResolver;
 #endif
-static inline id          MDLBundleAssetResolver_InitWithBundle(MDLBundleAssetResolver self, NSString path)    { return ((id (*)(MDLBundleAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("initWithBundle:"), path); }
-static inline NSString    MDLBundleAssetResolver_Path(MDLBundleAssetResolver self)                             { return ((NSString (*)(MDLBundleAssetResolver, SEL))bean_msgSend)(self, bean_sel("path")); }
-static inline void        MDLBundleAssetResolver_SetPath(MDLBundleAssetResolver self, NSString path)           { ((void (*)(MDLBundleAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("setPath:"), path); }
+static inline MDLBundleAssetResolver    MDLBundleAssetResolver_InitWithBundle(MDLBundleAssetResolver self, NSString path)          { return ((MDLBundleAssetResolver (*)(MDLBundleAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("initWithBundle:"), path); }
+static inline NSString                  MDLBundleAssetResolver_Path(MDLBundleAssetResolver self)                                   { return ((NSString (*)(MDLBundleAssetResolver, SEL))bean_msgSend)(self, bean_sel("path")); }
+static inline void                      MDLBundleAssetResolver_SetPath(MDLBundleAssetResolver self, NSString path)                 { ((void (*)(MDLBundleAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("setPath:"), path); }
+static inline BOOL                      MDLBundleAssetResolver_CanResolveAssetNamed(MDLBundleAssetResolver self, NSString name)    { return ((BOOL (*)(MDLBundleAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("canResolveAssetNamed:"), name); }
+static inline NSURL                     MDLBundleAssetResolver_ResolveAssetNamed(MDLBundleAssetResolver self, NSString name)       { return ((NSURL (*)(MDLBundleAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("resolveAssetNamed:"), name); }
 
 /* ===== MDLCheckerboardTexture ===== */
 #ifndef BEAN_TYPEDEF_MDLCheckerboardTexture
 #define BEAN_TYPEDEF_MDLCheckerboardTexture
 typedef bean_id MDLCheckerboardTexture;
 #endif
-static inline id            MDLCheckerboardTexture_InitWithDivisions_Name_Dimensions_ChannelCount_ChannelEncoding_Color1_Color2(MDLCheckerboardTexture self, CGFloat divisions, NSString name, void* dimensions, int channelCount, MDLTextureChannelEncoding channelEncoding, CGColorRef color1, CGColorRef color2)    { return ((id (*)(MDLCheckerboardTexture, SEL, CGFloat, NSString, void*, int, MDLTextureChannelEncoding, CGColorRef, CGColorRef))bean_msgSend)(self, bean_sel("initWithDivisions:name:dimensions:channelCount:channelEncoding:color1:color2:"), divisions, name, dimensions, channelCount, channelEncoding, color1, color2); }
-static inline CGFloat       MDLCheckerboardTexture_Divisions(MDLCheckerboardTexture self)                                                                                                                                                                                                                              { return ((CGFloat (*)(MDLCheckerboardTexture, SEL))bean_msgSend_fpret)(self, bean_sel("divisions")); }
-static inline void          MDLCheckerboardTexture_SetDivisions(MDLCheckerboardTexture self, CGFloat divisions)                                                                                                                                                                                                        { ((void (*)(MDLCheckerboardTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDivisions:"), divisions); }
-static inline CGColorRef    MDLCheckerboardTexture_Color1(MDLCheckerboardTexture self)                                                                                                                                                                                                                                 { return ((CGColorRef (*)(MDLCheckerboardTexture, SEL))bean_msgSend)(self, bean_sel("color1")); }
-static inline void          MDLCheckerboardTexture_SetColor1(MDLCheckerboardTexture self, CGColorRef color1)                                                                                                                                                                                                           { ((void (*)(MDLCheckerboardTexture, SEL, CGColorRef))bean_msgSend)(self, bean_sel("setColor1:"), color1); }
-static inline CGColorRef    MDLCheckerboardTexture_Color2(MDLCheckerboardTexture self)                                                                                                                                                                                                                                 { return ((CGColorRef (*)(MDLCheckerboardTexture, SEL))bean_msgSend)(self, bean_sel("color2")); }
-static inline void          MDLCheckerboardTexture_SetColor2(MDLCheckerboardTexture self, CGColorRef color2)                                                                                                                                                                                                           { ((void (*)(MDLCheckerboardTexture, SEL, CGColorRef))bean_msgSend)(self, bean_sel("setColor2:"), color2); }
+static inline MDLCheckerboardTexture    MDLCheckerboardTexture_InitWithDivisions_Name_Dimensions_ChannelCount_ChannelEncoding_Color1_Color2(MDLCheckerboardTexture self, CGFloat divisions, NSString name, void* dimensions, int channelCount, MDLTextureChannelEncoding channelEncoding, CGColorRef color1, CGColorRef color2)    { return ((MDLCheckerboardTexture (*)(MDLCheckerboardTexture, SEL, CGFloat, NSString, void*, int, MDLTextureChannelEncoding, CGColorRef, CGColorRef))bean_msgSend)(self, bean_sel("initWithDivisions:name:dimensions:channelCount:channelEncoding:color1:color2:"), divisions, name, dimensions, channelCount, channelEncoding, color1, color2); }
+static inline CGFloat                   MDLCheckerboardTexture_Divisions(MDLCheckerboardTexture self)                                                                                                                                                                                                                              { return ((CGFloat (*)(MDLCheckerboardTexture, SEL))bean_msgSend_fpret)(self, bean_sel("divisions")); }
+static inline void                      MDLCheckerboardTexture_SetDivisions(MDLCheckerboardTexture self, CGFloat divisions)                                                                                                                                                                                                        { ((void (*)(MDLCheckerboardTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDivisions:"), divisions); }
+static inline CGColorRef                MDLCheckerboardTexture_Color1(MDLCheckerboardTexture self)                                                                                                                                                                                                                                 { return ((CGColorRef (*)(MDLCheckerboardTexture, SEL))bean_msgSend)(self, bean_sel("color1")); }
+static inline void                      MDLCheckerboardTexture_SetColor1(MDLCheckerboardTexture self, CGColorRef color1)                                                                                                                                                                                                           { ((void (*)(MDLCheckerboardTexture, SEL, CGColorRef))bean_msgSend)(self, bean_sel("setColor1:"), color1); }
+static inline CGColorRef                MDLCheckerboardTexture_Color2(MDLCheckerboardTexture self)                                                                                                                                                                                                                                 { return ((CGColorRef (*)(MDLCheckerboardTexture, SEL))bean_msgSend)(self, bean_sel("color2")); }
+static inline void                      MDLCheckerboardTexture_SetColor2(MDLCheckerboardTexture self, CGColorRef color2)                                                                                                                                                                                                           { ((void (*)(MDLCheckerboardTexture, SEL, CGColorRef))bean_msgSend)(self, bean_sel("setColor2:"), color2); }
 
 /* ===== MDLColorSwatchTexture ===== */
 #ifndef BEAN_TYPEDEF_MDLColorSwatchTexture
 #define BEAN_TYPEDEF_MDLColorSwatchTexture
 typedef bean_id MDLColorSwatchTexture;
 #endif
-static inline id    MDLColorSwatchTexture_InitWithColorTemperatureGradientFrom_ToColorTemperature_Name_TextureDimensions(MDLColorSwatchTexture self, CGFloat colorTemperature1, CGFloat colorTemperature2, NSString name, void* textureDimensions)    { return ((id (*)(MDLColorSwatchTexture, SEL, CGFloat, CGFloat, NSString, void*))bean_msgSend)(self, bean_sel("initWithColorTemperatureGradientFrom:toColorTemperature:name:textureDimensions:"), colorTemperature1, colorTemperature2, name, textureDimensions); }
-static inline id    MDLColorSwatchTexture_InitWithColorGradientFrom_ToColor_Name_TextureDimensions(MDLColorSwatchTexture self, CGColorRef color1, CGColorRef color2, NSString name, void* textureDimensions)                                          { return ((id (*)(MDLColorSwatchTexture, SEL, CGColorRef, CGColorRef, NSString, void*))bean_msgSend)(self, bean_sel("initWithColorGradientFrom:toColor:name:textureDimensions:"), color1, color2, name, textureDimensions); }
+static inline MDLColorSwatchTexture    MDLColorSwatchTexture_InitWithColorTemperatureGradientFrom_ToColorTemperature_Name_TextureDimensions(MDLColorSwatchTexture self, CGFloat colorTemperature1, CGFloat colorTemperature2, NSString name, void* textureDimensions)    { return ((MDLColorSwatchTexture (*)(MDLColorSwatchTexture, SEL, CGFloat, CGFloat, NSString, void*))bean_msgSend)(self, bean_sel("initWithColorTemperatureGradientFrom:toColorTemperature:name:textureDimensions:"), colorTemperature1, colorTemperature2, name, textureDimensions); }
+static inline MDLColorSwatchTexture    MDLColorSwatchTexture_InitWithColorGradientFrom_ToColor_Name_TextureDimensions(MDLColorSwatchTexture self, CGColorRef color1, CGColorRef color2, NSString name, void* textureDimensions)                                          { return ((MDLColorSwatchTexture (*)(MDLColorSwatchTexture, SEL, CGColorRef, CGColorRef, NSString, void*))bean_msgSend)(self, bean_sel("initWithColorGradientFrom:toColor:name:textureDimensions:"), color1, color2, name, textureDimensions); }
 
 /* ===== MDLLight ===== */
 #ifndef BEAN_TYPEDEF_MDLLight
@@ -3609,59 +4732,96 @@ static inline void            MDLLight_SetLightType(MDLLight self, MDLLightType 
 static inline NSString        MDLLight_ColorSpace(MDLLight self)                                                               { return ((NSString (*)(MDLLight, SEL))bean_msgSend)(self, bean_sel("colorSpace")); }
 static inline void            MDLLight_SetColorSpace(MDLLight self, NSString colorSpace)                                       { ((void (*)(MDLLight, SEL, NSString))bean_msgSend)(self, bean_sel("setColorSpace:"), colorSpace); }
 
+/* ===== MDLLightProbeIrradianceDataSource ===== */
+#ifndef BEAN_TYPEDEF_MDLLightProbeIrradianceDataSource
+#define BEAN_TYPEDEF_MDLLightProbeIrradianceDataSource
+typedef bean_id MDLLightProbeIrradianceDataSource;
+#endif
+static inline NSData                       MDLLightProbeIrradianceDataSource_SphericalHarmonicsCoefficientsAtPosition(MDLLightProbeIrradianceDataSource self, void* position)          { return ((NSData (*)(MDLLightProbeIrradianceDataSource, SEL, void*))bean_msgSend)(self, bean_sel("sphericalHarmonicsCoefficientsAtPosition:"), position); }
+static inline MDLAxisAlignedBoundingBox    MDLLightProbeIrradianceDataSource_BoundingBox(MDLLightProbeIrradianceDataSource self)                                                       { return ((MDLAxisAlignedBoundingBox (*)(MDLLightProbeIrradianceDataSource, SEL))bean_msgSend)(self, bean_sel("boundingBox")); }
+static inline void                         MDLLightProbeIrradianceDataSource_SetBoundingBox(MDLLightProbeIrradianceDataSource self, MDLAxisAlignedBoundingBox boundingBox)             { ((void (*)(MDLLightProbeIrradianceDataSource, SEL, MDLAxisAlignedBoundingBox))bean_msgSend)(self, bean_sel("setBoundingBox:"), boundingBox); }
+static inline NSUInteger                   MDLLightProbeIrradianceDataSource_SphericalHarmonicsLevel(MDLLightProbeIrradianceDataSource self)                                           { return ((NSUInteger (*)(MDLLightProbeIrradianceDataSource, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsLevel")); }
+static inline void                         MDLLightProbeIrradianceDataSource_SetSphericalHarmonicsLevel(MDLLightProbeIrradianceDataSource self, NSUInteger sphericalHarmonicsLevel)    { ((void (*)(MDLLightProbeIrradianceDataSource, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setSphericalHarmonicsLevel:"), sphericalHarmonicsLevel); }
+
 /* ===== MDLMaterialPropertyGraph ===== */
 #ifndef BEAN_TYPEDEF_MDLMaterialPropertyGraph
 #define BEAN_TYPEDEF_MDLMaterialPropertyGraph
 typedef bean_id MDLMaterialPropertyGraph;
 #endif
-static inline id         MDLMaterialPropertyGraph_Init(MDLMaterialPropertyGraph self)                                                             { return ((id (*)(MDLMaterialPropertyGraph, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         MDLMaterialPropertyGraph_InitWithNodes_Connections(MDLMaterialPropertyGraph self, NSArray nodes, NSArray connections)    { return ((id (*)(MDLMaterialPropertyGraph, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithNodes:connections:"), nodes, connections); }
-static inline void       MDLMaterialPropertyGraph_Evaluate(MDLMaterialPropertyGraph self)                                                         { ((void (*)(MDLMaterialPropertyGraph, SEL))bean_msgSend)(self, bean_sel("evaluate")); }
-static inline NSArray    MDLMaterialPropertyGraph_Nodes(MDLMaterialPropertyGraph self)                                                            { return ((NSArray (*)(MDLMaterialPropertyGraph, SEL))bean_msgSend)(self, bean_sel("nodes")); }
-static inline NSArray    MDLMaterialPropertyGraph_Connections(MDLMaterialPropertyGraph self)                                                      { return ((NSArray (*)(MDLMaterialPropertyGraph, SEL))bean_msgSend)(self, bean_sel("connections")); }
+static inline MDLMaterialPropertyGraph    MDLMaterialPropertyGraph_Init(MDLMaterialPropertyGraph self)                                                             { return ((MDLMaterialPropertyGraph (*)(MDLMaterialPropertyGraph, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MDLMaterialPropertyGraph    MDLMaterialPropertyGraph_InitWithNodes_Connections(MDLMaterialPropertyGraph self, NSArray nodes, NSArray connections)    { return ((MDLMaterialPropertyGraph (*)(MDLMaterialPropertyGraph, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithNodes:connections:"), nodes, connections); }
+static inline void                        MDLMaterialPropertyGraph_Evaluate(MDLMaterialPropertyGraph self)                                                         { ((void (*)(MDLMaterialPropertyGraph, SEL))bean_msgSend)(self, bean_sel("evaluate")); }
+static inline NSArray                     MDLMaterialPropertyGraph_Nodes(MDLMaterialPropertyGraph self)                                                            { return ((NSArray (*)(MDLMaterialPropertyGraph, SEL))bean_msgSend)(self, bean_sel("nodes")); }
+static inline NSArray                     MDLMaterialPropertyGraph_Connections(MDLMaterialPropertyGraph self)                                                      { return ((NSArray (*)(MDLMaterialPropertyGraph, SEL))bean_msgSend)(self, bean_sel("connections")); }
 
 /* ===== MDLMaterialPropertyNode ===== */
 #ifndef BEAN_TYPEDEF_MDLMaterialPropertyNode
 #define BEAN_TYPEDEF_MDLMaterialPropertyNode
 typedef bean_id MDLMaterialPropertyNode;
 #endif
-static inline id         MDLMaterialPropertyNode_Init(MDLMaterialPropertyNode self)                                                                                          { return ((id (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         MDLMaterialPropertyNode_InitWithInputs_Outputs_EvaluationFunction(MDLMaterialPropertyNode self, NSArray inputs, NSArray outputs, void* function)    { return ((id (*)(MDLMaterialPropertyNode, SEL, NSArray, NSArray, void*))bean_msgSend)(self, bean_sel("initWithInputs:outputs:evaluationFunction:"), inputs, outputs, function); }
-static inline void*      MDLMaterialPropertyNode_EvaluationFunction(MDLMaterialPropertyNode self)                                                                            { return ((void* (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("evaluationFunction")); }
-static inline void       MDLMaterialPropertyNode_SetEvaluationFunction(MDLMaterialPropertyNode self, void* evaluationFunction)                                               { ((void (*)(MDLMaterialPropertyNode, SEL, void*))bean_msgSend)(self, bean_sel("setEvaluationFunction:"), evaluationFunction); }
-static inline NSArray    MDLMaterialPropertyNode_Inputs(MDLMaterialPropertyNode self)                                                                                        { return ((NSArray (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("inputs")); }
-static inline NSArray    MDLMaterialPropertyNode_Outputs(MDLMaterialPropertyNode self)                                                                                       { return ((NSArray (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("outputs")); }
+static inline MDLMaterialPropertyNode    MDLMaterialPropertyNode_Init(MDLMaterialPropertyNode self)                                                                                          { return ((MDLMaterialPropertyNode (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MDLMaterialPropertyNode    MDLMaterialPropertyNode_InitWithInputs_Outputs_EvaluationFunction(MDLMaterialPropertyNode self, NSArray inputs, NSArray outputs, void* function)    { return ((MDLMaterialPropertyNode (*)(MDLMaterialPropertyNode, SEL, NSArray, NSArray, void*))bean_msgSend)(self, bean_sel("initWithInputs:outputs:evaluationFunction:"), inputs, outputs, function); }
+static inline void*                      MDLMaterialPropertyNode_EvaluationFunction(MDLMaterialPropertyNode self)                                                                            { return ((void* (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("evaluationFunction")); }
+static inline void                       MDLMaterialPropertyNode_SetEvaluationFunction(MDLMaterialPropertyNode self, void* evaluationFunction)                                               { ((void (*)(MDLMaterialPropertyNode, SEL, void*))bean_msgSend)(self, bean_sel("setEvaluationFunction:"), evaluationFunction); }
+static inline NSArray                    MDLMaterialPropertyNode_Inputs(MDLMaterialPropertyNode self)                                                                                        { return ((NSArray (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("inputs")); }
+static inline NSArray                    MDLMaterialPropertyNode_Outputs(MDLMaterialPropertyNode self)                                                                                       { return ((NSArray (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("outputs")); }
+static inline NSString                   MDLMaterialPropertyNode_Name(MDLMaterialPropertyNode self)                                                                                          { return ((NSString (*)(MDLMaterialPropertyNode, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                       MDLMaterialPropertyNode_SetName(MDLMaterialPropertyNode self, NSString name)                                                                        { ((void (*)(MDLMaterialPropertyNode, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 
 /* ===== MDLMatrix4x4Array ===== */
 #ifndef BEAN_TYPEDEF_MDLMatrix4x4Array
 #define BEAN_TYPEDEF_MDLMatrix4x4Array
 typedef bean_id MDLMatrix4x4Array;
 #endif
-static inline void                MDLMatrix4x4Array_Clear(MDLMatrix4x4Array self)                                                                             { ((void (*)(MDLMatrix4x4Array, SEL))bean_msgSend)(self, bean_sel("clear")); }
-static inline id                  MDLMatrix4x4Array_InitWithElementCount(MDLMatrix4x4Array self, NSUInteger arrayElementCount)                                { return ((id (*)(MDLMatrix4x4Array, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithElementCount:"), arrayElementCount); }
-static inline void                MDLMatrix4x4Array_SetFloat4x4Array_Count(MDLMatrix4x4Array self, const matrix_float4x4* valuesArray, NSUInteger count)      { ((void (*)(MDLMatrix4x4Array, SEL, const matrix_float4x4*, NSUInteger))bean_msgSend)(self, bean_sel("setFloat4x4Array:count:"), valuesArray, count); }
-static inline void                MDLMatrix4x4Array_SetDouble4x4Array_Count(MDLMatrix4x4Array self, const matrix_double4x4* valuesArray, NSUInteger count)    { ((void (*)(MDLMatrix4x4Array, SEL, const matrix_double4x4*, NSUInteger))bean_msgSend)(self, bean_sel("setDouble4x4Array:count:"), valuesArray, count); }
-static inline NSUInteger          MDLMatrix4x4Array_GetFloat4x4Array_MaxCount(MDLMatrix4x4Array self, matrix_float4x4* valuesArray, NSUInteger maxCount)      { return ((NSUInteger (*)(MDLMatrix4x4Array, SEL, matrix_float4x4*, NSUInteger))bean_msgSend)(self, bean_sel("getFloat4x4Array:maxCount:"), valuesArray, maxCount); }
-static inline NSUInteger          MDLMatrix4x4Array_GetDouble4x4Array_MaxCount(MDLMatrix4x4Array self, matrix_double4x4* valuesArray, NSUInteger maxCount)    { return ((NSUInteger (*)(MDLMatrix4x4Array, SEL, matrix_double4x4*, NSUInteger))bean_msgSend)(self, bean_sel("getDouble4x4Array:maxCount:"), valuesArray, maxCount); }
-static inline NSUInteger          MDLMatrix4x4Array_ElementCount(MDLMatrix4x4Array self)                                                                      { return ((NSUInteger (*)(MDLMatrix4x4Array, SEL))bean_msgSend)(self, bean_sel("elementCount")); }
-static inline MDLDataPrecision    MDLMatrix4x4Array_Precision(MDLMatrix4x4Array self)                                                                         { return ((MDLDataPrecision (*)(MDLMatrix4x4Array, SEL))bean_msgSend)(self, bean_sel("precision")); }
+static inline void                 MDLMatrix4x4Array_Clear(MDLMatrix4x4Array self)                                                                             { ((void (*)(MDLMatrix4x4Array, SEL))bean_msgSend)(self, bean_sel("clear")); }
+static inline MDLMatrix4x4Array    MDLMatrix4x4Array_InitWithElementCount(MDLMatrix4x4Array self, NSUInteger arrayElementCount)                                { return ((MDLMatrix4x4Array (*)(MDLMatrix4x4Array, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithElementCount:"), arrayElementCount); }
+static inline void                 MDLMatrix4x4Array_SetFloat4x4Array_Count(MDLMatrix4x4Array self, const matrix_float4x4* valuesArray, NSUInteger count)      { ((void (*)(MDLMatrix4x4Array, SEL, const matrix_float4x4*, NSUInteger))bean_msgSend)(self, bean_sel("setFloat4x4Array:count:"), valuesArray, count); }
+static inline void                 MDLMatrix4x4Array_SetDouble4x4Array_Count(MDLMatrix4x4Array self, const matrix_double4x4* valuesArray, NSUInteger count)    { ((void (*)(MDLMatrix4x4Array, SEL, const matrix_double4x4*, NSUInteger))bean_msgSend)(self, bean_sel("setDouble4x4Array:count:"), valuesArray, count); }
+static inline NSUInteger           MDLMatrix4x4Array_GetFloat4x4Array_MaxCount(MDLMatrix4x4Array self, matrix_float4x4* valuesArray, NSUInteger maxCount)      { return ((NSUInteger (*)(MDLMatrix4x4Array, SEL, matrix_float4x4*, NSUInteger))bean_msgSend)(self, bean_sel("getFloat4x4Array:maxCount:"), valuesArray, maxCount); }
+static inline NSUInteger           MDLMatrix4x4Array_GetDouble4x4Array_MaxCount(MDLMatrix4x4Array self, matrix_double4x4* valuesArray, NSUInteger maxCount)    { return ((NSUInteger (*)(MDLMatrix4x4Array, SEL, matrix_double4x4*, NSUInteger))bean_msgSend)(self, bean_sel("getDouble4x4Array:maxCount:"), valuesArray, maxCount); }
+static inline NSUInteger           MDLMatrix4x4Array_ElementCount(MDLMatrix4x4Array self)                                                                      { return ((NSUInteger (*)(MDLMatrix4x4Array, SEL))bean_msgSend)(self, bean_sel("elementCount")); }
+static inline MDLDataPrecision     MDLMatrix4x4Array_Precision(MDLMatrix4x4Array self)                                                                         { return ((MDLDataPrecision (*)(MDLMatrix4x4Array, SEL))bean_msgSend)(self, bean_sel("precision")); }
+static inline id                   MDLMatrix4x4Array_CopyWithZone(MDLMatrix4x4Array self, NSZone* zone)                                                        { return ((id (*)(MDLMatrix4x4Array, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
-/* ===== MDLMeshBufferData ===== */
-#ifndef BEAN_TYPEDEF_MDLMeshBufferData
-#define BEAN_TYPEDEF_MDLMeshBufferData
-typedef bean_id MDLMeshBufferData;
+/* ===== MDLMeshBufferAllocator ===== */
+#ifndef BEAN_TYPEDEF_MDLMeshBufferAllocator
+#define BEAN_TYPEDEF_MDLMeshBufferAllocator
+typedef bean_id MDLMeshBufferAllocator;
 #endif
-static inline id        MDLMeshBufferData_InitWithType_Length(MDLMeshBufferData self, MDLMeshBufferType type, NSUInteger length)    { return ((id (*)(MDLMeshBufferData, SEL, MDLMeshBufferType, NSUInteger))bean_msgSend)(self, bean_sel("initWithType:length:"), type, length); }
-static inline id        MDLMeshBufferData_InitWithType_Data(MDLMeshBufferData self, MDLMeshBufferType type, NSData data)            { return ((id (*)(MDLMeshBufferData, SEL, MDLMeshBufferType, NSData))bean_msgSend)(self, bean_sel("initWithType:data:"), type, data); }
-static inline NSData    MDLMeshBufferData_Data(MDLMeshBufferData self)                                                              { return ((NSData (*)(MDLMeshBufferData, SEL))bean_msgSend)(self, bean_sel("data")); }
+static inline id    MDLMeshBufferAllocator_NewZone(MDLMeshBufferAllocator self, NSUInteger capacity)                                                         { return ((id (*)(MDLMeshBufferAllocator, SEL, NSUInteger))bean_msgSend)(self, bean_sel("newZone:"), capacity); }
+static inline id    MDLMeshBufferAllocator_NewZoneForBuffersWithSize_AndType(MDLMeshBufferAllocator self, NSArray sizes, NSArray types)                      { return ((id (*)(MDLMeshBufferAllocator, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("newZoneForBuffersWithSize:andType:"), sizes, types); }
+static inline id    MDLMeshBufferAllocator_NewBuffer_Type(MDLMeshBufferAllocator self, NSUInteger length, MDLMeshBufferType type)                            { return ((id (*)(MDLMeshBufferAllocator, SEL, NSUInteger, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBuffer:type:"), length, type); }
+static inline id    MDLMeshBufferAllocator_NewBufferWithData_Type(MDLMeshBufferAllocator self, NSData data, MDLMeshBufferType type)                          { return ((id (*)(MDLMeshBufferAllocator, SEL, NSData, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferWithData:type:"), data, type); }
+static inline id    MDLMeshBufferAllocator_NewBufferFromZone_Length_Type(MDLMeshBufferAllocator self, id zone, NSUInteger length, MDLMeshBufferType type)    { return ((id (*)(MDLMeshBufferAllocator, SEL, id, NSUInteger, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferFromZone:length:type:"), zone, length, type); }
+static inline id    MDLMeshBufferAllocator_NewBufferFromZone_Data_Type(MDLMeshBufferAllocator self, id zone, NSData data, MDLMeshBufferType type)            { return ((id (*)(MDLMeshBufferAllocator, SEL, id, NSData, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferFromZone:data:type:"), zone, data, type); }
+
+/* ===== MDLMeshBufferDataAllocator ===== */
+#ifndef BEAN_TYPEDEF_MDLMeshBufferDataAllocator
+#define BEAN_TYPEDEF_MDLMeshBufferDataAllocator
+typedef bean_id MDLMeshBufferDataAllocator;
+#endif
+static inline id    MDLMeshBufferDataAllocator_NewZone(MDLMeshBufferDataAllocator self, NSUInteger capacity)                                                         { return ((id (*)(MDLMeshBufferDataAllocator, SEL, NSUInteger))bean_msgSend)(self, bean_sel("newZone:"), capacity); }
+static inline id    MDLMeshBufferDataAllocator_NewZoneForBuffersWithSize_AndType(MDLMeshBufferDataAllocator self, NSArray sizes, NSArray types)                      { return ((id (*)(MDLMeshBufferDataAllocator, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("newZoneForBuffersWithSize:andType:"), sizes, types); }
+static inline id    MDLMeshBufferDataAllocator_NewBuffer_Type(MDLMeshBufferDataAllocator self, NSUInteger length, MDLMeshBufferType type)                            { return ((id (*)(MDLMeshBufferDataAllocator, SEL, NSUInteger, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBuffer:type:"), length, type); }
+static inline id    MDLMeshBufferDataAllocator_NewBufferWithData_Type(MDLMeshBufferDataAllocator self, NSData data, MDLMeshBufferType type)                          { return ((id (*)(MDLMeshBufferDataAllocator, SEL, NSData, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferWithData:type:"), data, type); }
+static inline id    MDLMeshBufferDataAllocator_NewBufferFromZone_Length_Type(MDLMeshBufferDataAllocator self, id zone, NSUInteger length, MDLMeshBufferType type)    { return ((id (*)(MDLMeshBufferDataAllocator, SEL, id, NSUInteger, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferFromZone:length:type:"), zone, length, type); }
+static inline id    MDLMeshBufferDataAllocator_NewBufferFromZone_Data_Type(MDLMeshBufferDataAllocator self, id zone, NSData data, MDLMeshBufferType type)            { return ((id (*)(MDLMeshBufferDataAllocator, SEL, id, NSData, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferFromZone:data:type:"), zone, data, type); }
 
 /* ===== MDLMeshBufferMap ===== */
 #ifndef BEAN_TYPEDEF_MDLMeshBufferMap
 #define BEAN_TYPEDEF_MDLMeshBufferMap
 typedef bean_id MDLMeshBufferMap;
 #endif
-static inline id       MDLMeshBufferMap_InitWithBytes_Deallocator(MDLMeshBufferMap self, void* bytes, void* deallocator)    { return ((id (*)(MDLMeshBufferMap, SEL, void*, void*))bean_msgSend)(self, bean_sel("initWithBytes:deallocator:"), bytes, deallocator); }
-static inline void*    MDLMeshBufferMap_Bytes(MDLMeshBufferMap self)                                                        { return ((void* (*)(MDLMeshBufferMap, SEL))bean_msgSend)(self, bean_sel("bytes")); }
+static inline MDLMeshBufferMap    MDLMeshBufferMap_InitWithBytes_Deallocator(MDLMeshBufferMap self, void* bytes, void* deallocator)    { return ((MDLMeshBufferMap (*)(MDLMeshBufferMap, SEL, void*, void*))bean_msgSend)(self, bean_sel("initWithBytes:deallocator:"), bytes, deallocator); }
+static inline void*               MDLMeshBufferMap_Bytes(MDLMeshBufferMap self)                                                        { return ((void* (*)(MDLMeshBufferMap, SEL))bean_msgSend)(self, bean_sel("bytes")); }
+
+/* ===== MDLMeshBufferZone ===== */
+#ifndef BEAN_TYPEDEF_MDLMeshBufferZone
+#define BEAN_TYPEDEF_MDLMeshBufferZone
+typedef bean_id MDLMeshBufferZone;
+#endif
+static inline NSUInteger    MDLMeshBufferZone_Capacity(MDLMeshBufferZone self)     { return ((NSUInteger (*)(MDLMeshBufferZone, SEL))bean_msgSend)(self, bean_sel("capacity")); }
+static inline id            MDLMeshBufferZone_Allocator(MDLMeshBufferZone self)    { return ((id (*)(MDLMeshBufferZone, SEL))bean_msgSend)(self, bean_sel("allocator")); }
 
 /* ===== MDLMeshBufferZoneDefault ===== */
 #ifndef BEAN_TYPEDEF_MDLMeshBufferZoneDefault
@@ -3671,14 +4831,22 @@ typedef bean_id MDLMeshBufferZoneDefault;
 static inline NSUInteger    MDLMeshBufferZoneDefault_Capacity(MDLMeshBufferZoneDefault self)     { return ((NSUInteger (*)(MDLMeshBufferZoneDefault, SEL))bean_msgSend)(self, bean_sel("capacity")); }
 static inline id            MDLMeshBufferZoneDefault_Allocator(MDLMeshBufferZoneDefault self)    { return ((id (*)(MDLMeshBufferZoneDefault, SEL))bean_msgSend)(self, bean_sel("allocator")); }
 
+/* ===== MDLNamed ===== */
+#ifndef BEAN_TYPEDEF_MDLNamed
+#define BEAN_TYPEDEF_MDLNamed
+typedef bean_id MDLNamed;
+#endif
+static inline NSString    MDLNamed_Name(MDLNamed self)                      { return ((NSString (*)(MDLNamed, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void        MDLNamed_SetName(MDLNamed self, NSString name)    { ((void (*)(MDLNamed, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+
 /* ===== MDLNoiseTexture ===== */
 #ifndef BEAN_TYPEDEF_MDLNoiseTexture
 #define BEAN_TYPEDEF_MDLNoiseTexture
 typedef bean_id MDLNoiseTexture;
 #endif
-static inline id    MDLNoiseTexture_InitVectorNoiseWithSmoothness_Name_TextureDimensions_ChannelEncoding(MDLNoiseTexture self, CGFloat smoothness, NSString name, void* textureDimensions, MDLTextureChannelEncoding channelEncoding)                                                             { return ((id (*)(MDLNoiseTexture, SEL, CGFloat, NSString, void*, MDLTextureChannelEncoding))bean_msgSend)(self, bean_sel("initVectorNoiseWithSmoothness:name:textureDimensions:channelEncoding:"), smoothness, name, textureDimensions, channelEncoding); }
-static inline id    MDLNoiseTexture_InitScalarNoiseWithSmoothness_Name_TextureDimensions_ChannelCount_ChannelEncoding_Grayscale(MDLNoiseTexture self, CGFloat smoothness, NSString name, void* textureDimensions, int channelCount, MDLTextureChannelEncoding channelEncoding, BOOL grayscale)    { return ((id (*)(MDLNoiseTexture, SEL, CGFloat, NSString, void*, int, MDLTextureChannelEncoding, BOOL))bean_msgSend)(self, bean_sel("initScalarNoiseWithSmoothness:name:textureDimensions:channelCount:channelEncoding:grayscale:"), smoothness, name, textureDimensions, channelCount, channelEncoding, grayscale); }
-static inline id    MDLNoiseTexture_InitCellularNoiseWithFrequency_Name_TextureDimensions_ChannelEncoding(MDLNoiseTexture self, CGFloat frequency, NSString name, void* textureDimensions, MDLTextureChannelEncoding channelEncoding)                                                             { return ((id (*)(MDLNoiseTexture, SEL, CGFloat, NSString, void*, MDLTextureChannelEncoding))bean_msgSend)(self, bean_sel("initCellularNoiseWithFrequency:name:textureDimensions:channelEncoding:"), frequency, name, textureDimensions, channelEncoding); }
+static inline MDLNoiseTexture    MDLNoiseTexture_InitVectorNoiseWithSmoothness_Name_TextureDimensions_ChannelEncoding(MDLNoiseTexture self, CGFloat smoothness, NSString name, void* textureDimensions, MDLTextureChannelEncoding channelEncoding)                                                             { return ((MDLNoiseTexture (*)(MDLNoiseTexture, SEL, CGFloat, NSString, void*, MDLTextureChannelEncoding))bean_msgSend)(self, bean_sel("initVectorNoiseWithSmoothness:name:textureDimensions:channelEncoding:"), smoothness, name, textureDimensions, channelEncoding); }
+static inline MDLNoiseTexture    MDLNoiseTexture_InitScalarNoiseWithSmoothness_Name_TextureDimensions_ChannelCount_ChannelEncoding_Grayscale(MDLNoiseTexture self, CGFloat smoothness, NSString name, void* textureDimensions, int channelCount, MDLTextureChannelEncoding channelEncoding, BOOL grayscale)    { return ((MDLNoiseTexture (*)(MDLNoiseTexture, SEL, CGFloat, NSString, void*, int, MDLTextureChannelEncoding, BOOL))bean_msgSend)(self, bean_sel("initScalarNoiseWithSmoothness:name:textureDimensions:channelCount:channelEncoding:grayscale:"), smoothness, name, textureDimensions, channelCount, channelEncoding, grayscale); }
+static inline MDLNoiseTexture    MDLNoiseTexture_InitCellularNoiseWithFrequency_Name_TextureDimensions_ChannelEncoding(MDLNoiseTexture self, CGFloat frequency, NSString name, void* textureDimensions, MDLTextureChannelEncoding channelEncoding)                                                             { return ((MDLNoiseTexture (*)(MDLNoiseTexture, SEL, CGFloat, NSString, void*, MDLTextureChannelEncoding))bean_msgSend)(self, bean_sel("initCellularNoiseWithFrequency:name:textureDimensions:channelEncoding:"), frequency, name, textureDimensions, channelEncoding); }
 
 /* ===== MDLObject ===== */
 #ifndef BEAN_TYPEDEF_MDLObject
@@ -3705,15 +4873,19 @@ static inline id                           MDLObject_Children(MDLObject self)   
 static inline void                         MDLObject_SetChildren(MDLObject self, id children)                                                                                                           { ((void (*)(MDLObject, SEL, id))bean_msgSend)(self, bean_sel("setChildren:"), children); }
 static inline BOOL                         MDLObject_Hidden(MDLObject self)                                                                                                                             { return ((BOOL (*)(MDLObject, SEL))bean_msgSend)(self, bean_sel("hidden")); }
 static inline void                         MDLObject_SetHidden(MDLObject self, BOOL hidden)                                                                                                             { ((void (*)(MDLObject, SEL, BOOL))bean_msgSend)(self, bean_sel("setHidden:"), hidden); }
+static inline NSString                     MDLObject_Name(MDLObject self)                                                                                                                               { return ((NSString (*)(MDLObject, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                         MDLObject_SetName(MDLObject self, NSString name)                                                                                                             { ((void (*)(MDLObject, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 
 /* ===== MDLPathAssetResolver ===== */
 #ifndef BEAN_TYPEDEF_MDLPathAssetResolver
 #define BEAN_TYPEDEF_MDLPathAssetResolver
 typedef bean_id MDLPathAssetResolver;
 #endif
-static inline id          MDLPathAssetResolver_InitWithPath(MDLPathAssetResolver self, NSString path)    { return ((id (*)(MDLPathAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("initWithPath:"), path); }
-static inline NSString    MDLPathAssetResolver_Path(MDLPathAssetResolver self)                           { return ((NSString (*)(MDLPathAssetResolver, SEL))bean_msgSend)(self, bean_sel("path")); }
-static inline void        MDLPathAssetResolver_SetPath(MDLPathAssetResolver self, NSString path)         { ((void (*)(MDLPathAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("setPath:"), path); }
+static inline MDLPathAssetResolver    MDLPathAssetResolver_InitWithPath(MDLPathAssetResolver self, NSString path)            { return ((MDLPathAssetResolver (*)(MDLPathAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("initWithPath:"), path); }
+static inline NSString                MDLPathAssetResolver_Path(MDLPathAssetResolver self)                                   { return ((NSString (*)(MDLPathAssetResolver, SEL))bean_msgSend)(self, bean_sel("path")); }
+static inline void                    MDLPathAssetResolver_SetPath(MDLPathAssetResolver self, NSString path)                 { ((void (*)(MDLPathAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("setPath:"), path); }
+static inline BOOL                    MDLPathAssetResolver_CanResolveAssetNamed(MDLPathAssetResolver self, NSString name)    { return ((BOOL (*)(MDLPathAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("canResolveAssetNamed:"), name); }
+static inline NSURL                   MDLPathAssetResolver_ResolveAssetNamed(MDLPathAssetResolver self, NSString name)       { return ((NSURL (*)(MDLPathAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("resolveAssetNamed:"), name); }
 
 /* ===== MDLPhysicallyPlausibleLight ===== */
 #ifndef BEAN_TYPEDEF_MDLPhysicallyPlausibleLight
@@ -3739,35 +4911,35 @@ static inline void          MDLPhysicallyPlausibleLight_SetAttenuationEndDistanc
 #define BEAN_TYPEDEF_MDLSkyCubeTexture
 typedef bean_id MDLSkyCubeTexture;
 #endif
-static inline id            MDLSkyCubeTexture_InitWithName_ChannelEncoding_TextureDimensions_Turbidity_SunElevation_UpperAtmosphereScattering_GroundAlbedo(MDLSkyCubeTexture self, NSString name, MDLTextureChannelEncoding channelEncoding, void* textureDimensions, CGFloat turbidity, CGFloat sunElevation, CGFloat upperAtmosphereScattering, CGFloat groundAlbedo)                                   { return ((id (*)(MDLSkyCubeTexture, SEL, NSString, MDLTextureChannelEncoding, void*, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithName:channelEncoding:textureDimensions:turbidity:sunElevation:upperAtmosphereScattering:groundAlbedo:"), name, channelEncoding, textureDimensions, turbidity, sunElevation, upperAtmosphereScattering, groundAlbedo); }
-static inline id            MDLSkyCubeTexture_InitWithName_ChannelEncoding_TextureDimensions_Turbidity_SunElevation_SunAzimuth_UpperAtmosphereScattering_GroundAlbedo(MDLSkyCubeTexture self, NSString name, MDLTextureChannelEncoding channelEncoding, void* textureDimensions, CGFloat turbidity, CGFloat sunElevation, CGFloat sunAzimuth, CGFloat upperAtmosphereScattering, CGFloat groundAlbedo)    { return ((id (*)(MDLSkyCubeTexture, SEL, NSString, MDLTextureChannelEncoding, void*, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithName:channelEncoding:textureDimensions:turbidity:sunElevation:sunAzimuth:upperAtmosphereScattering:groundAlbedo:"), name, channelEncoding, textureDimensions, turbidity, sunElevation, sunAzimuth, upperAtmosphereScattering, groundAlbedo); }
-static inline void          MDLSkyCubeTexture_UpdateTexture(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                       { ((void (*)(MDLSkyCubeTexture, SEL))bean_msgSend)(self, bean_sel("updateTexture")); }
-static inline CGFloat       MDLSkyCubeTexture_Turbidity(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                           { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("turbidity")); }
-static inline void          MDLSkyCubeTexture_SetTurbidity(MDLSkyCubeTexture self, CGFloat turbidity)                                                                                                                                                                                                                                                                                                     { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTurbidity:"), turbidity); }
-static inline CGFloat       MDLSkyCubeTexture_SunElevation(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                        { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("sunElevation")); }
-static inline void          MDLSkyCubeTexture_SetSunElevation(MDLSkyCubeTexture self, CGFloat sunElevation)                                                                                                                                                                                                                                                                                               { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSunElevation:"), sunElevation); }
-static inline CGFloat       MDLSkyCubeTexture_SunAzimuth(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                          { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("sunAzimuth")); }
-static inline void          MDLSkyCubeTexture_SetSunAzimuth(MDLSkyCubeTexture self, CGFloat sunAzimuth)                                                                                                                                                                                                                                                                                                   { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSunAzimuth:"), sunAzimuth); }
-static inline CGFloat       MDLSkyCubeTexture_UpperAtmosphereScattering(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                           { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("upperAtmosphereScattering")); }
-static inline void          MDLSkyCubeTexture_SetUpperAtmosphereScattering(MDLSkyCubeTexture self, CGFloat upperAtmosphereScattering)                                                                                                                                                                                                                                                                     { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setUpperAtmosphereScattering:"), upperAtmosphereScattering); }
-static inline CGFloat       MDLSkyCubeTexture_GroundAlbedo(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                        { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("groundAlbedo")); }
-static inline void          MDLSkyCubeTexture_SetGroundAlbedo(MDLSkyCubeTexture self, CGFloat groundAlbedo)                                                                                                                                                                                                                                                                                               { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setGroundAlbedo:"), groundAlbedo); }
-static inline CGFloat       MDLSkyCubeTexture_HorizonElevation(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                    { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("horizonElevation")); }
-static inline void          MDLSkyCubeTexture_SetHorizonElevation(MDLSkyCubeTexture self, CGFloat horizonElevation)                                                                                                                                                                                                                                                                                       { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setHorizonElevation:"), horizonElevation); }
-static inline CGColorRef    MDLSkyCubeTexture_GroundColor(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                         { return ((CGColorRef (*)(MDLSkyCubeTexture, SEL))bean_msgSend)(self, bean_sel("groundColor")); }
-static inline void          MDLSkyCubeTexture_SetGroundColor(MDLSkyCubeTexture self, CGColorRef groundColor)                                                                                                                                                                                                                                                                                              { ((void (*)(MDLSkyCubeTexture, SEL, CGColorRef))bean_msgSend)(self, bean_sel("setGroundColor:"), groundColor); }
-static inline CGFloat       MDLSkyCubeTexture_Gamma(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                               { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("gamma")); }
-static inline void          MDLSkyCubeTexture_SetGamma(MDLSkyCubeTexture self, CGFloat gamma)                                                                                                                                                                                                                                                                                                             { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setGamma:"), gamma); }
-static inline CGFloat       MDLSkyCubeTexture_Exposure(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                            { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("exposure")); }
-static inline void          MDLSkyCubeTexture_SetExposure(MDLSkyCubeTexture self, CGFloat exposure)                                                                                                                                                                                                                                                                                                       { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setExposure:"), exposure); }
-static inline CGFloat       MDLSkyCubeTexture_Brightness(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                          { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("brightness")); }
-static inline void          MDLSkyCubeTexture_SetBrightness(MDLSkyCubeTexture self, CGFloat brightness)                                                                                                                                                                                                                                                                                                   { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBrightness:"), brightness); }
-static inline CGFloat       MDLSkyCubeTexture_Contrast(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                            { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("contrast")); }
-static inline void          MDLSkyCubeTexture_SetContrast(MDLSkyCubeTexture self, CGFloat contrast)                                                                                                                                                                                                                                                                                                       { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setContrast:"), contrast); }
-static inline CGFloat       MDLSkyCubeTexture_Saturation(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                          { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("saturation")); }
-static inline void          MDLSkyCubeTexture_SetSaturation(MDLSkyCubeTexture self, CGFloat saturation)                                                                                                                                                                                                                                                                                                   { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSaturation:"), saturation); }
-static inline void*         MDLSkyCubeTexture_HighDynamicRangeCompression(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                         { return ((void* (*)(MDLSkyCubeTexture, SEL))bean_msgSend)(self, bean_sel("highDynamicRangeCompression")); }
-static inline void          MDLSkyCubeTexture_SetHighDynamicRangeCompression(MDLSkyCubeTexture self, void* highDynamicRangeCompression)                                                                                                                                                                                                                                                                   { ((void (*)(MDLSkyCubeTexture, SEL, void*))bean_msgSend)(self, bean_sel("setHighDynamicRangeCompression:"), highDynamicRangeCompression); }
+static inline MDLSkyCubeTexture    MDLSkyCubeTexture_InitWithName_ChannelEncoding_TextureDimensions_Turbidity_SunElevation_UpperAtmosphereScattering_GroundAlbedo(MDLSkyCubeTexture self, NSString name, MDLTextureChannelEncoding channelEncoding, void* textureDimensions, CGFloat turbidity, CGFloat sunElevation, CGFloat upperAtmosphereScattering, CGFloat groundAlbedo)                                   { return ((MDLSkyCubeTexture (*)(MDLSkyCubeTexture, SEL, NSString, MDLTextureChannelEncoding, void*, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithName:channelEncoding:textureDimensions:turbidity:sunElevation:upperAtmosphereScattering:groundAlbedo:"), name, channelEncoding, textureDimensions, turbidity, sunElevation, upperAtmosphereScattering, groundAlbedo); }
+static inline MDLSkyCubeTexture    MDLSkyCubeTexture_InitWithName_ChannelEncoding_TextureDimensions_Turbidity_SunElevation_SunAzimuth_UpperAtmosphereScattering_GroundAlbedo(MDLSkyCubeTexture self, NSString name, MDLTextureChannelEncoding channelEncoding, void* textureDimensions, CGFloat turbidity, CGFloat sunElevation, CGFloat sunAzimuth, CGFloat upperAtmosphereScattering, CGFloat groundAlbedo)    { return ((MDLSkyCubeTexture (*)(MDLSkyCubeTexture, SEL, NSString, MDLTextureChannelEncoding, void*, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithName:channelEncoding:textureDimensions:turbidity:sunElevation:sunAzimuth:upperAtmosphereScattering:groundAlbedo:"), name, channelEncoding, textureDimensions, turbidity, sunElevation, sunAzimuth, upperAtmosphereScattering, groundAlbedo); }
+static inline void                 MDLSkyCubeTexture_UpdateTexture(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                       { ((void (*)(MDLSkyCubeTexture, SEL))bean_msgSend)(self, bean_sel("updateTexture")); }
+static inline CGFloat              MDLSkyCubeTexture_Turbidity(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                           { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("turbidity")); }
+static inline void                 MDLSkyCubeTexture_SetTurbidity(MDLSkyCubeTexture self, CGFloat turbidity)                                                                                                                                                                                                                                                                                                     { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTurbidity:"), turbidity); }
+static inline CGFloat              MDLSkyCubeTexture_SunElevation(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                        { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("sunElevation")); }
+static inline void                 MDLSkyCubeTexture_SetSunElevation(MDLSkyCubeTexture self, CGFloat sunElevation)                                                                                                                                                                                                                                                                                               { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSunElevation:"), sunElevation); }
+static inline CGFloat              MDLSkyCubeTexture_SunAzimuth(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                          { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("sunAzimuth")); }
+static inline void                 MDLSkyCubeTexture_SetSunAzimuth(MDLSkyCubeTexture self, CGFloat sunAzimuth)                                                                                                                                                                                                                                                                                                   { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSunAzimuth:"), sunAzimuth); }
+static inline CGFloat              MDLSkyCubeTexture_UpperAtmosphereScattering(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                           { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("upperAtmosphereScattering")); }
+static inline void                 MDLSkyCubeTexture_SetUpperAtmosphereScattering(MDLSkyCubeTexture self, CGFloat upperAtmosphereScattering)                                                                                                                                                                                                                                                                     { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setUpperAtmosphereScattering:"), upperAtmosphereScattering); }
+static inline CGFloat              MDLSkyCubeTexture_GroundAlbedo(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                        { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("groundAlbedo")); }
+static inline void                 MDLSkyCubeTexture_SetGroundAlbedo(MDLSkyCubeTexture self, CGFloat groundAlbedo)                                                                                                                                                                                                                                                                                               { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setGroundAlbedo:"), groundAlbedo); }
+static inline CGFloat              MDLSkyCubeTexture_HorizonElevation(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                    { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("horizonElevation")); }
+static inline void                 MDLSkyCubeTexture_SetHorizonElevation(MDLSkyCubeTexture self, CGFloat horizonElevation)                                                                                                                                                                                                                                                                                       { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setHorizonElevation:"), horizonElevation); }
+static inline CGColorRef           MDLSkyCubeTexture_GroundColor(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                         { return ((CGColorRef (*)(MDLSkyCubeTexture, SEL))bean_msgSend)(self, bean_sel("groundColor")); }
+static inline void                 MDLSkyCubeTexture_SetGroundColor(MDLSkyCubeTexture self, CGColorRef groundColor)                                                                                                                                                                                                                                                                                              { ((void (*)(MDLSkyCubeTexture, SEL, CGColorRef))bean_msgSend)(self, bean_sel("setGroundColor:"), groundColor); }
+static inline CGFloat              MDLSkyCubeTexture_Gamma(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                               { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("gamma")); }
+static inline void                 MDLSkyCubeTexture_SetGamma(MDLSkyCubeTexture self, CGFloat gamma)                                                                                                                                                                                                                                                                                                             { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setGamma:"), gamma); }
+static inline CGFloat              MDLSkyCubeTexture_Exposure(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                            { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("exposure")); }
+static inline void                 MDLSkyCubeTexture_SetExposure(MDLSkyCubeTexture self, CGFloat exposure)                                                                                                                                                                                                                                                                                                       { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setExposure:"), exposure); }
+static inline CGFloat              MDLSkyCubeTexture_Brightness(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                          { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("brightness")); }
+static inline void                 MDLSkyCubeTexture_SetBrightness(MDLSkyCubeTexture self, CGFloat brightness)                                                                                                                                                                                                                                                                                                   { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBrightness:"), brightness); }
+static inline CGFloat              MDLSkyCubeTexture_Contrast(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                            { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("contrast")); }
+static inline void                 MDLSkyCubeTexture_SetContrast(MDLSkyCubeTexture self, CGFloat contrast)                                                                                                                                                                                                                                                                                                       { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setContrast:"), contrast); }
+static inline CGFloat              MDLSkyCubeTexture_Saturation(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                                          { return ((CGFloat (*)(MDLSkyCubeTexture, SEL))bean_msgSend_fpret)(self, bean_sel("saturation")); }
+static inline void                 MDLSkyCubeTexture_SetSaturation(MDLSkyCubeTexture self, CGFloat saturation)                                                                                                                                                                                                                                                                                                   { ((void (*)(MDLSkyCubeTexture, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSaturation:"), saturation); }
+static inline void*                MDLSkyCubeTexture_HighDynamicRangeCompression(MDLSkyCubeTexture self)                                                                                                                                                                                                                                                                                                         { return ((void* (*)(MDLSkyCubeTexture, SEL))bean_msgSend)(self, bean_sel("highDynamicRangeCompression")); }
+static inline void                 MDLSkyCubeTexture_SetHighDynamicRangeCompression(MDLSkyCubeTexture self, void* highDynamicRangeCompression)                                                                                                                                                                                                                                                                   { ((void (*)(MDLSkyCubeTexture, SEL, void*))bean_msgSend)(self, bean_sel("setHighDynamicRangeCompression:"), highDynamicRangeCompression); }
 
 /* ===== MDLStereoscopicCamera ===== */
 #ifndef BEAN_TYPEDEF_MDLStereoscopicCamera
@@ -3792,15 +4964,15 @@ static inline simd_float4x4    MDLStereoscopicCamera_RightProjectionMatrix(MDLSt
 #define BEAN_TYPEDEF_MDLTexture
 typedef bean_id MDLTexture;
 #endif
-static inline id                           MDLTexture_Init(MDLTexture self)                                                                                                                                                                                                                                                                     { return ((id (*)(MDLTexture, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                           MDLTexture_TextureNamed(NSString name)                                                                                                                                                                                                                                                               { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureNamed:"), name); }
-static inline id                           MDLTexture_TextureNamed_Bundle(NSString name, NSBundle bundleOrNil)                                                                                                                                                                                                                                  { return ((id (*)(bean_class, SEL, NSString, NSBundle))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureNamed:bundle:"), name, bundleOrNil); }
-static inline id                           MDLTexture_TextureNamed_AssetResolver(NSString name, id resolver)                                                                                                                                                                                                                                    { return ((id (*)(bean_class, SEL, NSString, id))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureNamed:assetResolver:"), name, resolver); }
-static inline id                           MDLTexture_TextureCubeWithImagesNamed(NSArray names)                                                                                                                                                                                                                                                 { return ((id (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureCubeWithImagesNamed:"), names); }
-static inline id                           MDLTexture_TextureCubeWithImagesNamed_Bundle(NSArray names, NSBundle bundleOrNil)                                                                                                                                                                                                                    { return ((id (*)(bean_class, SEL, NSArray, NSBundle))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureCubeWithImagesNamed:bundle:"), names, bundleOrNil); }
-static inline id                           MDLTexture_IrradianceTextureCubeWithTexture_Name_Dimensions(MDLTexture texture, NSString name, void* dimensions)                                                                                                                                                                                     { return ((id (*)(bean_class, SEL, MDLTexture, NSString, void*))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("irradianceTextureCubeWithTexture:name:dimensions:"), texture, name, dimensions); }
-static inline id                           MDLTexture_IrradianceTextureCubeWithTexture_Name_Dimensions_Roughness(MDLTexture texture, NSString name, void* dimensions, CGFloat roughness)                                                                                                                                                        { return ((id (*)(bean_class, SEL, MDLTexture, NSString, void*, CGFloat))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("irradianceTextureCubeWithTexture:name:dimensions:roughness:"), texture, name, dimensions, roughness); }
-static inline id                           MDLTexture_InitWithData_TopLeftOrigin_Name_Dimensions_RowStride_ChannelCount_ChannelEncoding_IsCube(MDLTexture self, NSData pixelData, BOOL topLeftOrigin, NSString name, void* dimensions, NSInteger rowStride, NSUInteger channelCount, MDLTextureChannelEncoding channelEncoding, BOOL isCube)    { return ((id (*)(MDLTexture, SEL, NSData, BOOL, NSString, void*, NSInteger, NSUInteger, MDLTextureChannelEncoding, BOOL))bean_msgSend)(self, bean_sel("initWithData:topLeftOrigin:name:dimensions:rowStride:channelCount:channelEncoding:isCube:"), pixelData, topLeftOrigin, name, dimensions, rowStride, channelCount, channelEncoding, isCube); }
+static inline MDLTexture                   MDLTexture_Init(MDLTexture self)                                                                                                                                                                                                                                                                     { return ((MDLTexture (*)(MDLTexture, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MDLTexture                   MDLTexture_TextureNamed(NSString name)                                                                                                                                                                                                                                                               { return ((MDLTexture (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureNamed:"), name); }
+static inline MDLTexture                   MDLTexture_TextureNamed_Bundle(NSString name, NSBundle bundleOrNil)                                                                                                                                                                                                                                  { return ((MDLTexture (*)(bean_class, SEL, NSString, NSBundle))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureNamed:bundle:"), name, bundleOrNil); }
+static inline MDLTexture                   MDLTexture_TextureNamed_AssetResolver(NSString name, id resolver)                                                                                                                                                                                                                                    { return ((MDLTexture (*)(bean_class, SEL, NSString, id))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureNamed:assetResolver:"), name, resolver); }
+static inline MDLTexture                   MDLTexture_TextureCubeWithImagesNamed(NSArray names)                                                                                                                                                                                                                                                 { return ((MDLTexture (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureCubeWithImagesNamed:"), names); }
+static inline MDLTexture                   MDLTexture_TextureCubeWithImagesNamed_Bundle(NSArray names, NSBundle bundleOrNil)                                                                                                                                                                                                                    { return ((MDLTexture (*)(bean_class, SEL, NSArray, NSBundle))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("textureCubeWithImagesNamed:bundle:"), names, bundleOrNil); }
+static inline MDLTexture                   MDLTexture_IrradianceTextureCubeWithTexture_Name_Dimensions(MDLTexture texture, NSString name, void* dimensions)                                                                                                                                                                                     { return ((MDLTexture (*)(bean_class, SEL, MDLTexture, NSString, void*))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("irradianceTextureCubeWithTexture:name:dimensions:"), texture, name, dimensions); }
+static inline MDLTexture                   MDLTexture_IrradianceTextureCubeWithTexture_Name_Dimensions_Roughness(MDLTexture texture, NSString name, void* dimensions, CGFloat roughness)                                                                                                                                                        { return ((MDLTexture (*)(bean_class, SEL, MDLTexture, NSString, void*, CGFloat))bean_msgSend)(bean_cls("MDLTexture"), bean_sel("irradianceTextureCubeWithTexture:name:dimensions:roughness:"), texture, name, dimensions, roughness); }
+static inline MDLTexture                   MDLTexture_InitWithData_TopLeftOrigin_Name_Dimensions_RowStride_ChannelCount_ChannelEncoding_IsCube(MDLTexture self, NSData pixelData, BOOL topLeftOrigin, NSString name, void* dimensions, NSInteger rowStride, NSUInteger channelCount, MDLTextureChannelEncoding channelEncoding, BOOL isCube)    { return ((MDLTexture (*)(MDLTexture, SEL, NSData, BOOL, NSString, void*, NSInteger, NSUInteger, MDLTextureChannelEncoding, BOOL))bean_msgSend)(self, bean_sel("initWithData:topLeftOrigin:name:dimensions:rowStride:channelCount:channelEncoding:isCube:"), pixelData, topLeftOrigin, name, dimensions, rowStride, channelCount, channelEncoding, isCube); }
 static inline BOOL                         MDLTexture_WriteToURL(MDLTexture self, NSURL URL)                                                                                                                                                                                                                                                    { return ((BOOL (*)(MDLTexture, SEL, NSURL))bean_msgSend)(self, bean_sel("writeToURL:"), URL); }
 static inline BOOL                         MDLTexture_WriteToURL_Level(MDLTexture self, NSURL URL, NSUInteger level)                                                                                                                                                                                                                            { return ((BOOL (*)(MDLTexture, SEL, NSURL, NSUInteger))bean_msgSend)(self, bean_sel("writeToURL:level:"), URL, level); }
 static inline CGImageRef                   MDLTexture_ImageFromTexture(MDLTexture self)                                                                                                                                                                                                                                                         { return ((CGImageRef (*)(MDLTexture, SEL))bean_msgSend)(self, bean_sel("imageFromTexture")); }
@@ -3818,6 +4990,8 @@ static inline BOOL                         MDLTexture_IsCube(MDLTexture self)   
 static inline void                         MDLTexture_SetIsCube(MDLTexture self, BOOL isCube)                                                                                                                                                                                                                                                   { ((void (*)(MDLTexture, SEL, BOOL))bean_msgSend)(self, bean_sel("setIsCube:"), isCube); }
 static inline BOOL                         MDLTexture_HasAlphaValues(MDLTexture self)                                                                                                                                                                                                                                                           { return ((BOOL (*)(MDLTexture, SEL))bean_msgSend)(self, bean_sel("hasAlphaValues")); }
 static inline void                         MDLTexture_SetHasAlphaValues(MDLTexture self, BOOL hasAlphaValues)                                                                                                                                                                                                                                   { ((void (*)(MDLTexture, SEL, BOOL))bean_msgSend)(self, bean_sel("setHasAlphaValues:"), hasAlphaValues); }
+static inline NSString                     MDLTexture_Name(MDLTexture self)                                                                                                                                                                                                                                                                     { return ((NSString (*)(MDLTexture, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                         MDLTexture_SetName(MDLTexture self, NSString name)                                                                                                                                                                                                                                                   { ((void (*)(MDLTexture, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 
 /* ===== MDLTextureFilter ===== */
 #ifndef BEAN_TYPEDEF_MDLTextureFilter
@@ -3837,45 +5011,24 @@ static inline void                            MDLTextureFilter_SetMagFilter(MDLT
 static inline MDLMaterialMipMapFilterMode     MDLTextureFilter_MipFilter(MDLTextureFilter self)                                               { return ((MDLMaterialMipMapFilterMode (*)(MDLTextureFilter, SEL))bean_msgSend)(self, bean_sel("mipFilter")); }
 static inline void                            MDLTextureFilter_SetMipFilter(MDLTextureFilter self, MDLMaterialMipMapFilterMode mipFilter)     { ((void (*)(MDLTextureFilter, SEL, MDLMaterialMipMapFilterMode))bean_msgSend)(self, bean_sel("setMipFilter:"), mipFilter); }
 
-/* ===== MDLTransform ===== */
-#ifndef BEAN_TYPEDEF_MDLTransform
-#define BEAN_TYPEDEF_MDLTransform
-typedef bean_id MDLTransform;
+/* ===== MDLTransformOp ===== */
+#ifndef BEAN_TYPEDEF_MDLTransformOp
+#define BEAN_TYPEDEF_MDLTransformOp
+typedef bean_id MDLTransformOp;
 #endif
-static inline id               MDLTransform_Init(MDLTransform self)                                                                              { return ((id (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id               MDLTransform_InitWithIdentity(MDLTransform self)                                                                  { return ((id (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("initWithIdentity")); }
-static inline id               MDLTransform_InitWithTransformComponent(MDLTransform self, id component)                                          { return ((id (*)(MDLTransform, SEL, id))bean_msgSend)(self, bean_sel("initWithTransformComponent:"), component); }
-static inline id               MDLTransform_InitWithTransformComponent_ResetsTransform(MDLTransform self, id component, BOOL resetsTransform)    { return ((id (*)(MDLTransform, SEL, id, BOOL))bean_msgSend)(self, bean_sel("initWithTransformComponent:resetsTransform:"), component, resetsTransform); }
-static inline id               MDLTransform_InitWithMatrix(MDLTransform self, simd_float4x4 matrix)                                              { return ((id (*)(MDLTransform, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("initWithMatrix:"), matrix); }
-static inline id               MDLTransform_InitWithMatrix_ResetsTransform(MDLTransform self, simd_float4x4 matrix, BOOL resetsTransform)        { return ((id (*)(MDLTransform, SEL, simd_float4x4, BOOL))bean_msgSend)(self, bean_sel("initWithMatrix:resetsTransform:"), matrix, resetsTransform); }
-static inline void             MDLTransform_SetIdentity(MDLTransform self)                                                                       { ((void (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("setIdentity")); }
-static inline void*            MDLTransform_TranslationAtTime(MDLTransform self, CGFloat time)                                                   { return ((void* (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("translationAtTime:"), time); }
-static inline void*            MDLTransform_RotationAtTime(MDLTransform self, CGFloat time)                                                      { return ((void* (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("rotationAtTime:"), time); }
-static inline void*            MDLTransform_ShearAtTime(MDLTransform self, CGFloat time)                                                         { return ((void* (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("shearAtTime:"), time); }
-static inline void*            MDLTransform_ScaleAtTime(MDLTransform self, CGFloat time)                                                         { return ((void* (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("scaleAtTime:"), time); }
-static inline void             MDLTransform_SetMatrix_ForTime(MDLTransform self, simd_float4x4 matrix, CGFloat time)                             { ((void (*)(MDLTransform, SEL, simd_float4x4, CGFloat))bean_msgSend)(self, bean_sel("setMatrix:forTime:"), matrix, time); }
-static inline void             MDLTransform_SetTranslation_ForTime(MDLTransform self, void* translation, CGFloat time)                           { ((void (*)(MDLTransform, SEL, void*, CGFloat))bean_msgSend)(self, bean_sel("setTranslation:forTime:"), translation, time); }
-static inline void             MDLTransform_SetRotation_ForTime(MDLTransform self, void* rotation, CGFloat time)                                 { ((void (*)(MDLTransform, SEL, void*, CGFloat))bean_msgSend)(self, bean_sel("setRotation:forTime:"), rotation, time); }
-static inline void             MDLTransform_SetShear_ForTime(MDLTransform self, void* shear, CGFloat time)                                       { ((void (*)(MDLTransform, SEL, void*, CGFloat))bean_msgSend)(self, bean_sel("setShear:forTime:"), shear, time); }
-static inline void             MDLTransform_SetScale_ForTime(MDLTransform self, void* scale, CGFloat time)                                       { ((void (*)(MDLTransform, SEL, void*, CGFloat))bean_msgSend)(self, bean_sel("setScale:forTime:"), scale, time); }
-static inline simd_float4x4    MDLTransform_RotationMatrixAtTime(MDLTransform self, CGFloat time)                                                { return ((simd_float4x4 (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("rotationMatrixAtTime:"), time); }
-static inline void*            MDLTransform_Translation(MDLTransform self)                                                                       { return ((void* (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("translation")); }
-static inline void             MDLTransform_SetTranslation(MDLTransform self, void* translation)                                                 { ((void (*)(MDLTransform, SEL, void*))bean_msgSend)(self, bean_sel("setTranslation:"), translation); }
-static inline void*            MDLTransform_Rotation(MDLTransform self)                                                                          { return ((void* (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("rotation")); }
-static inline void             MDLTransform_SetRotation(MDLTransform self, void* rotation)                                                       { ((void (*)(MDLTransform, SEL, void*))bean_msgSend)(self, bean_sel("setRotation:"), rotation); }
-static inline void*            MDLTransform_Shear(MDLTransform self)                                                                             { return ((void* (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("shear")); }
-static inline void             MDLTransform_SetShear(MDLTransform self, void* shear)                                                             { ((void (*)(MDLTransform, SEL, void*))bean_msgSend)(self, bean_sel("setShear:"), shear); }
-static inline void*            MDLTransform_Scale(MDLTransform self)                                                                             { return ((void* (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("scale")); }
-static inline void             MDLTransform_SetScale(MDLTransform self, void* scale)                                                             { ((void (*)(MDLTransform, SEL, void*))bean_msgSend)(self, bean_sel("setScale:"), scale); }
+static inline simd_float4x4     MDLTransformOp_Float4x4AtTime(MDLTransformOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4    MDLTransformOp_Double4x4AtTime(MDLTransformOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL              MDLTransformOp_IsInverseOp(MDLTransformOp self)                      { return ((BOOL (*)(MDLTransformOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
+static inline NSString          MDLTransformOp_Name(MDLTransformOp self)                             { return ((NSString (*)(MDLTransformOp, SEL))bean_msgSend)(self, bean_sel("name")); }
 
 /* ===== MDLURLTexture ===== */
 #ifndef BEAN_TYPEDEF_MDLURLTexture
 #define BEAN_TYPEDEF_MDLURLTexture
 typedef bean_id MDLURLTexture;
 #endif
-static inline id       MDLURLTexture_InitWithURL_Name(MDLURLTexture self, NSURL URL, NSString name)    { return ((id (*)(MDLURLTexture, SEL, NSURL, NSString))bean_msgSend)(self, bean_sel("initWithURL:name:"), URL, name); }
-static inline NSURL    MDLURLTexture_URL(MDLURLTexture self)                                           { return ((NSURL (*)(MDLURLTexture, SEL))bean_msgSend)(self, bean_sel("URL")); }
-static inline void     MDLURLTexture_SetURL(MDLURLTexture self, NSURL URL)                             { ((void (*)(MDLURLTexture, SEL, NSURL))bean_msgSend)(self, bean_sel("setURL:"), URL); }
+static inline MDLURLTexture    MDLURLTexture_InitWithURL_Name(MDLURLTexture self, NSURL URL, NSString name)    { return ((MDLURLTexture (*)(MDLURLTexture, SEL, NSURL, NSString))bean_msgSend)(self, bean_sel("initWithURL:name:"), URL, name); }
+static inline NSURL            MDLURLTexture_URL(MDLURLTexture self)                                           { return ((NSURL (*)(MDLURLTexture, SEL))bean_msgSend)(self, bean_sel("URL")); }
+static inline void             MDLURLTexture_SetURL(MDLURLTexture self, NSURL URL)                             { ((void (*)(MDLURLTexture, SEL, NSURL))bean_msgSend)(self, bean_sel("setURL:"), URL); }
 
 /* ===== MDLUtility ===== */
 #ifndef BEAN_TYPEDEF_MDLUtility
@@ -3889,54 +5042,62 @@ static inline void    MDLUtility_ConvertToUSDZ_WriteToURL(NSURL inputURL, NSURL 
 #define BEAN_TYPEDEF_MDLVertexAttribute
 typedef bean_id MDLVertexAttribute;
 #endif
-static inline id                 MDLVertexAttribute_InitWithName_Format_Offset_BufferIndex(MDLVertexAttribute self, NSString name, MDLVertexFormat format, NSUInteger offset, NSUInteger bufferIndex)    { return ((id (*)(MDLVertexAttribute, SEL, NSString, MDLVertexFormat, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("initWithName:format:offset:bufferIndex:"), name, format, offset, bufferIndex); }
-static inline NSString           MDLVertexAttribute_Name(MDLVertexAttribute self)                                                                                                                        { return ((NSString (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void               MDLVertexAttribute_SetName(MDLVertexAttribute self, NSString name)                                                                                                      { ((void (*)(MDLVertexAttribute, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline MDLVertexFormat    MDLVertexAttribute_Format(MDLVertexAttribute self)                                                                                                                      { return ((MDLVertexFormat (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("format")); }
-static inline void               MDLVertexAttribute_SetFormat(MDLVertexAttribute self, MDLVertexFormat format)                                                                                           { ((void (*)(MDLVertexAttribute, SEL, MDLVertexFormat))bean_msgSend)(self, bean_sel("setFormat:"), format); }
-static inline NSUInteger         MDLVertexAttribute_Offset(MDLVertexAttribute self)                                                                                                                      { return ((NSUInteger (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("offset")); }
-static inline void               MDLVertexAttribute_SetOffset(MDLVertexAttribute self, NSUInteger offset)                                                                                                { ((void (*)(MDLVertexAttribute, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setOffset:"), offset); }
-static inline NSUInteger         MDLVertexAttribute_BufferIndex(MDLVertexAttribute self)                                                                                                                 { return ((NSUInteger (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("bufferIndex")); }
-static inline void               MDLVertexAttribute_SetBufferIndex(MDLVertexAttribute self, NSUInteger bufferIndex)                                                                                      { ((void (*)(MDLVertexAttribute, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setBufferIndex:"), bufferIndex); }
-static inline CGFloat            MDLVertexAttribute_Time(MDLVertexAttribute self)                                                                                                                        { return ((CGFloat (*)(MDLVertexAttribute, SEL))bean_msgSend_fpret)(self, bean_sel("time")); }
-static inline void               MDLVertexAttribute_SetTime(MDLVertexAttribute self, CGFloat time)                                                                                                       { ((void (*)(MDLVertexAttribute, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTime:"), time); }
-static inline void*              MDLVertexAttribute_InitializationValue(MDLVertexAttribute self)                                                                                                         { return ((void* (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("initializationValue")); }
-static inline void               MDLVertexAttribute_SetInitializationValue(MDLVertexAttribute self, void* initializationValue)                                                                           { ((void (*)(MDLVertexAttribute, SEL, void*))bean_msgSend)(self, bean_sel("setInitializationValue:"), initializationValue); }
+static inline MDLVertexAttribute    MDLVertexAttribute_InitWithName_Format_Offset_BufferIndex(MDLVertexAttribute self, NSString name, MDLVertexFormat format, NSUInteger offset, NSUInteger bufferIndex)    { return ((MDLVertexAttribute (*)(MDLVertexAttribute, SEL, NSString, MDLVertexFormat, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("initWithName:format:offset:bufferIndex:"), name, format, offset, bufferIndex); }
+static inline NSString              MDLVertexAttribute_Name(MDLVertexAttribute self)                                                                                                                        { return ((NSString (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                  MDLVertexAttribute_SetName(MDLVertexAttribute self, NSString name)                                                                                                      { ((void (*)(MDLVertexAttribute, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline MDLVertexFormat       MDLVertexAttribute_Format(MDLVertexAttribute self)                                                                                                                      { return ((MDLVertexFormat (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("format")); }
+static inline void                  MDLVertexAttribute_SetFormat(MDLVertexAttribute self, MDLVertexFormat format)                                                                                           { ((void (*)(MDLVertexAttribute, SEL, MDLVertexFormat))bean_msgSend)(self, bean_sel("setFormat:"), format); }
+static inline NSUInteger            MDLVertexAttribute_Offset(MDLVertexAttribute self)                                                                                                                      { return ((NSUInteger (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("offset")); }
+static inline void                  MDLVertexAttribute_SetOffset(MDLVertexAttribute self, NSUInteger offset)                                                                                                { ((void (*)(MDLVertexAttribute, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setOffset:"), offset); }
+static inline NSUInteger            MDLVertexAttribute_BufferIndex(MDLVertexAttribute self)                                                                                                                 { return ((NSUInteger (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("bufferIndex")); }
+static inline void                  MDLVertexAttribute_SetBufferIndex(MDLVertexAttribute self, NSUInteger bufferIndex)                                                                                      { ((void (*)(MDLVertexAttribute, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setBufferIndex:"), bufferIndex); }
+static inline CGFloat               MDLVertexAttribute_Time(MDLVertexAttribute self)                                                                                                                        { return ((CGFloat (*)(MDLVertexAttribute, SEL))bean_msgSend_fpret)(self, bean_sel("time")); }
+static inline void                  MDLVertexAttribute_SetTime(MDLVertexAttribute self, CGFloat time)                                                                                                       { ((void (*)(MDLVertexAttribute, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTime:"), time); }
+static inline MDLVertexAttribute    MDLVertexAttribute_InitializationValue(MDLVertexAttribute self)                                                                                                         { return ((MDLVertexAttribute (*)(MDLVertexAttribute, SEL))bean_msgSend)(self, bean_sel("initializationValue")); }
+static inline void                  MDLVertexAttribute_SetInitializationValue(MDLVertexAttribute self, void* initializationValue)                                                                           { ((void (*)(MDLVertexAttribute, SEL, void*))bean_msgSend)(self, bean_sel("setInitializationValue:"), initializationValue); }
+static inline id                    MDLVertexAttribute_CopyWithZone(MDLVertexAttribute self, NSZone* zone)                                                                                                  { return ((id (*)(MDLVertexAttribute, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== MDLVertexBufferLayout ===== */
 #ifndef BEAN_TYPEDEF_MDLVertexBufferLayout
 #define BEAN_TYPEDEF_MDLVertexBufferLayout
 typedef bean_id MDLVertexBufferLayout;
 #endif
-static inline id            MDLVertexBufferLayout_InitWithStride(MDLVertexBufferLayout self, NSUInteger stride)    { return ((id (*)(MDLVertexBufferLayout, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithStride:"), stride); }
-static inline NSUInteger    MDLVertexBufferLayout_Stride(MDLVertexBufferLayout self)                               { return ((NSUInteger (*)(MDLVertexBufferLayout, SEL))bean_msgSend)(self, bean_sel("stride")); }
-static inline void          MDLVertexBufferLayout_SetStride(MDLVertexBufferLayout self, NSUInteger stride)         { ((void (*)(MDLVertexBufferLayout, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setStride:"), stride); }
+static inline MDLVertexBufferLayout    MDLVertexBufferLayout_InitWithStride(MDLVertexBufferLayout self, NSUInteger stride)    { return ((MDLVertexBufferLayout (*)(MDLVertexBufferLayout, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithStride:"), stride); }
+static inline NSUInteger               MDLVertexBufferLayout_Stride(MDLVertexBufferLayout self)                               { return ((NSUInteger (*)(MDLVertexBufferLayout, SEL))bean_msgSend)(self, bean_sel("stride")); }
+static inline void                     MDLVertexBufferLayout_SetStride(MDLVertexBufferLayout self, NSUInteger stride)         { ((void (*)(MDLVertexBufferLayout, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setStride:"), stride); }
+static inline id                       MDLVertexBufferLayout_CopyWithZone(MDLVertexBufferLayout self, NSZone* zone)           { return ((id (*)(MDLVertexBufferLayout, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== MTKMeshBufferAllocator ===== */
 #ifndef BEAN_TYPEDEF_MTKMeshBufferAllocator
 #define BEAN_TYPEDEF_MTKMeshBufferAllocator
 typedef bean_id MTKMeshBufferAllocator;
 #endif
-static inline id    MTKMeshBufferAllocator_Init(MTKMeshBufferAllocator self)                         { return ((id (*)(MTKMeshBufferAllocator, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id    MTKMeshBufferAllocator_InitWithDevice(MTKMeshBufferAllocator self, id device)    { return ((id (*)(MTKMeshBufferAllocator, SEL, id))bean_msgSend)(self, bean_sel("initWithDevice:"), device); }
-static inline id    MTKMeshBufferAllocator_Device(MTKMeshBufferAllocator self)                       { return ((id (*)(MTKMeshBufferAllocator, SEL))bean_msgSend)(self, bean_sel("device")); }
+static inline MTKMeshBufferAllocator    MTKMeshBufferAllocator_Init(MTKMeshBufferAllocator self)                                                                                 { return ((MTKMeshBufferAllocator (*)(MTKMeshBufferAllocator, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MTKMeshBufferAllocator    MTKMeshBufferAllocator_InitWithDevice(MTKMeshBufferAllocator self, id device)                                                            { return ((MTKMeshBufferAllocator (*)(MTKMeshBufferAllocator, SEL, id))bean_msgSend)(self, bean_sel("initWithDevice:"), device); }
+static inline id                        MTKMeshBufferAllocator_Device(MTKMeshBufferAllocator self)                                                                               { return ((id (*)(MTKMeshBufferAllocator, SEL))bean_msgSend)(self, bean_sel("device")); }
+static inline id                        MTKMeshBufferAllocator_NewZone(MTKMeshBufferAllocator self, NSUInteger capacity)                                                         { return ((id (*)(MTKMeshBufferAllocator, SEL, NSUInteger))bean_msgSend)(self, bean_sel("newZone:"), capacity); }
+static inline id                        MTKMeshBufferAllocator_NewZoneForBuffersWithSize_AndType(MTKMeshBufferAllocator self, NSArray sizes, NSArray types)                      { return ((id (*)(MTKMeshBufferAllocator, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("newZoneForBuffersWithSize:andType:"), sizes, types); }
+static inline id                        MTKMeshBufferAllocator_NewBuffer_Type(MTKMeshBufferAllocator self, NSUInteger length, MDLMeshBufferType type)                            { return ((id (*)(MTKMeshBufferAllocator, SEL, NSUInteger, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBuffer:type:"), length, type); }
+static inline id                        MTKMeshBufferAllocator_NewBufferWithData_Type(MTKMeshBufferAllocator self, NSData data, MDLMeshBufferType type)                          { return ((id (*)(MTKMeshBufferAllocator, SEL, NSData, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferWithData:type:"), data, type); }
+static inline id                        MTKMeshBufferAllocator_NewBufferFromZone_Length_Type(MTKMeshBufferAllocator self, id zone, NSUInteger length, MDLMeshBufferType type)    { return ((id (*)(MTKMeshBufferAllocator, SEL, id, NSUInteger, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferFromZone:length:type:"), zone, length, type); }
+static inline id                        MTKMeshBufferAllocator_NewBufferFromZone_Data_Type(MTKMeshBufferAllocator self, id zone, NSData data, MDLMeshBufferType type)            { return ((id (*)(MTKMeshBufferAllocator, SEL, id, NSData, MDLMeshBufferType))bean_msgSend)(self, bean_sel("newBufferFromZone:data:type:"), zone, data, type); }
 
 /* ===== MTKTextureLoader ===== */
 #ifndef BEAN_TYPEDEF_MTKTextureLoader
 #define BEAN_TYPEDEF_MTKTextureLoader
 typedef bean_id MTKTextureLoader;
 #endif
-static inline id    MTKTextureLoader_Init(MTKTextureLoader self)                         { return ((id (*)(MTKTextureLoader, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id    MTKTextureLoader_InitWithDevice(MTKTextureLoader self, id device)    { return ((id (*)(MTKTextureLoader, SEL, id))bean_msgSend)(self, bean_sel("initWithDevice:"), device); }
-static inline id    MTKTextureLoader_Device(MTKTextureLoader self)                       { return ((id (*)(MTKTextureLoader, SEL))bean_msgSend)(self, bean_sel("device")); }
+static inline MTKTextureLoader    MTKTextureLoader_Init(MTKTextureLoader self)                         { return ((MTKTextureLoader (*)(MTKTextureLoader, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MTKTextureLoader    MTKTextureLoader_InitWithDevice(MTKTextureLoader self, id device)    { return ((MTKTextureLoader (*)(MTKTextureLoader, SEL, id))bean_msgSend)(self, bean_sel("initWithDevice:"), device); }
+static inline id                  MTKTextureLoader_Device(MTKTextureLoader self)                       { return ((id (*)(MTKTextureLoader, SEL))bean_msgSend)(self, bean_sel("device")); }
 
 /* ===== MTKView ===== */
 #ifndef BEAN_TYPEDEF_MTKView
 #define BEAN_TYPEDEF_MTKView
 typedef bean_id MTKView;
 #endif
-static inline id                          MTKView_InitWithFrame_Device(MTKView self, CGRect frameRect, id device)                                                    { return ((id (*)(MTKView, SEL, CGRect, id))bean_msgSend)(self, bean_sel("initWithFrame:device:"), frameRect, device); }
-static inline id                          MTKView_InitWithCoder(MTKView self, NSCoder coder)                                                                         { return ((id (*)(MTKView, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline MTKView                     MTKView_InitWithFrame_Device(MTKView self, CGRect frameRect, id device)                                                    { return ((MTKView (*)(MTKView, SEL, CGRect, id))bean_msgSend)(self, bean_sel("initWithFrame:device:"), frameRect, device); }
+static inline MTKView                     MTKView_InitWithCoder(MTKView self, NSCoder coder)                                                                         { return ((MTKView (*)(MTKView, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline void                        MTKView_ReleaseDrawables(MTKView self)                                                                                     { ((void (*)(MTKView, SEL))bean_msgSend)(self, bean_sel("releaseDrawables")); }
 static inline void                        MTKView_Draw(MTKView self)                                                                                                 { ((void (*)(MTKView, SEL))bean_msgSend)(self, bean_sel("draw")); }
 static inline id                          MTKView_Delegate(MTKView self)                                                                                             { return ((id (*)(MTKView, SEL))bean_msgSend)(self, bean_sel("delegate")); }
@@ -3984,6 +5145,12 @@ static inline BOOL                        MTKView_IsPaused(MTKView self)        
 static inline void                        MTKView_SetPaused(MTKView self, BOOL paused)                                                                               { ((void (*)(MTKView, SEL, BOOL))bean_msgSend)(self, bean_sel("setPaused:"), paused); }
 static inline CGColorSpaceRef             MTKView_Colorspace(MTKView self)                                                                                           { return ((CGColorSpaceRef (*)(MTKView, SEL))bean_msgSend)(self, bean_sel("colorspace")); }
 static inline void                        MTKView_SetColorspace(MTKView self, CGColorSpaceRef colorspace)                                                            { ((void (*)(MTKView, SEL, CGColorSpaceRef))bean_msgSend)(self, bean_sel("setColorspace:"), colorspace); }
+static inline void                        MTKView_EncodeWithCoder(MTKView self, NSCoder coder)                                                                       { ((void (*)(MTKView, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline void                        MTKView_DisplayLayer(MTKView self, CALayer layer)                                                                          { ((void (*)(MTKView, SEL, CALayer))bean_msgSend)(self, bean_sel("displayLayer:"), layer); }
+static inline void                        MTKView_DrawLayer_InContext(MTKView self, CALayer layer, CGContextRef ctx)                                                 { ((void (*)(MTKView, SEL, CALayer, CGContextRef))bean_msgSend)(self, bean_sel("drawLayer:inContext:"), layer, ctx); }
+static inline void                        MTKView_LayerWillDraw(MTKView self, CALayer layer)                                                                         { ((void (*)(MTKView, SEL, CALayer))bean_msgSend)(self, bean_sel("layerWillDraw:"), layer); }
+static inline void                        MTKView_LayoutSublayersOfLayer(MTKView self, CALayer layer)                                                                { ((void (*)(MTKView, SEL, CALayer))bean_msgSend)(self, bean_sel("layoutSublayersOfLayer:"), layer); }
+static inline id                          MTKView_ActionForLayer_ForKey(MTKView self, CALayer layer, NSString event)                                                 { return ((id (*)(MTKView, SEL, CALayer, NSString))bean_msgSend)(self, bean_sel("actionForLayer:forKey:"), layer, event); }
 static inline BOOL                        MTKView_Paused(MTKView self)                                                                                               { return ((BOOL (*)(MTKView, SEL))bean_msgSend)(self, bean_sel("paused")); }
 
 /* ===== MDLCamera ===== */
@@ -4042,135 +5209,245 @@ static inline void                   MDLCamera_SetExposureCompression(MDLCamera 
 static inline void*                  MDLCamera_Exposure(MDLCamera self)                                                                                     { return ((void* (*)(MDLCamera, SEL))bean_msgSend)(self, bean_sel("exposure")); }
 static inline void                   MDLCamera_SetExposure(MDLCamera self, void* exposure)                                                                  { ((void (*)(MDLCamera, SEL, void*))bean_msgSend)(self, bean_sel("setExposure:"), exposure); }
 
-/* ===== MDLLightProbe ===== */
-#ifndef BEAN_TYPEDEF_MDLLightProbe
-#define BEAN_TYPEDEF_MDLLightProbe
-typedef bean_id MDLLightProbe;
+/* ===== MDLMeshBuffer ===== */
+#ifndef BEAN_TYPEDEF_MDLMeshBuffer
+#define BEAN_TYPEDEF_MDLMeshBuffer
+typedef bean_id MDLMeshBuffer;
 #endif
-static inline id               MDLLightProbe_InitWithReflectiveTexture_IrradianceTexture(MDLLightProbe self, MDLTexture reflectiveTexture, MDLTexture irradianceTexture)                                                                                                                                                     { return ((id (*)(MDLLightProbe, SEL, MDLTexture, MDLTexture))bean_msgSend)(self, bean_sel("initWithReflectiveTexture:irradianceTexture:"), reflectiveTexture, irradianceTexture); }
-static inline void             MDLLightProbe_GenerateSphericalHarmonicsFromIrradiance(MDLLightProbe self, NSUInteger sphericalHarmonicsLevel)                                                                                                                                                                                { ((void (*)(MDLLightProbe, SEL, NSUInteger))bean_msgSend)(self, bean_sel("generateSphericalHarmonicsFromIrradiance:"), sphericalHarmonicsLevel); }
-static inline MDLTexture       MDLLightProbe_ReflectiveTexture(MDLLightProbe self)                                                                                                                                                                                                                                           { return ((MDLTexture (*)(MDLLightProbe, SEL))bean_msgSend)(self, bean_sel("reflectiveTexture")); }
-static inline MDLTexture       MDLLightProbe_IrradianceTexture(MDLLightProbe self)                                                                                                                                                                                                                                           { return ((MDLTexture (*)(MDLLightProbe, SEL))bean_msgSend)(self, bean_sel("irradianceTexture")); }
-static inline NSUInteger       MDLLightProbe_SphericalHarmonicsLevel(MDLLightProbe self)                                                                                                                                                                                                                                     { return ((NSUInteger (*)(MDLLightProbe, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsLevel")); }
-static inline NSData           MDLLightProbe_SphericalHarmonicsCoefficients(MDLLightProbe self)                                                                                                                                                                                                                              { return ((NSData (*)(MDLLightProbe, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsCoefficients")); }
-static inline MDLLightProbe    MDLLightProbe_LightProbeWithTextureSize_ForLocation_LightsToConsider_ObjectsToConsider_ReflectiveCubemap_IrradianceCubemap(NSInteger textureSize, MDLTransform transform, NSArray lightsToConsider, NSArray objectsToConsider, MDLTexture reflectiveCubemap, MDLTexture irradianceCubemap)    { return ((MDLLightProbe (*)(bean_class, SEL, NSInteger, MDLTransform, NSArray, NSArray, MDLTexture, MDLTexture))bean_msgSend)(bean_cls("MDLLightProbe"), bean_sel("lightProbeWithTextureSize:forLocation:lightsToConsider:objectsToConsider:reflectiveCubemap:irradianceCubemap:"), textureSize, transform, lightsToConsider, objectsToConsider, reflectiveCubemap, irradianceCubemap); }
+static inline void                 MDLMeshBuffer_FillData_Offset(MDLMeshBuffer self, NSData data, NSUInteger offset)    { ((void (*)(MDLMeshBuffer, SEL, NSData, NSUInteger))bean_msgSend)(self, bean_sel("fillData:offset:"), data, offset); }
+static inline MDLMeshBufferMap     MDLMeshBuffer_Map(MDLMeshBuffer self)                                                { return ((MDLMeshBufferMap (*)(MDLMeshBuffer, SEL))bean_msgSend)(self, bean_sel("map")); }
+static inline NSUInteger           MDLMeshBuffer_Length(MDLMeshBuffer self)                                             { return ((NSUInteger (*)(MDLMeshBuffer, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline id                   MDLMeshBuffer_Allocator(MDLMeshBuffer self)                                          { return ((id (*)(MDLMeshBuffer, SEL))bean_msgSend)(self, bean_sel("allocator")); }
+static inline id                   MDLMeshBuffer_Zone(MDLMeshBuffer self)                                               { return ((id (*)(MDLMeshBuffer, SEL))bean_msgSend)(self, bean_sel("zone")); }
+static inline MDLMeshBufferType    MDLMeshBuffer_Type(MDLMeshBuffer self)                                               { return ((MDLMeshBufferType (*)(MDLMeshBuffer, SEL))bean_msgSend)(self, bean_sel("type")); }
+
+/* ===== MDLMeshBufferData ===== */
+#ifndef BEAN_TYPEDEF_MDLMeshBufferData
+#define BEAN_TYPEDEF_MDLMeshBufferData
+typedef bean_id MDLMeshBufferData;
+#endif
+static inline MDLMeshBufferData    MDLMeshBufferData_InitWithType_Length(MDLMeshBufferData self, MDLMeshBufferType type, NSUInteger length)    { return ((MDLMeshBufferData (*)(MDLMeshBufferData, SEL, MDLMeshBufferType, NSUInteger))bean_msgSend)(self, bean_sel("initWithType:length:"), type, length); }
+static inline MDLMeshBufferData    MDLMeshBufferData_InitWithType_Data(MDLMeshBufferData self, MDLMeshBufferType type, NSData data)            { return ((MDLMeshBufferData (*)(MDLMeshBufferData, SEL, MDLMeshBufferType, NSData))bean_msgSend)(self, bean_sel("initWithType:data:"), type, data); }
+static inline NSData               MDLMeshBufferData_Data(MDLMeshBufferData self)                                                              { return ((NSData (*)(MDLMeshBufferData, SEL))bean_msgSend)(self, bean_sel("data")); }
+static inline void                 MDLMeshBufferData_FillData_Offset(MDLMeshBufferData self, NSData data, NSUInteger offset)                   { ((void (*)(MDLMeshBufferData, SEL, NSData, NSUInteger))bean_msgSend)(self, bean_sel("fillData:offset:"), data, offset); }
+static inline MDLMeshBufferMap     MDLMeshBufferData_Map(MDLMeshBufferData self)                                                               { return ((MDLMeshBufferMap (*)(MDLMeshBufferData, SEL))bean_msgSend)(self, bean_sel("map")); }
+static inline NSUInteger           MDLMeshBufferData_Length(MDLMeshBufferData self)                                                            { return ((NSUInteger (*)(MDLMeshBufferData, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline id                   MDLMeshBufferData_Allocator(MDLMeshBufferData self)                                                         { return ((id (*)(MDLMeshBufferData, SEL))bean_msgSend)(self, bean_sel("allocator")); }
+static inline id                   MDLMeshBufferData_Zone(MDLMeshBufferData self)                                                              { return ((id (*)(MDLMeshBufferData, SEL))bean_msgSend)(self, bean_sel("zone")); }
+static inline MDLMeshBufferType    MDLMeshBufferData_Type(MDLMeshBufferData self)                                                              { return ((MDLMeshBufferType (*)(MDLMeshBufferData, SEL))bean_msgSend)(self, bean_sel("type")); }
 
 /* ===== MDLNormalMapTexture ===== */
 #ifndef BEAN_TYPEDEF_MDLNormalMapTexture
 #define BEAN_TYPEDEF_MDLNormalMapTexture
 typedef bean_id MDLNormalMapTexture;
 #endif
-static inline id    MDLNormalMapTexture_InitByGeneratingNormalMapWithTexture_Name_Smoothness_Contrast(MDLNormalMapTexture self, MDLTexture sourceTexture, NSString name, CGFloat smoothness, CGFloat contrast)    { return ((id (*)(MDLNormalMapTexture, SEL, MDLTexture, NSString, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initByGeneratingNormalMapWithTexture:name:smoothness:contrast:"), sourceTexture, name, smoothness, contrast); }
+static inline MDLNormalMapTexture    MDLNormalMapTexture_InitByGeneratingNormalMapWithTexture_Name_Smoothness_Contrast(MDLNormalMapTexture self, MDLTexture sourceTexture, NSString name, CGFloat smoothness, CGFloat contrast)    { return ((MDLNormalMapTexture (*)(MDLNormalMapTexture, SEL, MDLTexture, NSString, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initByGeneratingNormalMapWithTexture:name:smoothness:contrast:"), sourceTexture, name, smoothness, contrast); }
+
+/* ===== MDLObjectContainer ===== */
+#ifndef BEAN_TYPEDEF_MDLObjectContainer
+#define BEAN_TYPEDEF_MDLObjectContainer
+typedef bean_id MDLObjectContainer;
+#endif
+static inline void          MDLObjectContainer_AddObject(MDLObjectContainer self, MDLObject object)                   { ((void (*)(MDLObjectContainer, SEL, MDLObject))bean_msgSend)(self, bean_sel("addObject:"), object); }
+static inline void          MDLObjectContainer_RemoveObject(MDLObjectContainer self, MDLObject object)                { ((void (*)(MDLObjectContainer, SEL, MDLObject))bean_msgSend)(self, bean_sel("removeObject:"), object); }
+static inline MDLObject     MDLObjectContainer_ObjectAtIndexedSubscript(MDLObjectContainer self, NSUInteger index)    { return ((MDLObject (*)(MDLObjectContainer, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), index); }
+static inline NSUInteger    MDLObjectContainer_Count(MDLObjectContainer self)                                         { return ((NSUInteger (*)(MDLObjectContainer, SEL))bean_msgSend)(self, bean_sel("count")); }
+static inline NSArray       MDLObjectContainer_Objects(MDLObjectContainer self)                                       { return ((NSArray (*)(MDLObjectContainer, SEL))bean_msgSend)(self, bean_sel("objects")); }
+
+/* ===== MDLObjectContainerComponent ===== */
+#ifndef BEAN_TYPEDEF_MDLObjectContainerComponent
+#define BEAN_TYPEDEF_MDLObjectContainerComponent
+typedef bean_id MDLObjectContainerComponent;
+#endif
+static inline void          MDLObjectContainerComponent_AddObject(MDLObjectContainerComponent self, MDLObject object)                   { ((void (*)(MDLObjectContainerComponent, SEL, MDLObject))bean_msgSend)(self, bean_sel("addObject:"), object); }
+static inline void          MDLObjectContainerComponent_RemoveObject(MDLObjectContainerComponent self, MDLObject object)                { ((void (*)(MDLObjectContainerComponent, SEL, MDLObject))bean_msgSend)(self, bean_sel("removeObject:"), object); }
+static inline MDLObject     MDLObjectContainerComponent_ObjectAtIndexedSubscript(MDLObjectContainerComponent self, NSUInteger index)    { return ((MDLObject (*)(MDLObjectContainerComponent, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), index); }
+static inline NSUInteger    MDLObjectContainerComponent_Count(MDLObjectContainerComponent self)                                         { return ((NSUInteger (*)(MDLObjectContainerComponent, SEL))bean_msgSend)(self, bean_sel("count")); }
+static inline NSArray       MDLObjectContainerComponent_Objects(MDLObjectContainerComponent self)                                       { return ((NSArray (*)(MDLObjectContainerComponent, SEL))bean_msgSend)(self, bean_sel("objects")); }
 
 /* ===== MDLPackedJointAnimation ===== */
 #ifndef BEAN_TYPEDEF_MDLPackedJointAnimation
 #define BEAN_TYPEDEF_MDLPackedJointAnimation
 typedef bean_id MDLPackedJointAnimation;
 #endif
-static inline id                            MDLPackedJointAnimation_InitWithName_JointPaths(MDLPackedJointAnimation self, NSString name, NSArray jointPaths)    { return ((id (*)(MDLPackedJointAnimation, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithName:jointPaths:"), name, jointPaths); }
+static inline MDLPackedJointAnimation       MDLPackedJointAnimation_InitWithName_JointPaths(MDLPackedJointAnimation self, NSString name, NSArray jointPaths)    { return ((MDLPackedJointAnimation (*)(MDLPackedJointAnimation, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithName:jointPaths:"), name, jointPaths); }
 static inline NSArray                       MDLPackedJointAnimation_JointPaths(MDLPackedJointAnimation self)                                                    { return ((NSArray (*)(MDLPackedJointAnimation, SEL))bean_msgSend)(self, bean_sel("jointPaths")); }
 static inline MDLAnimatedVector3Array       MDLPackedJointAnimation_Translations(MDLPackedJointAnimation self)                                                  { return ((MDLAnimatedVector3Array (*)(MDLPackedJointAnimation, SEL))bean_msgSend)(self, bean_sel("translations")); }
 static inline MDLAnimatedQuaternionArray    MDLPackedJointAnimation_Rotations(MDLPackedJointAnimation self)                                                     { return ((MDLAnimatedQuaternionArray (*)(MDLPackedJointAnimation, SEL))bean_msgSend)(self, bean_sel("rotations")); }
 static inline MDLAnimatedVector3Array       MDLPackedJointAnimation_Scales(MDLPackedJointAnimation self)                                                        { return ((MDLAnimatedVector3Array (*)(MDLPackedJointAnimation, SEL))bean_msgSend)(self, bean_sel("scales")); }
+static inline id                            MDLPackedJointAnimation_CopyWithZone(MDLPackedJointAnimation self, NSZone* zone)                                    { return ((id (*)(MDLPackedJointAnimation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== MDLPhotometricLight ===== */
 #ifndef BEAN_TYPEDEF_MDLPhotometricLight
 #define BEAN_TYPEDEF_MDLPhotometricLight
 typedef bean_id MDLPhotometricLight;
 #endif
-static inline id            MDLPhotometricLight_InitWithIESProfile(MDLPhotometricLight self, NSURL URL)                                              { return ((id (*)(MDLPhotometricLight, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithIESProfile:"), URL); }
-static inline void          MDLPhotometricLight_GenerateSphericalHarmonicsFromLight(MDLPhotometricLight self, NSUInteger sphericalHarmonicsLevel)    { ((void (*)(MDLPhotometricLight, SEL, NSUInteger))bean_msgSend)(self, bean_sel("generateSphericalHarmonicsFromLight:"), sphericalHarmonicsLevel); }
-static inline void          MDLPhotometricLight_GenerateCubemapFromLight(MDLPhotometricLight self, NSUInteger textureSize)                           { ((void (*)(MDLPhotometricLight, SEL, NSUInteger))bean_msgSend)(self, bean_sel("generateCubemapFromLight:"), textureSize); }
-static inline MDLTexture    MDLPhotometricLight_GenerateTexture(MDLPhotometricLight self, NSUInteger textureSize)                                    { return ((MDLTexture (*)(MDLPhotometricLight, SEL, NSUInteger))bean_msgSend)(self, bean_sel("generateTexture:"), textureSize); }
-static inline MDLTexture    MDLPhotometricLight_LightCubeMap(MDLPhotometricLight self)                                                               { return ((MDLTexture (*)(MDLPhotometricLight, SEL))bean_msgSend)(self, bean_sel("lightCubeMap")); }
-static inline NSUInteger    MDLPhotometricLight_SphericalHarmonicsLevel(MDLPhotometricLight self)                                                    { return ((NSUInteger (*)(MDLPhotometricLight, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsLevel")); }
-static inline NSData        MDLPhotometricLight_SphericalHarmonicsCoefficients(MDLPhotometricLight self)                                             { return ((NSData (*)(MDLPhotometricLight, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsCoefficients")); }
+static inline MDLPhotometricLight    MDLPhotometricLight_InitWithIESProfile(MDLPhotometricLight self, NSURL URL)                                              { return ((MDLPhotometricLight (*)(MDLPhotometricLight, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithIESProfile:"), URL); }
+static inline void                   MDLPhotometricLight_GenerateSphericalHarmonicsFromLight(MDLPhotometricLight self, NSUInteger sphericalHarmonicsLevel)    { ((void (*)(MDLPhotometricLight, SEL, NSUInteger))bean_msgSend)(self, bean_sel("generateSphericalHarmonicsFromLight:"), sphericalHarmonicsLevel); }
+static inline void                   MDLPhotometricLight_GenerateCubemapFromLight(MDLPhotometricLight self, NSUInteger textureSize)                           { ((void (*)(MDLPhotometricLight, SEL, NSUInteger))bean_msgSend)(self, bean_sel("generateCubemapFromLight:"), textureSize); }
+static inline MDLTexture             MDLPhotometricLight_GenerateTexture(MDLPhotometricLight self, NSUInteger textureSize)                                    { return ((MDLTexture (*)(MDLPhotometricLight, SEL, NSUInteger))bean_msgSend)(self, bean_sel("generateTexture:"), textureSize); }
+static inline MDLTexture             MDLPhotometricLight_LightCubeMap(MDLPhotometricLight self)                                                               { return ((MDLTexture (*)(MDLPhotometricLight, SEL))bean_msgSend)(self, bean_sel("lightCubeMap")); }
+static inline NSUInteger             MDLPhotometricLight_SphericalHarmonicsLevel(MDLPhotometricLight self)                                                    { return ((NSUInteger (*)(MDLPhotometricLight, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsLevel")); }
+static inline NSData                 MDLPhotometricLight_SphericalHarmonicsCoefficients(MDLPhotometricLight self)                                             { return ((NSData (*)(MDLPhotometricLight, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsCoefficients")); }
 
 /* ===== MDLSkeleton ===== */
 #ifndef BEAN_TYPEDEF_MDLSkeleton
 #define BEAN_TYPEDEF_MDLSkeleton
 typedef bean_id MDLSkeleton;
 #endif
-static inline id                   MDLSkeleton_InitWithName_JointPaths(MDLSkeleton self, NSString name, NSArray jointPaths)    { return ((id (*)(MDLSkeleton, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithName:jointPaths:"), name, jointPaths); }
+static inline MDLSkeleton          MDLSkeleton_InitWithName_JointPaths(MDLSkeleton self, NSString name, NSArray jointPaths)    { return ((MDLSkeleton (*)(MDLSkeleton, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithName:jointPaths:"), name, jointPaths); }
 static inline NSArray              MDLSkeleton_JointPaths(MDLSkeleton self)                                                    { return ((NSArray (*)(MDLSkeleton, SEL))bean_msgSend)(self, bean_sel("jointPaths")); }
 static inline MDLMatrix4x4Array    MDLSkeleton_JointBindTransforms(MDLSkeleton self)                                           { return ((MDLMatrix4x4Array (*)(MDLSkeleton, SEL))bean_msgSend)(self, bean_sel("jointBindTransforms")); }
 static inline MDLMatrix4x4Array    MDLSkeleton_JointRestTransforms(MDLSkeleton self)                                           { return ((MDLMatrix4x4Array (*)(MDLSkeleton, SEL))bean_msgSend)(self, bean_sel("jointRestTransforms")); }
+static inline id                   MDLSkeleton_CopyWithZone(MDLSkeleton self, NSZone* zone)                                    { return ((id (*)(MDLSkeleton, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
-/* ===== MDLTextureSampler ===== */
-#ifndef BEAN_TYPEDEF_MDLTextureSampler
-#define BEAN_TYPEDEF_MDLTextureSampler
-typedef bean_id MDLTextureSampler;
+/* ===== MDLTransform ===== */
+#ifndef BEAN_TYPEDEF_MDLTransform
+#define BEAN_TYPEDEF_MDLTransform
+typedef bean_id MDLTransform;
 #endif
-static inline MDLTexture          MDLTextureSampler_Texture(MDLTextureSampler self)                                               { return ((MDLTexture (*)(MDLTextureSampler, SEL))bean_msgSend)(self, bean_sel("texture")); }
-static inline void                MDLTextureSampler_SetTexture(MDLTextureSampler self, MDLTexture texture)                        { ((void (*)(MDLTextureSampler, SEL, MDLTexture))bean_msgSend)(self, bean_sel("setTexture:"), texture); }
-static inline MDLTextureFilter    MDLTextureSampler_HardwareFilter(MDLTextureSampler self)                                        { return ((MDLTextureFilter (*)(MDLTextureSampler, SEL))bean_msgSend)(self, bean_sel("hardwareFilter")); }
-static inline void                MDLTextureSampler_SetHardwareFilter(MDLTextureSampler self, MDLTextureFilter hardwareFilter)    { ((void (*)(MDLTextureSampler, SEL, MDLTextureFilter))bean_msgSend)(self, bean_sel("setHardwareFilter:"), hardwareFilter); }
-static inline MDLTransform        MDLTextureSampler_Transform(MDLTextureSampler self)                                             { return ((MDLTransform (*)(MDLTextureSampler, SEL))bean_msgSend)(self, bean_sel("transform")); }
-static inline void                MDLTextureSampler_SetTransform(MDLTextureSampler self, MDLTransform transform)                  { ((void (*)(MDLTextureSampler, SEL, MDLTransform))bean_msgSend)(self, bean_sel("setTransform:"), transform); }
+static inline MDLTransform     MDLTransform_Init(MDLTransform self)                                                                              { return ((MDLTransform (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MDLTransform     MDLTransform_InitWithIdentity(MDLTransform self)                                                                  { return ((MDLTransform (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("initWithIdentity")); }
+static inline MDLTransform     MDLTransform_InitWithTransformComponent(MDLTransform self, id component)                                          { return ((MDLTransform (*)(MDLTransform, SEL, id))bean_msgSend)(self, bean_sel("initWithTransformComponent:"), component); }
+static inline MDLTransform     MDLTransform_InitWithTransformComponent_ResetsTransform(MDLTransform self, id component, BOOL resetsTransform)    { return ((MDLTransform (*)(MDLTransform, SEL, id, BOOL))bean_msgSend)(self, bean_sel("initWithTransformComponent:resetsTransform:"), component, resetsTransform); }
+static inline MDLTransform     MDLTransform_InitWithMatrix(MDLTransform self, simd_float4x4 matrix)                                              { return ((MDLTransform (*)(MDLTransform, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("initWithMatrix:"), matrix); }
+static inline MDLTransform     MDLTransform_InitWithMatrix_ResetsTransform(MDLTransform self, simd_float4x4 matrix, BOOL resetsTransform)        { return ((MDLTransform (*)(MDLTransform, SEL, simd_float4x4, BOOL))bean_msgSend)(self, bean_sel("initWithMatrix:resetsTransform:"), matrix, resetsTransform); }
+static inline void             MDLTransform_SetIdentity(MDLTransform self)                                                                       { ((void (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("setIdentity")); }
+static inline void*            MDLTransform_TranslationAtTime(MDLTransform self, CGFloat time)                                                   { return ((void* (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("translationAtTime:"), time); }
+static inline void*            MDLTransform_RotationAtTime(MDLTransform self, CGFloat time)                                                      { return ((void* (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("rotationAtTime:"), time); }
+static inline void*            MDLTransform_ShearAtTime(MDLTransform self, CGFloat time)                                                         { return ((void* (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("shearAtTime:"), time); }
+static inline void*            MDLTransform_ScaleAtTime(MDLTransform self, CGFloat time)                                                         { return ((void* (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("scaleAtTime:"), time); }
+static inline void             MDLTransform_SetMatrix_ForTime(MDLTransform self, simd_float4x4 matrix, CGFloat time)                             { ((void (*)(MDLTransform, SEL, simd_float4x4, CGFloat))bean_msgSend)(self, bean_sel("setMatrix:forTime:"), matrix, time); }
+static inline void             MDLTransform_SetTranslation_ForTime(MDLTransform self, void* translation, CGFloat time)                           { ((void (*)(MDLTransform, SEL, void*, CGFloat))bean_msgSend)(self, bean_sel("setTranslation:forTime:"), translation, time); }
+static inline void             MDLTransform_SetRotation_ForTime(MDLTransform self, void* rotation, CGFloat time)                                 { ((void (*)(MDLTransform, SEL, void*, CGFloat))bean_msgSend)(self, bean_sel("setRotation:forTime:"), rotation, time); }
+static inline void             MDLTransform_SetShear_ForTime(MDLTransform self, void* shear, CGFloat time)                                       { ((void (*)(MDLTransform, SEL, void*, CGFloat))bean_msgSend)(self, bean_sel("setShear:forTime:"), shear, time); }
+static inline void             MDLTransform_SetScale_ForTime(MDLTransform self, void* scale, CGFloat time)                                       { ((void (*)(MDLTransform, SEL, void*, CGFloat))bean_msgSend)(self, bean_sel("setScale:forTime:"), scale, time); }
+static inline simd_float4x4    MDLTransform_RotationMatrixAtTime(MDLTransform self, CGFloat time)                                                { return ((simd_float4x4 (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("rotationMatrixAtTime:"), time); }
+static inline void*            MDLTransform_Translation(MDLTransform self)                                                                       { return ((void* (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("translation")); }
+static inline void             MDLTransform_SetTranslation(MDLTransform self, void* translation)                                                 { ((void (*)(MDLTransform, SEL, void*))bean_msgSend)(self, bean_sel("setTranslation:"), translation); }
+static inline void*            MDLTransform_Rotation(MDLTransform self)                                                                          { return ((void* (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("rotation")); }
+static inline void             MDLTransform_SetRotation(MDLTransform self, void* rotation)                                                       { ((void (*)(MDLTransform, SEL, void*))bean_msgSend)(self, bean_sel("setRotation:"), rotation); }
+static inline void*            MDLTransform_Shear(MDLTransform self)                                                                             { return ((void* (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("shear")); }
+static inline void             MDLTransform_SetShear(MDLTransform self, void* shear)                                                             { ((void (*)(MDLTransform, SEL, void*))bean_msgSend)(self, bean_sel("setShear:"), shear); }
+static inline void*            MDLTransform_Scale(MDLTransform self)                                                                             { return ((void* (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("scale")); }
+static inline void             MDLTransform_SetScale(MDLTransform self, void* scale)                                                             { ((void (*)(MDLTransform, SEL, void*))bean_msgSend)(self, bean_sel("setScale:"), scale); }
+static inline id               MDLTransform_CopyWithZone(MDLTransform self, NSZone* zone)                                                        { return ((id (*)(MDLTransform, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline void             MDLTransform_SetLocalTransform_ForTime(MDLTransform self, simd_float4x4 transform, CGFloat time)                  { ((void (*)(MDLTransform, SEL, simd_float4x4, CGFloat))bean_msgSend)(self, bean_sel("setLocalTransform:forTime:"), transform, time); }
+static inline void             MDLTransform_SetLocalTransform(MDLTransform self, simd_float4x4 transform)                                        { ((void (*)(MDLTransform, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("setLocalTransform:"), transform); }
+static inline simd_float4x4    MDLTransform_LocalTransformAtTime(MDLTransform self, CGFloat time)                                                { return ((simd_float4x4 (*)(MDLTransform, SEL, CGFloat))bean_msgSend)(self, bean_sel("localTransformAtTime:"), time); }
+static inline simd_float4x4    MDLTransform_GlobalTransformWithObject_AtTime(MDLObject object, CGFloat time)                                     { return ((simd_float4x4 (*)(bean_class, SEL, MDLObject, CGFloat))bean_msgSend)(bean_cls("MDLTransform"), bean_sel("globalTransformWithObject:atTime:"), object, time); }
+static inline simd_float4x4    MDLTransform_Matrix(MDLTransform self)                                                                            { return ((simd_float4x4 (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("matrix")); }
+static inline void             MDLTransform_SetMatrix(MDLTransform self, simd_float4x4 matrix)                                                   { ((void (*)(MDLTransform, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("setMatrix:"), matrix); }
+static inline BOOL             MDLTransform_ResetsTransform(MDLTransform self)                                                                   { return ((BOOL (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("resetsTransform")); }
+static inline void             MDLTransform_SetResetsTransform(MDLTransform self, BOOL resetsTransform)                                          { ((void (*)(MDLTransform, SEL, BOOL))bean_msgSend)(self, bean_sel("setResetsTransform:"), resetsTransform); }
+static inline CGFloat          MDLTransform_MinimumTime(MDLTransform self)                                                                       { return ((CGFloat (*)(MDLTransform, SEL))bean_msgSend_fpret)(self, bean_sel("minimumTime")); }
+static inline CGFloat          MDLTransform_MaximumTime(MDLTransform self)                                                                       { return ((CGFloat (*)(MDLTransform, SEL))bean_msgSend_fpret)(self, bean_sel("maximumTime")); }
+static inline NSArray          MDLTransform_KeyTimes(MDLTransform self)                                                                          { return ((NSArray (*)(MDLTransform, SEL))bean_msgSend)(self, bean_sel("keyTimes")); }
+
+/* ===== MDLTransformComponent ===== */
+#ifndef BEAN_TYPEDEF_MDLTransformComponent
+#define BEAN_TYPEDEF_MDLTransformComponent
+typedef bean_id MDLTransformComponent;
+#endif
+static inline void             MDLTransformComponent_SetLocalTransform_ForTime(MDLTransformComponent self, simd_float4x4 transform, CGFloat time)    { ((void (*)(MDLTransformComponent, SEL, simd_float4x4, CGFloat))bean_msgSend)(self, bean_sel("setLocalTransform:forTime:"), transform, time); }
+static inline void             MDLTransformComponent_SetLocalTransform(MDLTransformComponent self, simd_float4x4 transform)                          { ((void (*)(MDLTransformComponent, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("setLocalTransform:"), transform); }
+static inline simd_float4x4    MDLTransformComponent_LocalTransformAtTime(MDLTransformComponent self, CGFloat time)                                  { return ((simd_float4x4 (*)(MDLTransformComponent, SEL, CGFloat))bean_msgSend)(self, bean_sel("localTransformAtTime:"), time); }
+static inline simd_float4x4    MDLTransformComponent_GlobalTransformWithObject_AtTime(MDLObject object, CGFloat time)                                { return ((simd_float4x4 (*)(bean_class, SEL, MDLObject, CGFloat))bean_msgSend)(bean_cls("MDLTransformComponent"), bean_sel("globalTransformWithObject:atTime:"), object, time); }
+static inline simd_float4x4    MDLTransformComponent_Matrix(MDLTransformComponent self)                                                              { return ((simd_float4x4 (*)(MDLTransformComponent, SEL))bean_msgSend)(self, bean_sel("matrix")); }
+static inline void             MDLTransformComponent_SetMatrix(MDLTransformComponent self, simd_float4x4 matrix)                                     { ((void (*)(MDLTransformComponent, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("setMatrix:"), matrix); }
+static inline BOOL             MDLTransformComponent_ResetsTransform(MDLTransformComponent self)                                                     { return ((BOOL (*)(MDLTransformComponent, SEL))bean_msgSend)(self, bean_sel("resetsTransform")); }
+static inline void             MDLTransformComponent_SetResetsTransform(MDLTransformComponent self, BOOL resetsTransform)                            { ((void (*)(MDLTransformComponent, SEL, BOOL))bean_msgSend)(self, bean_sel("setResetsTransform:"), resetsTransform); }
+static inline CGFloat          MDLTransformComponent_MinimumTime(MDLTransformComponent self)                                                         { return ((CGFloat (*)(MDLTransformComponent, SEL))bean_msgSend_fpret)(self, bean_sel("minimumTime")); }
+static inline CGFloat          MDLTransformComponent_MaximumTime(MDLTransformComponent self)                                                         { return ((CGFloat (*)(MDLTransformComponent, SEL))bean_msgSend_fpret)(self, bean_sel("maximumTime")); }
+static inline NSArray          MDLTransformComponent_KeyTimes(MDLTransformComponent self)                                                            { return ((NSArray (*)(MDLTransformComponent, SEL))bean_msgSend)(self, bean_sel("keyTimes")); }
 
 /* ===== MDLTransformMatrixOp ===== */
 #ifndef BEAN_TYPEDEF_MDLTransformMatrixOp
 #define BEAN_TYPEDEF_MDLTransformMatrixOp
 typedef bean_id MDLTransformMatrixOp;
 #endif
-static inline NSString                MDLTransformMatrixOp_Name(MDLTransformMatrixOp self)             { return ((NSString (*)(MDLTransformMatrixOp, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline MDLAnimatedMatrix4x4    MDLTransformMatrixOp_AnimatedValue(MDLTransformMatrixOp self)    { return ((MDLAnimatedMatrix4x4 (*)(MDLTransformMatrixOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline NSString                MDLTransformMatrixOp_Name(MDLTransformMatrixOp self)                             { return ((NSString (*)(MDLTransformMatrixOp, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline MDLAnimatedMatrix4x4    MDLTransformMatrixOp_AnimatedValue(MDLTransformMatrixOp self)                    { return ((MDLAnimatedMatrix4x4 (*)(MDLTransformMatrixOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline simd_float4x4           MDLTransformMatrixOp_Float4x4AtTime(MDLTransformMatrixOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformMatrixOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4          MDLTransformMatrixOp_Double4x4AtTime(MDLTransformMatrixOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformMatrixOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL                    MDLTransformMatrixOp_IsInverseOp(MDLTransformMatrixOp self)                      { return ((BOOL (*)(MDLTransformMatrixOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
 
 /* ===== MDLTransformOrientOp ===== */
 #ifndef BEAN_TYPEDEF_MDLTransformOrientOp
 #define BEAN_TYPEDEF_MDLTransformOrientOp
 typedef bean_id MDLTransformOrientOp;
 #endif
-static inline NSString                 MDLTransformOrientOp_Name(MDLTransformOrientOp self)             { return ((NSString (*)(MDLTransformOrientOp, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline MDLAnimatedQuaternion    MDLTransformOrientOp_AnimatedValue(MDLTransformOrientOp self)    { return ((MDLAnimatedQuaternion (*)(MDLTransformOrientOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline NSString                 MDLTransformOrientOp_Name(MDLTransformOrientOp self)                             { return ((NSString (*)(MDLTransformOrientOp, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline MDLAnimatedQuaternion    MDLTransformOrientOp_AnimatedValue(MDLTransformOrientOp self)                    { return ((MDLAnimatedQuaternion (*)(MDLTransformOrientOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline simd_float4x4            MDLTransformOrientOp_Float4x4AtTime(MDLTransformOrientOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformOrientOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4           MDLTransformOrientOp_Double4x4AtTime(MDLTransformOrientOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformOrientOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL                     MDLTransformOrientOp_IsInverseOp(MDLTransformOrientOp self)                      { return ((BOOL (*)(MDLTransformOrientOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
 
 /* ===== MDLTransformRotateOp ===== */
 #ifndef BEAN_TYPEDEF_MDLTransformRotateOp
 #define BEAN_TYPEDEF_MDLTransformRotateOp
 typedef bean_id MDLTransformRotateOp;
 #endif
-static inline NSString              MDLTransformRotateOp_Name(MDLTransformRotateOp self)             { return ((NSString (*)(MDLTransformRotateOp, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline MDLAnimatedVector3    MDLTransformRotateOp_AnimatedValue(MDLTransformRotateOp self)    { return ((MDLAnimatedVector3 (*)(MDLTransformRotateOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline NSString              MDLTransformRotateOp_Name(MDLTransformRotateOp self)                             { return ((NSString (*)(MDLTransformRotateOp, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline MDLAnimatedVector3    MDLTransformRotateOp_AnimatedValue(MDLTransformRotateOp self)                    { return ((MDLAnimatedVector3 (*)(MDLTransformRotateOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline simd_float4x4         MDLTransformRotateOp_Float4x4AtTime(MDLTransformRotateOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformRotateOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4        MDLTransformRotateOp_Double4x4AtTime(MDLTransformRotateOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformRotateOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL                  MDLTransformRotateOp_IsInverseOp(MDLTransformRotateOp self)                      { return ((BOOL (*)(MDLTransformRotateOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
 
 /* ===== MDLTransformRotateXOp ===== */
 #ifndef BEAN_TYPEDEF_MDLTransformRotateXOp
 #define BEAN_TYPEDEF_MDLTransformRotateXOp
 typedef bean_id MDLTransformRotateXOp;
 #endif
-static inline NSString             MDLTransformRotateXOp_Name(MDLTransformRotateXOp self)             { return ((NSString (*)(MDLTransformRotateXOp, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline MDLAnimatedScalar    MDLTransformRotateXOp_AnimatedValue(MDLTransformRotateXOp self)    { return ((MDLAnimatedScalar (*)(MDLTransformRotateXOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline NSString             MDLTransformRotateXOp_Name(MDLTransformRotateXOp self)                             { return ((NSString (*)(MDLTransformRotateXOp, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline MDLAnimatedScalar    MDLTransformRotateXOp_AnimatedValue(MDLTransformRotateXOp self)                    { return ((MDLAnimatedScalar (*)(MDLTransformRotateXOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline simd_float4x4        MDLTransformRotateXOp_Float4x4AtTime(MDLTransformRotateXOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformRotateXOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4       MDLTransformRotateXOp_Double4x4AtTime(MDLTransformRotateXOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformRotateXOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL                 MDLTransformRotateXOp_IsInverseOp(MDLTransformRotateXOp self)                      { return ((BOOL (*)(MDLTransformRotateXOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
 
 /* ===== MDLTransformRotateYOp ===== */
 #ifndef BEAN_TYPEDEF_MDLTransformRotateYOp
 #define BEAN_TYPEDEF_MDLTransformRotateYOp
 typedef bean_id MDLTransformRotateYOp;
 #endif
-static inline NSString             MDLTransformRotateYOp_Name(MDLTransformRotateYOp self)             { return ((NSString (*)(MDLTransformRotateYOp, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline MDLAnimatedScalar    MDLTransformRotateYOp_AnimatedValue(MDLTransformRotateYOp self)    { return ((MDLAnimatedScalar (*)(MDLTransformRotateYOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline NSString             MDLTransformRotateYOp_Name(MDLTransformRotateYOp self)                             { return ((NSString (*)(MDLTransformRotateYOp, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline MDLAnimatedScalar    MDLTransformRotateYOp_AnimatedValue(MDLTransformRotateYOp self)                    { return ((MDLAnimatedScalar (*)(MDLTransformRotateYOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline simd_float4x4        MDLTransformRotateYOp_Float4x4AtTime(MDLTransformRotateYOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformRotateYOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4       MDLTransformRotateYOp_Double4x4AtTime(MDLTransformRotateYOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformRotateYOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL                 MDLTransformRotateYOp_IsInverseOp(MDLTransformRotateYOp self)                      { return ((BOOL (*)(MDLTransformRotateYOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
 
 /* ===== MDLTransformRotateZOp ===== */
 #ifndef BEAN_TYPEDEF_MDLTransformRotateZOp
 #define BEAN_TYPEDEF_MDLTransformRotateZOp
 typedef bean_id MDLTransformRotateZOp;
 #endif
-static inline NSString             MDLTransformRotateZOp_Name(MDLTransformRotateZOp self)             { return ((NSString (*)(MDLTransformRotateZOp, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline MDLAnimatedScalar    MDLTransformRotateZOp_AnimatedValue(MDLTransformRotateZOp self)    { return ((MDLAnimatedScalar (*)(MDLTransformRotateZOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline NSString             MDLTransformRotateZOp_Name(MDLTransformRotateZOp self)                             { return ((NSString (*)(MDLTransformRotateZOp, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline MDLAnimatedScalar    MDLTransformRotateZOp_AnimatedValue(MDLTransformRotateZOp self)                    { return ((MDLAnimatedScalar (*)(MDLTransformRotateZOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline simd_float4x4        MDLTransformRotateZOp_Float4x4AtTime(MDLTransformRotateZOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformRotateZOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4       MDLTransformRotateZOp_Double4x4AtTime(MDLTransformRotateZOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformRotateZOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL                 MDLTransformRotateZOp_IsInverseOp(MDLTransformRotateZOp self)                      { return ((BOOL (*)(MDLTransformRotateZOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
 
 /* ===== MDLTransformScaleOp ===== */
 #ifndef BEAN_TYPEDEF_MDLTransformScaleOp
 #define BEAN_TYPEDEF_MDLTransformScaleOp
 typedef bean_id MDLTransformScaleOp;
 #endif
-static inline NSString              MDLTransformScaleOp_Name(MDLTransformScaleOp self)             { return ((NSString (*)(MDLTransformScaleOp, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline MDLAnimatedVector3    MDLTransformScaleOp_AnimatedValue(MDLTransformScaleOp self)    { return ((MDLAnimatedVector3 (*)(MDLTransformScaleOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline NSString              MDLTransformScaleOp_Name(MDLTransformScaleOp self)                             { return ((NSString (*)(MDLTransformScaleOp, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline MDLAnimatedVector3    MDLTransformScaleOp_AnimatedValue(MDLTransformScaleOp self)                    { return ((MDLAnimatedVector3 (*)(MDLTransformScaleOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline simd_float4x4         MDLTransformScaleOp_Float4x4AtTime(MDLTransformScaleOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformScaleOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4        MDLTransformScaleOp_Double4x4AtTime(MDLTransformScaleOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformScaleOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL                  MDLTransformScaleOp_IsInverseOp(MDLTransformScaleOp self)                      { return ((BOOL (*)(MDLTransformScaleOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
 
 /* ===== MDLTransformTranslateOp ===== */
 #ifndef BEAN_TYPEDEF_MDLTransformTranslateOp
 #define BEAN_TYPEDEF_MDLTransformTranslateOp
 typedef bean_id MDLTransformTranslateOp;
 #endif
-static inline NSString              MDLTransformTranslateOp_Name(MDLTransformTranslateOp self)             { return ((NSString (*)(MDLTransformTranslateOp, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline MDLAnimatedVector3    MDLTransformTranslateOp_AnimatedValue(MDLTransformTranslateOp self)    { return ((MDLAnimatedVector3 (*)(MDLTransformTranslateOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline NSString              MDLTransformTranslateOp_Name(MDLTransformTranslateOp self)                             { return ((NSString (*)(MDLTransformTranslateOp, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline MDLAnimatedVector3    MDLTransformTranslateOp_AnimatedValue(MDLTransformTranslateOp self)                    { return ((MDLAnimatedVector3 (*)(MDLTransformTranslateOp, SEL))bean_msgSend)(self, bean_sel("animatedValue")); }
+static inline simd_float4x4         MDLTransformTranslateOp_Float4x4AtTime(MDLTransformTranslateOp self, CGFloat time)     { return ((simd_float4x4 (*)(MDLTransformTranslateOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4        MDLTransformTranslateOp_Double4x4AtTime(MDLTransformTranslateOp self, CGFloat time)    { return ((simd_double4x4 (*)(MDLTransformTranslateOp, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline BOOL                  MDLTransformTranslateOp_IsInverseOp(MDLTransformTranslateOp self)                      { return ((BOOL (*)(MDLTransformTranslateOp, SEL))bean_msgSend)(self, bean_sel("IsInverseOp")); }
 
 /* ===== MDLVertexAttributeData ===== */
 #ifndef BEAN_TYPEDEF_MDLVertexAttributeData
@@ -4193,30 +5470,43 @@ static inline void                MDLVertexAttributeData_SetBufferSize(MDLVertex
 #define BEAN_TYPEDEF_MDLVertexDescriptor
 typedef bean_id MDLVertexDescriptor;
 #endif
-static inline id                    MDLVertexDescriptor_InitWithVertexDescriptor(MDLVertexDescriptor self, MDLVertexDescriptor vertexDescriptor)    { return ((id (*)(MDLVertexDescriptor, SEL, MDLVertexDescriptor))bean_msgSend)(self, bean_sel("initWithVertexDescriptor:"), vertexDescriptor); }
-static inline MDLVertexAttribute    MDLVertexDescriptor_AttributeNamed(MDLVertexDescriptor self, NSString name)                                     { return ((MDLVertexAttribute (*)(MDLVertexDescriptor, SEL, NSString))bean_msgSend)(self, bean_sel("attributeNamed:"), name); }
-static inline void                  MDLVertexDescriptor_AddOrReplaceAttribute(MDLVertexDescriptor self, MDLVertexAttribute attribute)               { ((void (*)(MDLVertexDescriptor, SEL, MDLVertexAttribute))bean_msgSend)(self, bean_sel("addOrReplaceAttribute:"), attribute); }
-static inline void                  MDLVertexDescriptor_RemoveAttributeNamed(MDLVertexDescriptor self, NSString name)                               { ((void (*)(MDLVertexDescriptor, SEL, NSString))bean_msgSend)(self, bean_sel("removeAttributeNamed:"), name); }
-static inline void                  MDLVertexDescriptor_Reset(MDLVertexDescriptor self)                                                             { ((void (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("reset")); }
-static inline void                  MDLVertexDescriptor_SetPackedStrides(MDLVertexDescriptor self)                                                  { ((void (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("setPackedStrides")); }
-static inline void                  MDLVertexDescriptor_SetPackedOffsets(MDLVertexDescriptor self)                                                  { ((void (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("setPackedOffsets")); }
-static inline NSMutableArray        MDLVertexDescriptor_Attributes(MDLVertexDescriptor self)                                                        { return ((NSMutableArray (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("attributes")); }
-static inline void                  MDLVertexDescriptor_SetAttributes(MDLVertexDescriptor self, NSMutableArray attributes)                          { ((void (*)(MDLVertexDescriptor, SEL, NSMutableArray))bean_msgSend)(self, bean_sel("setAttributes:"), attributes); }
-static inline NSMutableArray        MDLVertexDescriptor_Layouts(MDLVertexDescriptor self)                                                           { return ((NSMutableArray (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("layouts")); }
-static inline void                  MDLVertexDescriptor_SetLayouts(MDLVertexDescriptor self, NSMutableArray layouts)                                { ((void (*)(MDLVertexDescriptor, SEL, NSMutableArray))bean_msgSend)(self, bean_sel("setLayouts:"), layouts); }
+static inline MDLVertexDescriptor    MDLVertexDescriptor_InitWithVertexDescriptor(MDLVertexDescriptor self, MDLVertexDescriptor vertexDescriptor)    { return ((MDLVertexDescriptor (*)(MDLVertexDescriptor, SEL, MDLVertexDescriptor))bean_msgSend)(self, bean_sel("initWithVertexDescriptor:"), vertexDescriptor); }
+static inline MDLVertexAttribute     MDLVertexDescriptor_AttributeNamed(MDLVertexDescriptor self, NSString name)                                     { return ((MDLVertexAttribute (*)(MDLVertexDescriptor, SEL, NSString))bean_msgSend)(self, bean_sel("attributeNamed:"), name); }
+static inline void                   MDLVertexDescriptor_AddOrReplaceAttribute(MDLVertexDescriptor self, MDLVertexAttribute attribute)               { ((void (*)(MDLVertexDescriptor, SEL, MDLVertexAttribute))bean_msgSend)(self, bean_sel("addOrReplaceAttribute:"), attribute); }
+static inline void                   MDLVertexDescriptor_RemoveAttributeNamed(MDLVertexDescriptor self, NSString name)                               { ((void (*)(MDLVertexDescriptor, SEL, NSString))bean_msgSend)(self, bean_sel("removeAttributeNamed:"), name); }
+static inline void                   MDLVertexDescriptor_Reset(MDLVertexDescriptor self)                                                             { ((void (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("reset")); }
+static inline void                   MDLVertexDescriptor_SetPackedStrides(MDLVertexDescriptor self)                                                  { ((void (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("setPackedStrides")); }
+static inline void                   MDLVertexDescriptor_SetPackedOffsets(MDLVertexDescriptor self)                                                  { ((void (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("setPackedOffsets")); }
+static inline NSMutableArray         MDLVertexDescriptor_Attributes(MDLVertexDescriptor self)                                                        { return ((NSMutableArray (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("attributes")); }
+static inline void                   MDLVertexDescriptor_SetAttributes(MDLVertexDescriptor self, NSMutableArray attributes)                          { ((void (*)(MDLVertexDescriptor, SEL, NSMutableArray))bean_msgSend)(self, bean_sel("setAttributes:"), attributes); }
+static inline NSMutableArray         MDLVertexDescriptor_Layouts(MDLVertexDescriptor self)                                                           { return ((NSMutableArray (*)(MDLVertexDescriptor, SEL))bean_msgSend)(self, bean_sel("layouts")); }
+static inline void                   MDLVertexDescriptor_SetLayouts(MDLVertexDescriptor self, NSMutableArray layouts)                                { ((void (*)(MDLVertexDescriptor, SEL, NSMutableArray))bean_msgSend)(self, bean_sel("setLayouts:"), layouts); }
+static inline id                     MDLVertexDescriptor_CopyWithZone(MDLVertexDescriptor self, NSZone* zone)                                        { return ((id (*)(MDLVertexDescriptor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== MTKMeshBuffer ===== */
 #ifndef BEAN_TYPEDEF_MTKMeshBuffer
 #define BEAN_TYPEDEF_MTKMeshBuffer
 typedef bean_id MTKMeshBuffer;
 #endif
-static inline id                        MTKMeshBuffer_Init(MTKMeshBuffer self)         { return ((id (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline NSUInteger                MTKMeshBuffer_Length(MTKMeshBuffer self)       { return ((NSUInteger (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("length")); }
-static inline MTKMeshBufferAllocator    MTKMeshBuffer_Allocator(MTKMeshBuffer self)    { return ((MTKMeshBufferAllocator (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("allocator")); }
-static inline id                        MTKMeshBuffer_Zone(MTKMeshBuffer self)         { return ((id (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("zone")); }
-static inline id                        MTKMeshBuffer_Buffer(MTKMeshBuffer self)       { return ((id (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("buffer")); }
-static inline NSUInteger                MTKMeshBuffer_Offset(MTKMeshBuffer self)       { return ((NSUInteger (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("offset")); }
-static inline MDLMeshBufferType         MTKMeshBuffer_Type(MTKMeshBuffer self)         { return ((MDLMeshBufferType (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline MTKMeshBuffer             MTKMeshBuffer_Init(MTKMeshBuffer self)                                               { return ((MTKMeshBuffer (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSUInteger                MTKMeshBuffer_Length(MTKMeshBuffer self)                                             { return ((NSUInteger (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline MTKMeshBufferAllocator    MTKMeshBuffer_Allocator(MTKMeshBuffer self)                                          { return ((MTKMeshBufferAllocator (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("allocator")); }
+static inline id                        MTKMeshBuffer_Zone(MTKMeshBuffer self)                                               { return ((id (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("zone")); }
+static inline id                        MTKMeshBuffer_Buffer(MTKMeshBuffer self)                                             { return ((id (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("buffer")); }
+static inline NSUInteger                MTKMeshBuffer_Offset(MTKMeshBuffer self)                                             { return ((NSUInteger (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("offset")); }
+static inline MDLMeshBufferType         MTKMeshBuffer_Type(MTKMeshBuffer self)                                               { return ((MDLMeshBufferType (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                      MTKMeshBuffer_FillData_Offset(MTKMeshBuffer self, NSData data, NSUInteger offset)    { ((void (*)(MTKMeshBuffer, SEL, NSData, NSUInteger))bean_msgSend)(self, bean_sel("fillData:offset:"), data, offset); }
+static inline MDLMeshBufferMap          MTKMeshBuffer_Map(MTKMeshBuffer self)                                                { return ((MDLMeshBufferMap (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("map")); }
+static inline NSString                  MTKMeshBuffer_Name(MTKMeshBuffer self)                                               { return ((NSString (*)(MTKMeshBuffer, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                      MTKMeshBuffer_SetName(MTKMeshBuffer self, NSString name)                             { ((void (*)(MTKMeshBuffer, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+
+/* ===== MTKViewDelegate ===== */
+#ifndef BEAN_TYPEDEF_MTKViewDelegate
+#define BEAN_TYPEDEF_MTKViewDelegate
+typedef bean_id MTKViewDelegate;
+#endif
+static inline void    MTKViewDelegate_MtkView_DrawableSizeWillChange(MTKViewDelegate self, MTKView view, CGSize size)    { ((void (*)(MTKViewDelegate, SEL, MTKView, CGSize))bean_msgSend)(self, bean_sel("mtkView:drawableSizeWillChange:"), view, size); }
+static inline void    MTKViewDelegate_DrawInMTKView(MTKViewDelegate self, MTKView view)                                  { ((void (*)(MTKViewDelegate, SEL, MTKView))bean_msgSend)(self, bean_sel("drawInMTKView:"), view); }
 
 /* ===== MDLAnimationBindComponent ===== */
 #ifndef BEAN_TYPEDEF_MDLAnimationBindComponent
@@ -4231,67 +5521,187 @@ static inline NSArray           MDLAnimationBindComponent_JointPaths(MDLAnimatio
 static inline void              MDLAnimationBindComponent_SetJointPaths(MDLAnimationBindComponent self, NSArray jointPaths)                                 { ((void (*)(MDLAnimationBindComponent, SEL, NSArray))bean_msgSend)(self, bean_sel("setJointPaths:"), jointPaths); }
 static inline simd_double4x4    MDLAnimationBindComponent_GeometryBindTransform(MDLAnimationBindComponent self)                                             { return ((simd_double4x4 (*)(MDLAnimationBindComponent, SEL))bean_msgSend)(self, bean_sel("geometryBindTransform")); }
 static inline void              MDLAnimationBindComponent_SetGeometryBindTransform(MDLAnimationBindComponent self, simd_double4x4 geometryBindTransform)    { ((void (*)(MDLAnimationBindComponent, SEL, simd_double4x4))bean_msgSend)(self, bean_sel("setGeometryBindTransform:"), geometryBindTransform); }
+static inline id                MDLAnimationBindComponent_CopyWithZone(MDLAnimationBindComponent self, NSZone* zone)                                        { return ((id (*)(MDLAnimationBindComponent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== MDLAsset ===== */
 #ifndef BEAN_TYPEDEF_MDLAsset
 #define BEAN_TYPEDEF_MDLAsset
 typedef bean_id MDLAsset;
 #endif
-static inline id                           MDLAsset_InitWithURL(MDLAsset self, NSURL URL)                                                                                                                                                            { return ((id (*)(MDLAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), URL); }
-static inline id                           MDLAsset_InitWithURL_VertexDescriptor_BufferAllocator(MDLAsset self, NSURL URL, MDLVertexDescriptor vertexDescriptor, id bufferAllocator)                                                                 { return ((id (*)(MDLAsset, SEL, NSURL, MDLVertexDescriptor, id))bean_msgSend)(self, bean_sel("initWithURL:vertexDescriptor:bufferAllocator:"), URL, vertexDescriptor, bufferAllocator); }
-static inline id                           MDLAsset_InitWithBufferAllocator(MDLAsset self, id bufferAllocator)                                                                                                                                       { return ((id (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("initWithBufferAllocator:"), bufferAllocator); }
-static inline id                           MDLAsset_InitWithURL_VertexDescriptor_BufferAllocator_PreserveTopology_Error(MDLAsset self, NSURL URL, MDLVertexDescriptor vertexDescriptor, id bufferAllocator, BOOL preserveTopology, NSError error)    { return ((id (*)(MDLAsset, SEL, NSURL, MDLVertexDescriptor, id, BOOL, NSError))bean_msgSend)(self, bean_sel("initWithURL:vertexDescriptor:bufferAllocator:preserveTopology:error:"), URL, vertexDescriptor, bufferAllocator, preserveTopology, error); }
-static inline BOOL                         MDLAsset_ExportAssetToURL(MDLAsset self, NSURL URL)                                                                                                                                                       { return ((BOOL (*)(MDLAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("exportAssetToURL:"), URL); }
-static inline BOOL                         MDLAsset_ExportAssetToURL_Error(MDLAsset self, NSURL URL, NSError error)                                                                                                                                  { return ((BOOL (*)(MDLAsset, SEL, NSURL, NSError))bean_msgSend)(self, bean_sel("exportAssetToURL:error:"), URL, error); }
-static inline MDLObject                    MDLAsset_ObjectAtPath(MDLAsset self, NSString path)                                                                                                                                                       { return ((MDLObject (*)(MDLAsset, SEL, NSString))bean_msgSend)(self, bean_sel("objectAtPath:"), path); }
-static inline BOOL                         MDLAsset_CanImportFileExtension(NSString extension)                                                                                                                                                       { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("MDLAsset"), bean_sel("canImportFileExtension:"), extension); }
-static inline BOOL                         MDLAsset_CanExportFileExtension(NSString extension)                                                                                                                                                       { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("MDLAsset"), bean_sel("canExportFileExtension:"), extension); }
-static inline NSArray                      MDLAsset_ChildObjectsOfClass(MDLAsset self, bean_class objectClass)                                                                                                                                       { return ((NSArray (*)(MDLAsset, SEL, bean_class))bean_msgSend)(self, bean_sel("childObjectsOfClass:"), objectClass); }
-static inline void                         MDLAsset_LoadTextures(MDLAsset self)                                                                                                                                                                      { ((void (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("loadTextures")); }
-static inline MDLAxisAlignedBoundingBox    MDLAsset_BoundingBoxAtTime(MDLAsset self, CGFloat time)                                                                                                                                                   { return ((MDLAxisAlignedBoundingBox (*)(MDLAsset, SEL, CGFloat))bean_msgSend)(self, bean_sel("boundingBoxAtTime:"), time); }
-static inline void                         MDLAsset_AddObject(MDLAsset self, MDLObject object)                                                                                                                                                       { ((void (*)(MDLAsset, SEL, MDLObject))bean_msgSend)(self, bean_sel("addObject:"), object); }
-static inline void                         MDLAsset_RemoveObject(MDLAsset self, MDLObject object)                                                                                                                                                    { ((void (*)(MDLAsset, SEL, MDLObject))bean_msgSend)(self, bean_sel("removeObject:"), object); }
-static inline MDLObject                    MDLAsset_ObjectAtIndexedSubscript(MDLAsset self, NSUInteger index)                                                                                                                                        { return ((MDLObject (*)(MDLAsset, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), index); }
-static inline MDLObject                    MDLAsset_ObjectAtIndex(MDLAsset self, NSUInteger index)                                                                                                                                                   { return ((MDLObject (*)(MDLAsset, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndex:"), index); }
-static inline MDLAxisAlignedBoundingBox    MDLAsset_BoundingBox(MDLAsset self)                                                                                                                                                                       { return ((MDLAxisAlignedBoundingBox (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("boundingBox")); }
-static inline CGFloat                      MDLAsset_FrameInterval(MDLAsset self)                                                                                                                                                                     { return ((CGFloat (*)(MDLAsset, SEL))bean_msgSend_fpret)(self, bean_sel("frameInterval")); }
-static inline void                         MDLAsset_SetFrameInterval(MDLAsset self, CGFloat frameInterval)                                                                                                                                           { ((void (*)(MDLAsset, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrameInterval:"), frameInterval); }
-static inline CGFloat                      MDLAsset_StartTime(MDLAsset self)                                                                                                                                                                         { return ((CGFloat (*)(MDLAsset, SEL))bean_msgSend_fpret)(self, bean_sel("startTime")); }
-static inline void                         MDLAsset_SetStartTime(MDLAsset self, CGFloat startTime)                                                                                                                                                   { ((void (*)(MDLAsset, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStartTime:"), startTime); }
-static inline CGFloat                      MDLAsset_EndTime(MDLAsset self)                                                                                                                                                                           { return ((CGFloat (*)(MDLAsset, SEL))bean_msgSend_fpret)(self, bean_sel("endTime")); }
-static inline void                         MDLAsset_SetEndTime(MDLAsset self, CGFloat endTime)                                                                                                                                                       { ((void (*)(MDLAsset, SEL, CGFloat))bean_msgSend)(self, bean_sel("setEndTime:"), endTime); }
-static inline void*                        MDLAsset_UpAxis(MDLAsset self)                                                                                                                                                                            { return ((void* (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("upAxis")); }
-static inline void                         MDLAsset_SetUpAxis(MDLAsset self, void* upAxis)                                                                                                                                                           { ((void (*)(MDLAsset, SEL, void*))bean_msgSend)(self, bean_sel("setUpAxis:"), upAxis); }
-static inline NSURL                        MDLAsset_URL(MDLAsset self)                                                                                                                                                                               { return ((NSURL (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("URL")); }
-static inline id                           MDLAsset_Resolver(MDLAsset self)                                                                                                                                                                          { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("resolver")); }
-static inline void                         MDLAsset_SetResolver(MDLAsset self, id resolver)                                                                                                                                                          { ((void (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("setResolver:"), resolver); }
-static inline id                           MDLAsset_BufferAllocator(MDLAsset self)                                                                                                                                                                   { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("bufferAllocator")); }
-static inline MDLVertexDescriptor          MDLAsset_VertexDescriptor(MDLAsset self)                                                                                                                                                                  { return ((MDLVertexDescriptor (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("vertexDescriptor")); }
-static inline NSUInteger                   MDLAsset_Count(MDLAsset self)                                                                                                                                                                             { return ((NSUInteger (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("count")); }
-static inline id                           MDLAsset_Masters(MDLAsset self)                                                                                                                                                                           { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("masters")); }
-static inline void                         MDLAsset_SetMasters(MDLAsset self, id masters)                                                                                                                                                            { ((void (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("setMasters:"), masters); }
-static inline id                           MDLAsset_Originals(MDLAsset self)                                                                                                                                                                         { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("originals")); }
-static inline void                         MDLAsset_SetOriginals(MDLAsset self, id originals)                                                                                                                                                        { ((void (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("setOriginals:"), originals); }
-static inline id                           MDLAsset_Animations(MDLAsset self)                                                                                                                                                                        { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("animations")); }
-static inline void                         MDLAsset_SetAnimations(MDLAsset self, id animations)                                                                                                                                                      { ((void (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("setAnimations:"), animations); }
-static inline NSArray                      MDLAsset_PlaceLightProbesWithDensity_Heuristic_UsingIrradianceDataSource(CGFloat value, MDLProbePlacement type, id dataSource)                                                                            { return ((NSArray (*)(bean_class, SEL, CGFloat, MDLProbePlacement, id))bean_msgSend)(bean_cls("MDLAsset"), bean_sel("placeLightProbesWithDensity:heuristic:usingIrradianceDataSource:"), value, type, dataSource); }
+static inline MDLAsset                     MDLAsset_InitWithURL(MDLAsset self, NSURL URL)                                                                                                                                                             { return ((MDLAsset (*)(MDLAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), URL); }
+static inline MDLAsset                     MDLAsset_InitWithURL_VertexDescriptor_BufferAllocator(MDLAsset self, NSURL URL, MDLVertexDescriptor vertexDescriptor, id bufferAllocator)                                                                  { return ((MDLAsset (*)(MDLAsset, SEL, NSURL, MDLVertexDescriptor, id))bean_msgSend)(self, bean_sel("initWithURL:vertexDescriptor:bufferAllocator:"), URL, vertexDescriptor, bufferAllocator); }
+static inline MDLAsset                     MDLAsset_InitWithBufferAllocator(MDLAsset self, id bufferAllocator)                                                                                                                                        { return ((MDLAsset (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("initWithBufferAllocator:"), bufferAllocator); }
+static inline MDLAsset                     MDLAsset_InitWithURL_VertexDescriptor_BufferAllocator_PreserveTopology_Error(MDLAsset self, NSURL URL, MDLVertexDescriptor vertexDescriptor, id bufferAllocator, BOOL preserveTopology, NSError* error)    { return ((MDLAsset (*)(MDLAsset, SEL, NSURL, MDLVertexDescriptor, id, BOOL, NSError*))bean_msgSend)(self, bean_sel("initWithURL:vertexDescriptor:bufferAllocator:preserveTopology:error:"), URL, vertexDescriptor, bufferAllocator, preserveTopology, error); }
+static inline BOOL                         MDLAsset_ExportAssetToURL(MDLAsset self, NSURL URL)                                                                                                                                                        { return ((BOOL (*)(MDLAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("exportAssetToURL:"), URL); }
+static inline BOOL                         MDLAsset_ExportAssetToURL_Error(MDLAsset self, NSURL URL, NSError* error)                                                                                                                                  { return ((BOOL (*)(MDLAsset, SEL, NSURL, NSError*))bean_msgSend)(self, bean_sel("exportAssetToURL:error:"), URL, error); }
+static inline MDLObject                    MDLAsset_ObjectAtPath(MDLAsset self, NSString path)                                                                                                                                                        { return ((MDLObject (*)(MDLAsset, SEL, NSString))bean_msgSend)(self, bean_sel("objectAtPath:"), path); }
+static inline BOOL                         MDLAsset_CanImportFileExtension(NSString extension)                                                                                                                                                        { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("MDLAsset"), bean_sel("canImportFileExtension:"), extension); }
+static inline BOOL                         MDLAsset_CanExportFileExtension(NSString extension)                                                                                                                                                        { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("MDLAsset"), bean_sel("canExportFileExtension:"), extension); }
+static inline NSArray                      MDLAsset_ChildObjectsOfClass(MDLAsset self, bean_class objectClass)                                                                                                                                        { return ((NSArray (*)(MDLAsset, SEL, bean_class))bean_msgSend)(self, bean_sel("childObjectsOfClass:"), objectClass); }
+static inline void                         MDLAsset_LoadTextures(MDLAsset self)                                                                                                                                                                       { ((void (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("loadTextures")); }
+static inline MDLAxisAlignedBoundingBox    MDLAsset_BoundingBoxAtTime(MDLAsset self, CGFloat time)                                                                                                                                                    { return ((MDLAxisAlignedBoundingBox (*)(MDLAsset, SEL, CGFloat))bean_msgSend)(self, bean_sel("boundingBoxAtTime:"), time); }
+static inline void                         MDLAsset_AddObject(MDLAsset self, MDLObject object)                                                                                                                                                        { ((void (*)(MDLAsset, SEL, MDLObject))bean_msgSend)(self, bean_sel("addObject:"), object); }
+static inline void                         MDLAsset_RemoveObject(MDLAsset self, MDLObject object)                                                                                                                                                     { ((void (*)(MDLAsset, SEL, MDLObject))bean_msgSend)(self, bean_sel("removeObject:"), object); }
+static inline MDLObject                    MDLAsset_ObjectAtIndexedSubscript(MDLAsset self, NSUInteger index)                                                                                                                                         { return ((MDLObject (*)(MDLAsset, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), index); }
+static inline MDLObject                    MDLAsset_ObjectAtIndex(MDLAsset self, NSUInteger index)                                                                                                                                                    { return ((MDLObject (*)(MDLAsset, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndex:"), index); }
+static inline MDLAxisAlignedBoundingBox    MDLAsset_BoundingBox(MDLAsset self)                                                                                                                                                                        { return ((MDLAxisAlignedBoundingBox (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("boundingBox")); }
+static inline CGFloat                      MDLAsset_FrameInterval(MDLAsset self)                                                                                                                                                                      { return ((CGFloat (*)(MDLAsset, SEL))bean_msgSend_fpret)(self, bean_sel("frameInterval")); }
+static inline void                         MDLAsset_SetFrameInterval(MDLAsset self, CGFloat frameInterval)                                                                                                                                            { ((void (*)(MDLAsset, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrameInterval:"), frameInterval); }
+static inline CGFloat                      MDLAsset_StartTime(MDLAsset self)                                                                                                                                                                          { return ((CGFloat (*)(MDLAsset, SEL))bean_msgSend_fpret)(self, bean_sel("startTime")); }
+static inline void                         MDLAsset_SetStartTime(MDLAsset self, CGFloat startTime)                                                                                                                                                    { ((void (*)(MDLAsset, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStartTime:"), startTime); }
+static inline CGFloat                      MDLAsset_EndTime(MDLAsset self)                                                                                                                                                                            { return ((CGFloat (*)(MDLAsset, SEL))bean_msgSend_fpret)(self, bean_sel("endTime")); }
+static inline void                         MDLAsset_SetEndTime(MDLAsset self, CGFloat endTime)                                                                                                                                                        { ((void (*)(MDLAsset, SEL, CGFloat))bean_msgSend)(self, bean_sel("setEndTime:"), endTime); }
+static inline void*                        MDLAsset_UpAxis(MDLAsset self)                                                                                                                                                                             { return ((void* (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("upAxis")); }
+static inline void                         MDLAsset_SetUpAxis(MDLAsset self, void* upAxis)                                                                                                                                                            { ((void (*)(MDLAsset, SEL, void*))bean_msgSend)(self, bean_sel("setUpAxis:"), upAxis); }
+static inline NSURL                        MDLAsset_URL(MDLAsset self)                                                                                                                                                                                { return ((NSURL (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("URL")); }
+static inline id                           MDLAsset_Resolver(MDLAsset self)                                                                                                                                                                           { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("resolver")); }
+static inline void                         MDLAsset_SetResolver(MDLAsset self, id resolver)                                                                                                                                                           { ((void (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("setResolver:"), resolver); }
+static inline id                           MDLAsset_BufferAllocator(MDLAsset self)                                                                                                                                                                    { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("bufferAllocator")); }
+static inline MDLVertexDescriptor          MDLAsset_VertexDescriptor(MDLAsset self)                                                                                                                                                                   { return ((MDLVertexDescriptor (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("vertexDescriptor")); }
+static inline NSUInteger                   MDLAsset_Count(MDLAsset self)                                                                                                                                                                              { return ((NSUInteger (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("count")); }
+static inline id                           MDLAsset_Masters(MDLAsset self)                                                                                                                                                                            { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("masters")); }
+static inline void                         MDLAsset_SetMasters(MDLAsset self, id masters)                                                                                                                                                             { ((void (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("setMasters:"), masters); }
+static inline id                           MDLAsset_Originals(MDLAsset self)                                                                                                                                                                          { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("originals")); }
+static inline void                         MDLAsset_SetOriginals(MDLAsset self, id originals)                                                                                                                                                         { ((void (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("setOriginals:"), originals); }
+static inline id                           MDLAsset_Animations(MDLAsset self)                                                                                                                                                                         { return ((id (*)(MDLAsset, SEL))bean_msgSend)(self, bean_sel("animations")); }
+static inline void                         MDLAsset_SetAnimations(MDLAsset self, id animations)                                                                                                                                                       { ((void (*)(MDLAsset, SEL, id))bean_msgSend)(self, bean_sel("setAnimations:"), animations); }
+static inline NSArray                      MDLAsset_PlaceLightProbesWithDensity_Heuristic_UsingIrradianceDataSource(CGFloat value, MDLProbePlacement type, id dataSource)                                                                             { return ((NSArray (*)(bean_class, SEL, CGFloat, MDLProbePlacement, id))bean_msgSend)(bean_cls("MDLAsset"), bean_sel("placeLightProbesWithDensity:heuristic:usingIrradianceDataSource:"), value, type, dataSource); }
+static inline id                           MDLAsset_CopyWithZone(MDLAsset self, NSZone* zone)                                                                                                                                                         { return ((id (*)(MDLAsset, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline NSUInteger                   MDLAsset_CountByEnumeratingWithState_Objects_Count(MDLAsset self, NSFastEnumerationState* state, id* buffer, NSUInteger len)                                                                               { return ((NSUInteger (*)(MDLAsset, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+
+/* ===== MDLLightProbe ===== */
+#ifndef BEAN_TYPEDEF_MDLLightProbe
+#define BEAN_TYPEDEF_MDLLightProbe
+typedef bean_id MDLLightProbe;
+#endif
+static inline MDLLightProbe    MDLLightProbe_InitWithReflectiveTexture_IrradianceTexture(MDLLightProbe self, MDLTexture reflectiveTexture, MDLTexture irradianceTexture)                                                                                                                                                     { return ((MDLLightProbe (*)(MDLLightProbe, SEL, MDLTexture, MDLTexture))bean_msgSend)(self, bean_sel("initWithReflectiveTexture:irradianceTexture:"), reflectiveTexture, irradianceTexture); }
+static inline void             MDLLightProbe_GenerateSphericalHarmonicsFromIrradiance(MDLLightProbe self, NSUInteger sphericalHarmonicsLevel)                                                                                                                                                                                { ((void (*)(MDLLightProbe, SEL, NSUInteger))bean_msgSend)(self, bean_sel("generateSphericalHarmonicsFromIrradiance:"), sphericalHarmonicsLevel); }
+static inline MDLTexture       MDLLightProbe_ReflectiveTexture(MDLLightProbe self)                                                                                                                                                                                                                                           { return ((MDLTexture (*)(MDLLightProbe, SEL))bean_msgSend)(self, bean_sel("reflectiveTexture")); }
+static inline MDLTexture       MDLLightProbe_IrradianceTexture(MDLLightProbe self)                                                                                                                                                                                                                                           { return ((MDLTexture (*)(MDLLightProbe, SEL))bean_msgSend)(self, bean_sel("irradianceTexture")); }
+static inline NSUInteger       MDLLightProbe_SphericalHarmonicsLevel(MDLLightProbe self)                                                                                                                                                                                                                                     { return ((NSUInteger (*)(MDLLightProbe, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsLevel")); }
+static inline NSData           MDLLightProbe_SphericalHarmonicsCoefficients(MDLLightProbe self)                                                                                                                                                                                                                              { return ((NSData (*)(MDLLightProbe, SEL))bean_msgSend)(self, bean_sel("sphericalHarmonicsCoefficients")); }
+static inline MDLLightProbe    MDLLightProbe_LightProbeWithTextureSize_ForLocation_LightsToConsider_ObjectsToConsider_ReflectiveCubemap_IrradianceCubemap(NSInteger textureSize, MDLTransform transform, NSArray lightsToConsider, NSArray objectsToConsider, MDLTexture reflectiveCubemap, MDLTexture irradianceCubemap)    { return ((MDLLightProbe (*)(bean_class, SEL, NSInteger, MDLTransform, NSArray, NSArray, MDLTexture, MDLTexture))bean_msgSend)(bean_cls("MDLLightProbe"), bean_sel("lightProbeWithTextureSize:forLocation:lightsToConsider:objectsToConsider:reflectiveCubemap:irradianceCubemap:"), textureSize, transform, lightsToConsider, objectsToConsider, reflectiveCubemap, irradianceCubemap); }
+
+/* ===== MDLMesh ===== */
+#ifndef BEAN_TYPEDEF_MDLMesh
+#define BEAN_TYPEDEF_MDLMesh
+typedef bean_id MDLMesh;
+#endif
+static inline MDLMesh                      MDLMesh_InitWithBufferAllocator(MDLMesh self, id bufferAllocator)                                                                                                                                                                                                                                                            { return ((MDLMesh (*)(MDLMesh, SEL, id))bean_msgSend)(self, bean_sel("initWithBufferAllocator:"), bufferAllocator); }
+static inline MDLMesh                      MDLMesh_InitWithVertexBuffer_VertexCount_Descriptor_Submeshes(MDLMesh self, id vertexBuffer, NSUInteger vertexCount, MDLVertexDescriptor descriptor, NSArray submeshes)                                                                                                                                                      { return ((MDLMesh (*)(MDLMesh, SEL, id, NSUInteger, MDLVertexDescriptor, NSArray))bean_msgSend)(self, bean_sel("initWithVertexBuffer:vertexCount:descriptor:submeshes:"), vertexBuffer, vertexCount, descriptor, submeshes); }
+static inline MDLMesh                      MDLMesh_InitWithVertexBuffers_VertexCount_Descriptor_Submeshes(MDLMesh self, NSArray vertexBuffers, NSUInteger vertexCount, MDLVertexDescriptor descriptor, NSArray submeshes)                                                                                                                                               { return ((MDLMesh (*)(MDLMesh, SEL, NSArray, NSUInteger, MDLVertexDescriptor, NSArray))bean_msgSend)(self, bean_sel("initWithVertexBuffers:vertexCount:descriptor:submeshes:"), vertexBuffers, vertexCount, descriptor, submeshes); }
+static inline MDLVertexAttributeData       MDLMesh_VertexAttributeDataForAttributeNamed(MDLMesh self, NSString name)                                                                                                                                                                                                                                                    { return ((MDLVertexAttributeData (*)(MDLMesh, SEL, NSString))bean_msgSend)(self, bean_sel("vertexAttributeDataForAttributeNamed:"), name); }
+static inline MDLVertexAttributeData       MDLMesh_VertexAttributeDataForAttributeNamed_AsFormat(MDLMesh self, NSString name, MDLVertexFormat format)                                                                                                                                                                                                                   { return ((MDLVertexAttributeData (*)(MDLMesh, SEL, NSString, MDLVertexFormat))bean_msgSend)(self, bean_sel("vertexAttributeDataForAttributeNamed:asFormat:"), name, format); }
+static inline MDLAxisAlignedBoundingBox    MDLMesh_BoundingBox(MDLMesh self)                                                                                                                                                                                                                                                                                            { return ((MDLAxisAlignedBoundingBox (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("boundingBox")); }
+static inline MDLVertexDescriptor          MDLMesh_VertexDescriptor(MDLMesh self)                                                                                                                                                                                                                                                                                       { return ((MDLVertexDescriptor (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("vertexDescriptor")); }
+static inline void                         MDLMesh_SetVertexDescriptor(MDLMesh self, MDLVertexDescriptor vertexDescriptor)                                                                                                                                                                                                                                              { ((void (*)(MDLMesh, SEL, MDLVertexDescriptor))bean_msgSend)(self, bean_sel("setVertexDescriptor:"), vertexDescriptor); }
+static inline NSUInteger                   MDLMesh_VertexCount(MDLMesh self)                                                                                                                                                                                                                                                                                            { return ((NSUInteger (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
+static inline void                         MDLMesh_SetVertexCount(MDLMesh self, NSUInteger vertexCount)                                                                                                                                                                                                                                                                 { ((void (*)(MDLMesh, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setVertexCount:"), vertexCount); }
+static inline NSArray                      MDLMesh_VertexBuffers(MDLMesh self)                                                                                                                                                                                                                                                                                          { return ((NSArray (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("vertexBuffers")); }
+static inline void                         MDLMesh_SetVertexBuffers(MDLMesh self, NSArray vertexBuffers)                                                                                                                                                                                                                                                                { ((void (*)(MDLMesh, SEL, NSArray))bean_msgSend)(self, bean_sel("setVertexBuffers:"), vertexBuffers); }
+static inline NSMutableArray               MDLMesh_Submeshes(MDLMesh self)                                                                                                                                                                                                                                                                                              { return ((NSMutableArray (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("submeshes")); }
+static inline void                         MDLMesh_SetSubmeshes(MDLMesh self, NSMutableArray submeshes)                                                                                                                                                                                                                                                                 { ((void (*)(MDLMesh, SEL, NSMutableArray))bean_msgSend)(self, bean_sel("setSubmeshes:"), submeshes); }
+static inline id                           MDLMesh_Allocator(MDLMesh self)                                                                                                                                                                                                                                                                                              { return ((id (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("allocator")); }
+static inline void                         MDLMesh_AddAttributeWithName_Format(MDLMesh self, NSString name, MDLVertexFormat format)                                                                                                                                                                                                                                     { ((void (*)(MDLMesh, SEL, NSString, MDLVertexFormat))bean_msgSend)(self, bean_sel("addAttributeWithName:format:"), name, format); }
+static inline void                         MDLMesh_AddAttributeWithName_Format_Type_Data_Stride(MDLMesh self, NSString name, MDLVertexFormat format, NSString type, NSData data, NSInteger stride)                                                                                                                                                                      { ((void (*)(MDLMesh, SEL, NSString, MDLVertexFormat, NSString, NSData, NSInteger))bean_msgSend)(self, bean_sel("addAttributeWithName:format:type:data:stride:"), name, format, type, data, stride); }
+static inline void                         MDLMesh_AddAttributeWithName_Format_Type_Data_Stride_Time(MDLMesh self, NSString name, MDLVertexFormat format, NSString type, NSData data, NSInteger stride, CGFloat time)                                                                                                                                                   { ((void (*)(MDLMesh, SEL, NSString, MDLVertexFormat, NSString, NSData, NSInteger, CGFloat))bean_msgSend)(self, bean_sel("addAttributeWithName:format:type:data:stride:time:"), name, format, type, data, stride, time); }
+static inline void                         MDLMesh_AddNormalsWithAttributeNamed_CreaseThreshold(MDLMesh self, NSString attributeName, CGFloat creaseThreshold)                                                                                                                                                                                                          { ((void (*)(MDLMesh, SEL, NSString, CGFloat))bean_msgSend)(self, bean_sel("addNormalsWithAttributeNamed:creaseThreshold:"), attributeName, creaseThreshold); }
+static inline void                         MDLMesh_AddTangentBasisForTextureCoordinateAttributeNamed_TangentAttributeNamed_BitangentAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName, NSString tangentAttributeName, NSString bitangentAttributeName)                                                                                               { ((void (*)(MDLMesh, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("addTangentBasisForTextureCoordinateAttributeNamed:tangentAttributeNamed:bitangentAttributeNamed:"), textureCoordinateAttributeName, tangentAttributeName, bitangentAttributeName); }
+static inline void                         MDLMesh_AddTangentBasisForTextureCoordinateAttributeNamed_NormalAttributeNamed_TangentAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName, NSString normalAttributeName, NSString tangentAttributeName)                                                                                                     { ((void (*)(MDLMesh, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("addTangentBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:"), textureCoordinateAttributeName, normalAttributeName, tangentAttributeName); }
+static inline void                         MDLMesh_AddOrthTanBasisForTextureCoordinateAttributeNamed_NormalAttributeNamed_TangentAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName, NSString normalAttributeName, NSString tangentAttributeName)                                                                                                     { ((void (*)(MDLMesh, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("addOrthTanBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:"), textureCoordinateAttributeName, normalAttributeName, tangentAttributeName); }
+static inline void                         MDLMesh_AddUnwrappedTextureCoordinatesForAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName)                                                                                                                                                                                                               { ((void (*)(MDLMesh, SEL, NSString))bean_msgSend)(self, bean_sel("addUnwrappedTextureCoordinatesForAttributeNamed:"), textureCoordinateAttributeName); }
+static inline void                         MDLMesh_FlipTextureCoordinatesInAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName)                                                                                                                                                                                                                        { ((void (*)(MDLMesh, SEL, NSString))bean_msgSend)(self, bean_sel("flipTextureCoordinatesInAttributeNamed:"), textureCoordinateAttributeName); }
+static inline void                         MDLMesh_MakeVerticesUnique(MDLMesh self)                                                                                                                                                                                                                                                                                     { ((void (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("makeVerticesUnique")); }
+static inline BOOL                         MDLMesh_MakeVerticesUniqueAndReturnError(MDLMesh self, NSError* error)                                                                                                                                                                                                                                                       { return ((BOOL (*)(MDLMesh, SEL, NSError*))bean_msgSend)(self, bean_sel("makeVerticesUniqueAndReturnError:"), error); }
+static inline void                         MDLMesh_ReplaceAttributeNamed_WithData(MDLMesh self, NSString name, MDLVertexAttributeData newData)                                                                                                                                                                                                                          { ((void (*)(MDLMesh, SEL, NSString, MDLVertexAttributeData))bean_msgSend)(self, bean_sel("replaceAttributeNamed:withData:"), name, newData); }
+static inline void                         MDLMesh_UpdateAttributeNamed_WithData(MDLMesh self, NSString name, MDLVertexAttributeData newData)                                                                                                                                                                                                                           { ((void (*)(MDLMesh, SEL, NSString, MDLVertexAttributeData))bean_msgSend)(self, bean_sel("updateAttributeNamed:withData:"), name, newData); }
+static inline void                         MDLMesh_RemoveAttributeNamed(MDLMesh self, NSString name)                                                                                                                                                                                                                                                                    { ((void (*)(MDLMesh, SEL, NSString))bean_msgSend)(self, bean_sel("removeAttributeNamed:"), name); }
+static inline MDLMesh                      MDLMesh_InitBoxWithExtent_Segments_InwardNormals_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                                                                          { return ((MDLMesh (*)(MDLMesh, SEL, void*, void*, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initBoxWithExtent:segments:inwardNormals:geometryType:allocator:"), extent, segments, inwardNormals, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_InitSphereWithExtent_Segments_InwardNormals_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                                                                       { return ((MDLMesh (*)(MDLMesh, SEL, void*, void*, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initSphereWithExtent:segments:inwardNormals:geometryType:allocator:"), extent, segments, inwardNormals, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_InitHemisphereWithExtent_Segments_InwardNormals_Cap_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, BOOL cap, MDLGeometryType geometryType, id allocator)                                                                                                                     { return ((MDLMesh (*)(MDLMesh, SEL, void*, void*, BOOL, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initHemisphereWithExtent:segments:inwardNormals:cap:geometryType:allocator:"), extent, segments, inwardNormals, cap, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_InitCylinderWithExtent_Segments_InwardNormals_TopCap_BottomCap_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, BOOL topCap, BOOL bottomCap, MDLGeometryType geometryType, id allocator)                                                                                       { return ((MDLMesh (*)(MDLMesh, SEL, void*, void*, BOOL, BOOL, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initCylinderWithExtent:segments:inwardNormals:topCap:bottomCap:geometryType:allocator:"), extent, segments, inwardNormals, topCap, bottomCap, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_InitCapsuleWithExtent_CylinderSegments_HemisphereSegments_InwardNormals_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, int hemisphereSegments, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                   { return ((MDLMesh (*)(MDLMesh, SEL, void*, void*, int, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initCapsuleWithExtent:cylinderSegments:hemisphereSegments:inwardNormals:geometryType:allocator:"), extent, segments, hemisphereSegments, inwardNormals, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_InitConeWithExtent_Segments_InwardNormals_Cap_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, BOOL cap, MDLGeometryType geometryType, id allocator)                                                                                                                           { return ((MDLMesh (*)(MDLMesh, SEL, void*, void*, BOOL, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initConeWithExtent:segments:inwardNormals:cap:geometryType:allocator:"), extent, segments, inwardNormals, cap, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_InitPlaneWithExtent_Segments_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, MDLGeometryType geometryType, id allocator)                                                                                                                                                                          { return ((MDLMesh (*)(MDLMesh, SEL, void*, void*, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initPlaneWithExtent:segments:geometryType:allocator:"), extent, segments, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_InitIcosahedronWithExtent_InwardNormals_GeometryType_Allocator(MDLMesh self, void* extent, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                                                                                           { return ((MDLMesh (*)(MDLMesh, SEL, void*, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initIcosahedronWithExtent:inwardNormals:geometryType:allocator:"), extent, inwardNormals, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_InitMeshBySubdividingMesh_SubmeshIndex_SubdivisionLevels_Allocator(MDLMesh self, MDLMesh mesh, int submeshIndex, NSUInteger subdivisionLevels, id allocator)                                                                                                                                                         { return ((MDLMesh (*)(MDLMesh, SEL, MDLMesh, int, NSUInteger, id))bean_msgSend)(self, bean_sel("initMeshBySubdividingMesh:submeshIndex:subdivisionLevels:allocator:"), mesh, submeshIndex, subdivisionLevels, allocator); }
+static inline MDLMesh                      MDLMesh_NewBoxWithDimensions_Segments_GeometryType_InwardNormals_Allocator(void* dimensions, void* segments, MDLGeometryType geometryType, BOOL inwardNormals, id allocator)                                                                                                                                                 { return ((MDLMesh (*)(bean_class, SEL, void*, void*, MDLGeometryType, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newBoxWithDimensions:segments:geometryType:inwardNormals:allocator:"), dimensions, segments, geometryType, inwardNormals, allocator); }
+static inline MDLMesh                      MDLMesh_NewEllipsoidWithRadii_RadialSegments_VerticalSegments_GeometryType_InwardNormals_Hemisphere_Allocator(void* radii, NSUInteger radialSegments, NSUInteger verticalSegments, MDLGeometryType geometryType, BOOL inwardNormals, BOOL hemisphere, id allocator)                                                          { return ((MDLMesh (*)(bean_class, SEL, void*, NSUInteger, NSUInteger, MDLGeometryType, BOOL, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newEllipsoidWithRadii:radialSegments:verticalSegments:geometryType:inwardNormals:hemisphere:allocator:"), radii, radialSegments, verticalSegments, geometryType, inwardNormals, hemisphere, allocator); }
+static inline MDLMesh                      MDLMesh_NewCylinderWithHeight_Radii_RadialSegments_VerticalSegments_GeometryType_InwardNormals_Allocator(CGFloat height, void* radii, NSUInteger radialSegments, NSUInteger verticalSegments, MDLGeometryType geometryType, BOOL inwardNormals, id allocator)                                                                { return ((MDLMesh (*)(bean_class, SEL, CGFloat, void*, NSUInteger, NSUInteger, MDLGeometryType, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newCylinderWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:"), height, radii, radialSegments, verticalSegments, geometryType, inwardNormals, allocator); }
+static inline MDLMesh                      MDLMesh_NewCapsuleWithHeight_Radii_RadialSegments_VerticalSegments_HemisphereSegments_GeometryType_InwardNormals_Allocator(CGFloat height, void* radii, NSUInteger radialSegments, NSUInteger verticalSegments, NSUInteger hemisphereSegments, MDLGeometryType geometryType, BOOL inwardNormals, id allocator)               { return ((MDLMesh (*)(bean_class, SEL, CGFloat, void*, NSUInteger, NSUInteger, NSUInteger, MDLGeometryType, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newCapsuleWithHeight:radii:radialSegments:verticalSegments:hemisphereSegments:geometryType:inwardNormals:allocator:"), height, radii, radialSegments, verticalSegments, hemisphereSegments, geometryType, inwardNormals, allocator); }
+static inline MDLMesh                      MDLMesh_NewEllipticalConeWithHeight_Radii_RadialSegments_VerticalSegments_GeometryType_InwardNormals_Allocator(CGFloat height, void* radii, NSUInteger radialSegments, NSUInteger verticalSegments, MDLGeometryType geometryType, BOOL inwardNormals, id allocator)                                                          { return ((MDLMesh (*)(bean_class, SEL, CGFloat, void*, NSUInteger, NSUInteger, MDLGeometryType, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newEllipticalConeWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:"), height, radii, radialSegments, verticalSegments, geometryType, inwardNormals, allocator); }
+static inline MDLMesh                      MDLMesh_NewPlaneWithDimensions_Segments_GeometryType_Allocator(void* dimensions, void* segments, MDLGeometryType geometryType, id allocator)                                                                                                                                                                                 { return ((MDLMesh (*)(bean_class, SEL, void*, void*, MDLGeometryType, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newPlaneWithDimensions:segments:geometryType:allocator:"), dimensions, segments, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_NewIcosahedronWithRadius_InwardNormals_GeometryType_Allocator(CGFloat radius, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                                                                                                        { return ((MDLMesh (*)(bean_class, SEL, CGFloat, BOOL, MDLGeometryType, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newIcosahedronWithRadius:inwardNormals:geometryType:allocator:"), radius, inwardNormals, geometryType, allocator); }
+static inline MDLMesh                      MDLMesh_NewIcosahedronWithRadius_InwardNormals_Allocator(CGFloat radius, BOOL inwardNormals, id allocator)                                                                                                                                                                                                                   { return ((MDLMesh (*)(bean_class, SEL, CGFloat, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newIcosahedronWithRadius:inwardNormals:allocator:"), radius, inwardNormals, allocator); }
+static inline MDLMesh                      MDLMesh_NewSubdividedMesh_SubmeshIndex_SubdivisionLevels(MDLMesh mesh, NSUInteger submeshIndex, NSUInteger subdivisionLevels)                                                                                                                                                                                                { return ((MDLMesh (*)(bean_class, SEL, MDLMesh, NSUInteger, NSUInteger))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newSubdividedMesh:submeshIndex:subdivisionLevels:"), mesh, submeshIndex, subdivisionLevels); }
+static inline BOOL                         MDLMesh_GenerateAmbientOcclusionTextureWithSize_RaysPerSample_AttenuationFactor_ObjectsToConsider_VertexAttributeNamed_MaterialPropertyNamed(MDLMesh self, void* textureSize, NSInteger raysPerSample, CGFloat attenuationFactor, NSArray objectsToConsider, NSString vertexAttributeName, NSString materialPropertyName)    { return ((BOOL (*)(MDLMesh, SEL, void*, NSInteger, CGFloat, NSArray, NSString, NSString))bean_msgSend)(self, bean_sel("generateAmbientOcclusionTextureWithSize:raysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:"), textureSize, raysPerSample, attenuationFactor, objectsToConsider, vertexAttributeName, materialPropertyName); }
+static inline BOOL                         MDLMesh_GenerateAmbientOcclusionTextureWithQuality_AttenuationFactor_ObjectsToConsider_VertexAttributeNamed_MaterialPropertyNamed(MDLMesh self, CGFloat bakeQuality, CGFloat attenuationFactor, NSArray objectsToConsider, NSString vertexAttributeName, NSString materialPropertyName)                                      { return ((BOOL (*)(MDLMesh, SEL, CGFloat, CGFloat, NSArray, NSString, NSString))bean_msgSend)(self, bean_sel("generateAmbientOcclusionTextureWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:"), bakeQuality, attenuationFactor, objectsToConsider, vertexAttributeName, materialPropertyName); }
+static inline BOOL                         MDLMesh_GenerateAmbientOcclusionVertexColorsWithRaysPerSample_AttenuationFactor_ObjectsToConsider_VertexAttributeNamed(MDLMesh self, NSInteger raysPerSample, CGFloat attenuationFactor, NSArray objectsToConsider, NSString vertexAttributeName)                                                                            { return ((BOOL (*)(MDLMesh, SEL, NSInteger, CGFloat, NSArray, NSString))bean_msgSend)(self, bean_sel("generateAmbientOcclusionVertexColorsWithRaysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:"), raysPerSample, attenuationFactor, objectsToConsider, vertexAttributeName); }
+static inline BOOL                         MDLMesh_GenerateAmbientOcclusionVertexColorsWithQuality_AttenuationFactor_ObjectsToConsider_VertexAttributeNamed(MDLMesh self, CGFloat bakeQuality, CGFloat attenuationFactor, NSArray objectsToConsider, NSString vertexAttributeName)                                                                                      { return ((BOOL (*)(MDLMesh, SEL, CGFloat, CGFloat, NSArray, NSString))bean_msgSend)(self, bean_sel("generateAmbientOcclusionVertexColorsWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:"), bakeQuality, attenuationFactor, objectsToConsider, vertexAttributeName); }
+static inline BOOL                         MDLMesh_GenerateLightMapTextureWithTextureSize_LightsToConsider_ObjectsToConsider_VertexAttributeNamed_MaterialPropertyNamed(MDLMesh self, void* textureSize, NSArray lightsToConsider, NSArray objectsToConsider, NSString vertexAttributeName, NSString materialPropertyName)                                              { return ((BOOL (*)(MDLMesh, SEL, void*, NSArray, NSArray, NSString, NSString))bean_msgSend)(self, bean_sel("generateLightMapTextureWithTextureSize:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:"), textureSize, lightsToConsider, objectsToConsider, vertexAttributeName, materialPropertyName); }
+static inline BOOL                         MDLMesh_GenerateLightMapTextureWithQuality_LightsToConsider_ObjectsToConsider_VertexAttributeNamed_MaterialPropertyNamed(MDLMesh self, CGFloat bakeQuality, NSArray lightsToConsider, NSArray objectsToConsider, NSString vertexAttributeName, NSString materialPropertyName)                                                { return ((BOOL (*)(MDLMesh, SEL, CGFloat, NSArray, NSArray, NSString, NSString))bean_msgSend)(self, bean_sel("generateLightMapTextureWithQuality:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:"), bakeQuality, lightsToConsider, objectsToConsider, vertexAttributeName, materialPropertyName); }
+static inline BOOL                         MDLMesh_GenerateLightMapVertexColorsWithLightsToConsider_ObjectsToConsider_VertexAttributeNamed(MDLMesh self, NSArray lightsToConsider, NSArray objectsToConsider, NSString vertexAttributeName)                                                                                                                             { return ((BOOL (*)(MDLMesh, SEL, NSArray, NSArray, NSString))bean_msgSend)(self, bean_sel("generateLightMapVertexColorsWithLightsToConsider:objectsToConsider:vertexAttributeNamed:"), lightsToConsider, objectsToConsider, vertexAttributeName); }
+
+/* ===== MDLTextureSampler ===== */
+#ifndef BEAN_TYPEDEF_MDLTextureSampler
+#define BEAN_TYPEDEF_MDLTextureSampler
+typedef bean_id MDLTextureSampler;
+#endif
+static inline MDLTexture          MDLTextureSampler_Texture(MDLTextureSampler self)                                               { return ((MDLTexture (*)(MDLTextureSampler, SEL))bean_msgSend)(self, bean_sel("texture")); }
+static inline void                MDLTextureSampler_SetTexture(MDLTextureSampler self, MDLTexture texture)                        { ((void (*)(MDLTextureSampler, SEL, MDLTexture))bean_msgSend)(self, bean_sel("setTexture:"), texture); }
+static inline MDLTextureFilter    MDLTextureSampler_HardwareFilter(MDLTextureSampler self)                                        { return ((MDLTextureFilter (*)(MDLTextureSampler, SEL))bean_msgSend)(self, bean_sel("hardwareFilter")); }
+static inline void                MDLTextureSampler_SetHardwareFilter(MDLTextureSampler self, MDLTextureFilter hardwareFilter)    { ((void (*)(MDLTextureSampler, SEL, MDLTextureFilter))bean_msgSend)(self, bean_sel("setHardwareFilter:"), hardwareFilter); }
+static inline MDLTransform        MDLTextureSampler_Transform(MDLTextureSampler self)                                             { return ((MDLTransform (*)(MDLTextureSampler, SEL))bean_msgSend)(self, bean_sel("transform")); }
+static inline void                MDLTextureSampler_SetTransform(MDLTextureSampler self, MDLTransform transform)                  { ((void (*)(MDLTextureSampler, SEL, MDLTransform))bean_msgSend)(self, bean_sel("setTransform:"), transform); }
+
+/* ===== MDLTransformStack ===== */
+#ifndef BEAN_TYPEDEF_MDLTransformStack
+#define BEAN_TYPEDEF_MDLTransformStack
+typedef bean_id MDLTransformStack;
+#endif
+static inline MDLTransformStack          MDLTransformStack_Init(MDLTransformStack self)                                                                                                      { return ((MDLTransformStack (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MDLTransformTranslateOp    MDLTransformStack_AddTranslateOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                          { return ((MDLTransformTranslateOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addTranslateOp:inverse:"), animatedValueName, inverse); }
+static inline MDLTransformRotateXOp      MDLTransformStack_AddRotateXOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                            { return ((MDLTransformRotateXOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addRotateXOp:inverse:"), animatedValueName, inverse); }
+static inline MDLTransformRotateYOp      MDLTransformStack_AddRotateYOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                            { return ((MDLTransformRotateYOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addRotateYOp:inverse:"), animatedValueName, inverse); }
+static inline MDLTransformRotateZOp      MDLTransformStack_AddRotateZOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                            { return ((MDLTransformRotateZOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addRotateZOp:inverse:"), animatedValueName, inverse); }
+static inline MDLTransformRotateOp       MDLTransformStack_AddRotateOp_Order_Inverse(MDLTransformStack self, NSString animatedValueName, MDLTransformOpRotationOrder order, BOOL inverse)    { return ((MDLTransformRotateOp (*)(MDLTransformStack, SEL, NSString, MDLTransformOpRotationOrder, BOOL))bean_msgSend)(self, bean_sel("addRotateOp:order:inverse:"), animatedValueName, order, inverse); }
+static inline MDLTransformScaleOp        MDLTransformStack_AddScaleOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                              { return ((MDLTransformScaleOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addScaleOp:inverse:"), animatedValueName, inverse); }
+static inline MDLTransformMatrixOp       MDLTransformStack_AddMatrixOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                             { return ((MDLTransformMatrixOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addMatrixOp:inverse:"), animatedValueName, inverse); }
+static inline MDLTransformOrientOp       MDLTransformStack_AddOrientOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                             { return ((MDLTransformOrientOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addOrientOp:inverse:"), animatedValueName, inverse); }
+static inline MDLAnimatedValue           MDLTransformStack_AnimatedValueWithName(MDLTransformStack self, NSString name)                                                                      { return ((MDLAnimatedValue (*)(MDLTransformStack, SEL, NSString))bean_msgSend)(self, bean_sel("animatedValueWithName:"), name); }
+static inline simd_float4x4              MDLTransformStack_Float4x4AtTime(MDLTransformStack self, CGFloat time)                                                                              { return ((simd_float4x4 (*)(MDLTransformStack, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
+static inline simd_double4x4             MDLTransformStack_Double4x4AtTime(MDLTransformStack self, CGFloat time)                                                                             { return ((simd_double4x4 (*)(MDLTransformStack, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
+static inline NSUInteger                 MDLTransformStack_Count(MDLTransformStack self)                                                                                                     { return ((NSUInteger (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("count")); }
+static inline NSArray                    MDLTransformStack_KeyTimes(MDLTransformStack self)                                                                                                  { return ((NSArray (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("keyTimes")); }
+static inline NSArray                    MDLTransformStack_TransformOps(MDLTransformStack self)                                                                                              { return ((NSArray (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("transformOps")); }
+static inline id                         MDLTransformStack_CopyWithZone(MDLTransformStack self, NSZone* zone)                                                                                { return ((id (*)(MDLTransformStack, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline void                       MDLTransformStack_SetLocalTransform_ForTime(MDLTransformStack self, simd_float4x4 transform, CGFloat time)                                          { ((void (*)(MDLTransformStack, SEL, simd_float4x4, CGFloat))bean_msgSend)(self, bean_sel("setLocalTransform:forTime:"), transform, time); }
+static inline void                       MDLTransformStack_SetLocalTransform(MDLTransformStack self, simd_float4x4 transform)                                                                { ((void (*)(MDLTransformStack, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("setLocalTransform:"), transform); }
+static inline simd_float4x4              MDLTransformStack_LocalTransformAtTime(MDLTransformStack self, CGFloat time)                                                                        { return ((simd_float4x4 (*)(MDLTransformStack, SEL, CGFloat))bean_msgSend)(self, bean_sel("localTransformAtTime:"), time); }
+static inline simd_float4x4              MDLTransformStack_GlobalTransformWithObject_AtTime(MDLObject object, CGFloat time)                                                                  { return ((simd_float4x4 (*)(bean_class, SEL, MDLObject, CGFloat))bean_msgSend)(bean_cls("MDLTransformStack"), bean_sel("globalTransformWithObject:atTime:"), object, time); }
+static inline simd_float4x4              MDLTransformStack_Matrix(MDLTransformStack self)                                                                                                    { return ((simd_float4x4 (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("matrix")); }
+static inline void                       MDLTransformStack_SetMatrix(MDLTransformStack self, simd_float4x4 matrix)                                                                           { ((void (*)(MDLTransformStack, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("setMatrix:"), matrix); }
+static inline BOOL                       MDLTransformStack_ResetsTransform(MDLTransformStack self)                                                                                           { return ((BOOL (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("resetsTransform")); }
+static inline void                       MDLTransformStack_SetResetsTransform(MDLTransformStack self, BOOL resetsTransform)                                                                  { ((void (*)(MDLTransformStack, SEL, BOOL))bean_msgSend)(self, bean_sel("setResetsTransform:"), resetsTransform); }
+static inline CGFloat                    MDLTransformStack_MinimumTime(MDLTransformStack self)                                                                                               { return ((CGFloat (*)(MDLTransformStack, SEL))bean_msgSend_fpret)(self, bean_sel("minimumTime")); }
+static inline CGFloat                    MDLTransformStack_MaximumTime(MDLTransformStack self)                                                                                               { return ((CGFloat (*)(MDLTransformStack, SEL))bean_msgSend_fpret)(self, bean_sel("maximumTime")); }
 
 /* ===== MDLMaterialProperty ===== */
 #ifndef BEAN_TYPEDEF_MDLMaterialProperty
 #define BEAN_TYPEDEF_MDLMaterialProperty
 typedef bean_id MDLMaterialProperty;
 #endif
-static inline id                         MDLMaterialProperty_Init(MDLMaterialProperty self)                                                                                                                   { return ((id (*)(MDLMaterialProperty, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic)                                                     { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic))bean_msgSend)(self, bean_sel("initWithName:semantic:"), name, semantic); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_Float(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, CGFloat value)                                { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, CGFloat))bean_msgSend)(self, bean_sel("initWithName:semantic:float:"), name, semantic, value); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_Float2(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, void* value)                                 { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, void*))bean_msgSend)(self, bean_sel("initWithName:semantic:float2:"), name, semantic, value); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_Float3(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, void* value)                                 { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, void*))bean_msgSend)(self, bean_sel("initWithName:semantic:float3:"), name, semantic, value); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_Float4(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, void* value)                                 { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, void*))bean_msgSend)(self, bean_sel("initWithName:semantic:float4:"), name, semantic, value); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_Matrix4x4(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, simd_float4x4 value)                      { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, simd_float4x4))bean_msgSend)(self, bean_sel("initWithName:semantic:matrix4x4:"), name, semantic, value); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_URL(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, NSURL URL)                                      { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, NSURL))bean_msgSend)(self, bean_sel("initWithName:semantic:URL:"), name, semantic, URL); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_String(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, NSString string)                             { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, NSString))bean_msgSend)(self, bean_sel("initWithName:semantic:string:"), name, semantic, string); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_TextureSampler(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, MDLTextureSampler textureSampler)    { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, MDLTextureSampler))bean_msgSend)(self, bean_sel("initWithName:semantic:textureSampler:"), name, semantic, textureSampler); }
-static inline id                         MDLMaterialProperty_InitWithName_Semantic_Color(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, CGColorRef color)                             { return ((id (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, CGColorRef))bean_msgSend)(self, bean_sel("initWithName:semantic:color:"), name, semantic, color); }
+static inline MDLMaterialProperty        MDLMaterialProperty_Init(MDLMaterialProperty self)                                                                                                                   { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic)                                                     { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic))bean_msgSend)(self, bean_sel("initWithName:semantic:"), name, semantic); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_Float(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, CGFloat value)                                { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, CGFloat))bean_msgSend)(self, bean_sel("initWithName:semantic:float:"), name, semantic, value); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_Float2(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, void* value)                                 { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, void*))bean_msgSend)(self, bean_sel("initWithName:semantic:float2:"), name, semantic, value); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_Float3(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, void* value)                                 { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, void*))bean_msgSend)(self, bean_sel("initWithName:semantic:float3:"), name, semantic, value); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_Float4(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, void* value)                                 { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, void*))bean_msgSend)(self, bean_sel("initWithName:semantic:float4:"), name, semantic, value); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_Matrix4x4(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, simd_float4x4 value)                      { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, simd_float4x4))bean_msgSend)(self, bean_sel("initWithName:semantic:matrix4x4:"), name, semantic, value); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_URL(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, NSURL URL)                                      { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, NSURL))bean_msgSend)(self, bean_sel("initWithName:semantic:URL:"), name, semantic, URL); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_String(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, NSString string)                             { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, NSString))bean_msgSend)(self, bean_sel("initWithName:semantic:string:"), name, semantic, string); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_TextureSampler(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, MDLTextureSampler textureSampler)    { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, MDLTextureSampler))bean_msgSend)(self, bean_sel("initWithName:semantic:textureSampler:"), name, semantic, textureSampler); }
+static inline MDLMaterialProperty        MDLMaterialProperty_InitWithName_Semantic_Color(MDLMaterialProperty self, NSString name, MDLMaterialSemantic semantic, CGColorRef color)                             { return ((MDLMaterialProperty (*)(MDLMaterialProperty, SEL, NSString, MDLMaterialSemantic, CGColorRef))bean_msgSend)(self, bean_sel("initWithName:semantic:color:"), name, semantic, color); }
 static inline void                       MDLMaterialProperty_SetProperties(MDLMaterialProperty self, MDLMaterialProperty property)                                                                            { ((void (*)(MDLMaterialProperty, SEL, MDLMaterialProperty))bean_msgSend)(self, bean_sel("setProperties:"), property); }
 static inline MDLMaterialSemantic        MDLMaterialProperty_Semantic(MDLMaterialProperty self)                                                                                                               { return ((MDLMaterialSemantic (*)(MDLMaterialProperty, SEL))bean_msgSend)(self, bean_sel("semantic")); }
 static inline void                       MDLMaterialProperty_SetSemantic(MDLMaterialProperty self, MDLMaterialSemantic semantic)                                                                              { ((void (*)(MDLMaterialProperty, SEL, MDLMaterialSemantic))bean_msgSend)(self, bean_sel("setSemantic:"), semantic); }
@@ -4319,150 +5729,28 @@ static inline simd_float4x4              MDLMaterialProperty_Matrix4x4(MDLMateri
 static inline void                       MDLMaterialProperty_SetMatrix4x4(MDLMaterialProperty self, simd_float4x4 matrix4x4)                                                                                  { ((void (*)(MDLMaterialProperty, SEL, simd_float4x4))bean_msgSend)(self, bean_sel("setMatrix4x4:"), matrix4x4); }
 static inline CGFloat                    MDLMaterialProperty_Luminance(MDLMaterialProperty self)                                                                                                              { return ((CGFloat (*)(MDLMaterialProperty, SEL))bean_msgSend_fpret)(self, bean_sel("luminance")); }
 static inline void                       MDLMaterialProperty_SetLuminance(MDLMaterialProperty self, CGFloat luminance)                                                                                        { ((void (*)(MDLMaterialProperty, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLuminance:"), luminance); }
-
-/* ===== MDLMesh ===== */
-#ifndef BEAN_TYPEDEF_MDLMesh
-#define BEAN_TYPEDEF_MDLMesh
-typedef bean_id MDLMesh;
-#endif
-static inline id                           MDLMesh_InitWithBufferAllocator(MDLMesh self, id bufferAllocator)                                                                                                                                                                                                                                                            { return ((id (*)(MDLMesh, SEL, id))bean_msgSend)(self, bean_sel("initWithBufferAllocator:"), bufferAllocator); }
-static inline id                           MDLMesh_InitWithVertexBuffer_VertexCount_Descriptor_Submeshes(MDLMesh self, id vertexBuffer, NSUInteger vertexCount, MDLVertexDescriptor descriptor, NSArray submeshes)                                                                                                                                                      { return ((id (*)(MDLMesh, SEL, id, NSUInteger, MDLVertexDescriptor, NSArray))bean_msgSend)(self, bean_sel("initWithVertexBuffer:vertexCount:descriptor:submeshes:"), vertexBuffer, vertexCount, descriptor, submeshes); }
-static inline id                           MDLMesh_InitWithVertexBuffers_VertexCount_Descriptor_Submeshes(MDLMesh self, NSArray vertexBuffers, NSUInteger vertexCount, MDLVertexDescriptor descriptor, NSArray submeshes)                                                                                                                                               { return ((id (*)(MDLMesh, SEL, NSArray, NSUInteger, MDLVertexDescriptor, NSArray))bean_msgSend)(self, bean_sel("initWithVertexBuffers:vertexCount:descriptor:submeshes:"), vertexBuffers, vertexCount, descriptor, submeshes); }
-static inline MDLVertexAttributeData       MDLMesh_VertexAttributeDataForAttributeNamed(MDLMesh self, NSString name)                                                                                                                                                                                                                                                    { return ((MDLVertexAttributeData (*)(MDLMesh, SEL, NSString))bean_msgSend)(self, bean_sel("vertexAttributeDataForAttributeNamed:"), name); }
-static inline MDLVertexAttributeData       MDLMesh_VertexAttributeDataForAttributeNamed_AsFormat(MDLMesh self, NSString name, MDLVertexFormat format)                                                                                                                                                                                                                   { return ((MDLVertexAttributeData (*)(MDLMesh, SEL, NSString, MDLVertexFormat))bean_msgSend)(self, bean_sel("vertexAttributeDataForAttributeNamed:asFormat:"), name, format); }
-static inline MDLAxisAlignedBoundingBox    MDLMesh_BoundingBox(MDLMesh self)                                                                                                                                                                                                                                                                                            { return ((MDLAxisAlignedBoundingBox (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("boundingBox")); }
-static inline MDLVertexDescriptor          MDLMesh_VertexDescriptor(MDLMesh self)                                                                                                                                                                                                                                                                                       { return ((MDLVertexDescriptor (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("vertexDescriptor")); }
-static inline void                         MDLMesh_SetVertexDescriptor(MDLMesh self, MDLVertexDescriptor vertexDescriptor)                                                                                                                                                                                                                                              { ((void (*)(MDLMesh, SEL, MDLVertexDescriptor))bean_msgSend)(self, bean_sel("setVertexDescriptor:"), vertexDescriptor); }
-static inline NSUInteger                   MDLMesh_VertexCount(MDLMesh self)                                                                                                                                                                                                                                                                                            { return ((NSUInteger (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
-static inline void                         MDLMesh_SetVertexCount(MDLMesh self, NSUInteger vertexCount)                                                                                                                                                                                                                                                                 { ((void (*)(MDLMesh, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setVertexCount:"), vertexCount); }
-static inline NSArray                      MDLMesh_VertexBuffers(MDLMesh self)                                                                                                                                                                                                                                                                                          { return ((NSArray (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("vertexBuffers")); }
-static inline void                         MDLMesh_SetVertexBuffers(MDLMesh self, NSArray vertexBuffers)                                                                                                                                                                                                                                                                { ((void (*)(MDLMesh, SEL, NSArray))bean_msgSend)(self, bean_sel("setVertexBuffers:"), vertexBuffers); }
-static inline NSMutableArray               MDLMesh_Submeshes(MDLMesh self)                                                                                                                                                                                                                                                                                              { return ((NSMutableArray (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("submeshes")); }
-static inline void                         MDLMesh_SetSubmeshes(MDLMesh self, NSMutableArray submeshes)                                                                                                                                                                                                                                                                 { ((void (*)(MDLMesh, SEL, NSMutableArray))bean_msgSend)(self, bean_sel("setSubmeshes:"), submeshes); }
-static inline id                           MDLMesh_Allocator(MDLMesh self)                                                                                                                                                                                                                                                                                              { return ((id (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("allocator")); }
-static inline void                         MDLMesh_AddAttributeWithName_Format(MDLMesh self, NSString name, MDLVertexFormat format)                                                                                                                                                                                                                                     { ((void (*)(MDLMesh, SEL, NSString, MDLVertexFormat))bean_msgSend)(self, bean_sel("addAttributeWithName:format:"), name, format); }
-static inline void                         MDLMesh_AddAttributeWithName_Format_Type_Data_Stride(MDLMesh self, NSString name, MDLVertexFormat format, NSString type, NSData data, NSInteger stride)                                                                                                                                                                      { ((void (*)(MDLMesh, SEL, NSString, MDLVertexFormat, NSString, NSData, NSInteger))bean_msgSend)(self, bean_sel("addAttributeWithName:format:type:data:stride:"), name, format, type, data, stride); }
-static inline void                         MDLMesh_AddAttributeWithName_Format_Type_Data_Stride_Time(MDLMesh self, NSString name, MDLVertexFormat format, NSString type, NSData data, NSInteger stride, CGFloat time)                                                                                                                                                   { ((void (*)(MDLMesh, SEL, NSString, MDLVertexFormat, NSString, NSData, NSInteger, CGFloat))bean_msgSend)(self, bean_sel("addAttributeWithName:format:type:data:stride:time:"), name, format, type, data, stride, time); }
-static inline void                         MDLMesh_AddNormalsWithAttributeNamed_CreaseThreshold(MDLMesh self, NSString attributeName, CGFloat creaseThreshold)                                                                                                                                                                                                          { ((void (*)(MDLMesh, SEL, NSString, CGFloat))bean_msgSend)(self, bean_sel("addNormalsWithAttributeNamed:creaseThreshold:"), attributeName, creaseThreshold); }
-static inline void                         MDLMesh_AddTangentBasisForTextureCoordinateAttributeNamed_TangentAttributeNamed_BitangentAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName, NSString tangentAttributeName, NSString bitangentAttributeName)                                                                                               { ((void (*)(MDLMesh, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("addTangentBasisForTextureCoordinateAttributeNamed:tangentAttributeNamed:bitangentAttributeNamed:"), textureCoordinateAttributeName, tangentAttributeName, bitangentAttributeName); }
-static inline void                         MDLMesh_AddTangentBasisForTextureCoordinateAttributeNamed_NormalAttributeNamed_TangentAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName, NSString normalAttributeName, NSString tangentAttributeName)                                                                                                     { ((void (*)(MDLMesh, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("addTangentBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:"), textureCoordinateAttributeName, normalAttributeName, tangentAttributeName); }
-static inline void                         MDLMesh_AddOrthTanBasisForTextureCoordinateAttributeNamed_NormalAttributeNamed_TangentAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName, NSString normalAttributeName, NSString tangentAttributeName)                                                                                                     { ((void (*)(MDLMesh, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("addOrthTanBasisForTextureCoordinateAttributeNamed:normalAttributeNamed:tangentAttributeNamed:"), textureCoordinateAttributeName, normalAttributeName, tangentAttributeName); }
-static inline void                         MDLMesh_AddUnwrappedTextureCoordinatesForAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName)                                                                                                                                                                                                               { ((void (*)(MDLMesh, SEL, NSString))bean_msgSend)(self, bean_sel("addUnwrappedTextureCoordinatesForAttributeNamed:"), textureCoordinateAttributeName); }
-static inline void                         MDLMesh_FlipTextureCoordinatesInAttributeNamed(MDLMesh self, NSString textureCoordinateAttributeName)                                                                                                                                                                                                                        { ((void (*)(MDLMesh, SEL, NSString))bean_msgSend)(self, bean_sel("flipTextureCoordinatesInAttributeNamed:"), textureCoordinateAttributeName); }
-static inline void                         MDLMesh_MakeVerticesUnique(MDLMesh self)                                                                                                                                                                                                                                                                                     { ((void (*)(MDLMesh, SEL))bean_msgSend)(self, bean_sel("makeVerticesUnique")); }
-static inline BOOL                         MDLMesh_MakeVerticesUniqueAndReturnError(MDLMesh self, NSError error)                                                                                                                                                                                                                                                        { return ((BOOL (*)(MDLMesh, SEL, NSError))bean_msgSend)(self, bean_sel("makeVerticesUniqueAndReturnError:"), error); }
-static inline void                         MDLMesh_ReplaceAttributeNamed_WithData(MDLMesh self, NSString name, MDLVertexAttributeData newData)                                                                                                                                                                                                                          { ((void (*)(MDLMesh, SEL, NSString, MDLVertexAttributeData))bean_msgSend)(self, bean_sel("replaceAttributeNamed:withData:"), name, newData); }
-static inline void                         MDLMesh_UpdateAttributeNamed_WithData(MDLMesh self, NSString name, MDLVertexAttributeData newData)                                                                                                                                                                                                                           { ((void (*)(MDLMesh, SEL, NSString, MDLVertexAttributeData))bean_msgSend)(self, bean_sel("updateAttributeNamed:withData:"), name, newData); }
-static inline void                         MDLMesh_RemoveAttributeNamed(MDLMesh self, NSString name)                                                                                                                                                                                                                                                                    { ((void (*)(MDLMesh, SEL, NSString))bean_msgSend)(self, bean_sel("removeAttributeNamed:"), name); }
-static inline id                           MDLMesh_InitBoxWithExtent_Segments_InwardNormals_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                                                                          { return ((id (*)(MDLMesh, SEL, void*, void*, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initBoxWithExtent:segments:inwardNormals:geometryType:allocator:"), extent, segments, inwardNormals, geometryType, allocator); }
-static inline id                           MDLMesh_InitSphereWithExtent_Segments_InwardNormals_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                                                                       { return ((id (*)(MDLMesh, SEL, void*, void*, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initSphereWithExtent:segments:inwardNormals:geometryType:allocator:"), extent, segments, inwardNormals, geometryType, allocator); }
-static inline id                           MDLMesh_InitHemisphereWithExtent_Segments_InwardNormals_Cap_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, BOOL cap, MDLGeometryType geometryType, id allocator)                                                                                                                     { return ((id (*)(MDLMesh, SEL, void*, void*, BOOL, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initHemisphereWithExtent:segments:inwardNormals:cap:geometryType:allocator:"), extent, segments, inwardNormals, cap, geometryType, allocator); }
-static inline id                           MDLMesh_InitCylinderWithExtent_Segments_InwardNormals_TopCap_BottomCap_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, BOOL topCap, BOOL bottomCap, MDLGeometryType geometryType, id allocator)                                                                                       { return ((id (*)(MDLMesh, SEL, void*, void*, BOOL, BOOL, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initCylinderWithExtent:segments:inwardNormals:topCap:bottomCap:geometryType:allocator:"), extent, segments, inwardNormals, topCap, bottomCap, geometryType, allocator); }
-static inline id                           MDLMesh_InitCapsuleWithExtent_CylinderSegments_HemisphereSegments_InwardNormals_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, int hemisphereSegments, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                   { return ((id (*)(MDLMesh, SEL, void*, void*, int, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initCapsuleWithExtent:cylinderSegments:hemisphereSegments:inwardNormals:geometryType:allocator:"), extent, segments, hemisphereSegments, inwardNormals, geometryType, allocator); }
-static inline id                           MDLMesh_InitConeWithExtent_Segments_InwardNormals_Cap_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, BOOL inwardNormals, BOOL cap, MDLGeometryType geometryType, id allocator)                                                                                                                           { return ((id (*)(MDLMesh, SEL, void*, void*, BOOL, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initConeWithExtent:segments:inwardNormals:cap:geometryType:allocator:"), extent, segments, inwardNormals, cap, geometryType, allocator); }
-static inline id                           MDLMesh_InitPlaneWithExtent_Segments_GeometryType_Allocator(MDLMesh self, void* extent, void* segments, MDLGeometryType geometryType, id allocator)                                                                                                                                                                          { return ((id (*)(MDLMesh, SEL, void*, void*, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initPlaneWithExtent:segments:geometryType:allocator:"), extent, segments, geometryType, allocator); }
-static inline id                           MDLMesh_InitIcosahedronWithExtent_InwardNormals_GeometryType_Allocator(MDLMesh self, void* extent, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                                                                                           { return ((id (*)(MDLMesh, SEL, void*, BOOL, MDLGeometryType, id))bean_msgSend)(self, bean_sel("initIcosahedronWithExtent:inwardNormals:geometryType:allocator:"), extent, inwardNormals, geometryType, allocator); }
-static inline id                           MDLMesh_InitMeshBySubdividingMesh_SubmeshIndex_SubdivisionLevels_Allocator(MDLMesh self, MDLMesh mesh, int submeshIndex, NSUInteger subdivisionLevels, id allocator)                                                                                                                                                         { return ((id (*)(MDLMesh, SEL, MDLMesh, int, NSUInteger, id))bean_msgSend)(self, bean_sel("initMeshBySubdividingMesh:submeshIndex:subdivisionLevels:allocator:"), mesh, submeshIndex, subdivisionLevels, allocator); }
-static inline id                           MDLMesh_NewBoxWithDimensions_Segments_GeometryType_InwardNormals_Allocator(void* dimensions, void* segments, MDLGeometryType geometryType, BOOL inwardNormals, id allocator)                                                                                                                                                 { return ((id (*)(bean_class, SEL, void*, void*, MDLGeometryType, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newBoxWithDimensions:segments:geometryType:inwardNormals:allocator:"), dimensions, segments, geometryType, inwardNormals, allocator); }
-static inline id                           MDLMesh_NewEllipsoidWithRadii_RadialSegments_VerticalSegments_GeometryType_InwardNormals_Hemisphere_Allocator(void* radii, NSUInteger radialSegments, NSUInteger verticalSegments, MDLGeometryType geometryType, BOOL inwardNormals, BOOL hemisphere, id allocator)                                                          { return ((id (*)(bean_class, SEL, void*, NSUInteger, NSUInteger, MDLGeometryType, BOOL, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newEllipsoidWithRadii:radialSegments:verticalSegments:geometryType:inwardNormals:hemisphere:allocator:"), radii, radialSegments, verticalSegments, geometryType, inwardNormals, hemisphere, allocator); }
-static inline id                           MDLMesh_NewCylinderWithHeight_Radii_RadialSegments_VerticalSegments_GeometryType_InwardNormals_Allocator(CGFloat height, void* radii, NSUInteger radialSegments, NSUInteger verticalSegments, MDLGeometryType geometryType, BOOL inwardNormals, id allocator)                                                                { return ((id (*)(bean_class, SEL, CGFloat, void*, NSUInteger, NSUInteger, MDLGeometryType, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newCylinderWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:"), height, radii, radialSegments, verticalSegments, geometryType, inwardNormals, allocator); }
-static inline id                           MDLMesh_NewCapsuleWithHeight_Radii_RadialSegments_VerticalSegments_HemisphereSegments_GeometryType_InwardNormals_Allocator(CGFloat height, void* radii, NSUInteger radialSegments, NSUInteger verticalSegments, NSUInteger hemisphereSegments, MDLGeometryType geometryType, BOOL inwardNormals, id allocator)               { return ((id (*)(bean_class, SEL, CGFloat, void*, NSUInteger, NSUInteger, NSUInteger, MDLGeometryType, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newCapsuleWithHeight:radii:radialSegments:verticalSegments:hemisphereSegments:geometryType:inwardNormals:allocator:"), height, radii, radialSegments, verticalSegments, hemisphereSegments, geometryType, inwardNormals, allocator); }
-static inline id                           MDLMesh_NewEllipticalConeWithHeight_Radii_RadialSegments_VerticalSegments_GeometryType_InwardNormals_Allocator(CGFloat height, void* radii, NSUInteger radialSegments, NSUInteger verticalSegments, MDLGeometryType geometryType, BOOL inwardNormals, id allocator)                                                          { return ((id (*)(bean_class, SEL, CGFloat, void*, NSUInteger, NSUInteger, MDLGeometryType, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newEllipticalConeWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:"), height, radii, radialSegments, verticalSegments, geometryType, inwardNormals, allocator); }
-static inline id                           MDLMesh_NewPlaneWithDimensions_Segments_GeometryType_Allocator(void* dimensions, void* segments, MDLGeometryType geometryType, id allocator)                                                                                                                                                                                 { return ((id (*)(bean_class, SEL, void*, void*, MDLGeometryType, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newPlaneWithDimensions:segments:geometryType:allocator:"), dimensions, segments, geometryType, allocator); }
-static inline id                           MDLMesh_NewIcosahedronWithRadius_InwardNormals_GeometryType_Allocator(CGFloat radius, BOOL inwardNormals, MDLGeometryType geometryType, id allocator)                                                                                                                                                                        { return ((id (*)(bean_class, SEL, CGFloat, BOOL, MDLGeometryType, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newIcosahedronWithRadius:inwardNormals:geometryType:allocator:"), radius, inwardNormals, geometryType, allocator); }
-static inline id                           MDLMesh_NewIcosahedronWithRadius_InwardNormals_Allocator(CGFloat radius, BOOL inwardNormals, id allocator)                                                                                                                                                                                                                   { return ((id (*)(bean_class, SEL, CGFloat, BOOL, id))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newIcosahedronWithRadius:inwardNormals:allocator:"), radius, inwardNormals, allocator); }
-static inline id                           MDLMesh_NewSubdividedMesh_SubmeshIndex_SubdivisionLevels(MDLMesh mesh, NSUInteger submeshIndex, NSUInteger subdivisionLevels)                                                                                                                                                                                                { return ((id (*)(bean_class, SEL, MDLMesh, NSUInteger, NSUInteger))bean_msgSend)(bean_cls("MDLMesh"), bean_sel("newSubdividedMesh:submeshIndex:subdivisionLevels:"), mesh, submeshIndex, subdivisionLevels); }
-static inline BOOL                         MDLMesh_GenerateAmbientOcclusionTextureWithSize_RaysPerSample_AttenuationFactor_ObjectsToConsider_VertexAttributeNamed_MaterialPropertyNamed(MDLMesh self, void* textureSize, NSInteger raysPerSample, CGFloat attenuationFactor, NSArray objectsToConsider, NSString vertexAttributeName, NSString materialPropertyName)    { return ((BOOL (*)(MDLMesh, SEL, void*, NSInteger, CGFloat, NSArray, NSString, NSString))bean_msgSend)(self, bean_sel("generateAmbientOcclusionTextureWithSize:raysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:"), textureSize, raysPerSample, attenuationFactor, objectsToConsider, vertexAttributeName, materialPropertyName); }
-static inline BOOL                         MDLMesh_GenerateAmbientOcclusionTextureWithQuality_AttenuationFactor_ObjectsToConsider_VertexAttributeNamed_MaterialPropertyNamed(MDLMesh self, CGFloat bakeQuality, CGFloat attenuationFactor, NSArray objectsToConsider, NSString vertexAttributeName, NSString materialPropertyName)                                      { return ((BOOL (*)(MDLMesh, SEL, CGFloat, CGFloat, NSArray, NSString, NSString))bean_msgSend)(self, bean_sel("generateAmbientOcclusionTextureWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:"), bakeQuality, attenuationFactor, objectsToConsider, vertexAttributeName, materialPropertyName); }
-static inline BOOL                         MDLMesh_GenerateAmbientOcclusionVertexColorsWithRaysPerSample_AttenuationFactor_ObjectsToConsider_VertexAttributeNamed(MDLMesh self, NSInteger raysPerSample, CGFloat attenuationFactor, NSArray objectsToConsider, NSString vertexAttributeName)                                                                            { return ((BOOL (*)(MDLMesh, SEL, NSInteger, CGFloat, NSArray, NSString))bean_msgSend)(self, bean_sel("generateAmbientOcclusionVertexColorsWithRaysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:"), raysPerSample, attenuationFactor, objectsToConsider, vertexAttributeName); }
-static inline BOOL                         MDLMesh_GenerateAmbientOcclusionVertexColorsWithQuality_AttenuationFactor_ObjectsToConsider_VertexAttributeNamed(MDLMesh self, CGFloat bakeQuality, CGFloat attenuationFactor, NSArray objectsToConsider, NSString vertexAttributeName)                                                                                      { return ((BOOL (*)(MDLMesh, SEL, CGFloat, CGFloat, NSArray, NSString))bean_msgSend)(self, bean_sel("generateAmbientOcclusionVertexColorsWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:"), bakeQuality, attenuationFactor, objectsToConsider, vertexAttributeName); }
-static inline BOOL                         MDLMesh_GenerateLightMapTextureWithTextureSize_LightsToConsider_ObjectsToConsider_VertexAttributeNamed_MaterialPropertyNamed(MDLMesh self, void* textureSize, NSArray lightsToConsider, NSArray objectsToConsider, NSString vertexAttributeName, NSString materialPropertyName)                                              { return ((BOOL (*)(MDLMesh, SEL, void*, NSArray, NSArray, NSString, NSString))bean_msgSend)(self, bean_sel("generateLightMapTextureWithTextureSize:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:"), textureSize, lightsToConsider, objectsToConsider, vertexAttributeName, materialPropertyName); }
-static inline BOOL                         MDLMesh_GenerateLightMapTextureWithQuality_LightsToConsider_ObjectsToConsider_VertexAttributeNamed_MaterialPropertyNamed(MDLMesh self, CGFloat bakeQuality, NSArray lightsToConsider, NSArray objectsToConsider, NSString vertexAttributeName, NSString materialPropertyName)                                                { return ((BOOL (*)(MDLMesh, SEL, CGFloat, NSArray, NSArray, NSString, NSString))bean_msgSend)(self, bean_sel("generateLightMapTextureWithQuality:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:"), bakeQuality, lightsToConsider, objectsToConsider, vertexAttributeName, materialPropertyName); }
-static inline BOOL                         MDLMesh_GenerateLightMapVertexColorsWithLightsToConsider_ObjectsToConsider_VertexAttributeNamed(MDLMesh self, NSArray lightsToConsider, NSArray objectsToConsider, NSString vertexAttributeName)                                                                                                                             { return ((BOOL (*)(MDLMesh, SEL, NSArray, NSArray, NSString))bean_msgSend)(self, bean_sel("generateLightMapVertexColorsWithLightsToConsider:objectsToConsider:vertexAttributeNamed:"), lightsToConsider, objectsToConsider, vertexAttributeName); }
-
-/* ===== MDLTransformStack ===== */
-#ifndef BEAN_TYPEDEF_MDLTransformStack
-#define BEAN_TYPEDEF_MDLTransformStack
-typedef bean_id MDLTransformStack;
-#endif
-static inline id                         MDLTransformStack_Init(MDLTransformStack self)                                                                                                      { return ((id (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline MDLTransformTranslateOp    MDLTransformStack_AddTranslateOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                          { return ((MDLTransformTranslateOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addTranslateOp:inverse:"), animatedValueName, inverse); }
-static inline MDLTransformRotateXOp      MDLTransformStack_AddRotateXOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                            { return ((MDLTransformRotateXOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addRotateXOp:inverse:"), animatedValueName, inverse); }
-static inline MDLTransformRotateYOp      MDLTransformStack_AddRotateYOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                            { return ((MDLTransformRotateYOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addRotateYOp:inverse:"), animatedValueName, inverse); }
-static inline MDLTransformRotateZOp      MDLTransformStack_AddRotateZOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                            { return ((MDLTransformRotateZOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addRotateZOp:inverse:"), animatedValueName, inverse); }
-static inline MDLTransformRotateOp       MDLTransformStack_AddRotateOp_Order_Inverse(MDLTransformStack self, NSString animatedValueName, MDLTransformOpRotationOrder order, BOOL inverse)    { return ((MDLTransformRotateOp (*)(MDLTransformStack, SEL, NSString, MDLTransformOpRotationOrder, BOOL))bean_msgSend)(self, bean_sel("addRotateOp:order:inverse:"), animatedValueName, order, inverse); }
-static inline MDLTransformScaleOp        MDLTransformStack_AddScaleOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                              { return ((MDLTransformScaleOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addScaleOp:inverse:"), animatedValueName, inverse); }
-static inline MDLTransformMatrixOp       MDLTransformStack_AddMatrixOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                             { return ((MDLTransformMatrixOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addMatrixOp:inverse:"), animatedValueName, inverse); }
-static inline MDLTransformOrientOp       MDLTransformStack_AddOrientOp_Inverse(MDLTransformStack self, NSString animatedValueName, BOOL inverse)                                             { return ((MDLTransformOrientOp (*)(MDLTransformStack, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("addOrientOp:inverse:"), animatedValueName, inverse); }
-static inline MDLAnimatedValue           MDLTransformStack_AnimatedValueWithName(MDLTransformStack self, NSString name)                                                                      { return ((MDLAnimatedValue (*)(MDLTransformStack, SEL, NSString))bean_msgSend)(self, bean_sel("animatedValueWithName:"), name); }
-static inline simd_float4x4              MDLTransformStack_Float4x4AtTime(MDLTransformStack self, CGFloat time)                                                                              { return ((simd_float4x4 (*)(MDLTransformStack, SEL, CGFloat))bean_msgSend)(self, bean_sel("float4x4AtTime:"), time); }
-static inline simd_double4x4             MDLTransformStack_Double4x4AtTime(MDLTransformStack self, CGFloat time)                                                                             { return ((simd_double4x4 (*)(MDLTransformStack, SEL, CGFloat))bean_msgSend)(self, bean_sel("double4x4AtTime:"), time); }
-static inline NSUInteger                 MDLTransformStack_Count(MDLTransformStack self)                                                                                                     { return ((NSUInteger (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("count")); }
-static inline NSArray                    MDLTransformStack_KeyTimes(MDLTransformStack self)                                                                                                  { return ((NSArray (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("keyTimes")); }
-static inline NSArray                    MDLTransformStack_TransformOps(MDLTransformStack self)                                                                                              { return ((NSArray (*)(MDLTransformStack, SEL))bean_msgSend)(self, bean_sel("transformOps")); }
-
-/* ===== MDLMaterialPropertyConnection ===== */
-#ifndef BEAN_TYPEDEF_MDLMaterialPropertyConnection
-#define BEAN_TYPEDEF_MDLMaterialPropertyConnection
-typedef bean_id MDLMaterialPropertyConnection;
-#endif
-static inline id                     MDLMaterialPropertyConnection_Init(MDLMaterialPropertyConnection self)                                                                           { return ((id (*)(MDLMaterialPropertyConnection, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                     MDLMaterialPropertyConnection_InitWithOutput_Input(MDLMaterialPropertyConnection self, MDLMaterialProperty output, MDLMaterialProperty input)    { return ((id (*)(MDLMaterialPropertyConnection, SEL, MDLMaterialProperty, MDLMaterialProperty))bean_msgSend)(self, bean_sel("initWithOutput:input:"), output, input); }
-static inline MDLMaterialProperty    MDLMaterialPropertyConnection_Output(MDLMaterialPropertyConnection self)                                                                         { return ((MDLMaterialProperty (*)(MDLMaterialPropertyConnection, SEL))bean_msgSend)(self, bean_sel("output")); }
-static inline MDLMaterialProperty    MDLMaterialPropertyConnection_Input(MDLMaterialPropertyConnection self)                                                                          { return ((MDLMaterialProperty (*)(MDLMaterialPropertyConnection, SEL))bean_msgSend)(self, bean_sel("input")); }
-
-/* ===== MDLPhysicallyPlausibleScatteringFunction ===== */
-#ifndef BEAN_TYPEDEF_MDLPhysicallyPlausibleScatteringFunction
-#define BEAN_TYPEDEF_MDLPhysicallyPlausibleScatteringFunction
-typedef bean_id MDLPhysicallyPlausibleScatteringFunction;
-#endif
-static inline NSInteger              MDLPhysicallyPlausibleScatteringFunction_Version(MDLPhysicallyPlausibleScatteringFunction self)                { return ((NSInteger (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("version")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Subsurface(MDLPhysicallyPlausibleScatteringFunction self)             { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("subsurface")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Metallic(MDLPhysicallyPlausibleScatteringFunction self)               { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("metallic")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_SpecularAmount(MDLPhysicallyPlausibleScatteringFunction self)         { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("specularAmount")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_SpecularTint(MDLPhysicallyPlausibleScatteringFunction self)           { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("specularTint")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Roughness(MDLPhysicallyPlausibleScatteringFunction self)              { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("roughness")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Anisotropic(MDLPhysicallyPlausibleScatteringFunction self)            { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("anisotropic")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_AnisotropicRotation(MDLPhysicallyPlausibleScatteringFunction self)    { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("anisotropicRotation")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Sheen(MDLPhysicallyPlausibleScatteringFunction self)                  { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("sheen")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_SheenTint(MDLPhysicallyPlausibleScatteringFunction self)              { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("sheenTint")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Clearcoat(MDLPhysicallyPlausibleScatteringFunction self)              { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("clearcoat")); }
-static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_ClearcoatGloss(MDLPhysicallyPlausibleScatteringFunction self)         { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("clearcoatGloss")); }
+static inline id                         MDLMaterialProperty_CopyWithZone(MDLMaterialProperty self, NSZone* zone)                                                                                             { return ((id (*)(MDLMaterialProperty, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== MDLRelativeAssetResolver ===== */
 #ifndef BEAN_TYPEDEF_MDLRelativeAssetResolver
 #define BEAN_TYPEDEF_MDLRelativeAssetResolver
 typedef bean_id MDLRelativeAssetResolver;
 #endif
-static inline id          MDLRelativeAssetResolver_InitWithAsset(MDLRelativeAssetResolver self, MDLAsset asset)    { return ((id (*)(MDLRelativeAssetResolver, SEL, MDLAsset))bean_msgSend)(self, bean_sel("initWithAsset:"), asset); }
-static inline MDLAsset    MDLRelativeAssetResolver_Asset(MDLRelativeAssetResolver self)                            { return ((MDLAsset (*)(MDLRelativeAssetResolver, SEL))bean_msgSend)(self, bean_sel("asset")); }
-static inline void        MDLRelativeAssetResolver_SetAsset(MDLRelativeAssetResolver self, MDLAsset asset)         { ((void (*)(MDLRelativeAssetResolver, SEL, MDLAsset))bean_msgSend)(self, bean_sel("setAsset:"), asset); }
-
-/* ===== MDLScatteringFunction ===== */
-#ifndef BEAN_TYPEDEF_MDLScatteringFunction
-#define BEAN_TYPEDEF_MDLScatteringFunction
-typedef bean_id MDLScatteringFunction;
-#endif
-static inline NSString               MDLScatteringFunction_Name(MDLScatteringFunction self)                          { return ((NSString (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void                   MDLScatteringFunction_SetName(MDLScatteringFunction self, NSString name)        { ((void (*)(MDLScatteringFunction, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline MDLMaterialProperty    MDLScatteringFunction_BaseColor(MDLScatteringFunction self)                     { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("baseColor")); }
-static inline MDLMaterialProperty    MDLScatteringFunction_Emission(MDLScatteringFunction self)                      { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("emission")); }
-static inline MDLMaterialProperty    MDLScatteringFunction_Specular(MDLScatteringFunction self)                      { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("specular")); }
-static inline MDLMaterialProperty    MDLScatteringFunction_MaterialIndexOfRefraction(MDLScatteringFunction self)     { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("materialIndexOfRefraction")); }
-static inline MDLMaterialProperty    MDLScatteringFunction_InterfaceIndexOfRefraction(MDLScatteringFunction self)    { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("interfaceIndexOfRefraction")); }
-static inline MDLMaterialProperty    MDLScatteringFunction_Normal(MDLScatteringFunction self)                        { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("normal")); }
-static inline MDLMaterialProperty    MDLScatteringFunction_AmbientOcclusion(MDLScatteringFunction self)              { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("ambientOcclusion")); }
-static inline MDLMaterialProperty    MDLScatteringFunction_AmbientOcclusionScale(MDLScatteringFunction self)         { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("ambientOcclusionScale")); }
+static inline MDLRelativeAssetResolver    MDLRelativeAssetResolver_InitWithAsset(MDLRelativeAssetResolver self, MDLAsset asset)          { return ((MDLRelativeAssetResolver (*)(MDLRelativeAssetResolver, SEL, MDLAsset))bean_msgSend)(self, bean_sel("initWithAsset:"), asset); }
+static inline MDLAsset                    MDLRelativeAssetResolver_Asset(MDLRelativeAssetResolver self)                                  { return ((MDLAsset (*)(MDLRelativeAssetResolver, SEL))bean_msgSend)(self, bean_sel("asset")); }
+static inline void                        MDLRelativeAssetResolver_SetAsset(MDLRelativeAssetResolver self, MDLAsset asset)               { ((void (*)(MDLRelativeAssetResolver, SEL, MDLAsset))bean_msgSend)(self, bean_sel("setAsset:"), asset); }
+static inline BOOL                        MDLRelativeAssetResolver_CanResolveAssetNamed(MDLRelativeAssetResolver self, NSString name)    { return ((BOOL (*)(MDLRelativeAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("canResolveAssetNamed:"), name); }
+static inline NSURL                       MDLRelativeAssetResolver_ResolveAssetNamed(MDLRelativeAssetResolver self, NSString name)       { return ((NSURL (*)(MDLRelativeAssetResolver, SEL, NSString))bean_msgSend)(self, bean_sel("resolveAssetNamed:"), name); }
 
 /* ===== MDLVoxelArray ===== */
 #ifndef BEAN_TYPEDEF_MDLVoxelArray
 #define BEAN_TYPEDEF_MDLVoxelArray
 typedef bean_id MDLVoxelArray;
 #endif
-static inline id                           MDLVoxelArray_InitWithAsset_Divisions_PatchRadius(MDLVoxelArray self, MDLAsset asset, int divisions, CGFloat patchRadius)                                                                                       { return ((id (*)(MDLVoxelArray, SEL, MDLAsset, int, CGFloat))bean_msgSend)(self, bean_sel("initWithAsset:divisions:patchRadius:"), asset, divisions, patchRadius); }
-static inline id                           MDLVoxelArray_InitWithData_BoundingBox_VoxelExtent(MDLVoxelArray self, NSData voxelData, MDLAxisAlignedBoundingBox boundingBox, CGFloat voxelExtent)                                                            { return ((id (*)(MDLVoxelArray, SEL, NSData, MDLAxisAlignedBoundingBox, CGFloat))bean_msgSend)(self, bean_sel("initWithData:boundingBox:voxelExtent:"), voxelData, boundingBox, voxelExtent); }
-static inline id                           MDLVoxelArray_InitWithAsset_Divisions_InteriorShells_ExteriorShells_PatchRadius(MDLVoxelArray self, MDLAsset asset, int divisions, int interiorShells, int exteriorShells, CGFloat patchRadius)                 { return ((id (*)(MDLVoxelArray, SEL, MDLAsset, int, int, int, CGFloat))bean_msgSend)(self, bean_sel("initWithAsset:divisions:interiorShells:exteriorShells:patchRadius:"), asset, divisions, interiorShells, exteriorShells, patchRadius); }
-static inline id                           MDLVoxelArray_InitWithAsset_Divisions_InteriorNBWidth_ExteriorNBWidth_PatchRadius(MDLVoxelArray self, MDLAsset asset, int divisions, CGFloat interiorNBWidth, CGFloat exteriorNBWidth, CGFloat patchRadius)     { return ((id (*)(MDLVoxelArray, SEL, MDLAsset, int, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithAsset:divisions:interiorNBWidth:exteriorNBWidth:patchRadius:"), asset, divisions, interiorNBWidth, exteriorNBWidth, patchRadius); }
+static inline MDLVoxelArray                MDLVoxelArray_InitWithAsset_Divisions_PatchRadius(MDLVoxelArray self, MDLAsset asset, int divisions, CGFloat patchRadius)                                                                                       { return ((MDLVoxelArray (*)(MDLVoxelArray, SEL, MDLAsset, int, CGFloat))bean_msgSend)(self, bean_sel("initWithAsset:divisions:patchRadius:"), asset, divisions, patchRadius); }
+static inline MDLVoxelArray                MDLVoxelArray_InitWithData_BoundingBox_VoxelExtent(MDLVoxelArray self, NSData voxelData, MDLAxisAlignedBoundingBox boundingBox, CGFloat voxelExtent)                                                            { return ((MDLVoxelArray (*)(MDLVoxelArray, SEL, NSData, MDLAxisAlignedBoundingBox, CGFloat))bean_msgSend)(self, bean_sel("initWithData:boundingBox:voxelExtent:"), voxelData, boundingBox, voxelExtent); }
+static inline MDLVoxelArray                MDLVoxelArray_InitWithAsset_Divisions_InteriorShells_ExteriorShells_PatchRadius(MDLVoxelArray self, MDLAsset asset, int divisions, int interiorShells, int exteriorShells, CGFloat patchRadius)                 { return ((MDLVoxelArray (*)(MDLVoxelArray, SEL, MDLAsset, int, int, int, CGFloat))bean_msgSend)(self, bean_sel("initWithAsset:divisions:interiorShells:exteriorShells:patchRadius:"), asset, divisions, interiorShells, exteriorShells, patchRadius); }
+static inline MDLVoxelArray                MDLVoxelArray_InitWithAsset_Divisions_InteriorNBWidth_ExteriorNBWidth_PatchRadius(MDLVoxelArray self, MDLAsset asset, int divisions, CGFloat interiorNBWidth, CGFloat exteriorNBWidth, CGFloat patchRadius)     { return ((MDLVoxelArray (*)(MDLVoxelArray, SEL, MDLAsset, int, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithAsset:divisions:interiorNBWidth:exteriorNBWidth:patchRadius:"), asset, divisions, interiorNBWidth, exteriorNBWidth, patchRadius); }
 static inline BOOL                         MDLVoxelArray_VoxelExistsAtIndex_AllowAnyX_AllowAnyY_AllowAnyZ_AllowAnyShell(MDLVoxelArray self, void* index, BOOL allowAnyX, BOOL allowAnyY, BOOL allowAnyZ, BOOL allowAnyShell)                               { return ((BOOL (*)(MDLVoxelArray, SEL, void*, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("voxelExistsAtIndex:allowAnyX:allowAnyY:allowAnyZ:allowAnyShell:"), index, allowAnyX, allowAnyY, allowAnyZ, allowAnyShell); }
 static inline NSData                       MDLVoxelArray_VoxelsWithinExtent(MDLVoxelArray self, MDLVoxelIndexExtent extent)                                                                                                                                { return ((NSData (*)(MDLVoxelArray, SEL, MDLVoxelIndexExtent))bean_msgSend)(self, bean_sel("voxelsWithinExtent:"), extent); }
 static inline NSData                       MDLVoxelArray_VoxelIndices(MDLVoxelArray self)                                                                                                                                                                  { return ((NSData (*)(MDLVoxelArray, SEL))bean_msgSend)(self, bean_sel("voxelIndices")); }
@@ -4494,47 +5782,68 @@ static inline void                         MDLVoxelArray_SetShellFieldExteriorTh
 #define BEAN_TYPEDEF_MTKMesh
 typedef bean_id MTKMesh;
 #endif
-static inline id                     MTKMesh_Init(MTKMesh self)                                                                                              { return ((id (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                     MTKMesh_InitWithMesh_Device_Error(MTKMesh self, MDLMesh mesh, id device, NSError error)                                 { return ((id (*)(MTKMesh, SEL, MDLMesh, id, NSError))bean_msgSend)(self, bean_sel("initWithMesh:device:error:"), mesh, device, error); }
-static inline NSArray                MTKMesh_NewMeshesFromAsset_Device_SourceMeshes_Error(MDLAsset asset, id device, NSArray sourceMeshes, NSError error)    { return ((NSArray (*)(bean_class, SEL, MDLAsset, id, NSArray, NSError))bean_msgSend)(bean_cls("MTKMesh"), bean_sel("newMeshesFromAsset:device:sourceMeshes:error:"), asset, device, sourceMeshes, error); }
-static inline NSArray                MTKMesh_VertexBuffers(MTKMesh self)                                                                                     { return ((NSArray (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("vertexBuffers")); }
-static inline MDLVertexDescriptor    MTKMesh_VertexDescriptor(MTKMesh self)                                                                                  { return ((MDLVertexDescriptor (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("vertexDescriptor")); }
-static inline NSArray                MTKMesh_Submeshes(MTKMesh self)                                                                                         { return ((NSArray (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("submeshes")); }
-static inline NSUInteger             MTKMesh_VertexCount(MTKMesh self)                                                                                       { return ((NSUInteger (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
-static inline NSString               MTKMesh_Name(MTKMesh self)                                                                                              { return ((NSString (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void                   MTKMesh_SetName(MTKMesh self, NSString name)                                                                            { ((void (*)(MTKMesh, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline MTKMesh                MTKMesh_Init(MTKMesh self)                                                                                               { return ((MTKMesh (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MTKMesh                MTKMesh_InitWithMesh_Device_Error(MTKMesh self, MDLMesh mesh, id device, NSError* error)                                 { return ((MTKMesh (*)(MTKMesh, SEL, MDLMesh, id, NSError*))bean_msgSend)(self, bean_sel("initWithMesh:device:error:"), mesh, device, error); }
+static inline NSArray                MTKMesh_NewMeshesFromAsset_Device_SourceMeshes_Error(MDLAsset asset, id device, NSArray sourceMeshes, NSError* error)    { return ((NSArray (*)(bean_class, SEL, MDLAsset, id, NSArray, NSError*))bean_msgSend)(bean_cls("MTKMesh"), bean_sel("newMeshesFromAsset:device:sourceMeshes:error:"), asset, device, sourceMeshes, error); }
+static inline NSArray                MTKMesh_VertexBuffers(MTKMesh self)                                                                                      { return ((NSArray (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("vertexBuffers")); }
+static inline MDLVertexDescriptor    MTKMesh_VertexDescriptor(MTKMesh self)                                                                                   { return ((MDLVertexDescriptor (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("vertexDescriptor")); }
+static inline NSArray                MTKMesh_Submeshes(MTKMesh self)                                                                                          { return ((NSArray (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("submeshes")); }
+static inline NSUInteger             MTKMesh_VertexCount(MTKMesh self)                                                                                        { return ((NSUInteger (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
+static inline NSString               MTKMesh_Name(MTKMesh self)                                                                                               { return ((NSString (*)(MTKMesh, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                   MTKMesh_SetName(MTKMesh self, NSString name)                                                                             { ((void (*)(MTKMesh, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 
-/* ===== MDLMaterial ===== */
-#ifndef BEAN_TYPEDEF_MDLMaterial
-#define BEAN_TYPEDEF_MDLMaterial
-typedef bean_id MDLMaterial;
+/* ===== MDLMaterialPropertyConnection ===== */
+#ifndef BEAN_TYPEDEF_MDLMaterialPropertyConnection
+#define BEAN_TYPEDEF_MDLMaterialPropertyConnection
+typedef bean_id MDLMaterialPropertyConnection;
 #endif
-static inline id                       MDLMaterial_InitWithName_ScatteringFunction(MDLMaterial self, NSString name, MDLScatteringFunction scatteringFunction)    { return ((id (*)(MDLMaterial, SEL, NSString, MDLScatteringFunction))bean_msgSend)(self, bean_sel("initWithName:scatteringFunction:"), name, scatteringFunction); }
-static inline void                     MDLMaterial_SetProperty(MDLMaterial self, MDLMaterialProperty property)                                                   { ((void (*)(MDLMaterial, SEL, MDLMaterialProperty))bean_msgSend)(self, bean_sel("setProperty:"), property); }
-static inline void                     MDLMaterial_RemoveProperty(MDLMaterial self, MDLMaterialProperty property)                                                { ((void (*)(MDLMaterial, SEL, MDLMaterialProperty))bean_msgSend)(self, bean_sel("removeProperty:"), property); }
-static inline MDLMaterialProperty      MDLMaterial_PropertyNamed(MDLMaterial self, NSString name)                                                                { return ((MDLMaterialProperty (*)(MDLMaterial, SEL, NSString))bean_msgSend)(self, bean_sel("propertyNamed:"), name); }
-static inline MDLMaterialProperty      MDLMaterial_PropertyWithSemantic(MDLMaterial self, MDLMaterialSemantic semantic)                                          { return ((MDLMaterialProperty (*)(MDLMaterial, SEL, MDLMaterialSemantic))bean_msgSend)(self, bean_sel("propertyWithSemantic:"), semantic); }
-static inline NSArray                  MDLMaterial_PropertiesWithSemantic(MDLMaterial self, MDLMaterialSemantic semantic)                                        { return ((NSArray (*)(MDLMaterial, SEL, MDLMaterialSemantic))bean_msgSend)(self, bean_sel("propertiesWithSemantic:"), semantic); }
-static inline void                     MDLMaterial_RemoveAllProperties(MDLMaterial self)                                                                         { ((void (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("removeAllProperties")); }
-static inline void                     MDLMaterial_ResolveTexturesWithResolver(MDLMaterial self, id resolver)                                                    { ((void (*)(MDLMaterial, SEL, id))bean_msgSend)(self, bean_sel("resolveTexturesWithResolver:"), resolver); }
-static inline void                     MDLMaterial_LoadTexturesUsingResolver(MDLMaterial self, id resolver)                                                      { ((void (*)(MDLMaterial, SEL, id))bean_msgSend)(self, bean_sel("loadTexturesUsingResolver:"), resolver); }
-static inline MDLMaterialProperty      MDLMaterial_ObjectAtIndexedSubscript(MDLMaterial self, NSUInteger idx)                                                    { return ((MDLMaterialProperty (*)(MDLMaterial, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), idx); }
-static inline MDLMaterialProperty      MDLMaterial_ObjectForKeyedSubscript(MDLMaterial self, NSString name)                                                      { return ((MDLMaterialProperty (*)(MDLMaterial, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), name); }
-static inline MDLScatteringFunction    MDLMaterial_ScatteringFunction(MDLMaterial self)                                                                          { return ((MDLScatteringFunction (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("scatteringFunction")); }
-static inline NSString                 MDLMaterial_Name(MDLMaterial self)                                                                                        { return ((NSString (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void                     MDLMaterial_SetName(MDLMaterial self, NSString name)                                                                      { ((void (*)(MDLMaterial, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline MDLMaterial              MDLMaterial_BaseMaterial(MDLMaterial self)                                                                                { return ((MDLMaterial (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("baseMaterial")); }
-static inline void                     MDLMaterial_SetBaseMaterial(MDLMaterial self, MDLMaterial baseMaterial)                                                   { ((void (*)(MDLMaterial, SEL, MDLMaterial))bean_msgSend)(self, bean_sel("setBaseMaterial:"), baseMaterial); }
-static inline NSUInteger               MDLMaterial_Count(MDLMaterial self)                                                                                       { return ((NSUInteger (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("count")); }
-static inline MDLMaterialFace          MDLMaterial_MaterialFace(MDLMaterial self)                                                                                { return ((MDLMaterialFace (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("materialFace")); }
-static inline void                     MDLMaterial_SetMaterialFace(MDLMaterial self, MDLMaterialFace materialFace)                                               { ((void (*)(MDLMaterial, SEL, MDLMaterialFace))bean_msgSend)(self, bean_sel("setMaterialFace:"), materialFace); }
+static inline MDLMaterialPropertyConnection    MDLMaterialPropertyConnection_Init(MDLMaterialPropertyConnection self)                                                                           { return ((MDLMaterialPropertyConnection (*)(MDLMaterialPropertyConnection, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MDLMaterialPropertyConnection    MDLMaterialPropertyConnection_InitWithOutput_Input(MDLMaterialPropertyConnection self, MDLMaterialProperty output, MDLMaterialProperty input)    { return ((MDLMaterialPropertyConnection (*)(MDLMaterialPropertyConnection, SEL, MDLMaterialProperty, MDLMaterialProperty))bean_msgSend)(self, bean_sel("initWithOutput:input:"), output, input); }
+static inline MDLMaterialProperty              MDLMaterialPropertyConnection_Output(MDLMaterialPropertyConnection self)                                                                         { return ((MDLMaterialProperty (*)(MDLMaterialPropertyConnection, SEL))bean_msgSend)(self, bean_sel("output")); }
+static inline MDLMaterialProperty              MDLMaterialPropertyConnection_Input(MDLMaterialPropertyConnection self)                                                                          { return ((MDLMaterialProperty (*)(MDLMaterialPropertyConnection, SEL))bean_msgSend)(self, bean_sel("input")); }
+static inline NSString                         MDLMaterialPropertyConnection_Name(MDLMaterialPropertyConnection self)                                                                           { return ((NSString (*)(MDLMaterialPropertyConnection, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                             MDLMaterialPropertyConnection_SetName(MDLMaterialPropertyConnection self, NSString name)                                                         { ((void (*)(MDLMaterialPropertyConnection, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+
+/* ===== MDLPhysicallyPlausibleScatteringFunction ===== */
+#ifndef BEAN_TYPEDEF_MDLPhysicallyPlausibleScatteringFunction
+#define BEAN_TYPEDEF_MDLPhysicallyPlausibleScatteringFunction
+typedef bean_id MDLPhysicallyPlausibleScatteringFunction;
+#endif
+static inline NSInteger              MDLPhysicallyPlausibleScatteringFunction_Version(MDLPhysicallyPlausibleScatteringFunction self)                { return ((NSInteger (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("version")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Subsurface(MDLPhysicallyPlausibleScatteringFunction self)             { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("subsurface")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Metallic(MDLPhysicallyPlausibleScatteringFunction self)               { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("metallic")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_SpecularAmount(MDLPhysicallyPlausibleScatteringFunction self)         { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("specularAmount")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_SpecularTint(MDLPhysicallyPlausibleScatteringFunction self)           { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("specularTint")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Roughness(MDLPhysicallyPlausibleScatteringFunction self)              { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("roughness")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Anisotropic(MDLPhysicallyPlausibleScatteringFunction self)            { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("anisotropic")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_AnisotropicRotation(MDLPhysicallyPlausibleScatteringFunction self)    { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("anisotropicRotation")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Sheen(MDLPhysicallyPlausibleScatteringFunction self)                  { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("sheen")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_SheenTint(MDLPhysicallyPlausibleScatteringFunction self)              { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("sheenTint")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_Clearcoat(MDLPhysicallyPlausibleScatteringFunction self)              { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("clearcoat")); }
+static inline MDLMaterialProperty    MDLPhysicallyPlausibleScatteringFunction_ClearcoatGloss(MDLPhysicallyPlausibleScatteringFunction self)         { return ((MDLMaterialProperty (*)(MDLPhysicallyPlausibleScatteringFunction, SEL))bean_msgSend)(self, bean_sel("clearcoatGloss")); }
+
+/* ===== MDLScatteringFunction ===== */
+#ifndef BEAN_TYPEDEF_MDLScatteringFunction
+#define BEAN_TYPEDEF_MDLScatteringFunction
+typedef bean_id MDLScatteringFunction;
+#endif
+static inline NSString               MDLScatteringFunction_Name(MDLScatteringFunction self)                          { return ((NSString (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                   MDLScatteringFunction_SetName(MDLScatteringFunction self, NSString name)        { ((void (*)(MDLScatteringFunction, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline MDLMaterialProperty    MDLScatteringFunction_BaseColor(MDLScatteringFunction self)                     { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("baseColor")); }
+static inline MDLMaterialProperty    MDLScatteringFunction_Emission(MDLScatteringFunction self)                      { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("emission")); }
+static inline MDLMaterialProperty    MDLScatteringFunction_Specular(MDLScatteringFunction self)                      { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("specular")); }
+static inline MDLMaterialProperty    MDLScatteringFunction_MaterialIndexOfRefraction(MDLScatteringFunction self)     { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("materialIndexOfRefraction")); }
+static inline MDLMaterialProperty    MDLScatteringFunction_InterfaceIndexOfRefraction(MDLScatteringFunction self)    { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("interfaceIndexOfRefraction")); }
+static inline MDLMaterialProperty    MDLScatteringFunction_Normal(MDLScatteringFunction self)                        { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("normal")); }
+static inline MDLMaterialProperty    MDLScatteringFunction_AmbientOcclusion(MDLScatteringFunction self)              { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("ambientOcclusion")); }
+static inline MDLMaterialProperty    MDLScatteringFunction_AmbientOcclusionScale(MDLScatteringFunction self)         { return ((MDLMaterialProperty (*)(MDLScatteringFunction, SEL))bean_msgSend)(self, bean_sel("ambientOcclusionScale")); }
 
 /* ===== MTKSubmesh ===== */
 #ifndef BEAN_TYPEDEF_MTKSubmesh
 #define BEAN_TYPEDEF_MTKSubmesh
 typedef bean_id MTKSubmesh;
 #endif
-static inline id                  MTKSubmesh_Init(MTKSubmesh self)                      { return ((id (*)(MTKSubmesh, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline MTKSubmesh          MTKSubmesh_Init(MTKSubmesh self)                      { return ((MTKSubmesh (*)(MTKSubmesh, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline MTLPrimitiveType    MTKSubmesh_PrimitiveType(MTKSubmesh self)             { return ((MTLPrimitiveType (*)(MTKSubmesh, SEL))bean_msgSend)(self, bean_sel("primitiveType")); }
 static inline MTLIndexType        MTKSubmesh_IndexType(MTKSubmesh self)                 { return ((MTLIndexType (*)(MTKSubmesh, SEL))bean_msgSend)(self, bean_sel("indexType")); }
 static inline MTKMeshBuffer       MTKSubmesh_IndexBuffer(MTKSubmesh self)               { return ((MTKMeshBuffer (*)(MTKSubmesh, SEL))bean_msgSend)(self, bean_sel("indexBuffer")); }
@@ -4543,15 +5852,41 @@ static inline MTKMesh             MTKSubmesh_Mesh(MTKSubmesh self)              
 static inline NSString            MTKSubmesh_Name(MTKSubmesh self)                      { return ((NSString (*)(MTKSubmesh, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline void                MTKSubmesh_SetName(MTKSubmesh self, NSString name)    { ((void (*)(MTKSubmesh, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 
+/* ===== MDLMaterial ===== */
+#ifndef BEAN_TYPEDEF_MDLMaterial
+#define BEAN_TYPEDEF_MDLMaterial
+typedef bean_id MDLMaterial;
+#endif
+static inline MDLMaterial              MDLMaterial_InitWithName_ScatteringFunction(MDLMaterial self, NSString name, MDLScatteringFunction scatteringFunction)                { return ((MDLMaterial (*)(MDLMaterial, SEL, NSString, MDLScatteringFunction))bean_msgSend)(self, bean_sel("initWithName:scatteringFunction:"), name, scatteringFunction); }
+static inline void                     MDLMaterial_SetProperty(MDLMaterial self, MDLMaterialProperty property)                                                               { ((void (*)(MDLMaterial, SEL, MDLMaterialProperty))bean_msgSend)(self, bean_sel("setProperty:"), property); }
+static inline void                     MDLMaterial_RemoveProperty(MDLMaterial self, MDLMaterialProperty property)                                                            { ((void (*)(MDLMaterial, SEL, MDLMaterialProperty))bean_msgSend)(self, bean_sel("removeProperty:"), property); }
+static inline MDLMaterialProperty      MDLMaterial_PropertyNamed(MDLMaterial self, NSString name)                                                                            { return ((MDLMaterialProperty (*)(MDLMaterial, SEL, NSString))bean_msgSend)(self, bean_sel("propertyNamed:"), name); }
+static inline MDLMaterialProperty      MDLMaterial_PropertyWithSemantic(MDLMaterial self, MDLMaterialSemantic semantic)                                                      { return ((MDLMaterialProperty (*)(MDLMaterial, SEL, MDLMaterialSemantic))bean_msgSend)(self, bean_sel("propertyWithSemantic:"), semantic); }
+static inline NSArray                  MDLMaterial_PropertiesWithSemantic(MDLMaterial self, MDLMaterialSemantic semantic)                                                    { return ((NSArray (*)(MDLMaterial, SEL, MDLMaterialSemantic))bean_msgSend)(self, bean_sel("propertiesWithSemantic:"), semantic); }
+static inline void                     MDLMaterial_RemoveAllProperties(MDLMaterial self)                                                                                     { ((void (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("removeAllProperties")); }
+static inline void                     MDLMaterial_ResolveTexturesWithResolver(MDLMaterial self, id resolver)                                                                { ((void (*)(MDLMaterial, SEL, id))bean_msgSend)(self, bean_sel("resolveTexturesWithResolver:"), resolver); }
+static inline void                     MDLMaterial_LoadTexturesUsingResolver(MDLMaterial self, id resolver)                                                                  { ((void (*)(MDLMaterial, SEL, id))bean_msgSend)(self, bean_sel("loadTexturesUsingResolver:"), resolver); }
+static inline MDLMaterialProperty      MDLMaterial_ObjectAtIndexedSubscript(MDLMaterial self, NSUInteger idx)                                                                { return ((MDLMaterialProperty (*)(MDLMaterial, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), idx); }
+static inline MDLMaterialProperty      MDLMaterial_ObjectForKeyedSubscript(MDLMaterial self, NSString name)                                                                  { return ((MDLMaterialProperty (*)(MDLMaterial, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), name); }
+static inline MDLScatteringFunction    MDLMaterial_ScatteringFunction(MDLMaterial self)                                                                                      { return ((MDLScatteringFunction (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("scatteringFunction")); }
+static inline NSString                 MDLMaterial_Name(MDLMaterial self)                                                                                                    { return ((NSString (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                     MDLMaterial_SetName(MDLMaterial self, NSString name)                                                                                  { ((void (*)(MDLMaterial, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline MDLMaterial              MDLMaterial_BaseMaterial(MDLMaterial self)                                                                                            { return ((MDLMaterial (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("baseMaterial")); }
+static inline void                     MDLMaterial_SetBaseMaterial(MDLMaterial self, MDLMaterial baseMaterial)                                                               { ((void (*)(MDLMaterial, SEL, MDLMaterial))bean_msgSend)(self, bean_sel("setBaseMaterial:"), baseMaterial); }
+static inline NSUInteger               MDLMaterial_Count(MDLMaterial self)                                                                                                   { return ((NSUInteger (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("count")); }
+static inline MDLMaterialFace          MDLMaterial_MaterialFace(MDLMaterial self)                                                                                            { return ((MDLMaterialFace (*)(MDLMaterial, SEL))bean_msgSend)(self, bean_sel("materialFace")); }
+static inline void                     MDLMaterial_SetMaterialFace(MDLMaterial self, MDLMaterialFace materialFace)                                                           { ((void (*)(MDLMaterial, SEL, MDLMaterialFace))bean_msgSend)(self, bean_sel("setMaterialFace:"), materialFace); }
+static inline NSUInteger               MDLMaterial_CountByEnumeratingWithState_Objects_Count(MDLMaterial self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(MDLMaterial, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+
 /* ===== MDLSubmesh ===== */
 #ifndef BEAN_TYPEDEF_MDLSubmesh
 #define BEAN_TYPEDEF_MDLSubmesh
 typedef bean_id MDLSubmesh;
 #endif
-static inline id                    MDLSubmesh_InitWithName_IndexBuffer_IndexCount_IndexType_GeometryType_Material(MDLSubmesh self, NSString name, id indexBuffer, NSUInteger indexCount, MDLIndexBitDepth indexType, MDLGeometryType geometryType, MDLMaterial material)                                          { return ((id (*)(MDLSubmesh, SEL, NSString, id, NSUInteger, MDLIndexBitDepth, MDLGeometryType, MDLMaterial))bean_msgSend)(self, bean_sel("initWithName:indexBuffer:indexCount:indexType:geometryType:material:"), name, indexBuffer, indexCount, indexType, geometryType, material); }
-static inline id                    MDLSubmesh_InitWithIndexBuffer_IndexCount_IndexType_GeometryType_Material(MDLSubmesh self, id indexBuffer, NSUInteger indexCount, MDLIndexBitDepth indexType, MDLGeometryType geometryType, MDLMaterial material)                                                              { return ((id (*)(MDLSubmesh, SEL, id, NSUInteger, MDLIndexBitDepth, MDLGeometryType, MDLMaterial))bean_msgSend)(self, bean_sel("initWithIndexBuffer:indexCount:indexType:geometryType:material:"), indexBuffer, indexCount, indexType, geometryType, material); }
-static inline id                    MDLSubmesh_InitWithName_IndexBuffer_IndexCount_IndexType_GeometryType_Material_Topology(MDLSubmesh self, NSString name, id indexBuffer, NSUInteger indexCount, MDLIndexBitDepth indexType, MDLGeometryType geometryType, MDLMaterial material, MDLSubmeshTopology topology)    { return ((id (*)(MDLSubmesh, SEL, NSString, id, NSUInteger, MDLIndexBitDepth, MDLGeometryType, MDLMaterial, MDLSubmeshTopology))bean_msgSend)(self, bean_sel("initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:"), name, indexBuffer, indexCount, indexType, geometryType, material, topology); }
-static inline id                    MDLSubmesh_InitWithMDLSubmesh_IndexType_GeometryType(MDLSubmesh self, MDLSubmesh submesh, MDLIndexBitDepth indexType, MDLGeometryType geometryType)                                                                                                                            { return ((id (*)(MDLSubmesh, SEL, MDLSubmesh, MDLIndexBitDepth, MDLGeometryType))bean_msgSend)(self, bean_sel("initWithMDLSubmesh:indexType:geometryType:"), submesh, indexType, geometryType); }
+static inline MDLSubmesh            MDLSubmesh_InitWithName_IndexBuffer_IndexCount_IndexType_GeometryType_Material(MDLSubmesh self, NSString name, id indexBuffer, NSUInteger indexCount, MDLIndexBitDepth indexType, MDLGeometryType geometryType, MDLMaterial material)                                          { return ((MDLSubmesh (*)(MDLSubmesh, SEL, NSString, id, NSUInteger, MDLIndexBitDepth, MDLGeometryType, MDLMaterial))bean_msgSend)(self, bean_sel("initWithName:indexBuffer:indexCount:indexType:geometryType:material:"), name, indexBuffer, indexCount, indexType, geometryType, material); }
+static inline MDLSubmesh            MDLSubmesh_InitWithIndexBuffer_IndexCount_IndexType_GeometryType_Material(MDLSubmesh self, id indexBuffer, NSUInteger indexCount, MDLIndexBitDepth indexType, MDLGeometryType geometryType, MDLMaterial material)                                                              { return ((MDLSubmesh (*)(MDLSubmesh, SEL, id, NSUInteger, MDLIndexBitDepth, MDLGeometryType, MDLMaterial))bean_msgSend)(self, bean_sel("initWithIndexBuffer:indexCount:indexType:geometryType:material:"), indexBuffer, indexCount, indexType, geometryType, material); }
+static inline MDLSubmesh            MDLSubmesh_InitWithName_IndexBuffer_IndexCount_IndexType_GeometryType_Material_Topology(MDLSubmesh self, NSString name, id indexBuffer, NSUInteger indexCount, MDLIndexBitDepth indexType, MDLGeometryType geometryType, MDLMaterial material, MDLSubmeshTopology topology)    { return ((MDLSubmesh (*)(MDLSubmesh, SEL, NSString, id, NSUInteger, MDLIndexBitDepth, MDLGeometryType, MDLMaterial, MDLSubmeshTopology))bean_msgSend)(self, bean_sel("initWithName:indexBuffer:indexCount:indexType:geometryType:material:topology:"), name, indexBuffer, indexCount, indexType, geometryType, material, topology); }
+static inline MDLSubmesh            MDLSubmesh_InitWithMDLSubmesh_IndexType_GeometryType(MDLSubmesh self, MDLSubmesh submesh, MDLIndexBitDepth indexType, MDLGeometryType geometryType)                                                                                                                            { return ((MDLSubmesh (*)(MDLSubmesh, SEL, MDLSubmesh, MDLIndexBitDepth, MDLGeometryType))bean_msgSend)(self, bean_sel("initWithMDLSubmesh:indexType:geometryType:"), submesh, indexType, geometryType); }
 static inline id                    MDLSubmesh_IndexBufferAsIndexType(MDLSubmesh self, MDLIndexBitDepth indexType)                                                                                                                                                                                                 { return ((id (*)(MDLSubmesh, SEL, MDLIndexBitDepth))bean_msgSend)(self, bean_sel("indexBufferAsIndexType:"), indexType); }
 static inline id                    MDLSubmesh_IndexBuffer(MDLSubmesh self)                                                                                                                                                                                                                                        { return ((id (*)(MDLSubmesh, SEL))bean_msgSend)(self, bean_sel("indexBuffer")); }
 static inline NSUInteger            MDLSubmesh_IndexCount(MDLSubmesh self)                                                                                                                                                                                                                                         { return ((NSUInteger (*)(MDLSubmesh, SEL))bean_msgSend)(self, bean_sel("indexCount")); }
@@ -4565,27 +5900,27 @@ static inline NSString              MDLSubmesh_Name(MDLSubmesh self)            
 static inline void                  MDLSubmesh_SetName(MDLSubmesh self, NSString name)                                                                                                                                                                                                                             { ((void (*)(MDLSubmesh, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 
 /* ===== MDLSubmeshTopology ===== */
-static inline id            MDLSubmeshTopology_InitWithSubmesh(MDLSubmeshTopology self, MDLSubmesh submesh)                   { return ((id (*)(MDLSubmeshTopology, SEL, MDLSubmesh))bean_msgSend)(self, bean_sel("initWithSubmesh:"), submesh); }
-static inline id            MDLSubmeshTopology_FaceTopology(MDLSubmeshTopology self)                                          { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("faceTopology")); }
-static inline void          MDLSubmeshTopology_SetFaceTopology(MDLSubmeshTopology self, id faceTopology)                      { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setFaceTopology:"), faceTopology); }
-static inline NSUInteger    MDLSubmeshTopology_FaceCount(MDLSubmeshTopology self)                                             { return ((NSUInteger (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("faceCount")); }
-static inline void          MDLSubmeshTopology_SetFaceCount(MDLSubmeshTopology self, NSUInteger faceCount)                    { ((void (*)(MDLSubmeshTopology, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setFaceCount:"), faceCount); }
-static inline id            MDLSubmeshTopology_VertexCreaseIndices(MDLSubmeshTopology self)                                   { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("vertexCreaseIndices")); }
-static inline void          MDLSubmeshTopology_SetVertexCreaseIndices(MDLSubmeshTopology self, id vertexCreaseIndices)        { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setVertexCreaseIndices:"), vertexCreaseIndices); }
-static inline id            MDLSubmeshTopology_VertexCreases(MDLSubmeshTopology self)                                         { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("vertexCreases")); }
-static inline void          MDLSubmeshTopology_SetVertexCreases(MDLSubmeshTopology self, id vertexCreases)                    { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setVertexCreases:"), vertexCreases); }
-static inline NSUInteger    MDLSubmeshTopology_VertexCreaseCount(MDLSubmeshTopology self)                                     { return ((NSUInteger (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("vertexCreaseCount")); }
-static inline void          MDLSubmeshTopology_SetVertexCreaseCount(MDLSubmeshTopology self, NSUInteger vertexCreaseCount)    { ((void (*)(MDLSubmeshTopology, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setVertexCreaseCount:"), vertexCreaseCount); }
-static inline id            MDLSubmeshTopology_EdgeCreaseIndices(MDLSubmeshTopology self)                                     { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("edgeCreaseIndices")); }
-static inline void          MDLSubmeshTopology_SetEdgeCreaseIndices(MDLSubmeshTopology self, id edgeCreaseIndices)            { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setEdgeCreaseIndices:"), edgeCreaseIndices); }
-static inline id            MDLSubmeshTopology_EdgeCreases(MDLSubmeshTopology self)                                           { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("edgeCreases")); }
-static inline void          MDLSubmeshTopology_SetEdgeCreases(MDLSubmeshTopology self, id edgeCreases)                        { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setEdgeCreases:"), edgeCreases); }
-static inline NSUInteger    MDLSubmeshTopology_EdgeCreaseCount(MDLSubmeshTopology self)                                       { return ((NSUInteger (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("edgeCreaseCount")); }
-static inline void          MDLSubmeshTopology_SetEdgeCreaseCount(MDLSubmeshTopology self, NSUInteger edgeCreaseCount)        { ((void (*)(MDLSubmeshTopology, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setEdgeCreaseCount:"), edgeCreaseCount); }
-static inline id            MDLSubmeshTopology_Holes(MDLSubmeshTopology self)                                                 { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("holes")); }
-static inline void          MDLSubmeshTopology_SetHoles(MDLSubmeshTopology self, id holes)                                    { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setHoles:"), holes); }
-static inline NSUInteger    MDLSubmeshTopology_HoleCount(MDLSubmeshTopology self)                                             { return ((NSUInteger (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("holeCount")); }
-static inline void          MDLSubmeshTopology_SetHoleCount(MDLSubmeshTopology self, NSUInteger holeCount)                    { ((void (*)(MDLSubmeshTopology, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setHoleCount:"), holeCount); }
+static inline MDLSubmeshTopology    MDLSubmeshTopology_InitWithSubmesh(MDLSubmeshTopology self, MDLSubmesh submesh)                   { return ((MDLSubmeshTopology (*)(MDLSubmeshTopology, SEL, MDLSubmesh))bean_msgSend)(self, bean_sel("initWithSubmesh:"), submesh); }
+static inline id                    MDLSubmeshTopology_FaceTopology(MDLSubmeshTopology self)                                          { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("faceTopology")); }
+static inline void                  MDLSubmeshTopology_SetFaceTopology(MDLSubmeshTopology self, id faceTopology)                      { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setFaceTopology:"), faceTopology); }
+static inline NSUInteger            MDLSubmeshTopology_FaceCount(MDLSubmeshTopology self)                                             { return ((NSUInteger (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("faceCount")); }
+static inline void                  MDLSubmeshTopology_SetFaceCount(MDLSubmeshTopology self, NSUInteger faceCount)                    { ((void (*)(MDLSubmeshTopology, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setFaceCount:"), faceCount); }
+static inline id                    MDLSubmeshTopology_VertexCreaseIndices(MDLSubmeshTopology self)                                   { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("vertexCreaseIndices")); }
+static inline void                  MDLSubmeshTopology_SetVertexCreaseIndices(MDLSubmeshTopology self, id vertexCreaseIndices)        { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setVertexCreaseIndices:"), vertexCreaseIndices); }
+static inline id                    MDLSubmeshTopology_VertexCreases(MDLSubmeshTopology self)                                         { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("vertexCreases")); }
+static inline void                  MDLSubmeshTopology_SetVertexCreases(MDLSubmeshTopology self, id vertexCreases)                    { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setVertexCreases:"), vertexCreases); }
+static inline NSUInteger            MDLSubmeshTopology_VertexCreaseCount(MDLSubmeshTopology self)                                     { return ((NSUInteger (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("vertexCreaseCount")); }
+static inline void                  MDLSubmeshTopology_SetVertexCreaseCount(MDLSubmeshTopology self, NSUInteger vertexCreaseCount)    { ((void (*)(MDLSubmeshTopology, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setVertexCreaseCount:"), vertexCreaseCount); }
+static inline id                    MDLSubmeshTopology_EdgeCreaseIndices(MDLSubmeshTopology self)                                     { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("edgeCreaseIndices")); }
+static inline void                  MDLSubmeshTopology_SetEdgeCreaseIndices(MDLSubmeshTopology self, id edgeCreaseIndices)            { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setEdgeCreaseIndices:"), edgeCreaseIndices); }
+static inline id                    MDLSubmeshTopology_EdgeCreases(MDLSubmeshTopology self)                                           { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("edgeCreases")); }
+static inline void                  MDLSubmeshTopology_SetEdgeCreases(MDLSubmeshTopology self, id edgeCreases)                        { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setEdgeCreases:"), edgeCreases); }
+static inline NSUInteger            MDLSubmeshTopology_EdgeCreaseCount(MDLSubmeshTopology self)                                       { return ((NSUInteger (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("edgeCreaseCount")); }
+static inline void                  MDLSubmeshTopology_SetEdgeCreaseCount(MDLSubmeshTopology self, NSUInteger edgeCreaseCount)        { ((void (*)(MDLSubmeshTopology, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setEdgeCreaseCount:"), edgeCreaseCount); }
+static inline id                    MDLSubmeshTopology_Holes(MDLSubmeshTopology self)                                                 { return ((id (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("holes")); }
+static inline void                  MDLSubmeshTopology_SetHoles(MDLSubmeshTopology self, id holes)                                    { ((void (*)(MDLSubmeshTopology, SEL, id))bean_msgSend)(self, bean_sel("setHoles:"), holes); }
+static inline NSUInteger            MDLSubmeshTopology_HoleCount(MDLSubmeshTopology self)                                             { return ((NSUInteger (*)(MDLSubmeshTopology, SEL))bean_msgSend)(self, bean_sel("holeCount")); }
+static inline void                  MDLSubmeshTopology_SetHoleCount(MDLSubmeshTopology self, NSUInteger holeCount)                    { ((void (*)(MDLSubmeshTopology, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setHoleCount:"), holeCount); }
 
 
 #ifdef __cplusplus

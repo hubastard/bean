@@ -19,31 +19,29 @@ Include the framework headers you need:
 #include <bean/appkit.h>
 
 int main(void) {
-    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
+    BEAN_AUTORELEASE_POOL {
+        NSApplication app = NSApplication_SharedApplication();
+        NSApplication_SetActivationPolicy(app, NSApplicationActivationPolicyRegular);
 
-    NSApplication app = NSApplication_SharedApplication();
-    NSApplication_SetActivationPolicy(app, NSApplicationActivationPolicyRegular);
+        CGRect frame = CGRectMake(100, 100, 640, 480);
+        NSWindow window = NSWindow_InitWithContentRect_StyleMask_Backing_Defer(
+            (NSWindow)bean_alloc(bean_cls("NSWindow")),
+            frame,
+            NSWindowStyleMaskTitled | NSWindowStyleMaskClosable,
+            NSBackingStoreBuffered,
+            NO);
 
-    CGRect frame = CGRectMake(100, 100, 640, 480);
-    NSWindow window = NSWindow_InitWithContentRect_StyleMask_Backing_Defer(
-        (NSWindow)bean_alloc(bean_cls("NSWindow")),
-        frame,
-        NSWindowStyleMaskTitled | NSWindowStyleMaskClosable,
-        NSBackingStoreBuffered,
-        NO);
-
-    NSWindow_SetTitle(window, NSString_StringWithUTF8String("Hello"));
-    NSWindow_MakeKeyAndOrderFront(window, NULL);
-    NSApplication_Run(app);
-
-    bean_autorelease_pool_pop(pool);
+        NSWindow_SetTitle(window, NSString_StringWithUTF8String("Hello"));
+        NSWindow_MakeKeyAndOrderFront(window, NULL);
+        NSApplication_Run(app);
+    }
     return 0;
 }
 ```
 
 ## Supported frameworks
 
-27 frameworks are generated today, in dependency order:
+26 frameworks are generated today, in dependency order:
 
 - CoreFoundation
 - CoreGraphics
@@ -70,7 +68,6 @@ int main(void) {
 - GameplayKit
 - MapKit
 - PDFKit
-- QuickLook
 - StoreKit
 
 ## How the headers are generated

@@ -31,9 +31,17 @@ static const GKRTreeSplitStrategy GKRTreeSplitStrategyQuadratic = (GKRTreeSplitS
 static const GKRTreeSplitStrategy GKRTreeSplitStrategyReduceOverlap = (GKRTreeSplitStrategy)3;
 
 /* ===== forward typedefs ===== */
+#ifndef BEAN_TYPEDEF_CAAction
+#define BEAN_TYPEDEF_CAAction
+typedef bean_id CAAction;
+#endif
 #ifndef BEAN_TYPEDEF_CAAnimation
 #define BEAN_TYPEDEF_CAAnimation
 typedef bean_id CAAnimation;
+#endif
+#ifndef BEAN_TYPEDEF_CAAnimationDelegate
+#define BEAN_TYPEDEF_CAAnimationDelegate
+typedef bean_id CAAnimationDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_CAAnimationGroup
 #define BEAN_TYPEDEF_CAAnimationGroup
@@ -79,6 +87,18 @@ typedef bean_id CAKeyframeAnimation;
 #define BEAN_TYPEDEF_CALayer
 typedef bean_id CALayer;
 #endif
+#ifndef BEAN_TYPEDEF_CALayerDelegate
+#define BEAN_TYPEDEF_CALayerDelegate
+typedef bean_id CALayerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_CALayoutManager
+#define BEAN_TYPEDEF_CALayoutManager
+typedef bean_id CALayoutManager;
+#endif
+#ifndef BEAN_TYPEDEF_CAMediaTiming
+#define BEAN_TYPEDEF_CAMediaTiming
+typedef bean_id CAMediaTiming;
+#endif
 #ifndef BEAN_TYPEDEF_CAMediaTimingFunction
 #define BEAN_TYPEDEF_CAMediaTimingFunction
 typedef bean_id CAMediaTimingFunction;
@@ -87,9 +107,17 @@ typedef bean_id CAMediaTimingFunction;
 #define BEAN_TYPEDEF_CAMetalDisplayLink
 typedef bean_id CAMetalDisplayLink;
 #endif
+#ifndef BEAN_TYPEDEF_CAMetalDisplayLinkDelegate
+#define BEAN_TYPEDEF_CAMetalDisplayLinkDelegate
+typedef bean_id CAMetalDisplayLinkDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_CAMetalDisplayLinkUpdate
 #define BEAN_TYPEDEF_CAMetalDisplayLinkUpdate
 typedef bean_id CAMetalDisplayLinkUpdate;
+#endif
+#ifndef BEAN_TYPEDEF_CAMetalDrawable
+#define BEAN_TYPEDEF_CAMetalDrawable
+typedef bean_id CAMetalDrawable;
 #endif
 #ifndef BEAN_TYPEDEF_CAMetalLayer
 #define BEAN_TYPEDEF_CAMetalLayer
@@ -155,6 +183,10 @@ typedef bean_id CAValueFunction;
 #define BEAN_TYPEDEF_CIAztecCodeDescriptor
 typedef bean_id CIAztecCodeDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_CIBarcodeDescriptor
+#define BEAN_TYPEDEF_CIBarcodeDescriptor
+typedef bean_id CIBarcodeDescriptor;
+#endif
 #ifndef BEAN_TYPEDEF_CIBlendKernel
 #define BEAN_TYPEDEF_CIBlendKernel
 typedef bean_id CIBlendKernel;
@@ -191,6 +223,10 @@ typedef bean_id CIFeature;
 #define BEAN_TYPEDEF_CIFilter
 typedef bean_id CIFilter;
 #endif
+#ifndef BEAN_TYPEDEF_CIFilterConstructor
+#define BEAN_TYPEDEF_CIFilterConstructor
+typedef bean_id CIFilterConstructor;
+#endif
 #ifndef BEAN_TYPEDEF_CIFilterGenerator
 #define BEAN_TYPEDEF_CIFilterGenerator
 typedef bean_id CIFilterGenerator;
@@ -207,9 +243,17 @@ typedef bean_id CIImage;
 #define BEAN_TYPEDEF_CIImageAccumulator
 typedef bean_id CIImageAccumulator;
 #endif
+#ifndef BEAN_TYPEDEF_CIImageProcessorInput
+#define BEAN_TYPEDEF_CIImageProcessorInput
+typedef bean_id CIImageProcessorInput;
+#endif
 #ifndef BEAN_TYPEDEF_CIImageProcessorKernel
 #define BEAN_TYPEDEF_CIImageProcessorKernel
 typedef bean_id CIImageProcessorKernel;
+#endif
+#ifndef BEAN_TYPEDEF_CIImageProcessorOutput
+#define BEAN_TYPEDEF_CIImageProcessorOutput
+typedef bean_id CIImageProcessorOutput;
 #endif
 #ifndef BEAN_TYPEDEF_CIKernel
 #define BEAN_TYPEDEF_CIKernel
@@ -222,6 +266,10 @@ typedef bean_id CIPDF417CodeDescriptor;
 #ifndef BEAN_TYPEDEF_CIPlugIn
 #define BEAN_TYPEDEF_CIPlugIn
 typedef bean_id CIPlugIn;
+#endif
+#ifndef BEAN_TYPEDEF_CIPlugInRegistration
+#define BEAN_TYPEDEF_CIPlugInRegistration
+typedef bean_id CIPlugInRegistration;
 #endif
 #ifndef BEAN_TYPEDEF_CIQRCodeDescriptor
 #define BEAN_TYPEDEF_CIQRCodeDescriptor
@@ -278,6 +326,10 @@ typedef bean_id CKReference;
 #ifndef BEAN_TYPEDEF_CKSubscription
 #define BEAN_TYPEDEF_CKSubscription
 typedef bean_id CKSubscription;
+#endif
+#ifndef BEAN_TYPEDEF_CTAdaptiveImageProviding
+#define BEAN_TYPEDEF_CTAdaptiveImageProviding
+typedef bean_id CTAdaptiveImageProviding;
 #endif
 #ifndef BEAN_TYPEDEF_GKBehavior
 #define BEAN_TYPEDEF_GKBehavior
@@ -343,45 +395,97 @@ typedef bean_id MTL4AccelerationStructureMotionTriangleGeometryDescriptor;
 #define BEAN_TYPEDEF_MTL4AccelerationStructureTriangleGeometryDescriptor
 typedef bean_id MTL4AccelerationStructureTriangleGeometryDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4Archive
+#define BEAN_TYPEDEF_MTL4Archive
+typedef bean_id MTL4Archive;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4ArgumentTable
+#define BEAN_TYPEDEF_MTL4ArgumentTable
+typedef bean_id MTL4ArgumentTable;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4ArgumentTableDescriptor
 #define BEAN_TYPEDEF_MTL4ArgumentTableDescriptor
 typedef bean_id MTL4ArgumentTableDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4BinaryFunction
+#define BEAN_TYPEDEF_MTL4BinaryFunction
+typedef bean_id MTL4BinaryFunction;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4BinaryFunctionDescriptor
 #define BEAN_TYPEDEF_MTL4BinaryFunctionDescriptor
 typedef bean_id MTL4BinaryFunctionDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4CommandAllocator
+#define BEAN_TYPEDEF_MTL4CommandAllocator
+typedef bean_id MTL4CommandAllocator;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4CommandAllocatorDescriptor
 #define BEAN_TYPEDEF_MTL4CommandAllocatorDescriptor
 typedef bean_id MTL4CommandAllocatorDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4CommandBuffer
+#define BEAN_TYPEDEF_MTL4CommandBuffer
+typedef bean_id MTL4CommandBuffer;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4CommandBufferOptions
 #define BEAN_TYPEDEF_MTL4CommandBufferOptions
 typedef bean_id MTL4CommandBufferOptions;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4CommandEncoder
+#define BEAN_TYPEDEF_MTL4CommandEncoder
+typedef bean_id MTL4CommandEncoder;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4CommandQueue
+#define BEAN_TYPEDEF_MTL4CommandQueue
+typedef bean_id MTL4CommandQueue;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4CommandQueueDescriptor
 #define BEAN_TYPEDEF_MTL4CommandQueueDescriptor
 typedef bean_id MTL4CommandQueueDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4CommitFeedback
+#define BEAN_TYPEDEF_MTL4CommitFeedback
+typedef bean_id MTL4CommitFeedback;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4CommitOptions
 #define BEAN_TYPEDEF_MTL4CommitOptions
 typedef bean_id MTL4CommitOptions;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4Compiler
+#define BEAN_TYPEDEF_MTL4Compiler
+typedef bean_id MTL4Compiler;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4CompilerDescriptor
 #define BEAN_TYPEDEF_MTL4CompilerDescriptor
 typedef bean_id MTL4CompilerDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4CompilerTask
+#define BEAN_TYPEDEF_MTL4CompilerTask
+typedef bean_id MTL4CompilerTask;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4CompilerTaskOptions
 #define BEAN_TYPEDEF_MTL4CompilerTaskOptions
 typedef bean_id MTL4CompilerTaskOptions;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4ComputeCommandEncoder
+#define BEAN_TYPEDEF_MTL4ComputeCommandEncoder
+typedef bean_id MTL4ComputeCommandEncoder;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4ComputePipelineDescriptor
 #define BEAN_TYPEDEF_MTL4ComputePipelineDescriptor
 typedef bean_id MTL4ComputePipelineDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4CounterHeap
+#define BEAN_TYPEDEF_MTL4CounterHeap
+typedef bean_id MTL4CounterHeap;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4CounterHeapDescriptor
 #define BEAN_TYPEDEF_MTL4CounterHeapDescriptor
 typedef bean_id MTL4CounterHeapDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4FunctionDescriptor
+#define BEAN_TYPEDEF_MTL4FunctionDescriptor
+typedef bean_id MTL4FunctionDescriptor;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4IndirectInstanceAccelerationStructureDescriptor
 #define BEAN_TYPEDEF_MTL4IndirectInstanceAccelerationStructureDescriptor
@@ -399,6 +503,10 @@ typedef bean_id MTL4LibraryDescriptor;
 #define BEAN_TYPEDEF_MTL4LibraryFunctionDescriptor
 typedef bean_id MTL4LibraryFunctionDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4MachineLearningCommandEncoder
+#define BEAN_TYPEDEF_MTL4MachineLearningCommandEncoder
+typedef bean_id MTL4MachineLearningCommandEncoder;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4MachineLearningPipelineDescriptor
 #define BEAN_TYPEDEF_MTL4MachineLearningPipelineDescriptor
 typedef bean_id MTL4MachineLearningPipelineDescriptor;
@@ -407,9 +515,17 @@ typedef bean_id MTL4MachineLearningPipelineDescriptor;
 #define BEAN_TYPEDEF_MTL4MachineLearningPipelineReflection
 typedef bean_id MTL4MachineLearningPipelineReflection;
 #endif
+#ifndef BEAN_TYPEDEF_MTL4MachineLearningPipelineState
+#define BEAN_TYPEDEF_MTL4MachineLearningPipelineState
+typedef bean_id MTL4MachineLearningPipelineState;
+#endif
 #ifndef BEAN_TYPEDEF_MTL4MeshRenderPipelineDescriptor
 #define BEAN_TYPEDEF_MTL4MeshRenderPipelineDescriptor
 typedef bean_id MTL4MeshRenderPipelineDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4PipelineDataSetSerializer
+#define BEAN_TYPEDEF_MTL4PipelineDataSetSerializer
+typedef bean_id MTL4PipelineDataSetSerializer;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4PipelineDataSetSerializerDescriptor
 #define BEAN_TYPEDEF_MTL4PipelineDataSetSerializerDescriptor
@@ -430,6 +546,10 @@ typedef bean_id MTL4PipelineStageDynamicLinkingDescriptor;
 #ifndef BEAN_TYPEDEF_MTL4PrimitiveAccelerationStructureDescriptor
 #define BEAN_TYPEDEF_MTL4PrimitiveAccelerationStructureDescriptor
 typedef bean_id MTL4PrimitiveAccelerationStructureDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTL4RenderCommandEncoder
+#define BEAN_TYPEDEF_MTL4RenderCommandEncoder
+typedef bean_id MTL4RenderCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTL4RenderPassDescriptor
 #define BEAN_TYPEDEF_MTL4RenderPassDescriptor
@@ -471,9 +591,17 @@ typedef bean_id MTL4StitchedFunctionDescriptor;
 #define BEAN_TYPEDEF_MTL4TileRenderPipelineDescriptor
 typedef bean_id MTL4TileRenderPipelineDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLAccelerationStructure
+#define BEAN_TYPEDEF_MTLAccelerationStructure
+typedef bean_id MTLAccelerationStructure;
+#endif
 #ifndef BEAN_TYPEDEF_MTLAccelerationStructureBoundingBoxGeometryDescriptor
 #define BEAN_TYPEDEF_MTLAccelerationStructureBoundingBoxGeometryDescriptor
 typedef bean_id MTLAccelerationStructureBoundingBoxGeometryDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLAccelerationStructureCommandEncoder
+#define BEAN_TYPEDEF_MTLAccelerationStructureCommandEncoder
+typedef bean_id MTLAccelerationStructureCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLAccelerationStructureCurveGeometryDescriptor
 #define BEAN_TYPEDEF_MTLAccelerationStructureCurveGeometryDescriptor
@@ -515,6 +643,10 @@ typedef bean_id MTLAccelerationStructurePassSampleBufferAttachmentDescriptorArra
 #define BEAN_TYPEDEF_MTLAccelerationStructureTriangleGeometryDescriptor
 typedef bean_id MTLAccelerationStructureTriangleGeometryDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLAllocation
+#define BEAN_TYPEDEF_MTLAllocation
+typedef bean_id MTLAllocation;
+#endif
 #ifndef BEAN_TYPEDEF_MTLArchitecture
 #define BEAN_TYPEDEF_MTLArchitecture
 typedef bean_id MTLArchitecture;
@@ -526,6 +658,10 @@ typedef bean_id MTLArgument;
 #ifndef BEAN_TYPEDEF_MTLArgumentDescriptor
 #define BEAN_TYPEDEF_MTLArgumentDescriptor
 typedef bean_id MTLArgumentDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLArgumentEncoder
+#define BEAN_TYPEDEF_MTLArgumentEncoder
+typedef bean_id MTLArgumentEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLArrayType
 #define BEAN_TYPEDEF_MTLArrayType
@@ -543,9 +679,21 @@ typedef bean_id MTLAttributeDescriptor;
 #define BEAN_TYPEDEF_MTLAttributeDescriptorArray
 typedef bean_id MTLAttributeDescriptorArray;
 #endif
+#ifndef BEAN_TYPEDEF_MTLBinaryArchive
+#define BEAN_TYPEDEF_MTLBinaryArchive
+typedef bean_id MTLBinaryArchive;
+#endif
 #ifndef BEAN_TYPEDEF_MTLBinaryArchiveDescriptor
 #define BEAN_TYPEDEF_MTLBinaryArchiveDescriptor
 typedef bean_id MTLBinaryArchiveDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLBinding
+#define BEAN_TYPEDEF_MTLBinding
+typedef bean_id MTLBinding;
+#endif
+#ifndef BEAN_TYPEDEF_MTLBlitCommandEncoder
+#define BEAN_TYPEDEF_MTLBlitCommandEncoder
+typedef bean_id MTLBlitCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLBlitPassDescriptor
 #define BEAN_TYPEDEF_MTLBlitPassDescriptor
@@ -558,6 +706,14 @@ typedef bean_id MTLBlitPassSampleBufferAttachmentDescriptor;
 #ifndef BEAN_TYPEDEF_MTLBlitPassSampleBufferAttachmentDescriptorArray
 #define BEAN_TYPEDEF_MTLBlitPassSampleBufferAttachmentDescriptorArray
 typedef bean_id MTLBlitPassSampleBufferAttachmentDescriptorArray;
+#endif
+#ifndef BEAN_TYPEDEF_MTLBuffer
+#define BEAN_TYPEDEF_MTLBuffer
+typedef bean_id MTLBuffer;
+#endif
+#ifndef BEAN_TYPEDEF_MTLBufferBinding
+#define BEAN_TYPEDEF_MTLBufferBinding
+typedef bean_id MTLBufferBinding;
 #endif
 #ifndef BEAN_TYPEDEF_MTLBufferLayoutDescriptor
 #define BEAN_TYPEDEF_MTLBufferLayoutDescriptor
@@ -575,9 +731,29 @@ typedef bean_id MTLCaptureDescriptor;
 #define BEAN_TYPEDEF_MTLCaptureManager
 typedef bean_id MTLCaptureManager;
 #endif
+#ifndef BEAN_TYPEDEF_MTLCaptureScope
+#define BEAN_TYPEDEF_MTLCaptureScope
+typedef bean_id MTLCaptureScope;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCommandBuffer
+#define BEAN_TYPEDEF_MTLCommandBuffer
+typedef bean_id MTLCommandBuffer;
+#endif
 #ifndef BEAN_TYPEDEF_MTLCommandBufferDescriptor
 #define BEAN_TYPEDEF_MTLCommandBufferDescriptor
 typedef bean_id MTLCommandBufferDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCommandBufferEncoderInfo
+#define BEAN_TYPEDEF_MTLCommandBufferEncoderInfo
+typedef bean_id MTLCommandBufferEncoderInfo;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCommandEncoder
+#define BEAN_TYPEDEF_MTLCommandEncoder
+typedef bean_id MTLCommandEncoder;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCommandQueue
+#define BEAN_TYPEDEF_MTLCommandQueue
+typedef bean_id MTLCommandQueue;
 #endif
 #ifndef BEAN_TYPEDEF_MTLCommandQueueDescriptor
 #define BEAN_TYPEDEF_MTLCommandQueueDescriptor
@@ -586,6 +762,10 @@ typedef bean_id MTLCommandQueueDescriptor;
 #ifndef BEAN_TYPEDEF_MTLCompileOptions
 #define BEAN_TYPEDEF_MTLCompileOptions
 typedef bean_id MTLCompileOptions;
+#endif
+#ifndef BEAN_TYPEDEF_MTLComputeCommandEncoder
+#define BEAN_TYPEDEF_MTLComputeCommandEncoder
+typedef bean_id MTLComputeCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLComputePassDescriptor
 #define BEAN_TYPEDEF_MTLComputePassDescriptor
@@ -607,13 +787,57 @@ typedef bean_id MTLComputePipelineDescriptor;
 #define BEAN_TYPEDEF_MTLComputePipelineReflection
 typedef bean_id MTLComputePipelineReflection;
 #endif
+#ifndef BEAN_TYPEDEF_MTLComputePipelineState
+#define BEAN_TYPEDEF_MTLComputePipelineState
+typedef bean_id MTLComputePipelineState;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCounter
+#define BEAN_TYPEDEF_MTLCounter
+typedef bean_id MTLCounter;
+#endif
+#ifndef BEAN_TYPEDEF_MTLCounterSampleBuffer
+#define BEAN_TYPEDEF_MTLCounterSampleBuffer
+typedef bean_id MTLCounterSampleBuffer;
+#endif
 #ifndef BEAN_TYPEDEF_MTLCounterSampleBufferDescriptor
 #define BEAN_TYPEDEF_MTLCounterSampleBufferDescriptor
 typedef bean_id MTLCounterSampleBufferDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLCounterSet
+#define BEAN_TYPEDEF_MTLCounterSet
+typedef bean_id MTLCounterSet;
+#endif
 #ifndef BEAN_TYPEDEF_MTLDepthStencilDescriptor
 #define BEAN_TYPEDEF_MTLDepthStencilDescriptor
 typedef bean_id MTLDepthStencilDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLDepthStencilState
+#define BEAN_TYPEDEF_MTLDepthStencilState
+typedef bean_id MTLDepthStencilState;
+#endif
+#ifndef BEAN_TYPEDEF_MTLDevice
+#define BEAN_TYPEDEF_MTLDevice
+typedef bean_id MTLDevice;
+#endif
+#ifndef BEAN_TYPEDEF_MTLDrawable
+#define BEAN_TYPEDEF_MTLDrawable
+typedef bean_id MTLDrawable;
+#endif
+#ifndef BEAN_TYPEDEF_MTLDynamicLibrary
+#define BEAN_TYPEDEF_MTLDynamicLibrary
+typedef bean_id MTLDynamicLibrary;
+#endif
+#ifndef BEAN_TYPEDEF_MTLEvent
+#define BEAN_TYPEDEF_MTLEvent
+typedef bean_id MTLEvent;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFence
+#define BEAN_TYPEDEF_MTLFence
+typedef bean_id MTLFence;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFunction
+#define BEAN_TYPEDEF_MTLFunction
+typedef bean_id MTLFunction;
 #endif
 #ifndef BEAN_TYPEDEF_MTLFunctionConstant
 #define BEAN_TYPEDEF_MTLFunctionConstant
@@ -626,6 +850,18 @@ typedef bean_id MTLFunctionConstantValues;
 #ifndef BEAN_TYPEDEF_MTLFunctionDescriptor
 #define BEAN_TYPEDEF_MTLFunctionDescriptor
 typedef bean_id MTLFunctionDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFunctionHandle
+#define BEAN_TYPEDEF_MTLFunctionHandle
+typedef bean_id MTLFunctionHandle;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFunctionLog
+#define BEAN_TYPEDEF_MTLFunctionLog
+typedef bean_id MTLFunctionLog;
+#endif
+#ifndef BEAN_TYPEDEF_MTLFunctionLogDebugLocation
+#define BEAN_TYPEDEF_MTLFunctionLogDebugLocation
+typedef bean_id MTLFunctionLogDebugLocation;
 #endif
 #ifndef BEAN_TYPEDEF_MTLFunctionReflection
 #define BEAN_TYPEDEF_MTLFunctionReflection
@@ -643,33 +879,85 @@ typedef bean_id MTLFunctionStitchingGraph;
 #define BEAN_TYPEDEF_MTLFunctionStitchingInputNode
 typedef bean_id MTLFunctionStitchingInputNode;
 #endif
+#ifndef BEAN_TYPEDEF_MTLHeap
+#define BEAN_TYPEDEF_MTLHeap
+typedef bean_id MTLHeap;
+#endif
 #ifndef BEAN_TYPEDEF_MTLHeapDescriptor
 #define BEAN_TYPEDEF_MTLHeapDescriptor
 typedef bean_id MTLHeapDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIOCommandBuffer
+#define BEAN_TYPEDEF_MTLIOCommandBuffer
+typedef bean_id MTLIOCommandBuffer;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIOCommandQueue
+#define BEAN_TYPEDEF_MTLIOCommandQueue
+typedef bean_id MTLIOCommandQueue;
 #endif
 #ifndef BEAN_TYPEDEF_MTLIOCommandQueueDescriptor
 #define BEAN_TYPEDEF_MTLIOCommandQueueDescriptor
 typedef bean_id MTLIOCommandQueueDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLIOFileHandle
+#define BEAN_TYPEDEF_MTLIOFileHandle
+typedef bean_id MTLIOFileHandle;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIOScratchBuffer
+#define BEAN_TYPEDEF_MTLIOScratchBuffer
+typedef bean_id MTLIOScratchBuffer;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIOScratchBufferAllocator
+#define BEAN_TYPEDEF_MTLIOScratchBufferAllocator
+typedef bean_id MTLIOScratchBufferAllocator;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIndirectCommandBuffer
+#define BEAN_TYPEDEF_MTLIndirectCommandBuffer
+typedef bean_id MTLIndirectCommandBuffer;
+#endif
 #ifndef BEAN_TYPEDEF_MTLIndirectCommandBufferDescriptor
 #define BEAN_TYPEDEF_MTLIndirectCommandBufferDescriptor
 typedef bean_id MTLIndirectCommandBufferDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIndirectComputeCommand
+#define BEAN_TYPEDEF_MTLIndirectComputeCommand
+typedef bean_id MTLIndirectComputeCommand;
 #endif
 #ifndef BEAN_TYPEDEF_MTLIndirectInstanceAccelerationStructureDescriptor
 #define BEAN_TYPEDEF_MTLIndirectInstanceAccelerationStructureDescriptor
 typedef bean_id MTLIndirectInstanceAccelerationStructureDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLIndirectRenderCommand
+#define BEAN_TYPEDEF_MTLIndirectRenderCommand
+typedef bean_id MTLIndirectRenderCommand;
+#endif
 #ifndef BEAN_TYPEDEF_MTLInstanceAccelerationStructureDescriptor
 #define BEAN_TYPEDEF_MTLInstanceAccelerationStructureDescriptor
 typedef bean_id MTLInstanceAccelerationStructureDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIntersectionFunctionDescriptor
+#define BEAN_TYPEDEF_MTLIntersectionFunctionDescriptor
+typedef bean_id MTLIntersectionFunctionDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLIntersectionFunctionTable
+#define BEAN_TYPEDEF_MTLIntersectionFunctionTable
+typedef bean_id MTLIntersectionFunctionTable;
 #endif
 #ifndef BEAN_TYPEDEF_MTLIntersectionFunctionTableDescriptor
 #define BEAN_TYPEDEF_MTLIntersectionFunctionTableDescriptor
 typedef bean_id MTLIntersectionFunctionTableDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLLibrary
+#define BEAN_TYPEDEF_MTLLibrary
+typedef bean_id MTLLibrary;
+#endif
 #ifndef BEAN_TYPEDEF_MTLLinkedFunctions
 #define BEAN_TYPEDEF_MTLLinkedFunctions
 typedef bean_id MTLLinkedFunctions;
+#endif
+#ifndef BEAN_TYPEDEF_MTLLogState
+#define BEAN_TYPEDEF_MTLLogState
+typedef bean_id MTLLogState;
 #endif
 #ifndef BEAN_TYPEDEF_MTLLogStateDescriptor
 #define BEAN_TYPEDEF_MTLLogStateDescriptor
@@ -686,6 +974,14 @@ typedef bean_id MTLMeshRenderPipelineDescriptor;
 #ifndef BEAN_TYPEDEF_MTLMotionKeyframeData
 #define BEAN_TYPEDEF_MTLMotionKeyframeData
 typedef bean_id MTLMotionKeyframeData;
+#endif
+#ifndef BEAN_TYPEDEF_MTLObjectPayloadBinding
+#define BEAN_TYPEDEF_MTLObjectPayloadBinding
+typedef bean_id MTLObjectPayloadBinding;
+#endif
+#ifndef BEAN_TYPEDEF_MTLParallelRenderCommandEncoder
+#define BEAN_TYPEDEF_MTLParallelRenderCommandEncoder
+typedef bean_id MTLParallelRenderCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLPipelineBufferDescriptor
 #define BEAN_TYPEDEF_MTLPipelineBufferDescriptor
@@ -711,6 +1007,10 @@ typedef bean_id MTLRasterizationRateLayerArray;
 #define BEAN_TYPEDEF_MTLRasterizationRateLayerDescriptor
 typedef bean_id MTLRasterizationRateLayerDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLRasterizationRateMap
+#define BEAN_TYPEDEF_MTLRasterizationRateMap
+typedef bean_id MTLRasterizationRateMap;
+#endif
 #ifndef BEAN_TYPEDEF_MTLRasterizationRateMapDescriptor
 #define BEAN_TYPEDEF_MTLRasterizationRateMapDescriptor
 typedef bean_id MTLRasterizationRateMapDescriptor;
@@ -718,6 +1018,10 @@ typedef bean_id MTLRasterizationRateMapDescriptor;
 #ifndef BEAN_TYPEDEF_MTLRasterizationRateSampleArray
 #define BEAN_TYPEDEF_MTLRasterizationRateSampleArray
 typedef bean_id MTLRasterizationRateSampleArray;
+#endif
+#ifndef BEAN_TYPEDEF_MTLRenderCommandEncoder
+#define BEAN_TYPEDEF_MTLRenderCommandEncoder
+typedef bean_id MTLRenderCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLRenderPassAttachmentDescriptor
 #define BEAN_TYPEDEF_MTLRenderPassAttachmentDescriptor
@@ -771,9 +1075,25 @@ typedef bean_id MTLRenderPipelineFunctionsDescriptor;
 #define BEAN_TYPEDEF_MTLRenderPipelineReflection
 typedef bean_id MTLRenderPipelineReflection;
 #endif
+#ifndef BEAN_TYPEDEF_MTLRenderPipelineState
+#define BEAN_TYPEDEF_MTLRenderPipelineState
+typedef bean_id MTLRenderPipelineState;
+#endif
+#ifndef BEAN_TYPEDEF_MTLResidencySet
+#define BEAN_TYPEDEF_MTLResidencySet
+typedef bean_id MTLResidencySet;
+#endif
 #ifndef BEAN_TYPEDEF_MTLResidencySetDescriptor
 #define BEAN_TYPEDEF_MTLResidencySetDescriptor
 typedef bean_id MTLResidencySetDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLResource
+#define BEAN_TYPEDEF_MTLResource
+typedef bean_id MTLResource;
+#endif
+#ifndef BEAN_TYPEDEF_MTLResourceStateCommandEncoder
+#define BEAN_TYPEDEF_MTLResourceStateCommandEncoder
+typedef bean_id MTLResourceStateCommandEncoder;
 #endif
 #ifndef BEAN_TYPEDEF_MTLResourceStatePassDescriptor
 #define BEAN_TYPEDEF_MTLResourceStatePassDescriptor
@@ -787,6 +1107,10 @@ typedef bean_id MTLResourceStatePassSampleBufferAttachmentDescriptor;
 #define BEAN_TYPEDEF_MTLResourceStatePassSampleBufferAttachmentDescriptorArray
 typedef bean_id MTLResourceStatePassSampleBufferAttachmentDescriptorArray;
 #endif
+#ifndef BEAN_TYPEDEF_MTLResourceViewPool
+#define BEAN_TYPEDEF_MTLResourceViewPool
+typedef bean_id MTLResourceViewPool;
+#endif
 #ifndef BEAN_TYPEDEF_MTLResourceViewPoolDescriptor
 #define BEAN_TYPEDEF_MTLResourceViewPoolDescriptor
 typedef bean_id MTLResourceViewPoolDescriptor;
@@ -794,6 +1118,14 @@ typedef bean_id MTLResourceViewPoolDescriptor;
 #ifndef BEAN_TYPEDEF_MTLSamplerDescriptor
 #define BEAN_TYPEDEF_MTLSamplerDescriptor
 typedef bean_id MTLSamplerDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLSamplerState
+#define BEAN_TYPEDEF_MTLSamplerState
+typedef bean_id MTLSamplerState;
+#endif
+#ifndef BEAN_TYPEDEF_MTLSharedEvent
+#define BEAN_TYPEDEF_MTLSharedEvent
+typedef bean_id MTLSharedEvent;
 #endif
 #ifndef BEAN_TYPEDEF_MTLSharedEventHandle
 #define BEAN_TYPEDEF_MTLSharedEventHandle
@@ -827,6 +1159,14 @@ typedef bean_id MTLStructMember;
 #define BEAN_TYPEDEF_MTLStructType
 typedef bean_id MTLStructType;
 #endif
+#ifndef BEAN_TYPEDEF_MTLTensor
+#define BEAN_TYPEDEF_MTLTensor
+typedef bean_id MTLTensor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLTensorBinding
+#define BEAN_TYPEDEF_MTLTensorBinding
+typedef bean_id MTLTensorBinding;
+#endif
 #ifndef BEAN_TYPEDEF_MTLTensorDescriptor
 #define BEAN_TYPEDEF_MTLTensorDescriptor
 typedef bean_id MTLTensorDescriptor;
@@ -839,6 +1179,14 @@ typedef bean_id MTLTensorExtents;
 #define BEAN_TYPEDEF_MTLTensorReferenceType
 typedef bean_id MTLTensorReferenceType;
 #endif
+#ifndef BEAN_TYPEDEF_MTLTexture
+#define BEAN_TYPEDEF_MTLTexture
+typedef bean_id MTLTexture;
+#endif
+#ifndef BEAN_TYPEDEF_MTLTextureBinding
+#define BEAN_TYPEDEF_MTLTextureBinding
+typedef bean_id MTLTextureBinding;
+#endif
 #ifndef BEAN_TYPEDEF_MTLTextureDescriptor
 #define BEAN_TYPEDEF_MTLTextureDescriptor
 typedef bean_id MTLTextureDescriptor;
@@ -850,6 +1198,14 @@ typedef bean_id MTLTextureReferenceType;
 #ifndef BEAN_TYPEDEF_MTLTextureViewDescriptor
 #define BEAN_TYPEDEF_MTLTextureViewDescriptor
 typedef bean_id MTLTextureViewDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLTextureViewPool
+#define BEAN_TYPEDEF_MTLTextureViewPool
+typedef bean_id MTLTextureViewPool;
+#endif
+#ifndef BEAN_TYPEDEF_MTLThreadgroupBinding
+#define BEAN_TYPEDEF_MTLThreadgroupBinding
+typedef bean_id MTLThreadgroupBinding;
 #endif
 #ifndef BEAN_TYPEDEF_MTLTileRenderPipelineColorAttachmentDescriptor
 #define BEAN_TYPEDEF_MTLTileRenderPipelineColorAttachmentDescriptor
@@ -891,6 +1247,10 @@ typedef bean_id MTLVertexBufferLayoutDescriptorArray;
 #define BEAN_TYPEDEF_MTLVertexDescriptor
 typedef bean_id MTLVertexDescriptor;
 #endif
+#ifndef BEAN_TYPEDEF_MTLVisibleFunctionTable
+#define BEAN_TYPEDEF_MTLVisibleFunctionTable
+typedef bean_id MTLVisibleFunctionTable;
+#endif
 #ifndef BEAN_TYPEDEF_MTLVisibleFunctionTableDescriptor
 #define BEAN_TYPEDEF_MTLVisibleFunctionTableDescriptor
 typedef bean_id MTLVisibleFunctionTableDescriptor;
@@ -898,6 +1258,26 @@ typedef bean_id MTLVisibleFunctionTableDescriptor;
 #ifndef BEAN_TYPEDEF_NSATSTypesetter
 #define BEAN_TYPEDEF_NSATSTypesetter
 typedef bean_id NSATSTypesetter;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibility
+#define BEAN_TYPEDEF_NSAccessibility
+typedef bean_id NSAccessibility;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityButton
+#define BEAN_TYPEDEF_NSAccessibilityButton
+typedef bean_id NSAccessibilityButton;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityCheckBox
+#define BEAN_TYPEDEF_NSAccessibilityCheckBox
+typedef bean_id NSAccessibilityCheckBox;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityColor
+#define BEAN_TYPEDEF_NSAccessibilityColor
+typedef bean_id NSAccessibilityColor;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityContainsTransientUI
+#define BEAN_TYPEDEF_NSAccessibilityContainsTransientUI
+typedef bean_id NSAccessibilityContainsTransientUI;
 #endif
 #ifndef BEAN_TYPEDEF_NSAccessibilityCustomAction
 #define BEAN_TYPEDEF_NSAccessibilityCustomAction
@@ -911,6 +1291,10 @@ typedef bean_id NSAccessibilityCustomRotor;
 #define BEAN_TYPEDEF_NSAccessibilityCustomRotorItemResult
 typedef bean_id NSAccessibilityCustomRotorItemResult;
 #endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityCustomRotorItemSearchDelegate
+#define BEAN_TYPEDEF_NSAccessibilityCustomRotorItemSearchDelegate
+typedef bean_id NSAccessibilityCustomRotorItemSearchDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAccessibilityCustomRotorSearchParameters
 #define BEAN_TYPEDEF_NSAccessibilityCustomRotorSearchParameters
 typedef bean_id NSAccessibilityCustomRotorSearchParameters;
@@ -918,6 +1302,58 @@ typedef bean_id NSAccessibilityCustomRotorSearchParameters;
 #ifndef BEAN_TYPEDEF_NSAccessibilityElement
 #define BEAN_TYPEDEF_NSAccessibilityElement
 typedef bean_id NSAccessibilityElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityElementLoading
+#define BEAN_TYPEDEF_NSAccessibilityElementLoading
+typedef bean_id NSAccessibilityElementLoading;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityImage
+#define BEAN_TYPEDEF_NSAccessibilityImage
+typedef bean_id NSAccessibilityImage;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityLayoutArea
+#define BEAN_TYPEDEF_NSAccessibilityLayoutArea
+typedef bean_id NSAccessibilityLayoutArea;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityLayoutItem
+#define BEAN_TYPEDEF_NSAccessibilityLayoutItem
+typedef bean_id NSAccessibilityLayoutItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityNavigableStaticText
+#define BEAN_TYPEDEF_NSAccessibilityNavigableStaticText
+typedef bean_id NSAccessibilityNavigableStaticText;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityProgressIndicator
+#define BEAN_TYPEDEF_NSAccessibilityProgressIndicator
+typedef bean_id NSAccessibilityProgressIndicator;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityRadioButton
+#define BEAN_TYPEDEF_NSAccessibilityRadioButton
+typedef bean_id NSAccessibilityRadioButton;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityRow
+#define BEAN_TYPEDEF_NSAccessibilityRow
+typedef bean_id NSAccessibilityRow;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilitySlider
+#define BEAN_TYPEDEF_NSAccessibilitySlider
+typedef bean_id NSAccessibilitySlider;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityStaticText
+#define BEAN_TYPEDEF_NSAccessibilityStaticText
+typedef bean_id NSAccessibilityStaticText;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityStepper
+#define BEAN_TYPEDEF_NSAccessibilityStepper
+typedef bean_id NSAccessibilityStepper;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilitySwitch
+#define BEAN_TYPEDEF_NSAccessibilitySwitch
+typedef bean_id NSAccessibilitySwitch;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityTable
+#define BEAN_TYPEDEF_NSAccessibilityTable
+typedef bean_id NSAccessibilityTable;
 #endif
 #ifndef BEAN_TYPEDEF_NSActionCell
 #define BEAN_TYPEDEF_NSActionCell
@@ -935,9 +1371,17 @@ typedef bean_id NSAffineTransform;
 #define BEAN_TYPEDEF_NSAlert
 typedef bean_id NSAlert;
 #endif
+#ifndef BEAN_TYPEDEF_NSAlertDelegate
+#define BEAN_TYPEDEF_NSAlertDelegate
+typedef bean_id NSAlertDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAlignmentFeedbackFilter
 #define BEAN_TYPEDEF_NSAlignmentFeedbackFilter
 typedef bean_id NSAlignmentFeedbackFilter;
+#endif
+#ifndef BEAN_TYPEDEF_NSAnimatablePropertyContainer
+#define BEAN_TYPEDEF_NSAnimatablePropertyContainer
+typedef bean_id NSAnimatablePropertyContainer;
 #endif
 #ifndef BEAN_TYPEDEF_NSAnimation
 #define BEAN_TYPEDEF_NSAnimation
@@ -947,9 +1391,17 @@ typedef bean_id NSAnimation;
 #define BEAN_TYPEDEF_NSAnimationContext
 typedef bean_id NSAnimationContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSAnimationDelegate
+#define BEAN_TYPEDEF_NSAnimationDelegate
+typedef bean_id NSAnimationDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAppearance
 #define BEAN_TYPEDEF_NSAppearance
 typedef bean_id NSAppearance;
+#endif
+#ifndef BEAN_TYPEDEF_NSAppearanceCustomization
+#define BEAN_TYPEDEF_NSAppearanceCustomization
+typedef bean_id NSAppearanceCustomization;
 #endif
 #ifndef BEAN_TYPEDEF_NSAppleEventDescriptor
 #define BEAN_TYPEDEF_NSAppleEventDescriptor
@@ -966,6 +1418,10 @@ typedef bean_id NSAppleScript;
 #ifndef BEAN_TYPEDEF_NSApplication
 #define BEAN_TYPEDEF_NSApplication
 typedef bean_id NSApplication;
+#endif
+#ifndef BEAN_TYPEDEF_NSApplicationDelegate
+#define BEAN_TYPEDEF_NSApplicationDelegate
+typedef bean_id NSApplicationDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSArchiver
 #define BEAN_TYPEDEF_NSArchiver
@@ -1043,6 +1499,10 @@ typedef bean_id NSBrowser;
 #define BEAN_TYPEDEF_NSBrowserCell
 typedef bean_id NSBrowserCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSBrowserDelegate
+#define BEAN_TYPEDEF_NSBrowserDelegate
+typedef bean_id NSBrowserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSBundle
 #define BEAN_TYPEDEF_NSBundle
 typedef bean_id NSBundle;
@@ -1075,6 +1535,10 @@ typedef bean_id NSCIImageRep;
 #define BEAN_TYPEDEF_NSCache
 typedef bean_id NSCache;
 #endif
+#ifndef BEAN_TYPEDEF_NSCacheDelegate
+#define BEAN_TYPEDEF_NSCacheDelegate
+typedef bean_id NSCacheDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCachedImageRep
 #define BEAN_TYPEDEF_NSCachedImageRep
 typedef bean_id NSCachedImageRep;
@@ -1095,9 +1559,17 @@ typedef bean_id NSCalendarDate;
 #define BEAN_TYPEDEF_NSCandidateListTouchBarItem
 typedef bean_id NSCandidateListTouchBarItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSCandidateListTouchBarItemDelegate
+#define BEAN_TYPEDEF_NSCandidateListTouchBarItemDelegate
+typedef bean_id NSCandidateListTouchBarItemDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCell
 #define BEAN_TYPEDEF_NSCell
 typedef bean_id NSCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSChangeSpelling
+#define BEAN_TYPEDEF_NSChangeSpelling
+typedef bean_id NSChangeSpelling;
 #endif
 #ifndef BEAN_TYPEDEF_NSCharacterSet
 #define BEAN_TYPEDEF_NSCharacterSet
@@ -1123,9 +1595,21 @@ typedef bean_id NSCloneCommand;
 #define BEAN_TYPEDEF_NSCloseCommand
 typedef bean_id NSCloseCommand;
 #endif
+#ifndef BEAN_TYPEDEF_NSCloudSharingServiceDelegate
+#define BEAN_TYPEDEF_NSCloudSharingServiceDelegate
+typedef bean_id NSCloudSharingServiceDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCloudSharingValidation
+#define BEAN_TYPEDEF_NSCloudSharingValidation
+typedef bean_id NSCloudSharingValidation;
+#endif
 #ifndef BEAN_TYPEDEF_NSCoder
 #define BEAN_TYPEDEF_NSCoder
 typedef bean_id NSCoder;
+#endif
+#ifndef BEAN_TYPEDEF_NSCoding
+#define BEAN_TYPEDEF_NSCoding
+typedef bean_id NSCoding;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutAnchor
 #define BEAN_TYPEDEF_NSCollectionLayoutAnchor
@@ -1134,6 +1618,10 @@ typedef bean_id NSCollectionLayoutAnchor;
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutBoundarySupplementaryItem
 #define BEAN_TYPEDEF_NSCollectionLayoutBoundarySupplementaryItem
 typedef bean_id NSCollectionLayoutBoundarySupplementaryItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutContainer
+#define BEAN_TYPEDEF_NSCollectionLayoutContainer
+typedef bean_id NSCollectionLayoutContainer;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutDecorationItem
 #define BEAN_TYPEDEF_NSCollectionLayoutDecorationItem
@@ -1146,6 +1634,10 @@ typedef bean_id NSCollectionLayoutDimension;
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutEdgeSpacing
 #define BEAN_TYPEDEF_NSCollectionLayoutEdgeSpacing
 typedef bean_id NSCollectionLayoutEdgeSpacing;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutEnvironment
+#define BEAN_TYPEDEF_NSCollectionLayoutEnvironment
+typedef bean_id NSCollectionLayoutEnvironment;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutGroup
 #define BEAN_TYPEDEF_NSCollectionLayoutGroup
@@ -1175,6 +1667,10 @@ typedef bean_id NSCollectionLayoutSpacing;
 #define BEAN_TYPEDEF_NSCollectionLayoutSupplementaryItem
 typedef bean_id NSCollectionLayoutSupplementaryItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutVisibleItem
+#define BEAN_TYPEDEF_NSCollectionLayoutVisibleItem
+typedef bean_id NSCollectionLayoutVisibleItem;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionView
 #define BEAN_TYPEDEF_NSCollectionView
 typedef bean_id NSCollectionView;
@@ -1187,9 +1683,25 @@ typedef bean_id NSCollectionViewCompositionalLayout;
 #define BEAN_TYPEDEF_NSCollectionViewCompositionalLayoutConfiguration
 typedef bean_id NSCollectionViewCompositionalLayoutConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDataSource
+#define BEAN_TYPEDEF_NSCollectionViewDataSource
+typedef bean_id NSCollectionViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDelegate
+#define BEAN_TYPEDEF_NSCollectionViewDelegate
+typedef bean_id NSCollectionViewDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDelegateFlowLayout
+#define BEAN_TYPEDEF_NSCollectionViewDelegateFlowLayout
+typedef bean_id NSCollectionViewDelegateFlowLayout;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewDiffableDataSource
 #define BEAN_TYPEDEF_NSCollectionViewDiffableDataSource
 typedef bean_id NSCollectionViewDiffableDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewElement
+#define BEAN_TYPEDEF_NSCollectionViewElement
+typedef bean_id NSCollectionViewElement;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewFlowLayout
 #define BEAN_TYPEDEF_NSCollectionViewFlowLayout
@@ -1219,6 +1731,14 @@ typedef bean_id NSCollectionViewLayoutAttributes;
 #define BEAN_TYPEDEF_NSCollectionViewLayoutInvalidationContext
 typedef bean_id NSCollectionViewLayoutInvalidationContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewPrefetching
+#define BEAN_TYPEDEF_NSCollectionViewPrefetching
+typedef bean_id NSCollectionViewPrefetching;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewSectionHeaderView
+#define BEAN_TYPEDEF_NSCollectionViewSectionHeaderView
+typedef bean_id NSCollectionViewSectionHeaderView;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewTransitionLayout
 #define BEAN_TYPEDEF_NSCollectionViewTransitionLayout
 typedef bean_id NSCollectionViewTransitionLayout;
@@ -1230,6 +1750,10 @@ typedef bean_id NSCollectionViewUpdateItem;
 #ifndef BEAN_TYPEDEF_NSColor
 #define BEAN_TYPEDEF_NSColor
 typedef bean_id NSColor;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorChanging
+#define BEAN_TYPEDEF_NSColorChanging
+typedef bean_id NSColorChanging;
 #endif
 #ifndef BEAN_TYPEDEF_NSColorList
 #define BEAN_TYPEDEF_NSColorList
@@ -1246,6 +1770,14 @@ typedef bean_id NSColorPicker;
 #ifndef BEAN_TYPEDEF_NSColorPickerTouchBarItem
 #define BEAN_TYPEDEF_NSColorPickerTouchBarItem
 typedef bean_id NSColorPickerTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorPickingCustom
+#define BEAN_TYPEDEF_NSColorPickingCustom
+typedef bean_id NSColorPickingCustom;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorPickingDefault
+#define BEAN_TYPEDEF_NSColorPickingDefault
+typedef bean_id NSColorPickingDefault;
 #endif
 #ifndef BEAN_TYPEDEF_NSColorSampler
 #define BEAN_TYPEDEF_NSColorSampler
@@ -1266,6 +1798,18 @@ typedef bean_id NSComboBox;
 #ifndef BEAN_TYPEDEF_NSComboBoxCell
 #define BEAN_TYPEDEF_NSComboBoxCell
 typedef bean_id NSComboBoxCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxCellDataSource
+#define BEAN_TYPEDEF_NSComboBoxCellDataSource
+typedef bean_id NSComboBoxCellDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxDataSource
+#define BEAN_TYPEDEF_NSComboBoxDataSource
+typedef bean_id NSComboBoxDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxDelegate
+#define BEAN_TYPEDEF_NSComboBoxDelegate
+typedef bean_id NSComboBoxDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSComboButton
 #define BEAN_TYPEDEF_NSComboButton
@@ -1291,13 +1835,25 @@ typedef bean_id NSConditionLock;
 #define BEAN_TYPEDEF_NSConnection
 typedef bean_id NSConnection;
 #endif
+#ifndef BEAN_TYPEDEF_NSConnectionDelegate
+#define BEAN_TYPEDEF_NSConnectionDelegate
+typedef bean_id NSConnectionDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSControl
 #define BEAN_TYPEDEF_NSControl
 typedef bean_id NSControl;
 #endif
+#ifndef BEAN_TYPEDEF_NSControlTextEditingDelegate
+#define BEAN_TYPEDEF_NSControlTextEditingDelegate
+typedef bean_id NSControlTextEditingDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSController
 #define BEAN_TYPEDEF_NSController
 typedef bean_id NSController;
+#endif
+#ifndef BEAN_TYPEDEF_NSCopying
+#define BEAN_TYPEDEF_NSCopying
+typedef bean_id NSCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSCountedSet
 #define BEAN_TYPEDEF_NSCountedSet
@@ -1363,9 +1919,17 @@ typedef bean_id NSDatePicker;
 #define BEAN_TYPEDEF_NSDatePickerCell
 typedef bean_id NSDatePickerCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSDatePickerCellDelegate
+#define BEAN_TYPEDEF_NSDatePickerCellDelegate
+typedef bean_id NSDatePickerCellDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumber
 #define BEAN_TYPEDEF_NSDecimalNumber
 typedef bean_id NSDecimalNumber;
+#endif
+#ifndef BEAN_TYPEDEF_NSDecimalNumberBehaviors
+#define BEAN_TYPEDEF_NSDecimalNumberBehaviors
+typedef bean_id NSDecimalNumberBehaviors;
 #endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumberHandler
 #define BEAN_TYPEDEF_NSDecimalNumberHandler
@@ -1399,6 +1963,10 @@ typedef bean_id NSDimension;
 #define BEAN_TYPEDEF_NSDirectoryEnumerator
 typedef bean_id NSDirectoryEnumerator;
 #endif
+#ifndef BEAN_TYPEDEF_NSDiscardableContent
+#define BEAN_TYPEDEF_NSDiscardableContent
+typedef bean_id NSDiscardableContent;
+#endif
 #ifndef BEAN_TYPEDEF_NSDistantObject
 #define BEAN_TYPEDEF_NSDistantObject
 typedef bean_id NSDistantObject;
@@ -1419,6 +1987,10 @@ typedef bean_id NSDistributedNotificationCenter;
 #define BEAN_TYPEDEF_NSDockTile
 typedef bean_id NSDockTile;
 #endif
+#ifndef BEAN_TYPEDEF_NSDockTilePlugIn
+#define BEAN_TYPEDEF_NSDockTilePlugIn
+typedef bean_id NSDockTilePlugIn;
+#endif
 #ifndef BEAN_TYPEDEF_NSDocument
 #define BEAN_TYPEDEF_NSDocument
 typedef bean_id NSDocument;
@@ -1427,9 +1999,17 @@ typedef bean_id NSDocument;
 #define BEAN_TYPEDEF_NSDocumentController
 typedef bean_id NSDocumentController;
 #endif
+#ifndef BEAN_TYPEDEF_NSDraggingDestination
+#define BEAN_TYPEDEF_NSDraggingDestination
+typedef bean_id NSDraggingDestination;
+#endif
 #ifndef BEAN_TYPEDEF_NSDraggingImageComponent
 #define BEAN_TYPEDEF_NSDraggingImageComponent
 typedef bean_id NSDraggingImageComponent;
+#endif
+#ifndef BEAN_TYPEDEF_NSDraggingInfo
+#define BEAN_TYPEDEF_NSDraggingInfo
+typedef bean_id NSDraggingInfo;
 #endif
 #ifndef BEAN_TYPEDEF_NSDraggingItem
 #define BEAN_TYPEDEF_NSDraggingItem
@@ -1439,13 +2019,29 @@ typedef bean_id NSDraggingItem;
 #define BEAN_TYPEDEF_NSDraggingSession
 typedef bean_id NSDraggingSession;
 #endif
+#ifndef BEAN_TYPEDEF_NSDraggingSource
+#define BEAN_TYPEDEF_NSDraggingSource
+typedef bean_id NSDraggingSource;
+#endif
 #ifndef BEAN_TYPEDEF_NSDrawer
 #define BEAN_TYPEDEF_NSDrawer
 typedef bean_id NSDrawer;
 #endif
+#ifndef BEAN_TYPEDEF_NSDrawerDelegate
+#define BEAN_TYPEDEF_NSDrawerDelegate
+typedef bean_id NSDrawerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSEPSImageRep
 #define BEAN_TYPEDEF_NSEPSImageRep
 typedef bean_id NSEPSImageRep;
+#endif
+#ifndef BEAN_TYPEDEF_NSEditor
+#define BEAN_TYPEDEF_NSEditor
+typedef bean_id NSEditor;
+#endif
+#ifndef BEAN_TYPEDEF_NSEditorRegistration
+#define BEAN_TYPEDEF_NSEditorRegistration
+typedef bean_id NSEditorRegistration;
 #endif
 #ifndef BEAN_TYPEDEF_NSEnergyFormatter
 #define BEAN_TYPEDEF_NSEnergyFormatter
@@ -1479,6 +2075,14 @@ typedef bean_id NSExtensionContext;
 #define BEAN_TYPEDEF_NSExtensionItem
 typedef bean_id NSExtensionItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSExtensionRequestHandling
+#define BEAN_TYPEDEF_NSExtensionRequestHandling
+typedef bean_id NSExtensionRequestHandling;
+#endif
+#ifndef BEAN_TYPEDEF_NSFastEnumeration
+#define BEAN_TYPEDEF_NSFastEnumeration
+typedef bean_id NSFastEnumeration;
+#endif
 #ifndef BEAN_TYPEDEF_NSFetchRequest
 #define BEAN_TYPEDEF_NSFetchRequest
 typedef bean_id NSFetchRequest;
@@ -1499,9 +2103,21 @@ typedef bean_id NSFileHandle;
 #define BEAN_TYPEDEF_NSFileManager
 typedef bean_id NSFileManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSFileManagerDelegate
+#define BEAN_TYPEDEF_NSFileManagerDelegate
+typedef bean_id NSFileManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePresenter
+#define BEAN_TYPEDEF_NSFilePresenter
+typedef bean_id NSFilePresenter;
+#endif
 #ifndef BEAN_TYPEDEF_NSFilePromiseProvider
 #define BEAN_TYPEDEF_NSFilePromiseProvider
 typedef bean_id NSFilePromiseProvider;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePromiseProviderDelegate
+#define BEAN_TYPEDEF_NSFilePromiseProviderDelegate
+typedef bean_id NSFilePromiseProviderDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSFilePromiseReceiver
 #define BEAN_TYPEDEF_NSFilePromiseReceiver
@@ -1530,6 +2146,10 @@ typedef bean_id NSFont;
 #ifndef BEAN_TYPEDEF_NSFontAssetRequest
 #define BEAN_TYPEDEF_NSFontAssetRequest
 typedef bean_id NSFontAssetRequest;
+#endif
+#ifndef BEAN_TYPEDEF_NSFontChanging
+#define BEAN_TYPEDEF_NSFontChanging
+typedef bean_id NSFontChanging;
 #endif
 #ifndef BEAN_TYPEDEF_NSFontCollection
 #define BEAN_TYPEDEF_NSFontCollection
@@ -1567,6 +2187,10 @@ typedef bean_id NSGarbageCollector;
 #define BEAN_TYPEDEF_NSGestureRecognizer
 typedef bean_id NSGestureRecognizer;
 #endif
+#ifndef BEAN_TYPEDEF_NSGestureRecognizerDelegate
+#define BEAN_TYPEDEF_NSGestureRecognizerDelegate
+typedef bean_id NSGestureRecognizerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSGlassEffectContainerView
 #define BEAN_TYPEDEF_NSGlassEffectContainerView
 typedef bean_id NSGlassEffectContainerView;
@@ -1582,6 +2206,10 @@ typedef bean_id NSGlyphGenerator;
 #ifndef BEAN_TYPEDEF_NSGlyphInfo
 #define BEAN_TYPEDEF_NSGlyphInfo
 typedef bean_id NSGlyphInfo;
+#endif
+#ifndef BEAN_TYPEDEF_NSGlyphStorage
+#define BEAN_TYPEDEF_NSGlyphStorage
+typedef bean_id NSGlyphStorage;
 #endif
 #ifndef BEAN_TYPEDEF_NSGradient
 #define BEAN_TYPEDEF_NSGradient
@@ -1627,6 +2255,10 @@ typedef bean_id NSHTTPURLResponse;
 #define BEAN_TYPEDEF_NSHapticFeedbackManager
 typedef bean_id NSHapticFeedbackManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSHapticFeedbackPerformer
+#define BEAN_TYPEDEF_NSHapticFeedbackPerformer
+typedef bean_id NSHapticFeedbackPerformer;
+#endif
 #ifndef BEAN_TYPEDEF_NSHashTable
 #define BEAN_TYPEDEF_NSHashTable
 typedef bean_id NSHashTable;
@@ -1643,6 +2275,10 @@ typedef bean_id NSHost;
 #define BEAN_TYPEDEF_NSISO8601DateFormatter
 typedef bean_id NSISO8601DateFormatter;
 #endif
+#ifndef BEAN_TYPEDEF_NSIgnoreMisspelledWords
+#define BEAN_TYPEDEF_NSIgnoreMisspelledWords
+typedef bean_id NSIgnoreMisspelledWords;
+#endif
 #ifndef BEAN_TYPEDEF_NSImage
 #define BEAN_TYPEDEF_NSImage
 typedef bean_id NSImage;
@@ -1650,6 +2286,10 @@ typedef bean_id NSImage;
 #ifndef BEAN_TYPEDEF_NSImageCell
 #define BEAN_TYPEDEF_NSImageCell
 typedef bean_id NSImageCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSImageDelegate
+#define BEAN_TYPEDEF_NSImageDelegate
+typedef bean_id NSImageDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSImageRep
 #define BEAN_TYPEDEF_NSImageRep
@@ -1695,6 +2335,14 @@ typedef bean_id NSInputManager;
 #define BEAN_TYPEDEF_NSInputServer
 typedef bean_id NSInputServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSInputServerMouseTracker
+#define BEAN_TYPEDEF_NSInputServerMouseTracker
+typedef bean_id NSInputServerMouseTracker;
+#endif
+#ifndef BEAN_TYPEDEF_NSInputServiceProvider
+#define BEAN_TYPEDEF_NSInputServiceProvider
+typedef bean_id NSInputServiceProvider;
+#endif
 #ifndef BEAN_TYPEDEF_NSInputStream
 #define BEAN_TYPEDEF_NSInputStream
 typedef bean_id NSInputStream;
@@ -1715,6 +2363,14 @@ typedef bean_id NSItemBadge;
 #define BEAN_TYPEDEF_NSItemProvider
 typedef bean_id NSItemProvider;
 #endif
+#ifndef BEAN_TYPEDEF_NSItemProviderReading
+#define BEAN_TYPEDEF_NSItemProviderReading
+typedef bean_id NSItemProviderReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSItemProviderWriting
+#define BEAN_TYPEDEF_NSItemProviderWriting
+typedef bean_id NSItemProviderWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSJSONSerialization
 #define BEAN_TYPEDEF_NSJSONSerialization
 typedef bean_id NSJSONSerialization;
@@ -1731,9 +2387,17 @@ typedef bean_id NSKeyValueSharedObserversSnapshot;
 #define BEAN_TYPEDEF_NSKeyedArchiver
 typedef bean_id NSKeyedArchiver;
 #endif
+#ifndef BEAN_TYPEDEF_NSKeyedArchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedArchiverDelegate
+typedef bean_id NSKeyedArchiverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiver
 #define BEAN_TYPEDEF_NSKeyedUnarchiver
 typedef bean_id NSKeyedUnarchiver;
+#endif
+#ifndef BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+typedef bean_id NSKeyedUnarchiverDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLayoutAnchor
 #define BEAN_TYPEDEF_NSLayoutAnchor
@@ -1754,6 +2418,10 @@ typedef bean_id NSLayoutGuide;
 #ifndef BEAN_TYPEDEF_NSLayoutManager
 #define BEAN_TYPEDEF_NSLayoutManager
 typedef bean_id NSLayoutManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSLayoutManagerDelegate
+#define BEAN_TYPEDEF_NSLayoutManagerDelegate
+typedef bean_id NSLayoutManagerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLayoutXAxisAnchor
 #define BEAN_TYPEDEF_NSLayoutXAxisAnchor
@@ -1795,6 +2463,10 @@ typedef bean_id NSLocalizedNumberFormatRule;
 #define BEAN_TYPEDEF_NSLock
 typedef bean_id NSLock;
 #endif
+#ifndef BEAN_TYPEDEF_NSLocking
+#define BEAN_TYPEDEF_NSLocking
+typedef bean_id NSLocking;
+#endif
 #ifndef BEAN_TYPEDEF_NSLogicalTest
 #define BEAN_TYPEDEF_NSLogicalTest
 typedef bean_id NSLogicalTest;
@@ -1806,6 +2478,10 @@ typedef bean_id NSMachBootstrapServer;
 #ifndef BEAN_TYPEDEF_NSMachPort
 #define BEAN_TYPEDEF_NSMachPort
 typedef bean_id NSMachPort;
+#endif
+#ifndef BEAN_TYPEDEF_NSMachPortDelegate
+#define BEAN_TYPEDEF_NSMachPortDelegate
+typedef bean_id NSMachPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMagnificationGestureRecognizer
 #define BEAN_TYPEDEF_NSMagnificationGestureRecognizer
@@ -1859,6 +2535,10 @@ typedef bean_id NSMediaLibraryBrowserController;
 #define BEAN_TYPEDEF_NSMenu
 typedef bean_id NSMenu;
 #endif
+#ifndef BEAN_TYPEDEF_NSMenuDelegate
+#define BEAN_TYPEDEF_NSMenuDelegate
+typedef bean_id NSMenuDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSMenuItem
 #define BEAN_TYPEDEF_NSMenuItem
 typedef bean_id NSMenuItem;
@@ -1870,6 +2550,10 @@ typedef bean_id NSMenuItemBadge;
 #ifndef BEAN_TYPEDEF_NSMenuItemCell
 #define BEAN_TYPEDEF_NSMenuItemCell
 typedef bean_id NSMenuItemCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSMenuItemValidation
+#define BEAN_TYPEDEF_NSMenuItemValidation
+typedef bean_id NSMenuItemValidation;
 #endif
 #ifndef BEAN_TYPEDEF_NSMenuToolbarItem
 #define BEAN_TYPEDEF_NSMenuToolbarItem
@@ -1890,6 +2574,10 @@ typedef bean_id NSMetadataQuery;
 #ifndef BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 #define BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 typedef bean_id NSMetadataQueryAttributeValueTuple;
+#endif
+#ifndef BEAN_TYPEDEF_NSMetadataQueryDelegate
+#define BEAN_TYPEDEF_NSMetadataQueryDelegate
+typedef bean_id NSMetadataQueryDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMetadataQueryResultGroup
 #define BEAN_TYPEDEF_NSMetadataQueryResultGroup
@@ -1934,6 +2622,10 @@ typedef bean_id NSMutableAttributedString;
 #ifndef BEAN_TYPEDEF_NSMutableCharacterSet
 #define BEAN_TYPEDEF_NSMutableCharacterSet
 typedef bean_id NSMutableCharacterSet;
+#endif
+#ifndef BEAN_TYPEDEF_NSMutableCopying
+#define BEAN_TYPEDEF_NSMutableCopying
+typedef bean_id NSMutableCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSMutableData
 #define BEAN_TYPEDEF_NSMutableData
@@ -1982,6 +2674,14 @@ typedef bean_id NSNetService;
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowser
 #define BEAN_TYPEDEF_NSNetServiceBrowser
 typedef bean_id NSNetServiceBrowser;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+#define BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+typedef bean_id NSNetServiceBrowserDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceDelegate
+#define BEAN_TYPEDEF_NSNetServiceDelegate
+typedef bean_id NSNetServiceDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSNib
 #define BEAN_TYPEDEF_NSNib
@@ -2043,6 +2743,10 @@ typedef bean_id NSOpenGLView;
 #define BEAN_TYPEDEF_NSOpenPanel
 typedef bean_id NSOpenPanel;
 #endif
+#ifndef BEAN_TYPEDEF_NSOpenSavePanelDelegate
+#define BEAN_TYPEDEF_NSOpenSavePanelDelegate
+typedef bean_id NSOpenSavePanelDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSOperation
 #define BEAN_TYPEDEF_NSOperation
 typedef bean_id NSOperation;
@@ -2071,6 +2775,14 @@ typedef bean_id NSOrthography;
 #define BEAN_TYPEDEF_NSOutlineView
 typedef bean_id NSOutlineView;
 #endif
+#ifndef BEAN_TYPEDEF_NSOutlineViewDataSource
+#define BEAN_TYPEDEF_NSOutlineViewDataSource
+typedef bean_id NSOutlineViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSOutlineViewDelegate
+#define BEAN_TYPEDEF_NSOutlineViewDelegate
+typedef bean_id NSOutlineViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSOutputStream
 #define BEAN_TYPEDEF_NSOutputStream
 typedef bean_id NSOutputStream;
@@ -2094,6 +2806,10 @@ typedef bean_id NSPICTImageRep;
 #ifndef BEAN_TYPEDEF_NSPageController
 #define BEAN_TYPEDEF_NSPageController
 typedef bean_id NSPageController;
+#endif
+#ifndef BEAN_TYPEDEF_NSPageControllerDelegate
+#define BEAN_TYPEDEF_NSPageControllerDelegate
+typedef bean_id NSPageControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPageLayout
 #define BEAN_TYPEDEF_NSPageLayout
@@ -2119,9 +2835,29 @@ typedef bean_id NSPasteboard;
 #define BEAN_TYPEDEF_NSPasteboardItem
 typedef bean_id NSPasteboardItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSPasteboardItemDataProvider
+#define BEAN_TYPEDEF_NSPasteboardItemDataProvider
+typedef bean_id NSPasteboardItemDataProvider;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardReading
+#define BEAN_TYPEDEF_NSPasteboardReading
+typedef bean_id NSPasteboardReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardTypeOwner
+#define BEAN_TYPEDEF_NSPasteboardTypeOwner
+typedef bean_id NSPasteboardTypeOwner;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardWriting
+#define BEAN_TYPEDEF_NSPasteboardWriting
+typedef bean_id NSPasteboardWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPathCell
 #define BEAN_TYPEDEF_NSPathCell
 typedef bean_id NSPathCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSPathCellDelegate
+#define BEAN_TYPEDEF_NSPathCellDelegate
+typedef bean_id NSPathCellDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPathComponentCell
 #define BEAN_TYPEDEF_NSPathComponentCell
@@ -2130,6 +2866,10 @@ typedef bean_id NSPathComponentCell;
 #ifndef BEAN_TYPEDEF_NSPathControl
 #define BEAN_TYPEDEF_NSPathControl
 typedef bean_id NSPathControl;
+#endif
+#ifndef BEAN_TYPEDEF_NSPathControlDelegate
+#define BEAN_TYPEDEF_NSPathControlDelegate
+typedef bean_id NSPathControlDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPathControlItem
 #define BEAN_TYPEDEF_NSPathControlItem
@@ -2191,6 +2931,10 @@ typedef bean_id NSPopUpButtonCell;
 #define BEAN_TYPEDEF_NSPopover
 typedef bean_id NSPopover;
 #endif
+#ifndef BEAN_TYPEDEF_NSPopoverDelegate
+#define BEAN_TYPEDEF_NSPopoverDelegate
+typedef bean_id NSPopoverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSPopoverTouchBarItem
 #define BEAN_TYPEDEF_NSPopoverTouchBarItem
 typedef bean_id NSPopoverTouchBarItem;
@@ -2202,6 +2946,10 @@ typedef bean_id NSPort;
 #ifndef BEAN_TYPEDEF_NSPortCoder
 #define BEAN_TYPEDEF_NSPortCoder
 typedef bean_id NSPortCoder;
+#endif
+#ifndef BEAN_TYPEDEF_NSPortDelegate
+#define BEAN_TYPEDEF_NSPortDelegate
+typedef bean_id NSPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPortMessage
 #define BEAN_TYPEDEF_NSPortMessage
@@ -2239,6 +2987,10 @@ typedef bean_id NSPressGestureRecognizer;
 #define BEAN_TYPEDEF_NSPressureConfiguration
 typedef bean_id NSPressureConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSPreviewRepresentableActivityItem
+#define BEAN_TYPEDEF_NSPreviewRepresentableActivityItem
+typedef bean_id NSPreviewRepresentableActivityItem;
+#endif
 #ifndef BEAN_TYPEDEF_NSPreviewRepresentingActivityItem
 #define BEAN_TYPEDEF_NSPreviewRepresentingActivityItem
 typedef bean_id NSPreviewRepresentingActivityItem;
@@ -2254,6 +3006,10 @@ typedef bean_id NSPrintOperation;
 #ifndef BEAN_TYPEDEF_NSPrintPanel
 #define BEAN_TYPEDEF_NSPrintPanel
 typedef bean_id NSPrintPanel;
+#endif
+#ifndef BEAN_TYPEDEF_NSPrintPanelAccessorizing
+#define BEAN_TYPEDEF_NSPrintPanelAccessorizing
+typedef bean_id NSPrintPanelAccessorizing;
 #endif
 #ifndef BEAN_TYPEDEF_NSPrinter
 #define BEAN_TYPEDEF_NSPrinter
@@ -2271,6 +3027,10 @@ typedef bean_id NSProgress;
 #define BEAN_TYPEDEF_NSProgressIndicator
 typedef bean_id NSProgressIndicator;
 #endif
+#ifndef BEAN_TYPEDEF_NSProgressReporting
+#define BEAN_TYPEDEF_NSProgressReporting
+typedef bean_id NSProgressReporting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPropertyDescription
 #define BEAN_TYPEDEF_NSPropertyDescription
 typedef bean_id NSPropertyDescription;
@@ -2286,6 +3046,10 @@ typedef bean_id NSProtocolChecker;
 #ifndef BEAN_TYPEDEF_NSProxy
 #define BEAN_TYPEDEF_NSProxy
 typedef bean_id NSProxy;
+#endif
+#ifndef BEAN_TYPEDEF_NSPurgeableData
+#define BEAN_TYPEDEF_NSPurgeableData
+typedef bean_id NSPurgeableData;
 #endif
 #ifndef BEAN_TYPEDEF_NSQuitCommand
 #define BEAN_TYPEDEF_NSQuitCommand
@@ -2326,6 +3090,10 @@ typedef bean_id NSRotationGestureRecognizer;
 #ifndef BEAN_TYPEDEF_NSRuleEditor
 #define BEAN_TYPEDEF_NSRuleEditor
 typedef bean_id NSRuleEditor;
+#endif
+#ifndef BEAN_TYPEDEF_NSRuleEditorDelegate
+#define BEAN_TYPEDEF_NSRuleEditorDelegate
+typedef bean_id NSRuleEditorDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSRulerMarker
 #define BEAN_TYPEDEF_NSRulerMarker
@@ -2407,9 +3175,21 @@ typedef bean_id NSScrubber;
 #define BEAN_TYPEDEF_NSScrubberArrangedView
 typedef bean_id NSScrubberArrangedView;
 #endif
+#ifndef BEAN_TYPEDEF_NSScrubberDataSource
+#define BEAN_TYPEDEF_NSScrubberDataSource
+typedef bean_id NSScrubberDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSScrubberDelegate
+#define BEAN_TYPEDEF_NSScrubberDelegate
+typedef bean_id NSScrubberDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSScrubberFlowLayout
 #define BEAN_TYPEDEF_NSScrubberFlowLayout
 typedef bean_id NSScrubberFlowLayout;
+#endif
+#ifndef BEAN_TYPEDEF_NSScrubberFlowLayoutDelegate
+#define BEAN_TYPEDEF_NSScrubberFlowLayoutDelegate
+typedef bean_id NSScrubberFlowLayoutDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSScrubberImageItemView
 #define BEAN_TYPEDEF_NSScrubberImageItemView
@@ -2443,9 +3223,17 @@ typedef bean_id NSSearchField;
 #define BEAN_TYPEDEF_NSSearchFieldCell
 typedef bean_id NSSearchFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSSearchFieldDelegate
+#define BEAN_TYPEDEF_NSSearchFieldDelegate
+typedef bean_id NSSearchFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSearchToolbarItem
 #define BEAN_TYPEDEF_NSSearchToolbarItem
 typedef bean_id NSSearchToolbarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSSecureCoding
+#define BEAN_TYPEDEF_NSSecureCoding
+typedef bean_id NSSecureCoding;
 #endif
 #ifndef BEAN_TYPEDEF_NSSecureTextFieldCell
 #define BEAN_TYPEDEF_NSSecureTextFieldCell
@@ -2462,6 +3250,14 @@ typedef bean_id NSSegmentedCell;
 #ifndef BEAN_TYPEDEF_NSSegmentedControl
 #define BEAN_TYPEDEF_NSSegmentedControl
 typedef bean_id NSSegmentedControl;
+#endif
+#ifndef BEAN_TYPEDEF_NSSeguePerforming
+#define BEAN_TYPEDEF_NSSeguePerforming
+typedef bean_id NSSeguePerforming;
+#endif
+#ifndef BEAN_TYPEDEF_NSServicesMenuRequestor
+#define BEAN_TYPEDEF_NSServicesMenuRequestor
+typedef bean_id NSServicesMenuRequestor;
 #endif
 #ifndef BEAN_TYPEDEF_NSSet
 #define BEAN_TYPEDEF_NSSet
@@ -2483,17 +3279,33 @@ typedef bean_id NSSharingCollaborationModeRestriction;
 #define BEAN_TYPEDEF_NSSharingService
 typedef bean_id NSSharingService;
 #endif
+#ifndef BEAN_TYPEDEF_NSSharingServiceDelegate
+#define BEAN_TYPEDEF_NSSharingServiceDelegate
+typedef bean_id NSSharingServiceDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePicker
 #define BEAN_TYPEDEF_NSSharingServicePicker
 typedef bean_id NSSharingServicePicker;
+#endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerDelegate
+typedef bean_id NSSharingServicePickerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePickerToolbarItem
 #define BEAN_TYPEDEF_NSSharingServicePickerToolbarItem
 typedef bean_id NSSharingServicePickerToolbarItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerToolbarItemDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerToolbarItemDelegate
+typedef bean_id NSSharingServicePickerToolbarItemDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePickerTouchBarItem
 #define BEAN_TYPEDEF_NSSharingServicePickerTouchBarItem
 typedef bean_id NSSharingServicePickerTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerTouchBarItemDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerTouchBarItemDelegate
+typedef bean_id NSSharingServicePickerTouchBarItemDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSlider
 #define BEAN_TYPEDEF_NSSlider
@@ -2531,6 +3343,10 @@ typedef bean_id NSSortDescriptor;
 #define BEAN_TYPEDEF_NSSound
 typedef bean_id NSSound;
 #endif
+#ifndef BEAN_TYPEDEF_NSSoundDelegate
+#define BEAN_TYPEDEF_NSSoundDelegate
+typedef bean_id NSSoundDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSpecifierTest
 #define BEAN_TYPEDEF_NSSpecifierTest
 typedef bean_id NSSpecifierTest;
@@ -2539,9 +3355,17 @@ typedef bean_id NSSpecifierTest;
 #define BEAN_TYPEDEF_NSSpeechRecognizer
 typedef bean_id NSSpeechRecognizer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpeechRecognizerDelegate
+#define BEAN_TYPEDEF_NSSpeechRecognizerDelegate
+typedef bean_id NSSpeechRecognizerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSpeechSynthesizer
 #define BEAN_TYPEDEF_NSSpeechSynthesizer
 typedef bean_id NSSpeechSynthesizer;
+#endif
+#ifndef BEAN_TYPEDEF_NSSpeechSynthesizerDelegate
+#define BEAN_TYPEDEF_NSSpeechSynthesizerDelegate
+typedef bean_id NSSpeechSynthesizerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSpellChecker
 #define BEAN_TYPEDEF_NSSpellChecker
@@ -2551,6 +3375,10 @@ typedef bean_id NSSpellChecker;
 #define BEAN_TYPEDEF_NSSpellServer
 typedef bean_id NSSpellServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpellServerDelegate
+#define BEAN_TYPEDEF_NSSpellServerDelegate
+typedef bean_id NSSpellServerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSplitView
 #define BEAN_TYPEDEF_NSSplitView
 typedef bean_id NSSplitView;
@@ -2558,6 +3386,10 @@ typedef bean_id NSSplitView;
 #ifndef BEAN_TYPEDEF_NSSplitViewController
 #define BEAN_TYPEDEF_NSSplitViewController
 typedef bean_id NSSplitViewController;
+#endif
+#ifndef BEAN_TYPEDEF_NSSplitViewDelegate
+#define BEAN_TYPEDEF_NSSplitViewDelegate
+typedef bean_id NSSplitViewDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSplitViewItem
 #define BEAN_TYPEDEF_NSSplitViewItem
@@ -2567,9 +3399,21 @@ typedef bean_id NSSplitViewItem;
 #define BEAN_TYPEDEF_NSSplitViewItemAccessoryViewController
 typedef bean_id NSSplitViewItemAccessoryViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpringLoadingDestination
+#define BEAN_TYPEDEF_NSSpringLoadingDestination
+typedef bean_id NSSpringLoadingDestination;
+#endif
 #ifndef BEAN_TYPEDEF_NSStackView
 #define BEAN_TYPEDEF_NSStackView
 typedef bean_id NSStackView;
+#endif
+#ifndef BEAN_TYPEDEF_NSStackViewDelegate
+#define BEAN_TYPEDEF_NSStackViewDelegate
+typedef bean_id NSStackViewDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSStandardKeyBindingResponding
+#define BEAN_TYPEDEF_NSStandardKeyBindingResponding
+typedef bean_id NSStandardKeyBindingResponding;
 #endif
 #ifndef BEAN_TYPEDEF_NSStatusBar
 #define BEAN_TYPEDEF_NSStatusBar
@@ -2606,6 +3450,10 @@ typedef bean_id NSStoryboardSegue;
 #ifndef BEAN_TYPEDEF_NSStream
 #define BEAN_TYPEDEF_NSStream
 typedef bean_id NSStream;
+#endif
+#ifndef BEAN_TYPEDEF_NSStreamDelegate
+#define BEAN_TYPEDEF_NSStreamDelegate
+typedef bean_id NSStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSString
 #define BEAN_TYPEDEF_NSString
@@ -2695,6 +3543,10 @@ typedef bean_id NSTabView;
 #define BEAN_TYPEDEF_NSTabViewController
 typedef bean_id NSTabViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSTabViewDelegate
+#define BEAN_TYPEDEF_NSTabViewDelegate
+typedef bean_id NSTabViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTabViewItem
 #define BEAN_TYPEDEF_NSTabViewItem
 typedef bean_id NSTabViewItem;
@@ -2722,6 +3574,14 @@ typedef bean_id NSTableRowView;
 #ifndef BEAN_TYPEDEF_NSTableView
 #define BEAN_TYPEDEF_NSTableView
 typedef bean_id NSTableView;
+#endif
+#ifndef BEAN_TYPEDEF_NSTableViewDataSource
+#define BEAN_TYPEDEF_NSTableViewDataSource
+typedef bean_id NSTableViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSTableViewDelegate
+#define BEAN_TYPEDEF_NSTableViewDelegate
+typedef bean_id NSTableViewDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSTableViewDiffableDataSource
 #define BEAN_TYPEDEF_NSTableViewDiffableDataSource
@@ -2751,6 +3611,18 @@ typedef bean_id NSTextAlternatives;
 #define BEAN_TYPEDEF_NSTextAttachment
 typedef bean_id NSTextAttachment;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentCell
+#define BEAN_TYPEDEF_NSTextAttachmentCell
+typedef bean_id NSTextAttachmentCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentContainer
+#define BEAN_TYPEDEF_NSTextAttachmentContainer
+typedef bean_id NSTextAttachmentContainer;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentLayout
+#define BEAN_TYPEDEF_NSTextAttachmentLayout
+typedef bean_id NSTextAttachmentLayout;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextAttachmentViewProvider
 #define BEAN_TYPEDEF_NSTextAttachmentViewProvider
 typedef bean_id NSTextAttachmentViewProvider;
@@ -2758,6 +3630,10 @@ typedef bean_id NSTextAttachmentViewProvider;
 #ifndef BEAN_TYPEDEF_NSTextBlock
 #define BEAN_TYPEDEF_NSTextBlock
 typedef bean_id NSTextBlock;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextCheckingClient
+#define BEAN_TYPEDEF_NSTextCheckingClient
+typedef bean_id NSTextCheckingClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextCheckingController
 #define BEAN_TYPEDEF_NSTextCheckingController
@@ -2771,17 +3647,37 @@ typedef bean_id NSTextCheckingResult;
 #define BEAN_TYPEDEF_NSTextContainer
 typedef bean_id NSTextContainer;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextContent
+#define BEAN_TYPEDEF_NSTextContent
+typedef bean_id NSTextContent;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextContentManager
 #define BEAN_TYPEDEF_NSTextContentManager
 typedef bean_id NSTextContentManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextContentManagerDelegate
+#define BEAN_TYPEDEF_NSTextContentManagerDelegate
+typedef bean_id NSTextContentManagerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextContentStorage
 #define BEAN_TYPEDEF_NSTextContentStorage
 typedef bean_id NSTextContentStorage;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextContentStorageDelegate
+#define BEAN_TYPEDEF_NSTextContentStorageDelegate
+typedef bean_id NSTextContentStorageDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextDelegate
+#define BEAN_TYPEDEF_NSTextDelegate
+typedef bean_id NSTextDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextElement
 #define BEAN_TYPEDEF_NSTextElement
 typedef bean_id NSTextElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextElementProvider
+#define BEAN_TYPEDEF_NSTextElementProvider
+typedef bean_id NSTextElementProvider;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextField
 #define BEAN_TYPEDEF_NSTextField
@@ -2791,13 +3687,37 @@ typedef bean_id NSTextField;
 #define BEAN_TYPEDEF_NSTextFieldCell
 typedef bean_id NSTextFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextFieldDelegate
+#define BEAN_TYPEDEF_NSTextFieldDelegate
+typedef bean_id NSTextFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextFinder
 #define BEAN_TYPEDEF_NSTextFinder
 typedef bean_id NSTextFinder;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextFinderBarContainer
+#define BEAN_TYPEDEF_NSTextFinderBarContainer
+typedef bean_id NSTextFinderBarContainer;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextFinderClient
+#define BEAN_TYPEDEF_NSTextFinderClient
+typedef bean_id NSTextFinderClient;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInput
+#define BEAN_TYPEDEF_NSTextInput
+typedef bean_id NSTextInput;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInputClient
+#define BEAN_TYPEDEF_NSTextInputClient
+typedef bean_id NSTextInputClient;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextInputContext
 #define BEAN_TYPEDEF_NSTextInputContext
 typedef bean_id NSTextInputContext;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInputTraits
+#define BEAN_TYPEDEF_NSTextInputTraits
+typedef bean_id NSTextInputTraits;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextInsertionIndicator
 #define BEAN_TYPEDEF_NSTextInsertionIndicator
@@ -2811,6 +3731,14 @@ typedef bean_id NSTextLayoutFragment;
 #define BEAN_TYPEDEF_NSTextLayoutManager
 typedef bean_id NSTextLayoutManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextLayoutManagerDelegate
+#define BEAN_TYPEDEF_NSTextLayoutManagerDelegate
+typedef bean_id NSTextLayoutManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextLayoutOrientationProvider
+#define BEAN_TYPEDEF_NSTextLayoutOrientationProvider
+typedef bean_id NSTextLayoutOrientationProvider;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextLineFragment
 #define BEAN_TYPEDEF_NSTextLineFragment
 typedef bean_id NSTextLineFragment;
@@ -2822,6 +3750,10 @@ typedef bean_id NSTextList;
 #ifndef BEAN_TYPEDEF_NSTextListElement
 #define BEAN_TYPEDEF_NSTextListElement
 typedef bean_id NSTextListElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextLocation
+#define BEAN_TYPEDEF_NSTextLocation
+typedef bean_id NSTextLocation;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextParagraph
 #define BEAN_TYPEDEF_NSTextParagraph
@@ -2839,6 +3771,10 @@ typedef bean_id NSTextRange;
 #define BEAN_TYPEDEF_NSTextSelection
 typedef bean_id NSTextSelection;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextSelectionDataSource
+#define BEAN_TYPEDEF_NSTextSelectionDataSource
+typedef bean_id NSTextSelectionDataSource;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextSelectionNavigation
 #define BEAN_TYPEDEF_NSTextSelectionNavigation
 typedef bean_id NSTextSelectionNavigation;
@@ -2846,6 +3782,14 @@ typedef bean_id NSTextSelectionNavigation;
 #ifndef BEAN_TYPEDEF_NSTextStorage
 #define BEAN_TYPEDEF_NSTextStorage
 typedef bean_id NSTextStorage;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextStorageDelegate
+#define BEAN_TYPEDEF_NSTextStorageDelegate
+typedef bean_id NSTextStorageDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextStorageObserving
+#define BEAN_TYPEDEF_NSTextStorageObserving
+typedef bean_id NSTextStorageObserving;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextTab
 #define BEAN_TYPEDEF_NSTextTab
@@ -2863,9 +3807,17 @@ typedef bean_id NSTextTableBlock;
 #define BEAN_TYPEDEF_NSTextView
 typedef bean_id NSTextView;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextViewDelegate
+#define BEAN_TYPEDEF_NSTextViewDelegate
+typedef bean_id NSTextViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextViewportLayoutController
 #define BEAN_TYPEDEF_NSTextViewportLayoutController
 typedef bean_id NSTextViewportLayoutController;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextViewportLayoutControllerDelegate
+#define BEAN_TYPEDEF_NSTextViewportLayoutControllerDelegate
+typedef bean_id NSTextViewportLayoutControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSThread
 #define BEAN_TYPEDEF_NSThread
@@ -2895,9 +3847,21 @@ typedef bean_id NSTokenField;
 #define BEAN_TYPEDEF_NSTokenFieldCell
 typedef bean_id NSTokenFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSTokenFieldCellDelegate
+#define BEAN_TYPEDEF_NSTokenFieldCellDelegate
+typedef bean_id NSTokenFieldCellDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTokenFieldDelegate
+#define BEAN_TYPEDEF_NSTokenFieldDelegate
+typedef bean_id NSTokenFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSToolbar
 #define BEAN_TYPEDEF_NSToolbar
 typedef bean_id NSToolbar;
+#endif
+#ifndef BEAN_TYPEDEF_NSToolbarDelegate
+#define BEAN_TYPEDEF_NSToolbarDelegate
+typedef bean_id NSToolbarDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSToolbarItem
 #define BEAN_TYPEDEF_NSToolbarItem
@@ -2907,6 +3871,10 @@ typedef bean_id NSToolbarItem;
 #define BEAN_TYPEDEF_NSToolbarItemGroup
 typedef bean_id NSToolbarItemGroup;
 #endif
+#ifndef BEAN_TYPEDEF_NSToolbarItemValidation
+#define BEAN_TYPEDEF_NSToolbarItemValidation
+typedef bean_id NSToolbarItemValidation;
+#endif
 #ifndef BEAN_TYPEDEF_NSTouch
 #define BEAN_TYPEDEF_NSTouch
 typedef bean_id NSTouch;
@@ -2915,9 +3883,17 @@ typedef bean_id NSTouch;
 #define BEAN_TYPEDEF_NSTouchBar
 typedef bean_id NSTouchBar;
 #endif
+#ifndef BEAN_TYPEDEF_NSTouchBarDelegate
+#define BEAN_TYPEDEF_NSTouchBarDelegate
+typedef bean_id NSTouchBarDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTouchBarItem
 #define BEAN_TYPEDEF_NSTouchBarItem
 typedef bean_id NSTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSTouchBarProvider
+#define BEAN_TYPEDEF_NSTouchBarProvider
+typedef bean_id NSTouchBarProvider;
 #endif
 #ifndef BEAN_TYPEDEF_NSTrackingArea
 #define BEAN_TYPEDEF_NSTrackingArea
@@ -2947,6 +3923,10 @@ typedef bean_id NSURL;
 #define BEAN_TYPEDEF_NSURLAuthenticationChallenge
 typedef bean_id NSURLAuthenticationChallenge;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+#define BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+typedef bean_id NSURLAuthenticationChallengeSender;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLCache
 #define BEAN_TYPEDEF_NSURLCache
 typedef bean_id NSURLCache;
@@ -2958,6 +3938,18 @@ typedef bean_id NSURLComponents;
 #ifndef BEAN_TYPEDEF_NSURLConnection
 #define BEAN_TYPEDEF_NSURLConnection
 typedef bean_id NSURLConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDataDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDataDelegate
+typedef bean_id NSURLConnectionDataDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDelegate
+typedef bean_id NSURLConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+typedef bean_id NSURLConnectionDownloadDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLCredential
 #define BEAN_TYPEDEF_NSURLCredential
@@ -2971,9 +3963,17 @@ typedef bean_id NSURLCredentialStorage;
 #define BEAN_TYPEDEF_NSURLDownload
 typedef bean_id NSURLDownload;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLDownloadDelegate
+#define BEAN_TYPEDEF_NSURLDownloadDelegate
+typedef bean_id NSURLDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLHandle
 #define BEAN_TYPEDEF_NSURLHandle
 typedef bean_id NSURLHandle;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLHandleClient
+#define BEAN_TYPEDEF_NSURLHandleClient
+typedef bean_id NSURLHandleClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLProtectionSpace
 #define BEAN_TYPEDEF_NSURLProtectionSpace
@@ -2982,6 +3982,10 @@ typedef bean_id NSURLProtectionSpace;
 #ifndef BEAN_TYPEDEF_NSURLProtocol
 #define BEAN_TYPEDEF_NSURLProtocol
 typedef bean_id NSURLProtocol;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLProtocolClient
+#define BEAN_TYPEDEF_NSURLProtocolClient
+typedef bean_id NSURLProtocolClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLQueryItem
 #define BEAN_TYPEDEF_NSURLQueryItem
@@ -3003,13 +4007,29 @@ typedef bean_id NSURLSession;
 #define BEAN_TYPEDEF_NSURLSessionConfiguration
 typedef bean_id NSURLSessionConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDataDelegate
+#define BEAN_TYPEDEF_NSURLSessionDataDelegate
+typedef bean_id NSURLSessionDataDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDataTask
 #define BEAN_TYPEDEF_NSURLSessionDataTask
 typedef bean_id NSURLSessionDataTask;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDelegate
+#define BEAN_TYPEDEF_NSURLSessionDelegate
+typedef bean_id NSURLSessionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+typedef bean_id NSURLSessionDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadTask
 #define BEAN_TYPEDEF_NSURLSessionDownloadTask
 typedef bean_id NSURLSessionDownloadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionStreamDelegate
+#define BEAN_TYPEDEF_NSURLSessionStreamDelegate
+typedef bean_id NSURLSessionStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionStreamTask
 #define BEAN_TYPEDEF_NSURLSessionStreamTask
@@ -3018,6 +4038,10 @@ typedef bean_id NSURLSessionStreamTask;
 #ifndef BEAN_TYPEDEF_NSURLSessionTask
 #define BEAN_TYPEDEF_NSURLSessionTask
 typedef bean_id NSURLSessionTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionTaskDelegate
+#define BEAN_TYPEDEF_NSURLSessionTaskDelegate
+typedef bean_id NSURLSessionTaskDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskMetrics
 #define BEAN_TYPEDEF_NSURLSessionTaskMetrics
@@ -3030,6 +4054,10 @@ typedef bean_id NSURLSessionTaskTransactionMetrics;
 #ifndef BEAN_TYPEDEF_NSURLSessionUploadTask
 #define BEAN_TYPEDEF_NSURLSessionUploadTask
 typedef bean_id NSURLSessionUploadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+#define BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+typedef bean_id NSURLSessionWebSocketDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketMessage
 #define BEAN_TYPEDEF_NSURLSessionWebSocketMessage
@@ -3163,6 +4191,14 @@ typedef bean_id NSUnitVolume;
 #define BEAN_TYPEDEF_NSUserActivity
 typedef bean_id NSUserActivity;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserActivityDelegate
+#define BEAN_TYPEDEF_NSUserActivityDelegate
+typedef bean_id NSUserActivityDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserActivityRestoring
+#define BEAN_TYPEDEF_NSUserActivityRestoring
+typedef bean_id NSUserActivityRestoring;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserAppleScriptTask
 #define BEAN_TYPEDEF_NSUserAppleScriptTask
 typedef bean_id NSUserAppleScriptTask;
@@ -3179,9 +4215,25 @@ typedef bean_id NSUserDefaults;
 #define BEAN_TYPEDEF_NSUserDefaultsController
 typedef bean_id NSUserDefaultsController;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceCompression
+#define BEAN_TYPEDEF_NSUserInterfaceCompression
+typedef bean_id NSUserInterfaceCompression;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserInterfaceCompressionOptions
 #define BEAN_TYPEDEF_NSUserInterfaceCompressionOptions
 typedef bean_id NSUserInterfaceCompressionOptions;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceItemIdentification
+#define BEAN_TYPEDEF_NSUserInterfaceItemIdentification
+typedef bean_id NSUserInterfaceItemIdentification;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceItemSearching
+#define BEAN_TYPEDEF_NSUserInterfaceItemSearching
+typedef bean_id NSUserInterfaceItemSearching;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceValidations
+#define BEAN_TYPEDEF_NSUserInterfaceValidations
+typedef bean_id NSUserInterfaceValidations;
 #endif
 #ifndef BEAN_TYPEDEF_NSUserNotification
 #define BEAN_TYPEDEF_NSUserNotification
@@ -3195,6 +4247,10 @@ typedef bean_id NSUserNotificationAction;
 #define BEAN_TYPEDEF_NSUserNotificationCenter
 typedef bean_id NSUserNotificationCenter;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+#define BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+typedef bean_id NSUserNotificationCenterDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserScriptTask
 #define BEAN_TYPEDEF_NSUserScriptTask
 typedef bean_id NSUserScriptTask;
@@ -3202,6 +4258,10 @@ typedef bean_id NSUserScriptTask;
 #ifndef BEAN_TYPEDEF_NSUserUnixTask
 #define BEAN_TYPEDEF_NSUserUnixTask
 typedef bean_id NSUserUnixTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSValidatedUserInterfaceItem
+#define BEAN_TYPEDEF_NSValidatedUserInterfaceItem
+typedef bean_id NSValidatedUserInterfaceItem;
 #endif
 #ifndef BEAN_TYPEDEF_NSValue
 #define BEAN_TYPEDEF_NSValue
@@ -3219,13 +4279,29 @@ typedef bean_id NSView;
 #define BEAN_TYPEDEF_NSViewAnimation
 typedef bean_id NSViewAnimation;
 #endif
+#ifndef BEAN_TYPEDEF_NSViewContentSelectionInfo
+#define BEAN_TYPEDEF_NSViewContentSelectionInfo
+typedef bean_id NSViewContentSelectionInfo;
+#endif
 #ifndef BEAN_TYPEDEF_NSViewController
 #define BEAN_TYPEDEF_NSViewController
 typedef bean_id NSViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSViewControllerPresentationAnimator
+#define BEAN_TYPEDEF_NSViewControllerPresentationAnimator
+typedef bean_id NSViewControllerPresentationAnimator;
+#endif
+#ifndef BEAN_TYPEDEF_NSViewLayerContentScaleDelegate
+#define BEAN_TYPEDEF_NSViewLayerContentScaleDelegate
+typedef bean_id NSViewLayerContentScaleDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSViewLayoutRegion
 #define BEAN_TYPEDEF_NSViewLayoutRegion
 typedef bean_id NSViewLayoutRegion;
+#endif
+#ifndef BEAN_TYPEDEF_NSViewToolTipOwner
+#define BEAN_TYPEDEF_NSViewToolTipOwner
+typedef bean_id NSViewToolTipOwner;
 #endif
 #ifndef BEAN_TYPEDEF_NSVisualEffectView
 #define BEAN_TYPEDEF_NSVisualEffectView
@@ -3242,6 +4318,14 @@ typedef bean_id NSWindow;
 #ifndef BEAN_TYPEDEF_NSWindowController
 #define BEAN_TYPEDEF_NSWindowController
 typedef bean_id NSWindowController;
+#endif
+#ifndef BEAN_TYPEDEF_NSWindowDelegate
+#define BEAN_TYPEDEF_NSWindowDelegate
+typedef bean_id NSWindowDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSWindowRestoration
+#define BEAN_TYPEDEF_NSWindowRestoration
+typedef bean_id NSWindowRestoration;
 #endif
 #ifndef BEAN_TYPEDEF_NSWindowTab
 #define BEAN_TYPEDEF_NSWindowTab
@@ -3271,6 +4355,10 @@ typedef bean_id NSWritingToolsCoordinatorAnimationParameters;
 #define BEAN_TYPEDEF_NSWritingToolsCoordinatorContext
 typedef bean_id NSWritingToolsCoordinatorContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSWritingToolsCoordinatorDelegate
+#define BEAN_TYPEDEF_NSWritingToolsCoordinatorDelegate
+typedef bean_id NSWritingToolsCoordinatorDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXMLDTD
 #define BEAN_TYPEDEF_NSXMLDTD
 typedef bean_id NSXMLDTD;
@@ -3295,6 +4383,10 @@ typedef bean_id NSXMLNode;
 #define BEAN_TYPEDEF_NSXMLParser
 typedef bean_id NSXMLParser;
 #endif
+#ifndef BEAN_TYPEDEF_NSXMLParserDelegate
+#define BEAN_TYPEDEF_NSXMLParserDelegate
+typedef bean_id NSXMLParserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXPCCoder
 #define BEAN_TYPEDEF_NSXPCCoder
 typedef bean_id NSXPCCoder;
@@ -3310,6 +4402,18 @@ typedef bean_id NSXPCInterface;
 #ifndef BEAN_TYPEDEF_NSXPCListener
 #define BEAN_TYPEDEF_NSXPCListener
 typedef bean_id NSXPCListener;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerDelegate
+#define BEAN_TYPEDEF_NSXPCListenerDelegate
+typedef bean_id NSXPCListenerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
+#define BEAN_TYPEDEF_NSXPCListenerEndpoint
+typedef bean_id NSXPCListenerEndpoint;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCProxyCreating
+#define BEAN_TYPEDEF_NSXPCProxyCreating
+typedef bean_id NSXPCProxyCreating;
 #endif
 #ifndef BEAN_TYPEDEF_OS_object
 #define BEAN_TYPEDEF_OS_object
@@ -3327,6 +4431,18 @@ typedef bean_id OS_os_workgroup_interval;
 #define BEAN_TYPEDEF_OS_os_workgroup_parallel
 typedef bean_id OS_os_workgroup_parallel;
 #endif
+#ifndef BEAN_TYPEDEF_PDEPanel
+#define BEAN_TYPEDEF_PDEPanel
+typedef bean_id PDEPanel;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPlugIn
+#define BEAN_TYPEDEF_PDEPlugIn
+typedef bean_id PDEPlugIn;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+#define BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+typedef bean_id PDEPlugInCallbackProtocol;
+#endif
 #ifndef BEAN_TYPEDEF_SCNAccelerationConstraint
 #define BEAN_TYPEDEF_SCNAccelerationConstraint
 typedef bean_id SCNAccelerationConstraint;
@@ -3334,6 +4450,14 @@ typedef bean_id SCNAccelerationConstraint;
 #ifndef BEAN_TYPEDEF_SCNAction
 #define BEAN_TYPEDEF_SCNAction
 typedef bean_id SCNAction;
+#endif
+#ifndef BEAN_TYPEDEF_SCNActionable
+#define BEAN_TYPEDEF_SCNActionable
+typedef bean_id SCNActionable;
+#endif
+#ifndef BEAN_TYPEDEF_SCNAnimatable
+#define BEAN_TYPEDEF_SCNAnimatable
+typedef bean_id SCNAnimatable;
 #endif
 #ifndef BEAN_TYPEDEF_SCNAnimation
 #define BEAN_TYPEDEF_SCNAnimation
@@ -3359,21 +4483,41 @@ typedef bean_id SCNAudioSource;
 #define BEAN_TYPEDEF_SCNAvoidOccluderConstraint
 typedef bean_id SCNAvoidOccluderConstraint;
 #endif
+#ifndef BEAN_TYPEDEF_SCNAvoidOccluderConstraintDelegate
+#define BEAN_TYPEDEF_SCNAvoidOccluderConstraintDelegate
+typedef bean_id SCNAvoidOccluderConstraintDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_SCNBillboardConstraint
 #define BEAN_TYPEDEF_SCNBillboardConstraint
 typedef bean_id SCNBillboardConstraint;
+#endif
+#ifndef BEAN_TYPEDEF_SCNBoundingVolume
+#define BEAN_TYPEDEF_SCNBoundingVolume
+typedef bean_id SCNBoundingVolume;
 #endif
 #ifndef BEAN_TYPEDEF_SCNBox
 #define BEAN_TYPEDEF_SCNBox
 typedef bean_id SCNBox;
 #endif
+#ifndef BEAN_TYPEDEF_SCNBufferStream
+#define BEAN_TYPEDEF_SCNBufferStream
+typedef bean_id SCNBufferStream;
+#endif
 #ifndef BEAN_TYPEDEF_SCNCamera
 #define BEAN_TYPEDEF_SCNCamera
 typedef bean_id SCNCamera;
 #endif
+#ifndef BEAN_TYPEDEF_SCNCameraControlConfiguration
+#define BEAN_TYPEDEF_SCNCameraControlConfiguration
+typedef bean_id SCNCameraControlConfiguration;
+#endif
 #ifndef BEAN_TYPEDEF_SCNCameraController
 #define BEAN_TYPEDEF_SCNCameraController
 typedef bean_id SCNCameraController;
+#endif
+#ifndef BEAN_TYPEDEF_SCNCameraControllerDelegate
+#define BEAN_TYPEDEF_SCNCameraControllerDelegate
+typedef bean_id SCNCameraControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_SCNCapsule
 #define BEAN_TYPEDEF_SCNCapsule
@@ -3455,6 +4599,10 @@ typedef bean_id SCNMorpher;
 #define BEAN_TYPEDEF_SCNNode
 typedef bean_id SCNNode;
 #endif
+#ifndef BEAN_TYPEDEF_SCNNodeRendererDelegate
+#define BEAN_TYPEDEF_SCNNodeRendererDelegate
+typedef bean_id SCNNodeRendererDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_SCNParticlePropertyController
 #define BEAN_TYPEDEF_SCNParticlePropertyController
 typedef bean_id SCNParticlePropertyController;
@@ -3467,6 +4615,10 @@ typedef bean_id SCNParticleSystem;
 #define BEAN_TYPEDEF_SCNPhysicsBallSocketJoint
 typedef bean_id SCNPhysicsBallSocketJoint;
 #endif
+#ifndef BEAN_TYPEDEF_SCNPhysicsBehavior
+#define BEAN_TYPEDEF_SCNPhysicsBehavior
+typedef bean_id SCNPhysicsBehavior;
+#endif
 #ifndef BEAN_TYPEDEF_SCNPhysicsBody
 #define BEAN_TYPEDEF_SCNPhysicsBody
 typedef bean_id SCNPhysicsBody;
@@ -3478,6 +4630,10 @@ typedef bean_id SCNPhysicsConeTwistJoint;
 #ifndef BEAN_TYPEDEF_SCNPhysicsContact
 #define BEAN_TYPEDEF_SCNPhysicsContact
 typedef bean_id SCNPhysicsContact;
+#endif
+#ifndef BEAN_TYPEDEF_SCNPhysicsContactDelegate
+#define BEAN_TYPEDEF_SCNPhysicsContactDelegate
+typedef bean_id SCNPhysicsContactDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_SCNPhysicsField
 #define BEAN_TYPEDEF_SCNPhysicsField
@@ -3515,6 +4671,10 @@ typedef bean_id SCNPlane;
 #define BEAN_TYPEDEF_SCNProgram
 typedef bean_id SCNProgram;
 #endif
+#ifndef BEAN_TYPEDEF_SCNProgramDelegate
+#define BEAN_TYPEDEF_SCNProgramDelegate
+typedef bean_id SCNProgramDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_SCNPyramid
 #define BEAN_TYPEDEF_SCNPyramid
 typedef bean_id SCNPyramid;
@@ -3535,9 +4695,25 @@ typedef bean_id SCNReplicatorConstraint;
 #define BEAN_TYPEDEF_SCNScene
 typedef bean_id SCNScene;
 #endif
+#ifndef BEAN_TYPEDEF_SCNSceneExportDelegate
+#define BEAN_TYPEDEF_SCNSceneExportDelegate
+typedef bean_id SCNSceneExportDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_SCNSceneRenderer
+#define BEAN_TYPEDEF_SCNSceneRenderer
+typedef bean_id SCNSceneRenderer;
+#endif
+#ifndef BEAN_TYPEDEF_SCNSceneRendererDelegate
+#define BEAN_TYPEDEF_SCNSceneRendererDelegate
+typedef bean_id SCNSceneRendererDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_SCNSceneSource
 #define BEAN_TYPEDEF_SCNSceneSource
 typedef bean_id SCNSceneSource;
+#endif
+#ifndef BEAN_TYPEDEF_SCNShadable
+#define BEAN_TYPEDEF_SCNShadable
+typedef bean_id SCNShadable;
 #endif
 #ifndef BEAN_TYPEDEF_SCNShape
 #define BEAN_TYPEDEF_SCNShape
@@ -3558,6 +4734,10 @@ typedef bean_id SCNSphere;
 #ifndef BEAN_TYPEDEF_SCNTechnique
 #define BEAN_TYPEDEF_SCNTechnique
 typedef bean_id SCNTechnique;
+#endif
+#ifndef BEAN_TYPEDEF_SCNTechniqueSupport
+#define BEAN_TYPEDEF_SCNTechniqueSupport
+typedef bean_id SCNTechniqueSupport;
 #endif
 #ifndef BEAN_TYPEDEF_SCNText
 #define BEAN_TYPEDEF_SCNText
@@ -3627,6 +4807,10 @@ typedef bean_id SKView;
 #define BEAN_TYPEDEF_AVAudioEngine
 typedef bean_id AVAudioEngine;
 #endif
+#ifndef BEAN_TYPEDEF_AVAudioEnvironmentNode
+#define BEAN_TYPEDEF_AVAudioEnvironmentNode
+typedef bean_id AVAudioEnvironmentNode;
+#endif
 #ifndef BEAN_TYPEDEF_AVAudioNode
 #define BEAN_TYPEDEF_AVAudioNode
 typedef bean_id AVAudioNode;
@@ -3646,10 +4830,6 @@ typedef bean_id AVPortraitEffectsMatte;
 #ifndef BEAN_TYPEDEF_AVSemanticSegmentationMatte
 #define BEAN_TYPEDEF_AVSemanticSegmentationMatte
 typedef bean_id AVSemanticSegmentationMatte;
-#endif
-#ifndef BEAN_TYPEDEF_CIBarcodeDescriptor
-#define BEAN_TYPEDEF_CIBarcodeDescriptor
-typedef bean_id CIBarcodeDescriptor;
 #endif
 #ifndef BEAN_TYPEDEF_CKContainer
 #define BEAN_TYPEDEF_CKContainer
@@ -3683,6 +4863,10 @@ typedef bean_id CKReferenceAction;
 #define BEAN_TYPEDEF_CKShare
 typedef bean_id CKShare;
 #endif
+#ifndef BEAN_TYPEDEF_CKShareMetadata
+#define BEAN_TYPEDEF_CKShareMetadata
+typedef bean_id CKShareMetadata;
+#endif
 #ifndef BEAN_TYPEDEF_CSSearchableIndex
 #define BEAN_TYPEDEF_CSSearchableIndex
 typedef bean_id CSSearchableIndex;
@@ -3695,9 +4879,25 @@ typedef bean_id CSSearchableItemAttributeSet;
 #define BEAN_TYPEDEF_GKNoiseSource
 typedef bean_id GKNoiseSource;
 #endif
-#ifndef BEAN_TYPEDEF_MTL4FunctionDescriptor
-#define BEAN_TYPEDEF_MTL4FunctionDescriptor
-typedef bean_id MTL4FunctionDescriptor;
+#ifndef BEAN_TYPEDEF_MTL4AccelerationStructureDescriptor
+#define BEAN_TYPEDEF_MTL4AccelerationStructureDescriptor
+typedef bean_id MTL4AccelerationStructureDescriptor;
+#endif
+#ifndef BEAN_TYPEDEF_MTLAutoreleasedArgument
+#define BEAN_TYPEDEF_MTLAutoreleasedArgument
+typedef bean_id MTLAutoreleasedArgument;
+#endif
+#ifndef BEAN_TYPEDEF_MTLAutoreleasedComputePipelineReflection
+#define BEAN_TYPEDEF_MTLAutoreleasedComputePipelineReflection
+typedef bean_id MTLAutoreleasedComputePipelineReflection;
+#endif
+#ifndef BEAN_TYPEDEF_MTLAutoreleasedRenderPipelineReflection
+#define BEAN_TYPEDEF_MTLAutoreleasedRenderPipelineReflection
+typedef bean_id MTLAutoreleasedRenderPipelineReflection;
+#endif
+#ifndef BEAN_TYPEDEF_MTLTimestamp
+#define BEAN_TYPEDEF_MTLTimestamp
+typedef bean_id MTLTimestamp;
 #endif
 #ifndef BEAN_TYPEDEF_NSDeleteRule
 #define BEAN_TYPEDEF_NSDeleteRule
@@ -3710,10 +4910,6 @@ typedef bean_id NSGlyph;
 #ifndef BEAN_TYPEDEF_NSOpenGLPixelFormatAttribute
 #define BEAN_TYPEDEF_NSOpenGLPixelFormatAttribute
 typedef bean_id NSOpenGLPixelFormatAttribute;
-#endif
-#ifndef BEAN_TYPEDEF_NSPersistentHistoryToken
-#define BEAN_TYPEDEF_NSPersistentHistoryToken
-typedef bean_id NSPersistentHistoryToken;
 #endif
 #ifndef BEAN_TYPEDEF_NSPersistentStoreResult
 #define BEAN_TYPEDEF_NSPersistentStoreResult
@@ -3735,17 +4931,13 @@ typedef bean_id NSSymbolMagicReplaceContentTransition;
 #define BEAN_TYPEDEF_NSTextBlockid
 typedef bean_id NSTextBlockid;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextCheckingTypes
+#define BEAN_TYPEDEF_NSTextCheckingTypes
+typedef bean_id NSTextCheckingTypes;
+#endif
 #ifndef BEAN_TYPEDEF_NSWorkspaceAuthorization
 #define BEAN_TYPEDEF_NSWorkspaceAuthorization
 typedef bean_id NSWorkspaceAuthorization;
-#endif
-#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
-#define BEAN_TYPEDEF_NSXPCListenerEndpoint
-typedef bean_id NSXPCListenerEndpoint;
-#endif
-#ifndef BEAN_TYPEDEF_SCNPhysicsBehavior
-#define BEAN_TYPEDEF_SCNPhysicsBehavior
-typedef bean_id SCNPhysicsBehavior;
 #endif
 #ifndef BEAN_TYPEDEF_SKNodeFocusBehavior
 #define BEAN_TYPEDEF_SKNodeFocusBehavior
@@ -3766,10 +4958,6 @@ typedef bean_id SKTileDefinitionRotation;
 #ifndef BEAN_TYPEDEF_SKTransitionDirection
 #define BEAN_TYPEDEF_SKTransitionDirection
 typedef bean_id SKTransitionDirection;
-#endif
-#ifndef BEAN_TYPEDEF_SKWarpGeometry
-#define BEAN_TYPEDEF_SKWarpGeometry
-typedef bean_id SKWarpGeometry;
 #endif
 
 /* ===== fallback typedefs ===== */
@@ -3809,6 +4997,10 @@ typedef NSInteger NSFetchIndexElementType;
 #define BEAN_TYPEDEF_NSFetchRequestResultType
 typedef NSInteger NSFetchRequestResultType;
 #endif
+#ifndef BEAN_TYPEDEF_NSFetchedResultsChangeType
+#define BEAN_TYPEDEF_NSFetchedResultsChangeType
+typedef NSInteger NSFetchedResultsChangeType;
+#endif
 #ifndef BEAN_TYPEDEF_NSMergePolicyType
 #define BEAN_TYPEDEF_NSMergePolicyType
 typedef NSInteger NSMergePolicyType;
@@ -3840,6 +5032,10 @@ typedef NSInteger NSPersistentStoreRequestType;
 #ifndef BEAN_TYPEDEF_NSSnapshotEventType
 #define BEAN_TYPEDEF_NSSnapshotEventType
 typedef NSInteger NSSnapshotEventType;
+#endif
+#ifndef BEAN_TYPEDEF_OpaquePMPageFormat
+#define BEAN_TYPEDEF_OpaquePMPageFormat
+typedef NSInteger OpaquePMPageFormat;
 #endif
 #ifndef BEAN_TYPEDEF_SKActionTimingMode
 #define BEAN_TYPEDEF_SKActionTimingMode
@@ -3908,75 +5104,85 @@ typedef NSUInteger NSStringEncoding;
 #define BEAN_TYPEDEF_CKAsset
 typedef bean_id CKAsset;
 #endif
-static inline id       CKAsset_Init(CKAsset self)                              { return ((id (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id       CKAsset_New(void)                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKAsset"), bean_sel("new")); }
-static inline id       CKAsset_InitWithFileURL(CKAsset self, NSURL fileURL)    { return ((id (*)(CKAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithFileURL:"), fileURL); }
-static inline NSURL    CKAsset_FileURL(CKAsset self)                           { return ((NSURL (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("fileURL")); }
+static inline CKAsset    CKAsset_Init(CKAsset self)                              { return ((CKAsset (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKAsset    CKAsset_New(void)                                       { return ((CKAsset (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKAsset"), bean_sel("new")); }
+static inline CKAsset    CKAsset_InitWithFileURL(CKAsset self, NSURL fileURL)    { return ((CKAsset (*)(CKAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithFileURL:"), fileURL); }
+static inline NSURL      CKAsset_FileURL(CKAsset self)                           { return ((NSURL (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("fileURL")); }
 
 /* ===== CKDatabaseSubscription ===== */
 #ifndef BEAN_TYPEDEF_CKDatabaseSubscription
 #define BEAN_TYPEDEF_CKDatabaseSubscription
 typedef bean_id CKDatabaseSubscription;
 #endif
-static inline id          CKDatabaseSubscription_Init(CKDatabaseSubscription self)                                               { return ((id (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          CKDatabaseSubscription_New(void)                                                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabaseSubscription"), bean_sel("new")); }
-static inline id          CKDatabaseSubscription_InitWithSubscriptionID(CKDatabaseSubscription self, NSString subscriptionID)    { return ((id (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSubscriptionID:"), subscriptionID); }
-static inline id          CKDatabaseSubscription_InitWithCoder(CKDatabaseSubscription self, NSCoder aDecoder)                    { return ((id (*)(CKDatabaseSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline NSString    CKDatabaseSubscription_RecordType(CKDatabaseSubscription self)                                         { return ((NSString (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
-static inline void        CKDatabaseSubscription_SetRecordType(CKDatabaseSubscription self, NSString recordType)                 { ((void (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
+static inline CKDatabaseSubscription    CKDatabaseSubscription_Init(CKDatabaseSubscription self)                                               { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKDatabaseSubscription    CKDatabaseSubscription_New(void)                                                                       { return ((CKDatabaseSubscription (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabaseSubscription"), bean_sel("new")); }
+static inline CKDatabaseSubscription    CKDatabaseSubscription_InitWithSubscriptionID(CKDatabaseSubscription self, NSString subscriptionID)    { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSubscriptionID:"), subscriptionID); }
+static inline CKDatabaseSubscription    CKDatabaseSubscription_InitWithCoder(CKDatabaseSubscription self, NSCoder aDecoder)                    { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline NSString                  CKDatabaseSubscription_RecordType(CKDatabaseSubscription self)                                         { return ((NSString (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
+static inline void                      CKDatabaseSubscription_SetRecordType(CKDatabaseSubscription self, NSString recordType)                 { ((void (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
+static inline BOOL                      CKDatabaseSubscription_SupportsSecureCoding(void)                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabaseSubscription"), bean_sel("supportsSecureCoding")); }
+static inline id                        CKDatabaseSubscription_CopyWithZone(CKDatabaseSubscription self, NSZone* zone)                         { return ((id (*)(CKDatabaseSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKQuerySubscription ===== */
 #ifndef BEAN_TYPEDEF_CKQuerySubscription
 #define BEAN_TYPEDEF_CKQuerySubscription
 typedef bean_id CKQuerySubscription;
 #endif
-static inline id                            CKQuerySubscription_InitWithRecordType_Predicate_Options(CKQuerySubscription self, NSString recordType, NSPredicate predicate, CKQuerySubscriptionOptions querySubscriptionOptions)                                            { return ((id (*)(CKQuerySubscription, SEL, NSString, NSPredicate, CKQuerySubscriptionOptions))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:options:"), recordType, predicate, querySubscriptionOptions); }
-static inline id                            CKQuerySubscription_InitWithRecordType_Predicate_SubscriptionID_Options(CKQuerySubscription self, NSString recordType, NSPredicate predicate, NSString subscriptionID, CKQuerySubscriptionOptions querySubscriptionOptions)    { return ((id (*)(CKQuerySubscription, SEL, NSString, NSPredicate, NSString, CKQuerySubscriptionOptions))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:subscriptionID:options:"), recordType, predicate, subscriptionID, querySubscriptionOptions); }
-static inline id                            CKQuerySubscription_InitWithCoder(CKQuerySubscription self, NSCoder aDecoder)                                                                                                                                                  { return ((id (*)(CKQuerySubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline CKQuerySubscription           CKQuerySubscription_InitWithRecordType_Predicate_Options(CKQuerySubscription self, NSString recordType, NSPredicate predicate, CKQuerySubscriptionOptions querySubscriptionOptions)                                            { return ((CKQuerySubscription (*)(CKQuerySubscription, SEL, NSString, NSPredicate, CKQuerySubscriptionOptions))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:options:"), recordType, predicate, querySubscriptionOptions); }
+static inline CKQuerySubscription           CKQuerySubscription_InitWithRecordType_Predicate_SubscriptionID_Options(CKQuerySubscription self, NSString recordType, NSPredicate predicate, NSString subscriptionID, CKQuerySubscriptionOptions querySubscriptionOptions)    { return ((CKQuerySubscription (*)(CKQuerySubscription, SEL, NSString, NSPredicate, NSString, CKQuerySubscriptionOptions))bean_msgSend)(self, bean_sel("initWithRecordType:predicate:subscriptionID:options:"), recordType, predicate, subscriptionID, querySubscriptionOptions); }
+static inline CKQuerySubscription           CKQuerySubscription_InitWithCoder(CKQuerySubscription self, NSCoder aDecoder)                                                                                                                                                  { return ((CKQuerySubscription (*)(CKQuerySubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline NSString                      CKQuerySubscription_RecordType(CKQuerySubscription self)                                                                                                                                                                       { return ((NSString (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
 static inline NSPredicate                   CKQuerySubscription_Predicate(CKQuerySubscription self)                                                                                                                                                                        { return ((NSPredicate (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("predicate")); }
 static inline CKRecordZoneID                CKQuerySubscription_ZoneID(CKQuerySubscription self)                                                                                                                                                                           { return ((CKRecordZoneID (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
 static inline void                          CKQuerySubscription_SetZoneID(CKQuerySubscription self, CKRecordZoneID zoneID)                                                                                                                                                 { ((void (*)(CKQuerySubscription, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("setZoneID:"), zoneID); }
 static inline CKQuerySubscriptionOptions    CKQuerySubscription_QuerySubscriptionOptions(CKQuerySubscription self)                                                                                                                                                         { return ((CKQuerySubscriptionOptions (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("querySubscriptionOptions")); }
+static inline BOOL                          CKQuerySubscription_SupportsSecureCoding(void)                                                                                                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQuerySubscription"), bean_sel("supportsSecureCoding")); }
+static inline id                            CKQuerySubscription_CopyWithZone(CKQuerySubscription self, NSZone* zone)                                                                                                                                                       { return ((id (*)(CKQuerySubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKRecordZoneSubscription ===== */
 #ifndef BEAN_TYPEDEF_CKRecordZoneSubscription
 #define BEAN_TYPEDEF_CKRecordZoneSubscription
 typedef bean_id CKRecordZoneSubscription;
 #endif
-static inline id                CKRecordZoneSubscription_InitWithZoneID(CKRecordZoneSubscription self, CKRecordZoneID zoneID)                                            { return ((id (*)(CKRecordZoneSubscription, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithZoneID:"), zoneID); }
-static inline id                CKRecordZoneSubscription_InitWithZoneID_SubscriptionID(CKRecordZoneSubscription self, CKRecordZoneID zoneID, NSString subscriptionID)    { return ((id (*)(CKRecordZoneSubscription, SEL, CKRecordZoneID, NSString))bean_msgSend)(self, bean_sel("initWithZoneID:subscriptionID:"), zoneID, subscriptionID); }
-static inline id                CKRecordZoneSubscription_InitWithCoder(CKRecordZoneSubscription self, NSCoder aDecoder)                                                  { return ((id (*)(CKRecordZoneSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline CKRecordZoneID    CKRecordZoneSubscription_ZoneID(CKRecordZoneSubscription self)                                                                           { return ((CKRecordZoneID (*)(CKRecordZoneSubscription, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
-static inline NSString          CKRecordZoneSubscription_RecordType(CKRecordZoneSubscription self)                                                                       { return ((NSString (*)(CKRecordZoneSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
-static inline void              CKRecordZoneSubscription_SetRecordType(CKRecordZoneSubscription self, NSString recordType)                                               { ((void (*)(CKRecordZoneSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
+static inline CKRecordZoneSubscription    CKRecordZoneSubscription_InitWithZoneID(CKRecordZoneSubscription self, CKRecordZoneID zoneID)                                            { return ((CKRecordZoneSubscription (*)(CKRecordZoneSubscription, SEL, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithZoneID:"), zoneID); }
+static inline CKRecordZoneSubscription    CKRecordZoneSubscription_InitWithZoneID_SubscriptionID(CKRecordZoneSubscription self, CKRecordZoneID zoneID, NSString subscriptionID)    { return ((CKRecordZoneSubscription (*)(CKRecordZoneSubscription, SEL, CKRecordZoneID, NSString))bean_msgSend)(self, bean_sel("initWithZoneID:subscriptionID:"), zoneID, subscriptionID); }
+static inline CKRecordZoneSubscription    CKRecordZoneSubscription_InitWithCoder(CKRecordZoneSubscription self, NSCoder aDecoder)                                                  { return ((CKRecordZoneSubscription (*)(CKRecordZoneSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline CKRecordZoneID              CKRecordZoneSubscription_ZoneID(CKRecordZoneSubscription self)                                                                           { return ((CKRecordZoneID (*)(CKRecordZoneSubscription, SEL))bean_msgSend)(self, bean_sel("zoneID")); }
+static inline NSString                    CKRecordZoneSubscription_RecordType(CKRecordZoneSubscription self)                                                                       { return ((NSString (*)(CKRecordZoneSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
+static inline void                        CKRecordZoneSubscription_SetRecordType(CKRecordZoneSubscription self, NSString recordType)                                               { ((void (*)(CKRecordZoneSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
+static inline BOOL                        CKRecordZoneSubscription_SupportsSecureCoding(void)                                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZoneSubscription"), bean_sel("supportsSecureCoding")); }
+static inline id                          CKRecordZoneSubscription_CopyWithZone(CKRecordZoneSubscription self, NSZone* zone)                                                       { return ((id (*)(CKRecordZoneSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CLFloor ===== */
 #ifndef BEAN_TYPEDEF_CLFloor
 #define BEAN_TYPEDEF_CLFloor
 typedef bean_id CLFloor;
 #endif
-static inline NSInteger    CLFloor_Level(CLFloor self)    { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
+static inline NSInteger    CLFloor_Level(CLFloor self)                         { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
+static inline id           CLFloor_CopyWithZone(CLFloor self, NSZone* zone)    { return ((id (*)(CLFloor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL         CLFloor_SupportsSecureCoding(void)                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLFloor"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CLLocationSourceInformation ===== */
 #ifndef BEAN_TYPEDEF_CLLocationSourceInformation
 #define BEAN_TYPEDEF_CLLocationSourceInformation
 typedef bean_id CLLocationSourceInformation;
 #endif
-static inline id      CLLocationSourceInformation_InitWithSoftwareSimulationState_AndExternalAccessoryState(CLLocationSourceInformation self, BOOL isSoftware, BOOL isAccessory)    { return ((id (*)(CLLocationSourceInformation, SEL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initWithSoftwareSimulationState:andExternalAccessoryState:"), isSoftware, isAccessory); }
-static inline BOOL    CLLocationSourceInformation_IsSimulatedBySoftware(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isSimulatedBySoftware")); }
-static inline BOOL    CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
+static inline CLLocationSourceInformation    CLLocationSourceInformation_InitWithSoftwareSimulationState_AndExternalAccessoryState(CLLocationSourceInformation self, BOOL isSoftware, BOOL isAccessory)    { return ((CLLocationSourceInformation (*)(CLLocationSourceInformation, SEL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initWithSoftwareSimulationState:andExternalAccessoryState:"), isSoftware, isAccessory); }
+static inline BOOL                           CLLocationSourceInformation_IsSimulatedBySoftware(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isSimulatedBySoftware")); }
+static inline BOOL                           CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
+static inline id                             CLLocationSourceInformation_CopyWithZone(CLLocationSourceInformation self, NSZone* zone)                                                                      { return ((id (*)(CLLocationSourceInformation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                           CLLocationSourceInformation_SupportsSecureCoding(void)                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocationSourceInformation"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKARC4RandomSource ===== */
 #ifndef BEAN_TYPEDEF_GKARC4RandomSource
 #define BEAN_TYPEDEF_GKARC4RandomSource
 typedef bean_id GKARC4RandomSource;
 #endif
-static inline id        GKARC4RandomSource_Init(GKARC4RandomSource self)                                     { return ((id (*)(GKARC4RandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id        GKARC4RandomSource_InitWithSeed(GKARC4RandomSource self, NSData seed)                { return ((id (*)(GKARC4RandomSource, SEL, NSData))bean_msgSend)(self, bean_sel("initWithSeed:"), seed); }
-static inline void      GKARC4RandomSource_DropValuesWithCount(GKARC4RandomSource self, NSUInteger count)    { ((void (*)(GKARC4RandomSource, SEL, NSUInteger))bean_msgSend)(self, bean_sel("dropValuesWithCount:"), count); }
-static inline NSData    GKARC4RandomSource_Seed(GKARC4RandomSource self)                                     { return ((NSData (*)(GKARC4RandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
-static inline void      GKARC4RandomSource_SetSeed(GKARC4RandomSource self, NSData seed)                     { ((void (*)(GKARC4RandomSource, SEL, NSData))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+static inline GKARC4RandomSource    GKARC4RandomSource_Init(GKARC4RandomSource self)                                     { return ((GKARC4RandomSource (*)(GKARC4RandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKARC4RandomSource    GKARC4RandomSource_InitWithSeed(GKARC4RandomSource self, NSData seed)                { return ((GKARC4RandomSource (*)(GKARC4RandomSource, SEL, NSData))bean_msgSend)(self, bean_sel("initWithSeed:"), seed); }
+static inline void                  GKARC4RandomSource_DropValuesWithCount(GKARC4RandomSource self, NSUInteger count)    { ((void (*)(GKARC4RandomSource, SEL, NSUInteger))bean_msgSend)(self, bean_sel("dropValuesWithCount:"), count); }
+static inline NSData                GKARC4RandomSource_Seed(GKARC4RandomSource self)                                     { return ((NSData (*)(GKARC4RandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
+static inline void                  GKARC4RandomSource_SetSeed(GKARC4RandomSource self, NSData seed)                     { ((void (*)(GKARC4RandomSource, SEL, NSData))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
 
 /* ===== GKAgent2D ===== */
 #ifndef BEAN_TYPEDEF_GKAgent2D
@@ -3989,6 +5195,7 @@ static inline void       GKAgent2D_SetPosition(GKAgent2D self, void* position)  
 static inline void*      GKAgent2D_Velocity(GKAgent2D self)                                { return ((void* (*)(GKAgent2D, SEL))bean_msgSend)(self, bean_sel("velocity")); }
 static inline CGFloat    GKAgent2D_Rotation(GKAgent2D self)                                { return ((CGFloat (*)(GKAgent2D, SEL))bean_msgSend_fpret)(self, bean_sel("rotation")); }
 static inline void       GKAgent2D_SetRotation(GKAgent2D self, CGFloat rotation)           { ((void (*)(GKAgent2D, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRotation:"), rotation); }
+static inline BOOL       GKAgent2D_SupportsSecureCoding(void)                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKAgent2D"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKAgent3D ===== */
 #ifndef BEAN_TYPEDEF_GKAgent3D
@@ -4009,32 +5216,32 @@ static inline void             GKAgent3D_SetRotation(GKAgent3D self, simd_float3
 #define BEAN_TYPEDEF_GKBillowNoiseSource
 typedef bean_id GKBillowNoiseSource;
 #endif
-static inline id         GKBillowNoiseSource_BillowNoiseSourceWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)                 { return ((id (*)(bean_class, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(bean_cls("GKBillowNoiseSource"), bean_sel("billowNoiseSourceWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
-static inline id         GKBillowNoiseSource_InitWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(GKBillowNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)    { return ((id (*)(GKBillowNoiseSource, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
-static inline CGFloat    GKBillowNoiseSource_Persistence(GKBillowNoiseSource self)                                                                                                                                               { return ((CGFloat (*)(GKBillowNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("persistence")); }
-static inline void       GKBillowNoiseSource_SetPersistence(GKBillowNoiseSource self, CGFloat persistence)                                                                                                                       { ((void (*)(GKBillowNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPersistence:"), persistence); }
+static inline GKBillowNoiseSource    GKBillowNoiseSource_BillowNoiseSourceWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)                 { return ((GKBillowNoiseSource (*)(bean_class, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(bean_cls("GKBillowNoiseSource"), bean_sel("billowNoiseSourceWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
+static inline GKBillowNoiseSource    GKBillowNoiseSource_InitWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(GKBillowNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)    { return ((GKBillowNoiseSource (*)(GKBillowNoiseSource, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
+static inline CGFloat                GKBillowNoiseSource_Persistence(GKBillowNoiseSource self)                                                                                                                                               { return ((CGFloat (*)(GKBillowNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("persistence")); }
+static inline void                   GKBillowNoiseSource_SetPersistence(GKBillowNoiseSource self, CGFloat persistence)                                                                                                                       { ((void (*)(GKBillowNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPersistence:"), persistence); }
 
 /* ===== GKCheckerboardNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKCheckerboardNoiseSource
 #define BEAN_TYPEDEF_GKCheckerboardNoiseSource
 typedef bean_id GKCheckerboardNoiseSource;
 #endif
-static inline id         GKCheckerboardNoiseSource_CheckerboardNoiseWithSquareSize(CGFloat squareSize)                       { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKCheckerboardNoiseSource"), bean_sel("checkerboardNoiseWithSquareSize:"), squareSize); }
-static inline id         GKCheckerboardNoiseSource_InitWithSquareSize(GKCheckerboardNoiseSource self, CGFloat squareSize)    { return ((id (*)(GKCheckerboardNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithSquareSize:"), squareSize); }
-static inline CGFloat    GKCheckerboardNoiseSource_SquareSize(GKCheckerboardNoiseSource self)                                { return ((CGFloat (*)(GKCheckerboardNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("squareSize")); }
-static inline void       GKCheckerboardNoiseSource_SetSquareSize(GKCheckerboardNoiseSource self, CGFloat squareSize)         { ((void (*)(GKCheckerboardNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSquareSize:"), squareSize); }
+static inline GKCheckerboardNoiseSource    GKCheckerboardNoiseSource_CheckerboardNoiseWithSquareSize(CGFloat squareSize)                       { return ((GKCheckerboardNoiseSource (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKCheckerboardNoiseSource"), bean_sel("checkerboardNoiseWithSquareSize:"), squareSize); }
+static inline GKCheckerboardNoiseSource    GKCheckerboardNoiseSource_InitWithSquareSize(GKCheckerboardNoiseSource self, CGFloat squareSize)    { return ((GKCheckerboardNoiseSource (*)(GKCheckerboardNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithSquareSize:"), squareSize); }
+static inline CGFloat                      GKCheckerboardNoiseSource_SquareSize(GKCheckerboardNoiseSource self)                                { return ((CGFloat (*)(GKCheckerboardNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("squareSize")); }
+static inline void                         GKCheckerboardNoiseSource_SetSquareSize(GKCheckerboardNoiseSource self, CGFloat squareSize)         { ((void (*)(GKCheckerboardNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSquareSize:"), squareSize); }
 
 /* ===== GKCircleObstacle ===== */
 #ifndef BEAN_TYPEDEF_GKCircleObstacle
 #define BEAN_TYPEDEF_GKCircleObstacle
 typedef bean_id GKCircleObstacle;
 #endif
-static inline id         GKCircleObstacle_ObstacleWithRadius(CGFloat radius)                       { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKCircleObstacle"), bean_sel("obstacleWithRadius:"), radius); }
-static inline id         GKCircleObstacle_InitWithRadius(GKCircleObstacle self, CGFloat radius)    { return ((id (*)(GKCircleObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithRadius:"), radius); }
-static inline CGFloat    GKCircleObstacle_Radius(GKCircleObstacle self)                            { return ((CGFloat (*)(GKCircleObstacle, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
-static inline void       GKCircleObstacle_SetRadius(GKCircleObstacle self, CGFloat radius)         { ((void (*)(GKCircleObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
-static inline void*      GKCircleObstacle_Position(GKCircleObstacle self)                          { return ((void* (*)(GKCircleObstacle, SEL))bean_msgSend)(self, bean_sel("position")); }
-static inline void       GKCircleObstacle_SetPosition(GKCircleObstacle self, void* position)       { ((void (*)(GKCircleObstacle, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+static inline GKCircleObstacle    GKCircleObstacle_ObstacleWithRadius(CGFloat radius)                       { return ((GKCircleObstacle (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKCircleObstacle"), bean_sel("obstacleWithRadius:"), radius); }
+static inline GKCircleObstacle    GKCircleObstacle_InitWithRadius(GKCircleObstacle self, CGFloat radius)    { return ((GKCircleObstacle (*)(GKCircleObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithRadius:"), radius); }
+static inline CGFloat             GKCircleObstacle_Radius(GKCircleObstacle self)                            { return ((CGFloat (*)(GKCircleObstacle, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
+static inline void                GKCircleObstacle_SetRadius(GKCircleObstacle self, CGFloat radius)         { ((void (*)(GKCircleObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
+static inline void*               GKCircleObstacle_Position(GKCircleObstacle self)                          { return ((void* (*)(GKCircleObstacle, SEL))bean_msgSend)(self, bean_sel("position")); }
+static inline void                GKCircleObstacle_SetPosition(GKCircleObstacle self, void* position)       { ((void (*)(GKCircleObstacle, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
 
 /* ===== GKCoherentNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKCoherentNoiseSource
@@ -4055,88 +5262,103 @@ static inline void         GKCoherentNoiseSource_SetSeed(GKCoherentNoiseSource s
 #define BEAN_TYPEDEF_GKConstantNoiseSource
 typedef bean_id GKConstantNoiseSource;
 #endif
-static inline id         GKConstantNoiseSource_ConstantNoiseWithValue(CGFloat value)                       { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKConstantNoiseSource"), bean_sel("constantNoiseWithValue:"), value); }
-static inline id         GKConstantNoiseSource_InitWithValue(GKConstantNoiseSource self, CGFloat value)    { return ((id (*)(GKConstantNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithValue:"), value); }
-static inline CGFloat    GKConstantNoiseSource_Value(GKConstantNoiseSource self)                           { return ((CGFloat (*)(GKConstantNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("value")); }
-static inline void       GKConstantNoiseSource_SetValue(GKConstantNoiseSource self, CGFloat value)         { ((void (*)(GKConstantNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline GKConstantNoiseSource    GKConstantNoiseSource_ConstantNoiseWithValue(CGFloat value)                       { return ((GKConstantNoiseSource (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKConstantNoiseSource"), bean_sel("constantNoiseWithValue:"), value); }
+static inline GKConstantNoiseSource    GKConstantNoiseSource_InitWithValue(GKConstantNoiseSource self, CGFloat value)    { return ((GKConstantNoiseSource (*)(GKConstantNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithValue:"), value); }
+static inline CGFloat                  GKConstantNoiseSource_Value(GKConstantNoiseSource self)                           { return ((CGFloat (*)(GKConstantNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("value")); }
+static inline void                     GKConstantNoiseSource_SetValue(GKConstantNoiseSource self, CGFloat value)         { ((void (*)(GKConstantNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setValue:"), value); }
 
 /* ===== GKCylindersNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKCylindersNoiseSource
 #define BEAN_TYPEDEF_GKCylindersNoiseSource
 typedef bean_id GKCylindersNoiseSource;
 #endif
-static inline id         GKCylindersNoiseSource_CylindersNoiseWithFrequency(CGFloat frequency)                       { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKCylindersNoiseSource"), bean_sel("cylindersNoiseWithFrequency:"), frequency); }
-static inline id         GKCylindersNoiseSource_InitWithFrequency(GKCylindersNoiseSource self, CGFloat frequency)    { return ((id (*)(GKCylindersNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithFrequency:"), frequency); }
-static inline CGFloat    GKCylindersNoiseSource_Frequency(GKCylindersNoiseSource self)                               { return ((CGFloat (*)(GKCylindersNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
-static inline void       GKCylindersNoiseSource_SetFrequency(GKCylindersNoiseSource self, CGFloat frequency)         { ((void (*)(GKCylindersNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
+static inline GKCylindersNoiseSource    GKCylindersNoiseSource_CylindersNoiseWithFrequency(CGFloat frequency)                       { return ((GKCylindersNoiseSource (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKCylindersNoiseSource"), bean_sel("cylindersNoiseWithFrequency:"), frequency); }
+static inline GKCylindersNoiseSource    GKCylindersNoiseSource_InitWithFrequency(GKCylindersNoiseSource self, CGFloat frequency)    { return ((GKCylindersNoiseSource (*)(GKCylindersNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithFrequency:"), frequency); }
+static inline CGFloat                   GKCylindersNoiseSource_Frequency(GKCylindersNoiseSource self)                               { return ((CGFloat (*)(GKCylindersNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
+static inline void                      GKCylindersNoiseSource_SetFrequency(GKCylindersNoiseSource self, CGFloat frequency)         { ((void (*)(GKCylindersNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
 
 /* ===== GKDecisionNode ===== */
 #ifndef BEAN_TYPEDEF_GKDecisionNode
 #define BEAN_TYPEDEF_GKDecisionNode
 typedef bean_id GKDecisionNode;
 #endif
-static inline id    GKDecisionNode_CreateBranchWithValue_Attribute(GKDecisionNode self, NSNumber value, id attribute)               { return ((id (*)(GKDecisionNode, SEL, NSNumber, id))bean_msgSend)(self, bean_sel("createBranchWithValue:attribute:"), value, attribute); }
-static inline id    GKDecisionNode_CreateBranchWithPredicate_Attribute(GKDecisionNode self, NSPredicate predicate, id attribute)    { return ((id (*)(GKDecisionNode, SEL, NSPredicate, id))bean_msgSend)(self, bean_sel("createBranchWithPredicate:attribute:"), predicate, attribute); }
-static inline id    GKDecisionNode_CreateBranchWithWeight_Attribute(GKDecisionNode self, NSInteger weight, id attribute)            { return ((id (*)(GKDecisionNode, SEL, NSInteger, id))bean_msgSend)(self, bean_sel("createBranchWithWeight:attribute:"), weight, attribute); }
+static inline GKDecisionNode    GKDecisionNode_CreateBranchWithValue_Attribute(GKDecisionNode self, NSNumber value, id attribute)               { return ((GKDecisionNode (*)(GKDecisionNode, SEL, NSNumber, id))bean_msgSend)(self, bean_sel("createBranchWithValue:attribute:"), value, attribute); }
+static inline GKDecisionNode    GKDecisionNode_CreateBranchWithPredicate_Attribute(GKDecisionNode self, NSPredicate predicate, id attribute)    { return ((GKDecisionNode (*)(GKDecisionNode, SEL, NSPredicate, id))bean_msgSend)(self, bean_sel("createBranchWithPredicate:attribute:"), predicate, attribute); }
+static inline GKDecisionNode    GKDecisionNode_CreateBranchWithWeight_Attribute(GKDecisionNode self, NSInteger weight, id attribute)            { return ((GKDecisionNode (*)(GKDecisionNode, SEL, NSInteger, id))bean_msgSend)(self, bean_sel("createBranchWithWeight:attribute:"), weight, attribute); }
+
+/* ===== GKGameModelPlayer ===== */
+#ifndef BEAN_TYPEDEF_GKGameModelPlayer
+#define BEAN_TYPEDEF_GKGameModelPlayer
+typedef bean_id GKGameModelPlayer;
+#endif
+static inline NSInteger    GKGameModelPlayer_PlayerId(GKGameModelPlayer self)    { return ((NSInteger (*)(GKGameModelPlayer, SEL))bean_msgSend)(self, bean_sel("playerId")); }
+
+/* ===== GKGameModelUpdate ===== */
+#ifndef BEAN_TYPEDEF_GKGameModelUpdate
+#define BEAN_TYPEDEF_GKGameModelUpdate
+typedef bean_id GKGameModelUpdate;
+#endif
+static inline NSInteger    GKGameModelUpdate_Value(GKGameModelUpdate self)                        { return ((NSInteger (*)(GKGameModelUpdate, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void         GKGameModelUpdate_SetValue(GKGameModelUpdate self, NSInteger value)    { ((void (*)(GKGameModelUpdate, SEL, NSInteger))bean_msgSend)(self, bean_sel("setValue:"), value); }
 
 /* ===== GKGaussianDistribution ===== */
 #ifndef BEAN_TYPEDEF_GKGaussianDistribution
 #define BEAN_TYPEDEF_GKGaussianDistribution
 typedef bean_id GKGaussianDistribution;
 #endif
-static inline id         GKGaussianDistribution_InitWithRandomSource_LowestValue_HighestValue(GKGaussianDistribution self, id source, NSInteger lowestInclusive, NSInteger highestInclusive)    { return ((id (*)(GKGaussianDistribution, SEL, id, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("initWithRandomSource:lowestValue:highestValue:"), source, lowestInclusive, highestInclusive); }
-static inline id         GKGaussianDistribution_InitWithRandomSource_Mean_Deviation(GKGaussianDistribution self, id source, CGFloat mean, CGFloat deviation)                                    { return ((id (*)(GKGaussianDistribution, SEL, id, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithRandomSource:mean:deviation:"), source, mean, deviation); }
-static inline CGFloat    GKGaussianDistribution_Mean(GKGaussianDistribution self)                                                                                                               { return ((CGFloat (*)(GKGaussianDistribution, SEL))bean_msgSend_fpret)(self, bean_sel("mean")); }
-static inline CGFloat    GKGaussianDistribution_Deviation(GKGaussianDistribution self)                                                                                                          { return ((CGFloat (*)(GKGaussianDistribution, SEL))bean_msgSend_fpret)(self, bean_sel("deviation")); }
+static inline GKGaussianDistribution    GKGaussianDistribution_InitWithRandomSource_LowestValue_HighestValue(GKGaussianDistribution self, id source, NSInteger lowestInclusive, NSInteger highestInclusive)    { return ((GKGaussianDistribution (*)(GKGaussianDistribution, SEL, id, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("initWithRandomSource:lowestValue:highestValue:"), source, lowestInclusive, highestInclusive); }
+static inline GKGaussianDistribution    GKGaussianDistribution_InitWithRandomSource_Mean_Deviation(GKGaussianDistribution self, id source, CGFloat mean, CGFloat deviation)                                    { return ((GKGaussianDistribution (*)(GKGaussianDistribution, SEL, id, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithRandomSource:mean:deviation:"), source, mean, deviation); }
+static inline CGFloat                   GKGaussianDistribution_Mean(GKGaussianDistribution self)                                                                                                               { return ((CGFloat (*)(GKGaussianDistribution, SEL))bean_msgSend_fpret)(self, bean_sel("mean")); }
+static inline CGFloat                   GKGaussianDistribution_Deviation(GKGaussianDistribution self)                                                                                                          { return ((CGFloat (*)(GKGaussianDistribution, SEL))bean_msgSend_fpret)(self, bean_sel("deviation")); }
 
 /* ===== GKGraphNode2D ===== */
 #ifndef BEAN_TYPEDEF_GKGraphNode2D
 #define BEAN_TYPEDEF_GKGraphNode2D
 typedef bean_id GKGraphNode2D;
 #endif
-static inline id       GKGraphNode2D_NodeWithPoint(void* point)                         { return ((id (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("GKGraphNode2D"), bean_sel("nodeWithPoint:"), point); }
-static inline id       GKGraphNode2D_InitWithPoint(GKGraphNode2D self, void* point)     { return ((id (*)(GKGraphNode2D, SEL, void*))bean_msgSend)(self, bean_sel("initWithPoint:"), point); }
-static inline void*    GKGraphNode2D_Position(GKGraphNode2D self)                       { return ((void* (*)(GKGraphNode2D, SEL))bean_msgSend)(self, bean_sel("position")); }
-static inline void     GKGraphNode2D_SetPosition(GKGraphNode2D self, void* position)    { ((void (*)(GKGraphNode2D, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+static inline GKGraphNode2D    GKGraphNode2D_NodeWithPoint(void* point)                         { return ((GKGraphNode2D (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("GKGraphNode2D"), bean_sel("nodeWithPoint:"), point); }
+static inline GKGraphNode2D    GKGraphNode2D_InitWithPoint(GKGraphNode2D self, void* point)     { return ((GKGraphNode2D (*)(GKGraphNode2D, SEL, void*))bean_msgSend)(self, bean_sel("initWithPoint:"), point); }
+static inline void*            GKGraphNode2D_Position(GKGraphNode2D self)                       { return ((void* (*)(GKGraphNode2D, SEL))bean_msgSend)(self, bean_sel("position")); }
+static inline void             GKGraphNode2D_SetPosition(GKGraphNode2D self, void* position)    { ((void (*)(GKGraphNode2D, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
 
 /* ===== GKGraphNode3D ===== */
 #ifndef BEAN_TYPEDEF_GKGraphNode3D
 #define BEAN_TYPEDEF_GKGraphNode3D
 typedef bean_id GKGraphNode3D;
 #endif
-static inline id       GKGraphNode3D_NodeWithPoint(void* point)                         { return ((id (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("GKGraphNode3D"), bean_sel("nodeWithPoint:"), point); }
-static inline id       GKGraphNode3D_InitWithPoint(GKGraphNode3D self, void* point)     { return ((id (*)(GKGraphNode3D, SEL, void*))bean_msgSend)(self, bean_sel("initWithPoint:"), point); }
-static inline void*    GKGraphNode3D_Position(GKGraphNode3D self)                       { return ((void* (*)(GKGraphNode3D, SEL))bean_msgSend)(self, bean_sel("position")); }
-static inline void     GKGraphNode3D_SetPosition(GKGraphNode3D self, void* position)    { ((void (*)(GKGraphNode3D, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+static inline GKGraphNode3D    GKGraphNode3D_NodeWithPoint(void* point)                         { return ((GKGraphNode3D (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("GKGraphNode3D"), bean_sel("nodeWithPoint:"), point); }
+static inline GKGraphNode3D    GKGraphNode3D_InitWithPoint(GKGraphNode3D self, void* point)     { return ((GKGraphNode3D (*)(GKGraphNode3D, SEL, void*))bean_msgSend)(self, bean_sel("initWithPoint:"), point); }
+static inline void*            GKGraphNode3D_Position(GKGraphNode3D self)                       { return ((void* (*)(GKGraphNode3D, SEL))bean_msgSend)(self, bean_sel("position")); }
+static inline void             GKGraphNode3D_SetPosition(GKGraphNode3D self, void* position)    { ((void (*)(GKGraphNode3D, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
 
 /* ===== GKGridGraphNode ===== */
 #ifndef BEAN_TYPEDEF_GKGridGraphNode
 #define BEAN_TYPEDEF_GKGridGraphNode
 typedef bean_id GKGridGraphNode;
 #endif
-static inline id       GKGridGraphNode_NodeWithGridPosition(void* gridPosition)                          { return ((id (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("GKGridGraphNode"), bean_sel("nodeWithGridPosition:"), gridPosition); }
-static inline id       GKGridGraphNode_InitWithGridPosition(GKGridGraphNode self, void* gridPosition)    { return ((id (*)(GKGridGraphNode, SEL, void*))bean_msgSend)(self, bean_sel("initWithGridPosition:"), gridPosition); }
-static inline void*    GKGridGraphNode_GridPosition(GKGridGraphNode self)                                { return ((void* (*)(GKGridGraphNode, SEL))bean_msgSend)(self, bean_sel("gridPosition")); }
+static inline GKGridGraphNode    GKGridGraphNode_NodeWithGridPosition(void* gridPosition)                          { return ((GKGridGraphNode (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("GKGridGraphNode"), bean_sel("nodeWithGridPosition:"), gridPosition); }
+static inline GKGridGraphNode    GKGridGraphNode_InitWithGridPosition(GKGridGraphNode self, void* gridPosition)    { return ((GKGridGraphNode (*)(GKGridGraphNode, SEL, void*))bean_msgSend)(self, bean_sel("initWithGridPosition:"), gridPosition); }
+static inline void*              GKGridGraphNode_GridPosition(GKGridGraphNode self)                                { return ((void* (*)(GKGridGraphNode, SEL))bean_msgSend)(self, bean_sel("gridPosition")); }
 
 /* ===== GKLinearCongruentialRandomSource ===== */
 #ifndef BEAN_TYPEDEF_GKLinearCongruentialRandomSource
 #define BEAN_TYPEDEF_GKLinearCongruentialRandomSource
 typedef bean_id GKLinearCongruentialRandomSource;
 #endif
-static inline id                    GKLinearCongruentialRandomSource_Init(GKLinearCongruentialRandomSource self)                                     { return ((id (*)(GKLinearCongruentialRandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                    GKLinearCongruentialRandomSource_InitWithSeed(GKLinearCongruentialRandomSource self, unsigned long long seed)    { return ((id (*)(GKLinearCongruentialRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("initWithSeed:"), seed); }
-static inline unsigned long long    GKLinearCongruentialRandomSource_Seed(GKLinearCongruentialRandomSource self)                                     { return ((unsigned long long (*)(GKLinearCongruentialRandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
-static inline void                  GKLinearCongruentialRandomSource_SetSeed(GKLinearCongruentialRandomSource self, unsigned long long seed)         { ((void (*)(GKLinearCongruentialRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+static inline GKLinearCongruentialRandomSource    GKLinearCongruentialRandomSource_Init(GKLinearCongruentialRandomSource self)                                     { return ((GKLinearCongruentialRandomSource (*)(GKLinearCongruentialRandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKLinearCongruentialRandomSource    GKLinearCongruentialRandomSource_InitWithSeed(GKLinearCongruentialRandomSource self, unsigned long long seed)    { return ((GKLinearCongruentialRandomSource (*)(GKLinearCongruentialRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("initWithSeed:"), seed); }
+static inline unsigned long long                  GKLinearCongruentialRandomSource_Seed(GKLinearCongruentialRandomSource self)                                     { return ((unsigned long long (*)(GKLinearCongruentialRandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
+static inline void                                GKLinearCongruentialRandomSource_SetSeed(GKLinearCongruentialRandomSource self, unsigned long long seed)         { ((void (*)(GKLinearCongruentialRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
 
 /* ===== GKMersenneTwisterRandomSource ===== */
 #ifndef BEAN_TYPEDEF_GKMersenneTwisterRandomSource
 #define BEAN_TYPEDEF_GKMersenneTwisterRandomSource
 typedef bean_id GKMersenneTwisterRandomSource;
 #endif
-static inline id                    GKMersenneTwisterRandomSource_Init(GKMersenneTwisterRandomSource self)                                     { return ((id (*)(GKMersenneTwisterRandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                    GKMersenneTwisterRandomSource_InitWithSeed(GKMersenneTwisterRandomSource self, unsigned long long seed)    { return ((id (*)(GKMersenneTwisterRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("initWithSeed:"), seed); }
-static inline unsigned long long    GKMersenneTwisterRandomSource_Seed(GKMersenneTwisterRandomSource self)                                     { return ((unsigned long long (*)(GKMersenneTwisterRandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
-static inline void                  GKMersenneTwisterRandomSource_SetSeed(GKMersenneTwisterRandomSource self, unsigned long long seed)         { ((void (*)(GKMersenneTwisterRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+static inline GKMersenneTwisterRandomSource    GKMersenneTwisterRandomSource_Init(GKMersenneTwisterRandomSource self)                                     { return ((GKMersenneTwisterRandomSource (*)(GKMersenneTwisterRandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKMersenneTwisterRandomSource    GKMersenneTwisterRandomSource_InitWithSeed(GKMersenneTwisterRandomSource self, unsigned long long seed)    { return ((GKMersenneTwisterRandomSource (*)(GKMersenneTwisterRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("initWithSeed:"), seed); }
+static inline unsigned long long               GKMersenneTwisterRandomSource_Seed(GKMersenneTwisterRandomSource self)                                     { return ((unsigned long long (*)(GKMersenneTwisterRandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
+static inline void                             GKMersenneTwisterRandomSource_SetSeed(GKMersenneTwisterRandomSource self, unsigned long long seed)         { ((void (*)(GKMersenneTwisterRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
 
 /* ===== GKMinmaxStrategist ===== */
 #ifndef BEAN_TYPEDEF_GKMinmaxStrategist
@@ -4147,6 +5369,11 @@ static inline id           GKMinmaxStrategist_BestMoveForPlayer(GKMinmaxStrategi
 static inline id           GKMinmaxStrategist_RandomMoveForPlayer_FromNumberOfBestMoves(GKMinmaxStrategist self, id player, NSInteger numMovesToConsider)    { return ((id (*)(GKMinmaxStrategist, SEL, id, NSInteger))bean_msgSend)(self, bean_sel("randomMoveForPlayer:fromNumberOfBestMoves:"), player, numMovesToConsider); }
 static inline NSInteger    GKMinmaxStrategist_MaxLookAheadDepth(GKMinmaxStrategist self)                                                                     { return ((NSInteger (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("maxLookAheadDepth")); }
 static inline void         GKMinmaxStrategist_SetMaxLookAheadDepth(GKMinmaxStrategist self, NSInteger maxLookAheadDepth)                                     { ((void (*)(GKMinmaxStrategist, SEL, NSInteger))bean_msgSend)(self, bean_sel("setMaxLookAheadDepth:"), maxLookAheadDepth); }
+static inline id           GKMinmaxStrategist_BestMoveForActivePlayer(GKMinmaxStrategist self)                                                               { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
+static inline id           GKMinmaxStrategist_GameModel(GKMinmaxStrategist self)                                                                             { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
+static inline void         GKMinmaxStrategist_SetGameModel(GKMinmaxStrategist self, id gameModel)                                                            { ((void (*)(GKMinmaxStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
+static inline id           GKMinmaxStrategist_RandomSource(GKMinmaxStrategist self)                                                                          { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
+static inline void         GKMinmaxStrategist_SetRandomSource(GKMinmaxStrategist self, id randomSource)                                                      { ((void (*)(GKMinmaxStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
 
 /* ===== GKMonteCarloStrategist ===== */
 #ifndef BEAN_TYPEDEF_GKMonteCarloStrategist
@@ -4157,6 +5384,11 @@ static inline NSUInteger    GKMonteCarloStrategist_Budget(GKMonteCarloStrategist
 static inline void          GKMonteCarloStrategist_SetBudget(GKMonteCarloStrategist self, NSUInteger budget)                                { ((void (*)(GKMonteCarloStrategist, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setBudget:"), budget); }
 static inline NSUInteger    GKMonteCarloStrategist_ExplorationParameter(GKMonteCarloStrategist self)                                        { return ((NSUInteger (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("explorationParameter")); }
 static inline void          GKMonteCarloStrategist_SetExplorationParameter(GKMonteCarloStrategist self, NSUInteger explorationParameter)    { ((void (*)(GKMonteCarloStrategist, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setExplorationParameter:"), explorationParameter); }
+static inline id            GKMonteCarloStrategist_BestMoveForActivePlayer(GKMonteCarloStrategist self)                                     { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
+static inline id            GKMonteCarloStrategist_GameModel(GKMonteCarloStrategist self)                                                   { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
+static inline void          GKMonteCarloStrategist_SetGameModel(GKMonteCarloStrategist self, id gameModel)                                  { ((void (*)(GKMonteCarloStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
+static inline id            GKMonteCarloStrategist_RandomSource(GKMonteCarloStrategist self)                                                { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
+static inline void          GKMonteCarloStrategist_SetRandomSource(GKMonteCarloStrategist self, id randomSource)                            { ((void (*)(GKMonteCarloStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
 
 /* ===== GKOctreeNode ===== */
 #ifndef BEAN_TYPEDEF_GKOctreeNode
@@ -4170,20 +5402,21 @@ static inline GKBox    GKOctreeNode_Box(GKOctreeNode self)    { return ((GKBox (
 #define BEAN_TYPEDEF_GKPerlinNoiseSource
 typedef bean_id GKPerlinNoiseSource;
 #endif
-static inline id         GKPerlinNoiseSource_PerlinNoiseSourceWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)                 { return ((id (*)(bean_class, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(bean_cls("GKPerlinNoiseSource"), bean_sel("perlinNoiseSourceWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
-static inline id         GKPerlinNoiseSource_InitWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(GKPerlinNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)    { return ((id (*)(GKPerlinNoiseSource, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
-static inline CGFloat    GKPerlinNoiseSource_Persistence(GKPerlinNoiseSource self)                                                                                                                                               { return ((CGFloat (*)(GKPerlinNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("persistence")); }
-static inline void       GKPerlinNoiseSource_SetPersistence(GKPerlinNoiseSource self, CGFloat persistence)                                                                                                                       { ((void (*)(GKPerlinNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPersistence:"), persistence); }
+static inline GKPerlinNoiseSource    GKPerlinNoiseSource_PerlinNoiseSourceWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)                 { return ((GKPerlinNoiseSource (*)(bean_class, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(bean_cls("GKPerlinNoiseSource"), bean_sel("perlinNoiseSourceWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
+static inline GKPerlinNoiseSource    GKPerlinNoiseSource_InitWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(GKPerlinNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)    { return ((GKPerlinNoiseSource (*)(GKPerlinNoiseSource, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
+static inline CGFloat                GKPerlinNoiseSource_Persistence(GKPerlinNoiseSource self)                                                                                                                                               { return ((CGFloat (*)(GKPerlinNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("persistence")); }
+static inline void                   GKPerlinNoiseSource_SetPersistence(GKPerlinNoiseSource self, CGFloat persistence)                                                                                                                       { ((void (*)(GKPerlinNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPersistence:"), persistence); }
 
 /* ===== GKPolygonObstacle ===== */
 #ifndef BEAN_TYPEDEF_GKPolygonObstacle
 #define BEAN_TYPEDEF_GKPolygonObstacle
 typedef bean_id GKPolygonObstacle;
 #endif
-static inline id            GKPolygonObstacle_ObstacleWithPoints_Count(vector_float2* points, NSUInteger numPoints)                        { return ((id (*)(bean_class, SEL, vector_float2*, NSUInteger))bean_msgSend)(bean_cls("GKPolygonObstacle"), bean_sel("obstacleWithPoints:count:"), points, numPoints); }
-static inline id            GKPolygonObstacle_InitWithPoints_Count(GKPolygonObstacle self, vector_float2* points, NSUInteger numPoints)    { return ((id (*)(GKPolygonObstacle, SEL, vector_float2*, NSUInteger))bean_msgSend)(self, bean_sel("initWithPoints:count:"), points, numPoints); }
-static inline void*         GKPolygonObstacle_VertexAtIndex(GKPolygonObstacle self, NSUInteger index)                                      { return ((void* (*)(GKPolygonObstacle, SEL, NSUInteger))bean_msgSend)(self, bean_sel("vertexAtIndex:"), index); }
-static inline NSUInteger    GKPolygonObstacle_VertexCount(GKPolygonObstacle self)                                                          { return ((NSUInteger (*)(GKPolygonObstacle, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
+static inline GKPolygonObstacle    GKPolygonObstacle_ObstacleWithPoints_Count(vector_float2* points, NSUInteger numPoints)                        { return ((GKPolygonObstacle (*)(bean_class, SEL, vector_float2*, NSUInteger))bean_msgSend)(bean_cls("GKPolygonObstacle"), bean_sel("obstacleWithPoints:count:"), points, numPoints); }
+static inline GKPolygonObstacle    GKPolygonObstacle_InitWithPoints_Count(GKPolygonObstacle self, vector_float2* points, NSUInteger numPoints)    { return ((GKPolygonObstacle (*)(GKPolygonObstacle, SEL, vector_float2*, NSUInteger))bean_msgSend)(self, bean_sel("initWithPoints:count:"), points, numPoints); }
+static inline void*                GKPolygonObstacle_VertexAtIndex(GKPolygonObstacle self, NSUInteger index)                                      { return ((void* (*)(GKPolygonObstacle, SEL, NSUInteger))bean_msgSend)(self, bean_sel("vertexAtIndex:"), index); }
+static inline NSUInteger           GKPolygonObstacle_VertexCount(GKPolygonObstacle self)                                                          { return ((NSUInteger (*)(GKPolygonObstacle, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
+static inline BOOL                 GKPolygonObstacle_SupportsSecureCoding(void)                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKPolygonObstacle"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKQuadtreeNode ===== */
 #ifndef BEAN_TYPEDEF_GKQuadtreeNode
@@ -4192,70 +5425,91 @@ typedef bean_id GKQuadtreeNode;
 #endif
 static inline GKQuad    GKQuadtreeNode_Quad(GKQuadtreeNode self)    { return ((GKQuad (*)(GKQuadtreeNode, SEL))bean_msgSend_stret)(self, bean_sel("quad")); }
 
+/* ===== GKRandom ===== */
+#ifndef BEAN_TYPEDEF_GKRandom
+#define BEAN_TYPEDEF_GKRandom
+typedef bean_id GKRandom;
+#endif
+static inline NSInteger     GKRandom_NextInt(GKRandom self)                                         { return ((NSInteger (*)(GKRandom, SEL))bean_msgSend)(self, bean_sel("nextInt")); }
+static inline NSUInteger    GKRandom_NextIntWithUpperBound(GKRandom self, NSUInteger upperBound)    { return ((NSUInteger (*)(GKRandom, SEL, NSUInteger))bean_msgSend)(self, bean_sel("nextIntWithUpperBound:"), upperBound); }
+static inline CGFloat       GKRandom_NextUniform(GKRandom self)                                     { return ((CGFloat (*)(GKRandom, SEL))bean_msgSend_fpret)(self, bean_sel("nextUniform")); }
+static inline BOOL          GKRandom_NextBool(GKRandom self)                                        { return ((BOOL (*)(GKRandom, SEL))bean_msgSend)(self, bean_sel("nextBool")); }
+
 /* ===== GKRandomDistribution ===== */
 #ifndef BEAN_TYPEDEF_GKRandomDistribution
 #define BEAN_TYPEDEF_GKRandomDistribution
 typedef bean_id GKRandomDistribution;
 #endif
-static inline id            GKRandomDistribution_InitWithRandomSource_LowestValue_HighestValue(GKRandomDistribution self, id source, NSInteger lowestInclusive, NSInteger highestInclusive)    { return ((id (*)(GKRandomDistribution, SEL, id, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("initWithRandomSource:lowestValue:highestValue:"), source, lowestInclusive, highestInclusive); }
-static inline NSInteger     GKRandomDistribution_NextInt(GKRandomDistribution self)                                                                                                            { return ((NSInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("nextInt")); }
-static inline NSUInteger    GKRandomDistribution_NextIntWithUpperBound(GKRandomDistribution self, NSUInteger upperBound)                                                                       { return ((NSUInteger (*)(GKRandomDistribution, SEL, NSUInteger))bean_msgSend)(self, bean_sel("nextIntWithUpperBound:"), upperBound); }
-static inline CGFloat       GKRandomDistribution_NextUniform(GKRandomDistribution self)                                                                                                        { return ((CGFloat (*)(GKRandomDistribution, SEL))bean_msgSend_fpret)(self, bean_sel("nextUniform")); }
-static inline BOOL          GKRandomDistribution_NextBool(GKRandomDistribution self)                                                                                                           { return ((BOOL (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("nextBool")); }
-static inline id            GKRandomDistribution_DistributionWithLowestValue_HighestValue(NSInteger lowestInclusive, NSInteger highestInclusive)                                               { return ((id (*)(bean_class, SEL, NSInteger, NSInteger))bean_msgSend)(bean_cls("GKRandomDistribution"), bean_sel("distributionWithLowestValue:highestValue:"), lowestInclusive, highestInclusive); }
-static inline id            GKRandomDistribution_DistributionForDieWithSideCount(NSInteger sideCount)                                                                                          { return ((id (*)(bean_class, SEL, NSInteger))bean_msgSend)(bean_cls("GKRandomDistribution"), bean_sel("distributionForDieWithSideCount:"), sideCount); }
-static inline id            GKRandomDistribution_D6(void)                                                                                                                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKRandomDistribution"), bean_sel("d6")); }
-static inline id            GKRandomDistribution_D20(void)                                                                                                                                     { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKRandomDistribution"), bean_sel("d20")); }
-static inline NSInteger     GKRandomDistribution_LowestValue(GKRandomDistribution self)                                                                                                        { return ((NSInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("lowestValue")); }
-static inline NSInteger     GKRandomDistribution_HighestValue(GKRandomDistribution self)                                                                                                       { return ((NSInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("highestValue")); }
-static inline NSUInteger    GKRandomDistribution_NumberOfPossibleOutcomes(GKRandomDistribution self)                                                                                           { return ((NSUInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("numberOfPossibleOutcomes")); }
+static inline GKRandomDistribution    GKRandomDistribution_InitWithRandomSource_LowestValue_HighestValue(GKRandomDistribution self, id source, NSInteger lowestInclusive, NSInteger highestInclusive)    { return ((GKRandomDistribution (*)(GKRandomDistribution, SEL, id, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("initWithRandomSource:lowestValue:highestValue:"), source, lowestInclusive, highestInclusive); }
+static inline NSInteger               GKRandomDistribution_NextInt(GKRandomDistribution self)                                                                                                            { return ((NSInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("nextInt")); }
+static inline NSUInteger              GKRandomDistribution_NextIntWithUpperBound(GKRandomDistribution self, NSUInteger upperBound)                                                                       { return ((NSUInteger (*)(GKRandomDistribution, SEL, NSUInteger))bean_msgSend)(self, bean_sel("nextIntWithUpperBound:"), upperBound); }
+static inline CGFloat                 GKRandomDistribution_NextUniform(GKRandomDistribution self)                                                                                                        { return ((CGFloat (*)(GKRandomDistribution, SEL))bean_msgSend_fpret)(self, bean_sel("nextUniform")); }
+static inline BOOL                    GKRandomDistribution_NextBool(GKRandomDistribution self)                                                                                                           { return ((BOOL (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("nextBool")); }
+static inline GKRandomDistribution    GKRandomDistribution_DistributionWithLowestValue_HighestValue(NSInteger lowestInclusive, NSInteger highestInclusive)                                               { return ((GKRandomDistribution (*)(bean_class, SEL, NSInteger, NSInteger))bean_msgSend)(bean_cls("GKRandomDistribution"), bean_sel("distributionWithLowestValue:highestValue:"), lowestInclusive, highestInclusive); }
+static inline GKRandomDistribution    GKRandomDistribution_DistributionForDieWithSideCount(NSInteger sideCount)                                                                                          { return ((GKRandomDistribution (*)(bean_class, SEL, NSInteger))bean_msgSend)(bean_cls("GKRandomDistribution"), bean_sel("distributionForDieWithSideCount:"), sideCount); }
+static inline GKRandomDistribution    GKRandomDistribution_D6(void)                                                                                                                                      { return ((GKRandomDistribution (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKRandomDistribution"), bean_sel("d6")); }
+static inline GKRandomDistribution    GKRandomDistribution_D20(void)                                                                                                                                     { return ((GKRandomDistribution (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKRandomDistribution"), bean_sel("d20")); }
+static inline NSInteger               GKRandomDistribution_LowestValue(GKRandomDistribution self)                                                                                                        { return ((NSInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("lowestValue")); }
+static inline NSInteger               GKRandomDistribution_HighestValue(GKRandomDistribution self)                                                                                                       { return ((NSInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("highestValue")); }
+static inline NSUInteger              GKRandomDistribution_NumberOfPossibleOutcomes(GKRandomDistribution self)                                                                                           { return ((NSUInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("numberOfPossibleOutcomes")); }
 
 /* ===== GKRidgedNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKRidgedNoiseSource
 #define BEAN_TYPEDEF_GKRidgedNoiseSource
 typedef bean_id GKRidgedNoiseSource;
 #endif
-static inline id    GKRidgedNoiseSource_RidgedNoiseSourceWithFrequency_OctaveCount_Lacunarity_Seed(CGFloat frequency, NSInteger octaveCount, CGFloat lacunarity, int seed)                 { return ((id (*)(bean_class, SEL, CGFloat, NSInteger, CGFloat, int))bean_msgSend)(bean_cls("GKRidgedNoiseSource"), bean_sel("ridgedNoiseSourceWithFrequency:octaveCount:lacunarity:seed:"), frequency, octaveCount, lacunarity, seed); }
-static inline id    GKRidgedNoiseSource_InitWithFrequency_OctaveCount_Lacunarity_Seed(GKRidgedNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat lacunarity, int seed)    { return ((id (*)(GKRidgedNoiseSource, SEL, CGFloat, NSInteger, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:lacunarity:seed:"), frequency, octaveCount, lacunarity, seed); }
+static inline GKRidgedNoiseSource    GKRidgedNoiseSource_RidgedNoiseSourceWithFrequency_OctaveCount_Lacunarity_Seed(CGFloat frequency, NSInteger octaveCount, CGFloat lacunarity, int seed)                 { return ((GKRidgedNoiseSource (*)(bean_class, SEL, CGFloat, NSInteger, CGFloat, int))bean_msgSend)(bean_cls("GKRidgedNoiseSource"), bean_sel("ridgedNoiseSourceWithFrequency:octaveCount:lacunarity:seed:"), frequency, octaveCount, lacunarity, seed); }
+static inline GKRidgedNoiseSource    GKRidgedNoiseSource_InitWithFrequency_OctaveCount_Lacunarity_Seed(GKRidgedNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat lacunarity, int seed)    { return ((GKRidgedNoiseSource (*)(GKRidgedNoiseSource, SEL, CGFloat, NSInteger, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:lacunarity:seed:"), frequency, octaveCount, lacunarity, seed); }
 
 /* ===== GKSphereObstacle ===== */
 #ifndef BEAN_TYPEDEF_GKSphereObstacle
 #define BEAN_TYPEDEF_GKSphereObstacle
 typedef bean_id GKSphereObstacle;
 #endif
-static inline id         GKSphereObstacle_ObstacleWithRadius(CGFloat radius)                       { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKSphereObstacle"), bean_sel("obstacleWithRadius:"), radius); }
-static inline id         GKSphereObstacle_InitWithRadius(GKSphereObstacle self, CGFloat radius)    { return ((id (*)(GKSphereObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithRadius:"), radius); }
-static inline CGFloat    GKSphereObstacle_Radius(GKSphereObstacle self)                            { return ((CGFloat (*)(GKSphereObstacle, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
-static inline void       GKSphereObstacle_SetRadius(GKSphereObstacle self, CGFloat radius)         { ((void (*)(GKSphereObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
-static inline void*      GKSphereObstacle_Position(GKSphereObstacle self)                          { return ((void* (*)(GKSphereObstacle, SEL))bean_msgSend)(self, bean_sel("position")); }
-static inline void       GKSphereObstacle_SetPosition(GKSphereObstacle self, void* position)       { ((void (*)(GKSphereObstacle, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+static inline GKSphereObstacle    GKSphereObstacle_ObstacleWithRadius(CGFloat radius)                       { return ((GKSphereObstacle (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKSphereObstacle"), bean_sel("obstacleWithRadius:"), radius); }
+static inline GKSphereObstacle    GKSphereObstacle_InitWithRadius(GKSphereObstacle self, CGFloat radius)    { return ((GKSphereObstacle (*)(GKSphereObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithRadius:"), radius); }
+static inline CGFloat             GKSphereObstacle_Radius(GKSphereObstacle self)                            { return ((CGFloat (*)(GKSphereObstacle, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
+static inline void                GKSphereObstacle_SetRadius(GKSphereObstacle self, CGFloat radius)         { ((void (*)(GKSphereObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
+static inline void*               GKSphereObstacle_Position(GKSphereObstacle self)                          { return ((void* (*)(GKSphereObstacle, SEL))bean_msgSend)(self, bean_sel("position")); }
+static inline void                GKSphereObstacle_SetPosition(GKSphereObstacle self, void* position)       { ((void (*)(GKSphereObstacle, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
 
 /* ===== GKSpheresNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKSpheresNoiseSource
 #define BEAN_TYPEDEF_GKSpheresNoiseSource
 typedef bean_id GKSpheresNoiseSource;
 #endif
-static inline id         GKSpheresNoiseSource_SpheresNoiseWithFrequency(CGFloat frequency)                       { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKSpheresNoiseSource"), bean_sel("spheresNoiseWithFrequency:"), frequency); }
-static inline id         GKSpheresNoiseSource_InitWithFrequency(GKSpheresNoiseSource self, CGFloat frequency)    { return ((id (*)(GKSpheresNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithFrequency:"), frequency); }
-static inline CGFloat    GKSpheresNoiseSource_Frequency(GKSpheresNoiseSource self)                               { return ((CGFloat (*)(GKSpheresNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
-static inline void       GKSpheresNoiseSource_SetFrequency(GKSpheresNoiseSource self, CGFloat frequency)         { ((void (*)(GKSpheresNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
+static inline GKSpheresNoiseSource    GKSpheresNoiseSource_SpheresNoiseWithFrequency(CGFloat frequency)                       { return ((GKSpheresNoiseSource (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKSpheresNoiseSource"), bean_sel("spheresNoiseWithFrequency:"), frequency); }
+static inline GKSpheresNoiseSource    GKSpheresNoiseSource_InitWithFrequency(GKSpheresNoiseSource self, CGFloat frequency)    { return ((GKSpheresNoiseSource (*)(GKSpheresNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithFrequency:"), frequency); }
+static inline CGFloat                 GKSpheresNoiseSource_Frequency(GKSpheresNoiseSource self)                               { return ((CGFloat (*)(GKSpheresNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
+static inline void                    GKSpheresNoiseSource_SetFrequency(GKSpheresNoiseSource self, CGFloat frequency)         { ((void (*)(GKSpheresNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
+
+/* ===== GKStrategist ===== */
+#ifndef BEAN_TYPEDEF_GKStrategist
+#define BEAN_TYPEDEF_GKStrategist
+typedef bean_id GKStrategist;
+#endif
+static inline id      GKStrategist_BestMoveForActivePlayer(GKStrategist self)             { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
+static inline id      GKStrategist_GameModel(GKStrategist self)                           { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
+static inline void    GKStrategist_SetGameModel(GKStrategist self, id gameModel)          { ((void (*)(GKStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
+static inline id      GKStrategist_RandomSource(GKStrategist self)                        { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
+static inline void    GKStrategist_SetRandomSource(GKStrategist self, id randomSource)    { ((void (*)(GKStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
 
 /* ===== GKVoronoiNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKVoronoiNoiseSource
 #define BEAN_TYPEDEF_GKVoronoiNoiseSource
 typedef bean_id GKVoronoiNoiseSource;
 #endif
-static inline id         GKVoronoiNoiseSource_VoronoiNoiseWithFrequency_Displacement_DistanceEnabled_Seed(CGFloat frequency, CGFloat displacement, BOOL distanceEnabled, int seed)                       { return ((id (*)(bean_class, SEL, CGFloat, CGFloat, BOOL, int))bean_msgSend)(bean_cls("GKVoronoiNoiseSource"), bean_sel("voronoiNoiseWithFrequency:displacement:distanceEnabled:seed:"), frequency, displacement, distanceEnabled, seed); }
-static inline id         GKVoronoiNoiseSource_InitWithFrequency_Displacement_DistanceEnabled_Seed(GKVoronoiNoiseSource self, CGFloat frequency, CGFloat displacement, BOOL distanceEnabled, int seed)    { return ((id (*)(GKVoronoiNoiseSource, SEL, CGFloat, CGFloat, BOOL, int))bean_msgSend)(self, bean_sel("initWithFrequency:displacement:distanceEnabled:seed:"), frequency, displacement, distanceEnabled, seed); }
-static inline CGFloat    GKVoronoiNoiseSource_Frequency(GKVoronoiNoiseSource self)                                                                                                                       { return ((CGFloat (*)(GKVoronoiNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
-static inline void       GKVoronoiNoiseSource_SetFrequency(GKVoronoiNoiseSource self, CGFloat frequency)                                                                                                 { ((void (*)(GKVoronoiNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
-static inline CGFloat    GKVoronoiNoiseSource_Displacement(GKVoronoiNoiseSource self)                                                                                                                    { return ((CGFloat (*)(GKVoronoiNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("displacement")); }
-static inline void       GKVoronoiNoiseSource_SetDisplacement(GKVoronoiNoiseSource self, CGFloat displacement)                                                                                           { ((void (*)(GKVoronoiNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDisplacement:"), displacement); }
-static inline BOOL       GKVoronoiNoiseSource_IsDistanceEnabled(GKVoronoiNoiseSource self)                                                                                                               { return ((BOOL (*)(GKVoronoiNoiseSource, SEL))bean_msgSend)(self, bean_sel("isDistanceEnabled")); }
-static inline void       GKVoronoiNoiseSource_SetDistanceEnabled(GKVoronoiNoiseSource self, BOOL distanceEnabled)                                                                                        { ((void (*)(GKVoronoiNoiseSource, SEL, BOOL))bean_msgSend)(self, bean_sel("setDistanceEnabled:"), distanceEnabled); }
-static inline int        GKVoronoiNoiseSource_Seed(GKVoronoiNoiseSource self)                                                                                                                            { return ((int (*)(GKVoronoiNoiseSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
-static inline void       GKVoronoiNoiseSource_SetSeed(GKVoronoiNoiseSource self, int seed)                                                                                                               { ((void (*)(GKVoronoiNoiseSource, SEL, int))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
-static inline BOOL       GKVoronoiNoiseSource_DistanceEnabled(GKVoronoiNoiseSource self)                                                                                                                 { return ((BOOL (*)(GKVoronoiNoiseSource, SEL))bean_msgSend)(self, bean_sel("distanceEnabled")); }
+static inline GKVoronoiNoiseSource    GKVoronoiNoiseSource_VoronoiNoiseWithFrequency_Displacement_DistanceEnabled_Seed(CGFloat frequency, CGFloat displacement, BOOL distanceEnabled, int seed)                       { return ((GKVoronoiNoiseSource (*)(bean_class, SEL, CGFloat, CGFloat, BOOL, int))bean_msgSend)(bean_cls("GKVoronoiNoiseSource"), bean_sel("voronoiNoiseWithFrequency:displacement:distanceEnabled:seed:"), frequency, displacement, distanceEnabled, seed); }
+static inline GKVoronoiNoiseSource    GKVoronoiNoiseSource_InitWithFrequency_Displacement_DistanceEnabled_Seed(GKVoronoiNoiseSource self, CGFloat frequency, CGFloat displacement, BOOL distanceEnabled, int seed)    { return ((GKVoronoiNoiseSource (*)(GKVoronoiNoiseSource, SEL, CGFloat, CGFloat, BOOL, int))bean_msgSend)(self, bean_sel("initWithFrequency:displacement:distanceEnabled:seed:"), frequency, displacement, distanceEnabled, seed); }
+static inline CGFloat                 GKVoronoiNoiseSource_Frequency(GKVoronoiNoiseSource self)                                                                                                                       { return ((CGFloat (*)(GKVoronoiNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
+static inline void                    GKVoronoiNoiseSource_SetFrequency(GKVoronoiNoiseSource self, CGFloat frequency)                                                                                                 { ((void (*)(GKVoronoiNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
+static inline CGFloat                 GKVoronoiNoiseSource_Displacement(GKVoronoiNoiseSource self)                                                                                                                    { return ((CGFloat (*)(GKVoronoiNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("displacement")); }
+static inline void                    GKVoronoiNoiseSource_SetDisplacement(GKVoronoiNoiseSource self, CGFloat displacement)                                                                                           { ((void (*)(GKVoronoiNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDisplacement:"), displacement); }
+static inline BOOL                    GKVoronoiNoiseSource_IsDistanceEnabled(GKVoronoiNoiseSource self)                                                                                                               { return ((BOOL (*)(GKVoronoiNoiseSource, SEL))bean_msgSend)(self, bean_sel("isDistanceEnabled")); }
+static inline void                    GKVoronoiNoiseSource_SetDistanceEnabled(GKVoronoiNoiseSource self, BOOL distanceEnabled)                                                                                        { ((void (*)(GKVoronoiNoiseSource, SEL, BOOL))bean_msgSend)(self, bean_sel("setDistanceEnabled:"), distanceEnabled); }
+static inline int                     GKVoronoiNoiseSource_Seed(GKVoronoiNoiseSource self)                                                                                                                            { return ((int (*)(GKVoronoiNoiseSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
+static inline void                    GKVoronoiNoiseSource_SetSeed(GKVoronoiNoiseSource self, int seed)                                                                                                               { ((void (*)(GKVoronoiNoiseSource, SEL, int))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+static inline BOOL                    GKVoronoiNoiseSource_DistanceEnabled(GKVoronoiNoiseSource self)                                                                                                                 { return ((BOOL (*)(GKVoronoiNoiseSource, SEL))bean_msgSend)(self, bean_sel("distanceEnabled")); }
 
 /* ===== NSBatchDeleteResult ===== */
 #ifndef BEAN_TYPEDEF_NSBatchDeleteResult
@@ -4323,23 +5577,24 @@ static inline void        NSMigrationStage_SetLabel(NSMigrationStage self, NSStr
 #define BEAN_TYPEDEF_NSPersistentCloudKitContainerEvent
 typedef bean_id NSPersistentCloudKitContainerEvent;
 #endif
-static inline id                                        NSPersistentCloudKitContainerEvent_New(void)                                                   { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEvent"), bean_sel("new")); }
-static inline id                                        NSPersistentCloudKitContainerEvent_Init(NSPersistentCloudKitContainerEvent self)               { return ((id (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline NSUUID                                    NSPersistentCloudKitContainerEvent_Identifier(NSPersistentCloudKitContainerEvent self)         { return ((NSUUID (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("identifier")); }
-static inline NSString                                  NSPersistentCloudKitContainerEvent_StoreIdentifier(NSPersistentCloudKitContainerEvent self)    { return ((NSString (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("storeIdentifier")); }
-static inline NSPersistentCloudKitContainerEventType    NSPersistentCloudKitContainerEvent_Type(NSPersistentCloudKitContainerEvent self)               { return ((NSPersistentCloudKitContainerEventType (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline NSDate                                    NSPersistentCloudKitContainerEvent_StartDate(NSPersistentCloudKitContainerEvent self)          { return ((NSDate (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("startDate")); }
-static inline NSDate                                    NSPersistentCloudKitContainerEvent_EndDate(NSPersistentCloudKitContainerEvent self)            { return ((NSDate (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("endDate")); }
-static inline BOOL                                      NSPersistentCloudKitContainerEvent_Succeeded(NSPersistentCloudKitContainerEvent self)          { return ((BOOL (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("succeeded")); }
-static inline NSError                                   NSPersistentCloudKitContainerEvent_Error(NSPersistentCloudKitContainerEvent self)              { return ((NSError (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("error")); }
+static inline NSPersistentCloudKitContainerEvent        NSPersistentCloudKitContainerEvent_New(void)                                                              { return ((NSPersistentCloudKitContainerEvent (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEvent"), bean_sel("new")); }
+static inline NSPersistentCloudKitContainerEvent        NSPersistentCloudKitContainerEvent_Init(NSPersistentCloudKitContainerEvent self)                          { return ((NSPersistentCloudKitContainerEvent (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSUUID                                    NSPersistentCloudKitContainerEvent_Identifier(NSPersistentCloudKitContainerEvent self)                    { return ((NSUUID (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline NSString                                  NSPersistentCloudKitContainerEvent_StoreIdentifier(NSPersistentCloudKitContainerEvent self)               { return ((NSString (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("storeIdentifier")); }
+static inline NSPersistentCloudKitContainerEventType    NSPersistentCloudKitContainerEvent_Type(NSPersistentCloudKitContainerEvent self)                          { return ((NSPersistentCloudKitContainerEventType (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline NSDate                                    NSPersistentCloudKitContainerEvent_StartDate(NSPersistentCloudKitContainerEvent self)                     { return ((NSDate (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("startDate")); }
+static inline NSDate                                    NSPersistentCloudKitContainerEvent_EndDate(NSPersistentCloudKitContainerEvent self)                       { return ((NSDate (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("endDate")); }
+static inline BOOL                                      NSPersistentCloudKitContainerEvent_Succeeded(NSPersistentCloudKitContainerEvent self)                     { return ((BOOL (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("succeeded")); }
+static inline NSError                                   NSPersistentCloudKitContainerEvent_Error(NSPersistentCloudKitContainerEvent self)                         { return ((NSError (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("error")); }
+static inline id                                        NSPersistentCloudKitContainerEvent_CopyWithZone(NSPersistentCloudKitContainerEvent self, NSZone* zone)    { return ((id (*)(NSPersistentCloudKitContainerEvent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== NSPersistentCloudKitContainerEventResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerEventResult
 #define BEAN_TYPEDEF_NSPersistentCloudKitContainerEventResult
 typedef bean_id NSPersistentCloudKitContainerEventResult;
 #endif
-static inline id                                              NSPersistentCloudKitContainerEventResult_Init(NSPersistentCloudKitContainerEventResult self)          { return ((id (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                              NSPersistentCloudKitContainerEventResult_New(void)                                                    { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventResult"), bean_sel("new")); }
+static inline NSPersistentCloudKitContainerEventResult        NSPersistentCloudKitContainerEventResult_Init(NSPersistentCloudKitContainerEventResult self)          { return ((NSPersistentCloudKitContainerEventResult (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSPersistentCloudKitContainerEventResult        NSPersistentCloudKitContainerEventResult_New(void)                                                    { return ((NSPersistentCloudKitContainerEventResult (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventResult"), bean_sel("new")); }
 static inline id                                              NSPersistentCloudKitContainerEventResult_Result(NSPersistentCloudKitContainerEventResult self)        { return ((id (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSPersistentCloudKitContainerEventResultType    NSPersistentCloudKitContainerEventResult_ResultType(NSPersistentCloudKitContainerEventResult self)    { return ((NSPersistentCloudKitContainerEventResultType (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 
@@ -4348,11 +5603,11 @@ static inline NSPersistentCloudKitContainerEventResultType    NSPersistentCloudK
 #define BEAN_TYPEDEF_NSPersistentCloudKitContainerOptions
 typedef bean_id NSPersistentCloudKitContainerOptions;
 #endif
-static inline id                 NSPersistentCloudKitContainerOptions_Init(NSPersistentCloudKitContainerOptions self)                                                         { return ((id (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                 NSPersistentCloudKitContainerOptions_InitWithContainerIdentifier(NSPersistentCloudKitContainerOptions self, NSString containerIdentifier)    { return ((id (*)(NSPersistentCloudKitContainerOptions, SEL, NSString))bean_msgSend)(self, bean_sel("initWithContainerIdentifier:"), containerIdentifier); }
-static inline NSString           NSPersistentCloudKitContainerOptions_ContainerIdentifier(NSPersistentCloudKitContainerOptions self)                                          { return ((NSString (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
-static inline CKDatabaseScope    NSPersistentCloudKitContainerOptions_DatabaseScope(NSPersistentCloudKitContainerOptions self)                                                { return ((CKDatabaseScope (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("databaseScope")); }
-static inline void               NSPersistentCloudKitContainerOptions_SetDatabaseScope(NSPersistentCloudKitContainerOptions self, CKDatabaseScope databaseScope)              { ((void (*)(NSPersistentCloudKitContainerOptions, SEL, CKDatabaseScope))bean_msgSend)(self, bean_sel("setDatabaseScope:"), databaseScope); }
+static inline NSPersistentCloudKitContainerOptions    NSPersistentCloudKitContainerOptions_Init(NSPersistentCloudKitContainerOptions self)                                                         { return ((NSPersistentCloudKitContainerOptions (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSPersistentCloudKitContainerOptions    NSPersistentCloudKitContainerOptions_InitWithContainerIdentifier(NSPersistentCloudKitContainerOptions self, NSString containerIdentifier)    { return ((NSPersistentCloudKitContainerOptions (*)(NSPersistentCloudKitContainerOptions, SEL, NSString))bean_msgSend)(self, bean_sel("initWithContainerIdentifier:"), containerIdentifier); }
+static inline NSString                                NSPersistentCloudKitContainerOptions_ContainerIdentifier(NSPersistentCloudKitContainerOptions self)                                          { return ((NSString (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
+static inline CKDatabaseScope                         NSPersistentCloudKitContainerOptions_DatabaseScope(NSPersistentCloudKitContainerOptions self)                                                { return ((CKDatabaseScope (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("databaseScope")); }
+static inline void                                    NSPersistentCloudKitContainerOptions_SetDatabaseScope(NSPersistentCloudKitContainerOptions self, CKDatabaseScope databaseScope)              { ((void (*)(NSPersistentCloudKitContainerOptions, SEL, CKDatabaseScope))bean_msgSend)(self, bean_sel("setDatabaseScope:"), databaseScope); }
 
 /* ===== NSPersistentHistoryResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryResult
@@ -4361,6 +5616,14 @@ typedef bean_id NSPersistentHistoryResult;
 #endif
 static inline id                               NSPersistentHistoryResult_Result(NSPersistentHistoryResult self)        { return ((id (*)(NSPersistentHistoryResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSPersistentHistoryResultType    NSPersistentHistoryResult_ResultType(NSPersistentHistoryResult self)    { return ((NSPersistentHistoryResultType (*)(NSPersistentHistoryResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+
+/* ===== NSPersistentHistoryToken ===== */
+#ifndef BEAN_TYPEDEF_NSPersistentHistoryToken
+#define BEAN_TYPEDEF_NSPersistentHistoryToken
+typedef bean_id NSPersistentHistoryToken;
+#endif
+static inline id      NSPersistentHistoryToken_CopyWithZone(NSPersistentHistoryToken self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL    NSPersistentHistoryToken_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryToken"), bean_sel("supportsSecureCoding")); }
 
 /* ===== NSPersistentStoreAsynchronousResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentStoreAsynchronousResult
@@ -4389,63 +5652,68 @@ static inline void            NSPropertyMapping_SetUserInfo(NSPropertyMapping se
 #define BEAN_TYPEDEF_NSQueryGenerationToken
 typedef bean_id NSQueryGenerationToken;
 #endif
-static inline NSQueryGenerationToken    NSQueryGenerationToken_CurrentQueryGenerationToken(void)    { return ((NSQueryGenerationToken (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSQueryGenerationToken"), bean_sel("currentQueryGenerationToken")); }
+static inline NSQueryGenerationToken    NSQueryGenerationToken_CurrentQueryGenerationToken(void)                          { return ((NSQueryGenerationToken (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSQueryGenerationToken"), bean_sel("currentQueryGenerationToken")); }
+static inline id                        NSQueryGenerationToken_CopyWithZone(NSQueryGenerationToken self, NSZone* zone)    { return ((id (*)(NSQueryGenerationToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                      NSQueryGenerationToken_SupportsSecureCoding(void)                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSQueryGenerationToken"), bean_sel("supportsSecureCoding")); }
 
 /* ===== NSSaveChangesRequest ===== */
 #ifndef BEAN_TYPEDEF_NSSaveChangesRequest
 #define BEAN_TYPEDEF_NSSaveChangesRequest
 typedef bean_id NSSaveChangesRequest;
 #endif
-static inline id       NSSaveChangesRequest_InitWithInsertedObjects_UpdatedObjects_DeletedObjects_LockedObjects(NSSaveChangesRequest self, NSSet insertedObjects, NSSet updatedObjects, NSSet deletedObjects, NSSet lockedObjects)    { return ((id (*)(NSSaveChangesRequest, SEL, NSSet, NSSet, NSSet, NSSet))bean_msgSend)(self, bean_sel("initWithInsertedObjects:updatedObjects:deletedObjects:lockedObjects:"), insertedObjects, updatedObjects, deletedObjects, lockedObjects); }
-static inline NSSet    NSSaveChangesRequest_InsertedObjects(NSSaveChangesRequest self)                                                                                                                                                { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("insertedObjects")); }
-static inline NSSet    NSSaveChangesRequest_UpdatedObjects(NSSaveChangesRequest self)                                                                                                                                                 { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("updatedObjects")); }
-static inline NSSet    NSSaveChangesRequest_DeletedObjects(NSSaveChangesRequest self)                                                                                                                                                 { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("deletedObjects")); }
-static inline NSSet    NSSaveChangesRequest_LockedObjects(NSSaveChangesRequest self)                                                                                                                                                  { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("lockedObjects")); }
+static inline NSSaveChangesRequest    NSSaveChangesRequest_InitWithInsertedObjects_UpdatedObjects_DeletedObjects_LockedObjects(NSSaveChangesRequest self, NSSet insertedObjects, NSSet updatedObjects, NSSet deletedObjects, NSSet lockedObjects)    { return ((NSSaveChangesRequest (*)(NSSaveChangesRequest, SEL, NSSet, NSSet, NSSet, NSSet))bean_msgSend)(self, bean_sel("initWithInsertedObjects:updatedObjects:deletedObjects:lockedObjects:"), insertedObjects, updatedObjects, deletedObjects, lockedObjects); }
+static inline NSSet                   NSSaveChangesRequest_InsertedObjects(NSSaveChangesRequest self)                                                                                                                                                { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("insertedObjects")); }
+static inline NSSet                   NSSaveChangesRequest_UpdatedObjects(NSSaveChangesRequest self)                                                                                                                                                 { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("updatedObjects")); }
+static inline NSSet                   NSSaveChangesRequest_DeletedObjects(NSSaveChangesRequest self)                                                                                                                                                 { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("deletedObjects")); }
+static inline NSSet                   NSSaveChangesRequest_LockedObjects(NSSaveChangesRequest self)                                                                                                                                                  { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("lockedObjects")); }
 
 /* ===== SKAttribute ===== */
 #ifndef BEAN_TYPEDEF_SKAttribute
 #define BEAN_TYPEDEF_SKAttribute
 typedef bean_id SKAttribute;
 #endif
-static inline id                 SKAttribute_AttributeWithName_Type(NSString name, SKAttributeType type)                 { return ((id (*)(bean_class, SEL, NSString, SKAttributeType))bean_msgSend)(bean_cls("SKAttribute"), bean_sel("attributeWithName:type:"), name, type); }
-static inline id                 SKAttribute_InitWithName_Type(SKAttribute self, NSString name, SKAttributeType type)    { return ((id (*)(SKAttribute, SEL, NSString, SKAttributeType))bean_msgSend)(self, bean_sel("initWithName:type:"), name, type); }
+static inline SKAttribute        SKAttribute_AttributeWithName_Type(NSString name, SKAttributeType type)                 { return ((SKAttribute (*)(bean_class, SEL, NSString, SKAttributeType))bean_msgSend)(bean_cls("SKAttribute"), bean_sel("attributeWithName:type:"), name, type); }
+static inline SKAttribute        SKAttribute_InitWithName_Type(SKAttribute self, NSString name, SKAttributeType type)    { return ((SKAttribute (*)(SKAttribute, SEL, NSString, SKAttributeType))bean_msgSend)(self, bean_sel("initWithName:type:"), name, type); }
 static inline NSString           SKAttribute_Name(SKAttribute self)                                                      { return ((NSString (*)(SKAttribute, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline SKAttributeType    SKAttribute_Type(SKAttribute self)                                                      { return ((SKAttributeType (*)(SKAttribute, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline BOOL               SKAttribute_SupportsSecureCoding(void)                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKAttribute"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKAttributeValue ===== */
 #ifndef BEAN_TYPEDEF_SKAttributeValue
 #define BEAN_TYPEDEF_SKAttributeValue
 typedef bean_id SKAttributeValue;
 #endif
-static inline id         SKAttributeValue_ValueWithFloat(CGFloat value)                                           { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("valueWithFloat:"), value); }
-static inline id         SKAttributeValue_ValueWithVectorFloat2(void* value)                                      { return ((id (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("valueWithVectorFloat2:"), value); }
-static inline id         SKAttributeValue_ValueWithVectorFloat3(void* value)                                      { return ((id (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("valueWithVectorFloat3:"), value); }
-static inline id         SKAttributeValue_ValueWithVectorFloat4(void* value)                                      { return ((id (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("valueWithVectorFloat4:"), value); }
-static inline id         SKAttributeValue_Init(SKAttributeValue self)                                             { return ((id (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline CGFloat    SKAttributeValue_FloatValue(SKAttributeValue self)                                       { return ((CGFloat (*)(SKAttributeValue, SEL))bean_msgSend_fpret)(self, bean_sel("floatValue")); }
-static inline void       SKAttributeValue_SetFloatValue(SKAttributeValue self, CGFloat floatValue)                { ((void (*)(SKAttributeValue, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFloatValue:"), floatValue); }
-static inline void*      SKAttributeValue_VectorFloat2Value(SKAttributeValue self)                                { return ((void* (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("vectorFloat2Value")); }
-static inline void       SKAttributeValue_SetVectorFloat2Value(SKAttributeValue self, void* vectorFloat2Value)    { ((void (*)(SKAttributeValue, SEL, void*))bean_msgSend)(self, bean_sel("setVectorFloat2Value:"), vectorFloat2Value); }
-static inline void*      SKAttributeValue_VectorFloat3Value(SKAttributeValue self)                                { return ((void* (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("vectorFloat3Value")); }
-static inline void       SKAttributeValue_SetVectorFloat3Value(SKAttributeValue self, void* vectorFloat3Value)    { ((void (*)(SKAttributeValue, SEL, void*))bean_msgSend)(self, bean_sel("setVectorFloat3Value:"), vectorFloat3Value); }
-static inline void*      SKAttributeValue_VectorFloat4Value(SKAttributeValue self)                                { return ((void* (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("vectorFloat4Value")); }
-static inline void       SKAttributeValue_SetVectorFloat4Value(SKAttributeValue self, void* vectorFloat4Value)    { ((void (*)(SKAttributeValue, SEL, void*))bean_msgSend)(self, bean_sel("setVectorFloat4Value:"), vectorFloat4Value); }
+static inline SKAttributeValue    SKAttributeValue_ValueWithFloat(CGFloat value)                                           { return ((SKAttributeValue (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("valueWithFloat:"), value); }
+static inline SKAttributeValue    SKAttributeValue_ValueWithVectorFloat2(void* value)                                      { return ((SKAttributeValue (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("valueWithVectorFloat2:"), value); }
+static inline SKAttributeValue    SKAttributeValue_ValueWithVectorFloat3(void* value)                                      { return ((SKAttributeValue (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("valueWithVectorFloat3:"), value); }
+static inline SKAttributeValue    SKAttributeValue_ValueWithVectorFloat4(void* value)                                      { return ((SKAttributeValue (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("valueWithVectorFloat4:"), value); }
+static inline SKAttributeValue    SKAttributeValue_Init(SKAttributeValue self)                                             { return ((SKAttributeValue (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CGFloat             SKAttributeValue_FloatValue(SKAttributeValue self)                                       { return ((CGFloat (*)(SKAttributeValue, SEL))bean_msgSend_fpret)(self, bean_sel("floatValue")); }
+static inline void                SKAttributeValue_SetFloatValue(SKAttributeValue self, CGFloat floatValue)                { ((void (*)(SKAttributeValue, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFloatValue:"), floatValue); }
+static inline void*               SKAttributeValue_VectorFloat2Value(SKAttributeValue self)                                { return ((void* (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("vectorFloat2Value")); }
+static inline void                SKAttributeValue_SetVectorFloat2Value(SKAttributeValue self, void* vectorFloat2Value)    { ((void (*)(SKAttributeValue, SEL, void*))bean_msgSend)(self, bean_sel("setVectorFloat2Value:"), vectorFloat2Value); }
+static inline void*               SKAttributeValue_VectorFloat3Value(SKAttributeValue self)                                { return ((void* (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("vectorFloat3Value")); }
+static inline void                SKAttributeValue_SetVectorFloat3Value(SKAttributeValue self, void* vectorFloat3Value)    { ((void (*)(SKAttributeValue, SEL, void*))bean_msgSend)(self, bean_sel("setVectorFloat3Value:"), vectorFloat3Value); }
+static inline void*               SKAttributeValue_VectorFloat4Value(SKAttributeValue self)                                { return ((void* (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("vectorFloat4Value")); }
+static inline void                SKAttributeValue_SetVectorFloat4Value(SKAttributeValue self, void* vectorFloat4Value)    { ((void (*)(SKAttributeValue, SEL, void*))bean_msgSend)(self, bean_sel("setVectorFloat4Value:"), vectorFloat4Value); }
+static inline BOOL                SKAttributeValue_SupportsSecureCoding(void)                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKAudioNode ===== */
 #ifndef BEAN_TYPEDEF_SKAudioNode
 #define BEAN_TYPEDEF_SKAudioNode
 typedef bean_id SKAudioNode;
 #endif
-static inline id             SKAudioNode_InitWithAVAudioNode(SKAudioNode self, AVAudioNode node)      { return ((id (*)(SKAudioNode, SEL, AVAudioNode))bean_msgSend)(self, bean_sel("initWithAVAudioNode:"), node); }
-static inline id             SKAudioNode_InitWithCoder(SKAudioNode self, NSCoder aDecoder)            { return ((id (*)(SKAudioNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline id             SKAudioNode_InitWithFileNamed(SKAudioNode self, NSString name)           { return ((id (*)(SKAudioNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithFileNamed:"), name); }
-static inline id             SKAudioNode_InitWithURL(SKAudioNode self, NSURL url)                     { return ((id (*)(SKAudioNode, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), url); }
+static inline SKAudioNode    SKAudioNode_InitWithAVAudioNode(SKAudioNode self, AVAudioNode node)      { return ((SKAudioNode (*)(SKAudioNode, SEL, AVAudioNode))bean_msgSend)(self, bean_sel("initWithAVAudioNode:"), node); }
+static inline SKAudioNode    SKAudioNode_InitWithCoder(SKAudioNode self, NSCoder aDecoder)            { return ((SKAudioNode (*)(SKAudioNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline SKAudioNode    SKAudioNode_InitWithFileNamed(SKAudioNode self, NSString name)           { return ((SKAudioNode (*)(SKAudioNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithFileNamed:"), name); }
+static inline SKAudioNode    SKAudioNode_InitWithURL(SKAudioNode self, NSURL url)                     { return ((SKAudioNode (*)(SKAudioNode, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), url); }
 static inline AVAudioNode    SKAudioNode_AvAudioNode(SKAudioNode self)                                { return ((AVAudioNode (*)(SKAudioNode, SEL))bean_msgSend)(self, bean_sel("avAudioNode")); }
 static inline void           SKAudioNode_SetAvAudioNode(SKAudioNode self, AVAudioNode avAudioNode)    { ((void (*)(SKAudioNode, SEL, AVAudioNode))bean_msgSend)(self, bean_sel("setAvAudioNode:"), avAudioNode); }
 static inline BOOL           SKAudioNode_AutoplayLooped(SKAudioNode self)                             { return ((BOOL (*)(SKAudioNode, SEL))bean_msgSend)(self, bean_sel("autoplayLooped")); }
 static inline void           SKAudioNode_SetAutoplayLooped(SKAudioNode self, BOOL autoplayLooped)     { ((void (*)(SKAudioNode, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutoplayLooped:"), autoplayLooped); }
 static inline BOOL           SKAudioNode_IsPositional(SKAudioNode self)                               { return ((BOOL (*)(SKAudioNode, SEL))bean_msgSend)(self, bean_sel("isPositional")); }
 static inline void           SKAudioNode_SetPositional(SKAudioNode self, BOOL positional)             { ((void (*)(SKAudioNode, SEL, BOOL))bean_msgSend)(self, bean_sel("setPositional:"), positional); }
+static inline BOOL           SKAudioNode_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKAudioNode"), bean_sel("supportsSecureCoding")); }
 static inline BOOL           SKAudioNode_Positional(SKAudioNode self)                                 { return ((BOOL (*)(SKAudioNode, SEL))bean_msgSend)(self, bean_sel("positional")); }
 
 /* ===== SKLabelNode ===== */
@@ -4453,10 +5721,10 @@ static inline BOOL           SKAudioNode_Positional(SKAudioNode self)           
 #define BEAN_TYPEDEF_SKLabelNode
 typedef bean_id SKLabelNode;
 #endif
-static inline id                                SKLabelNode_LabelNodeWithText(NSString text)                                                                        { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKLabelNode"), bean_sel("labelNodeWithText:"), text); }
-static inline id                                SKLabelNode_LabelNodeWithAttributedText(NSAttributedString attributedText)                                          { return ((id (*)(bean_class, SEL, NSAttributedString))bean_msgSend)(bean_cls("SKLabelNode"), bean_sel("labelNodeWithAttributedText:"), attributedText); }
-static inline id                                SKLabelNode_LabelNodeWithFontNamed(NSString fontName)                                                               { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKLabelNode"), bean_sel("labelNodeWithFontNamed:"), fontName); }
-static inline id                                SKLabelNode_InitWithFontNamed(SKLabelNode self, NSString fontName)                                                  { return ((id (*)(SKLabelNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithFontNamed:"), fontName); }
+static inline SKLabelNode                       SKLabelNode_LabelNodeWithText(NSString text)                                                                        { return ((SKLabelNode (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKLabelNode"), bean_sel("labelNodeWithText:"), text); }
+static inline SKLabelNode                       SKLabelNode_LabelNodeWithAttributedText(NSAttributedString attributedText)                                          { return ((SKLabelNode (*)(bean_class, SEL, NSAttributedString))bean_msgSend)(bean_cls("SKLabelNode"), bean_sel("labelNodeWithAttributedText:"), attributedText); }
+static inline SKLabelNode                       SKLabelNode_LabelNodeWithFontNamed(NSString fontName)                                                               { return ((SKLabelNode (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKLabelNode"), bean_sel("labelNodeWithFontNamed:"), fontName); }
+static inline SKLabelNode                       SKLabelNode_InitWithFontNamed(SKLabelNode self, NSString fontName)                                                  { return ((SKLabelNode (*)(SKLabelNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithFontNamed:"), fontName); }
 static inline SKLabelVerticalAlignmentMode      SKLabelNode_VerticalAlignmentMode(SKLabelNode self)                                                                 { return ((SKLabelVerticalAlignmentMode (*)(SKLabelNode, SEL))bean_msgSend)(self, bean_sel("verticalAlignmentMode")); }
 static inline void                              SKLabelNode_SetVerticalAlignmentMode(SKLabelNode self, SKLabelVerticalAlignmentMode verticalAlignmentMode)          { ((void (*)(SKLabelNode, SEL, SKLabelVerticalAlignmentMode))bean_msgSend)(self, bean_sel("setVerticalAlignmentMode:"), verticalAlignmentMode); }
 static inline SKLabelHorizontalAlignmentMode    SKLabelNode_HorizontalAlignmentMode(SKLabelNode self)                                                               { return ((SKLabelHorizontalAlignmentMode (*)(SKLabelNode, SEL))bean_msgSend)(self, bean_sel("horizontalAlignmentMode")); }
@@ -4508,54 +5776,59 @@ static inline BOOL          SKLightNode_Enabled(SKLightNode self)               
 #define BEAN_TYPEDEF_SKMutableTexture
 typedef bean_id SKMutableTexture;
 #endif
-static inline id      SKMutableTexture_InitWithSize(SKMutableTexture self, CGSize size)                            { return ((id (*)(SKMutableTexture, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithSize:"), size); }
-static inline id      SKMutableTexture_MutableTextureWithSize(CGSize size)                                         { return ((id (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKMutableTexture"), bean_sel("mutableTextureWithSize:"), size); }
-static inline id      SKMutableTexture_InitWithSize_PixelFormat(SKMutableTexture self, CGSize size, int format)    { return ((id (*)(SKMutableTexture, SEL, CGSize, int))bean_msgSend)(self, bean_sel("initWithSize:pixelFormat:"), size, format); }
-static inline void    SKMutableTexture_ModifyPixelDataWithBlock(SKMutableTexture self, void* block)                { ((void (*)(SKMutableTexture, SEL, void*))bean_msgSend)(self, bean_sel("modifyPixelDataWithBlock:"), block); }
+static inline SKMutableTexture    SKMutableTexture_InitWithSize(SKMutableTexture self, CGSize size)                            { return ((SKMutableTexture (*)(SKMutableTexture, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithSize:"), size); }
+static inline SKMutableTexture    SKMutableTexture_MutableTextureWithSize(CGSize size)                                         { return ((SKMutableTexture (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKMutableTexture"), bean_sel("mutableTextureWithSize:"), size); }
+static inline SKMutableTexture    SKMutableTexture_InitWithSize_PixelFormat(SKMutableTexture self, CGSize size, int format)    { return ((SKMutableTexture (*)(SKMutableTexture, SEL, CGSize, int))bean_msgSend)(self, bean_sel("initWithSize:pixelFormat:"), size, format); }
+static inline void                SKMutableTexture_ModifyPixelDataWithBlock(SKMutableTexture self, void* block)                { ((void (*)(SKMutableTexture, SEL, void*))bean_msgSend)(self, bean_sel("modifyPixelDataWithBlock:"), block); }
 
 /* ===== SKRange ===== */
 #ifndef BEAN_TYPEDEF_SKRange
 #define BEAN_TYPEDEF_SKRange
 typedef bean_id SKRange;
 #endif
-static inline id         SKRange_InitWithLowerLimit_UpperLimit(SKRange self, CGFloat lower, CGFloat upper)    { return ((id (*)(SKRange, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLowerLimit:upperLimit:"), lower, upper); }
-static inline id         SKRange_RangeWithLowerLimit_UpperLimit(CGFloat lower, CGFloat upper)                 { return ((id (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithLowerLimit:upperLimit:"), lower, upper); }
-static inline id         SKRange_RangeWithLowerLimit(CGFloat lower)                                           { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithLowerLimit:"), lower); }
-static inline id         SKRange_RangeWithUpperLimit(CGFloat upper)                                           { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithUpperLimit:"), upper); }
-static inline id         SKRange_RangeWithConstantValue(CGFloat value)                                        { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithConstantValue:"), value); }
-static inline id         SKRange_RangeWithValue_Variance(CGFloat value, CGFloat variance)                     { return ((id (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithValue:variance:"), value, variance); }
-static inline id         SKRange_RangeWithNoLimits(void)                                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithNoLimits")); }
+static inline SKRange    SKRange_InitWithLowerLimit_UpperLimit(SKRange self, CGFloat lower, CGFloat upper)    { return ((SKRange (*)(SKRange, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLowerLimit:upperLimit:"), lower, upper); }
+static inline SKRange    SKRange_RangeWithLowerLimit_UpperLimit(CGFloat lower, CGFloat upper)                 { return ((SKRange (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithLowerLimit:upperLimit:"), lower, upper); }
+static inline SKRange    SKRange_RangeWithLowerLimit(CGFloat lower)                                           { return ((SKRange (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithLowerLimit:"), lower); }
+static inline SKRange    SKRange_RangeWithUpperLimit(CGFloat upper)                                           { return ((SKRange (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithUpperLimit:"), upper); }
+static inline SKRange    SKRange_RangeWithConstantValue(CGFloat value)                                        { return ((SKRange (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithConstantValue:"), value); }
+static inline SKRange    SKRange_RangeWithValue_Variance(CGFloat value, CGFloat variance)                     { return ((SKRange (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithValue:variance:"), value, variance); }
+static inline SKRange    SKRange_RangeWithNoLimits(void)                                                      { return ((SKRange (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKRange"), bean_sel("rangeWithNoLimits")); }
 static inline CGFloat    SKRange_LowerLimit(SKRange self)                                                     { return ((CGFloat (*)(SKRange, SEL))bean_msgSend_fpret)(self, bean_sel("lowerLimit")); }
 static inline void       SKRange_SetLowerLimit(SKRange self, CGFloat lowerLimit)                              { ((void (*)(SKRange, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLowerLimit:"), lowerLimit); }
 static inline CGFloat    SKRange_UpperLimit(SKRange self)                                                     { return ((CGFloat (*)(SKRange, SEL))bean_msgSend_fpret)(self, bean_sel("upperLimit")); }
 static inline void       SKRange_SetUpperLimit(SKRange self, CGFloat upperLimit)                              { ((void (*)(SKRange, SEL, CGFloat))bean_msgSend)(self, bean_sel("setUpperLimit:"), upperLimit); }
+static inline BOOL       SKRange_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKRange"), bean_sel("supportsSecureCoding")); }
+static inline id         SKRange_CopyWithZone(SKRange self, NSZone* zone)                                     { return ((id (*)(SKRange, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== SKReachConstraints ===== */
 #ifndef BEAN_TYPEDEF_SKReachConstraints
 #define BEAN_TYPEDEF_SKReachConstraints
 typedef bean_id SKReachConstraints;
 #endif
-static inline id         SKReachConstraints_InitWithLowerAngleLimit_UpperAngleLimit(SKReachConstraints self, CGFloat lowerAngleLimit, CGFloat upperAngleLimit)    { return ((id (*)(SKReachConstraints, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLowerAngleLimit:upperAngleLimit:"), lowerAngleLimit, upperAngleLimit); }
-static inline CGFloat    SKReachConstraints_LowerAngleLimit(SKReachConstraints self)                                                                              { return ((CGFloat (*)(SKReachConstraints, SEL))bean_msgSend_fpret)(self, bean_sel("lowerAngleLimit")); }
-static inline void       SKReachConstraints_SetLowerAngleLimit(SKReachConstraints self, CGFloat lowerAngleLimit)                                                  { ((void (*)(SKReachConstraints, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLowerAngleLimit:"), lowerAngleLimit); }
-static inline CGFloat    SKReachConstraints_UpperAngleLimit(SKReachConstraints self)                                                                              { return ((CGFloat (*)(SKReachConstraints, SEL))bean_msgSend_fpret)(self, bean_sel("upperAngleLimit")); }
-static inline void       SKReachConstraints_SetUpperAngleLimit(SKReachConstraints self, CGFloat upperAngleLimit)                                                  { ((void (*)(SKReachConstraints, SEL, CGFloat))bean_msgSend)(self, bean_sel("setUpperAngleLimit:"), upperAngleLimit); }
+static inline SKReachConstraints    SKReachConstraints_InitWithLowerAngleLimit_UpperAngleLimit(SKReachConstraints self, CGFloat lowerAngleLimit, CGFloat upperAngleLimit)    { return ((SKReachConstraints (*)(SKReachConstraints, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLowerAngleLimit:upperAngleLimit:"), lowerAngleLimit, upperAngleLimit); }
+static inline CGFloat               SKReachConstraints_LowerAngleLimit(SKReachConstraints self)                                                                              { return ((CGFloat (*)(SKReachConstraints, SEL))bean_msgSend_fpret)(self, bean_sel("lowerAngleLimit")); }
+static inline void                  SKReachConstraints_SetLowerAngleLimit(SKReachConstraints self, CGFloat lowerAngleLimit)                                                  { ((void (*)(SKReachConstraints, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLowerAngleLimit:"), lowerAngleLimit); }
+static inline CGFloat               SKReachConstraints_UpperAngleLimit(SKReachConstraints self)                                                                              { return ((CGFloat (*)(SKReachConstraints, SEL))bean_msgSend_fpret)(self, bean_sel("upperAngleLimit")); }
+static inline void                  SKReachConstraints_SetUpperAngleLimit(SKReachConstraints self, CGFloat upperAngleLimit)                                                  { ((void (*)(SKReachConstraints, SEL, CGFloat))bean_msgSend)(self, bean_sel("setUpperAngleLimit:"), upperAngleLimit); }
+static inline BOOL                  SKReachConstraints_SupportsSecureCoding(void)                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKReachConstraints"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKRegion ===== */
 #ifndef BEAN_TYPEDEF_SKRegion
 #define BEAN_TYPEDEF_SKRegion
 typedef bean_id SKRegion;
 #endif
-static inline id                SKRegion_InfiniteRegion(void)                                              { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKRegion"), bean_sel("infiniteRegion")); }
-static inline id                SKRegion_InitWithRadius(SKRegion self, CGFloat radius)                     { return ((id (*)(SKRegion, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithRadius:"), radius); }
-static inline id                SKRegion_InitWithSize(SKRegion self, CGSize size)                          { return ((id (*)(SKRegion, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithSize:"), size); }
-static inline id                SKRegion_InitWithPath(SKRegion self, const struct CGPath* path)            { return ((id (*)(SKRegion, SEL, const struct CGPath*))bean_msgSend)(self, bean_sel("initWithPath:"), path); }
-static inline id                SKRegion_InverseRegion(SKRegion self)                                      { return ((id (*)(SKRegion, SEL))bean_msgSend)(self, bean_sel("inverseRegion")); }
-static inline id                SKRegion_RegionByUnionWithRegion(SKRegion self, SKRegion region)           { return ((id (*)(SKRegion, SEL, SKRegion))bean_msgSend)(self, bean_sel("regionByUnionWithRegion:"), region); }
-static inline id                SKRegion_RegionByDifferenceFromRegion(SKRegion self, SKRegion region)      { return ((id (*)(SKRegion, SEL, SKRegion))bean_msgSend)(self, bean_sel("regionByDifferenceFromRegion:"), region); }
-static inline id                SKRegion_RegionByIntersectionWithRegion(SKRegion self, SKRegion region)    { return ((id (*)(SKRegion, SEL, SKRegion))bean_msgSend)(self, bean_sel("regionByIntersectionWithRegion:"), region); }
+static inline SKRegion          SKRegion_InfiniteRegion(void)                                              { return ((SKRegion (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKRegion"), bean_sel("infiniteRegion")); }
+static inline SKRegion          SKRegion_InitWithRadius(SKRegion self, CGFloat radius)                     { return ((SKRegion (*)(SKRegion, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithRadius:"), radius); }
+static inline SKRegion          SKRegion_InitWithSize(SKRegion self, CGSize size)                          { return ((SKRegion (*)(SKRegion, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithSize:"), size); }
+static inline SKRegion          SKRegion_InitWithPath(SKRegion self, const struct CGPath* path)            { return ((SKRegion (*)(SKRegion, SEL, const struct CGPath*))bean_msgSend)(self, bean_sel("initWithPath:"), path); }
+static inline SKRegion          SKRegion_InverseRegion(SKRegion self)                                      { return ((SKRegion (*)(SKRegion, SEL))bean_msgSend)(self, bean_sel("inverseRegion")); }
+static inline SKRegion          SKRegion_RegionByUnionWithRegion(SKRegion self, SKRegion region)           { return ((SKRegion (*)(SKRegion, SEL, SKRegion))bean_msgSend)(self, bean_sel("regionByUnionWithRegion:"), region); }
+static inline SKRegion          SKRegion_RegionByDifferenceFromRegion(SKRegion self, SKRegion region)      { return ((SKRegion (*)(SKRegion, SEL, SKRegion))bean_msgSend)(self, bean_sel("regionByDifferenceFromRegion:"), region); }
+static inline SKRegion          SKRegion_RegionByIntersectionWithRegion(SKRegion self, SKRegion region)    { return ((SKRegion (*)(SKRegion, SEL, SKRegion))bean_msgSend)(self, bean_sel("regionByIntersectionWithRegion:"), region); }
 static inline BOOL              SKRegion_ContainsPoint(SKRegion self, CGPoint point)                       { return ((BOOL (*)(SKRegion, SEL, CGPoint))bean_msgSend)(self, bean_sel("containsPoint:"), point); }
 static inline struct CGPath*    SKRegion_Path(SKRegion self)                                               { return ((struct CGPath* (*)(SKRegion, SEL))bean_msgSend)(self, bean_sel("path")); }
+static inline id                SKRegion_CopyWithZone(SKRegion self, NSZone* zone)                         { return ((id (*)(SKRegion, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL              SKRegion_SupportsSecureCoding(void)                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKRegion"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKTransformNode ===== */
 #ifndef BEAN_TYPEDEF_SKTransformNode
@@ -4596,6 +5869,7 @@ static inline BOOL            SKTransition_PausesIncomingScene(SKTransition self
 static inline void            SKTransition_SetPausesIncomingScene(SKTransition self, BOOL pausesIncomingScene)           { ((void (*)(SKTransition, SEL, BOOL))bean_msgSend)(self, bean_sel("setPausesIncomingScene:"), pausesIncomingScene); }
 static inline BOOL            SKTransition_PausesOutgoingScene(SKTransition self)                                        { return ((BOOL (*)(SKTransition, SEL))bean_msgSend)(self, bean_sel("pausesOutgoingScene")); }
 static inline void            SKTransition_SetPausesOutgoingScene(SKTransition self, BOOL pausesOutgoingScene)           { ((void (*)(SKTransition, SEL, BOOL))bean_msgSend)(self, bean_sel("setPausesOutgoingScene:"), pausesOutgoingScene); }
+static inline id              SKTransition_CopyWithZone(SKTransition self, NSZone* zone)                                 { return ((id (*)(SKTransition, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== SKVideoNode ===== */
 #ifndef BEAN_TYPEDEF_SKVideoNode
@@ -4607,12 +5881,12 @@ static inline SKVideoNode    SKVideoNode_VideoNodeWithVideoFileNamed(NSString vi
 static inline SKVideoNode    SKVideoNode_VideoNodeWithFileNamed(NSString videoFile)                      { return ((SKVideoNode (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKVideoNode"), bean_sel("videoNodeWithFileNamed:"), videoFile); }
 static inline SKVideoNode    SKVideoNode_VideoNodeWithVideoURL(NSURL videoURL)                           { return ((SKVideoNode (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("SKVideoNode"), bean_sel("videoNodeWithVideoURL:"), videoURL); }
 static inline SKVideoNode    SKVideoNode_VideoNodeWithURL(NSURL videoURL)                                { return ((SKVideoNode (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("SKVideoNode"), bean_sel("videoNodeWithURL:"), videoURL); }
-static inline id             SKVideoNode_InitWithAVPlayer(SKVideoNode self, AVPlayer player)             { return ((id (*)(SKVideoNode, SEL, AVPlayer))bean_msgSend)(self, bean_sel("initWithAVPlayer:"), player); }
-static inline id             SKVideoNode_InitWithVideoFileNamed(SKVideoNode self, NSString videoFile)    { return ((id (*)(SKVideoNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithVideoFileNamed:"), videoFile); }
-static inline id             SKVideoNode_InitWithFileNamed(SKVideoNode self, NSString videoFile)         { return ((id (*)(SKVideoNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithFileNamed:"), videoFile); }
-static inline id             SKVideoNode_InitWithVideoURL(SKVideoNode self, NSURL url)                   { return ((id (*)(SKVideoNode, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithVideoURL:"), url); }
-static inline id             SKVideoNode_InitWithURL(SKVideoNode self, NSURL url)                        { return ((id (*)(SKVideoNode, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), url); }
-static inline id             SKVideoNode_InitWithCoder(SKVideoNode self, NSCoder aDecoder)               { return ((id (*)(SKVideoNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline SKVideoNode    SKVideoNode_InitWithAVPlayer(SKVideoNode self, AVPlayer player)             { return ((SKVideoNode (*)(SKVideoNode, SEL, AVPlayer))bean_msgSend)(self, bean_sel("initWithAVPlayer:"), player); }
+static inline SKVideoNode    SKVideoNode_InitWithVideoFileNamed(SKVideoNode self, NSString videoFile)    { return ((SKVideoNode (*)(SKVideoNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithVideoFileNamed:"), videoFile); }
+static inline SKVideoNode    SKVideoNode_InitWithFileNamed(SKVideoNode self, NSString videoFile)         { return ((SKVideoNode (*)(SKVideoNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithFileNamed:"), videoFile); }
+static inline SKVideoNode    SKVideoNode_InitWithVideoURL(SKVideoNode self, NSURL url)                   { return ((SKVideoNode (*)(SKVideoNode, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithVideoURL:"), url); }
+static inline SKVideoNode    SKVideoNode_InitWithURL(SKVideoNode self, NSURL url)                        { return ((SKVideoNode (*)(SKVideoNode, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), url); }
+static inline SKVideoNode    SKVideoNode_InitWithCoder(SKVideoNode self, NSCoder aDecoder)               { return ((SKVideoNode (*)(SKVideoNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline void           SKVideoNode_Play(SKVideoNode self)                                          { ((void (*)(SKVideoNode, SEL))bean_msgSend)(self, bean_sel("play")); }
 static inline void           SKVideoNode_Pause(SKVideoNode self)                                         { ((void (*)(SKVideoNode, SEL))bean_msgSend)(self, bean_sel("pause")); }
 static inline CGSize         SKVideoNode_Size(SKVideoNode self)                                          { return ((CGSize (*)(SKVideoNode, SEL))bean_msgSend_stret)(self, bean_sel("size")); }
@@ -4620,34 +5894,43 @@ static inline void           SKVideoNode_SetSize(SKVideoNode self, CGSize size) 
 static inline CGPoint        SKVideoNode_AnchorPoint(SKVideoNode self)                                   { return ((CGPoint (*)(SKVideoNode, SEL))bean_msgSend_stret)(self, bean_sel("anchorPoint")); }
 static inline void           SKVideoNode_SetAnchorPoint(SKVideoNode self, CGPoint anchorPoint)           { ((void (*)(SKVideoNode, SEL, CGPoint))bean_msgSend)(self, bean_sel("setAnchorPoint:"), anchorPoint); }
 
+/* ===== SKWarpGeometry ===== */
+#ifndef BEAN_TYPEDEF_SKWarpGeometry
+#define BEAN_TYPEDEF_SKWarpGeometry
+typedef bean_id SKWarpGeometry;
+#endif
+static inline id      SKWarpGeometry_CopyWithZone(SKWarpGeometry self, NSZone* zone)    { return ((id (*)(SKWarpGeometry, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL    SKWarpGeometry_SupportsSecureCoding(void)                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKWarpGeometry"), bean_sel("supportsSecureCoding")); }
+
 /* ===== SKWarpGeometryGrid ===== */
 #ifndef BEAN_TYPEDEF_SKWarpGeometryGrid
 #define BEAN_TYPEDEF_SKWarpGeometryGrid
 typedef bean_id SKWarpGeometryGrid;
 #endif
-static inline id           SKWarpGeometryGrid_InitWithCoder(SKWarpGeometryGrid self, NSCoder aDecoder)                                                                                                                                 { return ((id (*)(SKWarpGeometryGrid, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline id           SKWarpGeometryGrid_Grid(void)                                                                                                                                                                               { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKWarpGeometryGrid"), bean_sel("grid")); }
-static inline id           SKWarpGeometryGrid_GridWithColumns_Rows(NSInteger cols, NSInteger rows)                                                                                                                                     { return ((id (*)(bean_class, SEL, NSInteger, NSInteger))bean_msgSend)(bean_cls("SKWarpGeometryGrid"), bean_sel("gridWithColumns:rows:"), cols, rows); }
-static inline id           SKWarpGeometryGrid_GridWithColumns_Rows_SourcePositions_DestPositions(NSInteger cols, NSInteger rows, const vector_float2* sourcePositions, const vector_float2* destPositions)                             { return ((id (*)(bean_class, SEL, NSInteger, NSInteger, const vector_float2*, const vector_float2*))bean_msgSend)(bean_cls("SKWarpGeometryGrid"), bean_sel("gridWithColumns:rows:sourcePositions:destPositions:"), cols, rows, sourcePositions, destPositions); }
-static inline id           SKWarpGeometryGrid_InitWithColumns_Rows_SourcePositions_DestPositions(SKWarpGeometryGrid self, NSInteger cols, NSInteger rows, const vector_float2* sourcePositions, const vector_float2* destPositions)    { return ((id (*)(SKWarpGeometryGrid, SEL, NSInteger, NSInteger, const vector_float2*, const vector_float2*))bean_msgSend)(self, bean_sel("initWithColumns:rows:sourcePositions:destPositions:"), cols, rows, sourcePositions, destPositions); }
-static inline void*        SKWarpGeometryGrid_SourcePositionAtIndex(SKWarpGeometryGrid self, NSInteger index)                                                                                                                          { return ((void* (*)(SKWarpGeometryGrid, SEL, NSInteger))bean_msgSend)(self, bean_sel("sourcePositionAtIndex:"), index); }
-static inline void*        SKWarpGeometryGrid_DestPositionAtIndex(SKWarpGeometryGrid self, NSInteger index)                                                                                                                            { return ((void* (*)(SKWarpGeometryGrid, SEL, NSInteger))bean_msgSend)(self, bean_sel("destPositionAtIndex:"), index); }
-static inline id           SKWarpGeometryGrid_GridByReplacingSourcePositions(SKWarpGeometryGrid self, const vector_float2* sourcePositions)                                                                                            { return ((id (*)(SKWarpGeometryGrid, SEL, const vector_float2*))bean_msgSend)(self, bean_sel("gridByReplacingSourcePositions:"), sourcePositions); }
-static inline id           SKWarpGeometryGrid_GridByReplacingDestPositions(SKWarpGeometryGrid self, const vector_float2* destPositions)                                                                                                { return ((id (*)(SKWarpGeometryGrid, SEL, const vector_float2*))bean_msgSend)(self, bean_sel("gridByReplacingDestPositions:"), destPositions); }
-static inline NSInteger    SKWarpGeometryGrid_NumberOfColumns(SKWarpGeometryGrid self)                                                                                                                                                 { return ((NSInteger (*)(SKWarpGeometryGrid, SEL))bean_msgSend)(self, bean_sel("numberOfColumns")); }
-static inline NSInteger    SKWarpGeometryGrid_NumberOfRows(SKWarpGeometryGrid self)                                                                                                                                                    { return ((NSInteger (*)(SKWarpGeometryGrid, SEL))bean_msgSend)(self, bean_sel("numberOfRows")); }
-static inline NSInteger    SKWarpGeometryGrid_VertexCount(SKWarpGeometryGrid self)                                                                                                                                                     { return ((NSInteger (*)(SKWarpGeometryGrid, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_InitWithCoder(SKWarpGeometryGrid self, NSCoder aDecoder)                                                                                                                                 { return ((SKWarpGeometryGrid (*)(SKWarpGeometryGrid, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_Grid(void)                                                                                                                                                                               { return ((SKWarpGeometryGrid (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKWarpGeometryGrid"), bean_sel("grid")); }
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_GridWithColumns_Rows(NSInteger cols, NSInteger rows)                                                                                                                                     { return ((SKWarpGeometryGrid (*)(bean_class, SEL, NSInteger, NSInteger))bean_msgSend)(bean_cls("SKWarpGeometryGrid"), bean_sel("gridWithColumns:rows:"), cols, rows); }
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_GridWithColumns_Rows_SourcePositions_DestPositions(NSInteger cols, NSInteger rows, const vector_float2* sourcePositions, const vector_float2* destPositions)                             { return ((SKWarpGeometryGrid (*)(bean_class, SEL, NSInteger, NSInteger, const vector_float2*, const vector_float2*))bean_msgSend)(bean_cls("SKWarpGeometryGrid"), bean_sel("gridWithColumns:rows:sourcePositions:destPositions:"), cols, rows, sourcePositions, destPositions); }
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_InitWithColumns_Rows_SourcePositions_DestPositions(SKWarpGeometryGrid self, NSInteger cols, NSInteger rows, const vector_float2* sourcePositions, const vector_float2* destPositions)    { return ((SKWarpGeometryGrid (*)(SKWarpGeometryGrid, SEL, NSInteger, NSInteger, const vector_float2*, const vector_float2*))bean_msgSend)(self, bean_sel("initWithColumns:rows:sourcePositions:destPositions:"), cols, rows, sourcePositions, destPositions); }
+static inline void*                 SKWarpGeometryGrid_SourcePositionAtIndex(SKWarpGeometryGrid self, NSInteger index)                                                                                                                          { return ((void* (*)(SKWarpGeometryGrid, SEL, NSInteger))bean_msgSend)(self, bean_sel("sourcePositionAtIndex:"), index); }
+static inline void*                 SKWarpGeometryGrid_DestPositionAtIndex(SKWarpGeometryGrid self, NSInteger index)                                                                                                                            { return ((void* (*)(SKWarpGeometryGrid, SEL, NSInteger))bean_msgSend)(self, bean_sel("destPositionAtIndex:"), index); }
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_GridByReplacingSourcePositions(SKWarpGeometryGrid self, const vector_float2* sourcePositions)                                                                                            { return ((SKWarpGeometryGrid (*)(SKWarpGeometryGrid, SEL, const vector_float2*))bean_msgSend)(self, bean_sel("gridByReplacingSourcePositions:"), sourcePositions); }
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_GridByReplacingDestPositions(SKWarpGeometryGrid self, const vector_float2* destPositions)                                                                                                { return ((SKWarpGeometryGrid (*)(SKWarpGeometryGrid, SEL, const vector_float2*))bean_msgSend)(self, bean_sel("gridByReplacingDestPositions:"), destPositions); }
+static inline NSInteger             SKWarpGeometryGrid_NumberOfColumns(SKWarpGeometryGrid self)                                                                                                                                                 { return ((NSInteger (*)(SKWarpGeometryGrid, SEL))bean_msgSend)(self, bean_sel("numberOfColumns")); }
+static inline NSInteger             SKWarpGeometryGrid_NumberOfRows(SKWarpGeometryGrid self)                                                                                                                                                    { return ((NSInteger (*)(SKWarpGeometryGrid, SEL))bean_msgSend)(self, bean_sel("numberOfRows")); }
+static inline NSInteger             SKWarpGeometryGrid_VertexCount(SKWarpGeometryGrid self)                                                                                                                                                     { return ((NSInteger (*)(SKWarpGeometryGrid, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
+static inline BOOL                  SKWarpGeometryGrid_SupportsSecureCoding(void)                                                                                                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKWarpGeometryGrid"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CLLocation ===== */
 #ifndef BEAN_TYPEDEF_CLLocation
 #define BEAN_TYPEDEF_CLLocation
 typedef bean_id CLLocation;
 #endif
-static inline id                             CLLocation_InitWithLatitude_Longitude(CLLocation self, CGFloat latitude, CGFloat longitude)                                                                                                                                                                                                                                                                                                      { return ((id (*)(CLLocation, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLatitude:longitude:"), latitude, longitude); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, NSDate timestamp)                                                                                                                                                                               { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_Speed_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat speed, NSDate timestamp)                                                                                                                                   { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, speed, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp)                                                       { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp_SourceInfo(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp, CLLocationSourceInformation sourceInfo)    { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate, CLLocationSourceInformation))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:sourceInfo:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp, sourceInfo); }
+static inline CLLocation                     CLLocation_InitWithLatitude_Longitude(CLLocation self, CGFloat latitude, CGFloat longitude)                                                                                                                                                                                                                                                                                                      { return ((CLLocation (*)(CLLocation, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLatitude:longitude:"), latitude, longitude); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, NSDate timestamp)                                                                                                                                                                               { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_Speed_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat speed, NSDate timestamp)                                                                                                                                   { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, speed, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp)                                                       { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp_SourceInfo(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp, CLLocationSourceInformation sourceInfo)    { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate, CLLocationSourceInformation))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:sourceInfo:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp, sourceInfo); }
 static inline CGFloat                        CLLocation_GetDistanceFrom(CLLocation self, const CLLocation location)                                                                                                                                                                                                                                                                                                                           { return ((CGFloat (*)(CLLocation, SEL, const CLLocation))bean_msgSend_fpret)(self, bean_sel("getDistanceFrom:"), location); }
 static inline CGFloat                        CLLocation_DistanceFromLocation(CLLocation self, const CLLocation location)                                                                                                                                                                                                                                                                                                                      { return ((CGFloat (*)(CLLocation, SEL, const CLLocation))bean_msgSend_fpret)(self, bean_sel("distanceFromLocation:"), location); }
 static inline CLLocationCoordinate2D         CLLocation_Coordinate(CLLocation self)                                                                                                                                                                                                                                                                                                                                                           { return ((CLLocationCoordinate2D (*)(CLLocation, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
@@ -4662,16 +5945,18 @@ static inline CGFloat                        CLLocation_SpeedAccuracy(CLLocation
 static inline NSDate                         CLLocation_Timestamp(CLLocation self)                                                                                                                                                                                                                                                                                                                                                            { return ((NSDate (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
 static inline CLFloor                        CLLocation_Floor(CLLocation self)                                                                                                                                                                                                                                                                                                                                                                { return ((CLFloor (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("floor")); }
 static inline CLLocationSourceInformation    CLLocation_SourceInformation(CLLocation self)                                                                                                                                                                                                                                                                                                                                                    { return ((CLLocationSourceInformation (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("sourceInformation")); }
+static inline id                             CLLocation_CopyWithZone(CLLocation self, NSZone* zone)                                                                                                                                                                                                                                                                                                                                           { return ((id (*)(CLLocation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                           CLLocation_SupportsSecureCoding(void)                                                                                                                                                                                                                                                                                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocation"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKGridGraph ===== */
 #ifndef BEAN_TYPEDEF_GKGridGraph
 #define BEAN_TYPEDEF_GKGridGraph
 typedef bean_id GKGridGraph;
 #endif
-static inline id                 GKGridGraph_GraphFromGridStartingAt_Width_Height_DiagonalsAllowed(void* position, int width, int height, BOOL diagonalsAllowed)                                                     { return ((id (*)(bean_class, SEL, void*, int, int, BOOL))bean_msgSend)(bean_cls("GKGridGraph"), bean_sel("graphFromGridStartingAt:width:height:diagonalsAllowed:"), position, width, height, diagonalsAllowed); }
-static inline id                 GKGridGraph_InitFromGridStartingAt_Width_Height_DiagonalsAllowed(GKGridGraph self, void* position, int width, int height, BOOL diagonalsAllowed)                                    { return ((id (*)(GKGridGraph, SEL, void*, int, int, BOOL))bean_msgSend)(self, bean_sel("initFromGridStartingAt:width:height:diagonalsAllowed:"), position, width, height, diagonalsAllowed); }
-static inline id                 GKGridGraph_GraphFromGridStartingAt_Width_Height_DiagonalsAllowed_NodeClass(void* position, int width, int height, BOOL diagonalsAllowed, bean_class nodeClass)                     { return ((id (*)(bean_class, SEL, void*, int, int, BOOL, bean_class))bean_msgSend)(bean_cls("GKGridGraph"), bean_sel("graphFromGridStartingAt:width:height:diagonalsAllowed:nodeClass:"), position, width, height, diagonalsAllowed, nodeClass); }
-static inline id                 GKGridGraph_InitFromGridStartingAt_Width_Height_DiagonalsAllowed_NodeClass(GKGridGraph self, void* position, int width, int height, BOOL diagonalsAllowed, bean_class nodeClass)    { return ((id (*)(GKGridGraph, SEL, void*, int, int, BOOL, bean_class))bean_msgSend)(self, bean_sel("initFromGridStartingAt:width:height:diagonalsAllowed:nodeClass:"), position, width, height, diagonalsAllowed, nodeClass); }
+static inline GKGridGraph        GKGridGraph_GraphFromGridStartingAt_Width_Height_DiagonalsAllowed(void* position, int width, int height, BOOL diagonalsAllowed)                                                     { return ((GKGridGraph (*)(bean_class, SEL, void*, int, int, BOOL))bean_msgSend)(bean_cls("GKGridGraph"), bean_sel("graphFromGridStartingAt:width:height:diagonalsAllowed:"), position, width, height, diagonalsAllowed); }
+static inline GKGridGraph        GKGridGraph_InitFromGridStartingAt_Width_Height_DiagonalsAllowed(GKGridGraph self, void* position, int width, int height, BOOL diagonalsAllowed)                                    { return ((GKGridGraph (*)(GKGridGraph, SEL, void*, int, int, BOOL))bean_msgSend)(self, bean_sel("initFromGridStartingAt:width:height:diagonalsAllowed:"), position, width, height, diagonalsAllowed); }
+static inline GKGridGraph        GKGridGraph_GraphFromGridStartingAt_Width_Height_DiagonalsAllowed_NodeClass(void* position, int width, int height, BOOL diagonalsAllowed, bean_class nodeClass)                     { return ((GKGridGraph (*)(bean_class, SEL, void*, int, int, BOOL, bean_class))bean_msgSend)(bean_cls("GKGridGraph"), bean_sel("graphFromGridStartingAt:width:height:diagonalsAllowed:nodeClass:"), position, width, height, diagonalsAllowed, nodeClass); }
+static inline GKGridGraph        GKGridGraph_InitFromGridStartingAt_Width_Height_DiagonalsAllowed_NodeClass(GKGridGraph self, void* position, int width, int height, BOOL diagonalsAllowed, bean_class nodeClass)    { return ((GKGridGraph (*)(GKGridGraph, SEL, void*, int, int, BOOL, bean_class))bean_msgSend)(self, bean_sel("initFromGridStartingAt:width:height:diagonalsAllowed:nodeClass:"), position, width, height, diagonalsAllowed, nodeClass); }
 static inline GKGridGraphNode    GKGridGraph_NodeAtGridPosition(GKGridGraph self, void* position)                                                                                                                    { return ((GKGridGraphNode (*)(GKGridGraph, SEL, void*))bean_msgSend)(self, bean_sel("nodeAtGridPosition:"), position); }
 static inline void               GKGridGraph_ConnectNodeToAdjacentNodes(GKGridGraph self, GKGridGraphNode node)                                                                                                      { ((void (*)(GKGridGraph, SEL, GKGridGraphNode))bean_msgSend)(self, bean_sel("connectNodeToAdjacentNodes:"), node); }
 static inline bean_class         GKGridGraph_ClassForGenericArgumentAtIndex(GKGridGraph self, NSUInteger index)                                                                                                      { return ((bean_class (*)(GKGridGraph, SEL, NSUInteger))bean_msgSend)(self, bean_sel("classForGenericArgumentAtIndex:"), index); }
@@ -4685,10 +5970,10 @@ static inline BOOL               GKGridGraph_DiagonalsAllowed(GKGridGraph self) 
 #define BEAN_TYPEDEF_NSPersistentStoreDescription
 typedef bean_id NSPersistentStoreDescription;
 #endif
-static inline id                                      NSPersistentStoreDescription_PersistentStoreDescriptionWithURL(NSURL URL)                                                                                     { return ((id (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSPersistentStoreDescription"), bean_sel("persistentStoreDescriptionWithURL:"), URL); }
+static inline NSPersistentStoreDescription            NSPersistentStoreDescription_PersistentStoreDescriptionWithURL(NSURL URL)                                                                                     { return ((NSPersistentStoreDescription (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSPersistentStoreDescription"), bean_sel("persistentStoreDescriptionWithURL:"), URL); }
 static inline void                                    NSPersistentStoreDescription_SetOption_ForKey(NSPersistentStoreDescription self, NSObject option, NSString key)                                               { ((void (*)(NSPersistentStoreDescription, SEL, NSObject, NSString))bean_msgSend)(self, bean_sel("setOption:forKey:"), option, key); }
 static inline void                                    NSPersistentStoreDescription_SetValue_ForPragmaNamed(NSPersistentStoreDescription self, NSObject value, NSString name)                                        { ((void (*)(NSPersistentStoreDescription, SEL, NSObject, NSString))bean_msgSend)(self, bean_sel("setValue:forPragmaNamed:"), value, name); }
-static inline id                                      NSPersistentStoreDescription_InitWithURL(NSPersistentStoreDescription self, NSURL url)                                                                        { return ((id (*)(NSPersistentStoreDescription, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), url); }
+static inline NSPersistentStoreDescription            NSPersistentStoreDescription_InitWithURL(NSPersistentStoreDescription self, NSURL url)                                                                        { return ((NSPersistentStoreDescription (*)(NSPersistentStoreDescription, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), url); }
 static inline NSString                                NSPersistentStoreDescription_Type(NSPersistentStoreDescription self)                                                                                          { return ((NSString (*)(NSPersistentStoreDescription, SEL))bean_msgSend)(self, bean_sel("type")); }
 static inline void                                    NSPersistentStoreDescription_SetType(NSPersistentStoreDescription self, NSString type)                                                                        { ((void (*)(NSPersistentStoreDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
 static inline NSString                                NSPersistentStoreDescription_Configuration(NSPersistentStoreDescription self)                                                                                 { return ((NSString (*)(NSPersistentStoreDescription, SEL))bean_msgSend)(self, bean_sel("configuration")); }
@@ -4709,15 +5994,26 @@ static inline BOOL                                    NSPersistentStoreDescripti
 static inline void                                    NSPersistentStoreDescription_SetShouldInferMappingModelAutomatically(NSPersistentStoreDescription self, BOOL shouldInferMappingModelAutomatically)            { ((void (*)(NSPersistentStoreDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldInferMappingModelAutomatically:"), shouldInferMappingModelAutomatically); }
 static inline NSPersistentCloudKitContainerOptions    NSPersistentStoreDescription_CloudKitContainerOptions(NSPersistentStoreDescription self)                                                                      { return ((NSPersistentCloudKitContainerOptions (*)(NSPersistentStoreDescription, SEL))bean_msgSend)(self, bean_sel("cloudKitContainerOptions")); }
 static inline void                                    NSPersistentStoreDescription_SetCloudKitContainerOptions(NSPersistentStoreDescription self, NSPersistentCloudKitContainerOptions cloudKitContainerOptions)    { ((void (*)(NSPersistentStoreDescription, SEL, NSPersistentCloudKitContainerOptions))bean_msgSend)(self, bean_sel("setCloudKitContainerOptions:"), cloudKitContainerOptions); }
+static inline id                                      NSPersistentStoreDescription_CopyWithZone(NSPersistentStoreDescription self, NSZone* zone)                                                                    { return ((id (*)(NSPersistentStoreDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                                    NSPersistentStoreDescription_ReadOnly(NSPersistentStoreDescription self)                                                                                      { return ((BOOL (*)(NSPersistentStoreDescription, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
+
+/* ===== SKWarpable ===== */
+#ifndef BEAN_TYPEDEF_SKWarpable
+#define BEAN_TYPEDEF_SKWarpable
+typedef bean_id SKWarpable;
+#endif
+static inline SKWarpGeometry    SKWarpable_WarpGeometry(SKWarpable self)                                         { return ((SKWarpGeometry (*)(SKWarpable, SEL))bean_msgSend)(self, bean_sel("warpGeometry")); }
+static inline void              SKWarpable_SetWarpGeometry(SKWarpable self, SKWarpGeometry warpGeometry)         { ((void (*)(SKWarpable, SEL, SKWarpGeometry))bean_msgSend)(self, bean_sel("setWarpGeometry:"), warpGeometry); }
+static inline NSInteger         SKWarpable_SubdivisionLevels(SKWarpable self)                                    { return ((NSInteger (*)(SKWarpable, SEL))bean_msgSend)(self, bean_sel("subdivisionLevels")); }
+static inline void              SKWarpable_SetSubdivisionLevels(SKWarpable self, NSInteger subdivisionLevels)    { ((void (*)(SKWarpable, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSubdivisionLevels:"), subdivisionLevels); }
 
 /* ===== CKDatabase ===== */
 #ifndef BEAN_TYPEDEF_CKDatabase
 #define BEAN_TYPEDEF_CKDatabase
 typedef bean_id CKDatabase;
 #endif
-static inline id                 CKDatabase_Init(CKDatabase self)                                                                                                          { return ((id (*)(CKDatabase, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                 CKDatabase_New(void)                                                                                                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabase"), bean_sel("new")); }
+static inline CKDatabase         CKDatabase_Init(CKDatabase self)                                                                                                          { return ((CKDatabase (*)(CKDatabase, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKDatabase         CKDatabase_New(void)                                                                                                                      { return ((CKDatabase (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabase"), bean_sel("new")); }
 static inline void               CKDatabase_AddOperation(CKDatabase self, CKDatabaseOperation operation)                                                                   { ((void (*)(CKDatabase, SEL, CKDatabaseOperation))bean_msgSend)(self, bean_sel("addOperation:"), operation); }
 static inline CKDatabaseScope    CKDatabase_DatabaseScope(CKDatabase self)                                                                                                 { return ((CKDatabaseScope (*)(CKDatabase, SEL))bean_msgSend)(self, bean_sel("databaseScope")); }
 static inline void               CKDatabase_FetchRecordWithID_CompletionHandler(CKDatabase self, CKRecordID recordID, void* completionHandler)                             { ((void (*)(CKDatabase, SEL, CKRecordID, void*))bean_msgSend)(self, bean_sel("fetchRecordWithID:completionHandler:"), recordID, completionHandler); }
@@ -4774,13 +6070,15 @@ static inline NSString    CKNotificationInfo_Category(CKNotificationInfo self)  
 static inline void        CKNotificationInfo_SetCategory(CKNotificationInfo self, NSString category)                                        { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setCategory:"), category); }
 static inline NSString    CKNotificationInfo_CollapseIDKey(CKNotificationInfo self)                                                         { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("collapseIDKey")); }
 static inline void        CKNotificationInfo_SetCollapseIDKey(CKNotificationInfo self, NSString collapseIDKey)                              { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setCollapseIDKey:"), collapseIDKey); }
+static inline BOOL        CKNotificationInfo_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKNotificationInfo"), bean_sel("supportsSecureCoding")); }
+static inline id          CKNotificationInfo_CopyWithZone(CKNotificationInfo self, NSZone* zone)                                            { return ((id (*)(CKNotificationInfo, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKRecord ===== */
-static inline id             CKRecord_Init(CKRecord self)                                                                     { return ((id (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id             CKRecord_New(void)                                                                               { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecord"), bean_sel("new")); }
-static inline id             CKRecord_InitWithRecordType(CKRecord self, NSString recordType)                                  { return ((id (*)(CKRecord, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordType:"), recordType); }
-static inline id             CKRecord_InitWithRecordType_RecordID(CKRecord self, NSString recordType, CKRecordID recordID)    { return ((id (*)(CKRecord, SEL, NSString, CKRecordID))bean_msgSend)(self, bean_sel("initWithRecordType:recordID:"), recordType, recordID); }
-static inline id             CKRecord_InitWithRecordType_ZoneID(CKRecord self, NSString recordType, CKRecordZoneID zoneID)    { return ((id (*)(CKRecord, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordType:zoneID:"), recordType, zoneID); }
+static inline CKRecord       CKRecord_Init(CKRecord self)                                                                     { return ((CKRecord (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKRecord       CKRecord_New(void)                                                                               { return ((CKRecord (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecord"), bean_sel("new")); }
+static inline CKRecord       CKRecord_InitWithRecordType(CKRecord self, NSString recordType)                                  { return ((CKRecord (*)(CKRecord, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordType:"), recordType); }
+static inline CKRecord       CKRecord_InitWithRecordType_RecordID(CKRecord self, NSString recordType, CKRecordID recordID)    { return ((CKRecord (*)(CKRecord, SEL, NSString, CKRecordID))bean_msgSend)(self, bean_sel("initWithRecordType:recordID:"), recordType, recordID); }
+static inline CKRecord       CKRecord_InitWithRecordType_ZoneID(CKRecord self, NSString recordType, CKRecordZoneID zoneID)    { return ((CKRecord (*)(CKRecord, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordType:zoneID:"), recordType, zoneID); }
 static inline id             CKRecord_ObjectForKey(CKRecord self, NSString key)                                               { return ((id (*)(CKRecord, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKey:"), key); }
 static inline void           CKRecord_SetObject_ForKey(CKRecord self, id object, NSString key)                                { ((void (*)(CKRecord, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKey:"), object, key); }
 static inline NSArray        CKRecord_AllKeys(CKRecord self)                                                                  { return ((NSArray (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("allKeys")); }
@@ -4802,22 +6100,40 @@ static inline CKReference    CKRecord_Share(CKRecord self)                      
 static inline CKReference    CKRecord_Parent(CKRecord self)                                                                   { return ((CKReference (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("parent")); }
 static inline void           CKRecord_SetParent(CKRecord self, CKReference parent)                                            { ((void (*)(CKRecord, SEL, CKReference))bean_msgSend)(self, bean_sel("setParent:"), parent); }
 static inline id             CKRecord_EncryptedValues(CKRecord self)                                                          { return ((id (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("encryptedValues")); }
+static inline BOOL           CKRecord_SupportsSecureCoding(void)                                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecord"), bean_sel("supportsSecureCoding")); }
+static inline id             CKRecord_CopyWithZone(CKRecord self, NSZone* zone)                                               { return ((id (*)(CKRecord, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+
+/* ===== CKRecordKeyValueSetting ===== */
+#ifndef BEAN_TYPEDEF_CKRecordKeyValueSetting
+#define BEAN_TYPEDEF_CKRecordKeyValueSetting
+typedef bean_id CKRecordKeyValueSetting;
+#endif
+static inline id         CKRecordKeyValueSetting_ObjectForKey(CKRecordKeyValueSetting self, NSString key)                              { return ((id (*)(CKRecordKeyValueSetting, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKey:"), key); }
+static inline void       CKRecordKeyValueSetting_SetObject_ForKey(CKRecordKeyValueSetting self, id object, NSString key)               { ((void (*)(CKRecordKeyValueSetting, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKey:"), object, key); }
+static inline id         CKRecordKeyValueSetting_ObjectForKeyedSubscript(CKRecordKeyValueSetting self, NSString key)                   { return ((id (*)(CKRecordKeyValueSetting, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), key); }
+static inline void       CKRecordKeyValueSetting_SetObject_ForKeyedSubscript(CKRecordKeyValueSetting self, id object, NSString key)    { ((void (*)(CKRecordKeyValueSetting, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), object, key); }
+static inline NSArray    CKRecordKeyValueSetting_AllKeys(CKRecordKeyValueSetting self)                                                 { return ((NSArray (*)(CKRecordKeyValueSetting, SEL))bean_msgSend)(self, bean_sel("allKeys")); }
+static inline NSArray    CKRecordKeyValueSetting_ChangedKeys(CKRecordKeyValueSetting self)                                             { return ((NSArray (*)(CKRecordKeyValueSetting, SEL))bean_msgSend)(self, bean_sel("changedKeys")); }
 
 /* ===== CKReference ===== */
-static inline id                   CKReference_Init(CKReference self)                                                                      { return ((id (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                   CKReference_New(void)                                                                                   { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKReference"), bean_sel("new")); }
-static inline id                   CKReference_InitWithRecordID_Action(CKReference self, CKRecordID recordID, CKReferenceAction action)    { return ((id (*)(CKReference, SEL, CKRecordID, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecordID:action:"), recordID, action); }
-static inline id                   CKReference_InitWithRecord_Action(CKReference self, CKRecord record, CKReferenceAction action)          { return ((id (*)(CKReference, SEL, CKRecord, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecord:action:"), record, action); }
+static inline CKReference          CKReference_Init(CKReference self)                                                                      { return ((CKReference (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKReference          CKReference_New(void)                                                                                   { return ((CKReference (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKReference"), bean_sel("new")); }
+static inline CKReference          CKReference_InitWithRecordID_Action(CKReference self, CKRecordID recordID, CKReferenceAction action)    { return ((CKReference (*)(CKReference, SEL, CKRecordID, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecordID:action:"), recordID, action); }
+static inline CKReference          CKReference_InitWithRecord_Action(CKReference self, CKRecord record, CKReferenceAction action)          { return ((CKReference (*)(CKReference, SEL, CKRecord, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecord:action:"), record, action); }
 static inline CKReferenceAction    CKReference_ReferenceAction(CKReference self)                                                           { return ((CKReferenceAction (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("referenceAction")); }
 static inline CKRecordID           CKReference_RecordID(CKReference self)                                                                  { return ((CKRecordID (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("recordID")); }
+static inline BOOL                 CKReference_SupportsSecureCoding(void)                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKReference"), bean_sel("supportsSecureCoding")); }
+static inline id                   CKReference_CopyWithZone(CKReference self, NSZone* zone)                                                { return ((id (*)(CKReference, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== CKSubscription ===== */
-static inline id                    CKSubscription_Init(CKSubscription self)                                                        { return ((id (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                    CKSubscription_New(void)                                                                        { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSubscription"), bean_sel("new")); }
+static inline CKSubscription        CKSubscription_Init(CKSubscription self)                                                        { return ((CKSubscription (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline CKSubscription        CKSubscription_New(void)                                                                        { return ((CKSubscription (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSubscription"), bean_sel("new")); }
 static inline NSString              CKSubscription_SubscriptionID(CKSubscription self)                                              { return ((NSString (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("subscriptionID")); }
 static inline CKSubscriptionType    CKSubscription_SubscriptionType(CKSubscription self)                                            { return ((CKSubscriptionType (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("subscriptionType")); }
 static inline CKNotificationInfo    CKSubscription_NotificationInfo(CKSubscription self)                                            { return ((CKNotificationInfo (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("notificationInfo")); }
 static inline void                  CKSubscription_SetNotificationInfo(CKSubscription self, CKNotificationInfo notificationInfo)    { ((void (*)(CKSubscription, SEL, CKNotificationInfo))bean_msgSend)(self, bean_sel("setNotificationInfo:"), notificationInfo); }
+static inline BOOL                  CKSubscription_SupportsSecureCoding(void)                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSubscription"), bean_sel("supportsSecureCoding")); }
+static inline id                    CKSubscription_CopyWithZone(CKSubscription self, NSZone* zone)                                  { return ((id (*)(CKSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== GKAgent ===== */
 #ifndef BEAN_TYPEDEF_GKAgent
@@ -4838,20 +6154,31 @@ static inline CGFloat       GKAgent_MaxAcceleration(GKAgent self)               
 static inline void          GKAgent_SetMaxAcceleration(GKAgent self, CGFloat maxAcceleration)    { ((void (*)(GKAgent, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaxAcceleration:"), maxAcceleration); }
 static inline CGFloat       GKAgent_MaxSpeed(GKAgent self)                                       { return ((CGFloat (*)(GKAgent, SEL))bean_msgSend_fpret)(self, bean_sel("maxSpeed")); }
 static inline void          GKAgent_SetMaxSpeed(GKAgent self, CGFloat maxSpeed)                  { ((void (*)(GKAgent, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaxSpeed:"), maxSpeed); }
+static inline BOOL          GKAgent_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKAgent"), bean_sel("supportsSecureCoding")); }
+
+/* ===== GKAgentDelegate ===== */
+#ifndef BEAN_TYPEDEF_GKAgentDelegate
+#define BEAN_TYPEDEF_GKAgentDelegate
+typedef bean_id GKAgentDelegate;
+#endif
+static inline void    GKAgentDelegate_AgentWillUpdate(GKAgentDelegate self, GKAgent agent)    { ((void (*)(GKAgentDelegate, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentWillUpdate:"), agent); }
+static inline void    GKAgentDelegate_AgentDidUpdate(GKAgentDelegate self, GKAgent agent)     { ((void (*)(GKAgentDelegate, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentDidUpdate:"), agent); }
 
 /* ===== GKBehavior ===== */
-static inline id           GKBehavior_BehaviorWithGoal_Weight(GKGoal goal, CGFloat weight)                          { return ((id (*)(bean_class, SEL, GKGoal, CGFloat))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithGoal:weight:"), goal, weight); }
-static inline id           GKBehavior_BehaviorWithGoals(NSArray goals)                                              { return ((id (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithGoals:"), goals); }
-static inline id           GKBehavior_BehaviorWithGoals_AndWeights(NSArray goals, NSArray weights)                  { return ((id (*)(bean_class, SEL, NSArray, NSArray))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithGoals:andWeights:"), goals, weights); }
-static inline id           GKBehavior_BehaviorWithWeightedGoals(NSDictionary weightedGoals)                         { return ((id (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithWeightedGoals:"), weightedGoals); }
-static inline void         GKBehavior_SetWeight_ForGoal(GKBehavior self, CGFloat weight, GKGoal goal)               { ((void (*)(GKBehavior, SEL, CGFloat, GKGoal))bean_msgSend)(self, bean_sel("setWeight:forGoal:"), weight, goal); }
-static inline CGFloat      GKBehavior_WeightForGoal(GKBehavior self, GKGoal goal)                                   { return ((CGFloat (*)(GKBehavior, SEL, GKGoal))bean_msgSend_fpret)(self, bean_sel("weightForGoal:"), goal); }
-static inline void         GKBehavior_RemoveGoal(GKBehavior self, GKGoal goal)                                      { ((void (*)(GKBehavior, SEL, GKGoal))bean_msgSend)(self, bean_sel("removeGoal:"), goal); }
-static inline void         GKBehavior_RemoveAllGoals(GKBehavior self)                                               { ((void (*)(GKBehavior, SEL))bean_msgSend)(self, bean_sel("removeAllGoals")); }
-static inline GKGoal       GKBehavior_ObjectAtIndexedSubscript(GKBehavior self, NSUInteger idx)                     { return ((GKGoal (*)(GKBehavior, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), idx); }
-static inline void         GKBehavior_SetObject_ForKeyedSubscript(GKBehavior self, NSNumber weight, GKGoal goal)    { ((void (*)(GKBehavior, SEL, NSNumber, GKGoal))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), weight, goal); }
-static inline NSNumber     GKBehavior_ObjectForKeyedSubscript(GKBehavior self, GKGoal goal)                         { return ((NSNumber (*)(GKBehavior, SEL, GKGoal))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), goal); }
-static inline NSInteger    GKBehavior_GoalCount(GKBehavior self)                                                    { return ((NSInteger (*)(GKBehavior, SEL))bean_msgSend)(self, bean_sel("goalCount")); }
+static inline GKBehavior    GKBehavior_BehaviorWithGoal_Weight(GKGoal goal, CGFloat weight)                                                                     { return ((GKBehavior (*)(bean_class, SEL, GKGoal, CGFloat))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithGoal:weight:"), goal, weight); }
+static inline GKBehavior    GKBehavior_BehaviorWithGoals(NSArray goals)                                                                                         { return ((GKBehavior (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithGoals:"), goals); }
+static inline GKBehavior    GKBehavior_BehaviorWithGoals_AndWeights(NSArray goals, NSArray weights)                                                             { return ((GKBehavior (*)(bean_class, SEL, NSArray, NSArray))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithGoals:andWeights:"), goals, weights); }
+static inline GKBehavior    GKBehavior_BehaviorWithWeightedGoals(NSDictionary weightedGoals)                                                                    { return ((GKBehavior (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithWeightedGoals:"), weightedGoals); }
+static inline void          GKBehavior_SetWeight_ForGoal(GKBehavior self, CGFloat weight, GKGoal goal)                                                          { ((void (*)(GKBehavior, SEL, CGFloat, GKGoal))bean_msgSend)(self, bean_sel("setWeight:forGoal:"), weight, goal); }
+static inline CGFloat       GKBehavior_WeightForGoal(GKBehavior self, GKGoal goal)                                                                              { return ((CGFloat (*)(GKBehavior, SEL, GKGoal))bean_msgSend_fpret)(self, bean_sel("weightForGoal:"), goal); }
+static inline void          GKBehavior_RemoveGoal(GKBehavior self, GKGoal goal)                                                                                 { ((void (*)(GKBehavior, SEL, GKGoal))bean_msgSend)(self, bean_sel("removeGoal:"), goal); }
+static inline void          GKBehavior_RemoveAllGoals(GKBehavior self)                                                                                          { ((void (*)(GKBehavior, SEL))bean_msgSend)(self, bean_sel("removeAllGoals")); }
+static inline GKGoal        GKBehavior_ObjectAtIndexedSubscript(GKBehavior self, NSUInteger idx)                                                                { return ((GKGoal (*)(GKBehavior, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), idx); }
+static inline void          GKBehavior_SetObject_ForKeyedSubscript(GKBehavior self, NSNumber weight, GKGoal goal)                                               { ((void (*)(GKBehavior, SEL, NSNumber, GKGoal))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), weight, goal); }
+static inline NSNumber      GKBehavior_ObjectForKeyedSubscript(GKBehavior self, GKGoal goal)                                                                    { return ((NSNumber (*)(GKBehavior, SEL, GKGoal))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), goal); }
+static inline NSInteger     GKBehavior_GoalCount(GKBehavior self)                                                                                               { return ((NSInteger (*)(GKBehavior, SEL))bean_msgSend)(self, bean_sel("goalCount")); }
+static inline NSUInteger    GKBehavior_CountByEnumeratingWithState_Objects_Count(GKBehavior self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(GKBehavior, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+static inline id            GKBehavior_CopyWithZone(GKBehavior self, NSZone* zone)                                                                              { return ((id (*)(GKBehavior, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== GKComponent ===== */
 #ifndef BEAN_TYPEDEF_GKComponent
@@ -4862,88 +6189,112 @@ static inline void        GKComponent_UpdateWithDeltaTime(GKComponent self, CGFl
 static inline void        GKComponent_DidAddToEntity(GKComponent self)                          { ((void (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("didAddToEntity")); }
 static inline void        GKComponent_WillRemoveFromEntity(GKComponent self)                    { ((void (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("willRemoveFromEntity")); }
 static inline GKEntity    GKComponent_Entity(GKComponent self)                                  { return ((GKEntity (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("entity")); }
+static inline id          GKComponent_CopyWithZone(GKComponent self, NSZone* zone)              { return ((id (*)(GKComponent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL        GKComponent_SupportsSecureCoding(void)                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKComponent"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKComponentSystem ===== */
 #ifndef BEAN_TYPEDEF_GKComponentSystem
 #define BEAN_TYPEDEF_GKComponentSystem
 typedef bean_id GKComponentSystem;
 #endif
-static inline GKComponent    GKComponentSystem_ObjectAtIndexedSubscript(GKComponentSystem self, NSUInteger idx)            { return ((GKComponent (*)(GKComponentSystem, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), idx); }
-static inline id             GKComponentSystem_InitWithComponentClass(GKComponentSystem self, bean_class cls)              { return ((id (*)(GKComponentSystem, SEL, bean_class))bean_msgSend)(self, bean_sel("initWithComponentClass:"), cls); }
-static inline void           GKComponentSystem_AddComponent(GKComponentSystem self, GKComponent component)                 { ((void (*)(GKComponentSystem, SEL, GKComponent))bean_msgSend)(self, bean_sel("addComponent:"), component); }
-static inline void           GKComponentSystem_AddComponentWithEntity(GKComponentSystem self, GKEntity entity)             { ((void (*)(GKComponentSystem, SEL, GKEntity))bean_msgSend)(self, bean_sel("addComponentWithEntity:"), entity); }
-static inline void           GKComponentSystem_RemoveComponentWithEntity(GKComponentSystem self, GKEntity entity)          { ((void (*)(GKComponentSystem, SEL, GKEntity))bean_msgSend)(self, bean_sel("removeComponentWithEntity:"), entity); }
-static inline void           GKComponentSystem_RemoveComponent(GKComponentSystem self, GKComponent component)              { ((void (*)(GKComponentSystem, SEL, GKComponent))bean_msgSend)(self, bean_sel("removeComponent:"), component); }
-static inline void           GKComponentSystem_UpdateWithDeltaTime(GKComponentSystem self, CGFloat seconds)                { ((void (*)(GKComponentSystem, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
-static inline bean_class     GKComponentSystem_ClassForGenericArgumentAtIndex(GKComponentSystem self, NSUInteger index)    { return ((bean_class (*)(GKComponentSystem, SEL, NSUInteger))bean_msgSend)(self, bean_sel("classForGenericArgumentAtIndex:"), index); }
-static inline bean_class     GKComponentSystem_ComponentClass(GKComponentSystem self)                                      { return ((bean_class (*)(GKComponentSystem, SEL))bean_msgSend)(self, bean_sel("componentClass")); }
-static inline NSArray        GKComponentSystem_Components(GKComponentSystem self)                                          { return ((NSArray (*)(GKComponentSystem, SEL))bean_msgSend)(self, bean_sel("components")); }
+static inline GKComponent          GKComponentSystem_ObjectAtIndexedSubscript(GKComponentSystem self, NSUInteger idx)                                                                { return ((GKComponent (*)(GKComponentSystem, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), idx); }
+static inline GKComponentSystem    GKComponentSystem_InitWithComponentClass(GKComponentSystem self, bean_class cls)                                                                  { return ((GKComponentSystem (*)(GKComponentSystem, SEL, bean_class))bean_msgSend)(self, bean_sel("initWithComponentClass:"), cls); }
+static inline void                 GKComponentSystem_AddComponent(GKComponentSystem self, GKComponent component)                                                                     { ((void (*)(GKComponentSystem, SEL, GKComponent))bean_msgSend)(self, bean_sel("addComponent:"), component); }
+static inline void                 GKComponentSystem_AddComponentWithEntity(GKComponentSystem self, GKEntity entity)                                                                 { ((void (*)(GKComponentSystem, SEL, GKEntity))bean_msgSend)(self, bean_sel("addComponentWithEntity:"), entity); }
+static inline void                 GKComponentSystem_RemoveComponentWithEntity(GKComponentSystem self, GKEntity entity)                                                              { ((void (*)(GKComponentSystem, SEL, GKEntity))bean_msgSend)(self, bean_sel("removeComponentWithEntity:"), entity); }
+static inline void                 GKComponentSystem_RemoveComponent(GKComponentSystem self, GKComponent component)                                                                  { ((void (*)(GKComponentSystem, SEL, GKComponent))bean_msgSend)(self, bean_sel("removeComponent:"), component); }
+static inline void                 GKComponentSystem_UpdateWithDeltaTime(GKComponentSystem self, CGFloat seconds)                                                                    { ((void (*)(GKComponentSystem, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
+static inline bean_class           GKComponentSystem_ClassForGenericArgumentAtIndex(GKComponentSystem self, NSUInteger index)                                                        { return ((bean_class (*)(GKComponentSystem, SEL, NSUInteger))bean_msgSend)(self, bean_sel("classForGenericArgumentAtIndex:"), index); }
+static inline bean_class           GKComponentSystem_ComponentClass(GKComponentSystem self)                                                                                          { return ((bean_class (*)(GKComponentSystem, SEL))bean_msgSend)(self, bean_sel("componentClass")); }
+static inline NSArray              GKComponentSystem_Components(GKComponentSystem self)                                                                                              { return ((NSArray (*)(GKComponentSystem, SEL))bean_msgSend)(self, bean_sel("components")); }
+static inline NSUInteger           GKComponentSystem_CountByEnumeratingWithState_Objects_Count(GKComponentSystem self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(GKComponentSystem, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
 
 /* ===== GKCompositeBehavior ===== */
 #ifndef BEAN_TYPEDEF_GKCompositeBehavior
 #define BEAN_TYPEDEF_GKCompositeBehavior
 typedef bean_id GKCompositeBehavior;
 #endif
-static inline id            GKCompositeBehavior_BehaviorWithBehaviors(NSArray behaviors)                                                       { return ((id (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKCompositeBehavior"), bean_sel("behaviorWithBehaviors:"), behaviors); }
-static inline id            GKCompositeBehavior_BehaviorWithBehaviors_AndWeights(NSArray behaviors, NSArray weights)                           { return ((id (*)(bean_class, SEL, NSArray, NSArray))bean_msgSend)(bean_cls("GKCompositeBehavior"), bean_sel("behaviorWithBehaviors:andWeights:"), behaviors, weights); }
-static inline void          GKCompositeBehavior_SetWeight_ForBehavior(GKCompositeBehavior self, CGFloat weight, GKBehavior behavior)           { ((void (*)(GKCompositeBehavior, SEL, CGFloat, GKBehavior))bean_msgSend)(self, bean_sel("setWeight:forBehavior:"), weight, behavior); }
-static inline CGFloat       GKCompositeBehavior_WeightForBehavior(GKCompositeBehavior self, GKBehavior behavior)                               { return ((CGFloat (*)(GKCompositeBehavior, SEL, GKBehavior))bean_msgSend_fpret)(self, bean_sel("weightForBehavior:"), behavior); }
-static inline void          GKCompositeBehavior_RemoveBehavior(GKCompositeBehavior self, GKBehavior behavior)                                  { ((void (*)(GKCompositeBehavior, SEL, GKBehavior))bean_msgSend)(self, bean_sel("removeBehavior:"), behavior); }
-static inline void          GKCompositeBehavior_RemoveAllBehaviors(GKCompositeBehavior self)                                                   { ((void (*)(GKCompositeBehavior, SEL))bean_msgSend)(self, bean_sel("removeAllBehaviors")); }
-static inline GKBehavior    GKCompositeBehavior_ObjectAtIndexedSubscript(GKCompositeBehavior self, NSUInteger idx)                             { return ((GKBehavior (*)(GKCompositeBehavior, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), idx); }
-static inline void          GKCompositeBehavior_SetObject_ForKeyedSubscript(GKCompositeBehavior self, NSNumber weight, GKBehavior behavior)    { ((void (*)(GKCompositeBehavior, SEL, NSNumber, GKBehavior))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), weight, behavior); }
-static inline NSNumber      GKCompositeBehavior_ObjectForKeyedSubscript(GKCompositeBehavior self, GKBehavior behavior)                         { return ((NSNumber (*)(GKCompositeBehavior, SEL, GKBehavior))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), behavior); }
-static inline NSInteger     GKCompositeBehavior_BehaviorCount(GKCompositeBehavior self)                                                        { return ((NSInteger (*)(GKCompositeBehavior, SEL))bean_msgSend)(self, bean_sel("behaviorCount")); }
+static inline GKCompositeBehavior    GKCompositeBehavior_BehaviorWithBehaviors(NSArray behaviors)                                                       { return ((GKCompositeBehavior (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKCompositeBehavior"), bean_sel("behaviorWithBehaviors:"), behaviors); }
+static inline GKCompositeBehavior    GKCompositeBehavior_BehaviorWithBehaviors_AndWeights(NSArray behaviors, NSArray weights)                           { return ((GKCompositeBehavior (*)(bean_class, SEL, NSArray, NSArray))bean_msgSend)(bean_cls("GKCompositeBehavior"), bean_sel("behaviorWithBehaviors:andWeights:"), behaviors, weights); }
+static inline void                   GKCompositeBehavior_SetWeight_ForBehavior(GKCompositeBehavior self, CGFloat weight, GKBehavior behavior)           { ((void (*)(GKCompositeBehavior, SEL, CGFloat, GKBehavior))bean_msgSend)(self, bean_sel("setWeight:forBehavior:"), weight, behavior); }
+static inline CGFloat                GKCompositeBehavior_WeightForBehavior(GKCompositeBehavior self, GKBehavior behavior)                               { return ((CGFloat (*)(GKCompositeBehavior, SEL, GKBehavior))bean_msgSend_fpret)(self, bean_sel("weightForBehavior:"), behavior); }
+static inline void                   GKCompositeBehavior_RemoveBehavior(GKCompositeBehavior self, GKBehavior behavior)                                  { ((void (*)(GKCompositeBehavior, SEL, GKBehavior))bean_msgSend)(self, bean_sel("removeBehavior:"), behavior); }
+static inline void                   GKCompositeBehavior_RemoveAllBehaviors(GKCompositeBehavior self)                                                   { ((void (*)(GKCompositeBehavior, SEL))bean_msgSend)(self, bean_sel("removeAllBehaviors")); }
+static inline GKBehavior             GKCompositeBehavior_ObjectAtIndexedSubscript(GKCompositeBehavior self, NSUInteger idx)                             { return ((GKBehavior (*)(GKCompositeBehavior, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndexedSubscript:"), idx); }
+static inline void                   GKCompositeBehavior_SetObject_ForKeyedSubscript(GKCompositeBehavior self, NSNumber weight, GKBehavior behavior)    { ((void (*)(GKCompositeBehavior, SEL, NSNumber, GKBehavior))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), weight, behavior); }
+static inline NSNumber               GKCompositeBehavior_ObjectForKeyedSubscript(GKCompositeBehavior self, GKBehavior behavior)                         { return ((NSNumber (*)(GKCompositeBehavior, SEL, GKBehavior))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), behavior); }
+static inline NSInteger              GKCompositeBehavior_BehaviorCount(GKCompositeBehavior self)                                                        { return ((NSInteger (*)(GKCompositeBehavior, SEL))bean_msgSend)(self, bean_sel("behaviorCount")); }
 
 /* ===== GKDecisionTree ===== */
 #ifndef BEAN_TYPEDEF_GKDecisionTree
 #define BEAN_TYPEDEF_GKDecisionTree
 typedef bean_id GKDecisionTree;
 #endif
-static inline id                GKDecisionTree_InitWithAttribute(GKDecisionTree self, id attribute)                                                               { return ((id (*)(GKDecisionTree, SEL, id))bean_msgSend)(self, bean_sel("initWithAttribute:"), attribute); }
-static inline id                GKDecisionTree_InitWithExamples_Actions_Attributes(GKDecisionTree self, NSArray examples, NSArray actions, NSArray attributes)    { return ((id (*)(GKDecisionTree, SEL, NSArray, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithExamples:actions:attributes:"), examples, actions, attributes); }
-static inline id                GKDecisionTree_InitWithURL_Error(GKDecisionTree self, NSURL url, NSError error)                                                   { return ((id (*)(GKDecisionTree, SEL, NSURL, NSError))bean_msgSend)(self, bean_sel("initWithURL:error:"), url, error); }
-static inline BOOL              GKDecisionTree_ExportToURL_Error(GKDecisionTree self, NSURL url, NSError error)                                                   { return ((BOOL (*)(GKDecisionTree, SEL, NSURL, NSError))bean_msgSend)(self, bean_sel("exportToURL:error:"), url, error); }
+static inline GKDecisionTree    GKDecisionTree_InitWithAttribute(GKDecisionTree self, id attribute)                                                               { return ((GKDecisionTree (*)(GKDecisionTree, SEL, id))bean_msgSend)(self, bean_sel("initWithAttribute:"), attribute); }
+static inline GKDecisionTree    GKDecisionTree_InitWithExamples_Actions_Attributes(GKDecisionTree self, NSArray examples, NSArray actions, NSArray attributes)    { return ((GKDecisionTree (*)(GKDecisionTree, SEL, NSArray, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithExamples:actions:attributes:"), examples, actions, attributes); }
+static inline GKDecisionTree    GKDecisionTree_InitWithURL_Error(GKDecisionTree self, NSURL url, NSError* error)                                                  { return ((GKDecisionTree (*)(GKDecisionTree, SEL, NSURL, NSError*))bean_msgSend)(self, bean_sel("initWithURL:error:"), url, error); }
+static inline BOOL              GKDecisionTree_ExportToURL_Error(GKDecisionTree self, NSURL url, NSError* error)                                                  { return ((BOOL (*)(GKDecisionTree, SEL, NSURL, NSError*))bean_msgSend)(self, bean_sel("exportToURL:error:"), url, error); }
 static inline id                GKDecisionTree_FindActionForAnswers(GKDecisionTree self, NSDictionary answers)                                                    { return ((id (*)(GKDecisionTree, SEL, NSDictionary))bean_msgSend)(self, bean_sel("findActionForAnswers:"), answers); }
 static inline GKDecisionNode    GKDecisionTree_RootNode(GKDecisionTree self)                                                                                      { return ((GKDecisionNode (*)(GKDecisionTree, SEL))bean_msgSend)(self, bean_sel("rootNode")); }
 static inline GKRandomSource    GKDecisionTree_RandomSource(GKDecisionTree self)                                                                                  { return ((GKRandomSource (*)(GKDecisionTree, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
 static inline void              GKDecisionTree_SetRandomSource(GKDecisionTree self, GKRandomSource randomSource)                                                  { ((void (*)(GKDecisionTree, SEL, GKRandomSource))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
+static inline BOOL              GKDecisionTree_SupportsSecureCoding(void)                                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKDecisionTree"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKEntity ===== */
-static inline id             GKEntity_Entity(void)                                                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKEntity"), bean_sel("entity")); }
-static inline id             GKEntity_Init(GKEntity self)                                                  { return ((id (*)(GKEntity, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKEntity       GKEntity_Entity(void)                                                         { return ((GKEntity (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKEntity"), bean_sel("entity")); }
+static inline GKEntity       GKEntity_Init(GKEntity self)                                                  { return ((GKEntity (*)(GKEntity, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline void           GKEntity_UpdateWithDeltaTime(GKEntity self, CGFloat seconds)                  { ((void (*)(GKEntity, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
 static inline void           GKEntity_AddComponent(GKEntity self, GKComponent component)                   { ((void (*)(GKEntity, SEL, GKComponent))bean_msgSend)(self, bean_sel("addComponent:"), component); }
 static inline void           GKEntity_RemoveComponentForClass(GKEntity self, bean_class componentClass)    { ((void (*)(GKEntity, SEL, bean_class))bean_msgSend)(self, bean_sel("removeComponentForClass:"), componentClass); }
 static inline GKComponent    GKEntity_ComponentForClass(GKEntity self, bean_class componentClass)          { return ((GKComponent (*)(GKEntity, SEL, bean_class))bean_msgSend)(self, bean_sel("componentForClass:"), componentClass); }
 static inline NSArray        GKEntity_Components(GKEntity self)                                            { return ((NSArray (*)(GKEntity, SEL))bean_msgSend)(self, bean_sel("components")); }
+static inline id             GKEntity_CopyWithZone(GKEntity self, NSZone* zone)                            { return ((id (*)(GKEntity, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL           GKEntity_SupportsSecureCoding(void)                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKEntity"), bean_sel("supportsSecureCoding")); }
+
+/* ===== GKGameModel ===== */
+#ifndef BEAN_TYPEDEF_GKGameModel
+#define BEAN_TYPEDEF_GKGameModel
+typedef bean_id GKGameModel;
+#endif
+static inline void         GKGameModel_SetGameModel(GKGameModel self, id gameModel)                    { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
+static inline NSArray      GKGameModel_GameModelUpdatesForPlayer(GKGameModel self, id player)          { return ((NSArray (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("gameModelUpdatesForPlayer:"), player); }
+static inline void         GKGameModel_ApplyGameModelUpdate(GKGameModel self, id gameModelUpdate)      { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("applyGameModelUpdate:"), gameModelUpdate); }
+static inline NSInteger    GKGameModel_ScoreForPlayer(GKGameModel self, id player)                     { return ((NSInteger (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("scoreForPlayer:"), player); }
+static inline BOOL         GKGameModel_IsWinForPlayer(GKGameModel self, id player)                     { return ((BOOL (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("isWinForPlayer:"), player); }
+static inline BOOL         GKGameModel_IsLossForPlayer(GKGameModel self, id player)                    { return ((BOOL (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("isLossForPlayer:"), player); }
+static inline void         GKGameModel_UnapplyGameModelUpdate(GKGameModel self, id gameModelUpdate)    { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("unapplyGameModelUpdate:"), gameModelUpdate); }
+static inline NSArray      GKGameModel_Players(GKGameModel self)                                       { return ((NSArray (*)(GKGameModel, SEL))bean_msgSend)(self, bean_sel("players")); }
+static inline id           GKGameModel_ActivePlayer(GKGameModel self)                                  { return ((id (*)(GKGameModel, SEL))bean_msgSend)(self, bean_sel("activePlayer")); }
 
 /* ===== GKGoal ===== */
-static inline id    GKGoal_GoalToSeekAgent(GKAgent agent)                                                                          { return ((id (*)(bean_class, SEL, GKAgent))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToSeekAgent:"), agent); }
-static inline id    GKGoal_GoalToFleeAgent(GKAgent agent)                                                                          { return ((id (*)(bean_class, SEL, GKAgent))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToFleeAgent:"), agent); }
-static inline id    GKGoal_GoalToAvoidObstacles_MaxPredictionTime(NSArray obstacles, CGFloat maxPredictionTime)                    { return ((id (*)(bean_class, SEL, NSArray, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToAvoidObstacles:maxPredictionTime:"), obstacles, maxPredictionTime); }
-static inline id    GKGoal_GoalToAvoidAgents_MaxPredictionTime(NSArray agents, CGFloat maxPredictionTime)                          { return ((id (*)(bean_class, SEL, NSArray, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToAvoidAgents:maxPredictionTime:"), agents, maxPredictionTime); }
-static inline id    GKGoal_GoalToSeparateFromAgents_MaxDistance_MaxAngle(NSArray agents, CGFloat maxDistance, CGFloat maxAngle)    { return ((id (*)(bean_class, SEL, NSArray, CGFloat, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToSeparateFromAgents:maxDistance:maxAngle:"), agents, maxDistance, maxAngle); }
-static inline id    GKGoal_GoalToAlignWithAgents_MaxDistance_MaxAngle(NSArray agents, CGFloat maxDistance, CGFloat maxAngle)       { return ((id (*)(bean_class, SEL, NSArray, CGFloat, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToAlignWithAgents:maxDistance:maxAngle:"), agents, maxDistance, maxAngle); }
-static inline id    GKGoal_GoalToCohereWithAgents_MaxDistance_MaxAngle(NSArray agents, CGFloat maxDistance, CGFloat maxAngle)      { return ((id (*)(bean_class, SEL, NSArray, CGFloat, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToCohereWithAgents:maxDistance:maxAngle:"), agents, maxDistance, maxAngle); }
-static inline id    GKGoal_GoalToReachTargetSpeed(CGFloat targetSpeed)                                                             { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToReachTargetSpeed:"), targetSpeed); }
-static inline id    GKGoal_GoalToWander(CGFloat speed)                                                                             { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToWander:"), speed); }
-static inline id    GKGoal_GoalToInterceptAgent_MaxPredictionTime(GKAgent target, CGFloat maxPredictionTime)                       { return ((id (*)(bean_class, SEL, GKAgent, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToInterceptAgent:maxPredictionTime:"), target, maxPredictionTime); }
-static inline id    GKGoal_GoalToFollowPath_MaxPredictionTime_Forward(GKPath path, CGFloat maxPredictionTime, BOOL forward)        { return ((id (*)(bean_class, SEL, GKPath, CGFloat, BOOL))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToFollowPath:maxPredictionTime:forward:"), path, maxPredictionTime, forward); }
-static inline id    GKGoal_GoalToStayOnPath_MaxPredictionTime(GKPath path, CGFloat maxPredictionTime)                              { return ((id (*)(bean_class, SEL, GKPath, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToStayOnPath:maxPredictionTime:"), path, maxPredictionTime); }
+static inline GKGoal    GKGoal_GoalToSeekAgent(GKAgent agent)                                                                          { return ((GKGoal (*)(bean_class, SEL, GKAgent))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToSeekAgent:"), agent); }
+static inline GKGoal    GKGoal_GoalToFleeAgent(GKAgent agent)                                                                          { return ((GKGoal (*)(bean_class, SEL, GKAgent))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToFleeAgent:"), agent); }
+static inline GKGoal    GKGoal_GoalToAvoidObstacles_MaxPredictionTime(NSArray obstacles, CGFloat maxPredictionTime)                    { return ((GKGoal (*)(bean_class, SEL, NSArray, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToAvoidObstacles:maxPredictionTime:"), obstacles, maxPredictionTime); }
+static inline GKGoal    GKGoal_GoalToAvoidAgents_MaxPredictionTime(NSArray agents, CGFloat maxPredictionTime)                          { return ((GKGoal (*)(bean_class, SEL, NSArray, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToAvoidAgents:maxPredictionTime:"), agents, maxPredictionTime); }
+static inline GKGoal    GKGoal_GoalToSeparateFromAgents_MaxDistance_MaxAngle(NSArray agents, CGFloat maxDistance, CGFloat maxAngle)    { return ((GKGoal (*)(bean_class, SEL, NSArray, CGFloat, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToSeparateFromAgents:maxDistance:maxAngle:"), agents, maxDistance, maxAngle); }
+static inline GKGoal    GKGoal_GoalToAlignWithAgents_MaxDistance_MaxAngle(NSArray agents, CGFloat maxDistance, CGFloat maxAngle)       { return ((GKGoal (*)(bean_class, SEL, NSArray, CGFloat, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToAlignWithAgents:maxDistance:maxAngle:"), agents, maxDistance, maxAngle); }
+static inline GKGoal    GKGoal_GoalToCohereWithAgents_MaxDistance_MaxAngle(NSArray agents, CGFloat maxDistance, CGFloat maxAngle)      { return ((GKGoal (*)(bean_class, SEL, NSArray, CGFloat, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToCohereWithAgents:maxDistance:maxAngle:"), agents, maxDistance, maxAngle); }
+static inline GKGoal    GKGoal_GoalToReachTargetSpeed(CGFloat targetSpeed)                                                             { return ((GKGoal (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToReachTargetSpeed:"), targetSpeed); }
+static inline GKGoal    GKGoal_GoalToWander(CGFloat speed)                                                                             { return ((GKGoal (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToWander:"), speed); }
+static inline GKGoal    GKGoal_GoalToInterceptAgent_MaxPredictionTime(GKAgent target, CGFloat maxPredictionTime)                       { return ((GKGoal (*)(bean_class, SEL, GKAgent, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToInterceptAgent:maxPredictionTime:"), target, maxPredictionTime); }
+static inline GKGoal    GKGoal_GoalToFollowPath_MaxPredictionTime_Forward(GKPath path, CGFloat maxPredictionTime, BOOL forward)        { return ((GKGoal (*)(bean_class, SEL, GKPath, CGFloat, BOOL))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToFollowPath:maxPredictionTime:forward:"), path, maxPredictionTime, forward); }
+static inline GKGoal    GKGoal_GoalToStayOnPath_MaxPredictionTime(GKPath path, CGFloat maxPredictionTime)                              { return ((GKGoal (*)(bean_class, SEL, GKPath, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToStayOnPath:maxPredictionTime:"), path, maxPredictionTime); }
+static inline id        GKGoal_CopyWithZone(GKGoal self, NSZone* zone)                                                                 { return ((id (*)(GKGoal, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== GKGraph ===== */
 #ifndef BEAN_TYPEDEF_GKGraph
 #define BEAN_TYPEDEF_GKGraph
 typedef bean_id GKGraph;
 #endif
-static inline id         GKGraph_GraphWithNodes(NSArray nodes)                                                                    { return ((id (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKGraph"), bean_sel("graphWithNodes:"), nodes); }
-static inline id         GKGraph_InitWithNodes(GKGraph self, NSArray nodes)                                                       { return ((id (*)(GKGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithNodes:"), nodes); }
+static inline GKGraph    GKGraph_GraphWithNodes(NSArray nodes)                                                                    { return ((GKGraph (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKGraph"), bean_sel("graphWithNodes:"), nodes); }
+static inline GKGraph    GKGraph_InitWithNodes(GKGraph self, NSArray nodes)                                                       { return ((GKGraph (*)(GKGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithNodes:"), nodes); }
 static inline void       GKGraph_ConnectNodeToLowestCostNode_Bidirectional(GKGraph self, GKGraphNode node, BOOL bidirectional)    { ((void (*)(GKGraph, SEL, GKGraphNode, BOOL))bean_msgSend)(self, bean_sel("connectNodeToLowestCostNode:bidirectional:"), node, bidirectional); }
 static inline void       GKGraph_RemoveNodes(GKGraph self, NSArray nodes)                                                         { ((void (*)(GKGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("removeNodes:"), nodes); }
 static inline void       GKGraph_AddNodes(GKGraph self, NSArray nodes)                                                            { ((void (*)(GKGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("addNodes:"), nodes); }
 static inline NSArray    GKGraph_FindPathFromNode_ToNode(GKGraph self, GKGraphNode startNode, GKGraphNode endNode)                { return ((NSArray (*)(GKGraph, SEL, GKGraphNode, GKGraphNode))bean_msgSend)(self, bean_sel("findPathFromNode:toNode:"), startNode, endNode); }
 static inline NSArray    GKGraph_Nodes(GKGraph self)                                                                              { return ((NSArray (*)(GKGraph, SEL))bean_msgSend)(self, bean_sel("nodes")); }
+static inline id         GKGraph_CopyWithZone(GKGraph self, NSZone* zone)                                                         { return ((id (*)(GKGraph, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL       GKGraph_SupportsSecureCoding(void)                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKGraph"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKGraphNode ===== */
 static inline void       GKGraphNode_AddConnectionsToNodes_Bidirectional(GKGraphNode self, NSArray nodes, BOOL bidirectional)       { ((void (*)(GKGraphNode, SEL, NSArray, BOOL))bean_msgSend)(self, bean_sel("addConnectionsToNodes:bidirectional:"), nodes, bidirectional); }
@@ -4953,16 +6304,17 @@ static inline CGFloat    GKGraphNode_CostToNode(GKGraphNode self, GKGraphNode no
 static inline NSArray    GKGraphNode_FindPathToNode(GKGraphNode self, GKGraphNode goalNode)                                         { return ((NSArray (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend)(self, bean_sel("findPathToNode:"), goalNode); }
 static inline NSArray    GKGraphNode_FindPathFromNode(GKGraphNode self, GKGraphNode startNode)                                      { return ((NSArray (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend)(self, bean_sel("findPathFromNode:"), startNode); }
 static inline NSArray    GKGraphNode_ConnectedNodes(GKGraphNode self)                                                               { return ((NSArray (*)(GKGraphNode, SEL))bean_msgSend)(self, bean_sel("connectedNodes")); }
+static inline BOOL       GKGraphNode_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKGraphNode"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKMeshGraph ===== */
 #ifndef BEAN_TYPEDEF_GKMeshGraph
 #define BEAN_TYPEDEF_GKMeshGraph
 typedef bean_id GKMeshGraph;
 #endif
-static inline id                              GKMeshGraph_GraphWithBufferRadius_MinCoordinate_MaxCoordinate_NodeClass(CGFloat bufferRadius, void* min, void* max, bean_class nodeClass)                     { return ((id (*)(bean_class, SEL, CGFloat, void*, void*, bean_class))bean_msgSend)(bean_cls("GKMeshGraph"), bean_sel("graphWithBufferRadius:minCoordinate:maxCoordinate:nodeClass:"), bufferRadius, min, max, nodeClass); }
-static inline id                              GKMeshGraph_InitWithBufferRadius_MinCoordinate_MaxCoordinate_NodeClass(GKMeshGraph self, CGFloat bufferRadius, void* min, void* max, bean_class nodeClass)    { return ((id (*)(GKMeshGraph, SEL, CGFloat, void*, void*, bean_class))bean_msgSend)(self, bean_sel("initWithBufferRadius:minCoordinate:maxCoordinate:nodeClass:"), bufferRadius, min, max, nodeClass); }
-static inline id                              GKMeshGraph_GraphWithBufferRadius_MinCoordinate_MaxCoordinate(CGFloat bufferRadius, void* min, void* max)                                                     { return ((id (*)(bean_class, SEL, CGFloat, void*, void*))bean_msgSend)(bean_cls("GKMeshGraph"), bean_sel("graphWithBufferRadius:minCoordinate:maxCoordinate:"), bufferRadius, min, max); }
-static inline id                              GKMeshGraph_InitWithBufferRadius_MinCoordinate_MaxCoordinate(GKMeshGraph self, CGFloat bufferRadius, void* min, void* max)                                    { return ((id (*)(GKMeshGraph, SEL, CGFloat, void*, void*))bean_msgSend)(self, bean_sel("initWithBufferRadius:minCoordinate:maxCoordinate:"), bufferRadius, min, max); }
+static inline GKMeshGraph                     GKMeshGraph_GraphWithBufferRadius_MinCoordinate_MaxCoordinate_NodeClass(CGFloat bufferRadius, void* min, void* max, bean_class nodeClass)                     { return ((GKMeshGraph (*)(bean_class, SEL, CGFloat, void*, void*, bean_class))bean_msgSend)(bean_cls("GKMeshGraph"), bean_sel("graphWithBufferRadius:minCoordinate:maxCoordinate:nodeClass:"), bufferRadius, min, max, nodeClass); }
+static inline GKMeshGraph                     GKMeshGraph_InitWithBufferRadius_MinCoordinate_MaxCoordinate_NodeClass(GKMeshGraph self, CGFloat bufferRadius, void* min, void* max, bean_class nodeClass)    { return ((GKMeshGraph (*)(GKMeshGraph, SEL, CGFloat, void*, void*, bean_class))bean_msgSend)(self, bean_sel("initWithBufferRadius:minCoordinate:maxCoordinate:nodeClass:"), bufferRadius, min, max, nodeClass); }
+static inline GKMeshGraph                     GKMeshGraph_GraphWithBufferRadius_MinCoordinate_MaxCoordinate(CGFloat bufferRadius, void* min, void* max)                                                     { return ((GKMeshGraph (*)(bean_class, SEL, CGFloat, void*, void*))bean_msgSend)(bean_cls("GKMeshGraph"), bean_sel("graphWithBufferRadius:minCoordinate:maxCoordinate:"), bufferRadius, min, max); }
+static inline GKMeshGraph                     GKMeshGraph_InitWithBufferRadius_MinCoordinate_MaxCoordinate(GKMeshGraph self, CGFloat bufferRadius, void* min, void* max)                                    { return ((GKMeshGraph (*)(GKMeshGraph, SEL, CGFloat, void*, void*))bean_msgSend)(self, bean_sel("initWithBufferRadius:minCoordinate:maxCoordinate:"), bufferRadius, min, max); }
 static inline void                            GKMeshGraph_AddObstacles(GKMeshGraph self, NSArray obstacles)                                                                                                 { ((void (*)(GKMeshGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("addObstacles:"), obstacles); }
 static inline void                            GKMeshGraph_RemoveObstacles(GKMeshGraph self, NSArray obstacles)                                                                                              { ((void (*)(GKMeshGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("removeObstacles:"), obstacles); }
 static inline void                            GKMeshGraph_ConnectNodeUsingObstacles(GKMeshGraph self, GKGraphNode2D node)                                                                                   { ((void (*)(GKMeshGraph, SEL, GKGraphNode2D))bean_msgSend)(self, bean_sel("connectNodeUsingObstacles:"), node); }
@@ -4980,22 +6332,22 @@ static inline NSUInteger                      GKMeshGraph_TriangleCount(GKMeshGr
 #define BEAN_TYPEDEF_GKNSPredicateRule
 typedef bean_id GKNSPredicateRule;
 #endif
-static inline id             GKNSPredicateRule_InitWithPredicate(GKNSPredicateRule self, NSPredicate predicate)            { return ((id (*)(GKNSPredicateRule, SEL, NSPredicate))bean_msgSend)(self, bean_sel("initWithPredicate:"), predicate); }
-static inline BOOL           GKNSPredicateRule_EvaluatePredicateWithSystem(GKNSPredicateRule self, GKRuleSystem system)    { return ((BOOL (*)(GKNSPredicateRule, SEL, GKRuleSystem))bean_msgSend)(self, bean_sel("evaluatePredicateWithSystem:"), system); }
-static inline NSPredicate    GKNSPredicateRule_Predicate(GKNSPredicateRule self)                                           { return ((NSPredicate (*)(GKNSPredicateRule, SEL))bean_msgSend)(self, bean_sel("predicate")); }
+static inline GKNSPredicateRule    GKNSPredicateRule_InitWithPredicate(GKNSPredicateRule self, NSPredicate predicate)            { return ((GKNSPredicateRule (*)(GKNSPredicateRule, SEL, NSPredicate))bean_msgSend)(self, bean_sel("initWithPredicate:"), predicate); }
+static inline BOOL                 GKNSPredicateRule_EvaluatePredicateWithSystem(GKNSPredicateRule self, GKRuleSystem system)    { return ((BOOL (*)(GKNSPredicateRule, SEL, GKRuleSystem))bean_msgSend)(self, bean_sel("evaluatePredicateWithSystem:"), system); }
+static inline NSPredicate          GKNSPredicateRule_Predicate(GKNSPredicateRule self)                                           { return ((NSPredicate (*)(GKNSPredicateRule, SEL))bean_msgSend)(self, bean_sel("predicate")); }
 
 /* ===== GKNoise ===== */
 #ifndef BEAN_TYPEDEF_GKNoise
 #define BEAN_TYPEDEF_GKNoise
 typedef bean_id GKNoise;
 #endif
-static inline id              GKNoise_Init(GKNoise self)                                                                                                                                                                 { return ((id (*)(GKNoise, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id              GKNoise_NoiseWithNoiseSource(GKNoiseSource noiseSource)                                                                                                                                    { return ((id (*)(bean_class, SEL, GKNoiseSource))bean_msgSend)(bean_cls("GKNoise"), bean_sel("noiseWithNoiseSource:"), noiseSource); }
-static inline id              GKNoise_NoiseWithNoiseSource_GradientColors(GKNoiseSource noiseSource, NSDictionary gradientColors)                                                                                        { return ((id (*)(bean_class, SEL, GKNoiseSource, NSDictionary))bean_msgSend)(bean_cls("GKNoise"), bean_sel("noiseWithNoiseSource:gradientColors:"), noiseSource, gradientColors); }
-static inline id              GKNoise_InitWithNoiseSource(GKNoise self, GKNoiseSource noiseSource)                                                                                                                       { return ((id (*)(GKNoise, SEL, GKNoiseSource))bean_msgSend)(self, bean_sel("initWithNoiseSource:"), noiseSource); }
-static inline id              GKNoise_InitWithNoiseSource_GradientColors(GKNoise self, GKNoiseSource noiseSource, NSDictionary gradientColors)                                                                           { return ((id (*)(GKNoise, SEL, GKNoiseSource, NSDictionary))bean_msgSend)(self, bean_sel("initWithNoiseSource:gradientColors:"), noiseSource, gradientColors); }
-static inline id              GKNoise_NoiseWithComponentNoises_SelectionNoise(NSArray noises, GKNoise selectionNoise)                                                                                                    { return ((id (*)(bean_class, SEL, NSArray, GKNoise))bean_msgSend)(bean_cls("GKNoise"), bean_sel("noiseWithComponentNoises:selectionNoise:"), noises, selectionNoise); }
-static inline id              GKNoise_NoiseWithComponentNoises_SelectionNoise_ComponentBoundaries_BoundaryBlendDistances(NSArray noises, GKNoise selectionNoise, NSArray componentBoundaries, NSArray blendDistances)    { return ((id (*)(bean_class, SEL, NSArray, GKNoise, NSArray, NSArray))bean_msgSend)(bean_cls("GKNoise"), bean_sel("noiseWithComponentNoises:selectionNoise:componentBoundaries:boundaryBlendDistances:"), noises, selectionNoise, componentBoundaries, blendDistances); }
+static inline GKNoise         GKNoise_Init(GKNoise self)                                                                                                                                                                 { return ((GKNoise (*)(GKNoise, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKNoise         GKNoise_NoiseWithNoiseSource(GKNoiseSource noiseSource)                                                                                                                                    { return ((GKNoise (*)(bean_class, SEL, GKNoiseSource))bean_msgSend)(bean_cls("GKNoise"), bean_sel("noiseWithNoiseSource:"), noiseSource); }
+static inline GKNoise         GKNoise_NoiseWithNoiseSource_GradientColors(GKNoiseSource noiseSource, NSDictionary gradientColors)                                                                                        { return ((GKNoise (*)(bean_class, SEL, GKNoiseSource, NSDictionary))bean_msgSend)(bean_cls("GKNoise"), bean_sel("noiseWithNoiseSource:gradientColors:"), noiseSource, gradientColors); }
+static inline GKNoise         GKNoise_InitWithNoiseSource(GKNoise self, GKNoiseSource noiseSource)                                                                                                                       { return ((GKNoise (*)(GKNoise, SEL, GKNoiseSource))bean_msgSend)(self, bean_sel("initWithNoiseSource:"), noiseSource); }
+static inline GKNoise         GKNoise_InitWithNoiseSource_GradientColors(GKNoise self, GKNoiseSource noiseSource, NSDictionary gradientColors)                                                                           { return ((GKNoise (*)(GKNoise, SEL, GKNoiseSource, NSDictionary))bean_msgSend)(self, bean_sel("initWithNoiseSource:gradientColors:"), noiseSource, gradientColors); }
+static inline GKNoise         GKNoise_NoiseWithComponentNoises_SelectionNoise(NSArray noises, GKNoise selectionNoise)                                                                                                    { return ((GKNoise (*)(bean_class, SEL, NSArray, GKNoise))bean_msgSend)(bean_cls("GKNoise"), bean_sel("noiseWithComponentNoises:selectionNoise:"), noises, selectionNoise); }
+static inline GKNoise         GKNoise_NoiseWithComponentNoises_SelectionNoise_ComponentBoundaries_BoundaryBlendDistances(NSArray noises, GKNoise selectionNoise, NSArray componentBoundaries, NSArray blendDistances)    { return ((GKNoise (*)(bean_class, SEL, NSArray, GKNoise, NSArray, NSArray))bean_msgSend)(bean_cls("GKNoise"), bean_sel("noiseWithComponentNoises:selectionNoise:componentBoundaries:boundaryBlendDistances:"), noises, selectionNoise, componentBoundaries, blendDistances); }
 static inline CGFloat         GKNoise_ValueAtPosition(GKNoise self, void* position)                                                                                                                                      { return ((CGFloat (*)(GKNoise, SEL, void*))bean_msgSend_fpret)(self, bean_sel("valueAtPosition:"), position); }
 static inline void            GKNoise_ApplyAbsoluteValue(GKNoise self)                                                                                                                                                   { ((void (*)(GKNoise, SEL))bean_msgSend)(self, bean_sel("applyAbsoluteValue")); }
 static inline void            GKNoise_ClampWithLowerBound_UpperBound(GKNoise self, CGFloat lowerBound, CGFloat upperBound)                                                                                               { ((void (*)(GKNoise, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("clampWithLowerBound:upperBound:"), lowerBound, upperBound); }
@@ -5021,50 +6373,50 @@ static inline void            GKNoise_SetGradientColors(GKNoise self, NSDictiona
 #define BEAN_TYPEDEF_GKNoiseMap
 typedef bean_id GKNoiseMap;
 #endif
-static inline id         GKNoiseMap_Init(GKNoiseMap self)                                                                                                                         { return ((id (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         GKNoiseMap_NoiseMapWithNoise(GKNoise noise)                                                                                                              { return ((id (*)(bean_class, SEL, GKNoise))bean_msgSend)(bean_cls("GKNoiseMap"), bean_sel("noiseMapWithNoise:"), noise); }
-static inline id         GKNoiseMap_NoiseMapWithNoise_Size_Origin_SampleCount_Seamless(GKNoise noise, void* size, void* origin, void* sampleCount, BOOL seamless)                 { return ((id (*)(bean_class, SEL, GKNoise, void*, void*, void*, BOOL))bean_msgSend)(bean_cls("GKNoiseMap"), bean_sel("noiseMapWithNoise:size:origin:sampleCount:seamless:"), noise, size, origin, sampleCount, seamless); }
-static inline id         GKNoiseMap_InitWithNoise(GKNoiseMap self, GKNoise noise)                                                                                                 { return ((id (*)(GKNoiseMap, SEL, GKNoise))bean_msgSend)(self, bean_sel("initWithNoise:"), noise); }
-static inline id         GKNoiseMap_InitWithNoise_Size_Origin_SampleCount_Seamless(GKNoiseMap self, GKNoise noise, void* size, void* origin, void* sampleCount, BOOL seamless)    { return ((id (*)(GKNoiseMap, SEL, GKNoise, void*, void*, void*, BOOL))bean_msgSend)(self, bean_sel("initWithNoise:size:origin:sampleCount:seamless:"), noise, size, origin, sampleCount, seamless); }
-static inline CGFloat    GKNoiseMap_ValueAtPosition(GKNoiseMap self, void* position)                                                                                              { return ((CGFloat (*)(GKNoiseMap, SEL, void*))bean_msgSend_fpret)(self, bean_sel("valueAtPosition:"), position); }
-static inline CGFloat    GKNoiseMap_InterpolatedValueAtPosition(GKNoiseMap self, void* position)                                                                                  { return ((CGFloat (*)(GKNoiseMap, SEL, void*))bean_msgSend_fpret)(self, bean_sel("interpolatedValueAtPosition:"), position); }
-static inline void       GKNoiseMap_SetValue_AtPosition(GKNoiseMap self, CGFloat value, void* position)                                                                           { ((void (*)(GKNoiseMap, SEL, CGFloat, void*))bean_msgSend)(self, bean_sel("setValue:atPosition:"), value, position); }
-static inline void*      GKNoiseMap_Size(GKNoiseMap self)                                                                                                                         { return ((void* (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("size")); }
-static inline void*      GKNoiseMap_Origin(GKNoiseMap self)                                                                                                                       { return ((void* (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("origin")); }
-static inline void*      GKNoiseMap_SampleCount(GKNoiseMap self)                                                                                                                  { return ((void* (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("sampleCount")); }
-static inline BOOL       GKNoiseMap_IsSeamless(GKNoiseMap self)                                                                                                                   { return ((BOOL (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("isSeamless")); }
-static inline BOOL       GKNoiseMap_Seamless(GKNoiseMap self)                                                                                                                     { return ((BOOL (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("seamless")); }
+static inline GKNoiseMap    GKNoiseMap_Init(GKNoiseMap self)                                                                                                                         { return ((GKNoiseMap (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKNoiseMap    GKNoiseMap_NoiseMapWithNoise(GKNoise noise)                                                                                                              { return ((GKNoiseMap (*)(bean_class, SEL, GKNoise))bean_msgSend)(bean_cls("GKNoiseMap"), bean_sel("noiseMapWithNoise:"), noise); }
+static inline GKNoiseMap    GKNoiseMap_NoiseMapWithNoise_Size_Origin_SampleCount_Seamless(GKNoise noise, void* size, void* origin, void* sampleCount, BOOL seamless)                 { return ((GKNoiseMap (*)(bean_class, SEL, GKNoise, void*, void*, void*, BOOL))bean_msgSend)(bean_cls("GKNoiseMap"), bean_sel("noiseMapWithNoise:size:origin:sampleCount:seamless:"), noise, size, origin, sampleCount, seamless); }
+static inline GKNoiseMap    GKNoiseMap_InitWithNoise(GKNoiseMap self, GKNoise noise)                                                                                                 { return ((GKNoiseMap (*)(GKNoiseMap, SEL, GKNoise))bean_msgSend)(self, bean_sel("initWithNoise:"), noise); }
+static inline GKNoiseMap    GKNoiseMap_InitWithNoise_Size_Origin_SampleCount_Seamless(GKNoiseMap self, GKNoise noise, void* size, void* origin, void* sampleCount, BOOL seamless)    { return ((GKNoiseMap (*)(GKNoiseMap, SEL, GKNoise, void*, void*, void*, BOOL))bean_msgSend)(self, bean_sel("initWithNoise:size:origin:sampleCount:seamless:"), noise, size, origin, sampleCount, seamless); }
+static inline CGFloat       GKNoiseMap_ValueAtPosition(GKNoiseMap self, void* position)                                                                                              { return ((CGFloat (*)(GKNoiseMap, SEL, void*))bean_msgSend_fpret)(self, bean_sel("valueAtPosition:"), position); }
+static inline CGFloat       GKNoiseMap_InterpolatedValueAtPosition(GKNoiseMap self, void* position)                                                                                  { return ((CGFloat (*)(GKNoiseMap, SEL, void*))bean_msgSend_fpret)(self, bean_sel("interpolatedValueAtPosition:"), position); }
+static inline void          GKNoiseMap_SetValue_AtPosition(GKNoiseMap self, CGFloat value, void* position)                                                                           { ((void (*)(GKNoiseMap, SEL, CGFloat, void*))bean_msgSend)(self, bean_sel("setValue:atPosition:"), value, position); }
+static inline void*         GKNoiseMap_Size(GKNoiseMap self)                                                                                                                         { return ((void* (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("size")); }
+static inline void*         GKNoiseMap_Origin(GKNoiseMap self)                                                                                                                       { return ((void* (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("origin")); }
+static inline void*         GKNoiseMap_SampleCount(GKNoiseMap self)                                                                                                                  { return ((void* (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("sampleCount")); }
+static inline BOOL          GKNoiseMap_IsSeamless(GKNoiseMap self)                                                                                                                   { return ((BOOL (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("isSeamless")); }
+static inline BOOL          GKNoiseMap_Seamless(GKNoiseMap self)                                                                                                                     { return ((BOOL (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("seamless")); }
 
 /* ===== GKObstacleGraph ===== */
 #ifndef BEAN_TYPEDEF_GKObstacleGraph
 #define BEAN_TYPEDEF_GKObstacleGraph
 typedef bean_id GKObstacleGraph;
 #endif
-static inline id            GKObstacleGraph_GraphWithObstacles_BufferRadius(NSArray obstacles, CGFloat bufferRadius)                                                                      { return ((id (*)(bean_class, SEL, NSArray, CGFloat))bean_msgSend)(bean_cls("GKObstacleGraph"), bean_sel("graphWithObstacles:bufferRadius:"), obstacles, bufferRadius); }
-static inline id            GKObstacleGraph_InitWithObstacles_BufferRadius(GKObstacleGraph self, NSArray obstacles, CGFloat bufferRadius)                                                 { return ((id (*)(GKObstacleGraph, SEL, NSArray, CGFloat))bean_msgSend)(self, bean_sel("initWithObstacles:bufferRadius:"), obstacles, bufferRadius); }
-static inline id            GKObstacleGraph_GraphWithObstacles_BufferRadius_NodeClass(NSArray obstacles, CGFloat bufferRadius, bean_class nodeClass)                                      { return ((id (*)(bean_class, SEL, NSArray, CGFloat, bean_class))bean_msgSend)(bean_cls("GKObstacleGraph"), bean_sel("graphWithObstacles:bufferRadius:nodeClass:"), obstacles, bufferRadius, nodeClass); }
-static inline id            GKObstacleGraph_InitWithObstacles_BufferRadius_NodeClass(GKObstacleGraph self, NSArray obstacles, CGFloat bufferRadius, bean_class nodeClass)                 { return ((id (*)(GKObstacleGraph, SEL, NSArray, CGFloat, bean_class))bean_msgSend)(self, bean_sel("initWithObstacles:bufferRadius:nodeClass:"), obstacles, bufferRadius, nodeClass); }
-static inline void          GKObstacleGraph_ConnectNodeUsingObstacles(GKObstacleGraph self, GKGraphNode2D node)                                                                           { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D))bean_msgSend)(self, bean_sel("connectNodeUsingObstacles:"), node); }
-static inline void          GKObstacleGraph_ConnectNodeUsingObstacles_IgnoringObstacles(GKObstacleGraph self, GKGraphNode2D node, NSArray obstaclesToIgnore)                              { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D, NSArray))bean_msgSend)(self, bean_sel("connectNodeUsingObstacles:ignoringObstacles:"), node, obstaclesToIgnore); }
-static inline void          GKObstacleGraph_ConnectNodeUsingObstacles_IgnoringBufferRadiusOfObstacles(GKObstacleGraph self, GKGraphNode2D node, NSArray obstaclesBufferRadiusToIgnore)    { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D, NSArray))bean_msgSend)(self, bean_sel("connectNodeUsingObstacles:ignoringBufferRadiusOfObstacles:"), node, obstaclesBufferRadiusToIgnore); }
-static inline void          GKObstacleGraph_AddObstacles(GKObstacleGraph self, NSArray obstacles)                                                                                         { ((void (*)(GKObstacleGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("addObstacles:"), obstacles); }
-static inline void          GKObstacleGraph_RemoveObstacles(GKObstacleGraph self, NSArray obstacles)                                                                                      { ((void (*)(GKObstacleGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("removeObstacles:"), obstacles); }
-static inline void          GKObstacleGraph_RemoveAllObstacles(GKObstacleGraph self)                                                                                                      { ((void (*)(GKObstacleGraph, SEL))bean_msgSend)(self, bean_sel("removeAllObstacles")); }
-static inline NSArray       GKObstacleGraph_NodesForObstacle(GKObstacleGraph self, GKPolygonObstacle obstacle)                                                                            { return ((NSArray (*)(GKObstacleGraph, SEL, GKPolygonObstacle))bean_msgSend)(self, bean_sel("nodesForObstacle:"), obstacle); }
-static inline void          GKObstacleGraph_LockConnectionFromNode_ToNode(GKObstacleGraph self, GKGraphNode2D startNode, GKGraphNode2D endNode)                                           { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D, GKGraphNode2D))bean_msgSend)(self, bean_sel("lockConnectionFromNode:toNode:"), startNode, endNode); }
-static inline void          GKObstacleGraph_UnlockConnectionFromNode_ToNode(GKObstacleGraph self, GKGraphNode2D startNode, GKGraphNode2D endNode)                                         { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D, GKGraphNode2D))bean_msgSend)(self, bean_sel("unlockConnectionFromNode:toNode:"), startNode, endNode); }
-static inline BOOL          GKObstacleGraph_IsConnectionLockedFromNode_ToNode(GKObstacleGraph self, GKGraphNode2D startNode, GKGraphNode2D endNode)                                       { return ((BOOL (*)(GKObstacleGraph, SEL, GKGraphNode2D, GKGraphNode2D))bean_msgSend)(self, bean_sel("isConnectionLockedFromNode:toNode:"), startNode, endNode); }
-static inline bean_class    GKObstacleGraph_ClassForGenericArgumentAtIndex(GKObstacleGraph self, NSUInteger index)                                                                        { return ((bean_class (*)(GKObstacleGraph, SEL, NSUInteger))bean_msgSend)(self, bean_sel("classForGenericArgumentAtIndex:"), index); }
-static inline NSArray       GKObstacleGraph_Obstacles(GKObstacleGraph self)                                                                                                               { return ((NSArray (*)(GKObstacleGraph, SEL))bean_msgSend)(self, bean_sel("obstacles")); }
-static inline CGFloat       GKObstacleGraph_BufferRadius(GKObstacleGraph self)                                                                                                            { return ((CGFloat (*)(GKObstacleGraph, SEL))bean_msgSend_fpret)(self, bean_sel("bufferRadius")); }
+static inline GKObstacleGraph    GKObstacleGraph_GraphWithObstacles_BufferRadius(NSArray obstacles, CGFloat bufferRadius)                                                                      { return ((GKObstacleGraph (*)(bean_class, SEL, NSArray, CGFloat))bean_msgSend)(bean_cls("GKObstacleGraph"), bean_sel("graphWithObstacles:bufferRadius:"), obstacles, bufferRadius); }
+static inline GKObstacleGraph    GKObstacleGraph_InitWithObstacles_BufferRadius(GKObstacleGraph self, NSArray obstacles, CGFloat bufferRadius)                                                 { return ((GKObstacleGraph (*)(GKObstacleGraph, SEL, NSArray, CGFloat))bean_msgSend)(self, bean_sel("initWithObstacles:bufferRadius:"), obstacles, bufferRadius); }
+static inline GKObstacleGraph    GKObstacleGraph_GraphWithObstacles_BufferRadius_NodeClass(NSArray obstacles, CGFloat bufferRadius, bean_class nodeClass)                                      { return ((GKObstacleGraph (*)(bean_class, SEL, NSArray, CGFloat, bean_class))bean_msgSend)(bean_cls("GKObstacleGraph"), bean_sel("graphWithObstacles:bufferRadius:nodeClass:"), obstacles, bufferRadius, nodeClass); }
+static inline GKObstacleGraph    GKObstacleGraph_InitWithObstacles_BufferRadius_NodeClass(GKObstacleGraph self, NSArray obstacles, CGFloat bufferRadius, bean_class nodeClass)                 { return ((GKObstacleGraph (*)(GKObstacleGraph, SEL, NSArray, CGFloat, bean_class))bean_msgSend)(self, bean_sel("initWithObstacles:bufferRadius:nodeClass:"), obstacles, bufferRadius, nodeClass); }
+static inline void               GKObstacleGraph_ConnectNodeUsingObstacles(GKObstacleGraph self, GKGraphNode2D node)                                                                           { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D))bean_msgSend)(self, bean_sel("connectNodeUsingObstacles:"), node); }
+static inline void               GKObstacleGraph_ConnectNodeUsingObstacles_IgnoringObstacles(GKObstacleGraph self, GKGraphNode2D node, NSArray obstaclesToIgnore)                              { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D, NSArray))bean_msgSend)(self, bean_sel("connectNodeUsingObstacles:ignoringObstacles:"), node, obstaclesToIgnore); }
+static inline void               GKObstacleGraph_ConnectNodeUsingObstacles_IgnoringBufferRadiusOfObstacles(GKObstacleGraph self, GKGraphNode2D node, NSArray obstaclesBufferRadiusToIgnore)    { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D, NSArray))bean_msgSend)(self, bean_sel("connectNodeUsingObstacles:ignoringBufferRadiusOfObstacles:"), node, obstaclesBufferRadiusToIgnore); }
+static inline void               GKObstacleGraph_AddObstacles(GKObstacleGraph self, NSArray obstacles)                                                                                         { ((void (*)(GKObstacleGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("addObstacles:"), obstacles); }
+static inline void               GKObstacleGraph_RemoveObstacles(GKObstacleGraph self, NSArray obstacles)                                                                                      { ((void (*)(GKObstacleGraph, SEL, NSArray))bean_msgSend)(self, bean_sel("removeObstacles:"), obstacles); }
+static inline void               GKObstacleGraph_RemoveAllObstacles(GKObstacleGraph self)                                                                                                      { ((void (*)(GKObstacleGraph, SEL))bean_msgSend)(self, bean_sel("removeAllObstacles")); }
+static inline NSArray            GKObstacleGraph_NodesForObstacle(GKObstacleGraph self, GKPolygonObstacle obstacle)                                                                            { return ((NSArray (*)(GKObstacleGraph, SEL, GKPolygonObstacle))bean_msgSend)(self, bean_sel("nodesForObstacle:"), obstacle); }
+static inline void               GKObstacleGraph_LockConnectionFromNode_ToNode(GKObstacleGraph self, GKGraphNode2D startNode, GKGraphNode2D endNode)                                           { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D, GKGraphNode2D))bean_msgSend)(self, bean_sel("lockConnectionFromNode:toNode:"), startNode, endNode); }
+static inline void               GKObstacleGraph_UnlockConnectionFromNode_ToNode(GKObstacleGraph self, GKGraphNode2D startNode, GKGraphNode2D endNode)                                         { ((void (*)(GKObstacleGraph, SEL, GKGraphNode2D, GKGraphNode2D))bean_msgSend)(self, bean_sel("unlockConnectionFromNode:toNode:"), startNode, endNode); }
+static inline BOOL               GKObstacleGraph_IsConnectionLockedFromNode_ToNode(GKObstacleGraph self, GKGraphNode2D startNode, GKGraphNode2D endNode)                                       { return ((BOOL (*)(GKObstacleGraph, SEL, GKGraphNode2D, GKGraphNode2D))bean_msgSend)(self, bean_sel("isConnectionLockedFromNode:toNode:"), startNode, endNode); }
+static inline bean_class         GKObstacleGraph_ClassForGenericArgumentAtIndex(GKObstacleGraph self, NSUInteger index)                                                                        { return ((bean_class (*)(GKObstacleGraph, SEL, NSUInteger))bean_msgSend)(self, bean_sel("classForGenericArgumentAtIndex:"), index); }
+static inline NSArray            GKObstacleGraph_Obstacles(GKObstacleGraph self)                                                                                                               { return ((NSArray (*)(GKObstacleGraph, SEL))bean_msgSend)(self, bean_sel("obstacles")); }
+static inline CGFloat            GKObstacleGraph_BufferRadius(GKObstacleGraph self)                                                                                                            { return ((CGFloat (*)(GKObstacleGraph, SEL))bean_msgSend_fpret)(self, bean_sel("bufferRadius")); }
 
 /* ===== GKOctree ===== */
 #ifndef BEAN_TYPEDEF_GKOctree
 #define BEAN_TYPEDEF_GKOctree
 typedef bean_id GKOctree;
 #endif
-static inline id              GKOctree_OctreeWithBoundingBox_MinimumCellSize(GKBox box, CGFloat minCellSize)                 { return ((id (*)(bean_class, SEL, GKBox, CGFloat))bean_msgSend)(bean_cls("GKOctree"), bean_sel("octreeWithBoundingBox:minimumCellSize:"), box, minCellSize); }
-static inline id              GKOctree_InitWithBoundingBox_MinimumCellSize(GKOctree self, GKBox box, CGFloat minCellSize)    { return ((id (*)(GKOctree, SEL, GKBox, CGFloat))bean_msgSend)(self, bean_sel("initWithBoundingBox:minimumCellSize:"), box, minCellSize); }
+static inline GKOctree        GKOctree_OctreeWithBoundingBox_MinimumCellSize(GKBox box, CGFloat minCellSize)                 { return ((GKOctree (*)(bean_class, SEL, GKBox, CGFloat))bean_msgSend)(bean_cls("GKOctree"), bean_sel("octreeWithBoundingBox:minimumCellSize:"), box, minCellSize); }
+static inline GKOctree        GKOctree_InitWithBoundingBox_MinimumCellSize(GKOctree self, GKBox box, CGFloat minCellSize)    { return ((GKOctree (*)(GKOctree, SEL, GKBox, CGFloat))bean_msgSend)(self, bean_sel("initWithBoundingBox:minimumCellSize:"), box, minCellSize); }
 static inline GKOctreeNode    GKOctree_AddElement_WithPoint(GKOctree self, NSObject element, void* point)                    { return ((GKOctreeNode (*)(GKOctree, SEL, NSObject, void*))bean_msgSend)(self, bean_sel("addElement:withPoint:"), element, point); }
 static inline GKOctreeNode    GKOctree_AddElement_WithBox(GKOctree self, NSObject element, GKBox box)                        { return ((GKOctreeNode (*)(GKOctree, SEL, NSObject, GKBox))bean_msgSend)(self, bean_sel("addElement:withBox:"), element, box); }
 static inline NSArray         GKOctree_ElementsAtPoint(GKOctree self, void* point)                                           { return ((NSArray (*)(GKOctree, SEL, void*))bean_msgSend)(self, bean_sel("elementsAtPoint:"), point); }
@@ -5073,12 +6425,12 @@ static inline BOOL            GKOctree_RemoveElement(GKOctree self, NSObject ele
 static inline BOOL            GKOctree_RemoveElement_WithNode(GKOctree self, NSObject element, GKOctreeNode node)            { return ((BOOL (*)(GKOctree, SEL, NSObject, GKOctreeNode))bean_msgSend)(self, bean_sel("removeElement:withNode:"), element, node); }
 
 /* ===== GKPath ===== */
-static inline id            GKPath_PathWithPoints_Count_Radius_Cyclical(vector_float2* points, NSUInteger count, CGFloat radius, BOOL cyclical)                       { return ((id (*)(bean_class, SEL, vector_float2*, NSUInteger, CGFloat, BOOL))bean_msgSend)(bean_cls("GKPath"), bean_sel("pathWithPoints:count:radius:cyclical:"), points, count, radius, cyclical); }
-static inline id            GKPath_InitWithPoints_Count_Radius_Cyclical(GKPath self, vector_float2* points, NSUInteger count, CGFloat radius, BOOL cyclical)          { return ((id (*)(GKPath, SEL, vector_float2*, NSUInteger, CGFloat, BOOL))bean_msgSend)(self, bean_sel("initWithPoints:count:radius:cyclical:"), points, count, radius, cyclical); }
-static inline id            GKPath_PathWithFloat3Points_Count_Radius_Cyclical(vector_float3* points, NSUInteger count, CGFloat radius, BOOL cyclical)                 { return ((id (*)(bean_class, SEL, vector_float3*, NSUInteger, CGFloat, BOOL))bean_msgSend)(bean_cls("GKPath"), bean_sel("pathWithFloat3Points:count:radius:cyclical:"), points, count, radius, cyclical); }
-static inline id            GKPath_InitWithFloat3Points_Count_Radius_Cyclical(GKPath self, vector_float3* points, NSUInteger count, CGFloat radius, BOOL cyclical)    { return ((id (*)(GKPath, SEL, vector_float3*, NSUInteger, CGFloat, BOOL))bean_msgSend)(self, bean_sel("initWithFloat3Points:count:radius:cyclical:"), points, count, radius, cyclical); }
-static inline id            GKPath_PathWithGraphNodes_Radius(NSArray graphNodes, CGFloat radius)                                                                      { return ((id (*)(bean_class, SEL, NSArray, CGFloat))bean_msgSend)(bean_cls("GKPath"), bean_sel("pathWithGraphNodes:radius:"), graphNodes, radius); }
-static inline id            GKPath_InitWithGraphNodes_Radius(GKPath self, NSArray graphNodes, CGFloat radius)                                                         { return ((id (*)(GKPath, SEL, NSArray, CGFloat))bean_msgSend)(self, bean_sel("initWithGraphNodes:radius:"), graphNodes, radius); }
+static inline GKPath        GKPath_PathWithPoints_Count_Radius_Cyclical(vector_float2* points, NSUInteger count, CGFloat radius, BOOL cyclical)                       { return ((GKPath (*)(bean_class, SEL, vector_float2*, NSUInteger, CGFloat, BOOL))bean_msgSend)(bean_cls("GKPath"), bean_sel("pathWithPoints:count:radius:cyclical:"), points, count, radius, cyclical); }
+static inline GKPath        GKPath_InitWithPoints_Count_Radius_Cyclical(GKPath self, vector_float2* points, NSUInteger count, CGFloat radius, BOOL cyclical)          { return ((GKPath (*)(GKPath, SEL, vector_float2*, NSUInteger, CGFloat, BOOL))bean_msgSend)(self, bean_sel("initWithPoints:count:radius:cyclical:"), points, count, radius, cyclical); }
+static inline GKPath        GKPath_PathWithFloat3Points_Count_Radius_Cyclical(vector_float3* points, NSUInteger count, CGFloat radius, BOOL cyclical)                 { return ((GKPath (*)(bean_class, SEL, vector_float3*, NSUInteger, CGFloat, BOOL))bean_msgSend)(bean_cls("GKPath"), bean_sel("pathWithFloat3Points:count:radius:cyclical:"), points, count, radius, cyclical); }
+static inline GKPath        GKPath_InitWithFloat3Points_Count_Radius_Cyclical(GKPath self, vector_float3* points, NSUInteger count, CGFloat radius, BOOL cyclical)    { return ((GKPath (*)(GKPath, SEL, vector_float3*, NSUInteger, CGFloat, BOOL))bean_msgSend)(self, bean_sel("initWithFloat3Points:count:radius:cyclical:"), points, count, radius, cyclical); }
+static inline GKPath        GKPath_PathWithGraphNodes_Radius(NSArray graphNodes, CGFloat radius)                                                                      { return ((GKPath (*)(bean_class, SEL, NSArray, CGFloat))bean_msgSend)(bean_cls("GKPath"), bean_sel("pathWithGraphNodes:radius:"), graphNodes, radius); }
+static inline GKPath        GKPath_InitWithGraphNodes_Radius(GKPath self, NSArray graphNodes, CGFloat radius)                                                         { return ((GKPath (*)(GKPath, SEL, NSArray, CGFloat))bean_msgSend)(self, bean_sel("initWithGraphNodes:radius:"), graphNodes, radius); }
 static inline void*         GKPath_PointAtIndex(GKPath self, NSUInteger index)                                                                                        { return ((void* (*)(GKPath, SEL, NSUInteger))bean_msgSend)(self, bean_sel("pointAtIndex:"), index); }
 static inline void*         GKPath_Float2AtIndex(GKPath self, NSUInteger index)                                                                                       { return ((void* (*)(GKPath, SEL, NSUInteger))bean_msgSend)(self, bean_sel("float2AtIndex:"), index); }
 static inline void*         GKPath_Float3AtIndex(GKPath self, NSUInteger index)                                                                                       { return ((void* (*)(GKPath, SEL, NSUInteger))bean_msgSend)(self, bean_sel("float3AtIndex:"), index); }
@@ -5094,8 +6446,8 @@ static inline BOOL          GKPath_Cyclical(GKPath self)                        
 #define BEAN_TYPEDEF_GKQuadtree
 typedef bean_id GKQuadtree;
 #endif
-static inline id                GKQuadtree_QuadtreeWithBoundingQuad_MinimumCellSize(GKQuad quad, CGFloat minCellSize)                 { return ((id (*)(bean_class, SEL, GKQuad, CGFloat))bean_msgSend)(bean_cls("GKQuadtree"), bean_sel("quadtreeWithBoundingQuad:minimumCellSize:"), quad, minCellSize); }
-static inline id                GKQuadtree_InitWithBoundingQuad_MinimumCellSize(GKQuadtree self, GKQuad quad, CGFloat minCellSize)    { return ((id (*)(GKQuadtree, SEL, GKQuad, CGFloat))bean_msgSend)(self, bean_sel("initWithBoundingQuad:minimumCellSize:"), quad, minCellSize); }
+static inline GKQuadtree        GKQuadtree_QuadtreeWithBoundingQuad_MinimumCellSize(GKQuad quad, CGFloat minCellSize)                 { return ((GKQuadtree (*)(bean_class, SEL, GKQuad, CGFloat))bean_msgSend)(bean_cls("GKQuadtree"), bean_sel("quadtreeWithBoundingQuad:minimumCellSize:"), quad, minCellSize); }
+static inline GKQuadtree        GKQuadtree_InitWithBoundingQuad_MinimumCellSize(GKQuadtree self, GKQuad quad, CGFloat minCellSize)    { return ((GKQuadtree (*)(GKQuadtree, SEL, GKQuad, CGFloat))bean_msgSend)(self, bean_sel("initWithBoundingQuad:minimumCellSize:"), quad, minCellSize); }
 static inline GKQuadtreeNode    GKQuadtree_AddElement_WithPoint(GKQuadtree self, NSObject element, void* point)                       { return ((GKQuadtreeNode (*)(GKQuadtree, SEL, NSObject, void*))bean_msgSend)(self, bean_sel("addElement:withPoint:"), element, point); }
 static inline GKQuadtreeNode    GKQuadtree_AddElement_WithQuad(GKQuadtree self, NSObject element, GKQuad quad)                        { return ((GKQuadtreeNode (*)(GKQuadtree, SEL, NSObject, GKQuad))bean_msgSend)(self, bean_sel("addElement:withQuad:"), element, quad); }
 static inline NSArray           GKQuadtree_ElementsAtPoint(GKQuadtree self, void* point)                                              { return ((NSArray (*)(GKQuadtree, SEL, void*))bean_msgSend)(self, bean_sel("elementsAtPoint:"), point); }
@@ -5108,8 +6460,8 @@ static inline BOOL              GKQuadtree_RemoveElement_WithNode(GKQuadtree sel
 #define BEAN_TYPEDEF_GKRTree
 typedef bean_id GKRTree;
 #endif
-static inline id            GKRTree_TreeWithMaxNumberOfChildren(NSUInteger maxNumberOfChildren)                                                                                                                   { return ((id (*)(bean_class, SEL, NSUInteger))bean_msgSend)(bean_cls("GKRTree"), bean_sel("treeWithMaxNumberOfChildren:"), maxNumberOfChildren); }
-static inline id            GKRTree_InitWithMaxNumberOfChildren(GKRTree self, NSUInteger maxNumberOfChildren)                                                                                                     { return ((id (*)(GKRTree, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithMaxNumberOfChildren:"), maxNumberOfChildren); }
+static inline GKRTree       GKRTree_TreeWithMaxNumberOfChildren(NSUInteger maxNumberOfChildren)                                                                                                                   { return ((GKRTree (*)(bean_class, SEL, NSUInteger))bean_msgSend)(bean_cls("GKRTree"), bean_sel("treeWithMaxNumberOfChildren:"), maxNumberOfChildren); }
+static inline GKRTree       GKRTree_InitWithMaxNumberOfChildren(GKRTree self, NSUInteger maxNumberOfChildren)                                                                                                     { return ((GKRTree (*)(GKRTree, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithMaxNumberOfChildren:"), maxNumberOfChildren); }
 static inline void          GKRTree_AddElement_BoundingRectMin_BoundingRectMax_SplitStrategy(GKRTree self, NSObject element, void* boundingRectMin, void* boundingRectMax, GKRTreeSplitStrategy splitStrategy)    { ((void (*)(GKRTree, SEL, NSObject, void*, void*, GKRTreeSplitStrategy))bean_msgSend)(self, bean_sel("addElement:boundingRectMin:boundingRectMax:splitStrategy:"), element, boundingRectMin, boundingRectMax, splitStrategy); }
 static inline void          GKRTree_RemoveElement_BoundingRectMin_BoundingRectMax(GKRTree self, NSObject element, void* boundingRectMin, void* boundingRectMax)                                                   { ((void (*)(GKRTree, SEL, NSObject, void*, void*))bean_msgSend)(self, bean_sel("removeElement:boundingRectMin:boundingRectMax:"), element, boundingRectMin, boundingRectMax); }
 static inline NSArray       GKRTree_ElementsInBoundingRectMin_RectMax(GKRTree self, void* rectMin, void* rectMax)                                                                                                 { return ((NSArray (*)(GKRTree, SEL, void*, void*))bean_msgSend)(self, bean_sel("elementsInBoundingRectMin:rectMax:"), rectMin, rectMax); }
@@ -5117,10 +6469,16 @@ static inline NSUInteger    GKRTree_QueryReserve(GKRTree self)                  
 static inline void          GKRTree_SetQueryReserve(GKRTree self, NSUInteger queryReserve)                                                                                                                        { ((void (*)(GKRTree, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setQueryReserve:"), queryReserve); }
 
 /* ===== GKRandomSource ===== */
-static inline id                GKRandomSource_Init(GKRandomSource self)                                             { return ((id (*)(GKRandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                GKRandomSource_InitWithCoder(GKRandomSource self, NSCoder aDecoder)                  { return ((id (*)(GKRandomSource, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline GKRandomSource    GKRandomSource_Init(GKRandomSource self)                                             { return ((GKRandomSource (*)(GKRandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKRandomSource    GKRandomSource_InitWithCoder(GKRandomSource self, NSCoder aDecoder)                  { return ((GKRandomSource (*)(GKRandomSource, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline GKRandomSource    GKRandomSource_SharedRandom(void)                                                    { return ((GKRandomSource (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKRandomSource"), bean_sel("sharedRandom")); }
 static inline NSArray           GKRandomSource_ArrayByShufflingObjectsInArray(GKRandomSource self, NSArray array)    { return ((NSArray (*)(GKRandomSource, SEL, NSArray))bean_msgSend)(self, bean_sel("arrayByShufflingObjectsInArray:"), array); }
+static inline NSInteger         GKRandomSource_NextInt(GKRandomSource self)                                          { return ((NSInteger (*)(GKRandomSource, SEL))bean_msgSend)(self, bean_sel("nextInt")); }
+static inline NSUInteger        GKRandomSource_NextIntWithUpperBound(GKRandomSource self, NSUInteger upperBound)     { return ((NSUInteger (*)(GKRandomSource, SEL, NSUInteger))bean_msgSend)(self, bean_sel("nextIntWithUpperBound:"), upperBound); }
+static inline CGFloat           GKRandomSource_NextUniform(GKRandomSource self)                                      { return ((CGFloat (*)(GKRandomSource, SEL))bean_msgSend_fpret)(self, bean_sel("nextUniform")); }
+static inline BOOL              GKRandomSource_NextBool(GKRandomSource self)                                         { return ((BOOL (*)(GKRandomSource, SEL))bean_msgSend)(self, bean_sel("nextBool")); }
+static inline BOOL              GKRandomSource_SupportsSecureCoding(void)                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKRandomSource"), bean_sel("supportsSecureCoding")); }
+static inline id                GKRandomSource_CopyWithZone(GKRandomSource self, NSZone* zone)                       { return ((id (*)(GKRandomSource, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== GKRule ===== */
 #ifndef BEAN_TYPEDEF_GKRule
@@ -5129,14 +6487,14 @@ typedef bean_id GKRule;
 #endif
 static inline BOOL         GKRule_EvaluatePredicateWithSystem(GKRule self, GKRuleSystem system)                            { return ((BOOL (*)(GKRule, SEL, GKRuleSystem))bean_msgSend)(self, bean_sel("evaluatePredicateWithSystem:"), system); }
 static inline void         GKRule_PerformActionWithSystem(GKRule self, GKRuleSystem system)                                { ((void (*)(GKRule, SEL, GKRuleSystem))bean_msgSend)(self, bean_sel("performActionWithSystem:"), system); }
-static inline id           GKRule_RuleWithPredicate_AssertingFact_Grade(NSPredicate predicate, id fact, CGFloat grade)     { return ((id (*)(bean_class, SEL, NSPredicate, id, CGFloat))bean_msgSend)(bean_cls("GKRule"), bean_sel("ruleWithPredicate:assertingFact:grade:"), predicate, fact, grade); }
-static inline id           GKRule_RuleWithPredicate_RetractingFact_Grade(NSPredicate predicate, id fact, CGFloat grade)    { return ((id (*)(bean_class, SEL, NSPredicate, id, CGFloat))bean_msgSend)(bean_cls("GKRule"), bean_sel("ruleWithPredicate:retractingFact:grade:"), predicate, fact, grade); }
-static inline id           GKRule_RuleWithBlockPredicate_Action(void* predicate, void* action)                             { return ((id (*)(bean_class, SEL, void*, void*))bean_msgSend)(bean_cls("GKRule"), bean_sel("ruleWithBlockPredicate:action:"), predicate, action); }
+static inline GKRule       GKRule_RuleWithPredicate_AssertingFact_Grade(NSPredicate predicate, id fact, CGFloat grade)     { return ((GKRule (*)(bean_class, SEL, NSPredicate, id, CGFloat))bean_msgSend)(bean_cls("GKRule"), bean_sel("ruleWithPredicate:assertingFact:grade:"), predicate, fact, grade); }
+static inline GKRule       GKRule_RuleWithPredicate_RetractingFact_Grade(NSPredicate predicate, id fact, CGFloat grade)    { return ((GKRule (*)(bean_class, SEL, NSPredicate, id, CGFloat))bean_msgSend)(bean_cls("GKRule"), bean_sel("ruleWithPredicate:retractingFact:grade:"), predicate, fact, grade); }
+static inline GKRule       GKRule_RuleWithBlockPredicate_Action(void* predicate, void* action)                             { return ((GKRule (*)(bean_class, SEL, void*, void*))bean_msgSend)(bean_cls("GKRule"), bean_sel("ruleWithBlockPredicate:action:"), predicate, action); }
 static inline NSInteger    GKRule_Salience(GKRule self)                                                                    { return ((NSInteger (*)(GKRule, SEL))bean_msgSend)(self, bean_sel("salience")); }
 static inline void         GKRule_SetSalience(GKRule self, NSInteger salience)                                             { ((void (*)(GKRule, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSalience:"), salience); }
 
 /* ===== GKRuleSystem ===== */
-static inline id                     GKRuleSystem_Init(GKRuleSystem self)                                         { return ((id (*)(GKRuleSystem, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKRuleSystem           GKRuleSystem_Init(GKRuleSystem self)                                         { return ((GKRuleSystem (*)(GKRuleSystem, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline void                   GKRuleSystem_Evaluate(GKRuleSystem self)                                     { ((void (*)(GKRuleSystem, SEL))bean_msgSend)(self, bean_sel("evaluate")); }
 static inline void                   GKRuleSystem_AddRule(GKRuleSystem self, GKRule rule)                         { ((void (*)(GKRuleSystem, SEL, GKRule))bean_msgSend)(self, bean_sel("addRule:"), rule); }
 static inline void                   GKRuleSystem_AddRulesFromArray(GKRuleSystem self, NSArray rules)             { ((void (*)(GKRuleSystem, SEL, NSArray))bean_msgSend)(self, bean_sel("addRulesFromArray:"), rules); }
@@ -5160,27 +6518,31 @@ static inline NSArray                GKRuleSystem_Facts(GKRuleSystem self)      
 #define BEAN_TYPEDEF_GKSCNNodeComponent
 typedef bean_id GKSCNNodeComponent;
 #endif
-static inline id         GKSCNNodeComponent_ComponentWithNode(SCNNode node)                        { return ((id (*)(bean_class, SEL, SCNNode))bean_msgSend)(bean_cls("GKSCNNodeComponent"), bean_sel("componentWithNode:"), node); }
-static inline id         GKSCNNodeComponent_InitWithNode(GKSCNNodeComponent self, SCNNode node)    { return ((id (*)(GKSCNNodeComponent, SEL, SCNNode))bean_msgSend)(self, bean_sel("initWithNode:"), node); }
-static inline SCNNode    GKSCNNodeComponent_Node(GKSCNNodeComponent self)                          { return ((SCNNode (*)(GKSCNNodeComponent, SEL))bean_msgSend)(self, bean_sel("node")); }
+static inline GKSCNNodeComponent    GKSCNNodeComponent_ComponentWithNode(SCNNode node)                            { return ((GKSCNNodeComponent (*)(bean_class, SEL, SCNNode))bean_msgSend)(bean_cls("GKSCNNodeComponent"), bean_sel("componentWithNode:"), node); }
+static inline GKSCNNodeComponent    GKSCNNodeComponent_InitWithNode(GKSCNNodeComponent self, SCNNode node)        { return ((GKSCNNodeComponent (*)(GKSCNNodeComponent, SEL, SCNNode))bean_msgSend)(self, bean_sel("initWithNode:"), node); }
+static inline SCNNode               GKSCNNodeComponent_Node(GKSCNNodeComponent self)                              { return ((SCNNode (*)(GKSCNNodeComponent, SEL))bean_msgSend)(self, bean_sel("node")); }
+static inline void                  GKSCNNodeComponent_AgentWillUpdate(GKSCNNodeComponent self, GKAgent agent)    { ((void (*)(GKSCNNodeComponent, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentWillUpdate:"), agent); }
+static inline void                  GKSCNNodeComponent_AgentDidUpdate(GKSCNNodeComponent self, GKAgent agent)     { ((void (*)(GKSCNNodeComponent, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentDidUpdate:"), agent); }
 
 /* ===== GKSKNodeComponent ===== */
 #ifndef BEAN_TYPEDEF_GKSKNodeComponent
 #define BEAN_TYPEDEF_GKSKNodeComponent
 typedef bean_id GKSKNodeComponent;
 #endif
-static inline id        GKSKNodeComponent_ComponentWithNode(SKNode node)                       { return ((id (*)(bean_class, SEL, SKNode))bean_msgSend)(bean_cls("GKSKNodeComponent"), bean_sel("componentWithNode:"), node); }
-static inline id        GKSKNodeComponent_InitWithNode(GKSKNodeComponent self, SKNode node)    { return ((id (*)(GKSKNodeComponent, SEL, SKNode))bean_msgSend)(self, bean_sel("initWithNode:"), node); }
-static inline SKNode    GKSKNodeComponent_Node(GKSKNodeComponent self)                         { return ((SKNode (*)(GKSKNodeComponent, SEL))bean_msgSend)(self, bean_sel("node")); }
-static inline void      GKSKNodeComponent_SetNode(GKSKNodeComponent self, SKNode node)         { ((void (*)(GKSKNodeComponent, SEL, SKNode))bean_msgSend)(self, bean_sel("setNode:"), node); }
+static inline GKSKNodeComponent    GKSKNodeComponent_ComponentWithNode(SKNode node)                            { return ((GKSKNodeComponent (*)(bean_class, SEL, SKNode))bean_msgSend)(bean_cls("GKSKNodeComponent"), bean_sel("componentWithNode:"), node); }
+static inline GKSKNodeComponent    GKSKNodeComponent_InitWithNode(GKSKNodeComponent self, SKNode node)         { return ((GKSKNodeComponent (*)(GKSKNodeComponent, SEL, SKNode))bean_msgSend)(self, bean_sel("initWithNode:"), node); }
+static inline SKNode               GKSKNodeComponent_Node(GKSKNodeComponent self)                              { return ((SKNode (*)(GKSKNodeComponent, SEL))bean_msgSend)(self, bean_sel("node")); }
+static inline void                 GKSKNodeComponent_SetNode(GKSKNodeComponent self, SKNode node)              { ((void (*)(GKSKNodeComponent, SEL, SKNode))bean_msgSend)(self, bean_sel("setNode:"), node); }
+static inline void                 GKSKNodeComponent_AgentWillUpdate(GKSKNodeComponent self, GKAgent agent)    { ((void (*)(GKSKNodeComponent, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentWillUpdate:"), agent); }
+static inline void                 GKSKNodeComponent_AgentDidUpdate(GKSKNodeComponent self, GKAgent agent)     { ((void (*)(GKSKNodeComponent, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentDidUpdate:"), agent); }
 
 /* ===== GKScene ===== */
 #ifndef BEAN_TYPEDEF_GKScene
 #define BEAN_TYPEDEF_GKScene
 typedef bean_id GKScene;
 #endif
-static inline id              GKScene_SceneWithFileNamed(NSString filename)                          { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("GKScene"), bean_sel("sceneWithFileNamed:"), filename); }
-static inline id              GKScene_SceneWithFileNamed_RootNode(NSString filename, id rootNode)    { return ((id (*)(bean_class, SEL, NSString, id))bean_msgSend)(bean_cls("GKScene"), bean_sel("sceneWithFileNamed:rootNode:"), filename, rootNode); }
+static inline GKScene         GKScene_SceneWithFileNamed(NSString filename)                          { return ((GKScene (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("GKScene"), bean_sel("sceneWithFileNamed:"), filename); }
+static inline GKScene         GKScene_SceneWithFileNamed_RootNode(NSString filename, id rootNode)    { return ((GKScene (*)(bean_class, SEL, NSString, id))bean_msgSend)(bean_cls("GKScene"), bean_sel("sceneWithFileNamed:rootNode:"), filename, rootNode); }
 static inline void            GKScene_AddEntity(GKScene self, GKEntity entity)                       { ((void (*)(GKScene, SEL, GKEntity))bean_msgSend)(self, bean_sel("addEntity:"), entity); }
 static inline void            GKScene_RemoveEntity(GKScene self, GKEntity entity)                    { ((void (*)(GKScene, SEL, GKEntity))bean_msgSend)(self, bean_sel("removeEntity:"), entity); }
 static inline void            GKScene_AddGraph_Name(GKScene self, GKGraph graph, NSString name)      { ((void (*)(GKScene, SEL, GKGraph, NSString))bean_msgSend)(self, bean_sel("addGraph:name:"), graph, name); }
@@ -5189,14 +6551,16 @@ static inline NSArray         GKScene_Entities(GKScene self)                    
 static inline id              GKScene_RootNode(GKScene self)                                         { return ((id (*)(GKScene, SEL))bean_msgSend)(self, bean_sel("rootNode")); }
 static inline void            GKScene_SetRootNode(GKScene self, id rootNode)                         { ((void (*)(GKScene, SEL, id))bean_msgSend)(self, bean_sel("setRootNode:"), rootNode); }
 static inline NSDictionary    GKScene_Graphs(GKScene self)                                           { return ((NSDictionary (*)(GKScene, SEL))bean_msgSend)(self, bean_sel("graphs")); }
+static inline id              GKScene_CopyWithZone(GKScene self, NSZone* zone)                       { return ((id (*)(GKScene, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL            GKScene_SupportsSecureCoding(void)                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKScene"), bean_sel("supportsSecureCoding")); }
 
 /* ===== GKState ===== */
 #ifndef BEAN_TYPEDEF_GKState
 #define BEAN_TYPEDEF_GKState
 typedef bean_id GKState;
 #endif
-static inline id                GKState_State(void)                                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKState"), bean_sel("state")); }
-static inline id                GKState_Init(GKState self)                                                { return ((id (*)(GKState, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline GKState           GKState_State(void)                                                       { return ((GKState (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKState"), bean_sel("state")); }
+static inline GKState           GKState_Init(GKState self)                                                { return ((GKState (*)(GKState, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline BOOL              GKState_IsValidNextState(GKState self, bean_class stateClass)             { return ((BOOL (*)(GKState, SEL, bean_class))bean_msgSend)(self, bean_sel("isValidNextState:"), stateClass); }
 static inline void              GKState_DidEnterWithPreviousState(GKState self, GKState previousState)    { ((void (*)(GKState, SEL, GKState))bean_msgSend)(self, bean_sel("didEnterWithPreviousState:"), previousState); }
 static inline void              GKState_UpdateWithDeltaTime(GKState self, CGFloat seconds)                { ((void (*)(GKState, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
@@ -5204,13 +6568,13 @@ static inline void              GKState_WillExitWithNextState(GKState self, GKSt
 static inline GKStateMachine    GKState_StateMachine(GKState self)                                        { return ((GKStateMachine (*)(GKState, SEL))bean_msgSend)(self, bean_sel("stateMachine")); }
 
 /* ===== GKStateMachine ===== */
-static inline id         GKStateMachine_StateMachineWithStates(NSArray states)                       { return ((id (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKStateMachine"), bean_sel("stateMachineWithStates:"), states); }
-static inline id         GKStateMachine_InitWithStates(GKStateMachine self, NSArray states)          { return ((id (*)(GKStateMachine, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithStates:"), states); }
-static inline void       GKStateMachine_UpdateWithDeltaTime(GKStateMachine self, CGFloat sec)        { ((void (*)(GKStateMachine, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), sec); }
-static inline GKState    GKStateMachine_StateForClass(GKStateMachine self, bean_class stateClass)    { return ((GKState (*)(GKStateMachine, SEL, bean_class))bean_msgSend)(self, bean_sel("stateForClass:"), stateClass); }
-static inline BOOL       GKStateMachine_CanEnterState(GKStateMachine self, bean_class stateClass)    { return ((BOOL (*)(GKStateMachine, SEL, bean_class))bean_msgSend)(self, bean_sel("canEnterState:"), stateClass); }
-static inline BOOL       GKStateMachine_EnterState(GKStateMachine self, bean_class stateClass)       { return ((BOOL (*)(GKStateMachine, SEL, bean_class))bean_msgSend)(self, bean_sel("enterState:"), stateClass); }
-static inline GKState    GKStateMachine_CurrentState(GKStateMachine self)                            { return ((GKState (*)(GKStateMachine, SEL))bean_msgSend)(self, bean_sel("currentState")); }
+static inline GKStateMachine    GKStateMachine_StateMachineWithStates(NSArray states)                       { return ((GKStateMachine (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKStateMachine"), bean_sel("stateMachineWithStates:"), states); }
+static inline GKStateMachine    GKStateMachine_InitWithStates(GKStateMachine self, NSArray states)          { return ((GKStateMachine (*)(GKStateMachine, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithStates:"), states); }
+static inline void              GKStateMachine_UpdateWithDeltaTime(GKStateMachine self, CGFloat sec)        { ((void (*)(GKStateMachine, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), sec); }
+static inline GKState           GKStateMachine_StateForClass(GKStateMachine self, bean_class stateClass)    { return ((GKState (*)(GKStateMachine, SEL, bean_class))bean_msgSend)(self, bean_sel("stateForClass:"), stateClass); }
+static inline BOOL              GKStateMachine_CanEnterState(GKStateMachine self, bean_class stateClass)    { return ((BOOL (*)(GKStateMachine, SEL, bean_class))bean_msgSend)(self, bean_sel("canEnterState:"), stateClass); }
+static inline BOOL              GKStateMachine_EnterState(GKStateMachine self, bean_class stateClass)       { return ((BOOL (*)(GKStateMachine, SEL, bean_class))bean_msgSend)(self, bean_sel("enterState:"), stateClass); }
+static inline GKState           GKStateMachine_CurrentState(GKStateMachine self)                            { return ((GKState (*)(GKStateMachine, SEL))bean_msgSend)(self, bean_sel("currentState")); }
 
 /* ===== NSArray ===== */
 static inline NSArray    NSArray_ShuffledArrayWithRandomSource(NSArray self, GKRandomSource randomSource)    { return ((NSArray (*)(NSArray, SEL, GKRandomSource))bean_msgSend)(self, bean_sel("shuffledArrayWithRandomSource:"), randomSource); }
@@ -5221,11 +6585,11 @@ static inline NSArray    NSArray_ShuffledArray(NSArray self)                    
 #define BEAN_TYPEDEF_NSAsynchronousFetchRequest
 typedef bean_id NSAsynchronousFetchRequest;
 #endif
-static inline id                NSAsynchronousFetchRequest_InitWithFetchRequest_CompletionBlock(NSAsynchronousFetchRequest self, NSFetchRequest request, void* blk)    { return ((id (*)(NSAsynchronousFetchRequest, SEL, NSFetchRequest, void*))bean_msgSend)(self, bean_sel("initWithFetchRequest:completionBlock:"), request, blk); }
-static inline NSFetchRequest    NSAsynchronousFetchRequest_FetchRequest(NSAsynchronousFetchRequest self)                                                               { return ((NSFetchRequest (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
-static inline void*             NSAsynchronousFetchRequest_CompletionBlock(NSAsynchronousFetchRequest self)                                                            { return ((void* (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("completionBlock")); }
-static inline NSInteger         NSAsynchronousFetchRequest_EstimatedResultCount(NSAsynchronousFetchRequest self)                                                       { return ((NSInteger (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("estimatedResultCount")); }
-static inline void              NSAsynchronousFetchRequest_SetEstimatedResultCount(NSAsynchronousFetchRequest self, NSInteger estimatedResultCount)                    { ((void (*)(NSAsynchronousFetchRequest, SEL, NSInteger))bean_msgSend)(self, bean_sel("setEstimatedResultCount:"), estimatedResultCount); }
+static inline NSAsynchronousFetchRequest    NSAsynchronousFetchRequest_InitWithFetchRequest_CompletionBlock(NSAsynchronousFetchRequest self, NSFetchRequest request, void* blk)    { return ((NSAsynchronousFetchRequest (*)(NSAsynchronousFetchRequest, SEL, NSFetchRequest, void*))bean_msgSend)(self, bean_sel("initWithFetchRequest:completionBlock:"), request, blk); }
+static inline NSFetchRequest                NSAsynchronousFetchRequest_FetchRequest(NSAsynchronousFetchRequest self)                                                               { return ((NSFetchRequest (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
+static inline void*                         NSAsynchronousFetchRequest_CompletionBlock(NSAsynchronousFetchRequest self)                                                            { return ((void* (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("completionBlock")); }
+static inline NSInteger                     NSAsynchronousFetchRequest_EstimatedResultCount(NSAsynchronousFetchRequest self)                                                       { return ((NSInteger (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("estimatedResultCount")); }
+static inline void                          NSAsynchronousFetchRequest_SetEstimatedResultCount(NSAsynchronousFetchRequest self, NSInteger estimatedResultCount)                    { ((void (*)(NSAsynchronousFetchRequest, SEL, NSInteger))bean_msgSend)(self, bean_sel("setEstimatedResultCount:"), estimatedResultCount); }
 
 /* ===== NSAsynchronousFetchResult ===== */
 #ifndef BEAN_TYPEDEF_NSAsynchronousFetchResult
@@ -5240,7 +6604,7 @@ static inline NSArray                       NSAsynchronousFetchResult_FinalResul
 #define BEAN_TYPEDEF_NSAtomicStore
 typedef bean_id NSAtomicStore;
 #endif
-static inline id                        NSAtomicStore_InitWithPersistentStoreCoordinator_ConfigurationName_URL_Options(NSAtomicStore self, NSPersistentStoreCoordinator coordinator, NSString configurationName, NSURL url, NSDictionary options)    { return ((id (*)(NSAtomicStore, SEL, NSPersistentStoreCoordinator, NSString, NSURL, NSDictionary))bean_msgSend)(self, bean_sel("initWithPersistentStoreCoordinator:configurationName:URL:options:"), coordinator, configurationName, url, options); }
+static inline NSAtomicStore             NSAtomicStore_InitWithPersistentStoreCoordinator_ConfigurationName_URL_Options(NSAtomicStore self, NSPersistentStoreCoordinator coordinator, NSString configurationName, NSURL url, NSDictionary options)    { return ((NSAtomicStore (*)(NSAtomicStore, SEL, NSPersistentStoreCoordinator, NSString, NSURL, NSDictionary))bean_msgSend)(self, bean_sel("initWithPersistentStoreCoordinator:configurationName:URL:options:"), coordinator, configurationName, url, options); }
 static inline BOOL                      NSAtomicStore_Load(NSAtomicStore self, NSError error)                                                                                                                                                        { return ((BOOL (*)(NSAtomicStore, SEL, NSError))bean_msgSend)(self, bean_sel("load:"), error); }
 static inline BOOL                      NSAtomicStore_Save(NSAtomicStore self, NSError error)                                                                                                                                                        { return ((BOOL (*)(NSAtomicStore, SEL, NSError))bean_msgSend)(self, bean_sel("save:"), error); }
 static inline NSAtomicStoreCacheNode    NSAtomicStore_NewCacheNodeForManagedObject(NSAtomicStore self, NSManagedObject managedObject)                                                                                                                { return ((NSAtomicStoreCacheNode (*)(NSAtomicStore, SEL, NSManagedObject))bean_msgSend)(self, bean_sel("newCacheNodeForManagedObject:"), managedObject); }
@@ -5254,21 +6618,21 @@ static inline id                        NSAtomicStore_NewReferenceObjectForManag
 static inline id                        NSAtomicStore_ReferenceObjectForObjectID(NSAtomicStore self, NSManagedObjectID objectID)                                                                                                                     { return ((id (*)(NSAtomicStore, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("referenceObjectForObjectID:"), objectID); }
 
 /* ===== NSAtomicStoreCacheNode ===== */
-static inline id                     NSAtomicStoreCacheNode_InitWithObjectID(NSAtomicStoreCacheNode self, NSManagedObjectID moid)               { return ((id (*)(NSAtomicStoreCacheNode, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("initWithObjectID:"), moid); }
-static inline id                     NSAtomicStoreCacheNode_ValueForKey(NSAtomicStoreCacheNode self, NSString key)                              { return ((id (*)(NSAtomicStoreCacheNode, SEL, NSString))bean_msgSend)(self, bean_sel("valueForKey:"), key); }
-static inline void                   NSAtomicStoreCacheNode_SetValue_ForKey(NSAtomicStoreCacheNode self, id value, NSString key)                { ((void (*)(NSAtomicStoreCacheNode, SEL, id, NSString))bean_msgSend)(self, bean_sel("setValue:forKey:"), value, key); }
-static inline NSManagedObjectID      NSAtomicStoreCacheNode_ObjectID(NSAtomicStoreCacheNode self)                                               { return ((NSManagedObjectID (*)(NSAtomicStoreCacheNode, SEL))bean_msgSend)(self, bean_sel("objectID")); }
-static inline NSMutableDictionary    NSAtomicStoreCacheNode_PropertyCache(NSAtomicStoreCacheNode self)                                          { return ((NSMutableDictionary (*)(NSAtomicStoreCacheNode, SEL))bean_msgSend)(self, bean_sel("propertyCache")); }
-static inline void                   NSAtomicStoreCacheNode_SetPropertyCache(NSAtomicStoreCacheNode self, NSMutableDictionary propertyCache)    { ((void (*)(NSAtomicStoreCacheNode, SEL, NSMutableDictionary))bean_msgSend)(self, bean_sel("setPropertyCache:"), propertyCache); }
+static inline NSAtomicStoreCacheNode    NSAtomicStoreCacheNode_InitWithObjectID(NSAtomicStoreCacheNode self, NSManagedObjectID moid)               { return ((NSAtomicStoreCacheNode (*)(NSAtomicStoreCacheNode, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("initWithObjectID:"), moid); }
+static inline id                        NSAtomicStoreCacheNode_ValueForKey(NSAtomicStoreCacheNode self, NSString key)                              { return ((id (*)(NSAtomicStoreCacheNode, SEL, NSString))bean_msgSend)(self, bean_sel("valueForKey:"), key); }
+static inline void                      NSAtomicStoreCacheNode_SetValue_ForKey(NSAtomicStoreCacheNode self, id value, NSString key)                { ((void (*)(NSAtomicStoreCacheNode, SEL, id, NSString))bean_msgSend)(self, bean_sel("setValue:forKey:"), value, key); }
+static inline NSManagedObjectID         NSAtomicStoreCacheNode_ObjectID(NSAtomicStoreCacheNode self)                                               { return ((NSManagedObjectID (*)(NSAtomicStoreCacheNode, SEL))bean_msgSend)(self, bean_sel("objectID")); }
+static inline NSMutableDictionary       NSAtomicStoreCacheNode_PropertyCache(NSAtomicStoreCacheNode self)                                          { return ((NSMutableDictionary (*)(NSAtomicStoreCacheNode, SEL))bean_msgSend)(self, bean_sel("propertyCache")); }
+static inline void                      NSAtomicStoreCacheNode_SetPropertyCache(NSAtomicStoreCacheNode self, NSMutableDictionary propertyCache)    { ((void (*)(NSAtomicStoreCacheNode, SEL, NSMutableDictionary))bean_msgSend)(self, bean_sel("setPropertyCache:"), propertyCache); }
 
 /* ===== NSBatchDeleteRequest ===== */
 #ifndef BEAN_TYPEDEF_NSBatchDeleteRequest
 #define BEAN_TYPEDEF_NSBatchDeleteRequest
 typedef bean_id NSBatchDeleteRequest;
 #endif
-static inline id                                NSBatchDeleteRequest_Init(NSBatchDeleteRequest self)                                                        { return ((id (*)(NSBatchDeleteRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                NSBatchDeleteRequest_InitWithFetchRequest(NSBatchDeleteRequest self, NSFetchRequest fetch)                  { return ((id (*)(NSBatchDeleteRequest, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("initWithFetchRequest:"), fetch); }
-static inline id                                NSBatchDeleteRequest_InitWithObjectIDs(NSBatchDeleteRequest self, NSArray objects)                          { return ((id (*)(NSBatchDeleteRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithObjectIDs:"), objects); }
+static inline NSBatchDeleteRequest              NSBatchDeleteRequest_Init(NSBatchDeleteRequest self)                                                        { return ((NSBatchDeleteRequest (*)(NSBatchDeleteRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSBatchDeleteRequest              NSBatchDeleteRequest_InitWithFetchRequest(NSBatchDeleteRequest self, NSFetchRequest fetch)                  { return ((NSBatchDeleteRequest (*)(NSBatchDeleteRequest, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("initWithFetchRequest:"), fetch); }
+static inline NSBatchDeleteRequest              NSBatchDeleteRequest_InitWithObjectIDs(NSBatchDeleteRequest self, NSArray objects)                          { return ((NSBatchDeleteRequest (*)(NSBatchDeleteRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithObjectIDs:"), objects); }
 static inline NSBatchDeleteRequestResultType    NSBatchDeleteRequest_ResultType(NSBatchDeleteRequest self)                                                  { return ((NSBatchDeleteRequestResultType (*)(NSBatchDeleteRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 static inline void                              NSBatchDeleteRequest_SetResultType(NSBatchDeleteRequest self, NSBatchDeleteRequestResultType resultType)    { ((void (*)(NSBatchDeleteRequest, SEL, NSBatchDeleteRequestResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
 static inline NSFetchRequest                    NSBatchDeleteRequest_FetchRequest(NSBatchDeleteRequest self)                                                { return ((NSFetchRequest (*)(NSBatchDeleteRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
@@ -5278,16 +6642,16 @@ static inline NSFetchRequest                    NSBatchDeleteRequest_FetchReques
 #define BEAN_TYPEDEF_NSBatchInsertRequest
 typedef bean_id NSBatchInsertRequest;
 #endif
-static inline id                                NSBatchInsertRequest_BatchInsertRequestWithEntityName_Objects(NSString entityName, NSArray dictionaries)                          { return ((id (*)(bean_class, SEL, NSString, NSArray))bean_msgSend)(bean_cls("NSBatchInsertRequest"), bean_sel("batchInsertRequestWithEntityName:objects:"), entityName, dictionaries); }
-static inline id                                NSBatchInsertRequest_BatchInsertRequestWithEntityName_DictionaryHandler(NSString entityName, void* handler)                       { return ((id (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("NSBatchInsertRequest"), bean_sel("batchInsertRequestWithEntityName:dictionaryHandler:"), entityName, handler); }
-static inline id                                NSBatchInsertRequest_BatchInsertRequestWithEntityName_ManagedObjectHandler(NSString entityName, void* handler)                    { return ((id (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("NSBatchInsertRequest"), bean_sel("batchInsertRequestWithEntityName:managedObjectHandler:"), entityName, handler); }
-static inline id                                NSBatchInsertRequest_Init(NSBatchInsertRequest self)                                                                              { return ((id (*)(NSBatchInsertRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                NSBatchInsertRequest_InitWithEntityName_Objects(NSBatchInsertRequest self, NSString entityName, NSArray dictionaries)             { return ((id (*)(NSBatchInsertRequest, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithEntityName:objects:"), entityName, dictionaries); }
-static inline id                                NSBatchInsertRequest_InitWithEntity_Objects(NSBatchInsertRequest self, NSEntityDescription entity, NSArray dictionaries)          { return ((id (*)(NSBatchInsertRequest, SEL, NSEntityDescription, NSArray))bean_msgSend)(self, bean_sel("initWithEntity:objects:"), entity, dictionaries); }
-static inline id                                NSBatchInsertRequest_InitWithEntity_DictionaryHandler(NSBatchInsertRequest self, NSEntityDescription entity, void* handler)       { return ((id (*)(NSBatchInsertRequest, SEL, NSEntityDescription, void*))bean_msgSend)(self, bean_sel("initWithEntity:dictionaryHandler:"), entity, handler); }
-static inline id                                NSBatchInsertRequest_InitWithEntity_ManagedObjectHandler(NSBatchInsertRequest self, NSEntityDescription entity, void* handler)    { return ((id (*)(NSBatchInsertRequest, SEL, NSEntityDescription, void*))bean_msgSend)(self, bean_sel("initWithEntity:managedObjectHandler:"), entity, handler); }
-static inline id                                NSBatchInsertRequest_InitWithEntityName_DictionaryHandler(NSBatchInsertRequest self, NSString entityName, void* handler)          { return ((id (*)(NSBatchInsertRequest, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithEntityName:dictionaryHandler:"), entityName, handler); }
-static inline id                                NSBatchInsertRequest_InitWithEntityName_ManagedObjectHandler(NSBatchInsertRequest self, NSString entityName, void* handler)       { return ((id (*)(NSBatchInsertRequest, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithEntityName:managedObjectHandler:"), entityName, handler); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_BatchInsertRequestWithEntityName_Objects(NSString entityName, NSArray dictionaries)                          { return ((NSBatchInsertRequest (*)(bean_class, SEL, NSString, NSArray))bean_msgSend)(bean_cls("NSBatchInsertRequest"), bean_sel("batchInsertRequestWithEntityName:objects:"), entityName, dictionaries); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_BatchInsertRequestWithEntityName_DictionaryHandler(NSString entityName, void* handler)                       { return ((NSBatchInsertRequest (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("NSBatchInsertRequest"), bean_sel("batchInsertRequestWithEntityName:dictionaryHandler:"), entityName, handler); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_BatchInsertRequestWithEntityName_ManagedObjectHandler(NSString entityName, void* handler)                    { return ((NSBatchInsertRequest (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("NSBatchInsertRequest"), bean_sel("batchInsertRequestWithEntityName:managedObjectHandler:"), entityName, handler); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_Init(NSBatchInsertRequest self)                                                                              { return ((NSBatchInsertRequest (*)(NSBatchInsertRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_InitWithEntityName_Objects(NSBatchInsertRequest self, NSString entityName, NSArray dictionaries)             { return ((NSBatchInsertRequest (*)(NSBatchInsertRequest, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithEntityName:objects:"), entityName, dictionaries); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_InitWithEntity_Objects(NSBatchInsertRequest self, NSEntityDescription entity, NSArray dictionaries)          { return ((NSBatchInsertRequest (*)(NSBatchInsertRequest, SEL, NSEntityDescription, NSArray))bean_msgSend)(self, bean_sel("initWithEntity:objects:"), entity, dictionaries); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_InitWithEntity_DictionaryHandler(NSBatchInsertRequest self, NSEntityDescription entity, void* handler)       { return ((NSBatchInsertRequest (*)(NSBatchInsertRequest, SEL, NSEntityDescription, void*))bean_msgSend)(self, bean_sel("initWithEntity:dictionaryHandler:"), entity, handler); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_InitWithEntity_ManagedObjectHandler(NSBatchInsertRequest self, NSEntityDescription entity, void* handler)    { return ((NSBatchInsertRequest (*)(NSBatchInsertRequest, SEL, NSEntityDescription, void*))bean_msgSend)(self, bean_sel("initWithEntity:managedObjectHandler:"), entity, handler); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_InitWithEntityName_DictionaryHandler(NSBatchInsertRequest self, NSString entityName, void* handler)          { return ((NSBatchInsertRequest (*)(NSBatchInsertRequest, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithEntityName:dictionaryHandler:"), entityName, handler); }
+static inline NSBatchInsertRequest              NSBatchInsertRequest_InitWithEntityName_ManagedObjectHandler(NSBatchInsertRequest self, NSString entityName, void* handler)       { return ((NSBatchInsertRequest (*)(NSBatchInsertRequest, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithEntityName:managedObjectHandler:"), entityName, handler); }
 static inline NSString                          NSBatchInsertRequest_EntityName(NSBatchInsertRequest self)                                                                        { return ((NSString (*)(NSBatchInsertRequest, SEL))bean_msgSend)(self, bean_sel("entityName")); }
 static inline NSEntityDescription               NSBatchInsertRequest_Entity(NSBatchInsertRequest self)                                                                            { return ((NSEntityDescription (*)(NSBatchInsertRequest, SEL))bean_msgSend)(self, bean_sel("entity")); }
 static inline NSArray                           NSBatchInsertRequest_ObjectsToInsert(NSBatchInsertRequest self)                                                                   { return ((NSArray (*)(NSBatchInsertRequest, SEL))bean_msgSend)(self, bean_sel("objectsToInsert")); }
@@ -5304,9 +6668,9 @@ static inline void                              NSBatchInsertRequest_SetResultTy
 #define BEAN_TYPEDEF_NSBatchUpdateRequest
 typedef bean_id NSBatchUpdateRequest;
 #endif
-static inline id                                NSBatchUpdateRequest_BatchUpdateRequestWithEntityName(NSString entityName)                                  { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSBatchUpdateRequest"), bean_sel("batchUpdateRequestWithEntityName:"), entityName); }
-static inline id                                NSBatchUpdateRequest_InitWithEntityName(NSBatchUpdateRequest self, NSString entityName)                     { return ((id (*)(NSBatchUpdateRequest, SEL, NSString))bean_msgSend)(self, bean_sel("initWithEntityName:"), entityName); }
-static inline id                                NSBatchUpdateRequest_InitWithEntity(NSBatchUpdateRequest self, NSEntityDescription entity)                  { return ((id (*)(NSBatchUpdateRequest, SEL, NSEntityDescription))bean_msgSend)(self, bean_sel("initWithEntity:"), entity); }
+static inline NSBatchUpdateRequest              NSBatchUpdateRequest_BatchUpdateRequestWithEntityName(NSString entityName)                                  { return ((NSBatchUpdateRequest (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSBatchUpdateRequest"), bean_sel("batchUpdateRequestWithEntityName:"), entityName); }
+static inline NSBatchUpdateRequest              NSBatchUpdateRequest_InitWithEntityName(NSBatchUpdateRequest self, NSString entityName)                     { return ((NSBatchUpdateRequest (*)(NSBatchUpdateRequest, SEL, NSString))bean_msgSend)(self, bean_sel("initWithEntityName:"), entityName); }
+static inline NSBatchUpdateRequest              NSBatchUpdateRequest_InitWithEntity(NSBatchUpdateRequest self, NSEntityDescription entity)                  { return ((NSBatchUpdateRequest (*)(NSBatchUpdateRequest, SEL, NSEntityDescription))bean_msgSend)(self, bean_sel("initWithEntity:"), entity); }
 static inline NSString                          NSBatchUpdateRequest_EntityName(NSBatchUpdateRequest self)                                                  { return ((NSString (*)(NSBatchUpdateRequest, SEL))bean_msgSend)(self, bean_sel("entityName")); }
 static inline NSEntityDescription               NSBatchUpdateRequest_Entity(NSBatchUpdateRequest self)                                                      { return ((NSEntityDescription (*)(NSBatchUpdateRequest, SEL))bean_msgSend)(self, bean_sel("entity")); }
 static inline NSPredicate                       NSBatchUpdateRequest_Predicate(NSBatchUpdateRequest self)                                                   { return ((NSPredicate (*)(NSBatchUpdateRequest, SEL))bean_msgSend)(self, bean_sel("predicate")); }
@@ -5331,40 +6695,40 @@ static inline void       NSCompositeAttributeDescription_SetElements(NSComposite
 #define BEAN_TYPEDEF_NSConstraintConflict
 typedef bean_id NSConstraintConflict;
 #endif
-static inline id                 NSConstraintConflict_InitWithConstraint_DatabaseObject_DatabaseSnapshot_ConflictingObjects_ConflictingSnapshots(NSConstraintConflict self, NSArray contraint, NSManagedObject databaseObject, NSDictionary databaseSnapshot, NSArray conflictingObjects, NSArray conflictingSnapshots)    { return ((id (*)(NSConstraintConflict, SEL, NSArray, NSManagedObject, NSDictionary, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithConstraint:databaseObject:databaseSnapshot:conflictingObjects:conflictingSnapshots:"), contraint, databaseObject, databaseSnapshot, conflictingObjects, conflictingSnapshots); }
-static inline NSArray            NSConstraintConflict_Constraint(NSConstraintConflict self)                                                                                                                                                                                                                                { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("constraint")); }
-static inline NSDictionary       NSConstraintConflict_ConstraintValues(NSConstraintConflict self)                                                                                                                                                                                                                          { return ((NSDictionary (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("constraintValues")); }
-static inline NSManagedObject    NSConstraintConflict_DatabaseObject(NSConstraintConflict self)                                                                                                                                                                                                                            { return ((NSManagedObject (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("databaseObject")); }
-static inline NSDictionary       NSConstraintConflict_DatabaseSnapshot(NSConstraintConflict self)                                                                                                                                                                                                                          { return ((NSDictionary (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("databaseSnapshot")); }
-static inline NSArray            NSConstraintConflict_ConflictingObjects(NSConstraintConflict self)                                                                                                                                                                                                                        { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("conflictingObjects")); }
-static inline NSArray            NSConstraintConflict_ConflictingSnapshots(NSConstraintConflict self)                                                                                                                                                                                                                      { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("conflictingSnapshots")); }
+static inline NSConstraintConflict    NSConstraintConflict_InitWithConstraint_DatabaseObject_DatabaseSnapshot_ConflictingObjects_ConflictingSnapshots(NSConstraintConflict self, NSArray contraint, NSManagedObject databaseObject, NSDictionary databaseSnapshot, NSArray conflictingObjects, NSArray conflictingSnapshots)    { return ((NSConstraintConflict (*)(NSConstraintConflict, SEL, NSArray, NSManagedObject, NSDictionary, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithConstraint:databaseObject:databaseSnapshot:conflictingObjects:conflictingSnapshots:"), contraint, databaseObject, databaseSnapshot, conflictingObjects, conflictingSnapshots); }
+static inline NSArray                 NSConstraintConflict_Constraint(NSConstraintConflict self)                                                                                                                                                                                                                                { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("constraint")); }
+static inline NSDictionary            NSConstraintConflict_ConstraintValues(NSConstraintConflict self)                                                                                                                                                                                                                          { return ((NSDictionary (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("constraintValues")); }
+static inline NSManagedObject         NSConstraintConflict_DatabaseObject(NSConstraintConflict self)                                                                                                                                                                                                                            { return ((NSManagedObject (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("databaseObject")); }
+static inline NSDictionary            NSConstraintConflict_DatabaseSnapshot(NSConstraintConflict self)                                                                                                                                                                                                                          { return ((NSDictionary (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("databaseSnapshot")); }
+static inline NSArray                 NSConstraintConflict_ConflictingObjects(NSConstraintConflict self)                                                                                                                                                                                                                        { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("conflictingObjects")); }
+static inline NSArray                 NSConstraintConflict_ConflictingSnapshots(NSConstraintConflict self)                                                                                                                                                                                                                      { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("conflictingSnapshots")); }
 
 /* ===== NSCoreDataCoreSpotlightDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSCoreDataCoreSpotlightDelegate
 #define BEAN_TYPEDEF_NSCoreDataCoreSpotlightDelegate
 typedef bean_id NSCoreDataCoreSpotlightDelegate;
 #endif
-static inline NSString                        NSCoreDataCoreSpotlightDelegate_DomainIdentifier(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                      { return ((NSString (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("domainIdentifier")); }
-static inline NSString                        NSCoreDataCoreSpotlightDelegate_IndexName(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                             { return ((NSString (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("indexName")); }
-static inline id                              NSCoreDataCoreSpotlightDelegate_Init(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                                  { return ((id (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                              NSCoreDataCoreSpotlightDelegate_InitForStoreWithDescription_Coordinator(NSCoreDataCoreSpotlightDelegate self, NSPersistentStoreDescription description, NSPersistentStoreCoordinator psc)                                                   { return ((id (*)(NSCoreDataCoreSpotlightDelegate, SEL, NSPersistentStoreDescription, NSPersistentStoreCoordinator))bean_msgSend)(self, bean_sel("initForStoreWithDescription:coordinator:"), description, psc); }
-static inline id                              NSCoreDataCoreSpotlightDelegate_InitForStoreWithDescription_Model(NSCoreDataCoreSpotlightDelegate self, NSPersistentStoreDescription description, NSManagedObjectModel model)                                                               { return ((id (*)(NSCoreDataCoreSpotlightDelegate, SEL, NSPersistentStoreDescription, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initForStoreWithDescription:model:"), description, model); }
-static inline void                            NSCoreDataCoreSpotlightDelegate_StartSpotlightIndexing(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("startSpotlightIndexing")); }
-static inline void                            NSCoreDataCoreSpotlightDelegate_StopSpotlightIndexing(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                 { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("stopSpotlightIndexing")); }
-static inline void                            NSCoreDataCoreSpotlightDelegate_DeleteSpotlightIndexWithCompletionHandler(NSCoreDataCoreSpotlightDelegate self, void* completionHandler)                                                                                                    { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL, void*))bean_msgSend)(self, bean_sel("deleteSpotlightIndexWithCompletionHandler:"), completionHandler); }
-static inline CSSearchableItemAttributeSet    NSCoreDataCoreSpotlightDelegate_AttributeSetForObject(NSCoreDataCoreSpotlightDelegate self, NSManagedObject object)                                                                                                                         { return ((CSSearchableItemAttributeSet (*)(NSCoreDataCoreSpotlightDelegate, SEL, NSManagedObject))bean_msgSend)(self, bean_sel("attributeSetForObject:"), object); }
-static inline void                            NSCoreDataCoreSpotlightDelegate_SearchableIndex_ReindexAllSearchableItemsWithAcknowledgementHandler(NSCoreDataCoreSpotlightDelegate self, CSSearchableIndex searchableIndex, void* acknowledgementHandler)                                  { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL, CSSearchableIndex, void*))bean_msgSend)(self, bean_sel("searchableIndex:reindexAllSearchableItemsWithAcknowledgementHandler:"), searchableIndex, acknowledgementHandler); }
-static inline void                            NSCoreDataCoreSpotlightDelegate_SearchableIndex_ReindexSearchableItemsWithIdentifiers_AcknowledgementHandler(NSCoreDataCoreSpotlightDelegate self, CSSearchableIndex searchableIndex, NSArray identifiers, void* acknowledgementHandler)    { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL, CSSearchableIndex, NSArray, void*))bean_msgSend)(self, bean_sel("searchableIndex:reindexSearchableItemsWithIdentifiers:acknowledgementHandler:"), searchableIndex, identifiers, acknowledgementHandler); }
-static inline BOOL                            NSCoreDataCoreSpotlightDelegate_IsIndexingEnabled(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                     { return ((BOOL (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("isIndexingEnabled")); }
-static inline BOOL                            NSCoreDataCoreSpotlightDelegate_IndexingEnabled(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                       { return ((BOOL (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("indexingEnabled")); }
+static inline NSString                           NSCoreDataCoreSpotlightDelegate_DomainIdentifier(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                      { return ((NSString (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("domainIdentifier")); }
+static inline NSString                           NSCoreDataCoreSpotlightDelegate_IndexName(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                             { return ((NSString (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("indexName")); }
+static inline NSCoreDataCoreSpotlightDelegate    NSCoreDataCoreSpotlightDelegate_Init(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                                  { return ((NSCoreDataCoreSpotlightDelegate (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSCoreDataCoreSpotlightDelegate    NSCoreDataCoreSpotlightDelegate_InitForStoreWithDescription_Coordinator(NSCoreDataCoreSpotlightDelegate self, NSPersistentStoreDescription description, NSPersistentStoreCoordinator psc)                                                   { return ((NSCoreDataCoreSpotlightDelegate (*)(NSCoreDataCoreSpotlightDelegate, SEL, NSPersistentStoreDescription, NSPersistentStoreCoordinator))bean_msgSend)(self, bean_sel("initForStoreWithDescription:coordinator:"), description, psc); }
+static inline NSCoreDataCoreSpotlightDelegate    NSCoreDataCoreSpotlightDelegate_InitForStoreWithDescription_Model(NSCoreDataCoreSpotlightDelegate self, NSPersistentStoreDescription description, NSManagedObjectModel model)                                                               { return ((NSCoreDataCoreSpotlightDelegate (*)(NSCoreDataCoreSpotlightDelegate, SEL, NSPersistentStoreDescription, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initForStoreWithDescription:model:"), description, model); }
+static inline void                               NSCoreDataCoreSpotlightDelegate_StartSpotlightIndexing(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("startSpotlightIndexing")); }
+static inline void                               NSCoreDataCoreSpotlightDelegate_StopSpotlightIndexing(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                 { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("stopSpotlightIndexing")); }
+static inline void                               NSCoreDataCoreSpotlightDelegate_DeleteSpotlightIndexWithCompletionHandler(NSCoreDataCoreSpotlightDelegate self, void* completionHandler)                                                                                                    { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL, void*))bean_msgSend)(self, bean_sel("deleteSpotlightIndexWithCompletionHandler:"), completionHandler); }
+static inline CSSearchableItemAttributeSet       NSCoreDataCoreSpotlightDelegate_AttributeSetForObject(NSCoreDataCoreSpotlightDelegate self, NSManagedObject object)                                                                                                                         { return ((CSSearchableItemAttributeSet (*)(NSCoreDataCoreSpotlightDelegate, SEL, NSManagedObject))bean_msgSend)(self, bean_sel("attributeSetForObject:"), object); }
+static inline void                               NSCoreDataCoreSpotlightDelegate_SearchableIndex_ReindexAllSearchableItemsWithAcknowledgementHandler(NSCoreDataCoreSpotlightDelegate self, CSSearchableIndex searchableIndex, void* acknowledgementHandler)                                  { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL, CSSearchableIndex, void*))bean_msgSend)(self, bean_sel("searchableIndex:reindexAllSearchableItemsWithAcknowledgementHandler:"), searchableIndex, acknowledgementHandler); }
+static inline void                               NSCoreDataCoreSpotlightDelegate_SearchableIndex_ReindexSearchableItemsWithIdentifiers_AcknowledgementHandler(NSCoreDataCoreSpotlightDelegate self, CSSearchableIndex searchableIndex, NSArray identifiers, void* acknowledgementHandler)    { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL, CSSearchableIndex, NSArray, void*))bean_msgSend)(self, bean_sel("searchableIndex:reindexSearchableItemsWithIdentifiers:acknowledgementHandler:"), searchableIndex, identifiers, acknowledgementHandler); }
+static inline BOOL                               NSCoreDataCoreSpotlightDelegate_IsIndexingEnabled(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                     { return ((BOOL (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("isIndexingEnabled")); }
+static inline BOOL                               NSCoreDataCoreSpotlightDelegate_IndexingEnabled(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                       { return ((BOOL (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("indexingEnabled")); }
 
 /* ===== NSCustomMigrationStage ===== */
 #ifndef BEAN_TYPEDEF_NSCustomMigrationStage
 #define BEAN_TYPEDEF_NSCustomMigrationStage
 typedef bean_id NSCustomMigrationStage;
 #endif
-static inline id                               NSCustomMigrationStage_Init(NSCustomMigrationStage self)                                                                                                                                     { return ((id (*)(NSCustomMigrationStage, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                               NSCustomMigrationStage_InitWithCurrentModelReference_NextModelReference(NSCustomMigrationStage self, NSManagedObjectModelReference currentModel, NSManagedObjectModelReference nextModel)    { return ((id (*)(NSCustomMigrationStage, SEL, NSManagedObjectModelReference, NSManagedObjectModelReference))bean_msgSend)(self, bean_sel("initWithCurrentModelReference:nextModelReference:"), currentModel, nextModel); }
+static inline NSCustomMigrationStage           NSCustomMigrationStage_Init(NSCustomMigrationStage self)                                                                                                                                     { return ((NSCustomMigrationStage (*)(NSCustomMigrationStage, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSCustomMigrationStage           NSCustomMigrationStage_InitWithCurrentModelReference_NextModelReference(NSCustomMigrationStage self, NSManagedObjectModelReference currentModel, NSManagedObjectModelReference nextModel)    { return ((NSCustomMigrationStage (*)(NSCustomMigrationStage, SEL, NSManagedObjectModelReference, NSManagedObjectModelReference))bean_msgSend)(self, bean_sel("initWithCurrentModelReference:nextModelReference:"), currentModel, nextModel); }
 static inline NSManagedObjectModelReference    NSCustomMigrationStage_CurrentModel(NSCustomMigrationStage self)                                                                                                                             { return ((NSManagedObjectModelReference (*)(NSCustomMigrationStage, SEL))bean_msgSend)(self, bean_sel("currentModel")); }
 static inline NSManagedObjectModelReference    NSCustomMigrationStage_NextModel(NSCustomMigrationStage self)                                                                                                                                { return ((NSManagedObjectModelReference (*)(NSCustomMigrationStage, SEL))bean_msgSend)(self, bean_sel("nextModel")); }
 static inline void*                            NSCustomMigrationStage_WillMigrateHandler(NSCustomMigrationStage self)                                                                                                                       { return ((void* (*)(NSCustomMigrationStage, SEL))bean_msgSend)(self, bean_sel("willMigrateHandler")); }
@@ -5373,42 +6737,46 @@ static inline void*                            NSCustomMigrationStage_DidMigrate
 static inline void                             NSCustomMigrationStage_SetDidMigrateHandler(NSCustomMigrationStage self, void* didMigrateHandler)                                                                                            { ((void (*)(NSCustomMigrationStage, SEL, void*))bean_msgSend)(self, bean_sel("setDidMigrateHandler:"), didMigrateHandler); }
 
 /* ===== NSEntityDescription ===== */
-static inline NSEntityDescription     NSEntityDescription_EntityForName_InManagedObjectContext(NSString entityName, NSManagedObjectContext context)                           { return ((NSEntityDescription (*)(bean_class, SEL, NSString, NSManagedObjectContext))bean_msgSend)(bean_cls("NSEntityDescription"), bean_sel("entityForName:inManagedObjectContext:"), entityName, context); }
-static inline NSManagedObject         NSEntityDescription_InsertNewObjectForEntityForName_InManagedObjectContext(NSString entityName, NSManagedObjectContext context)         { return ((NSManagedObject (*)(bean_class, SEL, NSString, NSManagedObjectContext))bean_msgSend)(bean_cls("NSEntityDescription"), bean_sel("insertNewObjectForEntityForName:inManagedObjectContext:"), entityName, context); }
-static inline NSArray                 NSEntityDescription_RelationshipsWithDestinationEntity(NSEntityDescription self, NSEntityDescription entity)                            { return ((NSArray (*)(NSEntityDescription, SEL, NSEntityDescription))bean_msgSend)(self, bean_sel("relationshipsWithDestinationEntity:"), entity); }
-static inline BOOL                    NSEntityDescription_IsKindOfEntity(NSEntityDescription self, NSEntityDescription entity)                                                { return ((BOOL (*)(NSEntityDescription, SEL, NSEntityDescription))bean_msgSend)(self, bean_sel("isKindOfEntity:"), entity); }
-static inline NSManagedObjectModel    NSEntityDescription_ManagedObjectModel(NSEntityDescription self)                                                                        { return ((NSManagedObjectModel (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("managedObjectModel")); }
-static inline NSString                NSEntityDescription_ManagedObjectClassName(NSEntityDescription self)                                                                    { return ((NSString (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("managedObjectClassName")); }
-static inline void                    NSEntityDescription_SetManagedObjectClassName(NSEntityDescription self, NSString managedObjectClassName)                                { ((void (*)(NSEntityDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setManagedObjectClassName:"), managedObjectClassName); }
-static inline NSString                NSEntityDescription_Name(NSEntityDescription self)                                                                                      { return ((NSString (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void                    NSEntityDescription_SetName(NSEntityDescription self, NSString name)                                                                    { ((void (*)(NSEntityDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline BOOL                    NSEntityDescription_IsAbstract(NSEntityDescription self)                                                                                { return ((BOOL (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("isAbstract")); }
-static inline void                    NSEntityDescription_SetAbstract(NSEntityDescription self, BOOL abstract)                                                                { ((void (*)(NSEntityDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setAbstract:"), abstract); }
-static inline NSDictionary            NSEntityDescription_SubentitiesByName(NSEntityDescription self)                                                                         { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("subentitiesByName")); }
-static inline NSArray                 NSEntityDescription_Subentities(NSEntityDescription self)                                                                               { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("subentities")); }
-static inline void                    NSEntityDescription_SetSubentities(NSEntityDescription self, NSArray subentities)                                                       { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubentities:"), subentities); }
-static inline NSEntityDescription     NSEntityDescription_Superentity(NSEntityDescription self)                                                                               { return ((NSEntityDescription (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("superentity")); }
-static inline NSDictionary            NSEntityDescription_PropertiesByName(NSEntityDescription self)                                                                          { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("propertiesByName")); }
-static inline NSArray                 NSEntityDescription_Properties(NSEntityDescription self)                                                                                { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("properties")); }
-static inline void                    NSEntityDescription_SetProperties(NSEntityDescription self, NSArray properties)                                                         { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setProperties:"), properties); }
-static inline NSDictionary            NSEntityDescription_UserInfo(NSEntityDescription self)                                                                                  { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
-static inline void                    NSEntityDescription_SetUserInfo(NSEntityDescription self, NSDictionary userInfo)                                                        { ((void (*)(NSEntityDescription, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
-static inline NSDictionary            NSEntityDescription_AttributesByName(NSEntityDescription self)                                                                          { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("attributesByName")); }
-static inline NSDictionary            NSEntityDescription_RelationshipsByName(NSEntityDescription self)                                                                       { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("relationshipsByName")); }
-static inline NSData                  NSEntityDescription_VersionHash(NSEntityDescription self)                                                                               { return ((NSData (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("versionHash")); }
-static inline NSString                NSEntityDescription_VersionHashModifier(NSEntityDescription self)                                                                       { return ((NSString (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("versionHashModifier")); }
-static inline void                    NSEntityDescription_SetVersionHashModifier(NSEntityDescription self, NSString versionHashModifier)                                      { ((void (*)(NSEntityDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setVersionHashModifier:"), versionHashModifier); }
-static inline NSString                NSEntityDescription_RenamingIdentifier(NSEntityDescription self)                                                                        { return ((NSString (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("renamingIdentifier")); }
-static inline void                    NSEntityDescription_SetRenamingIdentifier(NSEntityDescription self, NSString renamingIdentifier)                                        { ((void (*)(NSEntityDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setRenamingIdentifier:"), renamingIdentifier); }
-static inline NSArray                 NSEntityDescription_Indexes(NSEntityDescription self)                                                                                   { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("indexes")); }
-static inline void                    NSEntityDescription_SetIndexes(NSEntityDescription self, NSArray indexes)                                                               { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setIndexes:"), indexes); }
-static inline NSArray                 NSEntityDescription_UniquenessConstraints(NSEntityDescription self)                                                                     { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("uniquenessConstraints")); }
-static inline void                    NSEntityDescription_SetUniquenessConstraints(NSEntityDescription self, NSArray uniquenessConstraints)                                   { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setUniquenessConstraints:"), uniquenessConstraints); }
-static inline NSArray                 NSEntityDescription_CompoundIndexes(NSEntityDescription self)                                                                           { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("compoundIndexes")); }
-static inline void                    NSEntityDescription_SetCompoundIndexes(NSEntityDescription self, NSArray compoundIndexes)                                               { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setCompoundIndexes:"), compoundIndexes); }
-static inline NSExpression            NSEntityDescription_CoreSpotlightDisplayNameExpression(NSEntityDescription self)                                                        { return ((NSExpression (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("coreSpotlightDisplayNameExpression")); }
-static inline void                    NSEntityDescription_SetCoreSpotlightDisplayNameExpression(NSEntityDescription self, NSExpression coreSpotlightDisplayNameExpression)    { ((void (*)(NSEntityDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setCoreSpotlightDisplayNameExpression:"), coreSpotlightDisplayNameExpression); }
-static inline BOOL                    NSEntityDescription_Abstract(NSEntityDescription self)                                                                                  { return ((BOOL (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("abstract")); }
+static inline NSEntityDescription     NSEntityDescription_EntityForName_InManagedObjectContext(NSString entityName, NSManagedObjectContext context)                                         { return ((NSEntityDescription (*)(bean_class, SEL, NSString, NSManagedObjectContext))bean_msgSend)(bean_cls("NSEntityDescription"), bean_sel("entityForName:inManagedObjectContext:"), entityName, context); }
+static inline NSManagedObject         NSEntityDescription_InsertNewObjectForEntityForName_InManagedObjectContext(NSString entityName, NSManagedObjectContext context)                       { return ((NSManagedObject (*)(bean_class, SEL, NSString, NSManagedObjectContext))bean_msgSend)(bean_cls("NSEntityDescription"), bean_sel("insertNewObjectForEntityForName:inManagedObjectContext:"), entityName, context); }
+static inline NSArray                 NSEntityDescription_RelationshipsWithDestinationEntity(NSEntityDescription self, NSEntityDescription entity)                                          { return ((NSArray (*)(NSEntityDescription, SEL, NSEntityDescription))bean_msgSend)(self, bean_sel("relationshipsWithDestinationEntity:"), entity); }
+static inline BOOL                    NSEntityDescription_IsKindOfEntity(NSEntityDescription self, NSEntityDescription entity)                                                              { return ((BOOL (*)(NSEntityDescription, SEL, NSEntityDescription))bean_msgSend)(self, bean_sel("isKindOfEntity:"), entity); }
+static inline NSManagedObjectModel    NSEntityDescription_ManagedObjectModel(NSEntityDescription self)                                                                                      { return ((NSManagedObjectModel (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("managedObjectModel")); }
+static inline NSString                NSEntityDescription_ManagedObjectClassName(NSEntityDescription self)                                                                                  { return ((NSString (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("managedObjectClassName")); }
+static inline void                    NSEntityDescription_SetManagedObjectClassName(NSEntityDescription self, NSString managedObjectClassName)                                              { ((void (*)(NSEntityDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setManagedObjectClassName:"), managedObjectClassName); }
+static inline NSString                NSEntityDescription_Name(NSEntityDescription self)                                                                                                    { return ((NSString (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                    NSEntityDescription_SetName(NSEntityDescription self, NSString name)                                                                                  { ((void (*)(NSEntityDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline BOOL                    NSEntityDescription_IsAbstract(NSEntityDescription self)                                                                                              { return ((BOOL (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("isAbstract")); }
+static inline void                    NSEntityDescription_SetAbstract(NSEntityDescription self, BOOL abstract)                                                                              { ((void (*)(NSEntityDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setAbstract:"), abstract); }
+static inline NSDictionary            NSEntityDescription_SubentitiesByName(NSEntityDescription self)                                                                                       { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("subentitiesByName")); }
+static inline NSArray                 NSEntityDescription_Subentities(NSEntityDescription self)                                                                                             { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("subentities")); }
+static inline void                    NSEntityDescription_SetSubentities(NSEntityDescription self, NSArray subentities)                                                                     { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubentities:"), subentities); }
+static inline NSEntityDescription     NSEntityDescription_Superentity(NSEntityDescription self)                                                                                             { return ((NSEntityDescription (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("superentity")); }
+static inline NSDictionary            NSEntityDescription_PropertiesByName(NSEntityDescription self)                                                                                        { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("propertiesByName")); }
+static inline NSArray                 NSEntityDescription_Properties(NSEntityDescription self)                                                                                              { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("properties")); }
+static inline void                    NSEntityDescription_SetProperties(NSEntityDescription self, NSArray properties)                                                                       { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setProperties:"), properties); }
+static inline NSDictionary            NSEntityDescription_UserInfo(NSEntityDescription self)                                                                                                { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
+static inline void                    NSEntityDescription_SetUserInfo(NSEntityDescription self, NSDictionary userInfo)                                                                      { ((void (*)(NSEntityDescription, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+static inline NSDictionary            NSEntityDescription_AttributesByName(NSEntityDescription self)                                                                                        { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("attributesByName")); }
+static inline NSDictionary            NSEntityDescription_RelationshipsByName(NSEntityDescription self)                                                                                     { return ((NSDictionary (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("relationshipsByName")); }
+static inline NSData                  NSEntityDescription_VersionHash(NSEntityDescription self)                                                                                             { return ((NSData (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("versionHash")); }
+static inline NSString                NSEntityDescription_VersionHashModifier(NSEntityDescription self)                                                                                     { return ((NSString (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("versionHashModifier")); }
+static inline void                    NSEntityDescription_SetVersionHashModifier(NSEntityDescription self, NSString versionHashModifier)                                                    { ((void (*)(NSEntityDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setVersionHashModifier:"), versionHashModifier); }
+static inline NSString                NSEntityDescription_RenamingIdentifier(NSEntityDescription self)                                                                                      { return ((NSString (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("renamingIdentifier")); }
+static inline void                    NSEntityDescription_SetRenamingIdentifier(NSEntityDescription self, NSString renamingIdentifier)                                                      { ((void (*)(NSEntityDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setRenamingIdentifier:"), renamingIdentifier); }
+static inline NSArray                 NSEntityDescription_Indexes(NSEntityDescription self)                                                                                                 { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("indexes")); }
+static inline void                    NSEntityDescription_SetIndexes(NSEntityDescription self, NSArray indexes)                                                                             { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setIndexes:"), indexes); }
+static inline NSArray                 NSEntityDescription_UniquenessConstraints(NSEntityDescription self)                                                                                   { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("uniquenessConstraints")); }
+static inline void                    NSEntityDescription_SetUniquenessConstraints(NSEntityDescription self, NSArray uniquenessConstraints)                                                 { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setUniquenessConstraints:"), uniquenessConstraints); }
+static inline NSArray                 NSEntityDescription_CompoundIndexes(NSEntityDescription self)                                                                                         { return ((NSArray (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("compoundIndexes")); }
+static inline void                    NSEntityDescription_SetCompoundIndexes(NSEntityDescription self, NSArray compoundIndexes)                                                             { ((void (*)(NSEntityDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setCompoundIndexes:"), compoundIndexes); }
+static inline NSExpression            NSEntityDescription_CoreSpotlightDisplayNameExpression(NSEntityDescription self)                                                                      { return ((NSExpression (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("coreSpotlightDisplayNameExpression")); }
+static inline void                    NSEntityDescription_SetCoreSpotlightDisplayNameExpression(NSEntityDescription self, NSExpression coreSpotlightDisplayNameExpression)                  { ((void (*)(NSEntityDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setCoreSpotlightDisplayNameExpression:"), coreSpotlightDisplayNameExpression); }
+static inline void                    NSEntityDescription_EncodeWithCoder(NSEntityDescription self, NSCoder coder)                                                                          { ((void (*)(NSEntityDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding                NSEntityDescription_InitWithCoder(NSEntityDescription self, NSCoder coder)                                                                            { return ((NSCoding (*)(NSEntityDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id                      NSEntityDescription_CopyWithZone(NSEntityDescription self, NSZone* zone)                                                                              { return ((id (*)(NSEntityDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline NSUInteger              NSEntityDescription_CountByEnumeratingWithState_Objects_Count(NSEntityDescription self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSEntityDescription, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+static inline BOOL                    NSEntityDescription_Abstract(NSEntityDescription self)                                                                                                { return ((BOOL (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("abstract")); }
 
 /* ===== NSEntityMapping ===== */
 #ifndef BEAN_TYPEDEF_NSEntityMapping
@@ -5443,13 +6811,13 @@ static inline void                   NSEntityMapping_SetEntityMigrationPolicyCla
 #define BEAN_TYPEDEF_NSEntityMigrationPolicy
 typedef bean_id NSEntityMigrationPolicy;
 #endif
-static inline BOOL    NSEntityMigrationPolicy_BeginEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError error)                                                                      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError))bean_msgSend)(self, bean_sel("beginEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_CreateDestinationInstancesForSourceInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject sInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError error)    { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError))bean_msgSend)(self, bean_sel("createDestinationInstancesForSourceInstance:entityMapping:manager:error:"), sInstance, mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndInstanceCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError error)                                                     { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError))bean_msgSend)(self, bean_sel("endInstanceCreationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_CreateRelationshipsForDestinationInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject dInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError error)      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError))bean_msgSend)(self, bean_sel("createRelationshipsForDestinationInstance:entityMapping:manager:error:"), dInstance, mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndRelationshipCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError))bean_msgSend)(self, bean_sel("endRelationshipCreationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_PerformCustomValidationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError))bean_msgSend)(self, bean_sel("performCustomValidationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError error)                                                                        { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError))bean_msgSend)(self, bean_sel("endEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL    NSEntityMigrationPolicy_BeginEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("beginEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL    NSEntityMigrationPolicy_CreateDestinationInstancesForSourceInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject sInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)    { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createDestinationInstancesForSourceInstance:entityMapping:manager:error:"), sInstance, mapping, manager, error); }
+static inline BOOL    NSEntityMigrationPolicy_EndInstanceCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                     { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endInstanceCreationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL    NSEntityMigrationPolicy_CreateRelationshipsForDestinationInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject dInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createRelationshipsForDestinationInstance:entityMapping:manager:error:"), dInstance, mapping, manager, error); }
+static inline BOOL    NSEntityMigrationPolicy_EndRelationshipCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endRelationshipCreationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL    NSEntityMigrationPolicy_PerformCustomValidationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("performCustomValidationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL    NSEntityMigrationPolicy_EndEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                        { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endEntityMapping:manager:error:"), mapping, manager, error); }
 
 /* ===== NSEvent ===== */
 #ifndef BEAN_TYPEDEF_NSEvent
@@ -5463,34 +6831,40 @@ static inline CGPoint    NSEvent_LocationInNode(NSEvent self, SKNode node)    { 
 #define BEAN_TYPEDEF_NSFetchIndexDescription
 typedef bean_id NSFetchIndexDescription;
 #endif
-static inline id                     NSFetchIndexDescription_InitWithName_Elements(NSFetchIndexDescription self, NSString name, NSArray elements)         { return ((id (*)(NSFetchIndexDescription, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithName:elements:"), name, elements); }
-static inline NSString               NSFetchIndexDescription_Name(NSFetchIndexDescription self)                                                           { return ((NSString (*)(NSFetchIndexDescription, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void                   NSFetchIndexDescription_SetName(NSFetchIndexDescription self, NSString name)                                         { ((void (*)(NSFetchIndexDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSArray                NSFetchIndexDescription_Elements(NSFetchIndexDescription self)                                                       { return ((NSArray (*)(NSFetchIndexDescription, SEL))bean_msgSend)(self, bean_sel("elements")); }
-static inline void                   NSFetchIndexDescription_SetElements(NSFetchIndexDescription self, NSArray elements)                                  { ((void (*)(NSFetchIndexDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setElements:"), elements); }
-static inline NSEntityDescription    NSFetchIndexDescription_Entity(NSFetchIndexDescription self)                                                         { return ((NSEntityDescription (*)(NSFetchIndexDescription, SEL))bean_msgSend)(self, bean_sel("entity")); }
-static inline NSPredicate            NSFetchIndexDescription_PartialIndexPredicate(NSFetchIndexDescription self)                                          { return ((NSPredicate (*)(NSFetchIndexDescription, SEL))bean_msgSend)(self, bean_sel("partialIndexPredicate")); }
-static inline void                   NSFetchIndexDescription_SetPartialIndexPredicate(NSFetchIndexDescription self, NSPredicate partialIndexPredicate)    { ((void (*)(NSFetchIndexDescription, SEL, NSPredicate))bean_msgSend)(self, bean_sel("setPartialIndexPredicate:"), partialIndexPredicate); }
+static inline NSFetchIndexDescription    NSFetchIndexDescription_InitWithName_Elements(NSFetchIndexDescription self, NSString name, NSArray elements)         { return ((NSFetchIndexDescription (*)(NSFetchIndexDescription, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithName:elements:"), name, elements); }
+static inline NSString                   NSFetchIndexDescription_Name(NSFetchIndexDescription self)                                                           { return ((NSString (*)(NSFetchIndexDescription, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                       NSFetchIndexDescription_SetName(NSFetchIndexDescription self, NSString name)                                         { ((void (*)(NSFetchIndexDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSArray                    NSFetchIndexDescription_Elements(NSFetchIndexDescription self)                                                       { return ((NSArray (*)(NSFetchIndexDescription, SEL))bean_msgSend)(self, bean_sel("elements")); }
+static inline void                       NSFetchIndexDescription_SetElements(NSFetchIndexDescription self, NSArray elements)                                  { ((void (*)(NSFetchIndexDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setElements:"), elements); }
+static inline NSEntityDescription        NSFetchIndexDescription_Entity(NSFetchIndexDescription self)                                                         { return ((NSEntityDescription (*)(NSFetchIndexDescription, SEL))bean_msgSend)(self, bean_sel("entity")); }
+static inline NSPredicate                NSFetchIndexDescription_PartialIndexPredicate(NSFetchIndexDescription self)                                          { return ((NSPredicate (*)(NSFetchIndexDescription, SEL))bean_msgSend)(self, bean_sel("partialIndexPredicate")); }
+static inline void                       NSFetchIndexDescription_SetPartialIndexPredicate(NSFetchIndexDescription self, NSPredicate partialIndexPredicate)    { ((void (*)(NSFetchIndexDescription, SEL, NSPredicate))bean_msgSend)(self, bean_sel("setPartialIndexPredicate:"), partialIndexPredicate); }
+static inline void                       NSFetchIndexDescription_EncodeWithCoder(NSFetchIndexDescription self, NSCoder coder)                                 { ((void (*)(NSFetchIndexDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding                   NSFetchIndexDescription_InitWithCoder(NSFetchIndexDescription self, NSCoder coder)                                   { return ((NSCoding (*)(NSFetchIndexDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id                         NSFetchIndexDescription_CopyWithZone(NSFetchIndexDescription self, NSZone* zone)                                     { return ((id (*)(NSFetchIndexDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== NSFetchIndexElementDescription ===== */
 #ifndef BEAN_TYPEDEF_NSFetchIndexElementDescription
 #define BEAN_TYPEDEF_NSFetchIndexElementDescription
 typedef bean_id NSFetchIndexElementDescription;
 #endif
-static inline id                         NSFetchIndexElementDescription_InitWithProperty_CollationType(NSFetchIndexElementDescription self, NSPropertyDescription property, NSFetchIndexElementType collationType)    { return ((id (*)(NSFetchIndexElementDescription, SEL, NSPropertyDescription, NSFetchIndexElementType))bean_msgSend)(self, bean_sel("initWithProperty:collationType:"), property, collationType); }
-static inline NSPropertyDescription      NSFetchIndexElementDescription_Property(NSFetchIndexElementDescription self)                                                                                                 { return ((NSPropertyDescription (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("property")); }
-static inline NSString                   NSFetchIndexElementDescription_PropertyName(NSFetchIndexElementDescription self)                                                                                             { return ((NSString (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("propertyName")); }
-static inline NSFetchIndexElementType    NSFetchIndexElementDescription_CollationType(NSFetchIndexElementDescription self)                                                                                            { return ((NSFetchIndexElementType (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("collationType")); }
-static inline void                       NSFetchIndexElementDescription_SetCollationType(NSFetchIndexElementDescription self, NSFetchIndexElementType collationType)                                                  { ((void (*)(NSFetchIndexElementDescription, SEL, NSFetchIndexElementType))bean_msgSend)(self, bean_sel("setCollationType:"), collationType); }
-static inline BOOL                       NSFetchIndexElementDescription_IsAscending(NSFetchIndexElementDescription self)                                                                                              { return ((BOOL (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("isAscending")); }
-static inline void                       NSFetchIndexElementDescription_SetAscending(NSFetchIndexElementDescription self, BOOL ascending)                                                                             { ((void (*)(NSFetchIndexElementDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setAscending:"), ascending); }
-static inline NSFetchIndexDescription    NSFetchIndexElementDescription_IndexDescription(NSFetchIndexElementDescription self)                                                                                         { return ((NSFetchIndexDescription (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("indexDescription")); }
-static inline BOOL                       NSFetchIndexElementDescription_Ascending(NSFetchIndexElementDescription self)                                                                                                { return ((BOOL (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("ascending")); }
+static inline NSFetchIndexElementDescription    NSFetchIndexElementDescription_InitWithProperty_CollationType(NSFetchIndexElementDescription self, NSPropertyDescription property, NSFetchIndexElementType collationType)    { return ((NSFetchIndexElementDescription (*)(NSFetchIndexElementDescription, SEL, NSPropertyDescription, NSFetchIndexElementType))bean_msgSend)(self, bean_sel("initWithProperty:collationType:"), property, collationType); }
+static inline NSPropertyDescription             NSFetchIndexElementDescription_Property(NSFetchIndexElementDescription self)                                                                                                 { return ((NSPropertyDescription (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("property")); }
+static inline NSString                          NSFetchIndexElementDescription_PropertyName(NSFetchIndexElementDescription self)                                                                                             { return ((NSString (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("propertyName")); }
+static inline NSFetchIndexElementType           NSFetchIndexElementDescription_CollationType(NSFetchIndexElementDescription self)                                                                                            { return ((NSFetchIndexElementType (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("collationType")); }
+static inline void                              NSFetchIndexElementDescription_SetCollationType(NSFetchIndexElementDescription self, NSFetchIndexElementType collationType)                                                  { ((void (*)(NSFetchIndexElementDescription, SEL, NSFetchIndexElementType))bean_msgSend)(self, bean_sel("setCollationType:"), collationType); }
+static inline BOOL                              NSFetchIndexElementDescription_IsAscending(NSFetchIndexElementDescription self)                                                                                              { return ((BOOL (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("isAscending")); }
+static inline void                              NSFetchIndexElementDescription_SetAscending(NSFetchIndexElementDescription self, BOOL ascending)                                                                             { ((void (*)(NSFetchIndexElementDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setAscending:"), ascending); }
+static inline NSFetchIndexDescription           NSFetchIndexElementDescription_IndexDescription(NSFetchIndexElementDescription self)                                                                                         { return ((NSFetchIndexDescription (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("indexDescription")); }
+static inline void                              NSFetchIndexElementDescription_EncodeWithCoder(NSFetchIndexElementDescription self, NSCoder coder)                                                                           { ((void (*)(NSFetchIndexElementDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding                          NSFetchIndexElementDescription_InitWithCoder(NSFetchIndexElementDescription self, NSCoder coder)                                                                             { return ((NSCoding (*)(NSFetchIndexElementDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id                                NSFetchIndexElementDescription_CopyWithZone(NSFetchIndexElementDescription self, NSZone* zone)                                                                               { return ((id (*)(NSFetchIndexElementDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                              NSFetchIndexElementDescription_Ascending(NSFetchIndexElementDescription self)                                                                                                { return ((BOOL (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("ascending")); }
 
 /* ===== NSFetchRequest ===== */
-static inline id                          NSFetchRequest_FetchRequestWithEntityName(NSString entityName)                                                           { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSFetchRequest"), bean_sel("fetchRequestWithEntityName:"), entityName); }
-static inline id                          NSFetchRequest_Init(NSFetchRequest self)                                                                                 { return ((id (*)(NSFetchRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                          NSFetchRequest_InitWithEntityName(NSFetchRequest self, NSString entityName)                                              { return ((id (*)(NSFetchRequest, SEL, NSString))bean_msgSend)(self, bean_sel("initWithEntityName:"), entityName); }
+static inline NSFetchRequest              NSFetchRequest_FetchRequestWithEntityName(NSString entityName)                                                           { return ((NSFetchRequest (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSFetchRequest"), bean_sel("fetchRequestWithEntityName:"), entityName); }
+static inline NSFetchRequest              NSFetchRequest_Init(NSFetchRequest self)                                                                                 { return ((NSFetchRequest (*)(NSFetchRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSFetchRequest              NSFetchRequest_InitWithEntityName(NSFetchRequest self, NSString entityName)                                              { return ((NSFetchRequest (*)(NSFetchRequest, SEL, NSString))bean_msgSend)(self, bean_sel("initWithEntityName:"), entityName); }
 static inline NSArray                     NSFetchRequest_Execute(NSFetchRequest self, NSError error)                                                               { return ((NSArray (*)(NSFetchRequest, SEL, NSError))bean_msgSend)(self, bean_sel("execute:"), error); }
 static inline NSEntityDescription         NSFetchRequest_Entity(NSFetchRequest self)                                                                               { return ((NSEntityDescription (*)(NSFetchRequest, SEL))bean_msgSend)(self, bean_sel("entity")); }
 static inline void                        NSFetchRequest_SetEntity(NSFetchRequest self, NSEntityDescription entity)                                                { ((void (*)(NSFetchRequest, SEL, NSEntityDescription))bean_msgSend)(self, bean_sel("setEntity:"), entity); }
@@ -5529,6 +6903,9 @@ static inline NSArray                     NSFetchRequest_PropertiesToGroupBy(NSF
 static inline void                        NSFetchRequest_SetPropertiesToGroupBy(NSFetchRequest self, NSArray propertiesToGroupBy)                                  { ((void (*)(NSFetchRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("setPropertiesToGroupBy:"), propertiesToGroupBy); }
 static inline NSPredicate                 NSFetchRequest_HavingPredicate(NSFetchRequest self)                                                                      { return ((NSPredicate (*)(NSFetchRequest, SEL))bean_msgSend)(self, bean_sel("havingPredicate")); }
 static inline void                        NSFetchRequest_SetHavingPredicate(NSFetchRequest self, NSPredicate havingPredicate)                                      { ((void (*)(NSFetchRequest, SEL, NSPredicate))bean_msgSend)(self, bean_sel("setHavingPredicate:"), havingPredicate); }
+static inline void                        NSFetchRequest_EncodeWithCoder(NSFetchRequest self, NSCoder coder)                                                       { ((void (*)(NSFetchRequest, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding                    NSFetchRequest_InitWithCoder(NSFetchRequest self, NSCoder coder)                                                         { return ((NSCoding (*)(NSFetchRequest, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id                          NSFetchRequest_CopyWithZone(NSFetchRequest self, NSZone* zone)                                                           { return ((id (*)(NSFetchRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== NSFetchedPropertyDescription ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedPropertyDescription
@@ -5543,60 +6920,83 @@ static inline void              NSFetchedPropertyDescription_SetFetchRequest(NSF
 #define BEAN_TYPEDEF_NSFetchedResultsController
 typedef bean_id NSFetchedResultsController;
 #endif
-static inline id                        NSFetchedResultsController_InitWithFetchRequest_ManagedObjectContext_SectionNameKeyPath_CacheName(NSFetchedResultsController self, NSFetchRequest fetchRequest, NSManagedObjectContext context, NSString sectionNameKeyPath, NSString name)    { return ((id (*)(NSFetchedResultsController, SEL, NSFetchRequest, NSManagedObjectContext, NSString, NSString))bean_msgSend)(self, bean_sel("initWithFetchRequest:managedObjectContext:sectionNameKeyPath:cacheName:"), fetchRequest, context, sectionNameKeyPath, name); }
-static inline BOOL                      NSFetchedResultsController_PerformFetch(NSFetchedResultsController self, NSError error)                                                                                                                                                        { return ((BOOL (*)(NSFetchedResultsController, SEL, NSError))bean_msgSend)(self, bean_sel("performFetch:"), error); }
-static inline void                      NSFetchedResultsController_DeleteCacheWithName(NSString name)                                                                                                                                                                                  { ((void (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSFetchedResultsController"), bean_sel("deleteCacheWithName:"), name); }
-static inline id                        NSFetchedResultsController_ObjectAtIndexPath(NSFetchedResultsController self, NSIndexPath indexPath)                                                                                                                                           { return ((id (*)(NSFetchedResultsController, SEL, NSIndexPath))bean_msgSend)(self, bean_sel("objectAtIndexPath:"), indexPath); }
-static inline NSIndexPath               NSFetchedResultsController_IndexPathForObject(NSFetchedResultsController self, id object)                                                                                                                                                      { return ((NSIndexPath (*)(NSFetchedResultsController, SEL, id))bean_msgSend)(self, bean_sel("indexPathForObject:"), object); }
-static inline NSString                  NSFetchedResultsController_SectionIndexTitleForSectionName(NSFetchedResultsController self, NSString sectionName)                                                                                                                              { return ((NSString (*)(NSFetchedResultsController, SEL, NSString))bean_msgSend)(self, bean_sel("sectionIndexTitleForSectionName:"), sectionName); }
-static inline NSInteger                 NSFetchedResultsController_SectionForSectionIndexTitle_AtIndex(NSFetchedResultsController self, NSString title, NSInteger sectionIndex)                                                                                                        { return ((NSInteger (*)(NSFetchedResultsController, SEL, NSString, NSInteger))bean_msgSend)(self, bean_sel("sectionForSectionIndexTitle:atIndex:"), title, sectionIndex); }
-static inline NSFetchRequest            NSFetchedResultsController_FetchRequest(NSFetchedResultsController self)                                                                                                                                                                       { return ((NSFetchRequest (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
-static inline NSManagedObjectContext    NSFetchedResultsController_ManagedObjectContext(NSFetchedResultsController self)                                                                                                                                                               { return ((NSManagedObjectContext (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("managedObjectContext")); }
-static inline NSString                  NSFetchedResultsController_SectionNameKeyPath(NSFetchedResultsController self)                                                                                                                                                                 { return ((NSString (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sectionNameKeyPath")); }
-static inline NSString                  NSFetchedResultsController_CacheName(NSFetchedResultsController self)                                                                                                                                                                          { return ((NSString (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("cacheName")); }
-static inline id                        NSFetchedResultsController_Delegate(NSFetchedResultsController self)                                                                                                                                                                           { return ((id (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("delegate")); }
-static inline void                      NSFetchedResultsController_SetDelegate(NSFetchedResultsController self, id delegate)                                                                                                                                                           { ((void (*)(NSFetchedResultsController, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
-static inline NSArray                   NSFetchedResultsController_FetchedObjects(NSFetchedResultsController self)                                                                                                                                                                     { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("fetchedObjects")); }
-static inline NSArray                   NSFetchedResultsController_SectionIndexTitles(NSFetchedResultsController self)                                                                                                                                                                 { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sectionIndexTitles")); }
-static inline NSArray                   NSFetchedResultsController_Sections(NSFetchedResultsController self)                                                                                                                                                                           { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sections")); }
+static inline NSFetchedResultsController    NSFetchedResultsController_InitWithFetchRequest_ManagedObjectContext_SectionNameKeyPath_CacheName(NSFetchedResultsController self, NSFetchRequest fetchRequest, NSManagedObjectContext context, NSString sectionNameKeyPath, NSString name)    { return ((NSFetchedResultsController (*)(NSFetchedResultsController, SEL, NSFetchRequest, NSManagedObjectContext, NSString, NSString))bean_msgSend)(self, bean_sel("initWithFetchRequest:managedObjectContext:sectionNameKeyPath:cacheName:"), fetchRequest, context, sectionNameKeyPath, name); }
+static inline BOOL                          NSFetchedResultsController_PerformFetch(NSFetchedResultsController self, NSError error)                                                                                                                                                        { return ((BOOL (*)(NSFetchedResultsController, SEL, NSError))bean_msgSend)(self, bean_sel("performFetch:"), error); }
+static inline void                          NSFetchedResultsController_DeleteCacheWithName(NSString name)                                                                                                                                                                                  { ((void (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSFetchedResultsController"), bean_sel("deleteCacheWithName:"), name); }
+static inline id                            NSFetchedResultsController_ObjectAtIndexPath(NSFetchedResultsController self, NSIndexPath indexPath)                                                                                                                                           { return ((id (*)(NSFetchedResultsController, SEL, NSIndexPath))bean_msgSend)(self, bean_sel("objectAtIndexPath:"), indexPath); }
+static inline NSIndexPath                   NSFetchedResultsController_IndexPathForObject(NSFetchedResultsController self, id object)                                                                                                                                                      { return ((NSIndexPath (*)(NSFetchedResultsController, SEL, id))bean_msgSend)(self, bean_sel("indexPathForObject:"), object); }
+static inline NSString                      NSFetchedResultsController_SectionIndexTitleForSectionName(NSFetchedResultsController self, NSString sectionName)                                                                                                                              { return ((NSString (*)(NSFetchedResultsController, SEL, NSString))bean_msgSend)(self, bean_sel("sectionIndexTitleForSectionName:"), sectionName); }
+static inline NSInteger                     NSFetchedResultsController_SectionForSectionIndexTitle_AtIndex(NSFetchedResultsController self, NSString title, NSInteger sectionIndex)                                                                                                        { return ((NSInteger (*)(NSFetchedResultsController, SEL, NSString, NSInteger))bean_msgSend)(self, bean_sel("sectionForSectionIndexTitle:atIndex:"), title, sectionIndex); }
+static inline NSFetchRequest                NSFetchedResultsController_FetchRequest(NSFetchedResultsController self)                                                                                                                                                                       { return ((NSFetchRequest (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
+static inline NSManagedObjectContext        NSFetchedResultsController_ManagedObjectContext(NSFetchedResultsController self)                                                                                                                                                               { return ((NSManagedObjectContext (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("managedObjectContext")); }
+static inline NSString                      NSFetchedResultsController_SectionNameKeyPath(NSFetchedResultsController self)                                                                                                                                                                 { return ((NSString (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sectionNameKeyPath")); }
+static inline NSString                      NSFetchedResultsController_CacheName(NSFetchedResultsController self)                                                                                                                                                                          { return ((NSString (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("cacheName")); }
+static inline id                            NSFetchedResultsController_Delegate(NSFetchedResultsController self)                                                                                                                                                                           { return ((id (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("delegate")); }
+static inline void                          NSFetchedResultsController_SetDelegate(NSFetchedResultsController self, id delegate)                                                                                                                                                           { ((void (*)(NSFetchedResultsController, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+static inline NSArray                       NSFetchedResultsController_FetchedObjects(NSFetchedResultsController self)                                                                                                                                                                     { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("fetchedObjects")); }
+static inline NSArray                       NSFetchedResultsController_SectionIndexTitles(NSFetchedResultsController self)                                                                                                                                                                 { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sectionIndexTitles")); }
+static inline NSArray                       NSFetchedResultsController_Sections(NSFetchedResultsController self)                                                                                                                                                                           { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sections")); }
+
+/* ===== NSFetchedResultsControllerDelegate ===== */
+#ifndef BEAN_TYPEDEF_NSFetchedResultsControllerDelegate
+#define BEAN_TYPEDEF_NSFetchedResultsControllerDelegate
+typedef bean_id NSFetchedResultsControllerDelegate;
+#endif
+static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithSnapshot(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSDiffableDataSourceSnapshot snapshot)                                                                                      { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSDiffableDataSourceSnapshot))bean_msgSend)(self, bean_sel("controller:didChangeContentWithSnapshot:"), controller, snapshot); }
+static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithDifference(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSOrderedCollectionDifference diff)                                                                                       { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSOrderedCollectionDifference))bean_msgSend)(self, bean_sel("controller:didChangeContentWithDifference:"), controller, diff); }
+static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeObject_AtIndexPath_ForChangeType_NewIndexPath(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id anObject, NSIndexPath indexPath, NSFetchedResultsChangeType type, NSIndexPath newIndexPath)    { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSIndexPath, NSFetchedResultsChangeType, NSIndexPath))bean_msgSend)(self, bean_sel("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:"), controller, anObject, indexPath, type, newIndexPath); }
+static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeSection_AtIndex_ForChangeType(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id sectionInfo, NSUInteger sectionIndex, NSFetchedResultsChangeType type)                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSUInteger, NSFetchedResultsChangeType))bean_msgSend)(self, bean_sel("controller:didChangeSection:atIndex:forChangeType:"), controller, sectionInfo, sectionIndex, type); }
+static inline void        NSFetchedResultsControllerDelegate_ControllerWillChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerWillChangeContent:"), controller); }
+static inline void        NSFetchedResultsControllerDelegate_ControllerDidChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                          { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerDidChangeContent:"), controller); }
+static inline NSString    NSFetchedResultsControllerDelegate_Controller_SectionIndexTitleForSectionName(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSString sectionName)                                                                                                    { return ((NSString (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSString))bean_msgSend)(self, bean_sel("controller:sectionIndexTitleForSectionName:"), controller, sectionName); }
+
+/* ===== NSFetchedResultsSectionInfo ===== */
+#ifndef BEAN_TYPEDEF_NSFetchedResultsSectionInfo
+#define BEAN_TYPEDEF_NSFetchedResultsSectionInfo
+typedef bean_id NSFetchedResultsSectionInfo;
+#endif
+static inline NSString      NSFetchedResultsSectionInfo_Name(NSFetchedResultsSectionInfo self)               { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline NSString      NSFetchedResultsSectionInfo_IndexTitle(NSFetchedResultsSectionInfo self)         { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("indexTitle")); }
+static inline NSUInteger    NSFetchedResultsSectionInfo_NumberOfObjects(NSFetchedResultsSectionInfo self)    { return ((NSUInteger (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("numberOfObjects")); }
+static inline NSArray       NSFetchedResultsSectionInfo_Objects(NSFetchedResultsSectionInfo self)            { return ((NSArray (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("objects")); }
 
 /* ===== NSIncrementalStore ===== */
 #ifndef BEAN_TYPEDEF_NSIncrementalStore
 #define BEAN_TYPEDEF_NSIncrementalStore
 typedef bean_id NSIncrementalStore;
 #endif
-static inline BOOL                      NSIncrementalStore_LoadMetadata(NSIncrementalStore self, NSError error)                                                                                                                                                     { return ((BOOL (*)(NSIncrementalStore, SEL, NSError))bean_msgSend)(self, bean_sel("loadMetadata:"), error); }
-static inline id                        NSIncrementalStore_ExecuteRequest_WithContext_Error(NSIncrementalStore self, NSPersistentStoreRequest request, NSManagedObjectContext context, NSError error)                                                               { return ((id (*)(NSIncrementalStore, SEL, NSPersistentStoreRequest, NSManagedObjectContext, NSError))bean_msgSend)(self, bean_sel("executeRequest:withContext:error:"), request, context, error); }
-static inline NSIncrementalStoreNode    NSIncrementalStore_NewValuesForObjectWithID_WithContext_Error(NSIncrementalStore self, NSManagedObjectID objectID, NSManagedObjectContext context, NSError error)                                                           { return ((NSIncrementalStoreNode (*)(NSIncrementalStore, SEL, NSManagedObjectID, NSManagedObjectContext, NSError))bean_msgSend)(self, bean_sel("newValuesForObjectWithID:withContext:error:"), objectID, context, error); }
-static inline id                        NSIncrementalStore_NewValueForRelationship_ForObjectWithID_WithContext_Error(NSIncrementalStore self, NSRelationshipDescription relationship, NSManagedObjectID objectID, NSManagedObjectContext context, NSError error)    { return ((id (*)(NSIncrementalStore, SEL, NSRelationshipDescription, NSManagedObjectID, NSManagedObjectContext, NSError))bean_msgSend)(self, bean_sel("newValueForRelationship:forObjectWithID:withContext:error:"), relationship, objectID, context, error); }
-static inline id                        NSIncrementalStore_IdentifierForNewStoreAtURL(NSURL storeURL)                                                                                                                                                               { return ((id (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSIncrementalStore"), bean_sel("identifierForNewStoreAtURL:"), storeURL); }
-static inline NSArray                   NSIncrementalStore_ObtainPermanentIDsForObjects_Error(NSIncrementalStore self, NSArray array, NSError error)                                                                                                                { return ((NSArray (*)(NSIncrementalStore, SEL, NSArray, NSError))bean_msgSend)(self, bean_sel("obtainPermanentIDsForObjects:error:"), array, error); }
-static inline void                      NSIncrementalStore_ManagedObjectContextDidRegisterObjectsWithIDs(NSIncrementalStore self, NSArray objectIDs)                                                                                                                { ((void (*)(NSIncrementalStore, SEL, NSArray))bean_msgSend)(self, bean_sel("managedObjectContextDidRegisterObjectsWithIDs:"), objectIDs); }
-static inline void                      NSIncrementalStore_ManagedObjectContextDidUnregisterObjectsWithIDs(NSIncrementalStore self, NSArray objectIDs)                                                                                                              { ((void (*)(NSIncrementalStore, SEL, NSArray))bean_msgSend)(self, bean_sel("managedObjectContextDidUnregisterObjectsWithIDs:"), objectIDs); }
-static inline NSManagedObjectID         NSIncrementalStore_NewObjectIDForEntity_ReferenceObject(NSIncrementalStore self, NSEntityDescription entity, id data)                                                                                                       { return ((NSManagedObjectID (*)(NSIncrementalStore, SEL, NSEntityDescription, id))bean_msgSend)(self, bean_sel("newObjectIDForEntity:referenceObject:"), entity, data); }
-static inline id                        NSIncrementalStore_ReferenceObjectForObjectID(NSIncrementalStore self, NSManagedObjectID objectID)                                                                                                                          { return ((id (*)(NSIncrementalStore, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("referenceObjectForObjectID:"), objectID); }
+static inline BOOL                      NSIncrementalStore_LoadMetadata(NSIncrementalStore self, NSError error)                                                                                                                                                      { return ((BOOL (*)(NSIncrementalStore, SEL, NSError))bean_msgSend)(self, bean_sel("loadMetadata:"), error); }
+static inline id                        NSIncrementalStore_ExecuteRequest_WithContext_Error(NSIncrementalStore self, NSPersistentStoreRequest request, NSManagedObjectContext context, NSError* error)                                                               { return ((id (*)(NSIncrementalStore, SEL, NSPersistentStoreRequest, NSManagedObjectContext, NSError*))bean_msgSend)(self, bean_sel("executeRequest:withContext:error:"), request, context, error); }
+static inline NSIncrementalStoreNode    NSIncrementalStore_NewValuesForObjectWithID_WithContext_Error(NSIncrementalStore self, NSManagedObjectID objectID, NSManagedObjectContext context, NSError* error)                                                           { return ((NSIncrementalStoreNode (*)(NSIncrementalStore, SEL, NSManagedObjectID, NSManagedObjectContext, NSError*))bean_msgSend)(self, bean_sel("newValuesForObjectWithID:withContext:error:"), objectID, context, error); }
+static inline id                        NSIncrementalStore_NewValueForRelationship_ForObjectWithID_WithContext_Error(NSIncrementalStore self, NSRelationshipDescription relationship, NSManagedObjectID objectID, NSManagedObjectContext context, NSError* error)    { return ((id (*)(NSIncrementalStore, SEL, NSRelationshipDescription, NSManagedObjectID, NSManagedObjectContext, NSError*))bean_msgSend)(self, bean_sel("newValueForRelationship:forObjectWithID:withContext:error:"), relationship, objectID, context, error); }
+static inline id                        NSIncrementalStore_IdentifierForNewStoreAtURL(NSURL storeURL)                                                                                                                                                                { return ((id (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSIncrementalStore"), bean_sel("identifierForNewStoreAtURL:"), storeURL); }
+static inline NSArray                   NSIncrementalStore_ObtainPermanentIDsForObjects_Error(NSIncrementalStore self, NSArray array, NSError* error)                                                                                                                { return ((NSArray (*)(NSIncrementalStore, SEL, NSArray, NSError*))bean_msgSend)(self, bean_sel("obtainPermanentIDsForObjects:error:"), array, error); }
+static inline void                      NSIncrementalStore_ManagedObjectContextDidRegisterObjectsWithIDs(NSIncrementalStore self, NSArray objectIDs)                                                                                                                 { ((void (*)(NSIncrementalStore, SEL, NSArray))bean_msgSend)(self, bean_sel("managedObjectContextDidRegisterObjectsWithIDs:"), objectIDs); }
+static inline void                      NSIncrementalStore_ManagedObjectContextDidUnregisterObjectsWithIDs(NSIncrementalStore self, NSArray objectIDs)                                                                                                               { ((void (*)(NSIncrementalStore, SEL, NSArray))bean_msgSend)(self, bean_sel("managedObjectContextDidUnregisterObjectsWithIDs:"), objectIDs); }
+static inline NSManagedObjectID         NSIncrementalStore_NewObjectIDForEntity_ReferenceObject(NSIncrementalStore self, NSEntityDescription entity, id data)                                                                                                        { return ((NSManagedObjectID (*)(NSIncrementalStore, SEL, NSEntityDescription, id))bean_msgSend)(self, bean_sel("newObjectIDForEntity:referenceObject:"), entity, data); }
+static inline id                        NSIncrementalStore_ReferenceObjectForObjectID(NSIncrementalStore self, NSManagedObjectID objectID)                                                                                                                           { return ((id (*)(NSIncrementalStore, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("referenceObjectForObjectID:"), objectID); }
 
 /* ===== NSIncrementalStoreNode ===== */
-static inline id                    NSIncrementalStoreNode_InitWithObjectID_WithValues_Version(NSIncrementalStoreNode self, NSManagedObjectID objectID, NSDictionary values, unsigned long long version)    { return ((id (*)(NSIncrementalStoreNode, SEL, NSManagedObjectID, NSDictionary, unsigned long long))bean_msgSend)(self, bean_sel("initWithObjectID:withValues:version:"), objectID, values, version); }
-static inline void                  NSIncrementalStoreNode_UpdateWithValues_Version(NSIncrementalStoreNode self, NSDictionary values, unsigned long long version)                                           { ((void (*)(NSIncrementalStoreNode, SEL, NSDictionary, unsigned long long))bean_msgSend)(self, bean_sel("updateWithValues:version:"), values, version); }
-static inline id                    NSIncrementalStoreNode_ValueForPropertyDescription(NSIncrementalStoreNode self, NSPropertyDescription prop)                                                             { return ((id (*)(NSIncrementalStoreNode, SEL, NSPropertyDescription))bean_msgSend)(self, bean_sel("valueForPropertyDescription:"), prop); }
-static inline NSManagedObjectID     NSIncrementalStoreNode_ObjectID(NSIncrementalStoreNode self)                                                                                                            { return ((NSManagedObjectID (*)(NSIncrementalStoreNode, SEL))bean_msgSend)(self, bean_sel("objectID")); }
-static inline unsigned long long    NSIncrementalStoreNode_Version(NSIncrementalStoreNode self)                                                                                                             { return ((unsigned long long (*)(NSIncrementalStoreNode, SEL))bean_msgSend)(self, bean_sel("version")); }
+static inline NSIncrementalStoreNode    NSIncrementalStoreNode_InitWithObjectID_WithValues_Version(NSIncrementalStoreNode self, NSManagedObjectID objectID, NSDictionary values, unsigned long long version)    { return ((NSIncrementalStoreNode (*)(NSIncrementalStoreNode, SEL, NSManagedObjectID, NSDictionary, unsigned long long))bean_msgSend)(self, bean_sel("initWithObjectID:withValues:version:"), objectID, values, version); }
+static inline void                      NSIncrementalStoreNode_UpdateWithValues_Version(NSIncrementalStoreNode self, NSDictionary values, unsigned long long version)                                           { ((void (*)(NSIncrementalStoreNode, SEL, NSDictionary, unsigned long long))bean_msgSend)(self, bean_sel("updateWithValues:version:"), values, version); }
+static inline id                        NSIncrementalStoreNode_ValueForPropertyDescription(NSIncrementalStoreNode self, NSPropertyDescription prop)                                                             { return ((id (*)(NSIncrementalStoreNode, SEL, NSPropertyDescription))bean_msgSend)(self, bean_sel("valueForPropertyDescription:"), prop); }
+static inline NSManagedObjectID         NSIncrementalStoreNode_ObjectID(NSIncrementalStoreNode self)                                                                                                            { return ((NSManagedObjectID (*)(NSIncrementalStoreNode, SEL))bean_msgSend)(self, bean_sel("objectID")); }
+static inline unsigned long long        NSIncrementalStoreNode_Version(NSIncrementalStoreNode self)                                                                                                             { return ((unsigned long long (*)(NSIncrementalStoreNode, SEL))bean_msgSend)(self, bean_sel("version")); }
 
 /* ===== NSLightweightMigrationStage ===== */
 #ifndef BEAN_TYPEDEF_NSLightweightMigrationStage
 #define BEAN_TYPEDEF_NSLightweightMigrationStage
 typedef bean_id NSLightweightMigrationStage;
 #endif
-static inline id         NSLightweightMigrationStage_Init(NSLightweightMigrationStage self)                                                  { return ((id (*)(NSLightweightMigrationStage, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id         NSLightweightMigrationStage_InitWithVersionChecksums(NSLightweightMigrationStage self, NSArray versionChecksums)    { return ((id (*)(NSLightweightMigrationStage, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithVersionChecksums:"), versionChecksums); }
-static inline NSArray    NSLightweightMigrationStage_VersionChecksums(NSLightweightMigrationStage self)                                      { return ((NSArray (*)(NSLightweightMigrationStage, SEL))bean_msgSend)(self, bean_sel("versionChecksums")); }
+static inline NSLightweightMigrationStage    NSLightweightMigrationStage_Init(NSLightweightMigrationStage self)                                                  { return ((NSLightweightMigrationStage (*)(NSLightweightMigrationStage, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSLightweightMigrationStage    NSLightweightMigrationStage_InitWithVersionChecksums(NSLightweightMigrationStage self, NSArray versionChecksums)    { return ((NSLightweightMigrationStage (*)(NSLightweightMigrationStage, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithVersionChecksums:"), versionChecksums); }
+static inline NSArray                        NSLightweightMigrationStage_VersionChecksums(NSLightweightMigrationStage self)                                      { return ((NSArray (*)(NSLightweightMigrationStage, SEL))bean_msgSend)(self, bean_sel("versionChecksums")); }
 
 /* ===== NSManagedObject ===== */
 static inline NSEntityDescription       NSManagedObject_Entity(void)                                                                                                                                           { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSManagedObject"), bean_sel("entity")); }
 static inline NSFetchRequest            NSManagedObject_FetchRequest(void)                                                                                                                                     { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSManagedObject"), bean_sel("fetchRequest")); }
 static inline NSManagedObject           NSManagedObject_InitWithEntity_InsertIntoManagedObjectContext(NSManagedObject self, NSEntityDescription entity, NSManagedObjectContext context)                        { return ((NSManagedObject (*)(NSManagedObject, SEL, NSEntityDescription, NSManagedObjectContext))bean_msgSend)(self, bean_sel("initWithEntity:insertIntoManagedObjectContext:"), entity, context); }
-static inline id                        NSManagedObject_InitWithContext(NSManagedObject self, NSManagedObjectContext moc)                                                                                      { return ((id (*)(NSManagedObject, SEL, NSManagedObjectContext))bean_msgSend)(self, bean_sel("initWithContext:"), moc); }
+static inline NSManagedObject           NSManagedObject_InitWithContext(NSManagedObject self, NSManagedObjectContext moc)                                                                                      { return ((NSManagedObject (*)(NSManagedObject, SEL, NSManagedObjectContext))bean_msgSend)(self, bean_sel("initWithContext:"), moc); }
 static inline BOOL                      NSManagedObject_HasFaultForRelationshipNamed(NSManagedObject self, NSString key)                                                                                       { return ((BOOL (*)(NSManagedObject, SEL, NSString))bean_msgSend)(self, bean_sel("hasFaultForRelationshipNamed:"), key); }
 static inline NSArray                   NSManagedObject_ObjectIDsForRelationshipNamed(NSManagedObject self, NSString key)                                                                                      { return ((NSArray (*)(NSManagedObject, SEL, NSString))bean_msgSend)(self, bean_sel("objectIDsForRelationshipNamed:"), key); }
 static inline void                      NSManagedObject_WillAccessValueForKey(NSManagedObject self, NSString key)                                                                                              { ((void (*)(NSManagedObject, SEL, NSString))bean_msgSend)(self, bean_sel("willAccessValueForKey:"), key); }
@@ -5620,7 +7020,7 @@ static inline void                      NSManagedObject_SetPrimitiveValue_ForKey
 static inline NSDictionary              NSManagedObject_CommittedValuesForKeys(NSManagedObject self, NSArray keys)                                                                                             { return ((NSDictionary (*)(NSManagedObject, SEL, NSArray))bean_msgSend)(self, bean_sel("committedValuesForKeys:"), keys); }
 static inline NSDictionary              NSManagedObject_ChangedValues(NSManagedObject self)                                                                                                                    { return ((NSDictionary (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("changedValues")); }
 static inline NSDictionary              NSManagedObject_ChangedValuesForCurrentEvent(NSManagedObject self)                                                                                                     { return ((NSDictionary (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("changedValuesForCurrentEvent")); }
-static inline BOOL                      NSManagedObject_ValidateValue_ForKey_Error(NSManagedObject self, id* value, NSString key, NSError error)                                                               { return ((BOOL (*)(NSManagedObject, SEL, id*, NSString, NSError))bean_msgSend)(self, bean_sel("validateValue:forKey:error:"), value, key, error); }
+static inline BOOL                      NSManagedObject_ValidateValue_ForKey_Error(NSManagedObject self, id* value, NSString key, NSError* error)                                                              { return ((BOOL (*)(NSManagedObject, SEL, id*, NSString, NSError*))bean_msgSend)(self, bean_sel("validateValue:forKey:error:"), value, key, error); }
 static inline BOOL                      NSManagedObject_ValidateForDelete(NSManagedObject self, NSError error)                                                                                                 { return ((BOOL (*)(NSManagedObject, SEL, NSError))bean_msgSend)(self, bean_sel("validateForDelete:"), error); }
 static inline BOOL                      NSManagedObject_ValidateForInsert(NSManagedObject self, NSError error)                                                                                                 { return ((BOOL (*)(NSManagedObject, SEL, NSError))bean_msgSend)(self, bean_sel("validateForInsert:"), error); }
 static inline BOOL                      NSManagedObject_ValidateForUpdate(NSManagedObject self, NSError error)                                                                                                 { return ((BOOL (*)(NSManagedObject, SEL, NSError))bean_msgSend)(self, bean_sel("validateForUpdate:"), error); }
@@ -5642,66 +7042,71 @@ static inline BOOL                      NSManagedObject_Deleted(NSManagedObject 
 static inline BOOL                      NSManagedObject_Fault(NSManagedObject self)                                                                                                                            { return ((BOOL (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("fault")); }
 
 /* ===== NSManagedObjectID ===== */
-static inline NSURL                  NSManagedObjectID_URIRepresentation(NSManagedObjectID self)    { return ((NSURL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("URIRepresentation")); }
-static inline NSEntityDescription    NSManagedObjectID_Entity(NSManagedObjectID self)               { return ((NSEntityDescription (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("entity")); }
-static inline NSPersistentStore      NSManagedObjectID_PersistentStore(NSManagedObjectID self)      { return ((NSPersistentStore (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("persistentStore")); }
-static inline BOOL                   NSManagedObjectID_IsTemporaryID(NSManagedObjectID self)        { return ((BOOL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("isTemporaryID")); }
-static inline BOOL                   NSManagedObjectID_TemporaryID(NSManagedObjectID self)          { return ((BOOL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("temporaryID")); }
+static inline NSURL                  NSManagedObjectID_URIRepresentation(NSManagedObjectID self)             { return ((NSURL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("URIRepresentation")); }
+static inline NSEntityDescription    NSManagedObjectID_Entity(NSManagedObjectID self)                        { return ((NSEntityDescription (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("entity")); }
+static inline NSPersistentStore      NSManagedObjectID_PersistentStore(NSManagedObjectID self)               { return ((NSPersistentStore (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("persistentStore")); }
+static inline BOOL                   NSManagedObjectID_IsTemporaryID(NSManagedObjectID self)                 { return ((BOOL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("isTemporaryID")); }
+static inline id                     NSManagedObjectID_CopyWithZone(NSManagedObjectID self, NSZone* zone)    { return ((id (*)(NSManagedObjectID, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                   NSManagedObjectID_TemporaryID(NSManagedObjectID self)                   { return ((BOOL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("temporaryID")); }
 
 /* ===== NSManagedObjectModel ===== */
-static inline NSManagedObjectModel    NSManagedObjectModel_MergedModelFromBundles(NSArray bundles)                                                                                     { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("mergedModelFromBundles:"), bundles); }
-static inline NSManagedObjectModel    NSManagedObjectModel_ModelByMergingModels(NSArray models)                                                                                        { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("modelByMergingModels:"), models); }
-static inline id                      NSManagedObjectModel_Init(NSManagedObjectModel self)                                                                                             { return ((id (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                      NSManagedObjectModel_InitWithContentsOfURL(NSManagedObjectModel self, NSURL url)                                                                 { return ((id (*)(NSManagedObjectModel, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), url); }
-static inline NSArray                 NSManagedObjectModel_EntitiesForConfiguration(NSManagedObjectModel self, NSString configuration)                                                 { return ((NSArray (*)(NSManagedObjectModel, SEL, NSString))bean_msgSend)(self, bean_sel("entitiesForConfiguration:"), configuration); }
-static inline void                    NSManagedObjectModel_SetEntities_ForConfiguration(NSManagedObjectModel self, NSArray entities, NSString configuration)                           { ((void (*)(NSManagedObjectModel, SEL, NSArray, NSString))bean_msgSend)(self, bean_sel("setEntities:forConfiguration:"), entities, configuration); }
-static inline void                    NSManagedObjectModel_SetFetchRequestTemplate_ForName(NSManagedObjectModel self, NSFetchRequest fetchRequestTemplate, NSString name)              { ((void (*)(NSManagedObjectModel, SEL, NSFetchRequest, NSString))bean_msgSend)(self, bean_sel("setFetchRequestTemplate:forName:"), fetchRequestTemplate, name); }
-static inline NSFetchRequest          NSManagedObjectModel_FetchRequestTemplateForName(NSManagedObjectModel self, NSString name)                                                       { return ((NSFetchRequest (*)(NSManagedObjectModel, SEL, NSString))bean_msgSend)(self, bean_sel("fetchRequestTemplateForName:"), name); }
-static inline NSFetchRequest          NSManagedObjectModel_FetchRequestFromTemplateWithName_SubstitutionVariables(NSManagedObjectModel self, NSString name, NSDictionary variables)    { return ((NSFetchRequest (*)(NSManagedObjectModel, SEL, NSString, NSDictionary))bean_msgSend)(self, bean_sel("fetchRequestFromTemplateWithName:substitutionVariables:"), name, variables); }
-static inline NSManagedObjectModel    NSManagedObjectModel_MergedModelFromBundles_ForStoreMetadata(NSArray bundles, NSDictionary metadata)                                             { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray, NSDictionary))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("mergedModelFromBundles:forStoreMetadata:"), bundles, metadata); }
-static inline NSManagedObjectModel    NSManagedObjectModel_ModelByMergingModels_ForStoreMetadata(NSArray models, NSDictionary metadata)                                                { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray, NSDictionary))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("modelByMergingModels:forStoreMetadata:"), models, metadata); }
-static inline BOOL                    NSManagedObjectModel_IsConfiguration_CompatibleWithStoreMetadata(NSManagedObjectModel self, NSString configuration, NSDictionary metadata)       { return ((BOOL (*)(NSManagedObjectModel, SEL, NSString, NSDictionary))bean_msgSend)(self, bean_sel("isConfiguration:compatibleWithStoreMetadata:"), configuration, metadata); }
-static inline NSDictionary            NSManagedObjectModel_ChecksumsForVersionedModelAtURL_Error(NSURL modelURL, NSError error)                                                        { return ((NSDictionary (*)(bean_class, SEL, NSURL, NSError))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("checksumsForVersionedModelAtURL:error:"), modelURL, error); }
-static inline NSDictionary            NSManagedObjectModel_EntitiesByName(NSManagedObjectModel self)                                                                                   { return ((NSDictionary (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("entitiesByName")); }
-static inline NSArray                 NSManagedObjectModel_Entities(NSManagedObjectModel self)                                                                                         { return ((NSArray (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("entities")); }
-static inline void                    NSManagedObjectModel_SetEntities(NSManagedObjectModel self, NSArray entities)                                                                    { ((void (*)(NSManagedObjectModel, SEL, NSArray))bean_msgSend)(self, bean_sel("setEntities:"), entities); }
-static inline NSArray                 NSManagedObjectModel_Configurations(NSManagedObjectModel self)                                                                                   { return ((NSArray (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("configurations")); }
-static inline NSDictionary            NSManagedObjectModel_LocalizationDictionary(NSManagedObjectModel self)                                                                           { return ((NSDictionary (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("localizationDictionary")); }
-static inline void                    NSManagedObjectModel_SetLocalizationDictionary(NSManagedObjectModel self, NSDictionary localizationDictionary)                                   { ((void (*)(NSManagedObjectModel, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setLocalizationDictionary:"), localizationDictionary); }
-static inline NSDictionary            NSManagedObjectModel_FetchRequestTemplatesByName(NSManagedObjectModel self)                                                                      { return ((NSDictionary (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("fetchRequestTemplatesByName")); }
-static inline NSSet                   NSManagedObjectModel_VersionIdentifiers(NSManagedObjectModel self)                                                                               { return ((NSSet (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("versionIdentifiers")); }
-static inline void                    NSManagedObjectModel_SetVersionIdentifiers(NSManagedObjectModel self, NSSet versionIdentifiers)                                                  { ((void (*)(NSManagedObjectModel, SEL, NSSet))bean_msgSend)(self, bean_sel("setVersionIdentifiers:"), versionIdentifiers); }
-static inline NSDictionary            NSManagedObjectModel_EntityVersionHashesByName(NSManagedObjectModel self)                                                                        { return ((NSDictionary (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("entityVersionHashesByName")); }
-static inline NSString                NSManagedObjectModel_VersionChecksum(NSManagedObjectModel self)                                                                                  { return ((NSString (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("versionChecksum")); }
+static inline NSManagedObjectModel    NSManagedObjectModel_MergedModelFromBundles(NSArray bundles)                                                                                            { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("mergedModelFromBundles:"), bundles); }
+static inline NSManagedObjectModel    NSManagedObjectModel_ModelByMergingModels(NSArray models)                                                                                               { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("modelByMergingModels:"), models); }
+static inline NSManagedObjectModel    NSManagedObjectModel_Init(NSManagedObjectModel self)                                                                                                    { return ((NSManagedObjectModel (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSManagedObjectModel    NSManagedObjectModel_InitWithContentsOfURL(NSManagedObjectModel self, NSURL url)                                                                        { return ((NSManagedObjectModel (*)(NSManagedObjectModel, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), url); }
+static inline NSArray                 NSManagedObjectModel_EntitiesForConfiguration(NSManagedObjectModel self, NSString configuration)                                                        { return ((NSArray (*)(NSManagedObjectModel, SEL, NSString))bean_msgSend)(self, bean_sel("entitiesForConfiguration:"), configuration); }
+static inline void                    NSManagedObjectModel_SetEntities_ForConfiguration(NSManagedObjectModel self, NSArray entities, NSString configuration)                                  { ((void (*)(NSManagedObjectModel, SEL, NSArray, NSString))bean_msgSend)(self, bean_sel("setEntities:forConfiguration:"), entities, configuration); }
+static inline void                    NSManagedObjectModel_SetFetchRequestTemplate_ForName(NSManagedObjectModel self, NSFetchRequest fetchRequestTemplate, NSString name)                     { ((void (*)(NSManagedObjectModel, SEL, NSFetchRequest, NSString))bean_msgSend)(self, bean_sel("setFetchRequestTemplate:forName:"), fetchRequestTemplate, name); }
+static inline NSFetchRequest          NSManagedObjectModel_FetchRequestTemplateForName(NSManagedObjectModel self, NSString name)                                                              { return ((NSFetchRequest (*)(NSManagedObjectModel, SEL, NSString))bean_msgSend)(self, bean_sel("fetchRequestTemplateForName:"), name); }
+static inline NSFetchRequest          NSManagedObjectModel_FetchRequestFromTemplateWithName_SubstitutionVariables(NSManagedObjectModel self, NSString name, NSDictionary variables)           { return ((NSFetchRequest (*)(NSManagedObjectModel, SEL, NSString, NSDictionary))bean_msgSend)(self, bean_sel("fetchRequestFromTemplateWithName:substitutionVariables:"), name, variables); }
+static inline NSManagedObjectModel    NSManagedObjectModel_MergedModelFromBundles_ForStoreMetadata(NSArray bundles, NSDictionary metadata)                                                    { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray, NSDictionary))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("mergedModelFromBundles:forStoreMetadata:"), bundles, metadata); }
+static inline NSManagedObjectModel    NSManagedObjectModel_ModelByMergingModels_ForStoreMetadata(NSArray models, NSDictionary metadata)                                                       { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray, NSDictionary))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("modelByMergingModels:forStoreMetadata:"), models, metadata); }
+static inline BOOL                    NSManagedObjectModel_IsConfiguration_CompatibleWithStoreMetadata(NSManagedObjectModel self, NSString configuration, NSDictionary metadata)              { return ((BOOL (*)(NSManagedObjectModel, SEL, NSString, NSDictionary))bean_msgSend)(self, bean_sel("isConfiguration:compatibleWithStoreMetadata:"), configuration, metadata); }
+static inline NSDictionary            NSManagedObjectModel_ChecksumsForVersionedModelAtURL_Error(NSURL modelURL, NSError* error)                                                              { return ((NSDictionary (*)(bean_class, SEL, NSURL, NSError*))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("checksumsForVersionedModelAtURL:error:"), modelURL, error); }
+static inline NSDictionary            NSManagedObjectModel_EntitiesByName(NSManagedObjectModel self)                                                                                          { return ((NSDictionary (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("entitiesByName")); }
+static inline NSArray                 NSManagedObjectModel_Entities(NSManagedObjectModel self)                                                                                                { return ((NSArray (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("entities")); }
+static inline void                    NSManagedObjectModel_SetEntities(NSManagedObjectModel self, NSArray entities)                                                                           { ((void (*)(NSManagedObjectModel, SEL, NSArray))bean_msgSend)(self, bean_sel("setEntities:"), entities); }
+static inline NSArray                 NSManagedObjectModel_Configurations(NSManagedObjectModel self)                                                                                          { return ((NSArray (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("configurations")); }
+static inline NSDictionary            NSManagedObjectModel_LocalizationDictionary(NSManagedObjectModel self)                                                                                  { return ((NSDictionary (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("localizationDictionary")); }
+static inline void                    NSManagedObjectModel_SetLocalizationDictionary(NSManagedObjectModel self, NSDictionary localizationDictionary)                                          { ((void (*)(NSManagedObjectModel, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setLocalizationDictionary:"), localizationDictionary); }
+static inline NSDictionary            NSManagedObjectModel_FetchRequestTemplatesByName(NSManagedObjectModel self)                                                                             { return ((NSDictionary (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("fetchRequestTemplatesByName")); }
+static inline NSSet                   NSManagedObjectModel_VersionIdentifiers(NSManagedObjectModel self)                                                                                      { return ((NSSet (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("versionIdentifiers")); }
+static inline void                    NSManagedObjectModel_SetVersionIdentifiers(NSManagedObjectModel self, NSSet versionIdentifiers)                                                         { ((void (*)(NSManagedObjectModel, SEL, NSSet))bean_msgSend)(self, bean_sel("setVersionIdentifiers:"), versionIdentifiers); }
+static inline NSDictionary            NSManagedObjectModel_EntityVersionHashesByName(NSManagedObjectModel self)                                                                               { return ((NSDictionary (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("entityVersionHashesByName")); }
+static inline NSString                NSManagedObjectModel_VersionChecksum(NSManagedObjectModel self)                                                                                         { return ((NSString (*)(NSManagedObjectModel, SEL))bean_msgSend)(self, bean_sel("versionChecksum")); }
+static inline void                    NSManagedObjectModel_EncodeWithCoder(NSManagedObjectModel self, NSCoder coder)                                                                          { ((void (*)(NSManagedObjectModel, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding                NSManagedObjectModel_InitWithCoder(NSManagedObjectModel self, NSCoder coder)                                                                            { return ((NSCoding (*)(NSManagedObjectModel, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id                      NSManagedObjectModel_CopyWithZone(NSManagedObjectModel self, NSZone* zone)                                                                              { return ((id (*)(NSManagedObjectModel, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline NSUInteger              NSManagedObjectModel_CountByEnumeratingWithState_Objects_Count(NSManagedObjectModel self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSManagedObjectModel, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
 
 /* ===== NSManagedObjectModelReference ===== */
-static inline id                      NSManagedObjectModelReference_Init(NSManagedObjectModelReference self)                                                                                                                         { return ((id (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                      NSManagedObjectModelReference_InitWithModel_VersionChecksum(NSManagedObjectModelReference self, NSManagedObjectModel model, NSString versionChecksum)                                          { return ((id (*)(NSManagedObjectModelReference, SEL, NSManagedObjectModel, NSString))bean_msgSend)(self, bean_sel("initWithModel:versionChecksum:"), model, versionChecksum); }
-static inline id                      NSManagedObjectModelReference_InitWithFileURL_VersionChecksum(NSManagedObjectModelReference self, NSURL fileURL, NSString versionChecksum)                                                     { return ((id (*)(NSManagedObjectModelReference, SEL, NSURL, NSString))bean_msgSend)(self, bean_sel("initWithFileURL:versionChecksum:"), fileURL, versionChecksum); }
-static inline id                      NSManagedObjectModelReference_InitWithEntityVersionHashes_InBundle_VersionChecksum(NSManagedObjectModelReference self, NSDictionary versionHash, NSBundle bundle, NSString versionChecksum)    { return ((id (*)(NSManagedObjectModelReference, SEL, NSDictionary, NSBundle, NSString))bean_msgSend)(self, bean_sel("initWithEntityVersionHashes:inBundle:versionChecksum:"), versionHash, bundle, versionChecksum); }
-static inline id                      NSManagedObjectModelReference_InitWithName_InBundle_VersionChecksum(NSManagedObjectModelReference self, NSString modelName, NSBundle bundle, NSString versionChecksum)                         { return ((id (*)(NSManagedObjectModelReference, SEL, NSString, NSBundle, NSString))bean_msgSend)(self, bean_sel("initWithName:inBundle:versionChecksum:"), modelName, bundle, versionChecksum); }
-static inline NSManagedObjectModel    NSManagedObjectModelReference_ResolvedModel(NSManagedObjectModelReference self)                                                                                                                { return ((NSManagedObjectModel (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("resolvedModel")); }
-static inline NSString                NSManagedObjectModelReference_VersionChecksum(NSManagedObjectModelReference self)                                                                                                              { return ((NSString (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("versionChecksum")); }
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_Init(NSManagedObjectModelReference self)                                                                                                                         { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_InitWithModel_VersionChecksum(NSManagedObjectModelReference self, NSManagedObjectModel model, NSString versionChecksum)                                          { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL, NSManagedObjectModel, NSString))bean_msgSend)(self, bean_sel("initWithModel:versionChecksum:"), model, versionChecksum); }
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_InitWithFileURL_VersionChecksum(NSManagedObjectModelReference self, NSURL fileURL, NSString versionChecksum)                                                     { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL, NSURL, NSString))bean_msgSend)(self, bean_sel("initWithFileURL:versionChecksum:"), fileURL, versionChecksum); }
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_InitWithEntityVersionHashes_InBundle_VersionChecksum(NSManagedObjectModelReference self, NSDictionary versionHash, NSBundle bundle, NSString versionChecksum)    { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL, NSDictionary, NSBundle, NSString))bean_msgSend)(self, bean_sel("initWithEntityVersionHashes:inBundle:versionChecksum:"), versionHash, bundle, versionChecksum); }
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_InitWithName_InBundle_VersionChecksum(NSManagedObjectModelReference self, NSString modelName, NSBundle bundle, NSString versionChecksum)                         { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL, NSString, NSBundle, NSString))bean_msgSend)(self, bean_sel("initWithName:inBundle:versionChecksum:"), modelName, bundle, versionChecksum); }
+static inline NSManagedObjectModel             NSManagedObjectModelReference_ResolvedModel(NSManagedObjectModelReference self)                                                                                                                { return ((NSManagedObjectModel (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("resolvedModel")); }
+static inline NSString                         NSManagedObjectModelReference_VersionChecksum(NSManagedObjectModelReference self)                                                                                                              { return ((NSString (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("versionChecksum")); }
 
 /* ===== NSMappingModel ===== */
 #ifndef BEAN_TYPEDEF_NSMappingModel
 #define BEAN_TYPEDEF_NSMappingModel
 typedef bean_id NSMappingModel;
 #endif
-static inline NSMappingModel    NSMappingModel_MappingModelFromBundles_ForSourceModel_DestinationModel(NSArray bundles, NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel)    { return ((NSMappingModel (*)(bean_class, SEL, NSArray, NSManagedObjectModel, NSManagedObjectModel))bean_msgSend)(bean_cls("NSMappingModel"), bean_sel("mappingModelFromBundles:forSourceModel:destinationModel:"), bundles, sourceModel, destinationModel); }
-static inline NSMappingModel    NSMappingModel_InferredMappingModelForSourceModel_DestinationModel_Error(NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel, NSError error)    { return ((NSMappingModel (*)(bean_class, SEL, NSManagedObjectModel, NSManagedObjectModel, NSError))bean_msgSend)(bean_cls("NSMappingModel"), bean_sel("inferredMappingModelForSourceModel:destinationModel:error:"), sourceModel, destinationModel, error); }
-static inline id                NSMappingModel_InitWithContentsOfURL(NSMappingModel self, NSURL url)                                                                                                { return ((id (*)(NSMappingModel, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), url); }
-static inline NSArray           NSMappingModel_EntityMappings(NSMappingModel self)                                                                                                                  { return ((NSArray (*)(NSMappingModel, SEL))bean_msgSend)(self, bean_sel("entityMappings")); }
-static inline void              NSMappingModel_SetEntityMappings(NSMappingModel self, NSArray entityMappings)                                                                                       { ((void (*)(NSMappingModel, SEL, NSArray))bean_msgSend)(self, bean_sel("setEntityMappings:"), entityMappings); }
-static inline NSDictionary      NSMappingModel_EntityMappingsByName(NSMappingModel self)                                                                                                            { return ((NSDictionary (*)(NSMappingModel, SEL))bean_msgSend)(self, bean_sel("entityMappingsByName")); }
+static inline NSMappingModel    NSMappingModel_MappingModelFromBundles_ForSourceModel_DestinationModel(NSArray bundles, NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel)     { return ((NSMappingModel (*)(bean_class, SEL, NSArray, NSManagedObjectModel, NSManagedObjectModel))bean_msgSend)(bean_cls("NSMappingModel"), bean_sel("mappingModelFromBundles:forSourceModel:destinationModel:"), bundles, sourceModel, destinationModel); }
+static inline NSMappingModel    NSMappingModel_InferredMappingModelForSourceModel_DestinationModel_Error(NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel, NSError* error)    { return ((NSMappingModel (*)(bean_class, SEL, NSManagedObjectModel, NSManagedObjectModel, NSError*))bean_msgSend)(bean_cls("NSMappingModel"), bean_sel("inferredMappingModelForSourceModel:destinationModel:error:"), sourceModel, destinationModel, error); }
+static inline NSMappingModel    NSMappingModel_InitWithContentsOfURL(NSMappingModel self, NSURL url)                                                                                                 { return ((NSMappingModel (*)(NSMappingModel, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), url); }
+static inline NSArray           NSMappingModel_EntityMappings(NSMappingModel self)                                                                                                                   { return ((NSArray (*)(NSMappingModel, SEL))bean_msgSend)(self, bean_sel("entityMappings")); }
+static inline void              NSMappingModel_SetEntityMappings(NSMappingModel self, NSArray entityMappings)                                                                                        { ((void (*)(NSMappingModel, SEL, NSArray))bean_msgSend)(self, bean_sel("setEntityMappings:"), entityMappings); }
+static inline NSDictionary      NSMappingModel_EntityMappingsByName(NSMappingModel self)                                                                                                             { return ((NSDictionary (*)(NSMappingModel, SEL))bean_msgSend)(self, bean_sel("entityMappingsByName")); }
 
 /* ===== NSMergeConflict ===== */
 #ifndef BEAN_TYPEDEF_NSMergeConflict
 #define BEAN_TYPEDEF_NSMergeConflict
 typedef bean_id NSMergeConflict;
 #endif
-static inline id                 NSMergeConflict_InitWithSource_NewVersion_OldVersion_CachedSnapshot_PersistedSnapshot(NSMergeConflict self, NSManagedObject srcObject, NSUInteger newvers, NSUInteger oldvers, NSDictionary cachesnap, NSDictionary persnap)    { return ((id (*)(NSMergeConflict, SEL, NSManagedObject, NSUInteger, NSUInteger, NSDictionary, NSDictionary))bean_msgSend)(self, bean_sel("initWithSource:newVersion:oldVersion:cachedSnapshot:persistedSnapshot:"), srcObject, newvers, oldvers, cachesnap, persnap); }
-static inline id                 NSMergeConflict_Init(NSMergeConflict self)                                                                                                                                                                                      { return ((id (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSMergeConflict    NSMergeConflict_InitWithSource_NewVersion_OldVersion_CachedSnapshot_PersistedSnapshot(NSMergeConflict self, NSManagedObject srcObject, NSUInteger newvers, NSUInteger oldvers, NSDictionary cachesnap, NSDictionary persnap)    { return ((NSMergeConflict (*)(NSMergeConflict, SEL, NSManagedObject, NSUInteger, NSUInteger, NSDictionary, NSDictionary))bean_msgSend)(self, bean_sel("initWithSource:newVersion:oldVersion:cachedSnapshot:persistedSnapshot:"), srcObject, newvers, oldvers, cachesnap, persnap); }
+static inline NSMergeConflict    NSMergeConflict_Init(NSMergeConflict self)                                                                                                                                                                                      { return ((NSMergeConflict (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSManagedObject    NSMergeConflict_SourceObject(NSMergeConflict self)                                                                                                                                                                              { return ((NSManagedObject (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("sourceObject")); }
 static inline NSDictionary       NSMergeConflict_ObjectSnapshot(NSMergeConflict self)                                                                                                                                                                            { return ((NSDictionary (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("objectSnapshot")); }
 static inline NSDictionary       NSMergeConflict_CachedSnapshot(NSMergeConflict self)                                                                                                                                                                            { return ((NSDictionary (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("cachedSnapshot")); }
@@ -5714,62 +7119,62 @@ static inline NSUInteger         NSMergeConflict_OldVersionNumber(NSMergeConflic
 #define BEAN_TYPEDEF_NSMergePolicy
 typedef bean_id NSMergePolicy;
 #endif
-static inline id                   NSMergePolicy_InitWithMergeType(NSMergePolicy self, NSMergePolicyType ty)                                        { return ((id (*)(NSMergePolicy, SEL, NSMergePolicyType))bean_msgSend)(self, bean_sel("initWithMergeType:"), ty); }
-static inline id                   NSMergePolicy_Init(NSMergePolicy self)                                                                           { return ((id (*)(NSMergePolicy, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline BOOL                 NSMergePolicy_ResolveConflicts_Error(NSMergePolicy self, NSArray list, NSError error)                            { return ((BOOL (*)(NSMergePolicy, SEL, NSArray, NSError))bean_msgSend)(self, bean_sel("resolveConflicts:error:"), list, error); }
-static inline BOOL                 NSMergePolicy_ResolveOptimisticLockingVersionConflicts_Error(NSMergePolicy self, NSArray list, NSError error)    { return ((BOOL (*)(NSMergePolicy, SEL, NSArray, NSError))bean_msgSend)(self, bean_sel("resolveOptimisticLockingVersionConflicts:error:"), list, error); }
-static inline BOOL                 NSMergePolicy_ResolveConstraintConflicts_Error(NSMergePolicy self, NSArray list, NSError error)                  { return ((BOOL (*)(NSMergePolicy, SEL, NSArray, NSError))bean_msgSend)(self, bean_sel("resolveConstraintConflicts:error:"), list, error); }
-static inline NSMergePolicy        NSMergePolicy_ErrorMergePolicy(void)                                                                             { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("errorMergePolicy")); }
-static inline NSMergePolicy        NSMergePolicy_RollbackMergePolicy(void)                                                                          { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("rollbackMergePolicy")); }
-static inline NSMergePolicy        NSMergePolicy_OverwriteMergePolicy(void)                                                                         { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("overwriteMergePolicy")); }
-static inline NSMergePolicy        NSMergePolicy_MergeByPropertyObjectTrumpMergePolicy(void)                                                        { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("mergeByPropertyObjectTrumpMergePolicy")); }
-static inline NSMergePolicy        NSMergePolicy_MergeByPropertyStoreTrumpMergePolicy(void)                                                         { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("mergeByPropertyStoreTrumpMergePolicy")); }
-static inline NSMergePolicyType    NSMergePolicy_MergeType(NSMergePolicy self)                                                                      { return ((NSMergePolicyType (*)(NSMergePolicy, SEL))bean_msgSend)(self, bean_sel("mergeType")); }
+static inline NSMergePolicy        NSMergePolicy_InitWithMergeType(NSMergePolicy self, NSMergePolicyType ty)                                         { return ((NSMergePolicy (*)(NSMergePolicy, SEL, NSMergePolicyType))bean_msgSend)(self, bean_sel("initWithMergeType:"), ty); }
+static inline NSMergePolicy        NSMergePolicy_Init(NSMergePolicy self)                                                                            { return ((NSMergePolicy (*)(NSMergePolicy, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BOOL                 NSMergePolicy_ResolveConflicts_Error(NSMergePolicy self, NSArray list, NSError* error)                            { return ((BOOL (*)(NSMergePolicy, SEL, NSArray, NSError*))bean_msgSend)(self, bean_sel("resolveConflicts:error:"), list, error); }
+static inline BOOL                 NSMergePolicy_ResolveOptimisticLockingVersionConflicts_Error(NSMergePolicy self, NSArray list, NSError* error)    { return ((BOOL (*)(NSMergePolicy, SEL, NSArray, NSError*))bean_msgSend)(self, bean_sel("resolveOptimisticLockingVersionConflicts:error:"), list, error); }
+static inline BOOL                 NSMergePolicy_ResolveConstraintConflicts_Error(NSMergePolicy self, NSArray list, NSError* error)                  { return ((BOOL (*)(NSMergePolicy, SEL, NSArray, NSError*))bean_msgSend)(self, bean_sel("resolveConstraintConflicts:error:"), list, error); }
+static inline NSMergePolicy        NSMergePolicy_ErrorMergePolicy(void)                                                                              { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("errorMergePolicy")); }
+static inline NSMergePolicy        NSMergePolicy_RollbackMergePolicy(void)                                                                           { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("rollbackMergePolicy")); }
+static inline NSMergePolicy        NSMergePolicy_OverwriteMergePolicy(void)                                                                          { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("overwriteMergePolicy")); }
+static inline NSMergePolicy        NSMergePolicy_MergeByPropertyObjectTrumpMergePolicy(void)                                                         { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("mergeByPropertyObjectTrumpMergePolicy")); }
+static inline NSMergePolicy        NSMergePolicy_MergeByPropertyStoreTrumpMergePolicy(void)                                                          { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("mergeByPropertyStoreTrumpMergePolicy")); }
+static inline NSMergePolicyType    NSMergePolicy_MergeType(NSMergePolicy self)                                                                       { return ((NSMergePolicyType (*)(NSMergePolicy, SEL))bean_msgSend)(self, bean_sel("mergeType")); }
 
 /* ===== NSMigrationManager ===== */
-static inline id                        NSMigrationManager_InitWithSourceModel_DestinationModel(NSMigrationManager self, NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel)                                                                                                                                                               { return ((id (*)(NSMigrationManager, SEL, NSManagedObjectModel, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithSourceModel:destinationModel:"), sourceModel, destinationModel); }
-static inline BOOL                      NSMigrationManager_MigrateStoreFromURL_Type_Options_WithMappingModel_ToDestinationURL_DestinationType_DestinationOptions_Error(NSMigrationManager self, NSURL sourceURL, NSString sStoreType, NSDictionary sOptions, NSMappingModel mappings, NSURL dURL, NSString dStoreType, NSDictionary dOptions, NSError error)    { return ((BOOL (*)(NSMigrationManager, SEL, NSURL, NSString, NSDictionary, NSMappingModel, NSURL, NSString, NSDictionary, NSError))bean_msgSend)(self, bean_sel("migrateStoreFromURL:type:options:withMappingModel:toDestinationURL:destinationType:destinationOptions:error:"), sourceURL, sStoreType, sOptions, mappings, dURL, dStoreType, dOptions, error); }
-static inline void                      NSMigrationManager_Reset(NSMigrationManager self)                                                                                                                                                                                                                                                                       { ((void (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("reset")); }
-static inline NSEntityDescription       NSMigrationManager_SourceEntityForEntityMapping(NSMigrationManager self, NSEntityMapping mEntity)                                                                                                                                                                                                                       { return ((NSEntityDescription (*)(NSMigrationManager, SEL, NSEntityMapping))bean_msgSend)(self, bean_sel("sourceEntityForEntityMapping:"), mEntity); }
-static inline NSEntityDescription       NSMigrationManager_DestinationEntityForEntityMapping(NSMigrationManager self, NSEntityMapping mEntity)                                                                                                                                                                                                                  { return ((NSEntityDescription (*)(NSMigrationManager, SEL, NSEntityMapping))bean_msgSend)(self, bean_sel("destinationEntityForEntityMapping:"), mEntity); }
-static inline void                      NSMigrationManager_AssociateSourceInstance_WithDestinationInstance_ForEntityMapping(NSMigrationManager self, NSManagedObject sourceInstance, NSManagedObject destinationInstance, NSEntityMapping entityMapping)                                                                                                        { ((void (*)(NSMigrationManager, SEL, NSManagedObject, NSManagedObject, NSEntityMapping))bean_msgSend)(self, bean_sel("associateSourceInstance:withDestinationInstance:forEntityMapping:"), sourceInstance, destinationInstance, entityMapping); }
-static inline NSArray                   NSMigrationManager_DestinationInstancesForEntityMappingNamed_SourceInstances(NSMigrationManager self, NSString mappingName, NSArray sourceInstances)                                                                                                                                                                    { return ((NSArray (*)(NSMigrationManager, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("destinationInstancesForEntityMappingNamed:sourceInstances:"), mappingName, sourceInstances); }
-static inline NSArray                   NSMigrationManager_SourceInstancesForEntityMappingNamed_DestinationInstances(NSMigrationManager self, NSString mappingName, NSArray destinationInstances)                                                                                                                                                               { return ((NSArray (*)(NSMigrationManager, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("sourceInstancesForEntityMappingNamed:destinationInstances:"), mappingName, destinationInstances); }
-static inline void                      NSMigrationManager_CancelMigrationWithError(NSMigrationManager self, NSError error)                                                                                                                                                                                                                                     { ((void (*)(NSMigrationManager, SEL, NSError))bean_msgSend)(self, bean_sel("cancelMigrationWithError:"), error); }
-static inline BOOL                      NSMigrationManager_UsesStoreSpecificMigrationManager(NSMigrationManager self)                                                                                                                                                                                                                                           { return ((BOOL (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("usesStoreSpecificMigrationManager")); }
-static inline void                      NSMigrationManager_SetUsesStoreSpecificMigrationManager(NSMigrationManager self, BOOL usesStoreSpecificMigrationManager)                                                                                                                                                                                                { ((void (*)(NSMigrationManager, SEL, BOOL))bean_msgSend)(self, bean_sel("setUsesStoreSpecificMigrationManager:"), usesStoreSpecificMigrationManager); }
-static inline NSMappingModel            NSMigrationManager_MappingModel(NSMigrationManager self)                                                                                                                                                                                                                                                                { return ((NSMappingModel (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("mappingModel")); }
-static inline NSManagedObjectModel      NSMigrationManager_SourceModel(NSMigrationManager self)                                                                                                                                                                                                                                                                 { return ((NSManagedObjectModel (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("sourceModel")); }
-static inline NSManagedObjectModel      NSMigrationManager_DestinationModel(NSMigrationManager self)                                                                                                                                                                                                                                                            { return ((NSManagedObjectModel (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("destinationModel")); }
-static inline NSManagedObjectContext    NSMigrationManager_SourceContext(NSMigrationManager self)                                                                                                                                                                                                                                                               { return ((NSManagedObjectContext (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("sourceContext")); }
-static inline NSManagedObjectContext    NSMigrationManager_DestinationContext(NSMigrationManager self)                                                                                                                                                                                                                                                          { return ((NSManagedObjectContext (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("destinationContext")); }
-static inline NSEntityMapping           NSMigrationManager_CurrentEntityMapping(NSMigrationManager self)                                                                                                                                                                                                                                                        { return ((NSEntityMapping (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("currentEntityMapping")); }
-static inline CGFloat                   NSMigrationManager_MigrationProgress(NSMigrationManager self)                                                                                                                                                                                                                                                           { return ((CGFloat (*)(NSMigrationManager, SEL))bean_msgSend_fpret)(self, bean_sel("migrationProgress")); }
-static inline NSDictionary              NSMigrationManager_UserInfo(NSMigrationManager self)                                                                                                                                                                                                                                                                    { return ((NSDictionary (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
-static inline void                      NSMigrationManager_SetUserInfo(NSMigrationManager self, NSDictionary userInfo)                                                                                                                                                                                                                                          { ((void (*)(NSMigrationManager, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+static inline NSMigrationManager        NSMigrationManager_InitWithSourceModel_DestinationModel(NSMigrationManager self, NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel)                                                                                                                                                                { return ((NSMigrationManager (*)(NSMigrationManager, SEL, NSManagedObjectModel, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithSourceModel:destinationModel:"), sourceModel, destinationModel); }
+static inline BOOL                      NSMigrationManager_MigrateStoreFromURL_Type_Options_WithMappingModel_ToDestinationURL_DestinationType_DestinationOptions_Error(NSMigrationManager self, NSURL sourceURL, NSString sStoreType, NSDictionary sOptions, NSMappingModel mappings, NSURL dURL, NSString dStoreType, NSDictionary dOptions, NSError* error)    { return ((BOOL (*)(NSMigrationManager, SEL, NSURL, NSString, NSDictionary, NSMappingModel, NSURL, NSString, NSDictionary, NSError*))bean_msgSend)(self, bean_sel("migrateStoreFromURL:type:options:withMappingModel:toDestinationURL:destinationType:destinationOptions:error:"), sourceURL, sStoreType, sOptions, mappings, dURL, dStoreType, dOptions, error); }
+static inline void                      NSMigrationManager_Reset(NSMigrationManager self)                                                                                                                                                                                                                                                                        { ((void (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("reset")); }
+static inline NSEntityDescription       NSMigrationManager_SourceEntityForEntityMapping(NSMigrationManager self, NSEntityMapping mEntity)                                                                                                                                                                                                                        { return ((NSEntityDescription (*)(NSMigrationManager, SEL, NSEntityMapping))bean_msgSend)(self, bean_sel("sourceEntityForEntityMapping:"), mEntity); }
+static inline NSEntityDescription       NSMigrationManager_DestinationEntityForEntityMapping(NSMigrationManager self, NSEntityMapping mEntity)                                                                                                                                                                                                                   { return ((NSEntityDescription (*)(NSMigrationManager, SEL, NSEntityMapping))bean_msgSend)(self, bean_sel("destinationEntityForEntityMapping:"), mEntity); }
+static inline void                      NSMigrationManager_AssociateSourceInstance_WithDestinationInstance_ForEntityMapping(NSMigrationManager self, NSManagedObject sourceInstance, NSManagedObject destinationInstance, NSEntityMapping entityMapping)                                                                                                         { ((void (*)(NSMigrationManager, SEL, NSManagedObject, NSManagedObject, NSEntityMapping))bean_msgSend)(self, bean_sel("associateSourceInstance:withDestinationInstance:forEntityMapping:"), sourceInstance, destinationInstance, entityMapping); }
+static inline NSArray                   NSMigrationManager_DestinationInstancesForEntityMappingNamed_SourceInstances(NSMigrationManager self, NSString mappingName, NSArray sourceInstances)                                                                                                                                                                     { return ((NSArray (*)(NSMigrationManager, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("destinationInstancesForEntityMappingNamed:sourceInstances:"), mappingName, sourceInstances); }
+static inline NSArray                   NSMigrationManager_SourceInstancesForEntityMappingNamed_DestinationInstances(NSMigrationManager self, NSString mappingName, NSArray destinationInstances)                                                                                                                                                                { return ((NSArray (*)(NSMigrationManager, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("sourceInstancesForEntityMappingNamed:destinationInstances:"), mappingName, destinationInstances); }
+static inline void                      NSMigrationManager_CancelMigrationWithError(NSMigrationManager self, NSError error)                                                                                                                                                                                                                                      { ((void (*)(NSMigrationManager, SEL, NSError))bean_msgSend)(self, bean_sel("cancelMigrationWithError:"), error); }
+static inline BOOL                      NSMigrationManager_UsesStoreSpecificMigrationManager(NSMigrationManager self)                                                                                                                                                                                                                                            { return ((BOOL (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("usesStoreSpecificMigrationManager")); }
+static inline void                      NSMigrationManager_SetUsesStoreSpecificMigrationManager(NSMigrationManager self, BOOL usesStoreSpecificMigrationManager)                                                                                                                                                                                                 { ((void (*)(NSMigrationManager, SEL, BOOL))bean_msgSend)(self, bean_sel("setUsesStoreSpecificMigrationManager:"), usesStoreSpecificMigrationManager); }
+static inline NSMappingModel            NSMigrationManager_MappingModel(NSMigrationManager self)                                                                                                                                                                                                                                                                 { return ((NSMappingModel (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("mappingModel")); }
+static inline NSManagedObjectModel      NSMigrationManager_SourceModel(NSMigrationManager self)                                                                                                                                                                                                                                                                  { return ((NSManagedObjectModel (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("sourceModel")); }
+static inline NSManagedObjectModel      NSMigrationManager_DestinationModel(NSMigrationManager self)                                                                                                                                                                                                                                                             { return ((NSManagedObjectModel (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("destinationModel")); }
+static inline NSManagedObjectContext    NSMigrationManager_SourceContext(NSMigrationManager self)                                                                                                                                                                                                                                                                { return ((NSManagedObjectContext (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("sourceContext")); }
+static inline NSManagedObjectContext    NSMigrationManager_DestinationContext(NSMigrationManager self)                                                                                                                                                                                                                                                           { return ((NSManagedObjectContext (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("destinationContext")); }
+static inline NSEntityMapping           NSMigrationManager_CurrentEntityMapping(NSMigrationManager self)                                                                                                                                                                                                                                                         { return ((NSEntityMapping (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("currentEntityMapping")); }
+static inline CGFloat                   NSMigrationManager_MigrationProgress(NSMigrationManager self)                                                                                                                                                                                                                                                            { return ((CGFloat (*)(NSMigrationManager, SEL))bean_msgSend_fpret)(self, bean_sel("migrationProgress")); }
+static inline NSDictionary              NSMigrationManager_UserInfo(NSMigrationManager self)                                                                                                                                                                                                                                                                     { return ((NSDictionary (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
+static inline void                      NSMigrationManager_SetUserInfo(NSMigrationManager self, NSDictionary userInfo)                                                                                                                                                                                                                                           { ((void (*)(NSMigrationManager, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
 
 /* ===== NSPersistentCloudKitContainer ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainer
 #define BEAN_TYPEDEF_NSPersistentCloudKitContainer
 typedef bean_id NSPersistentCloudKitContainer;
 #endif
-static inline BOOL            NSPersistentCloudKitContainer_InitializeCloudKitSchemaWithOptions_Error(NSPersistentCloudKitContainer self, NSPersistentCloudKitContainerSchemaInitializationOptions options, NSError error)    { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSPersistentCloudKitContainerSchemaInitializationOptions, NSError))bean_msgSend)(self, bean_sel("initializeCloudKitSchemaWithOptions:error:"), options, error); }
-static inline CKRecord        NSPersistentCloudKitContainer_RecordForManagedObjectID(NSPersistentCloudKitContainer self, NSManagedObjectID managedObjectID)                                                                   { return ((CKRecord (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("recordForManagedObjectID:"), managedObjectID); }
-static inline NSDictionary    NSPersistentCloudKitContainer_RecordsForManagedObjectIDs(NSPersistentCloudKitContainer self, NSArray managedObjectIDs)                                                                          { return ((NSDictionary (*)(NSPersistentCloudKitContainer, SEL, NSArray))bean_msgSend)(self, bean_sel("recordsForManagedObjectIDs:"), managedObjectIDs); }
-static inline CKRecordID      NSPersistentCloudKitContainer_RecordIDForManagedObjectID(NSPersistentCloudKitContainer self, NSManagedObjectID managedObjectID)                                                                 { return ((CKRecordID (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("recordIDForManagedObjectID:"), managedObjectID); }
-static inline NSDictionary    NSPersistentCloudKitContainer_RecordIDsForManagedObjectIDs(NSPersistentCloudKitContainer self, NSArray managedObjectIDs)                                                                        { return ((NSDictionary (*)(NSPersistentCloudKitContainer, SEL, NSArray))bean_msgSend)(self, bean_sel("recordIDsForManagedObjectIDs:"), managedObjectIDs); }
-static inline BOOL            NSPersistentCloudKitContainer_CanUpdateRecordForManagedObjectWithID(NSPersistentCloudKitContainer self, NSManagedObjectID objectID)                                                             { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("canUpdateRecordForManagedObjectWithID:"), objectID); }
-static inline BOOL            NSPersistentCloudKitContainer_CanDeleteRecordForManagedObjectWithID(NSPersistentCloudKitContainer self, NSManagedObjectID objectID)                                                             { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("canDeleteRecordForManagedObjectWithID:"), objectID); }
-static inline BOOL            NSPersistentCloudKitContainer_CanModifyManagedObjectsInStore(NSPersistentCloudKitContainer self, NSPersistentStore store)                                                                       { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSPersistentStore))bean_msgSend)(self, bean_sel("canModifyManagedObjectsInStore:"), store); }
+static inline NSPersistentCloudKitContainer    NSPersistentCloudKitContainer_InitializeCloudKitSchemaWithOptions_Error(NSPersistentCloudKitContainer self, NSPersistentCloudKitContainerSchemaInitializationOptions options, NSError* error)    { return ((NSPersistentCloudKitContainer (*)(NSPersistentCloudKitContainer, SEL, NSPersistentCloudKitContainerSchemaInitializationOptions, NSError*))bean_msgSend)(self, bean_sel("initializeCloudKitSchemaWithOptions:error:"), options, error); }
+static inline CKRecord                         NSPersistentCloudKitContainer_RecordForManagedObjectID(NSPersistentCloudKitContainer self, NSManagedObjectID managedObjectID)                                                                    { return ((CKRecord (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("recordForManagedObjectID:"), managedObjectID); }
+static inline NSDictionary                     NSPersistentCloudKitContainer_RecordsForManagedObjectIDs(NSPersistentCloudKitContainer self, NSArray managedObjectIDs)                                                                           { return ((NSDictionary (*)(NSPersistentCloudKitContainer, SEL, NSArray))bean_msgSend)(self, bean_sel("recordsForManagedObjectIDs:"), managedObjectIDs); }
+static inline CKRecordID                       NSPersistentCloudKitContainer_RecordIDForManagedObjectID(NSPersistentCloudKitContainer self, NSManagedObjectID managedObjectID)                                                                  { return ((CKRecordID (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("recordIDForManagedObjectID:"), managedObjectID); }
+static inline NSDictionary                     NSPersistentCloudKitContainer_RecordIDsForManagedObjectIDs(NSPersistentCloudKitContainer self, NSArray managedObjectIDs)                                                                         { return ((NSDictionary (*)(NSPersistentCloudKitContainer, SEL, NSArray))bean_msgSend)(self, bean_sel("recordIDsForManagedObjectIDs:"), managedObjectIDs); }
+static inline BOOL                             NSPersistentCloudKitContainer_CanUpdateRecordForManagedObjectWithID(NSPersistentCloudKitContainer self, NSManagedObjectID objectID)                                                              { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("canUpdateRecordForManagedObjectWithID:"), objectID); }
+static inline BOOL                             NSPersistentCloudKitContainer_CanDeleteRecordForManagedObjectWithID(NSPersistentCloudKitContainer self, NSManagedObjectID objectID)                                                              { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("canDeleteRecordForManagedObjectWithID:"), objectID); }
+static inline BOOL                             NSPersistentCloudKitContainer_CanModifyManagedObjectsInStore(NSPersistentCloudKitContainer self, NSPersistentStore store)                                                                        { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSPersistentStore))bean_msgSend)(self, bean_sel("canModifyManagedObjectsInStore:"), store); }
 
 /* ===== NSPersistentCloudKitContainerEventRequest ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerEventRequest
 #define BEAN_TYPEDEF_NSPersistentCloudKitContainerEventRequest
 typedef bean_id NSPersistentCloudKitContainerEventRequest;
 #endif
-static inline id                                              NSPersistentCloudKitContainerEventRequest_FetchEventsAfterDate(NSDate date)                                                                                         { return ((id (*)(bean_class, SEL, NSDate))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchEventsAfterDate:"), date); }
-static inline id                                              NSPersistentCloudKitContainerEventRequest_FetchEventsAfterEvent(NSPersistentCloudKitContainerEvent event)                                                           { return ((id (*)(bean_class, SEL, NSPersistentCloudKitContainerEvent))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchEventsAfterEvent:"), event); }
-static inline id                                              NSPersistentCloudKitContainerEventRequest_FetchEventsMatchingFetchRequest(NSFetchRequest fetchRequest)                                                              { return ((id (*)(bean_class, SEL, NSFetchRequest))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchEventsMatchingFetchRequest:"), fetchRequest); }
+static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudKitContainerEventRequest_FetchEventsAfterDate(NSDate date)                                                                                         { return ((NSPersistentCloudKitContainerEventRequest (*)(bean_class, SEL, NSDate))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchEventsAfterDate:"), date); }
+static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudKitContainerEventRequest_FetchEventsAfterEvent(NSPersistentCloudKitContainerEvent event)                                                           { return ((NSPersistentCloudKitContainerEventRequest (*)(bean_class, SEL, NSPersistentCloudKitContainerEvent))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchEventsAfterEvent:"), event); }
+static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudKitContainerEventRequest_FetchEventsMatchingFetchRequest(NSFetchRequest fetchRequest)                                                              { return ((NSPersistentCloudKitContainerEventRequest (*)(bean_class, SEL, NSFetchRequest))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchEventsMatchingFetchRequest:"), fetchRequest); }
 static inline NSFetchRequest                                  NSPersistentCloudKitContainerEventRequest_FetchRequestForEvents(void)                                                                                               { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchRequestForEvents")); }
 static inline NSPersistentCloudKitContainerEventResultType    NSPersistentCloudKitContainerEventRequest_ResultType(NSPersistentCloudKitContainerEventRequest self)                                                                { return ((NSPersistentCloudKitContainerEventResultType (*)(NSPersistentCloudKitContainerEventRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 static inline void                                            NSPersistentCloudKitContainerEventRequest_SetResultType(NSPersistentCloudKitContainerEventRequest self, NSPersistentCloudKitContainerEventResultType resultType)    { ((void (*)(NSPersistentCloudKitContainerEventRequest, SEL, NSPersistentCloudKitContainerEventResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
@@ -5779,11 +7184,11 @@ static inline void                                            NSPersistentCloudK
 #define BEAN_TYPEDEF_NSPersistentContainer
 typedef bean_id NSPersistentContainer;
 #endif
-static inline id                              NSPersistentContainer_PersistentContainerWithName(NSString name)                                                                { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSPersistentContainer"), bean_sel("persistentContainerWithName:"), name); }
-static inline id                              NSPersistentContainer_PersistentContainerWithName_ManagedObjectModel(NSString name, NSManagedObjectModel model)                 { return ((id (*)(bean_class, SEL, NSString, NSManagedObjectModel))bean_msgSend)(bean_cls("NSPersistentContainer"), bean_sel("persistentContainerWithName:managedObjectModel:"), name, model); }
+static inline NSPersistentContainer           NSPersistentContainer_PersistentContainerWithName(NSString name)                                                                { return ((NSPersistentContainer (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSPersistentContainer"), bean_sel("persistentContainerWithName:"), name); }
+static inline NSPersistentContainer           NSPersistentContainer_PersistentContainerWithName_ManagedObjectModel(NSString name, NSManagedObjectModel model)                 { return ((NSPersistentContainer (*)(bean_class, SEL, NSString, NSManagedObjectModel))bean_msgSend)(bean_cls("NSPersistentContainer"), bean_sel("persistentContainerWithName:managedObjectModel:"), name, model); }
 static inline NSURL                           NSPersistentContainer_DefaultDirectoryURL(void)                                                                                 { return ((NSURL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentContainer"), bean_sel("defaultDirectoryURL")); }
-static inline id                              NSPersistentContainer_InitWithName(NSPersistentContainer self, NSString name)                                                   { return ((id (*)(NSPersistentContainer, SEL, NSString))bean_msgSend)(self, bean_sel("initWithName:"), name); }
-static inline id                              NSPersistentContainer_InitWithName_ManagedObjectModel(NSPersistentContainer self, NSString name, NSManagedObjectModel model)    { return ((id (*)(NSPersistentContainer, SEL, NSString, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithName:managedObjectModel:"), name, model); }
+static inline NSPersistentContainer           NSPersistentContainer_InitWithName(NSPersistentContainer self, NSString name)                                                   { return ((NSPersistentContainer (*)(NSPersistentContainer, SEL, NSString))bean_msgSend)(self, bean_sel("initWithName:"), name); }
+static inline NSPersistentContainer           NSPersistentContainer_InitWithName_ManagedObjectModel(NSPersistentContainer self, NSString name, NSManagedObjectModel model)    { return ((NSPersistentContainer (*)(NSPersistentContainer, SEL, NSString, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithName:managedObjectModel:"), name, model); }
 static inline void                            NSPersistentContainer_LoadPersistentStoresWithCompletionHandler(NSPersistentContainer self, void* block)                        { ((void (*)(NSPersistentContainer, SEL, void*))bean_msgSend)(self, bean_sel("loadPersistentStoresWithCompletionHandler:"), block); }
 static inline NSManagedObjectContext          NSPersistentContainer_NewBackgroundContext(NSPersistentContainer self)                                                          { return ((NSManagedObjectContext (*)(NSPersistentContainer, SEL))bean_msgSend)(self, bean_sel("newBackgroundContext")); }
 static inline void                            NSPersistentContainer_PerformBackgroundTask(NSPersistentContainer self, void* block)                                            { ((void (*)(NSPersistentContainer, SEL, void*))bean_msgSend)(self, bean_sel("performBackgroundTask:"), block); }
@@ -5808,46 +7213,48 @@ static inline NSPersistentHistoryChangeType     NSPersistentHistoryChange_Change
 static inline NSDictionary                      NSPersistentHistoryChange_Tombstone(NSPersistentHistoryChange self)                       { return ((NSDictionary (*)(NSPersistentHistoryChange, SEL))bean_msgSend)(self, bean_sel("tombstone")); }
 static inline NSPersistentHistoryTransaction    NSPersistentHistoryChange_Transaction(NSPersistentHistoryChange self)                     { return ((NSPersistentHistoryTransaction (*)(NSPersistentHistoryChange, SEL))bean_msgSend)(self, bean_sel("transaction")); }
 static inline NSSet                             NSPersistentHistoryChange_UpdatedProperties(NSPersistentHistoryChange self)               { return ((NSSet (*)(NSPersistentHistoryChange, SEL))bean_msgSend)(self, bean_sel("updatedProperties")); }
+static inline id                                NSPersistentHistoryChange_CopyWithZone(NSPersistentHistoryChange self, NSZone* zone)      { return ((id (*)(NSPersistentHistoryChange, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== NSPersistentHistoryChangeRequest ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryChangeRequest
 #define BEAN_TYPEDEF_NSPersistentHistoryChangeRequest
 typedef bean_id NSPersistentHistoryChangeRequest;
 #endif
-static inline id                               NSPersistentHistoryChangeRequest_FetchHistoryAfterDate(NSDate date)                                                                { return ((id (*)(bean_class, SEL, NSDate))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("fetchHistoryAfterDate:"), date); }
-static inline id                               NSPersistentHistoryChangeRequest_FetchHistoryAfterToken(NSPersistentHistoryToken token)                                            { return ((id (*)(bean_class, SEL, NSPersistentHistoryToken))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("fetchHistoryAfterToken:"), token); }
-static inline id                               NSPersistentHistoryChangeRequest_FetchHistoryAfterTransaction(NSPersistentHistoryTransaction transaction)                          { return ((id (*)(bean_class, SEL, NSPersistentHistoryTransaction))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("fetchHistoryAfterTransaction:"), transaction); }
-static inline id                               NSPersistentHistoryChangeRequest_FetchHistoryWithFetchRequest(NSFetchRequest fetchRequest)                                         { return ((id (*)(bean_class, SEL, NSFetchRequest))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("fetchHistoryWithFetchRequest:"), fetchRequest); }
-static inline id                               NSPersistentHistoryChangeRequest_DeleteHistoryBeforeDate(NSDate date)                                                              { return ((id (*)(bean_class, SEL, NSDate))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("deleteHistoryBeforeDate:"), date); }
-static inline id                               NSPersistentHistoryChangeRequest_DeleteHistoryBeforeToken(NSPersistentHistoryToken token)                                          { return ((id (*)(bean_class, SEL, NSPersistentHistoryToken))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("deleteHistoryBeforeToken:"), token); }
-static inline id                               NSPersistentHistoryChangeRequest_DeleteHistoryBeforeTransaction(NSPersistentHistoryTransaction transaction)                        { return ((id (*)(bean_class, SEL, NSPersistentHistoryTransaction))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("deleteHistoryBeforeTransaction:"), transaction); }
-static inline NSPersistentHistoryResultType    NSPersistentHistoryChangeRequest_ResultType(NSPersistentHistoryChangeRequest self)                                                 { return ((NSPersistentHistoryResultType (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
-static inline void                             NSPersistentHistoryChangeRequest_SetResultType(NSPersistentHistoryChangeRequest self, NSPersistentHistoryResultType resultType)    { ((void (*)(NSPersistentHistoryChangeRequest, SEL, NSPersistentHistoryResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
-static inline NSPersistentHistoryToken         NSPersistentHistoryChangeRequest_Token(NSPersistentHistoryChangeRequest self)                                                      { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("token")); }
-static inline NSFetchRequest                   NSPersistentHistoryChangeRequest_FetchRequest(NSPersistentHistoryChangeRequest self)                                               { return ((NSFetchRequest (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
-static inline void                             NSPersistentHistoryChangeRequest_SetFetchRequest(NSPersistentHistoryChangeRequest self, NSFetchRequest fetchRequest)               { ((void (*)(NSPersistentHistoryChangeRequest, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("setFetchRequest:"), fetchRequest); }
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_FetchHistoryAfterDate(NSDate date)                                                                { return ((NSPersistentHistoryChangeRequest (*)(bean_class, SEL, NSDate))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("fetchHistoryAfterDate:"), date); }
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_FetchHistoryAfterToken(NSPersistentHistoryToken token)                                            { return ((NSPersistentHistoryChangeRequest (*)(bean_class, SEL, NSPersistentHistoryToken))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("fetchHistoryAfterToken:"), token); }
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_FetchHistoryAfterTransaction(NSPersistentHistoryTransaction transaction)                          { return ((NSPersistentHistoryChangeRequest (*)(bean_class, SEL, NSPersistentHistoryTransaction))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("fetchHistoryAfterTransaction:"), transaction); }
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_FetchHistoryWithFetchRequest(NSFetchRequest fetchRequest)                                         { return ((NSPersistentHistoryChangeRequest (*)(bean_class, SEL, NSFetchRequest))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("fetchHistoryWithFetchRequest:"), fetchRequest); }
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_DeleteHistoryBeforeDate(NSDate date)                                                              { return ((NSPersistentHistoryChangeRequest (*)(bean_class, SEL, NSDate))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("deleteHistoryBeforeDate:"), date); }
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_DeleteHistoryBeforeToken(NSPersistentHistoryToken token)                                          { return ((NSPersistentHistoryChangeRequest (*)(bean_class, SEL, NSPersistentHistoryToken))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("deleteHistoryBeforeToken:"), token); }
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_DeleteHistoryBeforeTransaction(NSPersistentHistoryTransaction transaction)                        { return ((NSPersistentHistoryChangeRequest (*)(bean_class, SEL, NSPersistentHistoryTransaction))bean_msgSend)(bean_cls("NSPersistentHistoryChangeRequest"), bean_sel("deleteHistoryBeforeTransaction:"), transaction); }
+static inline NSPersistentHistoryResultType       NSPersistentHistoryChangeRequest_ResultType(NSPersistentHistoryChangeRequest self)                                                 { return ((NSPersistentHistoryResultType (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+static inline void                                NSPersistentHistoryChangeRequest_SetResultType(NSPersistentHistoryChangeRequest self, NSPersistentHistoryResultType resultType)    { ((void (*)(NSPersistentHistoryChangeRequest, SEL, NSPersistentHistoryResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
+static inline NSPersistentHistoryToken            NSPersistentHistoryChangeRequest_Token(NSPersistentHistoryChangeRequest self)                                                      { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("token")); }
+static inline NSFetchRequest                      NSPersistentHistoryChangeRequest_FetchRequest(NSPersistentHistoryChangeRequest self)                                               { return ((NSFetchRequest (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
+static inline void                                NSPersistentHistoryChangeRequest_SetFetchRequest(NSPersistentHistoryChangeRequest self, NSFetchRequest fetchRequest)               { ((void (*)(NSPersistentHistoryChangeRequest, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("setFetchRequest:"), fetchRequest); }
 
 /* ===== NSPersistentHistoryTransaction ===== */
-static inline NSEntityDescription         NSPersistentHistoryTransaction_EntityDescriptionWithContext(NSManagedObjectContext context)    { return ((NSEntityDescription (*)(bean_class, SEL, NSManagedObjectContext))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescriptionWithContext:"), context); }
-static inline NSNotification              NSPersistentHistoryTransaction_ObjectIDNotification(NSPersistentHistoryTransaction self)       { return ((NSNotification (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("objectIDNotification")); }
-static inline NSEntityDescription         NSPersistentHistoryTransaction_EntityDescription(void)                                         { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescription")); }
-static inline NSFetchRequest              NSPersistentHistoryTransaction_FetchRequest(void)                                              { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("fetchRequest")); }
-static inline NSDate                      NSPersistentHistoryTransaction_Timestamp(NSPersistentHistoryTransaction self)                  { return ((NSDate (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
-static inline NSArray                     NSPersistentHistoryTransaction_Changes(NSPersistentHistoryTransaction self)                    { return ((NSArray (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("changes")); }
-static inline long long                   NSPersistentHistoryTransaction_TransactionNumber(NSPersistentHistoryTransaction self)          { return ((long long (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("transactionNumber")); }
-static inline NSString                    NSPersistentHistoryTransaction_StoreID(NSPersistentHistoryTransaction self)                    { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("storeID")); }
-static inline NSString                    NSPersistentHistoryTransaction_BundleID(NSPersistentHistoryTransaction self)                   { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("bundleID")); }
-static inline NSString                    NSPersistentHistoryTransaction_ProcessID(NSPersistentHistoryTransaction self)                  { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("processID")); }
-static inline NSString                    NSPersistentHistoryTransaction_ContextName(NSPersistentHistoryTransaction self)                { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("contextName")); }
-static inline NSString                    NSPersistentHistoryTransaction_Author(NSPersistentHistoryTransaction self)                     { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("author")); }
-static inline NSPersistentHistoryToken    NSPersistentHistoryTransaction_Token(NSPersistentHistoryTransaction self)                      { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("token")); }
+static inline NSEntityDescription         NSPersistentHistoryTransaction_EntityDescriptionWithContext(NSManagedObjectContext context)       { return ((NSEntityDescription (*)(bean_class, SEL, NSManagedObjectContext))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescriptionWithContext:"), context); }
+static inline NSNotification              NSPersistentHistoryTransaction_ObjectIDNotification(NSPersistentHistoryTransaction self)          { return ((NSNotification (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("objectIDNotification")); }
+static inline NSEntityDescription         NSPersistentHistoryTransaction_EntityDescription(void)                                            { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescription")); }
+static inline NSFetchRequest              NSPersistentHistoryTransaction_FetchRequest(void)                                                 { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("fetchRequest")); }
+static inline NSDate                      NSPersistentHistoryTransaction_Timestamp(NSPersistentHistoryTransaction self)                     { return ((NSDate (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
+static inline NSArray                     NSPersistentHistoryTransaction_Changes(NSPersistentHistoryTransaction self)                       { return ((NSArray (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("changes")); }
+static inline long long                   NSPersistentHistoryTransaction_TransactionNumber(NSPersistentHistoryTransaction self)             { return ((long long (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("transactionNumber")); }
+static inline NSString                    NSPersistentHistoryTransaction_StoreID(NSPersistentHistoryTransaction self)                       { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("storeID")); }
+static inline NSString                    NSPersistentHistoryTransaction_BundleID(NSPersistentHistoryTransaction self)                      { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("bundleID")); }
+static inline NSString                    NSPersistentHistoryTransaction_ProcessID(NSPersistentHistoryTransaction self)                     { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("processID")); }
+static inline NSString                    NSPersistentHistoryTransaction_ContextName(NSPersistentHistoryTransaction self)                   { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("contextName")); }
+static inline NSString                    NSPersistentHistoryTransaction_Author(NSPersistentHistoryTransaction self)                        { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("author")); }
+static inline NSPersistentHistoryToken    NSPersistentHistoryTransaction_Token(NSPersistentHistoryTransaction self)                         { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("token")); }
+static inline id                          NSPersistentHistoryTransaction_CopyWithZone(NSPersistentHistoryTransaction self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryTransaction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== NSPersistentStore ===== */
-static inline NSDictionary                       NSPersistentStore_MetadataForPersistentStoreWithURL_Error(NSURL url, NSError error)                                                                                                              { return ((NSDictionary (*)(bean_class, SEL, NSURL, NSError))bean_msgSend)(bean_cls("NSPersistentStore"), bean_sel("metadataForPersistentStoreWithURL:error:"), url, error); }
-static inline BOOL                               NSPersistentStore_SetMetadata_ForPersistentStoreWithURL_Error(NSDictionary metadata, NSURL url, NSError error)                                                                                   { return ((BOOL (*)(bean_class, SEL, NSDictionary, NSURL, NSError))bean_msgSend)(bean_cls("NSPersistentStore"), bean_sel("setMetadata:forPersistentStoreWithURL:error:"), metadata, url, error); }
+static inline NSDictionary                       NSPersistentStore_MetadataForPersistentStoreWithURL_Error(NSURL url, NSError* error)                                                                                                             { return ((NSDictionary (*)(bean_class, SEL, NSURL, NSError*))bean_msgSend)(bean_cls("NSPersistentStore"), bean_sel("metadataForPersistentStoreWithURL:error:"), url, error); }
+static inline BOOL                               NSPersistentStore_SetMetadata_ForPersistentStoreWithURL_Error(NSDictionary metadata, NSURL url, NSError* error)                                                                                  { return ((BOOL (*)(bean_class, SEL, NSDictionary, NSURL, NSError*))bean_msgSend)(bean_cls("NSPersistentStore"), bean_sel("setMetadata:forPersistentStoreWithURL:error:"), metadata, url, error); }
 static inline bean_class                         NSPersistentStore_MigrationManagerClass(void)                                                                                                                                                    { return ((bean_class (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentStore"), bean_sel("migrationManagerClass")); }
-static inline id                                 NSPersistentStore_InitWithPersistentStoreCoordinator_ConfigurationName_URL_Options(NSPersistentStore self, NSPersistentStoreCoordinator root, NSString name, NSURL url, NSDictionary options)    { return ((id (*)(NSPersistentStore, SEL, NSPersistentStoreCoordinator, NSString, NSURL, NSDictionary))bean_msgSend)(self, bean_sel("initWithPersistentStoreCoordinator:configurationName:URL:options:"), root, name, url, options); }
-static inline id                                 NSPersistentStore_Init(NSPersistentStore self)                                                                                                                                                   { return ((id (*)(NSPersistentStore, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSPersistentStore                  NSPersistentStore_InitWithPersistentStoreCoordinator_ConfigurationName_URL_Options(NSPersistentStore self, NSPersistentStoreCoordinator root, NSString name, NSURL url, NSDictionary options)    { return ((NSPersistentStore (*)(NSPersistentStore, SEL, NSPersistentStoreCoordinator, NSString, NSURL, NSDictionary))bean_msgSend)(self, bean_sel("initWithPersistentStoreCoordinator:configurationName:URL:options:"), root, name, url, options); }
+static inline NSPersistentStore                  NSPersistentStore_Init(NSPersistentStore self)                                                                                                                                                   { return ((NSPersistentStore (*)(NSPersistentStore, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline BOOL                               NSPersistentStore_LoadMetadata(NSPersistentStore self, NSError error)                                                                                                                            { return ((BOOL (*)(NSPersistentStore, SEL, NSError))bean_msgSend)(self, bean_sel("loadMetadata:"), error); }
 static inline void                               NSPersistentStore_DidAddToPersistentStoreCoordinator(NSPersistentStore self, NSPersistentStoreCoordinator coordinator)                                                                           { ((void (*)(NSPersistentStore, SEL, NSPersistentStoreCoordinator))bean_msgSend)(self, bean_sel("didAddToPersistentStoreCoordinator:"), coordinator); }
 static inline void                               NSPersistentStore_WillRemoveFromPersistentStoreCoordinator(NSPersistentStore self, NSPersistentStoreCoordinator coordinator)                                                                     { ((void (*)(NSPersistentStore, SEL, NSPersistentStoreCoordinator))bean_msgSend)(self, bean_sel("willRemoveFromPersistentStoreCoordinator:"), coordinator); }
@@ -5867,48 +7274,49 @@ static inline NSCoreDataCoreSpotlightDelegate    NSPersistentStore_CoreSpotlight
 static inline BOOL                               NSPersistentStore_ReadOnly(NSPersistentStore self)                                                                                                                                               { return ((BOOL (*)(NSPersistentStore, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
 
 /* ===== NSPersistentStoreCoordinator ===== */
-static inline id                          NSPersistentStoreCoordinator_InitWithManagedObjectModel(NSPersistentStoreCoordinator self, NSManagedObjectModel model)                                                                                                                                                                                            { return ((id (*)(NSPersistentStoreCoordinator, SEL, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithManagedObjectModel:"), model); }
-static inline NSPersistentStore           NSPersistentStoreCoordinator_PersistentStoreForURL(NSPersistentStoreCoordinator self, NSURL URL)                                                                                                                                                                                                                  { return ((NSPersistentStore (*)(NSPersistentStoreCoordinator, SEL, NSURL))bean_msgSend)(self, bean_sel("persistentStoreForURL:"), URL); }
-static inline NSURL                       NSPersistentStoreCoordinator_URLForPersistentStore(NSPersistentStoreCoordinator self, NSPersistentStore store)                                                                                                                                                                                                    { return ((NSURL (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStore))bean_msgSend)(self, bean_sel("URLForPersistentStore:"), store); }
-static inline BOOL                        NSPersistentStoreCoordinator_SetURL_ForPersistentStore(NSPersistentStoreCoordinator self, NSURL url, NSPersistentStore store)                                                                                                                                                                                     { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSURL, NSPersistentStore))bean_msgSend)(self, bean_sel("setURL:forPersistentStore:"), url, store); }
-static inline NSPersistentStore           NSPersistentStoreCoordinator_AddPersistentStoreWithType_Configuration_URL_Options_Error(NSPersistentStoreCoordinator self, NSString storeType, NSString configuration, NSURL storeURL, NSDictionary options, NSError error)                                                                                       { return ((NSPersistentStore (*)(NSPersistentStoreCoordinator, SEL, NSString, NSString, NSURL, NSDictionary, NSError))bean_msgSend)(self, bean_sel("addPersistentStoreWithType:configuration:URL:options:error:"), storeType, configuration, storeURL, options, error); }
-static inline void                        NSPersistentStoreCoordinator_AddPersistentStoreWithDescription_CompletionHandler(NSPersistentStoreCoordinator self, NSPersistentStoreDescription storeDescription, void* block)                                                                                                                                   { ((void (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStoreDescription, void*))bean_msgSend)(self, bean_sel("addPersistentStoreWithDescription:completionHandler:"), storeDescription, block); }
-static inline BOOL                        NSPersistentStoreCoordinator_RemovePersistentStore_Error(NSPersistentStoreCoordinator self, NSPersistentStore store, NSError error)                                                                                                                                                                               { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStore, NSError))bean_msgSend)(self, bean_sel("removePersistentStore:error:"), store, error); }
-static inline void                        NSPersistentStoreCoordinator_SetMetadata_ForPersistentStore(NSPersistentStoreCoordinator self, NSDictionary metadata, NSPersistentStore store)                                                                                                                                                                    { ((void (*)(NSPersistentStoreCoordinator, SEL, NSDictionary, NSPersistentStore))bean_msgSend)(self, bean_sel("setMetadata:forPersistentStore:"), metadata, store); }
-static inline NSDictionary                NSPersistentStoreCoordinator_MetadataForPersistentStore(NSPersistentStoreCoordinator self, NSPersistentStore store)                                                                                                                                                                                               { return ((NSDictionary (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStore))bean_msgSend)(self, bean_sel("metadataForPersistentStore:"), store); }
-static inline NSManagedObjectID           NSPersistentStoreCoordinator_ManagedObjectIDForURIRepresentation(NSPersistentStoreCoordinator self, NSURL url)                                                                                                                                                                                                    { return ((NSManagedObjectID (*)(NSPersistentStoreCoordinator, SEL, NSURL))bean_msgSend)(self, bean_sel("managedObjectIDForURIRepresentation:"), url); }
-static inline id                          NSPersistentStoreCoordinator_ExecuteRequest_WithContext_Error(NSPersistentStoreCoordinator self, NSPersistentStoreRequest request, NSManagedObjectContext context, NSError error)                                                                                                                                 { return ((id (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStoreRequest, NSManagedObjectContext, NSError))bean_msgSend)(self, bean_sel("executeRequest:withContext:error:"), request, context, error); }
-static inline void                        NSPersistentStoreCoordinator_RegisterStoreClass_ForStoreType(bean_class storeClass, NSString storeType)                                                                                                                                                                                                           { ((void (*)(bean_class, SEL, bean_class, NSString))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("registerStoreClass:forStoreType:"), storeClass, storeType); }
-static inline NSDictionary                NSPersistentStoreCoordinator_MetadataForPersistentStoreOfType_URL_Options_Error(NSString storeType, NSURL url, NSDictionary options, NSError error)                                                                                                                                                               { return ((NSDictionary (*)(bean_class, SEL, NSString, NSURL, NSDictionary, NSError))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("metadataForPersistentStoreOfType:URL:options:error:"), storeType, url, options, error); }
-static inline BOOL                        NSPersistentStoreCoordinator_SetMetadata_ForPersistentStoreOfType_URL_Options_Error(NSDictionary metadata, NSString storeType, NSURL url, NSDictionary options, NSError error)                                                                                                                                    { return ((BOOL (*)(bean_class, SEL, NSDictionary, NSString, NSURL, NSDictionary, NSError))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("setMetadata:forPersistentStoreOfType:URL:options:error:"), metadata, storeType, url, options, error); }
-static inline NSDictionary                NSPersistentStoreCoordinator_ElementsDerivedFromExternalRecordURL(NSURL fileURL)                                                                                                                                                                                                                                  { return ((NSDictionary (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("elementsDerivedFromExternalRecordURL:"), fileURL); }
-static inline NSPersistentStore           NSPersistentStoreCoordinator_ImportStoreWithIdentifier_FromExternalRecordsDirectory_ToURL_Options_WithType_Error(NSPersistentStoreCoordinator self, NSString storeIdentifier, NSURL externalRecordsURL, NSURL destinationURL, NSDictionary options, NSString storeType, NSError error)                            { return ((NSPersistentStore (*)(NSPersistentStoreCoordinator, SEL, NSString, NSURL, NSURL, NSDictionary, NSString, NSError))bean_msgSend)(self, bean_sel("importStoreWithIdentifier:fromExternalRecordsDirectory:toURL:options:withType:error:"), storeIdentifier, externalRecordsURL, destinationURL, options, storeType, error); }
-static inline NSPersistentStore           NSPersistentStoreCoordinator_MigratePersistentStore_ToURL_Options_WithType_Error(NSPersistentStoreCoordinator self, NSPersistentStore store, NSURL URL, NSDictionary options, NSString storeType, NSError error)                                                                                                  { return ((NSPersistentStore (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStore, NSURL, NSDictionary, NSString, NSError))bean_msgSend)(self, bean_sel("migratePersistentStore:toURL:options:withType:error:"), store, URL, options, storeType, error); }
-static inline BOOL                        NSPersistentStoreCoordinator_DestroyPersistentStoreAtURL_WithType_Options_Error(NSPersistentStoreCoordinator self, NSURL url, NSString storeType, NSDictionary options, NSError error)                                                                                                                            { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSURL, NSString, NSDictionary, NSError))bean_msgSend)(self, bean_sel("destroyPersistentStoreAtURL:withType:options:error:"), url, storeType, options, error); }
-static inline BOOL                        NSPersistentStoreCoordinator_ReplacePersistentStoreAtURL_DestinationOptions_WithPersistentStoreFromURL_SourceOptions_StoreType_Error(NSPersistentStoreCoordinator self, NSURL destinationURL, NSDictionary destinationOptions, NSURL sourceURL, NSDictionary sourceOptions, NSString storeType, NSError error)    { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSURL, NSDictionary, NSURL, NSDictionary, NSString, NSError))bean_msgSend)(self, bean_sel("replacePersistentStoreAtURL:destinationOptions:withPersistentStoreFromURL:sourceOptions:storeType:error:"), destinationURL, destinationOptions, sourceURL, sourceOptions, storeType, error); }
-static inline void                        NSPersistentStoreCoordinator_PerformBlock(NSPersistentStoreCoordinator self, void* block)                                                                                                                                                                                                                         { ((void (*)(NSPersistentStoreCoordinator, SEL, void*))bean_msgSend)(self, bean_sel("performBlock:"), block); }
-static inline void                        NSPersistentStoreCoordinator_PerformBlockAndWait(NSPersistentStoreCoordinator self, void* block)                                                                                                                                                                                                                  { ((void (*)(NSPersistentStoreCoordinator, SEL, void*))bean_msgSend)(self, bean_sel("performBlockAndWait:"), block); }
-static inline NSPersistentHistoryToken    NSPersistentStoreCoordinator_CurrentPersistentHistoryTokenFromStores(NSPersistentStoreCoordinator self, NSArray stores)                                                                                                                                                                                           { return ((NSPersistentHistoryToken (*)(NSPersistentStoreCoordinator, SEL, NSArray))bean_msgSend)(self, bean_sel("currentPersistentHistoryTokenFromStores:"), stores); }
-static inline BOOL                        NSPersistentStoreCoordinator_FinishDeferredLightweightMigration(NSPersistentStoreCoordinator self, NSError error)                                                                                                                                                                                                 { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSError))bean_msgSend)(self, bean_sel("finishDeferredLightweightMigration:"), error); }
-static inline BOOL                        NSPersistentStoreCoordinator_FinishDeferredLightweightMigrationTask(NSPersistentStoreCoordinator self, NSError error)                                                                                                                                                                                             { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSError))bean_msgSend)(self, bean_sel("finishDeferredLightweightMigrationTask:"), error); }
-static inline NSManagedObjectID           NSPersistentStoreCoordinator_ManagedObjectIDFromUTF8String_Length(NSPersistentStoreCoordinator self, const char* utf8string, NSUInteger len)                                                                                                                                                                      { return ((NSManagedObjectID (*)(NSPersistentStoreCoordinator, SEL, const char*, NSUInteger))bean_msgSend)(self, bean_sel("managedObjectIDFromUTF8String:length:"), utf8string, len); }
-static inline NSDictionary                NSPersistentStoreCoordinator_MetadataForPersistentStoreWithURL_Error(NSURL url, NSError error)                                                                                                                                                                                                                    { return ((NSDictionary (*)(bean_class, SEL, NSURL, NSError))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("metadataForPersistentStoreWithURL:error:"), url, error); }
-static inline void                        NSPersistentStoreCoordinator_Lock(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                              { ((void (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("lock")); }
-static inline void                        NSPersistentStoreCoordinator_Unlock(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                            { ((void (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("unlock")); }
-static inline BOOL                        NSPersistentStoreCoordinator_TryLock(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                           { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("tryLock")); }
-static inline NSDictionary                NSPersistentStoreCoordinator_MetadataForPersistentStoreOfType_URL_Error(NSString storeType, NSURL url, NSError error)                                                                                                                                                                                             { return ((NSDictionary (*)(bean_class, SEL, NSString, NSURL, NSError))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("metadataForPersistentStoreOfType:URL:error:"), storeType, url, error); }
-static inline BOOL                        NSPersistentStoreCoordinator_SetMetadata_ForPersistentStoreOfType_URL_Error(NSDictionary metadata, NSString storeType, NSURL url, NSError error)                                                                                                                                                                  { return ((BOOL (*)(bean_class, SEL, NSDictionary, NSString, NSURL, NSError))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("setMetadata:forPersistentStoreOfType:URL:error:"), metadata, storeType, url, error); }
-static inline BOOL                        NSPersistentStoreCoordinator_RemoveUbiquitousContentAndPersistentStoreAtURL_Options_Error(NSURL storeURL, NSDictionary options, NSError error)                                                                                                                                                                    { return ((BOOL (*)(bean_class, SEL, NSURL, NSDictionary, NSError))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("removeUbiquitousContentAndPersistentStoreAtURL:options:error:"), storeURL, options, error); }
-static inline NSManagedObjectModel        NSPersistentStoreCoordinator_ManagedObjectModel(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                { return ((NSManagedObjectModel (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("managedObjectModel")); }
-static inline NSArray                     NSPersistentStoreCoordinator_PersistentStores(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                  { return ((NSArray (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("persistentStores")); }
-static inline NSString                    NSPersistentStoreCoordinator_Name(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                              { return ((NSString (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void                        NSPersistentStoreCoordinator_SetName(NSPersistentStoreCoordinator self, NSString name)                                                                                                                                                                                                                            { ((void (*)(NSPersistentStoreCoordinator, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSDictionary                NSPersistentStoreCoordinator_RegisteredStoreTypes(void)                                                                                                                                                                                                                                                           { return ((NSDictionary (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("registeredStoreTypes")); }
+static inline NSPersistentStoreCoordinator    NSPersistentStoreCoordinator_InitWithManagedObjectModel(NSPersistentStoreCoordinator self, NSManagedObjectModel model)                                                                                                                                                                                             { return ((NSPersistentStoreCoordinator (*)(NSPersistentStoreCoordinator, SEL, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithManagedObjectModel:"), model); }
+static inline NSPersistentStore               NSPersistentStoreCoordinator_PersistentStoreForURL(NSPersistentStoreCoordinator self, NSURL URL)                                                                                                                                                                                                                   { return ((NSPersistentStore (*)(NSPersistentStoreCoordinator, SEL, NSURL))bean_msgSend)(self, bean_sel("persistentStoreForURL:"), URL); }
+static inline NSURL                           NSPersistentStoreCoordinator_URLForPersistentStore(NSPersistentStoreCoordinator self, NSPersistentStore store)                                                                                                                                                                                                     { return ((NSURL (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStore))bean_msgSend)(self, bean_sel("URLForPersistentStore:"), store); }
+static inline BOOL                            NSPersistentStoreCoordinator_SetURL_ForPersistentStore(NSPersistentStoreCoordinator self, NSURL url, NSPersistentStore store)                                                                                                                                                                                      { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSURL, NSPersistentStore))bean_msgSend)(self, bean_sel("setURL:forPersistentStore:"), url, store); }
+static inline NSPersistentStore               NSPersistentStoreCoordinator_AddPersistentStoreWithType_Configuration_URL_Options_Error(NSPersistentStoreCoordinator self, NSString storeType, NSString configuration, NSURL storeURL, NSDictionary options, NSError* error)                                                                                       { return ((NSPersistentStore (*)(NSPersistentStoreCoordinator, SEL, NSString, NSString, NSURL, NSDictionary, NSError*))bean_msgSend)(self, bean_sel("addPersistentStoreWithType:configuration:URL:options:error:"), storeType, configuration, storeURL, options, error); }
+static inline void                            NSPersistentStoreCoordinator_AddPersistentStoreWithDescription_CompletionHandler(NSPersistentStoreCoordinator self, NSPersistentStoreDescription storeDescription, void* block)                                                                                                                                    { ((void (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStoreDescription, void*))bean_msgSend)(self, bean_sel("addPersistentStoreWithDescription:completionHandler:"), storeDescription, block); }
+static inline BOOL                            NSPersistentStoreCoordinator_RemovePersistentStore_Error(NSPersistentStoreCoordinator self, NSPersistentStore store, NSError* error)                                                                                                                                                                               { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStore, NSError*))bean_msgSend)(self, bean_sel("removePersistentStore:error:"), store, error); }
+static inline void                            NSPersistentStoreCoordinator_SetMetadata_ForPersistentStore(NSPersistentStoreCoordinator self, NSDictionary metadata, NSPersistentStore store)                                                                                                                                                                     { ((void (*)(NSPersistentStoreCoordinator, SEL, NSDictionary, NSPersistentStore))bean_msgSend)(self, bean_sel("setMetadata:forPersistentStore:"), metadata, store); }
+static inline NSDictionary                    NSPersistentStoreCoordinator_MetadataForPersistentStore(NSPersistentStoreCoordinator self, NSPersistentStore store)                                                                                                                                                                                                { return ((NSDictionary (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStore))bean_msgSend)(self, bean_sel("metadataForPersistentStore:"), store); }
+static inline NSManagedObjectID               NSPersistentStoreCoordinator_ManagedObjectIDForURIRepresentation(NSPersistentStoreCoordinator self, NSURL url)                                                                                                                                                                                                     { return ((NSManagedObjectID (*)(NSPersistentStoreCoordinator, SEL, NSURL))bean_msgSend)(self, bean_sel("managedObjectIDForURIRepresentation:"), url); }
+static inline id                              NSPersistentStoreCoordinator_ExecuteRequest_WithContext_Error(NSPersistentStoreCoordinator self, NSPersistentStoreRequest request, NSManagedObjectContext context, NSError* error)                                                                                                                                 { return ((id (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStoreRequest, NSManagedObjectContext, NSError*))bean_msgSend)(self, bean_sel("executeRequest:withContext:error:"), request, context, error); }
+static inline void                            NSPersistentStoreCoordinator_RegisterStoreClass_ForStoreType(bean_class storeClass, NSString storeType)                                                                                                                                                                                                            { ((void (*)(bean_class, SEL, bean_class, NSString))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("registerStoreClass:forStoreType:"), storeClass, storeType); }
+static inline NSDictionary                    NSPersistentStoreCoordinator_MetadataForPersistentStoreOfType_URL_Options_Error(NSString storeType, NSURL url, NSDictionary options, NSError* error)                                                                                                                                                               { return ((NSDictionary (*)(bean_class, SEL, NSString, NSURL, NSDictionary, NSError*))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("metadataForPersistentStoreOfType:URL:options:error:"), storeType, url, options, error); }
+static inline BOOL                            NSPersistentStoreCoordinator_SetMetadata_ForPersistentStoreOfType_URL_Options_Error(NSDictionary metadata, NSString storeType, NSURL url, NSDictionary options, NSError* error)                                                                                                                                    { return ((BOOL (*)(bean_class, SEL, NSDictionary, NSString, NSURL, NSDictionary, NSError*))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("setMetadata:forPersistentStoreOfType:URL:options:error:"), metadata, storeType, url, options, error); }
+static inline NSDictionary                    NSPersistentStoreCoordinator_ElementsDerivedFromExternalRecordURL(NSURL fileURL)                                                                                                                                                                                                                                   { return ((NSDictionary (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("elementsDerivedFromExternalRecordURL:"), fileURL); }
+static inline NSPersistentStore               NSPersistentStoreCoordinator_ImportStoreWithIdentifier_FromExternalRecordsDirectory_ToURL_Options_WithType_Error(NSPersistentStoreCoordinator self, NSString storeIdentifier, NSURL externalRecordsURL, NSURL destinationURL, NSDictionary options, NSString storeType, NSError* error)                            { return ((NSPersistentStore (*)(NSPersistentStoreCoordinator, SEL, NSString, NSURL, NSURL, NSDictionary, NSString, NSError*))bean_msgSend)(self, bean_sel("importStoreWithIdentifier:fromExternalRecordsDirectory:toURL:options:withType:error:"), storeIdentifier, externalRecordsURL, destinationURL, options, storeType, error); }
+static inline NSPersistentStore               NSPersistentStoreCoordinator_MigratePersistentStore_ToURL_Options_WithType_Error(NSPersistentStoreCoordinator self, NSPersistentStore store, NSURL URL, NSDictionary options, NSString storeType, NSError* error)                                                                                                  { return ((NSPersistentStore (*)(NSPersistentStoreCoordinator, SEL, NSPersistentStore, NSURL, NSDictionary, NSString, NSError*))bean_msgSend)(self, bean_sel("migratePersistentStore:toURL:options:withType:error:"), store, URL, options, storeType, error); }
+static inline BOOL                            NSPersistentStoreCoordinator_DestroyPersistentStoreAtURL_WithType_Options_Error(NSPersistentStoreCoordinator self, NSURL url, NSString storeType, NSDictionary options, NSError* error)                                                                                                                            { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSURL, NSString, NSDictionary, NSError*))bean_msgSend)(self, bean_sel("destroyPersistentStoreAtURL:withType:options:error:"), url, storeType, options, error); }
+static inline BOOL                            NSPersistentStoreCoordinator_ReplacePersistentStoreAtURL_DestinationOptions_WithPersistentStoreFromURL_SourceOptions_StoreType_Error(NSPersistentStoreCoordinator self, NSURL destinationURL, NSDictionary destinationOptions, NSURL sourceURL, NSDictionary sourceOptions, NSString storeType, NSError* error)    { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSURL, NSDictionary, NSURL, NSDictionary, NSString, NSError*))bean_msgSend)(self, bean_sel("replacePersistentStoreAtURL:destinationOptions:withPersistentStoreFromURL:sourceOptions:storeType:error:"), destinationURL, destinationOptions, sourceURL, sourceOptions, storeType, error); }
+static inline void                            NSPersistentStoreCoordinator_PerformBlock(NSPersistentStoreCoordinator self, void* block)                                                                                                                                                                                                                          { ((void (*)(NSPersistentStoreCoordinator, SEL, void*))bean_msgSend)(self, bean_sel("performBlock:"), block); }
+static inline void                            NSPersistentStoreCoordinator_PerformBlockAndWait(NSPersistentStoreCoordinator self, void* block)                                                                                                                                                                                                                   { ((void (*)(NSPersistentStoreCoordinator, SEL, void*))bean_msgSend)(self, bean_sel("performBlockAndWait:"), block); }
+static inline NSPersistentHistoryToken        NSPersistentStoreCoordinator_CurrentPersistentHistoryTokenFromStores(NSPersistentStoreCoordinator self, NSArray stores)                                                                                                                                                                                            { return ((NSPersistentHistoryToken (*)(NSPersistentStoreCoordinator, SEL, NSArray))bean_msgSend)(self, bean_sel("currentPersistentHistoryTokenFromStores:"), stores); }
+static inline BOOL                            NSPersistentStoreCoordinator_FinishDeferredLightweightMigration(NSPersistentStoreCoordinator self, NSError error)                                                                                                                                                                                                  { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSError))bean_msgSend)(self, bean_sel("finishDeferredLightweightMigration:"), error); }
+static inline BOOL                            NSPersistentStoreCoordinator_FinishDeferredLightweightMigrationTask(NSPersistentStoreCoordinator self, NSError error)                                                                                                                                                                                              { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL, NSError))bean_msgSend)(self, bean_sel("finishDeferredLightweightMigrationTask:"), error); }
+static inline NSManagedObjectID               NSPersistentStoreCoordinator_ManagedObjectIDFromUTF8String_Length(NSPersistentStoreCoordinator self, const char* utf8string, NSUInteger len)                                                                                                                                                                       { return ((NSManagedObjectID (*)(NSPersistentStoreCoordinator, SEL, const char*, NSUInteger))bean_msgSend)(self, bean_sel("managedObjectIDFromUTF8String:length:"), utf8string, len); }
+static inline NSDictionary                    NSPersistentStoreCoordinator_MetadataForPersistentStoreWithURL_Error(NSURL url, NSError* error)                                                                                                                                                                                                                    { return ((NSDictionary (*)(bean_class, SEL, NSURL, NSError*))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("metadataForPersistentStoreWithURL:error:"), url, error); }
+static inline void                            NSPersistentStoreCoordinator_Lock(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                               { ((void (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("lock")); }
+static inline void                            NSPersistentStoreCoordinator_Unlock(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                             { ((void (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+static inline BOOL                            NSPersistentStoreCoordinator_TryLock(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                            { return ((BOOL (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("tryLock")); }
+static inline NSDictionary                    NSPersistentStoreCoordinator_MetadataForPersistentStoreOfType_URL_Error(NSString storeType, NSURL url, NSError* error)                                                                                                                                                                                             { return ((NSDictionary (*)(bean_class, SEL, NSString, NSURL, NSError*))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("metadataForPersistentStoreOfType:URL:error:"), storeType, url, error); }
+static inline BOOL                            NSPersistentStoreCoordinator_SetMetadata_ForPersistentStoreOfType_URL_Error(NSDictionary metadata, NSString storeType, NSURL url, NSError* error)                                                                                                                                                                  { return ((BOOL (*)(bean_class, SEL, NSDictionary, NSString, NSURL, NSError*))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("setMetadata:forPersistentStoreOfType:URL:error:"), metadata, storeType, url, error); }
+static inline BOOL                            NSPersistentStoreCoordinator_RemoveUbiquitousContentAndPersistentStoreAtURL_Options_Error(NSURL storeURL, NSDictionary options, NSError* error)                                                                                                                                                                    { return ((BOOL (*)(bean_class, SEL, NSURL, NSDictionary, NSError*))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("removeUbiquitousContentAndPersistentStoreAtURL:options:error:"), storeURL, options, error); }
+static inline NSManagedObjectModel            NSPersistentStoreCoordinator_ManagedObjectModel(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                 { return ((NSManagedObjectModel (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("managedObjectModel")); }
+static inline NSArray                         NSPersistentStoreCoordinator_PersistentStores(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                   { return ((NSArray (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("persistentStores")); }
+static inline NSString                        NSPersistentStoreCoordinator_Name(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                               { return ((NSString (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                            NSPersistentStoreCoordinator_SetName(NSPersistentStoreCoordinator self, NSString name)                                                                                                                                                                                                                             { ((void (*)(NSPersistentStoreCoordinator, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSDictionary                    NSPersistentStoreCoordinator_RegisteredStoreTypes(void)                                                                                                                                                                                                                                                            { return ((NSDictionary (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("registeredStoreTypes")); }
 
 /* ===== NSPersistentStoreRequest ===== */
 static inline NSArray                         NSPersistentStoreRequest_AffectedStores(NSPersistentStoreRequest self)                               { return ((NSArray (*)(NSPersistentStoreRequest, SEL))bean_msgSend)(self, bean_sel("affectedStores")); }
 static inline void                            NSPersistentStoreRequest_SetAffectedStores(NSPersistentStoreRequest self, NSArray affectedStores)    { ((void (*)(NSPersistentStoreRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("setAffectedStores:"), affectedStores); }
 static inline NSPersistentStoreRequestType    NSPersistentStoreRequest_RequestType(NSPersistentStoreRequest self)                                  { return ((NSPersistentStoreRequestType (*)(NSPersistentStoreRequest, SEL))bean_msgSend)(self, bean_sel("requestType")); }
+static inline id                              NSPersistentStoreRequest_CopyWithZone(NSPersistentStoreRequest self, NSZone* zone)                   { return ((id (*)(NSPersistentStoreRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== NSRelationshipDescription ===== */
 static inline NSEntityDescription          NSRelationshipDescription_DestinationEntity(NSRelationshipDescription self)                                                        { return ((NSEntityDescription (*)(NSRelationshipDescription, SEL))bean_msgSend)(self, bean_sel("destinationEntity")); }
@@ -5933,10 +7341,10 @@ static inline BOOL                         NSRelationshipDescription_Ordered(NSR
 #define BEAN_TYPEDEF_NSStagedMigrationManager
 typedef bean_id NSStagedMigrationManager;
 #endif
-static inline id                       NSStagedMigrationManager_Init(NSStagedMigrationManager self)                                       { return ((id (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                       NSStagedMigrationManager_InitWithMigrationStages(NSStagedMigrationManager self, NSArray stages)    { return ((id (*)(NSStagedMigrationManager, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithMigrationStages:"), stages); }
-static inline NSArray                  NSStagedMigrationManager_Stages(NSStagedMigrationManager self)                                     { return ((NSArray (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("stages")); }
-static inline NSPersistentContainer    NSStagedMigrationManager_Container(NSStagedMigrationManager self)                                  { return ((NSPersistentContainer (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("container")); }
+static inline NSStagedMigrationManager    NSStagedMigrationManager_Init(NSStagedMigrationManager self)                                       { return ((NSStagedMigrationManager (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSStagedMigrationManager    NSStagedMigrationManager_InitWithMigrationStages(NSStagedMigrationManager self, NSArray stages)    { return ((NSStagedMigrationManager (*)(NSStagedMigrationManager, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithMigrationStages:"), stages); }
+static inline NSArray                     NSStagedMigrationManager_Stages(NSStagedMigrationManager self)                                     { return ((NSArray (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("stages")); }
+static inline NSPersistentContainer       NSStagedMigrationManager_Container(NSStagedMigrationManager self)                                  { return ((NSPersistentContainer (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("container")); }
 
 /* ===== SCNNode ===== */
 static inline GKEntity    SCNNode_Entity(SCNNode self)                        { return ((GKEntity (*)(SCNNode, SEL))bean_msgSend)(self, bean_sel("entity")); }
@@ -5947,9 +7355,9 @@ static inline void        SCNNode_SetEntity(SCNNode self, GKEntity entity)    { 
 #define BEAN_TYPEDEF_SK3DNode
 typedef bean_id SK3DNode;
 #endif
-static inline id          SK3DNode_InitWithViewportSize(SK3DNode self, CGSize viewportSize)                         { return ((id (*)(SK3DNode, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithViewportSize:"), viewportSize); }
-static inline id          SK3DNode_InitWithCoder(SK3DNode self, NSCoder aDecoder)                                   { return ((id (*)(SK3DNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline id          SK3DNode_NodeWithViewportSize(CGSize viewportSize)                                        { return ((id (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SK3DNode"), bean_sel("nodeWithViewportSize:"), viewportSize); }
+static inline SK3DNode    SK3DNode_InitWithViewportSize(SK3DNode self, CGSize viewportSize)                         { return ((SK3DNode (*)(SK3DNode, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithViewportSize:"), viewportSize); }
+static inline SK3DNode    SK3DNode_InitWithCoder(SK3DNode self, NSCoder aDecoder)                                   { return ((SK3DNode (*)(SK3DNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline SK3DNode    SK3DNode_NodeWithViewportSize(CGSize viewportSize)                                        { return ((SK3DNode (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SK3DNode"), bean_sel("nodeWithViewportSize:"), viewportSize); }
 static inline NSArray     SK3DNode_HitTest_Options(SK3DNode self, CGPoint point, NSDictionary options)              { return ((NSArray (*)(SK3DNode, SEL, CGPoint, NSDictionary))bean_msgSend)(self, bean_sel("hitTest:options:"), point, options); }
 static inline void*       SK3DNode_ProjectPoint(SK3DNode self, void* point)                                         { return ((void* (*)(SK3DNode, SEL, void*))bean_msgSend)(self, bean_sel("projectPoint:"), point); }
 static inline void*       SK3DNode_UnprojectPoint(SK3DNode self, void* point)                                       { return ((void* (*)(SK3DNode, SEL, void*))bean_msgSend)(self, bean_sel("unprojectPoint:"), point); }
@@ -6077,6 +7485,8 @@ static inline SKAction              SKAction_ChangeObstructionTo_Duration(CGFloa
 static inline SKAction              SKAction_ChangeObstructionBy_Duration(CGFloat v, CGFloat duration)                                                           { return ((SKAction (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("SKAction"), bean_sel("changeObstructionBy:duration:"), v, duration); }
 static inline SKAction              SKAction_ChangeOcclusionTo_Duration(CGFloat v, CGFloat duration)                                                             { return ((SKAction (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("SKAction"), bean_sel("changeOcclusionTo:duration:"), v, duration); }
 static inline SKAction              SKAction_ChangeOcclusionBy_Duration(CGFloat v, CGFloat duration)                                                             { return ((SKAction (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("SKAction"), bean_sel("changeOcclusionBy:duration:"), v, duration); }
+static inline id                    SKAction_CopyWithZone(SKAction self, NSZone* zone)                                                                           { return ((id (*)(SKAction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                  SKAction_SupportsSecureCoding(void)                                                                                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKAction"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKCameraNode ===== */
 #ifndef BEAN_TYPEDEF_SKCameraNode
@@ -6091,20 +7501,22 @@ static inline NSSet    SKCameraNode_ContainedNodeSet(SKCameraNode self)         
 #define BEAN_TYPEDEF_SKConstraint
 typedef bean_id SKConstraint;
 #endif
-static inline id        SKConstraint_PositionX(SKRange range)                                                    { return ((id (*)(bean_class, SEL, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("positionX:"), range); }
-static inline id        SKConstraint_PositionY(SKRange range)                                                    { return ((id (*)(bean_class, SEL, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("positionY:"), range); }
-static inline id        SKConstraint_PositionX_Y(SKRange xRange, SKRange yRange)                                 { return ((id (*)(bean_class, SEL, SKRange, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("positionX:Y:"), xRange, yRange); }
-static inline id        SKConstraint_Distance_ToNode(SKRange range, SKNode node)                                 { return ((id (*)(bean_class, SEL, SKRange, SKNode))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("distance:toNode:"), range, node); }
-static inline id        SKConstraint_Distance_ToPoint(SKRange range, CGPoint point)                              { return ((id (*)(bean_class, SEL, SKRange, CGPoint))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("distance:toPoint:"), range, point); }
-static inline id        SKConstraint_Distance_ToPoint_InNode(SKRange range, CGPoint point, SKNode node)          { return ((id (*)(bean_class, SEL, SKRange, CGPoint, SKNode))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("distance:toPoint:inNode:"), range, point, node); }
-static inline id        SKConstraint_ZRotation(SKRange zRange)                                                   { return ((id (*)(bean_class, SEL, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("zRotation:"), zRange); }
-static inline id        SKConstraint_OrientToNode_Offset(SKNode node, SKRange radians)                           { return ((id (*)(bean_class, SEL, SKNode, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("orientToNode:offset:"), node, radians); }
-static inline id        SKConstraint_OrientToPoint_Offset(CGPoint point, SKRange radians)                        { return ((id (*)(bean_class, SEL, CGPoint, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("orientToPoint:offset:"), point, radians); }
-static inline id        SKConstraint_OrientToPoint_InNode_Offset(CGPoint point, SKNode node, SKRange radians)    { return ((id (*)(bean_class, SEL, CGPoint, SKNode, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("orientToPoint:inNode:offset:"), point, node, radians); }
-static inline BOOL      SKConstraint_Enabled(SKConstraint self)                                                  { return ((BOOL (*)(SKConstraint, SEL))bean_msgSend)(self, bean_sel("enabled")); }
-static inline void      SKConstraint_SetEnabled(SKConstraint self, BOOL enabled)                                 { ((void (*)(SKConstraint, SEL, BOOL))bean_msgSend)(self, bean_sel("setEnabled:"), enabled); }
-static inline SKNode    SKConstraint_ReferenceNode(SKConstraint self)                                            { return ((SKNode (*)(SKConstraint, SEL))bean_msgSend)(self, bean_sel("referenceNode")); }
-static inline void      SKConstraint_SetReferenceNode(SKConstraint self, SKNode referenceNode)                   { ((void (*)(SKConstraint, SEL, SKNode))bean_msgSend)(self, bean_sel("setReferenceNode:"), referenceNode); }
+static inline SKConstraint    SKConstraint_PositionX(SKRange range)                                                    { return ((SKConstraint (*)(bean_class, SEL, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("positionX:"), range); }
+static inline SKConstraint    SKConstraint_PositionY(SKRange range)                                                    { return ((SKConstraint (*)(bean_class, SEL, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("positionY:"), range); }
+static inline SKConstraint    SKConstraint_PositionX_Y(SKRange xRange, SKRange yRange)                                 { return ((SKConstraint (*)(bean_class, SEL, SKRange, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("positionX:Y:"), xRange, yRange); }
+static inline SKConstraint    SKConstraint_Distance_ToNode(SKRange range, SKNode node)                                 { return ((SKConstraint (*)(bean_class, SEL, SKRange, SKNode))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("distance:toNode:"), range, node); }
+static inline SKConstraint    SKConstraint_Distance_ToPoint(SKRange range, CGPoint point)                              { return ((SKConstraint (*)(bean_class, SEL, SKRange, CGPoint))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("distance:toPoint:"), range, point); }
+static inline SKConstraint    SKConstraint_Distance_ToPoint_InNode(SKRange range, CGPoint point, SKNode node)          { return ((SKConstraint (*)(bean_class, SEL, SKRange, CGPoint, SKNode))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("distance:toPoint:inNode:"), range, point, node); }
+static inline SKConstraint    SKConstraint_ZRotation(SKRange zRange)                                                   { return ((SKConstraint (*)(bean_class, SEL, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("zRotation:"), zRange); }
+static inline SKConstraint    SKConstraint_OrientToNode_Offset(SKNode node, SKRange radians)                           { return ((SKConstraint (*)(bean_class, SEL, SKNode, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("orientToNode:offset:"), node, radians); }
+static inline SKConstraint    SKConstraint_OrientToPoint_Offset(CGPoint point, SKRange radians)                        { return ((SKConstraint (*)(bean_class, SEL, CGPoint, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("orientToPoint:offset:"), point, radians); }
+static inline SKConstraint    SKConstraint_OrientToPoint_InNode_Offset(CGPoint point, SKNode node, SKRange radians)    { return ((SKConstraint (*)(bean_class, SEL, CGPoint, SKNode, SKRange))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("orientToPoint:inNode:offset:"), point, node, radians); }
+static inline BOOL            SKConstraint_Enabled(SKConstraint self)                                                  { return ((BOOL (*)(SKConstraint, SEL))bean_msgSend)(self, bean_sel("enabled")); }
+static inline void            SKConstraint_SetEnabled(SKConstraint self, BOOL enabled)                                 { ((void (*)(SKConstraint, SEL, BOOL))bean_msgSend)(self, bean_sel("setEnabled:"), enabled); }
+static inline SKNode          SKConstraint_ReferenceNode(SKConstraint self)                                            { return ((SKNode (*)(SKConstraint, SEL))bean_msgSend)(self, bean_sel("referenceNode")); }
+static inline void            SKConstraint_SetReferenceNode(SKConstraint self, SKNode referenceNode)                   { ((void (*)(SKConstraint, SEL, SKNode))bean_msgSend)(self, bean_sel("setReferenceNode:"), referenceNode); }
+static inline BOOL            SKConstraint_SupportsSecureCoding(void)                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("supportsSecureCoding")); }
+static inline id              SKConstraint_CopyWithZone(SKConstraint self, NSZone* zone)                               { return ((id (*)(SKConstraint, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== SKCropNode ===== */
 #ifndef BEAN_TYPEDEF_SKCropNode
@@ -6135,6 +7547,10 @@ static inline SKShader            SKEffectNode_Shader(SKEffectNode self)        
 static inline void                SKEffectNode_SetShader(SKEffectNode self, SKShader shader)                                          { ((void (*)(SKEffectNode, SEL, SKShader))bean_msgSend)(self, bean_sel("setShader:"), shader); }
 static inline NSDictionary        SKEffectNode_AttributeValues(SKEffectNode self)                                                     { return ((NSDictionary (*)(SKEffectNode, SEL))bean_msgSend)(self, bean_sel("attributeValues")); }
 static inline void                SKEffectNode_SetAttributeValues(SKEffectNode self, NSDictionary attributeValues)                    { ((void (*)(SKEffectNode, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setAttributeValues:"), attributeValues); }
+static inline SKWarpGeometry      SKEffectNode_WarpGeometry(SKEffectNode self)                                                        { return ((SKWarpGeometry (*)(SKEffectNode, SEL))bean_msgSend)(self, bean_sel("warpGeometry")); }
+static inline void                SKEffectNode_SetWarpGeometry(SKEffectNode self, SKWarpGeometry warpGeometry)                        { ((void (*)(SKEffectNode, SEL, SKWarpGeometry))bean_msgSend)(self, bean_sel("setWarpGeometry:"), warpGeometry); }
+static inline NSInteger           SKEffectNode_SubdivisionLevels(SKEffectNode self)                                                   { return ((NSInteger (*)(SKEffectNode, SEL))bean_msgSend)(self, bean_sel("subdivisionLevels")); }
+static inline void                SKEffectNode_SetSubdivisionLevels(SKEffectNode self, NSInteger subdivisionLevels)                   { ((void (*)(SKEffectNode, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSubdivisionLevels:"), subdivisionLevels); }
 
 /* ===== SKEmitterNode ===== */
 #ifndef BEAN_TYPEDEF_SKEmitterNode
@@ -6287,9 +7703,9 @@ static inline BOOL           SKFieldNode_Enabled(SKFieldNode self)              
 static inline BOOL           SKFieldNode_Exclusive(SKFieldNode self)                                                        { return ((BOOL (*)(SKFieldNode, SEL))bean_msgSend)(self, bean_sel("exclusive")); }
 
 /* ===== SKKeyframeSequence ===== */
-static inline id                     SKKeyframeSequence_InitWithKeyframeValues_Times(SKKeyframeSequence self, NSArray values, NSArray times)                 { return ((id (*)(SKKeyframeSequence, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithKeyframeValues:times:"), values, times); }
-static inline id                     SKKeyframeSequence_InitWithCapacity(SKKeyframeSequence self, NSUInteger numItems)                                       { return ((id (*)(SKKeyframeSequence, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithCapacity:"), numItems); }
-static inline id                     SKKeyframeSequence_InitWithCoder(SKKeyframeSequence self, NSCoder aDecoder)                                             { return ((id (*)(SKKeyframeSequence, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline SKKeyframeSequence     SKKeyframeSequence_InitWithKeyframeValues_Times(SKKeyframeSequence self, NSArray values, NSArray times)                 { return ((SKKeyframeSequence (*)(SKKeyframeSequence, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithKeyframeValues:times:"), values, times); }
+static inline SKKeyframeSequence     SKKeyframeSequence_InitWithCapacity(SKKeyframeSequence self, NSUInteger numItems)                                       { return ((SKKeyframeSequence (*)(SKKeyframeSequence, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithCapacity:"), numItems); }
+static inline SKKeyframeSequence     SKKeyframeSequence_InitWithCoder(SKKeyframeSequence self, NSCoder aDecoder)                                             { return ((SKKeyframeSequence (*)(SKKeyframeSequence, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline NSUInteger             SKKeyframeSequence_Count(SKKeyframeSequence self)                                                                       { return ((NSUInteger (*)(SKKeyframeSequence, SEL))bean_msgSend)(self, bean_sel("count")); }
 static inline void                   SKKeyframeSequence_AddKeyframeValue_Time(SKKeyframeSequence self, id value, CGFloat time)                               { ((void (*)(SKKeyframeSequence, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("addKeyframeValue:time:"), value, time); }
 static inline void                   SKKeyframeSequence_RemoveLastKeyframe(SKKeyframeSequence self)                                                          { ((void (*)(SKKeyframeSequence, SEL))bean_msgSend)(self, bean_sel("removeLastKeyframe")); }
@@ -6304,13 +7720,15 @@ static inline SKInterpolationMode    SKKeyframeSequence_InterpolationMode(SKKeyf
 static inline void                   SKKeyframeSequence_SetInterpolationMode(SKKeyframeSequence self, SKInterpolationMode interpolationMode)                 { ((void (*)(SKKeyframeSequence, SEL, SKInterpolationMode))bean_msgSend)(self, bean_sel("setInterpolationMode:"), interpolationMode); }
 static inline SKRepeatMode           SKKeyframeSequence_RepeatMode(SKKeyframeSequence self)                                                                  { return ((SKRepeatMode (*)(SKKeyframeSequence, SEL))bean_msgSend)(self, bean_sel("repeatMode")); }
 static inline void                   SKKeyframeSequence_SetRepeatMode(SKKeyframeSequence self, SKRepeatMode repeatMode)                                      { ((void (*)(SKKeyframeSequence, SEL, SKRepeatMode))bean_msgSend)(self, bean_sel("setRepeatMode:"), repeatMode); }
+static inline BOOL                   SKKeyframeSequence_SupportsSecureCoding(void)                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKKeyframeSequence"), bean_sel("supportsSecureCoding")); }
+static inline id                     SKKeyframeSequence_CopyWithZone(SKKeyframeSequence self, NSZone* zone)                                                  { return ((id (*)(SKKeyframeSequence, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== SKNode ===== */
-static inline id                     SKNode_Init(SKNode self)                                                                                  { return ((id (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                     SKNode_InitWithCoder(SKNode self, NSCoder aDecoder)                                                       { return ((id (*)(SKNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline id                     SKNode_Node(void)                                                                                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKNode"), bean_sel("node")); }
-static inline id                     SKNode_NodeWithFileNamed(NSString filename)                                                               { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKNode"), bean_sel("nodeWithFileNamed:"), filename); }
-static inline id                     SKNode_NodeWithFileNamed_SecurelyWithClasses_AndError(NSString filename, NSSet classes, NSError error)    { return ((id (*)(bean_class, SEL, NSString, NSSet, NSError))bean_msgSend)(bean_cls("SKNode"), bean_sel("nodeWithFileNamed:securelyWithClasses:andError:"), filename, classes, error); }
+static inline SKNode                 SKNode_Init(SKNode self)                                                                                  { return ((SKNode (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline SKNode                 SKNode_InitWithCoder(SKNode self, NSCoder aDecoder)                                                       { return ((SKNode (*)(SKNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline SKNode                 SKNode_Node(void)                                                                                         { return ((SKNode (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKNode"), bean_sel("node")); }
+static inline SKNode                 SKNode_NodeWithFileNamed(NSString filename)                                                               { return ((SKNode (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKNode"), bean_sel("nodeWithFileNamed:"), filename); }
+static inline SKNode                 SKNode_NodeWithFileNamed_SecurelyWithClasses_AndError(NSString filename, NSSet classes, NSError error)    { return ((SKNode (*)(bean_class, SEL, NSString, NSSet, NSError))bean_msgSend)(bean_cls("SKNode"), bean_sel("nodeWithFileNamed:securelyWithClasses:andError:"), filename, classes, error); }
 static inline CGRect                 SKNode_CalculateAccumulatedFrame(SKNode self)                                                             { return ((CGRect (*)(SKNode, SEL))bean_msgSend_stret)(self, bean_sel("calculateAccumulatedFrame")); }
 static inline SKAttributeValue       SKNode_ValueForAttributeNamed(SKNode self, NSString key)                                                  { return ((SKAttributeValue (*)(SKNode, SEL, NSString))bean_msgSend)(self, bean_sel("valueForAttributeNamed:"), key); }
 static inline void                   SKNode_SetValue_ForAttributeNamed(SKNode self, SKAttributeValue value, NSString key)                      { ((void (*)(SKNode, SEL, SKAttributeValue, NSString))bean_msgSend)(self, bean_sel("setValue:forAttributeNamed:"), value, key); }
@@ -6403,6 +7821,8 @@ static inline NSArray                SKNode_ObstaclesFromNodeBounds(NSArray node
 static inline NSArray                SKNode_ObstaclesFromNodePhysicsBodies(NSArray nodes)                                                      { return ((NSArray (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("SKNode"), bean_sel("obstaclesFromNodePhysicsBodies:"), nodes); }
 static inline GKEntity               SKNode_Entity(SKNode self)                                                                                { return ((GKEntity (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("entity")); }
 static inline void                   SKNode_SetEntity(SKNode self, GKEntity entity)                                                            { ((void (*)(SKNode, SEL, GKEntity))bean_msgSend)(self, bean_sel("setEntity:"), entity); }
+static inline id                     SKNode_CopyWithZone(SKNode self, NSZone* zone)                                                            { return ((id (*)(SKNode, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                   SKNode_SupportsSecureCoding(void)                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKNode"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                   SKNode_Paused(SKNode self)                                                                                { return ((BOOL (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("paused")); }
 static inline BOOL                   SKNode_Hidden(SKNode self)                                                                                { return ((BOOL (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("hidden")); }
 static inline BOOL                   SKNode_UserInteractionEnabled(SKNode self)                                                                { return ((BOOL (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("userInteractionEnabled")); }
@@ -6470,6 +7890,8 @@ static inline CGVector         SKPhysicsBody_Velocity(SKPhysicsBody self)       
 static inline void             SKPhysicsBody_SetVelocity(SKPhysicsBody self, CGVector velocity)                                             { ((void (*)(SKPhysicsBody, SEL, CGVector))bean_msgSend)(self, bean_sel("setVelocity:"), velocity); }
 static inline CGFloat          SKPhysicsBody_AngularVelocity(SKPhysicsBody self)                                                            { return ((CGFloat (*)(SKPhysicsBody, SEL))bean_msgSend_fpret)(self, bean_sel("angularVelocity")); }
 static inline void             SKPhysicsBody_SetAngularVelocity(SKPhysicsBody self, CGFloat angularVelocity)                                { ((void (*)(SKPhysicsBody, SEL, CGFloat))bean_msgSend)(self, bean_sel("setAngularVelocity:"), angularVelocity); }
+static inline id               SKPhysicsBody_CopyWithZone(SKPhysicsBody self, NSZone* zone)                                                 { return ((id (*)(SKPhysicsBody, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL             SKPhysicsBody_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPhysicsBody"), bean_sel("supportsSecureCoding")); }
 static inline BOOL             SKPhysicsBody_Dynamic(SKPhysicsBody self)                                                                    { return ((BOOL (*)(SKPhysicsBody, SEL))bean_msgSend)(self, bean_sel("dynamic")); }
 static inline BOOL             SKPhysicsBody_Resting(SKPhysicsBody self)                                                                    { return ((BOOL (*)(SKPhysicsBody, SEL))bean_msgSend)(self, bean_sel("resting")); }
 
@@ -6484,6 +7906,14 @@ static inline CGPoint          SKPhysicsContact_ContactPoint(SKPhysicsContact se
 static inline CGVector         SKPhysicsContact_ContactNormal(SKPhysicsContact self)       { return ((CGVector (*)(SKPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactNormal")); }
 static inline CGFloat          SKPhysicsContact_CollisionImpulse(SKPhysicsContact self)    { return ((CGFloat (*)(SKPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("collisionImpulse")); }
 
+/* ===== SKPhysicsContactDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKPhysicsContactDelegate
+#define BEAN_TYPEDEF_SKPhysicsContactDelegate
+typedef bean_id SKPhysicsContactDelegate;
+#endif
+static inline void    SKPhysicsContactDelegate_DidBeginContact(SKPhysicsContactDelegate self, SKPhysicsContact contact)    { ((void (*)(SKPhysicsContactDelegate, SEL, SKPhysicsContact))bean_msgSend)(self, bean_sel("didBeginContact:"), contact); }
+static inline void    SKPhysicsContactDelegate_DidEndContact(SKPhysicsContactDelegate self, SKPhysicsContact contact)      { ((void (*)(SKPhysicsContactDelegate, SEL, SKPhysicsContact))bean_msgSend)(self, bean_sel("didEndContact:"), contact); }
+
 /* ===== SKPhysicsJoint ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsJoint
 #define BEAN_TYPEDEF_SKPhysicsJoint
@@ -6495,6 +7925,7 @@ static inline SKPhysicsBody    SKPhysicsJoint_BodyB(SKPhysicsJoint self)        
 static inline void             SKPhysicsJoint_SetBodyB(SKPhysicsJoint self, SKPhysicsBody bodyB)    { ((void (*)(SKPhysicsJoint, SEL, SKPhysicsBody))bean_msgSend)(self, bean_sel("setBodyB:"), bodyB); }
 static inline CGVector         SKPhysicsJoint_ReactionForce(SKPhysicsJoint self)                    { return ((CGVector (*)(SKPhysicsJoint, SEL))bean_msgSend_stret)(self, bean_sel("reactionForce")); }
 static inline CGFloat          SKPhysicsJoint_ReactionTorque(SKPhysicsJoint self)                   { return ((CGFloat (*)(SKPhysicsJoint, SEL))bean_msgSend_fpret)(self, bean_sel("reactionTorque")); }
+static inline BOOL             SKPhysicsJoint_SupportsSecureCoding(void)                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPhysicsJoint"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKPhysicsJointFixed ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsJointFixed
@@ -6574,19 +8005,20 @@ static inline CGFloat          SKPhysicsWorld_Speed(SKPhysicsWorld self)        
 static inline void             SKPhysicsWorld_SetSpeed(SKPhysicsWorld self, CGFloat speed)                                                                 { ((void (*)(SKPhysicsWorld, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
 static inline id               SKPhysicsWorld_ContactDelegate(SKPhysicsWorld self)                                                                         { return ((id (*)(SKPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("contactDelegate")); }
 static inline void             SKPhysicsWorld_SetContactDelegate(SKPhysicsWorld self, id contactDelegate)                                                  { ((void (*)(SKPhysicsWorld, SEL, id))bean_msgSend)(self, bean_sel("setContactDelegate:"), contactDelegate); }
+static inline BOOL             SKPhysicsWorld_SupportsSecureCoding(void)                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPhysicsWorld"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKReferenceNode ===== */
 #ifndef BEAN_TYPEDEF_SKReferenceNode
 #define BEAN_TYPEDEF_SKReferenceNode
 typedef bean_id SKReferenceNode;
 #endif
-static inline id      SKReferenceNode_InitWithURL(SKReferenceNode self, NSURL url)                  { return ((id (*)(SKReferenceNode, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), url); }
-static inline id      SKReferenceNode_InitWithFileNamed(SKReferenceNode self, NSString fileName)    { return ((id (*)(SKReferenceNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithFileNamed:"), fileName); }
-static inline id      SKReferenceNode_InitWithCoder(SKReferenceNode self, NSCoder aDecoder)         { return ((id (*)(SKReferenceNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
-static inline id      SKReferenceNode_ReferenceNodeWithFileNamed(NSString fileName)                 { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKReferenceNode"), bean_sel("referenceNodeWithFileNamed:"), fileName); }
-static inline id      SKReferenceNode_ReferenceNodeWithURL(NSURL referenceURL)                      { return ((id (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("SKReferenceNode"), bean_sel("referenceNodeWithURL:"), referenceURL); }
-static inline void    SKReferenceNode_DidLoadReferenceNode(SKReferenceNode self, SKNode node)       { ((void (*)(SKReferenceNode, SEL, SKNode))bean_msgSend)(self, bean_sel("didLoadReferenceNode:"), node); }
-static inline void    SKReferenceNode_ResolveReferenceNode(SKReferenceNode self)                    { ((void (*)(SKReferenceNode, SEL))bean_msgSend)(self, bean_sel("resolveReferenceNode")); }
+static inline SKReferenceNode    SKReferenceNode_InitWithURL(SKReferenceNode self, NSURL url)                  { return ((SKReferenceNode (*)(SKReferenceNode, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithURL:"), url); }
+static inline SKReferenceNode    SKReferenceNode_InitWithFileNamed(SKReferenceNode self, NSString fileName)    { return ((SKReferenceNode (*)(SKReferenceNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithFileNamed:"), fileName); }
+static inline SKReferenceNode    SKReferenceNode_InitWithCoder(SKReferenceNode self, NSCoder aDecoder)         { return ((SKReferenceNode (*)(SKReferenceNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline SKReferenceNode    SKReferenceNode_ReferenceNodeWithFileNamed(NSString fileName)                 { return ((SKReferenceNode (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKReferenceNode"), bean_sel("referenceNodeWithFileNamed:"), fileName); }
+static inline SKReferenceNode    SKReferenceNode_ReferenceNodeWithURL(NSURL referenceURL)                      { return ((SKReferenceNode (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("SKReferenceNode"), bean_sel("referenceNodeWithURL:"), referenceURL); }
+static inline void               SKReferenceNode_DidLoadReferenceNode(SKReferenceNode self, SKNode node)       { ((void (*)(SKReferenceNode, SEL, SKNode))bean_msgSend)(self, bean_sel("didLoadReferenceNode:"), node); }
+static inline void               SKReferenceNode_ResolveReferenceNode(SKReferenceNode self)                    { ((void (*)(SKReferenceNode, SEL))bean_msgSend)(self, bean_sel("resolveReferenceNode")); }
 
 /* ===== SKRenderer ===== */
 #ifndef BEAN_TYPEDEF_SKRenderer
@@ -6615,8 +8047,8 @@ static inline BOOL          SKRenderer_ShowsFields(SKRenderer self)             
 static inline void          SKRenderer_SetShowsFields(SKRenderer self, BOOL showsFields)                                                                                                                                                      { ((void (*)(SKRenderer, SEL, BOOL))bean_msgSend)(self, bean_sel("setShowsFields:"), showsFields); }
 
 /* ===== SKScene ===== */
-static inline id                  SKScene_InitWithSize(SKScene self, CGSize size)                      { return ((id (*)(SKScene, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithSize:"), size); }
-static inline id                  SKScene_SceneWithSize(CGSize size)                                   { return ((id (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKScene"), bean_sel("sceneWithSize:"), size); }
+static inline SKScene             SKScene_InitWithSize(SKScene self, CGSize size)                      { return ((SKScene (*)(SKScene, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithSize:"), size); }
+static inline SKScene             SKScene_SceneWithSize(CGSize size)                                   { return ((SKScene (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKScene"), bean_sel("sceneWithSize:"), size); }
 static inline void                SKScene_SceneDidLoad(SKScene self)                                   { ((void (*)(SKScene, SEL))bean_msgSend)(self, bean_sel("sceneDidLoad")); }
 static inline CGPoint             SKScene_ConvertPointFromView(SKScene self, CGPoint point)            { return ((CGPoint (*)(SKScene, SEL, CGPoint))bean_msgSend_stret)(self, bean_sel("convertPointFromView:"), point); }
 static inline CGPoint             SKScene_ConvertPointToView(SKScene self, CGPoint point)              { return ((CGPoint (*)(SKScene, SEL, CGPoint))bean_msgSend_stret)(self, bean_sel("convertPointToView:"), point); }
@@ -6646,13 +8078,24 @@ static inline void                SKScene_SetAnchorPoint(SKScene self, CGPoint a
 static inline SKPhysicsWorld      SKScene_PhysicsWorld(SKScene self)                                   { return ((SKPhysicsWorld (*)(SKScene, SEL))bean_msgSend)(self, bean_sel("physicsWorld")); }
 static inline SKView              SKScene_View(SKScene self)                                           { return ((SKView (*)(SKScene, SEL))bean_msgSend)(self, bean_sel("view")); }
 
+/* ===== SKSceneDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKSceneDelegate
+#define BEAN_TYPEDEF_SKSceneDelegate
+typedef bean_id SKSceneDelegate;
+#endif
+static inline void    SKSceneDelegate_Update_ForScene(SKSceneDelegate self, CGFloat currentTime, SKScene scene)    { ((void (*)(SKSceneDelegate, SEL, CGFloat, SKScene))bean_msgSend)(self, bean_sel("update:forScene:"), currentTime, scene); }
+static inline void    SKSceneDelegate_DidEvaluateActionsForScene(SKSceneDelegate self, SKScene scene)              { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didEvaluateActionsForScene:"), scene); }
+static inline void    SKSceneDelegate_DidSimulatePhysicsForScene(SKSceneDelegate self, SKScene scene)              { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didSimulatePhysicsForScene:"), scene); }
+static inline void    SKSceneDelegate_DidApplyConstraintsForScene(SKSceneDelegate self, SKScene scene)             { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didApplyConstraintsForScene:"), scene); }
+static inline void    SKSceneDelegate_DidFinishUpdateForScene(SKSceneDelegate self, SKScene scene)                 { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didFinishUpdateForScene:"), scene); }
+
 /* ===== SKShader ===== */
-static inline id           SKShader_InitWithSource(SKShader self, NSString source)                               { return ((id (*)(SKShader, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSource:"), source); }
-static inline id           SKShader_InitWithSource_Uniforms(SKShader self, NSString source, NSArray uniforms)    { return ((id (*)(SKShader, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithSource:uniforms:"), source, uniforms); }
-static inline id           SKShader_Shader(void)                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKShader"), bean_sel("shader")); }
-static inline id           SKShader_ShaderWithSource(NSString source)                                            { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKShader"), bean_sel("shaderWithSource:"), source); }
-static inline id           SKShader_ShaderWithSource_Uniforms(NSString source, NSArray uniforms)                 { return ((id (*)(bean_class, SEL, NSString, NSArray))bean_msgSend)(bean_cls("SKShader"), bean_sel("shaderWithSource:uniforms:"), source, uniforms); }
-static inline id           SKShader_ShaderWithFileNamed(NSString name)                                           { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKShader"), bean_sel("shaderWithFileNamed:"), name); }
+static inline SKShader     SKShader_InitWithSource(SKShader self, NSString source)                               { return ((SKShader (*)(SKShader, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSource:"), source); }
+static inline SKShader     SKShader_InitWithSource_Uniforms(SKShader self, NSString source, NSArray uniforms)    { return ((SKShader (*)(SKShader, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("initWithSource:uniforms:"), source, uniforms); }
+static inline SKShader     SKShader_Shader(void)                                                                 { return ((SKShader (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKShader"), bean_sel("shader")); }
+static inline SKShader     SKShader_ShaderWithSource(NSString source)                                            { return ((SKShader (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKShader"), bean_sel("shaderWithSource:"), source); }
+static inline SKShader     SKShader_ShaderWithSource_Uniforms(NSString source, NSArray uniforms)                 { return ((SKShader (*)(bean_class, SEL, NSString, NSArray))bean_msgSend)(bean_cls("SKShader"), bean_sel("shaderWithSource:uniforms:"), source, uniforms); }
+static inline SKShader     SKShader_ShaderWithFileNamed(NSString name)                                           { return ((SKShader (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKShader"), bean_sel("shaderWithFileNamed:"), name); }
 static inline void         SKShader_AddUniform(SKShader self, SKUniform uniform)                                 { ((void (*)(SKShader, SEL, SKUniform))bean_msgSend)(self, bean_sel("addUniform:"), uniform); }
 static inline SKUniform    SKShader_UniformNamed(SKShader self, NSString name)                                   { return ((SKUniform (*)(SKShader, SEL, NSString))bean_msgSend)(self, bean_sel("uniformNamed:"), name); }
 static inline void         SKShader_RemoveUniformNamed(SKShader self, NSString name)                             { ((void (*)(SKShader, SEL, NSString))bean_msgSend)(self, bean_sel("removeUniformNamed:"), name); }
@@ -6662,23 +8105,25 @@ static inline NSArray      SKShader_Uniforms(SKShader self)                     
 static inline void         SKShader_SetUniforms(SKShader self, NSArray uniforms)                                 { ((void (*)(SKShader, SEL, NSArray))bean_msgSend)(self, bean_sel("setUniforms:"), uniforms); }
 static inline NSArray      SKShader_Attributes(SKShader self)                                                    { return ((NSArray (*)(SKShader, SEL))bean_msgSend)(self, bean_sel("attributes")); }
 static inline void         SKShader_SetAttributes(SKShader self, NSArray attributes)                             { ((void (*)(SKShader, SEL, NSArray))bean_msgSend)(self, bean_sel("setAttributes:"), attributes); }
+static inline id           SKShader_CopyWithZone(SKShader self, NSZone* zone)                                    { return ((id (*)(SKShader, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL         SKShader_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKShader"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKShapeNode ===== */
 #ifndef BEAN_TYPEDEF_SKShapeNode
 #define BEAN_TYPEDEF_SKShapeNode
 typedef bean_id SKShapeNode;
 #endif
-static inline id                  SKShapeNode_ShapeNodeWithPath(const struct CGPath* path)                                          { return ((id (*)(bean_class, SEL, const struct CGPath*))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithPath:"), path); }
-static inline id                  SKShapeNode_ShapeNodeWithPath_Centered(const struct CGPath* path, BOOL centered)                  { return ((id (*)(bean_class, SEL, const struct CGPath*, BOOL))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithPath:centered:"), path, centered); }
-static inline id                  SKShapeNode_ShapeNodeWithRect(CGRect rect)                                                        { return ((id (*)(bean_class, SEL, CGRect))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithRect:"), rect); }
-static inline id                  SKShapeNode_ShapeNodeWithRectOfSize(CGSize size)                                                  { return ((id (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithRectOfSize:"), size); }
-static inline id                  SKShapeNode_ShapeNodeWithRect_CornerRadius(CGRect rect, CGFloat cornerRadius)                     { return ((id (*)(bean_class, SEL, CGRect, CGFloat))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithRect:cornerRadius:"), rect, cornerRadius); }
-static inline id                  SKShapeNode_ShapeNodeWithRectOfSize_CornerRadius(CGSize size, CGFloat cornerRadius)               { return ((id (*)(bean_class, SEL, CGSize, CGFloat))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithRectOfSize:cornerRadius:"), size, cornerRadius); }
-static inline id                  SKShapeNode_ShapeNodeWithCircleOfRadius(CGFloat radius)                                           { return ((id (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithCircleOfRadius:"), radius); }
-static inline id                  SKShapeNode_ShapeNodeWithEllipseInRect(CGRect rect)                                               { return ((id (*)(bean_class, SEL, CGRect))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithEllipseInRect:"), rect); }
-static inline id                  SKShapeNode_ShapeNodeWithEllipseOfSize(CGSize size)                                               { return ((id (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithEllipseOfSize:"), size); }
-static inline id                  SKShapeNode_ShapeNodeWithPoints_Count(CGPoint* points, NSUInteger numPoints)                      { return ((id (*)(bean_class, SEL, CGPoint*, NSUInteger))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithPoints:count:"), points, numPoints); }
-static inline id                  SKShapeNode_ShapeNodeWithSplinePoints_Count(CGPoint* points, NSUInteger numPoints)                { return ((id (*)(bean_class, SEL, CGPoint*, NSUInteger))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithSplinePoints:count:"), points, numPoints); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithPath(const struct CGPath* path)                                          { return ((SKShapeNode (*)(bean_class, SEL, const struct CGPath*))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithPath:"), path); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithPath_Centered(const struct CGPath* path, BOOL centered)                  { return ((SKShapeNode (*)(bean_class, SEL, const struct CGPath*, BOOL))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithPath:centered:"), path, centered); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithRect(CGRect rect)                                                        { return ((SKShapeNode (*)(bean_class, SEL, CGRect))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithRect:"), rect); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithRectOfSize(CGSize size)                                                  { return ((SKShapeNode (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithRectOfSize:"), size); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithRect_CornerRadius(CGRect rect, CGFloat cornerRadius)                     { return ((SKShapeNode (*)(bean_class, SEL, CGRect, CGFloat))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithRect:cornerRadius:"), rect, cornerRadius); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithRectOfSize_CornerRadius(CGSize size, CGFloat cornerRadius)               { return ((SKShapeNode (*)(bean_class, SEL, CGSize, CGFloat))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithRectOfSize:cornerRadius:"), size, cornerRadius); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithCircleOfRadius(CGFloat radius)                                           { return ((SKShapeNode (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithCircleOfRadius:"), radius); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithEllipseInRect(CGRect rect)                                               { return ((SKShapeNode (*)(bean_class, SEL, CGRect))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithEllipseInRect:"), rect); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithEllipseOfSize(CGSize size)                                               { return ((SKShapeNode (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithEllipseOfSize:"), size); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithPoints_Count(CGPoint* points, NSUInteger numPoints)                      { return ((SKShapeNode (*)(bean_class, SEL, CGPoint*, NSUInteger))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithPoints:count:"), points, numPoints); }
+static inline SKShapeNode         SKShapeNode_ShapeNodeWithSplinePoints_Count(CGPoint* points, NSUInteger numPoints)                { return ((SKShapeNode (*)(bean_class, SEL, CGPoint*, NSUInteger))bean_msgSend)(bean_cls("SKShapeNode"), bean_sel("shapeNodeWithSplinePoints:count:"), points, numPoints); }
 static inline SKAttributeValue    SKShapeNode_ValueForAttributeNamed(SKShapeNode self, NSString key)                                { return ((SKAttributeValue (*)(SKShapeNode, SEL, NSString))bean_msgSend)(self, bean_sel("valueForAttributeNamed:"), key); }
 static inline void                SKShapeNode_SetValue_ForAttributeNamed(SKShapeNode self, SKAttributeValue value, NSString key)    { ((void (*)(SKShapeNode, SEL, SKAttributeValue, NSString))bean_msgSend)(self, bean_sel("setValue:forAttributeNamed:"), value, key); }
 static inline struct CGPath*      SKShapeNode_Path(SKShapeNode self)                                                                { return ((struct CGPath* (*)(SKShapeNode, SEL))bean_msgSend)(self, bean_sel("path")); }
@@ -6719,17 +8164,17 @@ static inline BOOL                SKShapeNode_Antialiased(SKShapeNode self)     
 #define BEAN_TYPEDEF_SKSpriteNode
 typedef bean_id SKSpriteNode;
 #endif
-static inline id                  SKSpriteNode_SpriteNodeWithTexture_Size(SKTexture texture, CGSize size)                                      { return ((id (*)(bean_class, SEL, SKTexture, CGSize))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithTexture:size:"), texture, size); }
-static inline id                  SKSpriteNode_SpriteNodeWithTexture(SKTexture texture)                                                        { return ((id (*)(bean_class, SEL, SKTexture))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithTexture:"), texture); }
-static inline id                  SKSpriteNode_SpriteNodeWithTexture_NormalMap(SKTexture texture, SKTexture normalMap)                         { return ((id (*)(bean_class, SEL, SKTexture, SKTexture))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithTexture:normalMap:"), texture, normalMap); }
-static inline id                  SKSpriteNode_SpriteNodeWithImageNamed(NSString name)                                                         { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithImageNamed:"), name); }
-static inline id                  SKSpriteNode_SpriteNodeWithImageNamed_NormalMapped(NSString name, BOOL generateNormalMap)                    { return ((id (*)(bean_class, SEL, NSString, BOOL))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithImageNamed:normalMapped:"), name, generateNormalMap); }
-static inline id                  SKSpriteNode_SpriteNodeWithColor_Size(NSColor color, CGSize size)                                            { return ((id (*)(bean_class, SEL, NSColor, CGSize))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithColor:size:"), color, size); }
-static inline id                  SKSpriteNode_InitWithTexture_Color_Size(SKSpriteNode self, SKTexture texture, NSColor color, CGSize size)    { return ((id (*)(SKSpriteNode, SEL, SKTexture, NSColor, CGSize))bean_msgSend)(self, bean_sel("initWithTexture:color:size:"), texture, color, size); }
-static inline id                  SKSpriteNode_InitWithTexture(SKSpriteNode self, SKTexture texture)                                           { return ((id (*)(SKSpriteNode, SEL, SKTexture))bean_msgSend)(self, bean_sel("initWithTexture:"), texture); }
-static inline id                  SKSpriteNode_InitWithImageNamed(SKSpriteNode self, NSString name)                                            { return ((id (*)(SKSpriteNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithImageNamed:"), name); }
-static inline id                  SKSpriteNode_InitWithColor_Size(SKSpriteNode self, NSColor color, CGSize size)                               { return ((id (*)(SKSpriteNode, SEL, NSColor, CGSize))bean_msgSend)(self, bean_sel("initWithColor:size:"), color, size); }
-static inline id                  SKSpriteNode_InitWithCoder(SKSpriteNode self, NSCoder aDecoder)                                              { return ((id (*)(SKSpriteNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
+static inline SKSpriteNode        SKSpriteNode_SpriteNodeWithTexture_Size(SKTexture texture, CGSize size)                                      { return ((SKSpriteNode (*)(bean_class, SEL, SKTexture, CGSize))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithTexture:size:"), texture, size); }
+static inline SKSpriteNode        SKSpriteNode_SpriteNodeWithTexture(SKTexture texture)                                                        { return ((SKSpriteNode (*)(bean_class, SEL, SKTexture))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithTexture:"), texture); }
+static inline SKSpriteNode        SKSpriteNode_SpriteNodeWithTexture_NormalMap(SKTexture texture, SKTexture normalMap)                         { return ((SKSpriteNode (*)(bean_class, SEL, SKTexture, SKTexture))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithTexture:normalMap:"), texture, normalMap); }
+static inline SKSpriteNode        SKSpriteNode_SpriteNodeWithImageNamed(NSString name)                                                         { return ((SKSpriteNode (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithImageNamed:"), name); }
+static inline SKSpriteNode        SKSpriteNode_SpriteNodeWithImageNamed_NormalMapped(NSString name, BOOL generateNormalMap)                    { return ((SKSpriteNode (*)(bean_class, SEL, NSString, BOOL))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithImageNamed:normalMapped:"), name, generateNormalMap); }
+static inline SKSpriteNode        SKSpriteNode_SpriteNodeWithColor_Size(NSColor color, CGSize size)                                            { return ((SKSpriteNode (*)(bean_class, SEL, NSColor, CGSize))bean_msgSend)(bean_cls("SKSpriteNode"), bean_sel("spriteNodeWithColor:size:"), color, size); }
+static inline SKSpriteNode        SKSpriteNode_InitWithTexture_Color_Size(SKSpriteNode self, SKTexture texture, NSColor color, CGSize size)    { return ((SKSpriteNode (*)(SKSpriteNode, SEL, SKTexture, NSColor, CGSize))bean_msgSend)(self, bean_sel("initWithTexture:color:size:"), texture, color, size); }
+static inline SKSpriteNode        SKSpriteNode_InitWithTexture(SKSpriteNode self, SKTexture texture)                                           { return ((SKSpriteNode (*)(SKSpriteNode, SEL, SKTexture))bean_msgSend)(self, bean_sel("initWithTexture:"), texture); }
+static inline SKSpriteNode        SKSpriteNode_InitWithImageNamed(SKSpriteNode self, NSString name)                                            { return ((SKSpriteNode (*)(SKSpriteNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithImageNamed:"), name); }
+static inline SKSpriteNode        SKSpriteNode_InitWithColor_Size(SKSpriteNode self, NSColor color, CGSize size)                               { return ((SKSpriteNode (*)(SKSpriteNode, SEL, NSColor, CGSize))bean_msgSend)(self, bean_sel("initWithColor:size:"), color, size); }
+static inline SKSpriteNode        SKSpriteNode_InitWithCoder(SKSpriteNode self, NSCoder aDecoder)                                              { return ((SKSpriteNode (*)(SKSpriteNode, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline void                SKSpriteNode_ScaleToSize(SKSpriteNode self, CGSize size)                                                     { ((void (*)(SKSpriteNode, SEL, CGSize))bean_msgSend)(self, bean_sel("scaleToSize:"), size); }
 static inline SKAttributeValue    SKSpriteNode_ValueForAttributeNamed(SKSpriteNode self, NSString key)                                         { return ((SKAttributeValue (*)(SKSpriteNode, SEL, NSString))bean_msgSend)(self, bean_sel("valueForAttributeNamed:"), key); }
 static inline void                SKSpriteNode_SetValue_ForAttributeNamed(SKSpriteNode self, SKAttributeValue value, NSString key)             { ((void (*)(SKSpriteNode, SEL, SKAttributeValue, NSString))bean_msgSend)(self, bean_sel("setValue:forAttributeNamed:"), value, key); }
@@ -6759,20 +8204,24 @@ static inline SKShader            SKSpriteNode_Shader(SKSpriteNode self)        
 static inline void                SKSpriteNode_SetShader(SKSpriteNode self, SKShader shader)                                                   { ((void (*)(SKSpriteNode, SEL, SKShader))bean_msgSend)(self, bean_sel("setShader:"), shader); }
 static inline NSDictionary        SKSpriteNode_AttributeValues(SKSpriteNode self)                                                              { return ((NSDictionary (*)(SKSpriteNode, SEL))bean_msgSend)(self, bean_sel("attributeValues")); }
 static inline void                SKSpriteNode_SetAttributeValues(SKSpriteNode self, NSDictionary attributeValues)                             { ((void (*)(SKSpriteNode, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setAttributeValues:"), attributeValues); }
+static inline SKWarpGeometry      SKSpriteNode_WarpGeometry(SKSpriteNode self)                                                                 { return ((SKWarpGeometry (*)(SKSpriteNode, SEL))bean_msgSend)(self, bean_sel("warpGeometry")); }
+static inline void                SKSpriteNode_SetWarpGeometry(SKSpriteNode self, SKWarpGeometry warpGeometry)                                 { ((void (*)(SKSpriteNode, SEL, SKWarpGeometry))bean_msgSend)(self, bean_sel("setWarpGeometry:"), warpGeometry); }
+static inline NSInteger           SKSpriteNode_SubdivisionLevels(SKSpriteNode self)                                                            { return ((NSInteger (*)(SKSpriteNode, SEL))bean_msgSend)(self, bean_sel("subdivisionLevels")); }
+static inline void                SKSpriteNode_SetSubdivisionLevels(SKSpriteNode self, NSInteger subdivisionLevels)                            { ((void (*)(SKSpriteNode, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSubdivisionLevels:"), subdivisionLevels); }
 
 /* ===== SKTexture ===== */
-static inline id                        SKTexture_TextureWithImageNamed(NSString name)                                                                                   { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithImageNamed:"), name); }
-static inline id                        SKTexture_TextureWithRect_InTexture(CGRect rect, SKTexture texture)                                                              { return ((id (*)(bean_class, SEL, CGRect, SKTexture))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithRect:inTexture:"), rect, texture); }
-static inline id                        SKTexture_TextureVectorNoiseWithSmoothness_Size(CGFloat smoothness, CGSize size)                                                 { return ((id (*)(bean_class, SEL, CGFloat, CGSize))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureVectorNoiseWithSmoothness:size:"), smoothness, size); }
-static inline id                        SKTexture_TextureNoiseWithSmoothness_Size_Grayscale(CGFloat smoothness, CGSize size, BOOL grayscale)                             { return ((id (*)(bean_class, SEL, CGFloat, CGSize, BOOL))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureNoiseWithSmoothness:size:grayscale:"), smoothness, size, grayscale); }
-static inline id                        SKTexture_TextureWithCGImage(CGImageRef image)                                                                                   { return ((id (*)(bean_class, SEL, CGImageRef))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithCGImage:"), image); }
-static inline id                        SKTexture_TextureWithImage(NSImage image)                                                                                        { return ((id (*)(bean_class, SEL, NSImage))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithImage:"), image); }
-static inline id                        SKTexture_TextureWithData_Size(NSData pixelData, CGSize size)                                                                    { return ((id (*)(bean_class, SEL, NSData, CGSize))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithData:size:"), pixelData, size); }
-static inline id                        SKTexture_TextureWithData_Size_Flipped(NSData pixelData, CGSize size, BOOL flipped)                                              { return ((id (*)(bean_class, SEL, NSData, CGSize, BOOL))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithData:size:flipped:"), pixelData, size, flipped); }
-static inline id                        SKTexture_TextureWithData_Size_RowLength_Alignment(NSData pixelData, CGSize size, NSUInteger rowLength, NSUInteger alignment)    { return ((id (*)(bean_class, SEL, NSData, CGSize, NSUInteger, NSUInteger))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithData:size:rowLength:alignment:"), pixelData, size, rowLength, alignment); }
-static inline id                        SKTexture_TextureByApplyingCIFilter(SKTexture self, CIFilter filter)                                                             { return ((id (*)(SKTexture, SEL, CIFilter))bean_msgSend)(self, bean_sel("textureByApplyingCIFilter:"), filter); }
-static inline id                        SKTexture_TextureByGeneratingNormalMap(SKTexture self)                                                                           { return ((id (*)(SKTexture, SEL))bean_msgSend)(self, bean_sel("textureByGeneratingNormalMap")); }
-static inline id                        SKTexture_TextureByGeneratingNormalMapWithSmoothness_Contrast(SKTexture self, CGFloat smoothness, CGFloat contrast)              { return ((id (*)(SKTexture, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("textureByGeneratingNormalMapWithSmoothness:contrast:"), smoothness, contrast); }
+static inline SKTexture                 SKTexture_TextureWithImageNamed(NSString name)                                                                                   { return ((SKTexture (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithImageNamed:"), name); }
+static inline SKTexture                 SKTexture_TextureWithRect_InTexture(CGRect rect, SKTexture texture)                                                              { return ((SKTexture (*)(bean_class, SEL, CGRect, SKTexture))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithRect:inTexture:"), rect, texture); }
+static inline SKTexture                 SKTexture_TextureVectorNoiseWithSmoothness_Size(CGFloat smoothness, CGSize size)                                                 { return ((SKTexture (*)(bean_class, SEL, CGFloat, CGSize))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureVectorNoiseWithSmoothness:size:"), smoothness, size); }
+static inline SKTexture                 SKTexture_TextureNoiseWithSmoothness_Size_Grayscale(CGFloat smoothness, CGSize size, BOOL grayscale)                             { return ((SKTexture (*)(bean_class, SEL, CGFloat, CGSize, BOOL))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureNoiseWithSmoothness:size:grayscale:"), smoothness, size, grayscale); }
+static inline SKTexture                 SKTexture_TextureWithCGImage(CGImageRef image)                                                                                   { return ((SKTexture (*)(bean_class, SEL, CGImageRef))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithCGImage:"), image); }
+static inline SKTexture                 SKTexture_TextureWithImage(NSImage image)                                                                                        { return ((SKTexture (*)(bean_class, SEL, NSImage))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithImage:"), image); }
+static inline SKTexture                 SKTexture_TextureWithData_Size(NSData pixelData, CGSize size)                                                                    { return ((SKTexture (*)(bean_class, SEL, NSData, CGSize))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithData:size:"), pixelData, size); }
+static inline SKTexture                 SKTexture_TextureWithData_Size_Flipped(NSData pixelData, CGSize size, BOOL flipped)                                              { return ((SKTexture (*)(bean_class, SEL, NSData, CGSize, BOOL))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithData:size:flipped:"), pixelData, size, flipped); }
+static inline SKTexture                 SKTexture_TextureWithData_Size_RowLength_Alignment(NSData pixelData, CGSize size, NSUInteger rowLength, NSUInteger alignment)    { return ((SKTexture (*)(bean_class, SEL, NSData, CGSize, NSUInteger, NSUInteger))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithData:size:rowLength:alignment:"), pixelData, size, rowLength, alignment); }
+static inline SKTexture                 SKTexture_TextureByApplyingCIFilter(SKTexture self, CIFilter filter)                                                             { return ((SKTexture (*)(SKTexture, SEL, CIFilter))bean_msgSend)(self, bean_sel("textureByApplyingCIFilter:"), filter); }
+static inline SKTexture                 SKTexture_TextureByGeneratingNormalMap(SKTexture self)                                                                           { return ((SKTexture (*)(SKTexture, SEL))bean_msgSend)(self, bean_sel("textureByGeneratingNormalMap")); }
+static inline SKTexture                 SKTexture_TextureByGeneratingNormalMapWithSmoothness_Contrast(SKTexture self, CGFloat smoothness, CGFloat contrast)              { return ((SKTexture (*)(SKTexture, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("textureByGeneratingNormalMapWithSmoothness:contrast:"), smoothness, contrast); }
 static inline CGRect                    SKTexture_TextureRect(SKTexture self)                                                                                            { return ((CGRect (*)(SKTexture, SEL))bean_msgSend_stret)(self, bean_sel("textureRect")); }
 static inline CGSize                    SKTexture_Size(SKTexture self)                                                                                                   { return ((CGSize (*)(SKTexture, SEL))bean_msgSend_stret)(self, bean_sel("size")); }
 static inline CGImageRef                SKTexture_CGImage(SKTexture self)                                                                                                { return ((CGImageRef (*)(SKTexture, SEL))bean_msgSend)(self, bean_sel("CGImage")); }
@@ -6782,36 +8231,39 @@ static inline SKTextureFilteringMode    SKTexture_FilteringMode(SKTexture self) 
 static inline void                      SKTexture_SetFilteringMode(SKTexture self, SKTextureFilteringMode filteringMode)                                                 { ((void (*)(SKTexture, SEL, SKTextureFilteringMode))bean_msgSend)(self, bean_sel("setFilteringMode:"), filteringMode); }
 static inline BOOL                      SKTexture_UsesMipmaps(SKTexture self)                                                                                            { return ((BOOL (*)(SKTexture, SEL))bean_msgSend)(self, bean_sel("usesMipmaps")); }
 static inline void                      SKTexture_SetUsesMipmaps(SKTexture self, BOOL usesMipmaps)                                                                       { ((void (*)(SKTexture, SEL, BOOL))bean_msgSend)(self, bean_sel("setUsesMipmaps:"), usesMipmaps); }
-static inline id                        SKTexture_TextureWithNoiseMap(GKNoiseMap noiseMap)                                                                               { return ((id (*)(bean_class, SEL, GKNoiseMap))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithNoiseMap:"), noiseMap); }
+static inline SKTexture                 SKTexture_TextureWithNoiseMap(GKNoiseMap noiseMap)                                                                               { return ((SKTexture (*)(bean_class, SEL, GKNoiseMap))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithNoiseMap:"), noiseMap); }
+static inline id                        SKTexture_CopyWithZone(SKTexture self, NSZone* zone)                                                                             { return ((id (*)(SKTexture, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                      SKTexture_SupportsSecureCoding(void)                                                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTexture"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKTextureAtlas ===== */
 #ifndef BEAN_TYPEDEF_SKTextureAtlas
 #define BEAN_TYPEDEF_SKTextureAtlas
 typedef bean_id SKTextureAtlas;
 #endif
-static inline id           SKTextureAtlas_AtlasNamed(NSString name)                                                                        { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("atlasNamed:"), name); }
-static inline id           SKTextureAtlas_AtlasWithDictionary(NSDictionary properties)                                                     { return ((id (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("atlasWithDictionary:"), properties); }
-static inline SKTexture    SKTextureAtlas_TextureNamed(SKTextureAtlas self, NSString name)                                                 { return ((SKTexture (*)(SKTextureAtlas, SEL, NSString))bean_msgSend)(self, bean_sel("textureNamed:"), name); }
-static inline void         SKTextureAtlas_PreloadTextureAtlases_WithCompletionHandler(NSArray textureAtlases, void* completionHandler)     { ((void (*)(bean_class, SEL, NSArray, void*))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("preloadTextureAtlases:withCompletionHandler:"), textureAtlases, completionHandler); }
-static inline void         SKTextureAtlas_PreloadTextureAtlasesNamed_WithCompletionHandler(NSArray atlasNames, void* completionHandler)    { ((void (*)(bean_class, SEL, NSArray, void*))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("preloadTextureAtlasesNamed:withCompletionHandler:"), atlasNames, completionHandler); }
-static inline void         SKTextureAtlas_PreloadWithCompletionHandler(SKTextureAtlas self, void* completionHandler)                       { ((void (*)(SKTextureAtlas, SEL, void*))bean_msgSend)(self, bean_sel("preloadWithCompletionHandler:"), completionHandler); }
-static inline NSArray      SKTextureAtlas_TextureNames(SKTextureAtlas self)                                                                { return ((NSArray (*)(SKTextureAtlas, SEL))bean_msgSend)(self, bean_sel("textureNames")); }
+static inline SKTextureAtlas    SKTextureAtlas_AtlasNamed(NSString name)                                                                        { return ((SKTextureAtlas (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("atlasNamed:"), name); }
+static inline SKTextureAtlas    SKTextureAtlas_AtlasWithDictionary(NSDictionary properties)                                                     { return ((SKTextureAtlas (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("atlasWithDictionary:"), properties); }
+static inline SKTexture         SKTextureAtlas_TextureNamed(SKTextureAtlas self, NSString name)                                                 { return ((SKTexture (*)(SKTextureAtlas, SEL, NSString))bean_msgSend)(self, bean_sel("textureNamed:"), name); }
+static inline void              SKTextureAtlas_PreloadTextureAtlases_WithCompletionHandler(NSArray textureAtlases, void* completionHandler)     { ((void (*)(bean_class, SEL, NSArray, void*))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("preloadTextureAtlases:withCompletionHandler:"), textureAtlases, completionHandler); }
+static inline void              SKTextureAtlas_PreloadTextureAtlasesNamed_WithCompletionHandler(NSArray atlasNames, void* completionHandler)    { ((void (*)(bean_class, SEL, NSArray, void*))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("preloadTextureAtlasesNamed:withCompletionHandler:"), atlasNames, completionHandler); }
+static inline void              SKTextureAtlas_PreloadWithCompletionHandler(SKTextureAtlas self, void* completionHandler)                       { ((void (*)(SKTextureAtlas, SEL, void*))bean_msgSend)(self, bean_sel("preloadWithCompletionHandler:"), completionHandler); }
+static inline NSArray           SKTextureAtlas_TextureNames(SKTextureAtlas self)                                                                { return ((NSArray (*)(SKTextureAtlas, SEL))bean_msgSend)(self, bean_sel("textureNames")); }
+static inline BOOL              SKTextureAtlas_SupportsSecureCoding(void)                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKTileDefinition ===== */
 #ifndef BEAN_TYPEDEF_SKTileDefinition
 #define BEAN_TYPEDEF_SKTileDefinition
 typedef bean_id SKTileDefinition;
 #endif
-static inline id                          SKTileDefinition_TileDefinitionWithTexture(SKTexture texture)                                                                                                             { return ((id (*)(bean_class, SEL, SKTexture))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTexture:"), texture); }
-static inline id                          SKTileDefinition_TileDefinitionWithTexture_Size(SKTexture texture, CGSize size)                                                                                           { return ((id (*)(bean_class, SEL, SKTexture, CGSize))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTexture:size:"), texture, size); }
-static inline id                          SKTileDefinition_TileDefinitionWithTexture_NormalTexture_Size(SKTexture texture, SKTexture normalTexture, CGSize size)                                                    { return ((id (*)(bean_class, SEL, SKTexture, SKTexture, CGSize))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTexture:normalTexture:size:"), texture, normalTexture, size); }
-static inline id                          SKTileDefinition_TileDefinitionWithTextures_Size_TimePerFrame(NSArray textures, CGSize size, CGFloat timePerFrame)                                                        { return ((id (*)(bean_class, SEL, NSArray, CGSize, CGFloat))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTextures:size:timePerFrame:"), textures, size, timePerFrame); }
-static inline id                          SKTileDefinition_TileDefinitionWithTextures_NormalTextures_Size_TimePerFrame(NSArray textures, NSArray normalTextures, CGSize size, CGFloat timePerFrame)                 { return ((id (*)(bean_class, SEL, NSArray, NSArray, CGSize, CGFloat))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTextures:normalTextures:size:timePerFrame:"), textures, normalTextures, size, timePerFrame); }
-static inline id                          SKTileDefinition_InitWithTexture(SKTileDefinition self, SKTexture texture)                                                                                                { return ((id (*)(SKTileDefinition, SEL, SKTexture))bean_msgSend)(self, bean_sel("initWithTexture:"), texture); }
-static inline id                          SKTileDefinition_InitWithTexture_Size(SKTileDefinition self, SKTexture texture, CGSize size)                                                                              { return ((id (*)(SKTileDefinition, SEL, SKTexture, CGSize))bean_msgSend)(self, bean_sel("initWithTexture:size:"), texture, size); }
-static inline id                          SKTileDefinition_InitWithTexture_NormalTexture_Size(SKTileDefinition self, SKTexture texture, SKTexture normalTexture, CGSize size)                                       { return ((id (*)(SKTileDefinition, SEL, SKTexture, SKTexture, CGSize))bean_msgSend)(self, bean_sel("initWithTexture:normalTexture:size:"), texture, normalTexture, size); }
-static inline id                          SKTileDefinition_InitWithTextures_Size_TimePerFrame(SKTileDefinition self, NSArray textures, CGSize size, CGFloat timePerFrame)                                           { return ((id (*)(SKTileDefinition, SEL, NSArray, CGSize, CGFloat))bean_msgSend)(self, bean_sel("initWithTextures:size:timePerFrame:"), textures, size, timePerFrame); }
-static inline id                          SKTileDefinition_InitWithTextures_NormalTextures_Size_TimePerFrame(SKTileDefinition self, NSArray textures, NSArray normalTextures, CGSize size, CGFloat timePerFrame)    { return ((id (*)(SKTileDefinition, SEL, NSArray, NSArray, CGSize, CGFloat))bean_msgSend)(self, bean_sel("initWithTextures:normalTextures:size:timePerFrame:"), textures, normalTextures, size, timePerFrame); }
+static inline SKTileDefinition            SKTileDefinition_TileDefinitionWithTexture(SKTexture texture)                                                                                                             { return ((SKTileDefinition (*)(bean_class, SEL, SKTexture))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTexture:"), texture); }
+static inline SKTileDefinition            SKTileDefinition_TileDefinitionWithTexture_Size(SKTexture texture, CGSize size)                                                                                           { return ((SKTileDefinition (*)(bean_class, SEL, SKTexture, CGSize))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTexture:size:"), texture, size); }
+static inline SKTileDefinition            SKTileDefinition_TileDefinitionWithTexture_NormalTexture_Size(SKTexture texture, SKTexture normalTexture, CGSize size)                                                    { return ((SKTileDefinition (*)(bean_class, SEL, SKTexture, SKTexture, CGSize))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTexture:normalTexture:size:"), texture, normalTexture, size); }
+static inline SKTileDefinition            SKTileDefinition_TileDefinitionWithTextures_Size_TimePerFrame(NSArray textures, CGSize size, CGFloat timePerFrame)                                                        { return ((SKTileDefinition (*)(bean_class, SEL, NSArray, CGSize, CGFloat))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTextures:size:timePerFrame:"), textures, size, timePerFrame); }
+static inline SKTileDefinition            SKTileDefinition_TileDefinitionWithTextures_NormalTextures_Size_TimePerFrame(NSArray textures, NSArray normalTextures, CGSize size, CGFloat timePerFrame)                 { return ((SKTileDefinition (*)(bean_class, SEL, NSArray, NSArray, CGSize, CGFloat))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("tileDefinitionWithTextures:normalTextures:size:timePerFrame:"), textures, normalTextures, size, timePerFrame); }
+static inline SKTileDefinition            SKTileDefinition_InitWithTexture(SKTileDefinition self, SKTexture texture)                                                                                                { return ((SKTileDefinition (*)(SKTileDefinition, SEL, SKTexture))bean_msgSend)(self, bean_sel("initWithTexture:"), texture); }
+static inline SKTileDefinition            SKTileDefinition_InitWithTexture_Size(SKTileDefinition self, SKTexture texture, CGSize size)                                                                              { return ((SKTileDefinition (*)(SKTileDefinition, SEL, SKTexture, CGSize))bean_msgSend)(self, bean_sel("initWithTexture:size:"), texture, size); }
+static inline SKTileDefinition            SKTileDefinition_InitWithTexture_NormalTexture_Size(SKTileDefinition self, SKTexture texture, SKTexture normalTexture, CGSize size)                                       { return ((SKTileDefinition (*)(SKTileDefinition, SEL, SKTexture, SKTexture, CGSize))bean_msgSend)(self, bean_sel("initWithTexture:normalTexture:size:"), texture, normalTexture, size); }
+static inline SKTileDefinition            SKTileDefinition_InitWithTextures_Size_TimePerFrame(SKTileDefinition self, NSArray textures, CGSize size, CGFloat timePerFrame)                                           { return ((SKTileDefinition (*)(SKTileDefinition, SEL, NSArray, CGSize, CGFloat))bean_msgSend)(self, bean_sel("initWithTextures:size:timePerFrame:"), textures, size, timePerFrame); }
+static inline SKTileDefinition            SKTileDefinition_InitWithTextures_NormalTextures_Size_TimePerFrame(SKTileDefinition self, NSArray textures, NSArray normalTextures, CGSize size, CGFloat timePerFrame)    { return ((SKTileDefinition (*)(SKTileDefinition, SEL, NSArray, NSArray, CGSize, CGFloat))bean_msgSend)(self, bean_sel("initWithTextures:normalTextures:size:timePerFrame:"), textures, normalTextures, size, timePerFrame); }
 static inline NSArray                     SKTileDefinition_Textures(SKTileDefinition self)                                                                                                                          { return ((NSArray (*)(SKTileDefinition, SEL))bean_msgSend)(self, bean_sel("textures")); }
 static inline void                        SKTileDefinition_SetTextures(SKTileDefinition self, NSArray textures)                                                                                                     { ((void (*)(SKTileDefinition, SEL, NSArray))bean_msgSend)(self, bean_sel("setTextures:"), textures); }
 static inline NSArray                     SKTileDefinition_NormalTextures(SKTileDefinition self)                                                                                                                    { return ((NSArray (*)(SKTileDefinition, SEL))bean_msgSend)(self, bean_sel("normalTextures")); }
@@ -6832,47 +8284,53 @@ static inline BOOL                        SKTileDefinition_FlipVertically(SKTile
 static inline void                        SKTileDefinition_SetFlipVertically(SKTileDefinition self, BOOL flipVertically)                                                                                            { ((void (*)(SKTileDefinition, SEL, BOOL))bean_msgSend)(self, bean_sel("setFlipVertically:"), flipVertically); }
 static inline BOOL                        SKTileDefinition_FlipHorizontally(SKTileDefinition self)                                                                                                                  { return ((BOOL (*)(SKTileDefinition, SEL))bean_msgSend)(self, bean_sel("flipHorizontally")); }
 static inline void                        SKTileDefinition_SetFlipHorizontally(SKTileDefinition self, BOOL flipHorizontally)                                                                                        { ((void (*)(SKTileDefinition, SEL, BOOL))bean_msgSend)(self, bean_sel("setFlipHorizontally:"), flipHorizontally); }
+static inline id                          SKTileDefinition_CopyWithZone(SKTileDefinition self, NSZone* zone)                                                                                                        { return ((id (*)(SKTileDefinition, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                        SKTileDefinition_SupportsSecureCoding(void)                                                                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKTileGroup ===== */
 #ifndef BEAN_TYPEDEF_SKTileGroup
 #define BEAN_TYPEDEF_SKTileGroup
 typedef bean_id SKTileGroup;
 #endif
-static inline id          SKTileGroup_TileGroupWithTileDefinition(SKTileDefinition tileDefinition)                 { return ((id (*)(bean_class, SEL, SKTileDefinition))bean_msgSend)(bean_cls("SKTileGroup"), bean_sel("tileGroupWithTileDefinition:"), tileDefinition); }
-static inline id          SKTileGroup_TileGroupWithRules(NSArray rules)                                            { return ((id (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("SKTileGroup"), bean_sel("tileGroupWithRules:"), rules); }
-static inline id          SKTileGroup_EmptyTileGroup(void)                                                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileGroup"), bean_sel("emptyTileGroup")); }
-static inline id          SKTileGroup_InitWithTileDefinition(SKTileGroup self, SKTileDefinition tileDefinition)    { return ((id (*)(SKTileGroup, SEL, SKTileDefinition))bean_msgSend)(self, bean_sel("initWithTileDefinition:"), tileDefinition); }
-static inline id          SKTileGroup_InitWithRules(SKTileGroup self, NSArray rules)                               { return ((id (*)(SKTileGroup, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithRules:"), rules); }
-static inline NSArray     SKTileGroup_Rules(SKTileGroup self)                                                      { return ((NSArray (*)(SKTileGroup, SEL))bean_msgSend)(self, bean_sel("rules")); }
-static inline void        SKTileGroup_SetRules(SKTileGroup self, NSArray rules)                                    { ((void (*)(SKTileGroup, SEL, NSArray))bean_msgSend)(self, bean_sel("setRules:"), rules); }
-static inline NSString    SKTileGroup_Name(SKTileGroup self)                                                       { return ((NSString (*)(SKTileGroup, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        SKTileGroup_SetName(SKTileGroup self, NSString name)                                     { ((void (*)(SKTileGroup, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline SKTileGroup    SKTileGroup_TileGroupWithTileDefinition(SKTileDefinition tileDefinition)                 { return ((SKTileGroup (*)(bean_class, SEL, SKTileDefinition))bean_msgSend)(bean_cls("SKTileGroup"), bean_sel("tileGroupWithTileDefinition:"), tileDefinition); }
+static inline SKTileGroup    SKTileGroup_TileGroupWithRules(NSArray rules)                                            { return ((SKTileGroup (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("SKTileGroup"), bean_sel("tileGroupWithRules:"), rules); }
+static inline SKTileGroup    SKTileGroup_EmptyTileGroup(void)                                                         { return ((SKTileGroup (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileGroup"), bean_sel("emptyTileGroup")); }
+static inline SKTileGroup    SKTileGroup_InitWithTileDefinition(SKTileGroup self, SKTileDefinition tileDefinition)    { return ((SKTileGroup (*)(SKTileGroup, SEL, SKTileDefinition))bean_msgSend)(self, bean_sel("initWithTileDefinition:"), tileDefinition); }
+static inline SKTileGroup    SKTileGroup_InitWithRules(SKTileGroup self, NSArray rules)                               { return ((SKTileGroup (*)(SKTileGroup, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithRules:"), rules); }
+static inline NSArray        SKTileGroup_Rules(SKTileGroup self)                                                      { return ((NSArray (*)(SKTileGroup, SEL))bean_msgSend)(self, bean_sel("rules")); }
+static inline void           SKTileGroup_SetRules(SKTileGroup self, NSArray rules)                                    { ((void (*)(SKTileGroup, SEL, NSArray))bean_msgSend)(self, bean_sel("setRules:"), rules); }
+static inline NSString       SKTileGroup_Name(SKTileGroup self)                                                       { return ((NSString (*)(SKTileGroup, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void           SKTileGroup_SetName(SKTileGroup self, NSString name)                                     { ((void (*)(SKTileGroup, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline id             SKTileGroup_CopyWithZone(SKTileGroup self, NSZone* zone)                                 { return ((id (*)(SKTileGroup, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL           SKTileGroup_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileGroup"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKTileGroupRule ===== */
 #ifndef BEAN_TYPEDEF_SKTileGroupRule
 #define BEAN_TYPEDEF_SKTileGroupRule
 typedef bean_id SKTileGroupRule;
 #endif
-static inline id                     SKTileGroupRule_TileGroupRuleWithAdjacency_TileDefinitions(SKTileAdjacencyMask adjacency, NSArray tileDefinitions)                 { return ((id (*)(bean_class, SEL, SKTileAdjacencyMask, NSArray))bean_msgSend)(bean_cls("SKTileGroupRule"), bean_sel("tileGroupRuleWithAdjacency:tileDefinitions:"), adjacency, tileDefinitions); }
-static inline id                     SKTileGroupRule_InitWithAdjacency_TileDefinitions(SKTileGroupRule self, SKTileAdjacencyMask adjacency, NSArray tileDefinitions)    { return ((id (*)(SKTileGroupRule, SEL, SKTileAdjacencyMask, NSArray))bean_msgSend)(self, bean_sel("initWithAdjacency:tileDefinitions:"), adjacency, tileDefinitions); }
+static inline SKTileGroupRule        SKTileGroupRule_TileGroupRuleWithAdjacency_TileDefinitions(SKTileAdjacencyMask adjacency, NSArray tileDefinitions)                 { return ((SKTileGroupRule (*)(bean_class, SEL, SKTileAdjacencyMask, NSArray))bean_msgSend)(bean_cls("SKTileGroupRule"), bean_sel("tileGroupRuleWithAdjacency:tileDefinitions:"), adjacency, tileDefinitions); }
+static inline SKTileGroupRule        SKTileGroupRule_InitWithAdjacency_TileDefinitions(SKTileGroupRule self, SKTileAdjacencyMask adjacency, NSArray tileDefinitions)    { return ((SKTileGroupRule (*)(SKTileGroupRule, SEL, SKTileAdjacencyMask, NSArray))bean_msgSend)(self, bean_sel("initWithAdjacency:tileDefinitions:"), adjacency, tileDefinitions); }
 static inline SKTileAdjacencyMask    SKTileGroupRule_Adjacency(SKTileGroupRule self)                                                                                    { return ((SKTileAdjacencyMask (*)(SKTileGroupRule, SEL))bean_msgSend)(self, bean_sel("adjacency")); }
 static inline void                   SKTileGroupRule_SetAdjacency(SKTileGroupRule self, SKTileAdjacencyMask adjacency)                                                  { ((void (*)(SKTileGroupRule, SEL, SKTileAdjacencyMask))bean_msgSend)(self, bean_sel("setAdjacency:"), adjacency); }
 static inline NSArray                SKTileGroupRule_TileDefinitions(SKTileGroupRule self)                                                                              { return ((NSArray (*)(SKTileGroupRule, SEL))bean_msgSend)(self, bean_sel("tileDefinitions")); }
 static inline void                   SKTileGroupRule_SetTileDefinitions(SKTileGroupRule self, NSArray tileDefinitions)                                                  { ((void (*)(SKTileGroupRule, SEL, NSArray))bean_msgSend)(self, bean_sel("setTileDefinitions:"), tileDefinitions); }
 static inline NSString               SKTileGroupRule_Name(SKTileGroupRule self)                                                                                         { return ((NSString (*)(SKTileGroupRule, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline void                   SKTileGroupRule_SetName(SKTileGroupRule self, NSString name)                                                                       { ((void (*)(SKTileGroupRule, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline id                     SKTileGroupRule_CopyWithZone(SKTileGroupRule self, NSZone* zone)                                                                   { return ((id (*)(SKTileGroupRule, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                   SKTileGroupRule_SupportsSecureCoding(void)                                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileGroupRule"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKTileMapNode ===== */
 #ifndef BEAN_TYPEDEF_SKTileMapNode
 #define BEAN_TYPEDEF_SKTileMapNode
 typedef bean_id SKTileMapNode;
 #endif
-static inline id                  SKTileMapNode_TileMapNodeWithTileSet_Columns_Rows_TileSize(SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize)                                                                                      { return ((id (*)(bean_class, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("tileMapNodeWithTileSet:columns:rows:tileSize:"), tileSet, columns, rows, tileSize); }
-static inline id                  SKTileMapNode_TileMapNodeWithTileSet_Columns_Rows_TileSize_FillWithTileGroup(SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, SKTileGroup tileGroup)                                             { return ((id (*)(bean_class, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, SKTileGroup))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("tileMapNodeWithTileSet:columns:rows:tileSize:fillWithTileGroup:"), tileSet, columns, rows, tileSize, tileGroup); }
-static inline id                  SKTileMapNode_TileMapNodeWithTileSet_Columns_Rows_TileSize_TileGroupLayout(SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, NSArray tileGroupLayout)                                             { return ((id (*)(bean_class, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, NSArray))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("tileMapNodeWithTileSet:columns:rows:tileSize:tileGroupLayout:"), tileSet, columns, rows, tileSize, tileGroupLayout); }
-static inline id                  SKTileMapNode_InitWithTileSet_Columns_Rows_TileSize(SKTileMapNode self, SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize)                                                                         { return ((id (*)(SKTileMapNode, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize))bean_msgSend)(self, bean_sel("initWithTileSet:columns:rows:tileSize:"), tileSet, columns, rows, tileSize); }
-static inline id                  SKTileMapNode_InitWithTileSet_Columns_Rows_TileSize_FillWithTileGroup(SKTileMapNode self, SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, SKTileGroup tileGroup)                                { return ((id (*)(SKTileMapNode, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, SKTileGroup))bean_msgSend)(self, bean_sel("initWithTileSet:columns:rows:tileSize:fillWithTileGroup:"), tileSet, columns, rows, tileSize, tileGroup); }
-static inline id                  SKTileMapNode_InitWithTileSet_Columns_Rows_TileSize_TileGroupLayout(SKTileMapNode self, SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, NSArray tileGroupLayout)                                { return ((id (*)(SKTileMapNode, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, NSArray))bean_msgSend)(self, bean_sel("initWithTileSet:columns:rows:tileSize:tileGroupLayout:"), tileSet, columns, rows, tileSize, tileGroupLayout); }
+static inline SKTileMapNode       SKTileMapNode_TileMapNodeWithTileSet_Columns_Rows_TileSize(SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize)                                                                                      { return ((SKTileMapNode (*)(bean_class, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("tileMapNodeWithTileSet:columns:rows:tileSize:"), tileSet, columns, rows, tileSize); }
+static inline SKTileMapNode       SKTileMapNode_TileMapNodeWithTileSet_Columns_Rows_TileSize_FillWithTileGroup(SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, SKTileGroup tileGroup)                                             { return ((SKTileMapNode (*)(bean_class, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, SKTileGroup))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("tileMapNodeWithTileSet:columns:rows:tileSize:fillWithTileGroup:"), tileSet, columns, rows, tileSize, tileGroup); }
+static inline SKTileMapNode       SKTileMapNode_TileMapNodeWithTileSet_Columns_Rows_TileSize_TileGroupLayout(SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, NSArray tileGroupLayout)                                             { return ((SKTileMapNode (*)(bean_class, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, NSArray))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("tileMapNodeWithTileSet:columns:rows:tileSize:tileGroupLayout:"), tileSet, columns, rows, tileSize, tileGroupLayout); }
+static inline SKTileMapNode       SKTileMapNode_InitWithTileSet_Columns_Rows_TileSize(SKTileMapNode self, SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize)                                                                         { return ((SKTileMapNode (*)(SKTileMapNode, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize))bean_msgSend)(self, bean_sel("initWithTileSet:columns:rows:tileSize:"), tileSet, columns, rows, tileSize); }
+static inline SKTileMapNode       SKTileMapNode_InitWithTileSet_Columns_Rows_TileSize_FillWithTileGroup(SKTileMapNode self, SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, SKTileGroup tileGroup)                                { return ((SKTileMapNode (*)(SKTileMapNode, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, SKTileGroup))bean_msgSend)(self, bean_sel("initWithTileSet:columns:rows:tileSize:fillWithTileGroup:"), tileSet, columns, rows, tileSize, tileGroup); }
+static inline SKTileMapNode       SKTileMapNode_InitWithTileSet_Columns_Rows_TileSize_TileGroupLayout(SKTileMapNode self, SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, NSArray tileGroupLayout)                                { return ((SKTileMapNode (*)(SKTileMapNode, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, NSArray))bean_msgSend)(self, bean_sel("initWithTileSet:columns:rows:tileSize:tileGroupLayout:"), tileSet, columns, rows, tileSize, tileGroupLayout); }
 static inline SKAttributeValue    SKTileMapNode_ValueForAttributeNamed(SKTileMapNode self, NSString key)                                                                                                                                                   { return ((SKAttributeValue (*)(SKTileMapNode, SEL, NSString))bean_msgSend)(self, bean_sel("valueForAttributeNamed:"), key); }
 static inline void                SKTileMapNode_SetValue_ForAttributeNamed(SKTileMapNode self, SKAttributeValue value, NSString key)                                                                                                                       { ((void (*)(SKTileMapNode, SEL, SKAttributeValue, NSString))bean_msgSend)(self, bean_sel("setValue:forAttributeNamed:"), value, key); }
 static inline void                SKTileMapNode_FillWithTileGroup(SKTileMapNode self, SKTileGroup tileGroup)                                                                                                                                               { ((void (*)(SKTileMapNode, SEL, SKTileGroup))bean_msgSend)(self, bean_sel("fillWithTileGroup:"), tileGroup); }
@@ -6909,14 +8367,16 @@ static inline void                SKTileMapNode_SetLightingBitMask(SKTileMapNode
 static inline BOOL                SKTileMapNode_EnableAutomapping(SKTileMapNode self)                                                                                                                                                                      { return ((BOOL (*)(SKTileMapNode, SEL))bean_msgSend)(self, bean_sel("enableAutomapping")); }
 static inline void                SKTileMapNode_SetEnableAutomapping(SKTileMapNode self, BOOL enableAutomapping)                                                                                                                                           { ((void (*)(SKTileMapNode, SEL, BOOL))bean_msgSend)(self, bean_sel("setEnableAutomapping:"), enableAutomapping); }
 static inline NSArray             SKTileMapNode_TileMapNodesWithTileSet_Columns_Rows_TileSize_FromNoiseMap_TileTypeNoiseMapThresholds(SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, GKNoiseMap noiseMap, NSArray thresholds)    { return ((NSArray (*)(bean_class, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, GKNoiseMap, NSArray))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("tileMapNodesWithTileSet:columns:rows:tileSize:fromNoiseMap:tileTypeNoiseMapThresholds:"), tileSet, columns, rows, tileSize, noiseMap, thresholds); }
+static inline id                  SKTileMapNode_CopyWithZone(SKTileMapNode self, NSZone* zone)                                                                                                                                                             { return ((id (*)(SKTileMapNode, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                SKTileMapNode_SupportsSecureCoding(void)                                                                                                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKTileSet ===== */
-static inline id               SKTileSet_TileSetWithTileGroups(NSArray tileGroups)                                                        { return ((id (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetWithTileGroups:"), tileGroups); }
-static inline id               SKTileSet_TileSetWithTileGroups_TileSetType(NSArray tileGroups, SKTileSetType tileSetType)                 { return ((id (*)(bean_class, SEL, NSArray, SKTileSetType))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetWithTileGroups:tileSetType:"), tileGroups, tileSetType); }
-static inline id               SKTileSet_InitWithTileGroups(SKTileSet self, NSArray tileGroups)                                           { return ((id (*)(SKTileSet, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithTileGroups:"), tileGroups); }
-static inline id               SKTileSet_InitWithTileGroups_TileSetType(SKTileSet self, NSArray tileGroups, SKTileSetType tileSetType)    { return ((id (*)(SKTileSet, SEL, NSArray, SKTileSetType))bean_msgSend)(self, bean_sel("initWithTileGroups:tileSetType:"), tileGroups, tileSetType); }
-static inline id               SKTileSet_TileSetNamed(NSString name)                                                                      { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetNamed:"), name); }
-static inline id               SKTileSet_TileSetFromURL(NSURL url)                                                                        { return ((id (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetFromURL:"), url); }
+static inline SKTileSet        SKTileSet_TileSetWithTileGroups(NSArray tileGroups)                                                        { return ((SKTileSet (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetWithTileGroups:"), tileGroups); }
+static inline SKTileSet        SKTileSet_TileSetWithTileGroups_TileSetType(NSArray tileGroups, SKTileSetType tileSetType)                 { return ((SKTileSet (*)(bean_class, SEL, NSArray, SKTileSetType))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetWithTileGroups:tileSetType:"), tileGroups, tileSetType); }
+static inline SKTileSet        SKTileSet_InitWithTileGroups(SKTileSet self, NSArray tileGroups)                                           { return ((SKTileSet (*)(SKTileSet, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithTileGroups:"), tileGroups); }
+static inline SKTileSet        SKTileSet_InitWithTileGroups_TileSetType(SKTileSet self, NSArray tileGroups, SKTileSetType tileSetType)    { return ((SKTileSet (*)(SKTileSet, SEL, NSArray, SKTileSetType))bean_msgSend)(self, bean_sel("initWithTileGroups:tileSetType:"), tileGroups, tileSetType); }
+static inline SKTileSet        SKTileSet_TileSetNamed(NSString name)                                                                      { return ((SKTileSet (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetNamed:"), name); }
+static inline SKTileSet        SKTileSet_TileSetFromURL(NSURL url)                                                                        { return ((SKTileSet (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetFromURL:"), url); }
 static inline NSArray          SKTileSet_TileGroups(SKTileSet self)                                                                       { return ((NSArray (*)(SKTileSet, SEL))bean_msgSend)(self, bean_sel("tileGroups")); }
 static inline void             SKTileSet_SetTileGroups(SKTileSet self, NSArray tileGroups)                                                { ((void (*)(SKTileSet, SEL, NSArray))bean_msgSend)(self, bean_sel("setTileGroups:"), tileGroups); }
 static inline NSString         SKTileSet_Name(SKTileSet self)                                                                             { return ((NSString (*)(SKTileSet, SEL))bean_msgSend)(self, bean_sel("name")); }
@@ -6927,38 +8387,40 @@ static inline SKTileGroup      SKTileSet_DefaultTileGroup(SKTileSet self)       
 static inline void             SKTileSet_SetDefaultTileGroup(SKTileSet self, SKTileGroup defaultTileGroup)                                { ((void (*)(SKTileSet, SEL, SKTileGroup))bean_msgSend)(self, bean_sel("setDefaultTileGroup:"), defaultTileGroup); }
 static inline CGSize           SKTileSet_DefaultTileSize(SKTileSet self)                                                                  { return ((CGSize (*)(SKTileSet, SEL))bean_msgSend_stret)(self, bean_sel("defaultTileSize")); }
 static inline void             SKTileSet_SetDefaultTileSize(SKTileSet self, CGSize defaultTileSize)                                       { ((void (*)(SKTileSet, SEL, CGSize))bean_msgSend)(self, bean_sel("setDefaultTileSize:"), defaultTileSize); }
+static inline id               SKTileSet_CopyWithZone(SKTileSet self, NSZone* zone)                                                       { return ((id (*)(SKTileSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL             SKTileSet_SupportsSecureCoding(void)                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKUniform ===== */
-static inline id                 SKUniform_UniformWithName(NSString name)                                                     { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:"), name); }
-static inline id                 SKUniform_UniformWithName_Texture(NSString name, SKTexture texture)                          { return ((id (*)(bean_class, SEL, NSString, SKTexture))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:texture:"), name, texture); }
-static inline id                 SKUniform_UniformWithName_Float(NSString name, CGFloat value)                                { return ((id (*)(bean_class, SEL, NSString, CGFloat))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:float:"), name, value); }
-static inline id                 SKUniform_UniformWithName_VectorFloat2(NSString name, void* value)                           { return ((id (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:vectorFloat2:"), name, value); }
-static inline id                 SKUniform_UniformWithName_VectorFloat3(NSString name, void* value)                           { return ((id (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:vectorFloat3:"), name, value); }
-static inline id                 SKUniform_UniformWithName_VectorFloat4(NSString name, void* value)                           { return ((id (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:vectorFloat4:"), name, value); }
-static inline id                 SKUniform_UniformWithName_MatrixFloat2x2(NSString name, simd_float2x2 value)                 { return ((id (*)(bean_class, SEL, NSString, simd_float2x2))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:matrixFloat2x2:"), name, value); }
-static inline id                 SKUniform_UniformWithName_MatrixFloat3x3(NSString name, simd_float3x3 value)                 { return ((id (*)(bean_class, SEL, NSString, simd_float3x3))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:matrixFloat3x3:"), name, value); }
-static inline id                 SKUniform_UniformWithName_MatrixFloat4x4(NSString name, simd_float4x4 value)                 { return ((id (*)(bean_class, SEL, NSString, simd_float4x4))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:matrixFloat4x4:"), name, value); }
-static inline id                 SKUniform_InitWithName(SKUniform self, NSString name)                                        { return ((id (*)(SKUniform, SEL, NSString))bean_msgSend)(self, bean_sel("initWithName:"), name); }
-static inline id                 SKUniform_InitWithName_Texture(SKUniform self, NSString name, SKTexture texture)             { return ((id (*)(SKUniform, SEL, NSString, SKTexture))bean_msgSend)(self, bean_sel("initWithName:texture:"), name, texture); }
-static inline id                 SKUniform_InitWithName_Float(SKUniform self, NSString name, CGFloat value)                   { return ((id (*)(SKUniform, SEL, NSString, CGFloat))bean_msgSend)(self, bean_sel("initWithName:float:"), name, value); }
-static inline id                 SKUniform_InitWithName_VectorFloat2(SKUniform self, NSString name, void* value)              { return ((id (*)(SKUniform, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithName:vectorFloat2:"), name, value); }
-static inline id                 SKUniform_InitWithName_VectorFloat3(SKUniform self, NSString name, void* value)              { return ((id (*)(SKUniform, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithName:vectorFloat3:"), name, value); }
-static inline id                 SKUniform_InitWithName_VectorFloat4(SKUniform self, NSString name, void* value)              { return ((id (*)(SKUniform, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithName:vectorFloat4:"), name, value); }
-static inline id                 SKUniform_InitWithName_MatrixFloat2x2(SKUniform self, NSString name, simd_float2x2 value)    { return ((id (*)(SKUniform, SEL, NSString, simd_float2x2))bean_msgSend)(self, bean_sel("initWithName:matrixFloat2x2:"), name, value); }
-static inline id                 SKUniform_InitWithName_MatrixFloat3x3(SKUniform self, NSString name, simd_float3x3 value)    { return ((id (*)(SKUniform, SEL, NSString, simd_float3x3))bean_msgSend)(self, bean_sel("initWithName:matrixFloat3x3:"), name, value); }
-static inline id                 SKUniform_InitWithName_MatrixFloat4x4(SKUniform self, NSString name, simd_float4x4 value)    { return ((id (*)(SKUniform, SEL, NSString, simd_float4x4))bean_msgSend)(self, bean_sel("initWithName:matrixFloat4x4:"), name, value); }
-static inline id                 SKUniform_UniformWithName_FloatVector2(NSString name, vector_float2 value)                   { return ((id (*)(bean_class, SEL, NSString, vector_float2))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatVector2:"), name, value); }
-static inline id                 SKUniform_UniformWithName_FloatVector3(NSString name, vector_float3 value)                   { return ((id (*)(bean_class, SEL, NSString, vector_float3))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatVector3:"), name, value); }
-static inline id                 SKUniform_UniformWithName_FloatVector4(NSString name, vector_float4 value)                   { return ((id (*)(bean_class, SEL, NSString, vector_float4))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatVector4:"), name, value); }
-static inline id                 SKUniform_UniformWithName_FloatMatrix2(NSString name, matrix_float2x2 value)                 { return ((id (*)(bean_class, SEL, NSString, matrix_float2x2))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatMatrix2:"), name, value); }
-static inline id                 SKUniform_UniformWithName_FloatMatrix3(NSString name, matrix_float3x3 value)                 { return ((id (*)(bean_class, SEL, NSString, matrix_float3x3))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatMatrix3:"), name, value); }
-static inline id                 SKUniform_UniformWithName_FloatMatrix4(NSString name, matrix_float4x4 value)                 { return ((id (*)(bean_class, SEL, NSString, matrix_float4x4))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatMatrix4:"), name, value); }
-static inline id                 SKUniform_InitWithName_FloatVector2(SKUniform self, NSString name, vector_float2 value)      { return ((id (*)(SKUniform, SEL, NSString, vector_float2))bean_msgSend)(self, bean_sel("initWithName:floatVector2:"), name, value); }
-static inline id                 SKUniform_InitWithName_FloatVector3(SKUniform self, NSString name, vector_float3 value)      { return ((id (*)(SKUniform, SEL, NSString, vector_float3))bean_msgSend)(self, bean_sel("initWithName:floatVector3:"), name, value); }
-static inline id                 SKUniform_InitWithName_FloatVector4(SKUniform self, NSString name, vector_float4 value)      { return ((id (*)(SKUniform, SEL, NSString, vector_float4))bean_msgSend)(self, bean_sel("initWithName:floatVector4:"), name, value); }
-static inline id                 SKUniform_InitWithName_FloatMatrix2(SKUniform self, NSString name, matrix_float2x2 value)    { return ((id (*)(SKUniform, SEL, NSString, matrix_float2x2))bean_msgSend)(self, bean_sel("initWithName:floatMatrix2:"), name, value); }
-static inline id                 SKUniform_InitWithName_FloatMatrix3(SKUniform self, NSString name, matrix_float3x3 value)    { return ((id (*)(SKUniform, SEL, NSString, matrix_float3x3))bean_msgSend)(self, bean_sel("initWithName:floatMatrix3:"), name, value); }
-static inline id                 SKUniform_InitWithName_FloatMatrix4(SKUniform self, NSString name, matrix_float4x4 value)    { return ((id (*)(SKUniform, SEL, NSString, matrix_float4x4))bean_msgSend)(self, bean_sel("initWithName:floatMatrix4:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName(NSString name)                                                     { return ((SKUniform (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:"), name); }
+static inline SKUniform          SKUniform_UniformWithName_Texture(NSString name, SKTexture texture)                          { return ((SKUniform (*)(bean_class, SEL, NSString, SKTexture))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:texture:"), name, texture); }
+static inline SKUniform          SKUniform_UniformWithName_Float(NSString name, CGFloat value)                                { return ((SKUniform (*)(bean_class, SEL, NSString, CGFloat))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:float:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_VectorFloat2(NSString name, void* value)                           { return ((SKUniform (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:vectorFloat2:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_VectorFloat3(NSString name, void* value)                           { return ((SKUniform (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:vectorFloat3:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_VectorFloat4(NSString name, void* value)                           { return ((SKUniform (*)(bean_class, SEL, NSString, void*))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:vectorFloat4:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_MatrixFloat2x2(NSString name, simd_float2x2 value)                 { return ((SKUniform (*)(bean_class, SEL, NSString, simd_float2x2))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:matrixFloat2x2:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_MatrixFloat3x3(NSString name, simd_float3x3 value)                 { return ((SKUniform (*)(bean_class, SEL, NSString, simd_float3x3))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:matrixFloat3x3:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_MatrixFloat4x4(NSString name, simd_float4x4 value)                 { return ((SKUniform (*)(bean_class, SEL, NSString, simd_float4x4))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:matrixFloat4x4:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName(SKUniform self, NSString name)                                        { return ((SKUniform (*)(SKUniform, SEL, NSString))bean_msgSend)(self, bean_sel("initWithName:"), name); }
+static inline SKUniform          SKUniform_InitWithName_Texture(SKUniform self, NSString name, SKTexture texture)             { return ((SKUniform (*)(SKUniform, SEL, NSString, SKTexture))bean_msgSend)(self, bean_sel("initWithName:texture:"), name, texture); }
+static inline SKUniform          SKUniform_InitWithName_Float(SKUniform self, NSString name, CGFloat value)                   { return ((SKUniform (*)(SKUniform, SEL, NSString, CGFloat))bean_msgSend)(self, bean_sel("initWithName:float:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_VectorFloat2(SKUniform self, NSString name, void* value)              { return ((SKUniform (*)(SKUniform, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithName:vectorFloat2:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_VectorFloat3(SKUniform self, NSString name, void* value)              { return ((SKUniform (*)(SKUniform, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithName:vectorFloat3:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_VectorFloat4(SKUniform self, NSString name, void* value)              { return ((SKUniform (*)(SKUniform, SEL, NSString, void*))bean_msgSend)(self, bean_sel("initWithName:vectorFloat4:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_MatrixFloat2x2(SKUniform self, NSString name, simd_float2x2 value)    { return ((SKUniform (*)(SKUniform, SEL, NSString, simd_float2x2))bean_msgSend)(self, bean_sel("initWithName:matrixFloat2x2:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_MatrixFloat3x3(SKUniform self, NSString name, simd_float3x3 value)    { return ((SKUniform (*)(SKUniform, SEL, NSString, simd_float3x3))bean_msgSend)(self, bean_sel("initWithName:matrixFloat3x3:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_MatrixFloat4x4(SKUniform self, NSString name, simd_float4x4 value)    { return ((SKUniform (*)(SKUniform, SEL, NSString, simd_float4x4))bean_msgSend)(self, bean_sel("initWithName:matrixFloat4x4:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_FloatVector2(NSString name, vector_float2 value)                   { return ((SKUniform (*)(bean_class, SEL, NSString, vector_float2))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatVector2:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_FloatVector3(NSString name, vector_float3 value)                   { return ((SKUniform (*)(bean_class, SEL, NSString, vector_float3))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatVector3:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_FloatVector4(NSString name, vector_float4 value)                   { return ((SKUniform (*)(bean_class, SEL, NSString, vector_float4))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatVector4:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_FloatMatrix2(NSString name, matrix_float2x2 value)                 { return ((SKUniform (*)(bean_class, SEL, NSString, matrix_float2x2))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatMatrix2:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_FloatMatrix3(NSString name, matrix_float3x3 value)                 { return ((SKUniform (*)(bean_class, SEL, NSString, matrix_float3x3))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatMatrix3:"), name, value); }
+static inline SKUniform          SKUniform_UniformWithName_FloatMatrix4(NSString name, matrix_float4x4 value)                 { return ((SKUniform (*)(bean_class, SEL, NSString, matrix_float4x4))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:floatMatrix4:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_FloatVector2(SKUniform self, NSString name, vector_float2 value)      { return ((SKUniform (*)(SKUniform, SEL, NSString, vector_float2))bean_msgSend)(self, bean_sel("initWithName:floatVector2:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_FloatVector3(SKUniform self, NSString name, vector_float3 value)      { return ((SKUniform (*)(SKUniform, SEL, NSString, vector_float3))bean_msgSend)(self, bean_sel("initWithName:floatVector3:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_FloatVector4(SKUniform self, NSString name, vector_float4 value)      { return ((SKUniform (*)(SKUniform, SEL, NSString, vector_float4))bean_msgSend)(self, bean_sel("initWithName:floatVector4:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_FloatMatrix2(SKUniform self, NSString name, matrix_float2x2 value)    { return ((SKUniform (*)(SKUniform, SEL, NSString, matrix_float2x2))bean_msgSend)(self, bean_sel("initWithName:floatMatrix2:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_FloatMatrix3(SKUniform self, NSString name, matrix_float3x3 value)    { return ((SKUniform (*)(SKUniform, SEL, NSString, matrix_float3x3))bean_msgSend)(self, bean_sel("initWithName:floatMatrix3:"), name, value); }
+static inline SKUniform          SKUniform_InitWithName_FloatMatrix4(SKUniform self, NSString name, matrix_float4x4 value)    { return ((SKUniform (*)(SKUniform, SEL, NSString, matrix_float4x4))bean_msgSend)(self, bean_sel("initWithName:floatMatrix4:"), name, value); }
 static inline NSString           SKUniform_Name(SKUniform self)                                                               { return ((NSString (*)(SKUniform, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline SKUniformType      SKUniform_UniformType(SKUniform self)                                                        { return ((SKUniformType (*)(SKUniform, SEL))bean_msgSend)(self, bean_sel("uniformType")); }
 static inline SKTexture          SKUniform_TextureValue(SKUniform self)                                                       { return ((SKTexture (*)(SKUniform, SEL))bean_msgSend)(self, bean_sel("textureValue")); }
@@ -6989,6 +8451,8 @@ static inline matrix_float3x3    SKUniform_FloatMatrix3Value(SKUniform self)    
 static inline void               SKUniform_SetFloatMatrix3Value(SKUniform self, matrix_float3x3 floatMatrix3Value)            { ((void (*)(SKUniform, SEL, matrix_float3x3))bean_msgSend)(self, bean_sel("setFloatMatrix3Value:"), floatMatrix3Value); }
 static inline matrix_float4x4    SKUniform_FloatMatrix4Value(SKUniform self)                                                  { return ((matrix_float4x4 (*)(SKUniform, SEL))bean_msgSend_stret)(self, bean_sel("floatMatrix4Value")); }
 static inline void               SKUniform_SetFloatMatrix4Value(SKUniform self, matrix_float4x4 floatMatrix4Value)            { ((void (*)(SKUniform, SEL, matrix_float4x4))bean_msgSend)(self, bean_sel("setFloatMatrix4Value:"), floatMatrix4Value); }
+static inline id                 SKUniform_CopyWithZone(SKUniform self, NSZone* zone)                                         { return ((id (*)(SKUniform, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL               SKUniform_SupportsSecureCoding(void)                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKUniform"), bean_sel("supportsSecureCoding")); }
 
 /* ===== SKView ===== */
 static inline void         SKView_PresentScene(SKView self, SKScene scene)                                        { ((void (*)(SKView, SEL, SKScene))bean_msgSend)(self, bean_sel("presentScene:"), scene); }
@@ -7030,8 +8494,16 @@ static inline void         SKView_SetFrameInterval(SKView self, NSInteger frameI
 static inline CGFloat      SKView_PreferredFrameRate(SKView self)                                                 { return ((CGFloat (*)(SKView, SEL))bean_msgSend_fpret)(self, bean_sel("preferredFrameRate")); }
 static inline void         SKView_SetPreferredFrameRate(SKView self, CGFloat preferredFrameRate)                  { ((void (*)(SKView, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPreferredFrameRate:"), preferredFrameRate); }
 static inline SKScene      SKView_Scene(SKView self)                                                              { return ((SKScene (*)(SKView, SEL))bean_msgSend)(self, bean_sel("scene")); }
+static inline BOOL         SKView_SupportsSecureCoding(void)                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKView"), bean_sel("supportsSecureCoding")); }
 static inline BOOL         SKView_Paused(SKView self)                                                             { return ((BOOL (*)(SKView, SEL))bean_msgSend)(self, bean_sel("paused")); }
 static inline BOOL         SKView_Asynchronous(SKView self)                                                       { return ((BOOL (*)(SKView, SEL))bean_msgSend)(self, bean_sel("asynchronous")); }
+
+/* ===== SKViewDelegate ===== */
+#ifndef BEAN_TYPEDEF_SKViewDelegate
+#define BEAN_TYPEDEF_SKViewDelegate
+typedef bean_id SKViewDelegate;
+#endif
+static inline BOOL    SKViewDelegate_View_ShouldRenderAtTime(SKViewDelegate self, SKView view, CGFloat time)    { return ((BOOL (*)(SKViewDelegate, SEL, SKView, CGFloat))bean_msgSend)(self, bean_sel("view:shouldRenderAtTime:"), view, time); }
 
 
 #ifdef __cplusplus

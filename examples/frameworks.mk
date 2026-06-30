@@ -23,8 +23,6 @@ EXAMPLE_FRAMEWORKS_metal := Metal AppKit Foundation QuartzCore
 EXAMPLE_FRAMEWORKS_metalkit := MetalKit Metal AppKit Foundation QuartzCore CoreImage
 
 EXAMPLE_FRAMEWORKS_pdfkit := PDFKit AppKit Foundation CloudKit CoreGraphics QuartzCore Metal CoreImage
-EXAMPLE_FRAMEWORKS_quicklook := QuickLook AppKit Foundation CoreGraphics QuartzCore Metal CoreImage
-
 EXAMPLE_FRAMEWORKS_scenekit := SceneKit AppKit Foundation QuartzCore Metal CoreImage CloudKit
 EXAMPLE_FRAMEWORKS_spritekit := SpriteKit AppKit Foundation QuartzCore Metal CoreImage CloudKit
 

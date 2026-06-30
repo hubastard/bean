@@ -30,27 +30,18 @@ static NSString bean_avfoundation_sample_path(void) {
             char sample_path[PATH_MAX];
             snprintf(sample_path, sizeof(sample_path), "%s/sample.wav", dirname(dir_path));
             if (access(sample_path, R_OK) == 0) {
-                return NSString_StringWithUTF8String(sample_path);
+                return bean_str(sample_path);
             }
         }
     }
 
     for (size_t i = 0; fallbacks[i] != NULL; ++i) {
         if (access(fallbacks[i], R_OK) == 0) {
-            return NSString_StringWithUTF8String(fallbacks[i]);
+            return bean_str(fallbacks[i]);
         }
     }
 
-    return NSString_StringWithUTF8String("examples/avfoundation/sample.wav");
-}
-
-static AVAudioFile bean_avfoundation_open_audio_file(NSURL url, NSError** error) {
-    AVAudioFile file = (AVAudioFile)bean_alloc(bean_cls("AVAudioFile"));
-    return ((AVAudioFile (*)(AVAudioFile, SEL, NSURL, NSError**))bean_msgSend)(
-        file,
-        bean_sel("initForReading:error:"),
-        url,
-        error);
+    return bean_str("examples/avfoundation/sample.wav");
 }
 
 static double bean_avfoundation_file_duration(AVAudioFile file) {
@@ -84,16 +75,19 @@ static BOOL bean_avfoundation_play_with_engine(NSURL url, double* out_duration) 
     AVAudioEngine engine;
     AVAudioPlayerNode player_node;
     AVAudioFormat format;
-    NSError* error;
+    NSError error;
     double duration;
     double deadline;
 
     error = NULL;
-    file = bean_avfoundation_open_audio_file(url, &error);
+    file = AVAudioFile_InitForReading_Error(
+        (AVAudioFile)bean_alloc(bean_cls("AVAudioFile")),
+        url,
+        &error);
     if (!file) {
         const char* message = "unknown error";
         if (error) {
-            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(*error));
+            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(error));
         }
         fprintf(stderr, "AVAudioFile init failed: %s\n", message ? message : "unknown error");
         return NO;
@@ -105,12 +99,10 @@ static BOOL bean_avfoundation_play_with_engine(NSURL url, double* out_duration) 
         return NO;
     }
 
-    engine = (AVAudioEngine)bean_alloc(bean_cls("AVAudioEngine"));
-    engine = (AVAudioEngine)AVAudioEngine_Init(engine);
+    engine = (AVAudioEngine)bean_new(bean_cls("AVAudioEngine"));
     AVAudioEngine_SetAutoShutdownEnabled(engine, NO);
 
-    player_node = (AVAudioPlayerNode)bean_alloc(bean_cls("AVAudioPlayerNode"));
-    player_node = (AVAudioPlayerNode)AVAudioPlayerNode_Init(player_node);
+    player_node = (AVAudioPlayerNode)bean_new(bean_cls("AVAudioPlayerNode"));
 
     AVAudioEngine_AttachNode(engine, (AVAudioNode)player_node);
     format = AVAudioFile_ProcessingFormat(file);
@@ -121,13 +113,10 @@ static BOOL bean_avfoundation_play_with_engine(NSURL url, double* out_duration) 
         format);
 
     error = NULL;
-    if (!((BOOL (*)(AVAudioEngine, SEL, NSError**))bean_msgSend)(
-            engine,
-            bean_sel("startAndReturnError:"),
-            &error)) {
+    if (!AVAudioEngine_StartAndReturnError(engine, &error)) {
         const char* message = "unknown error";
         if (error) {
-            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(*error));
+            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(error));
         }
         fprintf(stderr, "AVAudioEngine start failed: %s\n", message ? message : "unknown error");
         return NO;
@@ -176,22 +165,22 @@ static BOOL bean_avfoundation_play_with_audio_services(NSURL url, double duratio
 }
 
 int main(void) {
-    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
-    NSString path = bean_avfoundation_sample_path();
-    NSURL url = NSURL_FileURLWithPath(path);
-    double duration = 0.0;
+    BEAN_AUTORELEASE_POOL {
+        NSString path = bean_avfoundation_sample_path();
+        NSURL url = NSURL_FileURLWithPath(path);
+        double duration = 0.0;
 
-    printf("AVFoundation sample: %s\n", bean_nsstring_to_utf8(path));
+        printf("AVFoundation sample: %s\n", bean_nsstring_to_utf8(path));
 
-    if (!bean_avfoundation_play_with_engine(url, &duration)) {
-        return 1;
+        if (!bean_avfoundation_play_with_engine(url, &duration)) {
+            return 1;
+        }
+
+        if (!bean_avfoundation_play_with_audio_services(url, duration)) {
+            return 1;
+        }
+
+        printf("Done.\n");
     }
-
-    if (!bean_avfoundation_play_with_audio_services(url, duration)) {
-        return 1;
-    }
-
-    printf("Done.\n");
-    bean_autorelease_pool_pop(pool);
     return 0;
 }

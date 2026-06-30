@@ -16,15 +16,13 @@ static void bean_example_app_send_event(id self, SEL _cmd, NSEvent event) {
     }
 
     {
-        struct objc_super super_info = { self, (Class)bean_cls("NSApplication") };
-        ((void (*)(struct objc_super*, SEL, NSEvent))objc_msgSendSuper)(&super_info, _cmd, event);
+        bean_super_call_obj(self, bean_cls("NSApplication"), _cmd, (bean_id)event);
     }
 }
 
 static void bean_example_content_resize(id self, SEL _cmd, CGSize old_size) {
     {
-        struct objc_super super_info = { self, (Class)bean_cls("NSView") };
-        ((void (*)(struct objc_super*, SEL, CGSize))objc_msgSendSuper)(&super_info, _cmd, old_size);
+        bean_super_call_size(self, bean_cls("NSView"), _cmd, old_size);
     }
 
     if (g_bean_example_layout) {
@@ -55,7 +53,7 @@ static inline NSView bean_example_install_content_view(NSWindow window) {
     CGRect bounds = NSView_Bounds(previous);
     NSView content;
 
-    content = (NSView)bean_init((id)bean_alloc(bean_example_content_view_class()));
+    content = (NSView)bean_alloc(bean_example_content_view_class());
     content = (NSView)NSView_InitWithFrame(content, bounds);
     NSView_SetAutoresizesSubviews(content, YES);
     NSWindow_SetContentView(window, content);
@@ -121,7 +119,7 @@ static inline NSWindow bean_example_window(const char* title, CGFloat width, CGF
         NSBackingStoreBuffered,
         NO);
 
-    NSWindow_SetTitle(window, NSString_StringWithUTF8String(title));
+    NSWindow_SetTitle(window, bean_str(title));
     NSWindow_Center(window);
     bean_example_install_content_view(window);
     return window;

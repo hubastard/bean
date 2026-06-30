@@ -3,28 +3,17 @@
 #include <bean/runtime.h>
 #include <stdio.h>
 
-enum {
-    BEAN_EK_AUTH_NOT_DETERMINED = 0,
-    BEAN_EK_AUTH_RESTRICTED = 1,
-    BEAN_EK_AUTH_DENIED = 2,
-    BEAN_EK_AUTH_AUTHORIZED = 3,
-    BEAN_EK_AUTH_FULL_ACCESS = 4,
-    BEAN_EK_AUTH_WRITE_ONLY = 5,
-};
-
 static const char* bean_eventkit_auth_status_name(EKAuthorizationStatus status) {
     switch ((int)status) {
-    case BEAN_EK_AUTH_NOT_DETERMINED:
+    case EKAuthorizationStatusNotDetermined:
         return "not determined (permission not requested yet)";
-    case BEAN_EK_AUTH_RESTRICTED:
+    case EKAuthorizationStatusRestricted:
         return "restricted (parental controls or policy)";
-    case BEAN_EK_AUTH_DENIED:
+    case EKAuthorizationStatusDenied:
         return "denied";
-    case BEAN_EK_AUTH_AUTHORIZED:
-        return "authorized";
-    case BEAN_EK_AUTH_FULL_ACCESS:
+    case EKAuthorizationStatusAuthorized: /* same value as FullAccess (3) */
         return "full access";
-    case BEAN_EK_AUTH_WRITE_ONLY:
+    case EKAuthorizationStatusWriteOnly:
         return "write only";
     default:
         return "unknown";
@@ -32,13 +21,14 @@ static const char* bean_eventkit_auth_status_name(EKAuthorizationStatus status) 
 }
 
 static int bean_eventkit_can_read_events(EKAuthorizationStatus status) {
-    return status == BEAN_EK_AUTH_AUTHORIZED || status == BEAN_EK_AUTH_FULL_ACCESS;
+    return status == EKAuthorizationStatusAuthorized
+        || status == EKAuthorizationStatusFullAccess;
 }
 
 typedef struct {
     volatile int done;
     BOOL granted;
-    NSError* error;
+    NSError error;
 } bean_eventkit_access_state;
 
 static void bean_eventkit_access_done(void* context, void* block, long granted, bean_id error_obj) {
@@ -47,7 +37,7 @@ static void bean_eventkit_access_done(void* context, void* block, long granted, 
     (void)block;
 
     state->granted = (BOOL)granted;
-    state->error = (NSError*)error_obj;
+    state->error = (NSError)error_obj;
     state->done = 1;
 }
 
@@ -63,7 +53,7 @@ static BOOL bean_eventkit_request_access(EKEventStore store) {
     if (!state.granted) {
         const char* message = "access denied";
         if (state.error) {
-            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(*state.error));
+            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(state.error));
         }
         fprintf(stderr, "Calendar access request failed: %s\n", message ? message : "access denied");
         return NO;
@@ -73,8 +63,7 @@ static BOOL bean_eventkit_request_access(EKEventStore store) {
 }
 
 static NSString bean_eventkit_format_date(NSDate date) {
-    NSDateFormatter formatter = (NSDateFormatter)bean_alloc(bean_cls("NSDateFormatter"));
-    formatter = (NSDateFormatter)bean_init((id)formatter);
+    NSDateFormatter formatter = (NSDateFormatter)bean_new(bean_cls("NSDateFormatter"));
     NSDateFormatter_SetDateStyle(formatter, NSDateFormatterShortStyle);
     NSDateFormatter_SetTimeStyle(formatter, NSDateFormatterShortStyle);
     return NSDateFormatter_StringFromDate(formatter, date);
@@ -101,8 +90,7 @@ static int bean_eventkit_print_upcoming(EKEventStore store, int limit) {
     events = EKEventStore_EventsMatchingPredicate(store, predicate);
     count = events ? NSArray_Count(events) : 0;
 
-    day_formatter = (NSDateFormatter)bean_alloc(bean_cls("NSDateFormatter"));
-    day_formatter = (NSDateFormatter)bean_init((id)day_formatter);
+    day_formatter = (NSDateFormatter)bean_new(bean_cls("NSDateFormatter"));
     NSDateFormatter_SetDateStyle(day_formatter, NSDateFormatterFullStyle);
     NSDateFormatter_SetTimeStyle(day_formatter, NSDateFormatterNoStyle);
 
@@ -187,59 +175,52 @@ static int bean_eventkit_print_calendars(EKEventStore store) {
 }
 
 int main(void) {
-    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
-    EKAuthorizationStatus status;
-    EKEventStore store;
-
-    status = EKEventStore_AuthorizationStatusForEntityType(EKEntityTypeEvent);
-    printf(
-        "Calendar authorization: %s\n",
-        bean_eventkit_auth_status_name(status));
-
-    store = (EKEventStore)EKEventStore_Init((EKEventStore)bean_alloc(bean_cls("EKEventStore")));
-
-    if (!bean_eventkit_can_read_events(status)) {
-        if (status == BEAN_EK_AUTH_DENIED || status == BEAN_EK_AUTH_RESTRICTED) {
-            fprintf(
-                stderr,
-                "Grant Calendar access in System Settings > Privacy & Security > Calendars.\n");
-            bean_autorelease_pool_pop(pool);
-            return 1;
-        }
-
-        if (status == BEAN_EK_AUTH_WRITE_ONLY) {
-            fprintf(stderr, "Calendar access is write-only; full read access is required.\n");
-            bean_autorelease_pool_pop(pool);
-            return 1;
-        }
-
-        printf("Requesting Calendar access (check for a system prompt)...\n");
-        if (!bean_eventkit_request_access(store)) {
-            bean_autorelease_pool_pop(pool);
-            return 1;
-        }
+    BEAN_AUTORELEASE_POOL {
+        EKAuthorizationStatus status;
+        EKEventStore store;
 
         status = EKEventStore_AuthorizationStatusForEntityType(EKEntityTypeEvent);
-        printf("Calendar authorization: %s\n", bean_eventkit_auth_status_name(status));
-    }
+        printf(
+            "Calendar authorization: %s\n",
+            bean_eventkit_auth_status_name(status));
 
-    if (!bean_eventkit_can_read_events(status)) {
-        fprintf(stderr, "Calendar read access is still unavailable.\n");
-        bean_autorelease_pool_pop(pool);
-        return 1;
-    }
+        store = (EKEventStore)bean_new(bean_cls("EKEventStore"));
 
-    if (bean_eventkit_print_calendars(store) != 0) {
-        bean_autorelease_pool_pop(pool);
-        return 1;
-    }
+        if (!bean_eventkit_can_read_events(status)) {
+            if (status == EKAuthorizationStatusDenied || status == EKAuthorizationStatusRestricted) {
+                fprintf(
+                    stderr,
+                    "Grant Calendar access in System Settings > Privacy & Security > Calendars.\n");
+                return 1;
+            }
 
-    printf("\n");
-    if (bean_eventkit_print_upcoming(store, 15) != 0) {
-        bean_autorelease_pool_pop(pool);
-        return 1;
-    }
+            if (status == EKAuthorizationStatusWriteOnly) {
+                fprintf(stderr, "Calendar access is write-only; full read access is required.\n");
+                return 1;
+            }
 
-    bean_autorelease_pool_pop(pool);
+            printf("Requesting Calendar access (check for a system prompt)...\n");
+            if (!bean_eventkit_request_access(store)) {
+                return 1;
+            }
+
+            status = EKEventStore_AuthorizationStatusForEntityType(EKEntityTypeEvent);
+            printf("Calendar authorization: %s\n", bean_eventkit_auth_status_name(status));
+        }
+
+        if (!bean_eventkit_can_read_events(status)) {
+            fprintf(stderr, "Calendar read access is still unavailable.\n");
+            return 1;
+        }
+
+        if (bean_eventkit_print_calendars(store) != 0) {
+            return 1;
+        }
+
+        printf("\n");
+        if (bean_eventkit_print_upcoming(store, 15) != 0) {
+            return 1;
+        }
+    }
     return 0;
 }

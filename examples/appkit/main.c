@@ -14,7 +14,7 @@ static int g_use_circle = 1;
 
 static void bean_appkit_refresh_status(CGFloat hue) {
     NSString text = NSString_StringWithFormat(
-        NSString_StringWithUTF8String("Hue: %.0f°  •  drag slider or press Random Color"),
+        bean_str("Hue: %.0f°  •  drag slider or press Random Color"),
         hue * 360.0);
     NSControl_SetStringValue((NSControl)g_status_label, text);
 }
@@ -64,8 +64,7 @@ static void bean_appkit_preview_draw(id self, SEL _cmd, CGRect dirty_rect) {
     NSBezierPath_Stroke(path);
 
     {
-        struct objc_super super_info = { self, (Class)bean_cls("NSView") };
-        ((void (*)(struct objc_super*, SEL, CGRect))objc_msgSendSuper)(&super_info, _cmd, dirty_rect);
+        bean_super_call_rect(self, bean_cls("NSView"), _cmd, dirty_rect);
     }
 }
 
@@ -172,7 +171,7 @@ static NSView bean_appkit_build_ui(NSView content) {
     controller = bean_appkit_controller();
 
     title = (NSTextField)NSTextField_LabelWithString(
-        NSString_StringWithUTF8String("Bean AppKit Showcase"));
+        bean_str("Bean AppKit Showcase"));
     NSTextField_SetBezeled(title, NO);
     NSTextField_SetDrawsBackground(title, NO);
     NSTextField_SetEditable(title, NO);
@@ -208,7 +207,7 @@ static NSView bean_appkit_build_ui(NSView content) {
     g_hue_slider = slider;
 
     g_status_label = (NSTextField)NSTextField_LabelWithString(
-        NSString_StringWithUTF8String("Hue: 209°  •  drag slider or press Random Color"));
+        bean_str("Hue: 209°  •  drag slider or press Random Color"));
     NSTextField_SetBezeled(g_status_label, NO);
     NSTextField_SetDrawsBackground(g_status_label, NO);
     NSTextField_SetEditable(g_status_label, NO);
@@ -217,13 +216,13 @@ static NSView bean_appkit_build_ui(NSView content) {
     NSView_AddSubview(content, (NSView)g_status_label);
 
     g_random_button = (NSButton)NSButton_ButtonWithTitle_Target_Action(
-        NSString_StringWithUTF8String("Random Color"),
+        bean_str("Random Color"),
         controller,
         bean_sel("randomColor:"));
     NSView_AddSubview(content, (NSView)g_random_button);
 
     g_shape_button = (NSButton)NSButton_ButtonWithTitle_Target_Action(
-        NSString_StringWithUTF8String("Toggle Shape"),
+        bean_str("Toggle Shape"),
         controller,
         bean_sel("toggleShape:"));
     NSView_AddSubview(content, (NSView)g_shape_button);
@@ -233,18 +232,16 @@ static NSView bean_appkit_build_ui(NSView content) {
 }
 
 int main(void) {
-    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
+    BEAN_AUTORELEASE_POOL {
+        NSWindow window = bean_example_window("Bean AppKit", 640.0, 480.0);
+        NSView content = NSWindow_ContentView(window);
 
-    NSWindow window = bean_example_window("Bean AppKit", 640.0, 480.0);
-    NSView content = NSWindow_ContentView(window);
+        bean_appkit_build_ui(content);
+        bean_example_set_layout_handler(bean_appkit_layout);
+        bean_appkit_refresh_status(0.58);
 
-    bean_appkit_build_ui(content);
-    bean_example_set_layout_handler(bean_appkit_layout);
-    bean_appkit_refresh_status(0.58);
-
-    printf("AppKit: color preview UI ready. Drag the hue slider or use the buttons.\n");
-    bean_example_run(window);
-
-    bean_autorelease_pool_pop(pool);
+        printf("AppKit: color preview UI ready. Drag the hue slider or use the buttons.\n");
+        bean_example_run(window);
+    }
     return 0;
 }

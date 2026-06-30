@@ -64,6 +64,9 @@ class ParseResult:
     enums: list[ParsedEnum] = field(default_factory=list)
     structs: list[ParsedStruct] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
+    class_protocols: dict[str, list[str]] = field(default_factory=dict)
+    protocol_methods: list[ParsedMethod] = field(default_factory=list)
+    protocol_properties: list[ParsedProperty] = field(default_factory=list)
 
 
 _PARSE_CACHE: dict[tuple[str, str], ParseResult] = {}
@@ -209,13 +212,117 @@ def _enum_underlying(enum_node: dict[str, Any]) -> str:
 
 
 def _find_constant_value(node: dict[str, Any]) -> Optional[str]:
-    if node.get("kind") == "ConstantExpr" and "value" in node:
+    kind = node.get("kind")
+    if kind == "ConstantExpr" and "value" in node:
         return str(node["value"])
+    if kind == "IntegerLiteral":
+        return node.get("value")
+    if kind == "UnaryOperator" and node.get("opcode") == "-":
+        for child in node.get("inner", []):
+            inner = _find_constant_value(child)
+            if inner is not None:
+                return f"-{inner}"
+    if kind == "BinaryOperator" and node.get("opcode") in ("+", "-", "|", "<<", ">>"):
+        left = right = None
+        for child in node.get("inner", []):
+            val = _find_constant_value(child)
+            if val is None:
+                continue
+            if left is None:
+                left = val
+            else:
+                right = val
+        if left is not None and right is not None:
+            return f"{left} {node['opcode']} {right}"
     for child in node.get("inner", []):
         found = _find_constant_value(child)
         if found is not None:
             return found
     return None
+
+
+def _parse_int_literal(text: str) -> Optional[int]:
+    text = text.strip()
+    if not text:
+        return None
+    try:
+        if text.startswith(("0x", "0X")):
+            return int(text, 16)
+        if text.lstrip("-").isdigit():
+            return int(text, 10)
+    except ValueError:
+        return None
+    return None
+
+
+def _resolve_enum_constant_values(enum: ParsedEnum) -> None:
+    """Fill implicit enum values and evaluate simple constant expressions."""
+    known: dict[str, int] = {}
+    next_implicit = 0
+    for constant in enum.constants:
+        if constant.value is None:
+            constant.value = str(next_implicit)
+            known[constant.name] = next_implicit
+            next_implicit += 1
+            continue
+
+        text = constant.value.strip()
+        numeric = _parse_int_literal(text)
+        if numeric is not None:
+            constant.value = str(numeric)
+            known[constant.name] = numeric
+            next_implicit = numeric + 1
+            continue
+
+        if text in known:
+            numeric = known[text]
+            constant.value = str(numeric)
+            next_implicit = numeric + 1
+            continue
+
+        if text.replace("_", "").isalnum() and not text.lstrip("-").isdigit():
+            # Unresolved enum constant reference; fill sequentially for now.
+            constant.value = str(next_implicit)
+            known[constant.name] = next_implicit
+            next_implicit += 1
+            continue
+
+        for op in ("+", "-", "|", "<<", ">>"):
+            if f" {op} " not in text:
+                continue
+            left_text, right_text = text.split(f" {op} ", 1)
+            left = known.get(left_text.strip())
+            if left is None:
+                left = _parse_int_literal(left_text)
+            right = known.get(right_text.strip())
+            if right is None:
+                right = _parse_int_literal(right_text)
+            if left is None or right is None:
+                break
+            if op == "+":
+                numeric = left + right
+            elif op == "-":
+                numeric = left - right
+            elif op == "|":
+                numeric = left | right
+            elif op == "<<":
+                numeric = left << right
+            else:
+                numeric = left >> right
+            constant.value = str(numeric)
+            known[constant.name] = numeric
+            next_implicit = numeric + 1
+            break
+        else:
+            next_implicit += 1
+
+
+def _method_return_type(class_name: str, return_qual_raw: str, return_qual: str, selector: str, is_class_method: bool) -> CType:
+    if "instancetype" in return_qual_raw:
+        return CType(class_name)
+    if not is_class_method and selector.startswith("init"):
+        return CType(class_name)
+    return qual_type_to_c(return_qual)
 
 
 def _extract_enum_constants(enum_node: dict[str, Any]) -> list[ParsedEnumConstant]:
@@ -231,12 +338,76 @@ def _extract_enum_constants(enum_node: dict[str, Any]) -> list[ParsedEnumConstan
     return constants
 
 
+def _record_protocol_conformance(result: ParseResult, class_name: str, node: dict[str, Any]) -> None:
+    protocols = node.get("protocols") or []
+    if not protocols:
+        return
+    names = [entry.get("name") for entry in protocols if entry.get("name")]
+    if not names:
+        return
+    existing = result.class_protocols.setdefault(class_name, [])
+    for name in names:
+        if name not in existing:
+            existing.append(name)
+
+
+def _append_method(
+    result: ParseResult,
+    class_name: str,
+    selector: str,
+    is_class_method: bool,
+    return_qual_raw: str,
+    return_qual: str,
+    params: list[tuple[str, CType]],
+    category: Optional[str],
+    *,
+    protocol_member: bool,
+) -> None:
+    method = ParsedMethod(
+        class_name=class_name,
+        selector=selector,
+        is_class_method=is_class_method,
+        return_type=_method_return_type(class_name, return_qual_raw, return_qual, selector, is_class_method),
+        params=params,
+        category=category,
+    )
+    if protocol_member:
+        result.protocol_methods.append(method)
+    else:
+        result.methods.append(method)
+
+
+def _append_property(
+    result: ParseResult,
+    class_name: str,
+    name: str,
+    prop_type: CType,
+    readonly: bool,
+    category: Optional[str],
+    *,
+    protocol_member: bool,
+) -> None:
+    prop = ParsedProperty(
+        class_name=class_name,
+        name=name,
+        type=prop_type,
+        readonly=readonly,
+        category=category,
+    )
+    if protocol_member:
+        result.protocol_properties.append(prop)
+    else:
+        result.properties.append(prop)
+
+
 def _walk(
     node: dict[str, Any],
     class_name: Optional[str],
     category: Optional[str],
     result: ParseResult,
     index: dict[str, dict[str, Any]],
+    *,
+    protocol_member: bool = False,
 ) -> None:
     kind = node.get("kind")
     if kind == "TypedefDecl" and node.get("name"):
@@ -246,21 +417,28 @@ def _walk(
     elif kind == "EnumDecl" and node.get("name"):
         constants = _extract_enum_constants(node)
         if constants:
-            result.enums.append(
-                ParsedEnum(
-                    name=node["name"],
-                    constants=constants,
-                    underlying=_enum_underlying(node),
-                )
+            parsed_enum = ParsedEnum(
+                name=node["name"],
+                constants=constants,
+                underlying=_enum_underlying(node),
             )
+            _resolve_enum_constant_values(parsed_enum)
+            result.enums.append(parsed_enum)
     elif kind == "TypedefDecl" and node.get("name"):
         inner = node.get("inner") or []
         if inner and inner[0].get("kind") == "EnumType":
             # typedef enum Foo Foo; — constants appear on a separate EnumDecl, skip duplicate shell.
             pass
+    if kind == "ObjCProtocolDecl" and node.get("name"):
+        protocol_name = node["name"]
+        for child in node.get("inner", []):
+            _walk(child, protocol_name, None, result, index, protocol_member=True)
+        return
     if kind == "ObjCInterfaceDecl":
         class_name = node.get("name")
         category = None
+        if class_name:
+            _record_protocol_conformance(result, class_name, node)
     elif kind == "ObjCCategoryDecl":
         category = node.get("name")
         interface = node.get("interface") or {}
@@ -270,34 +448,92 @@ def _walk(
         selector = node.get("name", "")
         if not selector:
             return
-        return_qual = node.get("returnType", {}).get("desugaredQualType") or node.get("returnType", {}).get("qualType", "void")
-        method = ParsedMethod(
-            class_name=class_name,
-            selector=selector,
-            is_class_method=not node.get("instance", True),
-            return_type=qual_type_to_c(return_qual),
-            params=_extract_params(node),
-            category=category,
+        return_qual_raw = node.get("returnType", {}).get("qualType") or ""
+        return_qual = node.get("returnType", {}).get("desugaredQualType") or return_qual_raw or "void"
+        _append_method(
+            result,
+            class_name,
+            selector,
+            not node.get("instance", True),
+            return_qual_raw,
+            return_qual,
+            _extract_params(node),
+            category,
+            protocol_member=protocol_member,
         )
-        result.methods.append(method)
     elif kind == "ObjCPropertyDecl" and class_name:
         prop_type = node.get("type", {}).get("desugaredQualType") or node.get("type", {}).get("qualType", "id")
-        result.properties.append(
-            ParsedProperty(
-                class_name=class_name,
-                name=node.get("name", ""),
-                type=qual_type_to_c(prop_type),
-                readonly=bool(node.get("readonly")),
-                category=category,
-            )
+        _append_property(
+            result,
+            class_name,
+            node.get("name", ""),
+            qual_type_to_c(prop_type),
+            bool(node.get("readonly")),
+            category,
+            protocol_member=protocol_member,
         )
 
     for child in node.get("inner", []):
-        _walk(child, class_name, category, result, index)
+        _walk(child, class_name, category, result, index, protocol_member=protocol_member)
 
 
 def clear_parse_cache() -> None:
     _PARSE_CACHE.clear()
+
+
+def _propagate_protocol_members(result: ParseResult) -> None:
+    if not result.protocol_methods and not result.protocol_properties:
+        return
+
+    methods_by_protocol: dict[str, list[ParsedMethod]] = {}
+    for method in result.protocol_methods:
+        methods_by_protocol.setdefault(method.class_name, []).append(method)
+
+    properties_by_protocol: dict[str, list[ParsedProperty]] = {}
+    for prop in result.protocol_properties:
+        properties_by_protocol.setdefault(prop.class_name, []).append(prop)
+
+    result.methods.extend(result.protocol_methods)
+    result.properties.extend(result.protocol_properties)
+
+    for class_name, protocol_names in result.class_protocols.items():
+        existing_methods = {
+            (method.selector, method.is_class_method)
+            for method in result.methods
+            if method.class_name == class_name
+        }
+        existing_properties = {prop.name for prop in result.properties if prop.class_name == class_name}
+
+        for protocol_name in protocol_names:
+            for method in methods_by_protocol.get(protocol_name, []):
+                key = (method.selector, method.is_class_method)
+                if key in existing_methods:
+                    continue
+                result.methods.append(
+                    ParsedMethod(
+                        class_name=class_name,
+                        selector=method.selector,
+                        is_class_method=method.is_class_method,
+                        return_type=method.return_type,
+                        params=list(method.params),
+                        category=method.category,
+                    )
+                )
+                existing_methods.add(key)
+
+            for prop in properties_by_protocol.get(protocol_name, []):
+                if prop.name in existing_properties:
+                    continue
+                result.properties.append(
+                    ParsedProperty(
+                        class_name=class_name,
+                        name=prop.name,
+                        type=prop.type,
+                        readonly=prop.readonly,
+                        category=prop.category,
+                    )
+                )
+                existing_properties.add(prop.name)
 
 
 def _parse_header_uncached(sdk_path: str, umbrella_relative: str) -> ParseResult:
@@ -309,6 +545,7 @@ def _parse_header_uncached(sdk_path: str, umbrella_relative: str) -> ParseResult
     _index_nodes(ast, index)
     result = ParseResult()
     _walk(ast, None, None, result, index)
+    _propagate_protocol_members(result)
     return result
 
 
@@ -340,6 +577,8 @@ def dedupe_enums(enums: list[ParsedEnum]) -> list[ParsedEnum]:
             if constant.name not in known:
                 existing.constants.append(constant)
                 known.add(constant.name)
+    for enum in by_name.values():
+        _resolve_enum_constant_values(enum)
     return list(by_name.values())
 
 

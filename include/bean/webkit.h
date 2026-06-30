@@ -17,62 +17,62 @@ extern "C" {
 typedef NSInteger WKDownloadRedirectPolicy;
 #endif
 static const WKDownloadRedirectPolicy WKDownloadRedirectPolicyCancel = (WKDownloadRedirectPolicy)0;
-static const WKDownloadRedirectPolicy WKDownloadRedirectPolicyAllow = (WKDownloadRedirectPolicy)0;
+static const WKDownloadRedirectPolicy WKDownloadRedirectPolicyAllow = (WKDownloadRedirectPolicy)1;
 
 #ifndef BEAN_TYPEDEF_WKDownloadPlaceholderPolicy
 #define BEAN_TYPEDEF_WKDownloadPlaceholderPolicy
 typedef NSInteger WKDownloadPlaceholderPolicy;
 #endif
 static const WKDownloadPlaceholderPolicy WKDownloadPlaceholderPolicyDisable = (WKDownloadPlaceholderPolicy)0;
-static const WKDownloadPlaceholderPolicy WKDownloadPlaceholderPolicyEnable = (WKDownloadPlaceholderPolicy)0;
+static const WKDownloadPlaceholderPolicy WKDownloadPlaceholderPolicyEnable = (WKDownloadPlaceholderPolicy)1;
 
 #ifndef BEAN_TYPEDEF_WKErrorCode
 #define BEAN_TYPEDEF_WKErrorCode
 typedef NSInteger WKErrorCode;
 #endif
 static const WKErrorCode WKErrorUnknown = (WKErrorCode)1;
-static const WKErrorCode WKErrorWebContentProcessTerminated = (WKErrorCode)0;
-static const WKErrorCode WKErrorWebViewInvalidated = (WKErrorCode)0;
-static const WKErrorCode WKErrorJavaScriptExceptionOccurred = (WKErrorCode)0;
-static const WKErrorCode WKErrorJavaScriptResultTypeIsUnsupported = (WKErrorCode)0;
-static const WKErrorCode WKErrorContentRuleListStoreCompileFailed = (WKErrorCode)0;
-static const WKErrorCode WKErrorContentRuleListStoreLookUpFailed = (WKErrorCode)0;
-static const WKErrorCode WKErrorContentRuleListStoreRemoveFailed = (WKErrorCode)0;
-static const WKErrorCode WKErrorContentRuleListStoreVersionMismatch = (WKErrorCode)0;
-static const WKErrorCode WKErrorAttributedStringContentFailedToLoad = (WKErrorCode)0;
-static const WKErrorCode WKErrorAttributedStringContentLoadTimedOut = (WKErrorCode)0;
-static const WKErrorCode WKErrorJavaScriptInvalidFrameTarget = (WKErrorCode)0;
-static const WKErrorCode WKErrorNavigationAppBoundDomain = (WKErrorCode)0;
-static const WKErrorCode WKErrorJavaScriptAppBoundDomain = (WKErrorCode)0;
-static const WKErrorCode WKErrorDuplicateCredential = (WKErrorCode)0;
-static const WKErrorCode WKErrorMalformedCredential = (WKErrorCode)0;
-static const WKErrorCode WKErrorCredentialNotFound = (WKErrorCode)0;
+static const WKErrorCode WKErrorWebContentProcessTerminated = (WKErrorCode)2;
+static const WKErrorCode WKErrorWebViewInvalidated = (WKErrorCode)3;
+static const WKErrorCode WKErrorJavaScriptExceptionOccurred = (WKErrorCode)4;
+static const WKErrorCode WKErrorJavaScriptResultTypeIsUnsupported = (WKErrorCode)5;
+static const WKErrorCode WKErrorContentRuleListStoreCompileFailed = (WKErrorCode)6;
+static const WKErrorCode WKErrorContentRuleListStoreLookUpFailed = (WKErrorCode)7;
+static const WKErrorCode WKErrorContentRuleListStoreRemoveFailed = (WKErrorCode)8;
+static const WKErrorCode WKErrorContentRuleListStoreVersionMismatch = (WKErrorCode)9;
+static const WKErrorCode WKErrorAttributedStringContentFailedToLoad = (WKErrorCode)10;
+static const WKErrorCode WKErrorAttributedStringContentLoadTimedOut = (WKErrorCode)11;
+static const WKErrorCode WKErrorJavaScriptInvalidFrameTarget = (WKErrorCode)12;
+static const WKErrorCode WKErrorNavigationAppBoundDomain = (WKErrorCode)13;
+static const WKErrorCode WKErrorJavaScriptAppBoundDomain = (WKErrorCode)14;
+static const WKErrorCode WKErrorDuplicateCredential = (WKErrorCode)15;
+static const WKErrorCode WKErrorMalformedCredential = (WKErrorCode)16;
+static const WKErrorCode WKErrorCredentialNotFound = (WKErrorCode)17;
 
 #ifndef BEAN_TYPEDEF_WKMediaPlaybackState
 #define BEAN_TYPEDEF_WKMediaPlaybackState
 typedef NSInteger WKMediaPlaybackState;
 #endif
 static const WKMediaPlaybackState WKMediaPlaybackStateNone = (WKMediaPlaybackState)0;
-static const WKMediaPlaybackState WKMediaPlaybackStatePlaying = (WKMediaPlaybackState)0;
-static const WKMediaPlaybackState WKMediaPlaybackStatePaused = (WKMediaPlaybackState)0;
-static const WKMediaPlaybackState WKMediaPlaybackStateSuspended = (WKMediaPlaybackState)0;
+static const WKMediaPlaybackState WKMediaPlaybackStatePlaying = (WKMediaPlaybackState)1;
+static const WKMediaPlaybackState WKMediaPlaybackStatePaused = (WKMediaPlaybackState)2;
+static const WKMediaPlaybackState WKMediaPlaybackStateSuspended = (WKMediaPlaybackState)3;
 
 #ifndef BEAN_TYPEDEF_WKMediaCaptureState
 #define BEAN_TYPEDEF_WKMediaCaptureState
 typedef NSInteger WKMediaCaptureState;
 #endif
 static const WKMediaCaptureState WKMediaCaptureStateNone = (WKMediaCaptureState)0;
-static const WKMediaCaptureState WKMediaCaptureStateActive = (WKMediaCaptureState)0;
-static const WKMediaCaptureState WKMediaCaptureStateMuted = (WKMediaCaptureState)0;
+static const WKMediaCaptureState WKMediaCaptureStateActive = (WKMediaCaptureState)1;
+static const WKMediaCaptureState WKMediaCaptureStateMuted = (WKMediaCaptureState)2;
 
 #ifndef BEAN_TYPEDEF_WKFullscreenState
 #define BEAN_TYPEDEF_WKFullscreenState
 typedef NSInteger WKFullscreenState;
 #endif
 static const WKFullscreenState WKFullscreenStateNotInFullscreen = (WKFullscreenState)0;
-static const WKFullscreenState WKFullscreenStateEnteringFullscreen = (WKFullscreenState)0;
-static const WKFullscreenState WKFullscreenStateInFullscreen = (WKFullscreenState)0;
-static const WKFullscreenState WKFullscreenStateExitingFullscreen = (WKFullscreenState)0;
+static const WKFullscreenState WKFullscreenStateEnteringFullscreen = (WKFullscreenState)1;
+static const WKFullscreenState WKFullscreenStateInFullscreen = (WKFullscreenState)2;
+static const WKFullscreenState WKFullscreenStateExitingFullscreen = (WKFullscreenState)3;
 
 #ifndef BEAN_TYPEDEF_WKWebViewDataType
 #define BEAN_TYPEDEF_WKWebViewDataType
@@ -85,34 +85,34 @@ static const WKWebViewDataType WKWebViewDataTypeSessionStorage = (WKWebViewDataT
 typedef NSInteger WKCookiePolicy;
 #endif
 static const WKCookiePolicy WKCookiePolicyAllow = (WKCookiePolicy)0;
-static const WKCookiePolicy WKCookiePolicyDisallow = (WKCookiePolicy)0;
+static const WKCookiePolicy WKCookiePolicyDisallow = (WKCookiePolicy)1;
 
 #ifndef BEAN_TYPEDEF_WKContentMode
 #define BEAN_TYPEDEF_WKContentMode
 typedef NSInteger WKContentMode;
 #endif
 static const WKContentMode WKContentModeRecommended = (WKContentMode)0;
-static const WKContentMode WKContentModeMobile = (WKContentMode)0;
-static const WKContentMode WKContentModeDesktop = (WKContentMode)0;
+static const WKContentMode WKContentModeMobile = (WKContentMode)1;
+static const WKContentMode WKContentModeDesktop = (WKContentMode)2;
 
 #ifndef BEAN_TYPEDEF_WKWebpagePreferencesUpgradeToHTTPSPolicy
 #define BEAN_TYPEDEF_WKWebpagePreferencesUpgradeToHTTPSPolicy
 typedef NSInteger WKWebpagePreferencesUpgradeToHTTPSPolicy;
 #endif
 static const WKWebpagePreferencesUpgradeToHTTPSPolicy WKWebpagePreferencesUpgradeToHTTPSPolicyKeepAsRequested = (WKWebpagePreferencesUpgradeToHTTPSPolicy)0;
-static const WKWebpagePreferencesUpgradeToHTTPSPolicy WKWebpagePreferencesUpgradeToHTTPSPolicyAutomaticFallbackToHTTP = (WKWebpagePreferencesUpgradeToHTTPSPolicy)0;
-static const WKWebpagePreferencesUpgradeToHTTPSPolicy WKWebpagePreferencesUpgradeToHTTPSPolicyUserMediatedFallbackToHTTP = (WKWebpagePreferencesUpgradeToHTTPSPolicy)0;
-static const WKWebpagePreferencesUpgradeToHTTPSPolicy WKWebpagePreferencesUpgradeToHTTPSPolicyErrorOnFailure = (WKWebpagePreferencesUpgradeToHTTPSPolicy)0;
+static const WKWebpagePreferencesUpgradeToHTTPSPolicy WKWebpagePreferencesUpgradeToHTTPSPolicyAutomaticFallbackToHTTP = (WKWebpagePreferencesUpgradeToHTTPSPolicy)1;
+static const WKWebpagePreferencesUpgradeToHTTPSPolicy WKWebpagePreferencesUpgradeToHTTPSPolicyUserMediatedFallbackToHTTP = (WKWebpagePreferencesUpgradeToHTTPSPolicy)2;
+static const WKWebpagePreferencesUpgradeToHTTPSPolicy WKWebpagePreferencesUpgradeToHTTPSPolicyErrorOnFailure = (WKWebpagePreferencesUpgradeToHTTPSPolicy)3;
 
 #ifndef BEAN_TYPEDEF_WKNavigationType
 #define BEAN_TYPEDEF_WKNavigationType
 typedef NSInteger WKNavigationType;
 #endif
 static const WKNavigationType WKNavigationTypeLinkActivated = (WKNavigationType)0;
-static const WKNavigationType WKNavigationTypeFormSubmitted = (WKNavigationType)0;
-static const WKNavigationType WKNavigationTypeBackForward = (WKNavigationType)0;
-static const WKNavigationType WKNavigationTypeReload = (WKNavigationType)0;
-static const WKNavigationType WKNavigationTypeFormResubmitted = (WKNavigationType)0;
+static const WKNavigationType WKNavigationTypeFormSubmitted = (WKNavigationType)1;
+static const WKNavigationType WKNavigationTypeBackForward = (WKNavigationType)2;
+static const WKNavigationType WKNavigationTypeReload = (WKNavigationType)3;
+static const WKNavigationType WKNavigationTypeFormResubmitted = (WKNavigationType)4;
 static const WKNavigationType WKNavigationTypeOther = (WKNavigationType)-1;
 
 #ifndef BEAN_TYPEDEF_WKNavigationActionPolicy
@@ -120,64 +120,64 @@ static const WKNavigationType WKNavigationTypeOther = (WKNavigationType)-1;
 typedef NSInteger WKNavigationActionPolicy;
 #endif
 static const WKNavigationActionPolicy WKNavigationActionPolicyCancel = (WKNavigationActionPolicy)0;
-static const WKNavigationActionPolicy WKNavigationActionPolicyAllow = (WKNavigationActionPolicy)0;
-static const WKNavigationActionPolicy WKNavigationActionPolicyDownload = (WKNavigationActionPolicy)0;
+static const WKNavigationActionPolicy WKNavigationActionPolicyAllow = (WKNavigationActionPolicy)1;
+static const WKNavigationActionPolicy WKNavigationActionPolicyDownload = (WKNavigationActionPolicy)2;
 
 #ifndef BEAN_TYPEDEF_WKNavigationResponsePolicy
 #define BEAN_TYPEDEF_WKNavigationResponsePolicy
 typedef NSInteger WKNavigationResponsePolicy;
 #endif
 static const WKNavigationResponsePolicy WKNavigationResponsePolicyCancel = (WKNavigationResponsePolicy)0;
-static const WKNavigationResponsePolicy WKNavigationResponsePolicyAllow = (WKNavigationResponsePolicy)0;
-static const WKNavigationResponsePolicy WKNavigationResponsePolicyDownload = (WKNavigationResponsePolicy)0;
+static const WKNavigationResponsePolicy WKNavigationResponsePolicyAllow = (WKNavigationResponsePolicy)1;
+static const WKNavigationResponsePolicy WKNavigationResponsePolicyDownload = (WKNavigationResponsePolicy)2;
 
 #ifndef BEAN_TYPEDEF_WKInactiveSchedulingPolicy
 #define BEAN_TYPEDEF_WKInactiveSchedulingPolicy
 typedef NSInteger WKInactiveSchedulingPolicy;
 #endif
 static const WKInactiveSchedulingPolicy WKInactiveSchedulingPolicySuspend = (WKInactiveSchedulingPolicy)0;
-static const WKInactiveSchedulingPolicy WKInactiveSchedulingPolicyThrottle = (WKInactiveSchedulingPolicy)0;
-static const WKInactiveSchedulingPolicy WKInactiveSchedulingPolicyNone = (WKInactiveSchedulingPolicy)0;
+static const WKInactiveSchedulingPolicy WKInactiveSchedulingPolicyThrottle = (WKInactiveSchedulingPolicy)1;
+static const WKInactiveSchedulingPolicy WKInactiveSchedulingPolicyNone = (WKInactiveSchedulingPolicy)2;
 
 #ifndef BEAN_TYPEDEF_WKPermissionDecision
 #define BEAN_TYPEDEF_WKPermissionDecision
 typedef NSInteger WKPermissionDecision;
 #endif
 static const WKPermissionDecision WKPermissionDecisionPrompt = (WKPermissionDecision)0;
-static const WKPermissionDecision WKPermissionDecisionGrant = (WKPermissionDecision)0;
-static const WKPermissionDecision WKPermissionDecisionDeny = (WKPermissionDecision)0;
+static const WKPermissionDecision WKPermissionDecisionGrant = (WKPermissionDecision)1;
+static const WKPermissionDecision WKPermissionDecisionDeny = (WKPermissionDecision)2;
 
 #ifndef BEAN_TYPEDEF_WKMediaCaptureType
 #define BEAN_TYPEDEF_WKMediaCaptureType
 typedef NSInteger WKMediaCaptureType;
 #endif
 static const WKMediaCaptureType WKMediaCaptureTypeCamera = (WKMediaCaptureType)0;
-static const WKMediaCaptureType WKMediaCaptureTypeMicrophone = (WKMediaCaptureType)0;
-static const WKMediaCaptureType WKMediaCaptureTypeCameraAndMicrophone = (WKMediaCaptureType)0;
+static const WKMediaCaptureType WKMediaCaptureTypeMicrophone = (WKMediaCaptureType)1;
+static const WKMediaCaptureType WKMediaCaptureTypeCameraAndMicrophone = (WKMediaCaptureType)2;
 
 #ifndef BEAN_TYPEDEF_WKDialogResult
 #define BEAN_TYPEDEF_WKDialogResult
 typedef NSInteger WKDialogResult;
 #endif
 static const WKDialogResult WKDialogResultShowDefault = (WKDialogResult)1;
-static const WKDialogResult WKDialogResultAskAgain = (WKDialogResult)0;
-static const WKDialogResult WKDialogResultHandled = (WKDialogResult)0;
+static const WKDialogResult WKDialogResultAskAgain = (WKDialogResult)2;
+static const WKDialogResult WKDialogResultHandled = (WKDialogResult)3;
 
 #ifndef BEAN_TYPEDEF_WKUserScriptInjectionTime
 #define BEAN_TYPEDEF_WKUserScriptInjectionTime
 typedef NSInteger WKUserScriptInjectionTime;
 #endif
 static const WKUserScriptInjectionTime WKUserScriptInjectionTimeAtDocumentStart = (WKUserScriptInjectionTime)0;
-static const WKUserScriptInjectionTime WKUserScriptInjectionTimeAtDocumentEnd = (WKUserScriptInjectionTime)0;
+static const WKUserScriptInjectionTime WKUserScriptInjectionTimeAtDocumentEnd = (WKUserScriptInjectionTime)1;
 
 #ifndef BEAN_TYPEDEF_WKWebExtensionMatchPatternError
 #define BEAN_TYPEDEF_WKWebExtensionMatchPatternError
 typedef NSInteger WKWebExtensionMatchPatternError;
 #endif
 static const WKWebExtensionMatchPatternError WKWebExtensionMatchPatternErrorUnknown = (WKWebExtensionMatchPatternError)1;
-static const WKWebExtensionMatchPatternError WKWebExtensionMatchPatternErrorInvalidScheme = (WKWebExtensionMatchPatternError)0;
-static const WKWebExtensionMatchPatternError WKWebExtensionMatchPatternErrorInvalidHost = (WKWebExtensionMatchPatternError)0;
-static const WKWebExtensionMatchPatternError WKWebExtensionMatchPatternErrorInvalidPath = (WKWebExtensionMatchPatternError)0;
+static const WKWebExtensionMatchPatternError WKWebExtensionMatchPatternErrorInvalidScheme = (WKWebExtensionMatchPatternError)2;
+static const WKWebExtensionMatchPatternError WKWebExtensionMatchPatternErrorInvalidHost = (WKWebExtensionMatchPatternError)3;
+static const WKWebExtensionMatchPatternError WKWebExtensionMatchPatternErrorInvalidPath = (WKWebExtensionMatchPatternError)4;
 
 #ifndef BEAN_TYPEDEF_WKWebExtensionMatchPatternOptions
 #define BEAN_TYPEDEF_WKWebExtensionMatchPatternOptions
@@ -193,14 +193,14 @@ static const WKWebExtensionMatchPatternOptions WKWebExtensionMatchPatternOptions
 typedef NSInteger WKWebExtensionError;
 #endif
 static const WKWebExtensionError WKWebExtensionErrorUnknown = (WKWebExtensionError)1;
-static const WKWebExtensionError WKWebExtensionErrorResourceNotFound = (WKWebExtensionError)0;
-static const WKWebExtensionError WKWebExtensionErrorInvalidResourceCodeSignature = (WKWebExtensionError)0;
-static const WKWebExtensionError WKWebExtensionErrorInvalidManifest = (WKWebExtensionError)0;
-static const WKWebExtensionError WKWebExtensionErrorUnsupportedManifestVersion = (WKWebExtensionError)0;
-static const WKWebExtensionError WKWebExtensionErrorInvalidManifestEntry = (WKWebExtensionError)0;
-static const WKWebExtensionError WKWebExtensionErrorInvalidDeclarativeNetRequestEntry = (WKWebExtensionError)0;
-static const WKWebExtensionError WKWebExtensionErrorInvalidBackgroundPersistence = (WKWebExtensionError)0;
-static const WKWebExtensionError WKWebExtensionErrorInvalidArchive = (WKWebExtensionError)0;
+static const WKWebExtensionError WKWebExtensionErrorResourceNotFound = (WKWebExtensionError)2;
+static const WKWebExtensionError WKWebExtensionErrorInvalidResourceCodeSignature = (WKWebExtensionError)3;
+static const WKWebExtensionError WKWebExtensionErrorInvalidManifest = (WKWebExtensionError)4;
+static const WKWebExtensionError WKWebExtensionErrorUnsupportedManifestVersion = (WKWebExtensionError)5;
+static const WKWebExtensionError WKWebExtensionErrorInvalidManifestEntry = (WKWebExtensionError)6;
+static const WKWebExtensionError WKWebExtensionErrorInvalidDeclarativeNetRequestEntry = (WKWebExtensionError)7;
+static const WKWebExtensionError WKWebExtensionErrorInvalidBackgroundPersistence = (WKWebExtensionError)8;
+static const WKWebExtensionError WKWebExtensionErrorInvalidArchive = (WKWebExtensionError)9;
 
 #ifndef BEAN_TYPEDEF_WKWebExtensionTabChangedProperties
 #define BEAN_TYPEDEF_WKWebExtensionTabChangedProperties
@@ -222,11 +222,11 @@ static const WKWebExtensionTabChangedProperties WKWebExtensionTabChangedProperti
 typedef NSInteger WKWebExtensionContextError;
 #endif
 static const WKWebExtensionContextError WKWebExtensionContextErrorUnknown = (WKWebExtensionContextError)1;
-static const WKWebExtensionContextError WKWebExtensionContextErrorAlreadyLoaded = (WKWebExtensionContextError)0;
-static const WKWebExtensionContextError WKWebExtensionContextErrorNotLoaded = (WKWebExtensionContextError)0;
-static const WKWebExtensionContextError WKWebExtensionContextErrorBaseURLAlreadyInUse = (WKWebExtensionContextError)0;
-static const WKWebExtensionContextError WKWebExtensionContextErrorNoBackgroundContent = (WKWebExtensionContextError)0;
-static const WKWebExtensionContextError WKWebExtensionContextErrorBackgroundContentFailedToLoad = (WKWebExtensionContextError)0;
+static const WKWebExtensionContextError WKWebExtensionContextErrorAlreadyLoaded = (WKWebExtensionContextError)2;
+static const WKWebExtensionContextError WKWebExtensionContextErrorNotLoaded = (WKWebExtensionContextError)3;
+static const WKWebExtensionContextError WKWebExtensionContextErrorBaseURLAlreadyInUse = (WKWebExtensionContextError)4;
+static const WKWebExtensionContextError WKWebExtensionContextErrorNoBackgroundContent = (WKWebExtensionContextError)5;
+static const WKWebExtensionContextError WKWebExtensionContextErrorBackgroundContentFailedToLoad = (WKWebExtensionContextError)6;
 
 #ifndef BEAN_TYPEDEF_WKWebExtensionContextPermissionStatus
 #define BEAN_TYPEDEF_WKWebExtensionContextPermissionStatus
@@ -245,40 +245,40 @@ static const WKWebExtensionContextPermissionStatus WKWebExtensionContextPermissi
 typedef NSInteger WKWebExtensionWindowType;
 #endif
 static const WKWebExtensionWindowType WKWebExtensionWindowTypeNormal = (WKWebExtensionWindowType)0;
-static const WKWebExtensionWindowType WKWebExtensionWindowTypePopup = (WKWebExtensionWindowType)0;
+static const WKWebExtensionWindowType WKWebExtensionWindowTypePopup = (WKWebExtensionWindowType)1;
 
 #ifndef BEAN_TYPEDEF_WKWebExtensionWindowState
 #define BEAN_TYPEDEF_WKWebExtensionWindowState
 typedef NSInteger WKWebExtensionWindowState;
 #endif
 static const WKWebExtensionWindowState WKWebExtensionWindowStateNormal = (WKWebExtensionWindowState)0;
-static const WKWebExtensionWindowState WKWebExtensionWindowStateMinimized = (WKWebExtensionWindowState)0;
-static const WKWebExtensionWindowState WKWebExtensionWindowStateMaximized = (WKWebExtensionWindowState)0;
-static const WKWebExtensionWindowState WKWebExtensionWindowStateFullscreen = (WKWebExtensionWindowState)0;
+static const WKWebExtensionWindowState WKWebExtensionWindowStateMinimized = (WKWebExtensionWindowState)1;
+static const WKWebExtensionWindowState WKWebExtensionWindowStateMaximized = (WKWebExtensionWindowState)2;
+static const WKWebExtensionWindowState WKWebExtensionWindowStateFullscreen = (WKWebExtensionWindowState)3;
 
 #ifndef BEAN_TYPEDEF_WKWebExtensionDataRecordError
 #define BEAN_TYPEDEF_WKWebExtensionDataRecordError
 typedef NSInteger WKWebExtensionDataRecordError;
 #endif
 static const WKWebExtensionDataRecordError WKWebExtensionDataRecordErrorUnknown = (WKWebExtensionDataRecordError)1;
-static const WKWebExtensionDataRecordError WKWebExtensionDataRecordErrorLocalStorageFailed = (WKWebExtensionDataRecordError)0;
-static const WKWebExtensionDataRecordError WKWebExtensionDataRecordErrorSessionStorageFailed = (WKWebExtensionDataRecordError)0;
-static const WKWebExtensionDataRecordError WKWebExtensionDataRecordErrorSynchronizedStorageFailed = (WKWebExtensionDataRecordError)0;
+static const WKWebExtensionDataRecordError WKWebExtensionDataRecordErrorLocalStorageFailed = (WKWebExtensionDataRecordError)2;
+static const WKWebExtensionDataRecordError WKWebExtensionDataRecordErrorSessionStorageFailed = (WKWebExtensionDataRecordError)3;
+static const WKWebExtensionDataRecordError WKWebExtensionDataRecordErrorSynchronizedStorageFailed = (WKWebExtensionDataRecordError)4;
 
 #ifndef BEAN_TYPEDEF_WKWebExtensionMessagePortError
 #define BEAN_TYPEDEF_WKWebExtensionMessagePortError
 typedef NSInteger WKWebExtensionMessagePortError;
 #endif
 static const WKWebExtensionMessagePortError WKWebExtensionMessagePortErrorUnknown = (WKWebExtensionMessagePortError)1;
-static const WKWebExtensionMessagePortError WKWebExtensionMessagePortErrorNotConnected = (WKWebExtensionMessagePortError)0;
-static const WKWebExtensionMessagePortError WKWebExtensionMessagePortErrorMessageInvalid = (WKWebExtensionMessagePortError)0;
+static const WKWebExtensionMessagePortError WKWebExtensionMessagePortErrorNotConnected = (WKWebExtensionMessagePortError)2;
+static const WKWebExtensionMessagePortError WKWebExtensionMessagePortErrorMessageInvalid = (WKWebExtensionMessagePortError)3;
 
 #ifndef BEAN_TYPEDEF_WKUserInterfaceDirectionPolicy
 #define BEAN_TYPEDEF_WKUserInterfaceDirectionPolicy
 typedef NSInteger WKUserInterfaceDirectionPolicy;
 #endif
 static const WKUserInterfaceDirectionPolicy WKUserInterfaceDirectionPolicyContent = (WKUserInterfaceDirectionPolicy)0;
-static const WKUserInterfaceDirectionPolicy WKUserInterfaceDirectionPolicySystem = (WKUserInterfaceDirectionPolicy)0;
+static const WKUserInterfaceDirectionPolicy WKUserInterfaceDirectionPolicySystem = (WKUserInterfaceDirectionPolicy)1;
 
 #ifndef BEAN_TYPEDEF_WKAudiovisualMediaTypes
 #define BEAN_TYPEDEF_WKAudiovisualMediaTypes
@@ -294,19 +294,19 @@ static const WKAudiovisualMediaTypes WKAudiovisualMediaTypeAll = (WKAudiovisualM
 typedef NSInteger WebViewInsertAction;
 #endif
 static const WebViewInsertAction WebViewInsertActionTyped = (WebViewInsertAction)0;
-static const WebViewInsertAction WebViewInsertActionPasted = (WebViewInsertAction)0;
-static const WebViewInsertAction WebViewInsertActionDropped = (WebViewInsertAction)0;
+static const WebViewInsertAction WebViewInsertActionPasted = (WebViewInsertAction)1;
+static const WebViewInsertAction WebViewInsertActionDropped = (WebViewInsertAction)2;
 
 #ifndef BEAN_TYPEDEF_WebNavigationType
 #define BEAN_TYPEDEF_WebNavigationType
 typedef NSInteger WebNavigationType;
 #endif
 static const WebNavigationType WebNavigationTypeLinkClicked = (WebNavigationType)0;
-static const WebNavigationType WebNavigationTypeFormSubmitted = (WebNavigationType)0;
-static const WebNavigationType WebNavigationTypeBackForward = (WebNavigationType)0;
-static const WebNavigationType WebNavigationTypeReload = (WebNavigationType)0;
-static const WebNavigationType WebNavigationTypeFormResubmitted = (WebNavigationType)0;
-static const WebNavigationType WebNavigationTypeOther = (WebNavigationType)0;
+static const WebNavigationType WebNavigationTypeFormSubmitted = (WebNavigationType)1;
+static const WebNavigationType WebNavigationTypeBackForward = (WebNavigationType)2;
+static const WebNavigationType WebNavigationTypeReload = (WebNavigationType)3;
+static const WebNavigationType WebNavigationTypeFormResubmitted = (WebNavigationType)4;
+static const WebNavigationType WebNavigationTypeOther = (WebNavigationType)5;
 
 #ifndef BEAN_TYPEDEF_WebCacheModel
 #define BEAN_TYPEDEF_WebCacheModel
@@ -338,9 +338,25 @@ static const WebDragSourceAction WebDragSourceActionSelection = (WebDragSourceAc
 static const WebDragSourceAction WebDragSourceActionAny = (WebDragSourceAction)4294967295;
 
 /* ===== forward typedefs ===== */
+#ifndef BEAN_TYPEDEF_CAAction
+#define BEAN_TYPEDEF_CAAction
+typedef bean_id CAAction;
+#endif
 #ifndef BEAN_TYPEDEF_CALayer
 #define BEAN_TYPEDEF_CALayer
 typedef bean_id CALayer;
+#endif
+#ifndef BEAN_TYPEDEF_CALayerDelegate
+#define BEAN_TYPEDEF_CALayerDelegate
+typedef bean_id CALayerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_CALayoutManager
+#define BEAN_TYPEDEF_CALayoutManager
+typedef bean_id CALayoutManager;
+#endif
+#ifndef BEAN_TYPEDEF_CAMediaTiming
+#define BEAN_TYPEDEF_CAMediaTiming
+typedef bean_id CAMediaTiming;
 #endif
 #ifndef BEAN_TYPEDEF_CAOpenGLLayer
 #define BEAN_TYPEDEF_CAOpenGLLayer
@@ -358,9 +374,33 @@ typedef bean_id CIImage;
 #define BEAN_TYPEDEF_CIVector
 typedef bean_id CIVector;
 #endif
+#ifndef BEAN_TYPEDEF_CTAdaptiveImageProviding
+#define BEAN_TYPEDEF_CTAdaptiveImageProviding
+typedef bean_id CTAdaptiveImageProviding;
+#endif
 #ifndef BEAN_TYPEDEF_NSATSTypesetter
 #define BEAN_TYPEDEF_NSATSTypesetter
 typedef bean_id NSATSTypesetter;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibility
+#define BEAN_TYPEDEF_NSAccessibility
+typedef bean_id NSAccessibility;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityButton
+#define BEAN_TYPEDEF_NSAccessibilityButton
+typedef bean_id NSAccessibilityButton;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityCheckBox
+#define BEAN_TYPEDEF_NSAccessibilityCheckBox
+typedef bean_id NSAccessibilityCheckBox;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityColor
+#define BEAN_TYPEDEF_NSAccessibilityColor
+typedef bean_id NSAccessibilityColor;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityContainsTransientUI
+#define BEAN_TYPEDEF_NSAccessibilityContainsTransientUI
+typedef bean_id NSAccessibilityContainsTransientUI;
 #endif
 #ifndef BEAN_TYPEDEF_NSAccessibilityCustomAction
 #define BEAN_TYPEDEF_NSAccessibilityCustomAction
@@ -374,6 +414,10 @@ typedef bean_id NSAccessibilityCustomRotor;
 #define BEAN_TYPEDEF_NSAccessibilityCustomRotorItemResult
 typedef bean_id NSAccessibilityCustomRotorItemResult;
 #endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityCustomRotorItemSearchDelegate
+#define BEAN_TYPEDEF_NSAccessibilityCustomRotorItemSearchDelegate
+typedef bean_id NSAccessibilityCustomRotorItemSearchDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAccessibilityCustomRotorSearchParameters
 #define BEAN_TYPEDEF_NSAccessibilityCustomRotorSearchParameters
 typedef bean_id NSAccessibilityCustomRotorSearchParameters;
@@ -381,6 +425,58 @@ typedef bean_id NSAccessibilityCustomRotorSearchParameters;
 #ifndef BEAN_TYPEDEF_NSAccessibilityElement
 #define BEAN_TYPEDEF_NSAccessibilityElement
 typedef bean_id NSAccessibilityElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityElementLoading
+#define BEAN_TYPEDEF_NSAccessibilityElementLoading
+typedef bean_id NSAccessibilityElementLoading;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityImage
+#define BEAN_TYPEDEF_NSAccessibilityImage
+typedef bean_id NSAccessibilityImage;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityLayoutArea
+#define BEAN_TYPEDEF_NSAccessibilityLayoutArea
+typedef bean_id NSAccessibilityLayoutArea;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityLayoutItem
+#define BEAN_TYPEDEF_NSAccessibilityLayoutItem
+typedef bean_id NSAccessibilityLayoutItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityNavigableStaticText
+#define BEAN_TYPEDEF_NSAccessibilityNavigableStaticText
+typedef bean_id NSAccessibilityNavigableStaticText;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityProgressIndicator
+#define BEAN_TYPEDEF_NSAccessibilityProgressIndicator
+typedef bean_id NSAccessibilityProgressIndicator;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityRadioButton
+#define BEAN_TYPEDEF_NSAccessibilityRadioButton
+typedef bean_id NSAccessibilityRadioButton;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityRow
+#define BEAN_TYPEDEF_NSAccessibilityRow
+typedef bean_id NSAccessibilityRow;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilitySlider
+#define BEAN_TYPEDEF_NSAccessibilitySlider
+typedef bean_id NSAccessibilitySlider;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityStaticText
+#define BEAN_TYPEDEF_NSAccessibilityStaticText
+typedef bean_id NSAccessibilityStaticText;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityStepper
+#define BEAN_TYPEDEF_NSAccessibilityStepper
+typedef bean_id NSAccessibilityStepper;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilitySwitch
+#define BEAN_TYPEDEF_NSAccessibilitySwitch
+typedef bean_id NSAccessibilitySwitch;
+#endif
+#ifndef BEAN_TYPEDEF_NSAccessibilityTable
+#define BEAN_TYPEDEF_NSAccessibilityTable
+typedef bean_id NSAccessibilityTable;
 #endif
 #ifndef BEAN_TYPEDEF_NSActionCell
 #define BEAN_TYPEDEF_NSActionCell
@@ -398,9 +494,17 @@ typedef bean_id NSAffineTransform;
 #define BEAN_TYPEDEF_NSAlert
 typedef bean_id NSAlert;
 #endif
+#ifndef BEAN_TYPEDEF_NSAlertDelegate
+#define BEAN_TYPEDEF_NSAlertDelegate
+typedef bean_id NSAlertDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAlignmentFeedbackFilter
 #define BEAN_TYPEDEF_NSAlignmentFeedbackFilter
 typedef bean_id NSAlignmentFeedbackFilter;
+#endif
+#ifndef BEAN_TYPEDEF_NSAnimatablePropertyContainer
+#define BEAN_TYPEDEF_NSAnimatablePropertyContainer
+typedef bean_id NSAnimatablePropertyContainer;
 #endif
 #ifndef BEAN_TYPEDEF_NSAnimation
 #define BEAN_TYPEDEF_NSAnimation
@@ -410,9 +514,17 @@ typedef bean_id NSAnimation;
 #define BEAN_TYPEDEF_NSAnimationContext
 typedef bean_id NSAnimationContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSAnimationDelegate
+#define BEAN_TYPEDEF_NSAnimationDelegate
+typedef bean_id NSAnimationDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSAppearance
 #define BEAN_TYPEDEF_NSAppearance
 typedef bean_id NSAppearance;
+#endif
+#ifndef BEAN_TYPEDEF_NSAppearanceCustomization
+#define BEAN_TYPEDEF_NSAppearanceCustomization
+typedef bean_id NSAppearanceCustomization;
 #endif
 #ifndef BEAN_TYPEDEF_NSAppleEventDescriptor
 #define BEAN_TYPEDEF_NSAppleEventDescriptor
@@ -429,6 +541,10 @@ typedef bean_id NSAppleScript;
 #ifndef BEAN_TYPEDEF_NSApplication
 #define BEAN_TYPEDEF_NSApplication
 typedef bean_id NSApplication;
+#endif
+#ifndef BEAN_TYPEDEF_NSApplicationDelegate
+#define BEAN_TYPEDEF_NSApplicationDelegate
+typedef bean_id NSApplicationDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSArchiver
 #define BEAN_TYPEDEF_NSArchiver
@@ -498,6 +614,10 @@ typedef bean_id NSBrowser;
 #define BEAN_TYPEDEF_NSBrowserCell
 typedef bean_id NSBrowserCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSBrowserDelegate
+#define BEAN_TYPEDEF_NSBrowserDelegate
+typedef bean_id NSBrowserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSBundle
 #define BEAN_TYPEDEF_NSBundle
 typedef bean_id NSBundle;
@@ -530,6 +650,10 @@ typedef bean_id NSCIImageRep;
 #define BEAN_TYPEDEF_NSCache
 typedef bean_id NSCache;
 #endif
+#ifndef BEAN_TYPEDEF_NSCacheDelegate
+#define BEAN_TYPEDEF_NSCacheDelegate
+typedef bean_id NSCacheDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCachedImageRep
 #define BEAN_TYPEDEF_NSCachedImageRep
 typedef bean_id NSCachedImageRep;
@@ -550,9 +674,17 @@ typedef bean_id NSCalendarDate;
 #define BEAN_TYPEDEF_NSCandidateListTouchBarItem
 typedef bean_id NSCandidateListTouchBarItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSCandidateListTouchBarItemDelegate
+#define BEAN_TYPEDEF_NSCandidateListTouchBarItemDelegate
+typedef bean_id NSCandidateListTouchBarItemDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCell
 #define BEAN_TYPEDEF_NSCell
 typedef bean_id NSCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSChangeSpelling
+#define BEAN_TYPEDEF_NSChangeSpelling
+typedef bean_id NSChangeSpelling;
 #endif
 #ifndef BEAN_TYPEDEF_NSCharacterSet
 #define BEAN_TYPEDEF_NSCharacterSet
@@ -578,9 +710,21 @@ typedef bean_id NSCloneCommand;
 #define BEAN_TYPEDEF_NSCloseCommand
 typedef bean_id NSCloseCommand;
 #endif
+#ifndef BEAN_TYPEDEF_NSCloudSharingServiceDelegate
+#define BEAN_TYPEDEF_NSCloudSharingServiceDelegate
+typedef bean_id NSCloudSharingServiceDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCloudSharingValidation
+#define BEAN_TYPEDEF_NSCloudSharingValidation
+typedef bean_id NSCloudSharingValidation;
+#endif
 #ifndef BEAN_TYPEDEF_NSCoder
 #define BEAN_TYPEDEF_NSCoder
 typedef bean_id NSCoder;
+#endif
+#ifndef BEAN_TYPEDEF_NSCoding
+#define BEAN_TYPEDEF_NSCoding
+typedef bean_id NSCoding;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutAnchor
 #define BEAN_TYPEDEF_NSCollectionLayoutAnchor
@@ -589,6 +733,10 @@ typedef bean_id NSCollectionLayoutAnchor;
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutBoundarySupplementaryItem
 #define BEAN_TYPEDEF_NSCollectionLayoutBoundarySupplementaryItem
 typedef bean_id NSCollectionLayoutBoundarySupplementaryItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutContainer
+#define BEAN_TYPEDEF_NSCollectionLayoutContainer
+typedef bean_id NSCollectionLayoutContainer;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutDecorationItem
 #define BEAN_TYPEDEF_NSCollectionLayoutDecorationItem
@@ -601,6 +749,10 @@ typedef bean_id NSCollectionLayoutDimension;
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutEdgeSpacing
 #define BEAN_TYPEDEF_NSCollectionLayoutEdgeSpacing
 typedef bean_id NSCollectionLayoutEdgeSpacing;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutEnvironment
+#define BEAN_TYPEDEF_NSCollectionLayoutEnvironment
+typedef bean_id NSCollectionLayoutEnvironment;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionLayoutGroup
 #define BEAN_TYPEDEF_NSCollectionLayoutGroup
@@ -630,6 +782,10 @@ typedef bean_id NSCollectionLayoutSpacing;
 #define BEAN_TYPEDEF_NSCollectionLayoutSupplementaryItem
 typedef bean_id NSCollectionLayoutSupplementaryItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionLayoutVisibleItem
+#define BEAN_TYPEDEF_NSCollectionLayoutVisibleItem
+typedef bean_id NSCollectionLayoutVisibleItem;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionView
 #define BEAN_TYPEDEF_NSCollectionView
 typedef bean_id NSCollectionView;
@@ -642,9 +798,25 @@ typedef bean_id NSCollectionViewCompositionalLayout;
 #define BEAN_TYPEDEF_NSCollectionViewCompositionalLayoutConfiguration
 typedef bean_id NSCollectionViewCompositionalLayoutConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDataSource
+#define BEAN_TYPEDEF_NSCollectionViewDataSource
+typedef bean_id NSCollectionViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDelegate
+#define BEAN_TYPEDEF_NSCollectionViewDelegate
+typedef bean_id NSCollectionViewDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewDelegateFlowLayout
+#define BEAN_TYPEDEF_NSCollectionViewDelegateFlowLayout
+typedef bean_id NSCollectionViewDelegateFlowLayout;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewDiffableDataSource
 #define BEAN_TYPEDEF_NSCollectionViewDiffableDataSource
 typedef bean_id NSCollectionViewDiffableDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewElement
+#define BEAN_TYPEDEF_NSCollectionViewElement
+typedef bean_id NSCollectionViewElement;
 #endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewFlowLayout
 #define BEAN_TYPEDEF_NSCollectionViewFlowLayout
@@ -674,6 +846,14 @@ typedef bean_id NSCollectionViewLayoutAttributes;
 #define BEAN_TYPEDEF_NSCollectionViewLayoutInvalidationContext
 typedef bean_id NSCollectionViewLayoutInvalidationContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewPrefetching
+#define BEAN_TYPEDEF_NSCollectionViewPrefetching
+typedef bean_id NSCollectionViewPrefetching;
+#endif
+#ifndef BEAN_TYPEDEF_NSCollectionViewSectionHeaderView
+#define BEAN_TYPEDEF_NSCollectionViewSectionHeaderView
+typedef bean_id NSCollectionViewSectionHeaderView;
+#endif
 #ifndef BEAN_TYPEDEF_NSCollectionViewTransitionLayout
 #define BEAN_TYPEDEF_NSCollectionViewTransitionLayout
 typedef bean_id NSCollectionViewTransitionLayout;
@@ -685,6 +865,10 @@ typedef bean_id NSCollectionViewUpdateItem;
 #ifndef BEAN_TYPEDEF_NSColor
 #define BEAN_TYPEDEF_NSColor
 typedef bean_id NSColor;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorChanging
+#define BEAN_TYPEDEF_NSColorChanging
+typedef bean_id NSColorChanging;
 #endif
 #ifndef BEAN_TYPEDEF_NSColorList
 #define BEAN_TYPEDEF_NSColorList
@@ -701,6 +885,14 @@ typedef bean_id NSColorPicker;
 #ifndef BEAN_TYPEDEF_NSColorPickerTouchBarItem
 #define BEAN_TYPEDEF_NSColorPickerTouchBarItem
 typedef bean_id NSColorPickerTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorPickingCustom
+#define BEAN_TYPEDEF_NSColorPickingCustom
+typedef bean_id NSColorPickingCustom;
+#endif
+#ifndef BEAN_TYPEDEF_NSColorPickingDefault
+#define BEAN_TYPEDEF_NSColorPickingDefault
+typedef bean_id NSColorPickingDefault;
 #endif
 #ifndef BEAN_TYPEDEF_NSColorSampler
 #define BEAN_TYPEDEF_NSColorSampler
@@ -721,6 +913,18 @@ typedef bean_id NSComboBox;
 #ifndef BEAN_TYPEDEF_NSComboBoxCell
 #define BEAN_TYPEDEF_NSComboBoxCell
 typedef bean_id NSComboBoxCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxCellDataSource
+#define BEAN_TYPEDEF_NSComboBoxCellDataSource
+typedef bean_id NSComboBoxCellDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxDataSource
+#define BEAN_TYPEDEF_NSComboBoxDataSource
+typedef bean_id NSComboBoxDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSComboBoxDelegate
+#define BEAN_TYPEDEF_NSComboBoxDelegate
+typedef bean_id NSComboBoxDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSComboButton
 #define BEAN_TYPEDEF_NSComboButton
@@ -746,13 +950,25 @@ typedef bean_id NSConditionLock;
 #define BEAN_TYPEDEF_NSConnection
 typedef bean_id NSConnection;
 #endif
+#ifndef BEAN_TYPEDEF_NSConnectionDelegate
+#define BEAN_TYPEDEF_NSConnectionDelegate
+typedef bean_id NSConnectionDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSControl
 #define BEAN_TYPEDEF_NSControl
 typedef bean_id NSControl;
 #endif
+#ifndef BEAN_TYPEDEF_NSControlTextEditingDelegate
+#define BEAN_TYPEDEF_NSControlTextEditingDelegate
+typedef bean_id NSControlTextEditingDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSController
 #define BEAN_TYPEDEF_NSController
 typedef bean_id NSController;
+#endif
+#ifndef BEAN_TYPEDEF_NSCopying
+#define BEAN_TYPEDEF_NSCopying
+typedef bean_id NSCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSCountedSet
 #define BEAN_TYPEDEF_NSCountedSet
@@ -818,9 +1034,17 @@ typedef bean_id NSDatePicker;
 #define BEAN_TYPEDEF_NSDatePickerCell
 typedef bean_id NSDatePickerCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSDatePickerCellDelegate
+#define BEAN_TYPEDEF_NSDatePickerCellDelegate
+typedef bean_id NSDatePickerCellDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumber
 #define BEAN_TYPEDEF_NSDecimalNumber
 typedef bean_id NSDecimalNumber;
+#endif
+#ifndef BEAN_TYPEDEF_NSDecimalNumberBehaviors
+#define BEAN_TYPEDEF_NSDecimalNumberBehaviors
+typedef bean_id NSDecimalNumberBehaviors;
 #endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumberHandler
 #define BEAN_TYPEDEF_NSDecimalNumberHandler
@@ -854,6 +1078,10 @@ typedef bean_id NSDimension;
 #define BEAN_TYPEDEF_NSDirectoryEnumerator
 typedef bean_id NSDirectoryEnumerator;
 #endif
+#ifndef BEAN_TYPEDEF_NSDiscardableContent
+#define BEAN_TYPEDEF_NSDiscardableContent
+typedef bean_id NSDiscardableContent;
+#endif
 #ifndef BEAN_TYPEDEF_NSDistantObject
 #define BEAN_TYPEDEF_NSDistantObject
 typedef bean_id NSDistantObject;
@@ -874,6 +1102,10 @@ typedef bean_id NSDistributedNotificationCenter;
 #define BEAN_TYPEDEF_NSDockTile
 typedef bean_id NSDockTile;
 #endif
+#ifndef BEAN_TYPEDEF_NSDockTilePlugIn
+#define BEAN_TYPEDEF_NSDockTilePlugIn
+typedef bean_id NSDockTilePlugIn;
+#endif
 #ifndef BEAN_TYPEDEF_NSDocument
 #define BEAN_TYPEDEF_NSDocument
 typedef bean_id NSDocument;
@@ -882,9 +1114,17 @@ typedef bean_id NSDocument;
 #define BEAN_TYPEDEF_NSDocumentController
 typedef bean_id NSDocumentController;
 #endif
+#ifndef BEAN_TYPEDEF_NSDraggingDestination
+#define BEAN_TYPEDEF_NSDraggingDestination
+typedef bean_id NSDraggingDestination;
+#endif
 #ifndef BEAN_TYPEDEF_NSDraggingImageComponent
 #define BEAN_TYPEDEF_NSDraggingImageComponent
 typedef bean_id NSDraggingImageComponent;
+#endif
+#ifndef BEAN_TYPEDEF_NSDraggingInfo
+#define BEAN_TYPEDEF_NSDraggingInfo
+typedef bean_id NSDraggingInfo;
 #endif
 #ifndef BEAN_TYPEDEF_NSDraggingItem
 #define BEAN_TYPEDEF_NSDraggingItem
@@ -894,13 +1134,29 @@ typedef bean_id NSDraggingItem;
 #define BEAN_TYPEDEF_NSDraggingSession
 typedef bean_id NSDraggingSession;
 #endif
+#ifndef BEAN_TYPEDEF_NSDraggingSource
+#define BEAN_TYPEDEF_NSDraggingSource
+typedef bean_id NSDraggingSource;
+#endif
 #ifndef BEAN_TYPEDEF_NSDrawer
 #define BEAN_TYPEDEF_NSDrawer
 typedef bean_id NSDrawer;
 #endif
+#ifndef BEAN_TYPEDEF_NSDrawerDelegate
+#define BEAN_TYPEDEF_NSDrawerDelegate
+typedef bean_id NSDrawerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSEPSImageRep
 #define BEAN_TYPEDEF_NSEPSImageRep
 typedef bean_id NSEPSImageRep;
+#endif
+#ifndef BEAN_TYPEDEF_NSEditor
+#define BEAN_TYPEDEF_NSEditor
+typedef bean_id NSEditor;
+#endif
+#ifndef BEAN_TYPEDEF_NSEditorRegistration
+#define BEAN_TYPEDEF_NSEditorRegistration
+typedef bean_id NSEditorRegistration;
 #endif
 #ifndef BEAN_TYPEDEF_NSEnergyFormatter
 #define BEAN_TYPEDEF_NSEnergyFormatter
@@ -934,6 +1190,14 @@ typedef bean_id NSExtensionContext;
 #define BEAN_TYPEDEF_NSExtensionItem
 typedef bean_id NSExtensionItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSExtensionRequestHandling
+#define BEAN_TYPEDEF_NSExtensionRequestHandling
+typedef bean_id NSExtensionRequestHandling;
+#endif
+#ifndef BEAN_TYPEDEF_NSFastEnumeration
+#define BEAN_TYPEDEF_NSFastEnumeration
+typedef bean_id NSFastEnumeration;
+#endif
 #ifndef BEAN_TYPEDEF_NSFileAccessIntent
 #define BEAN_TYPEDEF_NSFileAccessIntent
 typedef bean_id NSFileAccessIntent;
@@ -950,9 +1214,21 @@ typedef bean_id NSFileHandle;
 #define BEAN_TYPEDEF_NSFileManager
 typedef bean_id NSFileManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSFileManagerDelegate
+#define BEAN_TYPEDEF_NSFileManagerDelegate
+typedef bean_id NSFileManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePresenter
+#define BEAN_TYPEDEF_NSFilePresenter
+typedef bean_id NSFilePresenter;
+#endif
 #ifndef BEAN_TYPEDEF_NSFilePromiseProvider
 #define BEAN_TYPEDEF_NSFilePromiseProvider
 typedef bean_id NSFilePromiseProvider;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePromiseProviderDelegate
+#define BEAN_TYPEDEF_NSFilePromiseProviderDelegate
+typedef bean_id NSFilePromiseProviderDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSFilePromiseReceiver
 #define BEAN_TYPEDEF_NSFilePromiseReceiver
@@ -981,6 +1257,10 @@ typedef bean_id NSFont;
 #ifndef BEAN_TYPEDEF_NSFontAssetRequest
 #define BEAN_TYPEDEF_NSFontAssetRequest
 typedef bean_id NSFontAssetRequest;
+#endif
+#ifndef BEAN_TYPEDEF_NSFontChanging
+#define BEAN_TYPEDEF_NSFontChanging
+typedef bean_id NSFontChanging;
 #endif
 #ifndef BEAN_TYPEDEF_NSFontCollection
 #define BEAN_TYPEDEF_NSFontCollection
@@ -1018,6 +1298,10 @@ typedef bean_id NSGarbageCollector;
 #define BEAN_TYPEDEF_NSGestureRecognizer
 typedef bean_id NSGestureRecognizer;
 #endif
+#ifndef BEAN_TYPEDEF_NSGestureRecognizerDelegate
+#define BEAN_TYPEDEF_NSGestureRecognizerDelegate
+typedef bean_id NSGestureRecognizerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSGlassEffectContainerView
 #define BEAN_TYPEDEF_NSGlassEffectContainerView
 typedef bean_id NSGlassEffectContainerView;
@@ -1033,6 +1317,10 @@ typedef bean_id NSGlyphGenerator;
 #ifndef BEAN_TYPEDEF_NSGlyphInfo
 #define BEAN_TYPEDEF_NSGlyphInfo
 typedef bean_id NSGlyphInfo;
+#endif
+#ifndef BEAN_TYPEDEF_NSGlyphStorage
+#define BEAN_TYPEDEF_NSGlyphStorage
+typedef bean_id NSGlyphStorage;
 #endif
 #ifndef BEAN_TYPEDEF_NSGradient
 #define BEAN_TYPEDEF_NSGradient
@@ -1078,6 +1366,10 @@ typedef bean_id NSHTTPURLResponse;
 #define BEAN_TYPEDEF_NSHapticFeedbackManager
 typedef bean_id NSHapticFeedbackManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSHapticFeedbackPerformer
+#define BEAN_TYPEDEF_NSHapticFeedbackPerformer
+typedef bean_id NSHapticFeedbackPerformer;
+#endif
 #ifndef BEAN_TYPEDEF_NSHashTable
 #define BEAN_TYPEDEF_NSHashTable
 typedef bean_id NSHashTable;
@@ -1094,6 +1386,10 @@ typedef bean_id NSHost;
 #define BEAN_TYPEDEF_NSISO8601DateFormatter
 typedef bean_id NSISO8601DateFormatter;
 #endif
+#ifndef BEAN_TYPEDEF_NSIgnoreMisspelledWords
+#define BEAN_TYPEDEF_NSIgnoreMisspelledWords
+typedef bean_id NSIgnoreMisspelledWords;
+#endif
 #ifndef BEAN_TYPEDEF_NSImage
 #define BEAN_TYPEDEF_NSImage
 typedef bean_id NSImage;
@@ -1101,6 +1397,10 @@ typedef bean_id NSImage;
 #ifndef BEAN_TYPEDEF_NSImageCell
 #define BEAN_TYPEDEF_NSImageCell
 typedef bean_id NSImageCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSImageDelegate
+#define BEAN_TYPEDEF_NSImageDelegate
+typedef bean_id NSImageDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSImageRep
 #define BEAN_TYPEDEF_NSImageRep
@@ -1142,6 +1442,14 @@ typedef bean_id NSInputManager;
 #define BEAN_TYPEDEF_NSInputServer
 typedef bean_id NSInputServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSInputServerMouseTracker
+#define BEAN_TYPEDEF_NSInputServerMouseTracker
+typedef bean_id NSInputServerMouseTracker;
+#endif
+#ifndef BEAN_TYPEDEF_NSInputServiceProvider
+#define BEAN_TYPEDEF_NSInputServiceProvider
+typedef bean_id NSInputServiceProvider;
+#endif
 #ifndef BEAN_TYPEDEF_NSInputStream
 #define BEAN_TYPEDEF_NSInputStream
 typedef bean_id NSInputStream;
@@ -1162,6 +1470,14 @@ typedef bean_id NSItemBadge;
 #define BEAN_TYPEDEF_NSItemProvider
 typedef bean_id NSItemProvider;
 #endif
+#ifndef BEAN_TYPEDEF_NSItemProviderReading
+#define BEAN_TYPEDEF_NSItemProviderReading
+typedef bean_id NSItemProviderReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSItemProviderWriting
+#define BEAN_TYPEDEF_NSItemProviderWriting
+typedef bean_id NSItemProviderWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSJSONSerialization
 #define BEAN_TYPEDEF_NSJSONSerialization
 typedef bean_id NSJSONSerialization;
@@ -1178,9 +1494,17 @@ typedef bean_id NSKeyValueSharedObserversSnapshot;
 #define BEAN_TYPEDEF_NSKeyedArchiver
 typedef bean_id NSKeyedArchiver;
 #endif
+#ifndef BEAN_TYPEDEF_NSKeyedArchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedArchiverDelegate
+typedef bean_id NSKeyedArchiverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiver
 #define BEAN_TYPEDEF_NSKeyedUnarchiver
 typedef bean_id NSKeyedUnarchiver;
+#endif
+#ifndef BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+typedef bean_id NSKeyedUnarchiverDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLayoutAnchor
 #define BEAN_TYPEDEF_NSLayoutAnchor
@@ -1201,6 +1525,10 @@ typedef bean_id NSLayoutGuide;
 #ifndef BEAN_TYPEDEF_NSLayoutManager
 #define BEAN_TYPEDEF_NSLayoutManager
 typedef bean_id NSLayoutManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSLayoutManagerDelegate
+#define BEAN_TYPEDEF_NSLayoutManagerDelegate
+typedef bean_id NSLayoutManagerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLayoutXAxisAnchor
 #define BEAN_TYPEDEF_NSLayoutXAxisAnchor
@@ -1242,6 +1570,10 @@ typedef bean_id NSLocalizedNumberFormatRule;
 #define BEAN_TYPEDEF_NSLock
 typedef bean_id NSLock;
 #endif
+#ifndef BEAN_TYPEDEF_NSLocking
+#define BEAN_TYPEDEF_NSLocking
+typedef bean_id NSLocking;
+#endif
 #ifndef BEAN_TYPEDEF_NSLogicalTest
 #define BEAN_TYPEDEF_NSLogicalTest
 typedef bean_id NSLogicalTest;
@@ -1253,6 +1585,10 @@ typedef bean_id NSMachBootstrapServer;
 #ifndef BEAN_TYPEDEF_NSMachPort
 #define BEAN_TYPEDEF_NSMachPort
 typedef bean_id NSMachPort;
+#endif
+#ifndef BEAN_TYPEDEF_NSMachPortDelegate
+#define BEAN_TYPEDEF_NSMachPortDelegate
+typedef bean_id NSMachPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMagnificationGestureRecognizer
 #define BEAN_TYPEDEF_NSMagnificationGestureRecognizer
@@ -1290,6 +1626,10 @@ typedef bean_id NSMediaLibraryBrowserController;
 #define BEAN_TYPEDEF_NSMenu
 typedef bean_id NSMenu;
 #endif
+#ifndef BEAN_TYPEDEF_NSMenuDelegate
+#define BEAN_TYPEDEF_NSMenuDelegate
+typedef bean_id NSMenuDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSMenuItem
 #define BEAN_TYPEDEF_NSMenuItem
 typedef bean_id NSMenuItem;
@@ -1301,6 +1641,10 @@ typedef bean_id NSMenuItemBadge;
 #ifndef BEAN_TYPEDEF_NSMenuItemCell
 #define BEAN_TYPEDEF_NSMenuItemCell
 typedef bean_id NSMenuItemCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSMenuItemValidation
+#define BEAN_TYPEDEF_NSMenuItemValidation
+typedef bean_id NSMenuItemValidation;
 #endif
 #ifndef BEAN_TYPEDEF_NSMenuToolbarItem
 #define BEAN_TYPEDEF_NSMenuToolbarItem
@@ -1321,6 +1665,10 @@ typedef bean_id NSMetadataQuery;
 #ifndef BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 #define BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 typedef bean_id NSMetadataQueryAttributeValueTuple;
+#endif
+#ifndef BEAN_TYPEDEF_NSMetadataQueryDelegate
+#define BEAN_TYPEDEF_NSMetadataQueryDelegate
+typedef bean_id NSMetadataQueryDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMetadataQueryResultGroup
 #define BEAN_TYPEDEF_NSMetadataQueryResultGroup
@@ -1361,6 +1709,10 @@ typedef bean_id NSMutableAttributedString;
 #ifndef BEAN_TYPEDEF_NSMutableCharacterSet
 #define BEAN_TYPEDEF_NSMutableCharacterSet
 typedef bean_id NSMutableCharacterSet;
+#endif
+#ifndef BEAN_TYPEDEF_NSMutableCopying
+#define BEAN_TYPEDEF_NSMutableCopying
+typedef bean_id NSMutableCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSMutableData
 #define BEAN_TYPEDEF_NSMutableData
@@ -1409,6 +1761,14 @@ typedef bean_id NSNetService;
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowser
 #define BEAN_TYPEDEF_NSNetServiceBrowser
 typedef bean_id NSNetServiceBrowser;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+#define BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+typedef bean_id NSNetServiceBrowserDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceDelegate
+#define BEAN_TYPEDEF_NSNetServiceDelegate
+typedef bean_id NSNetServiceDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSNib
 #define BEAN_TYPEDEF_NSNib
@@ -1466,6 +1826,10 @@ typedef bean_id NSOpenGLView;
 #define BEAN_TYPEDEF_NSOpenPanel
 typedef bean_id NSOpenPanel;
 #endif
+#ifndef BEAN_TYPEDEF_NSOpenSavePanelDelegate
+#define BEAN_TYPEDEF_NSOpenSavePanelDelegate
+typedef bean_id NSOpenSavePanelDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSOperation
 #define BEAN_TYPEDEF_NSOperation
 typedef bean_id NSOperation;
@@ -1494,6 +1858,14 @@ typedef bean_id NSOrthography;
 #define BEAN_TYPEDEF_NSOutlineView
 typedef bean_id NSOutlineView;
 #endif
+#ifndef BEAN_TYPEDEF_NSOutlineViewDataSource
+#define BEAN_TYPEDEF_NSOutlineViewDataSource
+typedef bean_id NSOutlineViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSOutlineViewDelegate
+#define BEAN_TYPEDEF_NSOutlineViewDelegate
+typedef bean_id NSOutlineViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSOutputStream
 #define BEAN_TYPEDEF_NSOutputStream
 typedef bean_id NSOutputStream;
@@ -1517,6 +1889,10 @@ typedef bean_id NSPICTImageRep;
 #ifndef BEAN_TYPEDEF_NSPageController
 #define BEAN_TYPEDEF_NSPageController
 typedef bean_id NSPageController;
+#endif
+#ifndef BEAN_TYPEDEF_NSPageControllerDelegate
+#define BEAN_TYPEDEF_NSPageControllerDelegate
+typedef bean_id NSPageControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPageLayout
 #define BEAN_TYPEDEF_NSPageLayout
@@ -1542,9 +1918,29 @@ typedef bean_id NSPasteboard;
 #define BEAN_TYPEDEF_NSPasteboardItem
 typedef bean_id NSPasteboardItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSPasteboardItemDataProvider
+#define BEAN_TYPEDEF_NSPasteboardItemDataProvider
+typedef bean_id NSPasteboardItemDataProvider;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardReading
+#define BEAN_TYPEDEF_NSPasteboardReading
+typedef bean_id NSPasteboardReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardTypeOwner
+#define BEAN_TYPEDEF_NSPasteboardTypeOwner
+typedef bean_id NSPasteboardTypeOwner;
+#endif
+#ifndef BEAN_TYPEDEF_NSPasteboardWriting
+#define BEAN_TYPEDEF_NSPasteboardWriting
+typedef bean_id NSPasteboardWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPathCell
 #define BEAN_TYPEDEF_NSPathCell
 typedef bean_id NSPathCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSPathCellDelegate
+#define BEAN_TYPEDEF_NSPathCellDelegate
+typedef bean_id NSPathCellDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPathComponentCell
 #define BEAN_TYPEDEF_NSPathComponentCell
@@ -1553,6 +1949,10 @@ typedef bean_id NSPathComponentCell;
 #ifndef BEAN_TYPEDEF_NSPathControl
 #define BEAN_TYPEDEF_NSPathControl
 typedef bean_id NSPathControl;
+#endif
+#ifndef BEAN_TYPEDEF_NSPathControlDelegate
+#define BEAN_TYPEDEF_NSPathControlDelegate
+typedef bean_id NSPathControlDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPathControlItem
 #define BEAN_TYPEDEF_NSPathControlItem
@@ -1598,6 +1998,10 @@ typedef bean_id NSPopUpButtonCell;
 #define BEAN_TYPEDEF_NSPopover
 typedef bean_id NSPopover;
 #endif
+#ifndef BEAN_TYPEDEF_NSPopoverDelegate
+#define BEAN_TYPEDEF_NSPopoverDelegate
+typedef bean_id NSPopoverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSPopoverTouchBarItem
 #define BEAN_TYPEDEF_NSPopoverTouchBarItem
 typedef bean_id NSPopoverTouchBarItem;
@@ -1609,6 +2013,10 @@ typedef bean_id NSPort;
 #ifndef BEAN_TYPEDEF_NSPortCoder
 #define BEAN_TYPEDEF_NSPortCoder
 typedef bean_id NSPortCoder;
+#endif
+#ifndef BEAN_TYPEDEF_NSPortDelegate
+#define BEAN_TYPEDEF_NSPortDelegate
+typedef bean_id NSPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSPortMessage
 #define BEAN_TYPEDEF_NSPortMessage
@@ -1646,6 +2054,10 @@ typedef bean_id NSPressGestureRecognizer;
 #define BEAN_TYPEDEF_NSPressureConfiguration
 typedef bean_id NSPressureConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSPreviewRepresentableActivityItem
+#define BEAN_TYPEDEF_NSPreviewRepresentableActivityItem
+typedef bean_id NSPreviewRepresentableActivityItem;
+#endif
 #ifndef BEAN_TYPEDEF_NSPreviewRepresentingActivityItem
 #define BEAN_TYPEDEF_NSPreviewRepresentingActivityItem
 typedef bean_id NSPreviewRepresentingActivityItem;
@@ -1661,6 +2073,10 @@ typedef bean_id NSPrintOperation;
 #ifndef BEAN_TYPEDEF_NSPrintPanel
 #define BEAN_TYPEDEF_NSPrintPanel
 typedef bean_id NSPrintPanel;
+#endif
+#ifndef BEAN_TYPEDEF_NSPrintPanelAccessorizing
+#define BEAN_TYPEDEF_NSPrintPanelAccessorizing
+typedef bean_id NSPrintPanelAccessorizing;
 #endif
 #ifndef BEAN_TYPEDEF_NSPrinter
 #define BEAN_TYPEDEF_NSPrinter
@@ -1678,6 +2094,10 @@ typedef bean_id NSProgress;
 #define BEAN_TYPEDEF_NSProgressIndicator
 typedef bean_id NSProgressIndicator;
 #endif
+#ifndef BEAN_TYPEDEF_NSProgressReporting
+#define BEAN_TYPEDEF_NSProgressReporting
+typedef bean_id NSProgressReporting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPropertyDescription
 #define BEAN_TYPEDEF_NSPropertyDescription
 typedef bean_id NSPropertyDescription;
@@ -1693,6 +2113,10 @@ typedef bean_id NSProtocolChecker;
 #ifndef BEAN_TYPEDEF_NSProxy
 #define BEAN_TYPEDEF_NSProxy
 typedef bean_id NSProxy;
+#endif
+#ifndef BEAN_TYPEDEF_NSPurgeableData
+#define BEAN_TYPEDEF_NSPurgeableData
+typedef bean_id NSPurgeableData;
 #endif
 #ifndef BEAN_TYPEDEF_NSQuitCommand
 #define BEAN_TYPEDEF_NSQuitCommand
@@ -1729,6 +2153,10 @@ typedef bean_id NSRotationGestureRecognizer;
 #ifndef BEAN_TYPEDEF_NSRuleEditor
 #define BEAN_TYPEDEF_NSRuleEditor
 typedef bean_id NSRuleEditor;
+#endif
+#ifndef BEAN_TYPEDEF_NSRuleEditorDelegate
+#define BEAN_TYPEDEF_NSRuleEditorDelegate
+typedef bean_id NSRuleEditorDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSRulerMarker
 #define BEAN_TYPEDEF_NSRulerMarker
@@ -1810,9 +2238,21 @@ typedef bean_id NSScrubber;
 #define BEAN_TYPEDEF_NSScrubberArrangedView
 typedef bean_id NSScrubberArrangedView;
 #endif
+#ifndef BEAN_TYPEDEF_NSScrubberDataSource
+#define BEAN_TYPEDEF_NSScrubberDataSource
+typedef bean_id NSScrubberDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSScrubberDelegate
+#define BEAN_TYPEDEF_NSScrubberDelegate
+typedef bean_id NSScrubberDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSScrubberFlowLayout
 #define BEAN_TYPEDEF_NSScrubberFlowLayout
 typedef bean_id NSScrubberFlowLayout;
+#endif
+#ifndef BEAN_TYPEDEF_NSScrubberFlowLayoutDelegate
+#define BEAN_TYPEDEF_NSScrubberFlowLayoutDelegate
+typedef bean_id NSScrubberFlowLayoutDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSScrubberImageItemView
 #define BEAN_TYPEDEF_NSScrubberImageItemView
@@ -1846,9 +2286,17 @@ typedef bean_id NSSearchField;
 #define BEAN_TYPEDEF_NSSearchFieldCell
 typedef bean_id NSSearchFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSSearchFieldDelegate
+#define BEAN_TYPEDEF_NSSearchFieldDelegate
+typedef bean_id NSSearchFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSearchToolbarItem
 #define BEAN_TYPEDEF_NSSearchToolbarItem
 typedef bean_id NSSearchToolbarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSSecureCoding
+#define BEAN_TYPEDEF_NSSecureCoding
+typedef bean_id NSSecureCoding;
 #endif
 #ifndef BEAN_TYPEDEF_NSSecureTextFieldCell
 #define BEAN_TYPEDEF_NSSecureTextFieldCell
@@ -1865,6 +2313,14 @@ typedef bean_id NSSegmentedCell;
 #ifndef BEAN_TYPEDEF_NSSegmentedControl
 #define BEAN_TYPEDEF_NSSegmentedControl
 typedef bean_id NSSegmentedControl;
+#endif
+#ifndef BEAN_TYPEDEF_NSSeguePerforming
+#define BEAN_TYPEDEF_NSSeguePerforming
+typedef bean_id NSSeguePerforming;
+#endif
+#ifndef BEAN_TYPEDEF_NSServicesMenuRequestor
+#define BEAN_TYPEDEF_NSServicesMenuRequestor
+typedef bean_id NSServicesMenuRequestor;
 #endif
 #ifndef BEAN_TYPEDEF_NSSet
 #define BEAN_TYPEDEF_NSSet
@@ -1886,17 +2342,33 @@ typedef bean_id NSSharingCollaborationModeRestriction;
 #define BEAN_TYPEDEF_NSSharingService
 typedef bean_id NSSharingService;
 #endif
+#ifndef BEAN_TYPEDEF_NSSharingServiceDelegate
+#define BEAN_TYPEDEF_NSSharingServiceDelegate
+typedef bean_id NSSharingServiceDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePicker
 #define BEAN_TYPEDEF_NSSharingServicePicker
 typedef bean_id NSSharingServicePicker;
+#endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerDelegate
+typedef bean_id NSSharingServicePickerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePickerToolbarItem
 #define BEAN_TYPEDEF_NSSharingServicePickerToolbarItem
 typedef bean_id NSSharingServicePickerToolbarItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerToolbarItemDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerToolbarItemDelegate
+typedef bean_id NSSharingServicePickerToolbarItemDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSharingServicePickerTouchBarItem
 #define BEAN_TYPEDEF_NSSharingServicePickerTouchBarItem
 typedef bean_id NSSharingServicePickerTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSSharingServicePickerTouchBarItemDelegate
+#define BEAN_TYPEDEF_NSSharingServicePickerTouchBarItemDelegate
+typedef bean_id NSSharingServicePickerTouchBarItemDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSlider
 #define BEAN_TYPEDEF_NSSlider
@@ -1934,6 +2406,10 @@ typedef bean_id NSSortDescriptor;
 #define BEAN_TYPEDEF_NSSound
 typedef bean_id NSSound;
 #endif
+#ifndef BEAN_TYPEDEF_NSSoundDelegate
+#define BEAN_TYPEDEF_NSSoundDelegate
+typedef bean_id NSSoundDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSpecifierTest
 #define BEAN_TYPEDEF_NSSpecifierTest
 typedef bean_id NSSpecifierTest;
@@ -1942,9 +2418,17 @@ typedef bean_id NSSpecifierTest;
 #define BEAN_TYPEDEF_NSSpeechRecognizer
 typedef bean_id NSSpeechRecognizer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpeechRecognizerDelegate
+#define BEAN_TYPEDEF_NSSpeechRecognizerDelegate
+typedef bean_id NSSpeechRecognizerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSpeechSynthesizer
 #define BEAN_TYPEDEF_NSSpeechSynthesizer
 typedef bean_id NSSpeechSynthesizer;
+#endif
+#ifndef BEAN_TYPEDEF_NSSpeechSynthesizerDelegate
+#define BEAN_TYPEDEF_NSSpeechSynthesizerDelegate
+typedef bean_id NSSpeechSynthesizerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSpellChecker
 #define BEAN_TYPEDEF_NSSpellChecker
@@ -1954,6 +2438,10 @@ typedef bean_id NSSpellChecker;
 #define BEAN_TYPEDEF_NSSpellServer
 typedef bean_id NSSpellServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpellServerDelegate
+#define BEAN_TYPEDEF_NSSpellServerDelegate
+typedef bean_id NSSpellServerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSSplitView
 #define BEAN_TYPEDEF_NSSplitView
 typedef bean_id NSSplitView;
@@ -1961,6 +2449,10 @@ typedef bean_id NSSplitView;
 #ifndef BEAN_TYPEDEF_NSSplitViewController
 #define BEAN_TYPEDEF_NSSplitViewController
 typedef bean_id NSSplitViewController;
+#endif
+#ifndef BEAN_TYPEDEF_NSSplitViewDelegate
+#define BEAN_TYPEDEF_NSSplitViewDelegate
+typedef bean_id NSSplitViewDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSSplitViewItem
 #define BEAN_TYPEDEF_NSSplitViewItem
@@ -1970,9 +2462,21 @@ typedef bean_id NSSplitViewItem;
 #define BEAN_TYPEDEF_NSSplitViewItemAccessoryViewController
 typedef bean_id NSSplitViewItemAccessoryViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpringLoadingDestination
+#define BEAN_TYPEDEF_NSSpringLoadingDestination
+typedef bean_id NSSpringLoadingDestination;
+#endif
 #ifndef BEAN_TYPEDEF_NSStackView
 #define BEAN_TYPEDEF_NSStackView
 typedef bean_id NSStackView;
+#endif
+#ifndef BEAN_TYPEDEF_NSStackViewDelegate
+#define BEAN_TYPEDEF_NSStackViewDelegate
+typedef bean_id NSStackViewDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSStandardKeyBindingResponding
+#define BEAN_TYPEDEF_NSStandardKeyBindingResponding
+typedef bean_id NSStandardKeyBindingResponding;
 #endif
 #ifndef BEAN_TYPEDEF_NSStatusBar
 #define BEAN_TYPEDEF_NSStatusBar
@@ -2009,6 +2513,10 @@ typedef bean_id NSStoryboardSegue;
 #ifndef BEAN_TYPEDEF_NSStream
 #define BEAN_TYPEDEF_NSStream
 typedef bean_id NSStream;
+#endif
+#ifndef BEAN_TYPEDEF_NSStreamDelegate
+#define BEAN_TYPEDEF_NSStreamDelegate
+typedef bean_id NSStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSString
 #define BEAN_TYPEDEF_NSString
@@ -2098,6 +2606,10 @@ typedef bean_id NSTabView;
 #define BEAN_TYPEDEF_NSTabViewController
 typedef bean_id NSTabViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSTabViewDelegate
+#define BEAN_TYPEDEF_NSTabViewDelegate
+typedef bean_id NSTabViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTabViewItem
 #define BEAN_TYPEDEF_NSTabViewItem
 typedef bean_id NSTabViewItem;
@@ -2125,6 +2637,14 @@ typedef bean_id NSTableRowView;
 #ifndef BEAN_TYPEDEF_NSTableView
 #define BEAN_TYPEDEF_NSTableView
 typedef bean_id NSTableView;
+#endif
+#ifndef BEAN_TYPEDEF_NSTableViewDataSource
+#define BEAN_TYPEDEF_NSTableViewDataSource
+typedef bean_id NSTableViewDataSource;
+#endif
+#ifndef BEAN_TYPEDEF_NSTableViewDelegate
+#define BEAN_TYPEDEF_NSTableViewDelegate
+typedef bean_id NSTableViewDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSTableViewDiffableDataSource
 #define BEAN_TYPEDEF_NSTableViewDiffableDataSource
@@ -2154,6 +2674,18 @@ typedef bean_id NSTextAlternatives;
 #define BEAN_TYPEDEF_NSTextAttachment
 typedef bean_id NSTextAttachment;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentCell
+#define BEAN_TYPEDEF_NSTextAttachmentCell
+typedef bean_id NSTextAttachmentCell;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentContainer
+#define BEAN_TYPEDEF_NSTextAttachmentContainer
+typedef bean_id NSTextAttachmentContainer;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextAttachmentLayout
+#define BEAN_TYPEDEF_NSTextAttachmentLayout
+typedef bean_id NSTextAttachmentLayout;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextAttachmentViewProvider
 #define BEAN_TYPEDEF_NSTextAttachmentViewProvider
 typedef bean_id NSTextAttachmentViewProvider;
@@ -2161,6 +2693,10 @@ typedef bean_id NSTextAttachmentViewProvider;
 #ifndef BEAN_TYPEDEF_NSTextBlock
 #define BEAN_TYPEDEF_NSTextBlock
 typedef bean_id NSTextBlock;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextCheckingClient
+#define BEAN_TYPEDEF_NSTextCheckingClient
+typedef bean_id NSTextCheckingClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextCheckingController
 #define BEAN_TYPEDEF_NSTextCheckingController
@@ -2174,17 +2710,37 @@ typedef bean_id NSTextCheckingResult;
 #define BEAN_TYPEDEF_NSTextContainer
 typedef bean_id NSTextContainer;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextContent
+#define BEAN_TYPEDEF_NSTextContent
+typedef bean_id NSTextContent;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextContentManager
 #define BEAN_TYPEDEF_NSTextContentManager
 typedef bean_id NSTextContentManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextContentManagerDelegate
+#define BEAN_TYPEDEF_NSTextContentManagerDelegate
+typedef bean_id NSTextContentManagerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextContentStorage
 #define BEAN_TYPEDEF_NSTextContentStorage
 typedef bean_id NSTextContentStorage;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextContentStorageDelegate
+#define BEAN_TYPEDEF_NSTextContentStorageDelegate
+typedef bean_id NSTextContentStorageDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextDelegate
+#define BEAN_TYPEDEF_NSTextDelegate
+typedef bean_id NSTextDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextElement
 #define BEAN_TYPEDEF_NSTextElement
 typedef bean_id NSTextElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextElementProvider
+#define BEAN_TYPEDEF_NSTextElementProvider
+typedef bean_id NSTextElementProvider;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextField
 #define BEAN_TYPEDEF_NSTextField
@@ -2194,13 +2750,37 @@ typedef bean_id NSTextField;
 #define BEAN_TYPEDEF_NSTextFieldCell
 typedef bean_id NSTextFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextFieldDelegate
+#define BEAN_TYPEDEF_NSTextFieldDelegate
+typedef bean_id NSTextFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextFinder
 #define BEAN_TYPEDEF_NSTextFinder
 typedef bean_id NSTextFinder;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextFinderBarContainer
+#define BEAN_TYPEDEF_NSTextFinderBarContainer
+typedef bean_id NSTextFinderBarContainer;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextFinderClient
+#define BEAN_TYPEDEF_NSTextFinderClient
+typedef bean_id NSTextFinderClient;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInput
+#define BEAN_TYPEDEF_NSTextInput
+typedef bean_id NSTextInput;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInputClient
+#define BEAN_TYPEDEF_NSTextInputClient
+typedef bean_id NSTextInputClient;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextInputContext
 #define BEAN_TYPEDEF_NSTextInputContext
 typedef bean_id NSTextInputContext;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextInputTraits
+#define BEAN_TYPEDEF_NSTextInputTraits
+typedef bean_id NSTextInputTraits;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextInsertionIndicator
 #define BEAN_TYPEDEF_NSTextInsertionIndicator
@@ -2214,6 +2794,14 @@ typedef bean_id NSTextLayoutFragment;
 #define BEAN_TYPEDEF_NSTextLayoutManager
 typedef bean_id NSTextLayoutManager;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextLayoutManagerDelegate
+#define BEAN_TYPEDEF_NSTextLayoutManagerDelegate
+typedef bean_id NSTextLayoutManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextLayoutOrientationProvider
+#define BEAN_TYPEDEF_NSTextLayoutOrientationProvider
+typedef bean_id NSTextLayoutOrientationProvider;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextLineFragment
 #define BEAN_TYPEDEF_NSTextLineFragment
 typedef bean_id NSTextLineFragment;
@@ -2225,6 +2813,10 @@ typedef bean_id NSTextList;
 #ifndef BEAN_TYPEDEF_NSTextListElement
 #define BEAN_TYPEDEF_NSTextListElement
 typedef bean_id NSTextListElement;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextLocation
+#define BEAN_TYPEDEF_NSTextLocation
+typedef bean_id NSTextLocation;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextParagraph
 #define BEAN_TYPEDEF_NSTextParagraph
@@ -2242,6 +2834,10 @@ typedef bean_id NSTextRange;
 #define BEAN_TYPEDEF_NSTextSelection
 typedef bean_id NSTextSelection;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextSelectionDataSource
+#define BEAN_TYPEDEF_NSTextSelectionDataSource
+typedef bean_id NSTextSelectionDataSource;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextSelectionNavigation
 #define BEAN_TYPEDEF_NSTextSelectionNavigation
 typedef bean_id NSTextSelectionNavigation;
@@ -2249,6 +2845,14 @@ typedef bean_id NSTextSelectionNavigation;
 #ifndef BEAN_TYPEDEF_NSTextStorage
 #define BEAN_TYPEDEF_NSTextStorage
 typedef bean_id NSTextStorage;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextStorageDelegate
+#define BEAN_TYPEDEF_NSTextStorageDelegate
+typedef bean_id NSTextStorageDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextStorageObserving
+#define BEAN_TYPEDEF_NSTextStorageObserving
+typedef bean_id NSTextStorageObserving;
 #endif
 #ifndef BEAN_TYPEDEF_NSTextTab
 #define BEAN_TYPEDEF_NSTextTab
@@ -2266,9 +2870,17 @@ typedef bean_id NSTextTableBlock;
 #define BEAN_TYPEDEF_NSTextView
 typedef bean_id NSTextView;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextViewDelegate
+#define BEAN_TYPEDEF_NSTextViewDelegate
+typedef bean_id NSTextViewDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTextViewportLayoutController
 #define BEAN_TYPEDEF_NSTextViewportLayoutController
 typedef bean_id NSTextViewportLayoutController;
+#endif
+#ifndef BEAN_TYPEDEF_NSTextViewportLayoutControllerDelegate
+#define BEAN_TYPEDEF_NSTextViewportLayoutControllerDelegate
+typedef bean_id NSTextViewportLayoutControllerDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSThread
 #define BEAN_TYPEDEF_NSThread
@@ -2298,9 +2910,21 @@ typedef bean_id NSTokenField;
 #define BEAN_TYPEDEF_NSTokenFieldCell
 typedef bean_id NSTokenFieldCell;
 #endif
+#ifndef BEAN_TYPEDEF_NSTokenFieldCellDelegate
+#define BEAN_TYPEDEF_NSTokenFieldCellDelegate
+typedef bean_id NSTokenFieldCellDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSTokenFieldDelegate
+#define BEAN_TYPEDEF_NSTokenFieldDelegate
+typedef bean_id NSTokenFieldDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSToolbar
 #define BEAN_TYPEDEF_NSToolbar
 typedef bean_id NSToolbar;
+#endif
+#ifndef BEAN_TYPEDEF_NSToolbarDelegate
+#define BEAN_TYPEDEF_NSToolbarDelegate
+typedef bean_id NSToolbarDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSToolbarItem
 #define BEAN_TYPEDEF_NSToolbarItem
@@ -2310,6 +2934,10 @@ typedef bean_id NSToolbarItem;
 #define BEAN_TYPEDEF_NSToolbarItemGroup
 typedef bean_id NSToolbarItemGroup;
 #endif
+#ifndef BEAN_TYPEDEF_NSToolbarItemValidation
+#define BEAN_TYPEDEF_NSToolbarItemValidation
+typedef bean_id NSToolbarItemValidation;
+#endif
 #ifndef BEAN_TYPEDEF_NSTouch
 #define BEAN_TYPEDEF_NSTouch
 typedef bean_id NSTouch;
@@ -2318,9 +2946,17 @@ typedef bean_id NSTouch;
 #define BEAN_TYPEDEF_NSTouchBar
 typedef bean_id NSTouchBar;
 #endif
+#ifndef BEAN_TYPEDEF_NSTouchBarDelegate
+#define BEAN_TYPEDEF_NSTouchBarDelegate
+typedef bean_id NSTouchBarDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSTouchBarItem
 #define BEAN_TYPEDEF_NSTouchBarItem
 typedef bean_id NSTouchBarItem;
+#endif
+#ifndef BEAN_TYPEDEF_NSTouchBarProvider
+#define BEAN_TYPEDEF_NSTouchBarProvider
+typedef bean_id NSTouchBarProvider;
 #endif
 #ifndef BEAN_TYPEDEF_NSTrackingArea
 #define BEAN_TYPEDEF_NSTrackingArea
@@ -2350,6 +2986,10 @@ typedef bean_id NSURL;
 #define BEAN_TYPEDEF_NSURLAuthenticationChallenge
 typedef bean_id NSURLAuthenticationChallenge;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+#define BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+typedef bean_id NSURLAuthenticationChallengeSender;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLCache
 #define BEAN_TYPEDEF_NSURLCache
 typedef bean_id NSURLCache;
@@ -2361,6 +3001,18 @@ typedef bean_id NSURLComponents;
 #ifndef BEAN_TYPEDEF_NSURLConnection
 #define BEAN_TYPEDEF_NSURLConnection
 typedef bean_id NSURLConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDataDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDataDelegate
+typedef bean_id NSURLConnectionDataDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDelegate
+typedef bean_id NSURLConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+typedef bean_id NSURLConnectionDownloadDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLCredential
 #define BEAN_TYPEDEF_NSURLCredential
@@ -2374,9 +3026,17 @@ typedef bean_id NSURLCredentialStorage;
 #define BEAN_TYPEDEF_NSURLDownload
 typedef bean_id NSURLDownload;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLDownloadDelegate
+#define BEAN_TYPEDEF_NSURLDownloadDelegate
+typedef bean_id NSURLDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLHandle
 #define BEAN_TYPEDEF_NSURLHandle
 typedef bean_id NSURLHandle;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLHandleClient
+#define BEAN_TYPEDEF_NSURLHandleClient
+typedef bean_id NSURLHandleClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLProtectionSpace
 #define BEAN_TYPEDEF_NSURLProtectionSpace
@@ -2385,6 +3045,10 @@ typedef bean_id NSURLProtectionSpace;
 #ifndef BEAN_TYPEDEF_NSURLProtocol
 #define BEAN_TYPEDEF_NSURLProtocol
 typedef bean_id NSURLProtocol;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLProtocolClient
+#define BEAN_TYPEDEF_NSURLProtocolClient
+typedef bean_id NSURLProtocolClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLQueryItem
 #define BEAN_TYPEDEF_NSURLQueryItem
@@ -2406,13 +3070,29 @@ typedef bean_id NSURLSession;
 #define BEAN_TYPEDEF_NSURLSessionConfiguration
 typedef bean_id NSURLSessionConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDataDelegate
+#define BEAN_TYPEDEF_NSURLSessionDataDelegate
+typedef bean_id NSURLSessionDataDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDataTask
 #define BEAN_TYPEDEF_NSURLSessionDataTask
 typedef bean_id NSURLSessionDataTask;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDelegate
+#define BEAN_TYPEDEF_NSURLSessionDelegate
+typedef bean_id NSURLSessionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+typedef bean_id NSURLSessionDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadTask
 #define BEAN_TYPEDEF_NSURLSessionDownloadTask
 typedef bean_id NSURLSessionDownloadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionStreamDelegate
+#define BEAN_TYPEDEF_NSURLSessionStreamDelegate
+typedef bean_id NSURLSessionStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionStreamTask
 #define BEAN_TYPEDEF_NSURLSessionStreamTask
@@ -2421,6 +3101,10 @@ typedef bean_id NSURLSessionStreamTask;
 #ifndef BEAN_TYPEDEF_NSURLSessionTask
 #define BEAN_TYPEDEF_NSURLSessionTask
 typedef bean_id NSURLSessionTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionTaskDelegate
+#define BEAN_TYPEDEF_NSURLSessionTaskDelegate
+typedef bean_id NSURLSessionTaskDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskMetrics
 #define BEAN_TYPEDEF_NSURLSessionTaskMetrics
@@ -2433,6 +3117,10 @@ typedef bean_id NSURLSessionTaskTransactionMetrics;
 #ifndef BEAN_TYPEDEF_NSURLSessionUploadTask
 #define BEAN_TYPEDEF_NSURLSessionUploadTask
 typedef bean_id NSURLSessionUploadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+#define BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+typedef bean_id NSURLSessionWebSocketDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketMessage
 #define BEAN_TYPEDEF_NSURLSessionWebSocketMessage
@@ -2566,6 +3254,14 @@ typedef bean_id NSUnitVolume;
 #define BEAN_TYPEDEF_NSUserActivity
 typedef bean_id NSUserActivity;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserActivityDelegate
+#define BEAN_TYPEDEF_NSUserActivityDelegate
+typedef bean_id NSUserActivityDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserActivityRestoring
+#define BEAN_TYPEDEF_NSUserActivityRestoring
+typedef bean_id NSUserActivityRestoring;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserAppleScriptTask
 #define BEAN_TYPEDEF_NSUserAppleScriptTask
 typedef bean_id NSUserAppleScriptTask;
@@ -2582,9 +3278,25 @@ typedef bean_id NSUserDefaults;
 #define BEAN_TYPEDEF_NSUserDefaultsController
 typedef bean_id NSUserDefaultsController;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceCompression
+#define BEAN_TYPEDEF_NSUserInterfaceCompression
+typedef bean_id NSUserInterfaceCompression;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserInterfaceCompressionOptions
 #define BEAN_TYPEDEF_NSUserInterfaceCompressionOptions
 typedef bean_id NSUserInterfaceCompressionOptions;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceItemIdentification
+#define BEAN_TYPEDEF_NSUserInterfaceItemIdentification
+typedef bean_id NSUserInterfaceItemIdentification;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceItemSearching
+#define BEAN_TYPEDEF_NSUserInterfaceItemSearching
+typedef bean_id NSUserInterfaceItemSearching;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserInterfaceValidations
+#define BEAN_TYPEDEF_NSUserInterfaceValidations
+typedef bean_id NSUserInterfaceValidations;
 #endif
 #ifndef BEAN_TYPEDEF_NSUserNotification
 #define BEAN_TYPEDEF_NSUserNotification
@@ -2598,6 +3310,10 @@ typedef bean_id NSUserNotificationAction;
 #define BEAN_TYPEDEF_NSUserNotificationCenter
 typedef bean_id NSUserNotificationCenter;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+#define BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+typedef bean_id NSUserNotificationCenterDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserScriptTask
 #define BEAN_TYPEDEF_NSUserScriptTask
 typedef bean_id NSUserScriptTask;
@@ -2605,6 +3321,10 @@ typedef bean_id NSUserScriptTask;
 #ifndef BEAN_TYPEDEF_NSUserUnixTask
 #define BEAN_TYPEDEF_NSUserUnixTask
 typedef bean_id NSUserUnixTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSValidatedUserInterfaceItem
+#define BEAN_TYPEDEF_NSValidatedUserInterfaceItem
+typedef bean_id NSValidatedUserInterfaceItem;
 #endif
 #ifndef BEAN_TYPEDEF_NSValue
 #define BEAN_TYPEDEF_NSValue
@@ -2622,13 +3342,29 @@ typedef bean_id NSView;
 #define BEAN_TYPEDEF_NSViewAnimation
 typedef bean_id NSViewAnimation;
 #endif
+#ifndef BEAN_TYPEDEF_NSViewContentSelectionInfo
+#define BEAN_TYPEDEF_NSViewContentSelectionInfo
+typedef bean_id NSViewContentSelectionInfo;
+#endif
 #ifndef BEAN_TYPEDEF_NSViewController
 #define BEAN_TYPEDEF_NSViewController
 typedef bean_id NSViewController;
 #endif
+#ifndef BEAN_TYPEDEF_NSViewControllerPresentationAnimator
+#define BEAN_TYPEDEF_NSViewControllerPresentationAnimator
+typedef bean_id NSViewControllerPresentationAnimator;
+#endif
+#ifndef BEAN_TYPEDEF_NSViewLayerContentScaleDelegate
+#define BEAN_TYPEDEF_NSViewLayerContentScaleDelegate
+typedef bean_id NSViewLayerContentScaleDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSViewLayoutRegion
 #define BEAN_TYPEDEF_NSViewLayoutRegion
 typedef bean_id NSViewLayoutRegion;
+#endif
+#ifndef BEAN_TYPEDEF_NSViewToolTipOwner
+#define BEAN_TYPEDEF_NSViewToolTipOwner
+typedef bean_id NSViewToolTipOwner;
 #endif
 #ifndef BEAN_TYPEDEF_NSVisualEffectView
 #define BEAN_TYPEDEF_NSVisualEffectView
@@ -2645,6 +3381,14 @@ typedef bean_id NSWindow;
 #ifndef BEAN_TYPEDEF_NSWindowController
 #define BEAN_TYPEDEF_NSWindowController
 typedef bean_id NSWindowController;
+#endif
+#ifndef BEAN_TYPEDEF_NSWindowDelegate
+#define BEAN_TYPEDEF_NSWindowDelegate
+typedef bean_id NSWindowDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSWindowRestoration
+#define BEAN_TYPEDEF_NSWindowRestoration
+typedef bean_id NSWindowRestoration;
 #endif
 #ifndef BEAN_TYPEDEF_NSWindowTab
 #define BEAN_TYPEDEF_NSWindowTab
@@ -2674,6 +3418,10 @@ typedef bean_id NSWritingToolsCoordinatorAnimationParameters;
 #define BEAN_TYPEDEF_NSWritingToolsCoordinatorContext
 typedef bean_id NSWritingToolsCoordinatorContext;
 #endif
+#ifndef BEAN_TYPEDEF_NSWritingToolsCoordinatorDelegate
+#define BEAN_TYPEDEF_NSWritingToolsCoordinatorDelegate
+typedef bean_id NSWritingToolsCoordinatorDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXMLDTD
 #define BEAN_TYPEDEF_NSXMLDTD
 typedef bean_id NSXMLDTD;
@@ -2698,6 +3446,10 @@ typedef bean_id NSXMLNode;
 #define BEAN_TYPEDEF_NSXMLParser
 typedef bean_id NSXMLParser;
 #endif
+#ifndef BEAN_TYPEDEF_NSXMLParserDelegate
+#define BEAN_TYPEDEF_NSXMLParserDelegate
+typedef bean_id NSXMLParserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXPCCoder
 #define BEAN_TYPEDEF_NSXPCCoder
 typedef bean_id NSXPCCoder;
@@ -2714,6 +3466,18 @@ typedef bean_id NSXPCInterface;
 #define BEAN_TYPEDEF_NSXPCListener
 typedef bean_id NSXPCListener;
 #endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerDelegate
+#define BEAN_TYPEDEF_NSXPCListenerDelegate
+typedef bean_id NSXPCListenerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
+#define BEAN_TYPEDEF_NSXPCListenerEndpoint
+typedef bean_id NSXPCListenerEndpoint;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCProxyCreating
+#define BEAN_TYPEDEF_NSXPCProxyCreating
+typedef bean_id NSXPCProxyCreating;
+#endif
 #ifndef BEAN_TYPEDEF_OS_object
 #define BEAN_TYPEDEF_OS_object
 typedef bean_id OS_object;
@@ -2729,6 +3493,18 @@ typedef bean_id OS_os_workgroup_interval;
 #ifndef BEAN_TYPEDEF_OS_os_workgroup_parallel
 #define BEAN_TYPEDEF_OS_os_workgroup_parallel
 typedef bean_id OS_os_workgroup_parallel;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPanel
+#define BEAN_TYPEDEF_PDEPanel
+typedef bean_id PDEPanel;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPlugIn
+#define BEAN_TYPEDEF_PDEPlugIn
+typedef bean_id PDEPlugIn;
+#endif
+#ifndef BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+#define BEAN_TYPEDEF_PDEPlugInCallbackProtocol
+typedef bean_id PDEPlugInCallbackProtocol;
 #endif
 #ifndef BEAN_TYPEDEF_WKFrameInfo
 #define BEAN_TYPEDEF_WKFrameInfo
@@ -2754,6 +3530,10 @@ typedef bean_id WKWebView;
 #define BEAN_TYPEDEF_WKWebViewConfiguration
 typedef bean_id WKWebViewConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_WebDownloadDelegate
+#define BEAN_TYPEDEF_WebDownloadDelegate
+typedef bean_id WebDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_WebFrame
 #define BEAN_TYPEDEF_WebFrame
 typedef bean_id WebFrame;
@@ -2761,6 +3541,10 @@ typedef bean_id WebFrame;
 #ifndef BEAN_TYPEDEF_WebFrameView
 #define BEAN_TYPEDEF_WebFrameView
 typedef bean_id WebFrameView;
+#endif
+#ifndef BEAN_TYPEDEF_WebResourceLoadDelegate
+#define BEAN_TYPEDEF_WebResourceLoadDelegate
+typedef bean_id WebResourceLoadDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_WebView
 #define BEAN_TYPEDEF_WebView
@@ -2809,6 +3593,10 @@ typedef bean_id CKContainer;
 #ifndef BEAN_TYPEDEF_CKShare
 #define BEAN_TYPEDEF_CKShare
 typedef bean_id CKShare;
+#endif
+#ifndef BEAN_TYPEDEF_CKShareMetadata
+#define BEAN_TYPEDEF_CKShareMetadata
+typedef bean_id CKShareMetadata;
 #endif
 #ifndef BEAN_TYPEDEF_NSEntityDescription
 #define BEAN_TYPEDEF_NSEntityDescription
@@ -2874,20 +3662,20 @@ typedef bean_id NSSymbolMagicReplaceContentTransition;
 #define BEAN_TYPEDEF_NSTextBlockid
 typedef bean_id NSTextBlockid;
 #endif
+#ifndef BEAN_TYPEDEF_NSTextCheckingTypes
+#define BEAN_TYPEDEF_NSTextCheckingTypes
+typedef bean_id NSTextCheckingTypes;
+#endif
 #ifndef BEAN_TYPEDEF_NSWorkspaceAuthorization
 #define BEAN_TYPEDEF_NSWorkspaceAuthorization
 typedef bean_id NSWorkspaceAuthorization;
 #endif
-#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
-#define BEAN_TYPEDEF_NSXPCListenerEndpoint
-typedef bean_id NSXPCListenerEndpoint;
-#endif
-#ifndef BEAN_TYPEDEF_WKProcessPool
-#define BEAN_TYPEDEF_WKProcessPool
-typedef bean_id WKProcessPool;
-#endif
 
 /* ===== fallback typedefs ===== */
+#ifndef BEAN_TYPEDEF_OpaquePMPageFormat
+#define BEAN_TYPEDEF_OpaquePMPageFormat
+typedef NSInteger OpaquePMPageFormat;
+#endif
 #ifndef BEAN_TYPEDEF_UTType
 #define BEAN_TYPEDEF_UTType
 typedef NSInteger UTType;
@@ -3436,7 +4224,7 @@ typedef bean_id DOMEvent;
 #endif
 static inline void                  DOMEvent_StopPropagation(DOMEvent self)                                                                                       { ((void (*)(DOMEvent, SEL))bean_msgSend)(self, bean_sel("stopPropagation")); }
 static inline void                  DOMEvent_PreventDefault(DOMEvent self)                                                                                        { ((void (*)(DOMEvent, SEL))bean_msgSend)(self, bean_sel("preventDefault")); }
-static inline void                  DOMEvent_InitEvent_CanBubbleArg_CancelableArg(DOMEvent self, NSString eventTypeArg, BOOL canBubbleArg, BOOL cancelableArg)    { ((void (*)(DOMEvent, SEL, NSString, BOOL, BOOL))bean_msgSend)(self, bean_sel("initEvent:canBubbleArg:cancelableArg:"), eventTypeArg, canBubbleArg, cancelableArg); }
+static inline DOMEvent              DOMEvent_InitEvent_CanBubbleArg_CancelableArg(DOMEvent self, NSString eventTypeArg, BOOL canBubbleArg, BOOL cancelableArg)    { return ((DOMEvent (*)(DOMEvent, SEL, NSString, BOOL, BOOL))bean_msgSend)(self, bean_sel("initEvent:canBubbleArg:cancelableArg:"), eventTypeArg, canBubbleArg, cancelableArg); }
 static inline NSString              DOMEvent_Type(DOMEvent self)                                                                                                  { return ((NSString (*)(DOMEvent, SEL))bean_msgSend)(self, bean_sel("type")); }
 static inline id                    DOMEvent_Target(DOMEvent self)                                                                                                { return ((id (*)(DOMEvent, SEL))bean_msgSend)(self, bean_sel("target")); }
 static inline id                    DOMEvent_CurrentTarget(DOMEvent self)                                                                                         { return ((id (*)(DOMEvent, SEL))bean_msgSend)(self, bean_sel("currentTarget")); }
@@ -3449,7 +4237,25 @@ static inline BOOL                  DOMEvent_ReturnValue(DOMEvent self)         
 static inline void                  DOMEvent_SetReturnValue(DOMEvent self, BOOL returnValue)                                                                      { ((void (*)(DOMEvent, SEL, BOOL))bean_msgSend)(self, bean_sel("setReturnValue:"), returnValue); }
 static inline BOOL                  DOMEvent_CancelBubble(DOMEvent self)                                                                                          { return ((BOOL (*)(DOMEvent, SEL))bean_msgSend)(self, bean_sel("cancelBubble")); }
 static inline void                  DOMEvent_SetCancelBubble(DOMEvent self, BOOL cancelBubble)                                                                    { ((void (*)(DOMEvent, SEL, BOOL))bean_msgSend)(self, bean_sel("setCancelBubble:"), cancelBubble); }
-static inline void                  DOMEvent_InitEvent(DOMEvent self, NSString eventTypeArg, BOOL canBubbleArg, BOOL cancelableArg)                               { ((void (*)(DOMEvent, SEL, NSString, BOOL, BOOL))bean_msgSend)(self, bean_sel("initEvent:::"), eventTypeArg, canBubbleArg, cancelableArg); }
+static inline DOMEvent              DOMEvent_InitEvent(DOMEvent self, NSString eventTypeArg, BOOL canBubbleArg, BOOL cancelableArg)                               { return ((DOMEvent (*)(DOMEvent, SEL, NSString, BOOL, BOOL))bean_msgSend)(self, bean_sel("initEvent:::"), eventTypeArg, canBubbleArg, cancelableArg); }
+
+/* ===== DOMEventListener ===== */
+#ifndef BEAN_TYPEDEF_DOMEventListener
+#define BEAN_TYPEDEF_DOMEventListener
+typedef bean_id DOMEventListener;
+#endif
+static inline void    DOMEventListener_HandleEvent(DOMEventListener self, void* event)    { ((void (*)(DOMEventListener, SEL, void*))bean_msgSend)(self, bean_sel("handleEvent:"), event); }
+
+/* ===== DOMEventTarget ===== */
+#ifndef BEAN_TYPEDEF_DOMEventTarget
+#define BEAN_TYPEDEF_DOMEventTarget
+typedef bean_id DOMEventTarget;
+#endif
+static inline void    DOMEventTarget_AddEventListener_Listener_UseCapture(DOMEventTarget self, NSString type, id listener, BOOL useCapture)       { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:listener:useCapture:"), type, listener, useCapture); }
+static inline void    DOMEventTarget_RemoveEventListener_Listener_UseCapture(DOMEventTarget self, NSString type, id listener, BOOL useCapture)    { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:listener:useCapture:"), type, listener, useCapture); }
+static inline BOOL    DOMEventTarget_DispatchEvent(DOMEventTarget self, void* event)                                                              { return ((BOOL (*)(DOMEventTarget, SEL, void*))bean_msgSend)(self, bean_sel("dispatchEvent:"), event); }
+static inline void    DOMEventTarget_AddEventListener(DOMEventTarget self, NSString type, id listener, BOOL useCapture)                           { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:::"), type, listener, useCapture); }
+static inline void    DOMEventTarget_RemoveEventListener(DOMEventTarget self, NSString type, id listener, BOOL useCapture)                        { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:::"), type, listener, useCapture); }
 
 /* ===== DOMFile ===== */
 #ifndef BEAN_TYPEDEF_DOMFile
@@ -4405,21 +5211,21 @@ static inline void*    DOMImplementation_CreateCSSStyleSheet(DOMImplementation s
 #define BEAN_TYPEDEF_DOMKeyboardEvent
 typedef bean_id DOMKeyboardEvent;
 #endif
-static inline BOOL          DOMKeyboardEvent_GetModifierState(DOMKeyboardEvent self, NSString keyIdentifierArg)                                                                                                                                                                                                                                                                { return ((BOOL (*)(DOMKeyboardEvent, SEL, NSString))bean_msgSend)(self, bean_sel("getModifierState:"), keyIdentifierArg); }
-static inline void          DOMKeyboardEvent_InitKeyboardEvent_CanBubble_Cancelable_View_KeyIdentifier_Location_CtrlKey_AltKey_ShiftKey_MetaKey_AltGraphKey(DOMKeyboardEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, NSString keyIdentifier, NSUInteger location, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, BOOL altGraphKey)          { ((void (*)(DOMKeyboardEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSUInteger, BOOL, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:location:ctrlKey:altKey:shiftKey:metaKey:altGraphKey:"), type, canBubble, cancelable, view, keyIdentifier, location, ctrlKey, altKey, shiftKey, metaKey, altGraphKey); }
-static inline void          DOMKeyboardEvent_InitKeyboardEvent_CanBubble_Cancelable_View_KeyIdentifier_Location_CtrlKey_AltKey_ShiftKey_MetaKey(DOMKeyboardEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, NSString keyIdentifier, NSUInteger location, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey)                                        { ((void (*)(DOMKeyboardEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSUInteger, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:location:ctrlKey:altKey:shiftKey:metaKey:"), type, canBubble, cancelable, view, keyIdentifier, location, ctrlKey, altKey, shiftKey, metaKey); }
-static inline void          DOMKeyboardEvent_InitKeyboardEvent_CanBubble_Cancelable_View_KeyIdentifier_KeyLocation_CtrlKey_AltKey_ShiftKey_MetaKey_AltGraphKey(DOMKeyboardEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, NSString keyIdentifier, NSUInteger keyLocation, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, BOOL altGraphKey)    { ((void (*)(DOMKeyboardEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSUInteger, BOOL, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:keyLocation:ctrlKey:altKey:shiftKey:metaKey:altGraphKey:"), type, canBubble, cancelable, view, keyIdentifier, keyLocation, ctrlKey, altKey, shiftKey, metaKey, altGraphKey); }
-static inline void          DOMKeyboardEvent_InitKeyboardEvent_CanBubble_Cancelable_View_KeyIdentifier_KeyLocation_CtrlKey_AltKey_ShiftKey_MetaKey(DOMKeyboardEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, NSString keyIdentifier, NSUInteger keyLocation, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey)                                  { ((void (*)(DOMKeyboardEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSUInteger, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:keyLocation:ctrlKey:altKey:shiftKey:metaKey:"), type, canBubble, cancelable, view, keyIdentifier, keyLocation, ctrlKey, altKey, shiftKey, metaKey); }
-static inline NSString      DOMKeyboardEvent_KeyIdentifier(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                              { return ((NSString (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("keyIdentifier")); }
-static inline NSUInteger    DOMKeyboardEvent_Location(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                   { return ((NSUInteger (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("location")); }
-static inline NSUInteger    DOMKeyboardEvent_KeyLocation(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                { return ((NSUInteger (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("keyLocation")); }
-static inline BOOL          DOMKeyboardEvent_CtrlKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                    { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("ctrlKey")); }
-static inline BOOL          DOMKeyboardEvent_ShiftKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                   { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("shiftKey")); }
-static inline BOOL          DOMKeyboardEvent_AltKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                     { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("altKey")); }
-static inline BOOL          DOMKeyboardEvent_MetaKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                    { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("metaKey")); }
-static inline BOOL          DOMKeyboardEvent_AltGraphKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("altGraphKey")); }
-static inline int           DOMKeyboardEvent_KeyCode(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                    { return ((int (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("keyCode")); }
-static inline int           DOMKeyboardEvent_CharCode(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                   { return ((int (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("charCode")); }
+static inline BOOL                DOMKeyboardEvent_GetModifierState(DOMKeyboardEvent self, NSString keyIdentifierArg)                                                                                                                                                                                                                                                                { return ((BOOL (*)(DOMKeyboardEvent, SEL, NSString))bean_msgSend)(self, bean_sel("getModifierState:"), keyIdentifierArg); }
+static inline DOMKeyboardEvent    DOMKeyboardEvent_InitKeyboardEvent_CanBubble_Cancelable_View_KeyIdentifier_Location_CtrlKey_AltKey_ShiftKey_MetaKey_AltGraphKey(DOMKeyboardEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, NSString keyIdentifier, NSUInteger location, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, BOOL altGraphKey)          { return ((DOMKeyboardEvent (*)(DOMKeyboardEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSUInteger, BOOL, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:location:ctrlKey:altKey:shiftKey:metaKey:altGraphKey:"), type, canBubble, cancelable, view, keyIdentifier, location, ctrlKey, altKey, shiftKey, metaKey, altGraphKey); }
+static inline DOMKeyboardEvent    DOMKeyboardEvent_InitKeyboardEvent_CanBubble_Cancelable_View_KeyIdentifier_Location_CtrlKey_AltKey_ShiftKey_MetaKey(DOMKeyboardEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, NSString keyIdentifier, NSUInteger location, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey)                                        { return ((DOMKeyboardEvent (*)(DOMKeyboardEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSUInteger, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:location:ctrlKey:altKey:shiftKey:metaKey:"), type, canBubble, cancelable, view, keyIdentifier, location, ctrlKey, altKey, shiftKey, metaKey); }
+static inline DOMKeyboardEvent    DOMKeyboardEvent_InitKeyboardEvent_CanBubble_Cancelable_View_KeyIdentifier_KeyLocation_CtrlKey_AltKey_ShiftKey_MetaKey_AltGraphKey(DOMKeyboardEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, NSString keyIdentifier, NSUInteger keyLocation, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, BOOL altGraphKey)    { return ((DOMKeyboardEvent (*)(DOMKeyboardEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSUInteger, BOOL, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:keyLocation:ctrlKey:altKey:shiftKey:metaKey:altGraphKey:"), type, canBubble, cancelable, view, keyIdentifier, keyLocation, ctrlKey, altKey, shiftKey, metaKey, altGraphKey); }
+static inline DOMKeyboardEvent    DOMKeyboardEvent_InitKeyboardEvent_CanBubble_Cancelable_View_KeyIdentifier_KeyLocation_CtrlKey_AltKey_ShiftKey_MetaKey(DOMKeyboardEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, NSString keyIdentifier, NSUInteger keyLocation, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey)                                  { return ((DOMKeyboardEvent (*)(DOMKeyboardEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSUInteger, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initKeyboardEvent:canBubble:cancelable:view:keyIdentifier:keyLocation:ctrlKey:altKey:shiftKey:metaKey:"), type, canBubble, cancelable, view, keyIdentifier, keyLocation, ctrlKey, altKey, shiftKey, metaKey); }
+static inline NSString            DOMKeyboardEvent_KeyIdentifier(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                              { return ((NSString (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("keyIdentifier")); }
+static inline NSUInteger          DOMKeyboardEvent_Location(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                   { return ((NSUInteger (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("location")); }
+static inline NSUInteger          DOMKeyboardEvent_KeyLocation(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                { return ((NSUInteger (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("keyLocation")); }
+static inline BOOL                DOMKeyboardEvent_CtrlKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                    { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("ctrlKey")); }
+static inline BOOL                DOMKeyboardEvent_ShiftKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                   { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("shiftKey")); }
+static inline BOOL                DOMKeyboardEvent_AltKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                     { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("altKey")); }
+static inline BOOL                DOMKeyboardEvent_MetaKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                    { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("metaKey")); }
+static inline BOOL                DOMKeyboardEvent_AltGraphKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("altGraphKey")); }
+static inline int                 DOMKeyboardEvent_KeyCode(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                    { return ((int (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("keyCode")); }
+static inline int                 DOMKeyboardEvent_CharCode(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                   { return ((int (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("charCode")); }
 
 /* ===== DOMMediaList ===== */
 #ifndef BEAN_TYPEDEF_DOMMediaList
@@ -4438,37 +5244,37 @@ static inline NSUInteger    DOMMediaList_Length(DOMMediaList self)              
 #define BEAN_TYPEDEF_DOMMouseEvent
 typedef bean_id DOMMouseEvent;
 #endif
-static inline void     DOMMouseEvent_InitMouseEvent_CanBubble_Cancelable_View_Detail_ScreenX_ScreenY_ClientX_ClientY_CtrlKey_AltKey_ShiftKey_MetaKey_Button_RelatedTarget(DOMMouseEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail, int screenX, int screenY, int clientX, int clientY, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, unsigned short button, id relatedTarget)    { ((void (*)(DOMMouseEvent, SEL, NSString, BOOL, BOOL, void*, int, int, int, int, int, BOOL, BOOL, BOOL, BOOL, unsigned short, id))bean_msgSend)(self, bean_sel("initMouseEvent:canBubble:cancelable:view:detail:screenX:screenY:clientX:clientY:ctrlKey:altKey:shiftKey:metaKey:button:relatedTarget:"), type, canBubble, cancelable, view, detail, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey, button, relatedTarget); }
-static inline int      DOMMouseEvent_ScreenX(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("screenX")); }
-static inline int      DOMMouseEvent_ScreenY(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("screenY")); }
-static inline int      DOMMouseEvent_ClientX(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("clientX")); }
-static inline int      DOMMouseEvent_ClientY(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("clientY")); }
-static inline BOOL     DOMMouseEvent_CtrlKey(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((BOOL (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("ctrlKey")); }
-static inline BOOL     DOMMouseEvent_ShiftKey(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                             { return ((BOOL (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("shiftKey")); }
-static inline BOOL     DOMMouseEvent_AltKey(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                               { return ((BOOL (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("altKey")); }
-static inline BOOL     DOMMouseEvent_MetaKey(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((BOOL (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("metaKey")); }
-static inline short    DOMMouseEvent_Button(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                               { return ((short (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("button")); }
-static inline id       DOMMouseEvent_RelatedTarget(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                        { return ((id (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("relatedTarget")); }
-static inline int      DOMMouseEvent_OffsetX(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("offsetX")); }
-static inline int      DOMMouseEvent_OffsetY(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("offsetY")); }
-static inline int      DOMMouseEvent_X(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                                    { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("x")); }
-static inline int      DOMMouseEvent_Y(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                                    { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("y")); }
-static inline void*    DOMMouseEvent_FromElement(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                          { return ((void* (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("fromElement")); }
-static inline void*    DOMMouseEvent_ToElement(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                            { return ((void* (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("toElement")); }
-static inline void     DOMMouseEvent_InitMouseEvent(DOMMouseEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail, int screenX, int screenY, int clientX, int clientY, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, unsigned short button, id relatedTarget)                                                                                                                          { ((void (*)(DOMMouseEvent, SEL, NSString, BOOL, BOOL, void*, int, int, int, int, int, BOOL, BOOL, BOOL, BOOL, unsigned short, id))bean_msgSend)(self, bean_sel("initMouseEvent:::::::::::::::"), type, canBubble, cancelable, view, detail, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey, button, relatedTarget); }
+static inline DOMMouseEvent    DOMMouseEvent_InitMouseEvent_CanBubble_Cancelable_View_Detail_ScreenX_ScreenY_ClientX_ClientY_CtrlKey_AltKey_ShiftKey_MetaKey_Button_RelatedTarget(DOMMouseEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail, int screenX, int screenY, int clientX, int clientY, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, unsigned short button, id relatedTarget)    { return ((DOMMouseEvent (*)(DOMMouseEvent, SEL, NSString, BOOL, BOOL, void*, int, int, int, int, int, BOOL, BOOL, BOOL, BOOL, unsigned short, id))bean_msgSend)(self, bean_sel("initMouseEvent:canBubble:cancelable:view:detail:screenX:screenY:clientX:clientY:ctrlKey:altKey:shiftKey:metaKey:button:relatedTarget:"), type, canBubble, cancelable, view, detail, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey, button, relatedTarget); }
+static inline int              DOMMouseEvent_ScreenX(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("screenX")); }
+static inline int              DOMMouseEvent_ScreenY(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("screenY")); }
+static inline int              DOMMouseEvent_ClientX(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("clientX")); }
+static inline int              DOMMouseEvent_ClientY(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("clientY")); }
+static inline BOOL             DOMMouseEvent_CtrlKey(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((BOOL (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("ctrlKey")); }
+static inline BOOL             DOMMouseEvent_ShiftKey(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                             { return ((BOOL (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("shiftKey")); }
+static inline BOOL             DOMMouseEvent_AltKey(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                               { return ((BOOL (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("altKey")); }
+static inline BOOL             DOMMouseEvent_MetaKey(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((BOOL (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("metaKey")); }
+static inline short            DOMMouseEvent_Button(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                               { return ((short (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("button")); }
+static inline id               DOMMouseEvent_RelatedTarget(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                        { return ((id (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("relatedTarget")); }
+static inline int              DOMMouseEvent_OffsetX(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("offsetX")); }
+static inline int              DOMMouseEvent_OffsetY(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                              { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("offsetY")); }
+static inline int              DOMMouseEvent_X(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                                    { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("x")); }
+static inline int              DOMMouseEvent_Y(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                                    { return ((int (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("y")); }
+static inline void*            DOMMouseEvent_FromElement(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                          { return ((void* (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("fromElement")); }
+static inline void*            DOMMouseEvent_ToElement(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                            { return ((void* (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("toElement")); }
+static inline DOMMouseEvent    DOMMouseEvent_InitMouseEvent(DOMMouseEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail, int screenX, int screenY, int clientX, int clientY, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, unsigned short button, id relatedTarget)                                                                                                                          { return ((DOMMouseEvent (*)(DOMMouseEvent, SEL, NSString, BOOL, BOOL, void*, int, int, int, int, int, BOOL, BOOL, BOOL, BOOL, unsigned short, id))bean_msgSend)(self, bean_sel("initMouseEvent:::::::::::::::"), type, canBubble, cancelable, view, detail, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey, button, relatedTarget); }
 
 /* ===== DOMMutationEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMMutationEvent
 #define BEAN_TYPEDEF_DOMMutationEvent
 typedef bean_id DOMMutationEvent;
 #endif
-static inline NSString          DOMMutationEvent_NewValue(DOMMutationEvent self)                                                                                                                                                                                                                                             { return ((NSString (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("newValue")); }
-static inline void              DOMMutationEvent_InitMutationEvent_CanBubble_Cancelable_RelatedNode_PrevValue_NewValue_AttrName_AttrChange(DOMMutationEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* relatedNode, NSString prevValue, NSString newValue, NSString attrName, unsigned short attrChange)    { ((void (*)(DOMMutationEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSString, NSString, unsigned short))bean_msgSend)(self, bean_sel("initMutationEvent:canBubble:cancelable:relatedNode:prevValue:newValue:attrName:attrChange:"), type, canBubble, cancelable, relatedNode, prevValue, newValue, attrName, attrChange); }
-static inline void*             DOMMutationEvent_RelatedNode(DOMMutationEvent self)                                                                                                                                                                                                                                          { return ((void* (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("relatedNode")); }
-static inline NSString          DOMMutationEvent_PrevValue(DOMMutationEvent self)                                                                                                                                                                                                                                            { return ((NSString (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("prevValue")); }
-static inline NSString          DOMMutationEvent_AttrName(DOMMutationEvent self)                                                                                                                                                                                                                                             { return ((NSString (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("attrName")); }
-static inline unsigned short    DOMMutationEvent_AttrChange(DOMMutationEvent self)                                                                                                                                                                                                                                           { return ((unsigned short (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("attrChange")); }
-static inline void              DOMMutationEvent_InitMutationEvent(DOMMutationEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* relatedNode, NSString prevValue, NSString newValue, NSString attrName, unsigned short attrChange)                                                                            { ((void (*)(DOMMutationEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSString, NSString, unsigned short))bean_msgSend)(self, bean_sel("initMutationEvent::::::::"), type, canBubble, cancelable, relatedNode, prevValue, newValue, attrName, attrChange); }
+static inline NSString            DOMMutationEvent_NewValue(DOMMutationEvent self)                                                                                                                                                                                                                                             { return ((NSString (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("newValue")); }
+static inline DOMMutationEvent    DOMMutationEvent_InitMutationEvent_CanBubble_Cancelable_RelatedNode_PrevValue_NewValue_AttrName_AttrChange(DOMMutationEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* relatedNode, NSString prevValue, NSString newValue, NSString attrName, unsigned short attrChange)    { return ((DOMMutationEvent (*)(DOMMutationEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSString, NSString, unsigned short))bean_msgSend)(self, bean_sel("initMutationEvent:canBubble:cancelable:relatedNode:prevValue:newValue:attrName:attrChange:"), type, canBubble, cancelable, relatedNode, prevValue, newValue, attrName, attrChange); }
+static inline void*               DOMMutationEvent_RelatedNode(DOMMutationEvent self)                                                                                                                                                                                                                                          { return ((void* (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("relatedNode")); }
+static inline NSString            DOMMutationEvent_PrevValue(DOMMutationEvent self)                                                                                                                                                                                                                                            { return ((NSString (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("prevValue")); }
+static inline NSString            DOMMutationEvent_AttrName(DOMMutationEvent self)                                                                                                                                                                                                                                             { return ((NSString (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("attrName")); }
+static inline unsigned short      DOMMutationEvent_AttrChange(DOMMutationEvent self)                                                                                                                                                                                                                                           { return ((unsigned short (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("attrChange")); }
+static inline DOMMutationEvent    DOMMutationEvent_InitMutationEvent(DOMMutationEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* relatedNode, NSString prevValue, NSString newValue, NSString attrName, unsigned short attrChange)                                                                            { return ((DOMMutationEvent (*)(DOMMutationEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSString, NSString, unsigned short))bean_msgSend)(self, bean_sel("initMutationEvent::::::::"), type, canBubble, cancelable, relatedNode, prevValue, newValue, attrName, attrChange); }
 
 /* ===== DOMNamedNodeMap ===== */
 #ifndef BEAN_TYPEDEF_DOMNamedNodeMap
@@ -4485,6 +5291,66 @@ static inline void*         DOMNamedNodeMap_RemoveNamedItemNS_LocalName(DOMNamed
 static inline NSUInteger    DOMNamedNodeMap_Length(DOMNamedNodeMap self)                                                                    { return ((NSUInteger (*)(DOMNamedNodeMap, SEL))bean_msgSend)(self, bean_sel("length")); }
 static inline void*         DOMNamedNodeMap_GetNamedItemNS(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)                 { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getNamedItemNS::"), namespaceURI, localName); }
 static inline void*         DOMNamedNodeMap_RemoveNamedItemNS(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)              { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("removeNamedItemNS::"), namespaceURI, localName); }
+
+/* ===== DOMNode ===== */
+#ifndef BEAN_TYPEDEF_DOMNode
+#define BEAN_TYPEDEF_DOMNode
+typedef bean_id DOMNode;
+#endif
+static inline void*             DOMNode_InsertBefore_RefChild(DOMNode self, void* newChild, void* refChild)                                   { return ((void* (*)(DOMNode, SEL, void*, void*))bean_msgSend)(self, bean_sel("insertBefore:refChild:"), newChild, refChild); }
+static inline void*             DOMNode_ReplaceChild_OldChild(DOMNode self, void* newChild, void* oldChild)                                   { return ((void* (*)(DOMNode, SEL, void*, void*))bean_msgSend)(self, bean_sel("replaceChild:oldChild:"), newChild, oldChild); }
+static inline void*             DOMNode_RemoveChild(DOMNode self, void* oldChild)                                                             { return ((void* (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("removeChild:"), oldChild); }
+static inline void*             DOMNode_AppendChild(DOMNode self, void* newChild)                                                             { return ((void* (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("appendChild:"), newChild); }
+static inline BOOL              DOMNode_HasChildNodes(DOMNode self)                                                                           { return ((BOOL (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("hasChildNodes")); }
+static inline void*             DOMNode_CloneNode(DOMNode self, BOOL deep)                                                                    { return ((void* (*)(DOMNode, SEL, BOOL))bean_msgSend)(self, bean_sel("cloneNode:"), deep); }
+static inline void              DOMNode_Normalize(DOMNode self)                                                                               { ((void (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("normalize")); }
+static inline BOOL              DOMNode_IsSupported_Version(DOMNode self, NSString feature, NSString version)                                 { return ((BOOL (*)(DOMNode, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("isSupported:version:"), feature, version); }
+static inline BOOL              DOMNode_HasAttributes(DOMNode self)                                                                           { return ((BOOL (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("hasAttributes")); }
+static inline BOOL              DOMNode_IsSameNode(DOMNode self, void* other)                                                                 { return ((BOOL (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("isSameNode:"), other); }
+static inline BOOL              DOMNode_IsEqualNode(DOMNode self, void* other)                                                                { return ((BOOL (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("isEqualNode:"), other); }
+static inline NSString          DOMNode_LookupPrefix(DOMNode self, NSString namespaceURI)                                                     { return ((NSString (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("lookupPrefix:"), namespaceURI); }
+static inline NSString          DOMNode_LookupNamespaceURI(DOMNode self, NSString prefix)                                                     { return ((NSString (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("lookupNamespaceURI:"), prefix); }
+static inline BOOL              DOMNode_IsDefaultNamespace(DOMNode self, NSString namespaceURI)                                               { return ((BOOL (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("isDefaultNamespace:"), namespaceURI); }
+static inline unsigned short    DOMNode_CompareDocumentPosition(DOMNode self, void* other)                                                    { return ((unsigned short (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("compareDocumentPosition:"), other); }
+static inline BOOL              DOMNode_Contains(DOMNode self, void* other)                                                                   { return ((BOOL (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("contains:"), other); }
+static inline NSString          DOMNode_NodeName(DOMNode self)                                                                                { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("nodeName")); }
+static inline NSString          DOMNode_NodeValue(DOMNode self)                                                                               { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("nodeValue")); }
+static inline void              DOMNode_SetNodeValue(DOMNode self, NSString nodeValue)                                                        { ((void (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("setNodeValue:"), nodeValue); }
+static inline unsigned short    DOMNode_NodeType(DOMNode self)                                                                                { return ((unsigned short (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("nodeType")); }
+static inline void*             DOMNode_ParentNode(DOMNode self)                                                                              { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("parentNode")); }
+static inline void*             DOMNode_ChildNodes(DOMNode self)                                                                              { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("childNodes")); }
+static inline void*             DOMNode_FirstChild(DOMNode self)                                                                              { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("firstChild")); }
+static inline void*             DOMNode_LastChild(DOMNode self)                                                                               { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("lastChild")); }
+static inline void*             DOMNode_PreviousSibling(DOMNode self)                                                                         { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("previousSibling")); }
+static inline void*             DOMNode_NextSibling(DOMNode self)                                                                             { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("nextSibling")); }
+static inline void*             DOMNode_OwnerDocument(DOMNode self)                                                                           { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("ownerDocument")); }
+static inline NSString          DOMNode_NamespaceURI(DOMNode self)                                                                            { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("namespaceURI")); }
+static inline NSString          DOMNode_Prefix(DOMNode self)                                                                                  { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("prefix")); }
+static inline void              DOMNode_SetPrefix(DOMNode self, NSString prefix)                                                              { ((void (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("setPrefix:"), prefix); }
+static inline NSString          DOMNode_LocalName(DOMNode self)                                                                               { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("localName")); }
+static inline void*             DOMNode_Attributes(DOMNode self)                                                                              { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("attributes")); }
+static inline NSString          DOMNode_BaseURI(DOMNode self)                                                                                 { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("baseURI")); }
+static inline NSString          DOMNode_TextContent(DOMNode self)                                                                             { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("textContent")); }
+static inline void              DOMNode_SetTextContent(DOMNode self, NSString textContent)                                                    { ((void (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("setTextContent:"), textContent); }
+static inline void*             DOMNode_ParentElement(DOMNode self)                                                                           { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("parentElement")); }
+static inline BOOL              DOMNode_IsContentEditable(DOMNode self)                                                                       { return ((BOOL (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("isContentEditable")); }
+static inline void*             DOMNode_InsertBefore(DOMNode self, void* newChild, void* refChild)                                            { return ((void* (*)(DOMNode, SEL, void*, void*))bean_msgSend)(self, bean_sel("insertBefore::"), newChild, refChild); }
+static inline void*             DOMNode_ReplaceChild(DOMNode self, void* newChild, void* oldChild)                                            { return ((void* (*)(DOMNode, SEL, void*, void*))bean_msgSend)(self, bean_sel("replaceChild::"), newChild, oldChild); }
+static inline BOOL              DOMNode_IsSupported(DOMNode self, NSString feature, NSString version)                                         { return ((BOOL (*)(DOMNode, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("isSupported::"), feature, version); }
+static inline CGRect            DOMNode_BoundingBox(DOMNode self)                                                                             { return ((CGRect (*)(DOMNode, SEL))bean_msgSend_stret)(self, bean_sel("boundingBox")); }
+static inline NSArray           DOMNode_LineBoxRects(DOMNode self)                                                                            { return ((NSArray (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("lineBoxRects")); }
+static inline void              DOMNode_AddEventListener_Listener_UseCapture(DOMNode self, NSString type, id listener, BOOL useCapture)       { ((void (*)(DOMNode, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:listener:useCapture:"), type, listener, useCapture); }
+static inline void              DOMNode_RemoveEventListener_Listener_UseCapture(DOMNode self, NSString type, id listener, BOOL useCapture)    { ((void (*)(DOMNode, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:listener:useCapture:"), type, listener, useCapture); }
+static inline BOOL              DOMNode_DispatchEvent(DOMNode self, void* event)                                                              { return ((BOOL (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("dispatchEvent:"), event); }
+static inline void              DOMNode_AddEventListener(DOMNode self, NSString type, id listener, BOOL useCapture)                           { ((void (*)(DOMNode, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:::"), type, listener, useCapture); }
+static inline void              DOMNode_RemoveEventListener(DOMNode self, NSString type, id listener, BOOL useCapture)                        { ((void (*)(DOMNode, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:::"), type, listener, useCapture); }
+
+/* ===== DOMNodeFilter ===== */
+#ifndef BEAN_TYPEDEF_DOMNodeFilter
+#define BEAN_TYPEDEF_DOMNodeFilter
+typedef bean_id DOMNodeFilter;
+#endif
+static inline short    DOMNodeFilter_AcceptNode(DOMNodeFilter self, void* n)    { return ((short (*)(DOMNodeFilter, SEL, void*))bean_msgSend)(self, bean_sel("acceptNode:"), n); }
 
 /* ===== DOMNodeIterator ===== */
 #ifndef BEAN_TYPEDEF_DOMNodeIterator
@@ -4514,18 +5380,19 @@ static inline NSUInteger    DOMNodeList_Length(DOMNodeList self)                
 #define BEAN_TYPEDEF_DOMObject
 typedef bean_id DOMObject;
 #endif
-static inline id       DOMObject_Init(DOMObject self)     { return ((id (*)(DOMObject, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline void*    DOMObject_Sheet(DOMObject self)    { return ((void* (*)(DOMObject, SEL))bean_msgSend)(self, bean_sel("sheet")); }
+static inline DOMObject    DOMObject_Init(DOMObject self)                          { return ((DOMObject (*)(DOMObject, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline void*        DOMObject_Sheet(DOMObject self)                         { return ((void* (*)(DOMObject, SEL))bean_msgSend)(self, bean_sel("sheet")); }
+static inline id           DOMObject_CopyWithZone(DOMObject self, NSZone* zone)    { return ((id (*)(DOMObject, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== DOMOverflowEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMOverflowEvent
 #define BEAN_TYPEDEF_DOMOverflowEvent
 typedef bean_id DOMOverflowEvent;
 #endif
-static inline void              DOMOverflowEvent_InitOverflowEvent_HorizontalOverflow_VerticalOverflow(DOMOverflowEvent self, unsigned short orient, BOOL horizontalOverflow, BOOL verticalOverflow)    { ((void (*)(DOMOverflowEvent, SEL, unsigned short, BOOL, BOOL))bean_msgSend)(self, bean_sel("initOverflowEvent:horizontalOverflow:verticalOverflow:"), orient, horizontalOverflow, verticalOverflow); }
-static inline unsigned short    DOMOverflowEvent_Orient(DOMOverflowEvent self)                                                                                                                          { return ((unsigned short (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("orient")); }
-static inline BOOL              DOMOverflowEvent_HorizontalOverflow(DOMOverflowEvent self)                                                                                                              { return ((BOOL (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("horizontalOverflow")); }
-static inline BOOL              DOMOverflowEvent_VerticalOverflow(DOMOverflowEvent self)                                                                                                                { return ((BOOL (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("verticalOverflow")); }
+static inline DOMOverflowEvent    DOMOverflowEvent_InitOverflowEvent_HorizontalOverflow_VerticalOverflow(DOMOverflowEvent self, unsigned short orient, BOOL horizontalOverflow, BOOL verticalOverflow)    { return ((DOMOverflowEvent (*)(DOMOverflowEvent, SEL, unsigned short, BOOL, BOOL))bean_msgSend)(self, bean_sel("initOverflowEvent:horizontalOverflow:verticalOverflow:"), orient, horizontalOverflow, verticalOverflow); }
+static inline unsigned short      DOMOverflowEvent_Orient(DOMOverflowEvent self)                                                                                                                          { return ((unsigned short (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("orient")); }
+static inline BOOL                DOMOverflowEvent_HorizontalOverflow(DOMOverflowEvent self)                                                                                                              { return ((BOOL (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("horizontalOverflow")); }
+static inline BOOL                DOMOverflowEvent_VerticalOverflow(DOMOverflowEvent self)                                                                                                                { return ((BOOL (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("verticalOverflow")); }
 
 /* ===== DOMProcessingInstruction ===== */
 #ifndef BEAN_TYPEDEF_DOMProcessingInstruction
@@ -4554,6 +5421,46 @@ static inline void*      DOMRGBColor_Green(DOMRGBColor self)    { return ((void*
 static inline void*      DOMRGBColor_Blue(DOMRGBColor self)     { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("blue")); }
 static inline void*      DOMRGBColor_Alpha(DOMRGBColor self)    { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("alpha")); }
 static inline NSColor    DOMRGBColor_Color(DOMRGBColor self)    { return ((NSColor (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("color")); }
+
+/* ===== DOMRange ===== */
+#ifndef BEAN_TYPEDEF_DOMRange
+#define BEAN_TYPEDEF_DOMRange
+typedef bean_id DOMRange;
+#endif
+static inline void        DOMRange_SetStart_Offset(DOMRange self, void* refNode, int offset)                                  { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setStart:offset:"), refNode, offset); }
+static inline void        DOMRange_SetEnd_Offset(DOMRange self, void* refNode, int offset)                                    { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setEnd:offset:"), refNode, offset); }
+static inline void        DOMRange_SetStartBefore(DOMRange self, void* refNode)                                               { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("setStartBefore:"), refNode); }
+static inline void        DOMRange_SetStartAfter(DOMRange self, void* refNode)                                                { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("setStartAfter:"), refNode); }
+static inline void        DOMRange_SetEndBefore(DOMRange self, void* refNode)                                                 { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("setEndBefore:"), refNode); }
+static inline void        DOMRange_SetEndAfter(DOMRange self, void* refNode)                                                  { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("setEndAfter:"), refNode); }
+static inline void        DOMRange_Collapse(DOMRange self, BOOL toStart)                                                      { ((void (*)(DOMRange, SEL, BOOL))bean_msgSend)(self, bean_sel("collapse:"), toStart); }
+static inline void        DOMRange_SelectNode(DOMRange self, void* refNode)                                                   { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("selectNode:"), refNode); }
+static inline void        DOMRange_SelectNodeContents(DOMRange self, void* refNode)                                           { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("selectNodeContents:"), refNode); }
+static inline short       DOMRange_CompareBoundaryPoints_SourceRange(DOMRange self, unsigned short how, void* sourceRange)    { return ((short (*)(DOMRange, SEL, unsigned short, void*))bean_msgSend)(self, bean_sel("compareBoundaryPoints:sourceRange:"), how, sourceRange); }
+static inline void        DOMRange_DeleteContents(DOMRange self)                                                              { ((void (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("deleteContents")); }
+static inline void*       DOMRange_ExtractContents(DOMRange self)                                                             { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("extractContents")); }
+static inline void*       DOMRange_CloneContents(DOMRange self)                                                               { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("cloneContents")); }
+static inline void        DOMRange_InsertNode(DOMRange self, void* newNode)                                                   { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("insertNode:"), newNode); }
+static inline void        DOMRange_SurroundContents(DOMRange self, void* newParent)                                           { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("surroundContents:"), newParent); }
+static inline void*       DOMRange_CloneRange(DOMRange self)                                                                  { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("cloneRange")); }
+static inline NSString    DOMRange_ToString(DOMRange self)                                                                    { return ((NSString (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("toString")); }
+static inline void        DOMRange_Detach(DOMRange self)                                                                      { ((void (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("detach")); }
+static inline void*       DOMRange_CreateContextualFragment(DOMRange self, NSString html)                                     { return ((void* (*)(DOMRange, SEL, NSString))bean_msgSend)(self, bean_sel("createContextualFragment:"), html); }
+static inline short       DOMRange_CompareNode(DOMRange self, void* refNode)                                                  { return ((short (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("compareNode:"), refNode); }
+static inline BOOL        DOMRange_IntersectsNode(DOMRange self, void* refNode)                                               { return ((BOOL (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("intersectsNode:"), refNode); }
+static inline short       DOMRange_ComparePoint_Offset(DOMRange self, void* refNode, int offset)                              { return ((short (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("comparePoint:offset:"), refNode, offset); }
+static inline BOOL        DOMRange_IsPointInRange_Offset(DOMRange self, void* refNode, int offset)                            { return ((BOOL (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("isPointInRange:offset:"), refNode, offset); }
+static inline void*       DOMRange_StartContainer(DOMRange self)                                                              { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("startContainer")); }
+static inline int         DOMRange_StartOffset(DOMRange self)                                                                 { return ((int (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("startOffset")); }
+static inline void*       DOMRange_EndContainer(DOMRange self)                                                                { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("endContainer")); }
+static inline int         DOMRange_EndOffset(DOMRange self)                                                                   { return ((int (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("endOffset")); }
+static inline BOOL        DOMRange_Collapsed(DOMRange self)                                                                   { return ((BOOL (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("collapsed")); }
+static inline void*       DOMRange_CommonAncestorContainer(DOMRange self)                                                     { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("commonAncestorContainer")); }
+static inline NSString    DOMRange_Text(DOMRange self)                                                                        { return ((NSString (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("text")); }
+static inline void        DOMRange_SetStart(DOMRange self, void* refNode, int offset)                                         { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setStart::"), refNode, offset); }
+static inline void        DOMRange_SetEnd(DOMRange self, void* refNode, int offset)                                           { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setEnd::"), refNode, offset); }
+static inline short       DOMRange_CompareBoundaryPoints(DOMRange self, unsigned short how, void* sourceRange)                { return ((short (*)(DOMRange, SEL, unsigned short, void*))bean_msgSend)(self, bean_sel("compareBoundaryPoints::"), how, sourceRange); }
+static inline NSString    DOMRange_MarkupString(DOMRange self)                                                                { return ((NSString (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("markupString")); }
 
 /* ===== DOMRect ===== */
 #ifndef BEAN_TYPEDEF_DOMRect
@@ -4620,28 +5527,28 @@ static inline void          DOMTreeWalker_SetCurrentNode(DOMTreeWalker self, voi
 #define BEAN_TYPEDEF_DOMUIEvent
 typedef bean_id DOMUIEvent;
 #endif
-static inline void     DOMUIEvent_InitUIEvent_CanBubble_Cancelable_View_Detail(DOMUIEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail)    { ((void (*)(DOMUIEvent, SEL, NSString, BOOL, BOOL, void*, int))bean_msgSend)(self, bean_sel("initUIEvent:canBubble:cancelable:view:detail:"), type, canBubble, cancelable, view, detail); }
-static inline void*    DOMUIEvent_View(DOMUIEvent self)                                                                                                                    { return ((void* (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("view")); }
-static inline int      DOMUIEvent_Detail(DOMUIEvent self)                                                                                                                  { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("detail")); }
-static inline int      DOMUIEvent_KeyCode(DOMUIEvent self)                                                                                                                 { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("keyCode")); }
-static inline int      DOMUIEvent_CharCode(DOMUIEvent self)                                                                                                                { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("charCode")); }
-static inline int      DOMUIEvent_LayerX(DOMUIEvent self)                                                                                                                  { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("layerX")); }
-static inline int      DOMUIEvent_LayerY(DOMUIEvent self)                                                                                                                  { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("layerY")); }
-static inline int      DOMUIEvent_PageX(DOMUIEvent self)                                                                                                                   { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("pageX")); }
-static inline int      DOMUIEvent_PageY(DOMUIEvent self)                                                                                                                   { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("pageY")); }
-static inline int      DOMUIEvent_Which(DOMUIEvent self)                                                                                                                   { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("which")); }
-static inline void     DOMUIEvent_InitUIEvent(DOMUIEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail)                                     { ((void (*)(DOMUIEvent, SEL, NSString, BOOL, BOOL, void*, int))bean_msgSend)(self, bean_sel("initUIEvent:::::"), type, canBubble, cancelable, view, detail); }
+static inline DOMUIEvent    DOMUIEvent_InitUIEvent_CanBubble_Cancelable_View_Detail(DOMUIEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail)    { return ((DOMUIEvent (*)(DOMUIEvent, SEL, NSString, BOOL, BOOL, void*, int))bean_msgSend)(self, bean_sel("initUIEvent:canBubble:cancelable:view:detail:"), type, canBubble, cancelable, view, detail); }
+static inline void*         DOMUIEvent_View(DOMUIEvent self)                                                                                                                    { return ((void* (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("view")); }
+static inline int           DOMUIEvent_Detail(DOMUIEvent self)                                                                                                                  { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("detail")); }
+static inline int           DOMUIEvent_KeyCode(DOMUIEvent self)                                                                                                                 { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("keyCode")); }
+static inline int           DOMUIEvent_CharCode(DOMUIEvent self)                                                                                                                { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("charCode")); }
+static inline int           DOMUIEvent_LayerX(DOMUIEvent self)                                                                                                                  { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("layerX")); }
+static inline int           DOMUIEvent_LayerY(DOMUIEvent self)                                                                                                                  { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("layerY")); }
+static inline int           DOMUIEvent_PageX(DOMUIEvent self)                                                                                                                   { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("pageX")); }
+static inline int           DOMUIEvent_PageY(DOMUIEvent self)                                                                                                                   { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("pageY")); }
+static inline int           DOMUIEvent_Which(DOMUIEvent self)                                                                                                                   { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("which")); }
+static inline DOMUIEvent    DOMUIEvent_InitUIEvent(DOMUIEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail)                                     { return ((DOMUIEvent (*)(DOMUIEvent, SEL, NSString, BOOL, BOOL, void*, int))bean_msgSend)(self, bean_sel("initUIEvent:::::"), type, canBubble, cancelable, view, detail); }
 
 /* ===== DOMWheelEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMWheelEvent
 #define BEAN_TYPEDEF_DOMWheelEvent
 typedef bean_id DOMWheelEvent;
 #endif
-static inline void    DOMWheelEvent_InitWheelEvent_WheelDeltaY_View_ScreenX_ScreenY_ClientX_ClientY_CtrlKey_AltKey_ShiftKey_MetaKey(DOMWheelEvent self, int wheelDeltaX, int wheelDeltaY, void* view, int screenX, int screenY, int clientX, int clientY, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey)    { ((void (*)(DOMWheelEvent, SEL, int, int, void*, int, int, int, int, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initWheelEvent:wheelDeltaY:view:screenX:screenY:clientX:clientY:ctrlKey:altKey:shiftKey:metaKey:"), wheelDeltaX, wheelDeltaY, view, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey); }
-static inline int     DOMWheelEvent_WheelDeltaX(DOMWheelEvent self)                                                                                                                                                                                                                                                  { return ((int (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("wheelDeltaX")); }
-static inline int     DOMWheelEvent_WheelDeltaY(DOMWheelEvent self)                                                                                                                                                                                                                                                  { return ((int (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("wheelDeltaY")); }
-static inline int     DOMWheelEvent_WheelDelta(DOMWheelEvent self)                                                                                                                                                                                                                                                   { return ((int (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("wheelDelta")); }
-static inline BOOL    DOMWheelEvent_IsHorizontal(DOMWheelEvent self)                                                                                                                                                                                                                                                 { return ((BOOL (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("isHorizontal")); }
+static inline DOMWheelEvent    DOMWheelEvent_InitWheelEvent_WheelDeltaY_View_ScreenX_ScreenY_ClientX_ClientY_CtrlKey_AltKey_ShiftKey_MetaKey(DOMWheelEvent self, int wheelDeltaX, int wheelDeltaY, void* view, int screenX, int screenY, int clientX, int clientY, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey)    { return ((DOMWheelEvent (*)(DOMWheelEvent, SEL, int, int, void*, int, int, int, int, BOOL, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initWheelEvent:wheelDeltaY:view:screenX:screenY:clientX:clientY:ctrlKey:altKey:shiftKey:metaKey:"), wheelDeltaX, wheelDeltaY, view, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey); }
+static inline int              DOMWheelEvent_WheelDeltaX(DOMWheelEvent self)                                                                                                                                                                                                                                                  { return ((int (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("wheelDeltaX")); }
+static inline int              DOMWheelEvent_WheelDeltaY(DOMWheelEvent self)                                                                                                                                                                                                                                                  { return ((int (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("wheelDeltaY")); }
+static inline int              DOMWheelEvent_WheelDelta(DOMWheelEvent self)                                                                                                                                                                                                                                                   { return ((int (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("wheelDelta")); }
+static inline BOOL             DOMWheelEvent_IsHorizontal(DOMWheelEvent self)                                                                                                                                                                                                                                                 { return ((BOOL (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("isHorizontal")); }
 
 /* ===== DOMXPathExpression ===== */
 #ifndef BEAN_TYPEDEF_DOMXPathExpression
@@ -4650,6 +5557,13 @@ typedef bean_id DOMXPathExpression;
 #endif
 static inline void*    DOMXPathExpression_Evaluate_Type_InResult(DOMXPathExpression self, void* contextNode, unsigned short type, void* inResult)    { return ((void* (*)(DOMXPathExpression, SEL, void*, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:type:inResult:"), contextNode, type, inResult); }
 static inline void*    DOMXPathExpression_Evaluate(DOMXPathExpression self, void* contextNode, unsigned short type, void* inResult)                  { return ((void* (*)(DOMXPathExpression, SEL, void*, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:::"), contextNode, type, inResult); }
+
+/* ===== DOMXPathNSResolver ===== */
+#ifndef BEAN_TYPEDEF_DOMXPathNSResolver
+#define BEAN_TYPEDEF_DOMXPathNSResolver
+typedef bean_id DOMXPathNSResolver;
+#endif
+static inline NSString    DOMXPathNSResolver_LookupNamespaceURI(DOMXPathNSResolver self, NSString prefix)    { return ((NSString (*)(DOMXPathNSResolver, SEL, NSString))bean_msgSend)(self, bean_sel("lookupNamespaceURI:"), prefix); }
 
 /* ===== DOMXPathResult ===== */
 #ifndef BEAN_TYPEDEF_DOMXPathResult
@@ -4681,10 +5595,10 @@ static inline void    NSAttributedString_LoadFromHTMLWithData_Options_Completion
 #define BEAN_TYPEDEF_WKBackForwardListItem
 typedef bean_id WKBackForwardListItem;
 #endif
-static inline id          WKBackForwardListItem_Init(WKBackForwardListItem self)          { return ((id (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline NSURL       WKBackForwardListItem_URL(WKBackForwardListItem self)           { return ((NSURL (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("URL")); }
-static inline NSString    WKBackForwardListItem_Title(WKBackForwardListItem self)         { return ((NSString (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline NSURL       WKBackForwardListItem_InitialURL(WKBackForwardListItem self)    { return ((NSURL (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("initialURL")); }
+static inline WKBackForwardListItem    WKBackForwardListItem_Init(WKBackForwardListItem self)          { return ((WKBackForwardListItem (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSURL                    WKBackForwardListItem_URL(WKBackForwardListItem self)           { return ((NSURL (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("URL")); }
+static inline NSString                 WKBackForwardListItem_Title(WKBackForwardListItem self)         { return ((NSString (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline WKBackForwardListItem    WKBackForwardListItem_InitialURL(WKBackForwardListItem self)    { return ((WKBackForwardListItem (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("initialURL")); }
 
 /* ===== WKContentRuleList ===== */
 #ifndef BEAN_TYPEDEF_WKContentRuleList
@@ -4698,20 +5612,20 @@ static inline NSString    WKContentRuleList_Identifier(WKContentRuleList self)  
 #define BEAN_TYPEDEF_WKContentRuleListStore
 typedef bean_id WKContentRuleListStore;
 #endif
-static inline id      WKContentRuleListStore_DefaultStore(void)                                                                                                                                                                          { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentRuleListStore"), bean_sel("defaultStore")); }
-static inline id      WKContentRuleListStore_StoreWithURL(NSURL url)                                                                                                                                                                     { return ((id (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("WKContentRuleListStore"), bean_sel("storeWithURL:"), url); }
-static inline void    WKContentRuleListStore_CompileContentRuleListForIdentifier_EncodedContentRuleList_CompletionHandler(WKContentRuleListStore self, NSString identifier, NSString encodedContentRuleList, void* completionHandler)    { ((void (*)(WKContentRuleListStore, SEL, NSString, NSString, void*))bean_msgSend)(self, bean_sel("compileContentRuleListForIdentifier:encodedContentRuleList:completionHandler:"), identifier, encodedContentRuleList, completionHandler); }
-static inline void    WKContentRuleListStore_LookUpContentRuleListForIdentifier_CompletionHandler(WKContentRuleListStore self, NSString identifier, void* completionHandler)                                                             { ((void (*)(WKContentRuleListStore, SEL, NSString, void*))bean_msgSend)(self, bean_sel("lookUpContentRuleListForIdentifier:completionHandler:"), identifier, completionHandler); }
-static inline void    WKContentRuleListStore_RemoveContentRuleListForIdentifier_CompletionHandler(WKContentRuleListStore self, NSString identifier, void* completionHandler)                                                             { ((void (*)(WKContentRuleListStore, SEL, NSString, void*))bean_msgSend)(self, bean_sel("removeContentRuleListForIdentifier:completionHandler:"), identifier, completionHandler); }
-static inline void    WKContentRuleListStore_GetAvailableContentRuleListIdentifiers(WKContentRuleListStore self, void* completionHandler)                                                                                                { ((void (*)(WKContentRuleListStore, SEL, void*))bean_msgSend)(self, bean_sel("getAvailableContentRuleListIdentifiers:"), completionHandler); }
+static inline WKContentRuleListStore    WKContentRuleListStore_DefaultStore(void)                                                                                                                                                                          { return ((WKContentRuleListStore (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentRuleListStore"), bean_sel("defaultStore")); }
+static inline WKContentRuleListStore    WKContentRuleListStore_StoreWithURL(NSURL url)                                                                                                                                                                     { return ((WKContentRuleListStore (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("WKContentRuleListStore"), bean_sel("storeWithURL:"), url); }
+static inline void                      WKContentRuleListStore_CompileContentRuleListForIdentifier_EncodedContentRuleList_CompletionHandler(WKContentRuleListStore self, NSString identifier, NSString encodedContentRuleList, void* completionHandler)    { ((void (*)(WKContentRuleListStore, SEL, NSString, NSString, void*))bean_msgSend)(self, bean_sel("compileContentRuleListForIdentifier:encodedContentRuleList:completionHandler:"), identifier, encodedContentRuleList, completionHandler); }
+static inline void                      WKContentRuleListStore_LookUpContentRuleListForIdentifier_CompletionHandler(WKContentRuleListStore self, NSString identifier, void* completionHandler)                                                             { ((void (*)(WKContentRuleListStore, SEL, NSString, void*))bean_msgSend)(self, bean_sel("lookUpContentRuleListForIdentifier:completionHandler:"), identifier, completionHandler); }
+static inline void                      WKContentRuleListStore_RemoveContentRuleListForIdentifier_CompletionHandler(WKContentRuleListStore self, NSString identifier, void* completionHandler)                                                             { ((void (*)(WKContentRuleListStore, SEL, NSString, void*))bean_msgSend)(self, bean_sel("removeContentRuleListForIdentifier:completionHandler:"), identifier, completionHandler); }
+static inline void                      WKContentRuleListStore_GetAvailableContentRuleListIdentifiers(WKContentRuleListStore self, void* completionHandler)                                                                                                { ((void (*)(WKContentRuleListStore, SEL, void*))bean_msgSend)(self, bean_sel("getAvailableContentRuleListIdentifiers:"), completionHandler); }
 
 /* ===== WKContentWorld ===== */
 #ifndef BEAN_TYPEDEF_WKContentWorld
 #define BEAN_TYPEDEF_WKContentWorld
 typedef bean_id WKContentWorld;
 #endif
-static inline id                WKContentWorld_New(void)                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("new")); }
-static inline id                WKContentWorld_Init(WKContentWorld self)       { return ((id (*)(WKContentWorld, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline WKContentWorld    WKContentWorld_New(void)                       { return ((WKContentWorld (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("new")); }
+static inline WKContentWorld    WKContentWorld_Init(WKContentWorld self)       { return ((WKContentWorld (*)(WKContentWorld, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline WKContentWorld    WKContentWorld_WorldWithName(NSString name)    { return ((WKContentWorld (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("worldWithName:"), name); }
 static inline WKContentWorld    WKContentWorld_PageWorld(void)                 { return ((WKContentWorld (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("pageWorld")); }
 static inline WKContentWorld    WKContentWorld_DefaultClientWorld(void)        { return ((WKContentWorld (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("defaultClientWorld")); }
@@ -4728,29 +5642,31 @@ static inline BOOL    WKFindConfiguration_CaseSensitive(WKFindConfiguration self
 static inline void    WKFindConfiguration_SetCaseSensitive(WKFindConfiguration self, BOOL caseSensitive)    { ((void (*)(WKFindConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setCaseSensitive:"), caseSensitive); }
 static inline BOOL    WKFindConfiguration_Wraps(WKFindConfiguration self)                                   { return ((BOOL (*)(WKFindConfiguration, SEL))bean_msgSend)(self, bean_sel("wraps")); }
 static inline void    WKFindConfiguration_SetWraps(WKFindConfiguration self, BOOL wraps)                    { ((void (*)(WKFindConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setWraps:"), wraps); }
+static inline id      WKFindConfiguration_CopyWithZone(WKFindConfiguration self, NSZone* zone)              { return ((id (*)(WKFindConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== WKFindResult ===== */
 #ifndef BEAN_TYPEDEF_WKFindResult
 #define BEAN_TYPEDEF_WKFindResult
 typedef bean_id WKFindResult;
 #endif
-static inline id      WKFindResult_Init(WKFindResult self)          { return ((id (*)(WKFindResult, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline BOOL    WKFindResult_MatchFound(WKFindResult self)    { return ((BOOL (*)(WKFindResult, SEL))bean_msgSend)(self, bean_sel("matchFound")); }
+static inline WKFindResult    WKFindResult_Init(WKFindResult self)                          { return ((WKFindResult (*)(WKFindResult, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline BOOL            WKFindResult_MatchFound(WKFindResult self)                    { return ((BOOL (*)(WKFindResult, SEL))bean_msgSend)(self, bean_sel("matchFound")); }
+static inline id              WKFindResult_CopyWithZone(WKFindResult self, NSZone* zone)    { return ((id (*)(WKFindResult, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== WKHTTPCookieStore ===== */
 #ifndef BEAN_TYPEDEF_WKHTTPCookieStore
 #define BEAN_TYPEDEF_WKHTTPCookieStore
 typedef bean_id WKHTTPCookieStore;
 #endif
-static inline id      WKHTTPCookieStore_Init(WKHTTPCookieStore self)                                                                                 { return ((id (*)(WKHTTPCookieStore, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline void    WKHTTPCookieStore_GetAllCookies(WKHTTPCookieStore self, void* completionHandler)                                               { ((void (*)(WKHTTPCookieStore, SEL, void*))bean_msgSend)(self, bean_sel("getAllCookies:"), completionHandler); }
-static inline void    WKHTTPCookieStore_SetCookie_CompletionHandler(WKHTTPCookieStore self, NSHTTPCookie cookie, void* completionHandler)            { ((void (*)(WKHTTPCookieStore, SEL, NSHTTPCookie, void*))bean_msgSend)(self, bean_sel("setCookie:completionHandler:"), cookie, completionHandler); }
-static inline void    WKHTTPCookieStore_SetCookies_CompletionHandler(WKHTTPCookieStore self, NSArray cookies, void* completionHandler)               { ((void (*)(WKHTTPCookieStore, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("setCookies:completionHandler:"), cookies, completionHandler); }
-static inline void    WKHTTPCookieStore_DeleteCookie_CompletionHandler(WKHTTPCookieStore self, NSHTTPCookie cookie, void* completionHandler)         { ((void (*)(WKHTTPCookieStore, SEL, NSHTTPCookie, void*))bean_msgSend)(self, bean_sel("deleteCookie:completionHandler:"), cookie, completionHandler); }
-static inline void    WKHTTPCookieStore_AddObserver(WKHTTPCookieStore self, id observer)                                                             { ((void (*)(WKHTTPCookieStore, SEL, id))bean_msgSend)(self, bean_sel("addObserver:"), observer); }
-static inline void    WKHTTPCookieStore_RemoveObserver(WKHTTPCookieStore self, id observer)                                                          { ((void (*)(WKHTTPCookieStore, SEL, id))bean_msgSend)(self, bean_sel("removeObserver:"), observer); }
-static inline void    WKHTTPCookieStore_SetCookiePolicy_CompletionHandler(WKHTTPCookieStore self, WKCookiePolicy policy, void* completionHandler)    { ((void (*)(WKHTTPCookieStore, SEL, WKCookiePolicy, void*))bean_msgSend)(self, bean_sel("setCookiePolicy:completionHandler:"), policy, completionHandler); }
-static inline void    WKHTTPCookieStore_GetCookiePolicy(WKHTTPCookieStore self, void* completionHandler)                                             { ((void (*)(WKHTTPCookieStore, SEL, void*))bean_msgSend)(self, bean_sel("getCookiePolicy:"), completionHandler); }
+static inline WKHTTPCookieStore    WKHTTPCookieStore_Init(WKHTTPCookieStore self)                                                                                 { return ((WKHTTPCookieStore (*)(WKHTTPCookieStore, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline void                 WKHTTPCookieStore_GetAllCookies(WKHTTPCookieStore self, void* completionHandler)                                               { ((void (*)(WKHTTPCookieStore, SEL, void*))bean_msgSend)(self, bean_sel("getAllCookies:"), completionHandler); }
+static inline void                 WKHTTPCookieStore_SetCookie_CompletionHandler(WKHTTPCookieStore self, NSHTTPCookie cookie, void* completionHandler)            { ((void (*)(WKHTTPCookieStore, SEL, NSHTTPCookie, void*))bean_msgSend)(self, bean_sel("setCookie:completionHandler:"), cookie, completionHandler); }
+static inline void                 WKHTTPCookieStore_SetCookies_CompletionHandler(WKHTTPCookieStore self, NSArray cookies, void* completionHandler)               { ((void (*)(WKHTTPCookieStore, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("setCookies:completionHandler:"), cookies, completionHandler); }
+static inline void                 WKHTTPCookieStore_DeleteCookie_CompletionHandler(WKHTTPCookieStore self, NSHTTPCookie cookie, void* completionHandler)         { ((void (*)(WKHTTPCookieStore, SEL, NSHTTPCookie, void*))bean_msgSend)(self, bean_sel("deleteCookie:completionHandler:"), cookie, completionHandler); }
+static inline void                 WKHTTPCookieStore_AddObserver(WKHTTPCookieStore self, id observer)                                                             { ((void (*)(WKHTTPCookieStore, SEL, id))bean_msgSend)(self, bean_sel("addObserver:"), observer); }
+static inline void                 WKHTTPCookieStore_RemoveObserver(WKHTTPCookieStore self, id observer)                                                          { ((void (*)(WKHTTPCookieStore, SEL, id))bean_msgSend)(self, bean_sel("removeObserver:"), observer); }
+static inline void                 WKHTTPCookieStore_SetCookiePolicy_CompletionHandler(WKHTTPCookieStore self, WKCookiePolicy policy, void* completionHandler)    { ((void (*)(WKHTTPCookieStore, SEL, WKCookiePolicy, void*))bean_msgSend)(self, bean_sel("setCookiePolicy:completionHandler:"), policy, completionHandler); }
+static inline void                 WKHTTPCookieStore_GetCookiePolicy(WKHTTPCookieStore self, void* completionHandler)                                             { ((void (*)(WKHTTPCookieStore, SEL, void*))bean_msgSend)(self, bean_sel("getCookiePolicy:"), completionHandler); }
 
 /* ===== WKNavigation ===== */
 #ifndef BEAN_TYPEDEF_WKNavigation
@@ -4786,6 +5702,7 @@ static inline CGRect    WKPDFConfiguration_Rect(WKPDFConfiguration self)        
 static inline void      WKPDFConfiguration_SetRect(WKPDFConfiguration self, CGRect rect)                                              { ((void (*)(WKPDFConfiguration, SEL, CGRect))bean_msgSend)(self, bean_sel("setRect:"), rect); }
 static inline BOOL      WKPDFConfiguration_AllowTransparentBackground(WKPDFConfiguration self)                                        { return ((BOOL (*)(WKPDFConfiguration, SEL))bean_msgSend)(self, bean_sel("allowTransparentBackground")); }
 static inline void      WKPDFConfiguration_SetAllowTransparentBackground(WKPDFConfiguration self, BOOL allowTransparentBackground)    { ((void (*)(WKPDFConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowTransparentBackground:"), allowTransparentBackground); }
+static inline id        WKPDFConfiguration_CopyWithZone(WKPDFConfiguration self, NSZone* zone)                                        { return ((id (*)(WKPDFConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== WKPreferences ===== */
 #ifndef BEAN_TYPEDEF_WKPreferences
@@ -4818,20 +5735,28 @@ static inline BOOL                          WKPreferences_JavaScriptEnabled(WKPr
 static inline void                          WKPreferences_SetJavaScriptEnabled(WKPreferences self, BOOL javaScriptEnabled)                                            { ((void (*)(WKPreferences, SEL, BOOL))bean_msgSend)(self, bean_sel("setJavaScriptEnabled:"), javaScriptEnabled); }
 static inline BOOL                          WKPreferences_IsLookToScrollEnabled(WKPreferences self)                                                                   { return ((BOOL (*)(WKPreferences, SEL))bean_msgSend)(self, bean_sel("isLookToScrollEnabled")); }
 static inline void                          WKPreferences_SetIsLookToScrollEnabled(WKPreferences self, BOOL isLookToScrollEnabled)                                    { ((void (*)(WKPreferences, SEL, BOOL))bean_msgSend)(self, bean_sel("setIsLookToScrollEnabled:"), isLookToScrollEnabled); }
+static inline BOOL                          WKPreferences_SupportsSecureCoding(void)                                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKPreferences"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                          WKPreferences_FraudulentWebsiteWarningEnabled(WKPreferences self)                                                         { return ((BOOL (*)(WKPreferences, SEL))bean_msgSend)(self, bean_sel("fraudulentWebsiteWarningEnabled")); }
 static inline BOOL                          WKPreferences_TextInteractionEnabled(WKPreferences self)                                                                  { return ((BOOL (*)(WKPreferences, SEL))bean_msgSend)(self, bean_sel("textInteractionEnabled")); }
 static inline BOOL                          WKPreferences_SiteSpecificQuirksModeEnabled(WKPreferences self)                                                           { return ((BOOL (*)(WKPreferences, SEL))bean_msgSend)(self, bean_sel("siteSpecificQuirksModeEnabled")); }
 static inline BOOL                          WKPreferences_ElementFullscreenEnabled(WKPreferences self)                                                                { return ((BOOL (*)(WKPreferences, SEL))bean_msgSend)(self, bean_sel("elementFullscreenEnabled")); }
+
+/* ===== WKProcessPool ===== */
+#ifndef BEAN_TYPEDEF_WKProcessPool
+#define BEAN_TYPEDEF_WKProcessPool
+typedef bean_id WKProcessPool;
+#endif
+static inline BOOL    WKProcessPool_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKProcessPool"), bean_sel("supportsSecureCoding")); }
 
 /* ===== WKSecurityOrigin ===== */
 #ifndef BEAN_TYPEDEF_WKSecurityOrigin
 #define BEAN_TYPEDEF_WKSecurityOrigin
 typedef bean_id WKSecurityOrigin;
 #endif
-static inline id           WKSecurityOrigin_Init(WKSecurityOrigin self)        { return ((id (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline NSString     WKSecurityOrigin_Protocol(WKSecurityOrigin self)    { return ((NSString (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("protocol")); }
-static inline NSString     WKSecurityOrigin_Host(WKSecurityOrigin self)        { return ((NSString (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("host")); }
-static inline NSInteger    WKSecurityOrigin_Port(WKSecurityOrigin self)        { return ((NSInteger (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("port")); }
+static inline WKSecurityOrigin    WKSecurityOrigin_Init(WKSecurityOrigin self)        { return ((WKSecurityOrigin (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSString            WKSecurityOrigin_Protocol(WKSecurityOrigin self)    { return ((NSString (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("protocol")); }
+static inline NSString            WKSecurityOrigin_Host(WKSecurityOrigin self)        { return ((NSString (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("host")); }
+static inline NSInteger           WKSecurityOrigin_Port(WKSecurityOrigin self)        { return ((NSInteger (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("port")); }
 
 /* ===== WKSnapshotConfiguration ===== */
 #ifndef BEAN_TYPEDEF_WKSnapshotConfiguration
@@ -4844,130 +5769,144 @@ static inline NSNumber    WKSnapshotConfiguration_SnapshotWidth(WKSnapshotConfig
 static inline void        WKSnapshotConfiguration_SetSnapshotWidth(WKSnapshotConfiguration self, NSNumber snapshotWidth)          { ((void (*)(WKSnapshotConfiguration, SEL, NSNumber))bean_msgSend)(self, bean_sel("setSnapshotWidth:"), snapshotWidth); }
 static inline BOOL        WKSnapshotConfiguration_AfterScreenUpdates(WKSnapshotConfiguration self)                                { return ((BOOL (*)(WKSnapshotConfiguration, SEL))bean_msgSend)(self, bean_sel("afterScreenUpdates")); }
 static inline void        WKSnapshotConfiguration_SetAfterScreenUpdates(WKSnapshotConfiguration self, BOOL afterScreenUpdates)    { ((void (*)(WKSnapshotConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAfterScreenUpdates:"), afterScreenUpdates); }
+static inline id          WKSnapshotConfiguration_CopyWithZone(WKSnapshotConfiguration self, NSZone* zone)                        { return ((id (*)(WKSnapshotConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+
+/* ===== WKURLSchemeTask ===== */
+#ifndef BEAN_TYPEDEF_WKURLSchemeTask
+#define BEAN_TYPEDEF_WKURLSchemeTask
+typedef bean_id WKURLSchemeTask;
+#endif
+static inline void            WKURLSchemeTask_DidReceiveResponse(WKURLSchemeTask self, NSURLResponse response)    { ((void (*)(WKURLSchemeTask, SEL, NSURLResponse))bean_msgSend)(self, bean_sel("didReceiveResponse:"), response); }
+static inline void            WKURLSchemeTask_DidReceiveData(WKURLSchemeTask self, NSData data)                   { ((void (*)(WKURLSchemeTask, SEL, NSData))bean_msgSend)(self, bean_sel("didReceiveData:"), data); }
+static inline void            WKURLSchemeTask_DidFinish(WKURLSchemeTask self)                                     { ((void (*)(WKURLSchemeTask, SEL))bean_msgSend)(self, bean_sel("didFinish")); }
+static inline void            WKURLSchemeTask_DidFailWithError(WKURLSchemeTask self, NSError error)               { ((void (*)(WKURLSchemeTask, SEL, NSError))bean_msgSend)(self, bean_sel("didFailWithError:"), error); }
+static inline NSURLRequest    WKURLSchemeTask_Request(WKURLSchemeTask self)                                       { return ((NSURLRequest (*)(WKURLSchemeTask, SEL))bean_msgSend)(self, bean_sel("request")); }
 
 /* ===== WKWebExtension ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtension
 #define BEAN_TYPEDEF_WKWebExtension
 typedef bean_id WKWebExtension;
 #endif
-static inline id              WKWebExtension_New(void)                                                                                                  { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("new")); }
-static inline id              WKWebExtension_Init(WKWebExtension self)                                                                                  { return ((id (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline void            WKWebExtension_ExtensionWithAppExtensionBundle_CompletionHandler(NSBundle appExtensionBundle, void* completionHandler)    { ((void (*)(bean_class, SEL, NSBundle, void*))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("extensionWithAppExtensionBundle:completionHandler:"), appExtensionBundle, completionHandler); }
-static inline void            WKWebExtension_ExtensionWithResourceBaseURL_CompletionHandler(NSURL resourceBaseURL, void* completionHandler)             { ((void (*)(bean_class, SEL, NSURL, void*))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("extensionWithResourceBaseURL:completionHandler:"), resourceBaseURL, completionHandler); }
-static inline BOOL            WKWebExtension_SupportsManifestVersion(WKWebExtension self, CGFloat manifestVersion)                                      { return ((BOOL (*)(WKWebExtension, SEL, CGFloat))bean_msgSend)(self, bean_sel("supportsManifestVersion:"), manifestVersion); }
-static inline NSImage         WKWebExtension_IconForSize(WKWebExtension self, CGSize size)                                                              { return ((NSImage (*)(WKWebExtension, SEL, CGSize))bean_msgSend)(self, bean_sel("iconForSize:"), size); }
-static inline NSImage         WKWebExtension_ActionIconForSize(WKWebExtension self, CGSize size)                                                        { return ((NSImage (*)(WKWebExtension, SEL, CGSize))bean_msgSend)(self, bean_sel("actionIconForSize:"), size); }
-static inline NSArray         WKWebExtension_Errors(WKWebExtension self)                                                                                { return ((NSArray (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("errors")); }
-static inline NSDictionary    WKWebExtension_Manifest(WKWebExtension self)                                                                              { return ((NSDictionary (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("manifest")); }
-static inline CGFloat         WKWebExtension_ManifestVersion(WKWebExtension self)                                                                       { return ((CGFloat (*)(WKWebExtension, SEL))bean_msgSend_fpret)(self, bean_sel("manifestVersion")); }
-static inline NSLocale        WKWebExtension_DefaultLocale(WKWebExtension self)                                                                         { return ((NSLocale (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("defaultLocale")); }
-static inline NSString        WKWebExtension_DisplayName(WKWebExtension self)                                                                           { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayName")); }
-static inline NSString        WKWebExtension_DisplayShortName(WKWebExtension self)                                                                      { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayShortName")); }
-static inline NSString        WKWebExtension_DisplayVersion(WKWebExtension self)                                                                        { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayVersion")); }
-static inline NSString        WKWebExtension_DisplayDescription(WKWebExtension self)                                                                    { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayDescription")); }
-static inline NSString        WKWebExtension_DisplayActionLabel(WKWebExtension self)                                                                    { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayActionLabel")); }
-static inline NSString        WKWebExtension_Version(WKWebExtension self)                                                                               { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("version")); }
-static inline NSSet           WKWebExtension_RequestedPermissions(WKWebExtension self)                                                                  { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("requestedPermissions")); }
-static inline NSSet           WKWebExtension_OptionalPermissions(WKWebExtension self)                                                                   { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("optionalPermissions")); }
-static inline NSSet           WKWebExtension_RequestedPermissionMatchPatterns(WKWebExtension self)                                                      { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("requestedPermissionMatchPatterns")); }
-static inline NSSet           WKWebExtension_OptionalPermissionMatchPatterns(WKWebExtension self)                                                       { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("optionalPermissionMatchPatterns")); }
-static inline NSSet           WKWebExtension_AllRequestedMatchPatterns(WKWebExtension self)                                                             { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("allRequestedMatchPatterns")); }
-static inline BOOL            WKWebExtension_HasBackgroundContent(WKWebExtension self)                                                                  { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasBackgroundContent")); }
-static inline BOOL            WKWebExtension_HasPersistentBackgroundContent(WKWebExtension self)                                                        { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasPersistentBackgroundContent")); }
-static inline BOOL            WKWebExtension_HasInjectedContent(WKWebExtension self)                                                                    { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasInjectedContent")); }
-static inline BOOL            WKWebExtension_HasOptionsPage(WKWebExtension self)                                                                        { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasOptionsPage")); }
-static inline BOOL            WKWebExtension_HasOverrideNewTabPage(WKWebExtension self)                                                                 { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasOverrideNewTabPage")); }
-static inline BOOL            WKWebExtension_HasCommands(WKWebExtension self)                                                                           { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasCommands")); }
-static inline BOOL            WKWebExtension_HasContentModificationRules(WKWebExtension self)                                                           { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasContentModificationRules")); }
+static inline WKWebExtension    WKWebExtension_New(void)                                                                                                  { return ((WKWebExtension (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("new")); }
+static inline WKWebExtension    WKWebExtension_Init(WKWebExtension self)                                                                                  { return ((WKWebExtension (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline void              WKWebExtension_ExtensionWithAppExtensionBundle_CompletionHandler(NSBundle appExtensionBundle, void* completionHandler)    { ((void (*)(bean_class, SEL, NSBundle, void*))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("extensionWithAppExtensionBundle:completionHandler:"), appExtensionBundle, completionHandler); }
+static inline void              WKWebExtension_ExtensionWithResourceBaseURL_CompletionHandler(NSURL resourceBaseURL, void* completionHandler)             { ((void (*)(bean_class, SEL, NSURL, void*))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("extensionWithResourceBaseURL:completionHandler:"), resourceBaseURL, completionHandler); }
+static inline BOOL              WKWebExtension_SupportsManifestVersion(WKWebExtension self, CGFloat manifestVersion)                                      { return ((BOOL (*)(WKWebExtension, SEL, CGFloat))bean_msgSend)(self, bean_sel("supportsManifestVersion:"), manifestVersion); }
+static inline NSImage           WKWebExtension_IconForSize(WKWebExtension self, CGSize size)                                                              { return ((NSImage (*)(WKWebExtension, SEL, CGSize))bean_msgSend)(self, bean_sel("iconForSize:"), size); }
+static inline NSImage           WKWebExtension_ActionIconForSize(WKWebExtension self, CGSize size)                                                        { return ((NSImage (*)(WKWebExtension, SEL, CGSize))bean_msgSend)(self, bean_sel("actionIconForSize:"), size); }
+static inline NSArray           WKWebExtension_Errors(WKWebExtension self)                                                                                { return ((NSArray (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("errors")); }
+static inline NSDictionary      WKWebExtension_Manifest(WKWebExtension self)                                                                              { return ((NSDictionary (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("manifest")); }
+static inline CGFloat           WKWebExtension_ManifestVersion(WKWebExtension self)                                                                       { return ((CGFloat (*)(WKWebExtension, SEL))bean_msgSend_fpret)(self, bean_sel("manifestVersion")); }
+static inline NSLocale          WKWebExtension_DefaultLocale(WKWebExtension self)                                                                         { return ((NSLocale (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("defaultLocale")); }
+static inline NSString          WKWebExtension_DisplayName(WKWebExtension self)                                                                           { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayName")); }
+static inline NSString          WKWebExtension_DisplayShortName(WKWebExtension self)                                                                      { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayShortName")); }
+static inline NSString          WKWebExtension_DisplayVersion(WKWebExtension self)                                                                        { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayVersion")); }
+static inline NSString          WKWebExtension_DisplayDescription(WKWebExtension self)                                                                    { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayDescription")); }
+static inline NSString          WKWebExtension_DisplayActionLabel(WKWebExtension self)                                                                    { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("displayActionLabel")); }
+static inline NSString          WKWebExtension_Version(WKWebExtension self)                                                                               { return ((NSString (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("version")); }
+static inline NSSet             WKWebExtension_RequestedPermissions(WKWebExtension self)                                                                  { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("requestedPermissions")); }
+static inline NSSet             WKWebExtension_OptionalPermissions(WKWebExtension self)                                                                   { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("optionalPermissions")); }
+static inline NSSet             WKWebExtension_RequestedPermissionMatchPatterns(WKWebExtension self)                                                      { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("requestedPermissionMatchPatterns")); }
+static inline NSSet             WKWebExtension_OptionalPermissionMatchPatterns(WKWebExtension self)                                                       { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("optionalPermissionMatchPatterns")); }
+static inline NSSet             WKWebExtension_AllRequestedMatchPatterns(WKWebExtension self)                                                             { return ((NSSet (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("allRequestedMatchPatterns")); }
+static inline BOOL              WKWebExtension_HasBackgroundContent(WKWebExtension self)                                                                  { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasBackgroundContent")); }
+static inline BOOL              WKWebExtension_HasPersistentBackgroundContent(WKWebExtension self)                                                        { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasPersistentBackgroundContent")); }
+static inline BOOL              WKWebExtension_HasInjectedContent(WKWebExtension self)                                                                    { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasInjectedContent")); }
+static inline BOOL              WKWebExtension_HasOptionsPage(WKWebExtension self)                                                                        { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasOptionsPage")); }
+static inline BOOL              WKWebExtension_HasOverrideNewTabPage(WKWebExtension self)                                                                 { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasOverrideNewTabPage")); }
+static inline BOOL              WKWebExtension_HasCommands(WKWebExtension self)                                                                           { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasCommands")); }
+static inline BOOL              WKWebExtension_HasContentModificationRules(WKWebExtension self)                                                           { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasContentModificationRules")); }
 
 /* ===== WKWebExtensionDataRecord ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionDataRecord
 #define BEAN_TYPEDEF_WKWebExtensionDataRecord
 typedef bean_id WKWebExtensionDataRecord;
 #endif
-static inline id            WKWebExtensionDataRecord_New(void)                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionDataRecord"), bean_sel("new")); }
-static inline id            WKWebExtensionDataRecord_Init(WKWebExtensionDataRecord self)                                   { return ((id (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline NSUInteger    WKWebExtensionDataRecord_SizeInBytesOfTypes(WKWebExtensionDataRecord self, NSSet dataTypes)    { return ((NSUInteger (*)(WKWebExtensionDataRecord, SEL, NSSet))bean_msgSend)(self, bean_sel("sizeInBytesOfTypes:"), dataTypes); }
-static inline NSString      WKWebExtensionDataRecord_DisplayName(WKWebExtensionDataRecord self)                            { return ((NSString (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("displayName")); }
-static inline NSString      WKWebExtensionDataRecord_UniqueIdentifier(WKWebExtensionDataRecord self)                       { return ((NSString (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("uniqueIdentifier")); }
-static inline NSSet         WKWebExtensionDataRecord_ContainedDataTypes(WKWebExtensionDataRecord self)                     { return ((NSSet (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("containedDataTypes")); }
-static inline NSArray       WKWebExtensionDataRecord_Errors(WKWebExtensionDataRecord self)                                 { return ((NSArray (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("errors")); }
-static inline NSUInteger    WKWebExtensionDataRecord_TotalSizeInBytes(WKWebExtensionDataRecord self)                       { return ((NSUInteger (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("totalSizeInBytes")); }
+static inline WKWebExtensionDataRecord    WKWebExtensionDataRecord_New(void)                                                             { return ((WKWebExtensionDataRecord (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionDataRecord"), bean_sel("new")); }
+static inline WKWebExtensionDataRecord    WKWebExtensionDataRecord_Init(WKWebExtensionDataRecord self)                                   { return ((WKWebExtensionDataRecord (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline NSUInteger                  WKWebExtensionDataRecord_SizeInBytesOfTypes(WKWebExtensionDataRecord self, NSSet dataTypes)    { return ((NSUInteger (*)(WKWebExtensionDataRecord, SEL, NSSet))bean_msgSend)(self, bean_sel("sizeInBytesOfTypes:"), dataTypes); }
+static inline NSString                    WKWebExtensionDataRecord_DisplayName(WKWebExtensionDataRecord self)                            { return ((NSString (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("displayName")); }
+static inline NSString                    WKWebExtensionDataRecord_UniqueIdentifier(WKWebExtensionDataRecord self)                       { return ((NSString (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("uniqueIdentifier")); }
+static inline NSSet                       WKWebExtensionDataRecord_ContainedDataTypes(WKWebExtensionDataRecord self)                     { return ((NSSet (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("containedDataTypes")); }
+static inline NSArray                     WKWebExtensionDataRecord_Errors(WKWebExtensionDataRecord self)                                 { return ((NSArray (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("errors")); }
+static inline NSUInteger                  WKWebExtensionDataRecord_TotalSizeInBytes(WKWebExtensionDataRecord self)                       { return ((NSUInteger (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("totalSizeInBytes")); }
 
 /* ===== WKWebExtensionMatchPattern ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionMatchPattern
 #define BEAN_TYPEDEF_WKWebExtensionMatchPattern
 typedef bean_id WKWebExtensionMatchPattern;
 #endif
-static inline id          WKWebExtensionMatchPattern_New(void)                                                                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("new")); }
-static inline id          WKWebExtensionMatchPattern_Init(WKWebExtensionMatchPattern self)                                                                                                     { return ((id (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline void        WKWebExtensionMatchPattern_RegisterCustomURLScheme(NSString urlScheme)                                                                                               { ((void (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("registerCustomURLScheme:"), urlScheme); }
-static inline id          WKWebExtensionMatchPattern_AllURLsMatchPattern(void)                                                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("allURLsMatchPattern")); }
-static inline id          WKWebExtensionMatchPattern_AllHostsAndSchemesMatchPattern(void)                                                                                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("allHostsAndSchemesMatchPattern")); }
-static inline id          WKWebExtensionMatchPattern_MatchPatternWithString(NSString string)                                                                                                   { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("matchPatternWithString:"), string); }
-static inline id          WKWebExtensionMatchPattern_MatchPatternWithScheme_Host_Path(NSString scheme, NSString host, NSString path)                                                           { return ((id (*)(bean_class, SEL, NSString, NSString, NSString))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("matchPatternWithScheme:host:path:"), scheme, host, path); }
-static inline id          WKWebExtensionMatchPattern_InitWithString_Error(WKWebExtensionMatchPattern self, NSString string, NSError error)                                                     { return ((id (*)(WKWebExtensionMatchPattern, SEL, NSString, NSError))bean_msgSend)(self, bean_sel("initWithString:error:"), string, error); }
-static inline id          WKWebExtensionMatchPattern_InitWithScheme_Host_Path_Error(WKWebExtensionMatchPattern self, NSString scheme, NSString host, NSString path, NSError error)             { return ((id (*)(WKWebExtensionMatchPattern, SEL, NSString, NSString, NSString, NSError))bean_msgSend)(self, bean_sel("initWithScheme:host:path:error:"), scheme, host, path, error); }
-static inline BOOL        WKWebExtensionMatchPattern_MatchesURL(WKWebExtensionMatchPattern self, NSURL url)                                                                                    { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL, NSURL))bean_msgSend)(self, bean_sel("matchesURL:"), url); }
-static inline BOOL        WKWebExtensionMatchPattern_MatchesURL_Options(WKWebExtensionMatchPattern self, NSURL url, WKWebExtensionMatchPatternOptions options)                                 { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL, NSURL, WKWebExtensionMatchPatternOptions))bean_msgSend)(self, bean_sel("matchesURL:options:"), url, options); }
-static inline BOOL        WKWebExtensionMatchPattern_MatchesPattern(WKWebExtensionMatchPattern self, WKWebExtensionMatchPattern pattern)                                                       { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL, WKWebExtensionMatchPattern))bean_msgSend)(self, bean_sel("matchesPattern:"), pattern); }
-static inline BOOL        WKWebExtensionMatchPattern_MatchesPattern_Options(WKWebExtensionMatchPattern self, WKWebExtensionMatchPattern pattern, WKWebExtensionMatchPatternOptions options)    { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL, WKWebExtensionMatchPattern, WKWebExtensionMatchPatternOptions))bean_msgSend)(self, bean_sel("matchesPattern:options:"), pattern, options); }
-static inline NSString    WKWebExtensionMatchPattern_String(WKWebExtensionMatchPattern self)                                                                                                   { return ((NSString (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("string")); }
-static inline NSString    WKWebExtensionMatchPattern_Scheme(WKWebExtensionMatchPattern self)                                                                                                   { return ((NSString (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("scheme")); }
-static inline NSString    WKWebExtensionMatchPattern_Host(WKWebExtensionMatchPattern self)                                                                                                     { return ((NSString (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("host")); }
-static inline NSString    WKWebExtensionMatchPattern_Path(WKWebExtensionMatchPattern self)                                                                                                     { return ((NSString (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("path")); }
-static inline BOOL        WKWebExtensionMatchPattern_MatchesAllURLs(WKWebExtensionMatchPattern self)                                                                                           { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("matchesAllURLs")); }
-static inline BOOL        WKWebExtensionMatchPattern_MatchesAllHosts(WKWebExtensionMatchPattern self)                                                                                          { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("matchesAllHosts")); }
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_New(void)                                                                                                                                 { return ((WKWebExtensionMatchPattern (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("new")); }
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_Init(WKWebExtensionMatchPattern self)                                                                                                     { return ((WKWebExtensionMatchPattern (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline void                          WKWebExtensionMatchPattern_RegisterCustomURLScheme(NSString urlScheme)                                                                                               { ((void (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("registerCustomURLScheme:"), urlScheme); }
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_AllURLsMatchPattern(void)                                                                                                                 { return ((WKWebExtensionMatchPattern (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("allURLsMatchPattern")); }
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_AllHostsAndSchemesMatchPattern(void)                                                                                                      { return ((WKWebExtensionMatchPattern (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("allHostsAndSchemesMatchPattern")); }
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_MatchPatternWithString(NSString string)                                                                                                   { return ((WKWebExtensionMatchPattern (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("matchPatternWithString:"), string); }
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_MatchPatternWithScheme_Host_Path(NSString scheme, NSString host, NSString path)                                                           { return ((WKWebExtensionMatchPattern (*)(bean_class, SEL, NSString, NSString, NSString))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("matchPatternWithScheme:host:path:"), scheme, host, path); }
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_InitWithString_Error(WKWebExtensionMatchPattern self, NSString string, NSError* error)                                                    { return ((WKWebExtensionMatchPattern (*)(WKWebExtensionMatchPattern, SEL, NSString, NSError*))bean_msgSend)(self, bean_sel("initWithString:error:"), string, error); }
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_InitWithScheme_Host_Path_Error(WKWebExtensionMatchPattern self, NSString scheme, NSString host, NSString path, NSError* error)            { return ((WKWebExtensionMatchPattern (*)(WKWebExtensionMatchPattern, SEL, NSString, NSString, NSString, NSError*))bean_msgSend)(self, bean_sel("initWithScheme:host:path:error:"), scheme, host, path, error); }
+static inline BOOL                          WKWebExtensionMatchPattern_MatchesURL(WKWebExtensionMatchPattern self, NSURL url)                                                                                    { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL, NSURL))bean_msgSend)(self, bean_sel("matchesURL:"), url); }
+static inline BOOL                          WKWebExtensionMatchPattern_MatchesURL_Options(WKWebExtensionMatchPattern self, NSURL url, WKWebExtensionMatchPatternOptions options)                                 { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL, NSURL, WKWebExtensionMatchPatternOptions))bean_msgSend)(self, bean_sel("matchesURL:options:"), url, options); }
+static inline BOOL                          WKWebExtensionMatchPattern_MatchesPattern(WKWebExtensionMatchPattern self, WKWebExtensionMatchPattern pattern)                                                       { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL, WKWebExtensionMatchPattern))bean_msgSend)(self, bean_sel("matchesPattern:"), pattern); }
+static inline BOOL                          WKWebExtensionMatchPattern_MatchesPattern_Options(WKWebExtensionMatchPattern self, WKWebExtensionMatchPattern pattern, WKWebExtensionMatchPatternOptions options)    { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL, WKWebExtensionMatchPattern, WKWebExtensionMatchPatternOptions))bean_msgSend)(self, bean_sel("matchesPattern:options:"), pattern, options); }
+static inline NSString                      WKWebExtensionMatchPattern_String(WKWebExtensionMatchPattern self)                                                                                                   { return ((NSString (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("string")); }
+static inline NSString                      WKWebExtensionMatchPattern_Scheme(WKWebExtensionMatchPattern self)                                                                                                   { return ((NSString (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("scheme")); }
+static inline NSString                      WKWebExtensionMatchPattern_Host(WKWebExtensionMatchPattern self)                                                                                                     { return ((NSString (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("host")); }
+static inline NSString                      WKWebExtensionMatchPattern_Path(WKWebExtensionMatchPattern self)                                                                                                     { return ((NSString (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("path")); }
+static inline BOOL                          WKWebExtensionMatchPattern_MatchesAllURLs(WKWebExtensionMatchPattern self)                                                                                           { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("matchesAllURLs")); }
+static inline BOOL                          WKWebExtensionMatchPattern_MatchesAllHosts(WKWebExtensionMatchPattern self)                                                                                          { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("matchesAllHosts")); }
+static inline BOOL                          WKWebExtensionMatchPattern_SupportsSecureCoding(void)                                                                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("supportsSecureCoding")); }
+static inline id                            WKWebExtensionMatchPattern_CopyWithZone(WKWebExtensionMatchPattern self, NSZone* zone)                                                                               { return ((id (*)(WKWebExtensionMatchPattern, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== WKWebExtensionMessagePort ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionMessagePort
 #define BEAN_TYPEDEF_WKWebExtensionMessagePort
 typedef bean_id WKWebExtensionMessagePort;
 #endif
-static inline id          WKWebExtensionMessagePort_New(void)                                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMessagePort"), bean_sel("new")); }
-static inline id          WKWebExtensionMessagePort_Init(WKWebExtensionMessagePort self)                                                                  { return ((id (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline void        WKWebExtensionMessagePort_SendMessage_CompletionHandler(WKWebExtensionMessagePort self, id message, void* completionHandler)    { ((void (*)(WKWebExtensionMessagePort, SEL, id, void*))bean_msgSend)(self, bean_sel("sendMessage:completionHandler:"), message, completionHandler); }
-static inline void        WKWebExtensionMessagePort_Disconnect(WKWebExtensionMessagePort self)                                                            { ((void (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("disconnect")); }
-static inline void        WKWebExtensionMessagePort_DisconnectWithError(WKWebExtensionMessagePort self, NSError error)                                    { ((void (*)(WKWebExtensionMessagePort, SEL, NSError))bean_msgSend)(self, bean_sel("disconnectWithError:"), error); }
-static inline NSString    WKWebExtensionMessagePort_ApplicationIdentifier(WKWebExtensionMessagePort self)                                                 { return ((NSString (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("applicationIdentifier")); }
-static inline void*       WKWebExtensionMessagePort_MessageHandler(WKWebExtensionMessagePort self)                                                        { return ((void* (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("messageHandler")); }
-static inline void        WKWebExtensionMessagePort_SetMessageHandler(WKWebExtensionMessagePort self, void* messageHandler)                               { ((void (*)(WKWebExtensionMessagePort, SEL, void*))bean_msgSend)(self, bean_sel("setMessageHandler:"), messageHandler); }
-static inline void*       WKWebExtensionMessagePort_DisconnectHandler(WKWebExtensionMessagePort self)                                                     { return ((void* (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("disconnectHandler")); }
-static inline void        WKWebExtensionMessagePort_SetDisconnectHandler(WKWebExtensionMessagePort self, void* disconnectHandler)                         { ((void (*)(WKWebExtensionMessagePort, SEL, void*))bean_msgSend)(self, bean_sel("setDisconnectHandler:"), disconnectHandler); }
-static inline BOOL        WKWebExtensionMessagePort_IsDisconnected(WKWebExtensionMessagePort self)                                                        { return ((BOOL (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("isDisconnected")); }
-static inline BOOL        WKWebExtensionMessagePort_Disconnected(WKWebExtensionMessagePort self)                                                          { return ((BOOL (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("disconnected")); }
+static inline WKWebExtensionMessagePort    WKWebExtensionMessagePort_New(void)                                                                                             { return ((WKWebExtensionMessagePort (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMessagePort"), bean_sel("new")); }
+static inline WKWebExtensionMessagePort    WKWebExtensionMessagePort_Init(WKWebExtensionMessagePort self)                                                                  { return ((WKWebExtensionMessagePort (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline void                         WKWebExtensionMessagePort_SendMessage_CompletionHandler(WKWebExtensionMessagePort self, id message, void* completionHandler)    { ((void (*)(WKWebExtensionMessagePort, SEL, id, void*))bean_msgSend)(self, bean_sel("sendMessage:completionHandler:"), message, completionHandler); }
+static inline void                         WKWebExtensionMessagePort_Disconnect(WKWebExtensionMessagePort self)                                                            { ((void (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("disconnect")); }
+static inline void                         WKWebExtensionMessagePort_DisconnectWithError(WKWebExtensionMessagePort self, NSError error)                                    { ((void (*)(WKWebExtensionMessagePort, SEL, NSError))bean_msgSend)(self, bean_sel("disconnectWithError:"), error); }
+static inline NSString                     WKWebExtensionMessagePort_ApplicationIdentifier(WKWebExtensionMessagePort self)                                                 { return ((NSString (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("applicationIdentifier")); }
+static inline void*                        WKWebExtensionMessagePort_MessageHandler(WKWebExtensionMessagePort self)                                                        { return ((void* (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("messageHandler")); }
+static inline void                         WKWebExtensionMessagePort_SetMessageHandler(WKWebExtensionMessagePort self, void* messageHandler)                               { ((void (*)(WKWebExtensionMessagePort, SEL, void*))bean_msgSend)(self, bean_sel("setMessageHandler:"), messageHandler); }
+static inline void*                        WKWebExtensionMessagePort_DisconnectHandler(WKWebExtensionMessagePort self)                                                     { return ((void* (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("disconnectHandler")); }
+static inline void                         WKWebExtensionMessagePort_SetDisconnectHandler(WKWebExtensionMessagePort self, void* disconnectHandler)                         { ((void (*)(WKWebExtensionMessagePort, SEL, void*))bean_msgSend)(self, bean_sel("setDisconnectHandler:"), disconnectHandler); }
+static inline BOOL                         WKWebExtensionMessagePort_IsDisconnected(WKWebExtensionMessagePort self)                                                        { return ((BOOL (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("isDisconnected")); }
+static inline BOOL                         WKWebExtensionMessagePort_Disconnected(WKWebExtensionMessagePort self)                                                          { return ((BOOL (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("disconnected")); }
 
 /* ===== WKWebExtensionTabConfiguration ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionTabConfiguration
 #define BEAN_TYPEDEF_WKWebExtensionTabConfiguration
 typedef bean_id WKWebExtensionTabConfiguration;
 #endif
-static inline id            WKWebExtensionTabConfiguration_New(void)                                                        { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionTabConfiguration"), bean_sel("new")); }
-static inline id            WKWebExtensionTabConfiguration_Init(WKWebExtensionTabConfiguration self)                        { return ((id (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id            WKWebExtensionTabConfiguration_Window(WKWebExtensionTabConfiguration self)                      { return ((id (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("window")); }
-static inline NSUInteger    WKWebExtensionTabConfiguration_Index(WKWebExtensionTabConfiguration self)                       { return ((NSUInteger (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("index")); }
-static inline id            WKWebExtensionTabConfiguration_ParentTab(WKWebExtensionTabConfiguration self)                   { return ((id (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("parentTab")); }
-static inline NSURL         WKWebExtensionTabConfiguration_Url(WKWebExtensionTabConfiguration self)                         { return ((NSURL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("url")); }
-static inline BOOL          WKWebExtensionTabConfiguration_ShouldBeActive(WKWebExtensionTabConfiguration self)              { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBeActive")); }
-static inline BOOL          WKWebExtensionTabConfiguration_ShouldAddToSelection(WKWebExtensionTabConfiguration self)        { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldAddToSelection")); }
-static inline BOOL          WKWebExtensionTabConfiguration_ShouldBePinned(WKWebExtensionTabConfiguration self)              { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBePinned")); }
-static inline BOOL          WKWebExtensionTabConfiguration_ShouldBeMuted(WKWebExtensionTabConfiguration self)               { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBeMuted")); }
-static inline BOOL          WKWebExtensionTabConfiguration_ShouldReaderModeBeActive(WKWebExtensionTabConfiguration self)    { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldReaderModeBeActive")); }
+static inline WKWebExtensionTabConfiguration    WKWebExtensionTabConfiguration_New(void)                                                        { return ((WKWebExtensionTabConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionTabConfiguration"), bean_sel("new")); }
+static inline WKWebExtensionTabConfiguration    WKWebExtensionTabConfiguration_Init(WKWebExtensionTabConfiguration self)                        { return ((WKWebExtensionTabConfiguration (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline id                                WKWebExtensionTabConfiguration_Window(WKWebExtensionTabConfiguration self)                      { return ((id (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("window")); }
+static inline NSUInteger                        WKWebExtensionTabConfiguration_Index(WKWebExtensionTabConfiguration self)                       { return ((NSUInteger (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("index")); }
+static inline id                                WKWebExtensionTabConfiguration_ParentTab(WKWebExtensionTabConfiguration self)                   { return ((id (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("parentTab")); }
+static inline NSURL                             WKWebExtensionTabConfiguration_Url(WKWebExtensionTabConfiguration self)                         { return ((NSURL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("url")); }
+static inline BOOL                              WKWebExtensionTabConfiguration_ShouldBeActive(WKWebExtensionTabConfiguration self)              { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBeActive")); }
+static inline BOOL                              WKWebExtensionTabConfiguration_ShouldAddToSelection(WKWebExtensionTabConfiguration self)        { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldAddToSelection")); }
+static inline BOOL                              WKWebExtensionTabConfiguration_ShouldBePinned(WKWebExtensionTabConfiguration self)              { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBePinned")); }
+static inline BOOL                              WKWebExtensionTabConfiguration_ShouldBeMuted(WKWebExtensionTabConfiguration self)               { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBeMuted")); }
+static inline BOOL                              WKWebExtensionTabConfiguration_ShouldReaderModeBeActive(WKWebExtensionTabConfiguration self)    { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldReaderModeBeActive")); }
 
 /* ===== WKWebExtensionWindowConfiguration ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionWindowConfiguration
 #define BEAN_TYPEDEF_WKWebExtensionWindowConfiguration
 typedef bean_id WKWebExtensionWindowConfiguration;
 #endif
-static inline id                           WKWebExtensionWindowConfiguration_New(void)                                                  { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionWindowConfiguration"), bean_sel("new")); }
-static inline id                           WKWebExtensionWindowConfiguration_Init(WKWebExtensionWindowConfiguration self)               { return ((id (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline WKWebExtensionWindowType     WKWebExtensionWindowConfiguration_WindowType(WKWebExtensionWindowConfiguration self)         { return ((WKWebExtensionWindowType (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("windowType")); }
-static inline WKWebExtensionWindowState    WKWebExtensionWindowConfiguration_WindowState(WKWebExtensionWindowConfiguration self)        { return ((WKWebExtensionWindowState (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("windowState")); }
-static inline CGRect                       WKWebExtensionWindowConfiguration_Frame(WKWebExtensionWindowConfiguration self)              { return ((CGRect (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend_stret)(self, bean_sel("frame")); }
-static inline NSArray                      WKWebExtensionWindowConfiguration_TabURLs(WKWebExtensionWindowConfiguration self)            { return ((NSArray (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("tabURLs")); }
-static inline NSArray                      WKWebExtensionWindowConfiguration_Tabs(WKWebExtensionWindowConfiguration self)               { return ((NSArray (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("tabs")); }
-static inline BOOL                         WKWebExtensionWindowConfiguration_ShouldBeFocused(WKWebExtensionWindowConfiguration self)    { return ((BOOL (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBeFocused")); }
-static inline BOOL                         WKWebExtensionWindowConfiguration_ShouldBePrivate(WKWebExtensionWindowConfiguration self)    { return ((BOOL (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBePrivate")); }
+static inline WKWebExtensionWindowConfiguration    WKWebExtensionWindowConfiguration_New(void)                                                  { return ((WKWebExtensionWindowConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionWindowConfiguration"), bean_sel("new")); }
+static inline WKWebExtensionWindowConfiguration    WKWebExtensionWindowConfiguration_Init(WKWebExtensionWindowConfiguration self)               { return ((WKWebExtensionWindowConfiguration (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline WKWebExtensionWindowType             WKWebExtensionWindowConfiguration_WindowType(WKWebExtensionWindowConfiguration self)         { return ((WKWebExtensionWindowType (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("windowType")); }
+static inline WKWebExtensionWindowState            WKWebExtensionWindowConfiguration_WindowState(WKWebExtensionWindowConfiguration self)        { return ((WKWebExtensionWindowState (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("windowState")); }
+static inline CGRect                               WKWebExtensionWindowConfiguration_Frame(WKWebExtensionWindowConfiguration self)              { return ((CGRect (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend_stret)(self, bean_sel("frame")); }
+static inline NSArray                              WKWebExtensionWindowConfiguration_TabURLs(WKWebExtensionWindowConfiguration self)            { return ((NSArray (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("tabURLs")); }
+static inline NSArray                              WKWebExtensionWindowConfiguration_Tabs(WKWebExtensionWindowConfiguration self)               { return ((NSArray (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("tabs")); }
+static inline BOOL                                 WKWebExtensionWindowConfiguration_ShouldBeFocused(WKWebExtensionWindowConfiguration self)    { return ((BOOL (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBeFocused")); }
+static inline BOOL                                 WKWebExtensionWindowConfiguration_ShouldBePrivate(WKWebExtensionWindowConfiguration self)    { return ((BOOL (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBePrivate")); }
 
 /* ===== WKWebpagePreferences ===== */
 #ifndef BEAN_TYPEDEF_WKWebpagePreferences
@@ -5006,19 +5945,105 @@ static inline NSNumber    WKWindowFeatures_Y(WKWindowFeatures self)             
 static inline NSNumber    WKWindowFeatures_Width(WKWindowFeatures self)                  { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("width")); }
 static inline NSNumber    WKWindowFeatures_Height(WKWindowFeatures self)                 { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("height")); }
 
+/* ===== WebBackForwardList ===== */
+#ifndef BEAN_TYPEDEF_WebBackForwardList
+#define BEAN_TYPEDEF_WebBackForwardList
+typedef bean_id WebBackForwardList;
+#endif
+static inline void          WebBackForwardList_GoBack(WebBackForwardList self)                               { ((void (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("goBack")); }
+static inline void          WebBackForwardList_GoForward(WebBackForwardList self)                            { ((void (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("goForward")); }
+static inline NSArray       WebBackForwardList_BackListWithLimit(WebBackForwardList self, int limit)         { return ((NSArray (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("backListWithLimit:"), limit); }
+static inline NSArray       WebBackForwardList_ForwardListWithLimit(WebBackForwardList self, int limit)      { return ((NSArray (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("forwardListWithLimit:"), limit); }
+static inline int           WebBackForwardList_Capacity(WebBackForwardList self)                             { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("capacity")); }
+static inline void          WebBackForwardList_SetCapacity(WebBackForwardList self, int capacity)            { ((void (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("setCapacity:"), capacity); }
+static inline int           WebBackForwardList_BackListCount(WebBackForwardList self)                        { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("backListCount")); }
+static inline int           WebBackForwardList_ForwardListCount(WebBackForwardList self)                     { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("forwardListCount")); }
+static inline void          WebBackForwardList_SetPageCacheSize(WebBackForwardList self, NSUInteger size)    { ((void (*)(WebBackForwardList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setPageCacheSize:"), size); }
+static inline NSUInteger    WebBackForwardList_PageCacheSize(WebBackForwardList self)                        { return ((NSUInteger (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("pageCacheSize")); }
+
+/* ===== WebDocumentRepresentation ===== */
+#ifndef BEAN_TYPEDEF_WebDocumentRepresentation
+#define BEAN_TYPEDEF_WebDocumentRepresentation
+typedef bean_id WebDocumentRepresentation;
+#endif
+static inline BOOL        WebDocumentRepresentation_CanProvideDocumentSource(WebDocumentRepresentation self)    { return ((BOOL (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("canProvideDocumentSource")); }
+static inline NSString    WebDocumentRepresentation_DocumentSource(WebDocumentRepresentation self)              { return ((NSString (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("documentSource")); }
+static inline NSString    WebDocumentRepresentation_Title(WebDocumentRepresentation self)                       { return ((NSString (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("title")); }
+
+/* ===== WebDocumentSearching ===== */
+#ifndef BEAN_TYPEDEF_WebDocumentSearching
+#define BEAN_TYPEDEF_WebDocumentSearching
+typedef bean_id WebDocumentSearching;
+#endif
+static inline BOOL    WebDocumentSearching_SearchFor_Direction_CaseSensitive_Wrap(WebDocumentSearching self, NSString string, BOOL forward, BOOL caseFlag, BOOL wrapFlag)    { return ((BOOL (*)(WebDocumentSearching, SEL, NSString, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("searchFor:direction:caseSensitive:wrap:"), string, forward, caseFlag, wrapFlag); }
+
+/* ===== WebDocumentView ===== */
+#ifndef BEAN_TYPEDEF_WebDocumentView
+#define BEAN_TYPEDEF_WebDocumentView
+typedef bean_id WebDocumentView;
+#endif
+static inline void    WebDocumentView_SetNeedsLayout(WebDocumentView self, BOOL flag)                        { ((void (*)(WebDocumentView, SEL, BOOL))bean_msgSend)(self, bean_sel("setNeedsLayout:"), flag); }
+static inline void    WebDocumentView_Layout(WebDocumentView self)                                           { ((void (*)(WebDocumentView, SEL))bean_msgSend)(self, bean_sel("layout")); }
+static inline void    WebDocumentView_ViewWillMoveToHostWindow(WebDocumentView self, NSWindow hostWindow)    { ((void (*)(WebDocumentView, SEL, NSWindow))bean_msgSend)(self, bean_sel("viewWillMoveToHostWindow:"), hostWindow); }
+static inline void    WebDocumentView_ViewDidMoveToHostWindow(WebDocumentView self)                          { ((void (*)(WebDocumentView, SEL))bean_msgSend)(self, bean_sel("viewDidMoveToHostWindow")); }
+
+/* ===== WebHistory ===== */
+#ifndef BEAN_TYPEDEF_WebHistory
+#define BEAN_TYPEDEF_WebHistory
+typedef bean_id WebHistory;
+#endif
+static inline WebHistory    WebHistory_OptionalSharedHistory(void)                                                   { return ((WebHistory (*)(bean_class, SEL))bean_msgSend)(bean_cls("WebHistory"), bean_sel("optionalSharedHistory")); }
+static inline void          WebHistory_SetOptionalSharedHistory(WebHistory history)                                  { ((void (*)(bean_class, SEL, WebHistory))bean_msgSend)(bean_cls("WebHistory"), bean_sel("setOptionalSharedHistory:"), history); }
+static inline BOOL          WebHistory_LoadFromURL_Error(WebHistory self, NSURL URL, NSError* error)                 { return ((BOOL (*)(WebHistory, SEL, NSURL, NSError*))bean_msgSend)(self, bean_sel("loadFromURL:error:"), URL, error); }
+static inline BOOL          WebHistory_SaveToURL_Error(WebHistory self, NSURL URL, NSError* error)                   { return ((BOOL (*)(WebHistory, SEL, NSURL, NSError*))bean_msgSend)(self, bean_sel("saveToURL:error:"), URL, error); }
+static inline void          WebHistory_AddItems(WebHistory self, NSArray newItems)                                   { ((void (*)(WebHistory, SEL, NSArray))bean_msgSend)(self, bean_sel("addItems:"), newItems); }
+static inline void          WebHistory_RemoveItems(WebHistory self, NSArray items)                                   { ((void (*)(WebHistory, SEL, NSArray))bean_msgSend)(self, bean_sel("removeItems:"), items); }
+static inline void          WebHistory_RemoveAllItems(WebHistory self)                                               { ((void (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("removeAllItems")); }
+static inline NSArray       WebHistory_OrderedItemsLastVisitedOnDay(WebHistory self, NSCalendarDate calendarDate)    { return ((NSArray (*)(WebHistory, SEL, NSCalendarDate))bean_msgSend)(self, bean_sel("orderedItemsLastVisitedOnDay:"), calendarDate); }
+static inline NSArray       WebHistory_OrderedLastVisitedDays(WebHistory self)                                       { return ((NSArray (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("orderedLastVisitedDays")); }
+static inline int           WebHistory_HistoryItemLimit(WebHistory self)                                             { return ((int (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("historyItemLimit")); }
+static inline void          WebHistory_SetHistoryItemLimit(WebHistory self, int historyItemLimit)                    { ((void (*)(WebHistory, SEL, int))bean_msgSend)(self, bean_sel("setHistoryItemLimit:"), historyItemLimit); }
+static inline int           WebHistory_HistoryAgeInDaysLimit(WebHistory self)                                        { return ((int (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("historyAgeInDaysLimit")); }
+static inline void          WebHistory_SetHistoryAgeInDaysLimit(WebHistory self, int historyAgeInDaysLimit)          { ((void (*)(WebHistory, SEL, int))bean_msgSend)(self, bean_sel("setHistoryAgeInDaysLimit:"), historyAgeInDaysLimit); }
+
 /* ===== WebHistoryItem ===== */
 #ifndef BEAN_TYPEDEF_WebHistoryItem
 #define BEAN_TYPEDEF_WebHistoryItem
 typedef bean_id WebHistoryItem;
 #endif
-static inline id          WebHistoryItem_InitWithURLString_Title_LastVisitedTimeInterval(WebHistoryItem self, NSString URLString, NSString title, CGFloat time)    { return ((id (*)(WebHistoryItem, SEL, NSString, NSString, CGFloat))bean_msgSend)(self, bean_sel("initWithURLString:title:lastVisitedTimeInterval:"), URLString, title, time); }
-static inline NSString    WebHistoryItem_OriginalURLString(WebHistoryItem self)                                                                                    { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("originalURLString")); }
-static inline NSString    WebHistoryItem_URLString(WebHistoryItem self)                                                                                            { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("URLString")); }
-static inline NSString    WebHistoryItem_Title(WebHistoryItem self)                                                                                                { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline CGFloat     WebHistoryItem_LastVisitedTimeInterval(WebHistoryItem self)                                                                              { return ((CGFloat (*)(WebHistoryItem, SEL))bean_msgSend_fpret)(self, bean_sel("lastVisitedTimeInterval")); }
-static inline NSString    WebHistoryItem_AlternateTitle(WebHistoryItem self)                                                                                       { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("alternateTitle")); }
-static inline void        WebHistoryItem_SetAlternateTitle(WebHistoryItem self, NSString alternateTitle)                                                           { ((void (*)(WebHistoryItem, SEL, NSString))bean_msgSend)(self, bean_sel("setAlternateTitle:"), alternateTitle); }
-static inline NSImage     WebHistoryItem_Icon(WebHistoryItem self)                                                                                                 { return ((NSImage (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("icon")); }
+static inline NSString    WebHistoryItem_OriginalURLString(WebHistoryItem self)                             { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("originalURLString")); }
+static inline NSString    WebHistoryItem_URLString(WebHistoryItem self)                                     { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("URLString")); }
+static inline NSString    WebHistoryItem_Title(WebHistoryItem self)                                         { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline CGFloat     WebHistoryItem_LastVisitedTimeInterval(WebHistoryItem self)                       { return ((CGFloat (*)(WebHistoryItem, SEL))bean_msgSend_fpret)(self, bean_sel("lastVisitedTimeInterval")); }
+static inline NSString    WebHistoryItem_AlternateTitle(WebHistoryItem self)                                { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("alternateTitle")); }
+static inline void        WebHistoryItem_SetAlternateTitle(WebHistoryItem self, NSString alternateTitle)    { ((void (*)(WebHistoryItem, SEL, NSString))bean_msgSend)(self, bean_sel("setAlternateTitle:"), alternateTitle); }
+static inline NSImage     WebHistoryItem_Icon(WebHistoryItem self)                                          { return ((NSImage (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("icon")); }
+static inline id          WebHistoryItem_CopyWithZone(WebHistoryItem self, NSZone* zone)                    { return ((id (*)(WebHistoryItem, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+
+/* ===== WebOpenPanelResultListener ===== */
+#ifndef BEAN_TYPEDEF_WebOpenPanelResultListener
+#define BEAN_TYPEDEF_WebOpenPanelResultListener
+typedef bean_id WebOpenPanelResultListener;
+#endif
+static inline void    WebOpenPanelResultListener_ChooseFilename(WebOpenPanelResultListener self, NSString fileName)     { ((void (*)(WebOpenPanelResultListener, SEL, NSString))bean_msgSend)(self, bean_sel("chooseFilename:"), fileName); }
+static inline void    WebOpenPanelResultListener_ChooseFilenames(WebOpenPanelResultListener self, NSArray fileNames)    { ((void (*)(WebOpenPanelResultListener, SEL, NSArray))bean_msgSend)(self, bean_sel("chooseFilenames:"), fileNames); }
+static inline void    WebOpenPanelResultListener_Cancel(WebOpenPanelResultListener self)                                { ((void (*)(WebOpenPanelResultListener, SEL))bean_msgSend)(self, bean_sel("cancel")); }
+
+/* ===== WebPlugInViewFactory ===== */
+#ifndef BEAN_TYPEDEF_WebPlugInViewFactory
+#define BEAN_TYPEDEF_WebPlugInViewFactory
+typedef bean_id WebPlugInViewFactory;
+#endif
+static inline NSView    WebPlugInViewFactory_PlugInViewWithArguments(NSDictionary arguments)    { return ((NSView (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("WebPlugInViewFactory"), bean_sel("plugInViewWithArguments:"), arguments); }
+
+/* ===== WebPolicyDecisionListener ===== */
+#ifndef BEAN_TYPEDEF_WebPolicyDecisionListener
+#define BEAN_TYPEDEF_WebPolicyDecisionListener
+typedef bean_id WebPolicyDecisionListener;
+#endif
+static inline void    WebPolicyDecisionListener_Use(WebPolicyDecisionListener self)         { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("use")); }
+static inline void    WebPolicyDecisionListener_Download(WebPolicyDecisionListener self)    { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("download")); }
+static inline void    WebPolicyDecisionListener_Ignore(WebPolicyDecisionListener self)      { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("ignore")); }
 
 /* ===== WebPreferences ===== */
 #ifndef BEAN_TYPEDEF_WebPreferences
@@ -5026,7 +6051,7 @@ static inline NSImage     WebHistoryItem_Icon(WebHistoryItem self)              
 typedef bean_id WebPreferences;
 #endif
 static inline WebPreferences    WebPreferences_StandardPreferences(void)                                                                                    { return ((WebPreferences (*)(bean_class, SEL))bean_msgSend)(bean_cls("WebPreferences"), bean_sel("standardPreferences")); }
-static inline id                WebPreferences_InitWithIdentifier(WebPreferences self, NSString anIdentifier)                                               { return ((id (*)(WebPreferences, SEL, NSString))bean_msgSend)(self, bean_sel("initWithIdentifier:"), anIdentifier); }
+static inline WebPreferences    WebPreferences_InitWithIdentifier(WebPreferences self, NSString anIdentifier)                                               { return ((WebPreferences (*)(WebPreferences, SEL, NSString))bean_msgSend)(self, bean_sel("initWithIdentifier:"), anIdentifier); }
 static inline NSString          WebPreferences_Identifier(WebPreferences self)                                                                              { return ((NSString (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("identifier")); }
 static inline NSString          WebPreferences_StandardFontFamily(WebPreferences self)                                                                      { return ((NSString (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("standardFontFamily")); }
 static inline void              WebPreferences_SetStandardFontFamily(WebPreferences self, NSString standardFontFamily)                                      { ((void (*)(WebPreferences, SEL, NSString))bean_msgSend)(self, bean_sel("setStandardFontFamily:"), standardFontFamily); }
@@ -5084,6 +6109,8 @@ static inline BOOL              WebPreferences_SuppressesIncrementalRendering(We
 static inline void              WebPreferences_SetSuppressesIncrementalRendering(WebPreferences self, BOOL suppressesIncrementalRendering)                  { ((void (*)(WebPreferences, SEL, BOOL))bean_msgSend)(self, bean_sel("setSuppressesIncrementalRendering:"), suppressesIncrementalRendering); }
 static inline BOOL              WebPreferences_AllowsAirPlayForMediaPlayback(WebPreferences self)                                                           { return ((BOOL (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("allowsAirPlayForMediaPlayback")); }
 static inline void              WebPreferences_SetAllowsAirPlayForMediaPlayback(WebPreferences self, BOOL allowsAirPlayForMediaPlayback)                    { ((void (*)(WebPreferences, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsAirPlayForMediaPlayback:"), allowsAirPlayForMediaPlayback); }
+static inline void              WebPreferences_EncodeWithCoder(WebPreferences self, NSCoder coder)                                                          { ((void (*)(WebPreferences, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding          WebPreferences_InitWithCoder(WebPreferences self, NSCoder coder)                                                            { return ((NSCoding (*)(WebPreferences, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline BOOL              WebPreferences_JavaEnabled(WebPreferences self)                                                                             { return ((BOOL (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("javaEnabled")); }
 static inline BOOL              WebPreferences_JavaScriptEnabled(WebPreferences self)                                                                       { return ((BOOL (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("javaScriptEnabled")); }
 static inline BOOL              WebPreferences_PlugInsEnabled(WebPreferences self)                                                                          { return ((BOOL (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("plugInsEnabled")); }
@@ -5093,12 +6120,15 @@ static inline BOOL              WebPreferences_PlugInsEnabled(WebPreferences sel
 #define BEAN_TYPEDEF_WebResource
 typedef bean_id WebResource;
 #endif
-static inline id          WebResource_InitWithData_URL_MIMEType_TextEncodingName_FrameName(WebResource self, NSData data, NSURL URL, NSString MIMEType, NSString textEncodingName, NSString frameName)    { return ((id (*)(WebResource, SEL, NSData, NSURL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("initWithData:URL:MIMEType:textEncodingName:frameName:"), data, URL, MIMEType, textEncodingName, frameName); }
-static inline NSData      WebResource_Data(WebResource self)                                                                                                                                              { return ((NSData (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("data")); }
-static inline NSURL       WebResource_URL(WebResource self)                                                                                                                                               { return ((NSURL (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("URL")); }
-static inline NSString    WebResource_MIMEType(WebResource self)                                                                                                                                          { return ((NSString (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("MIMEType")); }
-static inline NSString    WebResource_TextEncodingName(WebResource self)                                                                                                                                  { return ((NSString (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("textEncodingName")); }
-static inline NSString    WebResource_FrameName(WebResource self)                                                                                                                                         { return ((NSString (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("frameName")); }
+static inline WebResource    WebResource_InitWithData_URL_MIMEType_TextEncodingName_FrameName(WebResource self, NSData data, NSURL URL, NSString MIMEType, NSString textEncodingName, NSString frameName)    { return ((WebResource (*)(WebResource, SEL, NSData, NSURL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("initWithData:URL:MIMEType:textEncodingName:frameName:"), data, URL, MIMEType, textEncodingName, frameName); }
+static inline NSData         WebResource_Data(WebResource self)                                                                                                                                              { return ((NSData (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("data")); }
+static inline NSURL          WebResource_URL(WebResource self)                                                                                                                                               { return ((NSURL (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("URL")); }
+static inline NSString       WebResource_MIMEType(WebResource self)                                                                                                                                          { return ((NSString (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("MIMEType")); }
+static inline NSString       WebResource_TextEncodingName(WebResource self)                                                                                                                                  { return ((NSString (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("textEncodingName")); }
+static inline NSString       WebResource_FrameName(WebResource self)                                                                                                                                         { return ((NSString (*)(WebResource, SEL))bean_msgSend)(self, bean_sel("frameName")); }
+static inline void           WebResource_EncodeWithCoder(WebResource self, NSCoder coder)                                                                                                                    { ((void (*)(WebResource, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding       WebResource_InitWithCoder(WebResource self, NSCoder coder)                                                                                                                      { return ((NSCoding (*)(WebResource, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id             WebResource_CopyWithZone(WebResource self, NSZone* zone)                                                                                                                        { return ((id (*)(WebResource, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== WebScriptObject ===== */
 #ifndef BEAN_TYPEDEF_WebScriptObject
@@ -5121,7 +6151,10 @@ static inline void*       WebScriptObject_JSValue(WebScriptObject self)         
 #define BEAN_TYPEDEF_WebUndefined
 typedef bean_id WebUndefined;
 #endif
-static inline WebUndefined    WebUndefined_Undefined(void)    { return ((WebUndefined (*)(bean_class, SEL))bean_msgSend)(bean_cls("WebUndefined"), bean_sel("undefined")); }
+static inline WebUndefined    WebUndefined_Undefined(void)                                      { return ((WebUndefined (*)(bean_class, SEL))bean_msgSend)(bean_cls("WebUndefined"), bean_sel("undefined")); }
+static inline void            WebUndefined_EncodeWithCoder(WebUndefined self, NSCoder coder)    { ((void (*)(WebUndefined, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding        WebUndefined_InitWithCoder(WebUndefined self, NSCoder coder)      { return ((NSCoding (*)(WebUndefined, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id              WebUndefined_CopyWithZone(WebUndefined self, NSZone* zone)        { return ((id (*)(WebUndefined, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== WKBackForwardList ===== */
 #ifndef BEAN_TYPEDEF_WKBackForwardList
@@ -5135,16 +6168,24 @@ static inline WKBackForwardListItem    WKBackForwardList_ForwardItem(WKBackForwa
 static inline NSArray                  WKBackForwardList_BackList(WKBackForwardList self)                        { return ((NSArray (*)(WKBackForwardList, SEL))bean_msgSend)(self, bean_sel("backList")); }
 static inline NSArray                  WKBackForwardList_ForwardList(WKBackForwardList self)                     { return ((NSArray (*)(WKBackForwardList, SEL))bean_msgSend)(self, bean_sel("forwardList")); }
 
+/* ===== WKHTTPCookieStoreObserver ===== */
+#ifndef BEAN_TYPEDEF_WKHTTPCookieStoreObserver
+#define BEAN_TYPEDEF_WKHTTPCookieStoreObserver
+typedef bean_id WKHTTPCookieStoreObserver;
+#endif
+static inline void    WKHTTPCookieStoreObserver_CookiesDidChangeInCookieStore(WKHTTPCookieStoreObserver self, WKHTTPCookieStore cookieStore)    { ((void (*)(WKHTTPCookieStoreObserver, SEL, WKHTTPCookieStore))bean_msgSend)(self, bean_sel("cookiesDidChangeInCookieStore:"), cookieStore); }
+
 /* ===== WKUserScript ===== */
 #ifndef BEAN_TYPEDEF_WKUserScript
 #define BEAN_TYPEDEF_WKUserScript
 typedef bean_id WKUserScript;
 #endif
-static inline id                           WKUserScript_InitWithSource_InjectionTime_ForMainFrameOnly(WKUserScript self, NSString source, WKUserScriptInjectionTime injectionTime, BOOL forMainFrameOnly)                                                { return ((id (*)(WKUserScript, SEL, NSString, WKUserScriptInjectionTime, BOOL))bean_msgSend)(self, bean_sel("initWithSource:injectionTime:forMainFrameOnly:"), source, injectionTime, forMainFrameOnly); }
-static inline id                           WKUserScript_InitWithSource_InjectionTime_ForMainFrameOnly_InContentWorld(WKUserScript self, NSString source, WKUserScriptInjectionTime injectionTime, BOOL forMainFrameOnly, WKContentWorld contentWorld)    { return ((id (*)(WKUserScript, SEL, NSString, WKUserScriptInjectionTime, BOOL, WKContentWorld))bean_msgSend)(self, bean_sel("initWithSource:injectionTime:forMainFrameOnly:inContentWorld:"), source, injectionTime, forMainFrameOnly, contentWorld); }
+static inline WKUserScript                 WKUserScript_InitWithSource_InjectionTime_ForMainFrameOnly(WKUserScript self, NSString source, WKUserScriptInjectionTime injectionTime, BOOL forMainFrameOnly)                                                { return ((WKUserScript (*)(WKUserScript, SEL, NSString, WKUserScriptInjectionTime, BOOL))bean_msgSend)(self, bean_sel("initWithSource:injectionTime:forMainFrameOnly:"), source, injectionTime, forMainFrameOnly); }
+static inline WKUserScript                 WKUserScript_InitWithSource_InjectionTime_ForMainFrameOnly_InContentWorld(WKUserScript self, NSString source, WKUserScriptInjectionTime injectionTime, BOOL forMainFrameOnly, WKContentWorld contentWorld)    { return ((WKUserScript (*)(WKUserScript, SEL, NSString, WKUserScriptInjectionTime, BOOL, WKContentWorld))bean_msgSend)(self, bean_sel("initWithSource:injectionTime:forMainFrameOnly:inContentWorld:"), source, injectionTime, forMainFrameOnly, contentWorld); }
 static inline NSString                     WKUserScript_Source(WKUserScript self)                                                                                                                                                                        { return ((NSString (*)(WKUserScript, SEL))bean_msgSend)(self, bean_sel("source")); }
 static inline WKUserScriptInjectionTime    WKUserScript_InjectionTime(WKUserScript self)                                                                                                                                                                 { return ((WKUserScriptInjectionTime (*)(WKUserScript, SEL))bean_msgSend)(self, bean_sel("injectionTime")); }
 static inline BOOL                         WKUserScript_IsForMainFrameOnly(WKUserScript self)                                                                                                                                                            { return ((BOOL (*)(WKUserScript, SEL))bean_msgSend)(self, bean_sel("isForMainFrameOnly")); }
+static inline id                           WKUserScript_CopyWithZone(WKUserScript self, NSZone* zone)                                                                                                                                                    { return ((id (*)(WKUserScript, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                         WKUserScript_ForMainFrameOnly(WKUserScript self)                                                                                                                                                              { return ((BOOL (*)(WKUserScript, SEL))bean_msgSend)(self, bean_sel("forMainFrameOnly")); }
 
 /* ===== WKWebsiteDataStore ===== */
@@ -5154,8 +6195,8 @@ typedef bean_id WKWebsiteDataStore;
 #endif
 static inline WKWebsiteDataStore    WKWebsiteDataStore_DefaultDataStore(void)                                                                                                                        { return ((WKWebsiteDataStore (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebsiteDataStore"), bean_sel("defaultDataStore")); }
 static inline WKWebsiteDataStore    WKWebsiteDataStore_NonPersistentDataStore(void)                                                                                                                  { return ((WKWebsiteDataStore (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebsiteDataStore"), bean_sel("nonPersistentDataStore")); }
-static inline id                    WKWebsiteDataStore_New(WKWebsiteDataStore self)                                                                                                                  { return ((id (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("new")); }
-static inline id                    WKWebsiteDataStore_Init(WKWebsiteDataStore self)                                                                                                                 { return ((id (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline WKWebsiteDataStore    WKWebsiteDataStore_New(WKWebsiteDataStore self)                                                                                                                  { return ((WKWebsiteDataStore (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("new")); }
+static inline WKWebsiteDataStore    WKWebsiteDataStore_Init(WKWebsiteDataStore self)                                                                                                                 { return ((WKWebsiteDataStore (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSSet                 WKWebsiteDataStore_AllWebsiteDataTypes(void)                                                                                                                     { return ((NSSet (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebsiteDataStore"), bean_sel("allWebsiteDataTypes")); }
 static inline void                  WKWebsiteDataStore_FetchDataRecordsOfTypes_CompletionHandler(WKWebsiteDataStore self, NSSet dataTypes, void* completionHandler)                                  { ((void (*)(WKWebsiteDataStore, SEL, NSSet, void*))bean_msgSend)(self, bean_sel("fetchDataRecordsOfTypes:completionHandler:"), dataTypes, completionHandler); }
 static inline void                  WKWebsiteDataStore_RemoveDataOfTypes_ForDataRecords_CompletionHandler(WKWebsiteDataStore self, NSSet dataTypes, NSArray dataRecords, void* completionHandler)    { ((void (*)(WKWebsiteDataStore, SEL, NSSet, NSArray, void*))bean_msgSend)(self, bean_sel("removeDataOfTypes:forDataRecords:completionHandler:"), dataTypes, dataRecords, completionHandler); }
@@ -5170,6 +6211,7 @@ static inline WKHTTPCookieStore     WKWebsiteDataStore_HttpCookieStore(WKWebsite
 static inline NSUUID                WKWebsiteDataStore_Identifier(WKWebsiteDataStore self)                                                                                                           { return ((NSUUID (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("identifier")); }
 static inline NSArray               WKWebsiteDataStore_ProxyConfigurations(WKWebsiteDataStore self)                                                                                                  { return ((NSArray (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("proxyConfigurations")); }
 static inline void                  WKWebsiteDataStore_SetProxyConfigurations(WKWebsiteDataStore self, NSArray proxyConfigurations)                                                                  { ((void (*)(WKWebsiteDataStore, SEL, NSArray))bean_msgSend)(self, bean_sel("setProxyConfigurations:"), proxyConfigurations); }
+static inline BOOL                  WKWebsiteDataStore_SupportsSecureCoding(void)                                                                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebsiteDataStore"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                  WKWebsiteDataStore_Persistent(WKWebsiteDataStore self)                                                                                                           { return ((BOOL (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("persistent")); }
 
 /* ===== WebArchive ===== */
@@ -5177,145 +6219,26 @@ static inline BOOL                  WKWebsiteDataStore_Persistent(WKWebsiteDataS
 #define BEAN_TYPEDEF_WebArchive
 typedef bean_id WebArchive;
 #endif
-static inline id             WebArchive_InitWithMainResource_Subresources_SubframeArchives(WebArchive self, WebResource mainResource, NSArray subresources, NSArray subframeArchives)    { return ((id (*)(WebArchive, SEL, WebResource, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithMainResource:subresources:subframeArchives:"), mainResource, subresources, subframeArchives); }
-static inline id             WebArchive_InitWithData(WebArchive self, NSData data)                                                                                                       { return ((id (*)(WebArchive, SEL, NSData))bean_msgSend)(self, bean_sel("initWithData:"), data); }
-static inline WebResource    WebArchive_MainResource(WebArchive self)                                                                                                                    { return ((WebResource (*)(WebArchive, SEL))bean_msgSend)(self, bean_sel("mainResource")); }
-static inline NSArray        WebArchive_Subresources(WebArchive self)                                                                                                                    { return ((NSArray (*)(WebArchive, SEL))bean_msgSend)(self, bean_sel("subresources")); }
-static inline NSArray        WebArchive_SubframeArchives(WebArchive self)                                                                                                                { return ((NSArray (*)(WebArchive, SEL))bean_msgSend)(self, bean_sel("subframeArchives")); }
-static inline NSData         WebArchive_Data(WebArchive self)                                                                                                                            { return ((NSData (*)(WebArchive, SEL))bean_msgSend)(self, bean_sel("data")); }
+static inline WebResource    WebArchive_MainResource(WebArchive self)                      { return ((WebResource (*)(WebArchive, SEL))bean_msgSend)(self, bean_sel("mainResource")); }
+static inline NSArray        WebArchive_Subresources(WebArchive self)                      { return ((NSArray (*)(WebArchive, SEL))bean_msgSend)(self, bean_sel("subresources")); }
+static inline NSArray        WebArchive_SubframeArchives(WebArchive self)                  { return ((NSArray (*)(WebArchive, SEL))bean_msgSend)(self, bean_sel("subframeArchives")); }
+static inline NSData         WebArchive_Data(WebArchive self)                              { return ((NSData (*)(WebArchive, SEL))bean_msgSend)(self, bean_sel("data")); }
+static inline void           WebArchive_EncodeWithCoder(WebArchive self, NSCoder coder)    { ((void (*)(WebArchive, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding       WebArchive_InitWithCoder(WebArchive self, NSCoder coder)      { return ((NSCoding (*)(WebArchive, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id             WebArchive_CopyWithZone(WebArchive self, NSZone* zone)        { return ((id (*)(WebArchive, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
-/* ===== WebBackForwardList ===== */
-#ifndef BEAN_TYPEDEF_WebBackForwardList
-#define BEAN_TYPEDEF_WebBackForwardList
-typedef bean_id WebBackForwardList;
+/* ===== WebDocumentText ===== */
+#ifndef BEAN_TYPEDEF_WebDocumentText
+#define BEAN_TYPEDEF_WebDocumentText
+typedef bean_id WebDocumentText;
 #endif
-static inline void              WebBackForwardList_AddItem(WebBackForwardList self, WebHistoryItem item)         { ((void (*)(WebBackForwardList, SEL, WebHistoryItem))bean_msgSend)(self, bean_sel("addItem:"), item); }
-static inline void              WebBackForwardList_GoBack(WebBackForwardList self)                               { ((void (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("goBack")); }
-static inline void              WebBackForwardList_GoForward(WebBackForwardList self)                            { ((void (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("goForward")); }
-static inline void              WebBackForwardList_GoToItem(WebBackForwardList self, WebHistoryItem item)        { ((void (*)(WebBackForwardList, SEL, WebHistoryItem))bean_msgSend)(self, bean_sel("goToItem:"), item); }
-static inline NSArray           WebBackForwardList_BackListWithLimit(WebBackForwardList self, int limit)         { return ((NSArray (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("backListWithLimit:"), limit); }
-static inline NSArray           WebBackForwardList_ForwardListWithLimit(WebBackForwardList self, int limit)      { return ((NSArray (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("forwardListWithLimit:"), limit); }
-static inline BOOL              WebBackForwardList_ContainsItem(WebBackForwardList self, WebHistoryItem item)    { return ((BOOL (*)(WebBackForwardList, SEL, WebHistoryItem))bean_msgSend)(self, bean_sel("containsItem:"), item); }
-static inline WebHistoryItem    WebBackForwardList_ItemAtIndex(WebBackForwardList self, int index)               { return ((WebHistoryItem (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("itemAtIndex:"), index); }
-static inline WebHistoryItem    WebBackForwardList_BackItem(WebBackForwardList self)                             { return ((WebHistoryItem (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("backItem")); }
-static inline WebHistoryItem    WebBackForwardList_CurrentItem(WebBackForwardList self)                          { return ((WebHistoryItem (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("currentItem")); }
-static inline WebHistoryItem    WebBackForwardList_ForwardItem(WebBackForwardList self)                          { return ((WebHistoryItem (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("forwardItem")); }
-static inline int               WebBackForwardList_Capacity(WebBackForwardList self)                             { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("capacity")); }
-static inline void              WebBackForwardList_SetCapacity(WebBackForwardList self, int capacity)            { ((void (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("setCapacity:"), capacity); }
-static inline int               WebBackForwardList_BackListCount(WebBackForwardList self)                        { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("backListCount")); }
-static inline int               WebBackForwardList_ForwardListCount(WebBackForwardList self)                     { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("forwardListCount")); }
-static inline void              WebBackForwardList_SetPageCacheSize(WebBackForwardList self, NSUInteger size)    { ((void (*)(WebBackForwardList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setPageCacheSize:"), size); }
-static inline NSUInteger        WebBackForwardList_PageCacheSize(WebBackForwardList self)                        { return ((NSUInteger (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("pageCacheSize")); }
-
-/* ===== WebHistory ===== */
-#ifndef BEAN_TYPEDEF_WebHistory
-#define BEAN_TYPEDEF_WebHistory
-typedef bean_id WebHistory;
-#endif
-static inline WebHistory        WebHistory_OptionalSharedHistory(void)                                                   { return ((WebHistory (*)(bean_class, SEL))bean_msgSend)(bean_cls("WebHistory"), bean_sel("optionalSharedHistory")); }
-static inline void              WebHistory_SetOptionalSharedHistory(WebHistory history)                                  { ((void (*)(bean_class, SEL, WebHistory))bean_msgSend)(bean_cls("WebHistory"), bean_sel("setOptionalSharedHistory:"), history); }
-static inline BOOL              WebHistory_LoadFromURL_Error(WebHistory self, NSURL URL, NSError error)                  { return ((BOOL (*)(WebHistory, SEL, NSURL, NSError))bean_msgSend)(self, bean_sel("loadFromURL:error:"), URL, error); }
-static inline BOOL              WebHistory_SaveToURL_Error(WebHistory self, NSURL URL, NSError error)                    { return ((BOOL (*)(WebHistory, SEL, NSURL, NSError))bean_msgSend)(self, bean_sel("saveToURL:error:"), URL, error); }
-static inline void              WebHistory_AddItems(WebHistory self, NSArray newItems)                                   { ((void (*)(WebHistory, SEL, NSArray))bean_msgSend)(self, bean_sel("addItems:"), newItems); }
-static inline void              WebHistory_RemoveItems(WebHistory self, NSArray items)                                   { ((void (*)(WebHistory, SEL, NSArray))bean_msgSend)(self, bean_sel("removeItems:"), items); }
-static inline void              WebHistory_RemoveAllItems(WebHistory self)                                               { ((void (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("removeAllItems")); }
-static inline NSArray           WebHistory_OrderedItemsLastVisitedOnDay(WebHistory self, NSCalendarDate calendarDate)    { return ((NSArray (*)(WebHistory, SEL, NSCalendarDate))bean_msgSend)(self, bean_sel("orderedItemsLastVisitedOnDay:"), calendarDate); }
-static inline WebHistoryItem    WebHistory_ItemForURL(WebHistory self, NSURL URL)                                        { return ((WebHistoryItem (*)(WebHistory, SEL, NSURL))bean_msgSend)(self, bean_sel("itemForURL:"), URL); }
-static inline NSArray           WebHistory_OrderedLastVisitedDays(WebHistory self)                                       { return ((NSArray (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("orderedLastVisitedDays")); }
-static inline int               WebHistory_HistoryItemLimit(WebHistory self)                                             { return ((int (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("historyItemLimit")); }
-static inline void              WebHistory_SetHistoryItemLimit(WebHistory self, int historyItemLimit)                    { ((void (*)(WebHistory, SEL, int))bean_msgSend)(self, bean_sel("setHistoryItemLimit:"), historyItemLimit); }
-static inline int               WebHistory_HistoryAgeInDaysLimit(WebHistory self)                                        { return ((int (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("historyAgeInDaysLimit")); }
-static inline void              WebHistory_SetHistoryAgeInDaysLimit(WebHistory self, int historyAgeInDaysLimit)          { ((void (*)(WebHistory, SEL, int))bean_msgSend)(self, bean_sel("setHistoryAgeInDaysLimit:"), historyAgeInDaysLimit); }
-
-/* ===== DOMNode ===== */
-#ifndef BEAN_TYPEDEF_DOMNode
-#define BEAN_TYPEDEF_DOMNode
-typedef bean_id DOMNode;
-#endif
-static inline void*             DOMNode_InsertBefore_RefChild(DOMNode self, void* newChild, void* refChild)      { return ((void* (*)(DOMNode, SEL, void*, void*))bean_msgSend)(self, bean_sel("insertBefore:refChild:"), newChild, refChild); }
-static inline void*             DOMNode_ReplaceChild_OldChild(DOMNode self, void* newChild, void* oldChild)      { return ((void* (*)(DOMNode, SEL, void*, void*))bean_msgSend)(self, bean_sel("replaceChild:oldChild:"), newChild, oldChild); }
-static inline void*             DOMNode_RemoveChild(DOMNode self, void* oldChild)                                { return ((void* (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("removeChild:"), oldChild); }
-static inline void*             DOMNode_AppendChild(DOMNode self, void* newChild)                                { return ((void* (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("appendChild:"), newChild); }
-static inline BOOL              DOMNode_HasChildNodes(DOMNode self)                                              { return ((BOOL (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("hasChildNodes")); }
-static inline void*             DOMNode_CloneNode(DOMNode self, BOOL deep)                                       { return ((void* (*)(DOMNode, SEL, BOOL))bean_msgSend)(self, bean_sel("cloneNode:"), deep); }
-static inline void              DOMNode_Normalize(DOMNode self)                                                  { ((void (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("normalize")); }
-static inline BOOL              DOMNode_IsSupported_Version(DOMNode self, NSString feature, NSString version)    { return ((BOOL (*)(DOMNode, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("isSupported:version:"), feature, version); }
-static inline BOOL              DOMNode_HasAttributes(DOMNode self)                                              { return ((BOOL (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("hasAttributes")); }
-static inline BOOL              DOMNode_IsSameNode(DOMNode self, void* other)                                    { return ((BOOL (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("isSameNode:"), other); }
-static inline BOOL              DOMNode_IsEqualNode(DOMNode self, void* other)                                   { return ((BOOL (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("isEqualNode:"), other); }
-static inline NSString          DOMNode_LookupPrefix(DOMNode self, NSString namespaceURI)                        { return ((NSString (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("lookupPrefix:"), namespaceURI); }
-static inline NSString          DOMNode_LookupNamespaceURI(DOMNode self, NSString prefix)                        { return ((NSString (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("lookupNamespaceURI:"), prefix); }
-static inline BOOL              DOMNode_IsDefaultNamespace(DOMNode self, NSString namespaceURI)                  { return ((BOOL (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("isDefaultNamespace:"), namespaceURI); }
-static inline unsigned short    DOMNode_CompareDocumentPosition(DOMNode self, void* other)                       { return ((unsigned short (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("compareDocumentPosition:"), other); }
-static inline BOOL              DOMNode_Contains(DOMNode self, void* other)                                      { return ((BOOL (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("contains:"), other); }
-static inline NSString          DOMNode_NodeName(DOMNode self)                                                   { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("nodeName")); }
-static inline NSString          DOMNode_NodeValue(DOMNode self)                                                  { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("nodeValue")); }
-static inline void              DOMNode_SetNodeValue(DOMNode self, NSString nodeValue)                           { ((void (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("setNodeValue:"), nodeValue); }
-static inline unsigned short    DOMNode_NodeType(DOMNode self)                                                   { return ((unsigned short (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("nodeType")); }
-static inline void*             DOMNode_ParentNode(DOMNode self)                                                 { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("parentNode")); }
-static inline void*             DOMNode_ChildNodes(DOMNode self)                                                 { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("childNodes")); }
-static inline void*             DOMNode_FirstChild(DOMNode self)                                                 { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("firstChild")); }
-static inline void*             DOMNode_LastChild(DOMNode self)                                                  { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("lastChild")); }
-static inline void*             DOMNode_PreviousSibling(DOMNode self)                                            { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("previousSibling")); }
-static inline void*             DOMNode_NextSibling(DOMNode self)                                                { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("nextSibling")); }
-static inline void*             DOMNode_OwnerDocument(DOMNode self)                                              { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("ownerDocument")); }
-static inline NSString          DOMNode_NamespaceURI(DOMNode self)                                               { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("namespaceURI")); }
-static inline NSString          DOMNode_Prefix(DOMNode self)                                                     { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("prefix")); }
-static inline void              DOMNode_SetPrefix(DOMNode self, NSString prefix)                                 { ((void (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("setPrefix:"), prefix); }
-static inline NSString          DOMNode_LocalName(DOMNode self)                                                  { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("localName")); }
-static inline void*             DOMNode_Attributes(DOMNode self)                                                 { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("attributes")); }
-static inline NSString          DOMNode_BaseURI(DOMNode self)                                                    { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("baseURI")); }
-static inline NSString          DOMNode_TextContent(DOMNode self)                                                { return ((NSString (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("textContent")); }
-static inline void              DOMNode_SetTextContent(DOMNode self, NSString textContent)                       { ((void (*)(DOMNode, SEL, NSString))bean_msgSend)(self, bean_sel("setTextContent:"), textContent); }
-static inline void*             DOMNode_ParentElement(DOMNode self)                                              { return ((void* (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("parentElement")); }
-static inline BOOL              DOMNode_IsContentEditable(DOMNode self)                                          { return ((BOOL (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("isContentEditable")); }
-static inline void*             DOMNode_InsertBefore(DOMNode self, void* newChild, void* refChild)               { return ((void* (*)(DOMNode, SEL, void*, void*))bean_msgSend)(self, bean_sel("insertBefore::"), newChild, refChild); }
-static inline void*             DOMNode_ReplaceChild(DOMNode self, void* newChild, void* oldChild)               { return ((void* (*)(DOMNode, SEL, void*, void*))bean_msgSend)(self, bean_sel("replaceChild::"), newChild, oldChild); }
-static inline BOOL              DOMNode_IsSupported(DOMNode self, NSString feature, NSString version)            { return ((BOOL (*)(DOMNode, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("isSupported::"), feature, version); }
-static inline CGRect            DOMNode_BoundingBox(DOMNode self)                                                { return ((CGRect (*)(DOMNode, SEL))bean_msgSend_stret)(self, bean_sel("boundingBox")); }
-static inline NSArray           DOMNode_LineBoxRects(DOMNode self)                                               { return ((NSArray (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("lineBoxRects")); }
-static inline WebArchive        DOMNode_WebArchive(DOMNode self)                                                 { return ((WebArchive (*)(DOMNode, SEL))bean_msgSend)(self, bean_sel("webArchive")); }
-
-/* ===== DOMRange ===== */
-#ifndef BEAN_TYPEDEF_DOMRange
-#define BEAN_TYPEDEF_DOMRange
-typedef bean_id DOMRange;
-#endif
-static inline void          DOMRange_SetStart_Offset(DOMRange self, void* refNode, int offset)                                  { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setStart:offset:"), refNode, offset); }
-static inline void          DOMRange_SetEnd_Offset(DOMRange self, void* refNode, int offset)                                    { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setEnd:offset:"), refNode, offset); }
-static inline void          DOMRange_SetStartBefore(DOMRange self, void* refNode)                                               { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("setStartBefore:"), refNode); }
-static inline void          DOMRange_SetStartAfter(DOMRange self, void* refNode)                                                { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("setStartAfter:"), refNode); }
-static inline void          DOMRange_SetEndBefore(DOMRange self, void* refNode)                                                 { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("setEndBefore:"), refNode); }
-static inline void          DOMRange_SetEndAfter(DOMRange self, void* refNode)                                                  { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("setEndAfter:"), refNode); }
-static inline void          DOMRange_Collapse(DOMRange self, BOOL toStart)                                                      { ((void (*)(DOMRange, SEL, BOOL))bean_msgSend)(self, bean_sel("collapse:"), toStart); }
-static inline void          DOMRange_SelectNode(DOMRange self, void* refNode)                                                   { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("selectNode:"), refNode); }
-static inline void          DOMRange_SelectNodeContents(DOMRange self, void* refNode)                                           { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("selectNodeContents:"), refNode); }
-static inline short         DOMRange_CompareBoundaryPoints_SourceRange(DOMRange self, unsigned short how, void* sourceRange)    { return ((short (*)(DOMRange, SEL, unsigned short, void*))bean_msgSend)(self, bean_sel("compareBoundaryPoints:sourceRange:"), how, sourceRange); }
-static inline void          DOMRange_DeleteContents(DOMRange self)                                                              { ((void (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("deleteContents")); }
-static inline void*         DOMRange_ExtractContents(DOMRange self)                                                             { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("extractContents")); }
-static inline void*         DOMRange_CloneContents(DOMRange self)                                                               { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("cloneContents")); }
-static inline void          DOMRange_InsertNode(DOMRange self, void* newNode)                                                   { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("insertNode:"), newNode); }
-static inline void          DOMRange_SurroundContents(DOMRange self, void* newParent)                                           { ((void (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("surroundContents:"), newParent); }
-static inline void*         DOMRange_CloneRange(DOMRange self)                                                                  { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("cloneRange")); }
-static inline NSString      DOMRange_ToString(DOMRange self)                                                                    { return ((NSString (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("toString")); }
-static inline void          DOMRange_Detach(DOMRange self)                                                                      { ((void (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("detach")); }
-static inline void*         DOMRange_CreateContextualFragment(DOMRange self, NSString html)                                     { return ((void* (*)(DOMRange, SEL, NSString))bean_msgSend)(self, bean_sel("createContextualFragment:"), html); }
-static inline short         DOMRange_CompareNode(DOMRange self, void* refNode)                                                  { return ((short (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("compareNode:"), refNode); }
-static inline BOOL          DOMRange_IntersectsNode(DOMRange self, void* refNode)                                               { return ((BOOL (*)(DOMRange, SEL, void*))bean_msgSend)(self, bean_sel("intersectsNode:"), refNode); }
-static inline short         DOMRange_ComparePoint_Offset(DOMRange self, void* refNode, int offset)                              { return ((short (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("comparePoint:offset:"), refNode, offset); }
-static inline BOOL          DOMRange_IsPointInRange_Offset(DOMRange self, void* refNode, int offset)                            { return ((BOOL (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("isPointInRange:offset:"), refNode, offset); }
-static inline void*         DOMRange_StartContainer(DOMRange self)                                                              { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("startContainer")); }
-static inline int           DOMRange_StartOffset(DOMRange self)                                                                 { return ((int (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("startOffset")); }
-static inline void*         DOMRange_EndContainer(DOMRange self)                                                                { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("endContainer")); }
-static inline int           DOMRange_EndOffset(DOMRange self)                                                                   { return ((int (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("endOffset")); }
-static inline BOOL          DOMRange_Collapsed(DOMRange self)                                                                   { return ((BOOL (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("collapsed")); }
-static inline void*         DOMRange_CommonAncestorContainer(DOMRange self)                                                     { return ((void* (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("commonAncestorContainer")); }
-static inline NSString      DOMRange_Text(DOMRange self)                                                                        { return ((NSString (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("text")); }
-static inline void          DOMRange_SetStart(DOMRange self, void* refNode, int offset)                                         { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setStart::"), refNode, offset); }
-static inline void          DOMRange_SetEnd(DOMRange self, void* refNode, int offset)                                           { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setEnd::"), refNode, offset); }
-static inline short         DOMRange_CompareBoundaryPoints(DOMRange self, unsigned short how, void* sourceRange)                { return ((short (*)(DOMRange, SEL, unsigned short, void*))bean_msgSend)(self, bean_sel("compareBoundaryPoints::"), how, sourceRange); }
-static inline WebArchive    DOMRange_WebArchive(DOMRange self)                                                                  { return ((WebArchive (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("webArchive")); }
-static inline NSString      DOMRange_MarkupString(DOMRange self)                                                                { return ((NSString (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("markupString")); }
+static inline BOOL                  WebDocumentText_SupportsTextEncoding(WebDocumentText self)        { return ((BOOL (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("supportsTextEncoding")); }
+static inline NSString              WebDocumentText_String(WebDocumentText self)                      { return ((NSString (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("string")); }
+static inline NSAttributedString    WebDocumentText_AttributedString(WebDocumentText self)            { return ((NSAttributedString (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("attributedString")); }
+static inline NSString              WebDocumentText_SelectedString(WebDocumentText self)              { return ((NSString (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("selectedString")); }
+static inline NSAttributedString    WebDocumentText_SelectedAttributedString(WebDocumentText self)    { return ((NSAttributedString (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("selectedAttributedString")); }
+static inline void                  WebDocumentText_SelectAll(WebDocumentText self)                   { ((void (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("selectAll")); }
+static inline void                  WebDocumentText_DeselectAll(WebDocumentText self)                 { ((void (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("deselectAll")); }
 
 /* ===== WKUserContentController ===== */
 #ifndef BEAN_TYPEDEF_WKUserContentController
@@ -5335,6 +6258,7 @@ static inline void       WKUserContentController_AddContentRuleList(WKUserConten
 static inline void       WKUserContentController_RemoveContentRuleList(WKUserContentController self, WKContentRuleList contentRuleList)                                                                            { ((void (*)(WKUserContentController, SEL, WKContentRuleList))bean_msgSend)(self, bean_sel("removeContentRuleList:"), contentRuleList); }
 static inline void       WKUserContentController_RemoveAllContentRuleLists(WKUserContentController self)                                                                                                           { ((void (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("removeAllContentRuleLists")); }
 static inline NSArray    WKUserContentController_UserScripts(WKUserContentController self)                                                                                                                         { return ((NSArray (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("userScripts")); }
+static inline BOOL       WKUserContentController_SupportsSecureCoding(void)                                                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKUserContentController"), bean_sel("supportsSecureCoding")); }
 
 /* ===== DOMDocument ===== */
 #ifndef BEAN_TYPEDEF_DOMDocument
@@ -5573,14 +6497,30 @@ static inline id              WKDownload_Delegate(WKDownload self)              
 static inline void            WKDownload_SetDelegate(WKDownload self, id delegate)           { ((void (*)(WKDownload, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
 static inline BOOL            WKDownload_IsUserInitiated(WKDownload self)                    { return ((BOOL (*)(WKDownload, SEL))bean_msgSend)(self, bean_sel("isUserInitiated")); }
 static inline WKFrameInfo     WKDownload_OriginatingFrame(WKDownload self)                   { return ((WKFrameInfo (*)(WKDownload, SEL))bean_msgSend)(self, bean_sel("originatingFrame")); }
+static inline NSProgress      WKDownload_Progress(WKDownload self)                           { return ((NSProgress (*)(WKDownload, SEL))bean_msgSend)(self, bean_sel("progress")); }
 static inline BOOL            WKDownload_UserInitiated(WKDownload self)                      { return ((BOOL (*)(WKDownload, SEL))bean_msgSend)(self, bean_sel("userInitiated")); }
 
+/* ===== WKDownloadDelegate ===== */
+#ifndef BEAN_TYPEDEF_WKDownloadDelegate
+#define BEAN_TYPEDEF_WKDownloadDelegate
+typedef bean_id WKDownloadDelegate;
+#endif
+static inline void    WKDownloadDelegate_Download_DecideDestinationUsingResponse_SuggestedFilename_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURLResponse response, NSString suggestedFilename, void* completionHandler)    { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURLResponse, NSString, void*))bean_msgSend)(self, bean_sel("download:decideDestinationUsingResponse:suggestedFilename:completionHandler:"), download, response, suggestedFilename, completionHandler); }
+static inline void    WKDownloadDelegate_Download_WillPerformHTTPRedirection_NewRequest_DecisionHandler(WKDownloadDelegate self, WKDownload download, NSHTTPURLResponse response, NSURLRequest request, void* decisionHandler)                     { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSHTTPURLResponse, NSURLRequest, void*))bean_msgSend)(self, bean_sel("download:willPerformHTTPRedirection:newRequest:decisionHandler:"), download, response, request, decisionHandler); }
+static inline void    WKDownloadDelegate_Download_DidReceiveAuthenticationChallenge_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURLAuthenticationChallenge challenge, void* completionHandler)                               { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("download:didReceiveAuthenticationChallenge:completionHandler:"), download, challenge, completionHandler); }
+static inline void    WKDownloadDelegate_DownloadDidFinish(WKDownloadDelegate self, WKDownload download)                                                                                                                                           { ((void (*)(WKDownloadDelegate, SEL, WKDownload))bean_msgSend)(self, bean_sel("downloadDidFinish:"), download); }
+static inline void    WKDownloadDelegate_Download_DidFailWithError_ResumeData(WKDownloadDelegate self, WKDownload download, NSError error, NSData resumeData)                                                                                      { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSError, NSData))bean_msgSend)(self, bean_sel("download:didFailWithError:resumeData:"), download, error, resumeData); }
+static inline void    WKDownloadDelegate_Download_DecidePlaceholderPolicy(WKDownloadDelegate self, WKDownload download, void* completionHandler)                                                                                                   { ((void (*)(WKDownloadDelegate, SEL, WKDownload, void*))bean_msgSend)(self, bean_sel("download:decidePlaceholderPolicy:"), download, completionHandler); }
+static inline void    WKDownloadDelegate_Download_DidReceivePlaceholderURL_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURL url, void* completionHandler)                                                                     { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURL, void*))bean_msgSend)(self, bean_sel("download:didReceivePlaceholderURL:completionHandler:"), download, url, completionHandler); }
+static inline void    WKDownloadDelegate_Download_DidReceiveFinalURL(WKDownloadDelegate self, WKDownload download, NSURL url)                                                                                                                      { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURL))bean_msgSend)(self, bean_sel("download:didReceiveFinalURL:"), download, url); }
+
 /* ===== WKFrameInfo ===== */
-static inline BOOL                WKFrameInfo_IsMainFrame(WKFrameInfo self)       { return ((BOOL (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("isMainFrame")); }
-static inline NSURLRequest        WKFrameInfo_Request(WKFrameInfo self)           { return ((NSURLRequest (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("request")); }
-static inline WKSecurityOrigin    WKFrameInfo_SecurityOrigin(WKFrameInfo self)    { return ((WKSecurityOrigin (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("securityOrigin")); }
-static inline WKWebView           WKFrameInfo_WebView(WKFrameInfo self)           { return ((WKWebView (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("webView")); }
-static inline BOOL                WKFrameInfo_MainFrame(WKFrameInfo self)         { return ((BOOL (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("mainFrame")); }
+static inline BOOL                WKFrameInfo_IsMainFrame(WKFrameInfo self)                   { return ((BOOL (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("isMainFrame")); }
+static inline NSURLRequest        WKFrameInfo_Request(WKFrameInfo self)                       { return ((NSURLRequest (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("request")); }
+static inline WKSecurityOrigin    WKFrameInfo_SecurityOrigin(WKFrameInfo self)                { return ((WKSecurityOrigin (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("securityOrigin")); }
+static inline WKWebView           WKFrameInfo_WebView(WKFrameInfo self)                       { return ((WKWebView (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("webView")); }
+static inline id                  WKFrameInfo_CopyWithZone(WKFrameInfo self, NSZone* zone)    { return ((id (*)(WKFrameInfo, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                WKFrameInfo_MainFrame(WKFrameInfo self)                     { return ((BOOL (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("mainFrame")); }
 
 /* ===== WKNavigationAction ===== */
 #ifndef BEAN_TYPEDEF_WKNavigationAction
@@ -5596,6 +6536,27 @@ static inline BOOL                    WKNavigationAction_IsContentRuleListRedire
 static inline NSEventModifierFlags    WKNavigationAction_ModifierFlags(WKNavigationAction self)                { return ((NSEventModifierFlags (*)(WKNavigationAction, SEL))bean_msgSend)(self, bean_sel("modifierFlags")); }
 static inline NSInteger               WKNavigationAction_ButtonNumber(WKNavigationAction self)                 { return ((NSInteger (*)(WKNavigationAction, SEL))bean_msgSend)(self, bean_sel("buttonNumber")); }
 
+/* ===== WKNavigationDelegate ===== */
+#ifndef BEAN_TYPEDEF_WKNavigationDelegate
+#define BEAN_TYPEDEF_WKNavigationDelegate
+typedef bean_id WKNavigationDelegate;
+#endif
+static inline void    WKNavigationDelegate_WebView_DecidePolicyForNavigationAction_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, void* decisionHandler)                                                        { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:decisionHandler:"), webView, navigationAction, decisionHandler); }
+static inline void    WKNavigationDelegate_WebView_DecidePolicyForNavigationAction_Preferences_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, WKWebpagePreferences preferences, void* decisionHandler)          { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, WKWebpagePreferences, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:preferences:decisionHandler:"), webView, navigationAction, preferences, decisionHandler); }
+static inline void    WKNavigationDelegate_WebView_DecidePolicyForNavigationResponse_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationResponse navigationResponse, void* decisionHandler)                                                  { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationResponse, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationResponse:decisionHandler:"), webView, navigationResponse, decisionHandler); }
+static inline void    WKNavigationDelegate_WebView_DidStartProvisionalNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                             { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didStartProvisionalNavigation:"), webView, navigation); }
+static inline void    WKNavigationDelegate_WebView_DidReceiveServerRedirectForProvisionalNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                          { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didReceiveServerRedirectForProvisionalNavigation:"), webView, navigation); }
+static inline void    WKNavigationDelegate_WebView_DidFailProvisionalNavigation_WithError(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation, NSError error)                                                                                     { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation, NSError))bean_msgSend)(self, bean_sel("webView:didFailProvisionalNavigation:withError:"), webView, navigation, error); }
+static inline void    WKNavigationDelegate_WebView_DidCommitNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didCommitNavigation:"), webView, navigation); }
+static inline void    WKNavigationDelegate_WebView_DidFinishNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didFinishNavigation:"), webView, navigation); }
+static inline void    WKNavigationDelegate_WebView_DidFailNavigation_WithError(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation, NSError error)                                                                                                { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation, NSError))bean_msgSend)(self, bean_sel("webView:didFailNavigation:withError:"), webView, navigation, error); }
+static inline void    WKNavigationDelegate_WebView_DidReceiveAuthenticationChallenge_CompletionHandler(WKNavigationDelegate self, WKWebView webView, NSURLAuthenticationChallenge challenge, void* completionHandler)                                               { ((void (*)(WKNavigationDelegate, SEL, WKWebView, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("webView:didReceiveAuthenticationChallenge:completionHandler:"), webView, challenge, completionHandler); }
+static inline void    WKNavigationDelegate_WebViewWebContentProcessDidTerminate(WKNavigationDelegate self, WKWebView webView)                                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView))bean_msgSend)(self, bean_sel("webViewWebContentProcessDidTerminate:"), webView); }
+static inline void    WKNavigationDelegate_WebView_AuthenticationChallenge_ShouldAllowDeprecatedTLS(WKNavigationDelegate self, WKWebView webView, NSURLAuthenticationChallenge challenge, void* decisionHandler)                                                    { ((void (*)(WKNavigationDelegate, SEL, WKWebView, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("webView:authenticationChallenge:shouldAllowDeprecatedTLS:"), webView, challenge, decisionHandler); }
+static inline void    WKNavigationDelegate_WebView_NavigationAction_DidBecomeDownload(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, WKDownload download)                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, WKDownload))bean_msgSend)(self, bean_sel("webView:navigationAction:didBecomeDownload:"), webView, navigationAction, download); }
+static inline void    WKNavigationDelegate_WebView_NavigationResponse_DidBecomeDownload(WKNavigationDelegate self, WKWebView webView, WKNavigationResponse navigationResponse, WKDownload download)                                                                 { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationResponse, WKDownload))bean_msgSend)(self, bean_sel("webView:navigationResponse:didBecomeDownload:"), webView, navigationResponse, download); }
+static inline void    WKNavigationDelegate_WebView_ShouldGoToBackForwardListItem_WillUseInstantBack_CompletionHandler(WKNavigationDelegate self, WKWebView webView, WKBackForwardListItem backForwardListItem, BOOL willUseInstantBack, void* completionHandler)    { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKBackForwardListItem, BOOL, void*))bean_msgSend)(self, bean_sel("webView:shouldGoToBackForwardListItem:willUseInstantBack:completionHandler:"), webView, backForwardListItem, willUseInstantBack, completionHandler); }
+
 /* ===== WKScriptMessage ===== */
 #ifndef BEAN_TYPEDEF_WKScriptMessage
 #define BEAN_TYPEDEF_WKScriptMessage
@@ -5607,13 +6568,49 @@ static inline WKFrameInfo       WKScriptMessage_FrameInfo(WKScriptMessage self) 
 static inline NSString          WKScriptMessage_Name(WKScriptMessage self)         { return ((NSString (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline WKContentWorld    WKScriptMessage_World(WKScriptMessage self)        { return ((WKContentWorld (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("world")); }
 
+/* ===== WKScriptMessageHandler ===== */
+#ifndef BEAN_TYPEDEF_WKScriptMessageHandler
+#define BEAN_TYPEDEF_WKScriptMessageHandler
+typedef bean_id WKScriptMessageHandler;
+#endif
+static inline void    WKScriptMessageHandler_UserContentController_DidReceiveScriptMessage(WKScriptMessageHandler self, WKUserContentController userContentController, WKScriptMessage message)    { ((void (*)(WKScriptMessageHandler, SEL, WKUserContentController, WKScriptMessage))bean_msgSend)(self, bean_sel("userContentController:didReceiveScriptMessage:"), userContentController, message); }
+
+/* ===== WKScriptMessageHandlerWithReply ===== */
+#ifndef BEAN_TYPEDEF_WKScriptMessageHandlerWithReply
+#define BEAN_TYPEDEF_WKScriptMessageHandlerWithReply
+typedef bean_id WKScriptMessageHandlerWithReply;
+#endif
+static inline void    WKScriptMessageHandlerWithReply_UserContentController_DidReceiveScriptMessage_ReplyHandler(WKScriptMessageHandlerWithReply self, WKUserContentController userContentController, WKScriptMessage message, void* replyHandler)    { ((void (*)(WKScriptMessageHandlerWithReply, SEL, WKUserContentController, WKScriptMessage, void*))bean_msgSend)(self, bean_sel("userContentController:didReceiveScriptMessage:replyHandler:"), userContentController, message, replyHandler); }
+
+/* ===== WKUIDelegate ===== */
+#ifndef BEAN_TYPEDEF_WKUIDelegate
+#define BEAN_TYPEDEF_WKUIDelegate
+typedef bean_id WKUIDelegate;
+#endif
+static inline WKWebView    WKUIDelegate_WebView_CreateWebViewWithConfiguration_ForNavigationAction_WindowFeatures(WKUIDelegate self, WKWebView webView, WKWebViewConfiguration configuration, WKNavigationAction navigationAction, WKWindowFeatures windowFeatures)    { return ((WKWebView (*)(WKUIDelegate, SEL, WKWebView, WKWebViewConfiguration, WKNavigationAction, WKWindowFeatures))bean_msgSend)(self, bean_sel("webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:"), webView, configuration, navigationAction, windowFeatures); }
+static inline void         WKUIDelegate_WebViewDidClose(WKUIDelegate self, WKWebView webView)                                                                                                                                                                          { ((void (*)(WKUIDelegate, SEL, WKWebView))bean_msgSend)(self, bean_sel("webViewDidClose:"), webView); }
+static inline void         WKUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString message, WKFrameInfo frame, void* completionHandler)                                              { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:"), webView, message, frame, completionHandler); }
+static inline void         WKUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString message, WKFrameInfo frame, void* completionHandler)                                            { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:completionHandler:"), webView, message, frame, completionHandler); }
+static inline void         WKUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString prompt, NSString defaultText, WKFrameInfo frame, void* completionHandler)          { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:completionHandler:"), webView, prompt, defaultText, frame, completionHandler); }
+static inline void         WKUIDelegate_WebView_RequestMediaCapturePermissionForOrigin_InitiatedByFrame_Type_DecisionHandler(WKUIDelegate self, WKWebView webView, WKSecurityOrigin origin, WKFrameInfo frame, WKMediaCaptureType type, void* decisionHandler)         { ((void (*)(WKUIDelegate, SEL, WKWebView, WKSecurityOrigin, WKFrameInfo, WKMediaCaptureType, void*))bean_msgSend)(self, bean_sel("webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:"), webView, origin, frame, type, decisionHandler); }
+static inline void         WKUIDelegate_WebView_RequestDeviceOrientationAndMotionPermissionForOrigin_InitiatedByFrame_DecisionHandler(WKUIDelegate self, WKWebView webView, WKSecurityOrigin origin, WKFrameInfo frame, void* decisionHandler)                         { ((void (*)(WKUIDelegate, SEL, WKWebView, WKSecurityOrigin, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:requestDeviceOrientationAndMotionPermissionForOrigin:initiatedByFrame:decisionHandler:"), webView, origin, frame, decisionHandler); }
+static inline void         WKUIDelegate_WebView_RunOpenPanelWithParameters_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, WKOpenPanelParameters parameters, WKFrameInfo frame, void* completionHandler)                                      { ((void (*)(WKUIDelegate, SEL, WKWebView, WKOpenPanelParameters, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runOpenPanelWithParameters:initiatedByFrame:completionHandler:"), webView, parameters, frame, completionHandler); }
+
+/* ===== WKURLSchemeHandler ===== */
+#ifndef BEAN_TYPEDEF_WKURLSchemeHandler
+#define BEAN_TYPEDEF_WKURLSchemeHandler
+typedef bean_id WKURLSchemeHandler;
+#endif
+static inline void    WKURLSchemeHandler_WebView_StartURLSchemeTask(WKURLSchemeHandler self, WKWebView webView, id urlSchemeTask)    { ((void (*)(WKURLSchemeHandler, SEL, WKWebView, id))bean_msgSend)(self, bean_sel("webView:startURLSchemeTask:"), webView, urlSchemeTask); }
+static inline void    WKURLSchemeHandler_WebView_StopURLSchemeTask(WKURLSchemeHandler self, WKWebView webView, id urlSchemeTask)     { ((void (*)(WKURLSchemeHandler, SEL, WKWebView, id))bean_msgSend)(self, bean_sel("webView:stopURLSchemeTask:"), webView, urlSchemeTask); }
+
 /* ===== WKWebExtensionAction ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionAction
 #define BEAN_TYPEDEF_WKWebExtensionAction
 typedef bean_id WKWebExtensionAction;
 #endif
-static inline id                       WKWebExtensionAction_Init(WKWebExtensionAction self)                                              { return ((id (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                       WKWebExtensionAction_New(WKWebExtensionAction self)                                               { return ((id (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("new")); }
+static inline WKWebExtensionAction     WKWebExtensionAction_Init(WKWebExtensionAction self)                                              { return ((WKWebExtensionAction (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline WKWebExtensionAction     WKWebExtensionAction_New(WKWebExtensionAction self)                                               { return ((WKWebExtensionAction (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("new")); }
 static inline NSImage                  WKWebExtensionAction_IconForSize(WKWebExtensionAction self, CGSize size)                          { return ((NSImage (*)(WKWebExtensionAction, SEL, CGSize))bean_msgSend)(self, bean_sel("iconForSize:"), size); }
 static inline void                     WKWebExtensionAction_ClosePopup(WKWebExtensionAction self)                                        { ((void (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("closePopup")); }
 static inline WKWebExtensionContext    WKWebExtensionAction_WebExtensionContext(WKWebExtensionAction self)                               { return ((WKWebExtensionContext (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("webExtensionContext")); }
@@ -5636,8 +6633,8 @@ static inline BOOL                     WKWebExtensionAction_Enabled(WKWebExtensi
 #define BEAN_TYPEDEF_WKWebExtensionCommand
 typedef bean_id WKWebExtensionCommand;
 #endif
-static inline id                       WKWebExtensionCommand_New(void)                                                                           { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionCommand"), bean_sel("new")); }
-static inline id                       WKWebExtensionCommand_Init(WKWebExtensionCommand self)                                                    { return ((id (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline WKWebExtensionCommand    WKWebExtensionCommand_New(void)                                                                           { return ((WKWebExtensionCommand (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionCommand"), bean_sel("new")); }
+static inline WKWebExtensionCommand    WKWebExtensionCommand_Init(WKWebExtensionCommand self)                                                    { return ((WKWebExtensionCommand (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline WKWebExtensionContext    WKWebExtensionCommand_WebExtensionContext(WKWebExtensionCommand self)                                     { return ((WKWebExtensionContext (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("webExtensionContext")); }
 static inline NSString                 WKWebExtensionCommand_Identifier(WKWebExtensionCommand self)                                              { return ((NSString (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("identifier")); }
 static inline NSString                 WKWebExtensionCommand_Title(WKWebExtensionCommand self)                                                   { return ((NSString (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("title")); }
@@ -5648,10 +6645,10 @@ static inline void                     WKWebExtensionCommand_SetModifierFlags(WK
 static inline NSMenuItem               WKWebExtensionCommand_MenuItem(WKWebExtensionCommand self)                                                { return ((NSMenuItem (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("menuItem")); }
 
 /* ===== WKWebExtensionContext ===== */
-static inline id                                       WKWebExtensionContext_New(void)                                                                                                                                                                                  { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionContext"), bean_sel("new")); }
-static inline id                                       WKWebExtensionContext_Init(WKWebExtensionContext self)                                                                                                                                                           { return ((id (*)(WKWebExtensionContext, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                       WKWebExtensionContext_ContextForExtension(WKWebExtension extension)                                                                                                                                              { return ((id (*)(bean_class, SEL, WKWebExtension))bean_msgSend)(bean_cls("WKWebExtensionContext"), bean_sel("contextForExtension:"), extension); }
-static inline id                                       WKWebExtensionContext_InitForExtension(WKWebExtensionContext self, WKWebExtension extension)                                                                                                                     { return ((id (*)(WKWebExtensionContext, SEL, WKWebExtension))bean_msgSend)(self, bean_sel("initForExtension:"), extension); }
+static inline WKWebExtensionContext                    WKWebExtensionContext_New(void)                                                                                                                                                                                  { return ((WKWebExtensionContext (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionContext"), bean_sel("new")); }
+static inline WKWebExtensionContext                    WKWebExtensionContext_Init(WKWebExtensionContext self)                                                                                                                                                           { return ((WKWebExtensionContext (*)(WKWebExtensionContext, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline WKWebExtensionContext                    WKWebExtensionContext_ContextForExtension(WKWebExtension extension)                                                                                                                                              { return ((WKWebExtensionContext (*)(bean_class, SEL, WKWebExtension))bean_msgSend)(bean_cls("WKWebExtensionContext"), bean_sel("contextForExtension:"), extension); }
+static inline WKWebExtensionContext                    WKWebExtensionContext_InitForExtension(WKWebExtensionContext self, WKWebExtension extension)                                                                                                                     { return ((WKWebExtensionContext (*)(WKWebExtensionContext, SEL, WKWebExtension))bean_msgSend)(self, bean_sel("initForExtension:"), extension); }
 static inline BOOL                                     WKWebExtensionContext_HasPermission(WKWebExtensionContext self, NSString permission)                                                                                                                             { return ((BOOL (*)(WKWebExtensionContext, SEL, NSString))bean_msgSend)(self, bean_sel("hasPermission:"), permission); }
 static inline BOOL                                     WKWebExtensionContext_HasPermission_InTab(WKWebExtensionContext self, NSString permission, id tab)                                                                                                               { return ((BOOL (*)(WKWebExtensionContext, SEL, NSString, id))bean_msgSend)(self, bean_sel("hasPermission:inTab:"), permission, tab); }
 static inline BOOL                                     WKWebExtensionContext_HasAccessToURL(WKWebExtensionContext self, NSURL url)                                                                                                                                      { return ((BOOL (*)(WKWebExtensionContext, SEL, NSURL))bean_msgSend)(self, bean_sel("hasAccessToURL:"), url); }
@@ -5733,10 +6730,10 @@ static inline BOOL                                     WKWebExtensionContext_Loa
 static inline BOOL                                     WKWebExtensionContext_Inspectable(WKWebExtensionContext self)                                                                                                                                                    { return ((BOOL (*)(WKWebExtensionContext, SEL))bean_msgSend)(self, bean_sel("inspectable")); }
 
 /* ===== WKWebExtensionController ===== */
-static inline id                                       WKWebExtensionController_Init(WKWebExtensionController self)                                                                                                                                              { return ((id (*)(WKWebExtensionController, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                                       WKWebExtensionController_InitWithConfiguration(WKWebExtensionController self, WKWebExtensionControllerConfiguration configuration)                                                                        { return ((id (*)(WKWebExtensionController, SEL, WKWebExtensionControllerConfiguration))bean_msgSend)(self, bean_sel("initWithConfiguration:"), configuration); }
-static inline BOOL                                     WKWebExtensionController_LoadExtensionContext_Error(WKWebExtensionController self, WKWebExtensionContext extensionContext, NSError error)                                                                 { return ((BOOL (*)(WKWebExtensionController, SEL, WKWebExtensionContext, NSError))bean_msgSend)(self, bean_sel("loadExtensionContext:error:"), extensionContext, error); }
-static inline BOOL                                     WKWebExtensionController_UnloadExtensionContext_Error(WKWebExtensionController self, WKWebExtensionContext extensionContext, NSError error)                                                               { return ((BOOL (*)(WKWebExtensionController, SEL, WKWebExtensionContext, NSError))bean_msgSend)(self, bean_sel("unloadExtensionContext:error:"), extensionContext, error); }
+static inline WKWebExtensionController                 WKWebExtensionController_Init(WKWebExtensionController self)                                                                                                                                              { return ((WKWebExtensionController (*)(WKWebExtensionController, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline WKWebExtensionController                 WKWebExtensionController_InitWithConfiguration(WKWebExtensionController self, WKWebExtensionControllerConfiguration configuration)                                                                        { return ((WKWebExtensionController (*)(WKWebExtensionController, SEL, WKWebExtensionControllerConfiguration))bean_msgSend)(self, bean_sel("initWithConfiguration:"), configuration); }
+static inline BOOL                                     WKWebExtensionController_LoadExtensionContext_Error(WKWebExtensionController self, WKWebExtensionContext extensionContext, NSError* error)                                                                { return ((BOOL (*)(WKWebExtensionController, SEL, WKWebExtensionContext, NSError*))bean_msgSend)(self, bean_sel("loadExtensionContext:error:"), extensionContext, error); }
+static inline BOOL                                     WKWebExtensionController_UnloadExtensionContext_Error(WKWebExtensionController self, WKWebExtensionContext extensionContext, NSError* error)                                                              { return ((BOOL (*)(WKWebExtensionController, SEL, WKWebExtensionContext, NSError*))bean_msgSend)(self, bean_sel("unloadExtensionContext:error:"), extensionContext, error); }
 static inline WKWebExtensionContext                    WKWebExtensionController_ExtensionContextForExtension(WKWebExtensionController self, WKWebExtension extension)                                                                                            { return ((WKWebExtensionContext (*)(WKWebExtensionController, SEL, WKWebExtension))bean_msgSend)(self, bean_sel("extensionContextForExtension:"), extension); }
 static inline WKWebExtensionContext                    WKWebExtensionController_ExtensionContextForURL(WKWebExtensionController self, NSURL URL)                                                                                                                 { return ((WKWebExtensionContext (*)(WKWebExtensionController, SEL, NSURL))bean_msgSend)(self, bean_sel("extensionContextForURL:"), URL); }
 static inline void                                     WKWebExtensionController_FetchDataRecordsOfTypes_CompletionHandler(WKWebExtensionController self, NSSet dataTypes, void* completionHandler)                                                               { ((void (*)(WKWebExtensionController, SEL, NSSet, void*))bean_msgSend)(self, bean_sel("fetchDataRecordsOfTypes:completionHandler:"), dataTypes, completionHandler); }
@@ -5761,22 +6758,98 @@ static inline NSSet                                    WKWebExtensionController_
 static inline NSSet                                    WKWebExtensionController_AllExtensionDataTypes(void)                                                                                                                                                      { return ((NSSet (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionController"), bean_sel("allExtensionDataTypes")); }
 
 /* ===== WKWebExtensionControllerConfiguration ===== */
-static inline id                        WKWebExtensionControllerConfiguration_New(void)                                                                                                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("new")); }
-static inline id                        WKWebExtensionControllerConfiguration_Init(WKWebExtensionControllerConfiguration self)                                                                      { return ((id (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                        WKWebExtensionControllerConfiguration_DefaultConfiguration(void)                                                                                            { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("defaultConfiguration")); }
-static inline id                        WKWebExtensionControllerConfiguration_NonPersistentConfiguration(void)                                                                                      { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("nonPersistentConfiguration")); }
-static inline id                        WKWebExtensionControllerConfiguration_ConfigurationWithIdentifier(NSUUID identifier)                                                                        { return ((id (*)(bean_class, SEL, NSUUID))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("configurationWithIdentifier:"), identifier); }
-static inline BOOL                      WKWebExtensionControllerConfiguration_IsPersistent(WKWebExtensionControllerConfiguration self)                                                              { return ((BOOL (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("isPersistent")); }
-static inline NSUUID                    WKWebExtensionControllerConfiguration_Identifier(WKWebExtensionControllerConfiguration self)                                                                { return ((NSUUID (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("identifier")); }
-static inline WKWebViewConfiguration    WKWebExtensionControllerConfiguration_WebViewConfiguration(WKWebExtensionControllerConfiguration self)                                                      { return ((WKWebViewConfiguration (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("webViewConfiguration")); }
-static inline void                      WKWebExtensionControllerConfiguration_SetWebViewConfiguration(WKWebExtensionControllerConfiguration self, WKWebViewConfiguration webViewConfiguration)      { ((void (*)(WKWebExtensionControllerConfiguration, SEL, WKWebViewConfiguration))bean_msgSend)(self, bean_sel("setWebViewConfiguration:"), webViewConfiguration); }
-static inline WKWebsiteDataStore        WKWebExtensionControllerConfiguration_DefaultWebsiteDataStore(WKWebExtensionControllerConfiguration self)                                                   { return ((WKWebsiteDataStore (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("defaultWebsiteDataStore")); }
-static inline void                      WKWebExtensionControllerConfiguration_SetDefaultWebsiteDataStore(WKWebExtensionControllerConfiguration self, WKWebsiteDataStore defaultWebsiteDataStore)    { ((void (*)(WKWebExtensionControllerConfiguration, SEL, WKWebsiteDataStore))bean_msgSend)(self, bean_sel("setDefaultWebsiteDataStore:"), defaultWebsiteDataStore); }
-static inline BOOL                      WKWebExtensionControllerConfiguration_Persistent(WKWebExtensionControllerConfiguration self)                                                                { return ((BOOL (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("persistent")); }
+static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_New(void)                                                                                                             { return ((WKWebExtensionControllerConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("new")); }
+static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_Init(WKWebExtensionControllerConfiguration self)                                                                      { return ((WKWebExtensionControllerConfiguration (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_DefaultConfiguration(void)                                                                                            { return ((WKWebExtensionControllerConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("defaultConfiguration")); }
+static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_NonPersistentConfiguration(void)                                                                                      { return ((WKWebExtensionControllerConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("nonPersistentConfiguration")); }
+static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_ConfigurationWithIdentifier(NSUUID identifier)                                                                        { return ((WKWebExtensionControllerConfiguration (*)(bean_class, SEL, NSUUID))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("configurationWithIdentifier:"), identifier); }
+static inline BOOL                                     WKWebExtensionControllerConfiguration_IsPersistent(WKWebExtensionControllerConfiguration self)                                                              { return ((BOOL (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("isPersistent")); }
+static inline NSUUID                                   WKWebExtensionControllerConfiguration_Identifier(WKWebExtensionControllerConfiguration self)                                                                { return ((NSUUID (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline WKWebViewConfiguration                   WKWebExtensionControllerConfiguration_WebViewConfiguration(WKWebExtensionControllerConfiguration self)                                                      { return ((WKWebViewConfiguration (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("webViewConfiguration")); }
+static inline void                                     WKWebExtensionControllerConfiguration_SetWebViewConfiguration(WKWebExtensionControllerConfiguration self, WKWebViewConfiguration webViewConfiguration)      { ((void (*)(WKWebExtensionControllerConfiguration, SEL, WKWebViewConfiguration))bean_msgSend)(self, bean_sel("setWebViewConfiguration:"), webViewConfiguration); }
+static inline WKWebsiteDataStore                       WKWebExtensionControllerConfiguration_DefaultWebsiteDataStore(WKWebExtensionControllerConfiguration self)                                                   { return ((WKWebsiteDataStore (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("defaultWebsiteDataStore")); }
+static inline void                                     WKWebExtensionControllerConfiguration_SetDefaultWebsiteDataStore(WKWebExtensionControllerConfiguration self, WKWebsiteDataStore defaultWebsiteDataStore)    { ((void (*)(WKWebExtensionControllerConfiguration, SEL, WKWebsiteDataStore))bean_msgSend)(self, bean_sel("setDefaultWebsiteDataStore:"), defaultWebsiteDataStore); }
+static inline BOOL                                     WKWebExtensionControllerConfiguration_SupportsSecureCoding(void)                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("supportsSecureCoding")); }
+static inline id                                       WKWebExtensionControllerConfiguration_CopyWithZone(WKWebExtensionControllerConfiguration self, NSZone* zone)                                                { return ((id (*)(WKWebExtensionControllerConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                                     WKWebExtensionControllerConfiguration_Persistent(WKWebExtensionControllerConfiguration self)                                                                { return ((BOOL (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("persistent")); }
+
+/* ===== WKWebExtensionControllerDelegate ===== */
+#ifndef BEAN_TYPEDEF_WKWebExtensionControllerDelegate
+#define BEAN_TYPEDEF_WKWebExtensionControllerDelegate
+typedef bean_id WKWebExtensionControllerDelegate;
+#endif
+static inline NSArray    WKWebExtensionControllerDelegate_WebExtensionController_OpenWindowsForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext)                                                                                                                     { return ((NSArray (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:openWindowsForExtensionContext:"), controller, extensionContext); }
+static inline id         WKWebExtensionControllerDelegate_WebExtensionController_FocusedWindowForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext)                                                                                                                   { return ((id (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:focusedWindowForExtensionContext:"), controller, extensionContext); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_OpenNewWindowUsingConfiguration_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionWindowConfiguration configuration, WKWebExtensionContext extensionContext, void* completionHandler)    { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionWindowConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openNewWindowUsingConfiguration:forExtensionContext:completionHandler:"), controller, configuration, extensionContext, completionHandler); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_OpenNewTabUsingConfiguration_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionTabConfiguration configuration, WKWebExtensionContext extensionContext, void* completionHandler)          { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionTabConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openNewTabUsingConfiguration:forExtensionContext:completionHandler:"), controller, configuration, extensionContext, completionHandler); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_OpenOptionsPageForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext, void* completionHandler)                                                                      { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openOptionsPageForExtensionContext:completionHandler:"), controller, extensionContext, completionHandler); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissions_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet permissions, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                               { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissions:inTab:forExtensionContext:completionHandler:"), controller, permissions, tab, extensionContext, completionHandler); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissionToAccessURLs_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet urls, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissionToAccessURLs:inTab:forExtensionContext:completionHandler:"), controller, urls, tab, extensionContext, completionHandler); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissionMatchPatterns_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet matchPatterns, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                 { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissionMatchPatterns:inTab:forExtensionContext:completionHandler:"), controller, matchPatterns, tab, extensionContext, completionHandler); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_DidUpdateAction_ForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionAction action, WKWebExtensionContext context)                                                                                            { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionAction, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:didUpdateAction:forExtensionContext:"), controller, action, context); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_PresentPopupForAction_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionAction action, WKWebExtensionContext context, void* completionHandler)                                           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionAction, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:presentPopupForAction:forExtensionContext:completionHandler:"), controller, action, context, completionHandler); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_SendMessage_ToApplicationWithIdentifier_ForExtensionContext_ReplyHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, id message, NSString applicationIdentifier, WKWebExtensionContext extensionContext, void* replyHandler)           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, id, NSString, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:sendMessage:toApplicationWithIdentifier:forExtensionContext:replyHandler:"), controller, message, applicationIdentifier, extensionContext, replyHandler); }
+static inline void       WKWebExtensionControllerDelegate_WebExtensionController_ConnectUsingMessagePort_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionMessagePort port, WKWebExtensionContext extensionContext, void* completionHandler)                             { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionMessagePort, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:connectUsingMessagePort:forExtensionContext:completionHandler:"), controller, port, extensionContext, completionHandler); }
+
+/* ===== WKWebExtensionTab ===== */
+#ifndef BEAN_TYPEDEF_WKWebExtensionTab
+#define BEAN_TYPEDEF_WKWebExtensionTab
+typedef bean_id WKWebExtensionTab;
+#endif
+static inline id            WKWebExtensionTab_WindowForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                   { return ((id (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("windowForWebExtensionContext:"), context); }
+static inline NSUInteger    WKWebExtensionTab_IndexInWindowForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                            { return ((NSUInteger (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("indexInWindowForWebExtensionContext:"), context); }
+static inline id            WKWebExtensionTab_ParentTabForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                { return ((id (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("parentTabForWebExtensionContext:"), context); }
+static inline void          WKWebExtensionTab_SetParentTab_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, id parentTab, WKWebExtensionContext context, void* completionHandler)                                                   { ((void (*)(WKWebExtensionTab, SEL, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setParentTab:forWebExtensionContext:completionHandler:"), parentTab, context, completionHandler); }
+static inline WKWebView     WKWebExtensionTab_WebViewForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                  { return ((WKWebView (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webViewForWebExtensionContext:"), context); }
+static inline NSString      WKWebExtensionTab_TitleForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                    { return ((NSString (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("titleForWebExtensionContext:"), context); }
+static inline BOOL          WKWebExtensionTab_IsPinnedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                 { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isPinnedForWebExtensionContext:"), context); }
+static inline void          WKWebExtensionTab_SetPinned_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL pinned, WKWebExtensionContext context, void* completionHandler)                                                       { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setPinned:forWebExtensionContext:completionHandler:"), pinned, context, completionHandler); }
+static inline BOOL          WKWebExtensionTab_IsReaderModeAvailableForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                    { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isReaderModeAvailableForWebExtensionContext:"), context); }
+static inline BOOL          WKWebExtensionTab_IsReaderModeActiveForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                       { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isReaderModeActiveForWebExtensionContext:"), context); }
+static inline void          WKWebExtensionTab_SetReaderModeActive_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL active, WKWebExtensionContext context, void* completionHandler)                                             { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setReaderModeActive:forWebExtensionContext:completionHandler:"), active, context, completionHandler); }
+static inline BOOL          WKWebExtensionTab_IsPlayingAudioForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                           { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isPlayingAudioForWebExtensionContext:"), context); }
+static inline BOOL          WKWebExtensionTab_IsMutedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                  { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isMutedForWebExtensionContext:"), context); }
+static inline void          WKWebExtensionTab_SetMuted_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL muted, WKWebExtensionContext context, void* completionHandler)                                                         { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setMuted:forWebExtensionContext:completionHandler:"), muted, context, completionHandler); }
+static inline CGSize        WKWebExtensionTab_SizeForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                     { return ((CGSize (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend_stret)(self, bean_sel("sizeForWebExtensionContext:"), context); }
+static inline CGFloat       WKWebExtensionTab_ZoomFactorForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((CGFloat (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend_fpret)(self, bean_sel("zoomFactorForWebExtensionContext:"), context); }
+static inline void          WKWebExtensionTab_SetZoomFactor_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, CGFloat zoomFactor, WKWebExtensionContext context, void* completionHandler)                                            { ((void (*)(WKWebExtensionTab, SEL, CGFloat, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setZoomFactor:forWebExtensionContext:completionHandler:"), zoomFactor, context, completionHandler); }
+static inline NSURL         WKWebExtensionTab_UrlForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                      { return ((NSURL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("urlForWebExtensionContext:"), context); }
+static inline NSURL         WKWebExtensionTab_PendingURLForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((NSURL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("pendingURLForWebExtensionContext:"), context); }
+static inline BOOL          WKWebExtensionTab_IsLoadingCompleteForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                        { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isLoadingCompleteForWebExtensionContext:"), context); }
+static inline void          WKWebExtensionTab_DetectWebpageLocaleForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                           { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("detectWebpageLocaleForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline void          WKWebExtensionTab_TakeSnapshotUsingConfiguration_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKSnapshotConfiguration configuration, WKWebExtensionContext context, void* completionHandler)        { ((void (*)(WKWebExtensionTab, SEL, WKSnapshotConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("takeSnapshotUsingConfiguration:forWebExtensionContext:completionHandler:"), configuration, context, completionHandler); }
+static inline void          WKWebExtensionTab_LoadURL_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, NSURL url, WKWebExtensionContext context, void* completionHandler)                                                           { ((void (*)(WKWebExtensionTab, SEL, NSURL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("loadURL:forWebExtensionContext:completionHandler:"), url, context, completionHandler); }
+static inline void          WKWebExtensionTab_ReloadFromOrigin_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL fromOrigin, WKWebExtensionContext context, void* completionHandler)                                            { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("reloadFromOrigin:forWebExtensionContext:completionHandler:"), fromOrigin, context, completionHandler); }
+static inline void          WKWebExtensionTab_GoBackForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                        { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("goBackForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline void          WKWebExtensionTab_GoForwardForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                     { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("goForwardForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline void          WKWebExtensionTab_ActivateForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                      { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("activateForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline BOOL          WKWebExtensionTab_IsSelectedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isSelectedForWebExtensionContext:"), context); }
+static inline void          WKWebExtensionTab_SetSelected_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL selected, WKWebExtensionContext context, void* completionHandler)                                                   { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setSelected:forWebExtensionContext:completionHandler:"), selected, context, completionHandler); }
+static inline void          WKWebExtensionTab_DuplicateUsingConfiguration_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionTabConfiguration configuration, WKWebExtensionContext context, void* completionHandler)    { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionTabConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("duplicateUsingConfiguration:forWebExtensionContext:completionHandler:"), configuration, context, completionHandler); }
+static inline void          WKWebExtensionTab_CloseForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                         { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("closeForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline BOOL          WKWebExtensionTab_ShouldGrantPermissionsOnUserGestureForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                      { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("shouldGrantPermissionsOnUserGestureForWebExtensionContext:"), context); }
+static inline BOOL          WKWebExtensionTab_ShouldBypassPermissionsForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                  { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("shouldBypassPermissionsForWebExtensionContext:"), context); }
+
+/* ===== WKWebExtensionWindow ===== */
+#ifndef BEAN_TYPEDEF_WKWebExtensionWindow
+#define BEAN_TYPEDEF_WKWebExtensionWindow
+typedef bean_id WKWebExtensionWindow;
+#endif
+static inline NSArray                      WKWebExtensionWindow_TabsForWebExtensionContext(WKWebExtensionWindow self, WKWebExtensionContext context)                                                                                           { return ((NSArray (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("tabsForWebExtensionContext:"), context); }
+static inline id                           WKWebExtensionWindow_ActiveTabForWebExtensionContext(WKWebExtensionWindow self, WKWebExtensionContext context)                                                                                      { return ((id (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("activeTabForWebExtensionContext:"), context); }
+static inline WKWebExtensionWindowType     WKWebExtensionWindow_WindowTypeForWebExtensionContext(WKWebExtensionWindow self, WKWebExtensionContext context)                                                                                     { return ((WKWebExtensionWindowType (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("windowTypeForWebExtensionContext:"), context); }
+static inline WKWebExtensionWindowState    WKWebExtensionWindow_WindowStateForWebExtensionContext(WKWebExtensionWindow self, WKWebExtensionContext context)                                                                                    { return ((WKWebExtensionWindowState (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("windowStateForWebExtensionContext:"), context); }
+static inline void                         WKWebExtensionWindow_SetWindowState_ForWebExtensionContext_CompletionHandler(WKWebExtensionWindow self, WKWebExtensionWindowState state, WKWebExtensionContext context, void* completionHandler)    { ((void (*)(WKWebExtensionWindow, SEL, WKWebExtensionWindowState, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setWindowState:forWebExtensionContext:completionHandler:"), state, context, completionHandler); }
+static inline BOOL                         WKWebExtensionWindow_IsPrivateForWebExtensionContext(WKWebExtensionWindow self, WKWebExtensionContext context)                                                                                      { return ((BOOL (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isPrivateForWebExtensionContext:"), context); }
+static inline CGRect                       WKWebExtensionWindow_ScreenFrameForWebExtensionContext(WKWebExtensionWindow self, WKWebExtensionContext context)                                                                                    { return ((CGRect (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext))bean_msgSend_stret)(self, bean_sel("screenFrameForWebExtensionContext:"), context); }
+static inline CGRect                       WKWebExtensionWindow_FrameForWebExtensionContext(WKWebExtensionWindow self, WKWebExtensionContext context)                                                                                          { return ((CGRect (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext))bean_msgSend_stret)(self, bean_sel("frameForWebExtensionContext:"), context); }
+static inline void                         WKWebExtensionWindow_SetFrame_ForWebExtensionContext_CompletionHandler(WKWebExtensionWindow self, CGRect frame, WKWebExtensionContext context, void* completionHandler)                             { ((void (*)(WKWebExtensionWindow, SEL, CGRect, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setFrame:forWebExtensionContext:completionHandler:"), frame, context, completionHandler); }
+static inline void                         WKWebExtensionWindow_FocusForWebExtensionContext_CompletionHandler(WKWebExtensionWindow self, WKWebExtensionContext context, void* completionHandler)                                               { ((void (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("focusForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline void                         WKWebExtensionWindow_CloseForWebExtensionContext_CompletionHandler(WKWebExtensionWindow self, WKWebExtensionContext context, void* completionHandler)                                               { ((void (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("closeForWebExtensionContext:completionHandler:"), context, completionHandler); }
 
 /* ===== WKWebView ===== */
-static inline id                        WKWebView_InitWithFrame_Configuration(WKWebView self, CGRect frame, WKWebViewConfiguration configuration)                                                                                                                   { return ((id (*)(WKWebView, SEL, CGRect, WKWebViewConfiguration))bean_msgSend)(self, bean_sel("initWithFrame:configuration:"), frame, configuration); }
-static inline id                        WKWebView_InitWithCoder(WKWebView self, NSCoder coder)                                                                                                                                                                      { return ((id (*)(WKWebView, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline WKWebView                 WKWebView_InitWithFrame_Configuration(WKWebView self, CGRect frame, WKWebViewConfiguration configuration)                                                                                                                   { return ((WKWebView (*)(WKWebView, SEL, CGRect, WKWebViewConfiguration))bean_msgSend)(self, bean_sel("initWithFrame:configuration:"), frame, configuration); }
+static inline WKWebView                 WKWebView_InitWithCoder(WKWebView self, NSCoder coder)                                                                                                                                                                      { return ((WKWebView (*)(WKWebView, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline WKNavigation              WKWebView_LoadRequest(WKWebView self, NSURLRequest request)                                                                                                                                                                 { return ((WKNavigation (*)(WKWebView, SEL, NSURLRequest))bean_msgSend)(self, bean_sel("loadRequest:"), request); }
 static inline WKNavigation              WKWebView_LoadFileURL_AllowingReadAccessToURL(WKWebView self, NSURL URL, NSURL readAccessURL)                                                                                                                               { return ((WKNavigation (*)(WKWebView, SEL, NSURL, NSURL))bean_msgSend)(self, bean_sel("loadFileURL:allowingReadAccessToURL:"), URL, readAccessURL); }
 static inline WKNavigation              WKWebView_LoadHTMLString_BaseURL(WKWebView self, NSString string, NSURL baseURL)                                                                                                                                            { return ((WKNavigation (*)(WKWebView, SEL, NSString, NSURL))bean_msgSend)(self, bean_sel("loadHTMLString:baseURL:"), string, baseURL); }
@@ -5904,37 +6977,56 @@ static inline BOOL                              WKWebViewConfiguration_SupportsA
 static inline void                              WKWebViewConfiguration_SetSupportsAdaptiveImageGlyph(WKWebViewConfiguration self, BOOL supportsAdaptiveImageGlyph)                                                   { ((void (*)(WKWebViewConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setSupportsAdaptiveImageGlyph:"), supportsAdaptiveImageGlyph); }
 static inline NSWritingToolsBehavior            WKWebViewConfiguration_WritingToolsBehavior(WKWebViewConfiguration self)                                                                                             { return ((NSWritingToolsBehavior (*)(WKWebViewConfiguration, SEL))bean_msgSend)(self, bean_sel("writingToolsBehavior")); }
 static inline void                              WKWebViewConfiguration_SetWritingToolsBehavior(WKWebViewConfiguration self, NSWritingToolsBehavior writingToolsBehavior)                                             { ((void (*)(WKWebViewConfiguration, SEL, NSWritingToolsBehavior))bean_msgSend)(self, bean_sel("setWritingToolsBehavior:"), writingToolsBehavior); }
+static inline BOOL                              WKWebViewConfiguration_SupportsSecureCoding(void)                                                                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebViewConfiguration"), bean_sel("supportsSecureCoding")); }
+static inline id                                WKWebViewConfiguration_CopyWithZone(WKWebViewConfiguration self, NSZone* zone)                                                                                       { return ((id (*)(WKWebViewConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== WebDataSource ===== */
 #ifndef BEAN_TYPEDEF_WebDataSource
 #define BEAN_TYPEDEF_WebDataSource
 typedef bean_id WebDataSource;
 #endif
-static inline id                     WebDataSource_InitWithRequest(WebDataSource self, NSURLRequest request)      { return ((id (*)(WebDataSource, SEL, NSURLRequest))bean_msgSend)(self, bean_sel("initWithRequest:"), request); }
 static inline WebResource            WebDataSource_SubresourceForURL(WebDataSource self, NSURL URL)               { return ((WebResource (*)(WebDataSource, SEL, NSURL))bean_msgSend)(self, bean_sel("subresourceForURL:"), URL); }
 static inline void                   WebDataSource_AddSubresource(WebDataSource self, WebResource subresource)    { ((void (*)(WebDataSource, SEL, WebResource))bean_msgSend)(self, bean_sel("addSubresource:"), subresource); }
 static inline NSData                 WebDataSource_Data(WebDataSource self)                                       { return ((NSData (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("data")); }
 static inline id                     WebDataSource_Representation(WebDataSource self)                             { return ((id (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("representation")); }
 static inline WebFrame               WebDataSource_WebFrame(WebDataSource self)                                   { return ((WebFrame (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("webFrame")); }
-static inline NSURLRequest           WebDataSource_InitialRequest(WebDataSource self)                             { return ((NSURLRequest (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("initialRequest")); }
 static inline NSMutableURLRequest    WebDataSource_Request(WebDataSource self)                                    { return ((NSMutableURLRequest (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("request")); }
 static inline NSURLResponse          WebDataSource_Response(WebDataSource self)                                   { return ((NSURLResponse (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("response")); }
 static inline NSString               WebDataSource_TextEncodingName(WebDataSource self)                           { return ((NSString (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("textEncodingName")); }
 static inline BOOL                   WebDataSource_IsLoading(WebDataSource self)                                  { return ((BOOL (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("isLoading")); }
 static inline NSString               WebDataSource_PageTitle(WebDataSource self)                                  { return ((NSString (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("pageTitle")); }
 static inline NSURL                  WebDataSource_UnreachableURL(WebDataSource self)                             { return ((NSURL (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("unreachableURL")); }
-static inline WebArchive             WebDataSource_WebArchive(WebDataSource self)                                 { return ((WebArchive (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("webArchive")); }
 static inline WebResource            WebDataSource_MainResource(WebDataSource self)                               { return ((WebResource (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("mainResource")); }
 static inline NSArray                WebDataSource_Subresources(WebDataSource self)                               { return ((NSArray (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("subresources")); }
 static inline BOOL                   WebDataSource_Loading(WebDataSource self)                                    { return ((BOOL (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("loading")); }
 
+/* ===== WebEditingDelegate ===== */
+#ifndef BEAN_TYPEDEF_WebEditingDelegate
+#define BEAN_TYPEDEF_WebEditingDelegate
+typedef bean_id WebEditingDelegate;
+#endif
+static inline BOOL             WebEditingDelegate_WebView_ShouldBeginEditingInDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                     { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldBeginEditingInDOMRange:"), webView, range); }
+static inline BOOL             WebEditingDelegate_WebView_ShouldEndEditingInDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                       { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldEndEditingInDOMRange:"), webView, range); }
+static inline BOOL             WebEditingDelegate_WebView_ShouldInsertNode_ReplacingDOMRange_GivenAction(WebEditingDelegate self, WebView webView, void* node, void* range, WebViewInsertAction action)                                                           { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*, WebViewInsertAction))bean_msgSend)(self, bean_sel("webView:shouldInsertNode:replacingDOMRange:givenAction:"), webView, node, range, action); }
+static inline BOOL             WebEditingDelegate_WebView_ShouldInsertText_ReplacingDOMRange_GivenAction(WebEditingDelegate self, WebView webView, NSString text, void* range, WebViewInsertAction action)                                                        { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, NSString, void*, WebViewInsertAction))bean_msgSend)(self, bean_sel("webView:shouldInsertText:replacingDOMRange:givenAction:"), webView, text, range, action); }
+static inline BOOL             WebEditingDelegate_WebView_ShouldDeleteDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                             { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldDeleteDOMRange:"), webView, range); }
+static inline BOOL             WebEditingDelegate_WebView_ShouldChangeSelectedDOMRange_ToDOMRange_Affinity_StillSelecting(WebEditingDelegate self, WebView webView, void* currentRange, void* proposedRange, NSSelectionAffinity selectionAffinity, BOOL flag)    { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*, NSSelectionAffinity, BOOL))bean_msgSend)(self, bean_sel("webView:shouldChangeSelectedDOMRange:toDOMRange:affinity:stillSelecting:"), webView, currentRange, proposedRange, selectionAffinity, flag); }
+static inline BOOL             WebEditingDelegate_WebView_ShouldApplyStyle_ToElementsInDOMRange(WebEditingDelegate self, WebView webView, void* style, void* range)                                                                                               { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*))bean_msgSend)(self, bean_sel("webView:shouldApplyStyle:toElementsInDOMRange:"), webView, style, range); }
+static inline BOOL             WebEditingDelegate_WebView_ShouldChangeTypingStyle_ToStyle(WebEditingDelegate self, WebView webView, void* currentStyle, void* proposedStyle)                                                                                      { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*))bean_msgSend)(self, bean_sel("webView:shouldChangeTypingStyle:toStyle:"), webView, currentStyle, proposedStyle); }
+static inline BOOL             WebEditingDelegate_WebView_DoCommandBySelector(WebEditingDelegate self, WebView webView, SEL selector)                                                                                                                             { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, SEL))bean_msgSend)(self, bean_sel("webView:doCommandBySelector:"), webView, selector); }
+static inline void             WebEditingDelegate_WebViewDidBeginEditing(WebEditingDelegate self, NSNotification notification)                                                                                                                                    { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidBeginEditing:"), notification); }
+static inline void             WebEditingDelegate_WebViewDidChange(WebEditingDelegate self, NSNotification notification)                                                                                                                                          { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChange:"), notification); }
+static inline void             WebEditingDelegate_WebViewDidEndEditing(WebEditingDelegate self, NSNotification notification)                                                                                                                                      { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidEndEditing:"), notification); }
+static inline void             WebEditingDelegate_WebViewDidChangeTypingStyle(WebEditingDelegate self, NSNotification notification)                                                                                                                               { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChangeTypingStyle:"), notification); }
+static inline void             WebEditingDelegate_WebViewDidChangeSelection(WebEditingDelegate self, NSNotification notification)                                                                                                                                 { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChangeSelection:"), notification); }
+static inline NSUndoManager    WebEditingDelegate_UndoManagerForWebView(WebEditingDelegate self, WebView webView)                                                                                                                                                 { return ((NSUndoManager (*)(WebEditingDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("undoManagerForWebView:"), webView); }
+
 /* ===== WebFrame ===== */
-static inline id                 WebFrame_InitWithName_WebFrameView_WebView(WebFrame self, NSString name, WebFrameView view, WebView webView)                            { return ((id (*)(WebFrame, SEL, NSString, WebFrameView, WebView))bean_msgSend)(self, bean_sel("initWithName:webFrameView:webView:"), name, view, webView); }
+static inline WebFrame           WebFrame_InitWithName_WebFrameView_WebView(WebFrame self, NSString name, WebFrameView view, WebView webView)                            { return ((WebFrame (*)(WebFrame, SEL, NSString, WebFrameView, WebView))bean_msgSend)(self, bean_sel("initWithName:webFrameView:webView:"), name, view, webView); }
 static inline void               WebFrame_LoadRequest(WebFrame self, NSURLRequest request)                                                                               { ((void (*)(WebFrame, SEL, NSURLRequest))bean_msgSend)(self, bean_sel("loadRequest:"), request); }
 static inline void               WebFrame_LoadData_MIMEType_TextEncodingName_BaseURL(WebFrame self, NSData data, NSString MIMEType, NSString encodingName, NSURL URL)    { ((void (*)(WebFrame, SEL, NSData, NSString, NSString, NSURL))bean_msgSend)(self, bean_sel("loadData:MIMEType:textEncodingName:baseURL:"), data, MIMEType, encodingName, URL); }
 static inline void               WebFrame_LoadHTMLString_BaseURL(WebFrame self, NSString string, NSURL URL)                                                              { ((void (*)(WebFrame, SEL, NSString, NSURL))bean_msgSend)(self, bean_sel("loadHTMLString:baseURL:"), string, URL); }
 static inline void               WebFrame_LoadAlternateHTMLString_BaseURL_ForUnreachableURL(WebFrame self, NSString string, NSURL baseURL, NSURL unreachableURL)         { ((void (*)(WebFrame, SEL, NSString, NSURL, NSURL))bean_msgSend)(self, bean_sel("loadAlternateHTMLString:baseURL:forUnreachableURL:"), string, baseURL, unreachableURL); }
-static inline void               WebFrame_LoadArchive(WebFrame self, WebArchive archive)                                                                                 { ((void (*)(WebFrame, SEL, WebArchive))bean_msgSend)(self, bean_sel("loadArchive:"), archive); }
 static inline void               WebFrame_StopLoading(WebFrame self)                                                                                                     { ((void (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("stopLoading")); }
 static inline void               WebFrame_Reload(WebFrame self)                                                                                                          { ((void (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("reload")); }
 static inline void               WebFrame_ReloadFromOrigin(WebFrame self)                                                                                                { ((void (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("reloadFromOrigin")); }
@@ -5944,13 +7036,32 @@ static inline WebView            WebFrame_WebView(WebFrame self)                
 static inline WebFrameView       WebFrame_FrameView(WebFrame self)                                                                                                       { return ((WebFrameView (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("frameView")); }
 static inline void*              WebFrame_DOMDocument(WebFrame self)                                                                                                     { return ((void* (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("DOMDocument")); }
 static inline void*              WebFrame_FrameElement(WebFrame self)                                                                                                    { return ((void* (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("frameElement")); }
-static inline WebDataSource      WebFrame_DataSource(WebFrame self)                                                                                                      { return ((WebDataSource (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("dataSource")); }
-static inline WebDataSource      WebFrame_ProvisionalDataSource(WebFrame self)                                                                                           { return ((WebDataSource (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("provisionalDataSource")); }
 static inline WebFrame           WebFrame_ParentFrame(WebFrame self)                                                                                                     { return ((WebFrame (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("parentFrame")); }
 static inline NSArray            WebFrame_ChildFrames(WebFrame self)                                                                                                     { return ((NSArray (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("childFrames")); }
 static inline WebScriptObject    WebFrame_WindowObject(WebFrame self)                                                                                                    { return ((WebScriptObject (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("windowObject")); }
 static inline void*              WebFrame_GlobalContext(WebFrame self)                                                                                                   { return ((void* (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("globalContext")); }
 static inline void*              WebFrame_JavaScriptContext(WebFrame self)                                                                                               { return ((void* (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("javaScriptContext")); }
+
+/* ===== WebFrameLoadDelegate ===== */
+#ifndef BEAN_TYPEDEF_WebFrameLoadDelegate
+#define BEAN_TYPEDEF_WebFrameLoadDelegate
+typedef bean_id WebFrameLoadDelegate;
+#endif
+static inline void    WebFrameLoadDelegate_WebView_DidStartProvisionalLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didStartProvisionalLoadForFrame:"), sender, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidReceiveServerRedirectForProvisionalLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                 { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveServerRedirectForProvisionalLoadForFrame:"), sender, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidFailProvisionalLoadWithError_ForFrame(WebFrameLoadDelegate self, WebView sender, NSError error, WebFrame frame)                                            { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:didFailProvisionalLoadWithError:forFrame:"), sender, error, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidCommitLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                              { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didCommitLoadForFrame:"), sender, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidReceiveTitle_ForFrame(WebFrameLoadDelegate self, WebView sender, NSString title, WebFrame frame)                                                           { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveTitle:forFrame:"), sender, title, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidReceiveIcon_ForFrame(WebFrameLoadDelegate self, WebView sender, NSImage image, WebFrame frame)                                                             { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSImage, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveIcon:forFrame:"), sender, image, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidFinishLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                              { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didFinishLoadForFrame:"), sender, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidFailLoadWithError_ForFrame(WebFrameLoadDelegate self, WebView sender, NSError error, WebFrame frame)                                                       { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:didFailLoadWithError:forFrame:"), sender, error, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidChangeLocationWithinPageForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didChangeLocationWithinPageForFrame:"), sender, frame); }
+static inline void    WebFrameLoadDelegate_WebView_WillPerformClientRedirectToURL_Delay_FireDate_ForFrame(WebFrameLoadDelegate self, WebView sender, NSURL URL, CGFloat seconds, NSDate date, WebFrame frame)    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSURL, CGFloat, NSDate, WebFrame))bean_msgSend)(self, bean_sel("webView:willPerformClientRedirectToURL:delay:fireDate:forFrame:"), sender, URL, seconds, date, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidCancelClientRedirectForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didCancelClientRedirectForFrame:"), sender, frame); }
+static inline void    WebFrameLoadDelegate_WebView_WillCloseFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                                     { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:willCloseFrame:"), sender, frame); }
+static inline void    WebFrameLoadDelegate_WebView_DidClearWindowObject_ForFrame(WebFrameLoadDelegate self, WebView webView, WebScriptObject windowObject, WebFrame frame)                                       { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebScriptObject, WebFrame))bean_msgSend)(self, bean_sel("webView:didClearWindowObject:forFrame:"), webView, windowObject, frame); }
+static inline void    WebFrameLoadDelegate_WebView_WindowScriptObjectAvailable(WebFrameLoadDelegate self, WebView webView, WebScriptObject windowScriptObject)                                                   { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebScriptObject))bean_msgSend)(self, bean_sel("webView:windowScriptObjectAvailable:"), webView, windowScriptObject); }
+static inline void    WebFrameLoadDelegate_WebView_DidCreateJavaScriptContext_ForFrame(WebFrameLoadDelegate self, WebView webView, void* context, WebFrame frame)                                                { ((void (*)(WebFrameLoadDelegate, SEL, WebView, void*, WebFrame))bean_msgSend)(self, bean_sel("webView:didCreateJavaScriptContext:forFrame:"), webView, context, frame); }
 
 /* ===== WebFrameView ===== */
 static inline NSPrintOperation    WebFrameView_PrintOperationWithPrintInfo(WebFrameView self, NSPrintInfo printInfo)    { return ((NSPrintOperation (*)(WebFrameView, SEL, NSPrintInfo))bean_msgSend)(self, bean_sel("printOperationWithPrintInfo:"), printInfo); }
@@ -5962,6 +7073,65 @@ static inline void                WebFrameView_SetAllowsScrolling(WebFrameView s
 static inline BOOL                WebFrameView_CanPrintHeadersAndFooters(WebFrameView self)                             { return ((BOOL (*)(WebFrameView, SEL))bean_msgSend)(self, bean_sel("canPrintHeadersAndFooters")); }
 static inline BOOL                WebFrameView_DocumentViewShouldHandlePrint(WebFrameView self)                         { return ((BOOL (*)(WebFrameView, SEL))bean_msgSend)(self, bean_sel("documentViewShouldHandlePrint")); }
 
+/* ===== WebPolicyDelegate ===== */
+#ifndef BEAN_TYPEDEF_WebPolicyDelegate
+#define BEAN_TYPEDEF_WebPolicyDelegate
+typedef bean_id WebPolicyDelegate;
+#endif
+static inline void    WebPolicyDelegate_WebView_DecidePolicyForNavigationAction_Request_Frame_DecisionListener(WebPolicyDelegate self, WebView webView, NSDictionary actionInformation, NSURLRequest request, WebFrame frame, id listener)              { ((void (*)(WebPolicyDelegate, SEL, WebView, NSDictionary, NSURLRequest, WebFrame, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:request:frame:decisionListener:"), webView, actionInformation, request, frame, listener); }
+static inline void    WebPolicyDelegate_WebView_DecidePolicyForNewWindowAction_Request_NewFrameName_DecisionListener(WebPolicyDelegate self, WebView webView, NSDictionary actionInformation, NSURLRequest request, NSString frameName, id listener)    { ((void (*)(WebPolicyDelegate, SEL, WebView, NSDictionary, NSURLRequest, NSString, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForNewWindowAction:request:newFrameName:decisionListener:"), webView, actionInformation, request, frameName, listener); }
+static inline void    WebPolicyDelegate_WebView_DecidePolicyForMIMEType_Request_Frame_DecisionListener(WebPolicyDelegate self, WebView webView, NSString type, NSURLRequest request, WebFrame frame, id listener)                                       { ((void (*)(WebPolicyDelegate, SEL, WebView, NSString, NSURLRequest, WebFrame, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForMIMEType:request:frame:decisionListener:"), webView, type, request, frame, listener); }
+static inline void    WebPolicyDelegate_WebView_UnableToImplementPolicyWithError_Frame(WebPolicyDelegate self, WebView webView, NSError error, WebFrame frame)                                                                                          { ((void (*)(WebPolicyDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:unableToImplementPolicyWithError:frame:"), webView, error, frame); }
+
+/* ===== WebUIDelegate ===== */
+#ifndef BEAN_TYPEDEF_WebUIDelegate
+#define BEAN_TYPEDEF_WebUIDelegate
+typedef bean_id WebUIDelegate;
+#endif
+static inline WebView        WebUIDelegate_WebView_CreateWebViewWithRequest(WebUIDelegate self, WebView sender, NSURLRequest request)                                                                               { return ((WebView (*)(WebUIDelegate, SEL, WebView, NSURLRequest))bean_msgSend)(self, bean_sel("webView:createWebViewWithRequest:"), sender, request); }
+static inline void           WebUIDelegate_WebViewShow(WebUIDelegate self, WebView sender)                                                                                                                          { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewShow:"), sender); }
+static inline WebView        WebUIDelegate_WebView_CreateWebViewModalDialogWithRequest(WebUIDelegate self, WebView sender, NSURLRequest request)                                                                    { return ((WebView (*)(WebUIDelegate, SEL, WebView, NSURLRequest))bean_msgSend)(self, bean_sel("webView:createWebViewModalDialogWithRequest:"), sender, request); }
+static inline void           WebUIDelegate_WebViewRunModal(WebUIDelegate self, WebView sender)                                                                                                                      { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewRunModal:"), sender); }
+static inline void           WebUIDelegate_WebViewClose(WebUIDelegate self, WebView sender)                                                                                                                         { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewClose:"), sender); }
+static inline void           WebUIDelegate_WebViewFocus(WebUIDelegate self, WebView sender)                                                                                                                         { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewFocus:"), sender); }
+static inline void           WebUIDelegate_WebViewUnfocus(WebUIDelegate self, WebView sender)                                                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewUnfocus:"), sender); }
+static inline NSResponder    WebUIDelegate_WebViewFirstResponder(WebUIDelegate self, WebView sender)                                                                                                                { return ((NSResponder (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewFirstResponder:"), sender); }
+static inline void           WebUIDelegate_WebView_MakeFirstResponder(WebUIDelegate self, WebView sender, NSResponder responder)                                                                                    { ((void (*)(WebUIDelegate, SEL, WebView, NSResponder))bean_msgSend)(self, bean_sel("webView:makeFirstResponder:"), sender, responder); }
+static inline void           WebUIDelegate_WebView_SetStatusText(WebUIDelegate self, WebView sender, NSString text)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:setStatusText:"), sender, text); }
+static inline NSString       WebUIDelegate_WebViewStatusText(WebUIDelegate self, WebView sender)                                                                                                                    { return ((NSString (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewStatusText:"), sender); }
+static inline BOOL           WebUIDelegate_WebViewAreToolbarsVisible(WebUIDelegate self, WebView sender)                                                                                                            { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewAreToolbarsVisible:"), sender); }
+static inline void           WebUIDelegate_WebView_SetToolbarsVisible(WebUIDelegate self, WebView sender, BOOL visible)                                                                                             { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setToolbarsVisible:"), sender, visible); }
+static inline BOOL           WebUIDelegate_WebViewIsStatusBarVisible(WebUIDelegate self, WebView sender)                                                                                                            { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewIsStatusBarVisible:"), sender); }
+static inline void           WebUIDelegate_WebView_SetStatusBarVisible(WebUIDelegate self, WebView sender, BOOL visible)                                                                                            { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setStatusBarVisible:"), sender, visible); }
+static inline BOOL           WebUIDelegate_WebViewIsResizable(WebUIDelegate self, WebView sender)                                                                                                                   { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewIsResizable:"), sender); }
+static inline void           WebUIDelegate_WebView_SetResizable(WebUIDelegate self, WebView sender, BOOL resizable)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setResizable:"), sender, resizable); }
+static inline void           WebUIDelegate_WebView_SetFrame(WebUIDelegate self, WebView sender, CGRect frame)                                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:setFrame:"), sender, frame); }
+static inline CGRect         WebUIDelegate_WebViewFrame(WebUIDelegate self, WebView sender)                                                                                                                         { return ((CGRect (*)(WebUIDelegate, SEL, WebView))bean_msgSend_stret)(self, bean_sel("webViewFrame:"), sender); }
+static inline void           WebUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                        { ((void (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
+static inline BOOL           WebUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                      { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
+static inline NSString       WebUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString prompt, NSString defaultText, WebFrame frame)    { return ((NSString (*)(WebUIDelegate, SEL, WebView, NSString, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:"), sender, prompt, defaultText, frame); }
+static inline BOOL           WebUIDelegate_WebView_RunBeforeUnloadConfirmPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                    { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runBeforeUnloadConfirmPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
+static inline void           WebUIDelegate_WebView_RunOpenPanelForFileButtonWithResultListener(WebUIDelegate self, WebView sender, id resultListener)                                                               { ((void (*)(WebUIDelegate, SEL, WebView, id))bean_msgSend)(self, bean_sel("webView:runOpenPanelForFileButtonWithResultListener:"), sender, resultListener); }
+static inline void           WebUIDelegate_WebView_RunOpenPanelForFileButtonWithResultListener_AllowMultipleFiles(WebUIDelegate self, WebView sender, id resultListener, BOOL allowMultipleFiles)                   { ((void (*)(WebUIDelegate, SEL, WebView, id, BOOL))bean_msgSend)(self, bean_sel("webView:runOpenPanelForFileButtonWithResultListener:allowMultipleFiles:"), sender, resultListener, allowMultipleFiles); }
+static inline void           WebUIDelegate_WebView_MouseDidMoveOverElement_ModifierFlags(WebUIDelegate self, WebView sender, NSDictionary elementInformation, NSUInteger modifierFlags)                             { ((void (*)(WebUIDelegate, SEL, WebView, NSDictionary, NSUInteger))bean_msgSend)(self, bean_sel("webView:mouseDidMoveOverElement:modifierFlags:"), sender, elementInformation, modifierFlags); }
+static inline NSArray        WebUIDelegate_WebView_ContextMenuItemsForElement_DefaultMenuItems(WebUIDelegate self, WebView sender, NSDictionary element, NSArray defaultMenuItems)                                  { return ((NSArray (*)(WebUIDelegate, SEL, WebView, NSDictionary, NSArray))bean_msgSend)(self, bean_sel("webView:contextMenuItemsForElement:defaultMenuItems:"), sender, element, defaultMenuItems); }
+static inline BOOL           WebUIDelegate_WebView_ValidateUserInterfaceItem_DefaultValidation(WebUIDelegate self, WebView webView, id item, BOOL defaultValidation)                                                { return ((BOOL (*)(WebUIDelegate, SEL, WebView, id, BOOL))bean_msgSend)(self, bean_sel("webView:validateUserInterfaceItem:defaultValidation:"), webView, item, defaultValidation); }
+static inline BOOL           WebUIDelegate_WebView_ShouldPerformAction_FromSender(WebUIDelegate self, WebView webView, SEL action, id sender)                                                                       { return ((BOOL (*)(WebUIDelegate, SEL, WebView, SEL, id))bean_msgSend)(self, bean_sel("webView:shouldPerformAction:fromSender:"), webView, action, sender); }
+static inline NSUInteger     WebUIDelegate_WebView_DragDestinationActionMaskForDraggingInfo(WebUIDelegate self, WebView webView, id draggingInfo)                                                                   { return ((NSUInteger (*)(WebUIDelegate, SEL, WebView, id))bean_msgSend)(self, bean_sel("webView:dragDestinationActionMaskForDraggingInfo:"), webView, draggingInfo); }
+static inline void           WebUIDelegate_WebView_WillPerformDragDestinationAction_ForDraggingInfo(WebUIDelegate self, WebView webView, WebDragDestinationAction action, id draggingInfo)                          { ((void (*)(WebUIDelegate, SEL, WebView, WebDragDestinationAction, id))bean_msgSend)(self, bean_sel("webView:willPerformDragDestinationAction:forDraggingInfo:"), webView, action, draggingInfo); }
+static inline NSUInteger     WebUIDelegate_WebView_DragSourceActionMaskForPoint(WebUIDelegate self, WebView webView, CGPoint point)                                                                                 { return ((NSUInteger (*)(WebUIDelegate, SEL, WebView, CGPoint))bean_msgSend)(self, bean_sel("webView:dragSourceActionMaskForPoint:"), webView, point); }
+static inline void           WebUIDelegate_WebView_WillPerformDragSourceAction_FromPoint_WithPasteboard(WebUIDelegate self, WebView webView, WebDragSourceAction action, CGPoint point, NSPasteboard pasteboard)    { ((void (*)(WebUIDelegate, SEL, WebView, WebDragSourceAction, CGPoint, NSPasteboard))bean_msgSend)(self, bean_sel("webView:willPerformDragSourceAction:fromPoint:withPasteboard:"), webView, action, point, pasteboard); }
+static inline void           WebUIDelegate_WebView_PrintFrameView(WebUIDelegate self, WebView sender, WebFrameView frameView)                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView, WebFrameView))bean_msgSend)(self, bean_sel("webView:printFrameView:"), sender, frameView); }
+static inline CGFloat        WebUIDelegate_WebViewHeaderHeight(WebUIDelegate self, WebView sender)                                                                                                                  { return ((CGFloat (*)(WebUIDelegate, SEL, WebView))bean_msgSend_fpret)(self, bean_sel("webViewHeaderHeight:"), sender); }
+static inline CGFloat        WebUIDelegate_WebViewFooterHeight(WebUIDelegate self, WebView sender)                                                                                                                  { return ((CGFloat (*)(WebUIDelegate, SEL, WebView))bean_msgSend_fpret)(self, bean_sel("webViewFooterHeight:"), sender); }
+static inline void           WebUIDelegate_WebView_DrawHeaderInRect(WebUIDelegate self, WebView sender, CGRect rect)                                                                                                { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:drawHeaderInRect:"), sender, rect); }
+static inline void           WebUIDelegate_WebView_DrawFooterInRect(WebUIDelegate self, WebView sender, CGRect rect)                                                                                                { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:drawFooterInRect:"), sender, rect); }
+static inline void           WebUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage(WebUIDelegate self, WebView sender, NSString message)                                                                         { ((void (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:"), sender, message); }
+static inline BOOL           WebUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage(WebUIDelegate self, WebView sender, NSString message)                                                                       { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:"), sender, message); }
+static inline NSString       WebUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText(WebUIDelegate self, WebView sender, NSString prompt, NSString defaultText)                                     { return ((NSString (*)(WebUIDelegate, SEL, WebView, NSString, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:"), sender, prompt, defaultText); }
+static inline void           WebUIDelegate_WebView_SetContentRect(WebUIDelegate self, WebView sender, CGRect frame)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:setContentRect:"), sender, frame); }
+static inline CGRect         WebUIDelegate_WebViewContentRect(WebUIDelegate self, WebView sender)                                                                                                                   { return ((CGRect (*)(WebUIDelegate, SEL, WebView))bean_msgSend_stret)(self, bean_sel("webViewContentRect:"), sender); }
+
 /* ===== WebView ===== */
 static inline BOOL                   WebView_CanShowMIMEType(NSString MIMEType)                                                                                            { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WebView"), bean_sel("canShowMIMEType:"), MIMEType); }
 static inline BOOL                   WebView_CanShowMIMETypeAsHTML(NSString MIMEType)                                                                                      { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WebView"), bean_sel("canShowMIMETypeAsHTML:"), MIMEType); }
@@ -5970,12 +7140,11 @@ static inline void                   WebView_SetMIMETypesShownAsHTML(NSArray MIM
 static inline NSURL                  WebView_URLFromPasteboard(NSPasteboard pasteboard)                                                                                    { return ((NSURL (*)(bean_class, SEL, NSPasteboard))bean_msgSend)(bean_cls("WebView"), bean_sel("URLFromPasteboard:"), pasteboard); }
 static inline NSString               WebView_URLTitleFromPasteboard(NSPasteboard pasteboard)                                                                               { return ((NSString (*)(bean_class, SEL, NSPasteboard))bean_msgSend)(bean_cls("WebView"), bean_sel("URLTitleFromPasteboard:"), pasteboard); }
 static inline void                   WebView_RegisterURLSchemeAsLocal(NSString scheme)                                                                                     { ((void (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WebView"), bean_sel("registerURLSchemeAsLocal:"), scheme); }
-static inline id                     WebView_InitWithFrame_FrameName_GroupName(WebView self, CGRect frame, NSString frameName, NSString groupName)                         { return ((id (*)(WebView, SEL, CGRect, NSString, NSString))bean_msgSend)(self, bean_sel("initWithFrame:frameName:groupName:"), frame, frameName, groupName); }
+static inline WebView                WebView_InitWithFrame_FrameName_GroupName(WebView self, CGRect frame, NSString frameName, NSString groupName)                         { return ((WebView (*)(WebView, SEL, CGRect, NSString, NSString))bean_msgSend)(self, bean_sel("initWithFrame:frameName:groupName:"), frame, frameName, groupName); }
 static inline void                   WebView_Close(WebView self)                                                                                                           { ((void (*)(WebView, SEL))bean_msgSend)(self, bean_sel("close")); }
 static inline void                   WebView_SetMaintainsBackForwardList(WebView self, BOOL flag)                                                                          { ((void (*)(WebView, SEL, BOOL))bean_msgSend)(self, bean_sel("setMaintainsBackForwardList:"), flag); }
 static inline BOOL                   WebView_GoBack(WebView self)                                                                                                          { return ((BOOL (*)(WebView, SEL))bean_msgSend)(self, bean_sel("goBack")); }
 static inline BOOL                   WebView_GoForward(WebView self)                                                                                                       { return ((BOOL (*)(WebView, SEL))bean_msgSend)(self, bean_sel("goForward")); }
-static inline BOOL                   WebView_GoToBackForwardItem(WebView self, WebHistoryItem item)                                                                        { return ((BOOL (*)(WebView, SEL, WebHistoryItem))bean_msgSend)(self, bean_sel("goToBackForwardItem:"), item); }
 static inline NSString               WebView_UserAgentForURL(WebView self, NSURL URL)                                                                                      { return ((NSString (*)(WebView, SEL, NSURL))bean_msgSend)(self, bean_sel("userAgentForURL:"), URL); }
 static inline NSString               WebView_StringByEvaluatingJavaScriptFromString(WebView self, NSString script)                                                         { return ((NSString (*)(WebView, SEL, NSString))bean_msgSend)(self, bean_sel("stringByEvaluatingJavaScriptFromString:"), script); }
 static inline BOOL                   WebView_SearchFor_Direction_CaseSensitive_Wrap(WebView self, NSString string, BOOL forward, BOOL caseFlag, BOOL wrapFlag)             { return ((BOOL (*)(WebView, SEL, NSString, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("searchFor:direction:caseSensitive:wrap:"), string, forward, caseFlag, wrapFlag); }
@@ -6069,7 +7238,6 @@ static inline void                   WebView_SetEditingDelegate(WebView self, id
 static inline void                   WebView_ReplaceSelectionWithNode(WebView self, void* node)                                                                            { ((void (*)(WebView, SEL, void*))bean_msgSend)(self, bean_sel("replaceSelectionWithNode:"), node); }
 static inline void                   WebView_ReplaceSelectionWithText(WebView self, NSString text)                                                                         { ((void (*)(WebView, SEL, NSString))bean_msgSend)(self, bean_sel("replaceSelectionWithText:"), text); }
 static inline void                   WebView_ReplaceSelectionWithMarkupString(WebView self, NSString markupString)                                                         { ((void (*)(WebView, SEL, NSString))bean_msgSend)(self, bean_sel("replaceSelectionWithMarkupString:"), markupString); }
-static inline void                   WebView_ReplaceSelectionWithArchive(WebView self, WebArchive archive)                                                                 { ((void (*)(WebView, SEL, WebArchive))bean_msgSend)(self, bean_sel("replaceSelectionWithArchive:"), archive); }
 static inline void                   WebView_DeleteSelection(WebView self)                                                                                                 { ((void (*)(WebView, SEL))bean_msgSend)(self, bean_sel("deleteSelection")); }
 static inline void                   WebView_ApplyStyle(WebView self, void* style)                                                                                         { ((void (*)(WebView, SEL, void*))bean_msgSend)(self, bean_sel("applyStyle:"), style); }
 static inline void                   WebView_Copy(WebView self, id sender)                                                                                                 { ((void (*)(WebView, SEL, id))bean_msgSend)(self, bean_sel("copy:"), sender); }

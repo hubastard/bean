@@ -26,6 +26,7 @@ from .typemap import (
     KNOWN_STRUCT_TYPES,
     UNSUPPORTED_TYPE_NAMES,
     VARIADIC_FORMAT_SELECTORS,
+    adjust_parameter_type,
     build_msg_send_cast,
     c_function_name,
     is_unsupported_method,
@@ -289,7 +290,7 @@ def _emit_variadic_format_method(
             f'bean_sel("initWithFormat:arguments:"), {format_name}, bean_args); '
             f"va_end(bean_args); return bean_result; }}"
         )
-        return EmittedWrapper("id", fn_name, params_sig, body, doc)
+        return EmittedWrapper(method.class_name, fn_name, params_sig, body, doc)
 
     if method.selector == "initWithFormat:":
         params_sig = f"{method.class_name} self, {format_type} {format_name}, ..."
@@ -299,7 +300,7 @@ def _emit_variadic_format_method(
             f"{format_type}, va_list))bean_msgSend)(self, bean_sel(\"initWithFormat:arguments:\"), "
             f"{format_name}, bean_args); va_end(bean_args); return bean_result; }}"
         )
-        return EmittedWrapper("id", fn_name, params_sig, body, doc)
+        return EmittedWrapper(method.class_name, fn_name, params_sig, body, doc)
 
     if method.selector == "initWithFormat:locale:":
         locale_name = _param_name(method.params[1][0], method.params[1][1])
@@ -312,7 +313,7 @@ def _emit_variadic_format_method(
             f'bean_sel("initWithFormat:locale:arguments:"), {format_name}, {locale_name}, '
             f"bean_args); va_end(bean_args); return bean_result; }}"
         )
-        return EmittedWrapper("id", fn_name, params_sig, body, doc)
+        return EmittedWrapper(method.class_name, fn_name, params_sig, body, doc)
 
     if method.selector == "appendFormat:":
         params_sig = f"{method.class_name} self, {format_type} {format_name}, ..."
@@ -338,9 +339,16 @@ def _emit_variadic_format_method(
             f'bean_sel("initWithFormat:locale:arguments:"), {format_name}, bean_locale, bean_args); '
             f"va_end(bean_args); return bean_result; }}"
         )
-        return EmittedWrapper("id", fn_name, params_sig, body, doc)
+        return EmittedWrapper(method.class_name, fn_name, params_sig, body, doc)
 
     raise ValueError(f"unsupported variadic format selector: {method.selector}")
+
+
+def _method_params(method: ParsedMethod) -> list[tuple[str, CType]]:
+    return [
+        (name, adjust_parameter_type(method.selector, name, ctype))
+        for name, ctype in method.params
+    ]
 
 
 def _emit_method(
@@ -353,7 +361,8 @@ def _emit_method(
     if method.selector in VARIADIC_FORMAT_SELECTORS:
         return _emit_variadic_format_method(method, framework, docs, with_docs)
 
-    param_types = [p[1] for p in method.params]
+    adjusted_params = _method_params(method)
+    param_types = [p[1] for p in adjusted_params]
     reason = is_unsupported_method(method.selector, param_types, method.return_type)
     if reason:
         unsupported.append(
@@ -369,18 +378,18 @@ def _emit_method(
     fn_name = c_function_name(method.class_name, method.selector, method.is_class_method)
     receiver_type = "bean_class" if method.is_class_method else method.class_name
     if method.is_class_method:
-        param_decls = [_param_decl(p[0], p[1]) for p in method.params]
+        param_decls = [_param_decl(p[0], p[1]) for p in adjusted_params]
         receiver_expr = f'bean_cls("{method.class_name}")'
     else:
-        param_decls = [f"{method.class_name} self"] + [_param_decl(p[0], p[1]) for p in method.params]
+        param_decls = [f"{method.class_name} self"] + [_param_decl(p[0], p[1]) for p in adjusted_params]
         receiver_expr = "self"
 
     cast = build_msg_send_cast(method.return_type, receiver_type, param_types)
 
     if method.is_class_method:
-        call_args = ", ".join([receiver_expr, f'bean_sel("{method.selector}")'] + [_param_name(p[0], p[1]) for p in method.params])
+        call_args = ", ".join([receiver_expr, f'bean_sel("{method.selector}")'] + [_param_name(p[0], p[1]) for p in adjusted_params])
     else:
-        call_args = ", ".join(["self", f'bean_sel("{method.selector}")'] + [_param_name(p[0], p[1]) for p in method.params])
+        call_args = ", ".join(["self", f'bean_sel("{method.selector}")'] + [_param_name(p[0], p[1]) for p in adjusted_params])
 
     ret = normalize_return_type_spelling(method.return_type.spelling)
     return_type = ret

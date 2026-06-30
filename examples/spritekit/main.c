@@ -85,8 +85,8 @@ static void bean_spritekit_title(SKScene scene, CGFloat center_x) {
     CGPoint position;
 
     title = (SKLabelNode)SKLabelNode_LabelNodeWithFontNamed(
-        NSString_StringWithUTF8String("HelveticaNeue-Bold"));
-    SKLabelNode_SetText(title, NSString_StringWithUTF8String("Bean SpriteKit"));
+        bean_str("HelveticaNeue-Bold"));
+    SKLabelNode_SetText(title, bean_str("Bean SpriteKit"));
     SKLabelNode_SetFontSize(title, 28.0);
     SKLabelNode_SetFontColor(title, NSColor_ColorWithCalibratedWhite_Alpha(0.92, 1.0));
     SKLabelNode_SetHorizontalAlignmentMode(title, SKLabelHorizontalAlignmentModeCenter);
@@ -151,23 +151,21 @@ static SKScene bean_spritekit_demo_scene(CGSize size) {
 }
 
 int main(void) {
-    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
+    BEAN_AUTORELEASE_POOL {
+        NSWindow window = bean_example_window("Bean SpriteKit", 640.0, 480.0);
+        NSView content = NSWindow_ContentView(window);
+        CGRect bounds = NSView_Bounds(content);
 
-    NSWindow window = bean_example_window("Bean SpriteKit", 640.0, 480.0);
-    NSView content = NSWindow_ContentView(window);
-    CGRect bounds = NSView_Bounds(content);
+        SKView sprite_view = (SKView)bean_alloc(bean_cls("SKView"));
+        sprite_view = (SKView)NSView_InitWithFrame((NSView)sprite_view, bounds);
+        bean_example_add_fill_subview(content, (NSView)sprite_view);
 
-    SKView sprite_view = (SKView)bean_alloc(bean_cls("SKView"));
-    sprite_view = (SKView)NSView_InitWithFrame((NSView)sprite_view, bounds);
-    bean_example_add_fill_subview(content, (NSView)sprite_view);
+        SKView_PresentScene(sprite_view, bean_spritekit_demo_scene(bounds.size));
+        SKView_SetShowsFPS(sprite_view, YES);
+        SKView_SetShowsNodeCount(sprite_view, YES);
 
-    SKView_PresentScene(sprite_view, bean_spritekit_demo_scene(bounds.size));
-    SKView_SetShowsFPS(sprite_view, YES);
-    SKView_SetShowsNodeCount(sprite_view, YES);
-
-    printf("SpriteKit: orbiting colors around a pulsing Bean logo.\n");
-    bean_example_run(window);
-
-    bean_autorelease_pool_pop(pool);
+        printf("SpriteKit: orbiting colors around a pulsing Bean logo.\n");
+        bean_example_run(window);
+    }
     return 0;
 }

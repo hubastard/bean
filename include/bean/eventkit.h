@@ -16,10 +16,10 @@ extern "C" {
 typedef NSInteger EKAuthorizationStatus;
 #endif
 static const EKAuthorizationStatus EKAuthorizationStatusNotDetermined = (EKAuthorizationStatus)0;
-static const EKAuthorizationStatus EKAuthorizationStatusRestricted = (EKAuthorizationStatus)0;
-static const EKAuthorizationStatus EKAuthorizationStatusDenied = (EKAuthorizationStatus)0;
-static const EKAuthorizationStatus EKAuthorizationStatusFullAccess = (EKAuthorizationStatus)0;
-static const EKAuthorizationStatus EKAuthorizationStatusWriteOnly = (EKAuthorizationStatus)0;
+static const EKAuthorizationStatus EKAuthorizationStatusRestricted = (EKAuthorizationStatus)1;
+static const EKAuthorizationStatus EKAuthorizationStatusDenied = (EKAuthorizationStatus)2;
+static const EKAuthorizationStatus EKAuthorizationStatusFullAccess = (EKAuthorizationStatus)3;
+static const EKAuthorizationStatus EKAuthorizationStatusWriteOnly = (EKAuthorizationStatus)4;
 static const EKAuthorizationStatus EKAuthorizationStatusAuthorized = (EKAuthorizationStatus)3;
 
 #ifndef BEAN_TYPEDEF_EKWeekday
@@ -27,12 +27,12 @@ static const EKAuthorizationStatus EKAuthorizationStatusAuthorized = (EKAuthoriz
 typedef NSInteger EKWeekday;
 #endif
 static const EKWeekday EKWeekdaySunday = (EKWeekday)1;
-static const EKWeekday EKWeekdayMonday = (EKWeekday)0;
-static const EKWeekday EKWeekdayTuesday = (EKWeekday)0;
-static const EKWeekday EKWeekdayWednesday = (EKWeekday)0;
-static const EKWeekday EKWeekdayThursday = (EKWeekday)0;
-static const EKWeekday EKWeekdayFriday = (EKWeekday)0;
-static const EKWeekday EKWeekdaySaturday = (EKWeekday)0;
+static const EKWeekday EKWeekdayMonday = (EKWeekday)2;
+static const EKWeekday EKWeekdayTuesday = (EKWeekday)3;
+static const EKWeekday EKWeekdayWednesday = (EKWeekday)4;
+static const EKWeekday EKWeekdayThursday = (EKWeekday)5;
+static const EKWeekday EKWeekdayFriday = (EKWeekday)6;
+static const EKWeekday EKWeekdaySaturday = (EKWeekday)7;
 static const EKWeekday EKSunday = (EKWeekday)1;
 static const EKWeekday EKMonday = (EKWeekday)2;
 static const EKWeekday EKTuesday = (EKWeekday)3;
@@ -46,66 +46,66 @@ static const EKWeekday EKSaturday = (EKWeekday)7;
 typedef NSInteger EKRecurrenceFrequency;
 #endif
 static const EKRecurrenceFrequency EKRecurrenceFrequencyDaily = (EKRecurrenceFrequency)0;
-static const EKRecurrenceFrequency EKRecurrenceFrequencyWeekly = (EKRecurrenceFrequency)0;
-static const EKRecurrenceFrequency EKRecurrenceFrequencyMonthly = (EKRecurrenceFrequency)0;
-static const EKRecurrenceFrequency EKRecurrenceFrequencyYearly = (EKRecurrenceFrequency)0;
+static const EKRecurrenceFrequency EKRecurrenceFrequencyWeekly = (EKRecurrenceFrequency)1;
+static const EKRecurrenceFrequency EKRecurrenceFrequencyMonthly = (EKRecurrenceFrequency)2;
+static const EKRecurrenceFrequency EKRecurrenceFrequencyYearly = (EKRecurrenceFrequency)3;
 
 #ifndef BEAN_TYPEDEF_EKParticipantType
 #define BEAN_TYPEDEF_EKParticipantType
 typedef NSInteger EKParticipantType;
 #endif
 static const EKParticipantType EKParticipantTypeUnknown = (EKParticipantType)0;
-static const EKParticipantType EKParticipantTypePerson = (EKParticipantType)0;
-static const EKParticipantType EKParticipantTypeRoom = (EKParticipantType)0;
-static const EKParticipantType EKParticipantTypeResource = (EKParticipantType)0;
-static const EKParticipantType EKParticipantTypeGroup = (EKParticipantType)0;
+static const EKParticipantType EKParticipantTypePerson = (EKParticipantType)1;
+static const EKParticipantType EKParticipantTypeRoom = (EKParticipantType)2;
+static const EKParticipantType EKParticipantTypeResource = (EKParticipantType)3;
+static const EKParticipantType EKParticipantTypeGroup = (EKParticipantType)4;
 
 #ifndef BEAN_TYPEDEF_EKParticipantRole
 #define BEAN_TYPEDEF_EKParticipantRole
 typedef NSInteger EKParticipantRole;
 #endif
 static const EKParticipantRole EKParticipantRoleUnknown = (EKParticipantRole)0;
-static const EKParticipantRole EKParticipantRoleRequired = (EKParticipantRole)0;
-static const EKParticipantRole EKParticipantRoleOptional = (EKParticipantRole)0;
-static const EKParticipantRole EKParticipantRoleChair = (EKParticipantRole)0;
-static const EKParticipantRole EKParticipantRoleNonParticipant = (EKParticipantRole)0;
+static const EKParticipantRole EKParticipantRoleRequired = (EKParticipantRole)1;
+static const EKParticipantRole EKParticipantRoleOptional = (EKParticipantRole)2;
+static const EKParticipantRole EKParticipantRoleChair = (EKParticipantRole)3;
+static const EKParticipantRole EKParticipantRoleNonParticipant = (EKParticipantRole)4;
 
 #ifndef BEAN_TYPEDEF_EKParticipantScheduleStatus
 #define BEAN_TYPEDEF_EKParticipantScheduleStatus
 typedef NSInteger EKParticipantScheduleStatus;
 #endif
 static const EKParticipantScheduleStatus EKParticipantScheduleStatusNone = (EKParticipantScheduleStatus)0;
-static const EKParticipantScheduleStatus EKParticipantScheduleStatusPending = (EKParticipantScheduleStatus)0;
-static const EKParticipantScheduleStatus EKParticipantScheduleStatusSent = (EKParticipantScheduleStatus)0;
-static const EKParticipantScheduleStatus EKParticipantScheduleStatusDelivered = (EKParticipantScheduleStatus)0;
-static const EKParticipantScheduleStatus EKParticipantScheduleStatusRecipientNotRecognized = (EKParticipantScheduleStatus)0;
-static const EKParticipantScheduleStatus EKParticipantScheduleStatusNoPrivileges = (EKParticipantScheduleStatus)0;
-static const EKParticipantScheduleStatus EKParticipantScheduleStatusDeliveryFailed = (EKParticipantScheduleStatus)0;
-static const EKParticipantScheduleStatus EKParticipantScheduleStatusCannotDeliver = (EKParticipantScheduleStatus)0;
-static const EKParticipantScheduleStatus EKParticipantScheduleStatusRecipientNotAllowed = (EKParticipantScheduleStatus)0;
+static const EKParticipantScheduleStatus EKParticipantScheduleStatusPending = (EKParticipantScheduleStatus)1;
+static const EKParticipantScheduleStatus EKParticipantScheduleStatusSent = (EKParticipantScheduleStatus)2;
+static const EKParticipantScheduleStatus EKParticipantScheduleStatusDelivered = (EKParticipantScheduleStatus)3;
+static const EKParticipantScheduleStatus EKParticipantScheduleStatusRecipientNotRecognized = (EKParticipantScheduleStatus)4;
+static const EKParticipantScheduleStatus EKParticipantScheduleStatusNoPrivileges = (EKParticipantScheduleStatus)5;
+static const EKParticipantScheduleStatus EKParticipantScheduleStatusDeliveryFailed = (EKParticipantScheduleStatus)6;
+static const EKParticipantScheduleStatus EKParticipantScheduleStatusCannotDeliver = (EKParticipantScheduleStatus)7;
+static const EKParticipantScheduleStatus EKParticipantScheduleStatusRecipientNotAllowed = (EKParticipantScheduleStatus)8;
 
 #ifndef BEAN_TYPEDEF_EKParticipantStatus
 #define BEAN_TYPEDEF_EKParticipantStatus
 typedef NSInteger EKParticipantStatus;
 #endif
 static const EKParticipantStatus EKParticipantStatusUnknown = (EKParticipantStatus)0;
-static const EKParticipantStatus EKParticipantStatusPending = (EKParticipantStatus)0;
-static const EKParticipantStatus EKParticipantStatusAccepted = (EKParticipantStatus)0;
-static const EKParticipantStatus EKParticipantStatusDeclined = (EKParticipantStatus)0;
-static const EKParticipantStatus EKParticipantStatusTentative = (EKParticipantStatus)0;
-static const EKParticipantStatus EKParticipantStatusDelegated = (EKParticipantStatus)0;
-static const EKParticipantStatus EKParticipantStatusCompleted = (EKParticipantStatus)0;
-static const EKParticipantStatus EKParticipantStatusInProcess = (EKParticipantStatus)0;
+static const EKParticipantStatus EKParticipantStatusPending = (EKParticipantStatus)1;
+static const EKParticipantStatus EKParticipantStatusAccepted = (EKParticipantStatus)2;
+static const EKParticipantStatus EKParticipantStatusDeclined = (EKParticipantStatus)3;
+static const EKParticipantStatus EKParticipantStatusTentative = (EKParticipantStatus)4;
+static const EKParticipantStatus EKParticipantStatusDelegated = (EKParticipantStatus)5;
+static const EKParticipantStatus EKParticipantStatusCompleted = (EKParticipantStatus)6;
+static const EKParticipantStatus EKParticipantStatusInProcess = (EKParticipantStatus)7;
 
 #ifndef BEAN_TYPEDEF_EKCalendarType
 #define BEAN_TYPEDEF_EKCalendarType
 typedef NSInteger EKCalendarType;
 #endif
 static const EKCalendarType EKCalendarTypeLocal = (EKCalendarType)0;
-static const EKCalendarType EKCalendarTypeCalDAV = (EKCalendarType)0;
-static const EKCalendarType EKCalendarTypeExchange = (EKCalendarType)0;
-static const EKCalendarType EKCalendarTypeSubscription = (EKCalendarType)0;
-static const EKCalendarType EKCalendarTypeBirthday = (EKCalendarType)0;
+static const EKCalendarType EKCalendarTypeCalDAV = (EKCalendarType)1;
+static const EKCalendarType EKCalendarTypeExchange = (EKCalendarType)2;
+static const EKCalendarType EKCalendarTypeSubscription = (EKCalendarType)3;
+static const EKCalendarType EKCalendarTypeBirthday = (EKCalendarType)4;
 
 #ifndef BEAN_TYPEDEF_EKCalendarEventAvailabilityMask
 #define BEAN_TYPEDEF_EKCalendarEventAvailabilityMask
@@ -122,18 +122,18 @@ static const EKCalendarEventAvailabilityMask EKCalendarEventAvailabilityUnavaila
 typedef NSInteger EKSourceType;
 #endif
 static const EKSourceType EKSourceTypeLocal = (EKSourceType)0;
-static const EKSourceType EKSourceTypeExchange = (EKSourceType)0;
-static const EKSourceType EKSourceTypeCalDAV = (EKSourceType)0;
-static const EKSourceType EKSourceTypeMobileMe = (EKSourceType)0;
-static const EKSourceType EKSourceTypeSubscribed = (EKSourceType)0;
-static const EKSourceType EKSourceTypeBirthdays = (EKSourceType)0;
+static const EKSourceType EKSourceTypeExchange = (EKSourceType)1;
+static const EKSourceType EKSourceTypeCalDAV = (EKSourceType)2;
+static const EKSourceType EKSourceTypeMobileMe = (EKSourceType)3;
+static const EKSourceType EKSourceTypeSubscribed = (EKSourceType)4;
+static const EKSourceType EKSourceTypeBirthdays = (EKSourceType)5;
 
 #ifndef BEAN_TYPEDEF_EKEntityType
 #define BEAN_TYPEDEF_EKEntityType
 typedef NSUInteger EKEntityType;
 #endif
 static const EKEntityType EKEntityTypeEvent = (EKEntityType)0;
-static const EKEntityType EKEntityTypeReminder = (EKEntityType)0;
+static const EKEntityType EKEntityTypeReminder = (EKEntityType)1;
 
 #ifndef BEAN_TYPEDEF_EKEntityMask
 #define BEAN_TYPEDEF_EKEntityMask
@@ -147,17 +147,17 @@ static const EKEntityMask EKEntityMaskReminder = (EKEntityMask)2;
 typedef NSInteger EKAlarmProximity;
 #endif
 static const EKAlarmProximity EKAlarmProximityNone = (EKAlarmProximity)0;
-static const EKAlarmProximity EKAlarmProximityEnter = (EKAlarmProximity)0;
-static const EKAlarmProximity EKAlarmProximityLeave = (EKAlarmProximity)0;
+static const EKAlarmProximity EKAlarmProximityEnter = (EKAlarmProximity)1;
+static const EKAlarmProximity EKAlarmProximityLeave = (EKAlarmProximity)2;
 
 #ifndef BEAN_TYPEDEF_EKAlarmType
 #define BEAN_TYPEDEF_EKAlarmType
 typedef NSInteger EKAlarmType;
 #endif
 static const EKAlarmType EKAlarmTypeDisplay = (EKAlarmType)0;
-static const EKAlarmType EKAlarmTypeAudio = (EKAlarmType)0;
-static const EKAlarmType EKAlarmTypeProcedure = (EKAlarmType)0;
-static const EKAlarmType EKAlarmTypeEmail = (EKAlarmType)0;
+static const EKAlarmType EKAlarmTypeAudio = (EKAlarmType)1;
+static const EKAlarmType EKAlarmTypeProcedure = (EKAlarmType)2;
+static const EKAlarmType EKAlarmTypeEmail = (EKAlarmType)3;
 
 #ifndef BEAN_TYPEDEF_EKReminderPriority
 #define BEAN_TYPEDEF_EKReminderPriority
@@ -173,50 +173,50 @@ static const EKReminderPriority EKReminderPriorityLow = (EKReminderPriority)9;
 typedef NSInteger EKSpan;
 #endif
 static const EKSpan EKSpanThisEvent = (EKSpan)0;
-static const EKSpan EKSpanFutureEvents = (EKSpan)0;
+static const EKSpan EKSpanFutureEvents = (EKSpan)1;
 
 #ifndef BEAN_TYPEDEF_EKErrorCode
 #define BEAN_TYPEDEF_EKErrorCode
 typedef NSInteger EKErrorCode;
 #endif
 static const EKErrorCode EKErrorEventNotMutable = (EKErrorCode)0;
-static const EKErrorCode EKErrorNoCalendar = (EKErrorCode)0;
-static const EKErrorCode EKErrorNoStartDate = (EKErrorCode)0;
-static const EKErrorCode EKErrorNoEndDate = (EKErrorCode)0;
-static const EKErrorCode EKErrorDatesInverted = (EKErrorCode)0;
-static const EKErrorCode EKErrorInternalFailure = (EKErrorCode)0;
-static const EKErrorCode EKErrorCalendarReadOnly = (EKErrorCode)0;
-static const EKErrorCode EKErrorDurationGreaterThanRecurrence = (EKErrorCode)0;
-static const EKErrorCode EKErrorAlarmGreaterThanRecurrence = (EKErrorCode)0;
-static const EKErrorCode EKErrorStartDateTooFarInFuture = (EKErrorCode)0;
-static const EKErrorCode EKErrorStartDateCollidesWithOtherOccurrence = (EKErrorCode)0;
-static const EKErrorCode EKErrorObjectBelongsToDifferentStore = (EKErrorCode)0;
-static const EKErrorCode EKErrorInvitesCannotBeMoved = (EKErrorCode)0;
-static const EKErrorCode EKErrorInvalidSpan = (EKErrorCode)0;
-static const EKErrorCode EKErrorCalendarHasNoSource = (EKErrorCode)0;
-static const EKErrorCode EKErrorCalendarSourceCannotBeModified = (EKErrorCode)0;
-static const EKErrorCode EKErrorCalendarIsImmutable = (EKErrorCode)0;
-static const EKErrorCode EKErrorSourceDoesNotAllowCalendarAddDelete = (EKErrorCode)0;
-static const EKErrorCode EKErrorRecurringReminderRequiresDueDate = (EKErrorCode)0;
-static const EKErrorCode EKErrorStructuredLocationsNotSupported = (EKErrorCode)0;
-static const EKErrorCode EKErrorReminderLocationsNotSupported = (EKErrorCode)0;
-static const EKErrorCode EKErrorAlarmProximityNotSupported = (EKErrorCode)0;
-static const EKErrorCode EKErrorCalendarDoesNotAllowEvents = (EKErrorCode)0;
-static const EKErrorCode EKErrorCalendarDoesNotAllowReminders = (EKErrorCode)0;
-static const EKErrorCode EKErrorSourceDoesNotAllowReminders = (EKErrorCode)0;
-static const EKErrorCode EKErrorSourceDoesNotAllowEvents = (EKErrorCode)0;
-static const EKErrorCode EKErrorPriorityIsInvalid = (EKErrorCode)0;
-static const EKErrorCode EKErrorInvalidEntityType = (EKErrorCode)0;
-static const EKErrorCode EKErrorProcedureAlarmsNotMutable = (EKErrorCode)0;
-static const EKErrorCode EKErrorEventStoreNotAuthorized = (EKErrorCode)0;
-static const EKErrorCode EKErrorOSNotSupported = (EKErrorCode)0;
-static const EKErrorCode EKErrorInvalidInviteReplyCalendar = (EKErrorCode)0;
-static const EKErrorCode EKErrorNotificationsCollectionFlagNotSet = (EKErrorCode)0;
-static const EKErrorCode EKErrorSourceMismatch = (EKErrorCode)0;
-static const EKErrorCode EKErrorNotificationCollectionMismatch = (EKErrorCode)0;
-static const EKErrorCode EKErrorNotificationSavedWithoutCollection = (EKErrorCode)0;
-static const EKErrorCode EKErrorReminderAlarmContainsEmailOrUrl = (EKErrorCode)0;
-static const EKErrorCode EKErrorLast = (EKErrorCode)0;
+static const EKErrorCode EKErrorNoCalendar = (EKErrorCode)1;
+static const EKErrorCode EKErrorNoStartDate = (EKErrorCode)2;
+static const EKErrorCode EKErrorNoEndDate = (EKErrorCode)3;
+static const EKErrorCode EKErrorDatesInverted = (EKErrorCode)4;
+static const EKErrorCode EKErrorInternalFailure = (EKErrorCode)5;
+static const EKErrorCode EKErrorCalendarReadOnly = (EKErrorCode)6;
+static const EKErrorCode EKErrorDurationGreaterThanRecurrence = (EKErrorCode)7;
+static const EKErrorCode EKErrorAlarmGreaterThanRecurrence = (EKErrorCode)8;
+static const EKErrorCode EKErrorStartDateTooFarInFuture = (EKErrorCode)9;
+static const EKErrorCode EKErrorStartDateCollidesWithOtherOccurrence = (EKErrorCode)10;
+static const EKErrorCode EKErrorObjectBelongsToDifferentStore = (EKErrorCode)11;
+static const EKErrorCode EKErrorInvitesCannotBeMoved = (EKErrorCode)12;
+static const EKErrorCode EKErrorInvalidSpan = (EKErrorCode)13;
+static const EKErrorCode EKErrorCalendarHasNoSource = (EKErrorCode)14;
+static const EKErrorCode EKErrorCalendarSourceCannotBeModified = (EKErrorCode)15;
+static const EKErrorCode EKErrorCalendarIsImmutable = (EKErrorCode)16;
+static const EKErrorCode EKErrorSourceDoesNotAllowCalendarAddDelete = (EKErrorCode)17;
+static const EKErrorCode EKErrorRecurringReminderRequiresDueDate = (EKErrorCode)18;
+static const EKErrorCode EKErrorStructuredLocationsNotSupported = (EKErrorCode)19;
+static const EKErrorCode EKErrorReminderLocationsNotSupported = (EKErrorCode)20;
+static const EKErrorCode EKErrorAlarmProximityNotSupported = (EKErrorCode)21;
+static const EKErrorCode EKErrorCalendarDoesNotAllowEvents = (EKErrorCode)22;
+static const EKErrorCode EKErrorCalendarDoesNotAllowReminders = (EKErrorCode)23;
+static const EKErrorCode EKErrorSourceDoesNotAllowReminders = (EKErrorCode)24;
+static const EKErrorCode EKErrorSourceDoesNotAllowEvents = (EKErrorCode)25;
+static const EKErrorCode EKErrorPriorityIsInvalid = (EKErrorCode)26;
+static const EKErrorCode EKErrorInvalidEntityType = (EKErrorCode)27;
+static const EKErrorCode EKErrorProcedureAlarmsNotMutable = (EKErrorCode)28;
+static const EKErrorCode EKErrorEventStoreNotAuthorized = (EKErrorCode)29;
+static const EKErrorCode EKErrorOSNotSupported = (EKErrorCode)30;
+static const EKErrorCode EKErrorInvalidInviteReplyCalendar = (EKErrorCode)31;
+static const EKErrorCode EKErrorNotificationsCollectionFlagNotSet = (EKErrorCode)32;
+static const EKErrorCode EKErrorSourceMismatch = (EKErrorCode)33;
+static const EKErrorCode EKErrorNotificationCollectionMismatch = (EKErrorCode)34;
+static const EKErrorCode EKErrorNotificationSavedWithoutCollection = (EKErrorCode)35;
+static const EKErrorCode EKErrorReminderAlarmContainsEmailOrUrl = (EKErrorCode)36;
+static const EKErrorCode EKErrorLast = (EKErrorCode)37;
 
 #ifndef BEAN_TYPEDEF_EKEventAvailability
 #define BEAN_TYPEDEF_EKEventAvailability
@@ -224,18 +224,18 @@ typedef NSInteger EKEventAvailability;
 #endif
 static const EKEventAvailability EKEventAvailabilityNotSupported = (EKEventAvailability)-1;
 static const EKEventAvailability EKEventAvailabilityBusy = (EKEventAvailability)0;
-static const EKEventAvailability EKEventAvailabilityFree = (EKEventAvailability)0;
-static const EKEventAvailability EKEventAvailabilityTentative = (EKEventAvailability)0;
-static const EKEventAvailability EKEventAvailabilityUnavailable = (EKEventAvailability)0;
+static const EKEventAvailability EKEventAvailabilityFree = (EKEventAvailability)1;
+static const EKEventAvailability EKEventAvailabilityTentative = (EKEventAvailability)2;
+static const EKEventAvailability EKEventAvailabilityUnavailable = (EKEventAvailability)3;
 
 #ifndef BEAN_TYPEDEF_EKEventStatus
 #define BEAN_TYPEDEF_EKEventStatus
 typedef NSInteger EKEventStatus;
 #endif
 static const EKEventStatus EKEventStatusNone = (EKEventStatus)0;
-static const EKEventStatus EKEventStatusConfirmed = (EKEventStatus)0;
-static const EKEventStatus EKEventStatusTentative = (EKEventStatus)0;
-static const EKEventStatus EKEventStatusCanceled = (EKEventStatus)0;
+static const EKEventStatus EKEventStatusConfirmed = (EKEventStatus)1;
+static const EKEventStatus EKEventStatusTentative = (EKEventStatus)2;
+static const EKEventStatus EKEventStatusCanceled = (EKEventStatus)3;
 
 /* ===== forward typedefs ===== */
 #ifndef BEAN_TYPEDEF_EKEventStore
@@ -314,6 +314,10 @@ typedef bean_id NSByteCountFormatter;
 #define BEAN_TYPEDEF_NSCache
 typedef bean_id NSCache;
 #endif
+#ifndef BEAN_TYPEDEF_NSCacheDelegate
+#define BEAN_TYPEDEF_NSCacheDelegate
+typedef bean_id NSCacheDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSCachedURLResponse
 #define BEAN_TYPEDEF_NSCachedURLResponse
 typedef bean_id NSCachedURLResponse;
@@ -346,6 +350,10 @@ typedef bean_id NSCloseCommand;
 #define BEAN_TYPEDEF_NSCoder
 typedef bean_id NSCoder;
 #endif
+#ifndef BEAN_TYPEDEF_NSCoding
+#define BEAN_TYPEDEF_NSCoding
+typedef bean_id NSCoding;
+#endif
 #ifndef BEAN_TYPEDEF_NSComparisonPredicate
 #define BEAN_TYPEDEF_NSComparisonPredicate
 typedef bean_id NSComparisonPredicate;
@@ -365,6 +373,14 @@ typedef bean_id NSConditionLock;
 #ifndef BEAN_TYPEDEF_NSConnection
 #define BEAN_TYPEDEF_NSConnection
 typedef bean_id NSConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSConnectionDelegate
+#define BEAN_TYPEDEF_NSConnectionDelegate
+typedef bean_id NSConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSCopying
+#define BEAN_TYPEDEF_NSCopying
+typedef bean_id NSCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSCountedSet
 #define BEAN_TYPEDEF_NSCountedSet
@@ -410,6 +426,10 @@ typedef bean_id NSDateIntervalFormatter;
 #define BEAN_TYPEDEF_NSDecimalNumber
 typedef bean_id NSDecimalNumber;
 #endif
+#ifndef BEAN_TYPEDEF_NSDecimalNumberBehaviors
+#define BEAN_TYPEDEF_NSDecimalNumberBehaviors
+typedef bean_id NSDecimalNumberBehaviors;
+#endif
 #ifndef BEAN_TYPEDEF_NSDecimalNumberHandler
 #define BEAN_TYPEDEF_NSDecimalNumberHandler
 typedef bean_id NSDecimalNumberHandler;
@@ -429,6 +449,10 @@ typedef bean_id NSDimension;
 #ifndef BEAN_TYPEDEF_NSDirectoryEnumerator
 #define BEAN_TYPEDEF_NSDirectoryEnumerator
 typedef bean_id NSDirectoryEnumerator;
+#endif
+#ifndef BEAN_TYPEDEF_NSDiscardableContent
+#define BEAN_TYPEDEF_NSDiscardableContent
+typedef bean_id NSDiscardableContent;
 #endif
 #ifndef BEAN_TYPEDEF_NSDistantObject
 #define BEAN_TYPEDEF_NSDistantObject
@@ -474,6 +498,14 @@ typedef bean_id NSExtensionContext;
 #define BEAN_TYPEDEF_NSExtensionItem
 typedef bean_id NSExtensionItem;
 #endif
+#ifndef BEAN_TYPEDEF_NSExtensionRequestHandling
+#define BEAN_TYPEDEF_NSExtensionRequestHandling
+typedef bean_id NSExtensionRequestHandling;
+#endif
+#ifndef BEAN_TYPEDEF_NSFastEnumeration
+#define BEAN_TYPEDEF_NSFastEnumeration
+typedef bean_id NSFastEnumeration;
+#endif
 #ifndef BEAN_TYPEDEF_NSFileAccessIntent
 #define BEAN_TYPEDEF_NSFileAccessIntent
 typedef bean_id NSFileAccessIntent;
@@ -489,6 +521,14 @@ typedef bean_id NSFileHandle;
 #ifndef BEAN_TYPEDEF_NSFileManager
 #define BEAN_TYPEDEF_NSFileManager
 typedef bean_id NSFileManager;
+#endif
+#ifndef BEAN_TYPEDEF_NSFileManagerDelegate
+#define BEAN_TYPEDEF_NSFileManagerDelegate
+typedef bean_id NSFileManagerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSFilePresenter
+#define BEAN_TYPEDEF_NSFilePresenter
+typedef bean_id NSFilePresenter;
 #endif
 #ifndef BEAN_TYPEDEF_NSFileProviderService
 #define BEAN_TYPEDEF_NSFileProviderService
@@ -574,6 +614,14 @@ typedef bean_id NSInvocationOperation;
 #define BEAN_TYPEDEF_NSItemProvider
 typedef bean_id NSItemProvider;
 #endif
+#ifndef BEAN_TYPEDEF_NSItemProviderReading
+#define BEAN_TYPEDEF_NSItemProviderReading
+typedef bean_id NSItemProviderReading;
+#endif
+#ifndef BEAN_TYPEDEF_NSItemProviderWriting
+#define BEAN_TYPEDEF_NSItemProviderWriting
+typedef bean_id NSItemProviderWriting;
+#endif
 #ifndef BEAN_TYPEDEF_NSJSONSerialization
 #define BEAN_TYPEDEF_NSJSONSerialization
 typedef bean_id NSJSONSerialization;
@@ -590,9 +638,17 @@ typedef bean_id NSKeyValueSharedObserversSnapshot;
 #define BEAN_TYPEDEF_NSKeyedArchiver
 typedef bean_id NSKeyedArchiver;
 #endif
+#ifndef BEAN_TYPEDEF_NSKeyedArchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedArchiverDelegate
+typedef bean_id NSKeyedArchiverDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiver
 #define BEAN_TYPEDEF_NSKeyedUnarchiver
 typedef bean_id NSKeyedUnarchiver;
+#endif
+#ifndef BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+#define BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
+typedef bean_id NSKeyedUnarchiverDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSLengthFormatter
 #define BEAN_TYPEDEF_NSLengthFormatter
@@ -618,6 +674,10 @@ typedef bean_id NSLocalizedNumberFormatRule;
 #define BEAN_TYPEDEF_NSLock
 typedef bean_id NSLock;
 #endif
+#ifndef BEAN_TYPEDEF_NSLocking
+#define BEAN_TYPEDEF_NSLocking
+typedef bean_id NSLocking;
+#endif
 #ifndef BEAN_TYPEDEF_NSLogicalTest
 #define BEAN_TYPEDEF_NSLogicalTest
 typedef bean_id NSLogicalTest;
@@ -629,6 +689,10 @@ typedef bean_id NSMachBootstrapServer;
 #ifndef BEAN_TYPEDEF_NSMachPort
 #define BEAN_TYPEDEF_NSMachPort
 typedef bean_id NSMachPort;
+#endif
+#ifndef BEAN_TYPEDEF_NSMachPortDelegate
+#define BEAN_TYPEDEF_NSMachPortDelegate
+typedef bean_id NSMachPortDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMapTable
 #define BEAN_TYPEDEF_NSMapTable
@@ -661,6 +725,10 @@ typedef bean_id NSMetadataQuery;
 #ifndef BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 #define BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 typedef bean_id NSMetadataQueryAttributeValueTuple;
+#endif
+#ifndef BEAN_TYPEDEF_NSMetadataQueryDelegate
+#define BEAN_TYPEDEF_NSMetadataQueryDelegate
+typedef bean_id NSMetadataQueryDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSMetadataQueryResultGroup
 #define BEAN_TYPEDEF_NSMetadataQueryResultGroup
@@ -697,6 +765,10 @@ typedef bean_id NSMutableAttributedString;
 #ifndef BEAN_TYPEDEF_NSMutableCharacterSet
 #define BEAN_TYPEDEF_NSMutableCharacterSet
 typedef bean_id NSMutableCharacterSet;
+#endif
+#ifndef BEAN_TYPEDEF_NSMutableCopying
+#define BEAN_TYPEDEF_NSMutableCopying
+typedef bean_id NSMutableCopying;
 #endif
 #ifndef BEAN_TYPEDEF_NSMutableData
 #define BEAN_TYPEDEF_NSMutableData
@@ -737,6 +809,14 @@ typedef bean_id NSNetService;
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowser
 #define BEAN_TYPEDEF_NSNetServiceBrowser
 typedef bean_id NSNetServiceBrowser;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+#define BEAN_TYPEDEF_NSNetServiceBrowserDelegate
+typedef bean_id NSNetServiceBrowserDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSNetServiceDelegate
+#define BEAN_TYPEDEF_NSNetServiceDelegate
+typedef bean_id NSNetServiceDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSNotification
 #define BEAN_TYPEDEF_NSNotification
@@ -822,6 +902,10 @@ typedef bean_id NSPort;
 #define BEAN_TYPEDEF_NSPortCoder
 typedef bean_id NSPortCoder;
 #endif
+#ifndef BEAN_TYPEDEF_NSPortDelegate
+#define BEAN_TYPEDEF_NSPortDelegate
+typedef bean_id NSPortDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSPortMessage
 #define BEAN_TYPEDEF_NSPortMessage
 typedef bean_id NSPortMessage;
@@ -850,6 +934,10 @@ typedef bean_id NSProcessInfo;
 #define BEAN_TYPEDEF_NSProgress
 typedef bean_id NSProgress;
 #endif
+#ifndef BEAN_TYPEDEF_NSProgressReporting
+#define BEAN_TYPEDEF_NSProgressReporting
+typedef bean_id NSProgressReporting;
+#endif
 #ifndef BEAN_TYPEDEF_NSPropertyListSerialization
 #define BEAN_TYPEDEF_NSPropertyListSerialization
 typedef bean_id NSPropertyListSerialization;
@@ -861,6 +949,10 @@ typedef bean_id NSProtocolChecker;
 #ifndef BEAN_TYPEDEF_NSProxy
 #define BEAN_TYPEDEF_NSProxy
 typedef bean_id NSProxy;
+#endif
+#ifndef BEAN_TYPEDEF_NSPurgeableData
+#define BEAN_TYPEDEF_NSPurgeableData
+typedef bean_id NSPurgeableData;
 #endif
 #ifndef BEAN_TYPEDEF_NSQuitCommand
 #define BEAN_TYPEDEF_NSQuitCommand
@@ -926,6 +1018,10 @@ typedef bean_id NSScriptSuiteRegistry;
 #define BEAN_TYPEDEF_NSScriptWhoseTest
 typedef bean_id NSScriptWhoseTest;
 #endif
+#ifndef BEAN_TYPEDEF_NSSecureCoding
+#define BEAN_TYPEDEF_NSSecureCoding
+typedef bean_id NSSecureCoding;
+#endif
 #ifndef BEAN_TYPEDEF_NSSecureUnarchiveFromDataTransformer
 #define BEAN_TYPEDEF_NSSecureUnarchiveFromDataTransformer
 typedef bean_id NSSecureUnarchiveFromDataTransformer;
@@ -958,9 +1054,17 @@ typedef bean_id NSSpecifierTest;
 #define BEAN_TYPEDEF_NSSpellServer
 typedef bean_id NSSpellServer;
 #endif
+#ifndef BEAN_TYPEDEF_NSSpellServerDelegate
+#define BEAN_TYPEDEF_NSSpellServerDelegate
+typedef bean_id NSSpellServerDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSStream
 #define BEAN_TYPEDEF_NSStream
 typedef bean_id NSStream;
+#endif
+#ifndef BEAN_TYPEDEF_NSStreamDelegate
+#define BEAN_TYPEDEF_NSStreamDelegate
+typedef bean_id NSStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSString
 #define BEAN_TYPEDEF_NSString
@@ -998,6 +1102,10 @@ typedef bean_id NSURL;
 #define BEAN_TYPEDEF_NSURLAuthenticationChallenge
 typedef bean_id NSURLAuthenticationChallenge;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+#define BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
+typedef bean_id NSURLAuthenticationChallengeSender;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLCache
 #define BEAN_TYPEDEF_NSURLCache
 typedef bean_id NSURLCache;
@@ -1009,6 +1117,18 @@ typedef bean_id NSURLComponents;
 #ifndef BEAN_TYPEDEF_NSURLConnection
 #define BEAN_TYPEDEF_NSURLConnection
 typedef bean_id NSURLConnection;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDataDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDataDelegate
+typedef bean_id NSURLConnectionDataDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDelegate
+typedef bean_id NSURLConnectionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
+typedef bean_id NSURLConnectionDownloadDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLCredential
 #define BEAN_TYPEDEF_NSURLCredential
@@ -1022,9 +1142,17 @@ typedef bean_id NSURLCredentialStorage;
 #define BEAN_TYPEDEF_NSURLDownload
 typedef bean_id NSURLDownload;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLDownloadDelegate
+#define BEAN_TYPEDEF_NSURLDownloadDelegate
+typedef bean_id NSURLDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLHandle
 #define BEAN_TYPEDEF_NSURLHandle
 typedef bean_id NSURLHandle;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLHandleClient
+#define BEAN_TYPEDEF_NSURLHandleClient
+typedef bean_id NSURLHandleClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLProtectionSpace
 #define BEAN_TYPEDEF_NSURLProtectionSpace
@@ -1033,6 +1161,10 @@ typedef bean_id NSURLProtectionSpace;
 #ifndef BEAN_TYPEDEF_NSURLProtocol
 #define BEAN_TYPEDEF_NSURLProtocol
 typedef bean_id NSURLProtocol;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLProtocolClient
+#define BEAN_TYPEDEF_NSURLProtocolClient
+typedef bean_id NSURLProtocolClient;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLQueryItem
 #define BEAN_TYPEDEF_NSURLQueryItem
@@ -1054,13 +1186,29 @@ typedef bean_id NSURLSession;
 #define BEAN_TYPEDEF_NSURLSessionConfiguration
 typedef bean_id NSURLSessionConfiguration;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDataDelegate
+#define BEAN_TYPEDEF_NSURLSessionDataDelegate
+typedef bean_id NSURLSessionDataDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDataTask
 #define BEAN_TYPEDEF_NSURLSessionDataTask
 typedef bean_id NSURLSessionDataTask;
 #endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDelegate
+#define BEAN_TYPEDEF_NSURLSessionDelegate
+typedef bean_id NSURLSessionDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+#define BEAN_TYPEDEF_NSURLSessionDownloadDelegate
+typedef bean_id NSURLSessionDownloadDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadTask
 #define BEAN_TYPEDEF_NSURLSessionDownloadTask
 typedef bean_id NSURLSessionDownloadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionStreamDelegate
+#define BEAN_TYPEDEF_NSURLSessionStreamDelegate
+typedef bean_id NSURLSessionStreamDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionStreamTask
 #define BEAN_TYPEDEF_NSURLSessionStreamTask
@@ -1069,6 +1217,10 @@ typedef bean_id NSURLSessionStreamTask;
 #ifndef BEAN_TYPEDEF_NSURLSessionTask
 #define BEAN_TYPEDEF_NSURLSessionTask
 typedef bean_id NSURLSessionTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionTaskDelegate
+#define BEAN_TYPEDEF_NSURLSessionTaskDelegate
+typedef bean_id NSURLSessionTaskDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskMetrics
 #define BEAN_TYPEDEF_NSURLSessionTaskMetrics
@@ -1081,6 +1233,10 @@ typedef bean_id NSURLSessionTaskTransactionMetrics;
 #ifndef BEAN_TYPEDEF_NSURLSessionUploadTask
 #define BEAN_TYPEDEF_NSURLSessionUploadTask
 typedef bean_id NSURLSessionUploadTask;
+#endif
+#ifndef BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+#define BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
+typedef bean_id NSURLSessionWebSocketDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketMessage
 #define BEAN_TYPEDEF_NSURLSessionWebSocketMessage
@@ -1214,6 +1370,10 @@ typedef bean_id NSUnitVolume;
 #define BEAN_TYPEDEF_NSUserActivity
 typedef bean_id NSUserActivity;
 #endif
+#ifndef BEAN_TYPEDEF_NSUserActivityDelegate
+#define BEAN_TYPEDEF_NSUserActivityDelegate
+typedef bean_id NSUserActivityDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSUserAppleScriptTask
 #define BEAN_TYPEDEF_NSUserAppleScriptTask
 typedef bean_id NSUserAppleScriptTask;
@@ -1237,6 +1397,10 @@ typedef bean_id NSUserNotificationAction;
 #ifndef BEAN_TYPEDEF_NSUserNotificationCenter
 #define BEAN_TYPEDEF_NSUserNotificationCenter
 typedef bean_id NSUserNotificationCenter;
+#endif
+#ifndef BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+#define BEAN_TYPEDEF_NSUserNotificationCenterDelegate
+typedef bean_id NSUserNotificationCenterDelegate;
 #endif
 #ifndef BEAN_TYPEDEF_NSUserScriptTask
 #define BEAN_TYPEDEF_NSUserScriptTask
@@ -1282,6 +1446,10 @@ typedef bean_id NSXMLNode;
 #define BEAN_TYPEDEF_NSXMLParser
 typedef bean_id NSXMLParser;
 #endif
+#ifndef BEAN_TYPEDEF_NSXMLParserDelegate
+#define BEAN_TYPEDEF_NSXMLParserDelegate
+typedef bean_id NSXMLParserDelegate;
+#endif
 #ifndef BEAN_TYPEDEF_NSXPCCoder
 #define BEAN_TYPEDEF_NSXPCCoder
 typedef bean_id NSXPCCoder;
@@ -1297,6 +1465,18 @@ typedef bean_id NSXPCInterface;
 #ifndef BEAN_TYPEDEF_NSXPCListener
 #define BEAN_TYPEDEF_NSXPCListener
 typedef bean_id NSXPCListener;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerDelegate
+#define BEAN_TYPEDEF_NSXPCListenerDelegate
+typedef bean_id NSXPCListenerDelegate;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
+#define BEAN_TYPEDEF_NSXPCListenerEndpoint
+typedef bean_id NSXPCListenerEndpoint;
+#endif
+#ifndef BEAN_TYPEDEF_NSXPCProxyCreating
+#define BEAN_TYPEDEF_NSXPCProxyCreating
+typedef bean_id NSXPCProxyCreating;
 #endif
 #ifndef BEAN_TYPEDEF_OS_object
 #define BEAN_TYPEDEF_OS_object
@@ -1334,10 +1514,6 @@ typedef bean_id NSColor;
 #define BEAN_TYPEDEF_NSImage
 typedef bean_id NSImage;
 #endif
-#ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
-#define BEAN_TYPEDEF_NSXPCListenerEndpoint
-typedef bean_id NSXPCListenerEndpoint;
-#endif
 
 #ifndef BEAN_TYPEDEF_NSImage
 #define BEAN_TYPEDEF_NSImage
@@ -1357,16 +1533,20 @@ typedef NSUInteger NSStringEncoding;
 #define BEAN_TYPEDEF_CLFloor
 typedef bean_id CLFloor;
 #endif
-static inline NSInteger    CLFloor_Level(CLFloor self)    { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
+static inline NSInteger    CLFloor_Level(CLFloor self)                         { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
+static inline id           CLFloor_CopyWithZone(CLFloor self, NSZone* zone)    { return ((id (*)(CLFloor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL         CLFloor_SupportsSecureCoding(void)                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLFloor"), bean_sel("supportsSecureCoding")); }
 
 /* ===== CLLocationSourceInformation ===== */
 #ifndef BEAN_TYPEDEF_CLLocationSourceInformation
 #define BEAN_TYPEDEF_CLLocationSourceInformation
 typedef bean_id CLLocationSourceInformation;
 #endif
-static inline id      CLLocationSourceInformation_InitWithSoftwareSimulationState_AndExternalAccessoryState(CLLocationSourceInformation self, BOOL isSoftware, BOOL isAccessory)    { return ((id (*)(CLLocationSourceInformation, SEL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initWithSoftwareSimulationState:andExternalAccessoryState:"), isSoftware, isAccessory); }
-static inline BOOL    CLLocationSourceInformation_IsSimulatedBySoftware(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isSimulatedBySoftware")); }
-static inline BOOL    CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
+static inline CLLocationSourceInformation    CLLocationSourceInformation_InitWithSoftwareSimulationState_AndExternalAccessoryState(CLLocationSourceInformation self, BOOL isSoftware, BOOL isAccessory)    { return ((CLLocationSourceInformation (*)(CLLocationSourceInformation, SEL, BOOL, BOOL))bean_msgSend)(self, bean_sel("initWithSoftwareSimulationState:andExternalAccessoryState:"), isSoftware, isAccessory); }
+static inline BOOL                           CLLocationSourceInformation_IsSimulatedBySoftware(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isSimulatedBySoftware")); }
+static inline BOOL                           CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
+static inline id                             CLLocationSourceInformation_CopyWithZone(CLLocationSourceInformation self, NSZone* zone)                                                                      { return ((id (*)(CLLocationSourceInformation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                           CLLocationSourceInformation_SupportsSecureCoding(void)                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocationSourceInformation"), bean_sel("supportsSecureCoding")); }
 
 /* ===== EKObject ===== */
 #ifndef BEAN_TYPEDEF_EKObject
@@ -1393,6 +1573,7 @@ static inline EKParticipantRole      EKParticipant_ParticipantRole(EKParticipant
 static inline EKParticipantType      EKParticipant_ParticipantType(EKParticipant self)                                     { return ((EKParticipantType (*)(EKParticipant, SEL))bean_msgSend)(self, bean_sel("participantType")); }
 static inline BOOL                   EKParticipant_IsCurrentUser(EKParticipant self)                                       { return ((BOOL (*)(EKParticipant, SEL))bean_msgSend)(self, bean_sel("isCurrentUser")); }
 static inline NSPredicate            EKParticipant_ContactPredicate(EKParticipant self)                                    { return ((NSPredicate (*)(EKParticipant, SEL))bean_msgSend)(self, bean_sel("contactPredicate")); }
+static inline id                     EKParticipant_CopyWithZone(EKParticipant self, NSZone* zone)                          { return ((id (*)(EKParticipant, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                   EKParticipant_CurrentUser(EKParticipant self)                                         { return ((BOOL (*)(EKParticipant, SEL))bean_msgSend)(self, bean_sel("currentUser")); }
 
 /* ===== EKRecurrenceDayOfWeek ===== */
@@ -1400,21 +1581,25 @@ static inline BOOL                   EKParticipant_CurrentUser(EKParticipant sel
 #define BEAN_TYPEDEF_EKRecurrenceDayOfWeek
 typedef bean_id EKRecurrenceDayOfWeek;
 #endif
-static inline id           EKRecurrenceDayOfWeek_DayOfWeek(EKWeekday dayOfTheWeek)                                                                            { return ((id (*)(bean_class, SEL, EKWeekday))bean_msgSend)(bean_cls("EKRecurrenceDayOfWeek"), bean_sel("dayOfWeek:"), dayOfTheWeek); }
-static inline id           EKRecurrenceDayOfWeek_DayOfWeek_WeekNumber(EKWeekday dayOfTheWeek, NSInteger weekNumber)                                           { return ((id (*)(bean_class, SEL, EKWeekday, NSInteger))bean_msgSend)(bean_cls("EKRecurrenceDayOfWeek"), bean_sel("dayOfWeek:weekNumber:"), dayOfTheWeek, weekNumber); }
-static inline id           EKRecurrenceDayOfWeek_InitWithDayOfTheWeek_WeekNumber(EKRecurrenceDayOfWeek self, EKWeekday dayOfTheWeek, NSInteger weekNumber)    { return ((id (*)(EKRecurrenceDayOfWeek, SEL, EKWeekday, NSInteger))bean_msgSend)(self, bean_sel("initWithDayOfTheWeek:weekNumber:"), dayOfTheWeek, weekNumber); }
-static inline EKWeekday    EKRecurrenceDayOfWeek_DayOfTheWeek(EKRecurrenceDayOfWeek self)                                                                     { return ((EKWeekday (*)(EKRecurrenceDayOfWeek, SEL))bean_msgSend)(self, bean_sel("dayOfTheWeek")); }
-static inline NSInteger    EKRecurrenceDayOfWeek_WeekNumber(EKRecurrenceDayOfWeek self)                                                                       { return ((NSInteger (*)(EKRecurrenceDayOfWeek, SEL))bean_msgSend)(self, bean_sel("weekNumber")); }
+static inline EKRecurrenceDayOfWeek    EKRecurrenceDayOfWeek_DayOfWeek(EKWeekday dayOfTheWeek)                                                                            { return ((EKRecurrenceDayOfWeek (*)(bean_class, SEL, EKWeekday))bean_msgSend)(bean_cls("EKRecurrenceDayOfWeek"), bean_sel("dayOfWeek:"), dayOfTheWeek); }
+static inline EKRecurrenceDayOfWeek    EKRecurrenceDayOfWeek_DayOfWeek_WeekNumber(EKWeekday dayOfTheWeek, NSInteger weekNumber)                                           { return ((EKRecurrenceDayOfWeek (*)(bean_class, SEL, EKWeekday, NSInteger))bean_msgSend)(bean_cls("EKRecurrenceDayOfWeek"), bean_sel("dayOfWeek:weekNumber:"), dayOfTheWeek, weekNumber); }
+static inline EKRecurrenceDayOfWeek    EKRecurrenceDayOfWeek_InitWithDayOfTheWeek_WeekNumber(EKRecurrenceDayOfWeek self, EKWeekday dayOfTheWeek, NSInteger weekNumber)    { return ((EKRecurrenceDayOfWeek (*)(EKRecurrenceDayOfWeek, SEL, EKWeekday, NSInteger))bean_msgSend)(self, bean_sel("initWithDayOfTheWeek:weekNumber:"), dayOfTheWeek, weekNumber); }
+static inline EKWeekday                EKRecurrenceDayOfWeek_DayOfTheWeek(EKRecurrenceDayOfWeek self)                                                                     { return ((EKWeekday (*)(EKRecurrenceDayOfWeek, SEL))bean_msgSend)(self, bean_sel("dayOfTheWeek")); }
+static inline NSInteger                EKRecurrenceDayOfWeek_WeekNumber(EKRecurrenceDayOfWeek self)                                                                       { return ((NSInteger (*)(EKRecurrenceDayOfWeek, SEL))bean_msgSend)(self, bean_sel("weekNumber")); }
+static inline id                       EKRecurrenceDayOfWeek_CopyWithZone(EKRecurrenceDayOfWeek self, NSZone* zone)                                                       { return ((id (*)(EKRecurrenceDayOfWeek, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                     EKRecurrenceDayOfWeek_SupportsSecureCoding(void)                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKRecurrenceDayOfWeek"), bean_sel("supportsSecureCoding")); }
 
 /* ===== EKRecurrenceEnd ===== */
 #ifndef BEAN_TYPEDEF_EKRecurrenceEnd
 #define BEAN_TYPEDEF_EKRecurrenceEnd
 typedef bean_id EKRecurrenceEnd;
 #endif
-static inline id            EKRecurrenceEnd_RecurrenceEndWithEndDate(NSDate endDate)                        { return ((id (*)(bean_class, SEL, NSDate))bean_msgSend)(bean_cls("EKRecurrenceEnd"), bean_sel("recurrenceEndWithEndDate:"), endDate); }
-static inline id            EKRecurrenceEnd_RecurrenceEndWithOccurrenceCount(NSUInteger occurrenceCount)    { return ((id (*)(bean_class, SEL, NSUInteger))bean_msgSend)(bean_cls("EKRecurrenceEnd"), bean_sel("recurrenceEndWithOccurrenceCount:"), occurrenceCount); }
-static inline NSDate        EKRecurrenceEnd_EndDate(EKRecurrenceEnd self)                                   { return ((NSDate (*)(EKRecurrenceEnd, SEL))bean_msgSend)(self, bean_sel("endDate")); }
-static inline NSUInteger    EKRecurrenceEnd_OccurrenceCount(EKRecurrenceEnd self)                           { return ((NSUInteger (*)(EKRecurrenceEnd, SEL))bean_msgSend)(self, bean_sel("occurrenceCount")); }
+static inline EKRecurrenceEnd    EKRecurrenceEnd_RecurrenceEndWithEndDate(NSDate endDate)                        { return ((EKRecurrenceEnd (*)(bean_class, SEL, NSDate))bean_msgSend)(bean_cls("EKRecurrenceEnd"), bean_sel("recurrenceEndWithEndDate:"), endDate); }
+static inline EKRecurrenceEnd    EKRecurrenceEnd_RecurrenceEndWithOccurrenceCount(NSUInteger occurrenceCount)    { return ((EKRecurrenceEnd (*)(bean_class, SEL, NSUInteger))bean_msgSend)(bean_cls("EKRecurrenceEnd"), bean_sel("recurrenceEndWithOccurrenceCount:"), occurrenceCount); }
+static inline NSDate             EKRecurrenceEnd_EndDate(EKRecurrenceEnd self)                                   { return ((NSDate (*)(EKRecurrenceEnd, SEL))bean_msgSend)(self, bean_sel("endDate")); }
+static inline NSUInteger         EKRecurrenceEnd_OccurrenceCount(EKRecurrenceEnd self)                           { return ((NSUInteger (*)(EKRecurrenceEnd, SEL))bean_msgSend)(self, bean_sel("occurrenceCount")); }
+static inline id                 EKRecurrenceEnd_CopyWithZone(EKRecurrenceEnd self, NSZone* zone)                { return ((id (*)(EKRecurrenceEnd, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL               EKRecurrenceEnd_SupportsSecureCoding(void)                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKRecurrenceEnd"), bean_sel("supportsSecureCoding")); }
 
 /* ===== EKSource ===== */
 #ifndef BEAN_TYPEDEF_EKSource
@@ -1433,12 +1618,12 @@ static inline BOOL            EKSource_IsDelegate(EKSource self)                
 #define BEAN_TYPEDEF_EKVirtualConferenceDescriptor
 typedef bean_id EKVirtualConferenceDescriptor;
 #endif
-static inline id          EKVirtualConferenceDescriptor_InitWithTitle_URLDescriptors_ConferenceDetails(EKVirtualConferenceDescriptor self, NSString title, NSArray URLDescriptors, NSString conferenceDetails)    { return ((id (*)(EKVirtualConferenceDescriptor, SEL, NSString, NSArray, NSString))bean_msgSend)(self, bean_sel("initWithTitle:URLDescriptors:conferenceDetails:"), title, URLDescriptors, conferenceDetails); }
-static inline id          EKVirtualConferenceDescriptor_Init(EKVirtualConferenceDescriptor self)                                                                                                                  { return ((id (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          EKVirtualConferenceDescriptor_New(void)                                                                                                                                                 { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceDescriptor"), bean_sel("new")); }
-static inline NSString    EKVirtualConferenceDescriptor_Title(EKVirtualConferenceDescriptor self)                                                                                                                 { return ((NSString (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline NSArray     EKVirtualConferenceDescriptor_URLDescriptors(EKVirtualConferenceDescriptor self)                                                                                                        { return ((NSArray (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("URLDescriptors")); }
-static inline NSString    EKVirtualConferenceDescriptor_ConferenceDetails(EKVirtualConferenceDescriptor self)                                                                                                     { return ((NSString (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("conferenceDetails")); }
+static inline EKVirtualConferenceDescriptor    EKVirtualConferenceDescriptor_InitWithTitle_URLDescriptors_ConferenceDetails(EKVirtualConferenceDescriptor self, NSString title, NSArray URLDescriptors, NSString conferenceDetails)    { return ((EKVirtualConferenceDescriptor (*)(EKVirtualConferenceDescriptor, SEL, NSString, NSArray, NSString))bean_msgSend)(self, bean_sel("initWithTitle:URLDescriptors:conferenceDetails:"), title, URLDescriptors, conferenceDetails); }
+static inline EKVirtualConferenceDescriptor    EKVirtualConferenceDescriptor_Init(EKVirtualConferenceDescriptor self)                                                                                                                  { return ((EKVirtualConferenceDescriptor (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline EKVirtualConferenceDescriptor    EKVirtualConferenceDescriptor_New(void)                                                                                                                                                 { return ((EKVirtualConferenceDescriptor (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceDescriptor"), bean_sel("new")); }
+static inline NSString                         EKVirtualConferenceDescriptor_Title(EKVirtualConferenceDescriptor self)                                                                                                                 { return ((NSString (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline NSArray                          EKVirtualConferenceDescriptor_URLDescriptors(EKVirtualConferenceDescriptor self)                                                                                                        { return ((NSArray (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("URLDescriptors")); }
+static inline NSString                         EKVirtualConferenceDescriptor_ConferenceDetails(EKVirtualConferenceDescriptor self)                                                                                                     { return ((NSString (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("conferenceDetails")); }
 
 /* ===== EKVirtualConferenceProvider ===== */
 #ifndef BEAN_TYPEDEF_EKVirtualConferenceProvider
@@ -1447,39 +1632,40 @@ typedef bean_id EKVirtualConferenceProvider;
 #endif
 static inline void    EKVirtualConferenceProvider_FetchAvailableRoomTypesWithCompletionHandler(EKVirtualConferenceProvider self, void* completionHandler)                                  { ((void (*)(EKVirtualConferenceProvider, SEL, void*))bean_msgSend)(self, bean_sel("fetchAvailableRoomTypesWithCompletionHandler:"), completionHandler); }
 static inline void    EKVirtualConferenceProvider_FetchVirtualConferenceForIdentifier_CompletionHandler(EKVirtualConferenceProvider self, NSString identifier, void* completionHandler)    { ((void (*)(EKVirtualConferenceProvider, SEL, NSString, void*))bean_msgSend)(self, bean_sel("fetchVirtualConferenceForIdentifier:completionHandler:"), identifier, completionHandler); }
+static inline void    EKVirtualConferenceProvider_BeginRequestWithExtensionContext(EKVirtualConferenceProvider self, NSExtensionContext context)                                           { ((void (*)(EKVirtualConferenceProvider, SEL, NSExtensionContext))bean_msgSend)(self, bean_sel("beginRequestWithExtensionContext:"), context); }
 
 /* ===== EKVirtualConferenceRoomTypeDescriptor ===== */
 #ifndef BEAN_TYPEDEF_EKVirtualConferenceRoomTypeDescriptor
 #define BEAN_TYPEDEF_EKVirtualConferenceRoomTypeDescriptor
 typedef bean_id EKVirtualConferenceRoomTypeDescriptor;
 #endif
-static inline id          EKVirtualConferenceRoomTypeDescriptor_InitWithTitle_Identifier(EKVirtualConferenceRoomTypeDescriptor self, NSString title, NSString identifier)    { return ((id (*)(EKVirtualConferenceRoomTypeDescriptor, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("initWithTitle:identifier:"), title, identifier); }
-static inline id          EKVirtualConferenceRoomTypeDescriptor_Init(EKVirtualConferenceRoomTypeDescriptor self)                                                             { return ((id (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          EKVirtualConferenceRoomTypeDescriptor_New(void)                                                                                                    { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceRoomTypeDescriptor"), bean_sel("new")); }
-static inline NSString    EKVirtualConferenceRoomTypeDescriptor_Title(EKVirtualConferenceRoomTypeDescriptor self)                                                            { return ((NSString (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline NSString    EKVirtualConferenceRoomTypeDescriptor_Identifier(EKVirtualConferenceRoomTypeDescriptor self)                                                       { return ((NSString (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline EKVirtualConferenceRoomTypeDescriptor    EKVirtualConferenceRoomTypeDescriptor_InitWithTitle_Identifier(EKVirtualConferenceRoomTypeDescriptor self, NSString title, NSString identifier)    { return ((EKVirtualConferenceRoomTypeDescriptor (*)(EKVirtualConferenceRoomTypeDescriptor, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("initWithTitle:identifier:"), title, identifier); }
+static inline EKVirtualConferenceRoomTypeDescriptor    EKVirtualConferenceRoomTypeDescriptor_Init(EKVirtualConferenceRoomTypeDescriptor self)                                                             { return ((EKVirtualConferenceRoomTypeDescriptor (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline EKVirtualConferenceRoomTypeDescriptor    EKVirtualConferenceRoomTypeDescriptor_New(void)                                                                                                    { return ((EKVirtualConferenceRoomTypeDescriptor (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceRoomTypeDescriptor"), bean_sel("new")); }
+static inline NSString                                 EKVirtualConferenceRoomTypeDescriptor_Title(EKVirtualConferenceRoomTypeDescriptor self)                                                            { return ((NSString (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline NSString                                 EKVirtualConferenceRoomTypeDescriptor_Identifier(EKVirtualConferenceRoomTypeDescriptor self)                                                       { return ((NSString (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("identifier")); }
 
 /* ===== EKVirtualConferenceURLDescriptor ===== */
 #ifndef BEAN_TYPEDEF_EKVirtualConferenceURLDescriptor
 #define BEAN_TYPEDEF_EKVirtualConferenceURLDescriptor
 typedef bean_id EKVirtualConferenceURLDescriptor;
 #endif
-static inline id          EKVirtualConferenceURLDescriptor_InitWithTitle_URL(EKVirtualConferenceURLDescriptor self, NSString title, NSURL URL)    { return ((id (*)(EKVirtualConferenceURLDescriptor, SEL, NSString, NSURL))bean_msgSend)(self, bean_sel("initWithTitle:URL:"), title, URL); }
-static inline id          EKVirtualConferenceURLDescriptor_Init(EKVirtualConferenceURLDescriptor self)                                            { return ((id (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id          EKVirtualConferenceURLDescriptor_New(void)                                                                              { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceURLDescriptor"), bean_sel("new")); }
-static inline NSString    EKVirtualConferenceURLDescriptor_Title(EKVirtualConferenceURLDescriptor self)                                           { return ((NSString (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline NSURL       EKVirtualConferenceURLDescriptor_URL(EKVirtualConferenceURLDescriptor self)                                             { return ((NSURL (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("URL")); }
+static inline EKVirtualConferenceURLDescriptor    EKVirtualConferenceURLDescriptor_InitWithTitle_URL(EKVirtualConferenceURLDescriptor self, NSString title, NSURL URL)    { return ((EKVirtualConferenceURLDescriptor (*)(EKVirtualConferenceURLDescriptor, SEL, NSString, NSURL))bean_msgSend)(self, bean_sel("initWithTitle:URL:"), title, URL); }
+static inline EKVirtualConferenceURLDescriptor    EKVirtualConferenceURLDescriptor_Init(EKVirtualConferenceURLDescriptor self)                                            { return ((EKVirtualConferenceURLDescriptor (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline EKVirtualConferenceURLDescriptor    EKVirtualConferenceURLDescriptor_New(void)                                                                              { return ((EKVirtualConferenceURLDescriptor (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceURLDescriptor"), bean_sel("new")); }
+static inline NSString                            EKVirtualConferenceURLDescriptor_Title(EKVirtualConferenceURLDescriptor self)                                           { return ((NSString (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline NSURL                               EKVirtualConferenceURLDescriptor_URL(EKVirtualConferenceURLDescriptor self)                                             { return ((NSURL (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("URL")); }
 
 /* ===== CLLocation ===== */
 #ifndef BEAN_TYPEDEF_CLLocation
 #define BEAN_TYPEDEF_CLLocation
 typedef bean_id CLLocation;
 #endif
-static inline id                             CLLocation_InitWithLatitude_Longitude(CLLocation self, CGFloat latitude, CGFloat longitude)                                                                                                                                                                                                                                                                                                      { return ((id (*)(CLLocation, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLatitude:longitude:"), latitude, longitude); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, NSDate timestamp)                                                                                                                                                                               { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_Speed_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat speed, NSDate timestamp)                                                                                                                                   { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, speed, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp)                                                       { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp); }
-static inline id                             CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp_SourceInfo(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp, CLLocationSourceInformation sourceInfo)    { return ((id (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate, CLLocationSourceInformation))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:sourceInfo:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp, sourceInfo); }
+static inline CLLocation                     CLLocation_InitWithLatitude_Longitude(CLLocation self, CGFloat latitude, CGFloat longitude)                                                                                                                                                                                                                                                                                                      { return ((CLLocation (*)(CLLocation, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithLatitude:longitude:"), latitude, longitude); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, NSDate timestamp)                                                                                                                                                                               { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_Speed_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat speed, NSDate timestamp)                                                                                                                                   { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:speed:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, speed, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp)                                                       { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp); }
+static inline CLLocation                     CLLocation_InitWithCoordinate_Altitude_HorizontalAccuracy_VerticalAccuracy_Course_CourseAccuracy_Speed_SpeedAccuracy_Timestamp_SourceInfo(CLLocation self, CLLocationCoordinate2D coordinate, CGFloat altitude, CGFloat hAccuracy, CGFloat vAccuracy, CGFloat course, CGFloat courseAccuracy, CGFloat speed, CGFloat speedAccuracy, NSDate timestamp, CLLocationSourceInformation sourceInfo)    { return ((CLLocation (*)(CLLocation, SEL, CLLocationCoordinate2D, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, CGFloat, NSDate, CLLocationSourceInformation))bean_msgSend)(self, bean_sel("initWithCoordinate:altitude:horizontalAccuracy:verticalAccuracy:course:courseAccuracy:speed:speedAccuracy:timestamp:sourceInfo:"), coordinate, altitude, hAccuracy, vAccuracy, course, courseAccuracy, speed, speedAccuracy, timestamp, sourceInfo); }
 static inline CGFloat                        CLLocation_GetDistanceFrom(CLLocation self, const CLLocation location)                                                                                                                                                                                                                                                                                                                           { return ((CGFloat (*)(CLLocation, SEL, const CLLocation))bean_msgSend_fpret)(self, bean_sel("getDistanceFrom:"), location); }
 static inline CGFloat                        CLLocation_DistanceFromLocation(CLLocation self, const CLLocation location)                                                                                                                                                                                                                                                                                                                      { return ((CGFloat (*)(CLLocation, SEL, const CLLocation))bean_msgSend_fpret)(self, bean_sel("distanceFromLocation:"), location); }
 static inline CLLocationCoordinate2D         CLLocation_Coordinate(CLLocation self)                                                                                                                                                                                                                                                                                                                                                           { return ((CLLocationCoordinate2D (*)(CLLocation, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
@@ -1494,14 +1680,16 @@ static inline CGFloat                        CLLocation_SpeedAccuracy(CLLocation
 static inline NSDate                         CLLocation_Timestamp(CLLocation self)                                                                                                                                                                                                                                                                                                                                                            { return ((NSDate (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
 static inline CLFloor                        CLLocation_Floor(CLLocation self)                                                                                                                                                                                                                                                                                                                                                                { return ((CLFloor (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("floor")); }
 static inline CLLocationSourceInformation    CLLocation_SourceInformation(CLLocation self)                                                                                                                                                                                                                                                                                                                                                    { return ((CLLocationSourceInformation (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("sourceInformation")); }
+static inline id                             CLLocation_CopyWithZone(CLLocation self, NSZone* zone)                                                                                                                                                                                                                                                                                                                                           { return ((id (*)(CLLocation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                           CLLocation_SupportsSecureCoding(void)                                                                                                                                                                                                                                                                                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocation"), bean_sel("supportsSecureCoding")); }
 
 /* ===== EKRecurrenceRule ===== */
 #ifndef BEAN_TYPEDEF_EKRecurrenceRule
 #define BEAN_TYPEDEF_EKRecurrenceRule
 typedef bean_id EKRecurrenceRule;
 #endif
-static inline id                       EKRecurrenceRule_InitRecurrenceWithFrequency_Interval_End(EKRecurrenceRule self, EKRecurrenceFrequency type, NSInteger interval, EKRecurrenceEnd end)                                                                                                                                                                                                                 { return ((id (*)(EKRecurrenceRule, SEL, EKRecurrenceFrequency, NSInteger, EKRecurrenceEnd))bean_msgSend)(self, bean_sel("initRecurrenceWithFrequency:interval:end:"), type, interval, end); }
-static inline id                       EKRecurrenceRule_InitRecurrenceWithFrequency_Interval_DaysOfTheWeek_DaysOfTheMonth_MonthsOfTheYear_WeeksOfTheYear_DaysOfTheYear_SetPositions_End(EKRecurrenceRule self, EKRecurrenceFrequency type, NSInteger interval, NSArray days, NSArray monthDays, NSArray months, NSArray weeksOfTheYear, NSArray daysOfTheYear, NSArray setPositions, EKRecurrenceEnd end)    { return ((id (*)(EKRecurrenceRule, SEL, EKRecurrenceFrequency, NSInteger, NSArray, NSArray, NSArray, NSArray, NSArray, NSArray, EKRecurrenceEnd))bean_msgSend)(self, bean_sel("initRecurrenceWithFrequency:interval:daysOfTheWeek:daysOfTheMonth:monthsOfTheYear:weeksOfTheYear:daysOfTheYear:setPositions:end:"), type, interval, days, monthDays, months, weeksOfTheYear, daysOfTheYear, setPositions, end); }
+static inline EKRecurrenceRule         EKRecurrenceRule_InitRecurrenceWithFrequency_Interval_End(EKRecurrenceRule self, EKRecurrenceFrequency type, NSInteger interval, EKRecurrenceEnd end)                                                                                                                                                                                                                 { return ((EKRecurrenceRule (*)(EKRecurrenceRule, SEL, EKRecurrenceFrequency, NSInteger, EKRecurrenceEnd))bean_msgSend)(self, bean_sel("initRecurrenceWithFrequency:interval:end:"), type, interval, end); }
+static inline EKRecurrenceRule         EKRecurrenceRule_InitRecurrenceWithFrequency_Interval_DaysOfTheWeek_DaysOfTheMonth_MonthsOfTheYear_WeeksOfTheYear_DaysOfTheYear_SetPositions_End(EKRecurrenceRule self, EKRecurrenceFrequency type, NSInteger interval, NSArray days, NSArray monthDays, NSArray months, NSArray weeksOfTheYear, NSArray daysOfTheYear, NSArray setPositions, EKRecurrenceEnd end)    { return ((EKRecurrenceRule (*)(EKRecurrenceRule, SEL, EKRecurrenceFrequency, NSInteger, NSArray, NSArray, NSArray, NSArray, NSArray, NSArray, EKRecurrenceEnd))bean_msgSend)(self, bean_sel("initRecurrenceWithFrequency:interval:daysOfTheWeek:daysOfTheMonth:monthsOfTheYear:weeksOfTheYear:daysOfTheYear:setPositions:end:"), type, interval, days, monthDays, months, weeksOfTheYear, daysOfTheYear, setPositions, end); }
 static inline NSString                 EKRecurrenceRule_CalendarIdentifier(EKRecurrenceRule self)                                                                                                                                                                                                                                                                                                            { return ((NSString (*)(EKRecurrenceRule, SEL))bean_msgSend)(self, bean_sel("calendarIdentifier")); }
 static inline EKRecurrenceEnd          EKRecurrenceRule_RecurrenceEnd(EKRecurrenceRule self)                                                                                                                                                                                                                                                                                                                 { return ((EKRecurrenceEnd (*)(EKRecurrenceRule, SEL))bean_msgSend)(self, bean_sel("recurrenceEnd")); }
 static inline void                     EKRecurrenceRule_SetRecurrenceEnd(EKRecurrenceRule self, EKRecurrenceEnd recurrenceEnd)                                                                                                                                                                                                                                                                               { ((void (*)(EKRecurrenceRule, SEL, EKRecurrenceEnd))bean_msgSend)(self, bean_sel("setRecurrenceEnd:"), recurrenceEnd); }
@@ -1514,20 +1702,22 @@ static inline NSArray                  EKRecurrenceRule_DaysOfTheYear(EKRecurren
 static inline NSArray                  EKRecurrenceRule_WeeksOfTheYear(EKRecurrenceRule self)                                                                                                                                                                                                                                                                                                                { return ((NSArray (*)(EKRecurrenceRule, SEL))bean_msgSend)(self, bean_sel("weeksOfTheYear")); }
 static inline NSArray                  EKRecurrenceRule_MonthsOfTheYear(EKRecurrenceRule self)                                                                                                                                                                                                                                                                                                               { return ((NSArray (*)(EKRecurrenceRule, SEL))bean_msgSend)(self, bean_sel("monthsOfTheYear")); }
 static inline NSArray                  EKRecurrenceRule_SetPositions(EKRecurrenceRule self)                                                                                                                                                                                                                                                                                                                  { return ((NSArray (*)(EKRecurrenceRule, SEL))bean_msgSend)(self, bean_sel("setPositions")); }
+static inline id                       EKRecurrenceRule_CopyWithZone(EKRecurrenceRule self, NSZone* zone)                                                                                                                                                                                                                                                                                                    { return ((id (*)(EKRecurrenceRule, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== EKStructuredLocation ===== */
 #ifndef BEAN_TYPEDEF_EKStructuredLocation
 #define BEAN_TYPEDEF_EKStructuredLocation
 typedef bean_id EKStructuredLocation;
 #endif
-static inline id            EKStructuredLocation_LocationWithTitle(NSString title)                                    { return ((id (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("EKStructuredLocation"), bean_sel("locationWithTitle:"), title); }
-static inline id            EKStructuredLocation_LocationWithMapItem(MKMapItem mapItem)                               { return ((id (*)(bean_class, SEL, MKMapItem))bean_msgSend)(bean_cls("EKStructuredLocation"), bean_sel("locationWithMapItem:"), mapItem); }
-static inline NSString      EKStructuredLocation_Title(EKStructuredLocation self)                                     { return ((NSString (*)(EKStructuredLocation, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline void          EKStructuredLocation_SetTitle(EKStructuredLocation self, NSString title)                  { ((void (*)(EKStructuredLocation, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
-static inline CLLocation    EKStructuredLocation_GeoLocation(EKStructuredLocation self)                               { return ((CLLocation (*)(EKStructuredLocation, SEL))bean_msgSend)(self, bean_sel("geoLocation")); }
-static inline void          EKStructuredLocation_SetGeoLocation(EKStructuredLocation self, CLLocation geoLocation)    { ((void (*)(EKStructuredLocation, SEL, CLLocation))bean_msgSend)(self, bean_sel("setGeoLocation:"), geoLocation); }
-static inline CGFloat       EKStructuredLocation_Radius(EKStructuredLocation self)                                    { return ((CGFloat (*)(EKStructuredLocation, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
-static inline void          EKStructuredLocation_SetRadius(EKStructuredLocation self, CGFloat radius)                 { ((void (*)(EKStructuredLocation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
+static inline EKStructuredLocation    EKStructuredLocation_LocationWithTitle(NSString title)                                    { return ((EKStructuredLocation (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("EKStructuredLocation"), bean_sel("locationWithTitle:"), title); }
+static inline EKStructuredLocation    EKStructuredLocation_LocationWithMapItem(MKMapItem mapItem)                               { return ((EKStructuredLocation (*)(bean_class, SEL, MKMapItem))bean_msgSend)(bean_cls("EKStructuredLocation"), bean_sel("locationWithMapItem:"), mapItem); }
+static inline NSString                EKStructuredLocation_Title(EKStructuredLocation self)                                     { return ((NSString (*)(EKStructuredLocation, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline void                    EKStructuredLocation_SetTitle(EKStructuredLocation self, NSString title)                  { ((void (*)(EKStructuredLocation, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
+static inline CLLocation              EKStructuredLocation_GeoLocation(EKStructuredLocation self)                               { return ((CLLocation (*)(EKStructuredLocation, SEL))bean_msgSend)(self, bean_sel("geoLocation")); }
+static inline void                    EKStructuredLocation_SetGeoLocation(EKStructuredLocation self, CLLocation geoLocation)    { ((void (*)(EKStructuredLocation, SEL, CLLocation))bean_msgSend)(self, bean_sel("setGeoLocation:"), geoLocation); }
+static inline CGFloat                 EKStructuredLocation_Radius(EKStructuredLocation self)                                    { return ((CGFloat (*)(EKStructuredLocation, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
+static inline void                    EKStructuredLocation_SetRadius(EKStructuredLocation self, CGFloat radius)                 { ((void (*)(EKStructuredLocation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
+static inline id                      EKStructuredLocation_CopyWithZone(EKStructuredLocation self, NSZone* zone)                { return ((id (*)(EKStructuredLocation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== EKAlarm ===== */
 #ifndef BEAN_TYPEDEF_EKAlarm
@@ -1551,6 +1741,7 @@ static inline NSString                EKAlarm_SoundName(EKAlarm self)           
 static inline void                    EKAlarm_SetSoundName(EKAlarm self, NSString soundName)                                  { ((void (*)(EKAlarm, SEL, NSString))bean_msgSend)(self, bean_sel("setSoundName:"), soundName); }
 static inline NSURL                   EKAlarm_Url(EKAlarm self)                                                               { return ((NSURL (*)(EKAlarm, SEL))bean_msgSend)(self, bean_sel("url")); }
 static inline void                    EKAlarm_SetUrl(EKAlarm self, NSURL url)                                                 { ((void (*)(EKAlarm, SEL, NSURL))bean_msgSend)(self, bean_sel("setUrl:"), url); }
+static inline id                      EKAlarm_CopyWithZone(EKAlarm self, NSZone* zone)                                        { return ((id (*)(EKAlarm, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 
 /* ===== EKCalendar ===== */
 #ifndef BEAN_TYPEDEF_EKCalendar
@@ -1643,9 +1834,9 @@ static inline BOOL                    EKEvent_AllDay(EKEvent self)              
 
 /* ===== EKEventStore ===== */
 static inline EKAuthorizationStatus    EKEventStore_AuthorizationStatusForEntityType(EKEntityType entityType)                                                                                            { return ((EKAuthorizationStatus (*)(bean_class, SEL, EKEntityType))bean_msgSend)(bean_cls("EKEventStore"), bean_sel("authorizationStatusForEntityType:"), entityType); }
-static inline id                       EKEventStore_InitWithAccessToEntityTypes(EKEventStore self, EKEntityMask entityTypes)                                                                             { return ((id (*)(EKEventStore, SEL, EKEntityMask))bean_msgSend)(self, bean_sel("initWithAccessToEntityTypes:"), entityTypes); }
-static inline id                       EKEventStore_Init(EKEventStore self)                                                                                                                              { return ((id (*)(EKEventStore, SEL))bean_msgSend)(self, bean_sel("init")); }
-static inline id                       EKEventStore_InitWithSources(EKEventStore self, NSArray sources)                                                                                                  { return ((id (*)(EKEventStore, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithSources:"), sources); }
+static inline EKEventStore             EKEventStore_InitWithAccessToEntityTypes(EKEventStore self, EKEntityMask entityTypes)                                                                             { return ((EKEventStore (*)(EKEventStore, SEL, EKEntityMask))bean_msgSend)(self, bean_sel("initWithAccessToEntityTypes:"), entityTypes); }
+static inline EKEventStore             EKEventStore_Init(EKEventStore self)                                                                                                                              { return ((EKEventStore (*)(EKEventStore, SEL))bean_msgSend)(self, bean_sel("init")); }
+static inline EKEventStore             EKEventStore_InitWithSources(EKEventStore self, NSArray sources)                                                                                                  { return ((EKEventStore (*)(EKEventStore, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithSources:"), sources); }
 static inline void                     EKEventStore_RequestFullAccessToEventsWithCompletion(EKEventStore self, void* completion)                                                                         { ((void (*)(EKEventStore, SEL, void*))bean_msgSend)(self, bean_sel("requestFullAccessToEventsWithCompletion:"), completion); }
 static inline void                     EKEventStore_RequestWriteOnlyAccessToEventsWithCompletion(EKEventStore self, void* completion)                                                                    { ((void (*)(EKEventStore, SEL, void*))bean_msgSend)(self, bean_sel("requestWriteOnlyAccessToEventsWithCompletion:"), completion); }
 static inline void                     EKEventStore_RequestFullAccessToRemindersWithCompletion(EKEventStore self, void* completion)                                                                      { ((void (*)(EKEventStore, SEL, void*))bean_msgSend)(self, bean_sel("requestFullAccessToRemindersWithCompletion:"), completion); }
@@ -1654,20 +1845,20 @@ static inline EKSource                 EKEventStore_SourceWithIdentifier(EKEvent
 static inline NSArray                  EKEventStore_CalendarsForEntityType(EKEventStore self, EKEntityType entityType)                                                                                   { return ((NSArray (*)(EKEventStore, SEL, EKEntityType))bean_msgSend)(self, bean_sel("calendarsForEntityType:"), entityType); }
 static inline EKCalendar               EKEventStore_DefaultCalendarForNewReminders(EKEventStore self)                                                                                                    { return ((EKCalendar (*)(EKEventStore, SEL))bean_msgSend)(self, bean_sel("defaultCalendarForNewReminders")); }
 static inline EKCalendar               EKEventStore_CalendarWithIdentifier(EKEventStore self, NSString identifier)                                                                                       { return ((EKCalendar (*)(EKEventStore, SEL, NSString))bean_msgSend)(self, bean_sel("calendarWithIdentifier:"), identifier); }
-static inline BOOL                     EKEventStore_SaveCalendar_Commit_Error(EKEventStore self, EKCalendar calendar, BOOL commit, NSError error)                                                        { return ((BOOL (*)(EKEventStore, SEL, EKCalendar, BOOL, NSError))bean_msgSend)(self, bean_sel("saveCalendar:commit:error:"), calendar, commit, error); }
-static inline BOOL                     EKEventStore_RemoveCalendar_Commit_Error(EKEventStore self, EKCalendar calendar, BOOL commit, NSError error)                                                      { return ((BOOL (*)(EKEventStore, SEL, EKCalendar, BOOL, NSError))bean_msgSend)(self, bean_sel("removeCalendar:commit:error:"), calendar, commit, error); }
+static inline BOOL                     EKEventStore_SaveCalendar_Commit_Error(EKEventStore self, EKCalendar calendar, BOOL commit, NSError* error)                                                       { return ((BOOL (*)(EKEventStore, SEL, EKCalendar, BOOL, NSError*))bean_msgSend)(self, bean_sel("saveCalendar:commit:error:"), calendar, commit, error); }
+static inline BOOL                     EKEventStore_RemoveCalendar_Commit_Error(EKEventStore self, EKCalendar calendar, BOOL commit, NSError* error)                                                     { return ((BOOL (*)(EKEventStore, SEL, EKCalendar, BOOL, NSError*))bean_msgSend)(self, bean_sel("removeCalendar:commit:error:"), calendar, commit, error); }
 static inline EKCalendarItem           EKEventStore_CalendarItemWithIdentifier(EKEventStore self, NSString identifier)                                                                                   { return ((EKCalendarItem (*)(EKEventStore, SEL, NSString))bean_msgSend)(self, bean_sel("calendarItemWithIdentifier:"), identifier); }
 static inline NSArray                  EKEventStore_CalendarItemsWithExternalIdentifier(EKEventStore self, NSString externalIdentifier)                                                                  { return ((NSArray (*)(EKEventStore, SEL, NSString))bean_msgSend)(self, bean_sel("calendarItemsWithExternalIdentifier:"), externalIdentifier); }
-static inline BOOL                     EKEventStore_SaveEvent_Span_Error(EKEventStore self, EKEvent event, EKSpan span, NSError error)                                                                   { return ((BOOL (*)(EKEventStore, SEL, EKEvent, EKSpan, NSError))bean_msgSend)(self, bean_sel("saveEvent:span:error:"), event, span, error); }
-static inline BOOL                     EKEventStore_RemoveEvent_Span_Error(EKEventStore self, EKEvent event, EKSpan span, NSError error)                                                                 { return ((BOOL (*)(EKEventStore, SEL, EKEvent, EKSpan, NSError))bean_msgSend)(self, bean_sel("removeEvent:span:error:"), event, span, error); }
-static inline BOOL                     EKEventStore_SaveEvent_Span_Commit_Error(EKEventStore self, EKEvent event, EKSpan span, BOOL commit, NSError error)                                               { return ((BOOL (*)(EKEventStore, SEL, EKEvent, EKSpan, BOOL, NSError))bean_msgSend)(self, bean_sel("saveEvent:span:commit:error:"), event, span, commit, error); }
-static inline BOOL                     EKEventStore_RemoveEvent_Span_Commit_Error(EKEventStore self, EKEvent event, EKSpan span, BOOL commit, NSError error)                                             { return ((BOOL (*)(EKEventStore, SEL, EKEvent, EKSpan, BOOL, NSError))bean_msgSend)(self, bean_sel("removeEvent:span:commit:error:"), event, span, commit, error); }
+static inline BOOL                     EKEventStore_SaveEvent_Span_Error(EKEventStore self, EKEvent event, EKSpan span, NSError* error)                                                                  { return ((BOOL (*)(EKEventStore, SEL, EKEvent, EKSpan, NSError*))bean_msgSend)(self, bean_sel("saveEvent:span:error:"), event, span, error); }
+static inline BOOL                     EKEventStore_RemoveEvent_Span_Error(EKEventStore self, EKEvent event, EKSpan span, NSError* error)                                                                { return ((BOOL (*)(EKEventStore, SEL, EKEvent, EKSpan, NSError*))bean_msgSend)(self, bean_sel("removeEvent:span:error:"), event, span, error); }
+static inline BOOL                     EKEventStore_SaveEvent_Span_Commit_Error(EKEventStore self, EKEvent event, EKSpan span, BOOL commit, NSError* error)                                              { return ((BOOL (*)(EKEventStore, SEL, EKEvent, EKSpan, BOOL, NSError*))bean_msgSend)(self, bean_sel("saveEvent:span:commit:error:"), event, span, commit, error); }
+static inline BOOL                     EKEventStore_RemoveEvent_Span_Commit_Error(EKEventStore self, EKEvent event, EKSpan span, BOOL commit, NSError* error)                                            { return ((BOOL (*)(EKEventStore, SEL, EKEvent, EKSpan, BOOL, NSError*))bean_msgSend)(self, bean_sel("removeEvent:span:commit:error:"), event, span, commit, error); }
 static inline EKEvent                  EKEventStore_EventWithIdentifier(EKEventStore self, NSString identifier)                                                                                          { return ((EKEvent (*)(EKEventStore, SEL, NSString))bean_msgSend)(self, bean_sel("eventWithIdentifier:"), identifier); }
 static inline NSArray                  EKEventStore_EventsMatchingPredicate(EKEventStore self, NSPredicate predicate)                                                                                    { return ((NSArray (*)(EKEventStore, SEL, NSPredicate))bean_msgSend)(self, bean_sel("eventsMatchingPredicate:"), predicate); }
 static inline void                     EKEventStore_EnumerateEventsMatchingPredicate_UsingBlock(EKEventStore self, NSPredicate predicate, void* block)                                                   { ((void (*)(EKEventStore, SEL, NSPredicate, void*))bean_msgSend)(self, bean_sel("enumerateEventsMatchingPredicate:usingBlock:"), predicate, block); }
 static inline NSPredicate              EKEventStore_PredicateForEventsWithStartDate_EndDate_Calendars(EKEventStore self, NSDate startDate, NSDate endDate, NSArray calendars)                            { return ((NSPredicate (*)(EKEventStore, SEL, NSDate, NSDate, NSArray))bean_msgSend)(self, bean_sel("predicateForEventsWithStartDate:endDate:calendars:"), startDate, endDate, calendars); }
-static inline BOOL                     EKEventStore_SaveReminder_Commit_Error(EKEventStore self, EKReminder reminder, BOOL commit, NSError error)                                                        { return ((BOOL (*)(EKEventStore, SEL, EKReminder, BOOL, NSError))bean_msgSend)(self, bean_sel("saveReminder:commit:error:"), reminder, commit, error); }
-static inline BOOL                     EKEventStore_RemoveReminder_Commit_Error(EKEventStore self, EKReminder reminder, BOOL commit, NSError error)                                                      { return ((BOOL (*)(EKEventStore, SEL, EKReminder, BOOL, NSError))bean_msgSend)(self, bean_sel("removeReminder:commit:error:"), reminder, commit, error); }
+static inline BOOL                     EKEventStore_SaveReminder_Commit_Error(EKEventStore self, EKReminder reminder, BOOL commit, NSError* error)                                                       { return ((BOOL (*)(EKEventStore, SEL, EKReminder, BOOL, NSError*))bean_msgSend)(self, bean_sel("saveReminder:commit:error:"), reminder, commit, error); }
+static inline BOOL                     EKEventStore_RemoveReminder_Commit_Error(EKEventStore self, EKReminder reminder, BOOL commit, NSError* error)                                                     { return ((BOOL (*)(EKEventStore, SEL, EKReminder, BOOL, NSError*))bean_msgSend)(self, bean_sel("removeReminder:commit:error:"), reminder, commit, error); }
 static inline id                       EKEventStore_FetchRemindersMatchingPredicate_Completion(EKEventStore self, NSPredicate predicate, void* completion)                                               { return ((id (*)(EKEventStore, SEL, NSPredicate, void*))bean_msgSend)(self, bean_sel("fetchRemindersMatchingPredicate:completion:"), predicate, completion); }
 static inline void                     EKEventStore_CancelFetchRequest(EKEventStore self, id fetchIdentifier)                                                                                            { ((void (*)(EKEventStore, SEL, id))bean_msgSend)(self, bean_sel("cancelFetchRequest:"), fetchIdentifier); }
 static inline NSPredicate              EKEventStore_PredicateForRemindersInCalendars(EKEventStore self, NSArray calendars)                                                                               { return ((NSPredicate (*)(EKEventStore, SEL, NSArray))bean_msgSend)(self, bean_sel("predicateForRemindersInCalendars:"), calendars); }

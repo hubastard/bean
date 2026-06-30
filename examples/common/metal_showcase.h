@@ -5,15 +5,6 @@
 #include <QuartzCore/CABase.h>
 #include <stdio.h>
 
-typedef struct bean_mtl_viewport {
-    double originX;
-    double originY;
-    double width;
-    double height;
-    double znear;
-    double zfar;
-} bean_mtl_viewport;
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -51,46 +42,25 @@ static const char* const bean_metal_showcase_shader_source =
     "}\n";
 
 typedef struct bean_metal_showcase_state {
-    id device;
-    id queue;
+    MTLDevice device;
+    MTLCommandQueue queue;
     id pipeline;
-    id time_buffer;
+    MTLBuffer time_buffer;
     double start_time;
     int ready;
 } bean_metal_showcase_state;
 
-static inline id bean_metal_device_new_library(id device, NSError** error) {
-    return ((id (*)(id, SEL, NSString, id, NSError**))bean_msgSend)(
-        device,
-        bean_sel("newLibraryWithSource:options:error:"),
-        NSString_StringWithUTF8String(bean_metal_showcase_shader_source),
-        NULL,
-        error);
-}
-
-static inline id bean_metal_device_new_pipeline(
-    id device,
-    MTLRenderPipelineDescriptor descriptor,
-    NSError** error
-) {
-    return ((id (*)(id, SEL, MTLRenderPipelineDescriptor, NSError**))bean_msgSend)(
-        device,
-        bean_sel("newRenderPipelineStateWithDescriptor:error:"),
-        descriptor,
-        error);
-}
-
 static inline BOOL bean_metal_showcase_setup(
     bean_metal_showcase_state* state,
-    id device,
+    MTLDevice device,
     MTLPixelFormat pixel_format
 ) {
     MTLRenderPipelineDescriptor pipeline_desc;
     MTLRenderPipelineColorAttachmentDescriptor color_attachment;
-    id library;
+    MTLLibrary library;
     id vertex_fn;
     id fragment_fn;
-    NSError* error;
+    NSError error;
     float zero_time;
 
     if (state->ready) {
@@ -104,32 +74,31 @@ static inline BOOL bean_metal_showcase_setup(
 
     error = NULL;
     state->device = device;
-    state->queue = ((id (*)(id, SEL))bean_msgSend)(device, bean_sel("newCommandQueue"));
+    state->queue = (MTLCommandQueue)MTLDevice_NewCommandQueue(device);
     if (!state->queue) {
-        state->queue = ((id (*)(id, SEL, NSUInteger))bean_msgSend)(
-            device,
-            bean_sel("newCommandQueueWithMaxCommandBufferCount:"),
-            64);
+        state->queue = (MTLCommandQueue)MTLDevice_NewCommandQueueWithMaxCommandBufferCount(device, 64);
     }
     if (!state->queue) {
         fprintf(stderr, "Metal showcase: failed to create command queue.\n");
         return NO;
     }
 
-    library = bean_metal_device_new_library(device, &error);
+    library = (MTLLibrary)MTLDevice_NewLibraryWithSource_Options_Error(
+        device,
+        bean_str(bean_metal_showcase_shader_source),
+        NULL,
+        &error);
     if (!library) {
         const char* message = "unknown error";
-        if (error && *error) {
-            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(*error));
+        if (error) {
+            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(error));
         }
         fprintf(stderr, "Metal showcase: shader compile failed: %s\n", message ? message : "unknown error");
         return NO;
     }
 
-    vertex_fn = ((id (*)(id, SEL, NSString))bean_msgSend)(
-        library, bean_sel("newFunctionWithName:"), NSString_StringWithUTF8String("bean_vertex"));
-    fragment_fn = ((id (*)(id, SEL, NSString))bean_msgSend)(
-        library, bean_sel("newFunctionWithName:"), NSString_StringWithUTF8String("bean_fragment"));
+    vertex_fn = MTLLibrary_NewFunctionWithName(library, bean_str("bean_vertex"));
+    fragment_fn = MTLLibrary_NewFunctionWithName(library, bean_str("bean_fragment"));
     if (!vertex_fn || !fragment_fn) {
         fprintf(stderr, "Metal showcase: failed to load shader functions.\n");
         return NO;
@@ -145,20 +114,19 @@ static inline BOOL bean_metal_showcase_setup(
     MTLRenderPipelineColorAttachmentDescriptor_SetPixelFormat(color_attachment, pixel_format);
 
     error = NULL;
-    state->pipeline = bean_metal_device_new_pipeline(device, pipeline_desc, &error);
+    state->pipeline = MTLDevice_NewRenderPipelineStateWithDescriptor_Error(device, pipeline_desc, &error);
     if (!state->pipeline) {
         const char* message = "unknown error";
-        if (error && *error) {
-            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(*error));
+        if (error) {
+            message = bean_nsstring_to_utf8(NSError_LocalizedDescription(error));
         }
         fprintf(stderr, "Metal showcase: pipeline creation failed: %s\n", message ? message : "unknown error");
         return NO;
     }
 
     zero_time = 0.0f;
-    state->time_buffer = ((id (*)(id, SEL, const void*, NSUInteger, MTLResourceOptions))bean_msgSend)(
+    state->time_buffer = (MTLBuffer)MTLDevice_NewBufferWithBytes_Length_Options(
         device,
-        bean_sel("newBufferWithBytes:length:options:"),
         &zero_time,
         sizeof(zero_time),
         MTLResourceStorageModeShared);
@@ -174,9 +142,9 @@ static inline void bean_metal_showcase_draw(
     double height,
     id drawable
 ) {
-    id command_buffer;
-    id encoder;
-    bean_mtl_viewport viewport;
+    MTLCommandBuffer command_buffer;
+    MTLRenderCommandEncoder encoder;
+    MTLViewport viewport;
     float time;
 
     if (!state->ready || !pass || !drawable) {
@@ -185,16 +153,15 @@ static inline void bean_metal_showcase_draw(
 
     time = (float)(CACurrentMediaTime() - state->start_time);
     {
-        void* contents = ((void* (*)(id, SEL))bean_msgSend)(state->time_buffer, bean_sel("contents"));
+        void* contents = MTLBuffer_Contents(state->time_buffer);
         if (contents) {
             *(float*)contents = time;
         }
     }
 
-    command_buffer = ((id (*)(id, SEL))bean_msgSend)(state->queue, bean_sel("commandBuffer"));
-    encoder = ((id (*)(id, SEL, MTLRenderPassDescriptor))bean_msgSend)(
+    command_buffer = (MTLCommandBuffer)MTLCommandQueue_CommandBuffer(state->queue);
+    encoder = (MTLRenderCommandEncoder)MTLCommandBuffer_RenderCommandEncoderWithDescriptor(
         command_buffer,
-        bean_sel("renderCommandEncoderWithDescriptor:"),
         pass);
 
     viewport.originX = 0.0;
@@ -204,23 +171,21 @@ static inline void bean_metal_showcase_draw(
     viewport.znear = 0.0;
     viewport.zfar = 1.0;
 
-    ((void (*)(id, SEL, bean_mtl_viewport))bean_msgSend)(encoder, bean_sel("setViewport:"), viewport);
-    ((void (*)(id, SEL, id))bean_msgSend)(encoder, bean_sel("setRenderPipelineState:"), state->pipeline);
-    ((void (*)(id, SEL, id, NSUInteger, NSUInteger))bean_msgSend)(
+    MTLRenderCommandEncoder_SetViewport(encoder, viewport);
+    MTLRenderCommandEncoder_SetRenderPipelineState(encoder, state->pipeline);
+    MTLRenderCommandEncoder_SetFragmentBuffer_Offset_AtIndex(
         encoder,
-        bean_sel("setFragmentBuffer:offset:atIndex:"),
         state->time_buffer,
         0,
         0);
-    ((void (*)(id, SEL, MTLPrimitiveType, NSUInteger, NSUInteger))bean_msgSend)(
+    MTLRenderCommandEncoder_DrawPrimitives_VertexStart_VertexCount(
         encoder,
-        bean_sel("drawPrimitives:vertexStart:vertexCount:"),
         MTLPrimitiveTypeTriangle,
         0,
         3);
-    ((void (*)(id, SEL))bean_msgSend)(encoder, bean_sel("endEncoding"));
-    ((void (*)(id, SEL, id))bean_msgSend)(command_buffer, bean_sel("presentDrawable:"), drawable);
-    ((void (*)(id, SEL))bean_msgSend)(command_buffer, bean_sel("commit"));
+    MTLCommandEncoder_EndEncoding((MTLCommandEncoder)encoder);
+    MTLCommandBuffer_PresentDrawable(command_buffer, drawable);
+    MTLCommandBuffer_Commit(command_buffer);
 }
 
 #endif /* BEAN_EXAMPLES_METAL_SHOWCASE_H */

@@ -156,7 +156,15 @@ OPAQUE_POINTER_TYPES: dict[str, str] = {
     "CGPDFPage": "void*",
 }
 
-UNSUPPORTED_TYPE_NAMES: frozenset[str] = frozenset()
+UNSUPPORTED_TYPE_NAMES: frozenset[str] = frozenset(
+    {
+        "WebDownload",
+        "WebArchive",
+        "WebDataSource",
+        "WebHistoryItem",
+        "WebFrameLoadDelegate",
+    }
+)
 
 
 def sanitize_qual_type(qual_type: str) -> str:
@@ -169,6 +177,7 @@ def sanitize_qual_type(qual_type: str) -> str:
     text = re.sub(r"\s+", " ", text).strip()
     # Strip Objective-C lightweight generics: NSArray<Foo *>* -> NSArray *
     text = re.sub(r"([A-Za-z_][A-Za-z0-9_]*)<[^>]+>", r"\1", text)
+    text = re.sub(r"id\s*<\s*([A-Za-z_][A-Za-z0-9_]*)\s*>", r"\1", text)
     text = text.replace("ObjectTypeconst", "const id").replace("ObjectType", "id")
     text = text.replace("KeyType", "id").replace("ValueType", "id")
     if text == "K" or text == "V":
@@ -393,7 +402,7 @@ def _type_is_valid(spelling: str) -> bool:
         return True
     if clean in ("CGLineCap", "CGLineJoin"):
         return True
-    if clean.startswith("DOM"):
+    if clean.startswith("IN") and clean not in {"IndexPath"}:
         return False
     if clean.startswith("JS") and clean not in {"JSON"}:
         return False
@@ -452,6 +461,39 @@ def normalize_return_type_spelling(spelling: str) -> str:
     while text.startswith("const "):
         text = text[6:].strip()
     return text
+
+
+def is_error_out_parameter(selector: str, param_name: str, ctype: CType) -> bool:
+    base = ctype.spelling.replace("const ", "").strip().rstrip("*").strip()
+    if base != "NSError":
+        return False
+    lowered = param_name.lower()
+    if lowered not in {"error", "outerror", "inerror", "outerr", "err"}:
+        return False
+    return selector.endswith("error:") or selector.endswith("AndReturnError:") or ":error:" in selector
+
+
+def is_out_pointer_parameter(param_name: str, ctype: CType) -> bool:
+    base = ctype.spelling.replace("const ", "").strip()
+    if base.endswith("**"):
+        return False
+    if not base.endswith("*"):
+        return False
+    scalar = base[:-1].strip()
+    if scalar not in {"BOOL", "NSUInteger", "NSInteger", "int", "unsigned int"}:
+        return False
+    lowered = param_name.lower()
+    return lowered.startswith("out") or lowered.endswith("out") or lowered.endswith("ptr")
+
+
+def adjust_parameter_type(selector: str, param_name: str, ctype: CType) -> CType:
+    if is_error_out_parameter(selector, param_name, ctype):
+        # NSError is typedef'd as bean_id (already a pointer); out param is NSError*.
+        return CType("NSError*")
+    if is_out_pointer_parameter(param_name, ctype):
+        base = ctype.spelling.replace("const ", "").strip()[:-1].strip()
+        return CType(f"{base}**")
+    return ctype
 
 
 def msg_send_name(return_type: CType) -> str:
