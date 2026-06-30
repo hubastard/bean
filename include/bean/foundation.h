@@ -1976,61 +1976,117 @@ static inline NSAffineTransformStruct    NSAffineTransform_TransformStruct(NSAff
 static inline void                       NSAffineTransform_SetTransformStruct(NSAffineTransform self, NSAffineTransformStruct transformStruct)    { ((void (*)(NSAffineTransform, SEL, NSAffineTransformStruct))bean_msgSend)(self, bean_sel("setTransformStruct:"), transformStruct); }
 static inline id                         NSAffineTransform_CopyWithZone(NSAffineTransform self, NSZone* zone)                                     { return ((id (*)(NSAffineTransform, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                       NSAffineTransform_SupportsSecureCoding(void)                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSAffineTransform"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSAffineTransform
+#define BEAN_ALLOC_NSAffineTransform
+static inline NSAffineTransform          NSAffineTransform_Alloc(void)                                                                            { return (NSAffineTransform)bean_alloc(bean_cls("NSAffineTransform")); }
+#endif
+#ifndef BEAN_NEW_NSAffineTransform
+#define BEAN_NEW_NSAffineTransform
+static inline NSAffineTransform          NSAffineTransform_New(void)                                                                              { return (NSAffineTransform)bean_new(bean_cls("NSAffineTransform")); }
+#endif
 
 /* ===== NSAutoreleasePool ===== */
 #ifndef BEAN_TYPEDEF_NSAutoreleasePool
 #define BEAN_TYPEDEF_NSAutoreleasePool
 typedef bean_id NSAutoreleasePool;
 #endif
-static inline void    NSAutoreleasePool_AddObject(id anObject)           { ((void (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("NSAutoreleasePool"), bean_sel("addObject:"), anObject); }
-static inline void    NSAutoreleasePool_Drain(NSAutoreleasePool self)    { ((void (*)(NSAutoreleasePool, SEL))bean_msgSend)(self, bean_sel("drain")); }
+static inline void                 NSAutoreleasePool_AddObject(id anObject)           { ((void (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("NSAutoreleasePool"), bean_sel("addObject:"), anObject); }
+static inline void                 NSAutoreleasePool_Drain(NSAutoreleasePool self)    { ((void (*)(NSAutoreleasePool, SEL))bean_msgSend)(self, bean_sel("drain")); }
+#ifndef BEAN_ALLOC_NSAutoreleasePool
+#define BEAN_ALLOC_NSAutoreleasePool
+static inline NSAutoreleasePool    NSAutoreleasePool_Alloc(void)                      { return (NSAutoreleasePool)bean_alloc(bean_cls("NSAutoreleasePool")); }
+#endif
+#ifndef BEAN_NEW_NSAutoreleasePool
+#define BEAN_NEW_NSAutoreleasePool
+static inline NSAutoreleasePool    NSAutoreleasePool_New(void)                        { return (NSAutoreleasePool)bean_new(bean_cls("NSAutoreleasePool")); }
+#endif
 
 /* ===== NSCloseCommand ===== */
 #ifndef BEAN_TYPEDEF_NSCloseCommand
 #define BEAN_TYPEDEF_NSCloseCommand
 typedef bean_id NSCloseCommand;
 #endif
-static inline NSSaveOptions    NSCloseCommand_SaveOptions(NSCloseCommand self)    { return ((NSSaveOptions (*)(NSCloseCommand, SEL))bean_msgSend)(self, bean_sel("saveOptions")); }
+static inline NSSaveOptions     NSCloseCommand_SaveOptions(NSCloseCommand self)    { return ((NSSaveOptions (*)(NSCloseCommand, SEL))bean_msgSend)(self, bean_sel("saveOptions")); }
+#ifndef BEAN_ALLOC_NSCloseCommand
+#define BEAN_ALLOC_NSCloseCommand
+static inline NSCloseCommand    NSCloseCommand_Alloc(void)                         { return (NSCloseCommand)bean_alloc(bean_cls("NSCloseCommand")); }
+#endif
+#ifndef BEAN_NEW_NSCloseCommand
+#define BEAN_NEW_NSCloseCommand
+static inline NSCloseCommand    NSCloseCommand_New(void)                           { return (NSCloseCommand)bean_new(bean_cls("NSCloseCommand")); }
+#endif
 
 /* ===== NSCopying ===== */
 #ifndef BEAN_TYPEDEF_NSCopying
 #define BEAN_TYPEDEF_NSCopying
 typedef bean_id NSCopying;
 #endif
-static inline id    NSCopying_CopyWithZone(NSCopying self, NSZone* zone)    { return ((id (*)(NSCopying, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline id           NSCopying_CopyWithZone(NSCopying self, NSZone* zone)    { return ((id (*)(NSCopying, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSCopying
+#define BEAN_ALLOC_NSCopying
+static inline NSCopying    NSCopying_Alloc(void)                                   { return (NSCopying)bean_alloc(bean_cls("NSCopying")); }
+#endif
+#ifndef BEAN_NEW_NSCopying
+#define BEAN_NEW_NSCopying
+static inline NSCopying    NSCopying_New(void)                                     { return (NSCopying)bean_new(bean_cls("NSCopying")); }
+#endif
 
 /* ===== NSDiscardableContent ===== */
 #ifndef BEAN_TYPEDEF_NSDiscardableContent
 #define BEAN_TYPEDEF_NSDiscardableContent
 typedef bean_id NSDiscardableContent;
 #endif
-static inline BOOL    NSDiscardableContent_BeginContentAccess(NSDiscardableContent self)          { return ((BOOL (*)(NSDiscardableContent, SEL))bean_msgSend)(self, bean_sel("beginContentAccess")); }
-static inline void    NSDiscardableContent_EndContentAccess(NSDiscardableContent self)            { ((void (*)(NSDiscardableContent, SEL))bean_msgSend)(self, bean_sel("endContentAccess")); }
-static inline void    NSDiscardableContent_DiscardContentIfPossible(NSDiscardableContent self)    { ((void (*)(NSDiscardableContent, SEL))bean_msgSend)(self, bean_sel("discardContentIfPossible")); }
-static inline BOOL    NSDiscardableContent_IsContentDiscarded(NSDiscardableContent self)          { return ((BOOL (*)(NSDiscardableContent, SEL))bean_msgSend)(self, bean_sel("isContentDiscarded")); }
+static inline BOOL                    NSDiscardableContent_BeginContentAccess(NSDiscardableContent self)          { return ((BOOL (*)(NSDiscardableContent, SEL))bean_msgSend)(self, bean_sel("beginContentAccess")); }
+static inline void                    NSDiscardableContent_EndContentAccess(NSDiscardableContent self)            { ((void (*)(NSDiscardableContent, SEL))bean_msgSend)(self, bean_sel("endContentAccess")); }
+static inline void                    NSDiscardableContent_DiscardContentIfPossible(NSDiscardableContent self)    { ((void (*)(NSDiscardableContent, SEL))bean_msgSend)(self, bean_sel("discardContentIfPossible")); }
+static inline BOOL                    NSDiscardableContent_IsContentDiscarded(NSDiscardableContent self)          { return ((BOOL (*)(NSDiscardableContent, SEL))bean_msgSend)(self, bean_sel("isContentDiscarded")); }
+#ifndef BEAN_ALLOC_NSDiscardableContent
+#define BEAN_ALLOC_NSDiscardableContent
+static inline NSDiscardableContent    NSDiscardableContent_Alloc(void)                                            { return (NSDiscardableContent)bean_alloc(bean_cls("NSDiscardableContent")); }
+#endif
+#ifndef BEAN_NEW_NSDiscardableContent
+#define BEAN_NEW_NSDiscardableContent
+static inline NSDiscardableContent    NSDiscardableContent_New(void)                                              { return (NSDiscardableContent)bean_new(bean_cls("NSDiscardableContent")); }
+#endif
 
 /* ===== NSFastEnumeration ===== */
 #ifndef BEAN_TYPEDEF_NSFastEnumeration
 #define BEAN_TYPEDEF_NSFastEnumeration
 typedef bean_id NSFastEnumeration;
 #endif
-static inline NSUInteger    NSFastEnumeration_CountByEnumeratingWithState_Objects_Count(NSFastEnumeration self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSFastEnumeration, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+static inline NSUInteger           NSFastEnumeration_CountByEnumeratingWithState_Objects_Count(NSFastEnumeration self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSFastEnumeration, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSFastEnumeration
+#define BEAN_ALLOC_NSFastEnumeration
+static inline NSFastEnumeration    NSFastEnumeration_Alloc(void)                                                                                                                     { return (NSFastEnumeration)bean_alloc(bean_cls("NSFastEnumeration")); }
+#endif
+#ifndef BEAN_NEW_NSFastEnumeration
+#define BEAN_NEW_NSFastEnumeration
+static inline NSFastEnumeration    NSFastEnumeration_New(void)                                                                                                                       { return (NSFastEnumeration)bean_new(bean_cls("NSFastEnumeration")); }
+#endif
 
 /* ===== NSGarbageCollector ===== */
 #ifndef BEAN_TYPEDEF_NSGarbageCollector
 #define BEAN_TYPEDEF_NSGarbageCollector
 typedef bean_id NSGarbageCollector;
 #endif
-static inline id         NSGarbageCollector_DefaultCollector(void)                                                  { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSGarbageCollector"), bean_sel("defaultCollector")); }
-static inline BOOL       NSGarbageCollector_IsCollecting(NSGarbageCollector self)                                   { return ((BOOL (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("isCollecting")); }
-static inline void       NSGarbageCollector_Disable(NSGarbageCollector self)                                        { ((void (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("disable")); }
-static inline void       NSGarbageCollector_Enable(NSGarbageCollector self)                                         { ((void (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("enable")); }
-static inline BOOL       NSGarbageCollector_IsEnabled(NSGarbageCollector self)                                      { return ((BOOL (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("isEnabled")); }
-static inline void       NSGarbageCollector_CollectIfNeeded(NSGarbageCollector self)                                { ((void (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("collectIfNeeded")); }
-static inline void       NSGarbageCollector_CollectExhaustively(NSGarbageCollector self)                            { ((void (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("collectExhaustively")); }
-static inline void       NSGarbageCollector_DisableCollectorForPointer(NSGarbageCollector self, const void* ptr)    { ((void (*)(NSGarbageCollector, SEL, const void*))bean_msgSend)(self, bean_sel("disableCollectorForPointer:"), ptr); }
-static inline void       NSGarbageCollector_EnableCollectorForPointer(NSGarbageCollector self, const void* ptr)     { ((void (*)(NSGarbageCollector, SEL, const void*))bean_msgSend)(self, bean_sel("enableCollectorForPointer:"), ptr); }
-static inline NSZone*    NSGarbageCollector_Zone(NSGarbageCollector self)                                           { return ((NSZone* (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("zone")); }
+static inline id                    NSGarbageCollector_DefaultCollector(void)                                                  { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSGarbageCollector"), bean_sel("defaultCollector")); }
+static inline BOOL                  NSGarbageCollector_IsCollecting(NSGarbageCollector self)                                   { return ((BOOL (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("isCollecting")); }
+static inline void                  NSGarbageCollector_Disable(NSGarbageCollector self)                                        { ((void (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("disable")); }
+static inline void                  NSGarbageCollector_Enable(NSGarbageCollector self)                                         { ((void (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("enable")); }
+static inline BOOL                  NSGarbageCollector_IsEnabled(NSGarbageCollector self)                                      { return ((BOOL (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("isEnabled")); }
+static inline void                  NSGarbageCollector_CollectIfNeeded(NSGarbageCollector self)                                { ((void (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("collectIfNeeded")); }
+static inline void                  NSGarbageCollector_CollectExhaustively(NSGarbageCollector self)                            { ((void (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("collectExhaustively")); }
+static inline void                  NSGarbageCollector_DisableCollectorForPointer(NSGarbageCollector self, const void* ptr)    { ((void (*)(NSGarbageCollector, SEL, const void*))bean_msgSend)(self, bean_sel("disableCollectorForPointer:"), ptr); }
+static inline void                  NSGarbageCollector_EnableCollectorForPointer(NSGarbageCollector self, const void* ptr)     { ((void (*)(NSGarbageCollector, SEL, const void*))bean_msgSend)(self, bean_sel("enableCollectorForPointer:"), ptr); }
+static inline NSZone*               NSGarbageCollector_Zone(NSGarbageCollector self)                                           { return ((NSZone* (*)(NSGarbageCollector, SEL))bean_msgSend)(self, bean_sel("zone")); }
+#ifndef BEAN_ALLOC_NSGarbageCollector
+#define BEAN_ALLOC_NSGarbageCollector
+static inline NSGarbageCollector    NSGarbageCollector_Alloc(void)                                                             { return (NSGarbageCollector)bean_alloc(bean_cls("NSGarbageCollector")); }
+#endif
+#ifndef BEAN_NEW_NSGarbageCollector
+#define BEAN_NEW_NSGarbageCollector
+static inline NSGarbageCollector    NSGarbageCollector_New(void)                                                               { return (NSGarbageCollector)bean_new(bean_cls("NSGarbageCollector")); }
+#endif
 
 /* ===== NSIndexPath ===== */
 #ifndef BEAN_TYPEDEF_NSIndexPath
@@ -2050,6 +2106,14 @@ static inline NSUInteger            NSIndexPath_Length(NSIndexPath self)        
 static inline void                  NSIndexPath_GetIndexes(NSIndexPath self, NSUInteger indexes)                                         { ((void (*)(NSIndexPath, SEL, NSUInteger))bean_msgSend)(self, bean_sel("getIndexes:"), indexes); }
 static inline id                    NSIndexPath_CopyWithZone(NSIndexPath self, NSZone* zone)                                             { return ((id (*)(NSIndexPath, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSIndexPath_SupportsSecureCoding(void)                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSIndexPath"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSIndexPath
+#define BEAN_ALLOC_NSIndexPath
+static inline NSIndexPath           NSIndexPath_Alloc(void)                                                                              { return (NSIndexPath)bean_alloc(bean_cls("NSIndexPath")); }
+#endif
+#ifndef BEAN_NEW_NSIndexPath
+#define BEAN_NEW_NSIndexPath
+static inline NSIndexPath           NSIndexPath_New(void)                                                                                { return (NSIndexPath)bean_new(bean_cls("NSIndexPath")); }
+#endif
 
 /* ===== NSIndexSet ===== */
 #ifndef BEAN_TYPEDEF_NSIndexSet
@@ -2091,6 +2155,14 @@ static inline NSUInteger    NSIndexSet_LastIndex(NSIndexSet self)               
 static inline id            NSIndexSet_CopyWithZone(NSIndexSet self, NSZone* zone)                                                                           { return ((id (*)(NSIndexSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id            NSIndexSet_MutableCopyWithZone(NSIndexSet self, NSZone* zone)                                                                    { return ((id (*)(NSIndexSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL          NSIndexSet_SupportsSecureCoding(void)                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSIndexSet"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSIndexSet
+#define BEAN_ALLOC_NSIndexSet
+static inline NSIndexSet    NSIndexSet_Alloc(void)                                                                                                           { return (NSIndexSet)bean_alloc(bean_cls("NSIndexSet")); }
+#endif
+#ifndef BEAN_NEW_NSIndexSet
+#define BEAN_NEW_NSIndexSet
+static inline NSIndexSet    NSIndexSet_New(void)                                                                                                             { return (NSIndexSet)bean_new(bean_cls("NSIndexSet")); }
+#endif
 
 /* ===== NSKeyValueSharedObserversSnapshot ===== */
 #ifndef BEAN_TYPEDEF_NSKeyValueSharedObserversSnapshot
@@ -2098,33 +2170,63 @@ static inline BOOL          NSIndexSet_SupportsSecureCoding(void)               
 typedef bean_id NSKeyValueSharedObserversSnapshot;
 #endif
 static inline NSKeyValueSharedObserversSnapshot    NSKeyValueSharedObserversSnapshot_Init(NSKeyValueSharedObserversSnapshot self)    { return ((NSKeyValueSharedObserversSnapshot (*)(NSKeyValueSharedObserversSnapshot, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSKeyValueSharedObserversSnapshot
+#define BEAN_NEW_NSKeyValueSharedObserversSnapshot
 static inline id                                   NSKeyValueSharedObserversSnapshot_New(void)                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSKeyValueSharedObserversSnapshot"), bean_sel("new")); }
+#endif
+#ifndef BEAN_ALLOC_NSKeyValueSharedObserversSnapshot
+#define BEAN_ALLOC_NSKeyValueSharedObserversSnapshot
+static inline NSKeyValueSharedObserversSnapshot    NSKeyValueSharedObserversSnapshot_Alloc(void)                                     { return (NSKeyValueSharedObserversSnapshot)bean_alloc(bean_cls("NSKeyValueSharedObserversSnapshot")); }
+#endif
 
 /* ===== NSLocalizedNumberFormatRule ===== */
 #ifndef BEAN_TYPEDEF_NSLocalizedNumberFormatRule
 #define BEAN_TYPEDEF_NSLocalizedNumberFormatRule
 typedef bean_id NSLocalizedNumberFormatRule;
 #endif
+#ifndef BEAN_NEW_NSLocalizedNumberFormatRule
+#define BEAN_NEW_NSLocalizedNumberFormatRule
 static inline id                             NSLocalizedNumberFormatRule_New(void)                                                       { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSLocalizedNumberFormatRule"), bean_sel("new")); }
+#endif
 static inline NSLocalizedNumberFormatRule    NSLocalizedNumberFormatRule_Init(NSLocalizedNumberFormatRule self)                          { return ((NSLocalizedNumberFormatRule (*)(NSLocalizedNumberFormatRule, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSLocalizedNumberFormatRule    NSLocalizedNumberFormatRule_Automatic(void)                                                 { return ((NSLocalizedNumberFormatRule (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSLocalizedNumberFormatRule"), bean_sel("automatic")); }
 static inline id                             NSLocalizedNumberFormatRule_CopyWithZone(NSLocalizedNumberFormatRule self, NSZone* zone)    { return ((id (*)(NSLocalizedNumberFormatRule, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                           NSLocalizedNumberFormatRule_SupportsSecureCoding(void)                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSLocalizedNumberFormatRule"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSLocalizedNumberFormatRule
+#define BEAN_ALLOC_NSLocalizedNumberFormatRule
+static inline NSLocalizedNumberFormatRule    NSLocalizedNumberFormatRule_Alloc(void)                                                     { return (NSLocalizedNumberFormatRule)bean_alloc(bean_cls("NSLocalizedNumberFormatRule")); }
+#endif
 
 /* ===== NSLocking ===== */
 #ifndef BEAN_TYPEDEF_NSLocking
 #define BEAN_TYPEDEF_NSLocking
 typedef bean_id NSLocking;
 #endif
-static inline void    NSLocking_Lock(NSLocking self)      { ((void (*)(NSLocking, SEL))bean_msgSend)(self, bean_sel("lock")); }
-static inline void    NSLocking_Unlock(NSLocking self)    { ((void (*)(NSLocking, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+static inline void         NSLocking_Lock(NSLocking self)      { ((void (*)(NSLocking, SEL))bean_msgSend)(self, bean_sel("lock")); }
+static inline void         NSLocking_Unlock(NSLocking self)    { ((void (*)(NSLocking, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+#ifndef BEAN_ALLOC_NSLocking
+#define BEAN_ALLOC_NSLocking
+static inline NSLocking    NSLocking_Alloc(void)               { return (NSLocking)bean_alloc(bean_cls("NSLocking")); }
+#endif
+#ifndef BEAN_NEW_NSLocking
+#define BEAN_NEW_NSLocking
+static inline NSLocking    NSLocking_New(void)                 { return (NSLocking)bean_new(bean_cls("NSLocking")); }
+#endif
 
 /* ===== NSMachPortDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSMachPortDelegate
 #define BEAN_TYPEDEF_NSMachPortDelegate
 typedef bean_id NSMachPortDelegate;
 #endif
-static inline void    NSMachPortDelegate_HandleMachMessage(NSMachPortDelegate self, void* msg)    { ((void (*)(NSMachPortDelegate, SEL, void*))bean_msgSend)(self, bean_sel("handleMachMessage:"), msg); }
+static inline void                  NSMachPortDelegate_HandleMachMessage(NSMachPortDelegate self, void* msg)    { ((void (*)(NSMachPortDelegate, SEL, void*))bean_msgSend)(self, bean_sel("handleMachMessage:"), msg); }
+#ifndef BEAN_ALLOC_NSMachPortDelegate
+#define BEAN_ALLOC_NSMachPortDelegate
+static inline NSMachPortDelegate    NSMachPortDelegate_Alloc(void)                                              { return (NSMachPortDelegate)bean_alloc(bean_cls("NSMachPortDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSMachPortDelegate
+#define BEAN_NEW_NSMachPortDelegate
+static inline NSMachPortDelegate    NSMachPortDelegate_New(void)                                                { return (NSMachPortDelegate)bean_new(bean_cls("NSMachPortDelegate")); }
+#endif
 
 /* ===== NSMethodSignature ===== */
 #ifndef BEAN_TYPEDEF_NSMethodSignature
@@ -2138,13 +2240,29 @@ static inline NSUInteger           NSMethodSignature_NumberOfArguments(NSMethodS
 static inline NSUInteger           NSMethodSignature_FrameLength(NSMethodSignature self)                               { return ((NSUInteger (*)(NSMethodSignature, SEL))bean_msgSend)(self, bean_sel("frameLength")); }
 static inline char*                NSMethodSignature_MethodReturnType(NSMethodSignature self)                          { return ((char* (*)(NSMethodSignature, SEL))bean_msgSend)(self, bean_sel("methodReturnType")); }
 static inline NSUInteger           NSMethodSignature_MethodReturnLength(NSMethodSignature self)                        { return ((NSUInteger (*)(NSMethodSignature, SEL))bean_msgSend)(self, bean_sel("methodReturnLength")); }
+#ifndef BEAN_ALLOC_NSMethodSignature
+#define BEAN_ALLOC_NSMethodSignature
+static inline NSMethodSignature    NSMethodSignature_Alloc(void)                                                       { return (NSMethodSignature)bean_alloc(bean_cls("NSMethodSignature")); }
+#endif
+#ifndef BEAN_NEW_NSMethodSignature
+#define BEAN_NEW_NSMethodSignature
+static inline NSMethodSignature    NSMethodSignature_New(void)                                                         { return (NSMethodSignature)bean_new(bean_cls("NSMethodSignature")); }
+#endif
 
 /* ===== NSMutableCopying ===== */
 #ifndef BEAN_TYPEDEF_NSMutableCopying
 #define BEAN_TYPEDEF_NSMutableCopying
 typedef bean_id NSMutableCopying;
 #endif
-static inline id    NSMutableCopying_MutableCopyWithZone(NSMutableCopying self, NSZone* zone)    { return ((id (*)(NSMutableCopying, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
+static inline id                  NSMutableCopying_MutableCopyWithZone(NSMutableCopying self, NSZone* zone)    { return ((id (*)(NSMutableCopying, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSMutableCopying
+#define BEAN_ALLOC_NSMutableCopying
+static inline NSMutableCopying    NSMutableCopying_Alloc(void)                                                 { return (NSMutableCopying)bean_alloc(bean_cls("NSMutableCopying")); }
+#endif
+#ifndef BEAN_NEW_NSMutableCopying
+#define BEAN_NEW_NSMutableCopying
+static inline NSMutableCopying    NSMutableCopying_New(void)                                                   { return (NSMutableCopying)bean_new(bean_cls("NSMutableCopying")); }
+#endif
 
 /* ===== NSNull ===== */
 #ifndef BEAN_TYPEDEF_NSNull
@@ -2154,6 +2272,14 @@ typedef bean_id NSNull;
 static inline NSNull    NSNull_Null(void)                                 { return ((NSNull (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSNull"), bean_sel("null")); }
 static inline id        NSNull_CopyWithZone(NSNull self, NSZone* zone)    { return ((id (*)(NSNull, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL      NSNull_SupportsSecureCoding(void)                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSNull"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSNull
+#define BEAN_ALLOC_NSNull
+static inline NSNull    NSNull_Alloc(void)                                { return (NSNull)bean_alloc(bean_cls("NSNull")); }
+#endif
+#ifndef BEAN_NEW_NSNull
+#define BEAN_NEW_NSNull
+static inline NSNull    NSNull_New(void)                                  { return (NSNull)bean_new(bean_cls("NSNull")); }
+#endif
 
 /* ===== NSOrderedCollectionChange ===== */
 #ifndef BEAN_TYPEDEF_NSOrderedCollectionChange
@@ -2169,6 +2295,14 @@ static inline id                           NSOrderedCollectionChange_Object(NSOr
 static inline NSCollectionChangeType       NSOrderedCollectionChange_ChangeType(NSOrderedCollectionChange self)                                                                                                                           { return ((NSCollectionChangeType (*)(NSOrderedCollectionChange, SEL))bean_msgSend)(self, bean_sel("changeType")); }
 static inline NSUInteger                   NSOrderedCollectionChange_Index(NSOrderedCollectionChange self)                                                                                                                                { return ((NSUInteger (*)(NSOrderedCollectionChange, SEL))bean_msgSend)(self, bean_sel("index")); }
 static inline NSUInteger                   NSOrderedCollectionChange_AssociatedIndex(NSOrderedCollectionChange self)                                                                                                                      { return ((NSUInteger (*)(NSOrderedCollectionChange, SEL))bean_msgSend)(self, bean_sel("associatedIndex")); }
+#ifndef BEAN_ALLOC_NSOrderedCollectionChange
+#define BEAN_ALLOC_NSOrderedCollectionChange
+static inline NSOrderedCollectionChange    NSOrderedCollectionChange_Alloc(void)                                                                                                                                                          { return (NSOrderedCollectionChange)bean_alloc(bean_cls("NSOrderedCollectionChange")); }
+#endif
+#ifndef BEAN_NEW_NSOrderedCollectionChange
+#define BEAN_NEW_NSOrderedCollectionChange
+static inline NSOrderedCollectionChange    NSOrderedCollectionChange_New(void)                                                                                                                                                            { return (NSOrderedCollectionChange)bean_new(bean_cls("NSOrderedCollectionChange")); }
+#endif
 
 /* ===== NSPointerFunctions ===== */
 #ifndef BEAN_TYPEDEF_NSPointerFunctions
@@ -2194,16 +2328,32 @@ static inline void                  NSPointerFunctions_SetUsesStrongWriteBarrier
 static inline BOOL                  NSPointerFunctions_UsesWeakReadAndWriteBarriers(NSPointerFunctions self)                                          { return ((BOOL (*)(NSPointerFunctions, SEL))bean_msgSend)(self, bean_sel("usesWeakReadAndWriteBarriers")); }
 static inline void                  NSPointerFunctions_SetUsesWeakReadAndWriteBarriers(NSPointerFunctions self, BOOL usesWeakReadAndWriteBarriers)    { ((void (*)(NSPointerFunctions, SEL, BOOL))bean_msgSend)(self, bean_sel("setUsesWeakReadAndWriteBarriers:"), usesWeakReadAndWriteBarriers); }
 static inline id                    NSPointerFunctions_CopyWithZone(NSPointerFunctions self, NSZone* zone)                                            { return ((id (*)(NSPointerFunctions, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPointerFunctions
+#define BEAN_ALLOC_NSPointerFunctions
+static inline NSPointerFunctions    NSPointerFunctions_Alloc(void)                                                                                    { return (NSPointerFunctions)bean_alloc(bean_cls("NSPointerFunctions")); }
+#endif
+#ifndef BEAN_NEW_NSPointerFunctions
+#define BEAN_NEW_NSPointerFunctions
+static inline NSPointerFunctions    NSPointerFunctions_New(void)                                                                                      { return (NSPointerFunctions)bean_new(bean_cls("NSPointerFunctions")); }
+#endif
 
 /* ===== NSPurgeableData ===== */
 #ifndef BEAN_TYPEDEF_NSPurgeableData
 #define BEAN_TYPEDEF_NSPurgeableData
 typedef bean_id NSPurgeableData;
 #endif
-static inline BOOL    NSPurgeableData_BeginContentAccess(NSPurgeableData self)          { return ((BOOL (*)(NSPurgeableData, SEL))bean_msgSend)(self, bean_sel("beginContentAccess")); }
-static inline void    NSPurgeableData_EndContentAccess(NSPurgeableData self)            { ((void (*)(NSPurgeableData, SEL))bean_msgSend)(self, bean_sel("endContentAccess")); }
-static inline void    NSPurgeableData_DiscardContentIfPossible(NSPurgeableData self)    { ((void (*)(NSPurgeableData, SEL))bean_msgSend)(self, bean_sel("discardContentIfPossible")); }
-static inline BOOL    NSPurgeableData_IsContentDiscarded(NSPurgeableData self)          { return ((BOOL (*)(NSPurgeableData, SEL))bean_msgSend)(self, bean_sel("isContentDiscarded")); }
+static inline BOOL               NSPurgeableData_BeginContentAccess(NSPurgeableData self)          { return ((BOOL (*)(NSPurgeableData, SEL))bean_msgSend)(self, bean_sel("beginContentAccess")); }
+static inline void               NSPurgeableData_EndContentAccess(NSPurgeableData self)            { ((void (*)(NSPurgeableData, SEL))bean_msgSend)(self, bean_sel("endContentAccess")); }
+static inline void               NSPurgeableData_DiscardContentIfPossible(NSPurgeableData self)    { ((void (*)(NSPurgeableData, SEL))bean_msgSend)(self, bean_sel("discardContentIfPossible")); }
+static inline BOOL               NSPurgeableData_IsContentDiscarded(NSPurgeableData self)          { return ((BOOL (*)(NSPurgeableData, SEL))bean_msgSend)(self, bean_sel("isContentDiscarded")); }
+#ifndef BEAN_ALLOC_NSPurgeableData
+#define BEAN_ALLOC_NSPurgeableData
+static inline NSPurgeableData    NSPurgeableData_Alloc(void)                                       { return (NSPurgeableData)bean_alloc(bean_cls("NSPurgeableData")); }
+#endif
+#ifndef BEAN_NEW_NSPurgeableData
+#define BEAN_NEW_NSPurgeableData
+static inline NSPurgeableData    NSPurgeableData_New(void)                                         { return (NSPurgeableData)bean_new(bean_cls("NSPurgeableData")); }
+#endif
 
 /* ===== NSQuitCommand ===== */
 #ifndef BEAN_TYPEDEF_NSQuitCommand
@@ -2211,6 +2361,14 @@ static inline BOOL    NSPurgeableData_IsContentDiscarded(NSPurgeableData self)  
 typedef bean_id NSQuitCommand;
 #endif
 static inline NSSaveOptions    NSQuitCommand_SaveOptions(NSQuitCommand self)    { return ((NSSaveOptions (*)(NSQuitCommand, SEL))bean_msgSend)(self, bean_sel("saveOptions")); }
+#ifndef BEAN_ALLOC_NSQuitCommand
+#define BEAN_ALLOC_NSQuitCommand
+static inline NSQuitCommand    NSQuitCommand_Alloc(void)                        { return (NSQuitCommand)bean_alloc(bean_cls("NSQuitCommand")); }
+#endif
+#ifndef BEAN_NEW_NSQuitCommand
+#define BEAN_NEW_NSQuitCommand
+static inline NSQuitCommand    NSQuitCommand_New(void)                          { return (NSQuitCommand)bean_new(bean_cls("NSQuitCommand")); }
+#endif
 
 /* ===== NSScriptCoercionHandler ===== */
 #ifndef BEAN_TYPEDEF_NSScriptCoercionHandler
@@ -2220,6 +2378,14 @@ typedef bean_id NSScriptCoercionHandler;
 static inline NSScriptCoercionHandler    NSScriptCoercionHandler_SharedCoercionHandler(void)                                                                                                                              { return ((NSScriptCoercionHandler (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSScriptCoercionHandler"), bean_sel("sharedCoercionHandler")); }
 static inline id                         NSScriptCoercionHandler_CoerceValue_ToClass(NSScriptCoercionHandler self, id value, bean_class toClass)                                                                          { return ((id (*)(NSScriptCoercionHandler, SEL, id, bean_class))bean_msgSend)(self, bean_sel("coerceValue:toClass:"), value, toClass); }
 static inline void                       NSScriptCoercionHandler_RegisterCoercer_Selector_ToConvertFromClass_ToClass(NSScriptCoercionHandler self, id coercer, SEL selector, bean_class fromClass, bean_class toClass)    { ((void (*)(NSScriptCoercionHandler, SEL, id, SEL, bean_class, bean_class))bean_msgSend)(self, bean_sel("registerCoercer:selector:toConvertFromClass:toClass:"), coercer, selector, fromClass, toClass); }
+#ifndef BEAN_ALLOC_NSScriptCoercionHandler
+#define BEAN_ALLOC_NSScriptCoercionHandler
+static inline NSScriptCoercionHandler    NSScriptCoercionHandler_Alloc(void)                                                                                                                                              { return (NSScriptCoercionHandler)bean_alloc(bean_cls("NSScriptCoercionHandler")); }
+#endif
+#ifndef BEAN_NEW_NSScriptCoercionHandler
+#define BEAN_NEW_NSScriptCoercionHandler
+static inline NSScriptCoercionHandler    NSScriptCoercionHandler_New(void)                                                                                                                                                { return (NSScriptCoercionHandler)bean_new(bean_cls("NSScriptCoercionHandler")); }
+#endif
 
 /* ===== NSScriptExecutionContext ===== */
 #ifndef BEAN_TYPEDEF_NSScriptExecutionContext
@@ -2233,13 +2399,29 @@ static inline id                          NSScriptExecutionContext_ObjectBeingTe
 static inline void                        NSScriptExecutionContext_SetObjectBeingTested(NSScriptExecutionContext self, id objectBeingTested)          { ((void (*)(NSScriptExecutionContext, SEL, id))bean_msgSend)(self, bean_sel("setObjectBeingTested:"), objectBeingTested); }
 static inline id                          NSScriptExecutionContext_RangeContainerObject(NSScriptExecutionContext self)                                { return ((id (*)(NSScriptExecutionContext, SEL))bean_msgSend)(self, bean_sel("rangeContainerObject")); }
 static inline void                        NSScriptExecutionContext_SetRangeContainerObject(NSScriptExecutionContext self, id rangeContainerObject)    { ((void (*)(NSScriptExecutionContext, SEL, id))bean_msgSend)(self, bean_sel("setRangeContainerObject:"), rangeContainerObject); }
+#ifndef BEAN_ALLOC_NSScriptExecutionContext
+#define BEAN_ALLOC_NSScriptExecutionContext
+static inline NSScriptExecutionContext    NSScriptExecutionContext_Alloc(void)                                                                        { return (NSScriptExecutionContext)bean_alloc(bean_cls("NSScriptExecutionContext")); }
+#endif
+#ifndef BEAN_NEW_NSScriptExecutionContext
+#define BEAN_NEW_NSScriptExecutionContext
+static inline NSScriptExecutionContext    NSScriptExecutionContext_New(void)                                                                          { return (NSScriptExecutionContext)bean_new(bean_cls("NSScriptExecutionContext")); }
+#endif
 
 /* ===== NSSecureCoding ===== */
 #ifndef BEAN_TYPEDEF_NSSecureCoding
 #define BEAN_TYPEDEF_NSSecureCoding
 typedef bean_id NSSecureCoding;
 #endif
-static inline BOOL    NSSecureCoding_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSSecureCoding"), bean_sel("supportsSecureCoding")); }
+static inline BOOL              NSSecureCoding_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSSecureCoding"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSSecureCoding
+#define BEAN_ALLOC_NSSecureCoding
+static inline NSSecureCoding    NSSecureCoding_Alloc(void)                   { return (NSSecureCoding)bean_alloc(bean_cls("NSSecureCoding")); }
+#endif
+#ifndef BEAN_NEW_NSSecureCoding
+#define BEAN_NEW_NSSecureCoding
+static inline NSSecureCoding    NSSecureCoding_New(void)                     { return (NSSecureCoding)bean_new(bean_cls("NSSecureCoding")); }
+#endif
 
 /* ===== NSURLSessionDataTask ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionDataTask
@@ -2247,7 +2429,14 @@ static inline BOOL    NSSecureCoding_SupportsSecureCoding(void)    { return ((BO
 typedef bean_id NSURLSessionDataTask;
 #endif
 static inline NSURLSessionDataTask    NSURLSessionDataTask_Init(NSURLSessionDataTask self)    { return ((NSURLSessionDataTask (*)(NSURLSessionDataTask, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionDataTask
+#define BEAN_NEW_NSURLSessionDataTask
 static inline NSURLSessionDataTask    NSURLSessionDataTask_New(void)                          { return ((NSURLSessionDataTask (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionDataTask"), bean_sel("new")); }
+#endif
+#ifndef BEAN_ALLOC_NSURLSessionDataTask
+#define BEAN_ALLOC_NSURLSessionDataTask
+static inline NSURLSessionDataTask    NSURLSessionDataTask_Alloc(void)                        { return (NSURLSessionDataTask)bean_alloc(bean_cls("NSURLSessionDataTask")); }
+#endif
 
 /* ===== NSURLSessionDownloadTask ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadTask
@@ -2256,7 +2445,14 @@ typedef bean_id NSURLSessionDownloadTask;
 #endif
 static inline void                        NSURLSessionDownloadTask_CancelByProducingResumeData(NSURLSessionDownloadTask self, void* completionHandler)    { ((void (*)(NSURLSessionDownloadTask, SEL, void*))bean_msgSend)(self, bean_sel("cancelByProducingResumeData:"), completionHandler); }
 static inline NSURLSessionDownloadTask    NSURLSessionDownloadTask_Init(NSURLSessionDownloadTask self)                                                    { return ((NSURLSessionDownloadTask (*)(NSURLSessionDownloadTask, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionDownloadTask
+#define BEAN_NEW_NSURLSessionDownloadTask
 static inline NSURLSessionDownloadTask    NSURLSessionDownloadTask_New(void)                                                                              { return ((NSURLSessionDownloadTask (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionDownloadTask"), bean_sel("new")); }
+#endif
+#ifndef BEAN_ALLOC_NSURLSessionDownloadTask
+#define BEAN_ALLOC_NSURLSessionDownloadTask
+static inline NSURLSessionDownloadTask    NSURLSessionDownloadTask_Alloc(void)                                                                            { return (NSURLSessionDownloadTask)bean_alloc(bean_cls("NSURLSessionDownloadTask")); }
+#endif
 
 /* ===== NSURLSessionUploadTask ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionUploadTask
@@ -2264,8 +2460,15 @@ static inline NSURLSessionDownloadTask    NSURLSessionDownloadTask_New(void)    
 typedef bean_id NSURLSessionUploadTask;
 #endif
 static inline NSURLSessionUploadTask    NSURLSessionUploadTask_Init(NSURLSessionUploadTask self)                                                    { return ((NSURLSessionUploadTask (*)(NSURLSessionUploadTask, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionUploadTask
+#define BEAN_NEW_NSURLSessionUploadTask
 static inline NSURLSessionUploadTask    NSURLSessionUploadTask_New(void)                                                                            { return ((NSURLSessionUploadTask (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionUploadTask"), bean_sel("new")); }
+#endif
 static inline void                      NSURLSessionUploadTask_CancelByProducingResumeData(NSURLSessionUploadTask self, void* completionHandler)    { ((void (*)(NSURLSessionUploadTask, SEL, void*))bean_msgSend)(self, bean_sel("cancelByProducingResumeData:"), completionHandler); }
+#ifndef BEAN_ALLOC_NSURLSessionUploadTask
+#define BEAN_ALLOC_NSURLSessionUploadTask
+static inline NSURLSessionUploadTask    NSURLSessionUploadTask_Alloc(void)                                                                          { return (NSURLSessionUploadTask)bean_alloc(bean_cls("NSURLSessionUploadTask")); }
+#endif
 
 /* ===== NSUnitAcceleration ===== */
 #ifndef BEAN_TYPEDEF_NSUnitAcceleration
@@ -2275,6 +2478,14 @@ typedef bean_id NSUnitAcceleration;
 static inline NSUnitAcceleration    NSUnitAcceleration_MetersPerSecondSquared(void)    { return ((NSUnitAcceleration (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitAcceleration"), bean_sel("metersPerSecondSquared")); }
 static inline NSUnitAcceleration    NSUnitAcceleration_Gravity(void)                   { return ((NSUnitAcceleration (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitAcceleration"), bean_sel("gravity")); }
 static inline BOOL                  NSUnitAcceleration_SupportsSecureCoding(void)      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitAcceleration"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitAcceleration
+#define BEAN_ALLOC_NSUnitAcceleration
+static inline NSUnitAcceleration    NSUnitAcceleration_Alloc(void)                     { return (NSUnitAcceleration)bean_alloc(bean_cls("NSUnitAcceleration")); }
+#endif
+#ifndef BEAN_NEW_NSUnitAcceleration
+#define BEAN_NEW_NSUnitAcceleration
+static inline NSUnitAcceleration    NSUnitAcceleration_New(void)                       { return (NSUnitAcceleration)bean_new(bean_cls("NSUnitAcceleration")); }
+#endif
 
 /* ===== NSUnitAngle ===== */
 #ifndef BEAN_TYPEDEF_NSUnitAngle
@@ -2288,6 +2499,14 @@ static inline NSUnitAngle    NSUnitAngle_Radians(void)                 { return 
 static inline NSUnitAngle    NSUnitAngle_Gradians(void)                { return ((NSUnitAngle (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitAngle"), bean_sel("gradians")); }
 static inline NSUnitAngle    NSUnitAngle_Revolutions(void)             { return ((NSUnitAngle (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitAngle"), bean_sel("revolutions")); }
 static inline BOOL           NSUnitAngle_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitAngle"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitAngle
+#define BEAN_ALLOC_NSUnitAngle
+static inline NSUnitAngle    NSUnitAngle_Alloc(void)                   { return (NSUnitAngle)bean_alloc(bean_cls("NSUnitAngle")); }
+#endif
+#ifndef BEAN_NEW_NSUnitAngle
+#define BEAN_NEW_NSUnitAngle
+static inline NSUnitAngle    NSUnitAngle_New(void)                     { return (NSUnitAngle)bean_new(bean_cls("NSUnitAngle")); }
+#endif
 
 /* ===== NSUnitArea ===== */
 #ifndef BEAN_TYPEDEF_NSUnitArea
@@ -2309,6 +2528,14 @@ static inline NSUnitArea    NSUnitArea_Acres(void)                   { return ((
 static inline NSUnitArea    NSUnitArea_Ares(void)                    { return ((NSUnitArea (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitArea"), bean_sel("ares")); }
 static inline NSUnitArea    NSUnitArea_Hectares(void)                { return ((NSUnitArea (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitArea"), bean_sel("hectares")); }
 static inline BOOL          NSUnitArea_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitArea"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitArea
+#define BEAN_ALLOC_NSUnitArea
+static inline NSUnitArea    NSUnitArea_Alloc(void)                   { return (NSUnitArea)bean_alloc(bean_cls("NSUnitArea")); }
+#endif
+#ifndef BEAN_NEW_NSUnitArea
+#define BEAN_NEW_NSUnitArea
+static inline NSUnitArea    NSUnitArea_New(void)                     { return (NSUnitArea)bean_new(bean_cls("NSUnitArea")); }
+#endif
 
 /* ===== NSUnitConcentrationMass ===== */
 #ifndef BEAN_TYPEDEF_NSUnitConcentrationMass
@@ -2319,14 +2546,30 @@ static inline NSUnitConcentrationMass    NSUnitConcentrationMass_MillimolesPerLi
 static inline NSUnitConcentrationMass    NSUnitConcentrationMass_GramsPerLiter(void)                                         { return ((NSUnitConcentrationMass (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitConcentrationMass"), bean_sel("gramsPerLiter")); }
 static inline NSUnitConcentrationMass    NSUnitConcentrationMass_MilligramsPerDeciliter(void)                                { return ((NSUnitConcentrationMass (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitConcentrationMass"), bean_sel("milligramsPerDeciliter")); }
 static inline BOOL                       NSUnitConcentrationMass_SupportsSecureCoding(void)                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitConcentrationMass"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitConcentrationMass
+#define BEAN_ALLOC_NSUnitConcentrationMass
+static inline NSUnitConcentrationMass    NSUnitConcentrationMass_Alloc(void)                                                 { return (NSUnitConcentrationMass)bean_alloc(bean_cls("NSUnitConcentrationMass")); }
+#endif
+#ifndef BEAN_NEW_NSUnitConcentrationMass
+#define BEAN_NEW_NSUnitConcentrationMass
+static inline NSUnitConcentrationMass    NSUnitConcentrationMass_New(void)                                                   { return (NSUnitConcentrationMass)bean_new(bean_cls("NSUnitConcentrationMass")); }
+#endif
 
 /* ===== NSUnitConverter ===== */
 #ifndef BEAN_TYPEDEF_NSUnitConverter
 #define BEAN_TYPEDEF_NSUnitConverter
 typedef bean_id NSUnitConverter;
 #endif
-static inline CGFloat    NSUnitConverter_BaseUnitValueFromValue(NSUnitConverter self, CGFloat value)            { return ((CGFloat (*)(NSUnitConverter, SEL, CGFloat))bean_msgSend_fpret)(self, bean_sel("baseUnitValueFromValue:"), value); }
-static inline CGFloat    NSUnitConverter_ValueFromBaseUnitValue(NSUnitConverter self, CGFloat baseUnitValue)    { return ((CGFloat (*)(NSUnitConverter, SEL, CGFloat))bean_msgSend_fpret)(self, bean_sel("valueFromBaseUnitValue:"), baseUnitValue); }
+static inline CGFloat            NSUnitConverter_BaseUnitValueFromValue(NSUnitConverter self, CGFloat value)            { return ((CGFloat (*)(NSUnitConverter, SEL, CGFloat))bean_msgSend_fpret)(self, bean_sel("baseUnitValueFromValue:"), value); }
+static inline CGFloat            NSUnitConverter_ValueFromBaseUnitValue(NSUnitConverter self, CGFloat baseUnitValue)    { return ((CGFloat (*)(NSUnitConverter, SEL, CGFloat))bean_msgSend_fpret)(self, bean_sel("valueFromBaseUnitValue:"), baseUnitValue); }
+#ifndef BEAN_ALLOC_NSUnitConverter
+#define BEAN_ALLOC_NSUnitConverter
+static inline NSUnitConverter    NSUnitConverter_Alloc(void)                                                            { return (NSUnitConverter)bean_alloc(bean_cls("NSUnitConverter")); }
+#endif
+#ifndef BEAN_NEW_NSUnitConverter
+#define BEAN_NEW_NSUnitConverter
+static inline NSUnitConverter    NSUnitConverter_New(void)                                                              { return (NSUnitConverter)bean_new(bean_cls("NSUnitConverter")); }
+#endif
 
 /* ===== NSUnitConverterLinear ===== */
 #ifndef BEAN_TYPEDEF_NSUnitConverterLinear
@@ -2338,6 +2581,14 @@ static inline NSUnitConverterLinear    NSUnitConverterLinear_InitWithCoefficient
 static inline CGFloat                  NSUnitConverterLinear_Coefficient(NSUnitConverterLinear self)                                                            { return ((CGFloat (*)(NSUnitConverterLinear, SEL))bean_msgSend_fpret)(self, bean_sel("coefficient")); }
 static inline CGFloat                  NSUnitConverterLinear_Constant(NSUnitConverterLinear self)                                                               { return ((CGFloat (*)(NSUnitConverterLinear, SEL))bean_msgSend_fpret)(self, bean_sel("constant")); }
 static inline BOOL                     NSUnitConverterLinear_SupportsSecureCoding(void)                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitConverterLinear"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitConverterLinear
+#define BEAN_ALLOC_NSUnitConverterLinear
+static inline NSUnitConverterLinear    NSUnitConverterLinear_Alloc(void)                                                                                        { return (NSUnitConverterLinear)bean_alloc(bean_cls("NSUnitConverterLinear")); }
+#endif
+#ifndef BEAN_NEW_NSUnitConverterLinear
+#define BEAN_NEW_NSUnitConverterLinear
+static inline NSUnitConverterLinear    NSUnitConverterLinear_New(void)                                                                                          { return (NSUnitConverterLinear)bean_new(bean_cls("NSUnitConverterLinear")); }
+#endif
 
 /* ===== NSUnitDispersion ===== */
 #ifndef BEAN_TYPEDEF_NSUnitDispersion
@@ -2346,6 +2597,14 @@ typedef bean_id NSUnitDispersion;
 #endif
 static inline NSUnitDispersion    NSUnitDispersion_PartsPerMillion(void)         { return ((NSUnitDispersion (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitDispersion"), bean_sel("partsPerMillion")); }
 static inline BOOL                NSUnitDispersion_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitDispersion"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitDispersion
+#define BEAN_ALLOC_NSUnitDispersion
+static inline NSUnitDispersion    NSUnitDispersion_Alloc(void)                   { return (NSUnitDispersion)bean_alloc(bean_cls("NSUnitDispersion")); }
+#endif
+#ifndef BEAN_NEW_NSUnitDispersion
+#define BEAN_NEW_NSUnitDispersion
+static inline NSUnitDispersion    NSUnitDispersion_New(void)                     { return (NSUnitDispersion)bean_new(bean_cls("NSUnitDispersion")); }
+#endif
 
 /* ===== NSUnitDuration ===== */
 #ifndef BEAN_TYPEDEF_NSUnitDuration
@@ -2360,6 +2619,14 @@ static inline NSUnitDuration    NSUnitDuration_Microseconds(void)            { r
 static inline NSUnitDuration    NSUnitDuration_Nanoseconds(void)             { return ((NSUnitDuration (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitDuration"), bean_sel("nanoseconds")); }
 static inline NSUnitDuration    NSUnitDuration_Picoseconds(void)             { return ((NSUnitDuration (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitDuration"), bean_sel("picoseconds")); }
 static inline BOOL              NSUnitDuration_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitDuration"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitDuration
+#define BEAN_ALLOC_NSUnitDuration
+static inline NSUnitDuration    NSUnitDuration_Alloc(void)                   { return (NSUnitDuration)bean_alloc(bean_cls("NSUnitDuration")); }
+#endif
+#ifndef BEAN_NEW_NSUnitDuration
+#define BEAN_NEW_NSUnitDuration
+static inline NSUnitDuration    NSUnitDuration_New(void)                     { return (NSUnitDuration)bean_new(bean_cls("NSUnitDuration")); }
+#endif
 
 /* ===== NSUnitElectricCharge ===== */
 #ifndef BEAN_TYPEDEF_NSUnitElectricCharge
@@ -2373,6 +2640,14 @@ static inline NSUnitElectricCharge    NSUnitElectricCharge_AmpereHours(void)    
 static inline NSUnitElectricCharge    NSUnitElectricCharge_MilliampereHours(void)        { return ((NSUnitElectricCharge (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricCharge"), bean_sel("milliampereHours")); }
 static inline NSUnitElectricCharge    NSUnitElectricCharge_MicroampereHours(void)        { return ((NSUnitElectricCharge (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricCharge"), bean_sel("microampereHours")); }
 static inline BOOL                    NSUnitElectricCharge_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricCharge"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitElectricCharge
+#define BEAN_ALLOC_NSUnitElectricCharge
+static inline NSUnitElectricCharge    NSUnitElectricCharge_Alloc(void)                   { return (NSUnitElectricCharge)bean_alloc(bean_cls("NSUnitElectricCharge")); }
+#endif
+#ifndef BEAN_NEW_NSUnitElectricCharge
+#define BEAN_NEW_NSUnitElectricCharge
+static inline NSUnitElectricCharge    NSUnitElectricCharge_New(void)                     { return (NSUnitElectricCharge)bean_new(bean_cls("NSUnitElectricCharge")); }
+#endif
 
 /* ===== NSUnitElectricCurrent ===== */
 #ifndef BEAN_TYPEDEF_NSUnitElectricCurrent
@@ -2385,6 +2660,14 @@ static inline NSUnitElectricCurrent    NSUnitElectricCurrent_Amperes(void)      
 static inline NSUnitElectricCurrent    NSUnitElectricCurrent_Milliamperes(void)            { return ((NSUnitElectricCurrent (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricCurrent"), bean_sel("milliamperes")); }
 static inline NSUnitElectricCurrent    NSUnitElectricCurrent_Microamperes(void)            { return ((NSUnitElectricCurrent (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricCurrent"), bean_sel("microamperes")); }
 static inline BOOL                     NSUnitElectricCurrent_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricCurrent"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitElectricCurrent
+#define BEAN_ALLOC_NSUnitElectricCurrent
+static inline NSUnitElectricCurrent    NSUnitElectricCurrent_Alloc(void)                   { return (NSUnitElectricCurrent)bean_alloc(bean_cls("NSUnitElectricCurrent")); }
+#endif
+#ifndef BEAN_NEW_NSUnitElectricCurrent
+#define BEAN_NEW_NSUnitElectricCurrent
+static inline NSUnitElectricCurrent    NSUnitElectricCurrent_New(void)                     { return (NSUnitElectricCurrent)bean_new(bean_cls("NSUnitElectricCurrent")); }
+#endif
 
 /* ===== NSUnitElectricPotentialDifference ===== */
 #ifndef BEAN_TYPEDEF_NSUnitElectricPotentialDifference
@@ -2397,6 +2680,14 @@ static inline NSUnitElectricPotentialDifference    NSUnitElectricPotentialDiffer
 static inline NSUnitElectricPotentialDifference    NSUnitElectricPotentialDifference_Millivolts(void)              { return ((NSUnitElectricPotentialDifference (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricPotentialDifference"), bean_sel("millivolts")); }
 static inline NSUnitElectricPotentialDifference    NSUnitElectricPotentialDifference_Microvolts(void)              { return ((NSUnitElectricPotentialDifference (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricPotentialDifference"), bean_sel("microvolts")); }
 static inline BOOL                                 NSUnitElectricPotentialDifference_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricPotentialDifference"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitElectricPotentialDifference
+#define BEAN_ALLOC_NSUnitElectricPotentialDifference
+static inline NSUnitElectricPotentialDifference    NSUnitElectricPotentialDifference_Alloc(void)                   { return (NSUnitElectricPotentialDifference)bean_alloc(bean_cls("NSUnitElectricPotentialDifference")); }
+#endif
+#ifndef BEAN_NEW_NSUnitElectricPotentialDifference
+#define BEAN_NEW_NSUnitElectricPotentialDifference
+static inline NSUnitElectricPotentialDifference    NSUnitElectricPotentialDifference_New(void)                     { return (NSUnitElectricPotentialDifference)bean_new(bean_cls("NSUnitElectricPotentialDifference")); }
+#endif
 
 /* ===== NSUnitElectricResistance ===== */
 #ifndef BEAN_TYPEDEF_NSUnitElectricResistance
@@ -2409,6 +2700,14 @@ static inline NSUnitElectricResistance    NSUnitElectricResistance_Ohms(void)   
 static inline NSUnitElectricResistance    NSUnitElectricResistance_Milliohms(void)               { return ((NSUnitElectricResistance (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricResistance"), bean_sel("milliohms")); }
 static inline NSUnitElectricResistance    NSUnitElectricResistance_Microohms(void)               { return ((NSUnitElectricResistance (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricResistance"), bean_sel("microohms")); }
 static inline BOOL                        NSUnitElectricResistance_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitElectricResistance"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitElectricResistance
+#define BEAN_ALLOC_NSUnitElectricResistance
+static inline NSUnitElectricResistance    NSUnitElectricResistance_Alloc(void)                   { return (NSUnitElectricResistance)bean_alloc(bean_cls("NSUnitElectricResistance")); }
+#endif
+#ifndef BEAN_NEW_NSUnitElectricResistance
+#define BEAN_NEW_NSUnitElectricResistance
+static inline NSUnitElectricResistance    NSUnitElectricResistance_New(void)                     { return (NSUnitElectricResistance)bean_new(bean_cls("NSUnitElectricResistance")); }
+#endif
 
 /* ===== NSUnitEnergy ===== */
 #ifndef BEAN_TYPEDEF_NSUnitEnergy
@@ -2421,6 +2720,14 @@ static inline NSUnitEnergy    NSUnitEnergy_Kilocalories(void)            { retur
 static inline NSUnitEnergy    NSUnitEnergy_Calories(void)                { return ((NSUnitEnergy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitEnergy"), bean_sel("calories")); }
 static inline NSUnitEnergy    NSUnitEnergy_KilowattHours(void)           { return ((NSUnitEnergy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitEnergy"), bean_sel("kilowattHours")); }
 static inline BOOL            NSUnitEnergy_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitEnergy"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitEnergy
+#define BEAN_ALLOC_NSUnitEnergy
+static inline NSUnitEnergy    NSUnitEnergy_Alloc(void)                   { return (NSUnitEnergy)bean_alloc(bean_cls("NSUnitEnergy")); }
+#endif
+#ifndef BEAN_NEW_NSUnitEnergy
+#define BEAN_NEW_NSUnitEnergy
+static inline NSUnitEnergy    NSUnitEnergy_New(void)                     { return (NSUnitEnergy)bean_new(bean_cls("NSUnitEnergy")); }
+#endif
 
 /* ===== NSUnitFrequency ===== */
 #ifndef BEAN_TYPEDEF_NSUnitFrequency
@@ -2437,6 +2744,14 @@ static inline NSUnitFrequency    NSUnitFrequency_Microhertz(void)              {
 static inline NSUnitFrequency    NSUnitFrequency_Nanohertz(void)               { return ((NSUnitFrequency (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitFrequency"), bean_sel("nanohertz")); }
 static inline NSUnitFrequency    NSUnitFrequency_FramesPerSecond(void)         { return ((NSUnitFrequency (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitFrequency"), bean_sel("framesPerSecond")); }
 static inline BOOL               NSUnitFrequency_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitFrequency"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitFrequency
+#define BEAN_ALLOC_NSUnitFrequency
+static inline NSUnitFrequency    NSUnitFrequency_Alloc(void)                   { return (NSUnitFrequency)bean_alloc(bean_cls("NSUnitFrequency")); }
+#endif
+#ifndef BEAN_NEW_NSUnitFrequency
+#define BEAN_NEW_NSUnitFrequency
+static inline NSUnitFrequency    NSUnitFrequency_New(void)                     { return (NSUnitFrequency)bean_new(bean_cls("NSUnitFrequency")); }
+#endif
 
 /* ===== NSUnitFuelEfficiency ===== */
 #ifndef BEAN_TYPEDEF_NSUnitFuelEfficiency
@@ -2447,6 +2762,14 @@ static inline NSUnitFuelEfficiency    NSUnitFuelEfficiency_LitersPer100Kilometer
 static inline NSUnitFuelEfficiency    NSUnitFuelEfficiency_MilesPerImperialGallon(void)    { return ((NSUnitFuelEfficiency (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitFuelEfficiency"), bean_sel("milesPerImperialGallon")); }
 static inline NSUnitFuelEfficiency    NSUnitFuelEfficiency_MilesPerGallon(void)            { return ((NSUnitFuelEfficiency (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitFuelEfficiency"), bean_sel("milesPerGallon")); }
 static inline BOOL                    NSUnitFuelEfficiency_SupportsSecureCoding(void)      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitFuelEfficiency"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitFuelEfficiency
+#define BEAN_ALLOC_NSUnitFuelEfficiency
+static inline NSUnitFuelEfficiency    NSUnitFuelEfficiency_Alloc(void)                     { return (NSUnitFuelEfficiency)bean_alloc(bean_cls("NSUnitFuelEfficiency")); }
+#endif
+#ifndef BEAN_NEW_NSUnitFuelEfficiency
+#define BEAN_NEW_NSUnitFuelEfficiency
+static inline NSUnitFuelEfficiency    NSUnitFuelEfficiency_New(void)                       { return (NSUnitFuelEfficiency)bean_new(bean_cls("NSUnitFuelEfficiency")); }
+#endif
 
 /* ===== NSUnitIlluminance ===== */
 #ifndef BEAN_TYPEDEF_NSUnitIlluminance
@@ -2455,6 +2778,14 @@ typedef bean_id NSUnitIlluminance;
 #endif
 static inline NSUnitIlluminance    NSUnitIlluminance_Lux(void)                     { return ((NSUnitIlluminance (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitIlluminance"), bean_sel("lux")); }
 static inline BOOL                 NSUnitIlluminance_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitIlluminance"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitIlluminance
+#define BEAN_ALLOC_NSUnitIlluminance
+static inline NSUnitIlluminance    NSUnitIlluminance_Alloc(void)                   { return (NSUnitIlluminance)bean_alloc(bean_cls("NSUnitIlluminance")); }
+#endif
+#ifndef BEAN_NEW_NSUnitIlluminance
+#define BEAN_NEW_NSUnitIlluminance
+static inline NSUnitIlluminance    NSUnitIlluminance_New(void)                     { return (NSUnitIlluminance)bean_new(bean_cls("NSUnitIlluminance")); }
+#endif
 
 /* ===== NSUnitInformationStorage ===== */
 #ifndef BEAN_TYPEDEF_NSUnitInformationStorage
@@ -2497,6 +2828,14 @@ static inline NSUnitInformationStorage    NSUnitInformationStorage_Gibibits(void
 static inline NSUnitInformationStorage    NSUnitInformationStorage_Mebibits(void)                { return ((NSUnitInformationStorage (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitInformationStorage"), bean_sel("mebibits")); }
 static inline NSUnitInformationStorage    NSUnitInformationStorage_Kibibits(void)                { return ((NSUnitInformationStorage (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitInformationStorage"), bean_sel("kibibits")); }
 static inline BOOL                        NSUnitInformationStorage_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitInformationStorage"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitInformationStorage
+#define BEAN_ALLOC_NSUnitInformationStorage
+static inline NSUnitInformationStorage    NSUnitInformationStorage_Alloc(void)                   { return (NSUnitInformationStorage)bean_alloc(bean_cls("NSUnitInformationStorage")); }
+#endif
+#ifndef BEAN_NEW_NSUnitInformationStorage
+#define BEAN_NEW_NSUnitInformationStorage
+static inline NSUnitInformationStorage    NSUnitInformationStorage_New(void)                     { return (NSUnitInformationStorage)bean_new(bean_cls("NSUnitInformationStorage")); }
+#endif
 
 /* ===== NSUnitLength ===== */
 #ifndef BEAN_TYPEDEF_NSUnitLength
@@ -2526,6 +2865,14 @@ static inline NSUnitLength    NSUnitLength_Furlongs(void)                { retur
 static inline NSUnitLength    NSUnitLength_AstronomicalUnits(void)       { return ((NSUnitLength (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitLength"), bean_sel("astronomicalUnits")); }
 static inline NSUnitLength    NSUnitLength_Parsecs(void)                 { return ((NSUnitLength (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitLength"), bean_sel("parsecs")); }
 static inline BOOL            NSUnitLength_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitLength"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitLength
+#define BEAN_ALLOC_NSUnitLength
+static inline NSUnitLength    NSUnitLength_Alloc(void)                   { return (NSUnitLength)bean_alloc(bean_cls("NSUnitLength")); }
+#endif
+#ifndef BEAN_NEW_NSUnitLength
+#define BEAN_NEW_NSUnitLength
+static inline NSUnitLength    NSUnitLength_New(void)                     { return (NSUnitLength)bean_new(bean_cls("NSUnitLength")); }
+#endif
 
 /* ===== NSUnitMass ===== */
 #ifndef BEAN_TYPEDEF_NSUnitMass
@@ -2549,6 +2896,14 @@ static inline NSUnitMass    NSUnitMass_Carats(void)                  { return ((
 static inline NSUnitMass    NSUnitMass_OuncesTroy(void)              { return ((NSUnitMass (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitMass"), bean_sel("ouncesTroy")); }
 static inline NSUnitMass    NSUnitMass_Slugs(void)                   { return ((NSUnitMass (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitMass"), bean_sel("slugs")); }
 static inline BOOL          NSUnitMass_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitMass"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitMass
+#define BEAN_ALLOC_NSUnitMass
+static inline NSUnitMass    NSUnitMass_Alloc(void)                   { return (NSUnitMass)bean_alloc(bean_cls("NSUnitMass")); }
+#endif
+#ifndef BEAN_NEW_NSUnitMass
+#define BEAN_NEW_NSUnitMass
+static inline NSUnitMass    NSUnitMass_New(void)                     { return (NSUnitMass)bean_new(bean_cls("NSUnitMass")); }
+#endif
 
 /* ===== NSUnitPower ===== */
 #ifndef BEAN_TYPEDEF_NSUnitPower
@@ -2567,6 +2922,14 @@ static inline NSUnitPower    NSUnitPower_Picowatts(void)               { return 
 static inline NSUnitPower    NSUnitPower_Femtowatts(void)              { return ((NSUnitPower (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitPower"), bean_sel("femtowatts")); }
 static inline NSUnitPower    NSUnitPower_Horsepower(void)              { return ((NSUnitPower (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitPower"), bean_sel("horsepower")); }
 static inline BOOL           NSUnitPower_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitPower"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitPower
+#define BEAN_ALLOC_NSUnitPower
+static inline NSUnitPower    NSUnitPower_Alloc(void)                   { return (NSUnitPower)bean_alloc(bean_cls("NSUnitPower")); }
+#endif
+#ifndef BEAN_NEW_NSUnitPower
+#define BEAN_NEW_NSUnitPower
+static inline NSUnitPower    NSUnitPower_New(void)                     { return (NSUnitPower)bean_new(bean_cls("NSUnitPower")); }
+#endif
 
 /* ===== NSUnitPressure ===== */
 #ifndef BEAN_TYPEDEF_NSUnitPressure
@@ -2584,6 +2947,14 @@ static inline NSUnitPressure    NSUnitPressure_Millibars(void)                  
 static inline NSUnitPressure    NSUnitPressure_MillimetersOfMercury(void)        { return ((NSUnitPressure (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitPressure"), bean_sel("millimetersOfMercury")); }
 static inline NSUnitPressure    NSUnitPressure_PoundsForcePerSquareInch(void)    { return ((NSUnitPressure (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitPressure"), bean_sel("poundsForcePerSquareInch")); }
 static inline BOOL              NSUnitPressure_SupportsSecureCoding(void)        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitPressure"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitPressure
+#define BEAN_ALLOC_NSUnitPressure
+static inline NSUnitPressure    NSUnitPressure_Alloc(void)                       { return (NSUnitPressure)bean_alloc(bean_cls("NSUnitPressure")); }
+#endif
+#ifndef BEAN_NEW_NSUnitPressure
+#define BEAN_NEW_NSUnitPressure
+static inline NSUnitPressure    NSUnitPressure_New(void)                         { return (NSUnitPressure)bean_new(bean_cls("NSUnitPressure")); }
+#endif
 
 /* ===== NSUnitSpeed ===== */
 #ifndef BEAN_TYPEDEF_NSUnitSpeed
@@ -2595,6 +2966,14 @@ static inline NSUnitSpeed    NSUnitSpeed_KilometersPerHour(void)       { return 
 static inline NSUnitSpeed    NSUnitSpeed_MilesPerHour(void)            { return ((NSUnitSpeed (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitSpeed"), bean_sel("milesPerHour")); }
 static inline NSUnitSpeed    NSUnitSpeed_Knots(void)                   { return ((NSUnitSpeed (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitSpeed"), bean_sel("knots")); }
 static inline BOOL           NSUnitSpeed_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitSpeed"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitSpeed
+#define BEAN_ALLOC_NSUnitSpeed
+static inline NSUnitSpeed    NSUnitSpeed_Alloc(void)                   { return (NSUnitSpeed)bean_alloc(bean_cls("NSUnitSpeed")); }
+#endif
+#ifndef BEAN_NEW_NSUnitSpeed
+#define BEAN_NEW_NSUnitSpeed
+static inline NSUnitSpeed    NSUnitSpeed_New(void)                     { return (NSUnitSpeed)bean_new(bean_cls("NSUnitSpeed")); }
+#endif
 
 /* ===== NSUnitTemperature ===== */
 #ifndef BEAN_TYPEDEF_NSUnitTemperature
@@ -2605,6 +2984,14 @@ static inline NSUnitTemperature    NSUnitTemperature_Kelvin(void)               
 static inline NSUnitTemperature    NSUnitTemperature_Celsius(void)                 { return ((NSUnitTemperature (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitTemperature"), bean_sel("celsius")); }
 static inline NSUnitTemperature    NSUnitTemperature_Fahrenheit(void)              { return ((NSUnitTemperature (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitTemperature"), bean_sel("fahrenheit")); }
 static inline BOOL                 NSUnitTemperature_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitTemperature"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitTemperature
+#define BEAN_ALLOC_NSUnitTemperature
+static inline NSUnitTemperature    NSUnitTemperature_Alloc(void)                   { return (NSUnitTemperature)bean_alloc(bean_cls("NSUnitTemperature")); }
+#endif
+#ifndef BEAN_NEW_NSUnitTemperature
+#define BEAN_NEW_NSUnitTemperature
+static inline NSUnitTemperature    NSUnitTemperature_New(void)                     { return (NSUnitTemperature)bean_new(bean_cls("NSUnitTemperature")); }
+#endif
 
 /* ===== NSUnitVolume ===== */
 #ifndef BEAN_TYPEDEF_NSUnitVolume
@@ -2643,22 +3030,46 @@ static inline NSUnitVolume    NSUnitVolume_ImperialQuarts(void)          { retur
 static inline NSUnitVolume    NSUnitVolume_ImperialGallons(void)         { return ((NSUnitVolume (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitVolume"), bean_sel("imperialGallons")); }
 static inline NSUnitVolume    NSUnitVolume_MetricCups(void)              { return ((NSUnitVolume (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitVolume"), bean_sel("metricCups")); }
 static inline BOOL            NSUnitVolume_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnitVolume"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnitVolume
+#define BEAN_ALLOC_NSUnitVolume
+static inline NSUnitVolume    NSUnitVolume_Alloc(void)                   { return (NSUnitVolume)bean_alloc(bean_cls("NSUnitVolume")); }
+#endif
+#ifndef BEAN_NEW_NSUnitVolume
+#define BEAN_NEW_NSUnitVolume
+static inline NSUnitVolume    NSUnitVolume_New(void)                     { return (NSUnitVolume)bean_new(bean_cls("NSUnitVolume")); }
+#endif
 
 /* ===== NSXPCListenerEndpoint ===== */
 #ifndef BEAN_TYPEDEF_NSXPCListenerEndpoint
 #define BEAN_TYPEDEF_NSXPCListenerEndpoint
 typedef bean_id NSXPCListenerEndpoint;
 #endif
-static inline BOOL    NSXPCListenerEndpoint_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSXPCListenerEndpoint"), bean_sel("supportsSecureCoding")); }
+static inline BOOL                     NSXPCListenerEndpoint_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSXPCListenerEndpoint"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSXPCListenerEndpoint
+#define BEAN_ALLOC_NSXPCListenerEndpoint
+static inline NSXPCListenerEndpoint    NSXPCListenerEndpoint_Alloc(void)                   { return (NSXPCListenerEndpoint)bean_alloc(bean_cls("NSXPCListenerEndpoint")); }
+#endif
+#ifndef BEAN_NEW_NSXPCListenerEndpoint
+#define BEAN_NEW_NSXPCListenerEndpoint
+static inline NSXPCListenerEndpoint    NSXPCListenerEndpoint_New(void)                     { return (NSXPCListenerEndpoint)bean_new(bean_cls("NSXPCListenerEndpoint")); }
+#endif
 
 /* ===== NSXPCProxyCreating ===== */
 #ifndef BEAN_TYPEDEF_NSXPCProxyCreating
 #define BEAN_TYPEDEF_NSXPCProxyCreating
 typedef bean_id NSXPCProxyCreating;
 #endif
-static inline id    NSXPCProxyCreating_RemoteObjectProxy(NSXPCProxyCreating self)                                              { return ((id (*)(NSXPCProxyCreating, SEL))bean_msgSend)(self, bean_sel("remoteObjectProxy")); }
-static inline id    NSXPCProxyCreating_RemoteObjectProxyWithErrorHandler(NSXPCProxyCreating self, void* handler)               { return ((id (*)(NSXPCProxyCreating, SEL, void*))bean_msgSend)(self, bean_sel("remoteObjectProxyWithErrorHandler:"), handler); }
-static inline id    NSXPCProxyCreating_SynchronousRemoteObjectProxyWithErrorHandler(NSXPCProxyCreating self, void* handler)    { return ((id (*)(NSXPCProxyCreating, SEL, void*))bean_msgSend)(self, bean_sel("synchronousRemoteObjectProxyWithErrorHandler:"), handler); }
+static inline id                    NSXPCProxyCreating_RemoteObjectProxy(NSXPCProxyCreating self)                                              { return ((id (*)(NSXPCProxyCreating, SEL))bean_msgSend)(self, bean_sel("remoteObjectProxy")); }
+static inline id                    NSXPCProxyCreating_RemoteObjectProxyWithErrorHandler(NSXPCProxyCreating self, void* handler)               { return ((id (*)(NSXPCProxyCreating, SEL, void*))bean_msgSend)(self, bean_sel("remoteObjectProxyWithErrorHandler:"), handler); }
+static inline id                    NSXPCProxyCreating_SynchronousRemoteObjectProxyWithErrorHandler(NSXPCProxyCreating self, void* handler)    { return ((id (*)(NSXPCProxyCreating, SEL, void*))bean_msgSend)(self, bean_sel("synchronousRemoteObjectProxyWithErrorHandler:"), handler); }
+#ifndef BEAN_ALLOC_NSXPCProxyCreating
+#define BEAN_ALLOC_NSXPCProxyCreating
+static inline NSXPCProxyCreating    NSXPCProxyCreating_Alloc(void)                                                                             { return (NSXPCProxyCreating)bean_alloc(bean_cls("NSXPCProxyCreating")); }
+#endif
+#ifndef BEAN_NEW_NSXPCProxyCreating
+#define BEAN_NEW_NSXPCProxyCreating
+static inline NSXPCProxyCreating    NSXPCProxyCreating_New(void)                                                                               { return (NSXPCProxyCreating)bean_new(bean_cls("NSXPCProxyCreating")); }
+#endif
 
 /* ===== OS_object ===== */
 #ifndef BEAN_TYPEDEF_OS_object
@@ -2666,6 +3077,14 @@ static inline id    NSXPCProxyCreating_SynchronousRemoteObjectProxyWithErrorHand
 typedef bean_id OS_object;
 #endif
 static inline OS_object    OS_object_Init(OS_object self)    { return ((OS_object (*)(OS_object, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_ALLOC_OS_object
+#define BEAN_ALLOC_OS_object
+static inline OS_object    OS_object_Alloc(void)             { return (OS_object)bean_alloc(bean_cls("OS_object")); }
+#endif
+#ifndef BEAN_NEW_OS_object
+#define BEAN_NEW_OS_object
+static inline OS_object    OS_object_New(void)               { return (OS_object)bean_new(bean_cls("OS_object")); }
+#endif
 
 /* ===== OS_os_workgroup ===== */
 #ifndef BEAN_TYPEDEF_OS_os_workgroup
@@ -2673,6 +3092,14 @@ static inline OS_object    OS_object_Init(OS_object self)    { return ((OS_objec
 typedef bean_id OS_os_workgroup;
 #endif
 static inline OS_os_workgroup    OS_os_workgroup_Init(OS_os_workgroup self)    { return ((OS_os_workgroup (*)(OS_os_workgroup, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_ALLOC_OS_os_workgroup
+#define BEAN_ALLOC_OS_os_workgroup
+static inline OS_os_workgroup    OS_os_workgroup_Alloc(void)                   { return (OS_os_workgroup)bean_alloc(bean_cls("OS_os_workgroup")); }
+#endif
+#ifndef BEAN_NEW_OS_os_workgroup
+#define BEAN_NEW_OS_os_workgroup
+static inline OS_os_workgroup    OS_os_workgroup_New(void)                     { return (OS_os_workgroup)bean_new(bean_cls("OS_os_workgroup")); }
+#endif
 
 /* ===== OS_os_workgroup_interval ===== */
 #ifndef BEAN_TYPEDEF_OS_os_workgroup_interval
@@ -2680,6 +3107,14 @@ static inline OS_os_workgroup    OS_os_workgroup_Init(OS_os_workgroup self)    {
 typedef bean_id OS_os_workgroup_interval;
 #endif
 static inline OS_os_workgroup_interval    OS_os_workgroup_interval_Init(OS_os_workgroup_interval self)    { return ((OS_os_workgroup_interval (*)(OS_os_workgroup_interval, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_ALLOC_OS_os_workgroup_interval
+#define BEAN_ALLOC_OS_os_workgroup_interval
+static inline OS_os_workgroup_interval    OS_os_workgroup_interval_Alloc(void)                            { return (OS_os_workgroup_interval)bean_alloc(bean_cls("OS_os_workgroup_interval")); }
+#endif
+#ifndef BEAN_NEW_OS_os_workgroup_interval
+#define BEAN_NEW_OS_os_workgroup_interval
+static inline OS_os_workgroup_interval    OS_os_workgroup_interval_New(void)                              { return (OS_os_workgroup_interval)bean_new(bean_cls("OS_os_workgroup_interval")); }
+#endif
 
 /* ===== OS_os_workgroup_parallel ===== */
 #ifndef BEAN_TYPEDEF_OS_os_workgroup_parallel
@@ -2687,6 +3122,14 @@ static inline OS_os_workgroup_interval    OS_os_workgroup_interval_Init(OS_os_wo
 typedef bean_id OS_os_workgroup_parallel;
 #endif
 static inline OS_os_workgroup_parallel    OS_os_workgroup_parallel_Init(OS_os_workgroup_parallel self)    { return ((OS_os_workgroup_parallel (*)(OS_os_workgroup_parallel, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_ALLOC_OS_os_workgroup_parallel
+#define BEAN_ALLOC_OS_os_workgroup_parallel
+static inline OS_os_workgroup_parallel    OS_os_workgroup_parallel_Alloc(void)                            { return (OS_os_workgroup_parallel)bean_alloc(bean_cls("OS_os_workgroup_parallel")); }
+#endif
+#ifndef BEAN_NEW_OS_os_workgroup_parallel
+#define BEAN_NEW_OS_os_workgroup_parallel
+static inline OS_os_workgroup_parallel    OS_os_workgroup_parallel_New(void)                              { return (OS_os_workgroup_parallel)bean_new(bean_cls("OS_os_workgroup_parallel")); }
+#endif
 
 /* ===== NSInvocation ===== */
 #ifndef BEAN_TYPEDEF_NSInvocation
@@ -2708,20 +3151,36 @@ static inline id                   NSInvocation_Target(NSInvocation self)       
 static inline void                 NSInvocation_SetTarget(NSInvocation self, id target)                                          { ((void (*)(NSInvocation, SEL, id))bean_msgSend)(self, bean_sel("setTarget:"), target); }
 static inline SEL                  NSInvocation_Selector(NSInvocation self)                                                      { return ((SEL (*)(NSInvocation, SEL))bean_msgSend)(self, bean_sel("selector")); }
 static inline void                 NSInvocation_SetSelector(NSInvocation self, SEL selector)                                     { ((void (*)(NSInvocation, SEL, SEL))bean_msgSend)(self, bean_sel("setSelector:"), selector); }
+#ifndef BEAN_ALLOC_NSInvocation
+#define BEAN_ALLOC_NSInvocation
+static inline NSInvocation         NSInvocation_Alloc(void)                                                                      { return (NSInvocation)bean_alloc(bean_cls("NSInvocation")); }
+#endif
+#ifndef BEAN_NEW_NSInvocation
+#define BEAN_NEW_NSInvocation
+static inline NSInvocation         NSInvocation_New(void)                                                                        { return (NSInvocation)bean_new(bean_cls("NSInvocation")); }
+#endif
 
 /* ===== NSMutableIndexSet ===== */
 #ifndef BEAN_TYPEDEF_NSMutableIndexSet
 #define BEAN_TYPEDEF_NSMutableIndexSet
 typedef bean_id NSMutableIndexSet;
 #endif
-static inline void    NSMutableIndexSet_AddIndexes(NSMutableIndexSet self, NSIndexSet indexSet)                                      { ((void (*)(NSMutableIndexSet, SEL, NSIndexSet))bean_msgSend)(self, bean_sel("addIndexes:"), indexSet); }
-static inline void    NSMutableIndexSet_RemoveIndexes(NSMutableIndexSet self, NSIndexSet indexSet)                                   { ((void (*)(NSMutableIndexSet, SEL, NSIndexSet))bean_msgSend)(self, bean_sel("removeIndexes:"), indexSet); }
-static inline void    NSMutableIndexSet_RemoveAllIndexes(NSMutableIndexSet self)                                                     { ((void (*)(NSMutableIndexSet, SEL))bean_msgSend)(self, bean_sel("removeAllIndexes")); }
-static inline void    NSMutableIndexSet_AddIndex(NSMutableIndexSet self, NSUInteger value)                                           { ((void (*)(NSMutableIndexSet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("addIndex:"), value); }
-static inline void    NSMutableIndexSet_RemoveIndex(NSMutableIndexSet self, NSUInteger value)                                        { ((void (*)(NSMutableIndexSet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("removeIndex:"), value); }
-static inline void    NSMutableIndexSet_AddIndexesInRange(NSMutableIndexSet self, NSRange range)                                     { ((void (*)(NSMutableIndexSet, SEL, NSRange))bean_msgSend)(self, bean_sel("addIndexesInRange:"), range); }
-static inline void    NSMutableIndexSet_RemoveIndexesInRange(NSMutableIndexSet self, NSRange range)                                  { ((void (*)(NSMutableIndexSet, SEL, NSRange))bean_msgSend)(self, bean_sel("removeIndexesInRange:"), range); }
-static inline void    NSMutableIndexSet_ShiftIndexesStartingAtIndex_By(NSMutableIndexSet self, NSUInteger index, NSInteger delta)    { ((void (*)(NSMutableIndexSet, SEL, NSUInteger, NSInteger))bean_msgSend)(self, bean_sel("shiftIndexesStartingAtIndex:by:"), index, delta); }
+static inline void                 NSMutableIndexSet_AddIndexes(NSMutableIndexSet self, NSIndexSet indexSet)                                      { ((void (*)(NSMutableIndexSet, SEL, NSIndexSet))bean_msgSend)(self, bean_sel("addIndexes:"), indexSet); }
+static inline void                 NSMutableIndexSet_RemoveIndexes(NSMutableIndexSet self, NSIndexSet indexSet)                                   { ((void (*)(NSMutableIndexSet, SEL, NSIndexSet))bean_msgSend)(self, bean_sel("removeIndexes:"), indexSet); }
+static inline void                 NSMutableIndexSet_RemoveAllIndexes(NSMutableIndexSet self)                                                     { ((void (*)(NSMutableIndexSet, SEL))bean_msgSend)(self, bean_sel("removeAllIndexes")); }
+static inline void                 NSMutableIndexSet_AddIndex(NSMutableIndexSet self, NSUInteger value)                                           { ((void (*)(NSMutableIndexSet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("addIndex:"), value); }
+static inline void                 NSMutableIndexSet_RemoveIndex(NSMutableIndexSet self, NSUInteger value)                                        { ((void (*)(NSMutableIndexSet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("removeIndex:"), value); }
+static inline void                 NSMutableIndexSet_AddIndexesInRange(NSMutableIndexSet self, NSRange range)                                     { ((void (*)(NSMutableIndexSet, SEL, NSRange))bean_msgSend)(self, bean_sel("addIndexesInRange:"), range); }
+static inline void                 NSMutableIndexSet_RemoveIndexesInRange(NSMutableIndexSet self, NSRange range)                                  { ((void (*)(NSMutableIndexSet, SEL, NSRange))bean_msgSend)(self, bean_sel("removeIndexesInRange:"), range); }
+static inline void                 NSMutableIndexSet_ShiftIndexesStartingAtIndex_By(NSMutableIndexSet self, NSUInteger index, NSInteger delta)    { ((void (*)(NSMutableIndexSet, SEL, NSUInteger, NSInteger))bean_msgSend)(self, bean_sel("shiftIndexesStartingAtIndex:by:"), index, delta); }
+#ifndef BEAN_ALLOC_NSMutableIndexSet
+#define BEAN_ALLOC_NSMutableIndexSet
+static inline NSMutableIndexSet    NSMutableIndexSet_Alloc(void)                                                                                  { return (NSMutableIndexSet)bean_alloc(bean_cls("NSMutableIndexSet")); }
+#endif
+#ifndef BEAN_NEW_NSMutableIndexSet
+#define BEAN_NEW_NSMutableIndexSet
+static inline NSMutableIndexSet    NSMutableIndexSet_New(void)                                                                                    { return (NSMutableIndexSet)bean_new(bean_cls("NSMutableIndexSet")); }
+#endif
 
 /* ===== NSInvocationOperation ===== */
 #ifndef BEAN_TYPEDEF_NSInvocationOperation
@@ -2732,6 +3191,14 @@ static inline NSInvocationOperation    NSInvocationOperation_InitWithTarget_Sele
 static inline NSInvocationOperation    NSInvocationOperation_InitWithInvocation(NSInvocationOperation self, NSInvocation inv)                          { return ((NSInvocationOperation (*)(NSInvocationOperation, SEL, NSInvocation))bean_msgSend)(self, bean_sel("initWithInvocation:"), inv); }
 static inline NSInvocation             NSInvocationOperation_Invocation(NSInvocationOperation self)                                                    { return ((NSInvocation (*)(NSInvocationOperation, SEL))bean_msgSend)(self, bean_sel("invocation")); }
 static inline id                       NSInvocationOperation_Result(NSInvocationOperation self)                                                        { return ((id (*)(NSInvocationOperation, SEL))bean_msgSend)(self, bean_sel("result")); }
+#ifndef BEAN_ALLOC_NSInvocationOperation
+#define BEAN_ALLOC_NSInvocationOperation
+static inline NSInvocationOperation    NSInvocationOperation_Alloc(void)                                                                               { return (NSInvocationOperation)bean_alloc(bean_cls("NSInvocationOperation")); }
+#endif
+#ifndef BEAN_NEW_NSInvocationOperation
+#define BEAN_NEW_NSInvocationOperation
+static inline NSInvocationOperation    NSInvocationOperation_New(void)                                                                                 { return (NSInvocationOperation)bean_new(bean_cls("NSInvocationOperation")); }
+#endif
 
 /* ===== NSAppleEventDescriptor ===== */
 #ifndef BEAN_TYPEDEF_NSAppleEventDescriptor
@@ -2795,6 +3262,14 @@ static inline BOOL                      NSAppleEventDescriptor_IsRecordDescripto
 static inline NSInteger                 NSAppleEventDescriptor_NumberOfItems(NSAppleEventDescriptor self)                                                                                                                                                                                { return ((NSInteger (*)(NSAppleEventDescriptor, SEL))bean_msgSend)(self, bean_sel("numberOfItems")); }
 static inline id                        NSAppleEventDescriptor_CopyWithZone(NSAppleEventDescriptor self, NSZone* zone)                                                                                                                                                                   { return ((id (*)(NSAppleEventDescriptor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      NSAppleEventDescriptor_SupportsSecureCoding(void)                                                                                                                                                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSAppleEventDescriptor"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSAppleEventDescriptor
+#define BEAN_ALLOC_NSAppleEventDescriptor
+static inline NSAppleEventDescriptor    NSAppleEventDescriptor_Alloc(void)                                                                                                                                                                                                               { return (NSAppleEventDescriptor)bean_alloc(bean_cls("NSAppleEventDescriptor")); }
+#endif
+#ifndef BEAN_NEW_NSAppleEventDescriptor
+#define BEAN_NEW_NSAppleEventDescriptor
+static inline NSAppleEventDescriptor    NSAppleEventDescriptor_New(void)                                                                                                                                                                                                                 { return (NSAppleEventDescriptor)bean_new(bean_cls("NSAppleEventDescriptor")); }
+#endif
 
 /* ===== NSAppleEventManager ===== */
 #ifndef BEAN_TYPEDEF_NSAppleEventManager
@@ -2807,6 +3282,14 @@ static inline void                      NSAppleEventManager_RemoveEventHandlerFo
 static inline short                     NSAppleEventManager_DispatchRawAppleEvent_WithRawReply_HandlerRefCon(NSAppleEventManager self, const AppleEvent theAppleEvent, AppleEvent theReply, void* handlerRefCon)              { return ((short (*)(NSAppleEventManager, SEL, const AppleEvent, AppleEvent, void*))bean_msgSend)(self, bean_sel("dispatchRawAppleEvent:withRawReply:handlerRefCon:"), theAppleEvent, theReply, handlerRefCon); }
 static inline NSAppleEventDescriptor    NSAppleEventManager_CurrentAppleEvent(NSAppleEventManager self)                                                                                                                       { return ((NSAppleEventDescriptor (*)(NSAppleEventManager, SEL))bean_msgSend)(self, bean_sel("currentAppleEvent")); }
 static inline NSAppleEventDescriptor    NSAppleEventManager_CurrentReplyAppleEvent(NSAppleEventManager self)                                                                                                                  { return ((NSAppleEventDescriptor (*)(NSAppleEventManager, SEL))bean_msgSend)(self, bean_sel("currentReplyAppleEvent")); }
+#ifndef BEAN_ALLOC_NSAppleEventManager
+#define BEAN_ALLOC_NSAppleEventManager
+static inline NSAppleEventManager       NSAppleEventManager_Alloc(void)                                                                                                                                                       { return (NSAppleEventManager)bean_alloc(bean_cls("NSAppleEventManager")); }
+#endif
+#ifndef BEAN_NEW_NSAppleEventManager
+#define BEAN_NEW_NSAppleEventManager
+static inline NSAppleEventManager       NSAppleEventManager_New(void)                                                                                                                                                         { return (NSAppleEventManager)bean_new(bean_cls("NSAppleEventManager")); }
+#endif
 
 /* ===== NSAppleScript ===== */
 #ifndef BEAN_TYPEDEF_NSAppleScript
@@ -2822,6 +3305,14 @@ static inline NSString                  NSAppleScript_Source(NSAppleScript self)
 static inline BOOL                      NSAppleScript_IsCompiled(NSAppleScript self)                                                                       { return ((BOOL (*)(NSAppleScript, SEL))bean_msgSend)(self, bean_sel("isCompiled")); }
 static inline id                        NSAppleScript_CopyWithZone(NSAppleScript self, NSZone* zone)                                                       { return ((id (*)(NSAppleScript, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      NSAppleScript_Compiled(NSAppleScript self)                                                                         { return ((BOOL (*)(NSAppleScript, SEL))bean_msgSend)(self, bean_sel("compiled")); }
+#ifndef BEAN_ALLOC_NSAppleScript
+#define BEAN_ALLOC_NSAppleScript
+static inline NSAppleScript             NSAppleScript_Alloc(void)                                                                                          { return (NSAppleScript)bean_alloc(bean_cls("NSAppleScript")); }
+#endif
+#ifndef BEAN_NEW_NSAppleScript
+#define BEAN_NEW_NSAppleScript
+static inline NSAppleScript             NSAppleScript_New(void)                                                                                            { return (NSAppleScript)bean_new(bean_cls("NSAppleScript")); }
+#endif
 
 /* ===== NSArchiver ===== */
 #ifndef BEAN_TYPEDEF_NSArchiver
@@ -2837,6 +3328,14 @@ static inline void             NSArchiver_EncodeClassName_IntoClassName(NSArchiv
 static inline NSString         NSArchiver_ClassNameEncodedForTrueClassName(NSArchiver self, NSString trueName)                         { return ((NSString (*)(NSArchiver, SEL, NSString))bean_msgSend)(self, bean_sel("classNameEncodedForTrueClassName:"), trueName); }
 static inline void             NSArchiver_ReplaceObject_WithObject(NSArchiver self, id object, id newObject)                           { ((void (*)(NSArchiver, SEL, id, id))bean_msgSend)(self, bean_sel("replaceObject:withObject:"), object, newObject); }
 static inline NSMutableData    NSArchiver_ArchiverData(NSArchiver self)                                                                { return ((NSMutableData (*)(NSArchiver, SEL))bean_msgSend)(self, bean_sel("archiverData")); }
+#ifndef BEAN_ALLOC_NSArchiver
+#define BEAN_ALLOC_NSArchiver
+static inline NSArchiver       NSArchiver_Alloc(void)                                                                                  { return (NSArchiver)bean_alloc(bean_cls("NSArchiver")); }
+#endif
+#ifndef BEAN_NEW_NSArchiver
+#define BEAN_NEW_NSArchiver
+static inline NSArchiver       NSArchiver_New(void)                                                                                    { return (NSArchiver)bean_new(bean_cls("NSArchiver")); }
+#endif
 
 /* ===== NSArray ===== */
 #ifndef BEAN_TYPEDEF_NSArray
@@ -2924,6 +3423,14 @@ static inline id                               NSArray_CopyWithZone(NSArray self
 static inline id                               NSArray_MutableCopyWithZone(NSArray self, NSZone* zone)                                                                                                                                        { return ((id (*)(NSArray, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL                             NSArray_SupportsSecureCoding(void)                                                                                                                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSArray"), bean_sel("supportsSecureCoding")); }
 static inline NSUInteger                       NSArray_CountByEnumeratingWithState_Objects_Count(NSArray self, NSFastEnumerationState* state, id* buffer, NSUInteger len)                                                                     { return ((NSUInteger (*)(NSArray, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSArray
+#define BEAN_ALLOC_NSArray
+static inline NSArray                          NSArray_Alloc(void)                                                                                                                                                                            { return (NSArray)bean_alloc(bean_cls("NSArray")); }
+#endif
+#ifndef BEAN_NEW_NSArray
+#define BEAN_NEW_NSArray
+static inline NSArray                          NSArray_New(void)                                                                                                                                                                              { return (NSArray)bean_new(bean_cls("NSArray")); }
+#endif
 
 /* ===== NSAssertionHandler ===== */
 #ifndef BEAN_TYPEDEF_NSAssertionHandler
@@ -2933,6 +3440,14 @@ typedef bean_id NSAssertionHandler;
 static inline void                  NSAssertionHandler_HandleFailureInMethod_Object_File_LineNumber_Description(NSAssertionHandler self, SEL selector, id object, NSString fileName, NSInteger line, NSString format)    { ((void (*)(NSAssertionHandler, SEL, SEL, id, NSString, NSInteger, NSString))bean_msgSend)(self, bean_sel("handleFailureInMethod:object:file:lineNumber:description:"), selector, object, fileName, line, format); }
 static inline void                  NSAssertionHandler_HandleFailureInFunction_File_LineNumber_Description(NSAssertionHandler self, NSString functionName, NSString fileName, NSInteger line, NSString format)           { ((void (*)(NSAssertionHandler, SEL, NSString, NSString, NSInteger, NSString))bean_msgSend)(self, bean_sel("handleFailureInFunction:file:lineNumber:description:"), functionName, fileName, line, format); }
 static inline NSAssertionHandler    NSAssertionHandler_CurrentHandler(void)                                                                                                                                              { return ((NSAssertionHandler (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSAssertionHandler"), bean_sel("currentHandler")); }
+#ifndef BEAN_ALLOC_NSAssertionHandler
+#define BEAN_ALLOC_NSAssertionHandler
+static inline NSAssertionHandler    NSAssertionHandler_Alloc(void)                                                                                                                                                       { return (NSAssertionHandler)bean_alloc(bean_cls("NSAssertionHandler")); }
+#endif
+#ifndef BEAN_NEW_NSAssertionHandler
+#define BEAN_NEW_NSAssertionHandler
+static inline NSAssertionHandler    NSAssertionHandler_New(void)                                                                                                                                                         { return (NSAssertionHandler)bean_new(bean_cls("NSAssertionHandler")); }
+#endif
 
 /* ===== NSAttributedString ===== */
 #ifndef BEAN_TYPEDEF_NSAttributedString
@@ -2967,6 +3482,14 @@ static inline NSAttributedString    NSAttributedString_AttributedStringByInflect
 static inline id                    NSAttributedString_CopyWithZone(NSAttributedString self, NSZone* zone)                                                                                                                                                         { return ((id (*)(NSAttributedString, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id                    NSAttributedString_MutableCopyWithZone(NSAttributedString self, NSZone* zone)                                                                                                                                                  { return ((id (*)(NSAttributedString, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL                  NSAttributedString_SupportsSecureCoding(void)                                                                                                                                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSAttributedString
+#define BEAN_ALLOC_NSAttributedString
+static inline NSAttributedString    NSAttributedString_Alloc(void)                                                                                                                                                                                                 { return (NSAttributedString)bean_alloc(bean_cls("NSAttributedString")); }
+#endif
+#ifndef BEAN_NEW_NSAttributedString
+#define BEAN_NEW_NSAttributedString
+static inline NSAttributedString    NSAttributedString_New(void)                                                                                                                                                                                                   { return (NSAttributedString)bean_new(bean_cls("NSAttributedString")); }
+#endif
 
 /* ===== NSAttributedStringMarkdownParsingOptions ===== */
 static inline NSAttributedStringMarkdownParsingOptions          NSAttributedStringMarkdownParsingOptions_Init(NSAttributedStringMarkdownParsingOptions self)                                                                                   { return ((NSAttributedStringMarkdownParsingOptions (*)(NSAttributedStringMarkdownParsingOptions, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -2981,6 +3504,14 @@ static inline void                                              NSAttributedStri
 static inline BOOL                                              NSAttributedStringMarkdownParsingOptions_AppliesSourcePositionAttributes(NSAttributedStringMarkdownParsingOptions self)                                                        { return ((BOOL (*)(NSAttributedStringMarkdownParsingOptions, SEL))bean_msgSend)(self, bean_sel("appliesSourcePositionAttributes")); }
 static inline void                                              NSAttributedStringMarkdownParsingOptions_SetAppliesSourcePositionAttributes(NSAttributedStringMarkdownParsingOptions self, BOOL appliesSourcePositionAttributes)               { ((void (*)(NSAttributedStringMarkdownParsingOptions, SEL, BOOL))bean_msgSend)(self, bean_sel("setAppliesSourcePositionAttributes:"), appliesSourcePositionAttributes); }
 static inline id                                                NSAttributedStringMarkdownParsingOptions_CopyWithZone(NSAttributedStringMarkdownParsingOptions self, NSZone* zone)                                                             { return ((id (*)(NSAttributedStringMarkdownParsingOptions, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSAttributedStringMarkdownParsingOptions
+#define BEAN_ALLOC_NSAttributedStringMarkdownParsingOptions
+static inline NSAttributedStringMarkdownParsingOptions          NSAttributedStringMarkdownParsingOptions_Alloc(void)                                                                                                                           { return (NSAttributedStringMarkdownParsingOptions)bean_alloc(bean_cls("NSAttributedStringMarkdownParsingOptions")); }
+#endif
+#ifndef BEAN_NEW_NSAttributedStringMarkdownParsingOptions
+#define BEAN_NEW_NSAttributedStringMarkdownParsingOptions
+static inline NSAttributedStringMarkdownParsingOptions          NSAttributedStringMarkdownParsingOptions_New(void)                                                                                                                             { return (NSAttributedStringMarkdownParsingOptions)bean_new(bean_cls("NSAttributedStringMarkdownParsingOptions")); }
+#endif
 
 /* ===== NSAttributedStringMarkdownSourcePosition ===== */
 #ifndef BEAN_TYPEDEF_NSAttributedStringMarkdownSourcePosition
@@ -2995,6 +3526,14 @@ static inline NSInteger                                   NSAttributedStringMark
 static inline NSInteger                                   NSAttributedStringMarkdownSourcePosition_EndColumn(NSAttributedStringMarkdownSourcePosition self)                                                                                                                              { return ((NSInteger (*)(NSAttributedStringMarkdownSourcePosition, SEL))bean_msgSend)(self, bean_sel("endColumn")); }
 static inline id                                          NSAttributedStringMarkdownSourcePosition_CopyWithZone(NSAttributedStringMarkdownSourcePosition self, NSZone* zone)                                                                                                             { return ((id (*)(NSAttributedStringMarkdownSourcePosition, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                                        NSAttributedStringMarkdownSourcePosition_SupportsSecureCoding(void)                                                                                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSAttributedStringMarkdownSourcePosition"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSAttributedStringMarkdownSourcePosition
+#define BEAN_ALLOC_NSAttributedStringMarkdownSourcePosition
+static inline NSAttributedStringMarkdownSourcePosition    NSAttributedStringMarkdownSourcePosition_Alloc(void)                                                                                                                                                                           { return (NSAttributedStringMarkdownSourcePosition)bean_alloc(bean_cls("NSAttributedStringMarkdownSourcePosition")); }
+#endif
+#ifndef BEAN_NEW_NSAttributedStringMarkdownSourcePosition
+#define BEAN_NEW_NSAttributedStringMarkdownSourcePosition
+static inline NSAttributedStringMarkdownSourcePosition    NSAttributedStringMarkdownSourcePosition_New(void)                                                                                                                                                                             { return (NSAttributedStringMarkdownSourcePosition)bean_new(bean_cls("NSAttributedStringMarkdownSourcePosition")); }
+#endif
 
 /* ===== NSBackgroundActivityScheduler ===== */
 #ifndef BEAN_TYPEDEF_NSBackgroundActivityScheduler
@@ -3014,6 +3553,14 @@ static inline void                             NSBackgroundActivityScheduler_Set
 static inline CGFloat                          NSBackgroundActivityScheduler_Tolerance(NSBackgroundActivityScheduler self)                                                   { return ((CGFloat (*)(NSBackgroundActivityScheduler, SEL))bean_msgSend_fpret)(self, bean_sel("tolerance")); }
 static inline void                             NSBackgroundActivityScheduler_SetTolerance(NSBackgroundActivityScheduler self, CGFloat tolerance)                             { ((void (*)(NSBackgroundActivityScheduler, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTolerance:"), tolerance); }
 static inline BOOL                             NSBackgroundActivityScheduler_ShouldDefer(NSBackgroundActivityScheduler self)                                                 { return ((BOOL (*)(NSBackgroundActivityScheduler, SEL))bean_msgSend)(self, bean_sel("shouldDefer")); }
+#ifndef BEAN_ALLOC_NSBackgroundActivityScheduler
+#define BEAN_ALLOC_NSBackgroundActivityScheduler
+static inline NSBackgroundActivityScheduler    NSBackgroundActivityScheduler_Alloc(void)                                                                                     { return (NSBackgroundActivityScheduler)bean_alloc(bean_cls("NSBackgroundActivityScheduler")); }
+#endif
+#ifndef BEAN_NEW_NSBackgroundActivityScheduler
+#define BEAN_NEW_NSBackgroundActivityScheduler
+static inline NSBackgroundActivityScheduler    NSBackgroundActivityScheduler_New(void)                                                                                       { return (NSBackgroundActivityScheduler)bean_new(bean_cls("NSBackgroundActivityScheduler")); }
+#endif
 
 /* ===== NSBlockOperation ===== */
 #ifndef BEAN_TYPEDEF_NSBlockOperation
@@ -3023,6 +3570,14 @@ typedef bean_id NSBlockOperation;
 static inline NSBlockOperation    NSBlockOperation_BlockOperationWithBlock(void* block)                     { return ((NSBlockOperation (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("NSBlockOperation"), bean_sel("blockOperationWithBlock:"), block); }
 static inline void                NSBlockOperation_AddExecutionBlock(NSBlockOperation self, void* block)    { ((void (*)(NSBlockOperation, SEL, void*))bean_msgSend)(self, bean_sel("addExecutionBlock:"), block); }
 static inline NSArray             NSBlockOperation_ExecutionBlocks(NSBlockOperation self)                   { return ((NSArray (*)(NSBlockOperation, SEL))bean_msgSend)(self, bean_sel("executionBlocks")); }
+#ifndef BEAN_ALLOC_NSBlockOperation
+#define BEAN_ALLOC_NSBlockOperation
+static inline NSBlockOperation    NSBlockOperation_Alloc(void)                                              { return (NSBlockOperation)bean_alloc(bean_cls("NSBlockOperation")); }
+#endif
+#ifndef BEAN_NEW_NSBlockOperation
+#define BEAN_NEW_NSBlockOperation
+static inline NSBlockOperation    NSBlockOperation_New(void)                                                { return (NSBlockOperation)bean_new(bean_cls("NSBlockOperation")); }
+#endif
 
 /* ===== NSBundle ===== */
 #ifndef BEAN_TYPEDEF_NSBundle
@@ -3090,6 +3645,14 @@ static inline NSArray               NSBundle_ExecutableArchitectures(NSBundle se
 static inline void                  NSBundle_SetPreservationPriority_ForTags(NSBundle self, CGFloat priority, NSSet tags)                                                                       { ((void (*)(NSBundle, SEL, CGFloat, NSSet))bean_msgSend)(self, bean_sel("setPreservationPriority:forTags:"), priority, tags); }
 static inline CGFloat               NSBundle_PreservationPriorityForTag(NSBundle self, NSString tag)                                                                                            { return ((CGFloat (*)(NSBundle, SEL, NSString))bean_msgSend_fpret)(self, bean_sel("preservationPriorityForTag:"), tag); }
 static inline BOOL                  NSBundle_Loaded(NSBundle self)                                                                                                                              { return ((BOOL (*)(NSBundle, SEL))bean_msgSend)(self, bean_sel("loaded")); }
+#ifndef BEAN_ALLOC_NSBundle
+#define BEAN_ALLOC_NSBundle
+static inline NSBundle              NSBundle_Alloc(void)                                                                                                                                        { return (NSBundle)bean_alloc(bean_cls("NSBundle")); }
+#endif
+#ifndef BEAN_NEW_NSBundle
+#define BEAN_NEW_NSBundle
+static inline NSBundle              NSBundle_New(void)                                                                                                                                          { return (NSBundle)bean_new(bean_cls("NSBundle")); }
+#endif
 
 /* ===== NSBundleResourceRequest ===== */
 #ifndef BEAN_TYPEDEF_NSBundleResourceRequest
@@ -3107,6 +3670,14 @@ static inline void                       NSBundleResourceRequest_SetLoadingPrior
 static inline NSSet                      NSBundleResourceRequest_Tags(NSBundleResourceRequest self)                                                                                  { return ((NSSet (*)(NSBundleResourceRequest, SEL))bean_msgSend)(self, bean_sel("tags")); }
 static inline NSBundle                   NSBundleResourceRequest_Bundle(NSBundleResourceRequest self)                                                                                { return ((NSBundle (*)(NSBundleResourceRequest, SEL))bean_msgSend)(self, bean_sel("bundle")); }
 static inline NSProgress                 NSBundleResourceRequest_Progress(NSBundleResourceRequest self)                                                                              { return ((NSProgress (*)(NSBundleResourceRequest, SEL))bean_msgSend)(self, bean_sel("progress")); }
+#ifndef BEAN_ALLOC_NSBundleResourceRequest
+#define BEAN_ALLOC_NSBundleResourceRequest
+static inline NSBundleResourceRequest    NSBundleResourceRequest_Alloc(void)                                                                                                         { return (NSBundleResourceRequest)bean_alloc(bean_cls("NSBundleResourceRequest")); }
+#endif
+#ifndef BEAN_NEW_NSBundleResourceRequest
+#define BEAN_NEW_NSBundleResourceRequest
+static inline NSBundleResourceRequest    NSBundleResourceRequest_New(void)                                                                                                           { return (NSBundleResourceRequest)bean_new(bean_cls("NSBundleResourceRequest")); }
+#endif
 
 /* ===== NSByteCountFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSByteCountFormatter
@@ -3137,6 +3708,14 @@ static inline void                              NSByteCountFormatter_SetZeroPads
 static inline NSFormattingContext               NSByteCountFormatter_FormattingContext(NSByteCountFormatter self)                                                              { return ((NSFormattingContext (*)(NSByteCountFormatter, SEL))bean_msgSend)(self, bean_sel("formattingContext")); }
 static inline void                              NSByteCountFormatter_SetFormattingContext(NSByteCountFormatter self, NSFormattingContext formattingContext)                    { ((void (*)(NSByteCountFormatter, SEL, NSFormattingContext))bean_msgSend)(self, bean_sel("setFormattingContext:"), formattingContext); }
 static inline BOOL                              NSByteCountFormatter_Adaptive(NSByteCountFormatter self)                                                                       { return ((BOOL (*)(NSByteCountFormatter, SEL))bean_msgSend)(self, bean_sel("adaptive")); }
+#ifndef BEAN_ALLOC_NSByteCountFormatter
+#define BEAN_ALLOC_NSByteCountFormatter
+static inline NSByteCountFormatter              NSByteCountFormatter_Alloc(void)                                                                                               { return (NSByteCountFormatter)bean_alloc(bean_cls("NSByteCountFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSByteCountFormatter
+#define BEAN_NEW_NSByteCountFormatter
+static inline NSByteCountFormatter              NSByteCountFormatter_New(void)                                                                                                 { return (NSByteCountFormatter)bean_new(bean_cls("NSByteCountFormatter")); }
+#endif
 
 /* ===== NSCache ===== */
 #ifndef BEAN_TYPEDEF_NSCache
@@ -3158,13 +3737,29 @@ static inline NSUInteger    NSCache_CountLimit(NSCache self)                    
 static inline void          NSCache_SetCountLimit(NSCache self, NSUInteger countLimit)                                            { ((void (*)(NSCache, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setCountLimit:"), countLimit); }
 static inline BOOL          NSCache_EvictsObjectsWithDiscardedContent(NSCache self)                                               { return ((BOOL (*)(NSCache, SEL))bean_msgSend)(self, bean_sel("evictsObjectsWithDiscardedContent")); }
 static inline void          NSCache_SetEvictsObjectsWithDiscardedContent(NSCache self, BOOL evictsObjectsWithDiscardedContent)    { ((void (*)(NSCache, SEL, BOOL))bean_msgSend)(self, bean_sel("setEvictsObjectsWithDiscardedContent:"), evictsObjectsWithDiscardedContent); }
+#ifndef BEAN_ALLOC_NSCache
+#define BEAN_ALLOC_NSCache
+static inline NSCache       NSCache_Alloc(void)                                                                                   { return (NSCache)bean_alloc(bean_cls("NSCache")); }
+#endif
+#ifndef BEAN_NEW_NSCache
+#define BEAN_NEW_NSCache
+static inline NSCache       NSCache_New(void)                                                                                     { return (NSCache)bean_new(bean_cls("NSCache")); }
+#endif
 
 /* ===== NSCacheDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSCacheDelegate
 #define BEAN_TYPEDEF_NSCacheDelegate
 typedef bean_id NSCacheDelegate;
 #endif
-static inline void    NSCacheDelegate_Cache_WillEvictObject(NSCacheDelegate self, NSCache cache, id obj)    { ((void (*)(NSCacheDelegate, SEL, NSCache, id))bean_msgSend)(self, bean_sel("cache:willEvictObject:"), cache, obj); }
+static inline void               NSCacheDelegate_Cache_WillEvictObject(NSCacheDelegate self, NSCache cache, id obj)    { ((void (*)(NSCacheDelegate, SEL, NSCache, id))bean_msgSend)(self, bean_sel("cache:willEvictObject:"), cache, obj); }
+#ifndef BEAN_ALLOC_NSCacheDelegate
+#define BEAN_ALLOC_NSCacheDelegate
+static inline NSCacheDelegate    NSCacheDelegate_Alloc(void)                                                           { return (NSCacheDelegate)bean_alloc(bean_cls("NSCacheDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSCacheDelegate
+#define BEAN_NEW_NSCacheDelegate
+static inline NSCacheDelegate    NSCacheDelegate_New(void)                                                             { return (NSCacheDelegate)bean_new(bean_cls("NSCacheDelegate")); }
+#endif
 
 /* ===== NSCachedURLResponse ===== */
 #ifndef BEAN_TYPEDEF_NSCachedURLResponse
@@ -3179,6 +3774,14 @@ static inline NSDictionary               NSCachedURLResponse_UserInfo(NSCachedUR
 static inline NSURLCacheStoragePolicy    NSCachedURLResponse_StoragePolicy(NSCachedURLResponse self)                                                                                                                                      { return ((NSURLCacheStoragePolicy (*)(NSCachedURLResponse, SEL))bean_msgSend)(self, bean_sel("storagePolicy")); }
 static inline BOOL                       NSCachedURLResponse_SupportsSecureCoding(void)                                                                                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSCachedURLResponse"), bean_sel("supportsSecureCoding")); }
 static inline id                         NSCachedURLResponse_CopyWithZone(NSCachedURLResponse self, NSZone* zone)                                                                                                                         { return ((id (*)(NSCachedURLResponse, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSCachedURLResponse
+#define BEAN_ALLOC_NSCachedURLResponse
+static inline NSCachedURLResponse        NSCachedURLResponse_Alloc(void)                                                                                                                                                                  { return (NSCachedURLResponse)bean_alloc(bean_cls("NSCachedURLResponse")); }
+#endif
+#ifndef BEAN_NEW_NSCachedURLResponse
+#define BEAN_NEW_NSCachedURLResponse
+static inline NSCachedURLResponse        NSCachedURLResponse_New(void)                                                                                                                                                                    { return (NSCachedURLResponse)bean_new(bean_cls("NSCachedURLResponse")); }
+#endif
 
 /* ===== NSCalendar ===== */
 #ifndef BEAN_TYPEDEF_NSCalendar
@@ -3256,6 +3859,14 @@ static inline NSString              NSCalendar_AMSymbol(NSCalendar self)        
 static inline NSString              NSCalendar_PMSymbol(NSCalendar self)                                                                                                                                                                                                                                                              { return ((NSString (*)(NSCalendar, SEL))bean_msgSend)(self, bean_sel("PMSymbol")); }
 static inline id                    NSCalendar_CopyWithZone(NSCalendar self, NSZone* zone)                                                                                                                                                                                                                                            { return ((id (*)(NSCalendar, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSCalendar_SupportsSecureCoding(void)                                                                                                                                                                                                                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSCalendar"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSCalendar
+#define BEAN_ALLOC_NSCalendar
+static inline NSCalendar            NSCalendar_Alloc(void)                                                                                                                                                                                                                                                                            { return (NSCalendar)bean_alloc(bean_cls("NSCalendar")); }
+#endif
+#ifndef BEAN_NEW_NSCalendar
+#define BEAN_NEW_NSCalendar
+static inline NSCalendar            NSCalendar_New(void)                                                                                                                                                                                                                                                                              { return (NSCalendar)bean_new(bean_cls("NSCalendar")); }
+#endif
 
 /* ===== NSCalendarDate ===== */
 #ifndef BEAN_TYPEDEF_NSCalendarDate
@@ -3290,6 +3901,14 @@ static inline void              NSCalendarDate_SetTimeZone(NSCalendarDate self, 
 static inline void              NSCalendarDate_Years_Months_Days_Hours_Minutes_Seconds_SinceDate(NSCalendarDate self, NSInteger yp, NSInteger mop, NSInteger dp, NSInteger hp, NSInteger mip, NSInteger sp, NSCalendarDate date)                         { ((void (*)(NSCalendarDate, SEL, NSInteger, NSInteger, NSInteger, NSInteger, NSInteger, NSInteger, NSCalendarDate))bean_msgSend)(self, bean_sel("years:months:days:hours:minutes:seconds:sinceDate:"), yp, mop, dp, hp, mip, sp, date); }
 static inline NSCalendarDate    NSCalendarDate_DistantFuture(void)                                                                                                                                                                                       { return ((NSCalendarDate (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSCalendarDate"), bean_sel("distantFuture")); }
 static inline NSCalendarDate    NSCalendarDate_DistantPast(void)                                                                                                                                                                                         { return ((NSCalendarDate (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSCalendarDate"), bean_sel("distantPast")); }
+#ifndef BEAN_ALLOC_NSCalendarDate
+#define BEAN_ALLOC_NSCalendarDate
+static inline NSCalendarDate    NSCalendarDate_Alloc(void)                                                                                                                                                                                               { return (NSCalendarDate)bean_alloc(bean_cls("NSCalendarDate")); }
+#endif
+#ifndef BEAN_NEW_NSCalendarDate
+#define BEAN_NEW_NSCalendarDate
+static inline NSCalendarDate    NSCalendarDate_New(void)                                                                                                                                                                                                 { return (NSCalendarDate)bean_new(bean_cls("NSCalendarDate")); }
+#endif
 
 /* ===== NSCharacterSet ===== */
 #ifndef BEAN_TYPEDEF_NSCharacterSet
@@ -3331,6 +3950,14 @@ static inline NSCharacterSet    NSCharacterSet_URLFragmentAllowedCharacterSet(vo
 static inline id                NSCharacterSet_CopyWithZone(NSCharacterSet self, NSZone* zone)                       { return ((id (*)(NSCharacterSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id                NSCharacterSet_MutableCopyWithZone(NSCharacterSet self, NSZone* zone)                { return ((id (*)(NSCharacterSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL              NSCharacterSet_SupportsSecureCoding(void)                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSCharacterSet"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSCharacterSet
+#define BEAN_ALLOC_NSCharacterSet
+static inline NSCharacterSet    NSCharacterSet_Alloc(void)                                                           { return (NSCharacterSet)bean_alloc(bean_cls("NSCharacterSet")); }
+#endif
+#ifndef BEAN_NEW_NSCharacterSet
+#define BEAN_NEW_NSCharacterSet
+static inline NSCharacterSet    NSCharacterSet_New(void)                                                             { return (NSCharacterSet)bean_new(bean_cls("NSCharacterSet")); }
+#endif
 
 /* ===== NSClassDescription ===== */
 #ifndef BEAN_TYPEDEF_NSClassDescription
@@ -3344,6 +3971,14 @@ static inline NSString              NSClassDescription_InverseForRelationshipKey
 static inline NSArray               NSClassDescription_AttributeKeys(NSClassDescription self)                                                  { return ((NSArray (*)(NSClassDescription, SEL))bean_msgSend)(self, bean_sel("attributeKeys")); }
 static inline NSArray               NSClassDescription_ToOneRelationshipKeys(NSClassDescription self)                                          { return ((NSArray (*)(NSClassDescription, SEL))bean_msgSend)(self, bean_sel("toOneRelationshipKeys")); }
 static inline NSArray               NSClassDescription_ToManyRelationshipKeys(NSClassDescription self)                                         { return ((NSArray (*)(NSClassDescription, SEL))bean_msgSend)(self, bean_sel("toManyRelationshipKeys")); }
+#ifndef BEAN_ALLOC_NSClassDescription
+#define BEAN_ALLOC_NSClassDescription
+static inline NSClassDescription    NSClassDescription_Alloc(void)                                                                             { return (NSClassDescription)bean_alloc(bean_cls("NSClassDescription")); }
+#endif
+#ifndef BEAN_NEW_NSClassDescription
+#define BEAN_NEW_NSClassDescription
+static inline NSClassDescription    NSClassDescription_New(void)                                                                               { return (NSClassDescription)bean_new(bean_cls("NSClassDescription")); }
+#endif
 
 /* ===== NSCloneCommand ===== */
 #ifndef BEAN_TYPEDEF_NSCloneCommand
@@ -3352,6 +3987,14 @@ typedef bean_id NSCloneCommand;
 #endif
 static inline void                       NSCloneCommand_SetReceiversSpecifier(NSCloneCommand self, NSScriptObjectSpecifier receiversRef)    { ((void (*)(NSCloneCommand, SEL, NSScriptObjectSpecifier))bean_msgSend)(self, bean_sel("setReceiversSpecifier:"), receiversRef); }
 static inline NSScriptObjectSpecifier    NSCloneCommand_KeySpecifier(NSCloneCommand self)                                                   { return ((NSScriptObjectSpecifier (*)(NSCloneCommand, SEL))bean_msgSend)(self, bean_sel("keySpecifier")); }
+#ifndef BEAN_ALLOC_NSCloneCommand
+#define BEAN_ALLOC_NSCloneCommand
+static inline NSCloneCommand             NSCloneCommand_Alloc(void)                                                                         { return (NSCloneCommand)bean_alloc(bean_cls("NSCloneCommand")); }
+#endif
+#ifndef BEAN_NEW_NSCloneCommand
+#define BEAN_NEW_NSCloneCommand
+static inline NSCloneCommand             NSCloneCommand_New(void)                                                                           { return (NSCloneCommand)bean_new(bean_cls("NSCloneCommand")); }
+#endif
 
 /* ===== NSCoder ===== */
 static inline void                       NSCoder_EncodeValueOfObjCType_At(NSCoder self, const char* type, const void* addr)                                                      { ((void (*)(NSCoder, SEL, const char*, const void*))bean_msgSend)(self, bean_sel("encodeValueOfObjCType:at:"), type, addr); }
@@ -3429,6 +4072,14 @@ static inline void                       NSCoder_EncodeRect_ForKey(NSCoder self,
 static inline CGPoint                    NSCoder_DecodePointForKey(NSCoder self, NSString key)                                                                                   { return ((CGPoint (*)(NSCoder, SEL, NSString))bean_msgSend_stret)(self, bean_sel("decodePointForKey:"), key); }
 static inline CGSize                     NSCoder_DecodeSizeForKey(NSCoder self, NSString key)                                                                                    { return ((CGSize (*)(NSCoder, SEL, NSString))bean_msgSend_stret)(self, bean_sel("decodeSizeForKey:"), key); }
 static inline CGRect                     NSCoder_DecodeRectForKey(NSCoder self, NSString key)                                                                                    { return ((CGRect (*)(NSCoder, SEL, NSString))bean_msgSend_stret)(self, bean_sel("decodeRectForKey:"), key); }
+#ifndef BEAN_ALLOC_NSCoder
+#define BEAN_ALLOC_NSCoder
+static inline NSCoder                    NSCoder_Alloc(void)                                                                                                                     { return (NSCoder)bean_alloc(bean_cls("NSCoder")); }
+#endif
+#ifndef BEAN_NEW_NSCoder
+#define BEAN_NEW_NSCoder
+static inline NSCoder                    NSCoder_New(void)                                                                                                                       { return (NSCoder)bean_new(bean_cls("NSCoder")); }
+#endif
 
 /* ===== NSCoding ===== */
 #ifndef BEAN_TYPEDEF_NSCoding
@@ -3437,6 +4088,14 @@ typedef bean_id NSCoding;
 #endif
 static inline void        NSCoding_EncodeWithCoder(NSCoding self, NSCoder coder)    { ((void (*)(NSCoding, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding    NSCoding_InitWithCoder(NSCoding self, NSCoder coder)      { return ((NSCoding (*)(NSCoding, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSCoding
+#define BEAN_ALLOC_NSCoding
+static inline NSCoding    NSCoding_Alloc(void)                                      { return (NSCoding)bean_alloc(bean_cls("NSCoding")); }
+#endif
+#ifndef BEAN_NEW_NSCoding
+#define BEAN_NEW_NSCoding
+static inline NSCoding    NSCoding_New(void)                                        { return (NSCoding)bean_new(bean_cls("NSCoding")); }
+#endif
 
 /* ===== NSComparisonPredicate ===== */
 #ifndef BEAN_TYPEDEF_NSComparisonPredicate
@@ -3454,6 +4113,14 @@ static inline NSExpression                     NSComparisonPredicate_LeftExpress
 static inline NSExpression                     NSComparisonPredicate_RightExpression(NSComparisonPredicate self)                                                                                                                                                                                                 { return ((NSExpression (*)(NSComparisonPredicate, SEL))bean_msgSend)(self, bean_sel("rightExpression")); }
 static inline SEL                              NSComparisonPredicate_CustomSelector(NSComparisonPredicate self)                                                                                                                                                                                                  { return ((SEL (*)(NSComparisonPredicate, SEL))bean_msgSend)(self, bean_sel("customSelector")); }
 static inline NSComparisonPredicateOptions     NSComparisonPredicate_Options(NSComparisonPredicate self)                                                                                                                                                                                                         { return ((NSComparisonPredicateOptions (*)(NSComparisonPredicate, SEL))bean_msgSend)(self, bean_sel("options")); }
+#ifndef BEAN_ALLOC_NSComparisonPredicate
+#define BEAN_ALLOC_NSComparisonPredicate
+static inline NSComparisonPredicate            NSComparisonPredicate_Alloc(void)                                                                                                                                                                                                                                 { return (NSComparisonPredicate)bean_alloc(bean_cls("NSComparisonPredicate")); }
+#endif
+#ifndef BEAN_NEW_NSComparisonPredicate
+#define BEAN_NEW_NSComparisonPredicate
+static inline NSComparisonPredicate            NSComparisonPredicate_New(void)                                                                                                                                                                                                                                   { return (NSComparisonPredicate)bean_new(bean_cls("NSComparisonPredicate")); }
+#endif
 
 /* ===== NSCompoundPredicate ===== */
 #ifndef BEAN_TYPEDEF_NSCompoundPredicate
@@ -3467,20 +4134,36 @@ static inline NSCompoundPredicate        NSCompoundPredicate_OrPredicateWithSubp
 static inline NSCompoundPredicate        NSCompoundPredicate_NotPredicateWithSubpredicate(NSPredicate predicate)                                                          { return ((NSCompoundPredicate (*)(bean_class, SEL, NSPredicate))bean_msgSend)(bean_cls("NSCompoundPredicate"), bean_sel("notPredicateWithSubpredicate:"), predicate); }
 static inline NSCompoundPredicateType    NSCompoundPredicate_CompoundPredicateType(NSCompoundPredicate self)                                                              { return ((NSCompoundPredicateType (*)(NSCompoundPredicate, SEL))bean_msgSend)(self, bean_sel("compoundPredicateType")); }
 static inline NSArray                    NSCompoundPredicate_Subpredicates(NSCompoundPredicate self)                                                                      { return ((NSArray (*)(NSCompoundPredicate, SEL))bean_msgSend)(self, bean_sel("subpredicates")); }
+#ifndef BEAN_ALLOC_NSCompoundPredicate
+#define BEAN_ALLOC_NSCompoundPredicate
+static inline NSCompoundPredicate        NSCompoundPredicate_Alloc(void)                                                                                                  { return (NSCompoundPredicate)bean_alloc(bean_cls("NSCompoundPredicate")); }
+#endif
+#ifndef BEAN_NEW_NSCompoundPredicate
+#define BEAN_NEW_NSCompoundPredicate
+static inline NSCompoundPredicate        NSCompoundPredicate_New(void)                                                                                                    { return (NSCompoundPredicate)bean_new(bean_cls("NSCompoundPredicate")); }
+#endif
 
 /* ===== NSCondition ===== */
 #ifndef BEAN_TYPEDEF_NSCondition
 #define BEAN_TYPEDEF_NSCondition
 typedef bean_id NSCondition;
 #endif
-static inline void        NSCondition_Wait(NSCondition self)                           { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("wait")); }
-static inline BOOL        NSCondition_WaitUntilDate(NSCondition self, NSDate limit)    { return ((BOOL (*)(NSCondition, SEL, NSDate))bean_msgSend)(self, bean_sel("waitUntilDate:"), limit); }
-static inline void        NSCondition_Signal(NSCondition self)                         { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("signal")); }
-static inline void        NSCondition_Broadcast(NSCondition self)                      { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("broadcast")); }
-static inline NSString    NSCondition_Name(NSCondition self)                           { return ((NSString (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        NSCondition_SetName(NSCondition self, NSString name)         { ((void (*)(NSCondition, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline void        NSCondition_Lock(NSCondition self)                           { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("lock")); }
-static inline void        NSCondition_Unlock(NSCondition self)                         { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+static inline void           NSCondition_Wait(NSCondition self)                           { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("wait")); }
+static inline BOOL           NSCondition_WaitUntilDate(NSCondition self, NSDate limit)    { return ((BOOL (*)(NSCondition, SEL, NSDate))bean_msgSend)(self, bean_sel("waitUntilDate:"), limit); }
+static inline void           NSCondition_Signal(NSCondition self)                         { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("signal")); }
+static inline void           NSCondition_Broadcast(NSCondition self)                      { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("broadcast")); }
+static inline NSString       NSCondition_Name(NSCondition self)                           { return ((NSString (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void           NSCondition_SetName(NSCondition self, NSString name)         { ((void (*)(NSCondition, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline void           NSCondition_Lock(NSCondition self)                           { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("lock")); }
+static inline void           NSCondition_Unlock(NSCondition self)                         { ((void (*)(NSCondition, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+#ifndef BEAN_ALLOC_NSCondition
+#define BEAN_ALLOC_NSCondition
+static inline NSCondition    NSCondition_Alloc(void)                                      { return (NSCondition)bean_alloc(bean_cls("NSCondition")); }
+#endif
+#ifndef BEAN_NEW_NSCondition
+#define BEAN_NEW_NSCondition
+static inline NSCondition    NSCondition_New(void)                                        { return (NSCondition)bean_new(bean_cls("NSCondition")); }
+#endif
 
 /* ===== NSConditionLock ===== */
 #ifndef BEAN_TYPEDEF_NSConditionLock
@@ -3499,6 +4182,14 @@ static inline NSString           NSConditionLock_Name(NSConditionLock self)     
 static inline void               NSConditionLock_SetName(NSConditionLock self, NSString name)                                             { ((void (*)(NSConditionLock, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 static inline void               NSConditionLock_Lock(NSConditionLock self)                                                               { ((void (*)(NSConditionLock, SEL))bean_msgSend)(self, bean_sel("lock")); }
 static inline void               NSConditionLock_Unlock(NSConditionLock self)                                                             { ((void (*)(NSConditionLock, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+#ifndef BEAN_ALLOC_NSConditionLock
+#define BEAN_ALLOC_NSConditionLock
+static inline NSConditionLock    NSConditionLock_Alloc(void)                                                                              { return (NSConditionLock)bean_alloc(bean_cls("NSConditionLock")); }
+#endif
+#ifndef BEAN_NEW_NSConditionLock
+#define BEAN_NEW_NSConditionLock
+static inline NSConditionLock    NSConditionLock_New(void)                                                                                { return (NSConditionLock)bean_new(bean_cls("NSConditionLock")); }
+#endif
 
 /* ===== NSConnection ===== */
 #ifndef BEAN_TYPEDEF_NSConnection
@@ -3546,18 +4237,34 @@ static inline BOOL               NSConnection_MultipleThreadsEnabled(NSConnectio
 static inline NSArray            NSConnection_RemoteObjects(NSConnection self)                                                                                            { return ((NSArray (*)(NSConnection, SEL))bean_msgSend)(self, bean_sel("remoteObjects")); }
 static inline NSArray            NSConnection_LocalObjects(NSConnection self)                                                                                             { return ((NSArray (*)(NSConnection, SEL))bean_msgSend)(self, bean_sel("localObjects")); }
 static inline BOOL               NSConnection_Valid(NSConnection self)                                                                                                    { return ((BOOL (*)(NSConnection, SEL))bean_msgSend)(self, bean_sel("valid")); }
+#ifndef BEAN_ALLOC_NSConnection
+#define BEAN_ALLOC_NSConnection
+static inline NSConnection       NSConnection_Alloc(void)                                                                                                                 { return (NSConnection)bean_alloc(bean_cls("NSConnection")); }
+#endif
+#ifndef BEAN_NEW_NSConnection
+#define BEAN_NEW_NSConnection
+static inline NSConnection       NSConnection_New(void)                                                                                                                   { return (NSConnection)bean_new(bean_cls("NSConnection")); }
+#endif
 
 /* ===== NSConnectionDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSConnectionDelegate
 #define BEAN_TYPEDEF_NSConnectionDelegate
 typedef bean_id NSConnectionDelegate;
 #endif
-static inline BOOL      NSConnectionDelegate_MakeNewConnection_Sender(NSConnectionDelegate self, NSConnection conn, NSConnection ancestor)                 { return ((BOOL (*)(NSConnectionDelegate, SEL, NSConnection, NSConnection))bean_msgSend)(self, bean_sel("makeNewConnection:sender:"), conn, ancestor); }
-static inline BOOL      NSConnectionDelegate_Connection_ShouldMakeNewConnection(NSConnectionDelegate self, NSConnection ancestor, NSConnection conn)       { return ((BOOL (*)(NSConnectionDelegate, SEL, NSConnection, NSConnection))bean_msgSend)(self, bean_sel("connection:shouldMakeNewConnection:"), ancestor, conn); }
-static inline NSData    NSConnectionDelegate_AuthenticationDataForComponents(NSConnectionDelegate self, NSArray components)                                { return ((NSData (*)(NSConnectionDelegate, SEL, NSArray))bean_msgSend)(self, bean_sel("authenticationDataForComponents:"), components); }
-static inline BOOL      NSConnectionDelegate_AuthenticateComponents_WithData(NSConnectionDelegate self, NSArray components, NSData signature)              { return ((BOOL (*)(NSConnectionDelegate, SEL, NSArray, NSData))bean_msgSend)(self, bean_sel("authenticateComponents:withData:"), components, signature); }
-static inline id        NSConnectionDelegate_CreateConversationForConnection(NSConnectionDelegate self, NSConnection conn)                                 { return ((id (*)(NSConnectionDelegate, SEL, NSConnection))bean_msgSend)(self, bean_sel("createConversationForConnection:"), conn); }
-static inline BOOL      NSConnectionDelegate_Connection_HandleRequest(NSConnectionDelegate self, NSConnection connection, NSDistantObjectRequest doreq)    { return ((BOOL (*)(NSConnectionDelegate, SEL, NSConnection, NSDistantObjectRequest))bean_msgSend)(self, bean_sel("connection:handleRequest:"), connection, doreq); }
+static inline BOOL                    NSConnectionDelegate_MakeNewConnection_Sender(NSConnectionDelegate self, NSConnection conn, NSConnection ancestor)                 { return ((BOOL (*)(NSConnectionDelegate, SEL, NSConnection, NSConnection))bean_msgSend)(self, bean_sel("makeNewConnection:sender:"), conn, ancestor); }
+static inline BOOL                    NSConnectionDelegate_Connection_ShouldMakeNewConnection(NSConnectionDelegate self, NSConnection ancestor, NSConnection conn)       { return ((BOOL (*)(NSConnectionDelegate, SEL, NSConnection, NSConnection))bean_msgSend)(self, bean_sel("connection:shouldMakeNewConnection:"), ancestor, conn); }
+static inline NSData                  NSConnectionDelegate_AuthenticationDataForComponents(NSConnectionDelegate self, NSArray components)                                { return ((NSData (*)(NSConnectionDelegate, SEL, NSArray))bean_msgSend)(self, bean_sel("authenticationDataForComponents:"), components); }
+static inline BOOL                    NSConnectionDelegate_AuthenticateComponents_WithData(NSConnectionDelegate self, NSArray components, NSData signature)              { return ((BOOL (*)(NSConnectionDelegate, SEL, NSArray, NSData))bean_msgSend)(self, bean_sel("authenticateComponents:withData:"), components, signature); }
+static inline id                      NSConnectionDelegate_CreateConversationForConnection(NSConnectionDelegate self, NSConnection conn)                                 { return ((id (*)(NSConnectionDelegate, SEL, NSConnection))bean_msgSend)(self, bean_sel("createConversationForConnection:"), conn); }
+static inline BOOL                    NSConnectionDelegate_Connection_HandleRequest(NSConnectionDelegate self, NSConnection connection, NSDistantObjectRequest doreq)    { return ((BOOL (*)(NSConnectionDelegate, SEL, NSConnection, NSDistantObjectRequest))bean_msgSend)(self, bean_sel("connection:handleRequest:"), connection, doreq); }
+#ifndef BEAN_ALLOC_NSConnectionDelegate
+#define BEAN_ALLOC_NSConnectionDelegate
+static inline NSConnectionDelegate    NSConnectionDelegate_Alloc(void)                                                                                                   { return (NSConnectionDelegate)bean_alloc(bean_cls("NSConnectionDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSConnectionDelegate
+#define BEAN_NEW_NSConnectionDelegate
+static inline NSConnectionDelegate    NSConnectionDelegate_New(void)                                                                                                     { return (NSConnectionDelegate)bean_new(bean_cls("NSConnectionDelegate")); }
+#endif
 
 /* ===== NSCountedSet ===== */
 #ifndef BEAN_TYPEDEF_NSCountedSet
@@ -3571,6 +4278,14 @@ static inline NSUInteger      NSCountedSet_CountForObject(NSCountedSet self, id 
 static inline NSEnumerator    NSCountedSet_ObjectEnumerator(NSCountedSet self)                         { return ((NSEnumerator (*)(NSCountedSet, SEL))bean_msgSend)(self, bean_sel("objectEnumerator")); }
 static inline void            NSCountedSet_AddObject(NSCountedSet self, id object)                     { ((void (*)(NSCountedSet, SEL, id))bean_msgSend)(self, bean_sel("addObject:"), object); }
 static inline void            NSCountedSet_RemoveObject(NSCountedSet self, id object)                  { ((void (*)(NSCountedSet, SEL, id))bean_msgSend)(self, bean_sel("removeObject:"), object); }
+#ifndef BEAN_ALLOC_NSCountedSet
+#define BEAN_ALLOC_NSCountedSet
+static inline NSCountedSet    NSCountedSet_Alloc(void)                                                 { return (NSCountedSet)bean_alloc(bean_cls("NSCountedSet")); }
+#endif
+#ifndef BEAN_NEW_NSCountedSet
+#define BEAN_NEW_NSCountedSet
+static inline NSCountedSet    NSCountedSet_New(void)                                                   { return (NSCountedSet)bean_new(bean_cls("NSCountedSet")); }
+#endif
 
 /* ===== NSCreateCommand ===== */
 #ifndef BEAN_TYPEDEF_NSCreateCommand
@@ -3579,6 +4294,14 @@ typedef bean_id NSCreateCommand;
 #endif
 static inline NSScriptClassDescription    NSCreateCommand_CreateClassDescription(NSCreateCommand self)    { return ((NSScriptClassDescription (*)(NSCreateCommand, SEL))bean_msgSend)(self, bean_sel("createClassDescription")); }
 static inline NSDictionary                NSCreateCommand_ResolvedKeyDictionary(NSCreateCommand self)     { return ((NSDictionary (*)(NSCreateCommand, SEL))bean_msgSend)(self, bean_sel("resolvedKeyDictionary")); }
+#ifndef BEAN_ALLOC_NSCreateCommand
+#define BEAN_ALLOC_NSCreateCommand
+static inline NSCreateCommand             NSCreateCommand_Alloc(void)                                     { return (NSCreateCommand)bean_alloc(bean_cls("NSCreateCommand")); }
+#endif
+#ifndef BEAN_NEW_NSCreateCommand
+#define BEAN_NEW_NSCreateCommand
+static inline NSCreateCommand             NSCreateCommand_New(void)                                       { return (NSCreateCommand)bean_new(bean_cls("NSCreateCommand")); }
+#endif
 
 /* ===== NSData ===== */
 static inline NSUInteger    NSData_Length(NSData self)                                                                                                         { return ((NSUInteger (*)(NSData, SEL))bean_msgSend)(self, bean_sel("length")); }
@@ -3626,6 +4349,14 @@ static inline NSString      NSData_Base64Encoding(NSData self)                  
 static inline id            NSData_CopyWithZone(NSData self, NSZone* zone)                                                                                     { return ((id (*)(NSData, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id            NSData_MutableCopyWithZone(NSData self, NSZone* zone)                                                                              { return ((id (*)(NSData, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL          NSData_SupportsSecureCoding(void)                                                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSData"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSData
+#define BEAN_ALLOC_NSData
+static inline NSData        NSData_Alloc(void)                                                                                                                 { return (NSData)bean_alloc(bean_cls("NSData")); }
+#endif
+#ifndef BEAN_NEW_NSData
+#define BEAN_NEW_NSData
+static inline NSData        NSData_New(void)                                                                                                                   { return (NSData)bean_new(bean_cls("NSData")); }
+#endif
 
 /* ===== NSDataDetector ===== */
 #ifndef BEAN_TYPEDEF_NSDataDetector
@@ -3635,6 +4366,14 @@ typedef bean_id NSDataDetector;
 static inline NSDataDetector        NSDataDetector_DataDetectorWithTypes_Error(unsigned long long checkingTypes, NSError* error)                 { return ((NSDataDetector (*)(bean_class, SEL, unsigned long long, NSError*))bean_msgSend)(bean_cls("NSDataDetector"), bean_sel("dataDetectorWithTypes:error:"), checkingTypes, error); }
 static inline NSDataDetector        NSDataDetector_InitWithTypes_Error(NSDataDetector self, unsigned long long checkingTypes, NSError* error)    { return ((NSDataDetector (*)(NSDataDetector, SEL, unsigned long long, NSError*))bean_msgSend)(self, bean_sel("initWithTypes:error:"), checkingTypes, error); }
 static inline unsigned long long    NSDataDetector_CheckingTypes(NSDataDetector self)                                                            { return ((unsigned long long (*)(NSDataDetector, SEL))bean_msgSend)(self, bean_sel("checkingTypes")); }
+#ifndef BEAN_ALLOC_NSDataDetector
+#define BEAN_ALLOC_NSDataDetector
+static inline NSDataDetector        NSDataDetector_Alloc(void)                                                                                   { return (NSDataDetector)bean_alloc(bean_cls("NSDataDetector")); }
+#endif
+#ifndef BEAN_NEW_NSDataDetector
+#define BEAN_NEW_NSDataDetector
+static inline NSDataDetector        NSDataDetector_New(void)                                                                                     { return (NSDataDetector)bean_new(bean_cls("NSDataDetector")); }
+#endif
 
 /* ===== NSDate ===== */
 static inline NSDate                NSDate_Init(NSDate self)                                                                                               { return ((NSDate (*)(NSDate, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -3671,58 +4410,74 @@ static inline NSString              NSDate_DescriptionWithCalendarFormat_TimeZon
 static inline NSDate                NSDate_InitWithString(NSDate self, NSString description)                                                               { return ((NSDate (*)(NSDate, SEL, NSString))bean_msgSend)(self, bean_sel("initWithString:"), description); }
 static inline id                    NSDate_CopyWithZone(NSDate self, NSZone* zone)                                                                         { return ((id (*)(NSDate, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSDate_SupportsSecureCoding(void)                                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSDate"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSDate
+#define BEAN_ALLOC_NSDate
+static inline NSDate                NSDate_Alloc(void)                                                                                                     { return (NSDate)bean_alloc(bean_cls("NSDate")); }
+#endif
+#ifndef BEAN_NEW_NSDate
+#define BEAN_NEW_NSDate
+static inline NSDate                NSDate_New(void)                                                                                                       { return (NSDate)bean_new(bean_cls("NSDate")); }
+#endif
 
 /* ===== NSDateComponents ===== */
-static inline NSInteger     NSDateComponents_Week(NSDateComponents self)                                                           { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("week")); }
-static inline void          NSDateComponents_SetWeek(NSDateComponents self, NSInteger v)                                           { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeek:"), v); }
-static inline void          NSDateComponents_SetValue_ForComponent(NSDateComponents self, NSInteger value, NSCalendarUnit unit)    { ((void (*)(NSDateComponents, SEL, NSInteger, NSCalendarUnit))bean_msgSend)(self, bean_sel("setValue:forComponent:"), value, unit); }
-static inline NSInteger     NSDateComponents_ValueForComponent(NSDateComponents self, NSCalendarUnit unit)                         { return ((NSInteger (*)(NSDateComponents, SEL, NSCalendarUnit))bean_msgSend)(self, bean_sel("valueForComponent:"), unit); }
-static inline BOOL          NSDateComponents_IsValidDateInCalendar(NSDateComponents self, NSCalendar calendar)                     { return ((BOOL (*)(NSDateComponents, SEL, NSCalendar))bean_msgSend)(self, bean_sel("isValidDateInCalendar:"), calendar); }
-static inline NSCalendar    NSDateComponents_Calendar(NSDateComponents self)                                                       { return ((NSCalendar (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("calendar")); }
-static inline void          NSDateComponents_SetCalendar(NSDateComponents self, NSCalendar calendar)                               { ((void (*)(NSDateComponents, SEL, NSCalendar))bean_msgSend)(self, bean_sel("setCalendar:"), calendar); }
-static inline NSTimeZone    NSDateComponents_TimeZone(NSDateComponents self)                                                       { return ((NSTimeZone (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("timeZone")); }
-static inline void          NSDateComponents_SetTimeZone(NSDateComponents self, NSTimeZone timeZone)                               { ((void (*)(NSDateComponents, SEL, NSTimeZone))bean_msgSend)(self, bean_sel("setTimeZone:"), timeZone); }
-static inline NSInteger     NSDateComponents_Era(NSDateComponents self)                                                            { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("era")); }
-static inline void          NSDateComponents_SetEra(NSDateComponents self, NSInteger era)                                          { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setEra:"), era); }
-static inline NSInteger     NSDateComponents_Year(NSDateComponents self)                                                           { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("year")); }
-static inline void          NSDateComponents_SetYear(NSDateComponents self, NSInteger year)                                        { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setYear:"), year); }
-static inline NSInteger     NSDateComponents_Month(NSDateComponents self)                                                          { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("month")); }
-static inline void          NSDateComponents_SetMonth(NSDateComponents self, NSInteger month)                                      { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setMonth:"), month); }
-static inline NSInteger     NSDateComponents_Day(NSDateComponents self)                                                            { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("day")); }
-static inline void          NSDateComponents_SetDay(NSDateComponents self, NSInteger day)                                          { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setDay:"), day); }
-static inline NSInteger     NSDateComponents_Hour(NSDateComponents self)                                                           { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("hour")); }
-static inline void          NSDateComponents_SetHour(NSDateComponents self, NSInteger hour)                                        { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setHour:"), hour); }
-static inline NSInteger     NSDateComponents_Minute(NSDateComponents self)                                                         { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("minute")); }
-static inline void          NSDateComponents_SetMinute(NSDateComponents self, NSInteger minute)                                    { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setMinute:"), minute); }
-static inline NSInteger     NSDateComponents_Second(NSDateComponents self)                                                         { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("second")); }
-static inline void          NSDateComponents_SetSecond(NSDateComponents self, NSInteger second)                                    { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSecond:"), second); }
-static inline NSInteger     NSDateComponents_Nanosecond(NSDateComponents self)                                                     { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("nanosecond")); }
-static inline void          NSDateComponents_SetNanosecond(NSDateComponents self, NSInteger nanosecond)                            { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setNanosecond:"), nanosecond); }
-static inline NSInteger     NSDateComponents_Weekday(NSDateComponents self)                                                        { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("weekday")); }
-static inline void          NSDateComponents_SetWeekday(NSDateComponents self, NSInteger weekday)                                  { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeekday:"), weekday); }
-static inline NSInteger     NSDateComponents_WeekdayOrdinal(NSDateComponents self)                                                 { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("weekdayOrdinal")); }
-static inline void          NSDateComponents_SetWeekdayOrdinal(NSDateComponents self, NSInteger weekdayOrdinal)                    { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeekdayOrdinal:"), weekdayOrdinal); }
-static inline NSInteger     NSDateComponents_Quarter(NSDateComponents self)                                                        { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("quarter")); }
-static inline void          NSDateComponents_SetQuarter(NSDateComponents self, NSInteger quarter)                                  { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setQuarter:"), quarter); }
-static inline NSInteger     NSDateComponents_WeekOfMonth(NSDateComponents self)                                                    { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("weekOfMonth")); }
-static inline void          NSDateComponents_SetWeekOfMonth(NSDateComponents self, NSInteger weekOfMonth)                          { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeekOfMonth:"), weekOfMonth); }
-static inline NSInteger     NSDateComponents_WeekOfYear(NSDateComponents self)                                                     { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("weekOfYear")); }
-static inline void          NSDateComponents_SetWeekOfYear(NSDateComponents self, NSInteger weekOfYear)                            { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeekOfYear:"), weekOfYear); }
-static inline NSInteger     NSDateComponents_YearForWeekOfYear(NSDateComponents self)                                              { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("yearForWeekOfYear")); }
-static inline void          NSDateComponents_SetYearForWeekOfYear(NSDateComponents self, NSInteger yearForWeekOfYear)              { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setYearForWeekOfYear:"), yearForWeekOfYear); }
-static inline NSInteger     NSDateComponents_DayOfYear(NSDateComponents self)                                                      { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("dayOfYear")); }
-static inline void          NSDateComponents_SetDayOfYear(NSDateComponents self, NSInteger dayOfYear)                              { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setDayOfYear:"), dayOfYear); }
-static inline BOOL          NSDateComponents_IsLeapMonth(NSDateComponents self)                                                    { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("isLeapMonth")); }
-static inline void          NSDateComponents_SetLeapMonth(NSDateComponents self, BOOL leapMonth)                                   { ((void (*)(NSDateComponents, SEL, BOOL))bean_msgSend)(self, bean_sel("setLeapMonth:"), leapMonth); }
-static inline BOOL          NSDateComponents_IsRepeatedDay(NSDateComponents self)                                                  { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("isRepeatedDay")); }
-static inline void          NSDateComponents_SetRepeatedDay(NSDateComponents self, BOOL repeatedDay)                               { ((void (*)(NSDateComponents, SEL, BOOL))bean_msgSend)(self, bean_sel("setRepeatedDay:"), repeatedDay); }
-static inline NSDate        NSDateComponents_Date(NSDateComponents self)                                                           { return ((NSDate (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("date")); }
-static inline BOOL          NSDateComponents_IsValidDate(NSDateComponents self)                                                    { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("isValidDate")); }
-static inline id            NSDateComponents_CopyWithZone(NSDateComponents self, NSZone* zone)                                     { return ((id (*)(NSDateComponents, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL          NSDateComponents_SupportsSecureCoding(void)                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSDateComponents"), bean_sel("supportsSecureCoding")); }
-static inline BOOL          NSDateComponents_LeapMonth(NSDateComponents self)                                                      { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("leapMonth")); }
-static inline BOOL          NSDateComponents_RepeatedDay(NSDateComponents self)                                                    { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("repeatedDay")); }
-static inline BOOL          NSDateComponents_ValidDate(NSDateComponents self)                                                      { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("validDate")); }
+static inline NSInteger           NSDateComponents_Week(NSDateComponents self)                                                           { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("week")); }
+static inline void                NSDateComponents_SetWeek(NSDateComponents self, NSInteger v)                                           { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeek:"), v); }
+static inline void                NSDateComponents_SetValue_ForComponent(NSDateComponents self, NSInteger value, NSCalendarUnit unit)    { ((void (*)(NSDateComponents, SEL, NSInteger, NSCalendarUnit))bean_msgSend)(self, bean_sel("setValue:forComponent:"), value, unit); }
+static inline NSInteger           NSDateComponents_ValueForComponent(NSDateComponents self, NSCalendarUnit unit)                         { return ((NSInteger (*)(NSDateComponents, SEL, NSCalendarUnit))bean_msgSend)(self, bean_sel("valueForComponent:"), unit); }
+static inline BOOL                NSDateComponents_IsValidDateInCalendar(NSDateComponents self, NSCalendar calendar)                     { return ((BOOL (*)(NSDateComponents, SEL, NSCalendar))bean_msgSend)(self, bean_sel("isValidDateInCalendar:"), calendar); }
+static inline NSCalendar          NSDateComponents_Calendar(NSDateComponents self)                                                       { return ((NSCalendar (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("calendar")); }
+static inline void                NSDateComponents_SetCalendar(NSDateComponents self, NSCalendar calendar)                               { ((void (*)(NSDateComponents, SEL, NSCalendar))bean_msgSend)(self, bean_sel("setCalendar:"), calendar); }
+static inline NSTimeZone          NSDateComponents_TimeZone(NSDateComponents self)                                                       { return ((NSTimeZone (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("timeZone")); }
+static inline void                NSDateComponents_SetTimeZone(NSDateComponents self, NSTimeZone timeZone)                               { ((void (*)(NSDateComponents, SEL, NSTimeZone))bean_msgSend)(self, bean_sel("setTimeZone:"), timeZone); }
+static inline NSInteger           NSDateComponents_Era(NSDateComponents self)                                                            { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("era")); }
+static inline void                NSDateComponents_SetEra(NSDateComponents self, NSInteger era)                                          { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setEra:"), era); }
+static inline NSInteger           NSDateComponents_Year(NSDateComponents self)                                                           { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("year")); }
+static inline void                NSDateComponents_SetYear(NSDateComponents self, NSInteger year)                                        { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setYear:"), year); }
+static inline NSInteger           NSDateComponents_Month(NSDateComponents self)                                                          { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("month")); }
+static inline void                NSDateComponents_SetMonth(NSDateComponents self, NSInteger month)                                      { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setMonth:"), month); }
+static inline NSInteger           NSDateComponents_Day(NSDateComponents self)                                                            { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("day")); }
+static inline void                NSDateComponents_SetDay(NSDateComponents self, NSInteger day)                                          { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setDay:"), day); }
+static inline NSInteger           NSDateComponents_Hour(NSDateComponents self)                                                           { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("hour")); }
+static inline void                NSDateComponents_SetHour(NSDateComponents self, NSInteger hour)                                        { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setHour:"), hour); }
+static inline NSInteger           NSDateComponents_Minute(NSDateComponents self)                                                         { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("minute")); }
+static inline void                NSDateComponents_SetMinute(NSDateComponents self, NSInteger minute)                                    { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setMinute:"), minute); }
+static inline NSInteger           NSDateComponents_Second(NSDateComponents self)                                                         { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("second")); }
+static inline void                NSDateComponents_SetSecond(NSDateComponents self, NSInteger second)                                    { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSecond:"), second); }
+static inline NSInteger           NSDateComponents_Nanosecond(NSDateComponents self)                                                     { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("nanosecond")); }
+static inline void                NSDateComponents_SetNanosecond(NSDateComponents self, NSInteger nanosecond)                            { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setNanosecond:"), nanosecond); }
+static inline NSInteger           NSDateComponents_Weekday(NSDateComponents self)                                                        { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("weekday")); }
+static inline void                NSDateComponents_SetWeekday(NSDateComponents self, NSInteger weekday)                                  { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeekday:"), weekday); }
+static inline NSInteger           NSDateComponents_WeekdayOrdinal(NSDateComponents self)                                                 { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("weekdayOrdinal")); }
+static inline void                NSDateComponents_SetWeekdayOrdinal(NSDateComponents self, NSInteger weekdayOrdinal)                    { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeekdayOrdinal:"), weekdayOrdinal); }
+static inline NSInteger           NSDateComponents_Quarter(NSDateComponents self)                                                        { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("quarter")); }
+static inline void                NSDateComponents_SetQuarter(NSDateComponents self, NSInteger quarter)                                  { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setQuarter:"), quarter); }
+static inline NSInteger           NSDateComponents_WeekOfMonth(NSDateComponents self)                                                    { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("weekOfMonth")); }
+static inline void                NSDateComponents_SetWeekOfMonth(NSDateComponents self, NSInteger weekOfMonth)                          { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeekOfMonth:"), weekOfMonth); }
+static inline NSInteger           NSDateComponents_WeekOfYear(NSDateComponents self)                                                     { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("weekOfYear")); }
+static inline void                NSDateComponents_SetWeekOfYear(NSDateComponents self, NSInteger weekOfYear)                            { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setWeekOfYear:"), weekOfYear); }
+static inline NSInteger           NSDateComponents_YearForWeekOfYear(NSDateComponents self)                                              { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("yearForWeekOfYear")); }
+static inline void                NSDateComponents_SetYearForWeekOfYear(NSDateComponents self, NSInteger yearForWeekOfYear)              { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setYearForWeekOfYear:"), yearForWeekOfYear); }
+static inline NSInteger           NSDateComponents_DayOfYear(NSDateComponents self)                                                      { return ((NSInteger (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("dayOfYear")); }
+static inline void                NSDateComponents_SetDayOfYear(NSDateComponents self, NSInteger dayOfYear)                              { ((void (*)(NSDateComponents, SEL, NSInteger))bean_msgSend)(self, bean_sel("setDayOfYear:"), dayOfYear); }
+static inline BOOL                NSDateComponents_IsLeapMonth(NSDateComponents self)                                                    { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("isLeapMonth")); }
+static inline void                NSDateComponents_SetLeapMonth(NSDateComponents self, BOOL leapMonth)                                   { ((void (*)(NSDateComponents, SEL, BOOL))bean_msgSend)(self, bean_sel("setLeapMonth:"), leapMonth); }
+static inline BOOL                NSDateComponents_IsRepeatedDay(NSDateComponents self)                                                  { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("isRepeatedDay")); }
+static inline void                NSDateComponents_SetRepeatedDay(NSDateComponents self, BOOL repeatedDay)                               { ((void (*)(NSDateComponents, SEL, BOOL))bean_msgSend)(self, bean_sel("setRepeatedDay:"), repeatedDay); }
+static inline NSDate              NSDateComponents_Date(NSDateComponents self)                                                           { return ((NSDate (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("date")); }
+static inline BOOL                NSDateComponents_IsValidDate(NSDateComponents self)                                                    { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("isValidDate")); }
+static inline id                  NSDateComponents_CopyWithZone(NSDateComponents self, NSZone* zone)                                     { return ((id (*)(NSDateComponents, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                NSDateComponents_SupportsSecureCoding(void)                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSDateComponents"), bean_sel("supportsSecureCoding")); }
+static inline BOOL                NSDateComponents_LeapMonth(NSDateComponents self)                                                      { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("leapMonth")); }
+static inline BOOL                NSDateComponents_RepeatedDay(NSDateComponents self)                                                    { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("repeatedDay")); }
+static inline BOOL                NSDateComponents_ValidDate(NSDateComponents self)                                                      { return ((BOOL (*)(NSDateComponents, SEL))bean_msgSend)(self, bean_sel("validDate")); }
+#ifndef BEAN_ALLOC_NSDateComponents
+#define BEAN_ALLOC_NSDateComponents
+static inline NSDateComponents    NSDateComponents_Alloc(void)                                                                           { return (NSDateComponents)bean_alloc(bean_cls("NSDateComponents")); }
+#endif
+#ifndef BEAN_NEW_NSDateComponents
+#define BEAN_NEW_NSDateComponents
+static inline NSDateComponents    NSDateComponents_New(void)                                                                             { return (NSDateComponents)bean_new(bean_cls("NSDateComponents")); }
+#endif
 
 /* ===== NSDateComponentsFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSDateComponentsFormatter
@@ -3757,6 +4512,14 @@ static inline BOOL                                               NSDateComponent
 static inline void                                               NSDateComponentsFormatter_SetIncludesTimeRemainingPhrase(NSDateComponentsFormatter self, BOOL includesTimeRemainingPhrase)                                     { ((void (*)(NSDateComponentsFormatter, SEL, BOOL))bean_msgSend)(self, bean_sel("setIncludesTimeRemainingPhrase:"), includesTimeRemainingPhrase); }
 static inline NSFormattingContext                                NSDateComponentsFormatter_FormattingContext(NSDateComponentsFormatter self)                                                                                    { return ((NSFormattingContext (*)(NSDateComponentsFormatter, SEL))bean_msgSend)(self, bean_sel("formattingContext")); }
 static inline void                                               NSDateComponentsFormatter_SetFormattingContext(NSDateComponentsFormatter self, NSFormattingContext formattingContext)                                          { ((void (*)(NSDateComponentsFormatter, SEL, NSFormattingContext))bean_msgSend)(self, bean_sel("setFormattingContext:"), formattingContext); }
+#ifndef BEAN_ALLOC_NSDateComponentsFormatter
+#define BEAN_ALLOC_NSDateComponentsFormatter
+static inline NSDateComponentsFormatter                          NSDateComponentsFormatter_Alloc(void)                                                                                                                          { return (NSDateComponentsFormatter)bean_alloc(bean_cls("NSDateComponentsFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSDateComponentsFormatter
+#define BEAN_NEW_NSDateComponentsFormatter
+static inline NSDateComponentsFormatter                          NSDateComponentsFormatter_New(void)                                                                                                                            { return (NSDateComponentsFormatter)bean_new(bean_cls("NSDateComponentsFormatter")); }
+#endif
 
 /* ===== NSDateFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSDateFormatter
@@ -3842,6 +4605,14 @@ static inline void                       NSDateFormatter_SetDoesRelativeDateForm
 static inline NSDateFormatter            NSDateFormatter_InitWithDateFormat_AllowNaturalLanguage(NSDateFormatter self, NSString format, BOOL flag)                                { return ((NSDateFormatter (*)(NSDateFormatter, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("initWithDateFormat:allowNaturalLanguage:"), format, flag); }
 static inline BOOL                       NSDateFormatter_AllowsNaturalLanguage(NSDateFormatter self)                                                                              { return ((BOOL (*)(NSDateFormatter, SEL))bean_msgSend)(self, bean_sel("allowsNaturalLanguage")); }
 static inline BOOL                       NSDateFormatter_Lenient(NSDateFormatter self)                                                                                            { return ((BOOL (*)(NSDateFormatter, SEL))bean_msgSend)(self, bean_sel("lenient")); }
+#ifndef BEAN_ALLOC_NSDateFormatter
+#define BEAN_ALLOC_NSDateFormatter
+static inline NSDateFormatter            NSDateFormatter_Alloc(void)                                                                                                              { return (NSDateFormatter)bean_alloc(bean_cls("NSDateFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSDateFormatter
+#define BEAN_NEW_NSDateFormatter
+static inline NSDateFormatter            NSDateFormatter_New(void)                                                                                                                { return (NSDateFormatter)bean_new(bean_cls("NSDateFormatter")); }
+#endif
 
 /* ===== NSDateInterval ===== */
 #ifndef BEAN_TYPEDEF_NSDateInterval
@@ -3862,6 +4633,14 @@ static inline NSDate                NSDateInterval_EndDate(NSDateInterval self) 
 static inline CGFloat               NSDateInterval_Duration(NSDateInterval self)                                                          { return ((CGFloat (*)(NSDateInterval, SEL))bean_msgSend_fpret)(self, bean_sel("duration")); }
 static inline id                    NSDateInterval_CopyWithZone(NSDateInterval self, NSZone* zone)                                        { return ((id (*)(NSDateInterval, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSDateInterval_SupportsSecureCoding(void)                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSDateInterval"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSDateInterval
+#define BEAN_ALLOC_NSDateInterval
+static inline NSDateInterval        NSDateInterval_Alloc(void)                                                                            { return (NSDateInterval)bean_alloc(bean_cls("NSDateInterval")); }
+#endif
+#ifndef BEAN_NEW_NSDateInterval
+#define BEAN_NEW_NSDateInterval
+static inline NSDateInterval        NSDateInterval_New(void)                                                                              { return (NSDateInterval)bean_new(bean_cls("NSDateInterval")); }
+#endif
 
 /* ===== NSDateIntervalFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSDateIntervalFormatter
@@ -3882,6 +4661,14 @@ static inline NSDateIntervalFormatterStyle    NSDateIntervalFormatter_DateStyle(
 static inline void                            NSDateIntervalFormatter_SetDateStyle(NSDateIntervalFormatter self, NSDateIntervalFormatterStyle dateStyle)     { ((void (*)(NSDateIntervalFormatter, SEL, NSDateIntervalFormatterStyle))bean_msgSend)(self, bean_sel("setDateStyle:"), dateStyle); }
 static inline NSDateIntervalFormatterStyle    NSDateIntervalFormatter_TimeStyle(NSDateIntervalFormatter self)                                                { return ((NSDateIntervalFormatterStyle (*)(NSDateIntervalFormatter, SEL))bean_msgSend)(self, bean_sel("timeStyle")); }
 static inline void                            NSDateIntervalFormatter_SetTimeStyle(NSDateIntervalFormatter self, NSDateIntervalFormatterStyle timeStyle)     { ((void (*)(NSDateIntervalFormatter, SEL, NSDateIntervalFormatterStyle))bean_msgSend)(self, bean_sel("setTimeStyle:"), timeStyle); }
+#ifndef BEAN_ALLOC_NSDateIntervalFormatter
+#define BEAN_ALLOC_NSDateIntervalFormatter
+static inline NSDateIntervalFormatter         NSDateIntervalFormatter_Alloc(void)                                                                            { return (NSDateIntervalFormatter)bean_alloc(bean_cls("NSDateIntervalFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSDateIntervalFormatter
+#define BEAN_NEW_NSDateIntervalFormatter
+static inline NSDateIntervalFormatter         NSDateIntervalFormatter_New(void)                                                                              { return (NSDateIntervalFormatter)bean_new(bean_cls("NSDateIntervalFormatter")); }
+#endif
 
 /* ===== NSDecimalNumber ===== */
 #ifndef BEAN_TYPEDEF_NSDecimalNumber
@@ -3921,15 +4708,31 @@ static inline id                    NSDecimalNumber_DefaultBehavior(void)       
 static inline void                  NSDecimalNumber_SetDefaultBehavior(id defaultBehavior)                                                                                { ((void (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("NSDecimalNumber"), bean_sel("setDefaultBehavior:"), defaultBehavior); }
 static inline char*                 NSDecimalNumber_ObjCType(NSDecimalNumber self)                                                                                        { return ((char* (*)(NSDecimalNumber, SEL))bean_msgSend)(self, bean_sel("objCType")); }
 static inline CGFloat               NSDecimalNumber_DoubleValue(NSDecimalNumber self)                                                                                     { return ((CGFloat (*)(NSDecimalNumber, SEL))bean_msgSend_fpret)(self, bean_sel("doubleValue")); }
+#ifndef BEAN_ALLOC_NSDecimalNumber
+#define BEAN_ALLOC_NSDecimalNumber
+static inline NSDecimalNumber       NSDecimalNumber_Alloc(void)                                                                                                           { return (NSDecimalNumber)bean_alloc(bean_cls("NSDecimalNumber")); }
+#endif
+#ifndef BEAN_NEW_NSDecimalNumber
+#define BEAN_NEW_NSDecimalNumber
+static inline NSDecimalNumber       NSDecimalNumber_New(void)                                                                                                             { return (NSDecimalNumber)bean_new(bean_cls("NSDecimalNumber")); }
+#endif
 
 /* ===== NSDecimalNumberBehaviors ===== */
 #ifndef BEAN_TYPEDEF_NSDecimalNumberBehaviors
 #define BEAN_TYPEDEF_NSDecimalNumberBehaviors
 typedef bean_id NSDecimalNumberBehaviors;
 #endif
-static inline NSRoundingMode     NSDecimalNumberBehaviors_RoundingMode(NSDecimalNumberBehaviors self)                                                                                                                                                   { return ((NSRoundingMode (*)(NSDecimalNumberBehaviors, SEL))bean_msgSend)(self, bean_sel("roundingMode")); }
-static inline short              NSDecimalNumberBehaviors_Scale(NSDecimalNumberBehaviors self)                                                                                                                                                          { return ((short (*)(NSDecimalNumberBehaviors, SEL))bean_msgSend)(self, bean_sel("scale")); }
-static inline NSDecimalNumber    NSDecimalNumberBehaviors_ExceptionDuringOperation_Error_LeftOperand_RightOperand(NSDecimalNumberBehaviors self, SEL operation, NSCalculationError error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand)    { return ((NSDecimalNumber (*)(NSDecimalNumberBehaviors, SEL, SEL, NSCalculationError, NSDecimalNumber, NSDecimalNumber))bean_msgSend)(self, bean_sel("exceptionDuringOperation:error:leftOperand:rightOperand:"), operation, error, leftOperand, rightOperand); }
+static inline NSRoundingMode              NSDecimalNumberBehaviors_RoundingMode(NSDecimalNumberBehaviors self)                                                                                                                                                   { return ((NSRoundingMode (*)(NSDecimalNumberBehaviors, SEL))bean_msgSend)(self, bean_sel("roundingMode")); }
+static inline short                       NSDecimalNumberBehaviors_Scale(NSDecimalNumberBehaviors self)                                                                                                                                                          { return ((short (*)(NSDecimalNumberBehaviors, SEL))bean_msgSend)(self, bean_sel("scale")); }
+static inline NSDecimalNumber             NSDecimalNumberBehaviors_ExceptionDuringOperation_Error_LeftOperand_RightOperand(NSDecimalNumberBehaviors self, SEL operation, NSCalculationError error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand)    { return ((NSDecimalNumber (*)(NSDecimalNumberBehaviors, SEL, SEL, NSCalculationError, NSDecimalNumber, NSDecimalNumber))bean_msgSend)(self, bean_sel("exceptionDuringOperation:error:leftOperand:rightOperand:"), operation, error, leftOperand, rightOperand); }
+#ifndef BEAN_ALLOC_NSDecimalNumberBehaviors
+#define BEAN_ALLOC_NSDecimalNumberBehaviors
+static inline NSDecimalNumberBehaviors    NSDecimalNumberBehaviors_Alloc(void)                                                                                                                                                                                   { return (NSDecimalNumberBehaviors)bean_alloc(bean_cls("NSDecimalNumberBehaviors")); }
+#endif
+#ifndef BEAN_NEW_NSDecimalNumberBehaviors
+#define BEAN_NEW_NSDecimalNumberBehaviors
+static inline NSDecimalNumberBehaviors    NSDecimalNumberBehaviors_New(void)                                                                                                                                                                                     { return (NSDecimalNumberBehaviors)bean_new(bean_cls("NSDecimalNumberBehaviors")); }
+#endif
 
 /* ===== NSDecimalNumberHandler ===== */
 #ifndef BEAN_TYPEDEF_NSDecimalNumberHandler
@@ -3944,6 +4747,14 @@ static inline short                     NSDecimalNumberHandler_Scale(NSDecimalNu
 static inline NSDecimalNumber           NSDecimalNumberHandler_ExceptionDuringOperation_Error_LeftOperand_RightOperand(NSDecimalNumberHandler self, SEL operation, NSCalculationError error, NSDecimalNumber leftOperand, NSDecimalNumber rightOperand)                                                 { return ((NSDecimalNumber (*)(NSDecimalNumberHandler, SEL, SEL, NSCalculationError, NSDecimalNumber, NSDecimalNumber))bean_msgSend)(self, bean_sel("exceptionDuringOperation:error:leftOperand:rightOperand:"), operation, error, leftOperand, rightOperand); }
 static inline void                      NSDecimalNumberHandler_EncodeWithCoder(NSDecimalNumberHandler self, NSCoder coder)                                                                                                                                                                              { ((void (*)(NSDecimalNumberHandler, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding                  NSDecimalNumberHandler_InitWithCoder(NSDecimalNumberHandler self, NSCoder coder)                                                                                                                                                                                { return ((NSCoding (*)(NSDecimalNumberHandler, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSDecimalNumberHandler
+#define BEAN_ALLOC_NSDecimalNumberHandler
+static inline NSDecimalNumberHandler    NSDecimalNumberHandler_Alloc(void)                                                                                                                                                                                                                              { return (NSDecimalNumberHandler)bean_alloc(bean_cls("NSDecimalNumberHandler")); }
+#endif
+#ifndef BEAN_NEW_NSDecimalNumberHandler
+#define BEAN_NEW_NSDecimalNumberHandler
+static inline NSDecimalNumberHandler    NSDecimalNumberHandler_New(void)                                                                                                                                                                                                                                { return (NSDecimalNumberHandler)bean_new(bean_cls("NSDecimalNumberHandler")); }
+#endif
 
 /* ===== NSDeleteCommand ===== */
 #ifndef BEAN_TYPEDEF_NSDeleteCommand
@@ -3952,6 +4763,14 @@ typedef bean_id NSDeleteCommand;
 #endif
 static inline void                       NSDeleteCommand_SetReceiversSpecifier(NSDeleteCommand self, NSScriptObjectSpecifier receiversRef)    { ((void (*)(NSDeleteCommand, SEL, NSScriptObjectSpecifier))bean_msgSend)(self, bean_sel("setReceiversSpecifier:"), receiversRef); }
 static inline NSScriptObjectSpecifier    NSDeleteCommand_KeySpecifier(NSDeleteCommand self)                                                   { return ((NSScriptObjectSpecifier (*)(NSDeleteCommand, SEL))bean_msgSend)(self, bean_sel("keySpecifier")); }
+#ifndef BEAN_ALLOC_NSDeleteCommand
+#define BEAN_ALLOC_NSDeleteCommand
+static inline NSDeleteCommand            NSDeleteCommand_Alloc(void)                                                                          { return (NSDeleteCommand)bean_alloc(bean_cls("NSDeleteCommand")); }
+#endif
+#ifndef BEAN_NEW_NSDeleteCommand
+#define BEAN_NEW_NSDeleteCommand
+static inline NSDeleteCommand            NSDeleteCommand_New(void)                                                                            { return (NSDeleteCommand)bean_new(bean_cls("NSDeleteCommand")); }
+#endif
 
 /* ===== NSDictionary ===== */
 static inline id                    NSDictionary_ObjectForKey(NSDictionary self, id aKey)                                                                                   { return ((id (*)(NSDictionary, SEL, id))bean_msgSend)(self, bean_sel("objectForKey:"), aKey); }
@@ -4021,6 +4840,14 @@ static inline id                    NSDictionary_ValueForKey(NSDictionary self, 
 static inline id                    NSDictionary_CopyWithZone(NSDictionary self, NSZone* zone)                                                                              { return ((id (*)(NSDictionary, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id                    NSDictionary_MutableCopyWithZone(NSDictionary self, NSZone* zone)                                                                       { return ((id (*)(NSDictionary, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL                  NSDictionary_SupportsSecureCoding(void)                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSDictionary"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSDictionary
+#define BEAN_ALLOC_NSDictionary
+static inline NSDictionary          NSDictionary_Alloc(void)                                                                                                                { return (NSDictionary)bean_alloc(bean_cls("NSDictionary")); }
+#endif
+#ifndef BEAN_NEW_NSDictionary
+#define BEAN_NEW_NSDictionary
+static inline NSDictionary          NSDictionary_New(void)                                                                                                                  { return (NSDictionary)bean_new(bean_cls("NSDictionary")); }
+#endif
 
 /* ===== NSDimension ===== */
 #ifndef BEAN_TYPEDEF_NSDimension
@@ -4031,18 +4858,34 @@ static inline NSDimension        NSDimension_InitWithSymbol_Converter(NSDimensio
 static inline NSDimension        NSDimension_BaseUnit(void)                                                                            { return ((NSDimension (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSDimension"), bean_sel("baseUnit")); }
 static inline NSUnitConverter    NSDimension_Converter(NSDimension self)                                                               { return ((NSUnitConverter (*)(NSDimension, SEL))bean_msgSend)(self, bean_sel("converter")); }
 static inline BOOL               NSDimension_SupportsSecureCoding(void)                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSDimension"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSDimension
+#define BEAN_ALLOC_NSDimension
+static inline NSDimension        NSDimension_Alloc(void)                                                                               { return (NSDimension)bean_alloc(bean_cls("NSDimension")); }
+#endif
+#ifndef BEAN_NEW_NSDimension
+#define BEAN_NEW_NSDimension
+static inline NSDimension        NSDimension_New(void)                                                                                 { return (NSDimension)bean_new(bean_cls("NSDimension")); }
+#endif
 
 /* ===== NSDirectoryEnumerator ===== */
 #ifndef BEAN_TYPEDEF_NSDirectoryEnumerator
 #define BEAN_TYPEDEF_NSDirectoryEnumerator
 typedef bean_id NSDirectoryEnumerator;
 #endif
-static inline void            NSDirectoryEnumerator_SkipDescendents(NSDirectoryEnumerator self)                    { ((void (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("skipDescendents")); }
-static inline void            NSDirectoryEnumerator_SkipDescendants(NSDirectoryEnumerator self)                    { ((void (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("skipDescendants")); }
-static inline NSDictionary    NSDirectoryEnumerator_FileAttributes(NSDirectoryEnumerator self)                     { return ((NSDictionary (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("fileAttributes")); }
-static inline NSDictionary    NSDirectoryEnumerator_DirectoryAttributes(NSDirectoryEnumerator self)                { return ((NSDictionary (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("directoryAttributes")); }
-static inline BOOL            NSDirectoryEnumerator_IsEnumeratingDirectoryPostOrder(NSDirectoryEnumerator self)    { return ((BOOL (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("isEnumeratingDirectoryPostOrder")); }
-static inline NSUInteger      NSDirectoryEnumerator_Level(NSDirectoryEnumerator self)                              { return ((NSUInteger (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("level")); }
+static inline void                     NSDirectoryEnumerator_SkipDescendents(NSDirectoryEnumerator self)                    { ((void (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("skipDescendents")); }
+static inline void                     NSDirectoryEnumerator_SkipDescendants(NSDirectoryEnumerator self)                    { ((void (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("skipDescendants")); }
+static inline NSDictionary             NSDirectoryEnumerator_FileAttributes(NSDirectoryEnumerator self)                     { return ((NSDictionary (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("fileAttributes")); }
+static inline NSDictionary             NSDirectoryEnumerator_DirectoryAttributes(NSDirectoryEnumerator self)                { return ((NSDictionary (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("directoryAttributes")); }
+static inline BOOL                     NSDirectoryEnumerator_IsEnumeratingDirectoryPostOrder(NSDirectoryEnumerator self)    { return ((BOOL (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("isEnumeratingDirectoryPostOrder")); }
+static inline NSUInteger               NSDirectoryEnumerator_Level(NSDirectoryEnumerator self)                              { return ((NSUInteger (*)(NSDirectoryEnumerator, SEL))bean_msgSend)(self, bean_sel("level")); }
+#ifndef BEAN_ALLOC_NSDirectoryEnumerator
+#define BEAN_ALLOC_NSDirectoryEnumerator
+static inline NSDirectoryEnumerator    NSDirectoryEnumerator_Alloc(void)                                                    { return (NSDirectoryEnumerator)bean_alloc(bean_cls("NSDirectoryEnumerator")); }
+#endif
+#ifndef BEAN_NEW_NSDirectoryEnumerator
+#define BEAN_NEW_NSDirectoryEnumerator
+static inline NSDirectoryEnumerator    NSDirectoryEnumerator_New(void)                                                      { return (NSDirectoryEnumerator)bean_new(bean_cls("NSDirectoryEnumerator")); }
+#endif
 
 /* ===== NSDistantObject ===== */
 static inline id                 NSDistantObject_ProxyWithTarget_Connection(id target, NSConnection connection)                         { return ((id (*)(bean_class, SEL, id, NSConnection))bean_msgSend)(bean_cls("NSDistantObject"), bean_sel("proxyWithTarget:connection:"), target, connection); }
@@ -4053,12 +4896,28 @@ static inline NSDistantObject    NSDistantObject_InitWithCoder(NSDistantObject s
 static inline void               NSDistantObject_SetProtocolForProxy(NSDistantObject self, Protocol proto)                              { ((void (*)(NSDistantObject, SEL, Protocol))bean_msgSend)(self, bean_sel("setProtocolForProxy:"), proto); }
 static inline NSConnection       NSDistantObject_ConnectionForProxy(NSDistantObject self)                                               { return ((NSConnection (*)(NSDistantObject, SEL))bean_msgSend)(self, bean_sel("connectionForProxy")); }
 static inline void               NSDistantObject_EncodeWithCoder(NSDistantObject self, NSCoder coder)                                   { ((void (*)(NSDistantObject, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSDistantObject
+#define BEAN_ALLOC_NSDistantObject
+static inline NSDistantObject    NSDistantObject_Alloc(void)                                                                            { return (NSDistantObject)bean_alloc(bean_cls("NSDistantObject")); }
+#endif
+#ifndef BEAN_NEW_NSDistantObject
+#define BEAN_NEW_NSDistantObject
+static inline NSDistantObject    NSDistantObject_New(void)                                                                              { return (NSDistantObject)bean_new(bean_cls("NSDistantObject")); }
+#endif
 
 /* ===== NSDistantObjectRequest ===== */
-static inline void            NSDistantObjectRequest_ReplyWithException(NSDistantObjectRequest self, NSException exception)    { ((void (*)(NSDistantObjectRequest, SEL, NSException))bean_msgSend)(self, bean_sel("replyWithException:"), exception); }
-static inline NSInvocation    NSDistantObjectRequest_Invocation(NSDistantObjectRequest self)                                   { return ((NSInvocation (*)(NSDistantObjectRequest, SEL))bean_msgSend)(self, bean_sel("invocation")); }
-static inline NSConnection    NSDistantObjectRequest_Connection(NSDistantObjectRequest self)                                   { return ((NSConnection (*)(NSDistantObjectRequest, SEL))bean_msgSend)(self, bean_sel("connection")); }
-static inline id              NSDistantObjectRequest_Conversation(NSDistantObjectRequest self)                                 { return ((id (*)(NSDistantObjectRequest, SEL))bean_msgSend)(self, bean_sel("conversation")); }
+static inline void                      NSDistantObjectRequest_ReplyWithException(NSDistantObjectRequest self, NSException exception)    { ((void (*)(NSDistantObjectRequest, SEL, NSException))bean_msgSend)(self, bean_sel("replyWithException:"), exception); }
+static inline NSInvocation              NSDistantObjectRequest_Invocation(NSDistantObjectRequest self)                                   { return ((NSInvocation (*)(NSDistantObjectRequest, SEL))bean_msgSend)(self, bean_sel("invocation")); }
+static inline NSConnection              NSDistantObjectRequest_Connection(NSDistantObjectRequest self)                                   { return ((NSConnection (*)(NSDistantObjectRequest, SEL))bean_msgSend)(self, bean_sel("connection")); }
+static inline id                        NSDistantObjectRequest_Conversation(NSDistantObjectRequest self)                                 { return ((id (*)(NSDistantObjectRequest, SEL))bean_msgSend)(self, bean_sel("conversation")); }
+#ifndef BEAN_ALLOC_NSDistantObjectRequest
+#define BEAN_ALLOC_NSDistantObjectRequest
+static inline NSDistantObjectRequest    NSDistantObjectRequest_Alloc(void)                                                               { return (NSDistantObjectRequest)bean_alloc(bean_cls("NSDistantObjectRequest")); }
+#endif
+#ifndef BEAN_NEW_NSDistantObjectRequest
+#define BEAN_NEW_NSDistantObjectRequest
+static inline NSDistantObjectRequest    NSDistantObjectRequest_New(void)                                                                 { return (NSDistantObjectRequest)bean_new(bean_cls("NSDistantObjectRequest")); }
+#endif
 
 /* ===== NSDistributedLock ===== */
 #ifndef BEAN_TYPEDEF_NSDistributedLock
@@ -4072,6 +4931,14 @@ static inline BOOL                 NSDistributedLock_TryLock(NSDistributedLock s
 static inline void                 NSDistributedLock_Unlock(NSDistributedLock self)                         { ((void (*)(NSDistributedLock, SEL))bean_msgSend)(self, bean_sel("unlock")); }
 static inline void                 NSDistributedLock_BreakLock(NSDistributedLock self)                      { ((void (*)(NSDistributedLock, SEL))bean_msgSend)(self, bean_sel("breakLock")); }
 static inline NSDate               NSDistributedLock_LockDate(NSDistributedLock self)                       { return ((NSDate (*)(NSDistributedLock, SEL))bean_msgSend)(self, bean_sel("lockDate")); }
+#ifndef BEAN_ALLOC_NSDistributedLock
+#define BEAN_ALLOC_NSDistributedLock
+static inline NSDistributedLock    NSDistributedLock_Alloc(void)                                            { return (NSDistributedLock)bean_alloc(bean_cls("NSDistributedLock")); }
+#endif
+#ifndef BEAN_NEW_NSDistributedLock
+#define BEAN_NEW_NSDistributedLock
+static inline NSDistributedLock    NSDistributedLock_New(void)                                              { return (NSDistributedLock)bean_new(bean_cls("NSDistributedLock")); }
+#endif
 
 /* ===== NSDistributedNotificationCenter ===== */
 #ifndef BEAN_TYPEDEF_NSDistributedNotificationCenter
@@ -4089,6 +4956,14 @@ static inline void                               NSDistributedNotificationCenter
 static inline void                               NSDistributedNotificationCenter_RemoveObserver_Name_Object(NSDistributedNotificationCenter self, id observer, NSString aName, NSString anObject)                                                                                             { ((void (*)(NSDistributedNotificationCenter, SEL, id, NSString, NSString))bean_msgSend)(self, bean_sel("removeObserver:name:object:"), observer, aName, anObject); }
 static inline BOOL                               NSDistributedNotificationCenter_Suspended(NSDistributedNotificationCenter self)                                                                                                                                                              { return ((BOOL (*)(NSDistributedNotificationCenter, SEL))bean_msgSend)(self, bean_sel("suspended")); }
 static inline void                               NSDistributedNotificationCenter_SetSuspended(NSDistributedNotificationCenter self, BOOL suspended)                                                                                                                                           { ((void (*)(NSDistributedNotificationCenter, SEL, BOOL))bean_msgSend)(self, bean_sel("setSuspended:"), suspended); }
+#ifndef BEAN_ALLOC_NSDistributedNotificationCenter
+#define BEAN_ALLOC_NSDistributedNotificationCenter
+static inline NSDistributedNotificationCenter    NSDistributedNotificationCenter_Alloc(void)                                                                                                                                                                                                  { return (NSDistributedNotificationCenter)bean_alloc(bean_cls("NSDistributedNotificationCenter")); }
+#endif
+#ifndef BEAN_NEW_NSDistributedNotificationCenter
+#define BEAN_NEW_NSDistributedNotificationCenter
+static inline NSDistributedNotificationCenter    NSDistributedNotificationCenter_New(void)                                                                                                                                                                                                    { return (NSDistributedNotificationCenter)bean_new(bean_cls("NSDistributedNotificationCenter")); }
+#endif
 
 /* ===== NSEnergyFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSEnergyFormatter
@@ -4107,11 +4982,27 @@ static inline void                     NSEnergyFormatter_SetUnitStyle(NSEnergyFo
 static inline BOOL                     NSEnergyFormatter_IsForFoodEnergyUse(NSEnergyFormatter self)                                                                     { return ((BOOL (*)(NSEnergyFormatter, SEL))bean_msgSend)(self, bean_sel("isForFoodEnergyUse")); }
 static inline void                     NSEnergyFormatter_SetForFoodEnergyUse(NSEnergyFormatter self, BOOL forFoodEnergyUse)                                             { ((void (*)(NSEnergyFormatter, SEL, BOOL))bean_msgSend)(self, bean_sel("setForFoodEnergyUse:"), forFoodEnergyUse); }
 static inline BOOL                     NSEnergyFormatter_ForFoodEnergyUse(NSEnergyFormatter self)                                                                       { return ((BOOL (*)(NSEnergyFormatter, SEL))bean_msgSend)(self, bean_sel("forFoodEnergyUse")); }
+#ifndef BEAN_ALLOC_NSEnergyFormatter
+#define BEAN_ALLOC_NSEnergyFormatter
+static inline NSEnergyFormatter        NSEnergyFormatter_Alloc(void)                                                                                                    { return (NSEnergyFormatter)bean_alloc(bean_cls("NSEnergyFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSEnergyFormatter
+#define BEAN_NEW_NSEnergyFormatter
+static inline NSEnergyFormatter        NSEnergyFormatter_New(void)                                                                                                      { return (NSEnergyFormatter)bean_new(bean_cls("NSEnergyFormatter")); }
+#endif
 
 /* ===== NSEnumerator ===== */
-static inline id            NSEnumerator_NextObject(NSEnumerator self)                                                                                              { return ((id (*)(NSEnumerator, SEL))bean_msgSend)(self, bean_sel("nextObject")); }
-static inline NSArray       NSEnumerator_AllObjects(NSEnumerator self)                                                                                              { return ((NSArray (*)(NSEnumerator, SEL))bean_msgSend)(self, bean_sel("allObjects")); }
-static inline NSUInteger    NSEnumerator_CountByEnumeratingWithState_Objects_Count(NSEnumerator self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSEnumerator, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+static inline id              NSEnumerator_NextObject(NSEnumerator self)                                                                                              { return ((id (*)(NSEnumerator, SEL))bean_msgSend)(self, bean_sel("nextObject")); }
+static inline NSArray         NSEnumerator_AllObjects(NSEnumerator self)                                                                                              { return ((NSArray (*)(NSEnumerator, SEL))bean_msgSend)(self, bean_sel("allObjects")); }
+static inline NSUInteger      NSEnumerator_CountByEnumeratingWithState_Objects_Count(NSEnumerator self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSEnumerator, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSEnumerator
+#define BEAN_ALLOC_NSEnumerator
+static inline NSEnumerator    NSEnumerator_Alloc(void)                                                                                                                { return (NSEnumerator)bean_alloc(bean_cls("NSEnumerator")); }
+#endif
+#ifndef BEAN_NEW_NSEnumerator
+#define BEAN_NEW_NSEnumerator
+static inline NSEnumerator    NSEnumerator_New(void)                                                                                                                  { return (NSEnumerator)bean_new(bean_cls("NSEnumerator")); }
+#endif
 
 /* ===== NSError ===== */
 static inline NSError         NSError_InitWithDomain_Code_UserInfo(NSError self, NSString domain, NSInteger code, NSDictionary dict)    { return ((NSError (*)(NSError, SEL, NSString, NSInteger, NSDictionary))bean_msgSend)(self, bean_sel("initWithDomain:code:userInfo:"), domain, code, dict); }
@@ -4129,6 +5020,14 @@ static inline NSString        NSError_HelpAnchor(NSError self)                  
 static inline NSArray         NSError_UnderlyingErrors(NSError self)                                                                    { return ((NSArray (*)(NSError, SEL))bean_msgSend)(self, bean_sel("underlyingErrors")); }
 static inline id              NSError_CopyWithZone(NSError self, NSZone* zone)                                                          { return ((id (*)(NSError, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL            NSError_SupportsSecureCoding(void)                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSError"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSError
+#define BEAN_ALLOC_NSError
+static inline NSError         NSError_Alloc(void)                                                                                       { return (NSError)bean_alloc(bean_cls("NSError")); }
+#endif
+#ifndef BEAN_NEW_NSError
+#define BEAN_NEW_NSError
+static inline NSError         NSError_New(void)                                                                                         { return (NSError)bean_new(bean_cls("NSError")); }
+#endif
 
 /* ===== NSException ===== */
 static inline NSException     NSException_ExceptionWithName_Reason_UserInfo(NSString name, NSString reason, NSDictionary userInfo)                    { return ((NSException (*)(bean_class, SEL, NSString, NSString, NSDictionary))bean_msgSend)(bean_cls("NSException"), bean_sel("exceptionWithName:reason:userInfo:"), name, reason, userInfo); }
@@ -4143,6 +5042,14 @@ static inline void            NSException_Raise_Format(NSString name, NSString f
 static inline void            NSException_Raise_Format_Arguments(NSString name, NSString format, char* argList)                                       { ((void (*)(bean_class, SEL, NSString, NSString, char*))bean_msgSend)(bean_cls("NSException"), bean_sel("raise:format:arguments:"), name, format, argList); }
 static inline id              NSException_CopyWithZone(NSException self, NSZone* zone)                                                                { return ((id (*)(NSException, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL            NSException_SupportsSecureCoding(void)                                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSException"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSException
+#define BEAN_ALLOC_NSException
+static inline NSException     NSException_Alloc(void)                                                                                                 { return (NSException)bean_alloc(bean_cls("NSException")); }
+#endif
+#ifndef BEAN_NEW_NSException
+#define BEAN_NEW_NSException
+static inline NSException     NSException_New(void)                                                                                                   { return (NSException)bean_new(bean_cls("NSException")); }
+#endif
 
 /* ===== NSExpression ===== */
 static inline NSExpression        NSExpression_ExpressionWithFormat_ArgumentArray(NSString expressionFormat, NSArray arguments)                                                             { return ((NSExpression (*)(bean_class, SEL, NSString, NSArray))bean_msgSend)(bean_cls("NSExpression"), bean_sel("expressionWithFormat:argumentArray:"), expressionFormat, arguments); }
@@ -4182,16 +5089,32 @@ static inline NSExpression        NSExpression_FalseExpression(NSExpression self
 static inline void*               NSExpression_ExpressionBlock(NSExpression self)                                                                                                           { return ((void* (*)(NSExpression, SEL))bean_msgSend)(self, bean_sel("expressionBlock")); }
 static inline BOOL                NSExpression_SupportsSecureCoding(void)                                                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSExpression"), bean_sel("supportsSecureCoding")); }
 static inline id                  NSExpression_CopyWithZone(NSExpression self, NSZone* zone)                                                                                                { return ((id (*)(NSExpression, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSExpression
+#define BEAN_ALLOC_NSExpression
+static inline NSExpression        NSExpression_Alloc(void)                                                                                                                                  { return (NSExpression)bean_alloc(bean_cls("NSExpression")); }
+#endif
+#ifndef BEAN_NEW_NSExpression
+#define BEAN_NEW_NSExpression
+static inline NSExpression        NSExpression_New(void)                                                                                                                                    { return (NSExpression)bean_new(bean_cls("NSExpression")); }
+#endif
 
 /* ===== NSExtensionContext ===== */
 #ifndef BEAN_TYPEDEF_NSExtensionContext
 #define BEAN_TYPEDEF_NSExtensionContext
 typedef bean_id NSExtensionContext;
 #endif
-static inline void       NSExtensionContext_CompleteRequestReturningItems_CompletionHandler(NSExtensionContext self, NSArray items, void* completionHandler)    { ((void (*)(NSExtensionContext, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("completeRequestReturningItems:completionHandler:"), items, completionHandler); }
-static inline void       NSExtensionContext_CancelRequestWithError(NSExtensionContext self, NSError error)                                                      { ((void (*)(NSExtensionContext, SEL, NSError))bean_msgSend)(self, bean_sel("cancelRequestWithError:"), error); }
-static inline void       NSExtensionContext_OpenURL_CompletionHandler(NSExtensionContext self, NSURL URL, void* completionHandler)                              { ((void (*)(NSExtensionContext, SEL, NSURL, void*))bean_msgSend)(self, bean_sel("openURL:completionHandler:"), URL, completionHandler); }
-static inline NSArray    NSExtensionContext_InputItems(NSExtensionContext self)                                                                                 { return ((NSArray (*)(NSExtensionContext, SEL))bean_msgSend)(self, bean_sel("inputItems")); }
+static inline void                  NSExtensionContext_CompleteRequestReturningItems_CompletionHandler(NSExtensionContext self, NSArray items, void* completionHandler)    { ((void (*)(NSExtensionContext, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("completeRequestReturningItems:completionHandler:"), items, completionHandler); }
+static inline void                  NSExtensionContext_CancelRequestWithError(NSExtensionContext self, NSError error)                                                      { ((void (*)(NSExtensionContext, SEL, NSError))bean_msgSend)(self, bean_sel("cancelRequestWithError:"), error); }
+static inline void                  NSExtensionContext_OpenURL_CompletionHandler(NSExtensionContext self, NSURL URL, void* completionHandler)                              { ((void (*)(NSExtensionContext, SEL, NSURL, void*))bean_msgSend)(self, bean_sel("openURL:completionHandler:"), URL, completionHandler); }
+static inline NSArray               NSExtensionContext_InputItems(NSExtensionContext self)                                                                                 { return ((NSArray (*)(NSExtensionContext, SEL))bean_msgSend)(self, bean_sel("inputItems")); }
+#ifndef BEAN_ALLOC_NSExtensionContext
+#define BEAN_ALLOC_NSExtensionContext
+static inline NSExtensionContext    NSExtensionContext_Alloc(void)                                                                                                         { return (NSExtensionContext)bean_alloc(bean_cls("NSExtensionContext")); }
+#endif
+#ifndef BEAN_NEW_NSExtensionContext
+#define BEAN_NEW_NSExtensionContext
+static inline NSExtensionContext    NSExtensionContext_New(void)                                                                                                           { return (NSExtensionContext)bean_new(bean_cls("NSExtensionContext")); }
+#endif
 
 /* ===== NSExtensionItem ===== */
 #ifndef BEAN_TYPEDEF_NSExtensionItem
@@ -4208,13 +5131,29 @@ static inline NSDictionary          NSExtensionItem_UserInfo(NSExtensionItem sel
 static inline void                  NSExtensionItem_SetUserInfo(NSExtensionItem self, NSDictionary userInfo)                                    { ((void (*)(NSExtensionItem, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
 static inline id                    NSExtensionItem_CopyWithZone(NSExtensionItem self, NSZone* zone)                                            { return ((id (*)(NSExtensionItem, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSExtensionItem_SupportsSecureCoding(void)                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSExtensionItem"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSExtensionItem
+#define BEAN_ALLOC_NSExtensionItem
+static inline NSExtensionItem       NSExtensionItem_Alloc(void)                                                                                 { return (NSExtensionItem)bean_alloc(bean_cls("NSExtensionItem")); }
+#endif
+#ifndef BEAN_NEW_NSExtensionItem
+#define BEAN_NEW_NSExtensionItem
+static inline NSExtensionItem       NSExtensionItem_New(void)                                                                                   { return (NSExtensionItem)bean_new(bean_cls("NSExtensionItem")); }
+#endif
 
 /* ===== NSExtensionRequestHandling ===== */
 #ifndef BEAN_TYPEDEF_NSExtensionRequestHandling
 #define BEAN_TYPEDEF_NSExtensionRequestHandling
 typedef bean_id NSExtensionRequestHandling;
 #endif
-static inline void    NSExtensionRequestHandling_BeginRequestWithExtensionContext(NSExtensionRequestHandling self, NSExtensionContext context)    { ((void (*)(NSExtensionRequestHandling, SEL, NSExtensionContext))bean_msgSend)(self, bean_sel("beginRequestWithExtensionContext:"), context); }
+static inline void                          NSExtensionRequestHandling_BeginRequestWithExtensionContext(NSExtensionRequestHandling self, NSExtensionContext context)    { ((void (*)(NSExtensionRequestHandling, SEL, NSExtensionContext))bean_msgSend)(self, bean_sel("beginRequestWithExtensionContext:"), context); }
+#ifndef BEAN_ALLOC_NSExtensionRequestHandling
+#define BEAN_ALLOC_NSExtensionRequestHandling
+static inline NSExtensionRequestHandling    NSExtensionRequestHandling_Alloc(void)                                                                                      { return (NSExtensionRequestHandling)bean_alloc(bean_cls("NSExtensionRequestHandling")); }
+#endif
+#ifndef BEAN_NEW_NSExtensionRequestHandling
+#define BEAN_NEW_NSExtensionRequestHandling
+static inline NSExtensionRequestHandling    NSExtensionRequestHandling_New(void)                                                                                        { return (NSExtensionRequestHandling)bean_new(bean_cls("NSExtensionRequestHandling")); }
+#endif
 
 /* ===== NSFileAccessIntent ===== */
 #ifndef BEAN_TYPEDEF_NSFileAccessIntent
@@ -4224,6 +5163,14 @@ typedef bean_id NSFileAccessIntent;
 static inline NSFileAccessIntent    NSFileAccessIntent_ReadingIntentWithURL_Options(NSURL url, NSFileCoordinatorReadingOptions options)    { return ((NSFileAccessIntent (*)(bean_class, SEL, NSURL, NSFileCoordinatorReadingOptions))bean_msgSend)(bean_cls("NSFileAccessIntent"), bean_sel("readingIntentWithURL:options:"), url, options); }
 static inline NSFileAccessIntent    NSFileAccessIntent_WritingIntentWithURL_Options(NSURL url, NSFileCoordinatorWritingOptions options)    { return ((NSFileAccessIntent (*)(bean_class, SEL, NSURL, NSFileCoordinatorWritingOptions))bean_msgSend)(bean_cls("NSFileAccessIntent"), bean_sel("writingIntentWithURL:options:"), url, options); }
 static inline NSURL                 NSFileAccessIntent_URL(NSFileAccessIntent self)                                                        { return ((NSURL (*)(NSFileAccessIntent, SEL))bean_msgSend)(self, bean_sel("URL")); }
+#ifndef BEAN_ALLOC_NSFileAccessIntent
+#define BEAN_ALLOC_NSFileAccessIntent
+static inline NSFileAccessIntent    NSFileAccessIntent_Alloc(void)                                                                         { return (NSFileAccessIntent)bean_alloc(bean_cls("NSFileAccessIntent")); }
+#endif
+#ifndef BEAN_NEW_NSFileAccessIntent
+#define BEAN_NEW_NSFileAccessIntent
+static inline NSFileAccessIntent    NSFileAccessIntent_New(void)                                                                           { return (NSFileAccessIntent)bean_new(bean_cls("NSFileAccessIntent")); }
+#endif
 
 /* ===== NSFileCoordinator ===== */
 #ifndef BEAN_TYPEDEF_NSFileCoordinator
@@ -4246,6 +5193,14 @@ static inline void                 NSFileCoordinator_Cancel(NSFileCoordinator se
 static inline NSArray              NSFileCoordinator_FilePresenters(void)                                                                                                                                                                                                                                                                          { return ((NSArray (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSFileCoordinator"), bean_sel("filePresenters")); }
 static inline NSString             NSFileCoordinator_PurposeIdentifier(NSFileCoordinator self)                                                                                                                                                                                                                                                     { return ((NSString (*)(NSFileCoordinator, SEL))bean_msgSend)(self, bean_sel("purposeIdentifier")); }
 static inline void                 NSFileCoordinator_SetPurposeIdentifier(NSFileCoordinator self, NSString purposeIdentifier)                                                                                                                                                                                                                      { ((void (*)(NSFileCoordinator, SEL, NSString))bean_msgSend)(self, bean_sel("setPurposeIdentifier:"), purposeIdentifier); }
+#ifndef BEAN_ALLOC_NSFileCoordinator
+#define BEAN_ALLOC_NSFileCoordinator
+static inline NSFileCoordinator    NSFileCoordinator_Alloc(void)                                                                                                                                                                                                                                                                                   { return (NSFileCoordinator)bean_alloc(bean_cls("NSFileCoordinator")); }
+#endif
+#ifndef BEAN_NEW_NSFileCoordinator
+#define BEAN_NEW_NSFileCoordinator
+static inline NSFileCoordinator    NSFileCoordinator_New(void)                                                                                                                                                                                                                                                                                     { return (NSFileCoordinator)bean_new(bean_cls("NSFileCoordinator")); }
+#endif
 
 /* ===== NSFileHandle ===== */
 #ifndef BEAN_TYPEDEF_NSFileHandle
@@ -4298,6 +5253,14 @@ static inline void                  NSFileHandle_TruncateFileAtOffset(NSFileHand
 static inline void                  NSFileHandle_SynchronizeFile(NSFileHandle self)                                                                     { ((void (*)(NSFileHandle, SEL))bean_msgSend)(self, bean_sel("synchronizeFile")); }
 static inline void                  NSFileHandle_CloseFile(NSFileHandle self)                                                                           { ((void (*)(NSFileHandle, SEL))bean_msgSend)(self, bean_sel("closeFile")); }
 static inline BOOL                  NSFileHandle_SupportsSecureCoding(void)                                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSFileHandle"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSFileHandle
+#define BEAN_ALLOC_NSFileHandle
+static inline NSFileHandle          NSFileHandle_Alloc(void)                                                                                            { return (NSFileHandle)bean_alloc(bean_cls("NSFileHandle")); }
+#endif
+#ifndef BEAN_NEW_NSFileHandle
+#define BEAN_NEW_NSFileHandle
+static inline NSFileHandle          NSFileHandle_New(void)                                                                                              { return (NSFileHandle)bean_new(bean_cls("NSFileHandle")); }
+#endif
 
 /* ===== NSFileManager ===== */
 #ifndef BEAN_TYPEDEF_NSFileManager
@@ -4379,28 +5342,44 @@ static inline id                       NSFileManager_UbiquityIdentityToken(NSFil
 static inline NSURL                    NSFileManager_HomeDirectoryForUser(NSFileManager self, NSString userName)                                                                                                                                                                                            { return ((NSURL (*)(NSFileManager, SEL, NSString))bean_msgSend)(self, bean_sel("homeDirectoryForUser:"), userName); }
 static inline NSURL                    NSFileManager_HomeDirectoryForCurrentUser(NSFileManager self)                                                                                                                                                                                                        { return ((NSURL (*)(NSFileManager, SEL))bean_msgSend)(self, bean_sel("homeDirectoryForCurrentUser")); }
 static inline NSURL                    NSFileManager_TemporaryDirectory(NSFileManager self)                                                                                                                                                                                                                 { return ((NSURL (*)(NSFileManager, SEL))bean_msgSend)(self, bean_sel("temporaryDirectory")); }
+#ifndef BEAN_ALLOC_NSFileManager
+#define BEAN_ALLOC_NSFileManager
+static inline NSFileManager            NSFileManager_Alloc(void)                                                                                                                                                                                                                                            { return (NSFileManager)bean_alloc(bean_cls("NSFileManager")); }
+#endif
+#ifndef BEAN_NEW_NSFileManager
+#define BEAN_NEW_NSFileManager
+static inline NSFileManager            NSFileManager_New(void)                                                                                                                                                                                                                                              { return (NSFileManager)bean_new(bean_cls("NSFileManager")); }
+#endif
 
 /* ===== NSFileManagerDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSFileManagerDelegate
 #define BEAN_TYPEDEF_NSFileManagerDelegate
 typedef bean_id NSFileManagerDelegate;
 #endif
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldCopyItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSString srcPath, NSString dstPath)                                        { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldCopyItemAtPath:toPath:"), fileManager, srcPath, dstPath); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldCopyItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSURL srcURL, NSURL dstURL)                                                  { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldCopyItemAtURL:toURL:"), fileManager, srcURL, dstURL); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldProceedAfterError_CopyingItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSString srcPath, NSString dstPath)    { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:copyingItemAtPath:toPath:"), fileManager, error, srcPath, dstPath); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldProceedAfterError_CopyingItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSURL srcURL, NSURL dstURL)              { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:copyingItemAtURL:toURL:"), fileManager, error, srcURL, dstURL); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldMoveItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSString srcPath, NSString dstPath)                                        { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldMoveItemAtPath:toPath:"), fileManager, srcPath, dstPath); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldMoveItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSURL srcURL, NSURL dstURL)                                                  { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldMoveItemAtURL:toURL:"), fileManager, srcURL, dstURL); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldProceedAfterError_MovingItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSString srcPath, NSString dstPath)     { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:movingItemAtPath:toPath:"), fileManager, error, srcPath, dstPath); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldProceedAfterError_MovingItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSURL srcURL, NSURL dstURL)               { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:movingItemAtURL:toURL:"), fileManager, error, srcURL, dstURL); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldLinkItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSString srcPath, NSString dstPath)                                        { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldLinkItemAtPath:toPath:"), fileManager, srcPath, dstPath); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldLinkItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSURL srcURL, NSURL dstURL)                                                  { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldLinkItemAtURL:toURL:"), fileManager, srcURL, dstURL); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldProceedAfterError_LinkingItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSString srcPath, NSString dstPath)    { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:linkingItemAtPath:toPath:"), fileManager, error, srcPath, dstPath); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldProceedAfterError_LinkingItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSURL srcURL, NSURL dstURL)              { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:linkingItemAtURL:toURL:"), fileManager, error, srcURL, dstURL); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldRemoveItemAtPath(NSFileManagerDelegate self, NSFileManager fileManager, NSString path)                                                                  { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldRemoveItemAtPath:"), fileManager, path); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldRemoveItemAtURL(NSFileManagerDelegate self, NSFileManager fileManager, NSURL URL)                                                                       { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldRemoveItemAtURL:"), fileManager, URL); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldProceedAfterError_RemovingItemAtPath(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSString path)                               { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:removingItemAtPath:"), fileManager, error, path); }
-static inline BOOL    NSFileManagerDelegate_FileManager_ShouldProceedAfterError_RemovingItemAtURL(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSURL URL)                                    { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:removingItemAtURL:"), fileManager, error, URL); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldCopyItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSString srcPath, NSString dstPath)                                        { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldCopyItemAtPath:toPath:"), fileManager, srcPath, dstPath); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldCopyItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSURL srcURL, NSURL dstURL)                                                  { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldCopyItemAtURL:toURL:"), fileManager, srcURL, dstURL); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldProceedAfterError_CopyingItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSString srcPath, NSString dstPath)    { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:copyingItemAtPath:toPath:"), fileManager, error, srcPath, dstPath); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldProceedAfterError_CopyingItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSURL srcURL, NSURL dstURL)              { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:copyingItemAtURL:toURL:"), fileManager, error, srcURL, dstURL); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldMoveItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSString srcPath, NSString dstPath)                                        { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldMoveItemAtPath:toPath:"), fileManager, srcPath, dstPath); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldMoveItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSURL srcURL, NSURL dstURL)                                                  { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldMoveItemAtURL:toURL:"), fileManager, srcURL, dstURL); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldProceedAfterError_MovingItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSString srcPath, NSString dstPath)     { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:movingItemAtPath:toPath:"), fileManager, error, srcPath, dstPath); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldProceedAfterError_MovingItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSURL srcURL, NSURL dstURL)               { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:movingItemAtURL:toURL:"), fileManager, error, srcURL, dstURL); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldLinkItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSString srcPath, NSString dstPath)                                        { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldLinkItemAtPath:toPath:"), fileManager, srcPath, dstPath); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldLinkItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSURL srcURL, NSURL dstURL)                                                  { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldLinkItemAtURL:toURL:"), fileManager, srcURL, dstURL); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldProceedAfterError_LinkingItemAtPath_ToPath(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSString srcPath, NSString dstPath)    { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSString, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:linkingItemAtPath:toPath:"), fileManager, error, srcPath, dstPath); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldProceedAfterError_LinkingItemAtURL_ToURL(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSURL srcURL, NSURL dstURL)              { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSURL, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:linkingItemAtURL:toURL:"), fileManager, error, srcURL, dstURL); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldRemoveItemAtPath(NSFileManagerDelegate self, NSFileManager fileManager, NSString path)                                                                  { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldRemoveItemAtPath:"), fileManager, path); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldRemoveItemAtURL(NSFileManagerDelegate self, NSFileManager fileManager, NSURL URL)                                                                       { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldRemoveItemAtURL:"), fileManager, URL); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldProceedAfterError_RemovingItemAtPath(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSString path)                               { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSString))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:removingItemAtPath:"), fileManager, error, path); }
+static inline BOOL                     NSFileManagerDelegate_FileManager_ShouldProceedAfterError_RemovingItemAtURL(NSFileManagerDelegate self, NSFileManager fileManager, NSError error, NSURL URL)                                    { return ((BOOL (*)(NSFileManagerDelegate, SEL, NSFileManager, NSError, NSURL))bean_msgSend)(self, bean_sel("fileManager:shouldProceedAfterError:removingItemAtURL:"), fileManager, error, URL); }
+#ifndef BEAN_ALLOC_NSFileManagerDelegate
+#define BEAN_ALLOC_NSFileManagerDelegate
+static inline NSFileManagerDelegate    NSFileManagerDelegate_Alloc(void)                                                                                                                                                               { return (NSFileManagerDelegate)bean_alloc(bean_cls("NSFileManagerDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSFileManagerDelegate
+#define BEAN_NEW_NSFileManagerDelegate
+static inline NSFileManagerDelegate    NSFileManagerDelegate_New(void)                                                                                                                                                                 { return (NSFileManagerDelegate)bean_new(bean_cls("NSFileManagerDelegate")); }
+#endif
 
 /* ===== NSFilePresenter ===== */
 #ifndef BEAN_TYPEDEF_NSFilePresenter
@@ -4429,14 +5408,30 @@ static inline NSURL               NSFilePresenter_PresentedItemURL(NSFilePresent
 static inline NSOperationQueue    NSFilePresenter_PresentedItemOperationQueue(NSFilePresenter self)                                                                       { return ((NSOperationQueue (*)(NSFilePresenter, SEL))bean_msgSend)(self, bean_sel("presentedItemOperationQueue")); }
 static inline NSURL               NSFilePresenter_PrimaryPresentedItemURL(NSFilePresenter self)                                                                           { return ((NSURL (*)(NSFilePresenter, SEL))bean_msgSend)(self, bean_sel("primaryPresentedItemURL")); }
 static inline NSSet               NSFilePresenter_ObservedPresentedItemUbiquityAttributes(NSFilePresenter self)                                                           { return ((NSSet (*)(NSFilePresenter, SEL))bean_msgSend)(self, bean_sel("observedPresentedItemUbiquityAttributes")); }
+#ifndef BEAN_ALLOC_NSFilePresenter
+#define BEAN_ALLOC_NSFilePresenter
+static inline NSFilePresenter     NSFilePresenter_Alloc(void)                                                                                                             { return (NSFilePresenter)bean_alloc(bean_cls("NSFilePresenter")); }
+#endif
+#ifndef BEAN_NEW_NSFilePresenter
+#define BEAN_NEW_NSFilePresenter
+static inline NSFilePresenter     NSFilePresenter_New(void)                                                                                                               { return (NSFilePresenter)bean_new(bean_cls("NSFilePresenter")); }
+#endif
 
 /* ===== NSFileProviderService ===== */
 #ifndef BEAN_TYPEDEF_NSFileProviderService
 #define BEAN_TYPEDEF_NSFileProviderService
 typedef bean_id NSFileProviderService;
 #endif
-static inline void        NSFileProviderService_GetFileProviderConnectionWithCompletionHandler(NSFileProviderService self, void* completionHandler)    { ((void (*)(NSFileProviderService, SEL, void*))bean_msgSend)(self, bean_sel("getFileProviderConnectionWithCompletionHandler:"), completionHandler); }
-static inline NSString    NSFileProviderService_Name(NSFileProviderService self)                                                                       { return ((NSString (*)(NSFileProviderService, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                     NSFileProviderService_GetFileProviderConnectionWithCompletionHandler(NSFileProviderService self, void* completionHandler)    { ((void (*)(NSFileProviderService, SEL, void*))bean_msgSend)(self, bean_sel("getFileProviderConnectionWithCompletionHandler:"), completionHandler); }
+static inline NSString                 NSFileProviderService_Name(NSFileProviderService self)                                                                       { return ((NSString (*)(NSFileProviderService, SEL))bean_msgSend)(self, bean_sel("name")); }
+#ifndef BEAN_ALLOC_NSFileProviderService
+#define BEAN_ALLOC_NSFileProviderService
+static inline NSFileProviderService    NSFileProviderService_Alloc(void)                                                                                            { return (NSFileProviderService)bean_alloc(bean_cls("NSFileProviderService")); }
+#endif
+#ifndef BEAN_NEW_NSFileProviderService
+#define BEAN_NEW_NSFileProviderService
+static inline NSFileProviderService    NSFileProviderService_New(void)                                                                                              { return (NSFileProviderService)bean_new(bean_cls("NSFileProviderService")); }
+#endif
 
 /* ===== NSFileSecurity ===== */
 #ifndef BEAN_TYPEDEF_NSFileSecurity
@@ -4446,6 +5441,14 @@ typedef bean_id NSFileSecurity;
 static inline NSFileSecurity    NSFileSecurity_InitWithCoder(NSFileSecurity self, NSCoder coder)    { return ((NSFileSecurity (*)(NSFileSecurity, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                NSFileSecurity_CopyWithZone(NSFileSecurity self, NSZone* zone)      { return ((id (*)(NSFileSecurity, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL              NSFileSecurity_SupportsSecureCoding(void)                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSFileSecurity"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSFileSecurity
+#define BEAN_ALLOC_NSFileSecurity
+static inline NSFileSecurity    NSFileSecurity_Alloc(void)                                          { return (NSFileSecurity)bean_alloc(bean_cls("NSFileSecurity")); }
+#endif
+#ifndef BEAN_NEW_NSFileSecurity
+#define BEAN_NEW_NSFileSecurity
+static inline NSFileSecurity    NSFileSecurity_New(void)                                            { return (NSFileSecurity)bean_new(bean_cls("NSFileSecurity")); }
+#endif
 
 /* ===== NSFileVersion ===== */
 static inline NSFileVersion             NSFileVersion_CurrentVersionOfItemAtURL(NSURL url)                                                                                                          { return ((NSFileVersion (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSFileVersion"), bean_sel("currentVersionOfItemAtURL:"), url); }
@@ -4474,6 +5477,14 @@ static inline BOOL                      NSFileVersion_HasThumbnail(NSFileVersion
 static inline BOOL                      NSFileVersion_Conflict(NSFileVersion self)                                                                                                                  { return ((BOOL (*)(NSFileVersion, SEL))bean_msgSend)(self, bean_sel("conflict")); }
 static inline BOOL                      NSFileVersion_Resolved(NSFileVersion self)                                                                                                                  { return ((BOOL (*)(NSFileVersion, SEL))bean_msgSend)(self, bean_sel("resolved")); }
 static inline BOOL                      NSFileVersion_Discardable(NSFileVersion self)                                                                                                               { return ((BOOL (*)(NSFileVersion, SEL))bean_msgSend)(self, bean_sel("discardable")); }
+#ifndef BEAN_ALLOC_NSFileVersion
+#define BEAN_ALLOC_NSFileVersion
+static inline NSFileVersion             NSFileVersion_Alloc(void)                                                                                                                                   { return (NSFileVersion)bean_alloc(bean_cls("NSFileVersion")); }
+#endif
+#ifndef BEAN_NEW_NSFileVersion
+#define BEAN_NEW_NSFileVersion
+static inline NSFileVersion             NSFileVersion_New(void)                                                                                                                                     { return (NSFileVersion)bean_new(bean_cls("NSFileVersion")); }
+#endif
 
 /* ===== NSFileWrapper ===== */
 #ifndef BEAN_TYPEDEF_NSFileWrapper
@@ -4518,6 +5529,14 @@ static inline BOOL             NSFileWrapper_SupportsSecureCoding(void)         
 static inline BOOL             NSFileWrapper_Directory(NSFileWrapper self)                                                                                                                                     { return ((BOOL (*)(NSFileWrapper, SEL))bean_msgSend)(self, bean_sel("directory")); }
 static inline BOOL             NSFileWrapper_RegularFile(NSFileWrapper self)                                                                                                                                   { return ((BOOL (*)(NSFileWrapper, SEL))bean_msgSend)(self, bean_sel("regularFile")); }
 static inline BOOL             NSFileWrapper_SymbolicLink(NSFileWrapper self)                                                                                                                                  { return ((BOOL (*)(NSFileWrapper, SEL))bean_msgSend)(self, bean_sel("symbolicLink")); }
+#ifndef BEAN_ALLOC_NSFileWrapper
+#define BEAN_ALLOC_NSFileWrapper
+static inline NSFileWrapper    NSFileWrapper_Alloc(void)                                                                                                                                                       { return (NSFileWrapper)bean_alloc(bean_cls("NSFileWrapper")); }
+#endif
+#ifndef BEAN_NEW_NSFileWrapper
+#define BEAN_NEW_NSFileWrapper
+static inline NSFileWrapper    NSFileWrapper_New(void)                                                                                                                                                         { return (NSFileWrapper)bean_new(bean_cls("NSFileWrapper")); }
+#endif
 
 /* ===== NSFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSFormatter
@@ -4533,6 +5552,14 @@ static inline BOOL                  NSFormatter_IsPartialStringValid_ProposedSel
 static inline id                    NSFormatter_CopyWithZone(NSFormatter self, NSZone* zone)                                                                                                                                                                                              { return ((id (*)(NSFormatter, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline void                  NSFormatter_EncodeWithCoder(NSFormatter self, NSCoder coder)                                                                                                                                                                                          { ((void (*)(NSFormatter, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding              NSFormatter_InitWithCoder(NSFormatter self, NSCoder coder)                                                                                                                                                                                            { return ((NSCoding (*)(NSFormatter, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSFormatter
+#define BEAN_ALLOC_NSFormatter
+static inline NSFormatter           NSFormatter_Alloc(void)                                                                                                                                                                                                                               { return (NSFormatter)bean_alloc(bean_cls("NSFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSFormatter
+#define BEAN_NEW_NSFormatter
+static inline NSFormatter           NSFormatter_New(void)                                                                                                                                                                                                                                 { return (NSFormatter)bean_new(bean_cls("NSFormatter")); }
+#endif
 
 /* ===== NSHTTPCookie ===== */
 #ifndef BEAN_TYPEDEF_NSHTTPCookie
@@ -4560,6 +5587,14 @@ static inline NSString        NSHTTPCookie_SameSitePolicy(NSHTTPCookie self)    
 static inline BOOL            NSHTTPCookie_SessionOnly(NSHTTPCookie self)                                                  { return ((BOOL (*)(NSHTTPCookie, SEL))bean_msgSend)(self, bean_sel("sessionOnly")); }
 static inline BOOL            NSHTTPCookie_Secure(NSHTTPCookie self)                                                       { return ((BOOL (*)(NSHTTPCookie, SEL))bean_msgSend)(self, bean_sel("secure")); }
 static inline BOOL            NSHTTPCookie_HTTPOnly(NSHTTPCookie self)                                                     { return ((BOOL (*)(NSHTTPCookie, SEL))bean_msgSend)(self, bean_sel("HTTPOnly")); }
+#ifndef BEAN_ALLOC_NSHTTPCookie
+#define BEAN_ALLOC_NSHTTPCookie
+static inline NSHTTPCookie    NSHTTPCookie_Alloc(void)                                                                     { return (NSHTTPCookie)bean_alloc(bean_cls("NSHTTPCookie")); }
+#endif
+#ifndef BEAN_NEW_NSHTTPCookie
+#define BEAN_NEW_NSHTTPCookie
+static inline NSHTTPCookie    NSHTTPCookie_New(void)                                                                       { return (NSHTTPCookie)bean_new(bean_cls("NSHTTPCookie")); }
+#endif
 
 /* ===== NSHTTPCookieStorage ===== */
 #ifndef BEAN_TYPEDEF_NSHTTPCookieStorage
@@ -4579,6 +5614,14 @@ static inline NSHTTPCookieAcceptPolicy    NSHTTPCookieStorage_CookieAcceptPolicy
 static inline void                        NSHTTPCookieStorage_SetCookieAcceptPolicy(NSHTTPCookieStorage self, NSHTTPCookieAcceptPolicy cookieAcceptPolicy)                      { ((void (*)(NSHTTPCookieStorage, SEL, NSHTTPCookieAcceptPolicy))bean_msgSend)(self, bean_sel("setCookieAcceptPolicy:"), cookieAcceptPolicy); }
 static inline void                        NSHTTPCookieStorage_StoreCookies_ForTask(NSHTTPCookieStorage self, NSArray cookies, NSURLSessionTask task)                            { ((void (*)(NSHTTPCookieStorage, SEL, NSArray, NSURLSessionTask))bean_msgSend)(self, bean_sel("storeCookies:forTask:"), cookies, task); }
 static inline void                        NSHTTPCookieStorage_GetCookiesForTask_CompletionHandler(NSHTTPCookieStorage self, NSURLSessionTask task, void* completionHandler)     { ((void (*)(NSHTTPCookieStorage, SEL, NSURLSessionTask, void*))bean_msgSend)(self, bean_sel("getCookiesForTask:completionHandler:"), task, completionHandler); }
+#ifndef BEAN_ALLOC_NSHTTPCookieStorage
+#define BEAN_ALLOC_NSHTTPCookieStorage
+static inline NSHTTPCookieStorage         NSHTTPCookieStorage_Alloc(void)                                                                                                       { return (NSHTTPCookieStorage)bean_alloc(bean_cls("NSHTTPCookieStorage")); }
+#endif
+#ifndef BEAN_NEW_NSHTTPCookieStorage
+#define BEAN_NEW_NSHTTPCookieStorage
+static inline NSHTTPCookieStorage         NSHTTPCookieStorage_New(void)                                                                                                         { return (NSHTTPCookieStorage)bean_new(bean_cls("NSHTTPCookieStorage")); }
+#endif
 
 /* ===== NSHTTPURLResponse ===== */
 #ifndef BEAN_TYPEDEF_NSHTTPURLResponse
@@ -4590,6 +5633,14 @@ static inline NSString             NSHTTPURLResponse_ValueForHTTPHeaderField(NSH
 static inline NSString             NSHTTPURLResponse_LocalizedStringForStatusCode(NSInteger statusCode)                                                                                                           { return ((NSString (*)(bean_class, SEL, NSInteger))bean_msgSend)(bean_cls("NSHTTPURLResponse"), bean_sel("localizedStringForStatusCode:"), statusCode); }
 static inline NSInteger            NSHTTPURLResponse_StatusCode(NSHTTPURLResponse self)                                                                                                                           { return ((NSInteger (*)(NSHTTPURLResponse, SEL))bean_msgSend)(self, bean_sel("statusCode")); }
 static inline NSDictionary         NSHTTPURLResponse_AllHeaderFields(NSHTTPURLResponse self)                                                                                                                      { return ((NSDictionary (*)(NSHTTPURLResponse, SEL))bean_msgSend)(self, bean_sel("allHeaderFields")); }
+#ifndef BEAN_ALLOC_NSHTTPURLResponse
+#define BEAN_ALLOC_NSHTTPURLResponse
+static inline NSHTTPURLResponse    NSHTTPURLResponse_Alloc(void)                                                                                                                                                  { return (NSHTTPURLResponse)bean_alloc(bean_cls("NSHTTPURLResponse")); }
+#endif
+#ifndef BEAN_NEW_NSHTTPURLResponse
+#define BEAN_NEW_NSHTTPURLResponse
+static inline NSHTTPURLResponse    NSHTTPURLResponse_New(void)                                                                                                                                                    { return (NSHTTPURLResponse)bean_new(bean_cls("NSHTTPURLResponse")); }
+#endif
 
 /* ===== NSHashTable ===== */
 #ifndef BEAN_TYPEDEF_NSHashTable
@@ -4621,6 +5672,14 @@ static inline NSSet                 NSHashTable_SetRepresentation(NSHashTable se
 static inline id                    NSHashTable_CopyWithZone(NSHashTable self, NSZone* zone)                                                                              { return ((id (*)(NSHashTable, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSHashTable_SupportsSecureCoding(void)                                                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSHashTable"), bean_sel("supportsSecureCoding")); }
 static inline NSUInteger            NSHashTable_CountByEnumeratingWithState_Objects_Count(NSHashTable self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSHashTable, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSHashTable
+#define BEAN_ALLOC_NSHashTable
+static inline NSHashTable           NSHashTable_Alloc(void)                                                                                                               { return (NSHashTable)bean_alloc(bean_cls("NSHashTable")); }
+#endif
+#ifndef BEAN_NEW_NSHashTable
+#define BEAN_NEW_NSHashTable
+static inline NSHashTable           NSHashTable_New(void)                                                                                                                 { return (NSHashTable)bean_new(bean_cls("NSHashTable")); }
+#endif
 
 /* ===== NSHost ===== */
 #ifndef BEAN_TYPEDEF_NSHost
@@ -4639,6 +5698,14 @@ static inline NSArray     NSHost_Names(NSHost self)                          { r
 static inline NSString    NSHost_Address(NSHost self)                        { return ((NSString (*)(NSHost, SEL))bean_msgSend)(self, bean_sel("address")); }
 static inline NSArray     NSHost_Addresses(NSHost self)                      { return ((NSArray (*)(NSHost, SEL))bean_msgSend)(self, bean_sel("addresses")); }
 static inline NSString    NSHost_LocalizedName(NSHost self)                  { return ((NSString (*)(NSHost, SEL))bean_msgSend)(self, bean_sel("localizedName")); }
+#ifndef BEAN_ALLOC_NSHost
+#define BEAN_ALLOC_NSHost
+static inline NSHost      NSHost_Alloc(void)                                 { return (NSHost)bean_alloc(bean_cls("NSHost")); }
+#endif
+#ifndef BEAN_NEW_NSHost
+#define BEAN_NEW_NSHost
+static inline NSHost      NSHost_New(void)                                   { return (NSHost)bean_new(bean_cls("NSHost")); }
+#endif
 
 /* ===== NSISO8601DateFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSISO8601DateFormatter
@@ -4654,6 +5721,14 @@ static inline void                          NSISO8601DateFormatter_SetTimeZone(N
 static inline NSISO8601DateFormatOptions    NSISO8601DateFormatter_FormatOptions(NSISO8601DateFormatter self)                                                                           { return ((NSISO8601DateFormatOptions (*)(NSISO8601DateFormatter, SEL))bean_msgSend)(self, bean_sel("formatOptions")); }
 static inline void                          NSISO8601DateFormatter_SetFormatOptions(NSISO8601DateFormatter self, NSISO8601DateFormatOptions formatOptions)                              { ((void (*)(NSISO8601DateFormatter, SEL, NSISO8601DateFormatOptions))bean_msgSend)(self, bean_sel("setFormatOptions:"), formatOptions); }
 static inline BOOL                          NSISO8601DateFormatter_SupportsSecureCoding(void)                                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSISO8601DateFormatter"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSISO8601DateFormatter
+#define BEAN_ALLOC_NSISO8601DateFormatter
+static inline NSISO8601DateFormatter        NSISO8601DateFormatter_Alloc(void)                                                                                                          { return (NSISO8601DateFormatter)bean_alloc(bean_cls("NSISO8601DateFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSISO8601DateFormatter
+#define BEAN_NEW_NSISO8601DateFormatter
+static inline NSISO8601DateFormatter        NSISO8601DateFormatter_New(void)                                                                                                            { return (NSISO8601DateFormatter)bean_new(bean_cls("NSISO8601DateFormatter")); }
+#endif
 
 /* ===== NSIndexSpecifier ===== */
 #ifndef BEAN_TYPEDEF_NSIndexSpecifier
@@ -4663,6 +5738,14 @@ typedef bean_id NSIndexSpecifier;
 static inline NSIndexSpecifier    NSIndexSpecifier_InitWithContainerClassDescription_ContainerSpecifier_Key_Index(NSIndexSpecifier self, NSScriptClassDescription classDesc, NSScriptObjectSpecifier container, NSString property, NSInteger index)    { return ((NSIndexSpecifier (*)(NSIndexSpecifier, SEL, NSScriptClassDescription, NSScriptObjectSpecifier, NSString, NSInteger))bean_msgSend)(self, bean_sel("initWithContainerClassDescription:containerSpecifier:key:index:"), classDesc, container, property, index); }
 static inline NSInteger           NSIndexSpecifier_Index(NSIndexSpecifier self)                                                                                                                                                                        { return ((NSInteger (*)(NSIndexSpecifier, SEL))bean_msgSend)(self, bean_sel("index")); }
 static inline void                NSIndexSpecifier_SetIndex(NSIndexSpecifier self, NSInteger index)                                                                                                                                                    { ((void (*)(NSIndexSpecifier, SEL, NSInteger))bean_msgSend)(self, bean_sel("setIndex:"), index); }
+#ifndef BEAN_ALLOC_NSIndexSpecifier
+#define BEAN_ALLOC_NSIndexSpecifier
+static inline NSIndexSpecifier    NSIndexSpecifier_Alloc(void)                                                                                                                                                                                         { return (NSIndexSpecifier)bean_alloc(bean_cls("NSIndexSpecifier")); }
+#endif
+#ifndef BEAN_NEW_NSIndexSpecifier
+#define BEAN_NEW_NSIndexSpecifier
+static inline NSIndexSpecifier    NSIndexSpecifier_New(void)                                                                                                                                                                                           { return (NSIndexSpecifier)bean_new(bean_cls("NSIndexSpecifier")); }
+#endif
 
 /* ===== NSInflectionRule ===== */
 #ifndef BEAN_TYPEDEF_NSInflectionRule
@@ -4675,6 +5758,14 @@ static inline BOOL                NSInflectionRule_CanInflectLanguage(NSString l
 static inline BOOL                NSInflectionRule_CanInflectPreferredLocalization(void)                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSInflectionRule"), bean_sel("canInflectPreferredLocalization")); }
 static inline id                  NSInflectionRule_CopyWithZone(NSInflectionRule self, NSZone* zone)    { return ((id (*)(NSInflectionRule, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                NSInflectionRule_SupportsSecureCoding(void)                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSInflectionRule"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSInflectionRule
+#define BEAN_ALLOC_NSInflectionRule
+static inline NSInflectionRule    NSInflectionRule_Alloc(void)                                          { return (NSInflectionRule)bean_alloc(bean_cls("NSInflectionRule")); }
+#endif
+#ifndef BEAN_NEW_NSInflectionRule
+#define BEAN_NEW_NSInflectionRule
+static inline NSInflectionRule    NSInflectionRule_New(void)                                            { return (NSInflectionRule)bean_new(bean_cls("NSInflectionRule")); }
+#endif
 
 /* ===== NSInflectionRuleExplicit ===== */
 #ifndef BEAN_TYPEDEF_NSInflectionRuleExplicit
@@ -4683,6 +5774,14 @@ typedef bean_id NSInflectionRuleExplicit;
 #endif
 static inline NSInflectionRuleExplicit    NSInflectionRuleExplicit_InitWithMorphology(NSInflectionRuleExplicit self, NSMorphology morphology)    { return ((NSInflectionRuleExplicit (*)(NSInflectionRuleExplicit, SEL, NSMorphology))bean_msgSend)(self, bean_sel("initWithMorphology:"), morphology); }
 static inline NSMorphology                NSInflectionRuleExplicit_Morphology(NSInflectionRuleExplicit self)                                     { return ((NSMorphology (*)(NSInflectionRuleExplicit, SEL))bean_msgSend)(self, bean_sel("morphology")); }
+#ifndef BEAN_ALLOC_NSInflectionRuleExplicit
+#define BEAN_ALLOC_NSInflectionRuleExplicit
+static inline NSInflectionRuleExplicit    NSInflectionRuleExplicit_Alloc(void)                                                                   { return (NSInflectionRuleExplicit)bean_alloc(bean_cls("NSInflectionRuleExplicit")); }
+#endif
+#ifndef BEAN_NEW_NSInflectionRuleExplicit
+#define BEAN_NEW_NSInflectionRuleExplicit
+static inline NSInflectionRuleExplicit    NSInflectionRuleExplicit_New(void)                                                                     { return (NSInflectionRuleExplicit)bean_new(bean_cls("NSInflectionRuleExplicit")); }
+#endif
 
 /* ===== NSInputStream ===== */
 #ifndef BEAN_TYPEDEF_NSInputStream
@@ -4698,6 +5797,14 @@ static inline NSInputStream    NSInputStream_InitWithFileAtPath(NSInputStream se
 static inline NSInputStream    NSInputStream_InputStreamWithData(NSData data)                                         { return ((NSInputStream (*)(bean_class, SEL, NSData))bean_msgSend)(bean_cls("NSInputStream"), bean_sel("inputStreamWithData:"), data); }
 static inline NSInputStream    NSInputStream_InputStreamWithFileAtPath(NSString path)                                 { return ((NSInputStream (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSInputStream"), bean_sel("inputStreamWithFileAtPath:"), path); }
 static inline NSInputStream    NSInputStream_InputStreamWithURL(NSURL url)                                            { return ((NSInputStream (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSInputStream"), bean_sel("inputStreamWithURL:"), url); }
+#ifndef BEAN_ALLOC_NSInputStream
+#define BEAN_ALLOC_NSInputStream
+static inline NSInputStream    NSInputStream_Alloc(void)                                                              { return (NSInputStream)bean_alloc(bean_cls("NSInputStream")); }
+#endif
+#ifndef BEAN_NEW_NSInputStream
+#define BEAN_NEW_NSInputStream
+static inline NSInputStream    NSInputStream_New(void)                                                                { return (NSInputStream)bean_new(bean_cls("NSInputStream")); }
+#endif
 
 /* ===== NSItemProvider ===== */
 #ifndef BEAN_TYPEDEF_NSItemProvider
@@ -4729,6 +5836,14 @@ static inline void              NSItemProvider_LoadPreviewImageWithOptions_Compl
 static inline void*             NSItemProvider_PreviewImageHandler(NSItemProvider self)                                                                                                                                                                                                     { return ((void* (*)(NSItemProvider, SEL))bean_msgSend)(self, bean_sel("previewImageHandler")); }
 static inline void              NSItemProvider_SetPreviewImageHandler(NSItemProvider self, void* previewImageHandler)                                                                                                                                                                       { ((void (*)(NSItemProvider, SEL, void*))bean_msgSend)(self, bean_sel("setPreviewImageHandler:"), previewImageHandler); }
 static inline id                NSItemProvider_CopyWithZone(NSItemProvider self, NSZone* zone)                                                                                                                                                                                              { return ((id (*)(NSItemProvider, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSItemProvider
+#define BEAN_ALLOC_NSItemProvider
+static inline NSItemProvider    NSItemProvider_Alloc(void)                                                                                                                                                                                                                                  { return (NSItemProvider)bean_alloc(bean_cls("NSItemProvider")); }
+#endif
+#ifndef BEAN_NEW_NSItemProvider
+#define BEAN_NEW_NSItemProvider
+static inline NSItemProvider    NSItemProvider_New(void)                                                                                                                                                                                                                                    { return (NSItemProvider)bean_new(bean_cls("NSItemProvider")); }
+#endif
 
 /* ===== NSItemProviderReading ===== */
 #ifndef BEAN_TYPEDEF_NSItemProviderReading
@@ -4737,6 +5852,14 @@ typedef bean_id NSItemProviderReading;
 #endif
 static inline NSItemProviderReading    NSItemProviderReading_ObjectWithItemProviderData_TypeIdentifier_Error(NSData data, NSString typeIdentifier, NSError* outError)    { return ((NSItemProviderReading (*)(bean_class, SEL, NSData, NSString, NSError*))bean_msgSend)(bean_cls("NSItemProviderReading"), bean_sel("objectWithItemProviderData:typeIdentifier:error:"), data, typeIdentifier, outError); }
 static inline NSArray                  NSItemProviderReading_ReadableTypeIdentifiersForItemProvider(void)                                                                { return ((NSArray (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSItemProviderReading"), bean_sel("readableTypeIdentifiersForItemProvider")); }
+#ifndef BEAN_ALLOC_NSItemProviderReading
+#define BEAN_ALLOC_NSItemProviderReading
+static inline NSItemProviderReading    NSItemProviderReading_Alloc(void)                                                                                                 { return (NSItemProviderReading)bean_alloc(bean_cls("NSItemProviderReading")); }
+#endif
+#ifndef BEAN_NEW_NSItemProviderReading
+#define BEAN_NEW_NSItemProviderReading
+static inline NSItemProviderReading    NSItemProviderReading_New(void)                                                                                                   { return (NSItemProviderReading)bean_new(bean_cls("NSItemProviderReading")); }
+#endif
 
 /* ===== NSItemProviderWriting ===== */
 #ifndef BEAN_TYPEDEF_NSItemProviderWriting
@@ -4746,17 +5869,33 @@ typedef bean_id NSItemProviderWriting;
 static inline NSItemProviderRepresentationVisibility    NSItemProviderWriting_ItemProviderVisibilityForRepresentationWithTypeIdentifier(NSString typeIdentifier)                                                           { return ((NSItemProviderRepresentationVisibility (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSItemProviderWriting"), bean_sel("itemProviderVisibilityForRepresentationWithTypeIdentifier:"), typeIdentifier); }
 static inline NSProgress                                NSItemProviderWriting_LoadDataWithTypeIdentifier_ForItemProviderCompletionHandler(NSItemProviderWriting self, NSString typeIdentifier, void* completionHandler)    { return ((NSProgress (*)(NSItemProviderWriting, SEL, NSString, void*))bean_msgSend)(self, bean_sel("loadDataWithTypeIdentifier:forItemProviderCompletionHandler:"), typeIdentifier, completionHandler); }
 static inline NSArray                                   NSItemProviderWriting_WritableTypeIdentifiersForItemProvider(void)                                                                                                 { return ((NSArray (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSItemProviderWriting"), bean_sel("writableTypeIdentifiersForItemProvider")); }
+#ifndef BEAN_ALLOC_NSItemProviderWriting
+#define BEAN_ALLOC_NSItemProviderWriting
+static inline NSItemProviderWriting                     NSItemProviderWriting_Alloc(void)                                                                                                                                  { return (NSItemProviderWriting)bean_alloc(bean_cls("NSItemProviderWriting")); }
+#endif
+#ifndef BEAN_NEW_NSItemProviderWriting
+#define BEAN_NEW_NSItemProviderWriting
+static inline NSItemProviderWriting                     NSItemProviderWriting_New(void)                                                                                                                                    { return (NSItemProviderWriting)bean_new(bean_cls("NSItemProviderWriting")); }
+#endif
 
 /* ===== NSJSONSerialization ===== */
 #ifndef BEAN_TYPEDEF_NSJSONSerialization
 #define BEAN_TYPEDEF_NSJSONSerialization
 typedef bean_id NSJSONSerialization;
 #endif
-static inline BOOL         NSJSONSerialization_IsValidJSONObject(id obj)                                                                                          { return ((BOOL (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("isValidJSONObject:"), obj); }
-static inline NSData       NSJSONSerialization_DataWithJSONObject_Options_Error(id obj, NSJSONWritingOptions opt, NSError* error)                                 { return ((NSData (*)(bean_class, SEL, id, NSJSONWritingOptions, NSError*))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("dataWithJSONObject:options:error:"), obj, opt, error); }
-static inline id           NSJSONSerialization_JSONObjectWithData_Options_Error(NSData data, NSJSONReadingOptions opt, NSError* error)                            { return ((id (*)(bean_class, SEL, NSData, NSJSONReadingOptions, NSError*))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("JSONObjectWithData:options:error:"), data, opt, error); }
-static inline NSInteger    NSJSONSerialization_WriteJSONObject_ToStream_Options_Error(id obj, NSOutputStream stream, NSJSONWritingOptions opt, NSError* error)    { return ((NSInteger (*)(bean_class, SEL, id, NSOutputStream, NSJSONWritingOptions, NSError*))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("writeJSONObject:toStream:options:error:"), obj, stream, opt, error); }
-static inline id           NSJSONSerialization_JSONObjectWithStream_Options_Error(NSInputStream stream, NSJSONReadingOptions opt, NSError* error)                 { return ((id (*)(bean_class, SEL, NSInputStream, NSJSONReadingOptions, NSError*))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("JSONObjectWithStream:options:error:"), stream, opt, error); }
+static inline BOOL                   NSJSONSerialization_IsValidJSONObject(id obj)                                                                                          { return ((BOOL (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("isValidJSONObject:"), obj); }
+static inline NSData                 NSJSONSerialization_DataWithJSONObject_Options_Error(id obj, NSJSONWritingOptions opt, NSError* error)                                 { return ((NSData (*)(bean_class, SEL, id, NSJSONWritingOptions, NSError*))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("dataWithJSONObject:options:error:"), obj, opt, error); }
+static inline id                     NSJSONSerialization_JSONObjectWithData_Options_Error(NSData data, NSJSONReadingOptions opt, NSError* error)                            { return ((id (*)(bean_class, SEL, NSData, NSJSONReadingOptions, NSError*))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("JSONObjectWithData:options:error:"), data, opt, error); }
+static inline NSInteger              NSJSONSerialization_WriteJSONObject_ToStream_Options_Error(id obj, NSOutputStream stream, NSJSONWritingOptions opt, NSError* error)    { return ((NSInteger (*)(bean_class, SEL, id, NSOutputStream, NSJSONWritingOptions, NSError*))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("writeJSONObject:toStream:options:error:"), obj, stream, opt, error); }
+static inline id                     NSJSONSerialization_JSONObjectWithStream_Options_Error(NSInputStream stream, NSJSONReadingOptions opt, NSError* error)                 { return ((id (*)(bean_class, SEL, NSInputStream, NSJSONReadingOptions, NSError*))bean_msgSend)(bean_cls("NSJSONSerialization"), bean_sel("JSONObjectWithStream:options:error:"), stream, opt, error); }
+#ifndef BEAN_ALLOC_NSJSONSerialization
+#define BEAN_ALLOC_NSJSONSerialization
+static inline NSJSONSerialization    NSJSONSerialization_Alloc(void)                                                                                                        { return (NSJSONSerialization)bean_alloc(bean_cls("NSJSONSerialization")); }
+#endif
+#ifndef BEAN_NEW_NSJSONSerialization
+#define BEAN_NEW_NSJSONSerialization
+static inline NSJSONSerialization    NSJSONSerialization_New(void)                                                                                                          { return (NSJSONSerialization)bean_new(bean_cls("NSJSONSerialization")); }
+#endif
 
 /* ===== NSKeyValueSharedObservers ===== */
 #ifndef BEAN_TYPEDEF_NSKeyValueSharedObservers
@@ -4765,10 +5904,17 @@ typedef bean_id NSKeyValueSharedObservers;
 #endif
 static inline NSKeyValueSharedObservers            NSKeyValueSharedObservers_InitWithObservableClass(NSKeyValueSharedObservers self, bean_class observableClass)                                                                               { return ((NSKeyValueSharedObservers (*)(NSKeyValueSharedObservers, SEL, bean_class))bean_msgSend)(self, bean_sel("initWithObservableClass:"), observableClass); }
 static inline NSKeyValueSharedObservers            NSKeyValueSharedObservers_Init(NSKeyValueSharedObservers self)                                                                                                                              { return ((NSKeyValueSharedObservers (*)(NSKeyValueSharedObservers, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSKeyValueSharedObservers
+#define BEAN_NEW_NSKeyValueSharedObservers
 static inline id                                   NSKeyValueSharedObservers_New(void)                                                                                                                                                         { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSKeyValueSharedObservers"), bean_sel("new")); }
+#endif
 static inline void                                 NSKeyValueSharedObservers_AddSharedObserver_ForKey_Options_Context(NSKeyValueSharedObservers self, NSObject observer, NSString key, NSKeyValueObservingOptions options, void* context)      { ((void (*)(NSKeyValueSharedObservers, SEL, NSObject, NSString, NSKeyValueObservingOptions, void*))bean_msgSend)(self, bean_sel("addSharedObserver:forKey:options:context:"), observer, key, options, context); }
 static inline void                                 NSKeyValueSharedObservers_AddObserver_ForKeyPath_Options_Context(NSKeyValueSharedObservers self, NSObject observer, NSString keyPath, NSKeyValueObservingOptions options, void* context)    { ((void (*)(NSKeyValueSharedObservers, SEL, NSObject, NSString, NSKeyValueObservingOptions, void*))bean_msgSend)(self, bean_sel("addObserver:forKeyPath:options:context:"), observer, keyPath, options, context); }
 static inline NSKeyValueSharedObserversSnapshot    NSKeyValueSharedObservers_Snapshot(NSKeyValueSharedObservers self)                                                                                                                          { return ((NSKeyValueSharedObserversSnapshot (*)(NSKeyValueSharedObservers, SEL))bean_msgSend)(self, bean_sel("snapshot")); }
+#ifndef BEAN_ALLOC_NSKeyValueSharedObservers
+#define BEAN_ALLOC_NSKeyValueSharedObservers
+static inline NSKeyValueSharedObservers            NSKeyValueSharedObservers_Alloc(void)                                                                                                                                                       { return (NSKeyValueSharedObservers)bean_alloc(bean_cls("NSKeyValueSharedObservers")); }
+#endif
 
 /* ===== NSKeyedArchiver ===== */
 #ifndef BEAN_TYPEDEF_NSKeyedArchiver
@@ -4799,17 +5945,33 @@ static inline void                    NSKeyedArchiver_SetOutputFormat(NSKeyedArc
 static inline NSData                  NSKeyedArchiver_EncodedData(NSKeyedArchiver self)                                                                               { return ((NSData (*)(NSKeyedArchiver, SEL))bean_msgSend)(self, bean_sel("encodedData")); }
 static inline BOOL                    NSKeyedArchiver_RequiresSecureCoding(NSKeyedArchiver self)                                                                      { return ((BOOL (*)(NSKeyedArchiver, SEL))bean_msgSend)(self, bean_sel("requiresSecureCoding")); }
 static inline void                    NSKeyedArchiver_SetRequiresSecureCoding(NSKeyedArchiver self, BOOL requiresSecureCoding)                                        { ((void (*)(NSKeyedArchiver, SEL, BOOL))bean_msgSend)(self, bean_sel("setRequiresSecureCoding:"), requiresSecureCoding); }
+#ifndef BEAN_ALLOC_NSKeyedArchiver
+#define BEAN_ALLOC_NSKeyedArchiver
+static inline NSKeyedArchiver         NSKeyedArchiver_Alloc(void)                                                                                                     { return (NSKeyedArchiver)bean_alloc(bean_cls("NSKeyedArchiver")); }
+#endif
+#ifndef BEAN_NEW_NSKeyedArchiver
+#define BEAN_NEW_NSKeyedArchiver
+static inline NSKeyedArchiver         NSKeyedArchiver_New(void)                                                                                                       { return (NSKeyedArchiver)bean_new(bean_cls("NSKeyedArchiver")); }
+#endif
 
 /* ===== NSKeyedArchiverDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSKeyedArchiverDelegate
 #define BEAN_TYPEDEF_NSKeyedArchiverDelegate
 typedef bean_id NSKeyedArchiverDelegate;
 #endif
-static inline id      NSKeyedArchiverDelegate_Archiver_WillEncodeObject(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver, id object)                              { return ((id (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver, id))bean_msgSend)(self, bean_sel("archiver:willEncodeObject:"), archiver, object); }
-static inline void    NSKeyedArchiverDelegate_Archiver_DidEncodeObject(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver, id object)                               { ((void (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver, id))bean_msgSend)(self, bean_sel("archiver:didEncodeObject:"), archiver, object); }
-static inline void    NSKeyedArchiverDelegate_Archiver_WillReplaceObject_WithObject(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver, id object, id newObject)    { ((void (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver, id, id))bean_msgSend)(self, bean_sel("archiver:willReplaceObject:withObject:"), archiver, object, newObject); }
-static inline void    NSKeyedArchiverDelegate_ArchiverWillFinish(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver)                                                { ((void (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver))bean_msgSend)(self, bean_sel("archiverWillFinish:"), archiver); }
-static inline void    NSKeyedArchiverDelegate_ArchiverDidFinish(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver)                                                 { ((void (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver))bean_msgSend)(self, bean_sel("archiverDidFinish:"), archiver); }
+static inline id                         NSKeyedArchiverDelegate_Archiver_WillEncodeObject(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver, id object)                              { return ((id (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver, id))bean_msgSend)(self, bean_sel("archiver:willEncodeObject:"), archiver, object); }
+static inline void                       NSKeyedArchiverDelegate_Archiver_DidEncodeObject(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver, id object)                               { ((void (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver, id))bean_msgSend)(self, bean_sel("archiver:didEncodeObject:"), archiver, object); }
+static inline void                       NSKeyedArchiverDelegate_Archiver_WillReplaceObject_WithObject(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver, id object, id newObject)    { ((void (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver, id, id))bean_msgSend)(self, bean_sel("archiver:willReplaceObject:withObject:"), archiver, object, newObject); }
+static inline void                       NSKeyedArchiverDelegate_ArchiverWillFinish(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver)                                                { ((void (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver))bean_msgSend)(self, bean_sel("archiverWillFinish:"), archiver); }
+static inline void                       NSKeyedArchiverDelegate_ArchiverDidFinish(NSKeyedArchiverDelegate self, NSKeyedArchiver archiver)                                                 { ((void (*)(NSKeyedArchiverDelegate, SEL, NSKeyedArchiver))bean_msgSend)(self, bean_sel("archiverDidFinish:"), archiver); }
+#ifndef BEAN_ALLOC_NSKeyedArchiverDelegate
+#define BEAN_ALLOC_NSKeyedArchiverDelegate
+static inline NSKeyedArchiverDelegate    NSKeyedArchiverDelegate_Alloc(void)                                                                                                               { return (NSKeyedArchiverDelegate)bean_alloc(bean_cls("NSKeyedArchiverDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSKeyedArchiverDelegate
+#define BEAN_NEW_NSKeyedArchiverDelegate
+static inline NSKeyedArchiverDelegate    NSKeyedArchiverDelegate_New(void)                                                                                                                 { return (NSKeyedArchiverDelegate)bean_new(bean_cls("NSKeyedArchiverDelegate")); }
+#endif
 
 /* ===== NSKeyedUnarchiver ===== */
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiver
@@ -4845,17 +6007,33 @@ static inline BOOL                       NSKeyedUnarchiver_RequiresSecureCoding(
 static inline void                       NSKeyedUnarchiver_SetRequiresSecureCoding(NSKeyedUnarchiver self, BOOL requiresSecureCoding)                                                                  { ((void (*)(NSKeyedUnarchiver, SEL, BOOL))bean_msgSend)(self, bean_sel("setRequiresSecureCoding:"), requiresSecureCoding); }
 static inline NSDecodingFailurePolicy    NSKeyedUnarchiver_DecodingFailurePolicy(NSKeyedUnarchiver self)                                                                                               { return ((NSDecodingFailurePolicy (*)(NSKeyedUnarchiver, SEL))bean_msgSend)(self, bean_sel("decodingFailurePolicy")); }
 static inline void                       NSKeyedUnarchiver_SetDecodingFailurePolicy(NSKeyedUnarchiver self, NSDecodingFailurePolicy decodingFailurePolicy)                                             { ((void (*)(NSKeyedUnarchiver, SEL, NSDecodingFailurePolicy))bean_msgSend)(self, bean_sel("setDecodingFailurePolicy:"), decodingFailurePolicy); }
+#ifndef BEAN_ALLOC_NSKeyedUnarchiver
+#define BEAN_ALLOC_NSKeyedUnarchiver
+static inline NSKeyedUnarchiver          NSKeyedUnarchiver_Alloc(void)                                                                                                                                 { return (NSKeyedUnarchiver)bean_alloc(bean_cls("NSKeyedUnarchiver")); }
+#endif
+#ifndef BEAN_NEW_NSKeyedUnarchiver
+#define BEAN_NEW_NSKeyedUnarchiver
+static inline NSKeyedUnarchiver          NSKeyedUnarchiver_New(void)                                                                                                                                   { return (NSKeyedUnarchiver)bean_new(bean_cls("NSKeyedUnarchiver")); }
+#endif
 
 /* ===== NSKeyedUnarchiverDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
 #define BEAN_TYPEDEF_NSKeyedUnarchiverDelegate
 typedef bean_id NSKeyedUnarchiverDelegate;
 #endif
-static inline bean_class    NSKeyedUnarchiverDelegate_Unarchiver_CannotDecodeObjectOfClassName_OriginalClasses(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver, NSString name, NSArray classNames)    { return ((bean_class (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver, NSString, NSArray))bean_msgSend)(self, bean_sel("unarchiver:cannotDecodeObjectOfClassName:originalClasses:"), unarchiver, name, classNames); }
-static inline id            NSKeyedUnarchiverDelegate_Unarchiver_DidDecodeObject(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver, id object)                                                          { return ((id (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver, id))bean_msgSend)(self, bean_sel("unarchiver:didDecodeObject:"), unarchiver, object); }
-static inline void          NSKeyedUnarchiverDelegate_Unarchiver_WillReplaceObject_WithObject(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver, id object, id newObject)                               { ((void (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver, id, id))bean_msgSend)(self, bean_sel("unarchiver:willReplaceObject:withObject:"), unarchiver, object, newObject); }
-static inline void          NSKeyedUnarchiverDelegate_UnarchiverWillFinish(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver)                                                                           { ((void (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver))bean_msgSend)(self, bean_sel("unarchiverWillFinish:"), unarchiver); }
-static inline void          NSKeyedUnarchiverDelegate_UnarchiverDidFinish(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver)                                                                            { ((void (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver))bean_msgSend)(self, bean_sel("unarchiverDidFinish:"), unarchiver); }
+static inline bean_class                   NSKeyedUnarchiverDelegate_Unarchiver_CannotDecodeObjectOfClassName_OriginalClasses(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver, NSString name, NSArray classNames)    { return ((bean_class (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver, NSString, NSArray))bean_msgSend)(self, bean_sel("unarchiver:cannotDecodeObjectOfClassName:originalClasses:"), unarchiver, name, classNames); }
+static inline id                           NSKeyedUnarchiverDelegate_Unarchiver_DidDecodeObject(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver, id object)                                                          { return ((id (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver, id))bean_msgSend)(self, bean_sel("unarchiver:didDecodeObject:"), unarchiver, object); }
+static inline void                         NSKeyedUnarchiverDelegate_Unarchiver_WillReplaceObject_WithObject(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver, id object, id newObject)                               { ((void (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver, id, id))bean_msgSend)(self, bean_sel("unarchiver:willReplaceObject:withObject:"), unarchiver, object, newObject); }
+static inline void                         NSKeyedUnarchiverDelegate_UnarchiverWillFinish(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver)                                                                           { ((void (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver))bean_msgSend)(self, bean_sel("unarchiverWillFinish:"), unarchiver); }
+static inline void                         NSKeyedUnarchiverDelegate_UnarchiverDidFinish(NSKeyedUnarchiverDelegate self, NSKeyedUnarchiver unarchiver)                                                                            { ((void (*)(NSKeyedUnarchiverDelegate, SEL, NSKeyedUnarchiver))bean_msgSend)(self, bean_sel("unarchiverDidFinish:"), unarchiver); }
+#ifndef BEAN_ALLOC_NSKeyedUnarchiverDelegate
+#define BEAN_ALLOC_NSKeyedUnarchiverDelegate
+static inline NSKeyedUnarchiverDelegate    NSKeyedUnarchiverDelegate_Alloc(void)                                                                                                                                                  { return (NSKeyedUnarchiverDelegate)bean_alloc(bean_cls("NSKeyedUnarchiverDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSKeyedUnarchiverDelegate
+#define BEAN_NEW_NSKeyedUnarchiverDelegate
+static inline NSKeyedUnarchiverDelegate    NSKeyedUnarchiverDelegate_New(void)                                                                                                                                                    { return (NSKeyedUnarchiverDelegate)bean_new(bean_cls("NSKeyedUnarchiverDelegate")); }
+#endif
 
 /* ===== NSLengthFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSLengthFormatter
@@ -4874,6 +6052,14 @@ static inline void                     NSLengthFormatter_SetUnitStyle(NSLengthFo
 static inline BOOL                     NSLengthFormatter_IsForPersonHeightUse(NSLengthFormatter self)                                                                   { return ((BOOL (*)(NSLengthFormatter, SEL))bean_msgSend)(self, bean_sel("isForPersonHeightUse")); }
 static inline void                     NSLengthFormatter_SetForPersonHeightUse(NSLengthFormatter self, BOOL forPersonHeightUse)                                         { ((void (*)(NSLengthFormatter, SEL, BOOL))bean_msgSend)(self, bean_sel("setForPersonHeightUse:"), forPersonHeightUse); }
 static inline BOOL                     NSLengthFormatter_ForPersonHeightUse(NSLengthFormatter self)                                                                     { return ((BOOL (*)(NSLengthFormatter, SEL))bean_msgSend)(self, bean_sel("forPersonHeightUse")); }
+#ifndef BEAN_ALLOC_NSLengthFormatter
+#define BEAN_ALLOC_NSLengthFormatter
+static inline NSLengthFormatter        NSLengthFormatter_Alloc(void)                                                                                                    { return (NSLengthFormatter)bean_alloc(bean_cls("NSLengthFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSLengthFormatter
+#define BEAN_NEW_NSLengthFormatter
+static inline NSLengthFormatter        NSLengthFormatter_New(void)                                                                                                      { return (NSLengthFormatter)bean_new(bean_cls("NSLengthFormatter")); }
+#endif
 
 /* ===== NSLinguisticTagger ===== */
 #ifndef BEAN_TYPEDEF_NSLinguisticTagger
@@ -4903,19 +6089,35 @@ static inline NSArray               NSLinguisticTagger_TagSchemes(NSLinguisticTa
 static inline NSString              NSLinguisticTagger_String(NSLinguisticTagger self)                                                                                                                                                                                                     { return ((NSString (*)(NSLinguisticTagger, SEL))bean_msgSend)(self, bean_sel("string")); }
 static inline void                  NSLinguisticTagger_SetString(NSLinguisticTagger self, NSString string)                                                                                                                                                                                 { ((void (*)(NSLinguisticTagger, SEL, NSString))bean_msgSend)(self, bean_sel("setString:"), string); }
 static inline NSString              NSLinguisticTagger_DominantLanguage(NSLinguisticTagger self)                                                                                                                                                                                           { return ((NSString (*)(NSLinguisticTagger, SEL))bean_msgSend)(self, bean_sel("dominantLanguage")); }
+#ifndef BEAN_ALLOC_NSLinguisticTagger
+#define BEAN_ALLOC_NSLinguisticTagger
+static inline NSLinguisticTagger    NSLinguisticTagger_Alloc(void)                                                                                                                                                                                                                         { return (NSLinguisticTagger)bean_alloc(bean_cls("NSLinguisticTagger")); }
+#endif
+#ifndef BEAN_NEW_NSLinguisticTagger
+#define BEAN_NEW_NSLinguisticTagger
+static inline NSLinguisticTagger    NSLinguisticTagger_New(void)                                                                                                                                                                                                                           { return (NSLinguisticTagger)bean_new(bean_cls("NSLinguisticTagger")); }
+#endif
 
 /* ===== NSListFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSListFormatter
 #define BEAN_TYPEDEF_NSListFormatter
 typedef bean_id NSListFormatter;
 #endif
-static inline NSString       NSListFormatter_LocalizedStringByJoiningStrings(NSArray strings)                     { return ((NSString (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("NSListFormatter"), bean_sel("localizedStringByJoiningStrings:"), strings); }
-static inline NSString       NSListFormatter_StringFromItems(NSListFormatter self, NSArray items)                 { return ((NSString (*)(NSListFormatter, SEL, NSArray))bean_msgSend)(self, bean_sel("stringFromItems:"), items); }
-static inline NSString       NSListFormatter_StringForObjectValue(NSListFormatter self, id obj)                   { return ((NSString (*)(NSListFormatter, SEL, id))bean_msgSend)(self, bean_sel("stringForObjectValue:"), obj); }
-static inline NSLocale       NSListFormatter_Locale(NSListFormatter self)                                         { return ((NSLocale (*)(NSListFormatter, SEL))bean_msgSend)(self, bean_sel("locale")); }
-static inline void           NSListFormatter_SetLocale(NSListFormatter self, NSLocale locale)                     { ((void (*)(NSListFormatter, SEL, NSLocale))bean_msgSend)(self, bean_sel("setLocale:"), locale); }
-static inline NSFormatter    NSListFormatter_ItemFormatter(NSListFormatter self)                                  { return ((NSFormatter (*)(NSListFormatter, SEL))bean_msgSend)(self, bean_sel("itemFormatter")); }
-static inline void           NSListFormatter_SetItemFormatter(NSListFormatter self, NSFormatter itemFormatter)    { ((void (*)(NSListFormatter, SEL, NSFormatter))bean_msgSend)(self, bean_sel("setItemFormatter:"), itemFormatter); }
+static inline NSString           NSListFormatter_LocalizedStringByJoiningStrings(NSArray strings)                     { return ((NSString (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("NSListFormatter"), bean_sel("localizedStringByJoiningStrings:"), strings); }
+static inline NSString           NSListFormatter_StringFromItems(NSListFormatter self, NSArray items)                 { return ((NSString (*)(NSListFormatter, SEL, NSArray))bean_msgSend)(self, bean_sel("stringFromItems:"), items); }
+static inline NSString           NSListFormatter_StringForObjectValue(NSListFormatter self, id obj)                   { return ((NSString (*)(NSListFormatter, SEL, id))bean_msgSend)(self, bean_sel("stringForObjectValue:"), obj); }
+static inline NSLocale           NSListFormatter_Locale(NSListFormatter self)                                         { return ((NSLocale (*)(NSListFormatter, SEL))bean_msgSend)(self, bean_sel("locale")); }
+static inline void               NSListFormatter_SetLocale(NSListFormatter self, NSLocale locale)                     { ((void (*)(NSListFormatter, SEL, NSLocale))bean_msgSend)(self, bean_sel("setLocale:"), locale); }
+static inline NSFormatter        NSListFormatter_ItemFormatter(NSListFormatter self)                                  { return ((NSFormatter (*)(NSListFormatter, SEL))bean_msgSend)(self, bean_sel("itemFormatter")); }
+static inline void               NSListFormatter_SetItemFormatter(NSListFormatter self, NSFormatter itemFormatter)    { ((void (*)(NSListFormatter, SEL, NSFormatter))bean_msgSend)(self, bean_sel("setItemFormatter:"), itemFormatter); }
+#ifndef BEAN_ALLOC_NSListFormatter
+#define BEAN_ALLOC_NSListFormatter
+static inline NSListFormatter    NSListFormatter_Alloc(void)                                                          { return (NSListFormatter)bean_alloc(bean_cls("NSListFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSListFormatter
+#define BEAN_NEW_NSListFormatter
+static inline NSListFormatter    NSListFormatter_New(void)                                                            { return (NSListFormatter)bean_new(bean_cls("NSListFormatter")); }
+#endif
 
 /* ===== NSLocale ===== */
 static inline id                           NSLocale_ObjectForKey(NSLocale self, NSString key)                                             { return ((id (*)(NSLocale, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKey:"), key); }
@@ -4972,6 +6174,14 @@ static inline NSArray                      NSLocale_CommonISOCurrencyCodes(void)
 static inline NSArray                      NSLocale_PreferredLanguages(void)                                                              { return ((NSArray (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSLocale"), bean_sel("preferredLanguages")); }
 static inline id                           NSLocale_CopyWithZone(NSLocale self, NSZone* zone)                                             { return ((id (*)(NSLocale, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                         NSLocale_SupportsSecureCoding(void)                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSLocale"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSLocale
+#define BEAN_ALLOC_NSLocale
+static inline NSLocale                     NSLocale_Alloc(void)                                                                           { return (NSLocale)bean_alloc(bean_cls("NSLocale")); }
+#endif
+#ifndef BEAN_NEW_NSLocale
+#define BEAN_NEW_NSLocale
+static inline NSLocale                     NSLocale_New(void)                                                                             { return (NSLocale)bean_new(bean_cls("NSLocale")); }
+#endif
 
 /* ===== NSLock ===== */
 #ifndef BEAN_TYPEDEF_NSLock
@@ -4984,6 +6194,14 @@ static inline NSString    NSLock_Name(NSLock self)                            { 
 static inline void        NSLock_SetName(NSLock self, NSString name)          { ((void (*)(NSLock, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 static inline void        NSLock_Lock(NSLock self)                            { ((void (*)(NSLock, SEL))bean_msgSend)(self, bean_sel("lock")); }
 static inline void        NSLock_Unlock(NSLock self)                          { ((void (*)(NSLock, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+#ifndef BEAN_ALLOC_NSLock
+#define BEAN_ALLOC_NSLock
+static inline NSLock      NSLock_Alloc(void)                                  { return (NSLock)bean_alloc(bean_cls("NSLock")); }
+#endif
+#ifndef BEAN_NEW_NSLock
+#define BEAN_NEW_NSLock
+static inline NSLock      NSLock_New(void)                                    { return (NSLock)bean_new(bean_cls("NSLock")); }
+#endif
 
 /* ===== NSLogicalTest ===== */
 #ifndef BEAN_TYPEDEF_NSLogicalTest
@@ -4993,17 +6211,33 @@ typedef bean_id NSLogicalTest;
 static inline NSLogicalTest    NSLogicalTest_InitAndTestWithTests(NSLogicalTest self, NSArray subTests)            { return ((NSLogicalTest (*)(NSLogicalTest, SEL, NSArray))bean_msgSend)(self, bean_sel("initAndTestWithTests:"), subTests); }
 static inline NSLogicalTest    NSLogicalTest_InitOrTestWithTests(NSLogicalTest self, NSArray subTests)             { return ((NSLogicalTest (*)(NSLogicalTest, SEL, NSArray))bean_msgSend)(self, bean_sel("initOrTestWithTests:"), subTests); }
 static inline NSLogicalTest    NSLogicalTest_InitNotTestWithTest(NSLogicalTest self, NSScriptWhoseTest subTest)    { return ((NSLogicalTest (*)(NSLogicalTest, SEL, NSScriptWhoseTest))bean_msgSend)(self, bean_sel("initNotTestWithTest:"), subTest); }
+#ifndef BEAN_ALLOC_NSLogicalTest
+#define BEAN_ALLOC_NSLogicalTest
+static inline NSLogicalTest    NSLogicalTest_Alloc(void)                                                           { return (NSLogicalTest)bean_alloc(bean_cls("NSLogicalTest")); }
+#endif
+#ifndef BEAN_NEW_NSLogicalTest
+#define BEAN_NEW_NSLogicalTest
+static inline NSLogicalTest    NSLogicalTest_New(void)                                                             { return (NSLogicalTest)bean_new(bean_cls("NSLogicalTest")); }
+#endif
 
 /* ===== NSMachBootstrapServer ===== */
 #ifndef BEAN_TYPEDEF_NSMachBootstrapServer
 #define BEAN_TYPEDEF_NSMachBootstrapServer
 typedef bean_id NSMachBootstrapServer;
 #endif
-static inline id        NSMachBootstrapServer_SharedInstance(void)                                                          { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMachBootstrapServer"), bean_sel("sharedInstance")); }
-static inline NSPort    NSMachBootstrapServer_PortForName(NSMachBootstrapServer self, NSString name)                        { return ((NSPort (*)(NSMachBootstrapServer, SEL, NSString))bean_msgSend)(self, bean_sel("portForName:"), name); }
-static inline NSPort    NSMachBootstrapServer_PortForName_Host(NSMachBootstrapServer self, NSString name, NSString host)    { return ((NSPort (*)(NSMachBootstrapServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("portForName:host:"), name, host); }
-static inline BOOL      NSMachBootstrapServer_RegisterPort_Name(NSMachBootstrapServer self, NSPort port, NSString name)     { return ((BOOL (*)(NSMachBootstrapServer, SEL, NSPort, NSString))bean_msgSend)(self, bean_sel("registerPort:name:"), port, name); }
-static inline NSPort    NSMachBootstrapServer_ServicePortWithName(NSMachBootstrapServer self, NSString name)                { return ((NSPort (*)(NSMachBootstrapServer, SEL, NSString))bean_msgSend)(self, bean_sel("servicePortWithName:"), name); }
+static inline id                       NSMachBootstrapServer_SharedInstance(void)                                                          { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMachBootstrapServer"), bean_sel("sharedInstance")); }
+static inline NSPort                   NSMachBootstrapServer_PortForName(NSMachBootstrapServer self, NSString name)                        { return ((NSPort (*)(NSMachBootstrapServer, SEL, NSString))bean_msgSend)(self, bean_sel("portForName:"), name); }
+static inline NSPort                   NSMachBootstrapServer_PortForName_Host(NSMachBootstrapServer self, NSString name, NSString host)    { return ((NSPort (*)(NSMachBootstrapServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("portForName:host:"), name, host); }
+static inline BOOL                     NSMachBootstrapServer_RegisterPort_Name(NSMachBootstrapServer self, NSPort port, NSString name)     { return ((BOOL (*)(NSMachBootstrapServer, SEL, NSPort, NSString))bean_msgSend)(self, bean_sel("registerPort:name:"), port, name); }
+static inline NSPort                   NSMachBootstrapServer_ServicePortWithName(NSMachBootstrapServer self, NSString name)                { return ((NSPort (*)(NSMachBootstrapServer, SEL, NSString))bean_msgSend)(self, bean_sel("servicePortWithName:"), name); }
+#ifndef BEAN_ALLOC_NSMachBootstrapServer
+#define BEAN_ALLOC_NSMachBootstrapServer
+static inline NSMachBootstrapServer    NSMachBootstrapServer_Alloc(void)                                                                   { return (NSMachBootstrapServer)bean_alloc(bean_cls("NSMachBootstrapServer")); }
+#endif
+#ifndef BEAN_NEW_NSMachBootstrapServer
+#define BEAN_NEW_NSMachBootstrapServer
+static inline NSMachBootstrapServer    NSMachBootstrapServer_New(void)                                                                     { return (NSMachBootstrapServer)bean_new(bean_cls("NSMachBootstrapServer")); }
+#endif
 
 /* ===== NSMachPort ===== */
 #ifndef BEAN_TYPEDEF_NSMachPort
@@ -5019,6 +6253,14 @@ static inline NSMachPort    NSMachPort_InitWithMachPort_Options(NSMachPort self,
 static inline void          NSMachPort_ScheduleInRunLoop_ForMode(NSMachPort self, NSRunLoop runLoop, NSString mode)           { ((void (*)(NSMachPort, SEL, NSRunLoop, NSString))bean_msgSend)(self, bean_sel("scheduleInRunLoop:forMode:"), runLoop, mode); }
 static inline void          NSMachPort_RemoveFromRunLoop_ForMode(NSMachPort self, NSRunLoop runLoop, NSString mode)           { ((void (*)(NSMachPort, SEL, NSRunLoop, NSString))bean_msgSend)(self, bean_sel("removeFromRunLoop:forMode:"), runLoop, mode); }
 static inline NSUInteger    NSMachPort_MachPort(NSMachPort self)                                                              { return ((NSUInteger (*)(NSMachPort, SEL))bean_msgSend)(self, bean_sel("machPort")); }
+#ifndef BEAN_ALLOC_NSMachPort
+#define BEAN_ALLOC_NSMachPort
+static inline NSMachPort    NSMachPort_Alloc(void)                                                                            { return (NSMachPort)bean_alloc(bean_cls("NSMachPort")); }
+#endif
+#ifndef BEAN_NEW_NSMachPort
+#define BEAN_NEW_NSMachPort
+static inline NSMachPort    NSMachPort_New(void)                                                                              { return (NSMachPort)bean_new(bean_cls("NSMachPort")); }
+#endif
 
 /* ===== NSMapTable ===== */
 #ifndef BEAN_TYPEDEF_NSMapTable
@@ -5049,6 +6291,14 @@ static inline NSUInteger            NSMapTable_Count(NSMapTable self)           
 static inline id                    NSMapTable_CopyWithZone(NSMapTable self, NSZone* zone)                                                                                                                                    { return ((id (*)(NSMapTable, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSMapTable_SupportsSecureCoding(void)                                                                                                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMapTable"), bean_sel("supportsSecureCoding")); }
 static inline NSUInteger            NSMapTable_CountByEnumeratingWithState_Objects_Count(NSMapTable self, NSFastEnumerationState* state, id* buffer, NSUInteger len)                                                          { return ((NSUInteger (*)(NSMapTable, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSMapTable
+#define BEAN_ALLOC_NSMapTable
+static inline NSMapTable            NSMapTable_Alloc(void)                                                                                                                                                                    { return (NSMapTable)bean_alloc(bean_cls("NSMapTable")); }
+#endif
+#ifndef BEAN_NEW_NSMapTable
+#define BEAN_NEW_NSMapTable
+static inline NSMapTable            NSMapTable_New(void)                                                                                                                                                                      { return (NSMapTable)bean_new(bean_cls("NSMapTable")); }
+#endif
 
 /* ===== NSMassFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSMassFormatter
@@ -5067,6 +6317,14 @@ static inline void                     NSMassFormatter_SetUnitStyle(NSMassFormat
 static inline BOOL                     NSMassFormatter_IsForPersonMassUse(NSMassFormatter self)                                                                        { return ((BOOL (*)(NSMassFormatter, SEL))bean_msgSend)(self, bean_sel("isForPersonMassUse")); }
 static inline void                     NSMassFormatter_SetForPersonMassUse(NSMassFormatter self, BOOL forPersonMassUse)                                                { ((void (*)(NSMassFormatter, SEL, BOOL))bean_msgSend)(self, bean_sel("setForPersonMassUse:"), forPersonMassUse); }
 static inline BOOL                     NSMassFormatter_ForPersonMassUse(NSMassFormatter self)                                                                          { return ((BOOL (*)(NSMassFormatter, SEL))bean_msgSend)(self, bean_sel("forPersonMassUse")); }
+#ifndef BEAN_ALLOC_NSMassFormatter
+#define BEAN_ALLOC_NSMassFormatter
+static inline NSMassFormatter          NSMassFormatter_Alloc(void)                                                                                                     { return (NSMassFormatter)bean_alloc(bean_cls("NSMassFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSMassFormatter
+#define BEAN_NEW_NSMassFormatter
+static inline NSMassFormatter          NSMassFormatter_New(void)                                                                                                       { return (NSMassFormatter)bean_new(bean_cls("NSMassFormatter")); }
+#endif
 
 /* ===== NSMeasurement ===== */
 static inline NSMeasurement    NSMeasurement_Init(NSMeasurement self)                                                              { return ((NSMeasurement (*)(NSMeasurement, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -5079,6 +6337,14 @@ static inline NSUnit           NSMeasurement_Unit(NSMeasurement self)           
 static inline CGFloat          NSMeasurement_DoubleValue(NSMeasurement self)                                                       { return ((CGFloat (*)(NSMeasurement, SEL))bean_msgSend_fpret)(self, bean_sel("doubleValue")); }
 static inline id               NSMeasurement_CopyWithZone(NSMeasurement self, NSZone* zone)                                        { return ((id (*)(NSMeasurement, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL             NSMeasurement_SupportsSecureCoding(void)                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMeasurement"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSMeasurement
+#define BEAN_ALLOC_NSMeasurement
+static inline NSMeasurement    NSMeasurement_Alloc(void)                                                                           { return (NSMeasurement)bean_alloc(bean_cls("NSMeasurement")); }
+#endif
+#ifndef BEAN_NEW_NSMeasurement
+#define BEAN_NEW_NSMeasurement
+static inline NSMeasurement    NSMeasurement_New(void)                                                                             { return (NSMeasurement)bean_new(bean_cls("NSMeasurement")); }
+#endif
 
 /* ===== NSMeasurementFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSMeasurementFormatter
@@ -5096,15 +6362,31 @@ static inline void                                 NSMeasurementFormatter_SetLoc
 static inline NSNumberFormatter                    NSMeasurementFormatter_NumberFormatter(NSMeasurementFormatter self)                                                  { return ((NSNumberFormatter (*)(NSMeasurementFormatter, SEL))bean_msgSend)(self, bean_sel("numberFormatter")); }
 static inline void                                 NSMeasurementFormatter_SetNumberFormatter(NSMeasurementFormatter self, NSNumberFormatter numberFormatter)            { ((void (*)(NSMeasurementFormatter, SEL, NSNumberFormatter))bean_msgSend)(self, bean_sel("setNumberFormatter:"), numberFormatter); }
 static inline BOOL                                 NSMeasurementFormatter_SupportsSecureCoding(void)                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMeasurementFormatter"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSMeasurementFormatter
+#define BEAN_ALLOC_NSMeasurementFormatter
+static inline NSMeasurementFormatter               NSMeasurementFormatter_Alloc(void)                                                                                   { return (NSMeasurementFormatter)bean_alloc(bean_cls("NSMeasurementFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSMeasurementFormatter
+#define BEAN_NEW_NSMeasurementFormatter
+static inline NSMeasurementFormatter               NSMeasurementFormatter_New(void)                                                                                     { return (NSMeasurementFormatter)bean_new(bean_cls("NSMeasurementFormatter")); }
+#endif
 
 /* ===== NSMessagePortNameServer ===== */
 #ifndef BEAN_TYPEDEF_NSMessagePortNameServer
 #define BEAN_TYPEDEF_NSMessagePortNameServer
 typedef bean_id NSMessagePortNameServer;
 #endif
-static inline id        NSMessagePortNameServer_SharedInstance(void)                                                            { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMessagePortNameServer"), bean_sel("sharedInstance")); }
-static inline NSPort    NSMessagePortNameServer_PortForName(NSMessagePortNameServer self, NSString name)                        { return ((NSPort (*)(NSMessagePortNameServer, SEL, NSString))bean_msgSend)(self, bean_sel("portForName:"), name); }
-static inline NSPort    NSMessagePortNameServer_PortForName_Host(NSMessagePortNameServer self, NSString name, NSString host)    { return ((NSPort (*)(NSMessagePortNameServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("portForName:host:"), name, host); }
+static inline id                         NSMessagePortNameServer_SharedInstance(void)                                                            { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMessagePortNameServer"), bean_sel("sharedInstance")); }
+static inline NSPort                     NSMessagePortNameServer_PortForName(NSMessagePortNameServer self, NSString name)                        { return ((NSPort (*)(NSMessagePortNameServer, SEL, NSString))bean_msgSend)(self, bean_sel("portForName:"), name); }
+static inline NSPort                     NSMessagePortNameServer_PortForName_Host(NSMessagePortNameServer self, NSString name, NSString host)    { return ((NSPort (*)(NSMessagePortNameServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("portForName:host:"), name, host); }
+#ifndef BEAN_ALLOC_NSMessagePortNameServer
+#define BEAN_ALLOC_NSMessagePortNameServer
+static inline NSMessagePortNameServer    NSMessagePortNameServer_Alloc(void)                                                                     { return (NSMessagePortNameServer)bean_alloc(bean_cls("NSMessagePortNameServer")); }
+#endif
+#ifndef BEAN_NEW_NSMessagePortNameServer
+#define BEAN_NEW_NSMessagePortNameServer
+static inline NSMessagePortNameServer    NSMessagePortNameServer_New(void)                                                                       { return (NSMessagePortNameServer)bean_new(bean_cls("NSMessagePortNameServer")); }
+#endif
 
 /* ===== NSMetadataItem ===== */
 #ifndef BEAN_TYPEDEF_NSMetadataItem
@@ -5115,6 +6397,14 @@ static inline NSMetadataItem    NSMetadataItem_InitWithURL(NSMetadataItem self, 
 static inline id                NSMetadataItem_ValueForAttribute(NSMetadataItem self, NSString key)      { return ((id (*)(NSMetadataItem, SEL, NSString))bean_msgSend)(self, bean_sel("valueForAttribute:"), key); }
 static inline NSDictionary      NSMetadataItem_ValuesForAttributes(NSMetadataItem self, NSArray keys)    { return ((NSDictionary (*)(NSMetadataItem, SEL, NSArray))bean_msgSend)(self, bean_sel("valuesForAttributes:"), keys); }
 static inline NSArray           NSMetadataItem_Attributes(NSMetadataItem self)                           { return ((NSArray (*)(NSMetadataItem, SEL))bean_msgSend)(self, bean_sel("attributes")); }
+#ifndef BEAN_ALLOC_NSMetadataItem
+#define BEAN_ALLOC_NSMetadataItem
+static inline NSMetadataItem    NSMetadataItem_Alloc(void)                                               { return (NSMetadataItem)bean_alloc(bean_cls("NSMetadataItem")); }
+#endif
+#ifndef BEAN_NEW_NSMetadataItem
+#define BEAN_NEW_NSMetadataItem
+static inline NSMetadataItem    NSMetadataItem_New(void)                                                 { return (NSMetadataItem)bean_new(bean_cls("NSMetadataItem")); }
+#endif
 
 /* ===== NSMetadataQuery ===== */
 #ifndef BEAN_TYPEDEF_NSMetadataQuery
@@ -5158,35 +6448,67 @@ static inline NSArray             NSMetadataQuery_GroupedResults(NSMetadataQuery
 static inline BOOL                NSMetadataQuery_Started(NSMetadataQuery self)                                                                           { return ((BOOL (*)(NSMetadataQuery, SEL))bean_msgSend)(self, bean_sel("started")); }
 static inline BOOL                NSMetadataQuery_Gathering(NSMetadataQuery self)                                                                         { return ((BOOL (*)(NSMetadataQuery, SEL))bean_msgSend)(self, bean_sel("gathering")); }
 static inline BOOL                NSMetadataQuery_Stopped(NSMetadataQuery self)                                                                           { return ((BOOL (*)(NSMetadataQuery, SEL))bean_msgSend)(self, bean_sel("stopped")); }
+#ifndef BEAN_ALLOC_NSMetadataQuery
+#define BEAN_ALLOC_NSMetadataQuery
+static inline NSMetadataQuery     NSMetadataQuery_Alloc(void)                                                                                             { return (NSMetadataQuery)bean_alloc(bean_cls("NSMetadataQuery")); }
+#endif
+#ifndef BEAN_NEW_NSMetadataQuery
+#define BEAN_NEW_NSMetadataQuery
+static inline NSMetadataQuery     NSMetadataQuery_New(void)                                                                                               { return (NSMetadataQuery)bean_new(bean_cls("NSMetadataQuery")); }
+#endif
 
 /* ===== NSMetadataQueryAttributeValueTuple ===== */
 #ifndef BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 #define BEAN_TYPEDEF_NSMetadataQueryAttributeValueTuple
 typedef bean_id NSMetadataQueryAttributeValueTuple;
 #endif
-static inline NSString      NSMetadataQueryAttributeValueTuple_Attribute(NSMetadataQueryAttributeValueTuple self)    { return ((NSString (*)(NSMetadataQueryAttributeValueTuple, SEL))bean_msgSend)(self, bean_sel("attribute")); }
-static inline id            NSMetadataQueryAttributeValueTuple_Value(NSMetadataQueryAttributeValueTuple self)        { return ((id (*)(NSMetadataQueryAttributeValueTuple, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline NSUInteger    NSMetadataQueryAttributeValueTuple_Count(NSMetadataQueryAttributeValueTuple self)        { return ((NSUInteger (*)(NSMetadataQueryAttributeValueTuple, SEL))bean_msgSend)(self, bean_sel("count")); }
+static inline NSString                              NSMetadataQueryAttributeValueTuple_Attribute(NSMetadataQueryAttributeValueTuple self)    { return ((NSString (*)(NSMetadataQueryAttributeValueTuple, SEL))bean_msgSend)(self, bean_sel("attribute")); }
+static inline id                                    NSMetadataQueryAttributeValueTuple_Value(NSMetadataQueryAttributeValueTuple self)        { return ((id (*)(NSMetadataQueryAttributeValueTuple, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline NSUInteger                            NSMetadataQueryAttributeValueTuple_Count(NSMetadataQueryAttributeValueTuple self)        { return ((NSUInteger (*)(NSMetadataQueryAttributeValueTuple, SEL))bean_msgSend)(self, bean_sel("count")); }
+#ifndef BEAN_ALLOC_NSMetadataQueryAttributeValueTuple
+#define BEAN_ALLOC_NSMetadataQueryAttributeValueTuple
+static inline NSMetadataQueryAttributeValueTuple    NSMetadataQueryAttributeValueTuple_Alloc(void)                                           { return (NSMetadataQueryAttributeValueTuple)bean_alloc(bean_cls("NSMetadataQueryAttributeValueTuple")); }
+#endif
+#ifndef BEAN_NEW_NSMetadataQueryAttributeValueTuple
+#define BEAN_NEW_NSMetadataQueryAttributeValueTuple
+static inline NSMetadataQueryAttributeValueTuple    NSMetadataQueryAttributeValueTuple_New(void)                                             { return (NSMetadataQueryAttributeValueTuple)bean_new(bean_cls("NSMetadataQueryAttributeValueTuple")); }
+#endif
 
 /* ===== NSMetadataQueryDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSMetadataQueryDelegate
 #define BEAN_TYPEDEF_NSMetadataQueryDelegate
 typedef bean_id NSMetadataQueryDelegate;
 #endif
-static inline id    NSMetadataQueryDelegate_MetadataQuery_ReplacementObjectForResultObject(NSMetadataQueryDelegate self, NSMetadataQuery query, NSMetadataItem result)                { return ((id (*)(NSMetadataQueryDelegate, SEL, NSMetadataQuery, NSMetadataItem))bean_msgSend)(self, bean_sel("metadataQuery:replacementObjectForResultObject:"), query, result); }
-static inline id    NSMetadataQueryDelegate_MetadataQuery_ReplacementValueForAttribute_Value(NSMetadataQueryDelegate self, NSMetadataQuery query, NSString attrName, id attrValue)    { return ((id (*)(NSMetadataQueryDelegate, SEL, NSMetadataQuery, NSString, id))bean_msgSend)(self, bean_sel("metadataQuery:replacementValueForAttribute:value:"), query, attrName, attrValue); }
+static inline id                         NSMetadataQueryDelegate_MetadataQuery_ReplacementObjectForResultObject(NSMetadataQueryDelegate self, NSMetadataQuery query, NSMetadataItem result)                { return ((id (*)(NSMetadataQueryDelegate, SEL, NSMetadataQuery, NSMetadataItem))bean_msgSend)(self, bean_sel("metadataQuery:replacementObjectForResultObject:"), query, result); }
+static inline id                         NSMetadataQueryDelegate_MetadataQuery_ReplacementValueForAttribute_Value(NSMetadataQueryDelegate self, NSMetadataQuery query, NSString attrName, id attrValue)    { return ((id (*)(NSMetadataQueryDelegate, SEL, NSMetadataQuery, NSString, id))bean_msgSend)(self, bean_sel("metadataQuery:replacementValueForAttribute:value:"), query, attrName, attrValue); }
+#ifndef BEAN_ALLOC_NSMetadataQueryDelegate
+#define BEAN_ALLOC_NSMetadataQueryDelegate
+static inline NSMetadataQueryDelegate    NSMetadataQueryDelegate_Alloc(void)                                                                                                                               { return (NSMetadataQueryDelegate)bean_alloc(bean_cls("NSMetadataQueryDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSMetadataQueryDelegate
+#define BEAN_NEW_NSMetadataQueryDelegate
+static inline NSMetadataQueryDelegate    NSMetadataQueryDelegate_New(void)                                                                                                                                 { return (NSMetadataQueryDelegate)bean_new(bean_cls("NSMetadataQueryDelegate")); }
+#endif
 
 /* ===== NSMetadataQueryResultGroup ===== */
 #ifndef BEAN_TYPEDEF_NSMetadataQueryResultGroup
 #define BEAN_TYPEDEF_NSMetadataQueryResultGroup
 typedef bean_id NSMetadataQueryResultGroup;
 #endif
-static inline id            NSMetadataQueryResultGroup_ResultAtIndex(NSMetadataQueryResultGroup self, NSUInteger idx)    { return ((id (*)(NSMetadataQueryResultGroup, SEL, NSUInteger))bean_msgSend)(self, bean_sel("resultAtIndex:"), idx); }
-static inline NSString      NSMetadataQueryResultGroup_Attribute(NSMetadataQueryResultGroup self)                        { return ((NSString (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("attribute")); }
-static inline id            NSMetadataQueryResultGroup_Value(NSMetadataQueryResultGroup self)                            { return ((id (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline NSArray       NSMetadataQueryResultGroup_Subgroups(NSMetadataQueryResultGroup self)                        { return ((NSArray (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("subgroups")); }
-static inline NSUInteger    NSMetadataQueryResultGroup_ResultCount(NSMetadataQueryResultGroup self)                      { return ((NSUInteger (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("resultCount")); }
-static inline NSArray       NSMetadataQueryResultGroup_Results(NSMetadataQueryResultGroup self)                          { return ((NSArray (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("results")); }
+static inline id                            NSMetadataQueryResultGroup_ResultAtIndex(NSMetadataQueryResultGroup self, NSUInteger idx)    { return ((id (*)(NSMetadataQueryResultGroup, SEL, NSUInteger))bean_msgSend)(self, bean_sel("resultAtIndex:"), idx); }
+static inline NSString                      NSMetadataQueryResultGroup_Attribute(NSMetadataQueryResultGroup self)                        { return ((NSString (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("attribute")); }
+static inline id                            NSMetadataQueryResultGroup_Value(NSMetadataQueryResultGroup self)                            { return ((id (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline NSArray                       NSMetadataQueryResultGroup_Subgroups(NSMetadataQueryResultGroup self)                        { return ((NSArray (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("subgroups")); }
+static inline NSUInteger                    NSMetadataQueryResultGroup_ResultCount(NSMetadataQueryResultGroup self)                      { return ((NSUInteger (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("resultCount")); }
+static inline NSArray                       NSMetadataQueryResultGroup_Results(NSMetadataQueryResultGroup self)                          { return ((NSArray (*)(NSMetadataQueryResultGroup, SEL))bean_msgSend)(self, bean_sel("results")); }
+#ifndef BEAN_ALLOC_NSMetadataQueryResultGroup
+#define BEAN_ALLOC_NSMetadataQueryResultGroup
+static inline NSMetadataQueryResultGroup    NSMetadataQueryResultGroup_Alloc(void)                                                       { return (NSMetadataQueryResultGroup)bean_alloc(bean_cls("NSMetadataQueryResultGroup")); }
+#endif
+#ifndef BEAN_NEW_NSMetadataQueryResultGroup
+#define BEAN_NEW_NSMetadataQueryResultGroup
+static inline NSMetadataQueryResultGroup    NSMetadataQueryResultGroup_New(void)                                                         { return (NSMetadataQueryResultGroup)bean_new(bean_cls("NSMetadataQueryResultGroup")); }
+#endif
 
 /* ===== NSMorphology ===== */
 static inline NSGrammaticalGender           NSMorphology_GrammaticalGender(NSMorphology self)                                                                                            { return ((NSGrammaticalGender (*)(NSMorphology, SEL))bean_msgSend)(self, bean_sel("grammaticalGender")); }
@@ -5212,29 +6534,48 @@ static inline NSMorphology                  NSMorphology_UserMorphology(void)   
 static inline id                            NSMorphology_CopyWithZone(NSMorphology self, NSZone* zone)                                                                                   { return ((id (*)(NSMorphology, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                          NSMorphology_SupportsSecureCoding(void)                                                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMorphology"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                          NSMorphology_Unspecified(NSMorphology self)                                                                                                  { return ((BOOL (*)(NSMorphology, SEL))bean_msgSend)(self, bean_sel("unspecified")); }
+#ifndef BEAN_ALLOC_NSMorphology
+#define BEAN_ALLOC_NSMorphology
+static inline NSMorphology                  NSMorphology_Alloc(void)                                                                                                                     { return (NSMorphology)bean_alloc(bean_cls("NSMorphology")); }
+#endif
+#ifndef BEAN_NEW_NSMorphology
+#define BEAN_NEW_NSMorphology
+static inline NSMorphology                  NSMorphology_New(void)                                                                                                                       { return (NSMorphology)bean_new(bean_cls("NSMorphology")); }
+#endif
 
 /* ===== NSMorphologyCustomPronoun ===== */
-static inline BOOL        NSMorphologyCustomPronoun_IsSupportedForLanguage(NSString language)                                                       { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSMorphologyCustomPronoun"), bean_sel("isSupportedForLanguage:"), language); }
-static inline NSArray     NSMorphologyCustomPronoun_RequiredKeysForLanguage(NSString language)                                                      { return ((NSArray (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSMorphologyCustomPronoun"), bean_sel("requiredKeysForLanguage:"), language); }
-static inline NSString    NSMorphologyCustomPronoun_SubjectForm(NSMorphologyCustomPronoun self)                                                     { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("subjectForm")); }
-static inline void        NSMorphologyCustomPronoun_SetSubjectForm(NSMorphologyCustomPronoun self, NSString subjectForm)                            { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setSubjectForm:"), subjectForm); }
-static inline NSString    NSMorphologyCustomPronoun_ObjectForm(NSMorphologyCustomPronoun self)                                                      { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("objectForm")); }
-static inline void        NSMorphologyCustomPronoun_SetObjectForm(NSMorphologyCustomPronoun self, NSString objectForm)                              { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setObjectForm:"), objectForm); }
-static inline NSString    NSMorphologyCustomPronoun_PossessiveForm(NSMorphologyCustomPronoun self)                                                  { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("possessiveForm")); }
-static inline void        NSMorphologyCustomPronoun_SetPossessiveForm(NSMorphologyCustomPronoun self, NSString possessiveForm)                      { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setPossessiveForm:"), possessiveForm); }
-static inline NSString    NSMorphologyCustomPronoun_PossessiveAdjectiveForm(NSMorphologyCustomPronoun self)                                         { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("possessiveAdjectiveForm")); }
-static inline void        NSMorphologyCustomPronoun_SetPossessiveAdjectiveForm(NSMorphologyCustomPronoun self, NSString possessiveAdjectiveForm)    { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setPossessiveAdjectiveForm:"), possessiveAdjectiveForm); }
-static inline NSString    NSMorphologyCustomPronoun_ReflexiveForm(NSMorphologyCustomPronoun self)                                                   { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("reflexiveForm")); }
-static inline void        NSMorphologyCustomPronoun_SetReflexiveForm(NSMorphologyCustomPronoun self, NSString reflexiveForm)                        { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setReflexiveForm:"), reflexiveForm); }
-static inline id          NSMorphologyCustomPronoun_CopyWithZone(NSMorphologyCustomPronoun self, NSZone* zone)                                      { return ((id (*)(NSMorphologyCustomPronoun, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL        NSMorphologyCustomPronoun_SupportsSecureCoding(void)                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMorphologyCustomPronoun"), bean_sel("supportsSecureCoding")); }
+static inline BOOL                         NSMorphologyCustomPronoun_IsSupportedForLanguage(NSString language)                                                       { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSMorphologyCustomPronoun"), bean_sel("isSupportedForLanguage:"), language); }
+static inline NSArray                      NSMorphologyCustomPronoun_RequiredKeysForLanguage(NSString language)                                                      { return ((NSArray (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSMorphologyCustomPronoun"), bean_sel("requiredKeysForLanguage:"), language); }
+static inline NSString                     NSMorphologyCustomPronoun_SubjectForm(NSMorphologyCustomPronoun self)                                                     { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("subjectForm")); }
+static inline void                         NSMorphologyCustomPronoun_SetSubjectForm(NSMorphologyCustomPronoun self, NSString subjectForm)                            { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setSubjectForm:"), subjectForm); }
+static inline NSString                     NSMorphologyCustomPronoun_ObjectForm(NSMorphologyCustomPronoun self)                                                      { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("objectForm")); }
+static inline void                         NSMorphologyCustomPronoun_SetObjectForm(NSMorphologyCustomPronoun self, NSString objectForm)                              { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setObjectForm:"), objectForm); }
+static inline NSString                     NSMorphologyCustomPronoun_PossessiveForm(NSMorphologyCustomPronoun self)                                                  { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("possessiveForm")); }
+static inline void                         NSMorphologyCustomPronoun_SetPossessiveForm(NSMorphologyCustomPronoun self, NSString possessiveForm)                      { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setPossessiveForm:"), possessiveForm); }
+static inline NSString                     NSMorphologyCustomPronoun_PossessiveAdjectiveForm(NSMorphologyCustomPronoun self)                                         { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("possessiveAdjectiveForm")); }
+static inline void                         NSMorphologyCustomPronoun_SetPossessiveAdjectiveForm(NSMorphologyCustomPronoun self, NSString possessiveAdjectiveForm)    { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setPossessiveAdjectiveForm:"), possessiveAdjectiveForm); }
+static inline NSString                     NSMorphologyCustomPronoun_ReflexiveForm(NSMorphologyCustomPronoun self)                                                   { return ((NSString (*)(NSMorphologyCustomPronoun, SEL))bean_msgSend)(self, bean_sel("reflexiveForm")); }
+static inline void                         NSMorphologyCustomPronoun_SetReflexiveForm(NSMorphologyCustomPronoun self, NSString reflexiveForm)                        { ((void (*)(NSMorphologyCustomPronoun, SEL, NSString))bean_msgSend)(self, bean_sel("setReflexiveForm:"), reflexiveForm); }
+static inline id                           NSMorphologyCustomPronoun_CopyWithZone(NSMorphologyCustomPronoun self, NSZone* zone)                                      { return ((id (*)(NSMorphologyCustomPronoun, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                         NSMorphologyCustomPronoun_SupportsSecureCoding(void)                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMorphologyCustomPronoun"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSMorphologyCustomPronoun
+#define BEAN_ALLOC_NSMorphologyCustomPronoun
+static inline NSMorphologyCustomPronoun    NSMorphologyCustomPronoun_Alloc(void)                                                                                     { return (NSMorphologyCustomPronoun)bean_alloc(bean_cls("NSMorphologyCustomPronoun")); }
+#endif
+#ifndef BEAN_NEW_NSMorphologyCustomPronoun
+#define BEAN_NEW_NSMorphologyCustomPronoun
+static inline NSMorphologyCustomPronoun    NSMorphologyCustomPronoun_New(void)                                                                                       { return (NSMorphologyCustomPronoun)bean_new(bean_cls("NSMorphologyCustomPronoun")); }
+#endif
 
 /* ===== NSMorphologyPronoun ===== */
 #ifndef BEAN_TYPEDEF_NSMorphologyPronoun
 #define BEAN_TYPEDEF_NSMorphologyPronoun
 typedef bean_id NSMorphologyPronoun;
 #endif
+#ifndef BEAN_NEW_NSMorphologyPronoun
+#define BEAN_NEW_NSMorphologyPronoun
 static inline NSMorphologyPronoun    NSMorphologyPronoun_New(void)                                                                                                                                                { return ((NSMorphologyPronoun (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMorphologyPronoun"), bean_sel("new")); }
+#endif
 static inline NSMorphologyPronoun    NSMorphologyPronoun_Init(NSMorphologyPronoun self)                                                                                                                           { return ((NSMorphologyPronoun (*)(NSMorphologyPronoun, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSMorphologyPronoun    NSMorphologyPronoun_InitWithPronoun_Morphology_DependentMorphology(NSMorphologyPronoun self, NSString pronoun, NSMorphology morphology, NSMorphology dependentMorphology)    { return ((NSMorphologyPronoun (*)(NSMorphologyPronoun, SEL, NSString, NSMorphology, NSMorphology))bean_msgSend)(self, bean_sel("initWithPronoun:morphology:dependentMorphology:"), pronoun, morphology, dependentMorphology); }
 static inline NSString               NSMorphologyPronoun_Pronoun(NSMorphologyPronoun self)                                                                                                                        { return ((NSString (*)(NSMorphologyPronoun, SEL))bean_msgSend)(self, bean_sel("pronoun")); }
@@ -5242,6 +6583,10 @@ static inline NSMorphology           NSMorphologyPronoun_Morphology(NSMorphology
 static inline NSMorphology           NSMorphologyPronoun_DependentMorphology(NSMorphologyPronoun self)                                                                                                            { return ((NSMorphology (*)(NSMorphologyPronoun, SEL))bean_msgSend)(self, bean_sel("dependentMorphology")); }
 static inline id                     NSMorphologyPronoun_CopyWithZone(NSMorphologyPronoun self, NSZone* zone)                                                                                                     { return ((id (*)(NSMorphologyPronoun, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                   NSMorphologyPronoun_SupportsSecureCoding(void)                                                                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMorphologyPronoun"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSMorphologyPronoun
+#define BEAN_ALLOC_NSMorphologyPronoun
+static inline NSMorphologyPronoun    NSMorphologyPronoun_Alloc(void)                                                                                                                                              { return (NSMorphologyPronoun)bean_alloc(bean_cls("NSMorphologyPronoun")); }
+#endif
 
 /* ===== NSMoveCommand ===== */
 #ifndef BEAN_TYPEDEF_NSMoveCommand
@@ -5250,6 +6595,14 @@ typedef bean_id NSMoveCommand;
 #endif
 static inline void                       NSMoveCommand_SetReceiversSpecifier(NSMoveCommand self, NSScriptObjectSpecifier receiversRef)    { ((void (*)(NSMoveCommand, SEL, NSScriptObjectSpecifier))bean_msgSend)(self, bean_sel("setReceiversSpecifier:"), receiversRef); }
 static inline NSScriptObjectSpecifier    NSMoveCommand_KeySpecifier(NSMoveCommand self)                                                   { return ((NSScriptObjectSpecifier (*)(NSMoveCommand, SEL))bean_msgSend)(self, bean_sel("keySpecifier")); }
+#ifndef BEAN_ALLOC_NSMoveCommand
+#define BEAN_ALLOC_NSMoveCommand
+static inline NSMoveCommand              NSMoveCommand_Alloc(void)                                                                        { return (NSMoveCommand)bean_alloc(bean_cls("NSMoveCommand")); }
+#endif
+#ifndef BEAN_NEW_NSMoveCommand
+#define BEAN_NEW_NSMoveCommand
+static inline NSMoveCommand              NSMoveCommand_New(void)                                                                          { return (NSMoveCommand)bean_new(bean_cls("NSMoveCommand")); }
+#endif
 
 /* ===== NSMutableArray ===== */
 #ifndef BEAN_TYPEDEF_NSMutableArray
@@ -5293,26 +6646,42 @@ static inline NSMutableArray    NSMutableArray_InitWithContentsOfURL(NSMutableAr
 static inline void              NSMutableArray_ApplyDifference(NSMutableArray self, NSOrderedCollectionDifference difference)                                                  { ((void (*)(NSMutableArray, SEL, NSOrderedCollectionDifference))bean_msgSend)(self, bean_sel("applyDifference:"), difference); }
 static inline void              NSMutableArray_SortUsingDescriptors(NSMutableArray self, NSArray sortDescriptors)                                                              { ((void (*)(NSMutableArray, SEL, NSArray))bean_msgSend)(self, bean_sel("sortUsingDescriptors:"), sortDescriptors); }
 static inline void              NSMutableArray_FilterUsingPredicate(NSMutableArray self, NSPredicate predicate)                                                                { ((void (*)(NSMutableArray, SEL, NSPredicate))bean_msgSend)(self, bean_sel("filterUsingPredicate:"), predicate); }
+#ifndef BEAN_ALLOC_NSMutableArray
+#define BEAN_ALLOC_NSMutableArray
+static inline NSMutableArray    NSMutableArray_Alloc(void)                                                                                                                     { return (NSMutableArray)bean_alloc(bean_cls("NSMutableArray")); }
+#endif
+#ifndef BEAN_NEW_NSMutableArray
+#define BEAN_NEW_NSMutableArray
+static inline NSMutableArray    NSMutableArray_New(void)                                                                                                                       { return (NSMutableArray)bean_new(bean_cls("NSMutableArray")); }
+#endif
 
 /* ===== NSMutableAttributedString ===== */
 #ifndef BEAN_TYPEDEF_NSMutableAttributedString
 #define BEAN_TYPEDEF_NSMutableAttributedString
 typedef bean_id NSMutableAttributedString;
 #endif
-static inline void               NSMutableAttributedString_ReplaceCharactersInRange_WithString(NSMutableAttributedString self, NSRange range, NSString str)                               { ((void (*)(NSMutableAttributedString, SEL, NSRange, NSString))bean_msgSend)(self, bean_sel("replaceCharactersInRange:withString:"), range, str); }
-static inline void               NSMutableAttributedString_SetAttributes_Range(NSMutableAttributedString self, NSDictionary attrs, NSRange range)                                         { ((void (*)(NSMutableAttributedString, SEL, NSDictionary, NSRange))bean_msgSend)(self, bean_sel("setAttributes:range:"), attrs, range); }
-static inline void               NSMutableAttributedString_AddAttribute_Value_Range(NSMutableAttributedString self, NSString name, id value, NSRange range)                               { ((void (*)(NSMutableAttributedString, SEL, NSString, id, NSRange))bean_msgSend)(self, bean_sel("addAttribute:value:range:"), name, value, range); }
-static inline void               NSMutableAttributedString_AddAttributes_Range(NSMutableAttributedString self, NSDictionary attrs, NSRange range)                                         { ((void (*)(NSMutableAttributedString, SEL, NSDictionary, NSRange))bean_msgSend)(self, bean_sel("addAttributes:range:"), attrs, range); }
-static inline void               NSMutableAttributedString_RemoveAttribute_Range(NSMutableAttributedString self, NSString name, NSRange range)                                            { ((void (*)(NSMutableAttributedString, SEL, NSString, NSRange))bean_msgSend)(self, bean_sel("removeAttribute:range:"), name, range); }
-static inline void               NSMutableAttributedString_ReplaceCharactersInRange_WithAttributedString(NSMutableAttributedString self, NSRange range, NSAttributedString attrString)    { ((void (*)(NSMutableAttributedString, SEL, NSRange, NSAttributedString))bean_msgSend)(self, bean_sel("replaceCharactersInRange:withAttributedString:"), range, attrString); }
-static inline void               NSMutableAttributedString_InsertAttributedString_AtIndex(NSMutableAttributedString self, NSAttributedString attrString, NSUInteger loc)                  { ((void (*)(NSMutableAttributedString, SEL, NSAttributedString, NSUInteger))bean_msgSend)(self, bean_sel("insertAttributedString:atIndex:"), attrString, loc); }
-static inline void               NSMutableAttributedString_AppendAttributedString(NSMutableAttributedString self, NSAttributedString attrString)                                          { ((void (*)(NSMutableAttributedString, SEL, NSAttributedString))bean_msgSend)(self, bean_sel("appendAttributedString:"), attrString); }
-static inline void               NSMutableAttributedString_DeleteCharactersInRange(NSMutableAttributedString self, NSRange range)                                                         { ((void (*)(NSMutableAttributedString, SEL, NSRange))bean_msgSend)(self, bean_sel("deleteCharactersInRange:"), range); }
-static inline void               NSMutableAttributedString_SetAttributedString(NSMutableAttributedString self, NSAttributedString attrString)                                             { ((void (*)(NSMutableAttributedString, SEL, NSAttributedString))bean_msgSend)(self, bean_sel("setAttributedString:"), attrString); }
-static inline void               NSMutableAttributedString_BeginEditing(NSMutableAttributedString self)                                                                                   { ((void (*)(NSMutableAttributedString, SEL))bean_msgSend)(self, bean_sel("beginEditing")); }
-static inline void               NSMutableAttributedString_EndEditing(NSMutableAttributedString self)                                                                                     { ((void (*)(NSMutableAttributedString, SEL))bean_msgSend)(self, bean_sel("endEditing")); }
-static inline NSMutableString    NSMutableAttributedString_MutableString(NSMutableAttributedString self)                                                                                  { return ((NSMutableString (*)(NSMutableAttributedString, SEL))bean_msgSend)(self, bean_sel("mutableString")); }
-static inline void               NSMutableAttributedString_AppendLocalizedFormat(NSMutableAttributedString self, NSAttributedString format)                                               { ((void (*)(NSMutableAttributedString, SEL, NSAttributedString))bean_msgSend)(self, bean_sel("appendLocalizedFormat:"), format); }
+static inline void                         NSMutableAttributedString_ReplaceCharactersInRange_WithString(NSMutableAttributedString self, NSRange range, NSString str)                               { ((void (*)(NSMutableAttributedString, SEL, NSRange, NSString))bean_msgSend)(self, bean_sel("replaceCharactersInRange:withString:"), range, str); }
+static inline void                         NSMutableAttributedString_SetAttributes_Range(NSMutableAttributedString self, NSDictionary attrs, NSRange range)                                         { ((void (*)(NSMutableAttributedString, SEL, NSDictionary, NSRange))bean_msgSend)(self, bean_sel("setAttributes:range:"), attrs, range); }
+static inline void                         NSMutableAttributedString_AddAttribute_Value_Range(NSMutableAttributedString self, NSString name, id value, NSRange range)                               { ((void (*)(NSMutableAttributedString, SEL, NSString, id, NSRange))bean_msgSend)(self, bean_sel("addAttribute:value:range:"), name, value, range); }
+static inline void                         NSMutableAttributedString_AddAttributes_Range(NSMutableAttributedString self, NSDictionary attrs, NSRange range)                                         { ((void (*)(NSMutableAttributedString, SEL, NSDictionary, NSRange))bean_msgSend)(self, bean_sel("addAttributes:range:"), attrs, range); }
+static inline void                         NSMutableAttributedString_RemoveAttribute_Range(NSMutableAttributedString self, NSString name, NSRange range)                                            { ((void (*)(NSMutableAttributedString, SEL, NSString, NSRange))bean_msgSend)(self, bean_sel("removeAttribute:range:"), name, range); }
+static inline void                         NSMutableAttributedString_ReplaceCharactersInRange_WithAttributedString(NSMutableAttributedString self, NSRange range, NSAttributedString attrString)    { ((void (*)(NSMutableAttributedString, SEL, NSRange, NSAttributedString))bean_msgSend)(self, bean_sel("replaceCharactersInRange:withAttributedString:"), range, attrString); }
+static inline void                         NSMutableAttributedString_InsertAttributedString_AtIndex(NSMutableAttributedString self, NSAttributedString attrString, NSUInteger loc)                  { ((void (*)(NSMutableAttributedString, SEL, NSAttributedString, NSUInteger))bean_msgSend)(self, bean_sel("insertAttributedString:atIndex:"), attrString, loc); }
+static inline void                         NSMutableAttributedString_AppendAttributedString(NSMutableAttributedString self, NSAttributedString attrString)                                          { ((void (*)(NSMutableAttributedString, SEL, NSAttributedString))bean_msgSend)(self, bean_sel("appendAttributedString:"), attrString); }
+static inline void                         NSMutableAttributedString_DeleteCharactersInRange(NSMutableAttributedString self, NSRange range)                                                         { ((void (*)(NSMutableAttributedString, SEL, NSRange))bean_msgSend)(self, bean_sel("deleteCharactersInRange:"), range); }
+static inline void                         NSMutableAttributedString_SetAttributedString(NSMutableAttributedString self, NSAttributedString attrString)                                             { ((void (*)(NSMutableAttributedString, SEL, NSAttributedString))bean_msgSend)(self, bean_sel("setAttributedString:"), attrString); }
+static inline void                         NSMutableAttributedString_BeginEditing(NSMutableAttributedString self)                                                                                   { ((void (*)(NSMutableAttributedString, SEL))bean_msgSend)(self, bean_sel("beginEditing")); }
+static inline void                         NSMutableAttributedString_EndEditing(NSMutableAttributedString self)                                                                                     { ((void (*)(NSMutableAttributedString, SEL))bean_msgSend)(self, bean_sel("endEditing")); }
+static inline NSMutableString              NSMutableAttributedString_MutableString(NSMutableAttributedString self)                                                                                  { return ((NSMutableString (*)(NSMutableAttributedString, SEL))bean_msgSend)(self, bean_sel("mutableString")); }
+static inline void                         NSMutableAttributedString_AppendLocalizedFormat(NSMutableAttributedString self, NSAttributedString format)                                               { ((void (*)(NSMutableAttributedString, SEL, NSAttributedString))bean_msgSend)(self, bean_sel("appendLocalizedFormat:"), format); }
+#ifndef BEAN_ALLOC_NSMutableAttributedString
+#define BEAN_ALLOC_NSMutableAttributedString
+static inline NSMutableAttributedString    NSMutableAttributedString_Alloc(void)                                                                                                                    { return (NSMutableAttributedString)bean_alloc(bean_cls("NSMutableAttributedString")); }
+#endif
+#ifndef BEAN_NEW_NSMutableAttributedString
+#define BEAN_NEW_NSMutableAttributedString
+static inline NSMutableAttributedString    NSMutableAttributedString_New(void)                                                                                                                      { return (NSMutableAttributedString)bean_new(bean_cls("NSMutableAttributedString")); }
+#endif
 
 /* ===== NSMutableCharacterSet ===== */
 #ifndef BEAN_TYPEDEF_NSMutableCharacterSet
@@ -5348,6 +6717,14 @@ static inline NSMutableCharacterSet    NSMutableCharacterSet_CharacterSetWithCon
 static inline id                       NSMutableCharacterSet_CopyWithZone(NSMutableCharacterSet self, NSZone* zone)                                   { return ((id (*)(NSMutableCharacterSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id                       NSMutableCharacterSet_MutableCopyWithZone(NSMutableCharacterSet self, NSZone* zone)                            { return ((id (*)(NSMutableCharacterSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL                     NSMutableCharacterSet_SupportsSecureCoding(void)                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMutableCharacterSet"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSMutableCharacterSet
+#define BEAN_ALLOC_NSMutableCharacterSet
+static inline NSMutableCharacterSet    NSMutableCharacterSet_Alloc(void)                                                                              { return (NSMutableCharacterSet)bean_alloc(bean_cls("NSMutableCharacterSet")); }
+#endif
+#ifndef BEAN_NEW_NSMutableCharacterSet
+#define BEAN_NEW_NSMutableCharacterSet
+static inline NSMutableCharacterSet    NSMutableCharacterSet_New(void)                                                                                { return (NSMutableCharacterSet)bean_new(bean_cls("NSMutableCharacterSet")); }
+#endif
 
 /* ===== NSMutableData ===== */
 static inline void*            NSMutableData_MutableBytes(NSMutableData self)                                                                                                       { return ((void* (*)(NSMutableData, SEL))bean_msgSend)(self, bean_sel("mutableBytes")); }
@@ -5366,6 +6743,14 @@ static inline NSMutableData    NSMutableData_InitWithCapacity(NSMutableData self
 static inline NSMutableData    NSMutableData_InitWithLength(NSMutableData self, NSUInteger length)                                                                                  { return ((NSMutableData (*)(NSMutableData, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithLength:"), length); }
 static inline BOOL             NSMutableData_DecompressUsingAlgorithm_Error(NSMutableData self, NSDataCompressionAlgorithm algorithm, NSError* error)                               { return ((BOOL (*)(NSMutableData, SEL, NSDataCompressionAlgorithm, NSError*))bean_msgSend)(self, bean_sel("decompressUsingAlgorithm:error:"), algorithm, error); }
 static inline BOOL             NSMutableData_CompressUsingAlgorithm_Error(NSMutableData self, NSDataCompressionAlgorithm algorithm, NSError* error)                                 { return ((BOOL (*)(NSMutableData, SEL, NSDataCompressionAlgorithm, NSError*))bean_msgSend)(self, bean_sel("compressUsingAlgorithm:error:"), algorithm, error); }
+#ifndef BEAN_ALLOC_NSMutableData
+#define BEAN_ALLOC_NSMutableData
+static inline NSMutableData    NSMutableData_Alloc(void)                                                                                                                            { return (NSMutableData)bean_alloc(bean_cls("NSMutableData")); }
+#endif
+#ifndef BEAN_NEW_NSMutableData
+#define BEAN_NEW_NSMutableData
+static inline NSMutableData    NSMutableData_New(void)                                                                                                                              { return (NSMutableData)bean_new(bean_cls("NSMutableData")); }
+#endif
 
 /* ===== NSMutableDictionary ===== */
 static inline void                   NSMutableDictionary_RemoveObjectForKey(NSMutableDictionary self, id aKey)                               { ((void (*)(NSMutableDictionary, SEL, id))bean_msgSend)(self, bean_sel("removeObjectForKey:"), aKey); }
@@ -5385,6 +6770,14 @@ static inline NSMutableDictionary    NSMutableDictionary_InitWithContentsOfFile(
 static inline NSMutableDictionary    NSMutableDictionary_InitWithContentsOfURL(NSMutableDictionary self, NSURL url)                          { return ((NSMutableDictionary (*)(NSMutableDictionary, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), url); }
 static inline NSMutableDictionary    NSMutableDictionary_DictionaryWithSharedKeySet(id keyset)                                               { return ((NSMutableDictionary (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("NSMutableDictionary"), bean_sel("dictionaryWithSharedKeySet:"), keyset); }
 static inline void                   NSMutableDictionary_SetValue_ForKey(NSMutableDictionary self, id value, NSString key)                   { ((void (*)(NSMutableDictionary, SEL, id, NSString))bean_msgSend)(self, bean_sel("setValue:forKey:"), value, key); }
+#ifndef BEAN_ALLOC_NSMutableDictionary
+#define BEAN_ALLOC_NSMutableDictionary
+static inline NSMutableDictionary    NSMutableDictionary_Alloc(void)                                                                         { return (NSMutableDictionary)bean_alloc(bean_cls("NSMutableDictionary")); }
+#endif
+#ifndef BEAN_NEW_NSMutableDictionary
+#define BEAN_NEW_NSMutableDictionary
+static inline NSMutableDictionary    NSMutableDictionary_New(void)                                                                           { return (NSMutableDictionary)bean_new(bean_cls("NSMutableDictionary")); }
+#endif
 
 /* ===== NSMutableOrderedSet ===== */
 #ifndef BEAN_TYPEDEF_NSMutableOrderedSet
@@ -5425,6 +6818,14 @@ static inline NSMutableOrderedSet    NSMutableOrderedSet_OrderedSetWithCapacity(
 static inline void                   NSMutableOrderedSet_ApplyDifference(NSMutableOrderedSet self, NSOrderedCollectionDifference difference)                                      { ((void (*)(NSMutableOrderedSet, SEL, NSOrderedCollectionDifference))bean_msgSend)(self, bean_sel("applyDifference:"), difference); }
 static inline void                   NSMutableOrderedSet_SortUsingDescriptors(NSMutableOrderedSet self, NSArray sortDescriptors)                                                  { ((void (*)(NSMutableOrderedSet, SEL, NSArray))bean_msgSend)(self, bean_sel("sortUsingDescriptors:"), sortDescriptors); }
 static inline void                   NSMutableOrderedSet_FilterUsingPredicate(NSMutableOrderedSet self, NSPredicate p)                                                            { ((void (*)(NSMutableOrderedSet, SEL, NSPredicate))bean_msgSend)(self, bean_sel("filterUsingPredicate:"), p); }
+#ifndef BEAN_ALLOC_NSMutableOrderedSet
+#define BEAN_ALLOC_NSMutableOrderedSet
+static inline NSMutableOrderedSet    NSMutableOrderedSet_Alloc(void)                                                                                                              { return (NSMutableOrderedSet)bean_alloc(bean_cls("NSMutableOrderedSet")); }
+#endif
+#ifndef BEAN_NEW_NSMutableOrderedSet
+#define BEAN_NEW_NSMutableOrderedSet
+static inline NSMutableOrderedSet    NSMutableOrderedSet_New(void)                                                                                                                { return (NSMutableOrderedSet)bean_new(bean_cls("NSMutableOrderedSet")); }
+#endif
 
 /* ===== NSMutableSet ===== */
 #ifndef BEAN_TYPEDEF_NSMutableSet
@@ -5444,6 +6845,14 @@ static inline void            NSMutableSet_UnionSet(NSMutableSet self, NSSet oth
 static inline void            NSMutableSet_SetSet(NSMutableSet self, NSSet otherSet)                         { ((void (*)(NSMutableSet, SEL, NSSet))bean_msgSend)(self, bean_sel("setSet:"), otherSet); }
 static inline NSMutableSet    NSMutableSet_SetWithCapacity(NSUInteger numItems)                              { return ((NSMutableSet (*)(bean_class, SEL, NSUInteger))bean_msgSend)(bean_cls("NSMutableSet"), bean_sel("setWithCapacity:"), numItems); }
 static inline void            NSMutableSet_FilterUsingPredicate(NSMutableSet self, NSPredicate predicate)    { ((void (*)(NSMutableSet, SEL, NSPredicate))bean_msgSend)(self, bean_sel("filterUsingPredicate:"), predicate); }
+#ifndef BEAN_ALLOC_NSMutableSet
+#define BEAN_ALLOC_NSMutableSet
+static inline NSMutableSet    NSMutableSet_Alloc(void)                                                       { return (NSMutableSet)bean_alloc(bean_cls("NSMutableSet")); }
+#endif
+#ifndef BEAN_NEW_NSMutableSet
+#define BEAN_NEW_NSMutableSet
+static inline NSMutableSet    NSMutableSet_New(void)                                                         { return (NSMutableSet)bean_new(bean_cls("NSMutableSet")); }
+#endif
 
 /* ===== NSMutableString ===== */
 static inline void               NSMutableString_ReplaceCharactersInRange_WithString(NSMutableString self, NSRange range, NSString aString)                                                                               { ((void (*)(NSMutableString, SEL, NSRange, NSString))bean_msgSend)(self, bean_sel("replaceCharactersInRange:withString:"), range, aString); }
@@ -5456,6 +6865,14 @@ static inline NSUInteger         NSMutableString_ReplaceOccurrencesOfString_With
 static inline BOOL               NSMutableString_ApplyTransform_Reverse_Range_UpdatedRange(NSMutableString self, NSString transform, BOOL reverse, NSRange range, NSRange* resultingRange)                                { return ((BOOL (*)(NSMutableString, SEL, NSString, BOOL, NSRange, NSRange*))bean_msgSend)(self, bean_sel("applyTransform:reverse:range:updatedRange:"), transform, reverse, range, resultingRange); }
 static inline NSMutableString    NSMutableString_InitWithCapacity(NSMutableString self, NSUInteger capacity)                                                                                                              { return ((NSMutableString (*)(NSMutableString, SEL, NSUInteger))bean_msgSend)(self, bean_sel("initWithCapacity:"), capacity); }
 static inline NSMutableString    NSMutableString_StringWithCapacity(NSUInteger capacity)                                                                                                                                  { return ((NSMutableString (*)(bean_class, SEL, NSUInteger))bean_msgSend)(bean_cls("NSMutableString"), bean_sel("stringWithCapacity:"), capacity); }
+#ifndef BEAN_ALLOC_NSMutableString
+#define BEAN_ALLOC_NSMutableString
+static inline NSMutableString    NSMutableString_Alloc(void)                                                                                                                                                              { return (NSMutableString)bean_alloc(bean_cls("NSMutableString")); }
+#endif
+#ifndef BEAN_NEW_NSMutableString
+#define BEAN_NEW_NSMutableString
+static inline NSMutableString    NSMutableString_New(void)                                                                                                                                                                { return (NSMutableString)bean_new(bean_cls("NSMutableString")); }
+#endif
 
 /* ===== NSMutableURLRequest ===== */
 #ifndef BEAN_TYPEDEF_NSMutableURLRequest
@@ -5504,6 +6921,14 @@ static inline BOOL                              NSMutableURLRequest_HTTPShouldHa
 static inline void                              NSMutableURLRequest_SetHTTPShouldHandleCookies(NSMutableURLRequest self, BOOL HTTPShouldHandleCookies)                            { ((void (*)(NSMutableURLRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setHTTPShouldHandleCookies:"), HTTPShouldHandleCookies); }
 static inline BOOL                              NSMutableURLRequest_HTTPShouldUsePipelining(NSMutableURLRequest self)                                                             { return ((BOOL (*)(NSMutableURLRequest, SEL))bean_msgSend)(self, bean_sel("HTTPShouldUsePipelining")); }
 static inline void                              NSMutableURLRequest_SetHTTPShouldUsePipelining(NSMutableURLRequest self, BOOL HTTPShouldUsePipelining)                            { ((void (*)(NSMutableURLRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setHTTPShouldUsePipelining:"), HTTPShouldUsePipelining); }
+#ifndef BEAN_ALLOC_NSMutableURLRequest
+#define BEAN_ALLOC_NSMutableURLRequest
+static inline NSMutableURLRequest               NSMutableURLRequest_Alloc(void)                                                                                                   { return (NSMutableURLRequest)bean_alloc(bean_cls("NSMutableURLRequest")); }
+#endif
+#ifndef BEAN_NEW_NSMutableURLRequest
+#define BEAN_NEW_NSMutableURLRequest
+static inline NSMutableURLRequest               NSMutableURLRequest_New(void)                                                                                                     { return (NSMutableURLRequest)bean_new(bean_cls("NSMutableURLRequest")); }
+#endif
 
 /* ===== NSNameSpecifier ===== */
 #ifndef BEAN_TYPEDEF_NSNameSpecifier
@@ -5514,6 +6939,14 @@ static inline NSNameSpecifier    NSNameSpecifier_InitWithCoder(NSNameSpecifier s
 static inline NSNameSpecifier    NSNameSpecifier_InitWithContainerClassDescription_ContainerSpecifier_Key_Name(NSNameSpecifier self, NSScriptClassDescription classDesc, NSScriptObjectSpecifier container, NSString property, NSString name)    { return ((NSNameSpecifier (*)(NSNameSpecifier, SEL, NSScriptClassDescription, NSScriptObjectSpecifier, NSString, NSString))bean_msgSend)(self, bean_sel("initWithContainerClassDescription:containerSpecifier:key:name:"), classDesc, container, property, name); }
 static inline NSString           NSNameSpecifier_Name(NSNameSpecifier self)                                                                                                                                                                      { return ((NSString (*)(NSNameSpecifier, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline void               NSNameSpecifier_SetName(NSNameSpecifier self, NSString name)                                                                                                                                                    { ((void (*)(NSNameSpecifier, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+#ifndef BEAN_ALLOC_NSNameSpecifier
+#define BEAN_ALLOC_NSNameSpecifier
+static inline NSNameSpecifier    NSNameSpecifier_Alloc(void)                                                                                                                                                                                     { return (NSNameSpecifier)bean_alloc(bean_cls("NSNameSpecifier")); }
+#endif
+#ifndef BEAN_NEW_NSNameSpecifier
+#define BEAN_NEW_NSNameSpecifier
+static inline NSNameSpecifier    NSNameSpecifier_New(void)                                                                                                                                                                                       { return (NSNameSpecifier)bean_new(bean_cls("NSNameSpecifier")); }
+#endif
 
 /* ===== NSNetService ===== */
 #ifndef BEAN_TYPEDEF_NSNetService
@@ -5546,6 +6979,14 @@ static inline NSString        NSNetService_Domain(NSNetService self)            
 static inline NSString        NSNetService_HostName(NSNetService self)                                                                                  { return ((NSString (*)(NSNetService, SEL))bean_msgSend)(self, bean_sel("hostName")); }
 static inline NSArray         NSNetService_Addresses(NSNetService self)                                                                                 { return ((NSArray (*)(NSNetService, SEL))bean_msgSend)(self, bean_sel("addresses")); }
 static inline NSInteger       NSNetService_Port(NSNetService self)                                                                                      { return ((NSInteger (*)(NSNetService, SEL))bean_msgSend)(self, bean_sel("port")); }
+#ifndef BEAN_ALLOC_NSNetService
+#define BEAN_ALLOC_NSNetService
+static inline NSNetService    NSNetService_Alloc(void)                                                                                                  { return (NSNetService)bean_alloc(bean_cls("NSNetService")); }
+#endif
+#ifndef BEAN_NEW_NSNetService
+#define BEAN_NEW_NSNetService
+static inline NSNetService    NSNetService_New(void)                                                                                                    { return (NSNetService)bean_new(bean_cls("NSNetService")); }
+#endif
 
 /* ===== NSNetServiceBrowser ===== */
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowser
@@ -5563,34 +7004,58 @@ static inline id                     NSNetServiceBrowser_Delegate(NSNetServiceBr
 static inline void                   NSNetServiceBrowser_SetDelegate(NSNetServiceBrowser self, id delegate)                                                  { ((void (*)(NSNetServiceBrowser, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
 static inline BOOL                   NSNetServiceBrowser_IncludesPeerToPeer(NSNetServiceBrowser self)                                                        { return ((BOOL (*)(NSNetServiceBrowser, SEL))bean_msgSend)(self, bean_sel("includesPeerToPeer")); }
 static inline void                   NSNetServiceBrowser_SetIncludesPeerToPeer(NSNetServiceBrowser self, BOOL includesPeerToPeer)                            { ((void (*)(NSNetServiceBrowser, SEL, BOOL))bean_msgSend)(self, bean_sel("setIncludesPeerToPeer:"), includesPeerToPeer); }
+#ifndef BEAN_ALLOC_NSNetServiceBrowser
+#define BEAN_ALLOC_NSNetServiceBrowser
+static inline NSNetServiceBrowser    NSNetServiceBrowser_Alloc(void)                                                                                         { return (NSNetServiceBrowser)bean_alloc(bean_cls("NSNetServiceBrowser")); }
+#endif
+#ifndef BEAN_NEW_NSNetServiceBrowser
+#define BEAN_NEW_NSNetServiceBrowser
+static inline NSNetServiceBrowser    NSNetServiceBrowser_New(void)                                                                                           { return (NSNetServiceBrowser)bean_new(bean_cls("NSNetServiceBrowser")); }
+#endif
 
 /* ===== NSNetServiceBrowserDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSNetServiceBrowserDelegate
 #define BEAN_TYPEDEF_NSNetServiceBrowserDelegate
 typedef bean_id NSNetServiceBrowserDelegate;
 #endif
-static inline void    NSNetServiceBrowserDelegate_NetServiceBrowserWillSearch(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser)                                                             { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser))bean_msgSend)(self, bean_sel("netServiceBrowserWillSearch:"), browser); }
-static inline void    NSNetServiceBrowserDelegate_NetServiceBrowserDidStopSearch(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser)                                                          { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser))bean_msgSend)(self, bean_sel("netServiceBrowserDidStopSearch:"), browser); }
-static inline void    NSNetServiceBrowserDelegate_NetServiceBrowser_DidNotSearch(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSDictionary errorDict)                                  { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSDictionary))bean_msgSend)(self, bean_sel("netServiceBrowser:didNotSearch:"), browser, errorDict); }
-static inline void    NSNetServiceBrowserDelegate_NetServiceBrowser_DidFindDomain_MoreComing(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSString domainString, BOOL moreComing)      { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSString, BOOL))bean_msgSend)(self, bean_sel("netServiceBrowser:didFindDomain:moreComing:"), browser, domainString, moreComing); }
-static inline void    NSNetServiceBrowserDelegate_NetServiceBrowser_DidFindService_MoreComing(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSNetService service, BOOL moreComing)      { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSNetService, BOOL))bean_msgSend)(self, bean_sel("netServiceBrowser:didFindService:moreComing:"), browser, service, moreComing); }
-static inline void    NSNetServiceBrowserDelegate_NetServiceBrowser_DidRemoveDomain_MoreComing(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSString domainString, BOOL moreComing)    { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSString, BOOL))bean_msgSend)(self, bean_sel("netServiceBrowser:didRemoveDomain:moreComing:"), browser, domainString, moreComing); }
-static inline void    NSNetServiceBrowserDelegate_NetServiceBrowser_DidRemoveService_MoreComing(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSNetService service, BOOL moreComing)    { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSNetService, BOOL))bean_msgSend)(self, bean_sel("netServiceBrowser:didRemoveService:moreComing:"), browser, service, moreComing); }
+static inline void                           NSNetServiceBrowserDelegate_NetServiceBrowserWillSearch(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser)                                                             { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser))bean_msgSend)(self, bean_sel("netServiceBrowserWillSearch:"), browser); }
+static inline void                           NSNetServiceBrowserDelegate_NetServiceBrowserDidStopSearch(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser)                                                          { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser))bean_msgSend)(self, bean_sel("netServiceBrowserDidStopSearch:"), browser); }
+static inline void                           NSNetServiceBrowserDelegate_NetServiceBrowser_DidNotSearch(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSDictionary errorDict)                                  { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSDictionary))bean_msgSend)(self, bean_sel("netServiceBrowser:didNotSearch:"), browser, errorDict); }
+static inline void                           NSNetServiceBrowserDelegate_NetServiceBrowser_DidFindDomain_MoreComing(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSString domainString, BOOL moreComing)      { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSString, BOOL))bean_msgSend)(self, bean_sel("netServiceBrowser:didFindDomain:moreComing:"), browser, domainString, moreComing); }
+static inline void                           NSNetServiceBrowserDelegate_NetServiceBrowser_DidFindService_MoreComing(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSNetService service, BOOL moreComing)      { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSNetService, BOOL))bean_msgSend)(self, bean_sel("netServiceBrowser:didFindService:moreComing:"), browser, service, moreComing); }
+static inline void                           NSNetServiceBrowserDelegate_NetServiceBrowser_DidRemoveDomain_MoreComing(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSString domainString, BOOL moreComing)    { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSString, BOOL))bean_msgSend)(self, bean_sel("netServiceBrowser:didRemoveDomain:moreComing:"), browser, domainString, moreComing); }
+static inline void                           NSNetServiceBrowserDelegate_NetServiceBrowser_DidRemoveService_MoreComing(NSNetServiceBrowserDelegate self, NSNetServiceBrowser browser, NSNetService service, BOOL moreComing)    { ((void (*)(NSNetServiceBrowserDelegate, SEL, NSNetServiceBrowser, NSNetService, BOOL))bean_msgSend)(self, bean_sel("netServiceBrowser:didRemoveService:moreComing:"), browser, service, moreComing); }
+#ifndef BEAN_ALLOC_NSNetServiceBrowserDelegate
+#define BEAN_ALLOC_NSNetServiceBrowserDelegate
+static inline NSNetServiceBrowserDelegate    NSNetServiceBrowserDelegate_Alloc(void)                                                                                                                                            { return (NSNetServiceBrowserDelegate)bean_alloc(bean_cls("NSNetServiceBrowserDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSNetServiceBrowserDelegate
+#define BEAN_NEW_NSNetServiceBrowserDelegate
+static inline NSNetServiceBrowserDelegate    NSNetServiceBrowserDelegate_New(void)                                                                                                                                              { return (NSNetServiceBrowserDelegate)bean_new(bean_cls("NSNetServiceBrowserDelegate")); }
+#endif
 
 /* ===== NSNetServiceDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSNetServiceDelegate
 #define BEAN_TYPEDEF_NSNetServiceDelegate
 typedef bean_id NSNetServiceDelegate;
 #endif
-static inline void    NSNetServiceDelegate_NetServiceWillPublish(NSNetServiceDelegate self, NSNetService sender)                                                                                                 { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceWillPublish:"), sender); }
-static inline void    NSNetServiceDelegate_NetServiceDidPublish(NSNetServiceDelegate self, NSNetService sender)                                                                                                  { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceDidPublish:"), sender); }
-static inline void    NSNetServiceDelegate_NetService_DidNotPublish(NSNetServiceDelegate self, NSNetService sender, NSDictionary errorDict)                                                                      { ((void (*)(NSNetServiceDelegate, SEL, NSNetService, NSDictionary))bean_msgSend)(self, bean_sel("netService:didNotPublish:"), sender, errorDict); }
-static inline void    NSNetServiceDelegate_NetServiceWillResolve(NSNetServiceDelegate self, NSNetService sender)                                                                                                 { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceWillResolve:"), sender); }
-static inline void    NSNetServiceDelegate_NetServiceDidResolveAddress(NSNetServiceDelegate self, NSNetService sender)                                                                                           { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceDidResolveAddress:"), sender); }
-static inline void    NSNetServiceDelegate_NetService_DidNotResolve(NSNetServiceDelegate self, NSNetService sender, NSDictionary errorDict)                                                                      { ((void (*)(NSNetServiceDelegate, SEL, NSNetService, NSDictionary))bean_msgSend)(self, bean_sel("netService:didNotResolve:"), sender, errorDict); }
-static inline void    NSNetServiceDelegate_NetServiceDidStop(NSNetServiceDelegate self, NSNetService sender)                                                                                                     { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceDidStop:"), sender); }
-static inline void    NSNetServiceDelegate_NetService_DidUpdateTXTRecordData(NSNetServiceDelegate self, NSNetService sender, NSData data)                                                                        { ((void (*)(NSNetServiceDelegate, SEL, NSNetService, NSData))bean_msgSend)(self, bean_sel("netService:didUpdateTXTRecordData:"), sender, data); }
-static inline void    NSNetServiceDelegate_NetService_DidAcceptConnectionWithInputStream_OutputStream(NSNetServiceDelegate self, NSNetService sender, NSInputStream inputStream, NSOutputStream outputStream)    { ((void (*)(NSNetServiceDelegate, SEL, NSNetService, NSInputStream, NSOutputStream))bean_msgSend)(self, bean_sel("netService:didAcceptConnectionWithInputStream:outputStream:"), sender, inputStream, outputStream); }
+static inline void                    NSNetServiceDelegate_NetServiceWillPublish(NSNetServiceDelegate self, NSNetService sender)                                                                                                 { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceWillPublish:"), sender); }
+static inline void                    NSNetServiceDelegate_NetServiceDidPublish(NSNetServiceDelegate self, NSNetService sender)                                                                                                  { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceDidPublish:"), sender); }
+static inline void                    NSNetServiceDelegate_NetService_DidNotPublish(NSNetServiceDelegate self, NSNetService sender, NSDictionary errorDict)                                                                      { ((void (*)(NSNetServiceDelegate, SEL, NSNetService, NSDictionary))bean_msgSend)(self, bean_sel("netService:didNotPublish:"), sender, errorDict); }
+static inline void                    NSNetServiceDelegate_NetServiceWillResolve(NSNetServiceDelegate self, NSNetService sender)                                                                                                 { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceWillResolve:"), sender); }
+static inline void                    NSNetServiceDelegate_NetServiceDidResolveAddress(NSNetServiceDelegate self, NSNetService sender)                                                                                           { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceDidResolveAddress:"), sender); }
+static inline void                    NSNetServiceDelegate_NetService_DidNotResolve(NSNetServiceDelegate self, NSNetService sender, NSDictionary errorDict)                                                                      { ((void (*)(NSNetServiceDelegate, SEL, NSNetService, NSDictionary))bean_msgSend)(self, bean_sel("netService:didNotResolve:"), sender, errorDict); }
+static inline void                    NSNetServiceDelegate_NetServiceDidStop(NSNetServiceDelegate self, NSNetService sender)                                                                                                     { ((void (*)(NSNetServiceDelegate, SEL, NSNetService))bean_msgSend)(self, bean_sel("netServiceDidStop:"), sender); }
+static inline void                    NSNetServiceDelegate_NetService_DidUpdateTXTRecordData(NSNetServiceDelegate self, NSNetService sender, NSData data)                                                                        { ((void (*)(NSNetServiceDelegate, SEL, NSNetService, NSData))bean_msgSend)(self, bean_sel("netService:didUpdateTXTRecordData:"), sender, data); }
+static inline void                    NSNetServiceDelegate_NetService_DidAcceptConnectionWithInputStream_OutputStream(NSNetServiceDelegate self, NSNetService sender, NSInputStream inputStream, NSOutputStream outputStream)    { ((void (*)(NSNetServiceDelegate, SEL, NSNetService, NSInputStream, NSOutputStream))bean_msgSend)(self, bean_sel("netService:didAcceptConnectionWithInputStream:outputStream:"), sender, inputStream, outputStream); }
+#ifndef BEAN_ALLOC_NSNetServiceDelegate
+#define BEAN_ALLOC_NSNetServiceDelegate
+static inline NSNetServiceDelegate    NSNetServiceDelegate_Alloc(void)                                                                                                                                                           { return (NSNetServiceDelegate)bean_alloc(bean_cls("NSNetServiceDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSNetServiceDelegate
+#define BEAN_NEW_NSNetServiceDelegate
+static inline NSNetServiceDelegate    NSNetServiceDelegate_New(void)                                                                                                                                                             { return (NSNetServiceDelegate)bean_new(bean_cls("NSNetServiceDelegate")); }
+#endif
 
 /* ===== NSNotification ===== */
 #ifndef BEAN_TYPEDEF_NSNotification
@@ -5607,6 +7072,14 @@ static inline NSNotification    NSNotification_NotificationWithName_Object_UserI
 static inline NSNotification    NSNotification_Init(NSNotification self)                                                                             { return ((NSNotification (*)(NSNotification, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline id                NSNotification_CopyWithZone(NSNotification self, NSZone* zone)                                                       { return ((id (*)(NSNotification, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline void              NSNotification_EncodeWithCoder(NSNotification self, NSCoder coder)                                                   { ((void (*)(NSNotification, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSNotification
+#define BEAN_ALLOC_NSNotification
+static inline NSNotification    NSNotification_Alloc(void)                                                                                           { return (NSNotification)bean_alloc(bean_cls("NSNotification")); }
+#endif
+#ifndef BEAN_NEW_NSNotification
+#define BEAN_NEW_NSNotification
+static inline NSNotification    NSNotification_New(void)                                                                                             { return (NSNotification)bean_new(bean_cls("NSNotification")); }
+#endif
 
 /* ===== NSNotificationCenter ===== */
 #ifndef BEAN_TYPEDEF_NSNotificationCenter
@@ -5621,6 +7094,14 @@ static inline void                    NSNotificationCenter_RemoveObserver(NSNoti
 static inline void                    NSNotificationCenter_RemoveObserver_Name_Object(NSNotificationCenter self, id observer, NSString aName, id anObject)                                      { ((void (*)(NSNotificationCenter, SEL, id, NSString, id))bean_msgSend)(self, bean_sel("removeObserver:name:object:"), observer, aName, anObject); }
 static inline id                      NSNotificationCenter_AddObserverForName_Object_Queue_UsingBlock(NSNotificationCenter self, NSString name, id obj, NSOperationQueue queue, void* block)    { return ((id (*)(NSNotificationCenter, SEL, NSString, id, NSOperationQueue, void*))bean_msgSend)(self, bean_sel("addObserverForName:object:queue:usingBlock:"), name, obj, queue, block); }
 static inline NSNotificationCenter    NSNotificationCenter_DefaultCenter(void)                                                                                                                  { return ((NSNotificationCenter (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSNotificationCenter"), bean_sel("defaultCenter")); }
+#ifndef BEAN_ALLOC_NSNotificationCenter
+#define BEAN_ALLOC_NSNotificationCenter
+static inline NSNotificationCenter    NSNotificationCenter_Alloc(void)                                                                                                                          { return (NSNotificationCenter)bean_alloc(bean_cls("NSNotificationCenter")); }
+#endif
+#ifndef BEAN_NEW_NSNotificationCenter
+#define BEAN_NEW_NSNotificationCenter
+static inline NSNotificationCenter    NSNotificationCenter_New(void)                                                                                                                            { return (NSNotificationCenter)bean_new(bean_cls("NSNotificationCenter")); }
+#endif
 
 /* ===== NSNotificationQueue ===== */
 #ifndef BEAN_TYPEDEF_NSNotificationQueue
@@ -5632,6 +7113,14 @@ static inline void                   NSNotificationQueue_EnqueueNotification_Pos
 static inline void                   NSNotificationQueue_EnqueueNotification_PostingStyle_CoalesceMask_ForModes(NSNotificationQueue self, NSNotification notification, NSPostingStyle postingStyle, NSNotificationCoalescing coalesceMask, NSArray modes)    { ((void (*)(NSNotificationQueue, SEL, NSNotification, NSPostingStyle, NSNotificationCoalescing, NSArray))bean_msgSend)(self, bean_sel("enqueueNotification:postingStyle:coalesceMask:forModes:"), notification, postingStyle, coalesceMask, modes); }
 static inline void                   NSNotificationQueue_DequeueNotificationsMatching_CoalesceMask(NSNotificationQueue self, NSNotification notification, NSUInteger coalesceMask)                                                                           { ((void (*)(NSNotificationQueue, SEL, NSNotification, NSUInteger))bean_msgSend)(self, bean_sel("dequeueNotificationsMatching:coalesceMask:"), notification, coalesceMask); }
 static inline NSNotificationQueue    NSNotificationQueue_DefaultQueue(void)                                                                                                                                                                                  { return ((NSNotificationQueue (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSNotificationQueue"), bean_sel("defaultQueue")); }
+#ifndef BEAN_ALLOC_NSNotificationQueue
+#define BEAN_ALLOC_NSNotificationQueue
+static inline NSNotificationQueue    NSNotificationQueue_Alloc(void)                                                                                                                                                                                         { return (NSNotificationQueue)bean_alloc(bean_cls("NSNotificationQueue")); }
+#endif
+#ifndef BEAN_NEW_NSNotificationQueue
+#define BEAN_NEW_NSNotificationQueue
+static inline NSNotificationQueue    NSNotificationQueue_New(void)                                                                                                                                                                                           { return (NSNotificationQueue)bean_new(bean_cls("NSNotificationQueue")); }
+#endif
 
 /* ===== NSNumber ===== */
 static inline NSNumber              NSNumber_InitWithCoder(NSNumber self, NSCoder coder)                          { return ((NSNumber (*)(NSNumber, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
@@ -5668,6 +7157,14 @@ static inline NSInteger             NSNumber_IntegerValue(NSNumber self)        
 static inline NSUInteger            NSNumber_UnsignedIntegerValue(NSNumber self)                                  { return ((NSUInteger (*)(NSNumber, SEL))bean_msgSend)(self, bean_sel("unsignedIntegerValue")); }
 static inline NSString              NSNumber_StringValue(NSNumber self)                                           { return ((NSString (*)(NSNumber, SEL))bean_msgSend)(self, bean_sel("stringValue")); }
 static inline NSDecimal             NSNumber_DecimalValue(NSNumber self)                                          { return ((NSDecimal (*)(NSNumber, SEL))bean_msgSend)(self, bean_sel("decimalValue")); }
+#ifndef BEAN_ALLOC_NSNumber
+#define BEAN_ALLOC_NSNumber
+static inline NSNumber              NSNumber_Alloc(void)                                                          { return (NSNumber)bean_alloc(bean_cls("NSNumber")); }
+#endif
+#ifndef BEAN_NEW_NSNumber
+#define BEAN_NEW_NSNumber
+static inline NSNumber              NSNumber_New(void)                                                            { return (NSNumber)bean_new(bean_cls("NSNumber")); }
+#endif
 
 /* ===== NSNumberFormatter ===== */
 static inline BOOL                             NSNumberFormatter_GetObjectValue_ForString_Range_Error(NSNumberFormatter self, id* obj, NSString string, NSRange* rangep, NSError* error)    { return ((BOOL (*)(NSNumberFormatter, SEL, id*, NSString, NSRange*, NSError*))bean_msgSend)(self, bean_sel("getObjectValue:forString:range:error:"), obj, string, rangep, error); }
@@ -5810,14 +7307,28 @@ static inline NSDecimalNumberHandler           NSNumberFormatter_RoundingBehavio
 static inline void                             NSNumberFormatter_SetRoundingBehavior(NSNumberFormatter self, NSDecimalNumberHandler roundingBehavior)                                       { ((void (*)(NSNumberFormatter, SEL, NSDecimalNumberHandler))bean_msgSend)(self, bean_sel("setRoundingBehavior:"), roundingBehavior); }
 static inline BOOL                             NSNumberFormatter_Lenient(NSNumberFormatter self)                                                                                            { return ((BOOL (*)(NSNumberFormatter, SEL))bean_msgSend)(self, bean_sel("lenient")); }
 static inline BOOL                             NSNumberFormatter_PartialStringValidationEnabled(NSNumberFormatter self)                                                                     { return ((BOOL (*)(NSNumberFormatter, SEL))bean_msgSend)(self, bean_sel("partialStringValidationEnabled")); }
+#ifndef BEAN_ALLOC_NSNumberFormatter
+#define BEAN_ALLOC_NSNumberFormatter
+static inline NSNumberFormatter                NSNumberFormatter_Alloc(void)                                                                                                                { return (NSNumberFormatter)bean_alloc(bean_cls("NSNumberFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSNumberFormatter
+#define BEAN_NEW_NSNumberFormatter
+static inline NSNumberFormatter                NSNumberFormatter_New(void)                                                                                                                  { return (NSNumberFormatter)bean_new(bean_cls("NSNumberFormatter")); }
+#endif
 
 /* ===== NSObject ===== */
 static inline void                       NSObject_Load(void)                                                                                                                                                                                            { ((void (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSObject"), bean_sel("load")); }
 static inline void                       NSObject_Initialize(void)                                                                                                                                                                                      { ((void (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSObject"), bean_sel("initialize")); }
 static inline NSObject                   NSObject_Init(NSObject self)                                                                                                                                                                                   { return ((NSObject (*)(NSObject, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSObject
+#define BEAN_NEW_NSObject
 static inline NSObject                   NSObject_New(void)                                                                                                                                                                                             { return ((NSObject (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSObject"), bean_sel("new")); }
+#endif
 static inline NSObject                   NSObject_AllocWithZone(NSZone* zone)                                                                                                                                                                           { return ((NSObject (*)(bean_class, SEL, NSZone*))bean_msgSend)(bean_cls("NSObject"), bean_sel("allocWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSObject
+#define BEAN_ALLOC_NSObject
 static inline NSObject                   NSObject_Alloc(void)                                                                                                                                                                                           { return ((NSObject (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSObject"), bean_sel("alloc")); }
+#endif
 static inline void                       NSObject_Dealloc(NSObject self)                                                                                                                                                                                { ((void (*)(NSObject, SEL))bean_msgSend)(self, bean_sel("dealloc")); }
 static inline void                       NSObject_Finalize(NSObject self)                                                                                                                                                                               { ((void (*)(NSObject, SEL))bean_msgSend)(self, bean_sel("finalize")); }
 static inline id                         NSObject_Copy(NSObject self)                                                                                                                                                                                   { return ((id (*)(NSObject, SEL))bean_msgSend)(self, bean_sel("copy")); }
@@ -6007,6 +7518,14 @@ static inline BOOL                        NSOperation_Finished(NSOperation self)
 static inline BOOL                        NSOperation_Concurrent(NSOperation self)                                                  { return ((BOOL (*)(NSOperation, SEL))bean_msgSend)(self, bean_sel("concurrent")); }
 static inline BOOL                        NSOperation_Asynchronous(NSOperation self)                                                { return ((BOOL (*)(NSOperation, SEL))bean_msgSend)(self, bean_sel("asynchronous")); }
 static inline BOOL                        NSOperation_Ready(NSOperation self)                                                       { return ((BOOL (*)(NSOperation, SEL))bean_msgSend)(self, bean_sel("ready")); }
+#ifndef BEAN_ALLOC_NSOperation
+#define BEAN_ALLOC_NSOperation
+static inline NSOperation                 NSOperation_Alloc(void)                                                                   { return (NSOperation)bean_alloc(bean_cls("NSOperation")); }
+#endif
+#ifndef BEAN_NEW_NSOperation
+#define BEAN_NEW_NSOperation
+static inline NSOperation                 NSOperation_New(void)                                                                     { return (NSOperation)bean_new(bean_cls("NSOperation")); }
+#endif
 
 /* ===== NSOperationQueue ===== */
 static inline void                  NSOperationQueue_AddOperation(NSOperationQueue self, NSOperation op)                                             { ((void (*)(NSOperationQueue, SEL, NSOperation))bean_msgSend)(self, bean_sel("addOperation:"), op); }
@@ -6031,6 +7550,14 @@ static inline NSOperationQueue      NSOperationQueue_MainQueue(void)            
 static inline NSArray               NSOperationQueue_Operations(NSOperationQueue self)                                                               { return ((NSArray (*)(NSOperationQueue, SEL))bean_msgSend)(self, bean_sel("operations")); }
 static inline NSUInteger            NSOperationQueue_OperationCount(NSOperationQueue self)                                                           { return ((NSUInteger (*)(NSOperationQueue, SEL))bean_msgSend)(self, bean_sel("operationCount")); }
 static inline BOOL                  NSOperationQueue_Suspended(NSOperationQueue self)                                                                { return ((BOOL (*)(NSOperationQueue, SEL))bean_msgSend)(self, bean_sel("suspended")); }
+#ifndef BEAN_ALLOC_NSOperationQueue
+#define BEAN_ALLOC_NSOperationQueue
+static inline NSOperationQueue      NSOperationQueue_Alloc(void)                                                                                     { return (NSOperationQueue)bean_alloc(bean_cls("NSOperationQueue")); }
+#endif
+#ifndef BEAN_NEW_NSOperationQueue
+#define BEAN_NEW_NSOperationQueue
+static inline NSOperationQueue      NSOperationQueue_New(void)                                                                                       { return (NSOperationQueue)bean_new(bean_cls("NSOperationQueue")); }
+#endif
 
 /* ===== NSOrderedCollectionDifference ===== */
 static inline NSOrderedCollectionDifference    NSOrderedCollectionDifference_InitWithChanges(NSOrderedCollectionDifference self, NSArray changes)                                                                                                                                                                  { return ((NSOrderedCollectionDifference (*)(NSOrderedCollectionDifference, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithChanges:"), changes); }
@@ -6042,6 +7569,14 @@ static inline NSArray                          NSOrderedCollectionDifference_Ins
 static inline NSArray                          NSOrderedCollectionDifference_Removals(NSOrderedCollectionDifference self)                                                                                                                                                                                          { return ((NSArray (*)(NSOrderedCollectionDifference, SEL))bean_msgSend)(self, bean_sel("removals")); }
 static inline BOOL                             NSOrderedCollectionDifference_HasChanges(NSOrderedCollectionDifference self)                                                                                                                                                                                        { return ((BOOL (*)(NSOrderedCollectionDifference, SEL))bean_msgSend)(self, bean_sel("hasChanges")); }
 static inline NSUInteger                       NSOrderedCollectionDifference_CountByEnumeratingWithState_Objects_Count(NSOrderedCollectionDifference self, NSFastEnumerationState* state, id* buffer, NSUInteger len)                                                                                              { return ((NSUInteger (*)(NSOrderedCollectionDifference, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSOrderedCollectionDifference
+#define BEAN_ALLOC_NSOrderedCollectionDifference
+static inline NSOrderedCollectionDifference    NSOrderedCollectionDifference_Alloc(void)                                                                                                                                                                                                                           { return (NSOrderedCollectionDifference)bean_alloc(bean_cls("NSOrderedCollectionDifference")); }
+#endif
+#ifndef BEAN_NEW_NSOrderedCollectionDifference
+#define BEAN_NEW_NSOrderedCollectionDifference
+static inline NSOrderedCollectionDifference    NSOrderedCollectionDifference_New(void)                                                                                                                                                                                                                             { return (NSOrderedCollectionDifference)bean_new(bean_cls("NSOrderedCollectionDifference")); }
+#endif
 
 /* ===== NSOrderedSet ===== */
 static inline id                               NSOrderedSet_ObjectAtIndex(NSOrderedSet self, NSUInteger idx)                                                                                                                          { return ((id (*)(NSOrderedSet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("objectAtIndex:"), idx); }
@@ -6116,6 +7651,14 @@ static inline id                               NSOrderedSet_CopyWithZone(NSOrder
 static inline id                               NSOrderedSet_MutableCopyWithZone(NSOrderedSet self, NSZone* zone)                                                                                                                      { return ((id (*)(NSOrderedSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL                             NSOrderedSet_SupportsSecureCoding(void)                                                                                                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSOrderedSet"), bean_sel("supportsSecureCoding")); }
 static inline NSUInteger                       NSOrderedSet_CountByEnumeratingWithState_Objects_Count(NSOrderedSet self, NSFastEnumerationState* state, id* buffer, NSUInteger len)                                                   { return ((NSUInteger (*)(NSOrderedSet, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSOrderedSet
+#define BEAN_ALLOC_NSOrderedSet
+static inline NSOrderedSet                     NSOrderedSet_Alloc(void)                                                                                                                                                               { return (NSOrderedSet)bean_alloc(bean_cls("NSOrderedSet")); }
+#endif
+#ifndef BEAN_NEW_NSOrderedSet
+#define BEAN_NEW_NSOrderedSet
+static inline NSOrderedSet                     NSOrderedSet_New(void)                                                                                                                                                                 { return (NSOrderedSet)bean_new(bean_cls("NSOrderedSet")); }
+#endif
 
 /* ===== NSOrthography ===== */
 static inline NSOrthography    NSOrthography_InitWithDominantScript_LanguageMap(NSOrthography self, NSString script, NSDictionary map)    { return ((NSOrthography (*)(NSOrthography, SEL, NSString, NSDictionary))bean_msgSend)(self, bean_sel("initWithDominantScript:languageMap:"), script, map); }
@@ -6131,6 +7674,14 @@ static inline NSArray          NSOrthography_AllLanguages(NSOrthography self)   
 static inline NSOrthography    NSOrthography_OrthographyWithDominantScript_LanguageMap(NSString script, NSDictionary map)                 { return ((NSOrthography (*)(bean_class, SEL, NSString, NSDictionary))bean_msgSend)(bean_cls("NSOrthography"), bean_sel("orthographyWithDominantScript:languageMap:"), script, map); }
 static inline id               NSOrthography_CopyWithZone(NSOrthography self, NSZone* zone)                                               { return ((id (*)(NSOrthography, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL             NSOrthography_SupportsSecureCoding(void)                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSOrthography"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSOrthography
+#define BEAN_ALLOC_NSOrthography
+static inline NSOrthography    NSOrthography_Alloc(void)                                                                                  { return (NSOrthography)bean_alloc(bean_cls("NSOrthography")); }
+#endif
+#ifndef BEAN_NEW_NSOrthography
+#define BEAN_NEW_NSOrthography
+static inline NSOrthography    NSOrthography_New(void)                                                                                    { return (NSOrthography)bean_new(bean_cls("NSOrthography")); }
+#endif
 
 /* ===== NSOutputStream ===== */
 static inline NSInteger         NSOutputStream_Write_MaxLength(NSOutputStream self, const uint8_t* buffer, NSUInteger len)         { return ((NSInteger (*)(NSOutputStream, SEL, const uint8_t*, NSUInteger))bean_msgSend)(self, bean_sel("write:maxLength:"), buffer, len); }
@@ -6143,6 +7694,14 @@ static inline NSOutputStream    NSOutputStream_OutputStreamToMemory(void)       
 static inline NSOutputStream    NSOutputStream_OutputStreamToBuffer_Capacity(uint8_t* buffer, NSUInteger capacity)                 { return ((NSOutputStream (*)(bean_class, SEL, uint8_t*, NSUInteger))bean_msgSend)(bean_cls("NSOutputStream"), bean_sel("outputStreamToBuffer:capacity:"), buffer, capacity); }
 static inline NSOutputStream    NSOutputStream_OutputStreamToFileAtPath_Append(NSString path, BOOL shouldAppend)                   { return ((NSOutputStream (*)(bean_class, SEL, NSString, BOOL))bean_msgSend)(bean_cls("NSOutputStream"), bean_sel("outputStreamToFileAtPath:append:"), path, shouldAppend); }
 static inline NSOutputStream    NSOutputStream_OutputStreamWithURL_Append(NSURL url, BOOL shouldAppend)                            { return ((NSOutputStream (*)(bean_class, SEL, NSURL, BOOL))bean_msgSend)(bean_cls("NSOutputStream"), bean_sel("outputStreamWithURL:append:"), url, shouldAppend); }
+#ifndef BEAN_ALLOC_NSOutputStream
+#define BEAN_ALLOC_NSOutputStream
+static inline NSOutputStream    NSOutputStream_Alloc(void)                                                                         { return (NSOutputStream)bean_alloc(bean_cls("NSOutputStream")); }
+#endif
+#ifndef BEAN_NEW_NSOutputStream
+#define BEAN_NEW_NSOutputStream
+static inline NSOutputStream    NSOutputStream_New(void)                                                                           { return (NSOutputStream)bean_new(bean_cls("NSOutputStream")); }
+#endif
 
 /* ===== NSPersonNameComponents ===== */
 static inline NSString                  NSPersonNameComponents_NamePrefix(NSPersonNameComponents self)                                                                  { return ((NSString (*)(NSPersonNameComponents, SEL))bean_msgSend)(self, bean_sel("namePrefix")); }
@@ -6161,6 +7720,14 @@ static inline NSPersonNameComponents    NSPersonNameComponents_PhoneticRepresent
 static inline void                      NSPersonNameComponents_SetPhoneticRepresentation(NSPersonNameComponents self, NSPersonNameComponents phoneticRepresentation)    { ((void (*)(NSPersonNameComponents, SEL, NSPersonNameComponents))bean_msgSend)(self, bean_sel("setPhoneticRepresentation:"), phoneticRepresentation); }
 static inline id                        NSPersonNameComponents_CopyWithZone(NSPersonNameComponents self, NSZone* zone)                                                  { return ((id (*)(NSPersonNameComponents, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      NSPersonNameComponents_SupportsSecureCoding(void)                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersonNameComponents"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSPersonNameComponents
+#define BEAN_ALLOC_NSPersonNameComponents
+static inline NSPersonNameComponents    NSPersonNameComponents_Alloc(void)                                                                                              { return (NSPersonNameComponents)bean_alloc(bean_cls("NSPersonNameComponents")); }
+#endif
+#ifndef BEAN_NEW_NSPersonNameComponents
+#define BEAN_NEW_NSPersonNameComponents
+static inline NSPersonNameComponents    NSPersonNameComponents_New(void)                                                                                                { return (NSPersonNameComponents)bean_new(bean_cls("NSPersonNameComponents")); }
+#endif
 
 /* ===== NSPersonNameComponentsFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSPersonNameComponentsFormatter
@@ -6179,6 +7746,14 @@ static inline void                                    NSPersonNameComponentsForm
 static inline NSLocale                                NSPersonNameComponentsFormatter_Locale(NSPersonNameComponentsFormatter self)                                                                                                                                                          { return ((NSLocale (*)(NSPersonNameComponentsFormatter, SEL))bean_msgSend)(self, bean_sel("locale")); }
 static inline void                                    NSPersonNameComponentsFormatter_SetLocale(NSPersonNameComponentsFormatter self, NSLocale locale)                                                                                                                                      { ((void (*)(NSPersonNameComponentsFormatter, SEL, NSLocale))bean_msgSend)(self, bean_sel("setLocale:"), locale); }
 static inline BOOL                                    NSPersonNameComponentsFormatter_Phonetic(NSPersonNameComponentsFormatter self)                                                                                                                                                        { return ((BOOL (*)(NSPersonNameComponentsFormatter, SEL))bean_msgSend)(self, bean_sel("phonetic")); }
+#ifndef BEAN_ALLOC_NSPersonNameComponentsFormatter
+#define BEAN_ALLOC_NSPersonNameComponentsFormatter
+static inline NSPersonNameComponentsFormatter         NSPersonNameComponentsFormatter_Alloc(void)                                                                                                                                                                                           { return (NSPersonNameComponentsFormatter)bean_alloc(bean_cls("NSPersonNameComponentsFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSPersonNameComponentsFormatter
+#define BEAN_NEW_NSPersonNameComponentsFormatter
+static inline NSPersonNameComponentsFormatter         NSPersonNameComponentsFormatter_New(void)                                                                                                                                                                                             { return (NSPersonNameComponentsFormatter)bean_new(bean_cls("NSPersonNameComponentsFormatter")); }
+#endif
 
 /* ===== NSPipe ===== */
 #ifndef BEAN_TYPEDEF_NSPipe
@@ -6188,6 +7763,14 @@ typedef bean_id NSPipe;
 static inline NSPipe          NSPipe_Pipe(void)                           { return ((NSPipe (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPipe"), bean_sel("pipe")); }
 static inline NSFileHandle    NSPipe_FileHandleForReading(NSPipe self)    { return ((NSFileHandle (*)(NSPipe, SEL))bean_msgSend)(self, bean_sel("fileHandleForReading")); }
 static inline NSFileHandle    NSPipe_FileHandleForWriting(NSPipe self)    { return ((NSFileHandle (*)(NSPipe, SEL))bean_msgSend)(self, bean_sel("fileHandleForWriting")); }
+#ifndef BEAN_ALLOC_NSPipe
+#define BEAN_ALLOC_NSPipe
+static inline NSPipe          NSPipe_Alloc(void)                          { return (NSPipe)bean_alloc(bean_cls("NSPipe")); }
+#endif
+#ifndef BEAN_NEW_NSPipe
+#define BEAN_NEW_NSPipe
+static inline NSPipe          NSPipe_New(void)                            { return (NSPipe)bean_new(bean_cls("NSPipe")); }
+#endif
 
 /* ===== NSPointerArray ===== */
 #ifndef BEAN_TYPEDEF_NSPointerArray
@@ -6215,6 +7798,14 @@ static inline NSArray               NSPointerArray_AllObjects(NSPointerArray sel
 static inline NSUInteger            NSPointerArray_CountByEnumeratingWithState_Objects_Count(NSPointerArray self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSPointerArray, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
 static inline id                    NSPointerArray_CopyWithZone(NSPointerArray self, NSZone* zone)                                                                              { return ((id (*)(NSPointerArray, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSPointerArray_SupportsSecureCoding(void)                                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPointerArray"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSPointerArray
+#define BEAN_ALLOC_NSPointerArray
+static inline NSPointerArray        NSPointerArray_Alloc(void)                                                                                                                  { return (NSPointerArray)bean_alloc(bean_cls("NSPointerArray")); }
+#endif
+#ifndef BEAN_NEW_NSPointerArray
+#define BEAN_NEW_NSPointerArray
+static inline NSPointerArray        NSPointerArray_New(void)                                                                                                                    { return (NSPointerArray)bean_new(bean_cls("NSPointerArray")); }
+#endif
 
 /* ===== NSPort ===== */
 static inline NSPort        NSPort_Port(void)                                                                                                                                                                       { return ((NSPort (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPort"), bean_sel("port")); }
@@ -6233,6 +7824,14 @@ static inline id            NSPort_CopyWithZone(NSPort self, NSZone* zone)      
 static inline void          NSPort_EncodeWithCoder(NSPort self, NSCoder coder)                                                                                                                                      { ((void (*)(NSPort, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding      NSPort_InitWithCoder(NSPort self, NSCoder coder)                                                                                                                                        { return ((NSCoding (*)(NSPort, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline BOOL          NSPort_Valid(NSPort self)                                                                                                                                                               { return ((BOOL (*)(NSPort, SEL))bean_msgSend)(self, bean_sel("valid")); }
+#ifndef BEAN_ALLOC_NSPort
+#define BEAN_ALLOC_NSPort
+static inline NSPort        NSPort_Alloc(void)                                                                                                                                                                      { return (NSPort)bean_alloc(bean_cls("NSPort")); }
+#endif
+#ifndef BEAN_NEW_NSPort
+#define BEAN_NEW_NSPort
+static inline NSPort        NSPort_New(void)                                                                                                                                                                        { return (NSPort)bean_new(bean_cls("NSPort")); }
+#endif
 
 /* ===== NSPortCoder ===== */
 static inline BOOL            NSPortCoder_IsBycopy(NSPortCoder self)                                                                                  { return ((BOOL (*)(NSPortCoder, SEL))bean_msgSend)(self, bean_sel("isBycopy")); }
@@ -6243,13 +7842,29 @@ static inline NSConnection    NSPortCoder_Connection(NSPortCoder self)          
 static inline id              NSPortCoder_PortCoderWithReceivePort_SendPort_Components(NSPort rcvPort, NSPort sndPort, NSArray comps)                 { return ((id (*)(bean_class, SEL, NSPort, NSPort, NSArray))bean_msgSend)(bean_cls("NSPortCoder"), bean_sel("portCoderWithReceivePort:sendPort:components:"), rcvPort, sndPort, comps); }
 static inline NSPortCoder     NSPortCoder_InitWithReceivePort_SendPort_Components(NSPortCoder self, NSPort rcvPort, NSPort sndPort, NSArray comps)    { return ((NSPortCoder (*)(NSPortCoder, SEL, NSPort, NSPort, NSArray))bean_msgSend)(self, bean_sel("initWithReceivePort:sendPort:components:"), rcvPort, sndPort, comps); }
 static inline void            NSPortCoder_Dispatch(NSPortCoder self)                                                                                  { ((void (*)(NSPortCoder, SEL))bean_msgSend)(self, bean_sel("dispatch")); }
+#ifndef BEAN_ALLOC_NSPortCoder
+#define BEAN_ALLOC_NSPortCoder
+static inline NSPortCoder     NSPortCoder_Alloc(void)                                                                                                 { return (NSPortCoder)bean_alloc(bean_cls("NSPortCoder")); }
+#endif
+#ifndef BEAN_NEW_NSPortCoder
+#define BEAN_NEW_NSPortCoder
+static inline NSPortCoder     NSPortCoder_New(void)                                                                                                   { return (NSPortCoder)bean_new(bean_cls("NSPortCoder")); }
+#endif
 
 /* ===== NSPortDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSPortDelegate
 #define BEAN_TYPEDEF_NSPortDelegate
 typedef bean_id NSPortDelegate;
 #endif
-static inline void    NSPortDelegate_HandlePortMessage(NSPortDelegate self, NSPortMessage message)    { ((void (*)(NSPortDelegate, SEL, NSPortMessage))bean_msgSend)(self, bean_sel("handlePortMessage:"), message); }
+static inline void              NSPortDelegate_HandlePortMessage(NSPortDelegate self, NSPortMessage message)    { ((void (*)(NSPortDelegate, SEL, NSPortMessage))bean_msgSend)(self, bean_sel("handlePortMessage:"), message); }
+#ifndef BEAN_ALLOC_NSPortDelegate
+#define BEAN_ALLOC_NSPortDelegate
+static inline NSPortDelegate    NSPortDelegate_Alloc(void)                                                      { return (NSPortDelegate)bean_alloc(bean_cls("NSPortDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSPortDelegate
+#define BEAN_NEW_NSPortDelegate
+static inline NSPortDelegate    NSPortDelegate_New(void)                                                        { return (NSPortDelegate)bean_new(bean_cls("NSPortDelegate")); }
+#endif
 
 /* ===== NSPortMessage ===== */
 static inline NSPortMessage    NSPortMessage_InitWithSendPort_ReceivePort_Components(NSPortMessage self, NSPort sendPort, NSPort replyPort, NSArray components)    { return ((NSPortMessage (*)(NSPortMessage, SEL, NSPort, NSPort, NSArray))bean_msgSend)(self, bean_sel("initWithSendPort:receivePort:components:"), sendPort, replyPort, components); }
@@ -6259,6 +7874,14 @@ static inline NSPort           NSPortMessage_ReceivePort(NSPortMessage self)    
 static inline NSPort           NSPortMessage_SendPort(NSPortMessage self)                                                                                          { return ((NSPort (*)(NSPortMessage, SEL))bean_msgSend)(self, bean_sel("sendPort")); }
 static inline NSUInteger       NSPortMessage_Msgid(NSPortMessage self)                                                                                             { return ((NSUInteger (*)(NSPortMessage, SEL))bean_msgSend)(self, bean_sel("msgid")); }
 static inline void             NSPortMessage_SetMsgid(NSPortMessage self, NSUInteger msgid)                                                                        { ((void (*)(NSPortMessage, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setMsgid:"), msgid); }
+#ifndef BEAN_ALLOC_NSPortMessage
+#define BEAN_ALLOC_NSPortMessage
+static inline NSPortMessage    NSPortMessage_Alloc(void)                                                                                                           { return (NSPortMessage)bean_alloc(bean_cls("NSPortMessage")); }
+#endif
+#ifndef BEAN_NEW_NSPortMessage
+#define BEAN_NEW_NSPortMessage
+static inline NSPortMessage    NSPortMessage_New(void)                                                                                                             { return (NSPortMessage)bean_new(bean_cls("NSPortMessage")); }
+#endif
 
 /* ===== NSPortNameServer ===== */
 static inline NSPortNameServer    NSPortNameServer_SystemDefaultPortNameServer(void)                                        { return ((NSPortNameServer (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPortNameServer"), bean_sel("systemDefaultPortNameServer")); }
@@ -6266,6 +7889,14 @@ static inline NSPort              NSPortNameServer_PortForName(NSPortNameServer 
 static inline NSPort              NSPortNameServer_PortForName_Host(NSPortNameServer self, NSString name, NSString host)    { return ((NSPort (*)(NSPortNameServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("portForName:host:"), name, host); }
 static inline BOOL                NSPortNameServer_RegisterPort_Name(NSPortNameServer self, NSPort port, NSString name)     { return ((BOOL (*)(NSPortNameServer, SEL, NSPort, NSString))bean_msgSend)(self, bean_sel("registerPort:name:"), port, name); }
 static inline BOOL                NSPortNameServer_RemovePortForName(NSPortNameServer self, NSString name)                  { return ((BOOL (*)(NSPortNameServer, SEL, NSString))bean_msgSend)(self, bean_sel("removePortForName:"), name); }
+#ifndef BEAN_ALLOC_NSPortNameServer
+#define BEAN_ALLOC_NSPortNameServer
+static inline NSPortNameServer    NSPortNameServer_Alloc(void)                                                              { return (NSPortNameServer)bean_alloc(bean_cls("NSPortNameServer")); }
+#endif
+#ifndef BEAN_NEW_NSPortNameServer
+#define BEAN_NEW_NSPortNameServer
+static inline NSPortNameServer    NSPortNameServer_New(void)                                                                { return (NSPortNameServer)bean_new(bean_cls("NSPortNameServer")); }
+#endif
 
 /* ===== NSPositionalSpecifier ===== */
 #ifndef BEAN_TYPEDEF_NSPositionalSpecifier
@@ -6281,6 +7912,14 @@ static inline id                         NSPositionalSpecifier_InsertionContaine
 static inline NSString                   NSPositionalSpecifier_InsertionKey(NSPositionalSpecifier self)                                                                                         { return ((NSString (*)(NSPositionalSpecifier, SEL))bean_msgSend)(self, bean_sel("insertionKey")); }
 static inline NSInteger                  NSPositionalSpecifier_InsertionIndex(NSPositionalSpecifier self)                                                                                       { return ((NSInteger (*)(NSPositionalSpecifier, SEL))bean_msgSend)(self, bean_sel("insertionIndex")); }
 static inline BOOL                       NSPositionalSpecifier_InsertionReplaces(NSPositionalSpecifier self)                                                                                    { return ((BOOL (*)(NSPositionalSpecifier, SEL))bean_msgSend)(self, bean_sel("insertionReplaces")); }
+#ifndef BEAN_ALLOC_NSPositionalSpecifier
+#define BEAN_ALLOC_NSPositionalSpecifier
+static inline NSPositionalSpecifier      NSPositionalSpecifier_Alloc(void)                                                                                                                      { return (NSPositionalSpecifier)bean_alloc(bean_cls("NSPositionalSpecifier")); }
+#endif
+#ifndef BEAN_NEW_NSPositionalSpecifier
+#define BEAN_NEW_NSPositionalSpecifier
+static inline NSPositionalSpecifier      NSPositionalSpecifier_New(void)                                                                                                                        { return (NSPositionalSpecifier)bean_new(bean_cls("NSPositionalSpecifier")); }
+#endif
 
 /* ===== NSPredicate ===== */
 static inline NSPredicate    NSPredicate_PredicateWithFormat_ArgumentArray(NSString predicateFormat, NSArray arguments)                  { return ((NSPredicate (*)(bean_class, SEL, NSString, NSArray))bean_msgSend)(bean_cls("NSPredicate"), bean_sel("predicateWithFormat:argumentArray:"), predicateFormat, arguments); }
@@ -6296,6 +7935,14 @@ static inline void           NSPredicate_AllowEvaluation(NSPredicate self)      
 static inline NSString       NSPredicate_PredicateFormat(NSPredicate self)                                                               { return ((NSString (*)(NSPredicate, SEL))bean_msgSend)(self, bean_sel("predicateFormat")); }
 static inline BOOL           NSPredicate_SupportsSecureCoding(void)                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPredicate"), bean_sel("supportsSecureCoding")); }
 static inline id             NSPredicate_CopyWithZone(NSPredicate self, NSZone* zone)                                                    { return ((id (*)(NSPredicate, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPredicate
+#define BEAN_ALLOC_NSPredicate
+static inline NSPredicate    NSPredicate_Alloc(void)                                                                                     { return (NSPredicate)bean_alloc(bean_cls("NSPredicate")); }
+#endif
+#ifndef BEAN_NEW_NSPredicate
+#define BEAN_NEW_NSPredicate
+static inline NSPredicate    NSPredicate_New(void)                                                                                       { return (NSPredicate)bean_new(bean_cls("NSPredicate")); }
+#endif
 
 /* ===== NSPresentationIntent ===== */
 #ifndef BEAN_TYPEDEF_NSPresentationIntent
@@ -6329,6 +7976,14 @@ static inline NSInteger                   NSPresentationIntent_Row(NSPresentatio
 static inline NSInteger                   NSPresentationIntent_IndentationLevel(NSPresentationIntent self)                                                                                                                      { return ((NSInteger (*)(NSPresentationIntent, SEL))bean_msgSend)(self, bean_sel("indentationLevel")); }
 static inline id                          NSPresentationIntent_CopyWithZone(NSPresentationIntent self, NSZone* zone)                                                                                                            { return ((id (*)(NSPresentationIntent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                        NSPresentationIntent_SupportsSecureCoding(void)                                                                                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPresentationIntent"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSPresentationIntent
+#define BEAN_ALLOC_NSPresentationIntent
+static inline NSPresentationIntent        NSPresentationIntent_Alloc(void)                                                                                                                                                      { return (NSPresentationIntent)bean_alloc(bean_cls("NSPresentationIntent")); }
+#endif
+#ifndef BEAN_NEW_NSPresentationIntent
+#define BEAN_NEW_NSPresentationIntent
+static inline NSPresentationIntent        NSPresentationIntent_New(void)                                                                                                                                                        { return (NSPresentationIntent)bean_new(bean_cls("NSPresentationIntent")); }
+#endif
 
 /* ===== NSProcessInfo ===== */
 #ifndef BEAN_TYPEDEF_NSProcessInfo
@@ -6373,6 +8028,14 @@ static inline BOOL                         NSProcessInfo_LowPowerModeEnabled(NSP
 static inline BOOL                         NSProcessInfo_MacCatalystApp(NSProcessInfo self)                                                                                           { return ((BOOL (*)(NSProcessInfo, SEL))bean_msgSend)(self, bean_sel("macCatalystApp")); }
 static inline BOOL                         NSProcessInfo_IOSAppOnMac(NSProcessInfo self)                                                                                              { return ((BOOL (*)(NSProcessInfo, SEL))bean_msgSend)(self, bean_sel("iOSAppOnMac")); }
 static inline BOOL                         NSProcessInfo_IOSAppOnVision(NSProcessInfo self)                                                                                           { return ((BOOL (*)(NSProcessInfo, SEL))bean_msgSend)(self, bean_sel("iOSAppOnVision")); }
+#ifndef BEAN_ALLOC_NSProcessInfo
+#define BEAN_ALLOC_NSProcessInfo
+static inline NSProcessInfo                NSProcessInfo_Alloc(void)                                                                                                                  { return (NSProcessInfo)bean_alloc(bean_cls("NSProcessInfo")); }
+#endif
+#ifndef BEAN_NEW_NSProcessInfo
+#define BEAN_NEW_NSProcessInfo
+static inline NSProcessInfo                NSProcessInfo_New(void)                                                                                                                    { return (NSProcessInfo)bean_new(bean_cls("NSProcessInfo")); }
+#endif
 
 /* ===== NSProgress ===== */
 static inline NSProgress      NSProgress_CurrentProgress(void)                                                                                                                  { return ((NSProgress (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSProgress"), bean_sel("currentProgress")); }
@@ -6438,26 +8101,50 @@ static inline BOOL            NSProgress_Paused(NSProgress self)                
 static inline BOOL            NSProgress_Indeterminate(NSProgress self)                                                                                                         { return ((BOOL (*)(NSProgress, SEL))bean_msgSend)(self, bean_sel("indeterminate")); }
 static inline BOOL            NSProgress_Finished(NSProgress self)                                                                                                              { return ((BOOL (*)(NSProgress, SEL))bean_msgSend)(self, bean_sel("finished")); }
 static inline BOOL            NSProgress_Old(NSProgress self)                                                                                                                   { return ((BOOL (*)(NSProgress, SEL))bean_msgSend)(self, bean_sel("old")); }
+#ifndef BEAN_ALLOC_NSProgress
+#define BEAN_ALLOC_NSProgress
+static inline NSProgress      NSProgress_Alloc(void)                                                                                                                            { return (NSProgress)bean_alloc(bean_cls("NSProgress")); }
+#endif
+#ifndef BEAN_NEW_NSProgress
+#define BEAN_NEW_NSProgress
+static inline NSProgress      NSProgress_New(void)                                                                                                                              { return (NSProgress)bean_new(bean_cls("NSProgress")); }
+#endif
 
 /* ===== NSProgressReporting ===== */
 #ifndef BEAN_TYPEDEF_NSProgressReporting
 #define BEAN_TYPEDEF_NSProgressReporting
 typedef bean_id NSProgressReporting;
 #endif
-static inline NSProgress    NSProgressReporting_Progress(NSProgressReporting self)    { return ((NSProgress (*)(NSProgressReporting, SEL))bean_msgSend)(self, bean_sel("progress")); }
+static inline NSProgress             NSProgressReporting_Progress(NSProgressReporting self)    { return ((NSProgress (*)(NSProgressReporting, SEL))bean_msgSend)(self, bean_sel("progress")); }
+#ifndef BEAN_ALLOC_NSProgressReporting
+#define BEAN_ALLOC_NSProgressReporting
+static inline NSProgressReporting    NSProgressReporting_Alloc(void)                           { return (NSProgressReporting)bean_alloc(bean_cls("NSProgressReporting")); }
+#endif
+#ifndef BEAN_NEW_NSProgressReporting
+#define BEAN_NEW_NSProgressReporting
+static inline NSProgressReporting    NSProgressReporting_New(void)                             { return (NSProgressReporting)bean_new(bean_cls("NSProgressReporting")); }
+#endif
 
 /* ===== NSPropertyListSerialization ===== */
 #ifndef BEAN_TYPEDEF_NSPropertyListSerialization
 #define BEAN_TYPEDEF_NSPropertyListSerialization
 typedef bean_id NSPropertyListSerialization;
 #endif
-static inline BOOL         NSPropertyListSerialization_PropertyList_IsValidForFormat(id plist, NSPropertyListFormat format)                                                                                                  { return ((BOOL (*)(bean_class, SEL, id, NSPropertyListFormat))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("propertyList:isValidForFormat:"), plist, format); }
-static inline NSData       NSPropertyListSerialization_DataWithPropertyList_Format_Options_Error(id plist, NSPropertyListFormat format, NSUInteger opt, NSError* error)                                                      { return ((NSData (*)(bean_class, SEL, id, NSPropertyListFormat, NSUInteger, NSError*))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("dataWithPropertyList:format:options:error:"), plist, format, opt, error); }
-static inline NSInteger    NSPropertyListSerialization_WritePropertyList_ToStream_Format_Options_Error(id plist, NSOutputStream stream, NSPropertyListFormat format, NSUInteger opt, NSError* error)                         { return ((NSInteger (*)(bean_class, SEL, id, NSOutputStream, NSPropertyListFormat, NSUInteger, NSError*))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("writePropertyList:toStream:format:options:error:"), plist, stream, format, opt, error); }
-static inline id           NSPropertyListSerialization_PropertyListWithData_Options_Format_Error(NSData data, NSPropertyListMutabilityOptions opt, NSPropertyListFormat format, NSError* error)                              { return ((id (*)(bean_class, SEL, NSData, NSPropertyListMutabilityOptions, NSPropertyListFormat, NSError*))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("propertyListWithData:options:format:error:"), data, opt, format, error); }
-static inline id           NSPropertyListSerialization_PropertyListWithStream_Options_Format_Error(NSInputStream stream, NSPropertyListMutabilityOptions opt, NSPropertyListFormat format, NSError* error)                   { return ((id (*)(bean_class, SEL, NSInputStream, NSPropertyListMutabilityOptions, NSPropertyListFormat, NSError*))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("propertyListWithStream:options:format:error:"), stream, opt, format, error); }
-static inline NSData       NSPropertyListSerialization_DataFromPropertyList_Format_ErrorDescription(id plist, NSPropertyListFormat format, NSString errorString)                                                             { return ((NSData (*)(bean_class, SEL, id, NSPropertyListFormat, NSString))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("dataFromPropertyList:format:errorDescription:"), plist, format, errorString); }
-static inline id           NSPropertyListSerialization_PropertyListFromData_MutabilityOption_Format_ErrorDescription(NSData data, NSPropertyListMutabilityOptions opt, NSPropertyListFormat format, NSString errorString)    { return ((id (*)(bean_class, SEL, NSData, NSPropertyListMutabilityOptions, NSPropertyListFormat, NSString))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("propertyListFromData:mutabilityOption:format:errorDescription:"), data, opt, format, errorString); }
+static inline BOOL                           NSPropertyListSerialization_PropertyList_IsValidForFormat(id plist, NSPropertyListFormat format)                                                                                                  { return ((BOOL (*)(bean_class, SEL, id, NSPropertyListFormat))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("propertyList:isValidForFormat:"), plist, format); }
+static inline NSData                         NSPropertyListSerialization_DataWithPropertyList_Format_Options_Error(id plist, NSPropertyListFormat format, NSUInteger opt, NSError* error)                                                      { return ((NSData (*)(bean_class, SEL, id, NSPropertyListFormat, NSUInteger, NSError*))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("dataWithPropertyList:format:options:error:"), plist, format, opt, error); }
+static inline NSInteger                      NSPropertyListSerialization_WritePropertyList_ToStream_Format_Options_Error(id plist, NSOutputStream stream, NSPropertyListFormat format, NSUInteger opt, NSError* error)                         { return ((NSInteger (*)(bean_class, SEL, id, NSOutputStream, NSPropertyListFormat, NSUInteger, NSError*))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("writePropertyList:toStream:format:options:error:"), plist, stream, format, opt, error); }
+static inline id                             NSPropertyListSerialization_PropertyListWithData_Options_Format_Error(NSData data, NSPropertyListMutabilityOptions opt, NSPropertyListFormat format, NSError* error)                              { return ((id (*)(bean_class, SEL, NSData, NSPropertyListMutabilityOptions, NSPropertyListFormat, NSError*))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("propertyListWithData:options:format:error:"), data, opt, format, error); }
+static inline id                             NSPropertyListSerialization_PropertyListWithStream_Options_Format_Error(NSInputStream stream, NSPropertyListMutabilityOptions opt, NSPropertyListFormat format, NSError* error)                   { return ((id (*)(bean_class, SEL, NSInputStream, NSPropertyListMutabilityOptions, NSPropertyListFormat, NSError*))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("propertyListWithStream:options:format:error:"), stream, opt, format, error); }
+static inline NSData                         NSPropertyListSerialization_DataFromPropertyList_Format_ErrorDescription(id plist, NSPropertyListFormat format, NSString errorString)                                                             { return ((NSData (*)(bean_class, SEL, id, NSPropertyListFormat, NSString))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("dataFromPropertyList:format:errorDescription:"), plist, format, errorString); }
+static inline id                             NSPropertyListSerialization_PropertyListFromData_MutabilityOption_Format_ErrorDescription(NSData data, NSPropertyListMutabilityOptions opt, NSPropertyListFormat format, NSString errorString)    { return ((id (*)(bean_class, SEL, NSData, NSPropertyListMutabilityOptions, NSPropertyListFormat, NSString))bean_msgSend)(bean_cls("NSPropertyListSerialization"), bean_sel("propertyListFromData:mutabilityOption:format:errorDescription:"), data, opt, format, errorString); }
+#ifndef BEAN_ALLOC_NSPropertyListSerialization
+#define BEAN_ALLOC_NSPropertyListSerialization
+static inline NSPropertyListSerialization    NSPropertyListSerialization_Alloc(void)                                                                                                                                                           { return (NSPropertyListSerialization)bean_alloc(bean_cls("NSPropertyListSerialization")); }
+#endif
+#ifndef BEAN_NEW_NSPropertyListSerialization
+#define BEAN_NEW_NSPropertyListSerialization
+static inline NSPropertyListSerialization    NSPropertyListSerialization_New(void)                                                                                                                                                             { return (NSPropertyListSerialization)bean_new(bean_cls("NSPropertyListSerialization")); }
+#endif
 
 /* ===== NSProtocolChecker ===== */
 #ifndef BEAN_TYPEDEF_NSProtocolChecker
@@ -6468,13 +8155,24 @@ static inline Protocol             NSProtocolChecker_Protocol(NSProtocolChecker 
 static inline NSObject             NSProtocolChecker_Target(NSProtocolChecker self)                                                            { return ((NSObject (*)(NSProtocolChecker, SEL))bean_msgSend)(self, bean_sel("target")); }
 static inline NSProtocolChecker    NSProtocolChecker_ProtocolCheckerWithTarget_Protocol(NSObject anObject, Protocol aProtocol)                 { return ((NSProtocolChecker (*)(bean_class, SEL, NSObject, Protocol))bean_msgSend)(bean_cls("NSProtocolChecker"), bean_sel("protocolCheckerWithTarget:protocol:"), anObject, aProtocol); }
 static inline NSProtocolChecker    NSProtocolChecker_InitWithTarget_Protocol(NSProtocolChecker self, NSObject anObject, Protocol aProtocol)    { return ((NSProtocolChecker (*)(NSProtocolChecker, SEL, NSObject, Protocol))bean_msgSend)(self, bean_sel("initWithTarget:protocol:"), anObject, aProtocol); }
+#ifndef BEAN_ALLOC_NSProtocolChecker
+#define BEAN_ALLOC_NSProtocolChecker
+static inline NSProtocolChecker    NSProtocolChecker_Alloc(void)                                                                               { return (NSProtocolChecker)bean_alloc(bean_cls("NSProtocolChecker")); }
+#endif
+#ifndef BEAN_NEW_NSProtocolChecker
+#define BEAN_NEW_NSProtocolChecker
+static inline NSProtocolChecker    NSProtocolChecker_New(void)                                                                                 { return (NSProtocolChecker)bean_new(bean_cls("NSProtocolChecker")); }
+#endif
 
 /* ===== NSProxy ===== */
 #ifndef BEAN_TYPEDEF_NSProxy
 #define BEAN_TYPEDEF_NSProxy
 typedef bean_id NSProxy;
 #endif
+#ifndef BEAN_ALLOC_NSProxy
+#define BEAN_ALLOC_NSProxy
 static inline id                   NSProxy_Alloc(void)                                                                                   { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSProxy"), bean_sel("alloc")); }
+#endif
 static inline id                   NSProxy_AllocWithZone(NSZone* zone)                                                                   { return ((id (*)(bean_class, SEL, NSZone*))bean_msgSend)(bean_cls("NSProxy"), bean_sel("allocWithZone:"), zone); }
 static inline bean_class           NSProxy_Class(void)                                                                                   { return ((bean_class (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSProxy"), bean_sel("class")); }
 static inline void                 NSProxy_ForwardInvocation(NSProxy self, NSInvocation invocation)                                      { ((void (*)(NSProxy, SEL, NSInvocation))bean_msgSend)(self, bean_sel("forwardInvocation:"), invocation); }
@@ -6502,6 +8200,10 @@ static inline NSUInteger           NSProxy_RetainCount(NSProxy self)            
 static inline NSZone*              NSProxy_Zone(NSProxy self)                                                                            { return ((NSZone* (*)(NSProxy, SEL))bean_msgSend)(self, bean_sel("zone")); }
 static inline NSUInteger           NSProxy_Hash(NSProxy self)                                                                            { return ((NSUInteger (*)(NSProxy, SEL))bean_msgSend)(self, bean_sel("hash")); }
 static inline bean_class           NSProxy_Superclass(NSProxy self)                                                                      { return ((bean_class (*)(NSProxy, SEL))bean_msgSend)(self, bean_sel("superclass")); }
+#ifndef BEAN_NEW_NSProxy
+#define BEAN_NEW_NSProxy
+static inline NSProxy              NSProxy_New(void)                                                                                     { return (NSProxy)bean_new(bean_cls("NSProxy")); }
+#endif
 
 /* ===== NSRangeSpecifier ===== */
 #ifndef BEAN_TYPEDEF_NSRangeSpecifier
@@ -6514,18 +8216,34 @@ static inline NSScriptObjectSpecifier    NSRangeSpecifier_StartSpecifier(NSRange
 static inline void                       NSRangeSpecifier_SetStartSpecifier(NSRangeSpecifier self, NSScriptObjectSpecifier startSpecifier)                                                                                                                                                                                             { ((void (*)(NSRangeSpecifier, SEL, NSScriptObjectSpecifier))bean_msgSend)(self, bean_sel("setStartSpecifier:"), startSpecifier); }
 static inline NSScriptObjectSpecifier    NSRangeSpecifier_EndSpecifier(NSRangeSpecifier self)                                                                                                                                                                                                                                          { return ((NSScriptObjectSpecifier (*)(NSRangeSpecifier, SEL))bean_msgSend)(self, bean_sel("endSpecifier")); }
 static inline void                       NSRangeSpecifier_SetEndSpecifier(NSRangeSpecifier self, NSScriptObjectSpecifier endSpecifier)                                                                                                                                                                                                 { ((void (*)(NSRangeSpecifier, SEL, NSScriptObjectSpecifier))bean_msgSend)(self, bean_sel("setEndSpecifier:"), endSpecifier); }
+#ifndef BEAN_ALLOC_NSRangeSpecifier
+#define BEAN_ALLOC_NSRangeSpecifier
+static inline NSRangeSpecifier           NSRangeSpecifier_Alloc(void)                                                                                                                                                                                                                                                                  { return (NSRangeSpecifier)bean_alloc(bean_cls("NSRangeSpecifier")); }
+#endif
+#ifndef BEAN_NEW_NSRangeSpecifier
+#define BEAN_NEW_NSRangeSpecifier
+static inline NSRangeSpecifier           NSRangeSpecifier_New(void)                                                                                                                                                                                                                                                                    { return (NSRangeSpecifier)bean_new(bean_cls("NSRangeSpecifier")); }
+#endif
 
 /* ===== NSRecursiveLock ===== */
 #ifndef BEAN_TYPEDEF_NSRecursiveLock
 #define BEAN_TYPEDEF_NSRecursiveLock
 typedef bean_id NSRecursiveLock;
 #endif
-static inline BOOL        NSRecursiveLock_TryLock(NSRecursiveLock self)                         { return ((BOOL (*)(NSRecursiveLock, SEL))bean_msgSend)(self, bean_sel("tryLock")); }
-static inline BOOL        NSRecursiveLock_LockBeforeDate(NSRecursiveLock self, NSDate limit)    { return ((BOOL (*)(NSRecursiveLock, SEL, NSDate))bean_msgSend)(self, bean_sel("lockBeforeDate:"), limit); }
-static inline NSString    NSRecursiveLock_Name(NSRecursiveLock self)                            { return ((NSString (*)(NSRecursiveLock, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        NSRecursiveLock_SetName(NSRecursiveLock self, NSString name)          { ((void (*)(NSRecursiveLock, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline void        NSRecursiveLock_Lock(NSRecursiveLock self)                            { ((void (*)(NSRecursiveLock, SEL))bean_msgSend)(self, bean_sel("lock")); }
-static inline void        NSRecursiveLock_Unlock(NSRecursiveLock self)                          { ((void (*)(NSRecursiveLock, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+static inline BOOL               NSRecursiveLock_TryLock(NSRecursiveLock self)                         { return ((BOOL (*)(NSRecursiveLock, SEL))bean_msgSend)(self, bean_sel("tryLock")); }
+static inline BOOL               NSRecursiveLock_LockBeforeDate(NSRecursiveLock self, NSDate limit)    { return ((BOOL (*)(NSRecursiveLock, SEL, NSDate))bean_msgSend)(self, bean_sel("lockBeforeDate:"), limit); }
+static inline NSString           NSRecursiveLock_Name(NSRecursiveLock self)                            { return ((NSString (*)(NSRecursiveLock, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void               NSRecursiveLock_SetName(NSRecursiveLock self, NSString name)          { ((void (*)(NSRecursiveLock, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline void               NSRecursiveLock_Lock(NSRecursiveLock self)                            { ((void (*)(NSRecursiveLock, SEL))bean_msgSend)(self, bean_sel("lock")); }
+static inline void               NSRecursiveLock_Unlock(NSRecursiveLock self)                          { ((void (*)(NSRecursiveLock, SEL))bean_msgSend)(self, bean_sel("unlock")); }
+#ifndef BEAN_ALLOC_NSRecursiveLock
+#define BEAN_ALLOC_NSRecursiveLock
+static inline NSRecursiveLock    NSRecursiveLock_Alloc(void)                                           { return (NSRecursiveLock)bean_alloc(bean_cls("NSRecursiveLock")); }
+#endif
+#ifndef BEAN_NEW_NSRecursiveLock
+#define BEAN_NEW_NSRecursiveLock
+static inline NSRecursiveLock    NSRecursiveLock_New(void)                                             { return (NSRecursiveLock)bean_new(bean_cls("NSRecursiveLock")); }
+#endif
 
 /* ===== NSRegularExpression ===== */
 #ifndef BEAN_TYPEDEF_NSRegularExpression
@@ -6549,6 +8267,14 @@ static inline NSString                      NSRegularExpression_ReplacementStrin
 static inline NSString                      NSRegularExpression_EscapedTemplateForString(NSString string)                                                                                                                           { return ((NSString (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSRegularExpression"), bean_sel("escapedTemplateForString:"), string); }
 static inline id                            NSRegularExpression_CopyWithZone(NSRegularExpression self, NSZone* zone)                                                                                                                { return ((id (*)(NSRegularExpression, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                          NSRegularExpression_SupportsSecureCoding(void)                                                                                                                                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSRegularExpression"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSRegularExpression
+#define BEAN_ALLOC_NSRegularExpression
+static inline NSRegularExpression           NSRegularExpression_Alloc(void)                                                                                                                                                         { return (NSRegularExpression)bean_alloc(bean_cls("NSRegularExpression")); }
+#endif
+#ifndef BEAN_NEW_NSRegularExpression
+#define BEAN_NEW_NSRegularExpression
+static inline NSRegularExpression           NSRegularExpression_New(void)                                                                                                                                                           { return (NSRegularExpression)bean_new(bean_cls("NSRegularExpression")); }
+#endif
 
 /* ===== NSRelativeDateTimeFormatter ===== */
 #ifndef BEAN_TYPEDEF_NSRelativeDateTimeFormatter
@@ -6569,6 +8295,14 @@ static inline NSCalendar                               NSRelativeDateTimeFormatt
 static inline void                                     NSRelativeDateTimeFormatter_SetCalendar(NSRelativeDateTimeFormatter self, NSCalendar calendar)                                            { ((void (*)(NSRelativeDateTimeFormatter, SEL, NSCalendar))bean_msgSend)(self, bean_sel("setCalendar:"), calendar); }
 static inline NSLocale                                 NSRelativeDateTimeFormatter_Locale(NSRelativeDateTimeFormatter self)                                                                      { return ((NSLocale (*)(NSRelativeDateTimeFormatter, SEL))bean_msgSend)(self, bean_sel("locale")); }
 static inline void                                     NSRelativeDateTimeFormatter_SetLocale(NSRelativeDateTimeFormatter self, NSLocale locale)                                                  { ((void (*)(NSRelativeDateTimeFormatter, SEL, NSLocale))bean_msgSend)(self, bean_sel("setLocale:"), locale); }
+#ifndef BEAN_ALLOC_NSRelativeDateTimeFormatter
+#define BEAN_ALLOC_NSRelativeDateTimeFormatter
+static inline NSRelativeDateTimeFormatter              NSRelativeDateTimeFormatter_Alloc(void)                                                                                                   { return (NSRelativeDateTimeFormatter)bean_alloc(bean_cls("NSRelativeDateTimeFormatter")); }
+#endif
+#ifndef BEAN_NEW_NSRelativeDateTimeFormatter
+#define BEAN_NEW_NSRelativeDateTimeFormatter
+static inline NSRelativeDateTimeFormatter              NSRelativeDateTimeFormatter_New(void)                                                                                                     { return (NSRelativeDateTimeFormatter)bean_new(bean_cls("NSRelativeDateTimeFormatter")); }
+#endif
 
 /* ===== NSRelativeSpecifier ===== */
 #ifndef BEAN_TYPEDEF_NSRelativeSpecifier
@@ -6581,6 +8315,14 @@ static inline NSRelativePosition         NSRelativeSpecifier_RelativePosition(NS
 static inline void                       NSRelativeSpecifier_SetRelativePosition(NSRelativeSpecifier self, NSRelativePosition relativePosition)                                                                                                                                                                                               { ((void (*)(NSRelativeSpecifier, SEL, NSRelativePosition))bean_msgSend)(self, bean_sel("setRelativePosition:"), relativePosition); }
 static inline NSScriptObjectSpecifier    NSRelativeSpecifier_BaseSpecifier(NSRelativeSpecifier self)                                                                                                                                                                                                                                          { return ((NSScriptObjectSpecifier (*)(NSRelativeSpecifier, SEL))bean_msgSend)(self, bean_sel("baseSpecifier")); }
 static inline void                       NSRelativeSpecifier_SetBaseSpecifier(NSRelativeSpecifier self, NSScriptObjectSpecifier baseSpecifier)                                                                                                                                                                                                { ((void (*)(NSRelativeSpecifier, SEL, NSScriptObjectSpecifier))bean_msgSend)(self, bean_sel("setBaseSpecifier:"), baseSpecifier); }
+#ifndef BEAN_ALLOC_NSRelativeSpecifier
+#define BEAN_ALLOC_NSRelativeSpecifier
+static inline NSRelativeSpecifier        NSRelativeSpecifier_Alloc(void)                                                                                                                                                                                                                                                                      { return (NSRelativeSpecifier)bean_alloc(bean_cls("NSRelativeSpecifier")); }
+#endif
+#ifndef BEAN_NEW_NSRelativeSpecifier
+#define BEAN_NEW_NSRelativeSpecifier
+static inline NSRelativeSpecifier        NSRelativeSpecifier_New(void)                                                                                                                                                                                                                                                                        { return (NSRelativeSpecifier)bean_new(bean_cls("NSRelativeSpecifier")); }
+#endif
 
 /* ===== NSRunLoop ===== */
 static inline CFRunLoopRef    NSRunLoop_GetCFRunLoop(NSRunLoop self)                                                                                                      { return ((CFRunLoopRef (*)(NSRunLoop, SEL))bean_msgSend)(self, bean_sel("getCFRunLoop")); }
@@ -6601,6 +8343,14 @@ static inline void            NSRunLoop_PerformBlock(NSRunLoop self, void* block
 static inline void            NSRunLoop_PerformSelector_Target_Argument_Order_Modes(NSRunLoop self, SEL aSelector, id target, id arg, NSUInteger order, NSArray modes)    { ((void (*)(NSRunLoop, SEL, SEL, id, id, NSUInteger, NSArray))bean_msgSend)(self, bean_sel("performSelector:target:argument:order:modes:"), aSelector, target, arg, order, modes); }
 static inline void            NSRunLoop_CancelPerformSelector_Target_Argument(NSRunLoop self, SEL aSelector, id target, id arg)                                           { ((void (*)(NSRunLoop, SEL, SEL, id, id))bean_msgSend)(self, bean_sel("cancelPerformSelector:target:argument:"), aSelector, target, arg); }
 static inline void            NSRunLoop_CancelPerformSelectorsWithTarget(NSRunLoop self, id target)                                                                       { ((void (*)(NSRunLoop, SEL, id))bean_msgSend)(self, bean_sel("cancelPerformSelectorsWithTarget:"), target); }
+#ifndef BEAN_ALLOC_NSRunLoop
+#define BEAN_ALLOC_NSRunLoop
+static inline NSRunLoop       NSRunLoop_Alloc(void)                                                                                                                       { return (NSRunLoop)bean_alloc(bean_cls("NSRunLoop")); }
+#endif
+#ifndef BEAN_NEW_NSRunLoop
+#define BEAN_NEW_NSRunLoop
+static inline NSRunLoop       NSRunLoop_New(void)                                                                                                                         { return (NSRunLoop)bean_new(bean_cls("NSRunLoop")); }
+#endif
 
 /* ===== NSScanner ===== */
 #ifndef BEAN_TYPEDEF_NSScanner
@@ -6637,6 +8387,14 @@ static inline BOOL              NSScanner_IsAtEnd(NSScanner self)               
 static inline BOOL              NSScanner_ScanDecimal(NSScanner self, NSDecimal dcm)                                                   { return ((BOOL (*)(NSScanner, SEL, NSDecimal))bean_msgSend)(self, bean_sel("scanDecimal:"), dcm); }
 static inline id                NSScanner_CopyWithZone(NSScanner self, NSZone* zone)                                                   { return ((id (*)(NSScanner, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL              NSScanner_AtEnd(NSScanner self)                                                                        { return ((BOOL (*)(NSScanner, SEL))bean_msgSend)(self, bean_sel("atEnd")); }
+#ifndef BEAN_ALLOC_NSScanner
+#define BEAN_ALLOC_NSScanner
+static inline NSScanner         NSScanner_Alloc(void)                                                                                  { return (NSScanner)bean_alloc(bean_cls("NSScanner")); }
+#endif
+#ifndef BEAN_NEW_NSScanner
+#define BEAN_NEW_NSScanner
+static inline NSScanner         NSScanner_New(void)                                                                                    { return (NSScanner)bean_new(bean_cls("NSScanner")); }
+#endif
 
 /* ===== NSScriptClassDescription ===== */
 static inline NSScriptClassDescription    NSScriptClassDescription_ClassDescriptionForClass(bean_class aClass)                                                                                                     { return ((NSScriptClassDescription (*)(bean_class, SEL, bean_class))bean_msgSend)(bean_cls("NSScriptClassDescription"), bean_sel("classDescriptionForClass:"), aClass); }
@@ -6660,6 +8418,14 @@ static inline NSScriptClassDescription    NSScriptClassDescription_SuperclassDes
 static inline NSUInteger                  NSScriptClassDescription_AppleEventCode(NSScriptClassDescription self)                                                                                                   { return ((NSUInteger (*)(NSScriptClassDescription, SEL))bean_msgSend)(self, bean_sel("appleEventCode")); }
 static inline NSString                    NSScriptClassDescription_DefaultSubcontainerAttributeKey(NSScriptClassDescription self)                                                                                  { return ((NSString (*)(NSScriptClassDescription, SEL))bean_msgSend)(self, bean_sel("defaultSubcontainerAttributeKey")); }
 static inline BOOL                        NSScriptClassDescription_IsReadOnlyKey(NSScriptClassDescription self, NSString key)                                                                                      { return ((BOOL (*)(NSScriptClassDescription, SEL, NSString))bean_msgSend)(self, bean_sel("isReadOnlyKey:"), key); }
+#ifndef BEAN_ALLOC_NSScriptClassDescription
+#define BEAN_ALLOC_NSScriptClassDescription
+static inline NSScriptClassDescription    NSScriptClassDescription_Alloc(void)                                                                                                                                     { return (NSScriptClassDescription)bean_alloc(bean_cls("NSScriptClassDescription")); }
+#endif
+#ifndef BEAN_NEW_NSScriptClassDescription
+#define BEAN_NEW_NSScriptClassDescription
+static inline NSScriptClassDescription    NSScriptClassDescription_New(void)                                                                                                                                       { return (NSScriptClassDescription)bean_new(bean_cls("NSScriptClassDescription")); }
+#endif
 
 /* ===== NSScriptCommand ===== */
 #ifndef BEAN_TYPEDEF_NSScriptCommand
@@ -6694,6 +8460,14 @@ static inline void                          NSScriptCommand_SetScriptErrorString
 static inline NSAppleEventDescriptor        NSScriptCommand_AppleEvent(NSScriptCommand self)                                                                                              { return ((NSAppleEventDescriptor (*)(NSScriptCommand, SEL))bean_msgSend)(self, bean_sel("appleEvent")); }
 static inline void                          NSScriptCommand_EncodeWithCoder(NSScriptCommand self, NSCoder coder)                                                                          { ((void (*)(NSScriptCommand, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline BOOL                          NSScriptCommand_WellFormed(NSScriptCommand self)                                                                                              { return ((BOOL (*)(NSScriptCommand, SEL))bean_msgSend)(self, bean_sel("wellFormed")); }
+#ifndef BEAN_ALLOC_NSScriptCommand
+#define BEAN_ALLOC_NSScriptCommand
+static inline NSScriptCommand               NSScriptCommand_Alloc(void)                                                                                                                   { return (NSScriptCommand)bean_alloc(bean_cls("NSScriptCommand")); }
+#endif
+#ifndef BEAN_NEW_NSScriptCommand
+#define BEAN_NEW_NSScriptCommand
+static inline NSScriptCommand               NSScriptCommand_New(void)                                                                                                                     { return (NSScriptCommand)bean_new(bean_cls("NSScriptCommand")); }
+#endif
 
 /* ===== NSScriptCommandDescription ===== */
 static inline NSScriptCommandDescription    NSScriptCommandDescription_Init(NSScriptCommandDescription self)                                                                                                                   { return ((NSScriptCommandDescription (*)(NSScriptCommandDescription, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -6713,6 +8487,14 @@ static inline NSString                      NSScriptCommandDescription_ReturnTyp
 static inline NSUInteger                    NSScriptCommandDescription_AppleEventCodeForReturnType(NSScriptCommandDescription self)                                                                                            { return ((NSUInteger (*)(NSScriptCommandDescription, SEL))bean_msgSend)(self, bean_sel("appleEventCodeForReturnType")); }
 static inline NSArray                       NSScriptCommandDescription_ArgumentNames(NSScriptCommandDescription self)                                                                                                          { return ((NSArray (*)(NSScriptCommandDescription, SEL))bean_msgSend)(self, bean_sel("argumentNames")); }
 static inline void                          NSScriptCommandDescription_EncodeWithCoder(NSScriptCommandDescription self, NSCoder coder)                                                                                         { ((void (*)(NSScriptCommandDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSScriptCommandDescription
+#define BEAN_ALLOC_NSScriptCommandDescription
+static inline NSScriptCommandDescription    NSScriptCommandDescription_Alloc(void)                                                                                                                                             { return (NSScriptCommandDescription)bean_alloc(bean_cls("NSScriptCommandDescription")); }
+#endif
+#ifndef BEAN_NEW_NSScriptCommandDescription
+#define BEAN_NEW_NSScriptCommandDescription
+static inline NSScriptCommandDescription    NSScriptCommandDescription_New(void)                                                                                                                                               { return (NSScriptCommandDescription)bean_new(bean_cls("NSScriptCommandDescription")); }
+#endif
 
 /* ===== NSScriptObjectSpecifier ===== */
 static inline NSScriptObjectSpecifier     NSScriptObjectSpecifier_ObjectSpecifierWithDescriptor(NSAppleEventDescriptor descriptor)                                                                                                                    { return ((NSScriptObjectSpecifier (*)(bean_class, SEL, NSAppleEventDescriptor))bean_msgSend)(bean_cls("NSScriptObjectSpecifier"), bean_sel("objectSpecifierWithDescriptor:"), descriptor); }
@@ -6740,6 +8522,14 @@ static inline void                        NSScriptObjectSpecifier_SetEvaluationE
 static inline NSScriptObjectSpecifier     NSScriptObjectSpecifier_EvaluationErrorSpecifier(NSScriptObjectSpecifier self)                                                                                                                              { return ((NSScriptObjectSpecifier (*)(NSScriptObjectSpecifier, SEL))bean_msgSend)(self, bean_sel("evaluationErrorSpecifier")); }
 static inline NSAppleEventDescriptor      NSScriptObjectSpecifier_Descriptor(NSScriptObjectSpecifier self)                                                                                                                                            { return ((NSAppleEventDescriptor (*)(NSScriptObjectSpecifier, SEL))bean_msgSend)(self, bean_sel("descriptor")); }
 static inline void                        NSScriptObjectSpecifier_EncodeWithCoder(NSScriptObjectSpecifier self, NSCoder coder)                                                                                                                        { ((void (*)(NSScriptObjectSpecifier, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSScriptObjectSpecifier
+#define BEAN_ALLOC_NSScriptObjectSpecifier
+static inline NSScriptObjectSpecifier     NSScriptObjectSpecifier_Alloc(void)                                                                                                                                                                         { return (NSScriptObjectSpecifier)bean_alloc(bean_cls("NSScriptObjectSpecifier")); }
+#endif
+#ifndef BEAN_NEW_NSScriptObjectSpecifier
+#define BEAN_NEW_NSScriptObjectSpecifier
+static inline NSScriptObjectSpecifier     NSScriptObjectSpecifier_New(void)                                                                                                                                                                           { return (NSScriptObjectSpecifier)bean_new(bean_cls("NSScriptObjectSpecifier")); }
+#endif
 
 /* ===== NSScriptSuiteRegistry ===== */
 #ifndef BEAN_TYPEDEF_NSScriptSuiteRegistry
@@ -6761,19 +8551,43 @@ static inline NSScriptClassDescription      NSScriptSuiteRegistry_ClassDescripti
 static inline NSScriptCommandDescription    NSScriptSuiteRegistry_CommandDescriptionWithAppleEventClass_AndAppleEventCode(NSScriptSuiteRegistry self, NSUInteger appleEventClassCode, NSUInteger appleEventIDCode)    { return ((NSScriptCommandDescription (*)(NSScriptSuiteRegistry, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("commandDescriptionWithAppleEventClass:andAppleEventCode:"), appleEventClassCode, appleEventIDCode); }
 static inline NSData                        NSScriptSuiteRegistry_AeteResource(NSScriptSuiteRegistry self, NSString languageName)                                                                                     { return ((NSData (*)(NSScriptSuiteRegistry, SEL, NSString))bean_msgSend)(self, bean_sel("aeteResource:"), languageName); }
 static inline NSArray                       NSScriptSuiteRegistry_SuiteNames(NSScriptSuiteRegistry self)                                                                                                              { return ((NSArray (*)(NSScriptSuiteRegistry, SEL))bean_msgSend)(self, bean_sel("suiteNames")); }
+#ifndef BEAN_ALLOC_NSScriptSuiteRegistry
+#define BEAN_ALLOC_NSScriptSuiteRegistry
+static inline NSScriptSuiteRegistry         NSScriptSuiteRegistry_Alloc(void)                                                                                                                                         { return (NSScriptSuiteRegistry)bean_alloc(bean_cls("NSScriptSuiteRegistry")); }
+#endif
+#ifndef BEAN_NEW_NSScriptSuiteRegistry
+#define BEAN_NEW_NSScriptSuiteRegistry
+static inline NSScriptSuiteRegistry         NSScriptSuiteRegistry_New(void)                                                                                                                                           { return (NSScriptSuiteRegistry)bean_new(bean_cls("NSScriptSuiteRegistry")); }
+#endif
 
 /* ===== NSScriptWhoseTest ===== */
 static inline BOOL                 NSScriptWhoseTest_IsTrue(NSScriptWhoseTest self)                            { return ((BOOL (*)(NSScriptWhoseTest, SEL))bean_msgSend)(self, bean_sel("isTrue")); }
 static inline NSScriptWhoseTest    NSScriptWhoseTest_Init(NSScriptWhoseTest self)                              { return ((NSScriptWhoseTest (*)(NSScriptWhoseTest, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSScriptWhoseTest    NSScriptWhoseTest_InitWithCoder(NSScriptWhoseTest self, NSCoder inCoder)    { return ((NSScriptWhoseTest (*)(NSScriptWhoseTest, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), inCoder); }
 static inline void                 NSScriptWhoseTest_EncodeWithCoder(NSScriptWhoseTest self, NSCoder coder)    { ((void (*)(NSScriptWhoseTest, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSScriptWhoseTest
+#define BEAN_ALLOC_NSScriptWhoseTest
+static inline NSScriptWhoseTest    NSScriptWhoseTest_Alloc(void)                                               { return (NSScriptWhoseTest)bean_alloc(bean_cls("NSScriptWhoseTest")); }
+#endif
+#ifndef BEAN_NEW_NSScriptWhoseTest
+#define BEAN_NEW_NSScriptWhoseTest
+static inline NSScriptWhoseTest    NSScriptWhoseTest_New(void)                                                 { return (NSScriptWhoseTest)bean_new(bean_cls("NSScriptWhoseTest")); }
+#endif
 
 /* ===== NSSecureUnarchiveFromDataTransformer ===== */
 #ifndef BEAN_TYPEDEF_NSSecureUnarchiveFromDataTransformer
 #define BEAN_TYPEDEF_NSSecureUnarchiveFromDataTransformer
 typedef bean_id NSSecureUnarchiveFromDataTransformer;
 #endif
-static inline NSArray    NSSecureUnarchiveFromDataTransformer_AllowedTopLevelClasses(void)    { return ((NSArray (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSSecureUnarchiveFromDataTransformer"), bean_sel("allowedTopLevelClasses")); }
+static inline NSArray                                 NSSecureUnarchiveFromDataTransformer_AllowedTopLevelClasses(void)    { return ((NSArray (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSSecureUnarchiveFromDataTransformer"), bean_sel("allowedTopLevelClasses")); }
+#ifndef BEAN_ALLOC_NSSecureUnarchiveFromDataTransformer
+#define BEAN_ALLOC_NSSecureUnarchiveFromDataTransformer
+static inline NSSecureUnarchiveFromDataTransformer    NSSecureUnarchiveFromDataTransformer_Alloc(void)                     { return (NSSecureUnarchiveFromDataTransformer)bean_alloc(bean_cls("NSSecureUnarchiveFromDataTransformer")); }
+#endif
+#ifndef BEAN_NEW_NSSecureUnarchiveFromDataTransformer
+#define BEAN_NEW_NSSecureUnarchiveFromDataTransformer
+static inline NSSecureUnarchiveFromDataTransformer    NSSecureUnarchiveFromDataTransformer_New(void)                       { return (NSSecureUnarchiveFromDataTransformer)bean_new(bean_cls("NSSecureUnarchiveFromDataTransformer")); }
+#endif
 
 /* ===== NSSet ===== */
 static inline id              NSSet_Member(NSSet self, id object)                                                                                                                 { return ((id (*)(NSSet, SEL, id))bean_msgSend)(self, bean_sel("member:"), object); }
@@ -6820,6 +8634,14 @@ static inline id              NSSet_CopyWithZone(NSSet self, NSZone* zone)      
 static inline id              NSSet_MutableCopyWithZone(NSSet self, NSZone* zone)                                                                                                 { return ((id (*)(NSSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL            NSSet_SupportsSecureCoding(void)                                                                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSSet"), bean_sel("supportsSecureCoding")); }
 static inline NSUInteger      NSSet_CountByEnumeratingWithState_Objects_Count(NSSet self, NSFastEnumerationState* state, id* buffer, NSUInteger len)                              { return ((NSUInteger (*)(NSSet, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSSet
+#define BEAN_ALLOC_NSSet
+static inline NSSet           NSSet_Alloc(void)                                                                                                                                   { return (NSSet)bean_alloc(bean_cls("NSSet")); }
+#endif
+#ifndef BEAN_NEW_NSSet
+#define BEAN_NEW_NSSet
+static inline NSSet           NSSet_New(void)                                                                                                                                     { return (NSSet)bean_new(bean_cls("NSSet")); }
+#endif
 
 /* ===== NSSetCommand ===== */
 #ifndef BEAN_TYPEDEF_NSSetCommand
@@ -6828,6 +8650,14 @@ typedef bean_id NSSetCommand;
 #endif
 static inline void                       NSSetCommand_SetReceiversSpecifier(NSSetCommand self, NSScriptObjectSpecifier receiversRef)    { ((void (*)(NSSetCommand, SEL, NSScriptObjectSpecifier))bean_msgSend)(self, bean_sel("setReceiversSpecifier:"), receiversRef); }
 static inline NSScriptObjectSpecifier    NSSetCommand_KeySpecifier(NSSetCommand self)                                                   { return ((NSScriptObjectSpecifier (*)(NSSetCommand, SEL))bean_msgSend)(self, bean_sel("keySpecifier")); }
+#ifndef BEAN_ALLOC_NSSetCommand
+#define BEAN_ALLOC_NSSetCommand
+static inline NSSetCommand               NSSetCommand_Alloc(void)                                                                       { return (NSSetCommand)bean_alloc(bean_cls("NSSetCommand")); }
+#endif
+#ifndef BEAN_NEW_NSSetCommand
+#define BEAN_NEW_NSSetCommand
+static inline NSSetCommand               NSSetCommand_New(void)                                                                         { return (NSSetCommand)bean_new(bean_cls("NSSetCommand")); }
+#endif
 
 /* ===== NSSocketPort ===== */
 #ifndef BEAN_TYPEDEF_NSSocketPort
@@ -6845,21 +8675,37 @@ static inline int             NSSocketPort_SocketType(NSSocketPort self)        
 static inline int             NSSocketPort_Protocol(NSSocketPort self)                                                                                                        { return ((int (*)(NSSocketPort, SEL))bean_msgSend)(self, bean_sel("protocol")); }
 static inline NSData          NSSocketPort_Address(NSSocketPort self)                                                                                                         { return ((NSData (*)(NSSocketPort, SEL))bean_msgSend)(self, bean_sel("address")); }
 static inline int             NSSocketPort_Socket(NSSocketPort self)                                                                                                          { return ((int (*)(NSSocketPort, SEL))bean_msgSend)(self, bean_sel("socket")); }
+#ifndef BEAN_ALLOC_NSSocketPort
+#define BEAN_ALLOC_NSSocketPort
+static inline NSSocketPort    NSSocketPort_Alloc(void)                                                                                                                        { return (NSSocketPort)bean_alloc(bean_cls("NSSocketPort")); }
+#endif
+#ifndef BEAN_NEW_NSSocketPort
+#define BEAN_NEW_NSSocketPort
+static inline NSSocketPort    NSSocketPort_New(void)                                                                                                                          { return (NSSocketPort)bean_new(bean_cls("NSSocketPort")); }
+#endif
 
 /* ===== NSSocketPortNameServer ===== */
 #ifndef BEAN_TYPEDEF_NSSocketPortNameServer
 #define BEAN_TYPEDEF_NSSocketPortNameServer
 typedef bean_id NSSocketPortNameServer;
 #endif
-static inline id                NSSocketPortNameServer_SharedInstance(void)                                                                                                           { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSSocketPortNameServer"), bean_sel("sharedInstance")); }
-static inline NSPort            NSSocketPortNameServer_PortForName(NSSocketPortNameServer self, NSString name)                                                                        { return ((NSPort (*)(NSSocketPortNameServer, SEL, NSString))bean_msgSend)(self, bean_sel("portForName:"), name); }
-static inline NSPort            NSSocketPortNameServer_PortForName_Host(NSSocketPortNameServer self, NSString name, NSString host)                                                    { return ((NSPort (*)(NSSocketPortNameServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("portForName:host:"), name, host); }
-static inline BOOL              NSSocketPortNameServer_RegisterPort_Name(NSSocketPortNameServer self, NSPort port, NSString name)                                                     { return ((BOOL (*)(NSSocketPortNameServer, SEL, NSPort, NSString))bean_msgSend)(self, bean_sel("registerPort:name:"), port, name); }
-static inline BOOL              NSSocketPortNameServer_RemovePortForName(NSSocketPortNameServer self, NSString name)                                                                  { return ((BOOL (*)(NSSocketPortNameServer, SEL, NSString))bean_msgSend)(self, bean_sel("removePortForName:"), name); }
-static inline NSPort            NSSocketPortNameServer_PortForName_Host_NameServerPortNumber(NSSocketPortNameServer self, NSString name, NSString host, unsigned short portNumber)    { return ((NSPort (*)(NSSocketPortNameServer, SEL, NSString, NSString, unsigned short))bean_msgSend)(self, bean_sel("portForName:host:nameServerPortNumber:"), name, host, portNumber); }
-static inline BOOL              NSSocketPortNameServer_RegisterPort_Name_NameServerPortNumber(NSSocketPortNameServer self, NSPort port, NSString name, unsigned short portNumber)     { return ((BOOL (*)(NSSocketPortNameServer, SEL, NSPort, NSString, unsigned short))bean_msgSend)(self, bean_sel("registerPort:name:nameServerPortNumber:"), port, name, portNumber); }
-static inline unsigned short    NSSocketPortNameServer_DefaultNameServerPortNumber(NSSocketPortNameServer self)                                                                       { return ((unsigned short (*)(NSSocketPortNameServer, SEL))bean_msgSend)(self, bean_sel("defaultNameServerPortNumber")); }
-static inline void              NSSocketPortNameServer_SetDefaultNameServerPortNumber(NSSocketPortNameServer self, unsigned short defaultNameServerPortNumber)                        { ((void (*)(NSSocketPortNameServer, SEL, unsigned short))bean_msgSend)(self, bean_sel("setDefaultNameServerPortNumber:"), defaultNameServerPortNumber); }
+static inline id                        NSSocketPortNameServer_SharedInstance(void)                                                                                                           { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSSocketPortNameServer"), bean_sel("sharedInstance")); }
+static inline NSPort                    NSSocketPortNameServer_PortForName(NSSocketPortNameServer self, NSString name)                                                                        { return ((NSPort (*)(NSSocketPortNameServer, SEL, NSString))bean_msgSend)(self, bean_sel("portForName:"), name); }
+static inline NSPort                    NSSocketPortNameServer_PortForName_Host(NSSocketPortNameServer self, NSString name, NSString host)                                                    { return ((NSPort (*)(NSSocketPortNameServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("portForName:host:"), name, host); }
+static inline BOOL                      NSSocketPortNameServer_RegisterPort_Name(NSSocketPortNameServer self, NSPort port, NSString name)                                                     { return ((BOOL (*)(NSSocketPortNameServer, SEL, NSPort, NSString))bean_msgSend)(self, bean_sel("registerPort:name:"), port, name); }
+static inline BOOL                      NSSocketPortNameServer_RemovePortForName(NSSocketPortNameServer self, NSString name)                                                                  { return ((BOOL (*)(NSSocketPortNameServer, SEL, NSString))bean_msgSend)(self, bean_sel("removePortForName:"), name); }
+static inline NSPort                    NSSocketPortNameServer_PortForName_Host_NameServerPortNumber(NSSocketPortNameServer self, NSString name, NSString host, unsigned short portNumber)    { return ((NSPort (*)(NSSocketPortNameServer, SEL, NSString, NSString, unsigned short))bean_msgSend)(self, bean_sel("portForName:host:nameServerPortNumber:"), name, host, portNumber); }
+static inline BOOL                      NSSocketPortNameServer_RegisterPort_Name_NameServerPortNumber(NSSocketPortNameServer self, NSPort port, NSString name, unsigned short portNumber)     { return ((BOOL (*)(NSSocketPortNameServer, SEL, NSPort, NSString, unsigned short))bean_msgSend)(self, bean_sel("registerPort:name:nameServerPortNumber:"), port, name, portNumber); }
+static inline unsigned short            NSSocketPortNameServer_DefaultNameServerPortNumber(NSSocketPortNameServer self)                                                                       { return ((unsigned short (*)(NSSocketPortNameServer, SEL))bean_msgSend)(self, bean_sel("defaultNameServerPortNumber")); }
+static inline void                      NSSocketPortNameServer_SetDefaultNameServerPortNumber(NSSocketPortNameServer self, unsigned short defaultNameServerPortNumber)                        { ((void (*)(NSSocketPortNameServer, SEL, unsigned short))bean_msgSend)(self, bean_sel("setDefaultNameServerPortNumber:"), defaultNameServerPortNumber); }
+#ifndef BEAN_ALLOC_NSSocketPortNameServer
+#define BEAN_ALLOC_NSSocketPortNameServer
+static inline NSSocketPortNameServer    NSSocketPortNameServer_Alloc(void)                                                                                                                    { return (NSSocketPortNameServer)bean_alloc(bean_cls("NSSocketPortNameServer")); }
+#endif
+#ifndef BEAN_NEW_NSSocketPortNameServer
+#define BEAN_NEW_NSSocketPortNameServer
+static inline NSSocketPortNameServer    NSSocketPortNameServer_New(void)                                                                                                                      { return (NSSocketPortNameServer)bean_new(bean_cls("NSSocketPortNameServer")); }
+#endif
 
 /* ===== NSSortDescriptor ===== */
 #ifndef BEAN_TYPEDEF_NSSortDescriptor
@@ -6882,6 +8728,14 @@ static inline void*                 NSSortDescriptor_Comparator(NSSortDescriptor
 static inline id                    NSSortDescriptor_ReversedSortDescriptor(NSSortDescriptor self)                                                         { return ((id (*)(NSSortDescriptor, SEL))bean_msgSend)(self, bean_sel("reversedSortDescriptor")); }
 static inline BOOL                  NSSortDescriptor_SupportsSecureCoding(void)                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSSortDescriptor"), bean_sel("supportsSecureCoding")); }
 static inline id                    NSSortDescriptor_CopyWithZone(NSSortDescriptor self, NSZone* zone)                                                     { return ((id (*)(NSSortDescriptor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSSortDescriptor
+#define BEAN_ALLOC_NSSortDescriptor
+static inline NSSortDescriptor      NSSortDescriptor_Alloc(void)                                                                                           { return (NSSortDescriptor)bean_alloc(bean_cls("NSSortDescriptor")); }
+#endif
+#ifndef BEAN_NEW_NSSortDescriptor
+#define BEAN_NEW_NSSortDescriptor
+static inline NSSortDescriptor      NSSortDescriptor_New(void)                                                                                             { return (NSSortDescriptor)bean_new(bean_cls("NSSortDescriptor")); }
+#endif
 
 /* ===== NSSpecifierTest ===== */
 #ifndef BEAN_TYPEDEF_NSSpecifierTest
@@ -6891,31 +8745,55 @@ typedef bean_id NSSpecifierTest;
 static inline NSSpecifierTest    NSSpecifierTest_Init(NSSpecifierTest self)                                                                                                                              { return ((NSSpecifierTest (*)(NSSpecifierTest, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSSpecifierTest    NSSpecifierTest_InitWithCoder(NSSpecifierTest self, NSCoder inCoder)                                                                                                    { return ((NSSpecifierTest (*)(NSSpecifierTest, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), inCoder); }
 static inline NSSpecifierTest    NSSpecifierTest_InitWithObjectSpecifier_ComparisonOperator_TestObject(NSSpecifierTest self, NSScriptObjectSpecifier obj1, NSTestComparisonOperation compOp, id obj2)    { return ((NSSpecifierTest (*)(NSSpecifierTest, SEL, NSScriptObjectSpecifier, NSTestComparisonOperation, id))bean_msgSend)(self, bean_sel("initWithObjectSpecifier:comparisonOperator:testObject:"), obj1, compOp, obj2); }
+#ifndef BEAN_ALLOC_NSSpecifierTest
+#define BEAN_ALLOC_NSSpecifierTest
+static inline NSSpecifierTest    NSSpecifierTest_Alloc(void)                                                                                                                                             { return (NSSpecifierTest)bean_alloc(bean_cls("NSSpecifierTest")); }
+#endif
+#ifndef BEAN_NEW_NSSpecifierTest
+#define BEAN_NEW_NSSpecifierTest
+static inline NSSpecifierTest    NSSpecifierTest_New(void)                                                                                                                                               { return (NSSpecifierTest)bean_new(bean_cls("NSSpecifierTest")); }
+#endif
 
 /* ===== NSSpellServer ===== */
 #ifndef BEAN_TYPEDEF_NSSpellServer
 #define BEAN_TYPEDEF_NSSpellServer
 typedef bean_id NSSpellServer;
 #endif
-static inline BOOL    NSSpellServer_RegisterLanguage_ByVendor(NSSpellServer self, NSString language, NSString vendor)       { return ((BOOL (*)(NSSpellServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("registerLanguage:byVendor:"), language, vendor); }
-static inline BOOL    NSSpellServer_IsWordInUserDictionaries_CaseSensitive(NSSpellServer self, NSString word, BOOL flag)    { return ((BOOL (*)(NSSpellServer, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("isWordInUserDictionaries:caseSensitive:"), word, flag); }
-static inline void    NSSpellServer_Run(NSSpellServer self)                                                                 { ((void (*)(NSSpellServer, SEL))bean_msgSend)(self, bean_sel("run")); }
-static inline id      NSSpellServer_Delegate(NSSpellServer self)                                                            { return ((id (*)(NSSpellServer, SEL))bean_msgSend)(self, bean_sel("delegate")); }
-static inline void    NSSpellServer_SetDelegate(NSSpellServer self, id delegate)                                            { ((void (*)(NSSpellServer, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+static inline BOOL             NSSpellServer_RegisterLanguage_ByVendor(NSSpellServer self, NSString language, NSString vendor)       { return ((BOOL (*)(NSSpellServer, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("registerLanguage:byVendor:"), language, vendor); }
+static inline BOOL             NSSpellServer_IsWordInUserDictionaries_CaseSensitive(NSSpellServer self, NSString word, BOOL flag)    { return ((BOOL (*)(NSSpellServer, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("isWordInUserDictionaries:caseSensitive:"), word, flag); }
+static inline void             NSSpellServer_Run(NSSpellServer self)                                                                 { ((void (*)(NSSpellServer, SEL))bean_msgSend)(self, bean_sel("run")); }
+static inline id               NSSpellServer_Delegate(NSSpellServer self)                                                            { return ((id (*)(NSSpellServer, SEL))bean_msgSend)(self, bean_sel("delegate")); }
+static inline void             NSSpellServer_SetDelegate(NSSpellServer self, id delegate)                                            { ((void (*)(NSSpellServer, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+#ifndef BEAN_ALLOC_NSSpellServer
+#define BEAN_ALLOC_NSSpellServer
+static inline NSSpellServer    NSSpellServer_Alloc(void)                                                                             { return (NSSpellServer)bean_alloc(bean_cls("NSSpellServer")); }
+#endif
+#ifndef BEAN_NEW_NSSpellServer
+#define BEAN_NEW_NSSpellServer
+static inline NSSpellServer    NSSpellServer_New(void)                                                                               { return (NSSpellServer)bean_new(bean_cls("NSSpellServer")); }
+#endif
 
 /* ===== NSSpellServerDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSSpellServerDelegate
 #define BEAN_TYPEDEF_NSSpellServerDelegate
 typedef bean_id NSSpellServerDelegate;
 #endif
-static inline NSRange    NSSpellServerDelegate_SpellServer_FindMisspelledWordInString_Language_WordCount_CountOnly(NSSpellServerDelegate self, NSSpellServer sender, NSString stringToCheck, NSString language, NSInteger wordCount, BOOL countOnly)                                                                      { return ((NSRange (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString, NSInteger, BOOL))bean_msgSend_stret)(self, bean_sel("spellServer:findMisspelledWordInString:language:wordCount:countOnly:"), sender, stringToCheck, language, wordCount, countOnly); }
-static inline NSArray    NSSpellServerDelegate_SpellServer_SuggestGuessesForWord_InLanguage(NSSpellServerDelegate self, NSSpellServer sender, NSString word, NSString language)                                                                                                                                           { return ((NSArray (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:suggestGuessesForWord:inLanguage:"), sender, word, language); }
-static inline void       NSSpellServerDelegate_SpellServer_DidLearnWord_InLanguage(NSSpellServerDelegate self, NSSpellServer sender, NSString word, NSString language)                                                                                                                                                    { ((void (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:didLearnWord:inLanguage:"), sender, word, language); }
-static inline void       NSSpellServerDelegate_SpellServer_DidForgetWord_InLanguage(NSSpellServerDelegate self, NSSpellServer sender, NSString word, NSString language)                                                                                                                                                   { ((void (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:didForgetWord:inLanguage:"), sender, word, language); }
-static inline NSArray    NSSpellServerDelegate_SpellServer_SuggestCompletionsForPartialWordRange_InString_Language(NSSpellServerDelegate self, NSSpellServer sender, NSRange range, NSString string, NSString language)                                                                                                   { return ((NSArray (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSRange, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:suggestCompletionsForPartialWordRange:inString:language:"), sender, range, string, language); }
-static inline NSRange    NSSpellServerDelegate_SpellServer_CheckGrammarInString_Language_Details(NSSpellServerDelegate self, NSSpellServer sender, NSString stringToCheck, NSString language, NSArray ** details)                                                                                                         { return ((NSRange (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString, NSArray **))bean_msgSend_stret)(self, bean_sel("spellServer:checkGrammarInString:language:details:"), sender, stringToCheck, language, details); }
-static inline NSArray    NSSpellServerDelegate_SpellServer_CheckString_Offset_Types_Options_Orthography_WordCount(NSSpellServerDelegate self, NSSpellServer sender, NSString stringToCheck, NSUInteger offset, unsigned long long checkingTypes, NSDictionary options, NSOrthography orthography, NSInteger wordCount)    { return ((NSArray (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSUInteger, unsigned long long, NSDictionary, NSOrthography, NSInteger))bean_msgSend)(self, bean_sel("spellServer:checkString:offset:types:options:orthography:wordCount:"), sender, stringToCheck, offset, checkingTypes, options, orthography, wordCount); }
-static inline void       NSSpellServerDelegate_SpellServer_RecordResponse_ToCorrection_ForWord_Language(NSSpellServerDelegate self, NSSpellServer sender, NSUInteger response, NSString correction, NSString word, NSString language)                                                                                     { ((void (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSUInteger, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:recordResponse:toCorrection:forWord:language:"), sender, response, correction, word, language); }
+static inline NSRange                  NSSpellServerDelegate_SpellServer_FindMisspelledWordInString_Language_WordCount_CountOnly(NSSpellServerDelegate self, NSSpellServer sender, NSString stringToCheck, NSString language, NSInteger wordCount, BOOL countOnly)                                                                      { return ((NSRange (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString, NSInteger, BOOL))bean_msgSend_stret)(self, bean_sel("spellServer:findMisspelledWordInString:language:wordCount:countOnly:"), sender, stringToCheck, language, wordCount, countOnly); }
+static inline NSArray                  NSSpellServerDelegate_SpellServer_SuggestGuessesForWord_InLanguage(NSSpellServerDelegate self, NSSpellServer sender, NSString word, NSString language)                                                                                                                                           { return ((NSArray (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:suggestGuessesForWord:inLanguage:"), sender, word, language); }
+static inline void                     NSSpellServerDelegate_SpellServer_DidLearnWord_InLanguage(NSSpellServerDelegate self, NSSpellServer sender, NSString word, NSString language)                                                                                                                                                    { ((void (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:didLearnWord:inLanguage:"), sender, word, language); }
+static inline void                     NSSpellServerDelegate_SpellServer_DidForgetWord_InLanguage(NSSpellServerDelegate self, NSSpellServer sender, NSString word, NSString language)                                                                                                                                                   { ((void (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:didForgetWord:inLanguage:"), sender, word, language); }
+static inline NSArray                  NSSpellServerDelegate_SpellServer_SuggestCompletionsForPartialWordRange_InString_Language(NSSpellServerDelegate self, NSSpellServer sender, NSRange range, NSString string, NSString language)                                                                                                   { return ((NSArray (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSRange, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:suggestCompletionsForPartialWordRange:inString:language:"), sender, range, string, language); }
+static inline NSRange                  NSSpellServerDelegate_SpellServer_CheckGrammarInString_Language_Details(NSSpellServerDelegate self, NSSpellServer sender, NSString stringToCheck, NSString language, NSArray ** details)                                                                                                         { return ((NSRange (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSString, NSArray **))bean_msgSend_stret)(self, bean_sel("spellServer:checkGrammarInString:language:details:"), sender, stringToCheck, language, details); }
+static inline NSArray                  NSSpellServerDelegate_SpellServer_CheckString_Offset_Types_Options_Orthography_WordCount(NSSpellServerDelegate self, NSSpellServer sender, NSString stringToCheck, NSUInteger offset, unsigned long long checkingTypes, NSDictionary options, NSOrthography orthography, NSInteger wordCount)    { return ((NSArray (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSString, NSUInteger, unsigned long long, NSDictionary, NSOrthography, NSInteger))bean_msgSend)(self, bean_sel("spellServer:checkString:offset:types:options:orthography:wordCount:"), sender, stringToCheck, offset, checkingTypes, options, orthography, wordCount); }
+static inline void                     NSSpellServerDelegate_SpellServer_RecordResponse_ToCorrection_ForWord_Language(NSSpellServerDelegate self, NSSpellServer sender, NSUInteger response, NSString correction, NSString word, NSString language)                                                                                     { ((void (*)(NSSpellServerDelegate, SEL, NSSpellServer, NSUInteger, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("spellServer:recordResponse:toCorrection:forWord:language:"), sender, response, correction, word, language); }
+#ifndef BEAN_ALLOC_NSSpellServerDelegate
+#define BEAN_ALLOC_NSSpellServerDelegate
+static inline NSSpellServerDelegate    NSSpellServerDelegate_Alloc(void)                                                                                                                                                                                                                                                                { return (NSSpellServerDelegate)bean_alloc(bean_cls("NSSpellServerDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSSpellServerDelegate
+#define BEAN_NEW_NSSpellServerDelegate
+static inline NSSpellServerDelegate    NSSpellServerDelegate_New(void)                                                                                                                                                                                                                                                                  { return (NSSpellServerDelegate)bean_new(bean_cls("NSSpellServerDelegate")); }
+#endif
 
 /* ===== NSStream ===== */
 #ifndef BEAN_TYPEDEF_NSStream
@@ -6935,13 +8813,29 @@ static inline NSError           NSStream_StreamError(NSStream self)             
 static inline void              NSStream_GetStreamsToHostWithName_Port_InputStream_OutputStream(NSString hostname, NSInteger port, NSInputStream inputStream, NSOutputStream outputStream)    { ((void (*)(bean_class, SEL, NSString, NSInteger, NSInputStream, NSOutputStream))bean_msgSend)(bean_cls("NSStream"), bean_sel("getStreamsToHostWithName:port:inputStream:outputStream:"), hostname, port, inputStream, outputStream); }
 static inline void              NSStream_GetStreamsToHost_Port_InputStream_OutputStream(NSHost host, NSInteger port, NSInputStream inputStream, NSOutputStream outputStream)                  { ((void (*)(bean_class, SEL, NSHost, NSInteger, NSInputStream, NSOutputStream))bean_msgSend)(bean_cls("NSStream"), bean_sel("getStreamsToHost:port:inputStream:outputStream:"), host, port, inputStream, outputStream); }
 static inline void              NSStream_GetBoundStreamsWithBufferSize_InputStream_OutputStream(NSUInteger bufferSize, NSInputStream inputStream, NSOutputStream outputStream)                { ((void (*)(bean_class, SEL, NSUInteger, NSInputStream, NSOutputStream))bean_msgSend)(bean_cls("NSStream"), bean_sel("getBoundStreamsWithBufferSize:inputStream:outputStream:"), bufferSize, inputStream, outputStream); }
+#ifndef BEAN_ALLOC_NSStream
+#define BEAN_ALLOC_NSStream
+static inline NSStream          NSStream_Alloc(void)                                                                                                                                          { return (NSStream)bean_alloc(bean_cls("NSStream")); }
+#endif
+#ifndef BEAN_NEW_NSStream
+#define BEAN_NEW_NSStream
+static inline NSStream          NSStream_New(void)                                                                                                                                            { return (NSStream)bean_new(bean_cls("NSStream")); }
+#endif
 
 /* ===== NSStreamDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSStreamDelegate
 #define BEAN_TYPEDEF_NSStreamDelegate
 typedef bean_id NSStreamDelegate;
 #endif
-static inline void    NSStreamDelegate_Stream_HandleEvent(NSStreamDelegate self, NSStream aStream, NSStreamEvent eventCode)    { ((void (*)(NSStreamDelegate, SEL, NSStream, NSStreamEvent))bean_msgSend)(self, bean_sel("stream:handleEvent:"), aStream, eventCode); }
+static inline void                NSStreamDelegate_Stream_HandleEvent(NSStreamDelegate self, NSStream aStream, NSStreamEvent eventCode)    { ((void (*)(NSStreamDelegate, SEL, NSStream, NSStreamEvent))bean_msgSend)(self, bean_sel("stream:handleEvent:"), aStream, eventCode); }
+#ifndef BEAN_ALLOC_NSStreamDelegate
+#define BEAN_ALLOC_NSStreamDelegate
+static inline NSStreamDelegate    NSStreamDelegate_Alloc(void)                                                                             { return (NSStreamDelegate)bean_alloc(bean_cls("NSStreamDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSStreamDelegate
+#define BEAN_NEW_NSStreamDelegate
+static inline NSStreamDelegate    NSStreamDelegate_New(void)                                                                               { return (NSStreamDelegate)bean_new(bean_cls("NSStreamDelegate")); }
+#endif
 
 /* ===== NSString ===== */
 static inline unsigned short        NSString_CharacterAtIndex(NSString self, NSUInteger index)                                                                                                                                                                                                            { return ((unsigned short (*)(NSString, SEL, NSUInteger))bean_msgSend)(self, bean_sel("characterAtIndex:"), index); }
@@ -7115,6 +9009,14 @@ static inline id                    NSString_CopyWithZone(NSString self, NSZone*
 static inline id                    NSString_MutableCopyWithZone(NSString self, NSZone* zone)                                                                                                                                                                                                             { return ((id (*)(NSString, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL                  NSString_SupportsSecureCoding(void)                                                                                                                                                                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSString"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                  NSString_AbsolutePath(NSString self)                                                                                                                                                                                                                                  { return ((BOOL (*)(NSString, SEL))bean_msgSend)(self, bean_sel("absolutePath")); }
+#ifndef BEAN_ALLOC_NSString
+#define BEAN_ALLOC_NSString
+static inline NSString              NSString_Alloc(void)                                                                                                                                                                                                                                                  { return (NSString)bean_alloc(bean_cls("NSString")); }
+#endif
+#ifndef BEAN_NEW_NSString
+#define BEAN_NEW_NSString
+static inline NSString              NSString_New(void)                                                                                                                                                                                                                                                    { return (NSString)bean_new(bean_cls("NSString")); }
+#endif
 
 /* ===== NSTask ===== */
 #ifndef BEAN_TYPEDEF_NSTask
@@ -7160,6 +9062,14 @@ static inline void                       NSTask_SetLaunchPath(NSTask self, NSStr
 static inline NSString                   NSTask_CurrentDirectoryPath(NSTask self)                                                                                                           { return ((NSString (*)(NSTask, SEL))bean_msgSend)(self, bean_sel("currentDirectoryPath")); }
 static inline void                       NSTask_SetCurrentDirectoryPath(NSTask self, NSString currentDirectoryPath)                                                                         { ((void (*)(NSTask, SEL, NSString))bean_msgSend)(self, bean_sel("setCurrentDirectoryPath:"), currentDirectoryPath); }
 static inline BOOL                       NSTask_Running(NSTask self)                                                                                                                        { return ((BOOL (*)(NSTask, SEL))bean_msgSend)(self, bean_sel("running")); }
+#ifndef BEAN_ALLOC_NSTask
+#define BEAN_ALLOC_NSTask
+static inline NSTask                     NSTask_Alloc(void)                                                                                                                                 { return (NSTask)bean_alloc(bean_cls("NSTask")); }
+#endif
+#ifndef BEAN_NEW_NSTask
+#define BEAN_NEW_NSTask
+static inline NSTask                     NSTask_New(void)                                                                                                                                   { return (NSTask)bean_new(bean_cls("NSTask")); }
+#endif
 
 /* ===== NSTermOfAddress ===== */
 #ifndef BEAN_TYPEDEF_NSTermOfAddress
@@ -7171,12 +9081,19 @@ static inline NSTermOfAddress    NSTermOfAddress_Feminine(void)                 
 static inline NSTermOfAddress    NSTermOfAddress_Masculine(void)                                                                     { return ((NSTermOfAddress (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSTermOfAddress"), bean_sel("masculine")); }
 static inline NSTermOfAddress    NSTermOfAddress_CurrentUser(void)                                                                   { return ((NSTermOfAddress (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSTermOfAddress"), bean_sel("currentUser")); }
 static inline NSTermOfAddress    NSTermOfAddress_LocalizedForLanguageIdentifier_WithPronouns(NSString language, NSArray pronouns)    { return ((NSTermOfAddress (*)(bean_class, SEL, NSString, NSArray))bean_msgSend)(bean_cls("NSTermOfAddress"), bean_sel("localizedForLanguageIdentifier:withPronouns:"), language, pronouns); }
+#ifndef BEAN_NEW_NSTermOfAddress
+#define BEAN_NEW_NSTermOfAddress
 static inline NSTermOfAddress    NSTermOfAddress_New(void)                                                                           { return ((NSTermOfAddress (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSTermOfAddress"), bean_sel("new")); }
+#endif
 static inline NSTermOfAddress    NSTermOfAddress_Init(NSTermOfAddress self)                                                          { return ((NSTermOfAddress (*)(NSTermOfAddress, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSString           NSTermOfAddress_LanguageIdentifier(NSTermOfAddress self)                                            { return ((NSString (*)(NSTermOfAddress, SEL))bean_msgSend)(self, bean_sel("languageIdentifier")); }
 static inline NSArray            NSTermOfAddress_Pronouns(NSTermOfAddress self)                                                      { return ((NSArray (*)(NSTermOfAddress, SEL))bean_msgSend)(self, bean_sel("pronouns")); }
 static inline id                 NSTermOfAddress_CopyWithZone(NSTermOfAddress self, NSZone* zone)                                    { return ((id (*)(NSTermOfAddress, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL               NSTermOfAddress_SupportsSecureCoding(void)                                                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSTermOfAddress"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSTermOfAddress
+#define BEAN_ALLOC_NSTermOfAddress
+static inline NSTermOfAddress    NSTermOfAddress_Alloc(void)                                                                         { return (NSTermOfAddress)bean_alloc(bean_cls("NSTermOfAddress")); }
+#endif
 
 /* ===== NSTextCheckingResult ===== */
 static inline NSTextCheckingType      NSTextCheckingResult_ResultType(NSTextCheckingResult self)                                                                                                            { return ((NSTextCheckingType (*)(NSTextCheckingResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
@@ -7214,6 +9131,14 @@ static inline NSTextCheckingResult    NSTextCheckingResult_PhoneNumberCheckingRe
 static inline NSTextCheckingResult    NSTextCheckingResult_TransitInformationCheckingResultWithRange_Components(NSRange range, NSDictionary components)                                                     { return ((NSTextCheckingResult (*)(bean_class, SEL, NSRange, NSDictionary))bean_msgSend)(bean_cls("NSTextCheckingResult"), bean_sel("transitInformationCheckingResultWithRange:components:"), range, components); }
 static inline id                      NSTextCheckingResult_CopyWithZone(NSTextCheckingResult self, NSZone* zone)                                                                                            { return ((id (*)(NSTextCheckingResult, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                    NSTextCheckingResult_SupportsSecureCoding(void)                                                                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSTextCheckingResult"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSTextCheckingResult
+#define BEAN_ALLOC_NSTextCheckingResult
+static inline NSTextCheckingResult    NSTextCheckingResult_Alloc(void)                                                                                                                                      { return (NSTextCheckingResult)bean_alloc(bean_cls("NSTextCheckingResult")); }
+#endif
+#ifndef BEAN_NEW_NSTextCheckingResult
+#define BEAN_NEW_NSTextCheckingResult
+static inline NSTextCheckingResult    NSTextCheckingResult_New(void)                                                                                                                                        { return (NSTextCheckingResult)bean_new(bean_cls("NSTextCheckingResult")); }
+#endif
 
 /* ===== NSThread ===== */
 static inline void                   NSThread_DetachNewThreadWithBlock(void* block)                                                  { ((void (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("NSThread"), bean_sel("detachNewThreadWithBlock:"), block); }
@@ -7248,6 +9173,14 @@ static inline BOOL                   NSThread_IsCancelled(NSThread self)        
 static inline BOOL                   NSThread_Executing(NSThread self)                                                               { return ((BOOL (*)(NSThread, SEL))bean_msgSend)(self, bean_sel("executing")); }
 static inline BOOL                   NSThread_Finished(NSThread self)                                                                { return ((BOOL (*)(NSThread, SEL))bean_msgSend)(self, bean_sel("finished")); }
 static inline BOOL                   NSThread_Cancelled(NSThread self)                                                               { return ((BOOL (*)(NSThread, SEL))bean_msgSend)(self, bean_sel("cancelled")); }
+#ifndef BEAN_ALLOC_NSThread
+#define BEAN_ALLOC_NSThread
+static inline NSThread               NSThread_Alloc(void)                                                                            { return (NSThread)bean_alloc(bean_cls("NSThread")); }
+#endif
+#ifndef BEAN_NEW_NSThread
+#define BEAN_NEW_NSThread
+static inline NSThread               NSThread_New(void)                                                                              { return (NSThread)bean_new(bean_cls("NSThread")); }
+#endif
 
 /* ===== NSTimeZone ===== */
 static inline NSInteger       NSTimeZone_SecondsFromGMTForDate(NSTimeZone self, NSDate aDate)                                 { return ((NSInteger (*)(NSTimeZone, SEL, NSDate))bean_msgSend)(self, bean_sel("secondsFromGMTForDate:"), aDate); }
@@ -7283,6 +9216,14 @@ static inline NSTimeZone      NSTimeZone_TimeZoneWithAbbreviation(NSString abbre
 static inline id              NSTimeZone_CopyWithZone(NSTimeZone self, NSZone* zone)                                          { return ((id (*)(NSTimeZone, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL            NSTimeZone_SupportsSecureCoding(void)                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSTimeZone"), bean_sel("supportsSecureCoding")); }
 static inline BOOL            NSTimeZone_DaylightSavingTime(NSTimeZone self)                                                  { return ((BOOL (*)(NSTimeZone, SEL))bean_msgSend)(self, bean_sel("daylightSavingTime")); }
+#ifndef BEAN_ALLOC_NSTimeZone
+#define BEAN_ALLOC_NSTimeZone
+static inline NSTimeZone      NSTimeZone_Alloc(void)                                                                          { return (NSTimeZone)bean_alloc(bean_cls("NSTimeZone")); }
+#endif
+#ifndef BEAN_NEW_NSTimeZone
+#define BEAN_NEW_NSTimeZone
+static inline NSTimeZone      NSTimeZone_New(void)                                                                            { return (NSTimeZone)bean_new(bean_cls("NSTimeZone")); }
+#endif
 
 /* ===== NSTimer ===== */
 static inline NSTimer    NSTimer_TimerWithTimeInterval_Invocation_Repeats(CGFloat ti, NSInvocation invocation, BOOL yesOrNo)                                          { return ((NSTimer (*)(bean_class, SEL, CGFloat, NSInvocation, BOOL))bean_msgSend)(bean_cls("NSTimer"), bean_sel("timerWithTimeInterval:invocation:repeats:"), ti, invocation, yesOrNo); }
@@ -7303,6 +9244,14 @@ static inline void       NSTimer_SetTolerance(NSTimer self, CGFloat tolerance)  
 static inline BOOL       NSTimer_IsValid(NSTimer self)                                                                                                                { return ((BOOL (*)(NSTimer, SEL))bean_msgSend)(self, bean_sel("isValid")); }
 static inline id         NSTimer_UserInfo(NSTimer self)                                                                                                               { return ((id (*)(NSTimer, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
 static inline BOOL       NSTimer_Valid(NSTimer self)                                                                                                                  { return ((BOOL (*)(NSTimer, SEL))bean_msgSend)(self, bean_sel("valid")); }
+#ifndef BEAN_ALLOC_NSTimer
+#define BEAN_ALLOC_NSTimer
+static inline NSTimer    NSTimer_Alloc(void)                                                                                                                          { return (NSTimer)bean_alloc(bean_cls("NSTimer")); }
+#endif
+#ifndef BEAN_NEW_NSTimer
+#define BEAN_NEW_NSTimer
+static inline NSTimer    NSTimer_New(void)                                                                                                                            { return (NSTimer)bean_new(bean_cls("NSTimer")); }
+#endif
 
 /* ===== NSURL ===== */
 static inline NSURL           NSURL_InitWithScheme_Host_Path(NSURL self, NSString scheme, NSString host, NSString path)                                                                                                                      { return ((NSURL (*)(NSURL, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("initWithScheme:host:path:"), scheme, host, path); }
@@ -7389,6 +9338,14 @@ static inline NSURLHandle     NSURL_URLHandleUsingCache(NSURL self, BOOL shouldU
 static inline BOOL            NSURL_SupportsSecureCoding(void)                                                                                                                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURL"), bean_sel("supportsSecureCoding")); }
 static inline id              NSURL_CopyWithZone(NSURL self, NSZone* zone)                                                                                                                                                                   { return ((id (*)(NSURL, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL            NSURL_FileURL(NSURL self)                                                                                                                                                                                      { return ((BOOL (*)(NSURL, SEL))bean_msgSend)(self, bean_sel("fileURL")); }
+#ifndef BEAN_ALLOC_NSURL
+#define BEAN_ALLOC_NSURL
+static inline NSURL           NSURL_Alloc(void)                                                                                                                                                                                              { return (NSURL)bean_alloc(bean_cls("NSURL")); }
+#endif
+#ifndef BEAN_NEW_NSURL
+#define BEAN_NEW_NSURL
+static inline NSURL           NSURL_New(void)                                                                                                                                                                                                { return (NSURL)bean_new(bean_cls("NSURL")); }
+#endif
 
 /* ===== NSURLAuthenticationChallenge ===== */
 #ifndef BEAN_TYPEDEF_NSURLAuthenticationChallenge
@@ -7404,17 +9361,33 @@ static inline NSURLResponse                   NSURLAuthenticationChallenge_Failu
 static inline NSError                         NSURLAuthenticationChallenge_Error(NSURLAuthenticationChallenge self)                                                                                                                                                                                                                                      { return ((NSError (*)(NSURLAuthenticationChallenge, SEL))bean_msgSend)(self, bean_sel("error")); }
 static inline id                              NSURLAuthenticationChallenge_Sender(NSURLAuthenticationChallenge self)                                                                                                                                                                                                                                     { return ((id (*)(NSURLAuthenticationChallenge, SEL))bean_msgSend)(self, bean_sel("sender")); }
 static inline BOOL                            NSURLAuthenticationChallenge_SupportsSecureCoding(void)                                                                                                                                                                                                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLAuthenticationChallenge"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSURLAuthenticationChallenge
+#define BEAN_ALLOC_NSURLAuthenticationChallenge
+static inline NSURLAuthenticationChallenge    NSURLAuthenticationChallenge_Alloc(void)                                                                                                                                                                                                                                                                   { return (NSURLAuthenticationChallenge)bean_alloc(bean_cls("NSURLAuthenticationChallenge")); }
+#endif
+#ifndef BEAN_NEW_NSURLAuthenticationChallenge
+#define BEAN_NEW_NSURLAuthenticationChallenge
+static inline NSURLAuthenticationChallenge    NSURLAuthenticationChallenge_New(void)                                                                                                                                                                                                                                                                     { return (NSURLAuthenticationChallenge)bean_new(bean_cls("NSURLAuthenticationChallenge")); }
+#endif
 
 /* ===== NSURLAuthenticationChallengeSender ===== */
 #ifndef BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
 #define BEAN_TYPEDEF_NSURLAuthenticationChallengeSender
 typedef bean_id NSURLAuthenticationChallengeSender;
 #endif
-static inline void    NSURLAuthenticationChallengeSender_UseCredential_ForAuthenticationChallenge(NSURLAuthenticationChallengeSender self, NSURLCredential credential, NSURLAuthenticationChallenge challenge)    { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLCredential, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("useCredential:forAuthenticationChallenge:"), credential, challenge); }
-static inline void    NSURLAuthenticationChallengeSender_ContinueWithoutCredentialForAuthenticationChallenge(NSURLAuthenticationChallengeSender self, NSURLAuthenticationChallenge challenge)                     { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("continueWithoutCredentialForAuthenticationChallenge:"), challenge); }
-static inline void    NSURLAuthenticationChallengeSender_CancelAuthenticationChallenge(NSURLAuthenticationChallengeSender self, NSURLAuthenticationChallenge challenge)                                           { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("cancelAuthenticationChallenge:"), challenge); }
-static inline void    NSURLAuthenticationChallengeSender_PerformDefaultHandlingForAuthenticationChallenge(NSURLAuthenticationChallengeSender self, NSURLAuthenticationChallenge challenge)                        { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("performDefaultHandlingForAuthenticationChallenge:"), challenge); }
-static inline void    NSURLAuthenticationChallengeSender_RejectProtectionSpaceAndContinueWithChallenge(NSURLAuthenticationChallengeSender self, NSURLAuthenticationChallenge challenge)                           { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("rejectProtectionSpaceAndContinueWithChallenge:"), challenge); }
+static inline void                                  NSURLAuthenticationChallengeSender_UseCredential_ForAuthenticationChallenge(NSURLAuthenticationChallengeSender self, NSURLCredential credential, NSURLAuthenticationChallenge challenge)    { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLCredential, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("useCredential:forAuthenticationChallenge:"), credential, challenge); }
+static inline void                                  NSURLAuthenticationChallengeSender_ContinueWithoutCredentialForAuthenticationChallenge(NSURLAuthenticationChallengeSender self, NSURLAuthenticationChallenge challenge)                     { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("continueWithoutCredentialForAuthenticationChallenge:"), challenge); }
+static inline void                                  NSURLAuthenticationChallengeSender_CancelAuthenticationChallenge(NSURLAuthenticationChallengeSender self, NSURLAuthenticationChallenge challenge)                                           { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("cancelAuthenticationChallenge:"), challenge); }
+static inline void                                  NSURLAuthenticationChallengeSender_PerformDefaultHandlingForAuthenticationChallenge(NSURLAuthenticationChallengeSender self, NSURLAuthenticationChallenge challenge)                        { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("performDefaultHandlingForAuthenticationChallenge:"), challenge); }
+static inline void                                  NSURLAuthenticationChallengeSender_RejectProtectionSpaceAndContinueWithChallenge(NSURLAuthenticationChallengeSender self, NSURLAuthenticationChallenge challenge)                           { ((void (*)(NSURLAuthenticationChallengeSender, SEL, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("rejectProtectionSpaceAndContinueWithChallenge:"), challenge); }
+#ifndef BEAN_ALLOC_NSURLAuthenticationChallengeSender
+#define BEAN_ALLOC_NSURLAuthenticationChallengeSender
+static inline NSURLAuthenticationChallengeSender    NSURLAuthenticationChallengeSender_Alloc(void)                                                                                                                                              { return (NSURLAuthenticationChallengeSender)bean_alloc(bean_cls("NSURLAuthenticationChallengeSender")); }
+#endif
+#ifndef BEAN_NEW_NSURLAuthenticationChallengeSender
+#define BEAN_NEW_NSURLAuthenticationChallengeSender
+static inline NSURLAuthenticationChallengeSender    NSURLAuthenticationChallengeSender_New(void)                                                                                                                                                { return (NSURLAuthenticationChallengeSender)bean_new(bean_cls("NSURLAuthenticationChallengeSender")); }
+#endif
 
 /* ===== NSURLCache ===== */
 #ifndef BEAN_TYPEDEF_NSURLCache
@@ -7439,6 +9412,14 @@ static inline NSUInteger             NSURLCache_CurrentDiskUsage(NSURLCache self
 static inline void                   NSURLCache_StoreCachedResponse_ForDataTask(NSURLCache self, NSCachedURLResponse cachedResponse, NSURLSessionDataTask dataTask)                          { ((void (*)(NSURLCache, SEL, NSCachedURLResponse, NSURLSessionDataTask))bean_msgSend)(self, bean_sel("storeCachedResponse:forDataTask:"), cachedResponse, dataTask); }
 static inline void                   NSURLCache_GetCachedResponseForDataTask_CompletionHandler(NSURLCache self, NSURLSessionDataTask dataTask, void* completionHandler)                      { ((void (*)(NSURLCache, SEL, NSURLSessionDataTask, void*))bean_msgSend)(self, bean_sel("getCachedResponseForDataTask:completionHandler:"), dataTask, completionHandler); }
 static inline void                   NSURLCache_RemoveCachedResponseForDataTask(NSURLCache self, NSURLSessionDataTask dataTask)                                                              { ((void (*)(NSURLCache, SEL, NSURLSessionDataTask))bean_msgSend)(self, bean_sel("removeCachedResponseForDataTask:"), dataTask); }
+#ifndef BEAN_ALLOC_NSURLCache
+#define BEAN_ALLOC_NSURLCache
+static inline NSURLCache             NSURLCache_Alloc(void)                                                                                                                                  { return (NSURLCache)bean_alloc(bean_cls("NSURLCache")); }
+#endif
+#ifndef BEAN_NEW_NSURLCache
+#define BEAN_NEW_NSURLCache
+static inline NSURLCache             NSURLCache_New(void)                                                                                                                                    { return (NSURLCache)bean_new(bean_cls("NSURLCache")); }
+#endif
 
 /* ===== NSURLComponents ===== */
 #ifndef BEAN_TYPEDEF_NSURLComponents
@@ -7498,6 +9479,14 @@ static inline void               NSURLComponents_SetQueryItems(NSURLComponents s
 static inline NSArray            NSURLComponents_PercentEncodedQueryItems(NSURLComponents self)                                                                        { return ((NSArray (*)(NSURLComponents, SEL))bean_msgSend)(self, bean_sel("percentEncodedQueryItems")); }
 static inline void               NSURLComponents_SetPercentEncodedQueryItems(NSURLComponents self, NSArray percentEncodedQueryItems)                                   { ((void (*)(NSURLComponents, SEL, NSArray))bean_msgSend)(self, bean_sel("setPercentEncodedQueryItems:"), percentEncodedQueryItems); }
 static inline id                 NSURLComponents_CopyWithZone(NSURLComponents self, NSZone* zone)                                                                      { return ((id (*)(NSURLComponents, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSURLComponents
+#define BEAN_ALLOC_NSURLComponents
+static inline NSURLComponents    NSURLComponents_Alloc(void)                                                                                                           { return (NSURLComponents)bean_alloc(bean_cls("NSURLComponents")); }
+#endif
+#ifndef BEAN_NEW_NSURLComponents
+#define BEAN_NEW_NSURLComponents
+static inline NSURLComponents    NSURLComponents_New(void)                                                                                                             { return (NSURLComponents)bean_new(bean_cls("NSURLComponents")); }
+#endif
 
 /* ===== NSURLConnection ===== */
 #ifndef BEAN_TYPEDEF_NSURLConnection
@@ -7517,40 +9506,72 @@ static inline NSURLRequest       NSURLConnection_OriginalRequest(NSURLConnection
 static inline NSURLRequest       NSURLConnection_CurrentRequest(NSURLConnection self)                                                                                         { return ((NSURLRequest (*)(NSURLConnection, SEL))bean_msgSend)(self, bean_sel("currentRequest")); }
 static inline NSData             NSURLConnection_SendSynchronousRequest_ReturningResponse_Error(NSURLRequest request, NSURLResponse response, NSError* error)                 { return ((NSData (*)(bean_class, SEL, NSURLRequest, NSURLResponse, NSError*))bean_msgSend)(bean_cls("NSURLConnection"), bean_sel("sendSynchronousRequest:returningResponse:error:"), request, response, error); }
 static inline void               NSURLConnection_SendAsynchronousRequest_Queue_CompletionHandler(NSURLRequest request, NSOperationQueue queue, void* handler)                 { ((void (*)(bean_class, SEL, NSURLRequest, NSOperationQueue, void*))bean_msgSend)(bean_cls("NSURLConnection"), bean_sel("sendAsynchronousRequest:queue:completionHandler:"), request, queue, handler); }
+#ifndef BEAN_ALLOC_NSURLConnection
+#define BEAN_ALLOC_NSURLConnection
+static inline NSURLConnection    NSURLConnection_Alloc(void)                                                                                                                  { return (NSURLConnection)bean_alloc(bean_cls("NSURLConnection")); }
+#endif
+#ifndef BEAN_NEW_NSURLConnection
+#define BEAN_NEW_NSURLConnection
+static inline NSURLConnection    NSURLConnection_New(void)                                                                                                                    { return (NSURLConnection)bean_new(bean_cls("NSURLConnection")); }
+#endif
 
 /* ===== NSURLConnectionDataDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLConnectionDataDelegate
 #define BEAN_TYPEDEF_NSURLConnectionDataDelegate
 typedef bean_id NSURLConnectionDataDelegate;
 #endif
-static inline NSURLRequest           NSURLConnectionDataDelegate_Connection_WillSendRequest_RedirectResponse(NSURLConnectionDataDelegate self, NSURLConnection connection, NSURLRequest request, NSURLResponse response)                                                                           { return ((NSURLRequest (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSURLRequest, NSURLResponse))bean_msgSend)(self, bean_sel("connection:willSendRequest:redirectResponse:"), connection, request, response); }
-static inline void                   NSURLConnectionDataDelegate_Connection_DidReceiveResponse(NSURLConnectionDataDelegate self, NSURLConnection connection, NSURLResponse response)                                                                                                               { ((void (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSURLResponse))bean_msgSend)(self, bean_sel("connection:didReceiveResponse:"), connection, response); }
-static inline void                   NSURLConnectionDataDelegate_Connection_DidReceiveData(NSURLConnectionDataDelegate self, NSURLConnection connection, NSData data)                                                                                                                              { ((void (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSData))bean_msgSend)(self, bean_sel("connection:didReceiveData:"), connection, data); }
-static inline NSInputStream          NSURLConnectionDataDelegate_Connection_NeedNewBodyStream(NSURLConnectionDataDelegate self, NSURLConnection connection, NSURLRequest request)                                                                                                                  { return ((NSInputStream (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSURLRequest))bean_msgSend)(self, bean_sel("connection:needNewBodyStream:"), connection, request); }
-static inline void                   NSURLConnectionDataDelegate_Connection_DidSendBodyData_TotalBytesWritten_TotalBytesExpectedToWrite(NSURLConnectionDataDelegate self, NSURLConnection connection, NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite)    { ((void (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSInteger, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("connection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:"), connection, bytesWritten, totalBytesWritten, totalBytesExpectedToWrite); }
-static inline NSCachedURLResponse    NSURLConnectionDataDelegate_Connection_WillCacheResponse(NSURLConnectionDataDelegate self, NSURLConnection connection, NSCachedURLResponse cachedResponse)                                                                                                    { return ((NSCachedURLResponse (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSCachedURLResponse))bean_msgSend)(self, bean_sel("connection:willCacheResponse:"), connection, cachedResponse); }
-static inline void                   NSURLConnectionDataDelegate_ConnectionDidFinishLoading(NSURLConnectionDataDelegate self, NSURLConnection connection)                                                                                                                                          { ((void (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection))bean_msgSend)(self, bean_sel("connectionDidFinishLoading:"), connection); }
+static inline NSURLRequest                   NSURLConnectionDataDelegate_Connection_WillSendRequest_RedirectResponse(NSURLConnectionDataDelegate self, NSURLConnection connection, NSURLRequest request, NSURLResponse response)                                                                           { return ((NSURLRequest (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSURLRequest, NSURLResponse))bean_msgSend)(self, bean_sel("connection:willSendRequest:redirectResponse:"), connection, request, response); }
+static inline void                           NSURLConnectionDataDelegate_Connection_DidReceiveResponse(NSURLConnectionDataDelegate self, NSURLConnection connection, NSURLResponse response)                                                                                                               { ((void (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSURLResponse))bean_msgSend)(self, bean_sel("connection:didReceiveResponse:"), connection, response); }
+static inline void                           NSURLConnectionDataDelegate_Connection_DidReceiveData(NSURLConnectionDataDelegate self, NSURLConnection connection, NSData data)                                                                                                                              { ((void (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSData))bean_msgSend)(self, bean_sel("connection:didReceiveData:"), connection, data); }
+static inline NSInputStream                  NSURLConnectionDataDelegate_Connection_NeedNewBodyStream(NSURLConnectionDataDelegate self, NSURLConnection connection, NSURLRequest request)                                                                                                                  { return ((NSInputStream (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSURLRequest))bean_msgSend)(self, bean_sel("connection:needNewBodyStream:"), connection, request); }
+static inline void                           NSURLConnectionDataDelegate_Connection_DidSendBodyData_TotalBytesWritten_TotalBytesExpectedToWrite(NSURLConnectionDataDelegate self, NSURLConnection connection, NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite)    { ((void (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSInteger, NSInteger, NSInteger))bean_msgSend)(self, bean_sel("connection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:"), connection, bytesWritten, totalBytesWritten, totalBytesExpectedToWrite); }
+static inline NSCachedURLResponse            NSURLConnectionDataDelegate_Connection_WillCacheResponse(NSURLConnectionDataDelegate self, NSURLConnection connection, NSCachedURLResponse cachedResponse)                                                                                                    { return ((NSCachedURLResponse (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection, NSCachedURLResponse))bean_msgSend)(self, bean_sel("connection:willCacheResponse:"), connection, cachedResponse); }
+static inline void                           NSURLConnectionDataDelegate_ConnectionDidFinishLoading(NSURLConnectionDataDelegate self, NSURLConnection connection)                                                                                                                                          { ((void (*)(NSURLConnectionDataDelegate, SEL, NSURLConnection))bean_msgSend)(self, bean_sel("connectionDidFinishLoading:"), connection); }
+#ifndef BEAN_ALLOC_NSURLConnectionDataDelegate
+#define BEAN_ALLOC_NSURLConnectionDataDelegate
+static inline NSURLConnectionDataDelegate    NSURLConnectionDataDelegate_Alloc(void)                                                                                                                                                                                                                       { return (NSURLConnectionDataDelegate)bean_alloc(bean_cls("NSURLConnectionDataDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLConnectionDataDelegate
+#define BEAN_NEW_NSURLConnectionDataDelegate
+static inline NSURLConnectionDataDelegate    NSURLConnectionDataDelegate_New(void)                                                                                                                                                                                                                         { return (NSURLConnectionDataDelegate)bean_new(bean_cls("NSURLConnectionDataDelegate")); }
+#endif
 
 /* ===== NSURLConnectionDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLConnectionDelegate
 #define BEAN_TYPEDEF_NSURLConnectionDelegate
 typedef bean_id NSURLConnectionDelegate;
 #endif
-static inline void    NSURLConnectionDelegate_Connection_DidFailWithError(NSURLConnectionDelegate self, NSURLConnection connection, NSError error)                                                      { ((void (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSError))bean_msgSend)(self, bean_sel("connection:didFailWithError:"), connection, error); }
-static inline BOOL    NSURLConnectionDelegate_ConnectionShouldUseCredentialStorage(NSURLConnectionDelegate self, NSURLConnection connection)                                                            { return ((BOOL (*)(NSURLConnectionDelegate, SEL, NSURLConnection))bean_msgSend)(self, bean_sel("connectionShouldUseCredentialStorage:"), connection); }
-static inline void    NSURLConnectionDelegate_Connection_WillSendRequestForAuthenticationChallenge(NSURLConnectionDelegate self, NSURLConnection connection, NSURLAuthenticationChallenge challenge)    { ((void (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("connection:willSendRequestForAuthenticationChallenge:"), connection, challenge); }
-static inline BOOL    NSURLConnectionDelegate_Connection_CanAuthenticateAgainstProtectionSpace(NSURLConnectionDelegate self, NSURLConnection connection, NSURLProtectionSpace protectionSpace)          { return ((BOOL (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSURLProtectionSpace))bean_msgSend)(self, bean_sel("connection:canAuthenticateAgainstProtectionSpace:"), connection, protectionSpace); }
-static inline void    NSURLConnectionDelegate_Connection_DidReceiveAuthenticationChallenge(NSURLConnectionDelegate self, NSURLConnection connection, NSURLAuthenticationChallenge challenge)            { ((void (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("connection:didReceiveAuthenticationChallenge:"), connection, challenge); }
-static inline void    NSURLConnectionDelegate_Connection_DidCancelAuthenticationChallenge(NSURLConnectionDelegate self, NSURLConnection connection, NSURLAuthenticationChallenge challenge)             { ((void (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("connection:didCancelAuthenticationChallenge:"), connection, challenge); }
+static inline void                       NSURLConnectionDelegate_Connection_DidFailWithError(NSURLConnectionDelegate self, NSURLConnection connection, NSError error)                                                      { ((void (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSError))bean_msgSend)(self, bean_sel("connection:didFailWithError:"), connection, error); }
+static inline BOOL                       NSURLConnectionDelegate_ConnectionShouldUseCredentialStorage(NSURLConnectionDelegate self, NSURLConnection connection)                                                            { return ((BOOL (*)(NSURLConnectionDelegate, SEL, NSURLConnection))bean_msgSend)(self, bean_sel("connectionShouldUseCredentialStorage:"), connection); }
+static inline void                       NSURLConnectionDelegate_Connection_WillSendRequestForAuthenticationChallenge(NSURLConnectionDelegate self, NSURLConnection connection, NSURLAuthenticationChallenge challenge)    { ((void (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("connection:willSendRequestForAuthenticationChallenge:"), connection, challenge); }
+static inline BOOL                       NSURLConnectionDelegate_Connection_CanAuthenticateAgainstProtectionSpace(NSURLConnectionDelegate self, NSURLConnection connection, NSURLProtectionSpace protectionSpace)          { return ((BOOL (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSURLProtectionSpace))bean_msgSend)(self, bean_sel("connection:canAuthenticateAgainstProtectionSpace:"), connection, protectionSpace); }
+static inline void                       NSURLConnectionDelegate_Connection_DidReceiveAuthenticationChallenge(NSURLConnectionDelegate self, NSURLConnection connection, NSURLAuthenticationChallenge challenge)            { ((void (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("connection:didReceiveAuthenticationChallenge:"), connection, challenge); }
+static inline void                       NSURLConnectionDelegate_Connection_DidCancelAuthenticationChallenge(NSURLConnectionDelegate self, NSURLConnection connection, NSURLAuthenticationChallenge challenge)             { ((void (*)(NSURLConnectionDelegate, SEL, NSURLConnection, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("connection:didCancelAuthenticationChallenge:"), connection, challenge); }
+#ifndef BEAN_ALLOC_NSURLConnectionDelegate
+#define BEAN_ALLOC_NSURLConnectionDelegate
+static inline NSURLConnectionDelegate    NSURLConnectionDelegate_Alloc(void)                                                                                                                                               { return (NSURLConnectionDelegate)bean_alloc(bean_cls("NSURLConnectionDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLConnectionDelegate
+#define BEAN_NEW_NSURLConnectionDelegate
+static inline NSURLConnectionDelegate    NSURLConnectionDelegate_New(void)                                                                                                                                                 { return (NSURLConnectionDelegate)bean_new(bean_cls("NSURLConnectionDelegate")); }
+#endif
 
 /* ===== NSURLConnectionDownloadDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
 #define BEAN_TYPEDEF_NSURLConnectionDownloadDelegate
 typedef bean_id NSURLConnectionDownloadDelegate;
 #endif
-static inline void    NSURLConnectionDownloadDelegate_Connection_DidWriteData_TotalBytesWritten_ExpectedTotalBytes(NSURLConnectionDownloadDelegate self, NSURLConnection connection, long long bytesWritten, long long totalBytesWritten, long long expectedTotalBytes)    { ((void (*)(NSURLConnectionDownloadDelegate, SEL, NSURLConnection, long long, long long, long long))bean_msgSend)(self, bean_sel("connection:didWriteData:totalBytesWritten:expectedTotalBytes:"), connection, bytesWritten, totalBytesWritten, expectedTotalBytes); }
-static inline void    NSURLConnectionDownloadDelegate_ConnectionDidResumeDownloading_TotalBytesWritten_ExpectedTotalBytes(NSURLConnectionDownloadDelegate self, NSURLConnection connection, long long totalBytesWritten, long long expectedTotalBytes)                     { ((void (*)(NSURLConnectionDownloadDelegate, SEL, NSURLConnection, long long, long long))bean_msgSend)(self, bean_sel("connectionDidResumeDownloading:totalBytesWritten:expectedTotalBytes:"), connection, totalBytesWritten, expectedTotalBytes); }
-static inline void    NSURLConnectionDownloadDelegate_ConnectionDidFinishDownloading_DestinationURL(NSURLConnectionDownloadDelegate self, NSURLConnection connection, NSURL destinationURL)                                                                                { ((void (*)(NSURLConnectionDownloadDelegate, SEL, NSURLConnection, NSURL))bean_msgSend)(self, bean_sel("connectionDidFinishDownloading:destinationURL:"), connection, destinationURL); }
+static inline void                               NSURLConnectionDownloadDelegate_Connection_DidWriteData_TotalBytesWritten_ExpectedTotalBytes(NSURLConnectionDownloadDelegate self, NSURLConnection connection, long long bytesWritten, long long totalBytesWritten, long long expectedTotalBytes)    { ((void (*)(NSURLConnectionDownloadDelegate, SEL, NSURLConnection, long long, long long, long long))bean_msgSend)(self, bean_sel("connection:didWriteData:totalBytesWritten:expectedTotalBytes:"), connection, bytesWritten, totalBytesWritten, expectedTotalBytes); }
+static inline void                               NSURLConnectionDownloadDelegate_ConnectionDidResumeDownloading_TotalBytesWritten_ExpectedTotalBytes(NSURLConnectionDownloadDelegate self, NSURLConnection connection, long long totalBytesWritten, long long expectedTotalBytes)                     { ((void (*)(NSURLConnectionDownloadDelegate, SEL, NSURLConnection, long long, long long))bean_msgSend)(self, bean_sel("connectionDidResumeDownloading:totalBytesWritten:expectedTotalBytes:"), connection, totalBytesWritten, expectedTotalBytes); }
+static inline void                               NSURLConnectionDownloadDelegate_ConnectionDidFinishDownloading_DestinationURL(NSURLConnectionDownloadDelegate self, NSURLConnection connection, NSURL destinationURL)                                                                                { ((void (*)(NSURLConnectionDownloadDelegate, SEL, NSURLConnection, NSURL))bean_msgSend)(self, bean_sel("connectionDidFinishDownloading:destinationURL:"), connection, destinationURL); }
+#ifndef BEAN_ALLOC_NSURLConnectionDownloadDelegate
+#define BEAN_ALLOC_NSURLConnectionDownloadDelegate
+static inline NSURLConnectionDownloadDelegate    NSURLConnectionDownloadDelegate_Alloc(void)                                                                                                                                                                                                          { return (NSURLConnectionDownloadDelegate)bean_alloc(bean_cls("NSURLConnectionDownloadDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLConnectionDownloadDelegate
+#define BEAN_NEW_NSURLConnectionDownloadDelegate
+static inline NSURLConnectionDownloadDelegate    NSURLConnectionDownloadDelegate_New(void)                                                                                                                                                                                                            { return (NSURLConnectionDownloadDelegate)bean_new(bean_cls("NSURLConnectionDownloadDelegate")); }
+#endif
 
 /* ===== NSURLCredential ===== */
 static inline NSURLCredentialPersistence    NSURLCredential_Persistence(NSURLCredential self)                                                                                                                      { return ((NSURLCredentialPersistence (*)(NSURLCredential, SEL))bean_msgSend)(self, bean_sel("persistence")); }
@@ -7567,6 +9588,14 @@ static inline NSURLCredential               NSURLCredential_InitWithTrust(NSURLC
 static inline NSURLCredential               NSURLCredential_CredentialForTrust(SecTrustRef trust)                                                                                                                  { return ((NSURLCredential (*)(bean_class, SEL, SecTrustRef))bean_msgSend)(bean_cls("NSURLCredential"), bean_sel("credentialForTrust:"), trust); }
 static inline BOOL                          NSURLCredential_SupportsSecureCoding(void)                                                                                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLCredential"), bean_sel("supportsSecureCoding")); }
 static inline id                            NSURLCredential_CopyWithZone(NSURLCredential self, NSZone* zone)                                                                                                       { return ((id (*)(NSURLCredential, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSURLCredential
+#define BEAN_ALLOC_NSURLCredential
+static inline NSURLCredential               NSURLCredential_Alloc(void)                                                                                                                                            { return (NSURLCredential)bean_alloc(bean_cls("NSURLCredential")); }
+#endif
+#ifndef BEAN_NEW_NSURLCredential
+#define BEAN_NEW_NSURLCredential
+static inline NSURLCredential               NSURLCredential_New(void)                                                                                                                                              { return (NSURLCredential)bean_new(bean_cls("NSURLCredential")); }
+#endif
 
 /* ===== NSURLCredentialStorage ===== */
 #ifndef BEAN_TYPEDEF_NSURLCredentialStorage
@@ -7586,6 +9615,14 @@ static inline void                      NSURLCredentialStorage_SetCredential_For
 static inline void                      NSURLCredentialStorage_RemoveCredential_ForProtectionSpace_Options_Task(NSURLCredentialStorage self, NSURLCredential credential, NSURLProtectionSpace protectionSpace, NSDictionary options, NSURLSessionTask task)    { ((void (*)(NSURLCredentialStorage, SEL, NSURLCredential, NSURLProtectionSpace, NSDictionary, NSURLSessionTask))bean_msgSend)(self, bean_sel("removeCredential:forProtectionSpace:options:task:"), credential, protectionSpace, options, task); }
 static inline void                      NSURLCredentialStorage_GetDefaultCredentialForProtectionSpace_Task_CompletionHandler(NSURLCredentialStorage self, NSURLProtectionSpace space, NSURLSessionTask task, void* completionHandler)                          { ((void (*)(NSURLCredentialStorage, SEL, NSURLProtectionSpace, NSURLSessionTask, void*))bean_msgSend)(self, bean_sel("getDefaultCredentialForProtectionSpace:task:completionHandler:"), space, task, completionHandler); }
 static inline void                      NSURLCredentialStorage_SetDefaultCredential_ForProtectionSpace_Task(NSURLCredentialStorage self, NSURLCredential credential, NSURLProtectionSpace protectionSpace, NSURLSessionTask task)                              { ((void (*)(NSURLCredentialStorage, SEL, NSURLCredential, NSURLProtectionSpace, NSURLSessionTask))bean_msgSend)(self, bean_sel("setDefaultCredential:forProtectionSpace:task:"), credential, protectionSpace, task); }
+#ifndef BEAN_ALLOC_NSURLCredentialStorage
+#define BEAN_ALLOC_NSURLCredentialStorage
+static inline NSURLCredentialStorage    NSURLCredentialStorage_Alloc(void)                                                                                                                                                                                     { return (NSURLCredentialStorage)bean_alloc(bean_cls("NSURLCredentialStorage")); }
+#endif
+#ifndef BEAN_NEW_NSURLCredentialStorage
+#define BEAN_NEW_NSURLCredentialStorage
+static inline NSURLCredentialStorage    NSURLCredentialStorage_New(void)                                                                                                                                                                                       { return (NSURLCredentialStorage)bean_new(bean_cls("NSURLCredentialStorage")); }
+#endif
 
 /* ===== NSURLDownload ===== */
 #ifndef BEAN_TYPEDEF_NSURLDownload
@@ -7601,26 +9638,42 @@ static inline NSURLRequest     NSURLDownload_Request(NSURLDownload self)        
 static inline NSData           NSURLDownload_ResumeData(NSURLDownload self)                                                                         { return ((NSData (*)(NSURLDownload, SEL))bean_msgSend)(self, bean_sel("resumeData")); }
 static inline BOOL             NSURLDownload_DeletesFileUponFailure(NSURLDownload self)                                                             { return ((BOOL (*)(NSURLDownload, SEL))bean_msgSend)(self, bean_sel("deletesFileUponFailure")); }
 static inline void             NSURLDownload_SetDeletesFileUponFailure(NSURLDownload self, BOOL deletesFileUponFailure)                             { ((void (*)(NSURLDownload, SEL, BOOL))bean_msgSend)(self, bean_sel("setDeletesFileUponFailure:"), deletesFileUponFailure); }
+#ifndef BEAN_ALLOC_NSURLDownload
+#define BEAN_ALLOC_NSURLDownload
+static inline NSURLDownload    NSURLDownload_Alloc(void)                                                                                            { return (NSURLDownload)bean_alloc(bean_cls("NSURLDownload")); }
+#endif
+#ifndef BEAN_NEW_NSURLDownload
+#define BEAN_NEW_NSURLDownload
+static inline NSURLDownload    NSURLDownload_New(void)                                                                                              { return (NSURLDownload)bean_new(bean_cls("NSURLDownload")); }
+#endif
 
 /* ===== NSURLDownloadDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLDownloadDelegate
 #define BEAN_TYPEDEF_NSURLDownloadDelegate
 typedef bean_id NSURLDownloadDelegate;
 #endif
-static inline void            NSURLDownloadDelegate_DownloadDidBegin(NSURLDownloadDelegate self, NSURLDownload download)                                                                                   { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload))bean_msgSend)(self, bean_sel("downloadDidBegin:"), download); }
-static inline NSURLRequest    NSURLDownloadDelegate_Download_WillSendRequest_RedirectResponse(NSURLDownloadDelegate self, NSURLDownload download, NSURLRequest request, NSURLResponse redirectResponse)    { return ((NSURLRequest (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLRequest, NSURLResponse))bean_msgSend)(self, bean_sel("download:willSendRequest:redirectResponse:"), download, request, redirectResponse); }
-static inline BOOL            NSURLDownloadDelegate_Download_CanAuthenticateAgainstProtectionSpace(NSURLDownloadDelegate self, NSURLDownload connection, NSURLProtectionSpace protectionSpace)             { return ((BOOL (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLProtectionSpace))bean_msgSend)(self, bean_sel("download:canAuthenticateAgainstProtectionSpace:"), connection, protectionSpace); }
-static inline void            NSURLDownloadDelegate_Download_DidReceiveAuthenticationChallenge(NSURLDownloadDelegate self, NSURLDownload download, NSURLAuthenticationChallenge challenge)                 { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("download:didReceiveAuthenticationChallenge:"), download, challenge); }
-static inline void            NSURLDownloadDelegate_Download_DidCancelAuthenticationChallenge(NSURLDownloadDelegate self, NSURLDownload download, NSURLAuthenticationChallenge challenge)                  { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("download:didCancelAuthenticationChallenge:"), download, challenge); }
-static inline BOOL            NSURLDownloadDelegate_DownloadShouldUseCredentialStorage(NSURLDownloadDelegate self, NSURLDownload download)                                                                 { return ((BOOL (*)(NSURLDownloadDelegate, SEL, NSURLDownload))bean_msgSend)(self, bean_sel("downloadShouldUseCredentialStorage:"), download); }
-static inline void            NSURLDownloadDelegate_Download_DidReceiveResponse(NSURLDownloadDelegate self, NSURLDownload download, NSURLResponse response)                                                { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLResponse))bean_msgSend)(self, bean_sel("download:didReceiveResponse:"), download, response); }
-static inline void            NSURLDownloadDelegate_Download_WillResumeWithResponse_FromByte(NSURLDownloadDelegate self, NSURLDownload download, NSURLResponse response, long long startingByte)           { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLResponse, long long))bean_msgSend)(self, bean_sel("download:willResumeWithResponse:fromByte:"), download, response, startingByte); }
-static inline void            NSURLDownloadDelegate_Download_DidReceiveDataOfLength(NSURLDownloadDelegate self, NSURLDownload download, NSUInteger length)                                                 { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSUInteger))bean_msgSend)(self, bean_sel("download:didReceiveDataOfLength:"), download, length); }
-static inline BOOL            NSURLDownloadDelegate_Download_ShouldDecodeSourceDataOfMIMEType(NSURLDownloadDelegate self, NSURLDownload download, NSString encodingType)                                   { return ((BOOL (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSString))bean_msgSend)(self, bean_sel("download:shouldDecodeSourceDataOfMIMEType:"), download, encodingType); }
-static inline void            NSURLDownloadDelegate_Download_DecideDestinationWithSuggestedFilename(NSURLDownloadDelegate self, NSURLDownload download, NSString filename)                                 { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSString))bean_msgSend)(self, bean_sel("download:decideDestinationWithSuggestedFilename:"), download, filename); }
-static inline void            NSURLDownloadDelegate_Download_DidCreateDestination(NSURLDownloadDelegate self, NSURLDownload download, NSString path)                                                       { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSString))bean_msgSend)(self, bean_sel("download:didCreateDestination:"), download, path); }
-static inline void            NSURLDownloadDelegate_DownloadDidFinish(NSURLDownloadDelegate self, NSURLDownload download)                                                                                  { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload))bean_msgSend)(self, bean_sel("downloadDidFinish:"), download); }
-static inline void            NSURLDownloadDelegate_Download_DidFailWithError(NSURLDownloadDelegate self, NSURLDownload download, NSError error)                                                           { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSError))bean_msgSend)(self, bean_sel("download:didFailWithError:"), download, error); }
+static inline void                     NSURLDownloadDelegate_DownloadDidBegin(NSURLDownloadDelegate self, NSURLDownload download)                                                                                   { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload))bean_msgSend)(self, bean_sel("downloadDidBegin:"), download); }
+static inline NSURLRequest             NSURLDownloadDelegate_Download_WillSendRequest_RedirectResponse(NSURLDownloadDelegate self, NSURLDownload download, NSURLRequest request, NSURLResponse redirectResponse)    { return ((NSURLRequest (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLRequest, NSURLResponse))bean_msgSend)(self, bean_sel("download:willSendRequest:redirectResponse:"), download, request, redirectResponse); }
+static inline BOOL                     NSURLDownloadDelegate_Download_CanAuthenticateAgainstProtectionSpace(NSURLDownloadDelegate self, NSURLDownload connection, NSURLProtectionSpace protectionSpace)             { return ((BOOL (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLProtectionSpace))bean_msgSend)(self, bean_sel("download:canAuthenticateAgainstProtectionSpace:"), connection, protectionSpace); }
+static inline void                     NSURLDownloadDelegate_Download_DidReceiveAuthenticationChallenge(NSURLDownloadDelegate self, NSURLDownload download, NSURLAuthenticationChallenge challenge)                 { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("download:didReceiveAuthenticationChallenge:"), download, challenge); }
+static inline void                     NSURLDownloadDelegate_Download_DidCancelAuthenticationChallenge(NSURLDownloadDelegate self, NSURLDownload download, NSURLAuthenticationChallenge challenge)                  { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("download:didCancelAuthenticationChallenge:"), download, challenge); }
+static inline BOOL                     NSURLDownloadDelegate_DownloadShouldUseCredentialStorage(NSURLDownloadDelegate self, NSURLDownload download)                                                                 { return ((BOOL (*)(NSURLDownloadDelegate, SEL, NSURLDownload))bean_msgSend)(self, bean_sel("downloadShouldUseCredentialStorage:"), download); }
+static inline void                     NSURLDownloadDelegate_Download_DidReceiveResponse(NSURLDownloadDelegate self, NSURLDownload download, NSURLResponse response)                                                { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLResponse))bean_msgSend)(self, bean_sel("download:didReceiveResponse:"), download, response); }
+static inline void                     NSURLDownloadDelegate_Download_WillResumeWithResponse_FromByte(NSURLDownloadDelegate self, NSURLDownload download, NSURLResponse response, long long startingByte)           { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSURLResponse, long long))bean_msgSend)(self, bean_sel("download:willResumeWithResponse:fromByte:"), download, response, startingByte); }
+static inline void                     NSURLDownloadDelegate_Download_DidReceiveDataOfLength(NSURLDownloadDelegate self, NSURLDownload download, NSUInteger length)                                                 { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSUInteger))bean_msgSend)(self, bean_sel("download:didReceiveDataOfLength:"), download, length); }
+static inline BOOL                     NSURLDownloadDelegate_Download_ShouldDecodeSourceDataOfMIMEType(NSURLDownloadDelegate self, NSURLDownload download, NSString encodingType)                                   { return ((BOOL (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSString))bean_msgSend)(self, bean_sel("download:shouldDecodeSourceDataOfMIMEType:"), download, encodingType); }
+static inline void                     NSURLDownloadDelegate_Download_DecideDestinationWithSuggestedFilename(NSURLDownloadDelegate self, NSURLDownload download, NSString filename)                                 { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSString))bean_msgSend)(self, bean_sel("download:decideDestinationWithSuggestedFilename:"), download, filename); }
+static inline void                     NSURLDownloadDelegate_Download_DidCreateDestination(NSURLDownloadDelegate self, NSURLDownload download, NSString path)                                                       { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSString))bean_msgSend)(self, bean_sel("download:didCreateDestination:"), download, path); }
+static inline void                     NSURLDownloadDelegate_DownloadDidFinish(NSURLDownloadDelegate self, NSURLDownload download)                                                                                  { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload))bean_msgSend)(self, bean_sel("downloadDidFinish:"), download); }
+static inline void                     NSURLDownloadDelegate_Download_DidFailWithError(NSURLDownloadDelegate self, NSURLDownload download, NSError error)                                                           { ((void (*)(NSURLDownloadDelegate, SEL, NSURLDownload, NSError))bean_msgSend)(self, bean_sel("download:didFailWithError:"), download, error); }
+#ifndef BEAN_ALLOC_NSURLDownloadDelegate
+#define BEAN_ALLOC_NSURLDownloadDelegate
+static inline NSURLDownloadDelegate    NSURLDownloadDelegate_Alloc(void)                                                                                                                                            { return (NSURLDownloadDelegate)bean_alloc(bean_cls("NSURLDownloadDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLDownloadDelegate
+#define BEAN_NEW_NSURLDownloadDelegate
+static inline NSURLDownloadDelegate    NSURLDownloadDelegate_New(void)                                                                                                                                              { return (NSURLDownloadDelegate)bean_new(bean_cls("NSURLDownloadDelegate")); }
+#endif
 
 /* ===== NSURLHandle ===== */
 static inline void                 NSURLHandle_RegisterURLHandleClass(bean_class anURLHandleSubclass)                            { ((void (*)(bean_class, SEL, bean_class))bean_msgSend)(bean_cls("NSURLHandle"), bean_sel("registerURLHandleClass:"), anURLHandleSubclass); }
@@ -7647,17 +9700,33 @@ static inline BOOL                 NSURLHandle_WriteData(NSURLHandle self, NSDat
 static inline NSData               NSURLHandle_LoadInForeground(NSURLHandle self)                                                { return ((NSData (*)(NSURLHandle, SEL))bean_msgSend)(self, bean_sel("loadInForeground")); }
 static inline void                 NSURLHandle_BeginLoadInBackground(NSURLHandle self)                                           { ((void (*)(NSURLHandle, SEL))bean_msgSend)(self, bean_sel("beginLoadInBackground")); }
 static inline void                 NSURLHandle_EndLoadInBackground(NSURLHandle self)                                             { ((void (*)(NSURLHandle, SEL))bean_msgSend)(self, bean_sel("endLoadInBackground")); }
+#ifndef BEAN_ALLOC_NSURLHandle
+#define BEAN_ALLOC_NSURLHandle
+static inline NSURLHandle          NSURLHandle_Alloc(void)                                                                       { return (NSURLHandle)bean_alloc(bean_cls("NSURLHandle")); }
+#endif
+#ifndef BEAN_NEW_NSURLHandle
+#define BEAN_NEW_NSURLHandle
+static inline NSURLHandle          NSURLHandle_New(void)                                                                         { return (NSURLHandle)bean_new(bean_cls("NSURLHandle")); }
+#endif
 
 /* ===== NSURLHandleClient ===== */
 #ifndef BEAN_TYPEDEF_NSURLHandleClient
 #define BEAN_TYPEDEF_NSURLHandleClient
 typedef bean_id NSURLHandleClient;
 #endif
-static inline void    NSURLHandleClient_URLHandle_ResourceDataDidBecomeAvailable(NSURLHandleClient self, NSURLHandle sender, NSData newBytes)      { ((void (*)(NSURLHandleClient, SEL, NSURLHandle, NSData))bean_msgSend)(self, bean_sel("URLHandle:resourceDataDidBecomeAvailable:"), sender, newBytes); }
-static inline void    NSURLHandleClient_URLHandleResourceDidBeginLoading(NSURLHandleClient self, NSURLHandle sender)                               { ((void (*)(NSURLHandleClient, SEL, NSURLHandle))bean_msgSend)(self, bean_sel("URLHandleResourceDidBeginLoading:"), sender); }
-static inline void    NSURLHandleClient_URLHandleResourceDidFinishLoading(NSURLHandleClient self, NSURLHandle sender)                              { ((void (*)(NSURLHandleClient, SEL, NSURLHandle))bean_msgSend)(self, bean_sel("URLHandleResourceDidFinishLoading:"), sender); }
-static inline void    NSURLHandleClient_URLHandleResourceDidCancelLoading(NSURLHandleClient self, NSURLHandle sender)                              { ((void (*)(NSURLHandleClient, SEL, NSURLHandle))bean_msgSend)(self, bean_sel("URLHandleResourceDidCancelLoading:"), sender); }
-static inline void    NSURLHandleClient_URLHandle_ResourceDidFailLoadingWithReason(NSURLHandleClient self, NSURLHandle sender, NSString reason)    { ((void (*)(NSURLHandleClient, SEL, NSURLHandle, NSString))bean_msgSend)(self, bean_sel("URLHandle:resourceDidFailLoadingWithReason:"), sender, reason); }
+static inline void                 NSURLHandleClient_URLHandle_ResourceDataDidBecomeAvailable(NSURLHandleClient self, NSURLHandle sender, NSData newBytes)      { ((void (*)(NSURLHandleClient, SEL, NSURLHandle, NSData))bean_msgSend)(self, bean_sel("URLHandle:resourceDataDidBecomeAvailable:"), sender, newBytes); }
+static inline void                 NSURLHandleClient_URLHandleResourceDidBeginLoading(NSURLHandleClient self, NSURLHandle sender)                               { ((void (*)(NSURLHandleClient, SEL, NSURLHandle))bean_msgSend)(self, bean_sel("URLHandleResourceDidBeginLoading:"), sender); }
+static inline void                 NSURLHandleClient_URLHandleResourceDidFinishLoading(NSURLHandleClient self, NSURLHandle sender)                              { ((void (*)(NSURLHandleClient, SEL, NSURLHandle))bean_msgSend)(self, bean_sel("URLHandleResourceDidFinishLoading:"), sender); }
+static inline void                 NSURLHandleClient_URLHandleResourceDidCancelLoading(NSURLHandleClient self, NSURLHandle sender)                              { ((void (*)(NSURLHandleClient, SEL, NSURLHandle))bean_msgSend)(self, bean_sel("URLHandleResourceDidCancelLoading:"), sender); }
+static inline void                 NSURLHandleClient_URLHandle_ResourceDidFailLoadingWithReason(NSURLHandleClient self, NSURLHandle sender, NSString reason)    { ((void (*)(NSURLHandleClient, SEL, NSURLHandle, NSString))bean_msgSend)(self, bean_sel("URLHandle:resourceDidFailLoadingWithReason:"), sender, reason); }
+#ifndef BEAN_ALLOC_NSURLHandleClient
+#define BEAN_ALLOC_NSURLHandleClient
+static inline NSURLHandleClient    NSURLHandleClient_Alloc(void)                                                                                                { return (NSURLHandleClient)bean_alloc(bean_cls("NSURLHandleClient")); }
+#endif
+#ifndef BEAN_NEW_NSURLHandleClient
+#define BEAN_NEW_NSURLHandleClient
+static inline NSURLHandleClient    NSURLHandleClient_New(void)                                                                                                  { return (NSURLHandleClient)bean_new(bean_cls("NSURLHandleClient")); }
+#endif
 
 /* ===== NSURLProtectionSpace ===== */
 static inline NSURLProtectionSpace    NSURLProtectionSpace_InitWithHost_Port_Protocol_Realm_AuthenticationMethod(NSURLProtectionSpace self, NSString host, NSInteger port, NSString protocol, NSString realm, NSString authenticationMethod)    { return ((NSURLProtectionSpace (*)(NSURLProtectionSpace, SEL, NSString, NSInteger, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("initWithHost:port:protocol:realm:authenticationMethod:"), host, port, protocol, realm, authenticationMethod); }
@@ -7674,6 +9743,14 @@ static inline NSArray                 NSURLProtectionSpace_DistinguishedNames(NS
 static inline SecTrustRef             NSURLProtectionSpace_ServerTrust(NSURLProtectionSpace self)                                                                                                                                               { return ((SecTrustRef (*)(NSURLProtectionSpace, SEL))bean_msgSend)(self, bean_sel("serverTrust")); }
 static inline BOOL                    NSURLProtectionSpace_SupportsSecureCoding(void)                                                                                                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLProtectionSpace"), bean_sel("supportsSecureCoding")); }
 static inline id                      NSURLProtectionSpace_CopyWithZone(NSURLProtectionSpace self, NSZone* zone)                                                                                                                                { return ((id (*)(NSURLProtectionSpace, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSURLProtectionSpace
+#define BEAN_ALLOC_NSURLProtectionSpace
+static inline NSURLProtectionSpace    NSURLProtectionSpace_Alloc(void)                                                                                                                                                                          { return (NSURLProtectionSpace)bean_alloc(bean_cls("NSURLProtectionSpace")); }
+#endif
+#ifndef BEAN_NEW_NSURLProtectionSpace
+#define BEAN_NEW_NSURLProtectionSpace
+static inline NSURLProtectionSpace    NSURLProtectionSpace_New(void)                                                                                                                                                                            { return (NSURLProtectionSpace)bean_new(bean_cls("NSURLProtectionSpace")); }
+#endif
 
 /* ===== NSURLProtocol ===== */
 #ifndef BEAN_TYPEDEF_NSURLProtocol
@@ -7697,20 +9774,36 @@ static inline NSCachedURLResponse    NSURLProtocol_CachedResponse(NSURLProtocol 
 static inline BOOL                   NSURLProtocol_CanInitWithTask(NSURLSessionTask task)                                                                                            { return ((BOOL (*)(bean_class, SEL, NSURLSessionTask))bean_msgSend)(bean_cls("NSURLProtocol"), bean_sel("canInitWithTask:"), task); }
 static inline NSURLProtocol          NSURLProtocol_InitWithTask_CachedResponse_Client(NSURLProtocol self, NSURLSessionTask task, NSCachedURLResponse cachedResponse, id client)      { return ((NSURLProtocol (*)(NSURLProtocol, SEL, NSURLSessionTask, NSCachedURLResponse, id))bean_msgSend)(self, bean_sel("initWithTask:cachedResponse:client:"), task, cachedResponse, client); }
 static inline NSURLSessionTask       NSURLProtocol_Task(NSURLProtocol self)                                                                                                          { return ((NSURLSessionTask (*)(NSURLProtocol, SEL))bean_msgSend)(self, bean_sel("task")); }
+#ifndef BEAN_ALLOC_NSURLProtocol
+#define BEAN_ALLOC_NSURLProtocol
+static inline NSURLProtocol          NSURLProtocol_Alloc(void)                                                                                                                       { return (NSURLProtocol)bean_alloc(bean_cls("NSURLProtocol")); }
+#endif
+#ifndef BEAN_NEW_NSURLProtocol
+#define BEAN_NEW_NSURLProtocol
+static inline NSURLProtocol          NSURLProtocol_New(void)                                                                                                                         { return (NSURLProtocol)bean_new(bean_cls("NSURLProtocol")); }
+#endif
 
 /* ===== NSURLProtocolClient ===== */
 #ifndef BEAN_TYPEDEF_NSURLProtocolClient
 #define BEAN_TYPEDEF_NSURLProtocolClient
 typedef bean_id NSURLProtocolClient;
 #endif
-static inline void    NSURLProtocolClient_URLProtocol_WasRedirectedToRequest_RedirectResponse(NSURLProtocolClient self, NSURLProtocol protocol, NSURLRequest request, NSURLResponse redirectResponse)    { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSURLRequest, NSURLResponse))bean_msgSend)(self, bean_sel("URLProtocol:wasRedirectedToRequest:redirectResponse:"), protocol, request, redirectResponse); }
-static inline void    NSURLProtocolClient_URLProtocol_CachedResponseIsValid(NSURLProtocolClient self, NSURLProtocol protocol, NSCachedURLResponse cachedResponse)                                        { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSCachedURLResponse))bean_msgSend)(self, bean_sel("URLProtocol:cachedResponseIsValid:"), protocol, cachedResponse); }
-static inline void    NSURLProtocolClient_URLProtocol_DidReceiveResponse_CacheStoragePolicy(NSURLProtocolClient self, NSURLProtocol protocol, NSURLResponse response, NSURLCacheStoragePolicy policy)    { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSURLResponse, NSURLCacheStoragePolicy))bean_msgSend)(self, bean_sel("URLProtocol:didReceiveResponse:cacheStoragePolicy:"), protocol, response, policy); }
-static inline void    NSURLProtocolClient_URLProtocol_DidLoadData(NSURLProtocolClient self, NSURLProtocol protocol, NSData data)                                                                         { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSData))bean_msgSend)(self, bean_sel("URLProtocol:didLoadData:"), protocol, data); }
-static inline void    NSURLProtocolClient_URLProtocolDidFinishLoading(NSURLProtocolClient self, NSURLProtocol protocol)                                                                                  { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol))bean_msgSend)(self, bean_sel("URLProtocolDidFinishLoading:"), protocol); }
-static inline void    NSURLProtocolClient_URLProtocol_DidFailWithError(NSURLProtocolClient self, NSURLProtocol protocol, NSError error)                                                                  { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSError))bean_msgSend)(self, bean_sel("URLProtocol:didFailWithError:"), protocol, error); }
-static inline void    NSURLProtocolClient_URLProtocol_DidReceiveAuthenticationChallenge(NSURLProtocolClient self, NSURLProtocol protocol, NSURLAuthenticationChallenge challenge)                        { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("URLProtocol:didReceiveAuthenticationChallenge:"), protocol, challenge); }
-static inline void    NSURLProtocolClient_URLProtocol_DidCancelAuthenticationChallenge(NSURLProtocolClient self, NSURLProtocol protocol, NSURLAuthenticationChallenge challenge)                         { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("URLProtocol:didCancelAuthenticationChallenge:"), protocol, challenge); }
+static inline void                   NSURLProtocolClient_URLProtocol_WasRedirectedToRequest_RedirectResponse(NSURLProtocolClient self, NSURLProtocol protocol, NSURLRequest request, NSURLResponse redirectResponse)    { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSURLRequest, NSURLResponse))bean_msgSend)(self, bean_sel("URLProtocol:wasRedirectedToRequest:redirectResponse:"), protocol, request, redirectResponse); }
+static inline void                   NSURLProtocolClient_URLProtocol_CachedResponseIsValid(NSURLProtocolClient self, NSURLProtocol protocol, NSCachedURLResponse cachedResponse)                                        { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSCachedURLResponse))bean_msgSend)(self, bean_sel("URLProtocol:cachedResponseIsValid:"), protocol, cachedResponse); }
+static inline void                   NSURLProtocolClient_URLProtocol_DidReceiveResponse_CacheStoragePolicy(NSURLProtocolClient self, NSURLProtocol protocol, NSURLResponse response, NSURLCacheStoragePolicy policy)    { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSURLResponse, NSURLCacheStoragePolicy))bean_msgSend)(self, bean_sel("URLProtocol:didReceiveResponse:cacheStoragePolicy:"), protocol, response, policy); }
+static inline void                   NSURLProtocolClient_URLProtocol_DidLoadData(NSURLProtocolClient self, NSURLProtocol protocol, NSData data)                                                                         { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSData))bean_msgSend)(self, bean_sel("URLProtocol:didLoadData:"), protocol, data); }
+static inline void                   NSURLProtocolClient_URLProtocolDidFinishLoading(NSURLProtocolClient self, NSURLProtocol protocol)                                                                                  { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol))bean_msgSend)(self, bean_sel("URLProtocolDidFinishLoading:"), protocol); }
+static inline void                   NSURLProtocolClient_URLProtocol_DidFailWithError(NSURLProtocolClient self, NSURLProtocol protocol, NSError error)                                                                  { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSError))bean_msgSend)(self, bean_sel("URLProtocol:didFailWithError:"), protocol, error); }
+static inline void                   NSURLProtocolClient_URLProtocol_DidReceiveAuthenticationChallenge(NSURLProtocolClient self, NSURLProtocol protocol, NSURLAuthenticationChallenge challenge)                        { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("URLProtocol:didReceiveAuthenticationChallenge:"), protocol, challenge); }
+static inline void                   NSURLProtocolClient_URLProtocol_DidCancelAuthenticationChallenge(NSURLProtocolClient self, NSURLProtocol protocol, NSURLAuthenticationChallenge challenge)                         { ((void (*)(NSURLProtocolClient, SEL, NSURLProtocol, NSURLAuthenticationChallenge))bean_msgSend)(self, bean_sel("URLProtocol:didCancelAuthenticationChallenge:"), protocol, challenge); }
+#ifndef BEAN_ALLOC_NSURLProtocolClient
+#define BEAN_ALLOC_NSURLProtocolClient
+static inline NSURLProtocolClient    NSURLProtocolClient_Alloc(void)                                                                                                                                                    { return (NSURLProtocolClient)bean_alloc(bean_cls("NSURLProtocolClient")); }
+#endif
+#ifndef BEAN_NEW_NSURLProtocolClient
+#define BEAN_NEW_NSURLProtocolClient
+static inline NSURLProtocolClient    NSURLProtocolClient_New(void)                                                                                                                                                      { return (NSURLProtocolClient)bean_new(bean_cls("NSURLProtocolClient")); }
+#endif
 
 /* ===== NSURLQueryItem ===== */
 #ifndef BEAN_TYPEDEF_NSURLQueryItem
@@ -7723,6 +9816,14 @@ static inline NSString          NSURLQueryItem_Name(NSURLQueryItem self)        
 static inline NSString          NSURLQueryItem_Value(NSURLQueryItem self)                                                { return ((NSString (*)(NSURLQueryItem, SEL))bean_msgSend)(self, bean_sel("value")); }
 static inline BOOL              NSURLQueryItem_SupportsSecureCoding(void)                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLQueryItem"), bean_sel("supportsSecureCoding")); }
 static inline id                NSURLQueryItem_CopyWithZone(NSURLQueryItem self, NSZone* zone)                           { return ((id (*)(NSURLQueryItem, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSURLQueryItem
+#define BEAN_ALLOC_NSURLQueryItem
+static inline NSURLQueryItem    NSURLQueryItem_Alloc(void)                                                               { return (NSURLQueryItem)bean_alloc(bean_cls("NSURLQueryItem")); }
+#endif
+#ifndef BEAN_NEW_NSURLQueryItem
+#define BEAN_NEW_NSURLQueryItem
+static inline NSURLQueryItem    NSURLQueryItem_New(void)                                                                 { return (NSURLQueryItem)bean_new(bean_cls("NSURLQueryItem")); }
+#endif
 
 /* ===== NSURLRequest ===== */
 static inline NSURLRequest                      NSURLRequest_RequestWithURL(NSURL URL)                                                                                                              { return ((NSURLRequest (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("NSURLRequest"), bean_sel("requestWithURL:"), URL); }
@@ -7753,6 +9854,14 @@ static inline BOOL                              NSURLRequest_HTTPShouldHandleCoo
 static inline BOOL                              NSURLRequest_HTTPShouldUsePipelining(NSURLRequest self)                                                                                             { return ((BOOL (*)(NSURLRequest, SEL))bean_msgSend)(self, bean_sel("HTTPShouldUsePipelining")); }
 static inline id                                NSURLRequest_CopyWithZone(NSURLRequest self, NSZone* zone)                                                                                          { return ((id (*)(NSURLRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id                                NSURLRequest_MutableCopyWithZone(NSURLRequest self, NSZone* zone)                                                                                   { return ((id (*)(NSURLRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSURLRequest
+#define BEAN_ALLOC_NSURLRequest
+static inline NSURLRequest                      NSURLRequest_Alloc(void)                                                                                                                            { return (NSURLRequest)bean_alloc(bean_cls("NSURLRequest")); }
+#endif
+#ifndef BEAN_NEW_NSURLRequest
+#define BEAN_NEW_NSURLRequest
+static inline NSURLRequest                      NSURLRequest_New(void)                                                                                                                              { return (NSURLRequest)bean_new(bean_cls("NSURLRequest")); }
+#endif
 
 /* ===== NSURLResponse ===== */
 static inline NSURLResponse    NSURLResponse_InitWithURL_MIMEType_ExpectedContentLength_TextEncodingName(NSURLResponse self, NSURL URL, NSString MIMEType, NSInteger length, NSString name)    { return ((NSURLResponse (*)(NSURLResponse, SEL, NSURL, NSString, NSInteger, NSString))bean_msgSend)(self, bean_sel("initWithURL:MIMEType:expectedContentLength:textEncodingName:"), URL, MIMEType, length, name); }
@@ -7763,6 +9872,14 @@ static inline NSString         NSURLResponse_TextEncodingName(NSURLResponse self
 static inline NSString         NSURLResponse_SuggestedFilename(NSURLResponse self)                                                                                                             { return ((NSString (*)(NSURLResponse, SEL))bean_msgSend)(self, bean_sel("suggestedFilename")); }
 static inline BOOL             NSURLResponse_SupportsSecureCoding(void)                                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLResponse"), bean_sel("supportsSecureCoding")); }
 static inline id               NSURLResponse_CopyWithZone(NSURLResponse self, NSZone* zone)                                                                                                    { return ((id (*)(NSURLResponse, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSURLResponse
+#define BEAN_ALLOC_NSURLResponse
+static inline NSURLResponse    NSURLResponse_Alloc(void)                                                                                                                                       { return (NSURLResponse)bean_alloc(bean_cls("NSURLResponse")); }
+#endif
+#ifndef BEAN_NEW_NSURLResponse
+#define BEAN_NEW_NSURLResponse
+static inline NSURLResponse    NSURLResponse_New(void)                                                                                                                                         { return (NSURLResponse)bean_new(bean_cls("NSURLResponse")); }
+#endif
 
 /* ===== NSURLSession ===== */
 #ifndef BEAN_TYPEDEF_NSURLSession
@@ -7792,7 +9909,10 @@ static inline NSURLSessionWebSocketTask    NSURLSession_WebSocketTaskWithURL(NSU
 static inline NSURLSessionWebSocketTask    NSURLSession_WebSocketTaskWithURL_Protocols(NSURLSession self, NSURL url, NSArray protocols)                                                        { return ((NSURLSessionWebSocketTask (*)(NSURLSession, SEL, NSURL, NSArray))bean_msgSend)(self, bean_sel("webSocketTaskWithURL:protocols:"), url, protocols); }
 static inline NSURLSessionWebSocketTask    NSURLSession_WebSocketTaskWithRequest(NSURLSession self, NSURLRequest request)                                                                      { return ((NSURLSessionWebSocketTask (*)(NSURLSession, SEL, NSURLRequest))bean_msgSend)(self, bean_sel("webSocketTaskWithRequest:"), request); }
 static inline NSURLSession                 NSURLSession_Init(NSURLSession self)                                                                                                                { return ((NSURLSession (*)(NSURLSession, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSession
+#define BEAN_NEW_NSURLSession
 static inline NSURLSession                 NSURLSession_New(void)                                                                                                                              { return ((NSURLSession (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSession"), bean_sel("new")); }
+#endif
 static inline NSURLSession                 NSURLSession_SharedSession(void)                                                                                                                    { return ((NSURLSession (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSession"), bean_sel("sharedSession")); }
 static inline NSOperationQueue             NSURLSession_DelegateQueue(NSURLSession self)                                                                                                       { return ((NSOperationQueue (*)(NSURLSession, SEL))bean_msgSend)(self, bean_sel("delegateQueue")); }
 static inline id                           NSURLSession_Delegate(NSURLSession self)                                                                                                            { return ((id (*)(NSURLSession, SEL))bean_msgSend)(self, bean_sel("delegate")); }
@@ -7807,11 +9927,18 @@ static inline NSURLSessionUploadTask       NSURLSession_UploadTaskWithResumeData
 static inline NSURLSessionDownloadTask     NSURLSession_DownloadTaskWithRequest_CompletionHandler(NSURLSession self, NSURLRequest request, void* completionHandler)                            { return ((NSURLSessionDownloadTask (*)(NSURLSession, SEL, NSURLRequest, void*))bean_msgSend)(self, bean_sel("downloadTaskWithRequest:completionHandler:"), request, completionHandler); }
 static inline NSURLSessionDownloadTask     NSURLSession_DownloadTaskWithURL_CompletionHandler(NSURLSession self, NSURL url, void* completionHandler)                                           { return ((NSURLSessionDownloadTask (*)(NSURLSession, SEL, NSURL, void*))bean_msgSend)(self, bean_sel("downloadTaskWithURL:completionHandler:"), url, completionHandler); }
 static inline NSURLSessionDownloadTask     NSURLSession_DownloadTaskWithResumeData_CompletionHandler(NSURLSession self, NSData resumeData, void* completionHandler)                            { return ((NSURLSessionDownloadTask (*)(NSURLSession, SEL, NSData, void*))bean_msgSend)(self, bean_sel("downloadTaskWithResumeData:completionHandler:"), resumeData, completionHandler); }
+#ifndef BEAN_ALLOC_NSURLSession
+#define BEAN_ALLOC_NSURLSession
+static inline NSURLSession                 NSURLSession_Alloc(void)                                                                                                                            { return (NSURLSession)bean_alloc(bean_cls("NSURLSession")); }
+#endif
 
 /* ===== NSURLSessionConfiguration ===== */
 static inline NSURLSessionConfiguration           NSURLSessionConfiguration_BackgroundSessionConfigurationWithIdentifier(NSString identifier)                                                                   { return ((NSURLSessionConfiguration (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSURLSessionConfiguration"), bean_sel("backgroundSessionConfigurationWithIdentifier:"), identifier); }
 static inline NSURLSessionConfiguration           NSURLSessionConfiguration_Init(NSURLSessionConfiguration self)                                                                                                { return ((NSURLSessionConfiguration (*)(NSURLSessionConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionConfiguration
+#define BEAN_NEW_NSURLSessionConfiguration
 static inline NSURLSessionConfiguration           NSURLSessionConfiguration_New(void)                                                                                                                           { return ((NSURLSessionConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionConfiguration"), bean_sel("new")); }
+#endif
 static inline NSURLSessionConfiguration           NSURLSessionConfiguration_DefaultSessionConfiguration(void)                                                                                                   { return ((NSURLSessionConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionConfiguration"), bean_sel("defaultSessionConfiguration")); }
 static inline NSURLSessionConfiguration           NSURLSessionConfiguration_EphemeralSessionConfiguration(void)                                                                                                 { return ((NSURLSessionConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionConfiguration"), bean_sel("ephemeralSessionConfiguration")); }
 static inline NSString                            NSURLSessionConfiguration_Identifier(NSURLSessionConfiguration self)                                                                                          { return ((NSString (*)(NSURLSessionConfiguration, SEL))bean_msgSend)(self, bean_sel("identifier")); }
@@ -7880,45 +10007,81 @@ static inline void                                NSURLSessionConfiguration_SetE
 static inline NSURLSessionConfiguration           NSURLSessionConfiguration_BackgroundSessionConfiguration(NSString identifier)                                                                                 { return ((NSURLSessionConfiguration (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSURLSessionConfiguration"), bean_sel("backgroundSessionConfiguration:"), identifier); }
 static inline id                                  NSURLSessionConfiguration_CopyWithZone(NSURLSessionConfiguration self, NSZone* zone)                                                                          { return ((id (*)(NSURLSessionConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                                NSURLSessionConfiguration_Discretionary(NSURLSessionConfiguration self)                                                                                       { return ((BOOL (*)(NSURLSessionConfiguration, SEL))bean_msgSend)(self, bean_sel("discretionary")); }
+#ifndef BEAN_ALLOC_NSURLSessionConfiguration
+#define BEAN_ALLOC_NSURLSessionConfiguration
+static inline NSURLSessionConfiguration           NSURLSessionConfiguration_Alloc(void)                                                                                                                         { return (NSURLSessionConfiguration)bean_alloc(bean_cls("NSURLSessionConfiguration")); }
+#endif
 
 /* ===== NSURLSessionDataDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionDataDelegate
 #define BEAN_TYPEDEF_NSURLSessionDataDelegate
 typedef bean_id NSURLSessionDataDelegate;
 #endif
-static inline void    NSURLSessionDataDelegate_URLSession_DataTask_DidReceiveResponse_CompletionHandler(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSURLResponse response, void* completionHandler)                 { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSURLResponse, void*))bean_msgSend)(self, bean_sel("URLSession:dataTask:didReceiveResponse:completionHandler:"), session, dataTask, response, completionHandler); }
-static inline void    NSURLSessionDataDelegate_URLSession_DataTask_DidBecomeDownloadTask(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSURLSessionDownloadTask downloadTask)                                          { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSURLSessionDownloadTask))bean_msgSend)(self, bean_sel("URLSession:dataTask:didBecomeDownloadTask:"), session, dataTask, downloadTask); }
-static inline void    NSURLSessionDataDelegate_URLSession_DataTask_DidBecomeStreamTask(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSURLSessionStreamTask streamTask)                                                { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSURLSessionStreamTask))bean_msgSend)(self, bean_sel("URLSession:dataTask:didBecomeStreamTask:"), session, dataTask, streamTask); }
-static inline void    NSURLSessionDataDelegate_URLSession_DataTask_DidReceiveData(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSData data)                                                                           { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSData))bean_msgSend)(self, bean_sel("URLSession:dataTask:didReceiveData:"), session, dataTask, data); }
-static inline void    NSURLSessionDataDelegate_URLSession_DataTask_WillCacheResponse_CompletionHandler(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSCachedURLResponse proposedResponse, void* completionHandler)    { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSCachedURLResponse, void*))bean_msgSend)(self, bean_sel("URLSession:dataTask:willCacheResponse:completionHandler:"), session, dataTask, proposedResponse, completionHandler); }
+static inline void                        NSURLSessionDataDelegate_URLSession_DataTask_DidReceiveResponse_CompletionHandler(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSURLResponse response, void* completionHandler)                 { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSURLResponse, void*))bean_msgSend)(self, bean_sel("URLSession:dataTask:didReceiveResponse:completionHandler:"), session, dataTask, response, completionHandler); }
+static inline void                        NSURLSessionDataDelegate_URLSession_DataTask_DidBecomeDownloadTask(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSURLSessionDownloadTask downloadTask)                                          { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSURLSessionDownloadTask))bean_msgSend)(self, bean_sel("URLSession:dataTask:didBecomeDownloadTask:"), session, dataTask, downloadTask); }
+static inline void                        NSURLSessionDataDelegate_URLSession_DataTask_DidBecomeStreamTask(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSURLSessionStreamTask streamTask)                                                { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSURLSessionStreamTask))bean_msgSend)(self, bean_sel("URLSession:dataTask:didBecomeStreamTask:"), session, dataTask, streamTask); }
+static inline void                        NSURLSessionDataDelegate_URLSession_DataTask_DidReceiveData(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSData data)                                                                           { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSData))bean_msgSend)(self, bean_sel("URLSession:dataTask:didReceiveData:"), session, dataTask, data); }
+static inline void                        NSURLSessionDataDelegate_URLSession_DataTask_WillCacheResponse_CompletionHandler(NSURLSessionDataDelegate self, NSURLSession session, NSURLSessionDataTask dataTask, NSCachedURLResponse proposedResponse, void* completionHandler)    { ((void (*)(NSURLSessionDataDelegate, SEL, NSURLSession, NSURLSessionDataTask, NSCachedURLResponse, void*))bean_msgSend)(self, bean_sel("URLSession:dataTask:willCacheResponse:completionHandler:"), session, dataTask, proposedResponse, completionHandler); }
+#ifndef BEAN_ALLOC_NSURLSessionDataDelegate
+#define BEAN_ALLOC_NSURLSessionDataDelegate
+static inline NSURLSessionDataDelegate    NSURLSessionDataDelegate_Alloc(void)                                                                                                                                                                                                   { return (NSURLSessionDataDelegate)bean_alloc(bean_cls("NSURLSessionDataDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLSessionDataDelegate
+#define BEAN_NEW_NSURLSessionDataDelegate
+static inline NSURLSessionDataDelegate    NSURLSessionDataDelegate_New(void)                                                                                                                                                                                                     { return (NSURLSessionDataDelegate)bean_new(bean_cls("NSURLSessionDataDelegate")); }
+#endif
 
 /* ===== NSURLSessionDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionDelegate
 #define BEAN_TYPEDEF_NSURLSessionDelegate
 typedef bean_id NSURLSessionDelegate;
 #endif
-static inline void    NSURLSessionDelegate_URLSession_DidBecomeInvalidWithError(NSURLSessionDelegate self, NSURLSession session, NSError error)                                                                  { ((void (*)(NSURLSessionDelegate, SEL, NSURLSession, NSError))bean_msgSend)(self, bean_sel("URLSession:didBecomeInvalidWithError:"), session, error); }
-static inline void    NSURLSessionDelegate_URLSession_DidReceiveChallenge_CompletionHandler(NSURLSessionDelegate self, NSURLSession session, NSURLAuthenticationChallenge challenge, void* completionHandler)    { ((void (*)(NSURLSessionDelegate, SEL, NSURLSession, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("URLSession:didReceiveChallenge:completionHandler:"), session, challenge, completionHandler); }
-static inline void    NSURLSessionDelegate_URLSessionDidFinishEventsForBackgroundURLSession(NSURLSessionDelegate self, NSURLSession session)                                                                     { ((void (*)(NSURLSessionDelegate, SEL, NSURLSession))bean_msgSend)(self, bean_sel("URLSessionDidFinishEventsForBackgroundURLSession:"), session); }
+static inline void                    NSURLSessionDelegate_URLSession_DidBecomeInvalidWithError(NSURLSessionDelegate self, NSURLSession session, NSError error)                                                                  { ((void (*)(NSURLSessionDelegate, SEL, NSURLSession, NSError))bean_msgSend)(self, bean_sel("URLSession:didBecomeInvalidWithError:"), session, error); }
+static inline void                    NSURLSessionDelegate_URLSession_DidReceiveChallenge_CompletionHandler(NSURLSessionDelegate self, NSURLSession session, NSURLAuthenticationChallenge challenge, void* completionHandler)    { ((void (*)(NSURLSessionDelegate, SEL, NSURLSession, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("URLSession:didReceiveChallenge:completionHandler:"), session, challenge, completionHandler); }
+static inline void                    NSURLSessionDelegate_URLSessionDidFinishEventsForBackgroundURLSession(NSURLSessionDelegate self, NSURLSession session)                                                                     { ((void (*)(NSURLSessionDelegate, SEL, NSURLSession))bean_msgSend)(self, bean_sel("URLSessionDidFinishEventsForBackgroundURLSession:"), session); }
+#ifndef BEAN_ALLOC_NSURLSessionDelegate
+#define BEAN_ALLOC_NSURLSessionDelegate
+static inline NSURLSessionDelegate    NSURLSessionDelegate_Alloc(void)                                                                                                                                                           { return (NSURLSessionDelegate)bean_alloc(bean_cls("NSURLSessionDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLSessionDelegate
+#define BEAN_NEW_NSURLSessionDelegate
+static inline NSURLSessionDelegate    NSURLSessionDelegate_New(void)                                                                                                                                                             { return (NSURLSessionDelegate)bean_new(bean_cls("NSURLSessionDelegate")); }
+#endif
 
 /* ===== NSURLSessionDownloadDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionDownloadDelegate
 #define BEAN_TYPEDEF_NSURLSessionDownloadDelegate
 typedef bean_id NSURLSessionDownloadDelegate;
 #endif
-static inline void    NSURLSessionDownloadDelegate_URLSession_DownloadTask_DidFinishDownloadingToURL(NSURLSessionDownloadDelegate self, NSURLSession session, NSURLSessionDownloadTask downloadTask, NSURL location)                                                                                                             { ((void (*)(NSURLSessionDownloadDelegate, SEL, NSURLSession, NSURLSessionDownloadTask, NSURL))bean_msgSend)(self, bean_sel("URLSession:downloadTask:didFinishDownloadingToURL:"), session, downloadTask, location); }
-static inline void    NSURLSessionDownloadDelegate_URLSession_DownloadTask_DidWriteData_TotalBytesWritten_TotalBytesExpectedToWrite(NSURLSessionDownloadDelegate self, NSURLSession session, NSURLSessionDownloadTask downloadTask, long long bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite)    { ((void (*)(NSURLSessionDownloadDelegate, SEL, NSURLSession, NSURLSessionDownloadTask, long long, long long, long long))bean_msgSend)(self, bean_sel("URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:"), session, downloadTask, bytesWritten, totalBytesWritten, totalBytesExpectedToWrite); }
-static inline void    NSURLSessionDownloadDelegate_URLSession_DownloadTask_DidResumeAtOffset_ExpectedTotalBytes(NSURLSessionDownloadDelegate self, NSURLSession session, NSURLSessionDownloadTask downloadTask, long long fileOffset, long long expectedTotalBytes)                                                              { ((void (*)(NSURLSessionDownloadDelegate, SEL, NSURLSession, NSURLSessionDownloadTask, long long, long long))bean_msgSend)(self, bean_sel("URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:"), session, downloadTask, fileOffset, expectedTotalBytes); }
+static inline void                            NSURLSessionDownloadDelegate_URLSession_DownloadTask_DidFinishDownloadingToURL(NSURLSessionDownloadDelegate self, NSURLSession session, NSURLSessionDownloadTask downloadTask, NSURL location)                                                                                                             { ((void (*)(NSURLSessionDownloadDelegate, SEL, NSURLSession, NSURLSessionDownloadTask, NSURL))bean_msgSend)(self, bean_sel("URLSession:downloadTask:didFinishDownloadingToURL:"), session, downloadTask, location); }
+static inline void                            NSURLSessionDownloadDelegate_URLSession_DownloadTask_DidWriteData_TotalBytesWritten_TotalBytesExpectedToWrite(NSURLSessionDownloadDelegate self, NSURLSession session, NSURLSessionDownloadTask downloadTask, long long bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite)    { ((void (*)(NSURLSessionDownloadDelegate, SEL, NSURLSession, NSURLSessionDownloadTask, long long, long long, long long))bean_msgSend)(self, bean_sel("URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:"), session, downloadTask, bytesWritten, totalBytesWritten, totalBytesExpectedToWrite); }
+static inline void                            NSURLSessionDownloadDelegate_URLSession_DownloadTask_DidResumeAtOffset_ExpectedTotalBytes(NSURLSessionDownloadDelegate self, NSURLSession session, NSURLSessionDownloadTask downloadTask, long long fileOffset, long long expectedTotalBytes)                                                              { ((void (*)(NSURLSessionDownloadDelegate, SEL, NSURLSession, NSURLSessionDownloadTask, long long, long long))bean_msgSend)(self, bean_sel("URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:"), session, downloadTask, fileOffset, expectedTotalBytes); }
+#ifndef BEAN_ALLOC_NSURLSessionDownloadDelegate
+#define BEAN_ALLOC_NSURLSessionDownloadDelegate
+static inline NSURLSessionDownloadDelegate    NSURLSessionDownloadDelegate_Alloc(void)                                                                                                                                                                                                                                                                   { return (NSURLSessionDownloadDelegate)bean_alloc(bean_cls("NSURLSessionDownloadDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLSessionDownloadDelegate
+#define BEAN_NEW_NSURLSessionDownloadDelegate
+static inline NSURLSessionDownloadDelegate    NSURLSessionDownloadDelegate_New(void)                                                                                                                                                                                                                                                                     { return (NSURLSessionDownloadDelegate)bean_new(bean_cls("NSURLSessionDownloadDelegate")); }
+#endif
 
 /* ===== NSURLSessionStreamDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionStreamDelegate
 #define BEAN_TYPEDEF_NSURLSessionStreamDelegate
 typedef bean_id NSURLSessionStreamDelegate;
 #endif
-static inline void    NSURLSessionStreamDelegate_URLSession_ReadClosedForStreamTask(NSURLSessionStreamDelegate self, NSURLSession session, NSURLSessionStreamTask streamTask)                                                                                 { ((void (*)(NSURLSessionStreamDelegate, SEL, NSURLSession, NSURLSessionStreamTask))bean_msgSend)(self, bean_sel("URLSession:readClosedForStreamTask:"), session, streamTask); }
-static inline void    NSURLSessionStreamDelegate_URLSession_WriteClosedForStreamTask(NSURLSessionStreamDelegate self, NSURLSession session, NSURLSessionStreamTask streamTask)                                                                                { ((void (*)(NSURLSessionStreamDelegate, SEL, NSURLSession, NSURLSessionStreamTask))bean_msgSend)(self, bean_sel("URLSession:writeClosedForStreamTask:"), session, streamTask); }
-static inline void    NSURLSessionStreamDelegate_URLSession_BetterRouteDiscoveredForStreamTask(NSURLSessionStreamDelegate self, NSURLSession session, NSURLSessionStreamTask streamTask)                                                                      { ((void (*)(NSURLSessionStreamDelegate, SEL, NSURLSession, NSURLSessionStreamTask))bean_msgSend)(self, bean_sel("URLSession:betterRouteDiscoveredForStreamTask:"), session, streamTask); }
-static inline void    NSURLSessionStreamDelegate_URLSession_StreamTask_DidBecomeInputStream_OutputStream(NSURLSessionStreamDelegate self, NSURLSession session, NSURLSessionStreamTask streamTask, NSInputStream inputStream, NSOutputStream outputStream)    { ((void (*)(NSURLSessionStreamDelegate, SEL, NSURLSession, NSURLSessionStreamTask, NSInputStream, NSOutputStream))bean_msgSend)(self, bean_sel("URLSession:streamTask:didBecomeInputStream:outputStream:"), session, streamTask, inputStream, outputStream); }
+static inline void                          NSURLSessionStreamDelegate_URLSession_ReadClosedForStreamTask(NSURLSessionStreamDelegate self, NSURLSession session, NSURLSessionStreamTask streamTask)                                                                                 { ((void (*)(NSURLSessionStreamDelegate, SEL, NSURLSession, NSURLSessionStreamTask))bean_msgSend)(self, bean_sel("URLSession:readClosedForStreamTask:"), session, streamTask); }
+static inline void                          NSURLSessionStreamDelegate_URLSession_WriteClosedForStreamTask(NSURLSessionStreamDelegate self, NSURLSession session, NSURLSessionStreamTask streamTask)                                                                                { ((void (*)(NSURLSessionStreamDelegate, SEL, NSURLSession, NSURLSessionStreamTask))bean_msgSend)(self, bean_sel("URLSession:writeClosedForStreamTask:"), session, streamTask); }
+static inline void                          NSURLSessionStreamDelegate_URLSession_BetterRouteDiscoveredForStreamTask(NSURLSessionStreamDelegate self, NSURLSession session, NSURLSessionStreamTask streamTask)                                                                      { ((void (*)(NSURLSessionStreamDelegate, SEL, NSURLSession, NSURLSessionStreamTask))bean_msgSend)(self, bean_sel("URLSession:betterRouteDiscoveredForStreamTask:"), session, streamTask); }
+static inline void                          NSURLSessionStreamDelegate_URLSession_StreamTask_DidBecomeInputStream_OutputStream(NSURLSessionStreamDelegate self, NSURLSession session, NSURLSessionStreamTask streamTask, NSInputStream inputStream, NSOutputStream outputStream)    { ((void (*)(NSURLSessionStreamDelegate, SEL, NSURLSession, NSURLSessionStreamTask, NSInputStream, NSOutputStream))bean_msgSend)(self, bean_sel("URLSession:streamTask:didBecomeInputStream:outputStream:"), session, streamTask, inputStream, outputStream); }
+#ifndef BEAN_ALLOC_NSURLSessionStreamDelegate
+#define BEAN_ALLOC_NSURLSessionStreamDelegate
+static inline NSURLSessionStreamDelegate    NSURLSessionStreamDelegate_Alloc(void)                                                                                                                                                                                                  { return (NSURLSessionStreamDelegate)bean_alloc(bean_cls("NSURLSessionStreamDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLSessionStreamDelegate
+#define BEAN_NEW_NSURLSessionStreamDelegate
+static inline NSURLSessionStreamDelegate    NSURLSessionStreamDelegate_New(void)                                                                                                                                                                                                    { return (NSURLSessionStreamDelegate)bean_new(bean_cls("NSURLSessionStreamDelegate")); }
+#endif
 
 /* ===== NSURLSessionStreamTask ===== */
 static inline void                      NSURLSessionStreamTask_ReadDataOfMinLength_MaxLength_Timeout_CompletionHandler(NSURLSessionStreamTask self, NSUInteger minBytes, NSUInteger maxBytes, CGFloat timeout, void* completionHandler)    { ((void (*)(NSURLSessionStreamTask, SEL, NSUInteger, NSUInteger, CGFloat, void*))bean_msgSend)(self, bean_sel("readDataOfMinLength:maxLength:timeout:completionHandler:"), minBytes, maxBytes, timeout, completionHandler); }
@@ -7929,14 +10092,24 @@ static inline void                      NSURLSessionStreamTask_CloseRead(NSURLSe
 static inline void                      NSURLSessionStreamTask_StartSecureConnection(NSURLSessionStreamTask self)                                                                                                                          { ((void (*)(NSURLSessionStreamTask, SEL))bean_msgSend)(self, bean_sel("startSecureConnection")); }
 static inline void                      NSURLSessionStreamTask_StopSecureConnection(NSURLSessionStreamTask self)                                                                                                                           { ((void (*)(NSURLSessionStreamTask, SEL))bean_msgSend)(self, bean_sel("stopSecureConnection")); }
 static inline NSURLSessionStreamTask    NSURLSessionStreamTask_Init(NSURLSessionStreamTask self)                                                                                                                                           { return ((NSURLSessionStreamTask (*)(NSURLSessionStreamTask, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionStreamTask
+#define BEAN_NEW_NSURLSessionStreamTask
 static inline NSURLSessionStreamTask    NSURLSessionStreamTask_New(void)                                                                                                                                                                   { return ((NSURLSessionStreamTask (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionStreamTask"), bean_sel("new")); }
+#endif
+#ifndef BEAN_ALLOC_NSURLSessionStreamTask
+#define BEAN_ALLOC_NSURLSessionStreamTask
+static inline NSURLSessionStreamTask    NSURLSessionStreamTask_Alloc(void)                                                                                                                                                                 { return (NSURLSessionStreamTask)bean_alloc(bean_cls("NSURLSessionStreamTask")); }
+#endif
 
 /* ===== NSURLSessionTask ===== */
 static inline void                     NSURLSessionTask_Cancel(NSURLSessionTask self)                                                                                 { ((void (*)(NSURLSessionTask, SEL))bean_msgSend)(self, bean_sel("cancel")); }
 static inline void                     NSURLSessionTask_Suspend(NSURLSessionTask self)                                                                                { ((void (*)(NSURLSessionTask, SEL))bean_msgSend)(self, bean_sel("suspend")); }
 static inline void                     NSURLSessionTask_Resume(NSURLSessionTask self)                                                                                 { ((void (*)(NSURLSessionTask, SEL))bean_msgSend)(self, bean_sel("resume")); }
 static inline NSURLSessionTask         NSURLSessionTask_Init(NSURLSessionTask self)                                                                                   { return ((NSURLSessionTask (*)(NSURLSessionTask, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionTask
+#define BEAN_NEW_NSURLSessionTask
 static inline NSURLSessionTask         NSURLSessionTask_New(void)                                                                                                     { return ((NSURLSessionTask (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionTask"), bean_sel("new")); }
+#endif
 static inline NSUInteger               NSURLSessionTask_TaskIdentifier(NSURLSessionTask self)                                                                         { return ((NSUInteger (*)(NSURLSessionTask, SEL))bean_msgSend)(self, bean_sel("taskIdentifier")); }
 static inline NSURLRequest             NSURLSessionTask_OriginalRequest(NSURLSessionTask self)                                                                        { return ((NSURLRequest (*)(NSURLSessionTask, SEL))bean_msgSend)(self, bean_sel("originalRequest")); }
 static inline NSURLRequest             NSURLSessionTask_CurrentRequest(NSURLSessionTask self)                                                                         { return ((NSURLRequest (*)(NSURLSessionTask, SEL))bean_msgSend)(self, bean_sel("currentRequest")); }
@@ -7963,30 +10136,49 @@ static inline void                     NSURLSessionTask_SetPriority(NSURLSession
 static inline BOOL                     NSURLSessionTask_PrefersIncrementalDelivery(NSURLSessionTask self)                                                             { return ((BOOL (*)(NSURLSessionTask, SEL))bean_msgSend)(self, bean_sel("prefersIncrementalDelivery")); }
 static inline void                     NSURLSessionTask_SetPrefersIncrementalDelivery(NSURLSessionTask self, BOOL prefersIncrementalDelivery)                         { ((void (*)(NSURLSessionTask, SEL, BOOL))bean_msgSend)(self, bean_sel("setPrefersIncrementalDelivery:"), prefersIncrementalDelivery); }
 static inline id                       NSURLSessionTask_CopyWithZone(NSURLSessionTask self, NSZone* zone)                                                             { return ((id (*)(NSURLSessionTask, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSURLSessionTask
+#define BEAN_ALLOC_NSURLSessionTask
+static inline NSURLSessionTask         NSURLSessionTask_Alloc(void)                                                                                                   { return (NSURLSessionTask)bean_alloc(bean_cls("NSURLSessionTask")); }
+#endif
 
 /* ===== NSURLSessionTaskDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskDelegate
 #define BEAN_TYPEDEF_NSURLSessionTaskDelegate
 typedef bean_id NSURLSessionTaskDelegate;
 #endif
-static inline void    NSURLSessionTaskDelegate_URLSession_DidCreateTask(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task)                                                                                                                                      { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask))bean_msgSend)(self, bean_sel("URLSession:didCreateTask:"), session, task); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_WillBeginDelayedRequest_CompletionHandler(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSURLRequest request, void* completionHandler)                                                      { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSURLRequest, void*))bean_msgSend)(self, bean_sel("URLSession:task:willBeginDelayedRequest:completionHandler:"), session, task, request, completionHandler); }
-static inline void    NSURLSessionTaskDelegate_URLSession_TaskIsWaitingForConnectivity(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task)                                                                                                                       { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask))bean_msgSend)(self, bean_sel("URLSession:taskIsWaitingForConnectivity:"), session, task); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_WillPerformHTTPRedirection_NewRequest_CompletionHandler(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSHTTPURLResponse response, NSURLRequest request, void* completionHandler)            { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSHTTPURLResponse, NSURLRequest, void*))bean_msgSend)(self, bean_sel("URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:"), session, task, response, request, completionHandler); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_DidReceiveChallenge_CompletionHandler(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSURLAuthenticationChallenge challenge, void* completionHandler)                                        { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("URLSession:task:didReceiveChallenge:completionHandler:"), session, task, challenge, completionHandler); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_NeedNewBodyStream(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, void* completionHandler)                                                                                                    { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, void*))bean_msgSend)(self, bean_sel("URLSession:task:needNewBodyStream:"), session, task, completionHandler); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_NeedNewBodyStreamFromOffset_CompletionHandler(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, long long offset, void* completionHandler)                                                      { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, long long, void*))bean_msgSend)(self, bean_sel("URLSession:task:needNewBodyStreamFromOffset:completionHandler:"), session, task, offset, completionHandler); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_DidSendBodyData_TotalBytesSent_TotalBytesExpectedToSend(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, long long bytesSent, long long totalBytesSent, long long totalBytesExpectedToSend)    { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, long long, long long, long long))bean_msgSend)(self, bean_sel("URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:"), session, task, bytesSent, totalBytesSent, totalBytesExpectedToSend); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_DidReceiveInformationalResponse(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSHTTPURLResponse response)                                                                                   { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSHTTPURLResponse))bean_msgSend)(self, bean_sel("URLSession:task:didReceiveInformationalResponse:"), session, task, response); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_DidFinishCollectingMetrics(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSURLSessionTaskMetrics metrics)                                                                                   { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSURLSessionTaskMetrics))bean_msgSend)(self, bean_sel("URLSession:task:didFinishCollectingMetrics:"), session, task, metrics); }
-static inline void    NSURLSessionTaskDelegate_URLSession_Task_DidCompleteWithError(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSError error)                                                                                                           { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSError))bean_msgSend)(self, bean_sel("URLSession:task:didCompleteWithError:"), session, task, error); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_DidCreateTask(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task)                                                                                                                                      { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask))bean_msgSend)(self, bean_sel("URLSession:didCreateTask:"), session, task); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_WillBeginDelayedRequest_CompletionHandler(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSURLRequest request, void* completionHandler)                                                      { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSURLRequest, void*))bean_msgSend)(self, bean_sel("URLSession:task:willBeginDelayedRequest:completionHandler:"), session, task, request, completionHandler); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_TaskIsWaitingForConnectivity(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task)                                                                                                                       { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask))bean_msgSend)(self, bean_sel("URLSession:taskIsWaitingForConnectivity:"), session, task); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_WillPerformHTTPRedirection_NewRequest_CompletionHandler(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSHTTPURLResponse response, NSURLRequest request, void* completionHandler)            { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSHTTPURLResponse, NSURLRequest, void*))bean_msgSend)(self, bean_sel("URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:"), session, task, response, request, completionHandler); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_DidReceiveChallenge_CompletionHandler(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSURLAuthenticationChallenge challenge, void* completionHandler)                                        { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("URLSession:task:didReceiveChallenge:completionHandler:"), session, task, challenge, completionHandler); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_NeedNewBodyStream(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, void* completionHandler)                                                                                                    { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, void*))bean_msgSend)(self, bean_sel("URLSession:task:needNewBodyStream:"), session, task, completionHandler); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_NeedNewBodyStreamFromOffset_CompletionHandler(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, long long offset, void* completionHandler)                                                      { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, long long, void*))bean_msgSend)(self, bean_sel("URLSession:task:needNewBodyStreamFromOffset:completionHandler:"), session, task, offset, completionHandler); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_DidSendBodyData_TotalBytesSent_TotalBytesExpectedToSend(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, long long bytesSent, long long totalBytesSent, long long totalBytesExpectedToSend)    { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, long long, long long, long long))bean_msgSend)(self, bean_sel("URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:"), session, task, bytesSent, totalBytesSent, totalBytesExpectedToSend); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_DidReceiveInformationalResponse(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSHTTPURLResponse response)                                                                                   { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSHTTPURLResponse))bean_msgSend)(self, bean_sel("URLSession:task:didReceiveInformationalResponse:"), session, task, response); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_DidFinishCollectingMetrics(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSURLSessionTaskMetrics metrics)                                                                                   { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSURLSessionTaskMetrics))bean_msgSend)(self, bean_sel("URLSession:task:didFinishCollectingMetrics:"), session, task, metrics); }
+static inline void                        NSURLSessionTaskDelegate_URLSession_Task_DidCompleteWithError(NSURLSessionTaskDelegate self, NSURLSession session, NSURLSessionTask task, NSError error)                                                                                                           { ((void (*)(NSURLSessionTaskDelegate, SEL, NSURLSession, NSURLSessionTask, NSError))bean_msgSend)(self, bean_sel("URLSession:task:didCompleteWithError:"), session, task, error); }
+#ifndef BEAN_ALLOC_NSURLSessionTaskDelegate
+#define BEAN_ALLOC_NSURLSessionTaskDelegate
+static inline NSURLSessionTaskDelegate    NSURLSessionTaskDelegate_Alloc(void)                                                                                                                                                                                                                               { return (NSURLSessionTaskDelegate)bean_alloc(bean_cls("NSURLSessionTaskDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLSessionTaskDelegate
+#define BEAN_NEW_NSURLSessionTaskDelegate
+static inline NSURLSessionTaskDelegate    NSURLSessionTaskDelegate_New(void)                                                                                                                                                                                                                                 { return (NSURLSessionTaskDelegate)bean_new(bean_cls("NSURLSessionTaskDelegate")); }
+#endif
 
 /* ===== NSURLSessionTaskMetrics ===== */
 static inline NSURLSessionTaskMetrics    NSURLSessionTaskMetrics_Init(NSURLSessionTaskMetrics self)                  { return ((NSURLSessionTaskMetrics (*)(NSURLSessionTaskMetrics, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionTaskMetrics
+#define BEAN_NEW_NSURLSessionTaskMetrics
 static inline NSURLSessionTaskMetrics    NSURLSessionTaskMetrics_New(void)                                           { return ((NSURLSessionTaskMetrics (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionTaskMetrics"), bean_sel("new")); }
+#endif
 static inline NSArray                    NSURLSessionTaskMetrics_TransactionMetrics(NSURLSessionTaskMetrics self)    { return ((NSArray (*)(NSURLSessionTaskMetrics, SEL))bean_msgSend)(self, bean_sel("transactionMetrics")); }
 static inline NSDateInterval             NSURLSessionTaskMetrics_TaskInterval(NSURLSessionTaskMetrics self)          { return ((NSDateInterval (*)(NSURLSessionTaskMetrics, SEL))bean_msgSend)(self, bean_sel("taskInterval")); }
 static inline NSUInteger                 NSURLSessionTaskMetrics_RedirectCount(NSURLSessionTaskMetrics self)         { return ((NSUInteger (*)(NSURLSessionTaskMetrics, SEL))bean_msgSend)(self, bean_sel("redirectCount")); }
+#ifndef BEAN_ALLOC_NSURLSessionTaskMetrics
+#define BEAN_ALLOC_NSURLSessionTaskMetrics
+static inline NSURLSessionTaskMetrics    NSURLSessionTaskMetrics_Alloc(void)                                         { return (NSURLSessionTaskMetrics)bean_alloc(bean_cls("NSURLSessionTaskMetrics")); }
+#endif
 
 /* ===== NSURLSessionTaskTransactionMetrics ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionTaskTransactionMetrics
@@ -7994,7 +10186,10 @@ static inline NSUInteger                 NSURLSessionTaskMetrics_RedirectCount(N
 typedef bean_id NSURLSessionTaskTransactionMetrics;
 #endif
 static inline NSURLSessionTaskTransactionMetrics                 NSURLSessionTaskTransactionMetrics_Init(NSURLSessionTaskTransactionMetrics self)                                     { return ((NSURLSessionTaskTransactionMetrics (*)(NSURLSessionTaskTransactionMetrics, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionTaskTransactionMetrics
+#define BEAN_NEW_NSURLSessionTaskTransactionMetrics
 static inline NSURLSessionTaskTransactionMetrics                 NSURLSessionTaskTransactionMetrics_New(void)                                                                         { return ((NSURLSessionTaskTransactionMetrics (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionTaskTransactionMetrics"), bean_sel("new")); }
+#endif
 static inline NSURLRequest                                       NSURLSessionTaskTransactionMetrics_Request(NSURLSessionTaskTransactionMetrics self)                                  { return ((NSURLRequest (*)(NSURLSessionTaskTransactionMetrics, SEL))bean_msgSend)(self, bean_sel("request")); }
 static inline NSURLResponse                                      NSURLSessionTaskTransactionMetrics_Response(NSURLSessionTaskTransactionMetrics self)                                 { return ((NSURLResponse (*)(NSURLSessionTaskTransactionMetrics, SEL))bean_msgSend)(self, bean_sel("response")); }
 static inline NSDate                                             NSURLSessionTaskTransactionMetrics_FetchStartDate(NSURLSessionTaskTransactionMetrics self)                           { return ((NSDate (*)(NSURLSessionTaskTransactionMetrics, SEL))bean_msgSend)(self, bean_sel("fetchStartDate")); }
@@ -8035,14 +10230,26 @@ static inline BOOL                                               NSURLSessionTas
 static inline BOOL                                               NSURLSessionTaskTransactionMetrics_Expensive(NSURLSessionTaskTransactionMetrics self)                                { return ((BOOL (*)(NSURLSessionTaskTransactionMetrics, SEL))bean_msgSend)(self, bean_sel("expensive")); }
 static inline BOOL                                               NSURLSessionTaskTransactionMetrics_Constrained(NSURLSessionTaskTransactionMetrics self)                              { return ((BOOL (*)(NSURLSessionTaskTransactionMetrics, SEL))bean_msgSend)(self, bean_sel("constrained")); }
 static inline BOOL                                               NSURLSessionTaskTransactionMetrics_Multipath(NSURLSessionTaskTransactionMetrics self)                                { return ((BOOL (*)(NSURLSessionTaskTransactionMetrics, SEL))bean_msgSend)(self, bean_sel("multipath")); }
+#ifndef BEAN_ALLOC_NSURLSessionTaskTransactionMetrics
+#define BEAN_ALLOC_NSURLSessionTaskTransactionMetrics
+static inline NSURLSessionTaskTransactionMetrics                 NSURLSessionTaskTransactionMetrics_Alloc(void)                                                                       { return (NSURLSessionTaskTransactionMetrics)bean_alloc(bean_cls("NSURLSessionTaskTransactionMetrics")); }
+#endif
 
 /* ===== NSURLSessionWebSocketDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
 #define BEAN_TYPEDEF_NSURLSessionWebSocketDelegate
 typedef bean_id NSURLSessionWebSocketDelegate;
 #endif
-static inline void    NSURLSessionWebSocketDelegate_URLSession_WebSocketTask_DidOpenWithProtocol(NSURLSessionWebSocketDelegate self, NSURLSession session, NSURLSessionWebSocketTask webSocketTask, NSString protocol)                                              { ((void (*)(NSURLSessionWebSocketDelegate, SEL, NSURLSession, NSURLSessionWebSocketTask, NSString))bean_msgSend)(self, bean_sel("URLSession:webSocketTask:didOpenWithProtocol:"), session, webSocketTask, protocol); }
-static inline void    NSURLSessionWebSocketDelegate_URLSession_WebSocketTask_DidCloseWithCode_Reason(NSURLSessionWebSocketDelegate self, NSURLSession session, NSURLSessionWebSocketTask webSocketTask, NSURLSessionWebSocketCloseCode closeCode, NSData reason)    { ((void (*)(NSURLSessionWebSocketDelegate, SEL, NSURLSession, NSURLSessionWebSocketTask, NSURLSessionWebSocketCloseCode, NSData))bean_msgSend)(self, bean_sel("URLSession:webSocketTask:didCloseWithCode:reason:"), session, webSocketTask, closeCode, reason); }
+static inline void                             NSURLSessionWebSocketDelegate_URLSession_WebSocketTask_DidOpenWithProtocol(NSURLSessionWebSocketDelegate self, NSURLSession session, NSURLSessionWebSocketTask webSocketTask, NSString protocol)                                              { ((void (*)(NSURLSessionWebSocketDelegate, SEL, NSURLSession, NSURLSessionWebSocketTask, NSString))bean_msgSend)(self, bean_sel("URLSession:webSocketTask:didOpenWithProtocol:"), session, webSocketTask, protocol); }
+static inline void                             NSURLSessionWebSocketDelegate_URLSession_WebSocketTask_DidCloseWithCode_Reason(NSURLSessionWebSocketDelegate self, NSURLSession session, NSURLSessionWebSocketTask webSocketTask, NSURLSessionWebSocketCloseCode closeCode, NSData reason)    { ((void (*)(NSURLSessionWebSocketDelegate, SEL, NSURLSession, NSURLSessionWebSocketTask, NSURLSessionWebSocketCloseCode, NSData))bean_msgSend)(self, bean_sel("URLSession:webSocketTask:didCloseWithCode:reason:"), session, webSocketTask, closeCode, reason); }
+#ifndef BEAN_ALLOC_NSURLSessionWebSocketDelegate
+#define BEAN_ALLOC_NSURLSessionWebSocketDelegate
+static inline NSURLSessionWebSocketDelegate    NSURLSessionWebSocketDelegate_Alloc(void)                                                                                                                                                                                                     { return (NSURLSessionWebSocketDelegate)bean_alloc(bean_cls("NSURLSessionWebSocketDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSURLSessionWebSocketDelegate
+#define BEAN_NEW_NSURLSessionWebSocketDelegate
+static inline NSURLSessionWebSocketDelegate    NSURLSessionWebSocketDelegate_New(void)                                                                                                                                                                                                       { return (NSURLSessionWebSocketDelegate)bean_new(bean_cls("NSURLSessionWebSocketDelegate")); }
+#endif
 
 /* ===== NSURLSessionWebSocketMessage ===== */
 #ifndef BEAN_TYPEDEF_NSURLSessionWebSocketMessage
@@ -8052,10 +10259,17 @@ typedef bean_id NSURLSessionWebSocketMessage;
 static inline NSURLSessionWebSocketMessage        NSURLSessionWebSocketMessage_InitWithData(NSURLSessionWebSocketMessage self, NSData data)          { return ((NSURLSessionWebSocketMessage (*)(NSURLSessionWebSocketMessage, SEL, NSData))bean_msgSend)(self, bean_sel("initWithData:"), data); }
 static inline NSURLSessionWebSocketMessage        NSURLSessionWebSocketMessage_InitWithString(NSURLSessionWebSocketMessage self, NSString string)    { return ((NSURLSessionWebSocketMessage (*)(NSURLSessionWebSocketMessage, SEL, NSString))bean_msgSend)(self, bean_sel("initWithString:"), string); }
 static inline NSURLSessionWebSocketMessage        NSURLSessionWebSocketMessage_Init(NSURLSessionWebSocketMessage self)                               { return ((NSURLSessionWebSocketMessage (*)(NSURLSessionWebSocketMessage, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionWebSocketMessage
+#define BEAN_NEW_NSURLSessionWebSocketMessage
 static inline NSURLSessionWebSocketMessage        NSURLSessionWebSocketMessage_New(void)                                                             { return ((NSURLSessionWebSocketMessage (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionWebSocketMessage"), bean_sel("new")); }
+#endif
 static inline NSURLSessionWebSocketMessageType    NSURLSessionWebSocketMessage_Type(NSURLSessionWebSocketMessage self)                               { return ((NSURLSessionWebSocketMessageType (*)(NSURLSessionWebSocketMessage, SEL))bean_msgSend)(self, bean_sel("type")); }
 static inline NSData                              NSURLSessionWebSocketMessage_Data(NSURLSessionWebSocketMessage self)                               { return ((NSData (*)(NSURLSessionWebSocketMessage, SEL))bean_msgSend)(self, bean_sel("data")); }
 static inline NSString                            NSURLSessionWebSocketMessage_String(NSURLSessionWebSocketMessage self)                             { return ((NSString (*)(NSURLSessionWebSocketMessage, SEL))bean_msgSend)(self, bean_sel("string")); }
+#ifndef BEAN_ALLOC_NSURLSessionWebSocketMessage
+#define BEAN_ALLOC_NSURLSessionWebSocketMessage
+static inline NSURLSessionWebSocketMessage        NSURLSessionWebSocketMessage_Alloc(void)                                                           { return (NSURLSessionWebSocketMessage)bean_alloc(bean_cls("NSURLSessionWebSocketMessage")); }
+#endif
 
 /* ===== NSURLSessionWebSocketTask ===== */
 static inline void                              NSURLSessionWebSocketTask_SendMessage_CompletionHandler(NSURLSessionWebSocketTask self, NSURLSessionWebSocketMessage message, void* completionHandler)    { ((void (*)(NSURLSessionWebSocketTask, SEL, NSURLSessionWebSocketMessage, void*))bean_msgSend)(self, bean_sel("sendMessage:completionHandler:"), message, completionHandler); }
@@ -8063,11 +10277,18 @@ static inline void                              NSURLSessionWebSocketTask_Receiv
 static inline void                              NSURLSessionWebSocketTask_SendPingWithPongReceiveHandler(NSURLSessionWebSocketTask self, void* pongReceiveHandler)                                        { ((void (*)(NSURLSessionWebSocketTask, SEL, void*))bean_msgSend)(self, bean_sel("sendPingWithPongReceiveHandler:"), pongReceiveHandler); }
 static inline void                              NSURLSessionWebSocketTask_CancelWithCloseCode_Reason(NSURLSessionWebSocketTask self, NSURLSessionWebSocketCloseCode closeCode, NSData reason)             { ((void (*)(NSURLSessionWebSocketTask, SEL, NSURLSessionWebSocketCloseCode, NSData))bean_msgSend)(self, bean_sel("cancelWithCloseCode:reason:"), closeCode, reason); }
 static inline NSURLSessionWebSocketTask         NSURLSessionWebSocketTask_Init(NSURLSessionWebSocketTask self)                                                                                            { return ((NSURLSessionWebSocketTask (*)(NSURLSessionWebSocketTask, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSURLSessionWebSocketTask
+#define BEAN_NEW_NSURLSessionWebSocketTask
 static inline NSURLSessionWebSocketTask         NSURLSessionWebSocketTask_New(void)                                                                                                                       { return ((NSURLSessionWebSocketTask (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSURLSessionWebSocketTask"), bean_sel("new")); }
+#endif
 static inline NSInteger                         NSURLSessionWebSocketTask_MaximumMessageSize(NSURLSessionWebSocketTask self)                                                                              { return ((NSInteger (*)(NSURLSessionWebSocketTask, SEL))bean_msgSend)(self, bean_sel("maximumMessageSize")); }
 static inline void                              NSURLSessionWebSocketTask_SetMaximumMessageSize(NSURLSessionWebSocketTask self, NSInteger maximumMessageSize)                                             { ((void (*)(NSURLSessionWebSocketTask, SEL, NSInteger))bean_msgSend)(self, bean_sel("setMaximumMessageSize:"), maximumMessageSize); }
 static inline NSURLSessionWebSocketCloseCode    NSURLSessionWebSocketTask_CloseCode(NSURLSessionWebSocketTask self)                                                                                       { return ((NSURLSessionWebSocketCloseCode (*)(NSURLSessionWebSocketTask, SEL))bean_msgSend)(self, bean_sel("closeCode")); }
 static inline NSData                            NSURLSessionWebSocketTask_CloseReason(NSURLSessionWebSocketTask self)                                                                                     { return ((NSData (*)(NSURLSessionWebSocketTask, SEL))bean_msgSend)(self, bean_sel("closeReason")); }
+#ifndef BEAN_ALLOC_NSURLSessionWebSocketTask
+#define BEAN_ALLOC_NSURLSessionWebSocketTask
+static inline NSURLSessionWebSocketTask         NSURLSessionWebSocketTask_Alloc(void)                                                                                                                     { return (NSURLSessionWebSocketTask)bean_alloc(bean_cls("NSURLSessionWebSocketTask")); }
+#endif
 
 /* ===== NSUUID ===== */
 #ifndef BEAN_TYPEDEF_NSUUID
@@ -8083,6 +10304,14 @@ static inline NSComparisonResult    NSUUID_Compare(NSUUID self, NSUUID otherUUID
 static inline NSString              NSUUID_UUIDString(NSUUID self)                                       { return ((NSString (*)(NSUUID, SEL))bean_msgSend)(self, bean_sel("UUIDString")); }
 static inline id                    NSUUID_CopyWithZone(NSUUID self, NSZone* zone)                       { return ((id (*)(NSUUID, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  NSUUID_SupportsSecureCoding(void)                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUUID"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUUID
+#define BEAN_ALLOC_NSUUID
+static inline NSUUID                NSUUID_Alloc(void)                                                   { return (NSUUID)bean_alloc(bean_cls("NSUUID")); }
+#endif
+#ifndef BEAN_NEW_NSUUID
+#define BEAN_NEW_NSUUID
+static inline NSUUID                NSUUID_New(void)                                                     { return (NSUUID)bean_new(bean_cls("NSUUID")); }
+#endif
 
 /* ===== NSUbiquitousKeyValueStore ===== */
 #ifndef BEAN_TYPEDEF_NSUbiquitousKeyValueStore
@@ -8109,6 +10338,14 @@ static inline void                         NSUbiquitousKeyValueStore_SetBool_For
 static inline BOOL                         NSUbiquitousKeyValueStore_Synchronize(NSUbiquitousKeyValueStore self)                                                      { return ((BOOL (*)(NSUbiquitousKeyValueStore, SEL))bean_msgSend)(self, bean_sel("synchronize")); }
 static inline NSUbiquitousKeyValueStore    NSUbiquitousKeyValueStore_DefaultStore(void)                                                                               { return ((NSUbiquitousKeyValueStore (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUbiquitousKeyValueStore"), bean_sel("defaultStore")); }
 static inline NSDictionary                 NSUbiquitousKeyValueStore_DictionaryRepresentation(NSUbiquitousKeyValueStore self)                                         { return ((NSDictionary (*)(NSUbiquitousKeyValueStore, SEL))bean_msgSend)(self, bean_sel("dictionaryRepresentation")); }
+#ifndef BEAN_ALLOC_NSUbiquitousKeyValueStore
+#define BEAN_ALLOC_NSUbiquitousKeyValueStore
+static inline NSUbiquitousKeyValueStore    NSUbiquitousKeyValueStore_Alloc(void)                                                                                      { return (NSUbiquitousKeyValueStore)bean_alloc(bean_cls("NSUbiquitousKeyValueStore")); }
+#endif
+#ifndef BEAN_NEW_NSUbiquitousKeyValueStore
+#define BEAN_NEW_NSUbiquitousKeyValueStore
+static inline NSUbiquitousKeyValueStore    NSUbiquitousKeyValueStore_New(void)                                                                                        { return (NSUbiquitousKeyValueStore)bean_new(bean_cls("NSUbiquitousKeyValueStore")); }
+#endif
 
 /* ===== NSUnarchiver ===== */
 #ifndef BEAN_TYPEDEF_NSUnarchiver
@@ -8126,54 +10363,70 @@ static inline void            NSUnarchiver_ReplaceObject_WithObject(NSUnarchiver
 static inline BOOL            NSUnarchiver_IsAtEnd(NSUnarchiver self)                                                { return ((BOOL (*)(NSUnarchiver, SEL))bean_msgSend)(self, bean_sel("isAtEnd")); }
 static inline NSUInteger      NSUnarchiver_SystemVersion(NSUnarchiver self)                                          { return ((NSUInteger (*)(NSUnarchiver, SEL))bean_msgSend)(self, bean_sel("systemVersion")); }
 static inline BOOL            NSUnarchiver_AtEnd(NSUnarchiver self)                                                  { return ((BOOL (*)(NSUnarchiver, SEL))bean_msgSend)(self, bean_sel("atEnd")); }
+#ifndef BEAN_ALLOC_NSUnarchiver
+#define BEAN_ALLOC_NSUnarchiver
+static inline NSUnarchiver    NSUnarchiver_Alloc(void)                                                               { return (NSUnarchiver)bean_alloc(bean_cls("NSUnarchiver")); }
+#endif
+#ifndef BEAN_NEW_NSUnarchiver
+#define BEAN_NEW_NSUnarchiver
+static inline NSUnarchiver    NSUnarchiver_New(void)                                                                 { return (NSUnarchiver)bean_new(bean_cls("NSUnarchiver")); }
+#endif
 
 /* ===== NSUndoManager ===== */
 #ifndef BEAN_TYPEDEF_NSUndoManager
 #define BEAN_TYPEDEF_NSUndoManager
 typedef bean_id NSUndoManager;
 #endif
-static inline void          NSUndoManager_BeginUndoGrouping(NSUndoManager self)                                                             { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("beginUndoGrouping")); }
-static inline void          NSUndoManager_EndUndoGrouping(NSUndoManager self)                                                               { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("endUndoGrouping")); }
-static inline void          NSUndoManager_DisableUndoRegistration(NSUndoManager self)                                                       { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("disableUndoRegistration")); }
-static inline void          NSUndoManager_EnableUndoRegistration(NSUndoManager self)                                                        { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("enableUndoRegistration")); }
-static inline void          NSUndoManager_Undo(NSUndoManager self)                                                                          { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undo")); }
-static inline void          NSUndoManager_Redo(NSUndoManager self)                                                                          { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redo")); }
-static inline void          NSUndoManager_UndoNestedGroup(NSUndoManager self)                                                               { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoNestedGroup")); }
-static inline void          NSUndoManager_RemoveAllActions(NSUndoManager self)                                                              { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("removeAllActions")); }
-static inline void          NSUndoManager_RemoveAllActionsWithTarget(NSUndoManager self, id target)                                         { ((void (*)(NSUndoManager, SEL, id))bean_msgSend)(self, bean_sel("removeAllActionsWithTarget:"), target); }
-static inline void          NSUndoManager_RegisterUndoWithTarget_Selector_Object(NSUndoManager self, id target, SEL selector, id object)    { ((void (*)(NSUndoManager, SEL, id, SEL, id))bean_msgSend)(self, bean_sel("registerUndoWithTarget:selector:object:"), target, selector, object); }
-static inline id            NSUndoManager_PrepareWithInvocationTarget(NSUndoManager self, id target)                                        { return ((id (*)(NSUndoManager, SEL, id))bean_msgSend)(self, bean_sel("prepareWithInvocationTarget:"), target); }
-static inline void          NSUndoManager_RegisterUndoWithTarget_Handler(NSUndoManager self, id target, void* undoHandler)                  { ((void (*)(NSUndoManager, SEL, id, void*))bean_msgSend)(self, bean_sel("registerUndoWithTarget:handler:"), target, undoHandler); }
-static inline void          NSUndoManager_SetActionIsDiscardable(NSUndoManager self, BOOL discardable)                                      { ((void (*)(NSUndoManager, SEL, BOOL))bean_msgSend)(self, bean_sel("setActionIsDiscardable:"), discardable); }
-static inline void          NSUndoManager_SetActionName(NSUndoManager self, NSString actionName)                                            { ((void (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("setActionName:"), actionName); }
-static inline id            NSUndoManager_UndoActionUserInfoValueForKey(NSUndoManager self, NSString key)                                   { return ((id (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("undoActionUserInfoValueForKey:"), key); }
-static inline id            NSUndoManager_RedoActionUserInfoValueForKey(NSUndoManager self, NSString key)                                   { return ((id (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("redoActionUserInfoValueForKey:"), key); }
-static inline void          NSUndoManager_SetActionUserInfoValue_ForKey(NSUndoManager self, id info, NSString key)                          { ((void (*)(NSUndoManager, SEL, id, NSString))bean_msgSend)(self, bean_sel("setActionUserInfoValue:forKey:"), info, key); }
-static inline NSString      NSUndoManager_UndoMenuTitleForUndoActionName(NSUndoManager self, NSString actionName)                           { return ((NSString (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("undoMenuTitleForUndoActionName:"), actionName); }
-static inline NSString      NSUndoManager_RedoMenuTitleForUndoActionName(NSUndoManager self, NSString actionName)                           { return ((NSString (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("redoMenuTitleForUndoActionName:"), actionName); }
-static inline NSInteger     NSUndoManager_GroupingLevel(NSUndoManager self)                                                                 { return ((NSInteger (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("groupingLevel")); }
-static inline BOOL          NSUndoManager_IsUndoRegistrationEnabled(NSUndoManager self)                                                     { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("isUndoRegistrationEnabled")); }
-static inline BOOL          NSUndoManager_GroupsByEvent(NSUndoManager self)                                                                 { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("groupsByEvent")); }
-static inline void          NSUndoManager_SetGroupsByEvent(NSUndoManager self, BOOL groupsByEvent)                                          { ((void (*)(NSUndoManager, SEL, BOOL))bean_msgSend)(self, bean_sel("setGroupsByEvent:"), groupsByEvent); }
-static inline NSUInteger    NSUndoManager_LevelsOfUndo(NSUndoManager self)                                                                  { return ((NSUInteger (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("levelsOfUndo")); }
-static inline void          NSUndoManager_SetLevelsOfUndo(NSUndoManager self, NSUInteger levelsOfUndo)                                      { ((void (*)(NSUndoManager, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setLevelsOfUndo:"), levelsOfUndo); }
-static inline NSArray       NSUndoManager_RunLoopModes(NSUndoManager self)                                                                  { return ((NSArray (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("runLoopModes")); }
-static inline void          NSUndoManager_SetRunLoopModes(NSUndoManager self, NSArray runLoopModes)                                         { ((void (*)(NSUndoManager, SEL, NSArray))bean_msgSend)(self, bean_sel("setRunLoopModes:"), runLoopModes); }
-static inline BOOL          NSUndoManager_CanUndo(NSUndoManager self)                                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("canUndo")); }
-static inline BOOL          NSUndoManager_CanRedo(NSUndoManager self)                                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("canRedo")); }
-static inline NSUInteger    NSUndoManager_UndoCount(NSUndoManager self)                                                                     { return ((NSUInteger (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoCount")); }
-static inline NSUInteger    NSUndoManager_RedoCount(NSUndoManager self)                                                                     { return ((NSUInteger (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoCount")); }
-static inline BOOL          NSUndoManager_IsUndoing(NSUndoManager self)                                                                     { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("isUndoing")); }
-static inline BOOL          NSUndoManager_IsRedoing(NSUndoManager self)                                                                     { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("isRedoing")); }
-static inline BOOL          NSUndoManager_UndoActionIsDiscardable(NSUndoManager self)                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoActionIsDiscardable")); }
-static inline BOOL          NSUndoManager_RedoActionIsDiscardable(NSUndoManager self)                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoActionIsDiscardable")); }
-static inline NSString      NSUndoManager_UndoActionName(NSUndoManager self)                                                                { return ((NSString (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoActionName")); }
-static inline NSString      NSUndoManager_RedoActionName(NSUndoManager self)                                                                { return ((NSString (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoActionName")); }
-static inline NSString      NSUndoManager_UndoMenuItemTitle(NSUndoManager self)                                                             { return ((NSString (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoMenuItemTitle")); }
-static inline NSString      NSUndoManager_RedoMenuItemTitle(NSUndoManager self)                                                             { return ((NSString (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoMenuItemTitle")); }
-static inline BOOL          NSUndoManager_UndoRegistrationEnabled(NSUndoManager self)                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoRegistrationEnabled")); }
-static inline BOOL          NSUndoManager_Undoing(NSUndoManager self)                                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoing")); }
-static inline BOOL          NSUndoManager_Redoing(NSUndoManager self)                                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoing")); }
+static inline void             NSUndoManager_BeginUndoGrouping(NSUndoManager self)                                                             { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("beginUndoGrouping")); }
+static inline void             NSUndoManager_EndUndoGrouping(NSUndoManager self)                                                               { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("endUndoGrouping")); }
+static inline void             NSUndoManager_DisableUndoRegistration(NSUndoManager self)                                                       { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("disableUndoRegistration")); }
+static inline void             NSUndoManager_EnableUndoRegistration(NSUndoManager self)                                                        { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("enableUndoRegistration")); }
+static inline void             NSUndoManager_Undo(NSUndoManager self)                                                                          { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undo")); }
+static inline void             NSUndoManager_Redo(NSUndoManager self)                                                                          { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redo")); }
+static inline void             NSUndoManager_UndoNestedGroup(NSUndoManager self)                                                               { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoNestedGroup")); }
+static inline void             NSUndoManager_RemoveAllActions(NSUndoManager self)                                                              { ((void (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("removeAllActions")); }
+static inline void             NSUndoManager_RemoveAllActionsWithTarget(NSUndoManager self, id target)                                         { ((void (*)(NSUndoManager, SEL, id))bean_msgSend)(self, bean_sel("removeAllActionsWithTarget:"), target); }
+static inline void             NSUndoManager_RegisterUndoWithTarget_Selector_Object(NSUndoManager self, id target, SEL selector, id object)    { ((void (*)(NSUndoManager, SEL, id, SEL, id))bean_msgSend)(self, bean_sel("registerUndoWithTarget:selector:object:"), target, selector, object); }
+static inline id               NSUndoManager_PrepareWithInvocationTarget(NSUndoManager self, id target)                                        { return ((id (*)(NSUndoManager, SEL, id))bean_msgSend)(self, bean_sel("prepareWithInvocationTarget:"), target); }
+static inline void             NSUndoManager_RegisterUndoWithTarget_Handler(NSUndoManager self, id target, void* undoHandler)                  { ((void (*)(NSUndoManager, SEL, id, void*))bean_msgSend)(self, bean_sel("registerUndoWithTarget:handler:"), target, undoHandler); }
+static inline void             NSUndoManager_SetActionIsDiscardable(NSUndoManager self, BOOL discardable)                                      { ((void (*)(NSUndoManager, SEL, BOOL))bean_msgSend)(self, bean_sel("setActionIsDiscardable:"), discardable); }
+static inline void             NSUndoManager_SetActionName(NSUndoManager self, NSString actionName)                                            { ((void (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("setActionName:"), actionName); }
+static inline id               NSUndoManager_UndoActionUserInfoValueForKey(NSUndoManager self, NSString key)                                   { return ((id (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("undoActionUserInfoValueForKey:"), key); }
+static inline id               NSUndoManager_RedoActionUserInfoValueForKey(NSUndoManager self, NSString key)                                   { return ((id (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("redoActionUserInfoValueForKey:"), key); }
+static inline void             NSUndoManager_SetActionUserInfoValue_ForKey(NSUndoManager self, id info, NSString key)                          { ((void (*)(NSUndoManager, SEL, id, NSString))bean_msgSend)(self, bean_sel("setActionUserInfoValue:forKey:"), info, key); }
+static inline NSString         NSUndoManager_UndoMenuTitleForUndoActionName(NSUndoManager self, NSString actionName)                           { return ((NSString (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("undoMenuTitleForUndoActionName:"), actionName); }
+static inline NSString         NSUndoManager_RedoMenuTitleForUndoActionName(NSUndoManager self, NSString actionName)                           { return ((NSString (*)(NSUndoManager, SEL, NSString))bean_msgSend)(self, bean_sel("redoMenuTitleForUndoActionName:"), actionName); }
+static inline NSInteger        NSUndoManager_GroupingLevel(NSUndoManager self)                                                                 { return ((NSInteger (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("groupingLevel")); }
+static inline BOOL             NSUndoManager_IsUndoRegistrationEnabled(NSUndoManager self)                                                     { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("isUndoRegistrationEnabled")); }
+static inline BOOL             NSUndoManager_GroupsByEvent(NSUndoManager self)                                                                 { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("groupsByEvent")); }
+static inline void             NSUndoManager_SetGroupsByEvent(NSUndoManager self, BOOL groupsByEvent)                                          { ((void (*)(NSUndoManager, SEL, BOOL))bean_msgSend)(self, bean_sel("setGroupsByEvent:"), groupsByEvent); }
+static inline NSUInteger       NSUndoManager_LevelsOfUndo(NSUndoManager self)                                                                  { return ((NSUInteger (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("levelsOfUndo")); }
+static inline void             NSUndoManager_SetLevelsOfUndo(NSUndoManager self, NSUInteger levelsOfUndo)                                      { ((void (*)(NSUndoManager, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setLevelsOfUndo:"), levelsOfUndo); }
+static inline NSArray          NSUndoManager_RunLoopModes(NSUndoManager self)                                                                  { return ((NSArray (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("runLoopModes")); }
+static inline void             NSUndoManager_SetRunLoopModes(NSUndoManager self, NSArray runLoopModes)                                         { ((void (*)(NSUndoManager, SEL, NSArray))bean_msgSend)(self, bean_sel("setRunLoopModes:"), runLoopModes); }
+static inline BOOL             NSUndoManager_CanUndo(NSUndoManager self)                                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("canUndo")); }
+static inline BOOL             NSUndoManager_CanRedo(NSUndoManager self)                                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("canRedo")); }
+static inline NSUInteger       NSUndoManager_UndoCount(NSUndoManager self)                                                                     { return ((NSUInteger (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoCount")); }
+static inline NSUInteger       NSUndoManager_RedoCount(NSUndoManager self)                                                                     { return ((NSUInteger (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoCount")); }
+static inline BOOL             NSUndoManager_IsUndoing(NSUndoManager self)                                                                     { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("isUndoing")); }
+static inline BOOL             NSUndoManager_IsRedoing(NSUndoManager self)                                                                     { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("isRedoing")); }
+static inline BOOL             NSUndoManager_UndoActionIsDiscardable(NSUndoManager self)                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoActionIsDiscardable")); }
+static inline BOOL             NSUndoManager_RedoActionIsDiscardable(NSUndoManager self)                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoActionIsDiscardable")); }
+static inline NSString         NSUndoManager_UndoActionName(NSUndoManager self)                                                                { return ((NSString (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoActionName")); }
+static inline NSString         NSUndoManager_RedoActionName(NSUndoManager self)                                                                { return ((NSString (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoActionName")); }
+static inline NSString         NSUndoManager_UndoMenuItemTitle(NSUndoManager self)                                                             { return ((NSString (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoMenuItemTitle")); }
+static inline NSString         NSUndoManager_RedoMenuItemTitle(NSUndoManager self)                                                             { return ((NSString (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoMenuItemTitle")); }
+static inline BOOL             NSUndoManager_UndoRegistrationEnabled(NSUndoManager self)                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoRegistrationEnabled")); }
+static inline BOOL             NSUndoManager_Undoing(NSUndoManager self)                                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("undoing")); }
+static inline BOOL             NSUndoManager_Redoing(NSUndoManager self)                                                                       { return ((BOOL (*)(NSUndoManager, SEL))bean_msgSend)(self, bean_sel("redoing")); }
+#ifndef BEAN_ALLOC_NSUndoManager
+#define BEAN_ALLOC_NSUndoManager
+static inline NSUndoManager    NSUndoManager_Alloc(void)                                                                                       { return (NSUndoManager)bean_alloc(bean_cls("NSUndoManager")); }
+#endif
+#ifndef BEAN_NEW_NSUndoManager
+#define BEAN_NEW_NSUndoManager
+static inline NSUndoManager    NSUndoManager_New(void)                                                                                         { return (NSUndoManager)bean_new(bean_cls("NSUndoManager")); }
+#endif
 
 /* ===== NSUniqueIDSpecifier ===== */
 #ifndef BEAN_TYPEDEF_NSUniqueIDSpecifier
@@ -8184,14 +10437,29 @@ static inline NSUniqueIDSpecifier    NSUniqueIDSpecifier_InitWithCoder(NSUniqueI
 static inline NSUniqueIDSpecifier    NSUniqueIDSpecifier_InitWithContainerClassDescription_ContainerSpecifier_Key_UniqueID(NSUniqueIDSpecifier self, NSScriptClassDescription classDesc, NSScriptObjectSpecifier container, NSString property, id uniqueID)    { return ((NSUniqueIDSpecifier (*)(NSUniqueIDSpecifier, SEL, NSScriptClassDescription, NSScriptObjectSpecifier, NSString, id))bean_msgSend)(self, bean_sel("initWithContainerClassDescription:containerSpecifier:key:uniqueID:"), classDesc, container, property, uniqueID); }
 static inline id                     NSUniqueIDSpecifier_UniqueID(NSUniqueIDSpecifier self)                                                                                                                                                                    { return ((id (*)(NSUniqueIDSpecifier, SEL))bean_msgSend)(self, bean_sel("uniqueID")); }
 static inline void                   NSUniqueIDSpecifier_SetUniqueID(NSUniqueIDSpecifier self, id uniqueID)                                                                                                                                                    { ((void (*)(NSUniqueIDSpecifier, SEL, id))bean_msgSend)(self, bean_sel("setUniqueID:"), uniqueID); }
+#ifndef BEAN_ALLOC_NSUniqueIDSpecifier
+#define BEAN_ALLOC_NSUniqueIDSpecifier
+static inline NSUniqueIDSpecifier    NSUniqueIDSpecifier_Alloc(void)                                                                                                                                                                                           { return (NSUniqueIDSpecifier)bean_alloc(bean_cls("NSUniqueIDSpecifier")); }
+#endif
+#ifndef BEAN_NEW_NSUniqueIDSpecifier
+#define BEAN_NEW_NSUniqueIDSpecifier
+static inline NSUniqueIDSpecifier    NSUniqueIDSpecifier_New(void)                                                                                                                                                                                             { return (NSUniqueIDSpecifier)bean_new(bean_cls("NSUniqueIDSpecifier")); }
+#endif
 
 /* ===== NSUnit ===== */
 static inline NSUnit      NSUnit_Init(NSUnit self)                               { return ((NSUnit (*)(NSUnit, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSUnit
+#define BEAN_NEW_NSUnit
 static inline NSUnit      NSUnit_New(void)                                       { return ((NSUnit (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnit"), bean_sel("new")); }
+#endif
 static inline NSUnit      NSUnit_InitWithSymbol(NSUnit self, NSString symbol)    { return ((NSUnit (*)(NSUnit, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSymbol:"), symbol); }
 static inline NSString    NSUnit_Symbol(NSUnit self)                             { return ((NSString (*)(NSUnit, SEL))bean_msgSend)(self, bean_sel("symbol")); }
 static inline id          NSUnit_CopyWithZone(NSUnit self, NSZone* zone)         { return ((id (*)(NSUnit, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL        NSUnit_SupportsSecureCoding(void)                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUnit"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSUnit
+#define BEAN_ALLOC_NSUnit
+static inline NSUnit      NSUnit_Alloc(void)                                     { return (NSUnit)bean_alloc(bean_cls("NSUnit")); }
+#endif
 
 /* ===== NSUserActivity ===== */
 #ifndef BEAN_TYPEDEF_NSUserActivity
@@ -8244,31 +10512,63 @@ static inline BOOL              NSUserActivity_EligibleForHandoff(NSUserActivity
 static inline BOOL              NSUserActivity_EligibleForSearch(NSUserActivity self)                                                                                { return ((BOOL (*)(NSUserActivity, SEL))bean_msgSend)(self, bean_sel("eligibleForSearch")); }
 static inline BOOL              NSUserActivity_EligibleForPublicIndexing(NSUserActivity self)                                                                        { return ((BOOL (*)(NSUserActivity, SEL))bean_msgSend)(self, bean_sel("eligibleForPublicIndexing")); }
 static inline BOOL              NSUserActivity_EligibleForPrediction(NSUserActivity self)                                                                            { return ((BOOL (*)(NSUserActivity, SEL))bean_msgSend)(self, bean_sel("eligibleForPrediction")); }
+#ifndef BEAN_ALLOC_NSUserActivity
+#define BEAN_ALLOC_NSUserActivity
+static inline NSUserActivity    NSUserActivity_Alloc(void)                                                                                                           { return (NSUserActivity)bean_alloc(bean_cls("NSUserActivity")); }
+#endif
+#ifndef BEAN_NEW_NSUserActivity
+#define BEAN_NEW_NSUserActivity
+static inline NSUserActivity    NSUserActivity_New(void)                                                                                                             { return (NSUserActivity)bean_new(bean_cls("NSUserActivity")); }
+#endif
 
 /* ===== NSUserActivityDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSUserActivityDelegate
 #define BEAN_TYPEDEF_NSUserActivityDelegate
 typedef bean_id NSUserActivityDelegate;
 #endif
-static inline void    NSUserActivityDelegate_UserActivityWillSave(NSUserActivityDelegate self, NSUserActivity userActivity)                                                                                       { ((void (*)(NSUserActivityDelegate, SEL, NSUserActivity))bean_msgSend)(self, bean_sel("userActivityWillSave:"), userActivity); }
-static inline void    NSUserActivityDelegate_UserActivityWasContinued(NSUserActivityDelegate self, NSUserActivity userActivity)                                                                                   { ((void (*)(NSUserActivityDelegate, SEL, NSUserActivity))bean_msgSend)(self, bean_sel("userActivityWasContinued:"), userActivity); }
-static inline void    NSUserActivityDelegate_UserActivity_DidReceiveInputStream_OutputStream(NSUserActivityDelegate self, NSUserActivity userActivity, NSInputStream inputStream, NSOutputStream outputStream)    { ((void (*)(NSUserActivityDelegate, SEL, NSUserActivity, NSInputStream, NSOutputStream))bean_msgSend)(self, bean_sel("userActivity:didReceiveInputStream:outputStream:"), userActivity, inputStream, outputStream); }
+static inline void                      NSUserActivityDelegate_UserActivityWillSave(NSUserActivityDelegate self, NSUserActivity userActivity)                                                                                       { ((void (*)(NSUserActivityDelegate, SEL, NSUserActivity))bean_msgSend)(self, bean_sel("userActivityWillSave:"), userActivity); }
+static inline void                      NSUserActivityDelegate_UserActivityWasContinued(NSUserActivityDelegate self, NSUserActivity userActivity)                                                                                   { ((void (*)(NSUserActivityDelegate, SEL, NSUserActivity))bean_msgSend)(self, bean_sel("userActivityWasContinued:"), userActivity); }
+static inline void                      NSUserActivityDelegate_UserActivity_DidReceiveInputStream_OutputStream(NSUserActivityDelegate self, NSUserActivity userActivity, NSInputStream inputStream, NSOutputStream outputStream)    { ((void (*)(NSUserActivityDelegate, SEL, NSUserActivity, NSInputStream, NSOutputStream))bean_msgSend)(self, bean_sel("userActivity:didReceiveInputStream:outputStream:"), userActivity, inputStream, outputStream); }
+#ifndef BEAN_ALLOC_NSUserActivityDelegate
+#define BEAN_ALLOC_NSUserActivityDelegate
+static inline NSUserActivityDelegate    NSUserActivityDelegate_Alloc(void)                                                                                                                                                          { return (NSUserActivityDelegate)bean_alloc(bean_cls("NSUserActivityDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSUserActivityDelegate
+#define BEAN_NEW_NSUserActivityDelegate
+static inline NSUserActivityDelegate    NSUserActivityDelegate_New(void)                                                                                                                                                            { return (NSUserActivityDelegate)bean_new(bean_cls("NSUserActivityDelegate")); }
+#endif
 
 /* ===== NSUserAppleScriptTask ===== */
 #ifndef BEAN_TYPEDEF_NSUserAppleScriptTask
 #define BEAN_TYPEDEF_NSUserAppleScriptTask
 typedef bean_id NSUserAppleScriptTask;
 #endif
-static inline void    NSUserAppleScriptTask_ExecuteWithAppleEvent_CompletionHandler(NSUserAppleScriptTask self, NSAppleEventDescriptor event, void* handler)    { ((void (*)(NSUserAppleScriptTask, SEL, NSAppleEventDescriptor, void*))bean_msgSend)(self, bean_sel("executeWithAppleEvent:completionHandler:"), event, handler); }
+static inline void                     NSUserAppleScriptTask_ExecuteWithAppleEvent_CompletionHandler(NSUserAppleScriptTask self, NSAppleEventDescriptor event, void* handler)    { ((void (*)(NSUserAppleScriptTask, SEL, NSAppleEventDescriptor, void*))bean_msgSend)(self, bean_sel("executeWithAppleEvent:completionHandler:"), event, handler); }
+#ifndef BEAN_ALLOC_NSUserAppleScriptTask
+#define BEAN_ALLOC_NSUserAppleScriptTask
+static inline NSUserAppleScriptTask    NSUserAppleScriptTask_Alloc(void)                                                                                                         { return (NSUserAppleScriptTask)bean_alloc(bean_cls("NSUserAppleScriptTask")); }
+#endif
+#ifndef BEAN_NEW_NSUserAppleScriptTask
+#define BEAN_NEW_NSUserAppleScriptTask
+static inline NSUserAppleScriptTask    NSUserAppleScriptTask_New(void)                                                                                                           { return (NSUserAppleScriptTask)bean_new(bean_cls("NSUserAppleScriptTask")); }
+#endif
 
 /* ===== NSUserAutomatorTask ===== */
 #ifndef BEAN_TYPEDEF_NSUserAutomatorTask
 #define BEAN_TYPEDEF_NSUserAutomatorTask
 typedef bean_id NSUserAutomatorTask;
 #endif
-static inline void            NSUserAutomatorTask_ExecuteWithInput_CompletionHandler(NSUserAutomatorTask self, id input, void* handler)    { ((void (*)(NSUserAutomatorTask, SEL, id, void*))bean_msgSend)(self, bean_sel("executeWithInput:completionHandler:"), input, handler); }
-static inline NSDictionary    NSUserAutomatorTask_Variables(NSUserAutomatorTask self)                                                      { return ((NSDictionary (*)(NSUserAutomatorTask, SEL))bean_msgSend)(self, bean_sel("variables")); }
-static inline void            NSUserAutomatorTask_SetVariables(NSUserAutomatorTask self, NSDictionary variables)                           { ((void (*)(NSUserAutomatorTask, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setVariables:"), variables); }
+static inline void                   NSUserAutomatorTask_ExecuteWithInput_CompletionHandler(NSUserAutomatorTask self, id input, void* handler)    { ((void (*)(NSUserAutomatorTask, SEL, id, void*))bean_msgSend)(self, bean_sel("executeWithInput:completionHandler:"), input, handler); }
+static inline NSDictionary           NSUserAutomatorTask_Variables(NSUserAutomatorTask self)                                                      { return ((NSDictionary (*)(NSUserAutomatorTask, SEL))bean_msgSend)(self, bean_sel("variables")); }
+static inline void                   NSUserAutomatorTask_SetVariables(NSUserAutomatorTask self, NSDictionary variables)                           { ((void (*)(NSUserAutomatorTask, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setVariables:"), variables); }
+#ifndef BEAN_ALLOC_NSUserAutomatorTask
+#define BEAN_ALLOC_NSUserAutomatorTask
+static inline NSUserAutomatorTask    NSUserAutomatorTask_Alloc(void)                                                                              { return (NSUserAutomatorTask)bean_alloc(bean_cls("NSUserAutomatorTask")); }
+#endif
+#ifndef BEAN_NEW_NSUserAutomatorTask
+#define BEAN_NEW_NSUserAutomatorTask
+static inline NSUserAutomatorTask    NSUserAutomatorTask_New(void)                                                                                { return (NSUserAutomatorTask)bean_new(bean_cls("NSUserAutomatorTask")); }
+#endif
 
 /* ===== NSUserDefaults ===== */
 #ifndef BEAN_TYPEDEF_NSUserDefaults
@@ -8313,6 +10613,14 @@ static inline BOOL              NSUserDefaults_ObjectIsForcedForKey(NSUserDefaul
 static inline BOOL              NSUserDefaults_ObjectIsForcedForKey_InDomain(NSUserDefaults self, NSString key, NSString domain)             { return ((BOOL (*)(NSUserDefaults, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("objectIsForcedForKey:inDomain:"), key, domain); }
 static inline NSUserDefaults    NSUserDefaults_StandardUserDefaults(void)                                                                    { return ((NSUserDefaults (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSUserDefaults"), bean_sel("standardUserDefaults")); }
 static inline NSArray           NSUserDefaults_VolatileDomainNames(NSUserDefaults self)                                                      { return ((NSArray (*)(NSUserDefaults, SEL))bean_msgSend)(self, bean_sel("volatileDomainNames")); }
+#ifndef BEAN_ALLOC_NSUserDefaults
+#define BEAN_ALLOC_NSUserDefaults
+static inline NSUserDefaults    NSUserDefaults_Alloc(void)                                                                                   { return (NSUserDefaults)bean_alloc(bean_cls("NSUserDefaults")); }
+#endif
+#ifndef BEAN_NEW_NSUserDefaults
+#define BEAN_NEW_NSUserDefaults
+static inline NSUserDefaults    NSUserDefaults_New(void)                                                                                     { return (NSUserDefaults)bean_new(bean_cls("NSUserDefaults")); }
+#endif
 
 /* ===== NSUserNotification ===== */
 #ifndef BEAN_TYPEDEF_NSUserNotification
@@ -8361,12 +10669,28 @@ static inline NSUserNotificationAction            NSUserNotification_AdditionalA
 static inline id                                  NSUserNotification_CopyWithZone(NSUserNotification self, NSZone* zone)                                            { return ((id (*)(NSUserNotification, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                                NSUserNotification_Presented(NSUserNotification self)                                                             { return ((BOOL (*)(NSUserNotification, SEL))bean_msgSend)(self, bean_sel("presented")); }
 static inline BOOL                                NSUserNotification_Remote(NSUserNotification self)                                                                { return ((BOOL (*)(NSUserNotification, SEL))bean_msgSend)(self, bean_sel("remote")); }
+#ifndef BEAN_ALLOC_NSUserNotification
+#define BEAN_ALLOC_NSUserNotification
+static inline NSUserNotification                  NSUserNotification_Alloc(void)                                                                                    { return (NSUserNotification)bean_alloc(bean_cls("NSUserNotification")); }
+#endif
+#ifndef BEAN_NEW_NSUserNotification
+#define BEAN_NEW_NSUserNotification
+static inline NSUserNotification                  NSUserNotification_New(void)                                                                                      { return (NSUserNotification)bean_new(bean_cls("NSUserNotification")); }
+#endif
 
 /* ===== NSUserNotificationAction ===== */
 static inline NSUserNotificationAction    NSUserNotificationAction_ActionWithIdentifier_Title(NSString identifier, NSString title)    { return ((NSUserNotificationAction (*)(bean_class, SEL, NSString, NSString))bean_msgSend)(bean_cls("NSUserNotificationAction"), bean_sel("actionWithIdentifier:title:"), identifier, title); }
 static inline NSString                    NSUserNotificationAction_Identifier(NSUserNotificationAction self)                          { return ((NSString (*)(NSUserNotificationAction, SEL))bean_msgSend)(self, bean_sel("identifier")); }
 static inline NSString                    NSUserNotificationAction_Title(NSUserNotificationAction self)                               { return ((NSString (*)(NSUserNotificationAction, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline id                          NSUserNotificationAction_CopyWithZone(NSUserNotificationAction self, NSZone* zone)          { return ((id (*)(NSUserNotificationAction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSUserNotificationAction
+#define BEAN_ALLOC_NSUserNotificationAction
+static inline NSUserNotificationAction    NSUserNotificationAction_Alloc(void)                                                        { return (NSUserNotificationAction)bean_alloc(bean_cls("NSUserNotificationAction")); }
+#endif
+#ifndef BEAN_NEW_NSUserNotificationAction
+#define BEAN_NEW_NSUserNotificationAction
+static inline NSUserNotificationAction    NSUserNotificationAction_New(void)                                                          { return (NSUserNotificationAction)bean_new(bean_cls("NSUserNotificationAction")); }
+#endif
 
 /* ===== NSUserNotificationCenter ===== */
 #ifndef BEAN_TYPEDEF_NSUserNotificationCenter
@@ -8384,15 +10708,31 @@ static inline void                        NSUserNotificationCenter_SetDelegate(N
 static inline NSArray                     NSUserNotificationCenter_ScheduledNotifications(NSUserNotificationCenter self)                                          { return ((NSArray (*)(NSUserNotificationCenter, SEL))bean_msgSend)(self, bean_sel("scheduledNotifications")); }
 static inline void                        NSUserNotificationCenter_SetScheduledNotifications(NSUserNotificationCenter self, NSArray scheduledNotifications)       { ((void (*)(NSUserNotificationCenter, SEL, NSArray))bean_msgSend)(self, bean_sel("setScheduledNotifications:"), scheduledNotifications); }
 static inline NSArray                     NSUserNotificationCenter_DeliveredNotifications(NSUserNotificationCenter self)                                          { return ((NSArray (*)(NSUserNotificationCenter, SEL))bean_msgSend)(self, bean_sel("deliveredNotifications")); }
+#ifndef BEAN_ALLOC_NSUserNotificationCenter
+#define BEAN_ALLOC_NSUserNotificationCenter
+static inline NSUserNotificationCenter    NSUserNotificationCenter_Alloc(void)                                                                                    { return (NSUserNotificationCenter)bean_alloc(bean_cls("NSUserNotificationCenter")); }
+#endif
+#ifndef BEAN_NEW_NSUserNotificationCenter
+#define BEAN_NEW_NSUserNotificationCenter
+static inline NSUserNotificationCenter    NSUserNotificationCenter_New(void)                                                                                      { return (NSUserNotificationCenter)bean_new(bean_cls("NSUserNotificationCenter")); }
+#endif
 
 /* ===== NSUserNotificationCenterDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSUserNotificationCenterDelegate
 #define BEAN_TYPEDEF_NSUserNotificationCenterDelegate
 typedef bean_id NSUserNotificationCenterDelegate;
 #endif
-static inline void    NSUserNotificationCenterDelegate_UserNotificationCenter_DidDeliverNotification(NSUserNotificationCenterDelegate self, NSUserNotificationCenter center, NSUserNotification notification)       { ((void (*)(NSUserNotificationCenterDelegate, SEL, NSUserNotificationCenter, NSUserNotification))bean_msgSend)(self, bean_sel("userNotificationCenter:didDeliverNotification:"), center, notification); }
-static inline void    NSUserNotificationCenterDelegate_UserNotificationCenter_DidActivateNotification(NSUserNotificationCenterDelegate self, NSUserNotificationCenter center, NSUserNotification notification)      { ((void (*)(NSUserNotificationCenterDelegate, SEL, NSUserNotificationCenter, NSUserNotification))bean_msgSend)(self, bean_sel("userNotificationCenter:didActivateNotification:"), center, notification); }
-static inline BOOL    NSUserNotificationCenterDelegate_UserNotificationCenter_ShouldPresentNotification(NSUserNotificationCenterDelegate self, NSUserNotificationCenter center, NSUserNotification notification)    { return ((BOOL (*)(NSUserNotificationCenterDelegate, SEL, NSUserNotificationCenter, NSUserNotification))bean_msgSend)(self, bean_sel("userNotificationCenter:shouldPresentNotification:"), center, notification); }
+static inline void                                NSUserNotificationCenterDelegate_UserNotificationCenter_DidDeliverNotification(NSUserNotificationCenterDelegate self, NSUserNotificationCenter center, NSUserNotification notification)       { ((void (*)(NSUserNotificationCenterDelegate, SEL, NSUserNotificationCenter, NSUserNotification))bean_msgSend)(self, bean_sel("userNotificationCenter:didDeliverNotification:"), center, notification); }
+static inline void                                NSUserNotificationCenterDelegate_UserNotificationCenter_DidActivateNotification(NSUserNotificationCenterDelegate self, NSUserNotificationCenter center, NSUserNotification notification)      { ((void (*)(NSUserNotificationCenterDelegate, SEL, NSUserNotificationCenter, NSUserNotification))bean_msgSend)(self, bean_sel("userNotificationCenter:didActivateNotification:"), center, notification); }
+static inline BOOL                                NSUserNotificationCenterDelegate_UserNotificationCenter_ShouldPresentNotification(NSUserNotificationCenterDelegate self, NSUserNotificationCenter center, NSUserNotification notification)    { return ((BOOL (*)(NSUserNotificationCenterDelegate, SEL, NSUserNotificationCenter, NSUserNotification))bean_msgSend)(self, bean_sel("userNotificationCenter:shouldPresentNotification:"), center, notification); }
+#ifndef BEAN_ALLOC_NSUserNotificationCenterDelegate
+#define BEAN_ALLOC_NSUserNotificationCenterDelegate
+static inline NSUserNotificationCenterDelegate    NSUserNotificationCenterDelegate_Alloc(void)                                                                                                                                                  { return (NSUserNotificationCenterDelegate)bean_alloc(bean_cls("NSUserNotificationCenterDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSUserNotificationCenterDelegate
+#define BEAN_NEW_NSUserNotificationCenterDelegate
+static inline NSUserNotificationCenterDelegate    NSUserNotificationCenterDelegate_New(void)                                                                                                                                                    { return (NSUserNotificationCenterDelegate)bean_new(bean_cls("NSUserNotificationCenterDelegate")); }
+#endif
 
 /* ===== NSUserScriptTask ===== */
 #ifndef BEAN_TYPEDEF_NSUserScriptTask
@@ -8402,19 +10742,35 @@ typedef bean_id NSUserScriptTask;
 static inline NSUserScriptTask    NSUserScriptTask_InitWithURL_Error(NSUserScriptTask self, NSURL url, NSError* error)    { return ((NSUserScriptTask (*)(NSUserScriptTask, SEL, NSURL, NSError*))bean_msgSend)(self, bean_sel("initWithURL:error:"), url, error); }
 static inline void                NSUserScriptTask_ExecuteWithCompletionHandler(NSUserScriptTask self, void* handler)     { ((void (*)(NSUserScriptTask, SEL, void*))bean_msgSend)(self, bean_sel("executeWithCompletionHandler:"), handler); }
 static inline NSURL               NSUserScriptTask_ScriptURL(NSUserScriptTask self)                                       { return ((NSURL (*)(NSUserScriptTask, SEL))bean_msgSend)(self, bean_sel("scriptURL")); }
+#ifndef BEAN_ALLOC_NSUserScriptTask
+#define BEAN_ALLOC_NSUserScriptTask
+static inline NSUserScriptTask    NSUserScriptTask_Alloc(void)                                                            { return (NSUserScriptTask)bean_alloc(bean_cls("NSUserScriptTask")); }
+#endif
+#ifndef BEAN_NEW_NSUserScriptTask
+#define BEAN_NEW_NSUserScriptTask
+static inline NSUserScriptTask    NSUserScriptTask_New(void)                                                              { return (NSUserScriptTask)bean_new(bean_cls("NSUserScriptTask")); }
+#endif
 
 /* ===== NSUserUnixTask ===== */
 #ifndef BEAN_TYPEDEF_NSUserUnixTask
 #define BEAN_TYPEDEF_NSUserUnixTask
 typedef bean_id NSUserUnixTask;
 #endif
-static inline void            NSUserUnixTask_ExecuteWithArguments_CompletionHandler(NSUserUnixTask self, NSArray arguments, void* handler)    { ((void (*)(NSUserUnixTask, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("executeWithArguments:completionHandler:"), arguments, handler); }
-static inline NSFileHandle    NSUserUnixTask_StandardInput(NSUserUnixTask self)                                                               { return ((NSFileHandle (*)(NSUserUnixTask, SEL))bean_msgSend)(self, bean_sel("standardInput")); }
-static inline void            NSUserUnixTask_SetStandardInput(NSUserUnixTask self, NSFileHandle standardInput)                                { ((void (*)(NSUserUnixTask, SEL, NSFileHandle))bean_msgSend)(self, bean_sel("setStandardInput:"), standardInput); }
-static inline NSFileHandle    NSUserUnixTask_StandardOutput(NSUserUnixTask self)                                                              { return ((NSFileHandle (*)(NSUserUnixTask, SEL))bean_msgSend)(self, bean_sel("standardOutput")); }
-static inline void            NSUserUnixTask_SetStandardOutput(NSUserUnixTask self, NSFileHandle standardOutput)                              { ((void (*)(NSUserUnixTask, SEL, NSFileHandle))bean_msgSend)(self, bean_sel("setStandardOutput:"), standardOutput); }
-static inline NSFileHandle    NSUserUnixTask_StandardError(NSUserUnixTask self)                                                               { return ((NSFileHandle (*)(NSUserUnixTask, SEL))bean_msgSend)(self, bean_sel("standardError")); }
-static inline void            NSUserUnixTask_SetStandardError(NSUserUnixTask self, NSFileHandle standardError)                                { ((void (*)(NSUserUnixTask, SEL, NSFileHandle))bean_msgSend)(self, bean_sel("setStandardError:"), standardError); }
+static inline void              NSUserUnixTask_ExecuteWithArguments_CompletionHandler(NSUserUnixTask self, NSArray arguments, void* handler)    { ((void (*)(NSUserUnixTask, SEL, NSArray, void*))bean_msgSend)(self, bean_sel("executeWithArguments:completionHandler:"), arguments, handler); }
+static inline NSFileHandle      NSUserUnixTask_StandardInput(NSUserUnixTask self)                                                               { return ((NSFileHandle (*)(NSUserUnixTask, SEL))bean_msgSend)(self, bean_sel("standardInput")); }
+static inline void              NSUserUnixTask_SetStandardInput(NSUserUnixTask self, NSFileHandle standardInput)                                { ((void (*)(NSUserUnixTask, SEL, NSFileHandle))bean_msgSend)(self, bean_sel("setStandardInput:"), standardInput); }
+static inline NSFileHandle      NSUserUnixTask_StandardOutput(NSUserUnixTask self)                                                              { return ((NSFileHandle (*)(NSUserUnixTask, SEL))bean_msgSend)(self, bean_sel("standardOutput")); }
+static inline void              NSUserUnixTask_SetStandardOutput(NSUserUnixTask self, NSFileHandle standardOutput)                              { ((void (*)(NSUserUnixTask, SEL, NSFileHandle))bean_msgSend)(self, bean_sel("setStandardOutput:"), standardOutput); }
+static inline NSFileHandle      NSUserUnixTask_StandardError(NSUserUnixTask self)                                                               { return ((NSFileHandle (*)(NSUserUnixTask, SEL))bean_msgSend)(self, bean_sel("standardError")); }
+static inline void              NSUserUnixTask_SetStandardError(NSUserUnixTask self, NSFileHandle standardError)                                { ((void (*)(NSUserUnixTask, SEL, NSFileHandle))bean_msgSend)(self, bean_sel("setStandardError:"), standardError); }
+#ifndef BEAN_ALLOC_NSUserUnixTask
+#define BEAN_ALLOC_NSUserUnixTask
+static inline NSUserUnixTask    NSUserUnixTask_Alloc(void)                                                                                      { return (NSUserUnixTask)bean_alloc(bean_cls("NSUserUnixTask")); }
+#endif
+#ifndef BEAN_NEW_NSUserUnixTask
+#define BEAN_NEW_NSUserUnixTask
+static inline NSUserUnixTask    NSUserUnixTask_New(void)                                                                                        { return (NSUserUnixTask)bean_new(bean_cls("NSUserUnixTask")); }
+#endif
 
 /* ===== NSValue ===== */
 #ifndef BEAN_TYPEDEF_NSValue
@@ -8445,6 +10801,14 @@ static inline CGRect          NSValue_RectValue(NSValue self)                   
 static inline NSEdgeInsets    NSValue_EdgeInsetsValue(NSValue self)                                                { return ((NSEdgeInsets (*)(NSValue, SEL))bean_msgSend_stret)(self, bean_sel("edgeInsetsValue")); }
 static inline id              NSValue_CopyWithZone(NSValue self, NSZone* zone)                                     { return ((id (*)(NSValue, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL            NSValue_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSValue"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSValue
+#define BEAN_ALLOC_NSValue
+static inline NSValue         NSValue_Alloc(void)                                                                  { return (NSValue)bean_alloc(bean_cls("NSValue")); }
+#endif
+#ifndef BEAN_NEW_NSValue
+#define BEAN_NEW_NSValue
+static inline NSValue         NSValue_New(void)                                                                    { return (NSValue)bean_new(bean_cls("NSValue")); }
+#endif
 
 /* ===== NSValueTransformer ===== */
 #ifndef BEAN_TYPEDEF_NSValueTransformer
@@ -8458,6 +10822,14 @@ static inline bean_class            NSValueTransformer_TransformedValueClass(voi
 static inline BOOL                  NSValueTransformer_AllowsReverseTransformation(void)                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSValueTransformer"), bean_sel("allowsReverseTransformation")); }
 static inline id                    NSValueTransformer_TransformedValue(NSValueTransformer self, id value)                           { return ((id (*)(NSValueTransformer, SEL, id))bean_msgSend)(self, bean_sel("transformedValue:"), value); }
 static inline id                    NSValueTransformer_ReverseTransformedValue(NSValueTransformer self, id value)                    { return ((id (*)(NSValueTransformer, SEL, id))bean_msgSend)(self, bean_sel("reverseTransformedValue:"), value); }
+#ifndef BEAN_ALLOC_NSValueTransformer
+#define BEAN_ALLOC_NSValueTransformer
+static inline NSValueTransformer    NSValueTransformer_Alloc(void)                                                                   { return (NSValueTransformer)bean_alloc(bean_cls("NSValueTransformer")); }
+#endif
+#ifndef BEAN_NEW_NSValueTransformer
+#define BEAN_NEW_NSValueTransformer
+static inline NSValueTransformer    NSValueTransformer_New(void)                                                                     { return (NSValueTransformer)bean_new(bean_cls("NSValueTransformer")); }
+#endif
 
 /* ===== NSWhoseSpecifier ===== */
 #ifndef BEAN_TYPEDEF_NSWhoseSpecifier
@@ -8476,6 +10848,14 @@ static inline NSWhoseSubelementIdentifier    NSWhoseSpecifier_EndSubelementIdent
 static inline void                           NSWhoseSpecifier_SetEndSubelementIdentifier(NSWhoseSpecifier self, NSWhoseSubelementIdentifier endSubelementIdentifier)                                                                                                    { ((void (*)(NSWhoseSpecifier, SEL, NSWhoseSubelementIdentifier))bean_msgSend)(self, bean_sel("setEndSubelementIdentifier:"), endSubelementIdentifier); }
 static inline NSInteger                      NSWhoseSpecifier_EndSubelementIndex(NSWhoseSpecifier self)                                                                                                                                                                 { return ((NSInteger (*)(NSWhoseSpecifier, SEL))bean_msgSend)(self, bean_sel("endSubelementIndex")); }
 static inline void                           NSWhoseSpecifier_SetEndSubelementIndex(NSWhoseSpecifier self, NSInteger endSubelementIndex)                                                                                                                                { ((void (*)(NSWhoseSpecifier, SEL, NSInteger))bean_msgSend)(self, bean_sel("setEndSubelementIndex:"), endSubelementIndex); }
+#ifndef BEAN_ALLOC_NSWhoseSpecifier
+#define BEAN_ALLOC_NSWhoseSpecifier
+static inline NSWhoseSpecifier               NSWhoseSpecifier_Alloc(void)                                                                                                                                                                                               { return (NSWhoseSpecifier)bean_alloc(bean_cls("NSWhoseSpecifier")); }
+#endif
+#ifndef BEAN_NEW_NSWhoseSpecifier
+#define BEAN_NEW_NSWhoseSpecifier
+static inline NSWhoseSpecifier               NSWhoseSpecifier_New(void)                                                                                                                                                                                                 { return (NSWhoseSpecifier)bean_new(bean_cls("NSWhoseSpecifier")); }
+#endif
 
 /* ===== NSXMLDTD ===== */
 #ifndef BEAN_TYPEDEF_NSXMLDTD
@@ -8501,6 +10881,14 @@ static inline NSString        NSXMLDTD_PublicID(NSXMLDTD self)                  
 static inline void            NSXMLDTD_SetPublicID(NSXMLDTD self, NSString publicID)                                                     { ((void (*)(NSXMLDTD, SEL, NSString))bean_msgSend)(self, bean_sel("setPublicID:"), publicID); }
 static inline NSString        NSXMLDTD_SystemID(NSXMLDTD self)                                                                           { return ((NSString (*)(NSXMLDTD, SEL))bean_msgSend)(self, bean_sel("systemID")); }
 static inline void            NSXMLDTD_SetSystemID(NSXMLDTD self, NSString systemID)                                                     { ((void (*)(NSXMLDTD, SEL, NSString))bean_msgSend)(self, bean_sel("setSystemID:"), systemID); }
+#ifndef BEAN_ALLOC_NSXMLDTD
+#define BEAN_ALLOC_NSXMLDTD
+static inline NSXMLDTD        NSXMLDTD_Alloc(void)                                                                                       { return (NSXMLDTD)bean_alloc(bean_cls("NSXMLDTD")); }
+#endif
+#ifndef BEAN_NEW_NSXMLDTD
+#define BEAN_NEW_NSXMLDTD
+static inline NSXMLDTD        NSXMLDTD_New(void)                                                                                         { return (NSXMLDTD)bean_new(bean_cls("NSXMLDTD")); }
+#endif
 
 /* ===== NSXMLDTDNode ===== */
 static inline NSXMLDTDNode        NSXMLDTDNode_InitWithXMLString(NSXMLDTDNode self, NSString string)                                    { return ((NSXMLDTDNode (*)(NSXMLDTDNode, SEL, NSString))bean_msgSend)(self, bean_sel("initWithXMLString:"), string); }
@@ -8516,6 +10904,14 @@ static inline void                NSXMLDTDNode_SetSystemID(NSXMLDTDNode self, NS
 static inline NSString            NSXMLDTDNode_NotationName(NSXMLDTDNode self)                                                          { return ((NSString (*)(NSXMLDTDNode, SEL))bean_msgSend)(self, bean_sel("notationName")); }
 static inline void                NSXMLDTDNode_SetNotationName(NSXMLDTDNode self, NSString notationName)                                { ((void (*)(NSXMLDTDNode, SEL, NSString))bean_msgSend)(self, bean_sel("setNotationName:"), notationName); }
 static inline BOOL                NSXMLDTDNode_External(NSXMLDTDNode self)                                                              { return ((BOOL (*)(NSXMLDTDNode, SEL))bean_msgSend)(self, bean_sel("external")); }
+#ifndef BEAN_ALLOC_NSXMLDTDNode
+#define BEAN_ALLOC_NSXMLDTDNode
+static inline NSXMLDTDNode        NSXMLDTDNode_Alloc(void)                                                                              { return (NSXMLDTDNode)bean_alloc(bean_cls("NSXMLDTDNode")); }
+#endif
+#ifndef BEAN_NEW_NSXMLDTDNode
+#define BEAN_NEW_NSXMLDTDNode
+static inline NSXMLDTDNode        NSXMLDTDNode_New(void)                                                                                { return (NSXMLDTDNode)bean_new(bean_cls("NSXMLDTDNode")); }
+#endif
 
 /* ===== NSXMLDocument ===== */
 #ifndef BEAN_TYPEDEF_NSXMLDocument
@@ -8555,6 +10951,14 @@ static inline NSXMLDTD                    NSXMLDocument_DTD(NSXMLDocument self) 
 static inline void                        NSXMLDocument_SetDTD(NSXMLDocument self, NSXMLDTD DTD)                                                                                 { ((void (*)(NSXMLDocument, SEL, NSXMLDTD))bean_msgSend)(self, bean_sel("setDTD:"), DTD); }
 static inline NSData                      NSXMLDocument_XMLData(NSXMLDocument self)                                                                                              { return ((NSData (*)(NSXMLDocument, SEL))bean_msgSend)(self, bean_sel("XMLData")); }
 static inline BOOL                        NSXMLDocument_Standalone(NSXMLDocument self)                                                                                           { return ((BOOL (*)(NSXMLDocument, SEL))bean_msgSend)(self, bean_sel("standalone")); }
+#ifndef BEAN_ALLOC_NSXMLDocument
+#define BEAN_ALLOC_NSXMLDocument
+static inline NSXMLDocument               NSXMLDocument_Alloc(void)                                                                                                              { return (NSXMLDocument)bean_alloc(bean_cls("NSXMLDocument")); }
+#endif
+#ifndef BEAN_NEW_NSXMLDocument
+#define BEAN_NEW_NSXMLDocument
+static inline NSXMLDocument               NSXMLDocument_New(void)                                                                                                                { return (NSXMLDocument)bean_new(bean_cls("NSXMLDocument")); }
+#endif
 
 /* ===== NSXMLElement ===== */
 static inline NSXMLElement    NSXMLElement_InitWithName(NSXMLElement self, NSString name)                                           { return ((NSXMLElement (*)(NSXMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("initWithName:"), name); }
@@ -8586,6 +10990,14 @@ static inline void            NSXMLElement_SetAttributes(NSXMLElement self, NSAr
 static inline NSArray         NSXMLElement_Namespaces(NSXMLElement self)                                                            { return ((NSArray (*)(NSXMLElement, SEL))bean_msgSend)(self, bean_sel("namespaces")); }
 static inline void            NSXMLElement_SetNamespaces(NSXMLElement self, NSArray namespaces)                                     { ((void (*)(NSXMLElement, SEL, NSArray))bean_msgSend)(self, bean_sel("setNamespaces:"), namespaces); }
 static inline void            NSXMLElement_SetAttributesAsDictionary(NSXMLElement self, NSDictionary attributes)                    { ((void (*)(NSXMLElement, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setAttributesAsDictionary:"), attributes); }
+#ifndef BEAN_ALLOC_NSXMLElement
+#define BEAN_ALLOC_NSXMLElement
+static inline NSXMLElement    NSXMLElement_Alloc(void)                                                                              { return (NSXMLElement)bean_alloc(bean_cls("NSXMLElement")); }
+#endif
+#ifndef BEAN_NEW_NSXMLElement
+#define BEAN_NEW_NSXMLElement
+static inline NSXMLElement    NSXMLElement_New(void)                                                                                { return (NSXMLElement)bean_new(bean_cls("NSXMLElement")); }
+#endif
 
 /* ===== NSXMLNode ===== */
 static inline NSXMLNode        NSXMLNode_Init(NSXMLNode self)                                                                                         { return ((NSXMLNode (*)(NSXMLNode, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -8640,6 +11052,14 @@ static inline void             NSXMLNode_SetURI(NSXMLNode self, NSString URI)   
 static inline NSString         NSXMLNode_Description(NSXMLNode self)                                                                                  { return ((NSString (*)(NSXMLNode, SEL))bean_msgSend)(self, bean_sel("description")); }
 static inline NSString         NSXMLNode_XMLString(NSXMLNode self)                                                                                    { return ((NSString (*)(NSXMLNode, SEL))bean_msgSend)(self, bean_sel("XMLString")); }
 static inline id               NSXMLNode_CopyWithZone(NSXMLNode self, NSZone* zone)                                                                   { return ((id (*)(NSXMLNode, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSXMLNode
+#define BEAN_ALLOC_NSXMLNode
+static inline NSXMLNode        NSXMLNode_Alloc(void)                                                                                                  { return (NSXMLNode)bean_alloc(bean_cls("NSXMLNode")); }
+#endif
+#ifndef BEAN_NEW_NSXMLNode
+#define BEAN_NEW_NSXMLNode
+static inline NSXMLNode        NSXMLNode_New(void)                                                                                                    { return (NSXMLNode)bean_new(bean_cls("NSXMLNode")); }
+#endif
 
 /* ===== NSXMLParser ===== */
 #ifndef BEAN_TYPEDEF_NSXMLParser
@@ -8668,32 +11088,48 @@ static inline NSString                                    NSXMLParser_PublicID(N
 static inline NSString                                    NSXMLParser_SystemID(NSXMLParser self)                                                                                                    { return ((NSString (*)(NSXMLParser, SEL))bean_msgSend)(self, bean_sel("systemID")); }
 static inline NSInteger                                   NSXMLParser_LineNumber(NSXMLParser self)                                                                                                  { return ((NSInteger (*)(NSXMLParser, SEL))bean_msgSend)(self, bean_sel("lineNumber")); }
 static inline NSInteger                                   NSXMLParser_ColumnNumber(NSXMLParser self)                                                                                                { return ((NSInteger (*)(NSXMLParser, SEL))bean_msgSend)(self, bean_sel("columnNumber")); }
+#ifndef BEAN_ALLOC_NSXMLParser
+#define BEAN_ALLOC_NSXMLParser
+static inline NSXMLParser                                 NSXMLParser_Alloc(void)                                                                                                                   { return (NSXMLParser)bean_alloc(bean_cls("NSXMLParser")); }
+#endif
+#ifndef BEAN_NEW_NSXMLParser
+#define BEAN_NEW_NSXMLParser
+static inline NSXMLParser                                 NSXMLParser_New(void)                                                                                                                     { return (NSXMLParser)bean_new(bean_cls("NSXMLParser")); }
+#endif
 
 /* ===== NSXMLParserDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSXMLParserDelegate
 #define BEAN_TYPEDEF_NSXMLParserDelegate
 typedef bean_id NSXMLParserDelegate;
 #endif
-static inline void      NSXMLParserDelegate_ParserDidStartDocument(NSXMLParserDelegate self, NSXMLParser parser)                                                                                                                                       { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser))bean_msgSend)(self, bean_sel("parserDidStartDocument:"), parser); }
-static inline void      NSXMLParserDelegate_ParserDidEndDocument(NSXMLParserDelegate self, NSXMLParser parser)                                                                                                                                         { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser))bean_msgSend)(self, bean_sel("parserDidEndDocument:"), parser); }
-static inline void      NSXMLParserDelegate_Parser_FoundNotationDeclarationWithName_PublicID_SystemID(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString publicID, NSString systemID)                                               { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundNotationDeclarationWithName:publicID:systemID:"), parser, name, publicID, systemID); }
-static inline void      NSXMLParserDelegate_Parser_FoundUnparsedEntityDeclarationWithName_PublicID_SystemID_NotationName(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString publicID, NSString systemID, NSString notationName)     { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundUnparsedEntityDeclarationWithName:publicID:systemID:notationName:"), parser, name, publicID, systemID, notationName); }
-static inline void      NSXMLParserDelegate_Parser_FoundAttributeDeclarationWithName_ForElement_Type_DefaultValue(NSXMLParserDelegate self, NSXMLParser parser, NSString attributeName, NSString elementName, NSString type, NSString defaultValue)    { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundAttributeDeclarationWithName:forElement:type:defaultValue:"), parser, attributeName, elementName, type, defaultValue); }
-static inline void      NSXMLParserDelegate_Parser_FoundElementDeclarationWithName_Model(NSXMLParserDelegate self, NSXMLParser parser, NSString elementName, NSString model)                                                                           { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundElementDeclarationWithName:model:"), parser, elementName, model); }
-static inline void      NSXMLParserDelegate_Parser_FoundInternalEntityDeclarationWithName_Value(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString value)                                                                           { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundInternalEntityDeclarationWithName:value:"), parser, name, value); }
-static inline void      NSXMLParserDelegate_Parser_FoundExternalEntityDeclarationWithName_PublicID_SystemID(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString publicID, NSString systemID)                                         { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundExternalEntityDeclarationWithName:publicID:systemID:"), parser, name, publicID, systemID); }
-static inline void      NSXMLParserDelegate_Parser_DidStartElement_NamespaceURI_QualifiedName_Attributes(NSXMLParserDelegate self, NSXMLParser parser, NSString elementName, NSString namespaceURI, NSString qName, NSDictionary attributeDict)        { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString, NSDictionary))bean_msgSend)(self, bean_sel("parser:didStartElement:namespaceURI:qualifiedName:attributes:"), parser, elementName, namespaceURI, qName, attributeDict); }
-static inline void      NSXMLParserDelegate_Parser_DidEndElement_NamespaceURI_QualifiedName(NSXMLParserDelegate self, NSXMLParser parser, NSString elementName, NSString namespaceURI, NSString qName)                                                 { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:didEndElement:namespaceURI:qualifiedName:"), parser, elementName, namespaceURI, qName); }
-static inline void      NSXMLParserDelegate_Parser_DidStartMappingPrefix_ToURI(NSXMLParserDelegate self, NSXMLParser parser, NSString prefix, NSString namespaceURI)                                                                                   { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:didStartMappingPrefix:toURI:"), parser, prefix, namespaceURI); }
-static inline void      NSXMLParserDelegate_Parser_DidEndMappingPrefix(NSXMLParserDelegate self, NSXMLParser parser, NSString prefix)                                                                                                                  { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString))bean_msgSend)(self, bean_sel("parser:didEndMappingPrefix:"), parser, prefix); }
-static inline void      NSXMLParserDelegate_Parser_FoundCharacters(NSXMLParserDelegate self, NSXMLParser parser, NSString string)                                                                                                                      { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString))bean_msgSend)(self, bean_sel("parser:foundCharacters:"), parser, string); }
-static inline void      NSXMLParserDelegate_Parser_FoundIgnorableWhitespace(NSXMLParserDelegate self, NSXMLParser parser, NSString whitespaceString)                                                                                                   { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString))bean_msgSend)(self, bean_sel("parser:foundIgnorableWhitespace:"), parser, whitespaceString); }
-static inline void      NSXMLParserDelegate_Parser_FoundProcessingInstructionWithTarget_Data(NSXMLParserDelegate self, NSXMLParser parser, NSString target, NSString data)                                                                             { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundProcessingInstructionWithTarget:data:"), parser, target, data); }
-static inline void      NSXMLParserDelegate_Parser_FoundComment(NSXMLParserDelegate self, NSXMLParser parser, NSString comment)                                                                                                                        { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString))bean_msgSend)(self, bean_sel("parser:foundComment:"), parser, comment); }
-static inline void      NSXMLParserDelegate_Parser_FoundCDATA(NSXMLParserDelegate self, NSXMLParser parser, NSData CDATABlock)                                                                                                                         { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSData))bean_msgSend)(self, bean_sel("parser:foundCDATA:"), parser, CDATABlock); }
-static inline NSData    NSXMLParserDelegate_Parser_ResolveExternalEntityName_SystemID(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString systemID)                                                                                  { return ((NSData (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:resolveExternalEntityName:systemID:"), parser, name, systemID); }
-static inline void      NSXMLParserDelegate_Parser_ParseErrorOccurred(NSXMLParserDelegate self, NSXMLParser parser, NSError parseError)                                                                                                                { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSError))bean_msgSend)(self, bean_sel("parser:parseErrorOccurred:"), parser, parseError); }
-static inline void      NSXMLParserDelegate_Parser_ValidationErrorOccurred(NSXMLParserDelegate self, NSXMLParser parser, NSError validationError)                                                                                                      { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSError))bean_msgSend)(self, bean_sel("parser:validationErrorOccurred:"), parser, validationError); }
+static inline void                   NSXMLParserDelegate_ParserDidStartDocument(NSXMLParserDelegate self, NSXMLParser parser)                                                                                                                                       { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser))bean_msgSend)(self, bean_sel("parserDidStartDocument:"), parser); }
+static inline void                   NSXMLParserDelegate_ParserDidEndDocument(NSXMLParserDelegate self, NSXMLParser parser)                                                                                                                                         { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser))bean_msgSend)(self, bean_sel("parserDidEndDocument:"), parser); }
+static inline void                   NSXMLParserDelegate_Parser_FoundNotationDeclarationWithName_PublicID_SystemID(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString publicID, NSString systemID)                                               { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundNotationDeclarationWithName:publicID:systemID:"), parser, name, publicID, systemID); }
+static inline void                   NSXMLParserDelegate_Parser_FoundUnparsedEntityDeclarationWithName_PublicID_SystemID_NotationName(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString publicID, NSString systemID, NSString notationName)     { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundUnparsedEntityDeclarationWithName:publicID:systemID:notationName:"), parser, name, publicID, systemID, notationName); }
+static inline void                   NSXMLParserDelegate_Parser_FoundAttributeDeclarationWithName_ForElement_Type_DefaultValue(NSXMLParserDelegate self, NSXMLParser parser, NSString attributeName, NSString elementName, NSString type, NSString defaultValue)    { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundAttributeDeclarationWithName:forElement:type:defaultValue:"), parser, attributeName, elementName, type, defaultValue); }
+static inline void                   NSXMLParserDelegate_Parser_FoundElementDeclarationWithName_Model(NSXMLParserDelegate self, NSXMLParser parser, NSString elementName, NSString model)                                                                           { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundElementDeclarationWithName:model:"), parser, elementName, model); }
+static inline void                   NSXMLParserDelegate_Parser_FoundInternalEntityDeclarationWithName_Value(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString value)                                                                           { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundInternalEntityDeclarationWithName:value:"), parser, name, value); }
+static inline void                   NSXMLParserDelegate_Parser_FoundExternalEntityDeclarationWithName_PublicID_SystemID(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString publicID, NSString systemID)                                         { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundExternalEntityDeclarationWithName:publicID:systemID:"), parser, name, publicID, systemID); }
+static inline void                   NSXMLParserDelegate_Parser_DidStartElement_NamespaceURI_QualifiedName_Attributes(NSXMLParserDelegate self, NSXMLParser parser, NSString elementName, NSString namespaceURI, NSString qName, NSDictionary attributeDict)        { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString, NSDictionary))bean_msgSend)(self, bean_sel("parser:didStartElement:namespaceURI:qualifiedName:attributes:"), parser, elementName, namespaceURI, qName, attributeDict); }
+static inline void                   NSXMLParserDelegate_Parser_DidEndElement_NamespaceURI_QualifiedName(NSXMLParserDelegate self, NSXMLParser parser, NSString elementName, NSString namespaceURI, NSString qName)                                                 { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("parser:didEndElement:namespaceURI:qualifiedName:"), parser, elementName, namespaceURI, qName); }
+static inline void                   NSXMLParserDelegate_Parser_DidStartMappingPrefix_ToURI(NSXMLParserDelegate self, NSXMLParser parser, NSString prefix, NSString namespaceURI)                                                                                   { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:didStartMappingPrefix:toURI:"), parser, prefix, namespaceURI); }
+static inline void                   NSXMLParserDelegate_Parser_DidEndMappingPrefix(NSXMLParserDelegate self, NSXMLParser parser, NSString prefix)                                                                                                                  { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString))bean_msgSend)(self, bean_sel("parser:didEndMappingPrefix:"), parser, prefix); }
+static inline void                   NSXMLParserDelegate_Parser_FoundCharacters(NSXMLParserDelegate self, NSXMLParser parser, NSString string)                                                                                                                      { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString))bean_msgSend)(self, bean_sel("parser:foundCharacters:"), parser, string); }
+static inline void                   NSXMLParserDelegate_Parser_FoundIgnorableWhitespace(NSXMLParserDelegate self, NSXMLParser parser, NSString whitespaceString)                                                                                                   { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString))bean_msgSend)(self, bean_sel("parser:foundIgnorableWhitespace:"), parser, whitespaceString); }
+static inline void                   NSXMLParserDelegate_Parser_FoundProcessingInstructionWithTarget_Data(NSXMLParserDelegate self, NSXMLParser parser, NSString target, NSString data)                                                                             { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:foundProcessingInstructionWithTarget:data:"), parser, target, data); }
+static inline void                   NSXMLParserDelegate_Parser_FoundComment(NSXMLParserDelegate self, NSXMLParser parser, NSString comment)                                                                                                                        { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString))bean_msgSend)(self, bean_sel("parser:foundComment:"), parser, comment); }
+static inline void                   NSXMLParserDelegate_Parser_FoundCDATA(NSXMLParserDelegate self, NSXMLParser parser, NSData CDATABlock)                                                                                                                         { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSData))bean_msgSend)(self, bean_sel("parser:foundCDATA:"), parser, CDATABlock); }
+static inline NSData                 NSXMLParserDelegate_Parser_ResolveExternalEntityName_SystemID(NSXMLParserDelegate self, NSXMLParser parser, NSString name, NSString systemID)                                                                                  { return ((NSData (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSString, NSString))bean_msgSend)(self, bean_sel("parser:resolveExternalEntityName:systemID:"), parser, name, systemID); }
+static inline void                   NSXMLParserDelegate_Parser_ParseErrorOccurred(NSXMLParserDelegate self, NSXMLParser parser, NSError parseError)                                                                                                                { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSError))bean_msgSend)(self, bean_sel("parser:parseErrorOccurred:"), parser, parseError); }
+static inline void                   NSXMLParserDelegate_Parser_ValidationErrorOccurred(NSXMLParserDelegate self, NSXMLParser parser, NSError validationError)                                                                                                      { ((void (*)(NSXMLParserDelegate, SEL, NSXMLParser, NSError))bean_msgSend)(self, bean_sel("parser:validationErrorOccurred:"), parser, validationError); }
+#ifndef BEAN_ALLOC_NSXMLParserDelegate
+#define BEAN_ALLOC_NSXMLParserDelegate
+static inline NSXMLParserDelegate    NSXMLParserDelegate_Alloc(void)                                                                                                                                                                                                { return (NSXMLParserDelegate)bean_alloc(bean_cls("NSXMLParserDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSXMLParserDelegate
+#define BEAN_NEW_NSXMLParserDelegate
+static inline NSXMLParserDelegate    NSXMLParserDelegate_New(void)                                                                                                                                                                                                  { return (NSXMLParserDelegate)bean_new(bean_cls("NSXMLParserDelegate")); }
+#endif
 
 /* ===== NSXPCCoder ===== */
 #ifndef BEAN_TYPEDEF_NSXPCCoder
@@ -8705,6 +11141,14 @@ static inline NSObject           NSXPCCoder_DecodeXPCObjectOfType_ForKey(NSXPCCo
 static inline id                 NSXPCCoder_UserInfo(NSXPCCoder self)                                                                      { return ((id (*)(NSXPCCoder, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
 static inline void               NSXPCCoder_SetUserInfo(NSXPCCoder self, id userInfo)                                                      { ((void (*)(NSXPCCoder, SEL, id))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
 static inline NSXPCConnection    NSXPCCoder_Connection(NSXPCCoder self)                                                                    { return ((NSXPCConnection (*)(NSXPCCoder, SEL))bean_msgSend)(self, bean_sel("connection")); }
+#ifndef BEAN_ALLOC_NSXPCCoder
+#define BEAN_ALLOC_NSXPCCoder
+static inline NSXPCCoder         NSXPCCoder_Alloc(void)                                                                                    { return (NSXPCCoder)bean_alloc(bean_cls("NSXPCCoder")); }
+#endif
+#ifndef BEAN_NEW_NSXPCCoder
+#define BEAN_NEW_NSXPCCoder
+static inline NSXPCCoder         NSXPCCoder_New(void)                                                                                      { return (NSXPCCoder)bean_new(bean_cls("NSXPCCoder")); }
+#endif
 
 /* ===== NSXPCConnection ===== */
 static inline NSXPCConnection          NSXPCConnection_InitWithServiceName(NSXPCConnection self, NSString serviceName)                                         { return ((NSXPCConnection (*)(NSXPCConnection, SEL, NSString))bean_msgSend)(self, bean_sel("initWithServiceName:"), serviceName); }
@@ -8736,6 +11180,14 @@ static inline int                      NSXPCConnection_AuditSessionIdentifier(NS
 static inline int                      NSXPCConnection_ProcessIdentifier(NSXPCConnection self)                                                                 { return ((int (*)(NSXPCConnection, SEL))bean_msgSend)(self, bean_sel("processIdentifier")); }
 static inline NSUInteger               NSXPCConnection_EffectiveUserIdentifier(NSXPCConnection self)                                                           { return ((NSUInteger (*)(NSXPCConnection, SEL))bean_msgSend)(self, bean_sel("effectiveUserIdentifier")); }
 static inline NSUInteger               NSXPCConnection_EffectiveGroupIdentifier(NSXPCConnection self)                                                          { return ((NSUInteger (*)(NSXPCConnection, SEL))bean_msgSend)(self, bean_sel("effectiveGroupIdentifier")); }
+#ifndef BEAN_ALLOC_NSXPCConnection
+#define BEAN_ALLOC_NSXPCConnection
+static inline NSXPCConnection          NSXPCConnection_Alloc(void)                                                                                             { return (NSXPCConnection)bean_alloc(bean_cls("NSXPCConnection")); }
+#endif
+#ifndef BEAN_NEW_NSXPCConnection
+#define BEAN_NEW_NSXPCConnection
+static inline NSXPCConnection          NSXPCConnection_New(void)                                                                                               { return (NSXPCConnection)bean_new(bean_cls("NSXPCConnection")); }
+#endif
 
 /* ===== NSXPCInterface ===== */
 static inline NSXPCInterface         NSXPCInterface_InterfaceWithProtocol(Protocol protocol)                                                                                                    { return ((NSXPCInterface (*)(bean_class, SEL, Protocol))bean_msgSend)(bean_cls("NSXPCInterface"), bean_sel("interfaceWithProtocol:"), protocol); }
@@ -8747,6 +11199,14 @@ static inline void                   NSXPCInterface_SetXPCType_ForSelector_Argum
 static inline struct _xpc_type_s*    NSXPCInterface_XPCTypeForSelector_ArgumentIndex_OfReply(NSXPCInterface self, SEL sel, NSUInteger arg, BOOL ofReply)                                        { return ((struct _xpc_type_s* (*)(NSXPCInterface, SEL, SEL, NSUInteger, BOOL))bean_msgSend)(self, bean_sel("XPCTypeForSelector:argumentIndex:ofReply:"), sel, arg, ofReply); }
 static inline Protocol               NSXPCInterface_Protocol(NSXPCInterface self)                                                                                                               { return ((Protocol (*)(NSXPCInterface, SEL))bean_msgSend)(self, bean_sel("protocol")); }
 static inline void                   NSXPCInterface_SetProtocol(NSXPCInterface self, Protocol protocol)                                                                                         { ((void (*)(NSXPCInterface, SEL, Protocol))bean_msgSend)(self, bean_sel("setProtocol:"), protocol); }
+#ifndef BEAN_ALLOC_NSXPCInterface
+#define BEAN_ALLOC_NSXPCInterface
+static inline NSXPCInterface         NSXPCInterface_Alloc(void)                                                                                                                                 { return (NSXPCInterface)bean_alloc(bean_cls("NSXPCInterface")); }
+#endif
+#ifndef BEAN_NEW_NSXPCInterface
+#define BEAN_NEW_NSXPCInterface
+static inline NSXPCInterface         NSXPCInterface_New(void)                                                                                                                                   { return (NSXPCInterface)bean_new(bean_cls("NSXPCInterface")); }
+#endif
 
 /* ===== NSXPCListener ===== */
 #ifndef BEAN_TYPEDEF_NSXPCListener
@@ -8764,13 +11224,29 @@ static inline void                     NSXPCListener_SetConnectionCodeSigningReq
 static inline id                       NSXPCListener_Delegate(NSXPCListener self)                                                     { return ((id (*)(NSXPCListener, SEL))bean_msgSend)(self, bean_sel("delegate")); }
 static inline void                     NSXPCListener_SetDelegate(NSXPCListener self, id delegate)                                     { ((void (*)(NSXPCListener, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
 static inline NSXPCListenerEndpoint    NSXPCListener_Endpoint(NSXPCListener self)                                                     { return ((NSXPCListenerEndpoint (*)(NSXPCListener, SEL))bean_msgSend)(self, bean_sel("endpoint")); }
+#ifndef BEAN_ALLOC_NSXPCListener
+#define BEAN_ALLOC_NSXPCListener
+static inline NSXPCListener            NSXPCListener_Alloc(void)                                                                      { return (NSXPCListener)bean_alloc(bean_cls("NSXPCListener")); }
+#endif
+#ifndef BEAN_NEW_NSXPCListener
+#define BEAN_NEW_NSXPCListener
+static inline NSXPCListener            NSXPCListener_New(void)                                                                        { return (NSXPCListener)bean_new(bean_cls("NSXPCListener")); }
+#endif
 
 /* ===== NSXPCListenerDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSXPCListenerDelegate
 #define BEAN_TYPEDEF_NSXPCListenerDelegate
 typedef bean_id NSXPCListenerDelegate;
 #endif
-static inline BOOL    NSXPCListenerDelegate_Listener_ShouldAcceptNewConnection(NSXPCListenerDelegate self, NSXPCListener listener, NSXPCConnection newConnection)    { return ((BOOL (*)(NSXPCListenerDelegate, SEL, NSXPCListener, NSXPCConnection))bean_msgSend)(self, bean_sel("listener:shouldAcceptNewConnection:"), listener, newConnection); }
+static inline BOOL                     NSXPCListenerDelegate_Listener_ShouldAcceptNewConnection(NSXPCListenerDelegate self, NSXPCListener listener, NSXPCConnection newConnection)    { return ((BOOL (*)(NSXPCListenerDelegate, SEL, NSXPCListener, NSXPCConnection))bean_msgSend)(self, bean_sel("listener:shouldAcceptNewConnection:"), listener, newConnection); }
+#ifndef BEAN_ALLOC_NSXPCListenerDelegate
+#define BEAN_ALLOC_NSXPCListenerDelegate
+static inline NSXPCListenerDelegate    NSXPCListenerDelegate_Alloc(void)                                                                                                              { return (NSXPCListenerDelegate)bean_alloc(bean_cls("NSXPCListenerDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSXPCListenerDelegate
+#define BEAN_NEW_NSXPCListenerDelegate
+static inline NSXPCListenerDelegate    NSXPCListenerDelegate_New(void)                                                                                                                { return (NSXPCListenerDelegate)bean_new(bean_cls("NSXPCListenerDelegate")); }
+#endif
 
 
 #ifdef __cplusplus

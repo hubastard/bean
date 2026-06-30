@@ -8,7 +8,7 @@ int main(void) {
         NSView content = NSWindow_ContentView(window);
         CGRect bounds = NSView_Bounds(content);
 
-        MKMapView map_view = (MKMapView)bean_alloc(bean_cls("MKMapView"));
+        MKMapView map_view = MKMapView_Alloc();
         map_view = (MKMapView)NSView_InitWithFrame((NSView)map_view, bounds);
         bean_example_add_fill_subview(content, (NSView)map_view);
 

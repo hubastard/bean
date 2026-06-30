@@ -126,6 +126,14 @@ def _typedef_guard(name: str) -> str:
     return f"BEAN_TYPEDEF_{name}"
 
 
+def _alloc_guard(name: str) -> str:
+    return f"BEAN_ALLOC_{name}"
+
+
+def _new_guard(name: str) -> str:
+    return f"BEAN_NEW_{name}"
+
+
 def _emit_guarded_typedef(type_spelling: str, name: str) -> list[str]:
     guard = _typedef_guard(name)
     return [
@@ -134,6 +142,18 @@ def _emit_guarded_typedef(type_spelling: str, name: str) -> list[str]:
         f"typedef {type_spelling} {name};",
         "#endif",
     ]
+
+
+def _factory_wrapper_guard(fn_name: str) -> str | None:
+    if fn_name.endswith("_Alloc"):
+        return _alloc_guard(fn_name[: -len("_Alloc")])
+    if fn_name.endswith("_New"):
+        return _new_guard(fn_name[: -len("_New")])
+    return None
+
+
+def _emit_guarded_line(guard: str, line: str) -> list[str]:
+    return [f"#ifndef {guard}", f"#define {guard}", line, "#endif"]
 
 
 def _pad_to_column(text: str, target_column: int) -> str:
@@ -181,7 +201,12 @@ def _format_wrappers(
     for wrapper in wrappers:
         if wrapper.doc:
             lines.append(wrapper.doc)
-        lines.append(_format_wrapper_line(wrapper, name_column, body_column))
+        line = _format_wrapper_line(wrapper, name_column, body_column)
+        guard = _factory_wrapper_guard(wrapper.fn_name)
+        if guard:
+            lines.extend(_emit_guarded_line(guard, line))
+        else:
+            lines.append(line)
     return lines
 
 
@@ -257,10 +282,30 @@ def _emit_class_block(
         if class_doc:
             lines.append(format_doc_comment(class_doc, None))
     lines.append(f"/* ===== {class_name} ===== */")
-    name_column, body_column = _compute_wrapper_columns(wrappers)
+    extra_wrappers: list[EmittedWrapper] = []
+    if not any(wrapper.fn_name == f"{class_name}_Alloc" for wrapper in wrappers):
+        extra_wrappers.append(
+            EmittedWrapper(
+                class_name,
+                f"{class_name}_Alloc",
+                "void",
+                f'return ({class_name})bean_alloc(bean_cls("{class_name}"));',
+            )
+        )
+    if not any(wrapper.fn_name == f"{class_name}_New" for wrapper in wrappers):
+        extra_wrappers.append(
+            EmittedWrapper(
+                class_name,
+                f"{class_name}_New",
+                "void",
+                f'return ({class_name})bean_new(bean_cls("{class_name}"));',
+            )
+        )
+    all_wrappers = [*wrappers, *extra_wrappers]
+    name_column, body_column = _compute_wrapper_columns(all_wrappers)
     if not skip_typedef:
         lines.extend(_emit_guarded_typedef("bean_id", class_name))
-    lines.extend(_format_wrappers(wrappers, name_column, body_column))
+    lines.extend(_format_wrappers(all_wrappers, name_column, body_column))
     lines.append("")
     return lines
 

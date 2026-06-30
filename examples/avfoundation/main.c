@@ -81,7 +81,7 @@ static BOOL bean_avfoundation_play_with_engine(NSURL url, double* out_duration) 
 
     error = NULL;
     file = AVAudioFile_InitForReading_Error(
-        (AVAudioFile)bean_alloc(bean_cls("AVAudioFile")),
+        AVAudioFile_Alloc(),
         url,
         &error);
     if (!file) {
@@ -99,10 +99,10 @@ static BOOL bean_avfoundation_play_with_engine(NSURL url, double* out_duration) 
         return NO;
     }
 
-    engine = (AVAudioEngine)bean_new(bean_cls("AVAudioEngine"));
+    engine = AVAudioEngine_New();
     AVAudioEngine_SetAutoShutdownEnabled(engine, NO);
 
-    player_node = (AVAudioPlayerNode)bean_new(bean_cls("AVAudioPlayerNode"));
+    player_node = AVAudioPlayerNode_New();
 
     AVAudioEngine_AttachNode(engine, (AVAudioNode)player_node);
     format = AVAudioFile_ProcessingFormat(file);

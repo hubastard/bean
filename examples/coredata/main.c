@@ -4,7 +4,7 @@
 
 int main(void) {
     autoreleasepool {
-        NSManagedObjectModel model = (NSManagedObjectModel)bean_alloc(bean_cls("NSManagedObjectModel"));
+        NSManagedObjectModel model = NSManagedObjectModel_Alloc();
         model = (NSManagedObjectModel)NSManagedObjectModel_Init(model);
         NSURL store_url = NSPersistentContainer_DefaultDirectoryURL();
         const char* path = bean_nsstring_to_utf8((NSString)NSURL_Path(store_url));

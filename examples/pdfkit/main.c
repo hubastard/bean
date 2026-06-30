@@ -41,7 +41,7 @@ int main(void) {
         NSString path = bean_pdfkit_sample_path();
         NSURL url = NSURL_FileURLWithPath(path);
 
-        PDFDocument document = (PDFDocument)bean_alloc(bean_cls("PDFDocument"));
+        PDFDocument document = PDFDocument_Alloc();
         document = (PDFDocument)PDFDocument_InitWithURL(document, url);
         if (!document || PDFDocument_PageCount(document) == 0) {
             const char* path_utf8 = bean_nsstring_to_utf8(path);
@@ -59,7 +59,7 @@ int main(void) {
         NSView content = NSWindow_ContentView(window);
         CGRect bounds = NSView_Bounds(content);
 
-        PDFView pdf_view = (PDFView)bean_alloc(bean_cls("PDFView"));
+        PDFView pdf_view = PDFView_Alloc();
         pdf_view = (PDFView)NSView_InitWithFrame((NSView)pdf_view, bounds);
         PDFView_SetAutoScales(pdf_view, YES);
         PDFView_SetDocument(pdf_view, document);

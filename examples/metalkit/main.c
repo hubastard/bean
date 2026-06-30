@@ -10,7 +10,7 @@ int main(void) {
         CGRect bounds = NSView_Bounds(content);
 
         id device = MTLCreateSystemDefaultDevice();
-        MTKView metal_view = (MTKView)bean_alloc(bean_cls("MTKView"));
+        MTKView metal_view = MTKView_Alloc();
         metal_view = (MTKView)MTKView_InitWithFrame_Device(metal_view, bounds, device);
         bean_example_add_fill_subview(content, (NSView)metal_view);
         bean_metal_showcase_configure_mtk_view(metal_view);

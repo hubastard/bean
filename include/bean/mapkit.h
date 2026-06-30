@@ -3634,22 +3634,37 @@ typedef NSUInteger NSStringEncoding;
 typedef bean_id CLBackgroundActivitySession;
 #endif
 static inline CLBackgroundActivitySession    CLBackgroundActivitySession_Init(CLBackgroundActivitySession self)                                       { return ((CLBackgroundActivitySession (*)(CLBackgroundActivitySession, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CLBackgroundActivitySession
+#define BEAN_NEW_CLBackgroundActivitySession
 static inline CLBackgroundActivitySession    CLBackgroundActivitySession_New(void)                                                                    { return ((CLBackgroundActivitySession (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLBackgroundActivitySession"), bean_sel("new")); }
+#endif
 static inline void                           CLBackgroundActivitySession_Invalidate(CLBackgroundActivitySession self)                                 { ((void (*)(CLBackgroundActivitySession, SEL))bean_msgSend)(self, bean_sel("invalidate")); }
 static inline CLBackgroundActivitySession    CLBackgroundActivitySession_BackgroundActivitySession(void)                                              { return ((CLBackgroundActivitySession (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLBackgroundActivitySession"), bean_sel("backgroundActivitySession")); }
 static inline CLBackgroundActivitySession    CLBackgroundActivitySession_BackgroundActivitySessionWithQueue_Handler(NSObject queue, void* handler)    { return ((CLBackgroundActivitySession (*)(bean_class, SEL, NSObject, void*))bean_msgSend)(bean_cls("CLBackgroundActivitySession"), bean_sel("backgroundActivitySessionWithQueue:handler:"), queue, handler); }
+#ifndef BEAN_ALLOC_CLBackgroundActivitySession
+#define BEAN_ALLOC_CLBackgroundActivitySession
+static inline CLBackgroundActivitySession    CLBackgroundActivitySession_Alloc(void)                                                                  { return (CLBackgroundActivitySession)bean_alloc(bean_cls("CLBackgroundActivitySession")); }
+#endif
 
 /* ===== CLBackgroundActivitySessionDiagnostic ===== */
 #ifndef BEAN_TYPEDEF_CLBackgroundActivitySessionDiagnostic
 #define BEAN_TYPEDEF_CLBackgroundActivitySessionDiagnostic
 typedef bean_id CLBackgroundActivitySessionDiagnostic;
 #endif
-static inline BOOL    CLBackgroundActivitySessionDiagnostic_AuthorizationDenied(CLBackgroundActivitySessionDiagnostic self)               { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationDenied")); }
-static inline BOOL    CLBackgroundActivitySessionDiagnostic_AuthorizationDeniedGlobally(CLBackgroundActivitySessionDiagnostic self)       { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationDeniedGlobally")); }
-static inline BOOL    CLBackgroundActivitySessionDiagnostic_AuthorizationRestricted(CLBackgroundActivitySessionDiagnostic self)           { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationRestricted")); }
-static inline BOOL    CLBackgroundActivitySessionDiagnostic_InsufficientlyInUse(CLBackgroundActivitySessionDiagnostic self)               { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("insufficientlyInUse")); }
-static inline BOOL    CLBackgroundActivitySessionDiagnostic_ServiceSessionRequired(CLBackgroundActivitySessionDiagnostic self)            { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("serviceSessionRequired")); }
-static inline BOOL    CLBackgroundActivitySessionDiagnostic_AuthorizationRequestInProgress(CLBackgroundActivitySessionDiagnostic self)    { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationRequestInProgress")); }
+static inline BOOL                                     CLBackgroundActivitySessionDiagnostic_AuthorizationDenied(CLBackgroundActivitySessionDiagnostic self)               { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationDenied")); }
+static inline BOOL                                     CLBackgroundActivitySessionDiagnostic_AuthorizationDeniedGlobally(CLBackgroundActivitySessionDiagnostic self)       { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationDeniedGlobally")); }
+static inline BOOL                                     CLBackgroundActivitySessionDiagnostic_AuthorizationRestricted(CLBackgroundActivitySessionDiagnostic self)           { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationRestricted")); }
+static inline BOOL                                     CLBackgroundActivitySessionDiagnostic_InsufficientlyInUse(CLBackgroundActivitySessionDiagnostic self)               { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("insufficientlyInUse")); }
+static inline BOOL                                     CLBackgroundActivitySessionDiagnostic_ServiceSessionRequired(CLBackgroundActivitySessionDiagnostic self)            { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("serviceSessionRequired")); }
+static inline BOOL                                     CLBackgroundActivitySessionDiagnostic_AuthorizationRequestInProgress(CLBackgroundActivitySessionDiagnostic self)    { return ((BOOL (*)(CLBackgroundActivitySessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationRequestInProgress")); }
+#ifndef BEAN_ALLOC_CLBackgroundActivitySessionDiagnostic
+#define BEAN_ALLOC_CLBackgroundActivitySessionDiagnostic
+static inline CLBackgroundActivitySessionDiagnostic    CLBackgroundActivitySessionDiagnostic_Alloc(void)                                                                   { return (CLBackgroundActivitySessionDiagnostic)bean_alloc(bean_cls("CLBackgroundActivitySessionDiagnostic")); }
+#endif
+#ifndef BEAN_NEW_CLBackgroundActivitySessionDiagnostic
+#define BEAN_NEW_CLBackgroundActivitySessionDiagnostic
+static inline CLBackgroundActivitySessionDiagnostic    CLBackgroundActivitySessionDiagnostic_New(void)                                                                     { return (CLBackgroundActivitySessionDiagnostic)bean_new(bean_cls("CLBackgroundActivitySessionDiagnostic")); }
+#endif
 
 /* ===== CLBeacon ===== */
 #ifndef BEAN_TYPEDEF_CLBeacon
@@ -3666,6 +3681,14 @@ static inline CGFloat        CLBeacon_Accuracy(CLBeacon self)                   
 static inline NSInteger      CLBeacon_Rssi(CLBeacon self)                          { return ((NSInteger (*)(CLBeacon, SEL))bean_msgSend)(self, bean_sel("rssi")); }
 static inline id             CLBeacon_CopyWithZone(CLBeacon self, NSZone* zone)    { return ((id (*)(CLBeacon, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL           CLBeacon_SupportsSecureCoding(void)                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLBeacon"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLBeacon
+#define BEAN_ALLOC_CLBeacon
+static inline CLBeacon       CLBeacon_Alloc(void)                                  { return (CLBeacon)bean_alloc(bean_cls("CLBeacon")); }
+#endif
+#ifndef BEAN_NEW_CLBeacon
+#define BEAN_NEW_CLBeacon
+static inline CLBeacon       CLBeacon_New(void)                                    { return (CLBeacon)bean_new(bean_cls("CLBeacon")); }
+#endif
 
 /* ===== CLBeaconIdentityCondition ===== */
 #ifndef BEAN_TYPEDEF_CLBeaconIdentityCondition
@@ -3680,14 +3703,30 @@ static inline NSNumber                     CLBeaconIdentityCondition_Major(CLBea
 static inline NSNumber                     CLBeaconIdentityCondition_Minor(CLBeaconIdentityCondition self)                                                                                { return ((NSNumber (*)(CLBeaconIdentityCondition, SEL))bean_msgSend)(self, bean_sel("minor")); }
 static inline id                           CLBeaconIdentityCondition_CopyWithZone(CLBeaconIdentityCondition self, NSZone* zone)                                                           { return ((id (*)(CLBeaconIdentityCondition, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                         CLBeaconIdentityCondition_SupportsSecureCoding(void)                                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLBeaconIdentityCondition"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLBeaconIdentityCondition
+#define BEAN_ALLOC_CLBeaconIdentityCondition
+static inline CLBeaconIdentityCondition    CLBeaconIdentityCondition_Alloc(void)                                                                                                          { return (CLBeaconIdentityCondition)bean_alloc(bean_cls("CLBeaconIdentityCondition")); }
+#endif
+#ifndef BEAN_NEW_CLBeaconIdentityCondition
+#define BEAN_NEW_CLBeaconIdentityCondition
+static inline CLBeaconIdentityCondition    CLBeaconIdentityCondition_New(void)                                                                                                            { return (CLBeaconIdentityCondition)bean_new(bean_cls("CLBeaconIdentityCondition")); }
+#endif
 
 /* ===== CLBeaconIdentityConstraint ===== */
 #ifndef BEAN_TYPEDEF_CLBeaconIdentityConstraint
 #define BEAN_TYPEDEF_CLBeaconIdentityConstraint
 typedef bean_id CLBeaconIdentityConstraint;
 #endif
-static inline id      CLBeaconIdentityConstraint_CopyWithZone(CLBeaconIdentityConstraint self, NSZone* zone)    { return ((id (*)(CLBeaconIdentityConstraint, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL    CLBeaconIdentityConstraint_SupportsSecureCoding(void)                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLBeaconIdentityConstraint"), bean_sel("supportsSecureCoding")); }
+static inline id                            CLBeaconIdentityConstraint_CopyWithZone(CLBeaconIdentityConstraint self, NSZone* zone)    { return ((id (*)(CLBeaconIdentityConstraint, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                          CLBeaconIdentityConstraint_SupportsSecureCoding(void)                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLBeaconIdentityConstraint"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLBeaconIdentityConstraint
+#define BEAN_ALLOC_CLBeaconIdentityConstraint
+static inline CLBeaconIdentityConstraint    CLBeaconIdentityConstraint_Alloc(void)                                                    { return (CLBeaconIdentityConstraint)bean_alloc(bean_cls("CLBeaconIdentityConstraint")); }
+#endif
+#ifndef BEAN_NEW_CLBeaconIdentityConstraint
+#define BEAN_NEW_CLBeaconIdentityConstraint
+static inline CLBeaconIdentityConstraint    CLBeaconIdentityConstraint_New(void)                                                      { return (CLBeaconIdentityConstraint)bean_new(bean_cls("CLBeaconIdentityConstraint")); }
+#endif
 
 /* ===== CLCircularGeographicCondition ===== */
 #ifndef BEAN_TYPEDEF_CLCircularGeographicCondition
@@ -3698,6 +3737,14 @@ static inline CLCircularGeographicCondition    CLCircularGeographicCondition_Ini
 static inline CLLocationCoordinate2D           CLCircularGeographicCondition_Center(CLCircularGeographicCondition self)                                                                  { return ((CLLocationCoordinate2D (*)(CLCircularGeographicCondition, SEL))bean_msgSend_stret)(self, bean_sel("center")); }
 static inline CGFloat                          CLCircularGeographicCondition_Radius(CLCircularGeographicCondition self)                                                                  { return ((CGFloat (*)(CLCircularGeographicCondition, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
 static inline BOOL                             CLCircularGeographicCondition_SupportsSecureCoding(void)                                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLCircularGeographicCondition"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLCircularGeographicCondition
+#define BEAN_ALLOC_CLCircularGeographicCondition
+static inline CLCircularGeographicCondition    CLCircularGeographicCondition_Alloc(void)                                                                                                 { return (CLCircularGeographicCondition)bean_alloc(bean_cls("CLCircularGeographicCondition")); }
+#endif
+#ifndef BEAN_NEW_CLCircularGeographicCondition
+#define BEAN_NEW_CLCircularGeographicCondition
+static inline CLCircularGeographicCondition    CLCircularGeographicCondition_New(void)                                                                                                   { return (CLCircularGeographicCondition)bean_new(bean_cls("CLCircularGeographicCondition")); }
+#endif
 
 /* ===== CLCircularRegion ===== */
 #ifndef BEAN_TYPEDEF_CLCircularRegion
@@ -3708,6 +3755,14 @@ static inline CLCircularRegion          CLCircularRegion_InitWithCenter_Radius_I
 static inline BOOL                      CLCircularRegion_ContainsCoordinate(CLCircularRegion self, CLLocationCoordinate2D coordinate)                                                   { return ((BOOL (*)(CLCircularRegion, SEL, CLLocationCoordinate2D))bean_msgSend)(self, bean_sel("containsCoordinate:"), coordinate); }
 static inline CLLocationCoordinate2D    CLCircularRegion_Center(CLCircularRegion self)                                                                                                  { return ((CLLocationCoordinate2D (*)(CLCircularRegion, SEL))bean_msgSend_stret)(self, bean_sel("center")); }
 static inline CGFloat                   CLCircularRegion_Radius(CLCircularRegion self)                                                                                                  { return ((CGFloat (*)(CLCircularRegion, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
+#ifndef BEAN_ALLOC_CLCircularRegion
+#define BEAN_ALLOC_CLCircularRegion
+static inline CLCircularRegion          CLCircularRegion_Alloc(void)                                                                                                                    { return (CLCircularRegion)bean_alloc(bean_cls("CLCircularRegion")); }
+#endif
+#ifndef BEAN_NEW_CLCircularRegion
+#define BEAN_NEW_CLCircularRegion
+static inline CLCircularRegion          CLCircularRegion_New(void)                                                                                                                      { return (CLCircularRegion)bean_new(bean_cls("CLCircularRegion")); }
+#endif
 
 /* ===== CLCondition ===== */
 #ifndef BEAN_TYPEDEF_CLCondition
@@ -3715,9 +3770,16 @@ static inline CGFloat                   CLCircularRegion_Radius(CLCircularRegion
 typedef bean_id CLCondition;
 #endif
 static inline CLCondition    CLCondition_Init(CLCondition self)                          { return ((CLCondition (*)(CLCondition, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CLCondition
+#define BEAN_NEW_CLCondition
 static inline CLCondition    CLCondition_New(void)                                       { return ((CLCondition (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLCondition"), bean_sel("new")); }
+#endif
 static inline BOOL           CLCondition_SupportsSecureCoding(void)                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLCondition"), bean_sel("supportsSecureCoding")); }
 static inline id             CLCondition_CopyWithZone(CLCondition self, NSZone* zone)    { return ((id (*)(CLCondition, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CLCondition
+#define BEAN_ALLOC_CLCondition
+static inline CLCondition    CLCondition_Alloc(void)                                     { return (CLCondition)bean_alloc(bean_cls("CLCondition")); }
+#endif
 
 /* ===== CLFloor ===== */
 #ifndef BEAN_TYPEDEF_CLFloor
@@ -3727,29 +3789,53 @@ typedef bean_id CLFloor;
 static inline NSInteger    CLFloor_Level(CLFloor self)                         { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
 static inline id           CLFloor_CopyWithZone(CLFloor self, NSZone* zone)    { return ((id (*)(CLFloor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL         CLFloor_SupportsSecureCoding(void)                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLFloor"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLFloor
+#define BEAN_ALLOC_CLFloor
+static inline CLFloor      CLFloor_Alloc(void)                                 { return (CLFloor)bean_alloc(bean_cls("CLFloor")); }
+#endif
+#ifndef BEAN_NEW_CLFloor
+#define BEAN_NEW_CLFloor
+static inline CLFloor      CLFloor_New(void)                                   { return (CLFloor)bean_new(bean_cls("CLFloor")); }
+#endif
 
 /* ===== CLHeading ===== */
 #ifndef BEAN_TYPEDEF_CLHeading
 #define BEAN_TYPEDEF_CLHeading
 typedef bean_id CLHeading;
 #endif
-static inline CGFloat    CLHeading_MagneticHeading(CLHeading self)               { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("magneticHeading")); }
-static inline CGFloat    CLHeading_TrueHeading(CLHeading self)                   { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("trueHeading")); }
-static inline CGFloat    CLHeading_HeadingAccuracy(CLHeading self)               { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("headingAccuracy")); }
-static inline CGFloat    CLHeading_X(CLHeading self)                             { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("x")); }
-static inline CGFloat    CLHeading_Y(CLHeading self)                             { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("y")); }
-static inline CGFloat    CLHeading_Z(CLHeading self)                             { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("z")); }
-static inline NSDate     CLHeading_Timestamp(CLHeading self)                     { return ((NSDate (*)(CLHeading, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
-static inline id         CLHeading_CopyWithZone(CLHeading self, NSZone* zone)    { return ((id (*)(CLHeading, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL       CLHeading_SupportsSecureCoding(void)                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLHeading"), bean_sel("supportsSecureCoding")); }
+static inline CGFloat      CLHeading_MagneticHeading(CLHeading self)               { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("magneticHeading")); }
+static inline CGFloat      CLHeading_TrueHeading(CLHeading self)                   { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("trueHeading")); }
+static inline CGFloat      CLHeading_HeadingAccuracy(CLHeading self)               { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("headingAccuracy")); }
+static inline CGFloat      CLHeading_X(CLHeading self)                             { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("x")); }
+static inline CGFloat      CLHeading_Y(CLHeading self)                             { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("y")); }
+static inline CGFloat      CLHeading_Z(CLHeading self)                             { return ((CGFloat (*)(CLHeading, SEL))bean_msgSend_fpret)(self, bean_sel("z")); }
+static inline NSDate       CLHeading_Timestamp(CLHeading self)                     { return ((NSDate (*)(CLHeading, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
+static inline id           CLHeading_CopyWithZone(CLHeading self, NSZone* zone)    { return ((id (*)(CLHeading, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL         CLHeading_SupportsSecureCoding(void)                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLHeading"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLHeading
+#define BEAN_ALLOC_CLHeading
+static inline CLHeading    CLHeading_Alloc(void)                                   { return (CLHeading)bean_alloc(bean_cls("CLHeading")); }
+#endif
+#ifndef BEAN_NEW_CLHeading
+#define BEAN_NEW_CLHeading
+static inline CLHeading    CLHeading_New(void)                                     { return (CLHeading)bean_new(bean_cls("CLHeading")); }
+#endif
 
 /* ===== CLLocationPushServiceExtension ===== */
 #ifndef BEAN_TYPEDEF_CLLocationPushServiceExtension
 #define BEAN_TYPEDEF_CLLocationPushServiceExtension
 typedef bean_id CLLocationPushServiceExtension;
 #endif
-static inline void    CLLocationPushServiceExtension_DidReceiveLocationPushPayload_Completion(CLLocationPushServiceExtension self, NSDictionary payload, void* completion)    { ((void (*)(CLLocationPushServiceExtension, SEL, NSDictionary, void*))bean_msgSend)(self, bean_sel("didReceiveLocationPushPayload:completion:"), payload, completion); }
-static inline void    CLLocationPushServiceExtension_ServiceExtensionWillTerminate(CLLocationPushServiceExtension self)                                                       { ((void (*)(CLLocationPushServiceExtension, SEL))bean_msgSend)(self, bean_sel("serviceExtensionWillTerminate")); }
+static inline void                              CLLocationPushServiceExtension_DidReceiveLocationPushPayload_Completion(CLLocationPushServiceExtension self, NSDictionary payload, void* completion)    { ((void (*)(CLLocationPushServiceExtension, SEL, NSDictionary, void*))bean_msgSend)(self, bean_sel("didReceiveLocationPushPayload:completion:"), payload, completion); }
+static inline void                              CLLocationPushServiceExtension_ServiceExtensionWillTerminate(CLLocationPushServiceExtension self)                                                       { ((void (*)(CLLocationPushServiceExtension, SEL))bean_msgSend)(self, bean_sel("serviceExtensionWillTerminate")); }
+#ifndef BEAN_ALLOC_CLLocationPushServiceExtension
+#define BEAN_ALLOC_CLLocationPushServiceExtension
+static inline CLLocationPushServiceExtension    CLLocationPushServiceExtension_Alloc(void)                                                                                                              { return (CLLocationPushServiceExtension)bean_alloc(bean_cls("CLLocationPushServiceExtension")); }
+#endif
+#ifndef BEAN_NEW_CLLocationPushServiceExtension
+#define BEAN_NEW_CLLocationPushServiceExtension
+static inline CLLocationPushServiceExtension    CLLocationPushServiceExtension_New(void)                                                                                                                { return (CLLocationPushServiceExtension)bean_new(bean_cls("CLLocationPushServiceExtension")); }
+#endif
 
 /* ===== CLLocationSourceInformation ===== */
 #ifndef BEAN_TYPEDEF_CLLocationSourceInformation
@@ -3761,6 +3847,14 @@ static inline BOOL                           CLLocationSourceInformation_IsSimul
 static inline BOOL                           CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
 static inline id                             CLLocationSourceInformation_CopyWithZone(CLLocationSourceInformation self, NSZone* zone)                                                                      { return ((id (*)(CLLocationSourceInformation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                           CLLocationSourceInformation_SupportsSecureCoding(void)                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocationSourceInformation"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLLocationSourceInformation
+#define BEAN_ALLOC_CLLocationSourceInformation
+static inline CLLocationSourceInformation    CLLocationSourceInformation_Alloc(void)                                                                                                                       { return (CLLocationSourceInformation)bean_alloc(bean_cls("CLLocationSourceInformation")); }
+#endif
+#ifndef BEAN_NEW_CLLocationSourceInformation
+#define BEAN_NEW_CLLocationSourceInformation
+static inline CLLocationSourceInformation    CLLocationSourceInformation_New(void)                                                                                                                         { return (CLLocationSourceInformation)bean_new(bean_cls("CLLocationSourceInformation")); }
+#endif
 
 /* ===== CLLocationUpdater ===== */
 #ifndef BEAN_TYPEDEF_CLLocationUpdater
@@ -3768,12 +3862,19 @@ static inline BOOL                           CLLocationSourceInformation_Support
 typedef bean_id CLLocationUpdater;
 #endif
 static inline CLLocationUpdater    CLLocationUpdater_Init(CLLocationUpdater self)                                                                                          { return ((CLLocationUpdater (*)(CLLocationUpdater, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CLLocationUpdater
+#define BEAN_NEW_CLLocationUpdater
 static inline CLLocationUpdater    CLLocationUpdater_New(void)                                                                                                             { return ((CLLocationUpdater (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocationUpdater"), bean_sel("new")); }
+#endif
 static inline CLLocationUpdater    CLLocationUpdater_LiveUpdaterWithQueue_Handler(NSObject queue, void* handler)                                                           { return ((CLLocationUpdater (*)(bean_class, SEL, NSObject, void*))bean_msgSend)(bean_cls("CLLocationUpdater"), bean_sel("liveUpdaterWithQueue:handler:"), queue, handler); }
 static inline CLLocationUpdater    CLLocationUpdater_LiveUpdaterWithConfiguration_Queue_Handler(CLLiveUpdateConfiguration configuration, NSObject queue, void* handler)    { return ((CLLocationUpdater (*)(bean_class, SEL, CLLiveUpdateConfiguration, NSObject, void*))bean_msgSend)(bean_cls("CLLocationUpdater"), bean_sel("liveUpdaterWithConfiguration:queue:handler:"), configuration, queue, handler); }
 static inline void                 CLLocationUpdater_Resume(CLLocationUpdater self)                                                                                        { ((void (*)(CLLocationUpdater, SEL))bean_msgSend)(self, bean_sel("resume")); }
 static inline void                 CLLocationUpdater_Pause(CLLocationUpdater self)                                                                                         { ((void (*)(CLLocationUpdater, SEL))bean_msgSend)(self, bean_sel("pause")); }
 static inline void                 CLLocationUpdater_Invalidate(CLLocationUpdater self)                                                                                    { ((void (*)(CLLocationUpdater, SEL))bean_msgSend)(self, bean_sel("invalidate")); }
+#ifndef BEAN_ALLOC_CLLocationUpdater
+#define BEAN_ALLOC_CLLocationUpdater
+static inline CLLocationUpdater    CLLocationUpdater_Alloc(void)                                                                                                           { return (CLLocationUpdater)bean_alloc(bean_cls("CLLocationUpdater")); }
+#endif
 
 /* ===== CLMonitorConfiguration ===== */
 #ifndef BEAN_TYPEDEF_CLMonitorConfiguration
@@ -3784,6 +3885,14 @@ static inline CLMonitorConfiguration    CLMonitorConfiguration_ConfigWithMonitor
 static inline NSString                  CLMonitorConfiguration_Name(CLMonitorConfiguration self)                                                              { return ((NSString (*)(CLMonitorConfiguration, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline NSObject                  CLMonitorConfiguration_Queue(CLMonitorConfiguration self)                                                             { return ((NSObject (*)(CLMonitorConfiguration, SEL))bean_msgSend)(self, bean_sel("queue")); }
 static inline void*                     CLMonitorConfiguration_EventHandler(CLMonitorConfiguration self)                                                      { return ((void* (*)(CLMonitorConfiguration, SEL))bean_msgSend)(self, bean_sel("eventHandler")); }
+#ifndef BEAN_ALLOC_CLMonitorConfiguration
+#define BEAN_ALLOC_CLMonitorConfiguration
+static inline CLMonitorConfiguration    CLMonitorConfiguration_Alloc(void)                                                                                    { return (CLMonitorConfiguration)bean_alloc(bean_cls("CLMonitorConfiguration")); }
+#endif
+#ifndef BEAN_NEW_CLMonitorConfiguration
+#define BEAN_NEW_CLMonitorConfiguration
+static inline CLMonitorConfiguration    CLMonitorConfiguration_New(void)                                                                                      { return (CLMonitorConfiguration)bean_new(bean_cls("CLMonitorConfiguration")); }
+#endif
 
 /* ===== CLRegion ===== */
 #ifndef BEAN_TYPEDEF_CLRegion
@@ -3801,6 +3910,14 @@ static inline BOOL                      CLRegion_NotifyOnExit(CLRegion self)    
 static inline void                      CLRegion_SetNotifyOnExit(CLRegion self, BOOL notifyOnExit)                                                                                    { ((void (*)(CLRegion, SEL, BOOL))bean_msgSend)(self, bean_sel("setNotifyOnExit:"), notifyOnExit); }
 static inline id                        CLRegion_CopyWithZone(CLRegion self, NSZone* zone)                                                                                            { return ((id (*)(CLRegion, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      CLRegion_SupportsSecureCoding(void)                                                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLRegion"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLRegion
+#define BEAN_ALLOC_CLRegion
+static inline CLRegion                  CLRegion_Alloc(void)                                                                                                                          { return (CLRegion)bean_alloc(bean_cls("CLRegion")); }
+#endif
+#ifndef BEAN_NEW_CLRegion
+#define BEAN_NEW_CLRegion
+static inline CLRegion                  CLRegion_New(void)                                                                                                                            { return (CLRegion)bean_new(bean_cls("CLRegion")); }
+#endif
 
 /* ===== CLServiceSession ===== */
 #ifndef BEAN_TYPEDEF_CLServiceSession
@@ -3808,26 +3925,41 @@ static inline BOOL                      CLRegion_SupportsSecureCoding(void)     
 typedef bean_id CLServiceSession;
 #endif
 static inline CLServiceSession    CLServiceSession_Init(CLServiceSession self)                                                                                                                                                                  { return ((CLServiceSession (*)(CLServiceSession, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CLServiceSession
+#define BEAN_NEW_CLServiceSession
 static inline CLServiceSession    CLServiceSession_New(void)                                                                                                                                                                                    { return ((CLServiceSession (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLServiceSession"), bean_sel("new")); }
+#endif
 static inline CLServiceSession    CLServiceSession_SessionRequiringAuthorization(CLServiceSessionAuthorizationRequirement authorizationRequirement)                                                                                             { return ((CLServiceSession (*)(bean_class, SEL, CLServiceSessionAuthorizationRequirement))bean_msgSend)(bean_cls("CLServiceSession"), bean_sel("sessionRequiringAuthorization:"), authorizationRequirement); }
 static inline CLServiceSession    CLServiceSession_SessionRequiringAuthorization_Queue_Handler(CLServiceSessionAuthorizationRequirement authorizationRequirement, NSObject queue, void* handler)                                                { return ((CLServiceSession (*)(bean_class, SEL, CLServiceSessionAuthorizationRequirement, NSObject, void*))bean_msgSend)(bean_cls("CLServiceSession"), bean_sel("sessionRequiringAuthorization:queue:handler:"), authorizationRequirement, queue, handler); }
 static inline CLServiceSession    CLServiceSession_SessionRequiringAuthorization_FullAccuracyPurposeKey(CLServiceSessionAuthorizationRequirement authorizationRequirement, NSString purposeKey)                                                 { return ((CLServiceSession (*)(bean_class, SEL, CLServiceSessionAuthorizationRequirement, NSString))bean_msgSend)(bean_cls("CLServiceSession"), bean_sel("sessionRequiringAuthorization:fullAccuracyPurposeKey:"), authorizationRequirement, purposeKey); }
 static inline CLServiceSession    CLServiceSession_SessionRequiringAuthorization_FullAccuracyPurposeKey_Queue_Handler(CLServiceSessionAuthorizationRequirement authorizationRequirement, NSString purposeKey, NSObject queue, void* handler)    { return ((CLServiceSession (*)(bean_class, SEL, CLServiceSessionAuthorizationRequirement, NSString, NSObject, void*))bean_msgSend)(bean_cls("CLServiceSession"), bean_sel("sessionRequiringAuthorization:fullAccuracyPurposeKey:queue:handler:"), authorizationRequirement, purposeKey, queue, handler); }
 static inline void                CLServiceSession_Invalidate(CLServiceSession self)                                                                                                                                                            { ((void (*)(CLServiceSession, SEL))bean_msgSend)(self, bean_sel("invalidate")); }
+#ifndef BEAN_ALLOC_CLServiceSession
+#define BEAN_ALLOC_CLServiceSession
+static inline CLServiceSession    CLServiceSession_Alloc(void)                                                                                                                                                                                  { return (CLServiceSession)bean_alloc(bean_cls("CLServiceSession")); }
+#endif
 
 /* ===== CLServiceSessionDiagnostic ===== */
 #ifndef BEAN_TYPEDEF_CLServiceSessionDiagnostic
 #define BEAN_TYPEDEF_CLServiceSessionDiagnostic
 typedef bean_id CLServiceSessionDiagnostic;
 #endif
-static inline BOOL    CLServiceSessionDiagnostic_AuthorizationDenied(CLServiceSessionDiagnostic self)               { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationDenied")); }
-static inline BOOL    CLServiceSessionDiagnostic_AuthorizationDeniedGlobally(CLServiceSessionDiagnostic self)       { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationDeniedGlobally")); }
-static inline BOOL    CLServiceSessionDiagnostic_AuthorizationRestricted(CLServiceSessionDiagnostic self)           { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationRestricted")); }
-static inline BOOL    CLServiceSessionDiagnostic_InsufficientlyInUse(CLServiceSessionDiagnostic self)               { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("insufficientlyInUse")); }
-static inline BOOL    CLServiceSessionDiagnostic_ServiceSessionRequired(CLServiceSessionDiagnostic self)            { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("serviceSessionRequired")); }
-static inline BOOL    CLServiceSessionDiagnostic_FullAccuracyDenied(CLServiceSessionDiagnostic self)                { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("fullAccuracyDenied")); }
-static inline BOOL    CLServiceSessionDiagnostic_AlwaysAuthorizationDenied(CLServiceSessionDiagnostic self)         { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("alwaysAuthorizationDenied")); }
-static inline BOOL    CLServiceSessionDiagnostic_AuthorizationRequestInProgress(CLServiceSessionDiagnostic self)    { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationRequestInProgress")); }
+static inline BOOL                          CLServiceSessionDiagnostic_AuthorizationDenied(CLServiceSessionDiagnostic self)               { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationDenied")); }
+static inline BOOL                          CLServiceSessionDiagnostic_AuthorizationDeniedGlobally(CLServiceSessionDiagnostic self)       { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationDeniedGlobally")); }
+static inline BOOL                          CLServiceSessionDiagnostic_AuthorizationRestricted(CLServiceSessionDiagnostic self)           { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationRestricted")); }
+static inline BOOL                          CLServiceSessionDiagnostic_InsufficientlyInUse(CLServiceSessionDiagnostic self)               { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("insufficientlyInUse")); }
+static inline BOOL                          CLServiceSessionDiagnostic_ServiceSessionRequired(CLServiceSessionDiagnostic self)            { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("serviceSessionRequired")); }
+static inline BOOL                          CLServiceSessionDiagnostic_FullAccuracyDenied(CLServiceSessionDiagnostic self)                { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("fullAccuracyDenied")); }
+static inline BOOL                          CLServiceSessionDiagnostic_AlwaysAuthorizationDenied(CLServiceSessionDiagnostic self)         { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("alwaysAuthorizationDenied")); }
+static inline BOOL                          CLServiceSessionDiagnostic_AuthorizationRequestInProgress(CLServiceSessionDiagnostic self)    { return ((BOOL (*)(CLServiceSessionDiagnostic, SEL))bean_msgSend)(self, bean_sel("authorizationRequestInProgress")); }
+#ifndef BEAN_ALLOC_CLServiceSessionDiagnostic
+#define BEAN_ALLOC_CLServiceSessionDiagnostic
+static inline CLServiceSessionDiagnostic    CLServiceSessionDiagnostic_Alloc(void)                                                        { return (CLServiceSessionDiagnostic)bean_alloc(bean_cls("CLServiceSessionDiagnostic")); }
+#endif
+#ifndef BEAN_NEW_CLServiceSessionDiagnostic
+#define BEAN_NEW_CLServiceSessionDiagnostic
+static inline CLServiceSessionDiagnostic    CLServiceSessionDiagnostic_New(void)                                                          { return (CLServiceSessionDiagnostic)bean_new(bean_cls("CLServiceSessionDiagnostic")); }
+#endif
 
 /* ===== CLVisit ===== */
 #ifndef BEAN_TYPEDEF_CLVisit
@@ -3840,6 +3972,14 @@ static inline CLLocationCoordinate2D    CLVisit_Coordinate(CLVisit self)        
 static inline CGFloat                   CLVisit_HorizontalAccuracy(CLVisit self)            { return ((CGFloat (*)(CLVisit, SEL))bean_msgSend_fpret)(self, bean_sel("horizontalAccuracy")); }
 static inline BOOL                      CLVisit_SupportsSecureCoding(void)                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLVisit"), bean_sel("supportsSecureCoding")); }
 static inline id                        CLVisit_CopyWithZone(CLVisit self, NSZone* zone)    { return ((id (*)(CLVisit, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CLVisit
+#define BEAN_ALLOC_CLVisit
+static inline CLVisit                   CLVisit_Alloc(void)                                 { return (CLVisit)bean_alloc(bean_cls("CLVisit")); }
+#endif
+#ifndef BEAN_NEW_CLVisit
+#define BEAN_NEW_CLVisit
+static inline CLVisit                   CLVisit_New(void)                                   { return (CLVisit)bean_new(bean_cls("CLVisit")); }
+#endif
 
 /* ===== MKAddress ===== */
 #ifndef BEAN_TYPEDEF_MKAddress
@@ -3848,9 +3988,16 @@ typedef bean_id MKAddress;
 #endif
 static inline MKAddress    MKAddress_InitWithFullAddress_ShortAddress(MKAddress self, NSString fullAddress, NSString shortAddress)    { return ((MKAddress (*)(MKAddress, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("initWithFullAddress:shortAddress:"), fullAddress, shortAddress); }
 static inline MKAddress    MKAddress_Init(MKAddress self)                                                                             { return ((MKAddress (*)(MKAddress, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_MKAddress
+#define BEAN_NEW_MKAddress
 static inline MKAddress    MKAddress_New(void)                                                                                        { return ((MKAddress (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKAddress"), bean_sel("new")); }
+#endif
 static inline NSString     MKAddress_FullAddress(MKAddress self)                                                                      { return ((NSString (*)(MKAddress, SEL))bean_msgSend)(self, bean_sel("fullAddress")); }
 static inline NSString     MKAddress_ShortAddress(MKAddress self)                                                                     { return ((NSString (*)(MKAddress, SEL))bean_msgSend)(self, bean_sel("shortAddress")); }
+#ifndef BEAN_ALLOC_MKAddress
+#define BEAN_ALLOC_MKAddress
+static inline MKAddress    MKAddress_Alloc(void)                                                                                      { return (MKAddress)bean_alloc(bean_cls("MKAddress")); }
+#endif
 
 /* ===== MKAddressFilter ===== */
 #ifndef BEAN_TYPEDEF_MKAddressFilter
@@ -3865,6 +4012,14 @@ static inline MKAddressFilter    MKAddressFilter_FilterIncludingAll(void)       
 static inline MKAddressFilter    MKAddressFilter_FilterExcludingAll(void)                                                     { return ((MKAddressFilter (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKAddressFilter"), bean_sel("filterExcludingAll")); }
 static inline BOOL               MKAddressFilter_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKAddressFilter"), bean_sel("supportsSecureCoding")); }
 static inline id                 MKAddressFilter_CopyWithZone(MKAddressFilter self, NSZone* zone)                             { return ((id (*)(MKAddressFilter, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKAddressFilter
+#define BEAN_ALLOC_MKAddressFilter
+static inline MKAddressFilter    MKAddressFilter_Alloc(void)                                                                  { return (MKAddressFilter)bean_alloc(bean_cls("MKAddressFilter")); }
+#endif
+#ifndef BEAN_NEW_MKAddressFilter
+#define BEAN_NEW_MKAddressFilter
+static inline MKAddressFilter    MKAddressFilter_New(void)                                                                    { return (MKAddressFilter)bean_new(bean_cls("MKAddressFilter")); }
+#endif
 
 /* ===== MKAddressRepresentations ===== */
 #ifndef BEAN_TYPEDEF_MKAddressRepresentations
@@ -3872,13 +4027,20 @@ static inline id                 MKAddressFilter_CopyWithZone(MKAddressFilter se
 typedef bean_id MKAddressRepresentations;
 #endif
 static inline MKAddressRepresentations    MKAddressRepresentations_Init(MKAddressRepresentations self)                                                                            { return ((MKAddressRepresentations (*)(MKAddressRepresentations, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_MKAddressRepresentations
+#define BEAN_NEW_MKAddressRepresentations
 static inline MKAddressRepresentations    MKAddressRepresentations_New(void)                                                                                                      { return ((MKAddressRepresentations (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKAddressRepresentations"), bean_sel("new")); }
+#endif
 static inline NSString                    MKAddressRepresentations_FullAddressIncludingRegion_SingleLine(MKAddressRepresentations self, BOOL includingRegion, BOOL singleLine)    { return ((NSString (*)(MKAddressRepresentations, SEL, BOOL, BOOL))bean_msgSend)(self, bean_sel("fullAddressIncludingRegion:singleLine:"), includingRegion, singleLine); }
 static inline NSString                    MKAddressRepresentations_CityWithContextUsingStyle(MKAddressRepresentations self, MKAddressRepresentationsContextStyle style)           { return ((NSString (*)(MKAddressRepresentations, SEL, MKAddressRepresentationsContextStyle))bean_msgSend)(self, bean_sel("cityWithContextUsingStyle:"), style); }
 static inline NSString                    MKAddressRepresentations_CityName(MKAddressRepresentations self)                                                                        { return ((NSString (*)(MKAddressRepresentations, SEL))bean_msgSend)(self, bean_sel("cityName")); }
 static inline NSString                    MKAddressRepresentations_CityWithContext(MKAddressRepresentations self)                                                                 { return ((NSString (*)(MKAddressRepresentations, SEL))bean_msgSend)(self, bean_sel("cityWithContext")); }
 static inline NSString                    MKAddressRepresentations_RegionName(MKAddressRepresentations self)                                                                      { return ((NSString (*)(MKAddressRepresentations, SEL))bean_msgSend)(self, bean_sel("regionName")); }
 static inline NSString                    MKAddressRepresentations_RegionCode(MKAddressRepresentations self)                                                                      { return ((NSString (*)(MKAddressRepresentations, SEL))bean_msgSend)(self, bean_sel("regionCode")); }
+#ifndef BEAN_ALLOC_MKAddressRepresentations
+#define BEAN_ALLOC_MKAddressRepresentations
+static inline MKAddressRepresentations    MKAddressRepresentations_Alloc(void)                                                                                                    { return (MKAddressRepresentations)bean_alloc(bean_cls("MKAddressRepresentations")); }
+#endif
 
 /* ===== MKAnnotation ===== */
 #ifndef BEAN_TYPEDEF_MKAnnotation
@@ -3889,6 +4051,14 @@ static inline void                      MKAnnotation_SetCoordinate(MKAnnotation 
 static inline CLLocationCoordinate2D    MKAnnotation_Coordinate(MKAnnotation self)                                             { return ((CLLocationCoordinate2D (*)(MKAnnotation, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline NSString                  MKAnnotation_Title(MKAnnotation self)                                                  { return ((NSString (*)(MKAnnotation, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline NSString                  MKAnnotation_Subtitle(MKAnnotation self)                                               { return ((NSString (*)(MKAnnotation, SEL))bean_msgSend)(self, bean_sel("subtitle")); }
+#ifndef BEAN_ALLOC_MKAnnotation
+#define BEAN_ALLOC_MKAnnotation
+static inline MKAnnotation              MKAnnotation_Alloc(void)                                                               { return (MKAnnotation)bean_alloc(bean_cls("MKAnnotation")); }
+#endif
+#ifndef BEAN_NEW_MKAnnotation
+#define BEAN_NEW_MKAnnotation
+static inline MKAnnotation              MKAnnotation_New(void)                                                                 { return (MKAnnotation)bean_new(bean_cls("MKAnnotation")); }
+#endif
 
 /* ===== MKAnnotationView ===== */
 #ifndef BEAN_TYPEDEF_MKAnnotationView
@@ -3949,6 +4119,14 @@ static inline BOOL                             MKAnnotationView_Enabled(MKAnnota
 static inline BOOL                             MKAnnotationView_Highlighted(MKAnnotationView self)                                                                     { return ((BOOL (*)(MKAnnotationView, SEL))bean_msgSend)(self, bean_sel("highlighted")); }
 static inline BOOL                             MKAnnotationView_Selected(MKAnnotationView self)                                                                        { return ((BOOL (*)(MKAnnotationView, SEL))bean_msgSend)(self, bean_sel("selected")); }
 static inline BOOL                             MKAnnotationView_Draggable(MKAnnotationView self)                                                                       { return ((BOOL (*)(MKAnnotationView, SEL))bean_msgSend)(self, bean_sel("draggable")); }
+#ifndef BEAN_ALLOC_MKAnnotationView
+#define BEAN_ALLOC_MKAnnotationView
+static inline MKAnnotationView                 MKAnnotationView_Alloc(void)                                                                                            { return (MKAnnotationView)bean_alloc(bean_cls("MKAnnotationView")); }
+#endif
+#ifndef BEAN_NEW_MKAnnotationView
+#define BEAN_NEW_MKAnnotationView
+static inline MKAnnotationView                 MKAnnotationView_New(void)                                                                                              { return (MKAnnotationView)bean_new(bean_cls("MKAnnotationView")); }
+#endif
 
 /* ===== MKCircle ===== */
 #ifndef BEAN_TYPEDEF_MKCircle
@@ -3962,6 +4140,14 @@ static inline CGFloat                   MKCircle_Radius(MKCircle self)          
 static inline MKMapRect                 MKCircle_BoundingMapRect(MKCircle self)                                                     { return ((MKMapRect (*)(MKCircle, SEL))bean_msgSend)(self, bean_sel("boundingMapRect")); }
 static inline BOOL                      MKCircle_IntersectsMapRect(MKCircle self, MKMapRect mapRect)                                { return ((BOOL (*)(MKCircle, SEL, MKMapRect))bean_msgSend)(self, bean_sel("intersectsMapRect:"), mapRect); }
 static inline BOOL                      MKCircle_CanReplaceMapContent(MKCircle self)                                                { return ((BOOL (*)(MKCircle, SEL))bean_msgSend)(self, bean_sel("canReplaceMapContent")); }
+#ifndef BEAN_ALLOC_MKCircle
+#define BEAN_ALLOC_MKCircle
+static inline MKCircle                  MKCircle_Alloc(void)                                                                        { return (MKCircle)bean_alloc(bean_cls("MKCircle")); }
+#endif
+#ifndef BEAN_NEW_MKCircle
+#define BEAN_NEW_MKCircle
+static inline MKCircle                  MKCircle_New(void)                                                                          { return (MKCircle)bean_new(bean_cls("MKCircle")); }
+#endif
 
 /* ===== MKClusterAnnotation ===== */
 #ifndef BEAN_TYPEDEF_MKClusterAnnotation
@@ -3977,6 +4163,14 @@ static inline void                      MKClusterAnnotation_SetSubtitle(MKCluste
 static inline NSArray                   MKClusterAnnotation_MemberAnnotations(MKClusterAnnotation self)                                       { return ((NSArray (*)(MKClusterAnnotation, SEL))bean_msgSend)(self, bean_sel("memberAnnotations")); }
 static inline void                      MKClusterAnnotation_SetCoordinate(MKClusterAnnotation self, CLLocationCoordinate2D newCoordinate)     { ((void (*)(MKClusterAnnotation, SEL, CLLocationCoordinate2D))bean_msgSend)(self, bean_sel("setCoordinate:"), newCoordinate); }
 static inline CLLocationCoordinate2D    MKClusterAnnotation_Coordinate(MKClusterAnnotation self)                                              { return ((CLLocationCoordinate2D (*)(MKClusterAnnotation, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
+#ifndef BEAN_ALLOC_MKClusterAnnotation
+#define BEAN_ALLOC_MKClusterAnnotation
+static inline MKClusterAnnotation       MKClusterAnnotation_Alloc(void)                                                                       { return (MKClusterAnnotation)bean_alloc(bean_cls("MKClusterAnnotation")); }
+#endif
+#ifndef BEAN_NEW_MKClusterAnnotation
+#define BEAN_NEW_MKClusterAnnotation
+static inline MKClusterAnnotation       MKClusterAnnotation_New(void)                                                                         { return (MKClusterAnnotation)bean_new(bean_cls("MKClusterAnnotation")); }
+#endif
 
 /* ===== MKDistanceFormatter ===== */
 #ifndef BEAN_TYPEDEF_MKDistanceFormatter
@@ -3991,22 +4185,46 @@ static inline MKDistanceFormatterUnits        MKDistanceFormatter_Units(MKDistan
 static inline void                            MKDistanceFormatter_SetUnits(MKDistanceFormatter self, MKDistanceFormatterUnits units)                { ((void (*)(MKDistanceFormatter, SEL, MKDistanceFormatterUnits))bean_msgSend)(self, bean_sel("setUnits:"), units); }
 static inline MKDistanceFormatterUnitStyle    MKDistanceFormatter_UnitStyle(MKDistanceFormatter self)                                               { return ((MKDistanceFormatterUnitStyle (*)(MKDistanceFormatter, SEL))bean_msgSend)(self, bean_sel("unitStyle")); }
 static inline void                            MKDistanceFormatter_SetUnitStyle(MKDistanceFormatter self, MKDistanceFormatterUnitStyle unitStyle)    { ((void (*)(MKDistanceFormatter, SEL, MKDistanceFormatterUnitStyle))bean_msgSend)(self, bean_sel("setUnitStyle:"), unitStyle); }
+#ifndef BEAN_ALLOC_MKDistanceFormatter
+#define BEAN_ALLOC_MKDistanceFormatter
+static inline MKDistanceFormatter             MKDistanceFormatter_Alloc(void)                                                                       { return (MKDistanceFormatter)bean_alloc(bean_cls("MKDistanceFormatter")); }
+#endif
+#ifndef BEAN_NEW_MKDistanceFormatter
+#define BEAN_NEW_MKDistanceFormatter
+static inline MKDistanceFormatter             MKDistanceFormatter_New(void)                                                                         { return (MKDistanceFormatter)bean_new(bean_cls("MKDistanceFormatter")); }
+#endif
 
 /* ===== MKGeoJSONDecoder ===== */
 #ifndef BEAN_TYPEDEF_MKGeoJSONDecoder
 #define BEAN_TYPEDEF_MKGeoJSONDecoder
 typedef bean_id MKGeoJSONDecoder;
 #endif
-static inline NSArray    MKGeoJSONDecoder_GeoJSONObjectsWithData_Error(MKGeoJSONDecoder self, NSData data, NSError errorPtr)    { return ((NSArray (*)(MKGeoJSONDecoder, SEL, NSData, NSError))bean_msgSend)(self, bean_sel("geoJSONObjectsWithData:error:"), data, errorPtr); }
+static inline NSArray             MKGeoJSONDecoder_GeoJSONObjectsWithData_Error(MKGeoJSONDecoder self, NSData data, NSError errorPtr)    { return ((NSArray (*)(MKGeoJSONDecoder, SEL, NSData, NSError))bean_msgSend)(self, bean_sel("geoJSONObjectsWithData:error:"), data, errorPtr); }
+#ifndef BEAN_ALLOC_MKGeoJSONDecoder
+#define BEAN_ALLOC_MKGeoJSONDecoder
+static inline MKGeoJSONDecoder    MKGeoJSONDecoder_Alloc(void)                                                                           { return (MKGeoJSONDecoder)bean_alloc(bean_cls("MKGeoJSONDecoder")); }
+#endif
+#ifndef BEAN_NEW_MKGeoJSONDecoder
+#define BEAN_NEW_MKGeoJSONDecoder
+static inline MKGeoJSONDecoder    MKGeoJSONDecoder_New(void)                                                                             { return (MKGeoJSONDecoder)bean_new(bean_cls("MKGeoJSONDecoder")); }
+#endif
 
 /* ===== MKGeoJSONFeature ===== */
 #ifndef BEAN_TYPEDEF_MKGeoJSONFeature
 #define BEAN_TYPEDEF_MKGeoJSONFeature
 typedef bean_id MKGeoJSONFeature;
 #endif
-static inline NSString    MKGeoJSONFeature_Identifier(MKGeoJSONFeature self)    { return ((NSString (*)(MKGeoJSONFeature, SEL))bean_msgSend)(self, bean_sel("identifier")); }
-static inline NSData      MKGeoJSONFeature_Properties(MKGeoJSONFeature self)    { return ((NSData (*)(MKGeoJSONFeature, SEL))bean_msgSend)(self, bean_sel("properties")); }
-static inline NSArray     MKGeoJSONFeature_Geometry(MKGeoJSONFeature self)      { return ((NSArray (*)(MKGeoJSONFeature, SEL))bean_msgSend)(self, bean_sel("geometry")); }
+static inline NSString            MKGeoJSONFeature_Identifier(MKGeoJSONFeature self)    { return ((NSString (*)(MKGeoJSONFeature, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline NSData              MKGeoJSONFeature_Properties(MKGeoJSONFeature self)    { return ((NSData (*)(MKGeoJSONFeature, SEL))bean_msgSend)(self, bean_sel("properties")); }
+static inline NSArray             MKGeoJSONFeature_Geometry(MKGeoJSONFeature self)      { return ((NSArray (*)(MKGeoJSONFeature, SEL))bean_msgSend)(self, bean_sel("geometry")); }
+#ifndef BEAN_ALLOC_MKGeoJSONFeature
+#define BEAN_ALLOC_MKGeoJSONFeature
+static inline MKGeoJSONFeature    MKGeoJSONFeature_Alloc(void)                          { return (MKGeoJSONFeature)bean_alloc(bean_cls("MKGeoJSONFeature")); }
+#endif
+#ifndef BEAN_NEW_MKGeoJSONFeature
+#define BEAN_NEW_MKGeoJSONFeature
+static inline MKGeoJSONFeature    MKGeoJSONFeature_New(void)                            { return (MKGeoJSONFeature)bean_new(bean_cls("MKGeoJSONFeature")); }
+#endif
 
 /* ===== MKGeocodingRequest ===== */
 #ifndef BEAN_TYPEDEF_MKGeocodingRequest
@@ -4014,7 +4232,10 @@ static inline NSArray     MKGeoJSONFeature_Geometry(MKGeoJSONFeature self)      
 typedef bean_id MKGeocodingRequest;
 #endif
 static inline MKGeocodingRequest    MKGeocodingRequest_Init(MKGeocodingRequest self)                                                         { return ((MKGeocodingRequest (*)(MKGeocodingRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_MKGeocodingRequest
+#define BEAN_NEW_MKGeocodingRequest
 static inline MKGeocodingRequest    MKGeocodingRequest_New(void)                                                                             { return ((MKGeocodingRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKGeocodingRequest"), bean_sel("new")); }
+#endif
 static inline MKGeocodingRequest    MKGeocodingRequest_InitWithAddressString(MKGeocodingRequest self, NSString addressString)                { return ((MKGeocodingRequest (*)(MKGeocodingRequest, SEL, NSString))bean_msgSend)(self, bean_sel("initWithAddressString:"), addressString); }
 static inline void                  MKGeocodingRequest_GetMapItemsWithCompletionHandler(MKGeocodingRequest self, void* completionHandler)    { ((void (*)(MKGeocodingRequest, SEL, void*))bean_msgSend)(self, bean_sel("getMapItemsWithCompletionHandler:"), completionHandler); }
 static inline void                  MKGeocodingRequest_Cancel(MKGeocodingRequest self)                                                       { ((void (*)(MKGeocodingRequest, SEL))bean_msgSend)(self, bean_sel("cancel")); }
@@ -4027,6 +4248,10 @@ static inline NSLocale              MKGeocodingRequest_PreferredLocale(MKGeocodi
 static inline void                  MKGeocodingRequest_SetPreferredLocale(MKGeocodingRequest self, NSLocale preferredLocale)                 { ((void (*)(MKGeocodingRequest, SEL, NSLocale))bean_msgSend)(self, bean_sel("setPreferredLocale:"), preferredLocale); }
 static inline BOOL                  MKGeocodingRequest_Cancelled(MKGeocodingRequest self)                                                    { return ((BOOL (*)(MKGeocodingRequest, SEL))bean_msgSend)(self, bean_sel("cancelled")); }
 static inline BOOL                  MKGeocodingRequest_Loading(MKGeocodingRequest self)                                                      { return ((BOOL (*)(MKGeocodingRequest, SEL))bean_msgSend)(self, bean_sel("loading")); }
+#ifndef BEAN_ALLOC_MKGeocodingRequest
+#define BEAN_ALLOC_MKGeocodingRequest
+static inline MKGeocodingRequest    MKGeocodingRequest_Alloc(void)                                                                           { return (MKGeocodingRequest)bean_alloc(bean_cls("MKGeocodingRequest")); }
+#endif
 
 /* ===== MKGeodesicPolyline ===== */
 #ifndef BEAN_TYPEDEF_MKGeodesicPolyline
@@ -4035,15 +4260,31 @@ typedef bean_id MKGeodesicPolyline;
 #endif
 static inline MKGeodesicPolyline    MKGeodesicPolyline_PolylineWithPoints_Count(const MKMapPoint points, NSUInteger count)                     { return ((MKGeodesicPolyline (*)(bean_class, SEL, const MKMapPoint, NSUInteger))bean_msgSend)(bean_cls("MKGeodesicPolyline"), bean_sel("polylineWithPoints:count:"), points, count); }
 static inline MKGeodesicPolyline    MKGeodesicPolyline_PolylineWithCoordinates_Count(const CLLocationCoordinate2D coords, NSUInteger count)    { return ((MKGeodesicPolyline (*)(bean_class, SEL, const CLLocationCoordinate2D, NSUInteger))bean_msgSend)(bean_cls("MKGeodesicPolyline"), bean_sel("polylineWithCoordinates:count:"), coords, count); }
+#ifndef BEAN_ALLOC_MKGeodesicPolyline
+#define BEAN_ALLOC_MKGeodesicPolyline
+static inline MKGeodesicPolyline    MKGeodesicPolyline_Alloc(void)                                                                             { return (MKGeodesicPolyline)bean_alloc(bean_cls("MKGeodesicPolyline")); }
+#endif
+#ifndef BEAN_NEW_MKGeodesicPolyline
+#define BEAN_NEW_MKGeodesicPolyline
+static inline MKGeodesicPolyline    MKGeodesicPolyline_New(void)                                                                               { return (MKGeodesicPolyline)bean_new(bean_cls("MKGeodesicPolyline")); }
+#endif
 
 /* ===== MKGradientPolylineRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKGradientPolylineRenderer
 #define BEAN_TYPEDEF_MKGradientPolylineRenderer
 typedef bean_id MKGradientPolylineRenderer;
 #endif
-static inline void       MKGradientPolylineRenderer_SetColors_AtLocations(MKGradientPolylineRenderer self, NSArray colors, NSArray locations)    { ((void (*)(MKGradientPolylineRenderer, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("setColors:atLocations:"), colors, locations); }
-static inline NSArray    MKGradientPolylineRenderer_Locations(MKGradientPolylineRenderer self)                                                   { return ((NSArray (*)(MKGradientPolylineRenderer, SEL))bean_msgSend)(self, bean_sel("locations")); }
-static inline NSArray    MKGradientPolylineRenderer_Colors(MKGradientPolylineRenderer self)                                                      { return ((NSArray (*)(MKGradientPolylineRenderer, SEL))bean_msgSend)(self, bean_sel("colors")); }
+static inline void                          MKGradientPolylineRenderer_SetColors_AtLocations(MKGradientPolylineRenderer self, NSArray colors, NSArray locations)    { ((void (*)(MKGradientPolylineRenderer, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("setColors:atLocations:"), colors, locations); }
+static inline NSArray                       MKGradientPolylineRenderer_Locations(MKGradientPolylineRenderer self)                                                   { return ((NSArray (*)(MKGradientPolylineRenderer, SEL))bean_msgSend)(self, bean_sel("locations")); }
+static inline NSArray                       MKGradientPolylineRenderer_Colors(MKGradientPolylineRenderer self)                                                      { return ((NSArray (*)(MKGradientPolylineRenderer, SEL))bean_msgSend)(self, bean_sel("colors")); }
+#ifndef BEAN_ALLOC_MKGradientPolylineRenderer
+#define BEAN_ALLOC_MKGradientPolylineRenderer
+static inline MKGradientPolylineRenderer    MKGradientPolylineRenderer_Alloc(void)                                                                                  { return (MKGradientPolylineRenderer)bean_alloc(bean_cls("MKGradientPolylineRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKGradientPolylineRenderer
+#define BEAN_NEW_MKGradientPolylineRenderer
+static inline MKGradientPolylineRenderer    MKGradientPolylineRenderer_New(void)                                                                                    { return (MKGradientPolylineRenderer)bean_new(bean_cls("MKGradientPolylineRenderer")); }
+#endif
 
 /* ===== MKImageryMapConfiguration ===== */
 #ifndef BEAN_TYPEDEF_MKImageryMapConfiguration
@@ -4052,40 +4293,79 @@ typedef bean_id MKImageryMapConfiguration;
 #endif
 static inline MKImageryMapConfiguration    MKImageryMapConfiguration_Init(MKImageryMapConfiguration self)                                                          { return ((MKImageryMapConfiguration (*)(MKImageryMapConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline MKImageryMapConfiguration    MKImageryMapConfiguration_InitWithElevationStyle(MKImageryMapConfiguration self, MKMapElevationStyle elevationStyle)    { return ((MKImageryMapConfiguration (*)(MKImageryMapConfiguration, SEL, MKMapElevationStyle))bean_msgSend)(self, bean_sel("initWithElevationStyle:"), elevationStyle); }
+#ifndef BEAN_ALLOC_MKImageryMapConfiguration
+#define BEAN_ALLOC_MKImageryMapConfiguration
+static inline MKImageryMapConfiguration    MKImageryMapConfiguration_Alloc(void)                                                                                   { return (MKImageryMapConfiguration)bean_alloc(bean_cls("MKImageryMapConfiguration")); }
+#endif
+#ifndef BEAN_NEW_MKImageryMapConfiguration
+#define BEAN_NEW_MKImageryMapConfiguration
+static inline MKImageryMapConfiguration    MKImageryMapConfiguration_New(void)                                                                                     { return (MKImageryMapConfiguration)bean_new(bean_cls("MKImageryMapConfiguration")); }
+#endif
 
 /* ===== MKLocalSearchCompletion ===== */
 #ifndef BEAN_TYPEDEF_MKLocalSearchCompletion
 #define BEAN_TYPEDEF_MKLocalSearchCompletion
 typedef bean_id MKLocalSearchCompletion;
 #endif
-static inline NSString    MKLocalSearchCompletion_Title(MKLocalSearchCompletion self)                      { return ((NSString (*)(MKLocalSearchCompletion, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline NSArray     MKLocalSearchCompletion_TitleHighlightRanges(MKLocalSearchCompletion self)       { return ((NSArray (*)(MKLocalSearchCompletion, SEL))bean_msgSend)(self, bean_sel("titleHighlightRanges")); }
-static inline NSString    MKLocalSearchCompletion_Subtitle(MKLocalSearchCompletion self)                   { return ((NSString (*)(MKLocalSearchCompletion, SEL))bean_msgSend)(self, bean_sel("subtitle")); }
-static inline NSArray     MKLocalSearchCompletion_SubtitleHighlightRanges(MKLocalSearchCompletion self)    { return ((NSArray (*)(MKLocalSearchCompletion, SEL))bean_msgSend)(self, bean_sel("subtitleHighlightRanges")); }
+static inline NSString                   MKLocalSearchCompletion_Title(MKLocalSearchCompletion self)                      { return ((NSString (*)(MKLocalSearchCompletion, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline NSArray                    MKLocalSearchCompletion_TitleHighlightRanges(MKLocalSearchCompletion self)       { return ((NSArray (*)(MKLocalSearchCompletion, SEL))bean_msgSend)(self, bean_sel("titleHighlightRanges")); }
+static inline NSString                   MKLocalSearchCompletion_Subtitle(MKLocalSearchCompletion self)                   { return ((NSString (*)(MKLocalSearchCompletion, SEL))bean_msgSend)(self, bean_sel("subtitle")); }
+static inline NSArray                    MKLocalSearchCompletion_SubtitleHighlightRanges(MKLocalSearchCompletion self)    { return ((NSArray (*)(MKLocalSearchCompletion, SEL))bean_msgSend)(self, bean_sel("subtitleHighlightRanges")); }
+#ifndef BEAN_ALLOC_MKLocalSearchCompletion
+#define BEAN_ALLOC_MKLocalSearchCompletion
+static inline MKLocalSearchCompletion    MKLocalSearchCompletion_Alloc(void)                                              { return (MKLocalSearchCompletion)bean_alloc(bean_cls("MKLocalSearchCompletion")); }
+#endif
+#ifndef BEAN_NEW_MKLocalSearchCompletion
+#define BEAN_NEW_MKLocalSearchCompletion
+static inline MKLocalSearchCompletion    MKLocalSearchCompletion_New(void)                                                { return (MKLocalSearchCompletion)bean_new(bean_cls("MKLocalSearchCompletion")); }
+#endif
 
 /* ===== MKLocalSearchResponse ===== */
 #ifndef BEAN_TYPEDEF_MKLocalSearchResponse
 #define BEAN_TYPEDEF_MKLocalSearchResponse
 typedef bean_id MKLocalSearchResponse;
 #endif
-static inline NSArray               MKLocalSearchResponse_MapItems(MKLocalSearchResponse self)          { return ((NSArray (*)(MKLocalSearchResponse, SEL))bean_msgSend)(self, bean_sel("mapItems")); }
-static inline MKCoordinateRegion    MKLocalSearchResponse_BoundingRegion(MKLocalSearchResponse self)    { return ((MKCoordinateRegion (*)(MKLocalSearchResponse, SEL))bean_msgSend)(self, bean_sel("boundingRegion")); }
+static inline NSArray                  MKLocalSearchResponse_MapItems(MKLocalSearchResponse self)          { return ((NSArray (*)(MKLocalSearchResponse, SEL))bean_msgSend)(self, bean_sel("mapItems")); }
+static inline MKCoordinateRegion       MKLocalSearchResponse_BoundingRegion(MKLocalSearchResponse self)    { return ((MKCoordinateRegion (*)(MKLocalSearchResponse, SEL))bean_msgSend)(self, bean_sel("boundingRegion")); }
+#ifndef BEAN_ALLOC_MKLocalSearchResponse
+#define BEAN_ALLOC_MKLocalSearchResponse
+static inline MKLocalSearchResponse    MKLocalSearchResponse_Alloc(void)                                   { return (MKLocalSearchResponse)bean_alloc(bean_cls("MKLocalSearchResponse")); }
+#endif
+#ifndef BEAN_NEW_MKLocalSearchResponse
+#define BEAN_NEW_MKLocalSearchResponse
+static inline MKLocalSearchResponse    MKLocalSearchResponse_New(void)                                     { return (MKLocalSearchResponse)bean_new(bean_cls("MKLocalSearchResponse")); }
+#endif
 
 /* ===== MKLookAroundScene ===== */
 #ifndef BEAN_TYPEDEF_MKLookAroundScene
 #define BEAN_TYPEDEF_MKLookAroundScene
 typedef bean_id MKLookAroundScene;
 #endif
+#ifndef BEAN_NEW_MKLookAroundScene
+#define BEAN_NEW_MKLookAroundScene
 static inline MKLookAroundScene    MKLookAroundScene_New(void)                                             { return ((MKLookAroundScene (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKLookAroundScene"), bean_sel("new")); }
+#endif
 static inline MKLookAroundScene    MKLookAroundScene_Init(MKLookAroundScene self)                          { return ((MKLookAroundScene (*)(MKLookAroundScene, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline id                   MKLookAroundScene_CopyWithZone(MKLookAroundScene self, NSZone* zone)    { return ((id (*)(MKLookAroundScene, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKLookAroundScene
+#define BEAN_ALLOC_MKLookAroundScene
+static inline MKLookAroundScene    MKLookAroundScene_Alloc(void)                                           { return (MKLookAroundScene)bean_alloc(bean_cls("MKLookAroundScene")); }
+#endif
 
 /* ===== MKLookAroundSnapshot ===== */
 #ifndef BEAN_TYPEDEF_MKLookAroundSnapshot
 #define BEAN_TYPEDEF_MKLookAroundSnapshot
 typedef bean_id MKLookAroundSnapshot;
 #endif
-static inline NSImage    MKLookAroundSnapshot_Image(MKLookAroundSnapshot self)    { return ((NSImage (*)(MKLookAroundSnapshot, SEL))bean_msgSend)(self, bean_sel("image")); }
+static inline NSImage                 MKLookAroundSnapshot_Image(MKLookAroundSnapshot self)    { return ((NSImage (*)(MKLookAroundSnapshot, SEL))bean_msgSend)(self, bean_sel("image")); }
+#ifndef BEAN_ALLOC_MKLookAroundSnapshot
+#define BEAN_ALLOC_MKLookAroundSnapshot
+static inline MKLookAroundSnapshot    MKLookAroundSnapshot_Alloc(void)                         { return (MKLookAroundSnapshot)bean_alloc(bean_cls("MKLookAroundSnapshot")); }
+#endif
+#ifndef BEAN_NEW_MKLookAroundSnapshot
+#define BEAN_NEW_MKLookAroundSnapshot
+static inline MKLookAroundSnapshot    MKLookAroundSnapshot_New(void)                           { return (MKLookAroundSnapshot)bean_new(bean_cls("MKLookAroundSnapshot")); }
+#endif
 
 /* ===== MKMapCameraBoundary ===== */
 #ifndef BEAN_TYPEDEF_MKMapCameraBoundary
@@ -4099,6 +4379,14 @@ static inline MKMapRect              MKMapCameraBoundary_MapRect(MKMapCameraBoun
 static inline MKCoordinateRegion     MKMapCameraBoundary_Region(MKMapCameraBoundary self)                                                 { return ((MKCoordinateRegion (*)(MKMapCameraBoundary, SEL))bean_msgSend)(self, bean_sel("region")); }
 static inline BOOL                   MKMapCameraBoundary_SupportsSecureCoding(void)                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapCameraBoundary"), bean_sel("supportsSecureCoding")); }
 static inline id                     MKMapCameraBoundary_CopyWithZone(MKMapCameraBoundary self, NSZone* zone)                             { return ((id (*)(MKMapCameraBoundary, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKMapCameraBoundary
+#define BEAN_ALLOC_MKMapCameraBoundary
+static inline MKMapCameraBoundary    MKMapCameraBoundary_Alloc(void)                                                                      { return (MKMapCameraBoundary)bean_alloc(bean_cls("MKMapCameraBoundary")); }
+#endif
+#ifndef BEAN_NEW_MKMapCameraBoundary
+#define BEAN_NEW_MKMapCameraBoundary
+static inline MKMapCameraBoundary    MKMapCameraBoundary_New(void)                                                                        { return (MKMapCameraBoundary)bean_new(bean_cls("MKMapCameraBoundary")); }
+#endif
 
 /* ===== MKMapCameraZoomRange ===== */
 #ifndef BEAN_TYPEDEF_MKMapCameraZoomRange
@@ -4112,6 +4400,14 @@ static inline CGFloat                 MKMapCameraZoomRange_MinCenterCoordinateDi
 static inline CGFloat                 MKMapCameraZoomRange_MaxCenterCoordinateDistance(MKMapCameraZoomRange self)                                                                                  { return ((CGFloat (*)(MKMapCameraZoomRange, SEL))bean_msgSend_fpret)(self, bean_sel("maxCenterCoordinateDistance")); }
 static inline BOOL                    MKMapCameraZoomRange_SupportsSecureCoding(void)                                                                                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapCameraZoomRange"), bean_sel("supportsSecureCoding")); }
 static inline id                      MKMapCameraZoomRange_CopyWithZone(MKMapCameraZoomRange self, NSZone* zone)                                                                                   { return ((id (*)(MKMapCameraZoomRange, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKMapCameraZoomRange
+#define BEAN_ALLOC_MKMapCameraZoomRange
+static inline MKMapCameraZoomRange    MKMapCameraZoomRange_Alloc(void)                                                                                                                             { return (MKMapCameraZoomRange)bean_alloc(bean_cls("MKMapCameraZoomRange")); }
+#endif
+#ifndef BEAN_NEW_MKMapCameraZoomRange
+#define BEAN_NEW_MKMapCameraZoomRange
+static inline MKMapCameraZoomRange    MKMapCameraZoomRange_New(void)                                                                                                                               { return (MKMapCameraZoomRange)bean_new(bean_cls("MKMapCameraZoomRange")); }
+#endif
 
 /* ===== MKMapConfiguration ===== */
 #ifndef BEAN_TYPEDEF_MKMapConfiguration
@@ -4119,24 +4415,38 @@ static inline id                      MKMapCameraZoomRange_CopyWithZone(MKMapCam
 typedef bean_id MKMapConfiguration;
 #endif
 static inline MKMapConfiguration     MKMapConfiguration_Init(MKMapConfiguration self)                                                     { return ((MKMapConfiguration (*)(MKMapConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_MKMapConfiguration
+#define BEAN_NEW_MKMapConfiguration
 static inline MKMapConfiguration     MKMapConfiguration_New(void)                                                                         { return ((MKMapConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapConfiguration"), bean_sel("new")); }
+#endif
 static inline MKMapElevationStyle    MKMapConfiguration_ElevationStyle(MKMapConfiguration self)                                           { return ((MKMapElevationStyle (*)(MKMapConfiguration, SEL))bean_msgSend)(self, bean_sel("elevationStyle")); }
 static inline void                   MKMapConfiguration_SetElevationStyle(MKMapConfiguration self, MKMapElevationStyle elevationStyle)    { ((void (*)(MKMapConfiguration, SEL, MKMapElevationStyle))bean_msgSend)(self, bean_sel("setElevationStyle:"), elevationStyle); }
 static inline BOOL                   MKMapConfiguration_SupportsSecureCoding(void)                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapConfiguration"), bean_sel("supportsSecureCoding")); }
 static inline id                     MKMapConfiguration_CopyWithZone(MKMapConfiguration self, NSZone* zone)                               { return ((id (*)(MKMapConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKMapConfiguration
+#define BEAN_ALLOC_MKMapConfiguration
+static inline MKMapConfiguration     MKMapConfiguration_Alloc(void)                                                                       { return (MKMapConfiguration)bean_alloc(bean_cls("MKMapConfiguration")); }
+#endif
 
 /* ===== MKMapItemDetailSelectionAccessoryPresentationStyle ===== */
 #ifndef BEAN_TYPEDEF_MKMapItemDetailSelectionAccessoryPresentationStyle
 #define BEAN_TYPEDEF_MKMapItemDetailSelectionAccessoryPresentationStyle
 typedef bean_id MKMapItemDetailSelectionAccessoryPresentationStyle;
 #endif
+#ifndef BEAN_NEW_MKMapItemDetailSelectionAccessoryPresentationStyle
+#define BEAN_NEW_MKMapItemDetailSelectionAccessoryPresentationStyle
 static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDetailSelectionAccessoryPresentationStyle_New(void)                                                                               { return ((MKMapItemDetailSelectionAccessoryPresentationStyle (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapItemDetailSelectionAccessoryPresentationStyle"), bean_sel("new")); }
+#endif
 static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDetailSelectionAccessoryPresentationStyle_Init(MKMapItemDetailSelectionAccessoryPresentationStyle self)                           { return ((MKMapItemDetailSelectionAccessoryPresentationStyle (*)(MKMapItemDetailSelectionAccessoryPresentationStyle, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDetailSelectionAccessoryPresentationStyle_AutomaticWithPresentationViewController(NSViewController presentationViewController)    { return ((MKMapItemDetailSelectionAccessoryPresentationStyle (*)(bean_class, SEL, NSViewController))bean_msgSend)(bean_cls("MKMapItemDetailSelectionAccessoryPresentationStyle"), bean_sel("automaticWithPresentationViewController:"), presentationViewController); }
 static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDetailSelectionAccessoryPresentationStyle_CalloutWithCalloutStyle(MKMapItemDetailSelectionAccessoryCalloutStyle style)            { return ((MKMapItemDetailSelectionAccessoryPresentationStyle (*)(bean_class, SEL, MKMapItemDetailSelectionAccessoryCalloutStyle))bean_msgSend)(bean_cls("MKMapItemDetailSelectionAccessoryPresentationStyle"), bean_sel("calloutWithCalloutStyle:"), style); }
 static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDetailSelectionAccessoryPresentationStyle_SheetPresentedFromViewController(NSViewController viewController)                       { return ((MKMapItemDetailSelectionAccessoryPresentationStyle (*)(bean_class, SEL, NSViewController))bean_msgSend)(bean_cls("MKMapItemDetailSelectionAccessoryPresentationStyle"), bean_sel("sheetPresentedFromViewController:"), viewController); }
 static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDetailSelectionAccessoryPresentationStyle_Callout(void)                                                                           { return ((MKMapItemDetailSelectionAccessoryPresentationStyle (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapItemDetailSelectionAccessoryPresentationStyle"), bean_sel("callout")); }
 static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDetailSelectionAccessoryPresentationStyle_OpenInMaps(void)                                                                        { return ((MKMapItemDetailSelectionAccessoryPresentationStyle (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapItemDetailSelectionAccessoryPresentationStyle"), bean_sel("openInMaps")); }
+#ifndef BEAN_ALLOC_MKMapItemDetailSelectionAccessoryPresentationStyle
+#define BEAN_ALLOC_MKMapItemDetailSelectionAccessoryPresentationStyle
+static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDetailSelectionAccessoryPresentationStyle_Alloc(void)                                                                             { return (MKMapItemDetailSelectionAccessoryPresentationStyle)bean_alloc(bean_cls("MKMapItemDetailSelectionAccessoryPresentationStyle")); }
+#endif
 
 /* ===== MKMapItemIdentifier ===== */
 #ifndef BEAN_TYPEDEF_MKMapItemIdentifier
@@ -4144,53 +4454,84 @@ static inline MKMapItemDetailSelectionAccessoryPresentationStyle    MKMapItemDet
 typedef bean_id MKMapItemIdentifier;
 #endif
 static inline MKMapItemIdentifier    MKMapItemIdentifier_Init(MKMapItemIdentifier self)                                         { return ((MKMapItemIdentifier (*)(MKMapItemIdentifier, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_MKMapItemIdentifier
+#define BEAN_NEW_MKMapItemIdentifier
 static inline MKMapItemIdentifier    MKMapItemIdentifier_New(void)                                                              { return ((MKMapItemIdentifier (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapItemIdentifier"), bean_sel("new")); }
+#endif
 static inline MKMapItemIdentifier    MKMapItemIdentifier_InitWithIdentifierString(MKMapItemIdentifier self, NSString string)    { return ((MKMapItemIdentifier (*)(MKMapItemIdentifier, SEL, NSString))bean_msgSend)(self, bean_sel("initWithIdentifierString:"), string); }
 static inline NSString               MKMapItemIdentifier_IdentifierString(MKMapItemIdentifier self)                             { return ((NSString (*)(MKMapItemIdentifier, SEL))bean_msgSend)(self, bean_sel("identifierString")); }
 static inline id                     MKMapItemIdentifier_CopyWithZone(MKMapItemIdentifier self, NSZone* zone)                   { return ((id (*)(MKMapItemIdentifier, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                   MKMapItemIdentifier_SupportsSecureCoding(void)                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapItemIdentifier"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_MKMapItemIdentifier
+#define BEAN_ALLOC_MKMapItemIdentifier
+static inline MKMapItemIdentifier    MKMapItemIdentifier_Alloc(void)                                                            { return (MKMapItemIdentifier)bean_alloc(bean_cls("MKMapItemIdentifier")); }
+#endif
 
 /* ===== MKMapSnapshot ===== */
 #ifndef BEAN_TYPEDEF_MKMapSnapshot
 #define BEAN_TYPEDEF_MKMapSnapshot
 typedef bean_id MKMapSnapshot;
 #endif
-static inline CGPoint         MKMapSnapshot_PointForCoordinate(MKMapSnapshot self, CLLocationCoordinate2D coordinate)    { return ((CGPoint (*)(MKMapSnapshot, SEL, CLLocationCoordinate2D))bean_msgSend_stret)(self, bean_sel("pointForCoordinate:"), coordinate); }
-static inline NSImage         MKMapSnapshot_Image(MKMapSnapshot self)                                                    { return ((NSImage (*)(MKMapSnapshot, SEL))bean_msgSend)(self, bean_sel("image")); }
-static inline NSAppearance    MKMapSnapshot_Appearance(MKMapSnapshot self)                                               { return ((NSAppearance (*)(MKMapSnapshot, SEL))bean_msgSend)(self, bean_sel("appearance")); }
+static inline CGPoint          MKMapSnapshot_PointForCoordinate(MKMapSnapshot self, CLLocationCoordinate2D coordinate)    { return ((CGPoint (*)(MKMapSnapshot, SEL, CLLocationCoordinate2D))bean_msgSend_stret)(self, bean_sel("pointForCoordinate:"), coordinate); }
+static inline NSImage          MKMapSnapshot_Image(MKMapSnapshot self)                                                    { return ((NSImage (*)(MKMapSnapshot, SEL))bean_msgSend)(self, bean_sel("image")); }
+static inline NSAppearance     MKMapSnapshot_Appearance(MKMapSnapshot self)                                               { return ((NSAppearance (*)(MKMapSnapshot, SEL))bean_msgSend)(self, bean_sel("appearance")); }
+#ifndef BEAN_ALLOC_MKMapSnapshot
+#define BEAN_ALLOC_MKMapSnapshot
+static inline MKMapSnapshot    MKMapSnapshot_Alloc(void)                                                                  { return (MKMapSnapshot)bean_alloc(bean_cls("MKMapSnapshot")); }
+#endif
+#ifndef BEAN_NEW_MKMapSnapshot
+#define BEAN_NEW_MKMapSnapshot
+static inline MKMapSnapshot    MKMapSnapshot_New(void)                                                                    { return (MKMapSnapshot)bean_new(bean_cls("MKMapSnapshot")); }
+#endif
 
 /* ===== MKMarkerAnnotationView ===== */
 #ifndef BEAN_TYPEDEF_MKMarkerAnnotationView
 #define BEAN_TYPEDEF_MKMarkerAnnotationView
 typedef bean_id MKMarkerAnnotationView;
 #endif
-static inline MKFeatureVisibility    MKMarkerAnnotationView_TitleVisibility(MKMarkerAnnotationView self)                                                  { return ((MKFeatureVisibility (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("titleVisibility")); }
-static inline void                   MKMarkerAnnotationView_SetTitleVisibility(MKMarkerAnnotationView self, MKFeatureVisibility titleVisibility)          { ((void (*)(MKMarkerAnnotationView, SEL, MKFeatureVisibility))bean_msgSend)(self, bean_sel("setTitleVisibility:"), titleVisibility); }
-static inline MKFeatureVisibility    MKMarkerAnnotationView_SubtitleVisibility(MKMarkerAnnotationView self)                                               { return ((MKFeatureVisibility (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("subtitleVisibility")); }
-static inline void                   MKMarkerAnnotationView_SetSubtitleVisibility(MKMarkerAnnotationView self, MKFeatureVisibility subtitleVisibility)    { ((void (*)(MKMarkerAnnotationView, SEL, MKFeatureVisibility))bean_msgSend)(self, bean_sel("setSubtitleVisibility:"), subtitleVisibility); }
-static inline NSColor                MKMarkerAnnotationView_MarkerTintColor(MKMarkerAnnotationView self)                                                  { return ((NSColor (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("markerTintColor")); }
-static inline void                   MKMarkerAnnotationView_SetMarkerTintColor(MKMarkerAnnotationView self, NSColor markerTintColor)                      { ((void (*)(MKMarkerAnnotationView, SEL, NSColor))bean_msgSend)(self, bean_sel("setMarkerTintColor:"), markerTintColor); }
-static inline NSColor                MKMarkerAnnotationView_GlyphTintColor(MKMarkerAnnotationView self)                                                   { return ((NSColor (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("glyphTintColor")); }
-static inline void                   MKMarkerAnnotationView_SetGlyphTintColor(MKMarkerAnnotationView self, NSColor glyphTintColor)                        { ((void (*)(MKMarkerAnnotationView, SEL, NSColor))bean_msgSend)(self, bean_sel("setGlyphTintColor:"), glyphTintColor); }
-static inline NSString               MKMarkerAnnotationView_GlyphText(MKMarkerAnnotationView self)                                                        { return ((NSString (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("glyphText")); }
-static inline void                   MKMarkerAnnotationView_SetGlyphText(MKMarkerAnnotationView self, NSString glyphText)                                 { ((void (*)(MKMarkerAnnotationView, SEL, NSString))bean_msgSend)(self, bean_sel("setGlyphText:"), glyphText); }
-static inline NSImage                MKMarkerAnnotationView_GlyphImage(MKMarkerAnnotationView self)                                                       { return ((NSImage (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("glyphImage")); }
-static inline void                   MKMarkerAnnotationView_SetGlyphImage(MKMarkerAnnotationView self, NSImage glyphImage)                                { ((void (*)(MKMarkerAnnotationView, SEL, NSImage))bean_msgSend)(self, bean_sel("setGlyphImage:"), glyphImage); }
-static inline NSImage                MKMarkerAnnotationView_SelectedGlyphImage(MKMarkerAnnotationView self)                                               { return ((NSImage (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("selectedGlyphImage")); }
-static inline void                   MKMarkerAnnotationView_SetSelectedGlyphImage(MKMarkerAnnotationView self, NSImage selectedGlyphImage)                { ((void (*)(MKMarkerAnnotationView, SEL, NSImage))bean_msgSend)(self, bean_sel("setSelectedGlyphImage:"), selectedGlyphImage); }
-static inline BOOL                   MKMarkerAnnotationView_AnimatesWhenAdded(MKMarkerAnnotationView self)                                                { return ((BOOL (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("animatesWhenAdded")); }
-static inline void                   MKMarkerAnnotationView_SetAnimatesWhenAdded(MKMarkerAnnotationView self, BOOL animatesWhenAdded)                     { ((void (*)(MKMarkerAnnotationView, SEL, BOOL))bean_msgSend)(self, bean_sel("setAnimatesWhenAdded:"), animatesWhenAdded); }
+static inline MKFeatureVisibility       MKMarkerAnnotationView_TitleVisibility(MKMarkerAnnotationView self)                                                  { return ((MKFeatureVisibility (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("titleVisibility")); }
+static inline void                      MKMarkerAnnotationView_SetTitleVisibility(MKMarkerAnnotationView self, MKFeatureVisibility titleVisibility)          { ((void (*)(MKMarkerAnnotationView, SEL, MKFeatureVisibility))bean_msgSend)(self, bean_sel("setTitleVisibility:"), titleVisibility); }
+static inline MKFeatureVisibility       MKMarkerAnnotationView_SubtitleVisibility(MKMarkerAnnotationView self)                                               { return ((MKFeatureVisibility (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("subtitleVisibility")); }
+static inline void                      MKMarkerAnnotationView_SetSubtitleVisibility(MKMarkerAnnotationView self, MKFeatureVisibility subtitleVisibility)    { ((void (*)(MKMarkerAnnotationView, SEL, MKFeatureVisibility))bean_msgSend)(self, bean_sel("setSubtitleVisibility:"), subtitleVisibility); }
+static inline NSColor                   MKMarkerAnnotationView_MarkerTintColor(MKMarkerAnnotationView self)                                                  { return ((NSColor (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("markerTintColor")); }
+static inline void                      MKMarkerAnnotationView_SetMarkerTintColor(MKMarkerAnnotationView self, NSColor markerTintColor)                      { ((void (*)(MKMarkerAnnotationView, SEL, NSColor))bean_msgSend)(self, bean_sel("setMarkerTintColor:"), markerTintColor); }
+static inline NSColor                   MKMarkerAnnotationView_GlyphTintColor(MKMarkerAnnotationView self)                                                   { return ((NSColor (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("glyphTintColor")); }
+static inline void                      MKMarkerAnnotationView_SetGlyphTintColor(MKMarkerAnnotationView self, NSColor glyphTintColor)                        { ((void (*)(MKMarkerAnnotationView, SEL, NSColor))bean_msgSend)(self, bean_sel("setGlyphTintColor:"), glyphTintColor); }
+static inline NSString                  MKMarkerAnnotationView_GlyphText(MKMarkerAnnotationView self)                                                        { return ((NSString (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("glyphText")); }
+static inline void                      MKMarkerAnnotationView_SetGlyphText(MKMarkerAnnotationView self, NSString glyphText)                                 { ((void (*)(MKMarkerAnnotationView, SEL, NSString))bean_msgSend)(self, bean_sel("setGlyphText:"), glyphText); }
+static inline NSImage                   MKMarkerAnnotationView_GlyphImage(MKMarkerAnnotationView self)                                                       { return ((NSImage (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("glyphImage")); }
+static inline void                      MKMarkerAnnotationView_SetGlyphImage(MKMarkerAnnotationView self, NSImage glyphImage)                                { ((void (*)(MKMarkerAnnotationView, SEL, NSImage))bean_msgSend)(self, bean_sel("setGlyphImage:"), glyphImage); }
+static inline NSImage                   MKMarkerAnnotationView_SelectedGlyphImage(MKMarkerAnnotationView self)                                               { return ((NSImage (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("selectedGlyphImage")); }
+static inline void                      MKMarkerAnnotationView_SetSelectedGlyphImage(MKMarkerAnnotationView self, NSImage selectedGlyphImage)                { ((void (*)(MKMarkerAnnotationView, SEL, NSImage))bean_msgSend)(self, bean_sel("setSelectedGlyphImage:"), selectedGlyphImage); }
+static inline BOOL                      MKMarkerAnnotationView_AnimatesWhenAdded(MKMarkerAnnotationView self)                                                { return ((BOOL (*)(MKMarkerAnnotationView, SEL))bean_msgSend)(self, bean_sel("animatesWhenAdded")); }
+static inline void                      MKMarkerAnnotationView_SetAnimatesWhenAdded(MKMarkerAnnotationView self, BOOL animatesWhenAdded)                     { ((void (*)(MKMarkerAnnotationView, SEL, BOOL))bean_msgSend)(self, bean_sel("setAnimatesWhenAdded:"), animatesWhenAdded); }
+#ifndef BEAN_ALLOC_MKMarkerAnnotationView
+#define BEAN_ALLOC_MKMarkerAnnotationView
+static inline MKMarkerAnnotationView    MKMarkerAnnotationView_Alloc(void)                                                                                   { return (MKMarkerAnnotationView)bean_alloc(bean_cls("MKMarkerAnnotationView")); }
+#endif
+#ifndef BEAN_NEW_MKMarkerAnnotationView
+#define BEAN_NEW_MKMarkerAnnotationView
+static inline MKMarkerAnnotationView    MKMarkerAnnotationView_New(void)                                                                                     { return (MKMarkerAnnotationView)bean_new(bean_cls("MKMarkerAnnotationView")); }
+#endif
 
 /* ===== MKMultiPoint ===== */
 #ifndef BEAN_TYPEDEF_MKMultiPoint
 #define BEAN_TYPEDEF_MKMultiPoint
 typedef bean_id MKMultiPoint;
 #endif
-static inline MKMapPoint    MKMultiPoint_Points(MKMultiPoint self)                                                                 { return ((MKMapPoint (*)(MKMultiPoint, SEL))bean_msgSend)(self, bean_sel("points")); }
-static inline void          MKMultiPoint_GetCoordinates_Range(MKMultiPoint self, CLLocationCoordinate2D* coords, NSRange range)    { ((void (*)(MKMultiPoint, SEL, CLLocationCoordinate2D*, NSRange))bean_msgSend)(self, bean_sel("getCoordinates:range:"), coords, range); }
-static inline CGFloat       MKMultiPoint_LocationAtPointIndex(MKMultiPoint self, NSUInteger index)                                 { return ((CGFloat (*)(MKMultiPoint, SEL, NSUInteger))bean_msgSend_fpret)(self, bean_sel("locationAtPointIndex:"), index); }
-static inline NSArray       MKMultiPoint_LocationsAtPointIndexes(MKMultiPoint self, NSIndexSet indexes)                            { return ((NSArray (*)(MKMultiPoint, SEL, NSIndexSet))bean_msgSend)(self, bean_sel("locationsAtPointIndexes:"), indexes); }
-static inline NSUInteger    MKMultiPoint_PointCount(MKMultiPoint self)                                                             { return ((NSUInteger (*)(MKMultiPoint, SEL))bean_msgSend)(self, bean_sel("pointCount")); }
+static inline MKMapPoint      MKMultiPoint_Points(MKMultiPoint self)                                                                 { return ((MKMapPoint (*)(MKMultiPoint, SEL))bean_msgSend)(self, bean_sel("points")); }
+static inline void            MKMultiPoint_GetCoordinates_Range(MKMultiPoint self, CLLocationCoordinate2D* coords, NSRange range)    { ((void (*)(MKMultiPoint, SEL, CLLocationCoordinate2D*, NSRange))bean_msgSend)(self, bean_sel("getCoordinates:range:"), coords, range); }
+static inline CGFloat         MKMultiPoint_LocationAtPointIndex(MKMultiPoint self, NSUInteger index)                                 { return ((CGFloat (*)(MKMultiPoint, SEL, NSUInteger))bean_msgSend_fpret)(self, bean_sel("locationAtPointIndex:"), index); }
+static inline NSArray         MKMultiPoint_LocationsAtPointIndexes(MKMultiPoint self, NSIndexSet indexes)                            { return ((NSArray (*)(MKMultiPoint, SEL, NSIndexSet))bean_msgSend)(self, bean_sel("locationsAtPointIndexes:"), indexes); }
+static inline NSUInteger      MKMultiPoint_PointCount(MKMultiPoint self)                                                             { return ((NSUInteger (*)(MKMultiPoint, SEL))bean_msgSend)(self, bean_sel("pointCount")); }
+#ifndef BEAN_ALLOC_MKMultiPoint
+#define BEAN_ALLOC_MKMultiPoint
+static inline MKMultiPoint    MKMultiPoint_Alloc(void)                                                                               { return (MKMultiPoint)bean_alloc(bean_cls("MKMultiPoint")); }
+#endif
+#ifndef BEAN_NEW_MKMultiPoint
+#define BEAN_NEW_MKMultiPoint
+static inline MKMultiPoint    MKMultiPoint_New(void)                                                                                 { return (MKMultiPoint)bean_new(bean_cls("MKMultiPoint")); }
+#endif
 
 /* ===== MKMultiPolygon ===== */
 #ifndef BEAN_TYPEDEF_MKMultiPolygon
@@ -4203,6 +4544,14 @@ static inline BOOL                      MKMultiPolygon_IntersectsMapRect(MKMulti
 static inline BOOL                      MKMultiPolygon_CanReplaceMapContent(MKMultiPolygon self)                    { return ((BOOL (*)(MKMultiPolygon, SEL))bean_msgSend)(self, bean_sel("canReplaceMapContent")); }
 static inline CLLocationCoordinate2D    MKMultiPolygon_Coordinate(MKMultiPolygon self)                              { return ((CLLocationCoordinate2D (*)(MKMultiPolygon, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline MKMapRect                 MKMultiPolygon_BoundingMapRect(MKMultiPolygon self)                         { return ((MKMapRect (*)(MKMultiPolygon, SEL))bean_msgSend)(self, bean_sel("boundingMapRect")); }
+#ifndef BEAN_ALLOC_MKMultiPolygon
+#define BEAN_ALLOC_MKMultiPolygon
+static inline MKMultiPolygon            MKMultiPolygon_Alloc(void)                                                  { return (MKMultiPolygon)bean_alloc(bean_cls("MKMultiPolygon")); }
+#endif
+#ifndef BEAN_NEW_MKMultiPolygon
+#define BEAN_NEW_MKMultiPolygon
+static inline MKMultiPolygon            MKMultiPolygon_New(void)                                                    { return (MKMultiPolygon)bean_new(bean_cls("MKMultiPolygon")); }
+#endif
 
 /* ===== MKMultiPolyline ===== */
 #ifndef BEAN_TYPEDEF_MKMultiPolyline
@@ -4215,6 +4564,14 @@ static inline BOOL                      MKMultiPolyline_IntersectsMapRect(MKMult
 static inline BOOL                      MKMultiPolyline_CanReplaceMapContent(MKMultiPolyline self)                    { return ((BOOL (*)(MKMultiPolyline, SEL))bean_msgSend)(self, bean_sel("canReplaceMapContent")); }
 static inline CLLocationCoordinate2D    MKMultiPolyline_Coordinate(MKMultiPolyline self)                              { return ((CLLocationCoordinate2D (*)(MKMultiPolyline, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline MKMapRect                 MKMultiPolyline_BoundingMapRect(MKMultiPolyline self)                         { return ((MKMapRect (*)(MKMultiPolyline, SEL))bean_msgSend)(self, bean_sel("boundingMapRect")); }
+#ifndef BEAN_ALLOC_MKMultiPolyline
+#define BEAN_ALLOC_MKMultiPolyline
+static inline MKMultiPolyline           MKMultiPolyline_Alloc(void)                                                   { return (MKMultiPolyline)bean_alloc(bean_cls("MKMultiPolyline")); }
+#endif
+#ifndef BEAN_NEW_MKMultiPolyline
+#define BEAN_NEW_MKMultiPolyline
+static inline MKMultiPolyline           MKMultiPolyline_New(void)                                                     { return (MKMultiPolyline)bean_new(bean_cls("MKMultiPolyline")); }
+#endif
 
 /* ===== MKOverlay ===== */
 #ifndef BEAN_TYPEDEF_MKOverlay
@@ -4225,38 +4582,54 @@ static inline BOOL                      MKOverlay_IntersectsMapRect(MKOverlay se
 static inline BOOL                      MKOverlay_CanReplaceMapContent(MKOverlay self)                    { return ((BOOL (*)(MKOverlay, SEL))bean_msgSend)(self, bean_sel("canReplaceMapContent")); }
 static inline CLLocationCoordinate2D    MKOverlay_Coordinate(MKOverlay self)                              { return ((CLLocationCoordinate2D (*)(MKOverlay, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline MKMapRect                 MKOverlay_BoundingMapRect(MKOverlay self)                         { return ((MKMapRect (*)(MKOverlay, SEL))bean_msgSend)(self, bean_sel("boundingMapRect")); }
+#ifndef BEAN_ALLOC_MKOverlay
+#define BEAN_ALLOC_MKOverlay
+static inline MKOverlay                 MKOverlay_Alloc(void)                                             { return (MKOverlay)bean_alloc(bean_cls("MKOverlay")); }
+#endif
+#ifndef BEAN_NEW_MKOverlay
+#define BEAN_NEW_MKOverlay
+static inline MKOverlay                 MKOverlay_New(void)                                               { return (MKOverlay)bean_new(bean_cls("MKOverlay")); }
+#endif
 
 /* ===== MKOverlayPathRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKOverlayPathRenderer
 #define BEAN_TYPEDEF_MKOverlayPathRenderer
 typedef bean_id MKOverlayPathRenderer;
 #endif
-static inline void              MKOverlayPathRenderer_CreatePath(MKOverlayPathRenderer self)                                                                             { ((void (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("createPath")); }
-static inline void              MKOverlayPathRenderer_InvalidatePath(MKOverlayPathRenderer self)                                                                         { ((void (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("invalidatePath")); }
-static inline void              MKOverlayPathRenderer_ApplyStrokePropertiesToContext_AtZoomScale(MKOverlayPathRenderer self, CGContextRef context, CGFloat zoomScale)    { ((void (*)(MKOverlayPathRenderer, SEL, CGContextRef, CGFloat))bean_msgSend)(self, bean_sel("applyStrokePropertiesToContext:atZoomScale:"), context, zoomScale); }
-static inline void              MKOverlayPathRenderer_ApplyFillPropertiesToContext_AtZoomScale(MKOverlayPathRenderer self, CGContextRef context, CGFloat zoomScale)      { ((void (*)(MKOverlayPathRenderer, SEL, CGContextRef, CGFloat))bean_msgSend)(self, bean_sel("applyFillPropertiesToContext:atZoomScale:"), context, zoomScale); }
-static inline void              MKOverlayPathRenderer_StrokePath_InContext(MKOverlayPathRenderer self, const struct CGPath* path, CGContextRef context)                  { ((void (*)(MKOverlayPathRenderer, SEL, const struct CGPath*, CGContextRef))bean_msgSend)(self, bean_sel("strokePath:inContext:"), path, context); }
-static inline void              MKOverlayPathRenderer_FillPath_InContext(MKOverlayPathRenderer self, const struct CGPath* path, CGContextRef context)                    { ((void (*)(MKOverlayPathRenderer, SEL, const struct CGPath*, CGContextRef))bean_msgSend)(self, bean_sel("fillPath:inContext:"), path, context); }
-static inline NSColor           MKOverlayPathRenderer_FillColor(MKOverlayPathRenderer self)                                                                              { return ((NSColor (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("fillColor")); }
-static inline void              MKOverlayPathRenderer_SetFillColor(MKOverlayPathRenderer self, NSColor fillColor)                                                        { ((void (*)(MKOverlayPathRenderer, SEL, NSColor))bean_msgSend)(self, bean_sel("setFillColor:"), fillColor); }
-static inline NSColor           MKOverlayPathRenderer_StrokeColor(MKOverlayPathRenderer self)                                                                            { return ((NSColor (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("strokeColor")); }
-static inline void              MKOverlayPathRenderer_SetStrokeColor(MKOverlayPathRenderer self, NSColor strokeColor)                                                    { ((void (*)(MKOverlayPathRenderer, SEL, NSColor))bean_msgSend)(self, bean_sel("setStrokeColor:"), strokeColor); }
-static inline CGFloat           MKOverlayPathRenderer_LineWidth(MKOverlayPathRenderer self)                                                                              { return ((CGFloat (*)(MKOverlayPathRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("lineWidth")); }
-static inline void              MKOverlayPathRenderer_SetLineWidth(MKOverlayPathRenderer self, CGFloat lineWidth)                                                        { ((void (*)(MKOverlayPathRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLineWidth:"), lineWidth); }
-static inline CGLineJoin        MKOverlayPathRenderer_LineJoin(MKOverlayPathRenderer self)                                                                               { return ((CGLineJoin (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("lineJoin")); }
-static inline void              MKOverlayPathRenderer_SetLineJoin(MKOverlayPathRenderer self, CGLineJoin lineJoin)                                                       { ((void (*)(MKOverlayPathRenderer, SEL, CGLineJoin))bean_msgSend)(self, bean_sel("setLineJoin:"), lineJoin); }
-static inline CGLineCap         MKOverlayPathRenderer_LineCap(MKOverlayPathRenderer self)                                                                                { return ((CGLineCap (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("lineCap")); }
-static inline void              MKOverlayPathRenderer_SetLineCap(MKOverlayPathRenderer self, CGLineCap lineCap)                                                          { ((void (*)(MKOverlayPathRenderer, SEL, CGLineCap))bean_msgSend)(self, bean_sel("setLineCap:"), lineCap); }
-static inline CGFloat           MKOverlayPathRenderer_MiterLimit(MKOverlayPathRenderer self)                                                                             { return ((CGFloat (*)(MKOverlayPathRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("miterLimit")); }
-static inline void              MKOverlayPathRenderer_SetMiterLimit(MKOverlayPathRenderer self, CGFloat miterLimit)                                                      { ((void (*)(MKOverlayPathRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMiterLimit:"), miterLimit); }
-static inline CGFloat           MKOverlayPathRenderer_LineDashPhase(MKOverlayPathRenderer self)                                                                          { return ((CGFloat (*)(MKOverlayPathRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("lineDashPhase")); }
-static inline void              MKOverlayPathRenderer_SetLineDashPhase(MKOverlayPathRenderer self, CGFloat lineDashPhase)                                                { ((void (*)(MKOverlayPathRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLineDashPhase:"), lineDashPhase); }
-static inline NSArray           MKOverlayPathRenderer_LineDashPattern(MKOverlayPathRenderer self)                                                                        { return ((NSArray (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("lineDashPattern")); }
-static inline void              MKOverlayPathRenderer_SetLineDashPattern(MKOverlayPathRenderer self, NSArray lineDashPattern)                                            { ((void (*)(MKOverlayPathRenderer, SEL, NSArray))bean_msgSend)(self, bean_sel("setLineDashPattern:"), lineDashPattern); }
-static inline BOOL              MKOverlayPathRenderer_ShouldRasterize(MKOverlayPathRenderer self)                                                                        { return ((BOOL (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("shouldRasterize")); }
-static inline void              MKOverlayPathRenderer_SetShouldRasterize(MKOverlayPathRenderer self, BOOL shouldRasterize)                                               { ((void (*)(MKOverlayPathRenderer, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldRasterize:"), shouldRasterize); }
-static inline struct CGPath*    MKOverlayPathRenderer_Path(MKOverlayPathRenderer self)                                                                                   { return ((struct CGPath* (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("path")); }
-static inline void              MKOverlayPathRenderer_SetPath(MKOverlayPathRenderer self, const struct CGPath* path)                                                     { ((void (*)(MKOverlayPathRenderer, SEL, const struct CGPath*))bean_msgSend)(self, bean_sel("setPath:"), path); }
+static inline void                     MKOverlayPathRenderer_CreatePath(MKOverlayPathRenderer self)                                                                             { ((void (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("createPath")); }
+static inline void                     MKOverlayPathRenderer_InvalidatePath(MKOverlayPathRenderer self)                                                                         { ((void (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("invalidatePath")); }
+static inline void                     MKOverlayPathRenderer_ApplyStrokePropertiesToContext_AtZoomScale(MKOverlayPathRenderer self, CGContextRef context, CGFloat zoomScale)    { ((void (*)(MKOverlayPathRenderer, SEL, CGContextRef, CGFloat))bean_msgSend)(self, bean_sel("applyStrokePropertiesToContext:atZoomScale:"), context, zoomScale); }
+static inline void                     MKOverlayPathRenderer_ApplyFillPropertiesToContext_AtZoomScale(MKOverlayPathRenderer self, CGContextRef context, CGFloat zoomScale)      { ((void (*)(MKOverlayPathRenderer, SEL, CGContextRef, CGFloat))bean_msgSend)(self, bean_sel("applyFillPropertiesToContext:atZoomScale:"), context, zoomScale); }
+static inline void                     MKOverlayPathRenderer_StrokePath_InContext(MKOverlayPathRenderer self, const struct CGPath* path, CGContextRef context)                  { ((void (*)(MKOverlayPathRenderer, SEL, const struct CGPath*, CGContextRef))bean_msgSend)(self, bean_sel("strokePath:inContext:"), path, context); }
+static inline void                     MKOverlayPathRenderer_FillPath_InContext(MKOverlayPathRenderer self, const struct CGPath* path, CGContextRef context)                    { ((void (*)(MKOverlayPathRenderer, SEL, const struct CGPath*, CGContextRef))bean_msgSend)(self, bean_sel("fillPath:inContext:"), path, context); }
+static inline NSColor                  MKOverlayPathRenderer_FillColor(MKOverlayPathRenderer self)                                                                              { return ((NSColor (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("fillColor")); }
+static inline void                     MKOverlayPathRenderer_SetFillColor(MKOverlayPathRenderer self, NSColor fillColor)                                                        { ((void (*)(MKOverlayPathRenderer, SEL, NSColor))bean_msgSend)(self, bean_sel("setFillColor:"), fillColor); }
+static inline NSColor                  MKOverlayPathRenderer_StrokeColor(MKOverlayPathRenderer self)                                                                            { return ((NSColor (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("strokeColor")); }
+static inline void                     MKOverlayPathRenderer_SetStrokeColor(MKOverlayPathRenderer self, NSColor strokeColor)                                                    { ((void (*)(MKOverlayPathRenderer, SEL, NSColor))bean_msgSend)(self, bean_sel("setStrokeColor:"), strokeColor); }
+static inline CGFloat                  MKOverlayPathRenderer_LineWidth(MKOverlayPathRenderer self)                                                                              { return ((CGFloat (*)(MKOverlayPathRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("lineWidth")); }
+static inline void                     MKOverlayPathRenderer_SetLineWidth(MKOverlayPathRenderer self, CGFloat lineWidth)                                                        { ((void (*)(MKOverlayPathRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLineWidth:"), lineWidth); }
+static inline CGLineJoin               MKOverlayPathRenderer_LineJoin(MKOverlayPathRenderer self)                                                                               { return ((CGLineJoin (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("lineJoin")); }
+static inline void                     MKOverlayPathRenderer_SetLineJoin(MKOverlayPathRenderer self, CGLineJoin lineJoin)                                                       { ((void (*)(MKOverlayPathRenderer, SEL, CGLineJoin))bean_msgSend)(self, bean_sel("setLineJoin:"), lineJoin); }
+static inline CGLineCap                MKOverlayPathRenderer_LineCap(MKOverlayPathRenderer self)                                                                                { return ((CGLineCap (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("lineCap")); }
+static inline void                     MKOverlayPathRenderer_SetLineCap(MKOverlayPathRenderer self, CGLineCap lineCap)                                                          { ((void (*)(MKOverlayPathRenderer, SEL, CGLineCap))bean_msgSend)(self, bean_sel("setLineCap:"), lineCap); }
+static inline CGFloat                  MKOverlayPathRenderer_MiterLimit(MKOverlayPathRenderer self)                                                                             { return ((CGFloat (*)(MKOverlayPathRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("miterLimit")); }
+static inline void                     MKOverlayPathRenderer_SetMiterLimit(MKOverlayPathRenderer self, CGFloat miterLimit)                                                      { ((void (*)(MKOverlayPathRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMiterLimit:"), miterLimit); }
+static inline CGFloat                  MKOverlayPathRenderer_LineDashPhase(MKOverlayPathRenderer self)                                                                          { return ((CGFloat (*)(MKOverlayPathRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("lineDashPhase")); }
+static inline void                     MKOverlayPathRenderer_SetLineDashPhase(MKOverlayPathRenderer self, CGFloat lineDashPhase)                                                { ((void (*)(MKOverlayPathRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLineDashPhase:"), lineDashPhase); }
+static inline NSArray                  MKOverlayPathRenderer_LineDashPattern(MKOverlayPathRenderer self)                                                                        { return ((NSArray (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("lineDashPattern")); }
+static inline void                     MKOverlayPathRenderer_SetLineDashPattern(MKOverlayPathRenderer self, NSArray lineDashPattern)                                            { ((void (*)(MKOverlayPathRenderer, SEL, NSArray))bean_msgSend)(self, bean_sel("setLineDashPattern:"), lineDashPattern); }
+static inline BOOL                     MKOverlayPathRenderer_ShouldRasterize(MKOverlayPathRenderer self)                                                                        { return ((BOOL (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("shouldRasterize")); }
+static inline void                     MKOverlayPathRenderer_SetShouldRasterize(MKOverlayPathRenderer self, BOOL shouldRasterize)                                               { ((void (*)(MKOverlayPathRenderer, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldRasterize:"), shouldRasterize); }
+static inline struct CGPath*           MKOverlayPathRenderer_Path(MKOverlayPathRenderer self)                                                                                   { return ((struct CGPath* (*)(MKOverlayPathRenderer, SEL))bean_msgSend)(self, bean_sel("path")); }
+static inline void                     MKOverlayPathRenderer_SetPath(MKOverlayPathRenderer self, const struct CGPath* path)                                                     { ((void (*)(MKOverlayPathRenderer, SEL, const struct CGPath*))bean_msgSend)(self, bean_sel("setPath:"), path); }
+#ifndef BEAN_ALLOC_MKOverlayPathRenderer
+#define BEAN_ALLOC_MKOverlayPathRenderer
+static inline MKOverlayPathRenderer    MKOverlayPathRenderer_Alloc(void)                                                                                                        { return (MKOverlayPathRenderer)bean_alloc(bean_cls("MKOverlayPathRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKOverlayPathRenderer
+#define BEAN_NEW_MKOverlayPathRenderer
+static inline MKOverlayPathRenderer    MKOverlayPathRenderer_New(void)                                                                                                          { return (MKOverlayPathRenderer)bean_new(bean_cls("MKOverlayPathRenderer")); }
+#endif
 
 /* ===== MKOverlayRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKOverlayRenderer
@@ -4279,6 +4652,14 @@ static inline void                 MKOverlayRenderer_SetAlpha(MKOverlayRenderer 
 static inline CGFloat              MKOverlayRenderer_ContentScaleFactor(MKOverlayRenderer self)                                                                             { return ((CGFloat (*)(MKOverlayRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("contentScaleFactor")); }
 static inline CGBlendMode          MKOverlayRenderer_BlendMode(MKOverlayRenderer self)                                                                                      { return ((CGBlendMode (*)(MKOverlayRenderer, SEL))bean_msgSend)(self, bean_sel("blendMode")); }
 static inline void                 MKOverlayRenderer_SetBlendMode(MKOverlayRenderer self, CGBlendMode blendMode)                                                            { ((void (*)(MKOverlayRenderer, SEL, CGBlendMode))bean_msgSend)(self, bean_sel("setBlendMode:"), blendMode); }
+#ifndef BEAN_ALLOC_MKOverlayRenderer
+#define BEAN_ALLOC_MKOverlayRenderer
+static inline MKOverlayRenderer    MKOverlayRenderer_Alloc(void)                                                                                                            { return (MKOverlayRenderer)bean_alloc(bean_cls("MKOverlayRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKOverlayRenderer
+#define BEAN_NEW_MKOverlayRenderer
+static inline MKOverlayRenderer    MKOverlayRenderer_New(void)                                                                                                              { return (MKOverlayRenderer)bean_new(bean_cls("MKOverlayRenderer")); }
+#endif
 
 /* ===== MKPinAnnotationView ===== */
 #ifndef BEAN_TYPEDEF_MKPinAnnotationView
@@ -4294,6 +4675,14 @@ static inline BOOL                    MKPinAnnotationView_AnimatesDrop(MKPinAnno
 static inline void                    MKPinAnnotationView_SetAnimatesDrop(MKPinAnnotationView self, BOOL animatesDrop)            { ((void (*)(MKPinAnnotationView, SEL, BOOL))bean_msgSend)(self, bean_sel("setAnimatesDrop:"), animatesDrop); }
 static inline MKPinAnnotationColor    MKPinAnnotationView_PinColor(MKPinAnnotationView self)                                      { return ((MKPinAnnotationColor (*)(MKPinAnnotationView, SEL))bean_msgSend)(self, bean_sel("pinColor")); }
 static inline void                    MKPinAnnotationView_SetPinColor(MKPinAnnotationView self, MKPinAnnotationColor pinColor)    { ((void (*)(MKPinAnnotationView, SEL, MKPinAnnotationColor))bean_msgSend)(self, bean_sel("setPinColor:"), pinColor); }
+#ifndef BEAN_ALLOC_MKPinAnnotationView
+#define BEAN_ALLOC_MKPinAnnotationView
+static inline MKPinAnnotationView     MKPinAnnotationView_Alloc(void)                                                             { return (MKPinAnnotationView)bean_alloc(bean_cls("MKPinAnnotationView")); }
+#endif
+#ifndef BEAN_NEW_MKPinAnnotationView
+#define BEAN_NEW_MKPinAnnotationView
+static inline MKPinAnnotationView     MKPinAnnotationView_New(void)                                                               { return (MKPinAnnotationView)bean_new(bean_cls("MKPinAnnotationView")); }
+#endif
 
 /* ===== MKPlacemark ===== */
 #ifndef BEAN_TYPEDEF_MKPlacemark
@@ -4308,6 +4697,14 @@ static inline void                      MKPlacemark_SetCoordinate(MKPlacemark se
 static inline CLLocationCoordinate2D    MKPlacemark_Coordinate(MKPlacemark self)                                                                                                 { return ((CLLocationCoordinate2D (*)(MKPlacemark, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline NSString                  MKPlacemark_Title(MKPlacemark self)                                                                                                      { return ((NSString (*)(MKPlacemark, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline NSString                  MKPlacemark_Subtitle(MKPlacemark self)                                                                                                   { return ((NSString (*)(MKPlacemark, SEL))bean_msgSend)(self, bean_sel("subtitle")); }
+#ifndef BEAN_ALLOC_MKPlacemark
+#define BEAN_ALLOC_MKPlacemark
+static inline MKPlacemark               MKPlacemark_Alloc(void)                                                                                                                  { return (MKPlacemark)bean_alloc(bean_cls("MKPlacemark")); }
+#endif
+#ifndef BEAN_NEW_MKPlacemark
+#define BEAN_NEW_MKPlacemark
+static inline MKPlacemark               MKPlacemark_New(void)                                                                                                                    { return (MKPlacemark)bean_new(bean_cls("MKPlacemark")); }
+#endif
 
 /* ===== MKPointAnnotation ===== */
 #ifndef BEAN_TYPEDEF_MKPointAnnotation
@@ -4319,6 +4716,14 @@ static inline MKPointAnnotation         MKPointAnnotation_InitWithCoordinate(MKP
 static inline MKPointAnnotation         MKPointAnnotation_InitWithCoordinate_Title_Subtitle(MKPointAnnotation self, CLLocationCoordinate2D coordinate, NSString title, NSString subtitle)    { return ((MKPointAnnotation (*)(MKPointAnnotation, SEL, CLLocationCoordinate2D, NSString, NSString))bean_msgSend)(self, bean_sel("initWithCoordinate:title:subtitle:"), coordinate, title, subtitle); }
 static inline CLLocationCoordinate2D    MKPointAnnotation_Coordinate(MKPointAnnotation self)                                                                                                 { return ((CLLocationCoordinate2D (*)(MKPointAnnotation, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline void                      MKPointAnnotation_SetCoordinate(MKPointAnnotation self, CLLocationCoordinate2D coordinate)                                                           { ((void (*)(MKPointAnnotation, SEL, CLLocationCoordinate2D))bean_msgSend)(self, bean_sel("setCoordinate:"), coordinate); }
+#ifndef BEAN_ALLOC_MKPointAnnotation
+#define BEAN_ALLOC_MKPointAnnotation
+static inline MKPointAnnotation         MKPointAnnotation_Alloc(void)                                                                                                                        { return (MKPointAnnotation)bean_alloc(bean_cls("MKPointAnnotation")); }
+#endif
+#ifndef BEAN_NEW_MKPointAnnotation
+#define BEAN_NEW_MKPointAnnotation
+static inline MKPointAnnotation         MKPointAnnotation_New(void)                                                                                                                          { return (MKPointAnnotation)bean_new(bean_cls("MKPointAnnotation")); }
+#endif
 
 /* ===== MKPointOfInterestFilter ===== */
 #ifndef BEAN_TYPEDEF_MKPointOfInterestFilter
@@ -4333,6 +4738,14 @@ static inline MKPointOfInterestFilter    MKPointOfInterestFilter_FilterIncluding
 static inline MKPointOfInterestFilter    MKPointOfInterestFilter_FilterExcludingAllCategories(void)                                           { return ((MKPointOfInterestFilter (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKPointOfInterestFilter"), bean_sel("filterExcludingAllCategories")); }
 static inline BOOL                       MKPointOfInterestFilter_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKPointOfInterestFilter"), bean_sel("supportsSecureCoding")); }
 static inline id                         MKPointOfInterestFilter_CopyWithZone(MKPointOfInterestFilter self, NSZone* zone)                     { return ((id (*)(MKPointOfInterestFilter, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKPointOfInterestFilter
+#define BEAN_ALLOC_MKPointOfInterestFilter
+static inline MKPointOfInterestFilter    MKPointOfInterestFilter_Alloc(void)                                                                  { return (MKPointOfInterestFilter)bean_alloc(bean_cls("MKPointOfInterestFilter")); }
+#endif
+#ifndef BEAN_NEW_MKPointOfInterestFilter
+#define BEAN_NEW_MKPointOfInterestFilter
+static inline MKPointOfInterestFilter    MKPointOfInterestFilter_New(void)                                                                    { return (MKPointOfInterestFilter)bean_new(bean_cls("MKPointOfInterestFilter")); }
+#endif
 
 /* ===== MKPolygon ===== */
 #ifndef BEAN_TYPEDEF_MKPolygon
@@ -4348,6 +4761,14 @@ static inline BOOL                      MKPolygon_IntersectsMapRect(MKPolygon se
 static inline BOOL                      MKPolygon_CanReplaceMapContent(MKPolygon self)                                                                                              { return ((BOOL (*)(MKPolygon, SEL))bean_msgSend)(self, bean_sel("canReplaceMapContent")); }
 static inline CLLocationCoordinate2D    MKPolygon_Coordinate(MKPolygon self)                                                                                                        { return ((CLLocationCoordinate2D (*)(MKPolygon, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline MKMapRect                 MKPolygon_BoundingMapRect(MKPolygon self)                                                                                                   { return ((MKMapRect (*)(MKPolygon, SEL))bean_msgSend)(self, bean_sel("boundingMapRect")); }
+#ifndef BEAN_ALLOC_MKPolygon
+#define BEAN_ALLOC_MKPolygon
+static inline MKPolygon                 MKPolygon_Alloc(void)                                                                                                                       { return (MKPolygon)bean_alloc(bean_cls("MKPolygon")); }
+#endif
+#ifndef BEAN_NEW_MKPolygon
+#define BEAN_NEW_MKPolygon
+static inline MKPolygon                 MKPolygon_New(void)                                                                                                                         { return (MKPolygon)bean_new(bean_cls("MKPolygon")); }
+#endif
 
 /* ===== MKPolyline ===== */
 #ifndef BEAN_TYPEDEF_MKPolyline
@@ -4360,6 +4781,14 @@ static inline BOOL                      MKPolyline_IntersectsMapRect(MKPolyline 
 static inline BOOL                      MKPolyline_CanReplaceMapContent(MKPolyline self)                                                   { return ((BOOL (*)(MKPolyline, SEL))bean_msgSend)(self, bean_sel("canReplaceMapContent")); }
 static inline CLLocationCoordinate2D    MKPolyline_Coordinate(MKPolyline self)                                                             { return ((CLLocationCoordinate2D (*)(MKPolyline, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline MKMapRect                 MKPolyline_BoundingMapRect(MKPolyline self)                                                        { return ((MKMapRect (*)(MKPolyline, SEL))bean_msgSend)(self, bean_sel("boundingMapRect")); }
+#ifndef BEAN_ALLOC_MKPolyline
+#define BEAN_ALLOC_MKPolyline
+static inline MKPolyline                MKPolyline_Alloc(void)                                                                             { return (MKPolyline)bean_alloc(bean_cls("MKPolyline")); }
+#endif
+#ifndef BEAN_NEW_MKPolyline
+#define BEAN_NEW_MKPolyline
+static inline MKPolyline                MKPolyline_New(void)                                                                               { return (MKPolyline)bean_new(bean_cls("MKPolyline")); }
+#endif
 
 /* ===== MKShape ===== */
 #ifndef BEAN_TYPEDEF_MKShape
@@ -4372,6 +4801,14 @@ static inline NSString                  MKShape_Subtitle(MKShape self)          
 static inline void                      MKShape_SetSubtitle(MKShape self, NSString subtitle)                         { ((void (*)(MKShape, SEL, NSString))bean_msgSend)(self, bean_sel("setSubtitle:"), subtitle); }
 static inline void                      MKShape_SetCoordinate(MKShape self, CLLocationCoordinate2D newCoordinate)    { ((void (*)(MKShape, SEL, CLLocationCoordinate2D))bean_msgSend)(self, bean_sel("setCoordinate:"), newCoordinate); }
 static inline CLLocationCoordinate2D    MKShape_Coordinate(MKShape self)                                             { return ((CLLocationCoordinate2D (*)(MKShape, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
+#ifndef BEAN_ALLOC_MKShape
+#define BEAN_ALLOC_MKShape
+static inline MKShape                   MKShape_Alloc(void)                                                          { return (MKShape)bean_alloc(bean_cls("MKShape")); }
+#endif
+#ifndef BEAN_NEW_MKShape
+#define BEAN_NEW_MKShape
+static inline MKShape                   MKShape_New(void)                                                            { return (MKShape)bean_new(bean_cls("MKShape")); }
+#endif
 
 /* ===== MKTileOverlay ===== */
 #ifndef BEAN_TYPEDEF_MKTileOverlay
@@ -4396,6 +4833,14 @@ static inline BOOL                      MKTileOverlay_IntersectsMapRect(MKTileOv
 static inline CLLocationCoordinate2D    MKTileOverlay_Coordinate(MKTileOverlay self)                                                     { return ((CLLocationCoordinate2D (*)(MKTileOverlay, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline MKMapRect                 MKTileOverlay_BoundingMapRect(MKTileOverlay self)                                                { return ((MKMapRect (*)(MKTileOverlay, SEL))bean_msgSend)(self, bean_sel("boundingMapRect")); }
 static inline BOOL                      MKTileOverlay_GeometryFlipped(MKTileOverlay self)                                                { return ((BOOL (*)(MKTileOverlay, SEL))bean_msgSend)(self, bean_sel("geometryFlipped")); }
+#ifndef BEAN_ALLOC_MKTileOverlay
+#define BEAN_ALLOC_MKTileOverlay
+static inline MKTileOverlay             MKTileOverlay_Alloc(void)                                                                        { return (MKTileOverlay)bean_alloc(bean_cls("MKTileOverlay")); }
+#endif
+#ifndef BEAN_NEW_MKTileOverlay
+#define BEAN_NEW_MKTileOverlay
+static inline MKTileOverlay             MKTileOverlay_New(void)                                                                          { return (MKTileOverlay)bean_new(bean_cls("MKTileOverlay")); }
+#endif
 
 /* ===== NSValue ===== */
 #ifndef BEAN_TYPEDEF_NSValue
@@ -4406,6 +4851,14 @@ static inline NSValue                   NSValue_ValueWithMKCoordinate(CLLocation
 static inline NSValue                   NSValue_ValueWithMKCoordinateSpan(MKCoordinateSpan span)            { return ((NSValue (*)(bean_class, SEL, MKCoordinateSpan))bean_msgSend)(bean_cls("NSValue"), bean_sel("valueWithMKCoordinateSpan:"), span); }
 static inline CLLocationCoordinate2D    NSValue_MKCoordinateValue(NSValue self)                             { return ((CLLocationCoordinate2D (*)(NSValue, SEL))bean_msgSend_stret)(self, bean_sel("MKCoordinateValue")); }
 static inline MKCoordinateSpan          NSValue_MKCoordinateSpanValue(NSValue self)                         { return ((MKCoordinateSpan (*)(NSValue, SEL))bean_msgSend)(self, bean_sel("MKCoordinateSpanValue")); }
+#ifndef BEAN_ALLOC_NSValue
+#define BEAN_ALLOC_NSValue
+static inline NSValue                   NSValue_Alloc(void)                                                 { return (NSValue)bean_alloc(bean_cls("NSValue")); }
+#endif
+#ifndef BEAN_NEW_NSValue
+#define BEAN_NEW_NSValue
+static inline NSValue                   NSValue_New(void)                                                   { return (NSValue)bean_new(bean_cls("NSValue")); }
+#endif
 
 /* ===== CLBeaconRegion ===== */
 #ifndef BEAN_TYPEDEF_CLBeaconRegion
@@ -4427,6 +4880,14 @@ static inline NSNumber                      CLBeaconRegion_Major(CLBeaconRegion 
 static inline NSNumber                      CLBeaconRegion_Minor(CLBeaconRegion self)                                                                                                                                  { return ((NSNumber (*)(CLBeaconRegion, SEL))bean_msgSend)(self, bean_sel("minor")); }
 static inline BOOL                          CLBeaconRegion_NotifyEntryStateOnDisplay(CLBeaconRegion self)                                                                                                              { return ((BOOL (*)(CLBeaconRegion, SEL))bean_msgSend)(self, bean_sel("notifyEntryStateOnDisplay")); }
 static inline void                          CLBeaconRegion_SetNotifyEntryStateOnDisplay(CLBeaconRegion self, BOOL notifyEntryStateOnDisplay)                                                                           { ((void (*)(CLBeaconRegion, SEL, BOOL))bean_msgSend)(self, bean_sel("setNotifyEntryStateOnDisplay:"), notifyEntryStateOnDisplay); }
+#ifndef BEAN_ALLOC_CLBeaconRegion
+#define BEAN_ALLOC_CLBeaconRegion
+static inline CLBeaconRegion                CLBeaconRegion_Alloc(void)                                                                                                                                                 { return (CLBeaconRegion)bean_alloc(bean_cls("CLBeaconRegion")); }
+#endif
+#ifndef BEAN_NEW_CLBeaconRegion
+#define BEAN_NEW_CLBeaconRegion
+static inline CLBeaconRegion                CLBeaconRegion_New(void)                                                                                                                                                   { return (CLBeaconRegion)bean_new(bean_cls("CLBeaconRegion")); }
+#endif
 
 /* ===== CLLocation ===== */
 #ifndef BEAN_TYPEDEF_CLLocation
@@ -4454,6 +4915,14 @@ static inline CLFloor                        CLLocation_Floor(CLLocation self)  
 static inline CLLocationSourceInformation    CLLocation_SourceInformation(CLLocation self)                                                                                                                                                                                                                                                                                                                                                    { return ((CLLocationSourceInformation (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("sourceInformation")); }
 static inline id                             CLLocation_CopyWithZone(CLLocation self, NSZone* zone)                                                                                                                                                                                                                                                                                                                                           { return ((id (*)(CLLocation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                           CLLocation_SupportsSecureCoding(void)                                                                                                                                                                                                                                                                                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocation"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLLocation
+#define BEAN_ALLOC_CLLocation
+static inline CLLocation                     CLLocation_Alloc(void)                                                                                                                                                                                                                                                                                                                                                                           { return (CLLocation)bean_alloc(bean_cls("CLLocation")); }
+#endif
+#ifndef BEAN_NEW_CLLocation
+#define BEAN_NEW_CLLocation
+static inline CLLocation                     CLLocation_New(void)                                                                                                                                                                                                                                                                                                                                                                             { return (CLLocation)bean_new(bean_cls("CLLocation")); }
+#endif
 
 /* ===== CLMonitoringEvent ===== */
 #ifndef BEAN_TYPEDEF_CLMonitoringEvent
@@ -4461,7 +4930,10 @@ static inline BOOL                           CLLocation_SupportsSecureCoding(voi
 typedef bean_id CLMonitoringEvent;
 #endif
 static inline CLMonitoringEvent    CLMonitoringEvent_Init(CLMonitoringEvent self)                              { return ((CLMonitoringEvent (*)(CLMonitoringEvent, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CLMonitoringEvent
+#define BEAN_NEW_CLMonitoringEvent
 static inline CLMonitoringEvent    CLMonitoringEvent_New(void)                                                 { return ((CLMonitoringEvent (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLMonitoringEvent"), bean_sel("new")); }
+#endif
 static inline NSString             CLMonitoringEvent_Identifier(CLMonitoringEvent self)                        { return ((NSString (*)(CLMonitoringEvent, SEL))bean_msgSend)(self, bean_sel("identifier")); }
 static inline CLCondition          CLMonitoringEvent_Refinement(CLMonitoringEvent self)                        { return ((CLCondition (*)(CLMonitoringEvent, SEL))bean_msgSend)(self, bean_sel("refinement")); }
 static inline CLMonitoringState    CLMonitoringEvent_State(CLMonitoringEvent self)                             { return ((CLMonitoringState (*)(CLMonitoringEvent, SEL))bean_msgSend)(self, bean_sel("state")); }
@@ -4477,6 +4949,10 @@ static inline BOOL                 CLMonitoringEvent_PersistenceUnavailable(CLMo
 static inline BOOL                 CLMonitoringEvent_ServiceSessionRequired(CLMonitoringEvent self)            { return ((BOOL (*)(CLMonitoringEvent, SEL))bean_msgSend)(self, bean_sel("serviceSessionRequired")); }
 static inline BOOL                 CLMonitoringEvent_AuthorizationRequestInProgress(CLMonitoringEvent self)    { return ((BOOL (*)(CLMonitoringEvent, SEL))bean_msgSend)(self, bean_sel("authorizationRequestInProgress")); }
 static inline BOOL                 CLMonitoringEvent_SupportsSecureCoding(void)                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLMonitoringEvent"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLMonitoringEvent
+#define BEAN_ALLOC_CLMonitoringEvent
+static inline CLMonitoringEvent    CLMonitoringEvent_Alloc(void)                                               { return (CLMonitoringEvent)bean_alloc(bean_cls("CLMonitoringEvent")); }
+#endif
 
 /* ===== MKCircleRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKCircleRenderer
@@ -4489,6 +4965,14 @@ static inline CGFloat             MKCircleRenderer_StrokeStart(MKCircleRenderer 
 static inline void                MKCircleRenderer_SetStrokeStart(MKCircleRenderer self, CGFloat strokeStart)    { ((void (*)(MKCircleRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStrokeStart:"), strokeStart); }
 static inline CGFloat             MKCircleRenderer_StrokeEnd(MKCircleRenderer self)                              { return ((CGFloat (*)(MKCircleRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("strokeEnd")); }
 static inline void                MKCircleRenderer_SetStrokeEnd(MKCircleRenderer self, CGFloat strokeEnd)        { ((void (*)(MKCircleRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStrokeEnd:"), strokeEnd); }
+#ifndef BEAN_ALLOC_MKCircleRenderer
+#define BEAN_ALLOC_MKCircleRenderer
+static inline MKCircleRenderer    MKCircleRenderer_Alloc(void)                                                   { return (MKCircleRenderer)bean_alloc(bean_cls("MKCircleRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKCircleRenderer
+#define BEAN_NEW_MKCircleRenderer
+static inline MKCircleRenderer    MKCircleRenderer_New(void)                                                     { return (MKCircleRenderer)bean_new(bean_cls("MKCircleRenderer")); }
+#endif
 
 /* ===== MKHybridMapConfiguration ===== */
 #ifndef BEAN_TYPEDEF_MKHybridMapConfiguration
@@ -4501,6 +4985,14 @@ static inline MKPointOfInterestFilter     MKHybridMapConfiguration_PointOfIntere
 static inline void                        MKHybridMapConfiguration_SetPointOfInterestFilter(MKHybridMapConfiguration self, MKPointOfInterestFilter pointOfInterestFilter)    { ((void (*)(MKHybridMapConfiguration, SEL, MKPointOfInterestFilter))bean_msgSend)(self, bean_sel("setPointOfInterestFilter:"), pointOfInterestFilter); }
 static inline BOOL                        MKHybridMapConfiguration_ShowsTraffic(MKHybridMapConfiguration self)                                                               { return ((BOOL (*)(MKHybridMapConfiguration, SEL))bean_msgSend)(self, bean_sel("showsTraffic")); }
 static inline void                        MKHybridMapConfiguration_SetShowsTraffic(MKHybridMapConfiguration self, BOOL showsTraffic)                                         { ((void (*)(MKHybridMapConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setShowsTraffic:"), showsTraffic); }
+#ifndef BEAN_ALLOC_MKHybridMapConfiguration
+#define BEAN_ALLOC_MKHybridMapConfiguration
+static inline MKHybridMapConfiguration    MKHybridMapConfiguration_Alloc(void)                                                                                               { return (MKHybridMapConfiguration)bean_alloc(bean_cls("MKHybridMapConfiguration")); }
+#endif
+#ifndef BEAN_NEW_MKHybridMapConfiguration
+#define BEAN_NEW_MKHybridMapConfiguration
+static inline MKHybridMapConfiguration    MKHybridMapConfiguration_New(void)                                                                                                 { return (MKHybridMapConfiguration)bean_new(bean_cls("MKHybridMapConfiguration")); }
+#endif
 
 /* ===== MKLocalPointsOfInterestRequest ===== */
 #ifndef BEAN_TYPEDEF_MKLocalPointsOfInterestRequest
@@ -4516,6 +5008,14 @@ static inline MKCoordinateRegion                MKLocalPointsOfInterestRequest_R
 static inline MKPointOfInterestFilter           MKLocalPointsOfInterestRequest_PointOfInterestFilter(MKLocalPointsOfInterestRequest self)                                                                 { return ((MKPointOfInterestFilter (*)(MKLocalPointsOfInterestRequest, SEL))bean_msgSend)(self, bean_sel("pointOfInterestFilter")); }
 static inline void                              MKLocalPointsOfInterestRequest_SetPointOfInterestFilter(MKLocalPointsOfInterestRequest self, MKPointOfInterestFilter pointOfInterestFilter)               { ((void (*)(MKLocalPointsOfInterestRequest, SEL, MKPointOfInterestFilter))bean_msgSend)(self, bean_sel("setPointOfInterestFilter:"), pointOfInterestFilter); }
 static inline id                                MKLocalPointsOfInterestRequest_CopyWithZone(MKLocalPointsOfInterestRequest self, NSZone* zone)                                                            { return ((id (*)(MKLocalPointsOfInterestRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKLocalPointsOfInterestRequest
+#define BEAN_ALLOC_MKLocalPointsOfInterestRequest
+static inline MKLocalPointsOfInterestRequest    MKLocalPointsOfInterestRequest_Alloc(void)                                                                                                                { return (MKLocalPointsOfInterestRequest)bean_alloc(bean_cls("MKLocalPointsOfInterestRequest")); }
+#endif
+#ifndef BEAN_NEW_MKLocalPointsOfInterestRequest
+#define BEAN_NEW_MKLocalPointsOfInterestRequest
+static inline MKLocalPointsOfInterestRequest    MKLocalPointsOfInterestRequest_New(void)                                                                                                                  { return (MKLocalPointsOfInterestRequest)bean_new(bean_cls("MKLocalPointsOfInterestRequest")); }
+#endif
 
 /* ===== MKLocalSearchCompleter ===== */
 #ifndef BEAN_TYPEDEF_MKLocalSearchCompleter
@@ -4542,6 +5042,14 @@ static inline void                                MKLocalSearchCompleter_SetDele
 static inline NSArray                             MKLocalSearchCompleter_Results(MKLocalSearchCompleter self)                                                                    { return ((NSArray (*)(MKLocalSearchCompleter, SEL))bean_msgSend)(self, bean_sel("results")); }
 static inline BOOL                                MKLocalSearchCompleter_IsSearching(MKLocalSearchCompleter self)                                                                { return ((BOOL (*)(MKLocalSearchCompleter, SEL))bean_msgSend)(self, bean_sel("isSearching")); }
 static inline BOOL                                MKLocalSearchCompleter_Searching(MKLocalSearchCompleter self)                                                                  { return ((BOOL (*)(MKLocalSearchCompleter, SEL))bean_msgSend)(self, bean_sel("searching")); }
+#ifndef BEAN_ALLOC_MKLocalSearchCompleter
+#define BEAN_ALLOC_MKLocalSearchCompleter
+static inline MKLocalSearchCompleter              MKLocalSearchCompleter_Alloc(void)                                                                                             { return (MKLocalSearchCompleter)bean_alloc(bean_cls("MKLocalSearchCompleter")); }
+#endif
+#ifndef BEAN_NEW_MKLocalSearchCompleter
+#define BEAN_NEW_MKLocalSearchCompleter
+static inline MKLocalSearchCompleter              MKLocalSearchCompleter_New(void)                                                                                               { return (MKLocalSearchCompleter)bean_new(bean_cls("MKLocalSearchCompleter")); }
+#endif
 
 /* ===== MKLocalSearchRequest ===== */
 #ifndef BEAN_TYPEDEF_MKLocalSearchRequest
@@ -4565,16 +5073,32 @@ static inline MKAddressFilter                MKLocalSearchRequest_AddressFilter(
 static inline void                           MKLocalSearchRequest_SetAddressFilter(MKLocalSearchRequest self, MKAddressFilter addressFilter)                                                  { ((void (*)(MKLocalSearchRequest, SEL, MKAddressFilter))bean_msgSend)(self, bean_sel("setAddressFilter:"), addressFilter); }
 static inline MKLocalSearchRequest           MKLocalSearchRequest_InitWithCompletion(MKLocalSearchRequest self, MKLocalSearchCompletion completion)                                           { return ((MKLocalSearchRequest (*)(MKLocalSearchRequest, SEL, MKLocalSearchCompletion))bean_msgSend)(self, bean_sel("initWithCompletion:"), completion); }
 static inline id                             MKLocalSearchRequest_CopyWithZone(MKLocalSearchRequest self, NSZone* zone)                                                                       { return ((id (*)(MKLocalSearchRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKLocalSearchRequest
+#define BEAN_ALLOC_MKLocalSearchRequest
+static inline MKLocalSearchRequest           MKLocalSearchRequest_Alloc(void)                                                                                                                 { return (MKLocalSearchRequest)bean_alloc(bean_cls("MKLocalSearchRequest")); }
+#endif
+#ifndef BEAN_NEW_MKLocalSearchRequest
+#define BEAN_NEW_MKLocalSearchRequest
+static inline MKLocalSearchRequest           MKLocalSearchRequest_New(void)                                                                                                                   { return (MKLocalSearchRequest)bean_new(bean_cls("MKLocalSearchRequest")); }
+#endif
 
 /* ===== MKLookAroundSnapshotOptions ===== */
 #ifndef BEAN_TYPEDEF_MKLookAroundSnapshotOptions
 #define BEAN_TYPEDEF_MKLookAroundSnapshotOptions
 typedef bean_id MKLookAroundSnapshotOptions;
 #endif
-static inline MKPointOfInterestFilter    MKLookAroundSnapshotOptions_PointOfInterestFilter(MKLookAroundSnapshotOptions self)                                                      { return ((MKPointOfInterestFilter (*)(MKLookAroundSnapshotOptions, SEL))bean_msgSend)(self, bean_sel("pointOfInterestFilter")); }
-static inline void                       MKLookAroundSnapshotOptions_SetPointOfInterestFilter(MKLookAroundSnapshotOptions self, MKPointOfInterestFilter pointOfInterestFilter)    { ((void (*)(MKLookAroundSnapshotOptions, SEL, MKPointOfInterestFilter))bean_msgSend)(self, bean_sel("setPointOfInterestFilter:"), pointOfInterestFilter); }
-static inline CGSize                     MKLookAroundSnapshotOptions_Size(MKLookAroundSnapshotOptions self)                                                                       { return ((CGSize (*)(MKLookAroundSnapshotOptions, SEL))bean_msgSend_stret)(self, bean_sel("size")); }
-static inline void                       MKLookAroundSnapshotOptions_SetSize(MKLookAroundSnapshotOptions self, CGSize size)                                                       { ((void (*)(MKLookAroundSnapshotOptions, SEL, CGSize))bean_msgSend)(self, bean_sel("setSize:"), size); }
+static inline MKPointOfInterestFilter        MKLookAroundSnapshotOptions_PointOfInterestFilter(MKLookAroundSnapshotOptions self)                                                      { return ((MKPointOfInterestFilter (*)(MKLookAroundSnapshotOptions, SEL))bean_msgSend)(self, bean_sel("pointOfInterestFilter")); }
+static inline void                           MKLookAroundSnapshotOptions_SetPointOfInterestFilter(MKLookAroundSnapshotOptions self, MKPointOfInterestFilter pointOfInterestFilter)    { ((void (*)(MKLookAroundSnapshotOptions, SEL, MKPointOfInterestFilter))bean_msgSend)(self, bean_sel("setPointOfInterestFilter:"), pointOfInterestFilter); }
+static inline CGSize                         MKLookAroundSnapshotOptions_Size(MKLookAroundSnapshotOptions self)                                                                       { return ((CGSize (*)(MKLookAroundSnapshotOptions, SEL))bean_msgSend_stret)(self, bean_sel("size")); }
+static inline void                           MKLookAroundSnapshotOptions_SetSize(MKLookAroundSnapshotOptions self, CGSize size)                                                       { ((void (*)(MKLookAroundSnapshotOptions, SEL, CGSize))bean_msgSend)(self, bean_sel("setSize:"), size); }
+#ifndef BEAN_ALLOC_MKLookAroundSnapshotOptions
+#define BEAN_ALLOC_MKLookAroundSnapshotOptions
+static inline MKLookAroundSnapshotOptions    MKLookAroundSnapshotOptions_Alloc(void)                                                                                                  { return (MKLookAroundSnapshotOptions)bean_alloc(bean_cls("MKLookAroundSnapshotOptions")); }
+#endif
+#ifndef BEAN_NEW_MKLookAroundSnapshotOptions
+#define BEAN_NEW_MKLookAroundSnapshotOptions
+static inline MKLookAroundSnapshotOptions    MKLookAroundSnapshotOptions_New(void)                                                                                                    { return (MKLookAroundSnapshotOptions)bean_new(bean_cls("MKLookAroundSnapshotOptions")); }
+#endif
 
 /* ===== MKLookAroundViewController ===== */
 #ifndef BEAN_TYPEDEF_MKLookAroundViewController
@@ -4599,6 +5123,14 @@ static inline void                          MKLookAroundViewController_SetBadgeP
 static inline BOOL                          MKLookAroundViewController_SupportsSecureCoding(void)                                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKLookAroundViewController"), bean_sel("supportsSecureCoding")); }
 static inline void                          MKLookAroundViewController_EncodeWithCoder(MKLookAroundViewController self, NSCoder coder)                                             { ((void (*)(MKLookAroundViewController, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline BOOL                          MKLookAroundViewController_NavigationEnabled(MKLookAroundViewController self)                                                          { return ((BOOL (*)(MKLookAroundViewController, SEL))bean_msgSend)(self, bean_sel("navigationEnabled")); }
+#ifndef BEAN_ALLOC_MKLookAroundViewController
+#define BEAN_ALLOC_MKLookAroundViewController
+static inline MKLookAroundViewController    MKLookAroundViewController_Alloc(void)                                                                                                 { return (MKLookAroundViewController)bean_alloc(bean_cls("MKLookAroundViewController")); }
+#endif
+#ifndef BEAN_NEW_MKLookAroundViewController
+#define BEAN_NEW_MKLookAroundViewController
+static inline MKLookAroundViewController    MKLookAroundViewController_New(void)                                                                                                   { return (MKLookAroundViewController)bean_new(bean_cls("MKLookAroundViewController")); }
+#endif
 
 /* ===== MKMapItemRequest ===== */
 #ifndef BEAN_TYPEDEF_MKMapItemRequest
@@ -4606,7 +5138,10 @@ static inline BOOL                          MKLookAroundViewController_Navigatio
 typedef bean_id MKMapItemRequest;
 #endif
 static inline MKMapItemRequest          MKMapItemRequest_Init(MKMapItemRequest self)                                                                         { return ((MKMapItemRequest (*)(MKMapItemRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_MKMapItemRequest
+#define BEAN_NEW_MKMapItemRequest
 static inline MKMapItemRequest          MKMapItemRequest_New(void)                                                                                           { return ((MKMapItemRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapItemRequest"), bean_sel("new")); }
+#endif
 static inline MKMapItemRequest          MKMapItemRequest_InitWithMapItemIdentifier(MKMapItemRequest self, MKMapItemIdentifier identifier)                    { return ((MKMapItemRequest (*)(MKMapItemRequest, SEL, MKMapItemIdentifier))bean_msgSend)(self, bean_sel("initWithMapItemIdentifier:"), identifier); }
 static inline MKMapItemRequest          MKMapItemRequest_InitWithMapFeatureAnnotation(MKMapItemRequest self, MKMapFeatureAnnotation mapFeatureAnnotation)    { return ((MKMapItemRequest (*)(MKMapItemRequest, SEL, MKMapFeatureAnnotation))bean_msgSend)(self, bean_sel("initWithMapFeatureAnnotation:"), mapFeatureAnnotation); }
 static inline void                      MKMapItemRequest_GetMapItemWithCompletionHandler(MKMapItemRequest self, void* completionHandler)                     { ((void (*)(MKMapItemRequest, SEL, void*))bean_msgSend)(self, bean_sel("getMapItemWithCompletionHandler:"), completionHandler); }
@@ -4618,6 +5153,10 @@ static inline BOOL                      MKMapItemRequest_IsCancelled(MKMapItemRe
 static inline BOOL                      MKMapItemRequest_IsLoading(MKMapItemRequest self)                                                                    { return ((BOOL (*)(MKMapItemRequest, SEL))bean_msgSend)(self, bean_sel("isLoading")); }
 static inline BOOL                      MKMapItemRequest_Cancelled(MKMapItemRequest self)                                                                    { return ((BOOL (*)(MKMapItemRequest, SEL))bean_msgSend)(self, bean_sel("cancelled")); }
 static inline BOOL                      MKMapItemRequest_Loading(MKMapItemRequest self)                                                                      { return ((BOOL (*)(MKMapItemRequest, SEL))bean_msgSend)(self, bean_sel("loading")); }
+#ifndef BEAN_ALLOC_MKMapItemRequest
+#define BEAN_ALLOC_MKMapItemRequest
+static inline MKMapItemRequest          MKMapItemRequest_Alloc(void)                                                                                         { return (MKMapItemRequest)bean_alloc(bean_cls("MKMapItemRequest")); }
+#endif
 
 /* ===== MKMultiPolygonRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKMultiPolygonRenderer
@@ -4626,6 +5165,14 @@ typedef bean_id MKMultiPolygonRenderer;
 #endif
 static inline MKMultiPolygonRenderer    MKMultiPolygonRenderer_InitWithMultiPolygon(MKMultiPolygonRenderer self, MKMultiPolygon multiPolygon)    { return ((MKMultiPolygonRenderer (*)(MKMultiPolygonRenderer, SEL, MKMultiPolygon))bean_msgSend)(self, bean_sel("initWithMultiPolygon:"), multiPolygon); }
 static inline MKMultiPolygon            MKMultiPolygonRenderer_MultiPolygon(MKMultiPolygonRenderer self)                                         { return ((MKMultiPolygon (*)(MKMultiPolygonRenderer, SEL))bean_msgSend)(self, bean_sel("multiPolygon")); }
+#ifndef BEAN_ALLOC_MKMultiPolygonRenderer
+#define BEAN_ALLOC_MKMultiPolygonRenderer
+static inline MKMultiPolygonRenderer    MKMultiPolygonRenderer_Alloc(void)                                                                       { return (MKMultiPolygonRenderer)bean_alloc(bean_cls("MKMultiPolygonRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKMultiPolygonRenderer
+#define BEAN_NEW_MKMultiPolygonRenderer
+static inline MKMultiPolygonRenderer    MKMultiPolygonRenderer_New(void)                                                                         { return (MKMultiPolygonRenderer)bean_new(bean_cls("MKMultiPolygonRenderer")); }
+#endif
 
 /* ===== MKMultiPolylineRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKMultiPolylineRenderer
@@ -4634,6 +5181,14 @@ typedef bean_id MKMultiPolylineRenderer;
 #endif
 static inline MKMultiPolylineRenderer    MKMultiPolylineRenderer_InitWithMultiPolyline(MKMultiPolylineRenderer self, MKMultiPolyline multiPolyline)    { return ((MKMultiPolylineRenderer (*)(MKMultiPolylineRenderer, SEL, MKMultiPolyline))bean_msgSend)(self, bean_sel("initWithMultiPolyline:"), multiPolyline); }
 static inline MKMultiPolyline            MKMultiPolylineRenderer_MultiPolyline(MKMultiPolylineRenderer self)                                           { return ((MKMultiPolyline (*)(MKMultiPolylineRenderer, SEL))bean_msgSend)(self, bean_sel("multiPolyline")); }
+#ifndef BEAN_ALLOC_MKMultiPolylineRenderer
+#define BEAN_ALLOC_MKMultiPolylineRenderer
+static inline MKMultiPolylineRenderer    MKMultiPolylineRenderer_Alloc(void)                                                                           { return (MKMultiPolylineRenderer)bean_alloc(bean_cls("MKMultiPolylineRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKMultiPolylineRenderer
+#define BEAN_NEW_MKMultiPolylineRenderer
+static inline MKMultiPolylineRenderer    MKMultiPolylineRenderer_New(void)                                                                             { return (MKMultiPolylineRenderer)bean_new(bean_cls("MKMultiPolylineRenderer")); }
+#endif
 
 /* ===== MKPolygonRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKPolygonRenderer
@@ -4646,6 +5201,14 @@ static inline CGFloat              MKPolygonRenderer_StrokeStart(MKPolygonRender
 static inline void                 MKPolygonRenderer_SetStrokeStart(MKPolygonRenderer self, CGFloat strokeStart)    { ((void (*)(MKPolygonRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStrokeStart:"), strokeStart); }
 static inline CGFloat              MKPolygonRenderer_StrokeEnd(MKPolygonRenderer self)                              { return ((CGFloat (*)(MKPolygonRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("strokeEnd")); }
 static inline void                 MKPolygonRenderer_SetStrokeEnd(MKPolygonRenderer self, CGFloat strokeEnd)        { ((void (*)(MKPolygonRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStrokeEnd:"), strokeEnd); }
+#ifndef BEAN_ALLOC_MKPolygonRenderer
+#define BEAN_ALLOC_MKPolygonRenderer
+static inline MKPolygonRenderer    MKPolygonRenderer_Alloc(void)                                                    { return (MKPolygonRenderer)bean_alloc(bean_cls("MKPolygonRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKPolygonRenderer
+#define BEAN_NEW_MKPolygonRenderer
+static inline MKPolygonRenderer    MKPolygonRenderer_New(void)                                                      { return (MKPolygonRenderer)bean_new(bean_cls("MKPolygonRenderer")); }
+#endif
 
 /* ===== MKPolylineRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKPolylineRenderer
@@ -4658,6 +5221,14 @@ static inline CGFloat               MKPolylineRenderer_StrokeStart(MKPolylineRen
 static inline void                  MKPolylineRenderer_SetStrokeStart(MKPolylineRenderer self, CGFloat strokeStart)      { ((void (*)(MKPolylineRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStrokeStart:"), strokeStart); }
 static inline CGFloat               MKPolylineRenderer_StrokeEnd(MKPolylineRenderer self)                                { return ((CGFloat (*)(MKPolylineRenderer, SEL))bean_msgSend_fpret)(self, bean_sel("strokeEnd")); }
 static inline void                  MKPolylineRenderer_SetStrokeEnd(MKPolylineRenderer self, CGFloat strokeEnd)          { ((void (*)(MKPolylineRenderer, SEL, CGFloat))bean_msgSend)(self, bean_sel("setStrokeEnd:"), strokeEnd); }
+#ifndef BEAN_ALLOC_MKPolylineRenderer
+#define BEAN_ALLOC_MKPolylineRenderer
+static inline MKPolylineRenderer    MKPolylineRenderer_Alloc(void)                                                       { return (MKPolylineRenderer)bean_alloc(bean_cls("MKPolylineRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKPolylineRenderer
+#define BEAN_NEW_MKPolylineRenderer
+static inline MKPolylineRenderer    MKPolylineRenderer_New(void)                                                         { return (MKPolylineRenderer)bean_new(bean_cls("MKPolylineRenderer")); }
+#endif
 
 /* ===== MKRoute ===== */
 #ifndef BEAN_TYPEDEF_MKRoute
@@ -4673,6 +5244,14 @@ static inline MKPolyline                   MKRoute_Polyline(MKRoute self)       
 static inline NSArray                      MKRoute_Steps(MKRoute self)                 { return ((NSArray (*)(MKRoute, SEL))bean_msgSend)(self, bean_sel("steps")); }
 static inline BOOL                         MKRoute_HasTolls(MKRoute self)              { return ((BOOL (*)(MKRoute, SEL))bean_msgSend)(self, bean_sel("hasTolls")); }
 static inline BOOL                         MKRoute_HasHighways(MKRoute self)           { return ((BOOL (*)(MKRoute, SEL))bean_msgSend)(self, bean_sel("hasHighways")); }
+#ifndef BEAN_ALLOC_MKRoute
+#define BEAN_ALLOC_MKRoute
+static inline MKRoute                      MKRoute_Alloc(void)                         { return (MKRoute)bean_alloc(bean_cls("MKRoute")); }
+#endif
+#ifndef BEAN_NEW_MKRoute
+#define BEAN_NEW_MKRoute
+static inline MKRoute                      MKRoute_New(void)                           { return (MKRoute)bean_new(bean_cls("MKRoute")); }
+#endif
 
 /* ===== MKRouteStep ===== */
 #ifndef BEAN_TYPEDEF_MKRouteStep
@@ -4684,15 +5263,30 @@ static inline NSString                     MKRouteStep_Notice(MKRouteStep self) 
 static inline MKPolyline                   MKRouteStep_Polyline(MKRouteStep self)         { return ((MKPolyline (*)(MKRouteStep, SEL))bean_msgSend)(self, bean_sel("polyline")); }
 static inline CGFloat                      MKRouteStep_Distance(MKRouteStep self)         { return ((CGFloat (*)(MKRouteStep, SEL))bean_msgSend_fpret)(self, bean_sel("distance")); }
 static inline MKDirectionsTransportType    MKRouteStep_TransportType(MKRouteStep self)    { return ((MKDirectionsTransportType (*)(MKRouteStep, SEL))bean_msgSend)(self, bean_sel("transportType")); }
+#ifndef BEAN_ALLOC_MKRouteStep
+#define BEAN_ALLOC_MKRouteStep
+static inline MKRouteStep                  MKRouteStep_Alloc(void)                        { return (MKRouteStep)bean_alloc(bean_cls("MKRouteStep")); }
+#endif
+#ifndef BEAN_NEW_MKRouteStep
+#define BEAN_NEW_MKRouteStep
+static inline MKRouteStep                  MKRouteStep_New(void)                          { return (MKRouteStep)bean_new(bean_cls("MKRouteStep")); }
+#endif
 
 /* ===== MKSelectionAccessory ===== */
 #ifndef BEAN_TYPEDEF_MKSelectionAccessory
 #define BEAN_TYPEDEF_MKSelectionAccessory
 typedef bean_id MKSelectionAccessory;
 #endif
+#ifndef BEAN_NEW_MKSelectionAccessory
+#define BEAN_NEW_MKSelectionAccessory
 static inline MKSelectionAccessory    MKSelectionAccessory_New(void)                                                                                                   { return ((MKSelectionAccessory (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKSelectionAccessory"), bean_sel("new")); }
+#endif
 static inline MKSelectionAccessory    MKSelectionAccessory_Init(MKSelectionAccessory self)                                                                             { return ((MKSelectionAccessory (*)(MKSelectionAccessory, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline MKSelectionAccessory    MKSelectionAccessory_MapItemDetailWithPresentationStyle(MKMapItemDetailSelectionAccessoryPresentationStyle presentationStyle)    { return ((MKSelectionAccessory (*)(bean_class, SEL, MKMapItemDetailSelectionAccessoryPresentationStyle))bean_msgSend)(bean_cls("MKSelectionAccessory"), bean_sel("mapItemDetailWithPresentationStyle:"), presentationStyle); }
+#ifndef BEAN_ALLOC_MKSelectionAccessory
+#define BEAN_ALLOC_MKSelectionAccessory
+static inline MKSelectionAccessory    MKSelectionAccessory_Alloc(void)                                                                                                 { return (MKSelectionAccessory)bean_alloc(bean_cls("MKSelectionAccessory")); }
+#endif
 
 /* ===== MKStandardMapConfiguration ===== */
 #ifndef BEAN_TYPEDEF_MKStandardMapConfiguration
@@ -4709,6 +5303,14 @@ static inline MKPointOfInterestFilter       MKStandardMapConfiguration_PointOfIn
 static inline void                          MKStandardMapConfiguration_SetPointOfInterestFilter(MKStandardMapConfiguration self, MKPointOfInterestFilter pointOfInterestFilter)                                               { ((void (*)(MKStandardMapConfiguration, SEL, MKPointOfInterestFilter))bean_msgSend)(self, bean_sel("setPointOfInterestFilter:"), pointOfInterestFilter); }
 static inline BOOL                          MKStandardMapConfiguration_ShowsTraffic(MKStandardMapConfiguration self)                                                                                                          { return ((BOOL (*)(MKStandardMapConfiguration, SEL))bean_msgSend)(self, bean_sel("showsTraffic")); }
 static inline void                          MKStandardMapConfiguration_SetShowsTraffic(MKStandardMapConfiguration self, BOOL showsTraffic)                                                                                    { ((void (*)(MKStandardMapConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setShowsTraffic:"), showsTraffic); }
+#ifndef BEAN_ALLOC_MKStandardMapConfiguration
+#define BEAN_ALLOC_MKStandardMapConfiguration
+static inline MKStandardMapConfiguration    MKStandardMapConfiguration_Alloc(void)                                                                                                                                            { return (MKStandardMapConfiguration)bean_alloc(bean_cls("MKStandardMapConfiguration")); }
+#endif
+#ifndef BEAN_NEW_MKStandardMapConfiguration
+#define BEAN_NEW_MKStandardMapConfiguration
+static inline MKStandardMapConfiguration    MKStandardMapConfiguration_New(void)                                                                                                                                              { return (MKStandardMapConfiguration)bean_new(bean_cls("MKStandardMapConfiguration")); }
+#endif
 
 /* ===== MKTileOverlayRenderer ===== */
 #ifndef BEAN_TYPEDEF_MKTileOverlayRenderer
@@ -4717,24 +5319,40 @@ typedef bean_id MKTileOverlayRenderer;
 #endif
 static inline MKTileOverlayRenderer    MKTileOverlayRenderer_InitWithTileOverlay(MKTileOverlayRenderer self, MKTileOverlay overlay)    { return ((MKTileOverlayRenderer (*)(MKTileOverlayRenderer, SEL, MKTileOverlay))bean_msgSend)(self, bean_sel("initWithTileOverlay:"), overlay); }
 static inline void                     MKTileOverlayRenderer_ReloadData(MKTileOverlayRenderer self)                                    { ((void (*)(MKTileOverlayRenderer, SEL))bean_msgSend)(self, bean_sel("reloadData")); }
+#ifndef BEAN_ALLOC_MKTileOverlayRenderer
+#define BEAN_ALLOC_MKTileOverlayRenderer
+static inline MKTileOverlayRenderer    MKTileOverlayRenderer_Alloc(void)                                                               { return (MKTileOverlayRenderer)bean_alloc(bean_cls("MKTileOverlayRenderer")); }
+#endif
+#ifndef BEAN_NEW_MKTileOverlayRenderer
+#define BEAN_NEW_MKTileOverlayRenderer
+static inline MKTileOverlayRenderer    MKTileOverlayRenderer_New(void)                                                                 { return (MKTileOverlayRenderer)bean_new(bean_cls("MKTileOverlayRenderer")); }
+#endif
 
 /* ===== CLGeocoder ===== */
 #ifndef BEAN_TYPEDEF_CLGeocoder
 #define BEAN_TYPEDEF_CLGeocoder
 typedef bean_id CLGeocoder;
 #endif
-static inline void    CLGeocoder_ReverseGeocodeLocation_CompletionHandler(CLGeocoder self, CLLocation location, void* completionHandler)                                                                                                                         { ((void (*)(CLGeocoder, SEL, CLLocation, void*))bean_msgSend)(self, bean_sel("reverseGeocodeLocation:completionHandler:"), location, completionHandler); }
-static inline void    CLGeocoder_ReverseGeocodeLocation_PreferredLocale_CompletionHandler(CLGeocoder self, CLLocation location, NSLocale locale, void* completionHandler)                                                                                        { ((void (*)(CLGeocoder, SEL, CLLocation, NSLocale, void*))bean_msgSend)(self, bean_sel("reverseGeocodeLocation:preferredLocale:completionHandler:"), location, locale, completionHandler); }
-static inline void    CLGeocoder_GeocodeAddressDictionary_CompletionHandler(CLGeocoder self, NSDictionary addressDictionary, void* completionHandler)                                                                                                            { ((void (*)(CLGeocoder, SEL, NSDictionary, void*))bean_msgSend)(self, bean_sel("geocodeAddressDictionary:completionHandler:"), addressDictionary, completionHandler); }
-static inline void    CLGeocoder_GeocodeAddressString_InRegion_CompletionHandler(CLGeocoder self, NSString addressString, CLRegion region, void* completionHandler)                                                                                              { ((void (*)(CLGeocoder, SEL, NSString, CLRegion, void*))bean_msgSend)(self, bean_sel("geocodeAddressString:inRegion:completionHandler:"), addressString, region, completionHandler); }
-static inline void    CLGeocoder_GeocodeAddressString_InRegion_PreferredLocale_CompletionHandler(CLGeocoder self, NSString addressString, CLRegion region, NSLocale locale, void* completionHandler)                                                             { ((void (*)(CLGeocoder, SEL, NSString, CLRegion, NSLocale, void*))bean_msgSend)(self, bean_sel("geocodeAddressString:inRegion:preferredLocale:completionHandler:"), addressString, region, locale, completionHandler); }
-static inline void    CLGeocoder_GeocodeAddressString_InRegionCenteredAt_InRegionRadius_PreferredLocale_CompletionHandler(CLGeocoder self, NSString addressString, CLLocationCoordinate2D centroid, CGFloat radius, NSLocale locale, void* completionHandler)    { ((void (*)(CLGeocoder, SEL, NSString, CLLocationCoordinate2D, CGFloat, NSLocale, void*))bean_msgSend)(self, bean_sel("geocodeAddressString:inRegionCenteredAt:inRegionRadius:preferredLocale:completionHandler:"), addressString, centroid, radius, locale, completionHandler); }
-static inline void    CLGeocoder_GeocodeAddressString_CompletionHandler(CLGeocoder self, NSString addressString, void* completionHandler)                                                                                                                        { ((void (*)(CLGeocoder, SEL, NSString, void*))bean_msgSend)(self, bean_sel("geocodeAddressString:completionHandler:"), addressString, completionHandler); }
-static inline void    CLGeocoder_CancelGeocode(CLGeocoder self)                                                                                                                                                                                                  { ((void (*)(CLGeocoder, SEL))bean_msgSend)(self, bean_sel("cancelGeocode")); }
-static inline BOOL    CLGeocoder_IsGeocoding(CLGeocoder self)                                                                                                                                                                                                    { return ((BOOL (*)(CLGeocoder, SEL))bean_msgSend)(self, bean_sel("isGeocoding")); }
-static inline void    CLGeocoder_GeocodePostalAddress_CompletionHandler(CLGeocoder self, CNPostalAddress postalAddress, void* completionHandler)                                                                                                                 { ((void (*)(CLGeocoder, SEL, CNPostalAddress, void*))bean_msgSend)(self, bean_sel("geocodePostalAddress:completionHandler:"), postalAddress, completionHandler); }
-static inline void    CLGeocoder_GeocodePostalAddress_PreferredLocale_CompletionHandler(CLGeocoder self, CNPostalAddress postalAddress, NSLocale locale, void* completionHandler)                                                                                { ((void (*)(CLGeocoder, SEL, CNPostalAddress, NSLocale, void*))bean_msgSend)(self, bean_sel("geocodePostalAddress:preferredLocale:completionHandler:"), postalAddress, locale, completionHandler); }
-static inline BOOL    CLGeocoder_Geocoding(CLGeocoder self)                                                                                                                                                                                                      { return ((BOOL (*)(CLGeocoder, SEL))bean_msgSend)(self, bean_sel("geocoding")); }
+static inline void          CLGeocoder_ReverseGeocodeLocation_CompletionHandler(CLGeocoder self, CLLocation location, void* completionHandler)                                                                                                                         { ((void (*)(CLGeocoder, SEL, CLLocation, void*))bean_msgSend)(self, bean_sel("reverseGeocodeLocation:completionHandler:"), location, completionHandler); }
+static inline void          CLGeocoder_ReverseGeocodeLocation_PreferredLocale_CompletionHandler(CLGeocoder self, CLLocation location, NSLocale locale, void* completionHandler)                                                                                        { ((void (*)(CLGeocoder, SEL, CLLocation, NSLocale, void*))bean_msgSend)(self, bean_sel("reverseGeocodeLocation:preferredLocale:completionHandler:"), location, locale, completionHandler); }
+static inline void          CLGeocoder_GeocodeAddressDictionary_CompletionHandler(CLGeocoder self, NSDictionary addressDictionary, void* completionHandler)                                                                                                            { ((void (*)(CLGeocoder, SEL, NSDictionary, void*))bean_msgSend)(self, bean_sel("geocodeAddressDictionary:completionHandler:"), addressDictionary, completionHandler); }
+static inline void          CLGeocoder_GeocodeAddressString_InRegion_CompletionHandler(CLGeocoder self, NSString addressString, CLRegion region, void* completionHandler)                                                                                              { ((void (*)(CLGeocoder, SEL, NSString, CLRegion, void*))bean_msgSend)(self, bean_sel("geocodeAddressString:inRegion:completionHandler:"), addressString, region, completionHandler); }
+static inline void          CLGeocoder_GeocodeAddressString_InRegion_PreferredLocale_CompletionHandler(CLGeocoder self, NSString addressString, CLRegion region, NSLocale locale, void* completionHandler)                                                             { ((void (*)(CLGeocoder, SEL, NSString, CLRegion, NSLocale, void*))bean_msgSend)(self, bean_sel("geocodeAddressString:inRegion:preferredLocale:completionHandler:"), addressString, region, locale, completionHandler); }
+static inline void          CLGeocoder_GeocodeAddressString_InRegionCenteredAt_InRegionRadius_PreferredLocale_CompletionHandler(CLGeocoder self, NSString addressString, CLLocationCoordinate2D centroid, CGFloat radius, NSLocale locale, void* completionHandler)    { ((void (*)(CLGeocoder, SEL, NSString, CLLocationCoordinate2D, CGFloat, NSLocale, void*))bean_msgSend)(self, bean_sel("geocodeAddressString:inRegionCenteredAt:inRegionRadius:preferredLocale:completionHandler:"), addressString, centroid, radius, locale, completionHandler); }
+static inline void          CLGeocoder_GeocodeAddressString_CompletionHandler(CLGeocoder self, NSString addressString, void* completionHandler)                                                                                                                        { ((void (*)(CLGeocoder, SEL, NSString, void*))bean_msgSend)(self, bean_sel("geocodeAddressString:completionHandler:"), addressString, completionHandler); }
+static inline void          CLGeocoder_CancelGeocode(CLGeocoder self)                                                                                                                                                                                                  { ((void (*)(CLGeocoder, SEL))bean_msgSend)(self, bean_sel("cancelGeocode")); }
+static inline BOOL          CLGeocoder_IsGeocoding(CLGeocoder self)                                                                                                                                                                                                    { return ((BOOL (*)(CLGeocoder, SEL))bean_msgSend)(self, bean_sel("isGeocoding")); }
+static inline void          CLGeocoder_GeocodePostalAddress_CompletionHandler(CLGeocoder self, CNPostalAddress postalAddress, void* completionHandler)                                                                                                                 { ((void (*)(CLGeocoder, SEL, CNPostalAddress, void*))bean_msgSend)(self, bean_sel("geocodePostalAddress:completionHandler:"), postalAddress, completionHandler); }
+static inline void          CLGeocoder_GeocodePostalAddress_PreferredLocale_CompletionHandler(CLGeocoder self, CNPostalAddress postalAddress, NSLocale locale, void* completionHandler)                                                                                { ((void (*)(CLGeocoder, SEL, CNPostalAddress, NSLocale, void*))bean_msgSend)(self, bean_sel("geocodePostalAddress:preferredLocale:completionHandler:"), postalAddress, locale, completionHandler); }
+static inline BOOL          CLGeocoder_Geocoding(CLGeocoder self)                                                                                                                                                                                                      { return ((BOOL (*)(CLGeocoder, SEL))bean_msgSend)(self, bean_sel("geocoding")); }
+#ifndef BEAN_ALLOC_CLGeocoder
+#define BEAN_ALLOC_CLGeocoder
+static inline CLGeocoder    CLGeocoder_Alloc(void)                                                                                                                                                                                                                     { return (CLGeocoder)bean_alloc(bean_cls("CLGeocoder")); }
+#endif
+#ifndef BEAN_NEW_CLGeocoder
+#define BEAN_NEW_CLGeocoder
+static inline CLGeocoder    CLGeocoder_New(void)                                                                                                                                                                                                                       { return (CLGeocoder)bean_new(bean_cls("CLGeocoder")); }
+#endif
 
 /* ===== CLLocationManager ===== */
 #ifndef BEAN_TYPEDEF_CLLocationManager
@@ -4806,6 +5424,14 @@ static inline NSSet                      CLLocationManager_RangedBeaconConstrain
 static inline void                       CLLocationManager_StartMonitoringVisits(CLLocationManager self)                                                                                                                { ((void (*)(CLLocationManager, SEL))bean_msgSend)(self, bean_sel("startMonitoringVisits")); }
 static inline void                       CLLocationManager_StopMonitoringVisits(CLLocationManager self)                                                                                                                 { ((void (*)(CLLocationManager, SEL))bean_msgSend)(self, bean_sel("stopMonitoringVisits")); }
 static inline BOOL                       CLLocationManager_AuthorizedForWidgetUpdates(CLLocationManager self)                                                                                                           { return ((BOOL (*)(CLLocationManager, SEL))bean_msgSend)(self, bean_sel("authorizedForWidgetUpdates")); }
+#ifndef BEAN_ALLOC_CLLocationManager
+#define BEAN_ALLOC_CLLocationManager
+static inline CLLocationManager          CLLocationManager_Alloc(void)                                                                                                                                                  { return (CLLocationManager)bean_alloc(bean_cls("CLLocationManager")); }
+#endif
+#ifndef BEAN_NEW_CLLocationManager
+#define BEAN_NEW_CLLocationManager
+static inline CLLocationManager          CLLocationManager_New(void)                                                                                                                                                    { return (CLLocationManager)bean_new(bean_cls("CLLocationManager")); }
+#endif
 
 /* ===== CLMonitoringRecord ===== */
 #ifndef BEAN_TYPEDEF_CLMonitoringRecord
@@ -4813,10 +5439,17 @@ static inline BOOL                       CLLocationManager_AuthorizedForWidgetUp
 typedef bean_id CLMonitoringRecord;
 #endif
 static inline CLMonitoringRecord    CLMonitoringRecord_Init(CLMonitoringRecord self)         { return ((CLMonitoringRecord (*)(CLMonitoringRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CLMonitoringRecord
+#define BEAN_NEW_CLMonitoringRecord
 static inline CLMonitoringRecord    CLMonitoringRecord_New(void)                             { return ((CLMonitoringRecord (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLMonitoringRecord"), bean_sel("new")); }
+#endif
 static inline CLCondition           CLMonitoringRecord_Condition(CLMonitoringRecord self)    { return ((CLCondition (*)(CLMonitoringRecord, SEL))bean_msgSend)(self, bean_sel("condition")); }
 static inline CLMonitoringEvent     CLMonitoringRecord_LastEvent(CLMonitoringRecord self)    { return ((CLMonitoringEvent (*)(CLMonitoringRecord, SEL))bean_msgSend)(self, bean_sel("lastEvent")); }
 static inline BOOL                  CLMonitoringRecord_SupportsSecureCoding(void)            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLMonitoringRecord"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLMonitoringRecord
+#define BEAN_ALLOC_CLMonitoringRecord
+static inline CLMonitoringRecord    CLMonitoringRecord_Alloc(void)                           { return (CLMonitoringRecord)bean_alloc(bean_cls("CLMonitoringRecord")); }
+#endif
 
 /* ===== CLPlacemark ===== */
 #ifndef BEAN_TYPEDEF_CLPlacemark
@@ -4824,7 +5457,10 @@ static inline BOOL                  CLMonitoringRecord_SupportsSecureCoding(void
 typedef bean_id CLPlacemark;
 #endif
 static inline CLPlacemark        CLPlacemark_Init(CLPlacemark self)                                        { return ((CLPlacemark (*)(CLPlacemark, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CLPlacemark
+#define BEAN_NEW_CLPlacemark
 static inline CLPlacemark        CLPlacemark_New(void)                                                     { return ((CLPlacemark (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLPlacemark"), bean_sel("new")); }
+#endif
 static inline CLPlacemark        CLPlacemark_InitWithPlacemark(CLPlacemark self, CLPlacemark placemark)    { return ((CLPlacemark (*)(CLPlacemark, SEL, CLPlacemark))bean_msgSend)(self, bean_sel("initWithPlacemark:"), placemark); }
 static inline CLLocation         CLPlacemark_Location(CLPlacemark self)                                    { return ((CLLocation (*)(CLPlacemark, SEL))bean_msgSend)(self, bean_sel("location")); }
 static inline CLRegion           CLPlacemark_Region(CLPlacemark self)                                      { return ((CLRegion (*)(CLPlacemark, SEL))bean_msgSend)(self, bean_sel("region")); }
@@ -4846,6 +5482,10 @@ static inline NSArray            CLPlacemark_AreasOfInterest(CLPlacemark self)  
 static inline CNPostalAddress    CLPlacemark_PostalAddress(CLPlacemark self)                               { return ((CNPostalAddress (*)(CLPlacemark, SEL))bean_msgSend)(self, bean_sel("postalAddress")); }
 static inline id                 CLPlacemark_CopyWithZone(CLPlacemark self, NSZone* zone)                  { return ((id (*)(CLPlacemark, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL               CLPlacemark_SupportsSecureCoding(void)                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLPlacemark"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLPlacemark
+#define BEAN_ALLOC_CLPlacemark
+static inline CLPlacemark        CLPlacemark_Alloc(void)                                                   { return (CLPlacemark)bean_alloc(bean_cls("CLPlacemark")); }
+#endif
 
 /* ===== CLUpdate ===== */
 #ifndef BEAN_TYPEDEF_CLUpdate
@@ -4863,6 +5503,14 @@ static inline BOOL          CLUpdate_AccuracyLimited(CLUpdate self)             
 static inline BOOL          CLUpdate_ServiceSessionRequired(CLUpdate self)            { return ((BOOL (*)(CLUpdate, SEL))bean_msgSend)(self, bean_sel("serviceSessionRequired")); }
 static inline BOOL          CLUpdate_AuthorizationRequestInProgress(CLUpdate self)    { return ((BOOL (*)(CLUpdate, SEL))bean_msgSend)(self, bean_sel("authorizationRequestInProgress")); }
 static inline CLLocation    CLUpdate_Location(CLUpdate self)                          { return ((CLLocation (*)(CLUpdate, SEL))bean_msgSend)(self, bean_sel("location")); }
+#ifndef BEAN_ALLOC_CLUpdate
+#define BEAN_ALLOC_CLUpdate
+static inline CLUpdate      CLUpdate_Alloc(void)                                      { return (CLUpdate)bean_alloc(bean_cls("CLUpdate")); }
+#endif
+#ifndef BEAN_NEW_CLUpdate
+#define BEAN_NEW_CLUpdate
+static inline CLUpdate      CLUpdate_New(void)                                        { return (CLUpdate)bean_new(bean_cls("CLUpdate")); }
+#endif
 
 /* ===== MKLocalSearch ===== */
 #ifndef BEAN_TYPEDEF_MKLocalSearch
@@ -4875,39 +5523,70 @@ static inline void             MKLocalSearch_StartWithCompletionHandler(MKLocalS
 static inline void             MKLocalSearch_Cancel(MKLocalSearch self)                                                                     { ((void (*)(MKLocalSearch, SEL))bean_msgSend)(self, bean_sel("cancel")); }
 static inline BOOL             MKLocalSearch_IsSearching(MKLocalSearch self)                                                                { return ((BOOL (*)(MKLocalSearch, SEL))bean_msgSend)(self, bean_sel("isSearching")); }
 static inline BOOL             MKLocalSearch_Searching(MKLocalSearch self)                                                                  { return ((BOOL (*)(MKLocalSearch, SEL))bean_msgSend)(self, bean_sel("searching")); }
+#ifndef BEAN_ALLOC_MKLocalSearch
+#define BEAN_ALLOC_MKLocalSearch
+static inline MKLocalSearch    MKLocalSearch_Alloc(void)                                                                                    { return (MKLocalSearch)bean_alloc(bean_cls("MKLocalSearch")); }
+#endif
+#ifndef BEAN_NEW_MKLocalSearch
+#define BEAN_NEW_MKLocalSearch
+static inline MKLocalSearch    MKLocalSearch_New(void)                                                                                      { return (MKLocalSearch)bean_new(bean_cls("MKLocalSearch")); }
+#endif
 
 /* ===== MKLocalSearchCompleterDelegate ===== */
 #ifndef BEAN_TYPEDEF_MKLocalSearchCompleterDelegate
 #define BEAN_TYPEDEF_MKLocalSearchCompleterDelegate
 typedef bean_id MKLocalSearchCompleterDelegate;
 #endif
-static inline void    MKLocalSearchCompleterDelegate_CompleterDidUpdateResults(MKLocalSearchCompleterDelegate self, MKLocalSearchCompleter completer)                    { ((void (*)(MKLocalSearchCompleterDelegate, SEL, MKLocalSearchCompleter))bean_msgSend)(self, bean_sel("completerDidUpdateResults:"), completer); }
-static inline void    MKLocalSearchCompleterDelegate_Completer_DidFailWithError(MKLocalSearchCompleterDelegate self, MKLocalSearchCompleter completer, NSError error)    { ((void (*)(MKLocalSearchCompleterDelegate, SEL, MKLocalSearchCompleter, NSError))bean_msgSend)(self, bean_sel("completer:didFailWithError:"), completer, error); }
+static inline void                              MKLocalSearchCompleterDelegate_CompleterDidUpdateResults(MKLocalSearchCompleterDelegate self, MKLocalSearchCompleter completer)                    { ((void (*)(MKLocalSearchCompleterDelegate, SEL, MKLocalSearchCompleter))bean_msgSend)(self, bean_sel("completerDidUpdateResults:"), completer); }
+static inline void                              MKLocalSearchCompleterDelegate_Completer_DidFailWithError(MKLocalSearchCompleterDelegate self, MKLocalSearchCompleter completer, NSError error)    { ((void (*)(MKLocalSearchCompleterDelegate, SEL, MKLocalSearchCompleter, NSError))bean_msgSend)(self, bean_sel("completer:didFailWithError:"), completer, error); }
+#ifndef BEAN_ALLOC_MKLocalSearchCompleterDelegate
+#define BEAN_ALLOC_MKLocalSearchCompleterDelegate
+static inline MKLocalSearchCompleterDelegate    MKLocalSearchCompleterDelegate_Alloc(void)                                                                                                         { return (MKLocalSearchCompleterDelegate)bean_alloc(bean_cls("MKLocalSearchCompleterDelegate")); }
+#endif
+#ifndef BEAN_NEW_MKLocalSearchCompleterDelegate
+#define BEAN_NEW_MKLocalSearchCompleterDelegate
+static inline MKLocalSearchCompleterDelegate    MKLocalSearchCompleterDelegate_New(void)                                                                                                           { return (MKLocalSearchCompleterDelegate)bean_new(bean_cls("MKLocalSearchCompleterDelegate")); }
+#endif
 
 /* ===== MKLookAroundSnapshotter ===== */
 #ifndef BEAN_TYPEDEF_MKLookAroundSnapshotter
 #define BEAN_TYPEDEF_MKLookAroundSnapshotter
 typedef bean_id MKLookAroundSnapshotter;
 #endif
+#ifndef BEAN_NEW_MKLookAroundSnapshotter
+#define BEAN_NEW_MKLookAroundSnapshotter
 static inline MKLookAroundSnapshotter    MKLookAroundSnapshotter_New(void)                                                                                                            { return ((MKLookAroundSnapshotter (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKLookAroundSnapshotter"), bean_sel("new")); }
+#endif
 static inline MKLookAroundSnapshotter    MKLookAroundSnapshotter_Init(MKLookAroundSnapshotter self)                                                                                   { return ((MKLookAroundSnapshotter (*)(MKLookAroundSnapshotter, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline MKLookAroundSnapshotter    MKLookAroundSnapshotter_InitWithScene_Options(MKLookAroundSnapshotter self, MKLookAroundScene scene, MKLookAroundSnapshotOptions options)    { return ((MKLookAroundSnapshotter (*)(MKLookAroundSnapshotter, SEL, MKLookAroundScene, MKLookAroundSnapshotOptions))bean_msgSend)(self, bean_sel("initWithScene:options:"), scene, options); }
 static inline void                       MKLookAroundSnapshotter_GetSnapshotWithCompletionHandler(MKLookAroundSnapshotter self, void* completionHandler)                              { ((void (*)(MKLookAroundSnapshotter, SEL, void*))bean_msgSend)(self, bean_sel("getSnapshotWithCompletionHandler:"), completionHandler); }
 static inline void                       MKLookAroundSnapshotter_Cancel(MKLookAroundSnapshotter self)                                                                                 { ((void (*)(MKLookAroundSnapshotter, SEL))bean_msgSend)(self, bean_sel("cancel")); }
 static inline BOOL                       MKLookAroundSnapshotter_IsLoading(MKLookAroundSnapshotter self)                                                                              { return ((BOOL (*)(MKLookAroundSnapshotter, SEL))bean_msgSend)(self, bean_sel("isLoading")); }
 static inline BOOL                       MKLookAroundSnapshotter_Loading(MKLookAroundSnapshotter self)                                                                                { return ((BOOL (*)(MKLookAroundSnapshotter, SEL))bean_msgSend)(self, bean_sel("loading")); }
+#ifndef BEAN_ALLOC_MKLookAroundSnapshotter
+#define BEAN_ALLOC_MKLookAroundSnapshotter
+static inline MKLookAroundSnapshotter    MKLookAroundSnapshotter_Alloc(void)                                                                                                          { return (MKLookAroundSnapshotter)bean_alloc(bean_cls("MKLookAroundSnapshotter")); }
+#endif
 
 /* ===== MKLookAroundViewControllerDelegate ===== */
 #ifndef BEAN_TYPEDEF_MKLookAroundViewControllerDelegate
 #define BEAN_TYPEDEF_MKLookAroundViewControllerDelegate
 typedef bean_id MKLookAroundViewControllerDelegate;
 #endif
-static inline void    MKLookAroundViewControllerDelegate_LookAroundViewControllerWillUpdateScene(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)          { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerWillUpdateScene:"), viewController); }
-static inline void    MKLookAroundViewControllerDelegate_LookAroundViewControllerDidUpdateScene(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)           { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerDidUpdateScene:"), viewController); }
-static inline void    MKLookAroundViewControllerDelegate_LookAroundViewControllerWillPresentFullScreen(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)    { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerWillPresentFullScreen:"), viewController); }
-static inline void    MKLookAroundViewControllerDelegate_LookAroundViewControllerDidPresentFullScreen(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)     { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerDidPresentFullScreen:"), viewController); }
-static inline void    MKLookAroundViewControllerDelegate_LookAroundViewControllerWillDismissFullScreen(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)    { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerWillDismissFullScreen:"), viewController); }
-static inline void    MKLookAroundViewControllerDelegate_LookAroundViewControllerDidDismissFullScreen(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)     { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerDidDismissFullScreen:"), viewController); }
+static inline void                                  MKLookAroundViewControllerDelegate_LookAroundViewControllerWillUpdateScene(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)          { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerWillUpdateScene:"), viewController); }
+static inline void                                  MKLookAroundViewControllerDelegate_LookAroundViewControllerDidUpdateScene(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)           { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerDidUpdateScene:"), viewController); }
+static inline void                                  MKLookAroundViewControllerDelegate_LookAroundViewControllerWillPresentFullScreen(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)    { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerWillPresentFullScreen:"), viewController); }
+static inline void                                  MKLookAroundViewControllerDelegate_LookAroundViewControllerDidPresentFullScreen(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)     { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerDidPresentFullScreen:"), viewController); }
+static inline void                                  MKLookAroundViewControllerDelegate_LookAroundViewControllerWillDismissFullScreen(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)    { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerWillDismissFullScreen:"), viewController); }
+static inline void                                  MKLookAroundViewControllerDelegate_LookAroundViewControllerDidDismissFullScreen(MKLookAroundViewControllerDelegate self, MKLookAroundViewController viewController)     { ((void (*)(MKLookAroundViewControllerDelegate, SEL, MKLookAroundViewController))bean_msgSend)(self, bean_sel("lookAroundViewControllerDidDismissFullScreen:"), viewController); }
+#ifndef BEAN_ALLOC_MKLookAroundViewControllerDelegate
+#define BEAN_ALLOC_MKLookAroundViewControllerDelegate
+static inline MKLookAroundViewControllerDelegate    MKLookAroundViewControllerDelegate_Alloc(void)                                                                                                                          { return (MKLookAroundViewControllerDelegate)bean_alloc(bean_cls("MKLookAroundViewControllerDelegate")); }
+#endif
+#ifndef BEAN_NEW_MKLookAroundViewControllerDelegate
+#define BEAN_NEW_MKLookAroundViewControllerDelegate
+static inline MKLookAroundViewControllerDelegate    MKLookAroundViewControllerDelegate_New(void)                                                                                                                            { return (MKLookAroundViewControllerDelegate)bean_new(bean_cls("MKLookAroundViewControllerDelegate")); }
+#endif
 
 /* ===== MKMapItem ===== */
 #ifndef BEAN_TYPEDEF_MKMapItem
@@ -4938,6 +5617,14 @@ static inline NSTimeZone                  MKMapItem_TimeZone(MKMapItem self)    
 static inline void                        MKMapItem_SetTimeZone(MKMapItem self, NSTimeZone timeZone)                                                                     { ((void (*)(MKMapItem, SEL, NSTimeZone))bean_msgSend)(self, bean_sel("setTimeZone:"), timeZone); }
 static inline NSString                    MKMapItem_PointOfInterestCategory(MKMapItem self)                                                                              { return ((NSString (*)(MKMapItem, SEL))bean_msgSend)(self, bean_sel("pointOfInterestCategory")); }
 static inline void                        MKMapItem_SetPointOfInterestCategory(MKMapItem self, NSString pointOfInterestCategory)                                         { ((void (*)(MKMapItem, SEL, NSString))bean_msgSend)(self, bean_sel("setPointOfInterestCategory:"), pointOfInterestCategory); }
+#ifndef BEAN_ALLOC_MKMapItem
+#define BEAN_ALLOC_MKMapItem
+static inline MKMapItem                   MKMapItem_Alloc(void)                                                                                                          { return (MKMapItem)bean_alloc(bean_cls("MKMapItem")); }
+#endif
+#ifndef BEAN_NEW_MKMapItem
+#define BEAN_NEW_MKMapItem
+static inline MKMapItem                   MKMapItem_New(void)                                                                                                            { return (MKMapItem)bean_new(bean_cls("MKMapItem")); }
+#endif
 
 /* ===== MKReverseGeocodingRequest ===== */
 #ifndef BEAN_TYPEDEF_MKReverseGeocodingRequest
@@ -4945,7 +5632,10 @@ static inline void                        MKMapItem_SetPointOfInterestCategory(M
 typedef bean_id MKReverseGeocodingRequest;
 #endif
 static inline MKReverseGeocodingRequest    MKReverseGeocodingRequest_Init(MKReverseGeocodingRequest self)                                                         { return ((MKReverseGeocodingRequest (*)(MKReverseGeocodingRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_MKReverseGeocodingRequest
+#define BEAN_NEW_MKReverseGeocodingRequest
 static inline MKReverseGeocodingRequest    MKReverseGeocodingRequest_New(void)                                                                                    { return ((MKReverseGeocodingRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKReverseGeocodingRequest"), bean_sel("new")); }
+#endif
 static inline MKReverseGeocodingRequest    MKReverseGeocodingRequest_InitWithLocation(MKReverseGeocodingRequest self, CLLocation location)                        { return ((MKReverseGeocodingRequest (*)(MKReverseGeocodingRequest, SEL, CLLocation))bean_msgSend)(self, bean_sel("initWithLocation:"), location); }
 static inline void                         MKReverseGeocodingRequest_GetMapItemsWithCompletionHandler(MKReverseGeocodingRequest self, void* completionHandler)    { ((void (*)(MKReverseGeocodingRequest, SEL, void*))bean_msgSend)(self, bean_sel("getMapItemsWithCompletionHandler:"), completionHandler); }
 static inline void                         MKReverseGeocodingRequest_Cancel(MKReverseGeocodingRequest self)                                                       { ((void (*)(MKReverseGeocodingRequest, SEL))bean_msgSend)(self, bean_sel("cancel")); }
@@ -4956,6 +5646,10 @@ static inline NSLocale                     MKReverseGeocodingRequest_PreferredLo
 static inline void                         MKReverseGeocodingRequest_SetPreferredLocale(MKReverseGeocodingRequest self, NSLocale preferredLocale)                 { ((void (*)(MKReverseGeocodingRequest, SEL, NSLocale))bean_msgSend)(self, bean_sel("setPreferredLocale:"), preferredLocale); }
 static inline BOOL                         MKReverseGeocodingRequest_Cancelled(MKReverseGeocodingRequest self)                                                    { return ((BOOL (*)(MKReverseGeocodingRequest, SEL))bean_msgSend)(self, bean_sel("cancelled")); }
 static inline BOOL                         MKReverseGeocodingRequest_Loading(MKReverseGeocodingRequest self)                                                      { return ((BOOL (*)(MKReverseGeocodingRequest, SEL))bean_msgSend)(self, bean_sel("loading")); }
+#ifndef BEAN_ALLOC_MKReverseGeocodingRequest
+#define BEAN_ALLOC_MKReverseGeocodingRequest
+static inline MKReverseGeocodingRequest    MKReverseGeocodingRequest_Alloc(void)                                                                                  { return (MKReverseGeocodingRequest)bean_alloc(bean_cls("MKReverseGeocodingRequest")); }
+#endif
 
 /* ===== MKUserLocation ===== */
 #ifndef BEAN_TYPEDEF_MKUserLocation
@@ -4972,32 +5666,48 @@ static inline void                      MKUserLocation_SetSubtitle(MKUserLocatio
 static inline void                      MKUserLocation_SetCoordinate(MKUserLocation self, CLLocationCoordinate2D newCoordinate)    { ((void (*)(MKUserLocation, SEL, CLLocationCoordinate2D))bean_msgSend)(self, bean_sel("setCoordinate:"), newCoordinate); }
 static inline CLLocationCoordinate2D    MKUserLocation_Coordinate(MKUserLocation self)                                             { return ((CLLocationCoordinate2D (*)(MKUserLocation, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline BOOL                      MKUserLocation_Updating(MKUserLocation self)                                               { return ((BOOL (*)(MKUserLocation, SEL))bean_msgSend)(self, bean_sel("updating")); }
+#ifndef BEAN_ALLOC_MKUserLocation
+#define BEAN_ALLOC_MKUserLocation
+static inline MKUserLocation            MKUserLocation_Alloc(void)                                                                 { return (MKUserLocation)bean_alloc(bean_cls("MKUserLocation")); }
+#endif
+#ifndef BEAN_NEW_MKUserLocation
+#define BEAN_NEW_MKUserLocation
+static inline MKUserLocation            MKUserLocation_New(void)                                                                   { return (MKUserLocation)bean_new(bean_cls("MKUserLocation")); }
+#endif
 
 /* ===== CLLocationManagerDelegate ===== */
 #ifndef BEAN_TYPEDEF_CLLocationManagerDelegate
 #define BEAN_TYPEDEF_CLLocationManagerDelegate
 typedef bean_id CLLocationManagerDelegate;
 #endif
-static inline void    CLLocationManagerDelegate_LocationManager_DidUpdateToLocation_FromLocation(CLLocationManagerDelegate self, CLLocationManager manager, CLLocation newLocation, CLLocation oldLocation)                         { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLLocation, CLLocation))bean_msgSend)(self, bean_sel("locationManager:didUpdateToLocation:fromLocation:"), manager, newLocation, oldLocation); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidUpdateLocations(CLLocationManagerDelegate self, CLLocationManager manager, NSArray locations)                                                                    { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSArray))bean_msgSend)(self, bean_sel("locationManager:didUpdateLocations:"), manager, locations); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidUpdateHeading(CLLocationManagerDelegate self, CLLocationManager manager, CLHeading newHeading)                                                                   { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLHeading))bean_msgSend)(self, bean_sel("locationManager:didUpdateHeading:"), manager, newHeading); }
-static inline BOOL    CLLocationManagerDelegate_LocationManagerShouldDisplayHeadingCalibration(CLLocationManagerDelegate self, CLLocationManager manager)                                                                           { return ((BOOL (*)(CLLocationManagerDelegate, SEL, CLLocationManager))bean_msgSend)(self, bean_sel("locationManagerShouldDisplayHeadingCalibration:"), manager); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidDetermineState_ForRegion(CLLocationManagerDelegate self, CLLocationManager manager, CLRegionState state, CLRegion region)                                        { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegionState, CLRegion))bean_msgSend)(self, bean_sel("locationManager:didDetermineState:forRegion:"), manager, state, region); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidRangeBeacons_InRegion(CLLocationManagerDelegate self, CLLocationManager manager, NSArray beacons, CLBeaconRegion region)                                         { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSArray, CLBeaconRegion))bean_msgSend)(self, bean_sel("locationManager:didRangeBeacons:inRegion:"), manager, beacons, region); }
-static inline void    CLLocationManagerDelegate_LocationManager_RangingBeaconsDidFailForRegion_WithError(CLLocationManagerDelegate self, CLLocationManager manager, CLBeaconRegion region, NSError error)                           { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLBeaconRegion, NSError))bean_msgSend)(self, bean_sel("locationManager:rangingBeaconsDidFailForRegion:withError:"), manager, region, error); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidRangeBeacons_SatisfyingConstraint(CLLocationManagerDelegate self, CLLocationManager manager, NSArray beacons, CLBeaconIdentityConstraint beaconConstraint)       { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSArray, CLBeaconIdentityConstraint))bean_msgSend)(self, bean_sel("locationManager:didRangeBeacons:satisfyingConstraint:"), manager, beacons, beaconConstraint); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidFailRangingBeaconsForConstraint_Error(CLLocationManagerDelegate self, CLLocationManager manager, CLBeaconIdentityConstraint beaconConstraint, NSError* error)    { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLBeaconIdentityConstraint, NSError*))bean_msgSend)(self, bean_sel("locationManager:didFailRangingBeaconsForConstraint:error:"), manager, beaconConstraint, error); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidEnterRegion(CLLocationManagerDelegate self, CLLocationManager manager, CLRegion region)                                                                          { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegion))bean_msgSend)(self, bean_sel("locationManager:didEnterRegion:"), manager, region); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidExitRegion(CLLocationManagerDelegate self, CLLocationManager manager, CLRegion region)                                                                           { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegion))bean_msgSend)(self, bean_sel("locationManager:didExitRegion:"), manager, region); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidFailWithError(CLLocationManagerDelegate self, CLLocationManager manager, NSError error)                                                                          { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSError))bean_msgSend)(self, bean_sel("locationManager:didFailWithError:"), manager, error); }
-static inline void    CLLocationManagerDelegate_LocationManager_MonitoringDidFailForRegion_WithError(CLLocationManagerDelegate self, CLLocationManager manager, CLRegion region, NSError error)                                     { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegion, NSError))bean_msgSend)(self, bean_sel("locationManager:monitoringDidFailForRegion:withError:"), manager, region, error); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidChangeAuthorizationStatus(CLLocationManagerDelegate self, CLLocationManager manager, CLAuthorizationStatus status)                                               { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLAuthorizationStatus))bean_msgSend)(self, bean_sel("locationManager:didChangeAuthorizationStatus:"), manager, status); }
-static inline void    CLLocationManagerDelegate_LocationManagerDidChangeAuthorization(CLLocationManagerDelegate self, CLLocationManager manager)                                                                                    { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager))bean_msgSend)(self, bean_sel("locationManagerDidChangeAuthorization:"), manager); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidStartMonitoringForRegion(CLLocationManagerDelegate self, CLLocationManager manager, CLRegion region)                                                             { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegion))bean_msgSend)(self, bean_sel("locationManager:didStartMonitoringForRegion:"), manager, region); }
-static inline void    CLLocationManagerDelegate_LocationManagerDidPauseLocationUpdates(CLLocationManagerDelegate self, CLLocationManager manager)                                                                                   { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager))bean_msgSend)(self, bean_sel("locationManagerDidPauseLocationUpdates:"), manager); }
-static inline void    CLLocationManagerDelegate_LocationManagerDidResumeLocationUpdates(CLLocationManagerDelegate self, CLLocationManager manager)                                                                                  { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager))bean_msgSend)(self, bean_sel("locationManagerDidResumeLocationUpdates:"), manager); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidFinishDeferredUpdatesWithError(CLLocationManagerDelegate self, CLLocationManager manager, NSError error)                                                         { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSError))bean_msgSend)(self, bean_sel("locationManager:didFinishDeferredUpdatesWithError:"), manager, error); }
-static inline void    CLLocationManagerDelegate_LocationManager_DidVisit(CLLocationManagerDelegate self, CLLocationManager manager, CLVisit visit)                                                                                  { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLVisit))bean_msgSend)(self, bean_sel("locationManager:didVisit:"), manager, visit); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidUpdateToLocation_FromLocation(CLLocationManagerDelegate self, CLLocationManager manager, CLLocation newLocation, CLLocation oldLocation)                         { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLLocation, CLLocation))bean_msgSend)(self, bean_sel("locationManager:didUpdateToLocation:fromLocation:"), manager, newLocation, oldLocation); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidUpdateLocations(CLLocationManagerDelegate self, CLLocationManager manager, NSArray locations)                                                                    { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSArray))bean_msgSend)(self, bean_sel("locationManager:didUpdateLocations:"), manager, locations); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidUpdateHeading(CLLocationManagerDelegate self, CLLocationManager manager, CLHeading newHeading)                                                                   { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLHeading))bean_msgSend)(self, bean_sel("locationManager:didUpdateHeading:"), manager, newHeading); }
+static inline BOOL                         CLLocationManagerDelegate_LocationManagerShouldDisplayHeadingCalibration(CLLocationManagerDelegate self, CLLocationManager manager)                                                                           { return ((BOOL (*)(CLLocationManagerDelegate, SEL, CLLocationManager))bean_msgSend)(self, bean_sel("locationManagerShouldDisplayHeadingCalibration:"), manager); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidDetermineState_ForRegion(CLLocationManagerDelegate self, CLLocationManager manager, CLRegionState state, CLRegion region)                                        { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegionState, CLRegion))bean_msgSend)(self, bean_sel("locationManager:didDetermineState:forRegion:"), manager, state, region); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidRangeBeacons_InRegion(CLLocationManagerDelegate self, CLLocationManager manager, NSArray beacons, CLBeaconRegion region)                                         { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSArray, CLBeaconRegion))bean_msgSend)(self, bean_sel("locationManager:didRangeBeacons:inRegion:"), manager, beacons, region); }
+static inline void                         CLLocationManagerDelegate_LocationManager_RangingBeaconsDidFailForRegion_WithError(CLLocationManagerDelegate self, CLLocationManager manager, CLBeaconRegion region, NSError error)                           { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLBeaconRegion, NSError))bean_msgSend)(self, bean_sel("locationManager:rangingBeaconsDidFailForRegion:withError:"), manager, region, error); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidRangeBeacons_SatisfyingConstraint(CLLocationManagerDelegate self, CLLocationManager manager, NSArray beacons, CLBeaconIdentityConstraint beaconConstraint)       { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSArray, CLBeaconIdentityConstraint))bean_msgSend)(self, bean_sel("locationManager:didRangeBeacons:satisfyingConstraint:"), manager, beacons, beaconConstraint); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidFailRangingBeaconsForConstraint_Error(CLLocationManagerDelegate self, CLLocationManager manager, CLBeaconIdentityConstraint beaconConstraint, NSError* error)    { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLBeaconIdentityConstraint, NSError*))bean_msgSend)(self, bean_sel("locationManager:didFailRangingBeaconsForConstraint:error:"), manager, beaconConstraint, error); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidEnterRegion(CLLocationManagerDelegate self, CLLocationManager manager, CLRegion region)                                                                          { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegion))bean_msgSend)(self, bean_sel("locationManager:didEnterRegion:"), manager, region); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidExitRegion(CLLocationManagerDelegate self, CLLocationManager manager, CLRegion region)                                                                           { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegion))bean_msgSend)(self, bean_sel("locationManager:didExitRegion:"), manager, region); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidFailWithError(CLLocationManagerDelegate self, CLLocationManager manager, NSError error)                                                                          { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSError))bean_msgSend)(self, bean_sel("locationManager:didFailWithError:"), manager, error); }
+static inline void                         CLLocationManagerDelegate_LocationManager_MonitoringDidFailForRegion_WithError(CLLocationManagerDelegate self, CLLocationManager manager, CLRegion region, NSError error)                                     { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegion, NSError))bean_msgSend)(self, bean_sel("locationManager:monitoringDidFailForRegion:withError:"), manager, region, error); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidChangeAuthorizationStatus(CLLocationManagerDelegate self, CLLocationManager manager, CLAuthorizationStatus status)                                               { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLAuthorizationStatus))bean_msgSend)(self, bean_sel("locationManager:didChangeAuthorizationStatus:"), manager, status); }
+static inline void                         CLLocationManagerDelegate_LocationManagerDidChangeAuthorization(CLLocationManagerDelegate self, CLLocationManager manager)                                                                                    { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager))bean_msgSend)(self, bean_sel("locationManagerDidChangeAuthorization:"), manager); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidStartMonitoringForRegion(CLLocationManagerDelegate self, CLLocationManager manager, CLRegion region)                                                             { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLRegion))bean_msgSend)(self, bean_sel("locationManager:didStartMonitoringForRegion:"), manager, region); }
+static inline void                         CLLocationManagerDelegate_LocationManagerDidPauseLocationUpdates(CLLocationManagerDelegate self, CLLocationManager manager)                                                                                   { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager))bean_msgSend)(self, bean_sel("locationManagerDidPauseLocationUpdates:"), manager); }
+static inline void                         CLLocationManagerDelegate_LocationManagerDidResumeLocationUpdates(CLLocationManagerDelegate self, CLLocationManager manager)                                                                                  { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager))bean_msgSend)(self, bean_sel("locationManagerDidResumeLocationUpdates:"), manager); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidFinishDeferredUpdatesWithError(CLLocationManagerDelegate self, CLLocationManager manager, NSError error)                                                         { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, NSError))bean_msgSend)(self, bean_sel("locationManager:didFinishDeferredUpdatesWithError:"), manager, error); }
+static inline void                         CLLocationManagerDelegate_LocationManager_DidVisit(CLLocationManagerDelegate self, CLLocationManager manager, CLVisit visit)                                                                                  { ((void (*)(CLLocationManagerDelegate, SEL, CLLocationManager, CLVisit))bean_msgSend)(self, bean_sel("locationManager:didVisit:"), manager, visit); }
+#ifndef BEAN_ALLOC_CLLocationManagerDelegate
+#define BEAN_ALLOC_CLLocationManagerDelegate
+static inline CLLocationManagerDelegate    CLLocationManagerDelegate_Alloc(void)                                                                                                                                                                         { return (CLLocationManagerDelegate)bean_alloc(bean_cls("CLLocationManagerDelegate")); }
+#endif
+#ifndef BEAN_NEW_CLLocationManagerDelegate
+#define BEAN_NEW_CLLocationManagerDelegate
+static inline CLLocationManagerDelegate    CLLocationManagerDelegate_New(void)                                                                                                                                                                           { return (CLLocationManagerDelegate)bean_new(bean_cls("CLLocationManagerDelegate")); }
+#endif
 
 /* ===== CLMonitor ===== */
 #ifndef BEAN_TYPEDEF_CLMonitor
@@ -5010,9 +5720,16 @@ static inline void                  CLMonitor_AddConditionForMonitoring_Identifi
 static inline void                  CLMonitor_RemoveConditionFromMonitoringWithIdentifier(CLMonitor self, NSString identifier)                                                          { ((void (*)(CLMonitor, SEL, NSString))bean_msgSend)(self, bean_sel("removeConditionFromMonitoringWithIdentifier:"), identifier); }
 static inline CLMonitoringRecord    CLMonitor_MonitoringRecordForIdentifier(CLMonitor self, NSString identifier)                                                                        { return ((CLMonitoringRecord (*)(CLMonitor, SEL, NSString))bean_msgSend)(self, bean_sel("monitoringRecordForIdentifier:"), identifier); }
 static inline CLMonitor             CLMonitor_Init(CLMonitor self)                                                                                                                      { return ((CLMonitor (*)(CLMonitor, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CLMonitor
+#define BEAN_NEW_CLMonitor
 static inline CLMonitor             CLMonitor_New(void)                                                                                                                                 { return ((CLMonitor (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLMonitor"), bean_sel("new")); }
+#endif
 static inline NSString              CLMonitor_Name(CLMonitor self)                                                                                                                      { return ((NSString (*)(CLMonitor, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline NSArray               CLMonitor_MonitoredIdentifiers(CLMonitor self)                                                                                                      { return ((NSArray (*)(CLMonitor, SEL))bean_msgSend)(self, bean_sel("monitoredIdentifiers")); }
+#ifndef BEAN_ALLOC_CLMonitor
+#define BEAN_ALLOC_CLMonitor
+static inline CLMonitor             CLMonitor_Alloc(void)                                                                                                                               { return (CLMonitor)bean_alloc(bean_cls("CLMonitor")); }
+#endif
 
 /* ===== MKDirectionsRequest ===== */
 #ifndef BEAN_TYPEDEF_MKDirectionsRequest
@@ -5037,15 +5754,31 @@ static inline MKDirectionsRoutePreference    MKDirectionsRequest_HighwayPreferen
 static inline void                           MKDirectionsRequest_SetHighwayPreference(MKDirectionsRequest self, MKDirectionsRoutePreference highwayPreference)    { ((void (*)(MKDirectionsRequest, SEL, MKDirectionsRoutePreference))bean_msgSend)(self, bean_sel("setHighwayPreference:"), highwayPreference); }
 static inline MKDirectionsRequest            MKDirectionsRequest_InitWithContentsOfURL(MKDirectionsRequest self, NSURL url)                                       { return ((MKDirectionsRequest (*)(MKDirectionsRequest, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithContentsOfURL:"), url); }
 static inline BOOL                           MKDirectionsRequest_IsDirectionsRequestURL(NSURL url)                                                                { return ((BOOL (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("MKDirectionsRequest"), bean_sel("isDirectionsRequestURL:"), url); }
+#ifndef BEAN_ALLOC_MKDirectionsRequest
+#define BEAN_ALLOC_MKDirectionsRequest
+static inline MKDirectionsRequest            MKDirectionsRequest_Alloc(void)                                                                                      { return (MKDirectionsRequest)bean_alloc(bean_cls("MKDirectionsRequest")); }
+#endif
+#ifndef BEAN_NEW_MKDirectionsRequest
+#define BEAN_NEW_MKDirectionsRequest
+static inline MKDirectionsRequest            MKDirectionsRequest_New(void)                                                                                        { return (MKDirectionsRequest)bean_new(bean_cls("MKDirectionsRequest")); }
+#endif
 
 /* ===== MKDirectionsResponse ===== */
 #ifndef BEAN_TYPEDEF_MKDirectionsResponse
 #define BEAN_TYPEDEF_MKDirectionsResponse
 typedef bean_id MKDirectionsResponse;
 #endif
-static inline MKMapItem    MKDirectionsResponse_Source(MKDirectionsResponse self)         { return ((MKMapItem (*)(MKDirectionsResponse, SEL))bean_msgSend)(self, bean_sel("source")); }
-static inline MKMapItem    MKDirectionsResponse_Destination(MKDirectionsResponse self)    { return ((MKMapItem (*)(MKDirectionsResponse, SEL))bean_msgSend)(self, bean_sel("destination")); }
-static inline NSArray      MKDirectionsResponse_Routes(MKDirectionsResponse self)         { return ((NSArray (*)(MKDirectionsResponse, SEL))bean_msgSend)(self, bean_sel("routes")); }
+static inline MKMapItem               MKDirectionsResponse_Source(MKDirectionsResponse self)         { return ((MKMapItem (*)(MKDirectionsResponse, SEL))bean_msgSend)(self, bean_sel("source")); }
+static inline MKMapItem               MKDirectionsResponse_Destination(MKDirectionsResponse self)    { return ((MKMapItem (*)(MKDirectionsResponse, SEL))bean_msgSend)(self, bean_sel("destination")); }
+static inline NSArray                 MKDirectionsResponse_Routes(MKDirectionsResponse self)         { return ((NSArray (*)(MKDirectionsResponse, SEL))bean_msgSend)(self, bean_sel("routes")); }
+#ifndef BEAN_ALLOC_MKDirectionsResponse
+#define BEAN_ALLOC_MKDirectionsResponse
+static inline MKDirectionsResponse    MKDirectionsResponse_Alloc(void)                               { return (MKDirectionsResponse)bean_alloc(bean_cls("MKDirectionsResponse")); }
+#endif
+#ifndef BEAN_NEW_MKDirectionsResponse
+#define BEAN_NEW_MKDirectionsResponse
+static inline MKDirectionsResponse    MKDirectionsResponse_New(void)                                 { return (MKDirectionsResponse)bean_new(bean_cls("MKDirectionsResponse")); }
+#endif
 
 /* ===== MKETAResponse ===== */
 #ifndef BEAN_TYPEDEF_MKETAResponse
@@ -5059,13 +5792,24 @@ static inline CGFloat                      MKETAResponse_Distance(MKETAResponse 
 static inline NSDate                       MKETAResponse_ExpectedArrivalDate(MKETAResponse self)      { return ((NSDate (*)(MKETAResponse, SEL))bean_msgSend)(self, bean_sel("expectedArrivalDate")); }
 static inline NSDate                       MKETAResponse_ExpectedDepartureDate(MKETAResponse self)    { return ((NSDate (*)(MKETAResponse, SEL))bean_msgSend)(self, bean_sel("expectedDepartureDate")); }
 static inline MKDirectionsTransportType    MKETAResponse_TransportType(MKETAResponse self)            { return ((MKDirectionsTransportType (*)(MKETAResponse, SEL))bean_msgSend)(self, bean_sel("transportType")); }
+#ifndef BEAN_ALLOC_MKETAResponse
+#define BEAN_ALLOC_MKETAResponse
+static inline MKETAResponse                MKETAResponse_Alloc(void)                                  { return (MKETAResponse)bean_alloc(bean_cls("MKETAResponse")); }
+#endif
+#ifndef BEAN_NEW_MKETAResponse
+#define BEAN_NEW_MKETAResponse
+static inline MKETAResponse                MKETAResponse_New(void)                                    { return (MKETAResponse)bean_new(bean_cls("MKETAResponse")); }
+#endif
 
 /* ===== MKLookAroundSceneRequest ===== */
 #ifndef BEAN_TYPEDEF_MKLookAroundSceneRequest
 #define BEAN_TYPEDEF_MKLookAroundSceneRequest
 typedef bean_id MKLookAroundSceneRequest;
 #endif
+#ifndef BEAN_NEW_MKLookAroundSceneRequest
+#define BEAN_NEW_MKLookAroundSceneRequest
 static inline MKLookAroundSceneRequest    MKLookAroundSceneRequest_New(void)                                                                                { return ((MKLookAroundSceneRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKLookAroundSceneRequest"), bean_sel("new")); }
+#endif
 static inline MKLookAroundSceneRequest    MKLookAroundSceneRequest_Init(MKLookAroundSceneRequest self)                                                      { return ((MKLookAroundSceneRequest (*)(MKLookAroundSceneRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline MKLookAroundSceneRequest    MKLookAroundSceneRequest_InitWithCoordinate(MKLookAroundSceneRequest self, CLLocationCoordinate2D coordinate)     { return ((MKLookAroundSceneRequest (*)(MKLookAroundSceneRequest, SEL, CLLocationCoordinate2D))bean_msgSend)(self, bean_sel("initWithCoordinate:"), coordinate); }
 static inline MKLookAroundSceneRequest    MKLookAroundSceneRequest_InitWithMapItem(MKLookAroundSceneRequest self, MKMapItem mapItem)                        { return ((MKLookAroundSceneRequest (*)(MKLookAroundSceneRequest, SEL, MKMapItem))bean_msgSend)(self, bean_sel("initWithMapItem:"), mapItem); }
@@ -5077,6 +5821,10 @@ static inline BOOL                        MKLookAroundSceneRequest_IsCancelled(M
 static inline BOOL                        MKLookAroundSceneRequest_IsLoading(MKLookAroundSceneRequest self)                                                 { return ((BOOL (*)(MKLookAroundSceneRequest, SEL))bean_msgSend)(self, bean_sel("isLoading")); }
 static inline BOOL                        MKLookAroundSceneRequest_Cancelled(MKLookAroundSceneRequest self)                                                 { return ((BOOL (*)(MKLookAroundSceneRequest, SEL))bean_msgSend)(self, bean_sel("cancelled")); }
 static inline BOOL                        MKLookAroundSceneRequest_Loading(MKLookAroundSceneRequest self)                                                   { return ((BOOL (*)(MKLookAroundSceneRequest, SEL))bean_msgSend)(self, bean_sel("loading")); }
+#ifndef BEAN_ALLOC_MKLookAroundSceneRequest
+#define BEAN_ALLOC_MKLookAroundSceneRequest
+static inline MKLookAroundSceneRequest    MKLookAroundSceneRequest_Alloc(void)                                                                              { return (MKLookAroundSceneRequest)bean_alloc(bean_cls("MKLookAroundSceneRequest")); }
+#endif
 
 /* ===== MKMapCamera ===== */
 #ifndef BEAN_TYPEDEF_MKMapCamera
@@ -5099,13 +5847,24 @@ static inline CGFloat                   MKMapCamera_Altitude(MKMapCamera self)  
 static inline void                      MKMapCamera_SetAltitude(MKMapCamera self, CGFloat altitude)                                                                                                                      { ((void (*)(MKMapCamera, SEL, CGFloat))bean_msgSend)(self, bean_sel("setAltitude:"), altitude); }
 static inline BOOL                      MKMapCamera_SupportsSecureCoding(void)                                                                                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapCamera"), bean_sel("supportsSecureCoding")); }
 static inline id                        MKMapCamera_CopyWithZone(MKMapCamera self, NSZone* zone)                                                                                                                         { return ((id (*)(MKMapCamera, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKMapCamera
+#define BEAN_ALLOC_MKMapCamera
+static inline MKMapCamera               MKMapCamera_Alloc(void)                                                                                                                                                          { return (MKMapCamera)bean_alloc(bean_cls("MKMapCamera")); }
+#endif
+#ifndef BEAN_NEW_MKMapCamera
+#define BEAN_NEW_MKMapCamera
+static inline MKMapCamera               MKMapCamera_New(void)                                                                                                                                                            { return (MKMapCamera)bean_new(bean_cls("MKMapCamera")); }
+#endif
 
 /* ===== MKMapItemAnnotation ===== */
 #ifndef BEAN_TYPEDEF_MKMapItemAnnotation
 #define BEAN_TYPEDEF_MKMapItemAnnotation
 typedef bean_id MKMapItemAnnotation;
 #endif
+#ifndef BEAN_NEW_MKMapItemAnnotation
+#define BEAN_NEW_MKMapItemAnnotation
 static inline MKMapItemAnnotation       MKMapItemAnnotation_New(void)                                                                        { return ((MKMapItemAnnotation (*)(bean_class, SEL))bean_msgSend)(bean_cls("MKMapItemAnnotation"), bean_sel("new")); }
+#endif
 static inline MKMapItemAnnotation       MKMapItemAnnotation_Init(MKMapItemAnnotation self)                                                   { return ((MKMapItemAnnotation (*)(MKMapItemAnnotation, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline MKMapItemAnnotation       MKMapItemAnnotation_InitWithMapItem(MKMapItemAnnotation self, MKMapItem mapItem)                     { return ((MKMapItemAnnotation (*)(MKMapItemAnnotation, SEL, MKMapItem))bean_msgSend)(self, bean_sel("initWithMapItem:"), mapItem); }
 static inline MKMapItem                 MKMapItemAnnotation_MapItem(MKMapItemAnnotation self)                                                { return ((MKMapItem (*)(MKMapItemAnnotation, SEL))bean_msgSend)(self, bean_sel("mapItem")); }
@@ -5113,6 +5872,10 @@ static inline void                      MKMapItemAnnotation_SetCoordinate(MKMapI
 static inline CLLocationCoordinate2D    MKMapItemAnnotation_Coordinate(MKMapItemAnnotation self)                                             { return ((CLLocationCoordinate2D (*)(MKMapItemAnnotation, SEL))bean_msgSend_stret)(self, bean_sel("coordinate")); }
 static inline NSString                  MKMapItemAnnotation_Title(MKMapItemAnnotation self)                                                  { return ((NSString (*)(MKMapItemAnnotation, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline NSString                  MKMapItemAnnotation_Subtitle(MKMapItemAnnotation self)                                               { return ((NSString (*)(MKMapItemAnnotation, SEL))bean_msgSend)(self, bean_sel("subtitle")); }
+#ifndef BEAN_ALLOC_MKMapItemAnnotation
+#define BEAN_ALLOC_MKMapItemAnnotation
+static inline MKMapItemAnnotation       MKMapItemAnnotation_Alloc(void)                                                                      { return (MKMapItemAnnotation)bean_alloc(bean_cls("MKMapItemAnnotation")); }
+#endif
 
 /* ===== MKMapItemDetailViewController ===== */
 #ifndef BEAN_TYPEDEF_MKMapItemDetailViewController
@@ -5125,14 +5888,30 @@ static inline MKMapItem                        MKMapItemDetailViewController_Map
 static inline void                             MKMapItemDetailViewController_SetMapItem(MKMapItemDetailViewController self, MKMapItem mapItem)                                       { ((void (*)(MKMapItemDetailViewController, SEL, MKMapItem))bean_msgSend)(self, bean_sel("setMapItem:"), mapItem); }
 static inline id                               MKMapItemDetailViewController_Delegate(MKMapItemDetailViewController self)                                                            { return ((id (*)(MKMapItemDetailViewController, SEL))bean_msgSend)(self, bean_sel("delegate")); }
 static inline void                             MKMapItemDetailViewController_SetDelegate(MKMapItemDetailViewController self, id delegate)                                            { ((void (*)(MKMapItemDetailViewController, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+#ifndef BEAN_ALLOC_MKMapItemDetailViewController
+#define BEAN_ALLOC_MKMapItemDetailViewController
+static inline MKMapItemDetailViewController    MKMapItemDetailViewController_Alloc(void)                                                                                             { return (MKMapItemDetailViewController)bean_alloc(bean_cls("MKMapItemDetailViewController")); }
+#endif
+#ifndef BEAN_NEW_MKMapItemDetailViewController
+#define BEAN_NEW_MKMapItemDetailViewController
+static inline MKMapItemDetailViewController    MKMapItemDetailViewController_New(void)                                                                                               { return (MKMapItemDetailViewController)bean_new(bean_cls("MKMapItemDetailViewController")); }
+#endif
 
 /* ===== NSUserActivity ===== */
 #ifndef BEAN_TYPEDEF_NSUserActivity
 #define BEAN_TYPEDEF_NSUserActivity
 typedef bean_id NSUserActivity;
 #endif
-static inline MKMapItem    NSUserActivity_MapItem(NSUserActivity self)                          { return ((MKMapItem (*)(NSUserActivity, SEL))bean_msgSend)(self, bean_sel("mapItem")); }
-static inline void         NSUserActivity_SetMapItem(NSUserActivity self, MKMapItem mapItem)    { ((void (*)(NSUserActivity, SEL, MKMapItem))bean_msgSend)(self, bean_sel("setMapItem:"), mapItem); }
+static inline MKMapItem         NSUserActivity_MapItem(NSUserActivity self)                          { return ((MKMapItem (*)(NSUserActivity, SEL))bean_msgSend)(self, bean_sel("mapItem")); }
+static inline void              NSUserActivity_SetMapItem(NSUserActivity self, MKMapItem mapItem)    { ((void (*)(NSUserActivity, SEL, MKMapItem))bean_msgSend)(self, bean_sel("setMapItem:"), mapItem); }
+#ifndef BEAN_ALLOC_NSUserActivity
+#define BEAN_ALLOC_NSUserActivity
+static inline NSUserActivity    NSUserActivity_Alloc(void)                                           { return (NSUserActivity)bean_alloc(bean_cls("NSUserActivity")); }
+#endif
+#ifndef BEAN_NEW_NSUserActivity
+#define BEAN_NEW_NSUserActivity
+static inline NSUserActivity    NSUserActivity_New(void)                                             { return (NSUserActivity)bean_new(bean_cls("NSUserActivity")); }
+#endif
 
 /* ===== MKDirections ===== */
 #ifndef BEAN_TYPEDEF_MKDirections
@@ -5145,13 +5924,29 @@ static inline void            MKDirections_CalculateETAWithCompletionHandler(MKD
 static inline void            MKDirections_Cancel(MKDirections self)                                                               { ((void (*)(MKDirections, SEL))bean_msgSend)(self, bean_sel("cancel")); }
 static inline BOOL            MKDirections_IsCalculating(MKDirections self)                                                        { return ((BOOL (*)(MKDirections, SEL))bean_msgSend)(self, bean_sel("isCalculating")); }
 static inline BOOL            MKDirections_Calculating(MKDirections self)                                                          { return ((BOOL (*)(MKDirections, SEL))bean_msgSend)(self, bean_sel("calculating")); }
+#ifndef BEAN_ALLOC_MKDirections
+#define BEAN_ALLOC_MKDirections
+static inline MKDirections    MKDirections_Alloc(void)                                                                             { return (MKDirections)bean_alloc(bean_cls("MKDirections")); }
+#endif
+#ifndef BEAN_NEW_MKDirections
+#define BEAN_NEW_MKDirections
+static inline MKDirections    MKDirections_New(void)                                                                               { return (MKDirections)bean_new(bean_cls("MKDirections")); }
+#endif
 
 /* ===== MKMapItemDetailViewControllerDelegate ===== */
 #ifndef BEAN_TYPEDEF_MKMapItemDetailViewControllerDelegate
 #define BEAN_TYPEDEF_MKMapItemDetailViewControllerDelegate
 typedef bean_id MKMapItemDetailViewControllerDelegate;
 #endif
-static inline void    MKMapItemDetailViewControllerDelegate_MapItemDetailViewControllerDidFinish(MKMapItemDetailViewControllerDelegate self, MKMapItemDetailViewController detailViewController)    { ((void (*)(MKMapItemDetailViewControllerDelegate, SEL, MKMapItemDetailViewController))bean_msgSend)(self, bean_sel("mapItemDetailViewControllerDidFinish:"), detailViewController); }
+static inline void                                     MKMapItemDetailViewControllerDelegate_MapItemDetailViewControllerDidFinish(MKMapItemDetailViewControllerDelegate self, MKMapItemDetailViewController detailViewController)    { ((void (*)(MKMapItemDetailViewControllerDelegate, SEL, MKMapItemDetailViewController))bean_msgSend)(self, bean_sel("mapItemDetailViewControllerDidFinish:"), detailViewController); }
+#ifndef BEAN_ALLOC_MKMapItemDetailViewControllerDelegate
+#define BEAN_ALLOC_MKMapItemDetailViewControllerDelegate
+static inline MKMapItemDetailViewControllerDelegate    MKMapItemDetailViewControllerDelegate_Alloc(void)                                                                                                                             { return (MKMapItemDetailViewControllerDelegate)bean_alloc(bean_cls("MKMapItemDetailViewControllerDelegate")); }
+#endif
+#ifndef BEAN_NEW_MKMapItemDetailViewControllerDelegate
+#define BEAN_NEW_MKMapItemDetailViewControllerDelegate
+static inline MKMapItemDetailViewControllerDelegate    MKMapItemDetailViewControllerDelegate_New(void)                                                                                                                               { return (MKMapItemDetailViewControllerDelegate)bean_new(bean_cls("MKMapItemDetailViewControllerDelegate")); }
+#endif
 
 /* ===== MKMapSnapshotOptions ===== */
 #ifndef BEAN_TYPEDEF_MKMapSnapshotOptions
@@ -5179,6 +5974,14 @@ static inline void                       MKMapSnapshotOptions_SetSize(MKMapSnaps
 static inline NSAppearance               MKMapSnapshotOptions_Appearance(MKMapSnapshotOptions self)                                                                 { return ((NSAppearance (*)(MKMapSnapshotOptions, SEL))bean_msgSend)(self, bean_sel("appearance")); }
 static inline void                       MKMapSnapshotOptions_SetAppearance(MKMapSnapshotOptions self, NSAppearance appearance)                                     { ((void (*)(MKMapSnapshotOptions, SEL, NSAppearance))bean_msgSend)(self, bean_sel("setAppearance:"), appearance); }
 static inline id                         MKMapSnapshotOptions_CopyWithZone(MKMapSnapshotOptions self, NSZone* zone)                                                 { return ((id (*)(MKMapSnapshotOptions, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_MKMapSnapshotOptions
+#define BEAN_ALLOC_MKMapSnapshotOptions
+static inline MKMapSnapshotOptions       MKMapSnapshotOptions_Alloc(void)                                                                                           { return (MKMapSnapshotOptions)bean_alloc(bean_cls("MKMapSnapshotOptions")); }
+#endif
+#ifndef BEAN_NEW_MKMapSnapshotOptions
+#define BEAN_NEW_MKMapSnapshotOptions
+static inline MKMapSnapshotOptions       MKMapSnapshotOptions_New(void)                                                                                             { return (MKMapSnapshotOptions)bean_new(bean_cls("MKMapSnapshotOptions")); }
+#endif
 
 /* ===== MKMapView ===== */
 #ifndef BEAN_TYPEDEF_MKMapView
@@ -5290,6 +6093,14 @@ static inline BOOL                       MKMapView_ScrollEnabled(MKMapView self)
 static inline BOOL                       MKMapView_RotateEnabled(MKMapView self)                                                                                    { return ((BOOL (*)(MKMapView, SEL))bean_msgSend)(self, bean_sel("rotateEnabled")); }
 static inline BOOL                       MKMapView_PitchEnabled(MKMapView self)                                                                                     { return ((BOOL (*)(MKMapView, SEL))bean_msgSend)(self, bean_sel("pitchEnabled")); }
 static inline BOOL                       MKMapView_UserLocationVisible(MKMapView self)                                                                              { return ((BOOL (*)(MKMapView, SEL))bean_msgSend)(self, bean_sel("userLocationVisible")); }
+#ifndef BEAN_ALLOC_MKMapView
+#define BEAN_ALLOC_MKMapView
+static inline MKMapView                  MKMapView_Alloc(void)                                                                                                      { return (MKMapView)bean_alloc(bean_cls("MKMapView")); }
+#endif
+#ifndef BEAN_NEW_MKMapView
+#define BEAN_NEW_MKMapView
+static inline MKMapView                  MKMapView_New(void)                                                                                                        { return (MKMapView)bean_new(bean_cls("MKMapView")); }
+#endif
 
 /* ===== MKCompassButton ===== */
 #ifndef BEAN_TYPEDEF_MKCompassButton
@@ -5301,6 +6112,14 @@ static inline MKMapView              MKCompassButton_MapView(MKCompassButton sel
 static inline void                   MKCompassButton_SetMapView(MKCompassButton self, MKMapView mapView)                                  { ((void (*)(MKCompassButton, SEL, MKMapView))bean_msgSend)(self, bean_sel("setMapView:"), mapView); }
 static inline MKFeatureVisibility    MKCompassButton_CompassVisibility(MKCompassButton self)                                              { return ((MKFeatureVisibility (*)(MKCompassButton, SEL))bean_msgSend)(self, bean_sel("compassVisibility")); }
 static inline void                   MKCompassButton_SetCompassVisibility(MKCompassButton self, MKFeatureVisibility compassVisibility)    { ((void (*)(MKCompassButton, SEL, MKFeatureVisibility))bean_msgSend)(self, bean_sel("setCompassVisibility:"), compassVisibility); }
+#ifndef BEAN_ALLOC_MKCompassButton
+#define BEAN_ALLOC_MKCompassButton
+static inline MKCompassButton        MKCompassButton_Alloc(void)                                                                          { return (MKCompassButton)bean_alloc(bean_cls("MKCompassButton")); }
+#endif
+#ifndef BEAN_NEW_MKCompassButton
+#define BEAN_NEW_MKCompassButton
+static inline MKCompassButton        MKCompassButton_New(void)                                                                            { return (MKCompassButton)bean_new(bean_cls("MKCompassButton")); }
+#endif
 
 /* ===== MKMapSnapshotter ===== */
 #ifndef BEAN_TYPEDEF_MKMapSnapshotter
@@ -5313,6 +6132,14 @@ static inline void                MKMapSnapshotter_StartWithQueue_CompletionHand
 static inline void                MKMapSnapshotter_Cancel(MKMapSnapshotter self)                                                                       { ((void (*)(MKMapSnapshotter, SEL))bean_msgSend)(self, bean_sel("cancel")); }
 static inline BOOL                MKMapSnapshotter_IsLoading(MKMapSnapshotter self)                                                                    { return ((BOOL (*)(MKMapSnapshotter, SEL))bean_msgSend)(self, bean_sel("isLoading")); }
 static inline BOOL                MKMapSnapshotter_Loading(MKMapSnapshotter self)                                                                      { return ((BOOL (*)(MKMapSnapshotter, SEL))bean_msgSend)(self, bean_sel("loading")); }
+#ifndef BEAN_ALLOC_MKMapSnapshotter
+#define BEAN_ALLOC_MKMapSnapshotter
+static inline MKMapSnapshotter    MKMapSnapshotter_Alloc(void)                                                                                         { return (MKMapSnapshotter)bean_alloc(bean_cls("MKMapSnapshotter")); }
+#endif
+#ifndef BEAN_NEW_MKMapSnapshotter
+#define BEAN_NEW_MKMapSnapshotter
+static inline MKMapSnapshotter    MKMapSnapshotter_New(void)                                                                                           { return (MKMapSnapshotter)bean_new(bean_cls("MKMapSnapshotter")); }
+#endif
 
 /* ===== MKMapViewDelegate ===== */
 #ifndef BEAN_TYPEDEF_MKMapViewDelegate
@@ -5343,6 +6170,14 @@ static inline void                    MKMapViewDelegate_MapView_DidChangeUserTra
 static inline MKOverlayRenderer       MKMapViewDelegate_MapView_RendererForOverlay(MKMapViewDelegate self, MKMapView mapView, id overlay)                                                                                                                   { return ((MKOverlayRenderer (*)(MKMapViewDelegate, SEL, MKMapView, id))bean_msgSend)(self, bean_sel("mapView:rendererForOverlay:"), mapView, overlay); }
 static inline void                    MKMapViewDelegate_MapView_DidAddOverlayRenderers(MKMapViewDelegate self, MKMapView mapView, NSArray renderers)                                                                                                        { ((void (*)(MKMapViewDelegate, SEL, MKMapView, NSArray))bean_msgSend)(self, bean_sel("mapView:didAddOverlayRenderers:"), mapView, renderers); }
 static inline MKClusterAnnotation     MKMapViewDelegate_MapView_ClusterAnnotationForMemberAnnotations(MKMapViewDelegate self, MKMapView mapView, NSArray memberAnnotations)                                                                                 { return ((MKClusterAnnotation (*)(MKMapViewDelegate, SEL, MKMapView, NSArray))bean_msgSend)(self, bean_sel("mapView:clusterAnnotationForMemberAnnotations:"), mapView, memberAnnotations); }
+#ifndef BEAN_ALLOC_MKMapViewDelegate
+#define BEAN_ALLOC_MKMapViewDelegate
+static inline MKMapViewDelegate       MKMapViewDelegate_Alloc(void)                                                                                                                                                                                         { return (MKMapViewDelegate)bean_alloc(bean_cls("MKMapViewDelegate")); }
+#endif
+#ifndef BEAN_NEW_MKMapViewDelegate
+#define BEAN_NEW_MKMapViewDelegate
+static inline MKMapViewDelegate       MKMapViewDelegate_New(void)                                                                                                                                                                                           { return (MKMapViewDelegate)bean_new(bean_cls("MKMapViewDelegate")); }
+#endif
 
 /* ===== MKPitchControl ===== */
 #ifndef BEAN_TYPEDEF_MKPitchControl
@@ -5352,6 +6187,14 @@ typedef bean_id MKPitchControl;
 static inline MKPitchControl    MKPitchControl_PitchControlWithMapView(MKMapView mapView)            { return ((MKPitchControl (*)(bean_class, SEL, MKMapView))bean_msgSend)(bean_cls("MKPitchControl"), bean_sel("pitchControlWithMapView:"), mapView); }
 static inline MKMapView         MKPitchControl_MapView(MKPitchControl self)                          { return ((MKMapView (*)(MKPitchControl, SEL))bean_msgSend)(self, bean_sel("mapView")); }
 static inline void              MKPitchControl_SetMapView(MKPitchControl self, MKMapView mapView)    { ((void (*)(MKPitchControl, SEL, MKMapView))bean_msgSend)(self, bean_sel("setMapView:"), mapView); }
+#ifndef BEAN_ALLOC_MKPitchControl
+#define BEAN_ALLOC_MKPitchControl
+static inline MKPitchControl    MKPitchControl_Alloc(void)                                           { return (MKPitchControl)bean_alloc(bean_cls("MKPitchControl")); }
+#endif
+#ifndef BEAN_NEW_MKPitchControl
+#define BEAN_NEW_MKPitchControl
+static inline MKPitchControl    MKPitchControl_New(void)                                             { return (MKPitchControl)bean_new(bean_cls("MKPitchControl")); }
+#endif
 
 /* ===== MKZoomControl ===== */
 #ifndef BEAN_TYPEDEF_MKZoomControl
@@ -5361,6 +6204,14 @@ typedef bean_id MKZoomControl;
 static inline MKZoomControl    MKZoomControl_ZoomControlWithMapView(MKMapView mapView)            { return ((MKZoomControl (*)(bean_class, SEL, MKMapView))bean_msgSend)(bean_cls("MKZoomControl"), bean_sel("zoomControlWithMapView:"), mapView); }
 static inline MKMapView        MKZoomControl_MapView(MKZoomControl self)                          { return ((MKMapView (*)(MKZoomControl, SEL))bean_msgSend)(self, bean_sel("mapView")); }
 static inline void             MKZoomControl_SetMapView(MKZoomControl self, MKMapView mapView)    { ((void (*)(MKZoomControl, SEL, MKMapView))bean_msgSend)(self, bean_sel("setMapView:"), mapView); }
+#ifndef BEAN_ALLOC_MKZoomControl
+#define BEAN_ALLOC_MKZoomControl
+static inline MKZoomControl    MKZoomControl_Alloc(void)                                          { return (MKZoomControl)bean_alloc(bean_cls("MKZoomControl")); }
+#endif
+#ifndef BEAN_NEW_MKZoomControl
+#define BEAN_NEW_MKZoomControl
+static inline MKZoomControl    MKZoomControl_New(void)                                            { return (MKZoomControl)bean_new(bean_cls("MKZoomControl")); }
+#endif
 
 
 #ifdef __cplusplus

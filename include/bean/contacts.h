@@ -1382,42 +1382,74 @@ typedef NSUInteger NSStringEncoding;
 #define BEAN_TYPEDEF_CNChangeHistoryDeleteContactEvent
 typedef bean_id CNChangeHistoryDeleteContactEvent;
 #endif
-static inline NSString    CNChangeHistoryDeleteContactEvent_ContactIdentifier(CNChangeHistoryDeleteContactEvent self)    { return ((NSString (*)(CNChangeHistoryDeleteContactEvent, SEL))bean_msgSend)(self, bean_sel("contactIdentifier")); }
+static inline NSString                             CNChangeHistoryDeleteContactEvent_ContactIdentifier(CNChangeHistoryDeleteContactEvent self)    { return ((NSString (*)(CNChangeHistoryDeleteContactEvent, SEL))bean_msgSend)(self, bean_sel("contactIdentifier")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryDeleteContactEvent
+#define BEAN_ALLOC_CNChangeHistoryDeleteContactEvent
+static inline CNChangeHistoryDeleteContactEvent    CNChangeHistoryDeleteContactEvent_Alloc(void)                                                  { return (CNChangeHistoryDeleteContactEvent)bean_alloc(bean_cls("CNChangeHistoryDeleteContactEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryDeleteContactEvent
+#define BEAN_NEW_CNChangeHistoryDeleteContactEvent
+static inline CNChangeHistoryDeleteContactEvent    CNChangeHistoryDeleteContactEvent_New(void)                                                    { return (CNChangeHistoryDeleteContactEvent)bean_new(bean_cls("CNChangeHistoryDeleteContactEvent")); }
+#endif
 
 /* ===== CNChangeHistoryDeleteGroupEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryDeleteGroupEvent
 #define BEAN_TYPEDEF_CNChangeHistoryDeleteGroupEvent
 typedef bean_id CNChangeHistoryDeleteGroupEvent;
 #endif
-static inline NSString    CNChangeHistoryDeleteGroupEvent_GroupIdentifier(CNChangeHistoryDeleteGroupEvent self)    { return ((NSString (*)(CNChangeHistoryDeleteGroupEvent, SEL))bean_msgSend)(self, bean_sel("groupIdentifier")); }
+static inline NSString                           CNChangeHistoryDeleteGroupEvent_GroupIdentifier(CNChangeHistoryDeleteGroupEvent self)    { return ((NSString (*)(CNChangeHistoryDeleteGroupEvent, SEL))bean_msgSend)(self, bean_sel("groupIdentifier")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryDeleteGroupEvent
+#define BEAN_ALLOC_CNChangeHistoryDeleteGroupEvent
+static inline CNChangeHistoryDeleteGroupEvent    CNChangeHistoryDeleteGroupEvent_Alloc(void)                                              { return (CNChangeHistoryDeleteGroupEvent)bean_alloc(bean_cls("CNChangeHistoryDeleteGroupEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryDeleteGroupEvent
+#define BEAN_NEW_CNChangeHistoryDeleteGroupEvent
+static inline CNChangeHistoryDeleteGroupEvent    CNChangeHistoryDeleteGroupEvent_New(void)                                                { return (CNChangeHistoryDeleteGroupEvent)bean_new(bean_cls("CNChangeHistoryDeleteGroupEvent")); }
+#endif
 
 /* ===== CNChangeHistoryEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryEvent
 #define BEAN_TYPEDEF_CNChangeHistoryEvent
 typedef bean_id CNChangeHistoryEvent;
 #endif
-static inline void    CNChangeHistoryEvent_AcceptEventVisitor(CNChangeHistoryEvent self, id visitor)    { ((void (*)(CNChangeHistoryEvent, SEL, id))bean_msgSend)(self, bean_sel("acceptEventVisitor:"), visitor); }
-static inline id      CNChangeHistoryEvent_CopyWithZone(CNChangeHistoryEvent self, NSZone* zone)        { return ((id (*)(CNChangeHistoryEvent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL    CNChangeHistoryEvent_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNChangeHistoryEvent"), bean_sel("supportsSecureCoding")); }
+static inline void                    CNChangeHistoryEvent_AcceptEventVisitor(CNChangeHistoryEvent self, id visitor)    { ((void (*)(CNChangeHistoryEvent, SEL, id))bean_msgSend)(self, bean_sel("acceptEventVisitor:"), visitor); }
+static inline id                      CNChangeHistoryEvent_CopyWithZone(CNChangeHistoryEvent self, NSZone* zone)        { return ((id (*)(CNChangeHistoryEvent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                    CNChangeHistoryEvent_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNChangeHistoryEvent"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryEvent
+#define BEAN_ALLOC_CNChangeHistoryEvent
+static inline CNChangeHistoryEvent    CNChangeHistoryEvent_Alloc(void)                                                  { return (CNChangeHistoryEvent)bean_alloc(bean_cls("CNChangeHistoryEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryEvent
+#define BEAN_NEW_CNChangeHistoryEvent
+static inline CNChangeHistoryEvent    CNChangeHistoryEvent_New(void)                                                    { return (CNChangeHistoryEvent)bean_new(bean_cls("CNChangeHistoryEvent")); }
+#endif
 
 /* ===== CNChangeHistoryFetchRequest ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryFetchRequest
 #define BEAN_TYPEDEF_CNChangeHistoryFetchRequest
 typedef bean_id CNChangeHistoryFetchRequest;
 #endif
-static inline NSData     CNChangeHistoryFetchRequest_StartingToken(CNChangeHistoryFetchRequest self)                                                                  { return ((NSData (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("startingToken")); }
-static inline void       CNChangeHistoryFetchRequest_SetStartingToken(CNChangeHistoryFetchRequest self, NSData startingToken)                                         { ((void (*)(CNChangeHistoryFetchRequest, SEL, NSData))bean_msgSend)(self, bean_sel("setStartingToken:"), startingToken); }
-static inline NSArray    CNChangeHistoryFetchRequest_AdditionalContactKeyDescriptors(CNChangeHistoryFetchRequest self)                                                { return ((NSArray (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("additionalContactKeyDescriptors")); }
-static inline void       CNChangeHistoryFetchRequest_SetAdditionalContactKeyDescriptors(CNChangeHistoryFetchRequest self, NSArray additionalContactKeyDescriptors)    { ((void (*)(CNChangeHistoryFetchRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("setAdditionalContactKeyDescriptors:"), additionalContactKeyDescriptors); }
-static inline BOOL       CNChangeHistoryFetchRequest_ShouldUnifyResults(CNChangeHistoryFetchRequest self)                                                             { return ((BOOL (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("shouldUnifyResults")); }
-static inline void       CNChangeHistoryFetchRequest_SetShouldUnifyResults(CNChangeHistoryFetchRequest self, BOOL shouldUnifyResults)                                 { ((void (*)(CNChangeHistoryFetchRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldUnifyResults:"), shouldUnifyResults); }
-static inline BOOL       CNChangeHistoryFetchRequest_MutableObjects(CNChangeHistoryFetchRequest self)                                                                 { return ((BOOL (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("mutableObjects")); }
-static inline void       CNChangeHistoryFetchRequest_SetMutableObjects(CNChangeHistoryFetchRequest self, BOOL mutableObjects)                                         { ((void (*)(CNChangeHistoryFetchRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setMutableObjects:"), mutableObjects); }
-static inline BOOL       CNChangeHistoryFetchRequest_IncludeGroupChanges(CNChangeHistoryFetchRequest self)                                                            { return ((BOOL (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("includeGroupChanges")); }
-static inline void       CNChangeHistoryFetchRequest_SetIncludeGroupChanges(CNChangeHistoryFetchRequest self, BOOL includeGroupChanges)                               { ((void (*)(CNChangeHistoryFetchRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setIncludeGroupChanges:"), includeGroupChanges); }
-static inline NSArray    CNChangeHistoryFetchRequest_ExcludedTransactionAuthors(CNChangeHistoryFetchRequest self)                                                     { return ((NSArray (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("excludedTransactionAuthors")); }
-static inline void       CNChangeHistoryFetchRequest_SetExcludedTransactionAuthors(CNChangeHistoryFetchRequest self, NSArray excludedTransactionAuthors)              { ((void (*)(CNChangeHistoryFetchRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("setExcludedTransactionAuthors:"), excludedTransactionAuthors); }
-static inline BOOL       CNChangeHistoryFetchRequest_SupportsSecureCoding(void)                                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNChangeHistoryFetchRequest"), bean_sel("supportsSecureCoding")); }
+static inline NSData                         CNChangeHistoryFetchRequest_StartingToken(CNChangeHistoryFetchRequest self)                                                                  { return ((NSData (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("startingToken")); }
+static inline void                           CNChangeHistoryFetchRequest_SetStartingToken(CNChangeHistoryFetchRequest self, NSData startingToken)                                         { ((void (*)(CNChangeHistoryFetchRequest, SEL, NSData))bean_msgSend)(self, bean_sel("setStartingToken:"), startingToken); }
+static inline NSArray                        CNChangeHistoryFetchRequest_AdditionalContactKeyDescriptors(CNChangeHistoryFetchRequest self)                                                { return ((NSArray (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("additionalContactKeyDescriptors")); }
+static inline void                           CNChangeHistoryFetchRequest_SetAdditionalContactKeyDescriptors(CNChangeHistoryFetchRequest self, NSArray additionalContactKeyDescriptors)    { ((void (*)(CNChangeHistoryFetchRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("setAdditionalContactKeyDescriptors:"), additionalContactKeyDescriptors); }
+static inline BOOL                           CNChangeHistoryFetchRequest_ShouldUnifyResults(CNChangeHistoryFetchRequest self)                                                             { return ((BOOL (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("shouldUnifyResults")); }
+static inline void                           CNChangeHistoryFetchRequest_SetShouldUnifyResults(CNChangeHistoryFetchRequest self, BOOL shouldUnifyResults)                                 { ((void (*)(CNChangeHistoryFetchRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldUnifyResults:"), shouldUnifyResults); }
+static inline BOOL                           CNChangeHistoryFetchRequest_MutableObjects(CNChangeHistoryFetchRequest self)                                                                 { return ((BOOL (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("mutableObjects")); }
+static inline void                           CNChangeHistoryFetchRequest_SetMutableObjects(CNChangeHistoryFetchRequest self, BOOL mutableObjects)                                         { ((void (*)(CNChangeHistoryFetchRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setMutableObjects:"), mutableObjects); }
+static inline BOOL                           CNChangeHistoryFetchRequest_IncludeGroupChanges(CNChangeHistoryFetchRequest self)                                                            { return ((BOOL (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("includeGroupChanges")); }
+static inline void                           CNChangeHistoryFetchRequest_SetIncludeGroupChanges(CNChangeHistoryFetchRequest self, BOOL includeGroupChanges)                               { ((void (*)(CNChangeHistoryFetchRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setIncludeGroupChanges:"), includeGroupChanges); }
+static inline NSArray                        CNChangeHistoryFetchRequest_ExcludedTransactionAuthors(CNChangeHistoryFetchRequest self)                                                     { return ((NSArray (*)(CNChangeHistoryFetchRequest, SEL))bean_msgSend)(self, bean_sel("excludedTransactionAuthors")); }
+static inline void                           CNChangeHistoryFetchRequest_SetExcludedTransactionAuthors(CNChangeHistoryFetchRequest self, NSArray excludedTransactionAuthors)              { ((void (*)(CNChangeHistoryFetchRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("setExcludedTransactionAuthors:"), excludedTransactionAuthors); }
+static inline BOOL                           CNChangeHistoryFetchRequest_SupportsSecureCoding(void)                                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNChangeHistoryFetchRequest"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryFetchRequest
+#define BEAN_ALLOC_CNChangeHistoryFetchRequest
+static inline CNChangeHistoryFetchRequest    CNChangeHistoryFetchRequest_Alloc(void)                                                                                                      { return (CNChangeHistoryFetchRequest)bean_alloc(bean_cls("CNChangeHistoryFetchRequest")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryFetchRequest
+#define BEAN_NEW_CNChangeHistoryFetchRequest
+static inline CNChangeHistoryFetchRequest    CNChangeHistoryFetchRequest_New(void)                                                                                                        { return (CNChangeHistoryFetchRequest)bean_new(bean_cls("CNChangeHistoryFetchRequest")); }
+#endif
 
 /* ===== CNContactFetchRequest ===== */
 #ifndef BEAN_TYPEDEF_CNContactFetchRequest
@@ -1425,7 +1457,10 @@ static inline BOOL       CNChangeHistoryFetchRequest_SupportsSecureCoding(void) 
 typedef bean_id CNContactFetchRequest;
 #endif
 static inline CNContactFetchRequest    CNContactFetchRequest_Init(CNContactFetchRequest self)                                          { return ((CNContactFetchRequest (*)(CNContactFetchRequest, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CNContactFetchRequest
+#define BEAN_NEW_CNContactFetchRequest
 static inline CNContactFetchRequest    CNContactFetchRequest_New(void)                                                                 { return ((CNContactFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactFetchRequest"), bean_sel("new")); }
+#endif
 static inline CNContactFetchRequest    CNContactFetchRequest_InitWithKeysToFetch(CNContactFetchRequest self, NSArray keysToFetch)      { return ((CNContactFetchRequest (*)(CNContactFetchRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithKeysToFetch:"), keysToFetch); }
 static inline NSPredicate              CNContactFetchRequest_Predicate(CNContactFetchRequest self)                                     { return ((NSPredicate (*)(CNContactFetchRequest, SEL))bean_msgSend)(self, bean_sel("predicate")); }
 static inline void                     CNContactFetchRequest_SetPredicate(CNContactFetchRequest self, NSPredicate predicate)           { ((void (*)(CNContactFetchRequest, SEL, NSPredicate))bean_msgSend)(self, bean_sel("setPredicate:"), predicate); }
@@ -1438,6 +1473,10 @@ static inline void                     CNContactFetchRequest_SetUnifyResults(CNC
 static inline CNContactSortOrder       CNContactFetchRequest_SortOrder(CNContactFetchRequest self)                                     { return ((CNContactSortOrder (*)(CNContactFetchRequest, SEL))bean_msgSend)(self, bean_sel("sortOrder")); }
 static inline void                     CNContactFetchRequest_SetSortOrder(CNContactFetchRequest self, CNContactSortOrder sortOrder)    { ((void (*)(CNContactFetchRequest, SEL, CNContactSortOrder))bean_msgSend)(self, bean_sel("setSortOrder:"), sortOrder); }
 static inline BOOL                     CNContactFetchRequest_SupportsSecureCoding(void)                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactFetchRequest"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNContactFetchRequest
+#define BEAN_ALLOC_CNContactFetchRequest
+static inline CNContactFetchRequest    CNContactFetchRequest_Alloc(void)                                                               { return (CNContactFetchRequest)bean_alloc(bean_cls("CNContactFetchRequest")); }
+#endif
 
 /* ===== CNContactRelation ===== */
 #ifndef BEAN_TYPEDEF_CNContactRelation
@@ -1449,15 +1488,31 @@ static inline CNContactRelation    CNContactRelation_InitWithName(CNContactRelat
 static inline NSString             CNContactRelation_Name(CNContactRelation self)                           { return ((NSString (*)(CNContactRelation, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline id                   CNContactRelation_CopyWithZone(CNContactRelation self, NSZone* zone)     { return ((id (*)(CNContactRelation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                 CNContactRelation_SupportsSecureCoding(void)                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactRelation"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNContactRelation
+#define BEAN_ALLOC_CNContactRelation
+static inline CNContactRelation    CNContactRelation_Alloc(void)                                            { return (CNContactRelation)bean_alloc(bean_cls("CNContactRelation")); }
+#endif
+#ifndef BEAN_NEW_CNContactRelation
+#define BEAN_NEW_CNContactRelation
+static inline CNContactRelation    CNContactRelation_New(void)                                              { return (CNContactRelation)bean_new(bean_cls("CNContactRelation")); }
+#endif
 
 /* ===== CNContactVCardSerialization ===== */
 #ifndef BEAN_TYPEDEF_CNContactVCardSerialization
 #define BEAN_TYPEDEF_CNContactVCardSerialization
 typedef bean_id CNContactVCardSerialization;
 #endif
-static inline id         CNContactVCardSerialization_DescriptorForRequiredKeys(void)                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactVCardSerialization"), bean_sel("descriptorForRequiredKeys")); }
-static inline NSData     CNContactVCardSerialization_DataWithContacts_Error(NSArray contacts, NSError* error)    { return ((NSData (*)(bean_class, SEL, NSArray, NSError*))bean_msgSend)(bean_cls("CNContactVCardSerialization"), bean_sel("dataWithContacts:error:"), contacts, error); }
-static inline NSArray    CNContactVCardSerialization_ContactsWithData_Error(NSData data, NSError* error)         { return ((NSArray (*)(bean_class, SEL, NSData, NSError*))bean_msgSend)(bean_cls("CNContactVCardSerialization"), bean_sel("contactsWithData:error:"), data, error); }
+static inline id                             CNContactVCardSerialization_DescriptorForRequiredKeys(void)                             { return ((id (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactVCardSerialization"), bean_sel("descriptorForRequiredKeys")); }
+static inline NSData                         CNContactVCardSerialization_DataWithContacts_Error(NSArray contacts, NSError* error)    { return ((NSData (*)(bean_class, SEL, NSArray, NSError*))bean_msgSend)(bean_cls("CNContactVCardSerialization"), bean_sel("dataWithContacts:error:"), contacts, error); }
+static inline NSArray                        CNContactVCardSerialization_ContactsWithData_Error(NSData data, NSError* error)         { return ((NSArray (*)(bean_class, SEL, NSData, NSError*))bean_msgSend)(bean_cls("CNContactVCardSerialization"), bean_sel("contactsWithData:error:"), data, error); }
+#ifndef BEAN_ALLOC_CNContactVCardSerialization
+#define BEAN_ALLOC_CNContactVCardSerialization
+static inline CNContactVCardSerialization    CNContactVCardSerialization_Alloc(void)                                                 { return (CNContactVCardSerialization)bean_alloc(bean_cls("CNContactVCardSerialization")); }
+#endif
+#ifndef BEAN_NEW_CNContactVCardSerialization
+#define BEAN_NEW_CNContactVCardSerialization
+static inline CNContactVCardSerialization    CNContactVCardSerialization_New(void)                                                   { return (CNContactVCardSerialization)bean_new(bean_cls("CNContactVCardSerialization")); }
+#endif
 
 /* ===== CNContactsUserDefaults ===== */
 #ifndef BEAN_TYPEDEF_CNContactsUserDefaults
@@ -1467,6 +1522,14 @@ typedef bean_id CNContactsUserDefaults;
 static inline CNContactsUserDefaults    CNContactsUserDefaults_SharedDefaults(void)                        { return ((CNContactsUserDefaults (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactsUserDefaults"), bean_sel("sharedDefaults")); }
 static inline CNContactSortOrder        CNContactsUserDefaults_SortOrder(CNContactsUserDefaults self)      { return ((CNContactSortOrder (*)(CNContactsUserDefaults, SEL))bean_msgSend)(self, bean_sel("sortOrder")); }
 static inline NSString                  CNContactsUserDefaults_CountryCode(CNContactsUserDefaults self)    { return ((NSString (*)(CNContactsUserDefaults, SEL))bean_msgSend)(self, bean_sel("countryCode")); }
+#ifndef BEAN_ALLOC_CNContactsUserDefaults
+#define BEAN_ALLOC_CNContactsUserDefaults
+static inline CNContactsUserDefaults    CNContactsUserDefaults_Alloc(void)                                 { return (CNContactsUserDefaults)bean_alloc(bean_cls("CNContactsUserDefaults")); }
+#endif
+#ifndef BEAN_NEW_CNContactsUserDefaults
+#define BEAN_NEW_CNContactsUserDefaults
+static inline CNContactsUserDefaults    CNContactsUserDefaults_New(void)                                   { return (CNContactsUserDefaults)bean_new(bean_cls("CNContactsUserDefaults")); }
+#endif
 
 /* ===== CNContainer ===== */
 #ifndef BEAN_TYPEDEF_CNContainer
@@ -1481,6 +1544,14 @@ static inline NSPredicate        CNContainer_PredicateForContainerOfContactWithI
 static inline NSPredicate        CNContainer_PredicateForContainerOfGroupWithIdentifier(NSString groupIdentifier)        { return ((NSPredicate (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CNContainer"), bean_sel("predicateForContainerOfGroupWithIdentifier:"), groupIdentifier); }
 static inline id                 CNContainer_CopyWithZone(CNContainer self, NSZone* zone)                                { return ((id (*)(CNContainer, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL               CNContainer_SupportsSecureCoding(void)                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContainer"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNContainer
+#define BEAN_ALLOC_CNContainer
+static inline CNContainer        CNContainer_Alloc(void)                                                                 { return (CNContainer)bean_alloc(bean_cls("CNContainer")); }
+#endif
+#ifndef BEAN_NEW_CNContainer
+#define BEAN_NEW_CNContainer
+static inline CNContainer        CNContainer_New(void)                                                                   { return (CNContainer)bean_new(bean_cls("CNContainer")); }
+#endif
 
 /* ===== CNFetchResult ===== */
 #ifndef BEAN_TYPEDEF_CNFetchResult
@@ -1488,9 +1559,16 @@ static inline BOOL               CNContainer_SupportsSecureCoding(void)         
 typedef bean_id CNFetchResult;
 #endif
 static inline CNFetchResult    CNFetchResult_Init(CNFetchResult self)                   { return ((CNFetchResult (*)(CNFetchResult, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CNFetchResult
+#define BEAN_NEW_CNFetchResult
 static inline CNFetchResult    CNFetchResult_New(void)                                  { return ((CNFetchResult (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNFetchResult"), bean_sel("new")); }
+#endif
 static inline id               CNFetchResult_Value(CNFetchResult self)                  { return ((id (*)(CNFetchResult, SEL))bean_msgSend)(self, bean_sel("value")); }
 static inline NSData           CNFetchResult_CurrentHistoryToken(CNFetchResult self)    { return ((NSData (*)(CNFetchResult, SEL))bean_msgSend)(self, bean_sel("currentHistoryToken")); }
+#ifndef BEAN_ALLOC_CNFetchResult
+#define BEAN_ALLOC_CNFetchResult
+static inline CNFetchResult    CNFetchResult_Alloc(void)                                { return (CNFetchResult)bean_alloc(bean_cls("CNFetchResult")); }
+#endif
 
 /* ===== CNGroup ===== */
 #ifndef BEAN_TYPEDEF_CNGroup
@@ -1505,6 +1583,14 @@ static inline NSPredicate    CNGroup_PredicateForGroupsInContainerWithIdentifier
 static inline id             CNGroup_CopyWithZone(CNGroup self, NSZone* zone)                                      { return ((id (*)(CNGroup, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id             CNGroup_MutableCopyWithZone(CNGroup self, NSZone* zone)                               { return ((id (*)(CNGroup, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL           CNGroup_SupportsSecureCoding(void)                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNGroup"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNGroup
+#define BEAN_ALLOC_CNGroup
+static inline CNGroup        CNGroup_Alloc(void)                                                                   { return (CNGroup)bean_alloc(bean_cls("CNGroup")); }
+#endif
+#ifndef BEAN_NEW_CNGroup
+#define BEAN_NEW_CNGroup
+static inline CNGroup        CNGroup_New(void)                                                                     { return (CNGroup)bean_new(bean_cls("CNGroup")); }
+#endif
 
 /* ===== CNInstantMessageAddress ===== */
 #ifndef BEAN_TYPEDEF_CNInstantMessageAddress
@@ -1518,6 +1604,14 @@ static inline NSString                   CNInstantMessageAddress_Username(CNInst
 static inline NSString                   CNInstantMessageAddress_Service(CNInstantMessageAddress self)                                                          { return ((NSString (*)(CNInstantMessageAddress, SEL))bean_msgSend)(self, bean_sel("service")); }
 static inline id                         CNInstantMessageAddress_CopyWithZone(CNInstantMessageAddress self, NSZone* zone)                                       { return ((id (*)(CNInstantMessageAddress, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                       CNInstantMessageAddress_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNInstantMessageAddress"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNInstantMessageAddress
+#define BEAN_ALLOC_CNInstantMessageAddress
+static inline CNInstantMessageAddress    CNInstantMessageAddress_Alloc(void)                                                                                    { return (CNInstantMessageAddress)bean_alloc(bean_cls("CNInstantMessageAddress")); }
+#endif
+#ifndef BEAN_NEW_CNInstantMessageAddress
+#define BEAN_NEW_CNInstantMessageAddress
+static inline CNInstantMessageAddress    CNInstantMessageAddress_New(void)                                                                                      { return (CNInstantMessageAddress)bean_new(bean_cls("CNInstantMessageAddress")); }
+#endif
 
 /* ===== CNLabeledValue ===== */
 #ifndef BEAN_TYPEDEF_CNLabeledValue
@@ -1535,6 +1629,14 @@ static inline NSString          CNLabeledValue_Label(CNLabeledValue self)       
 static inline id                CNLabeledValue_Value(CNLabeledValue self)                                                         { return ((id (*)(CNLabeledValue, SEL))bean_msgSend)(self, bean_sel("value")); }
 static inline id                CNLabeledValue_CopyWithZone(CNLabeledValue self, NSZone* zone)                                    { return ((id (*)(CNLabeledValue, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL              CNLabeledValue_SupportsSecureCoding(void)                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNLabeledValue"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNLabeledValue
+#define BEAN_ALLOC_CNLabeledValue
+static inline CNLabeledValue    CNLabeledValue_Alloc(void)                                                                        { return (CNLabeledValue)bean_alloc(bean_cls("CNLabeledValue")); }
+#endif
+#ifndef BEAN_NEW_CNLabeledValue
+#define BEAN_NEW_CNLabeledValue
+static inline CNLabeledValue    CNLabeledValue_New(void)                                                                          { return (CNLabeledValue)bean_new(bean_cls("CNLabeledValue")); }
+#endif
 
 /* ===== CNMutableContact ===== */
 #ifndef BEAN_TYPEDEF_CNMutableContact
@@ -1595,36 +1697,60 @@ static inline NSDateComponents    CNMutableContact_NonGregorianBirthday(CNMutabl
 static inline void                CNMutableContact_SetNonGregorianBirthday(CNMutableContact self, NSDateComponents nonGregorianBirthday)    { ((void (*)(CNMutableContact, SEL, NSDateComponents))bean_msgSend)(self, bean_sel("setNonGregorianBirthday:"), nonGregorianBirthday); }
 static inline NSArray             CNMutableContact_Dates(CNMutableContact self)                                                             { return ((NSArray (*)(CNMutableContact, SEL))bean_msgSend)(self, bean_sel("dates")); }
 static inline void                CNMutableContact_SetDates(CNMutableContact self, NSArray dates)                                           { ((void (*)(CNMutableContact, SEL, NSArray))bean_msgSend)(self, bean_sel("setDates:"), dates); }
+#ifndef BEAN_ALLOC_CNMutableContact
+#define BEAN_ALLOC_CNMutableContact
+static inline CNMutableContact    CNMutableContact_Alloc(void)                                                                              { return (CNMutableContact)bean_alloc(bean_cls("CNMutableContact")); }
+#endif
+#ifndef BEAN_NEW_CNMutableContact
+#define BEAN_NEW_CNMutableContact
+static inline CNMutableContact    CNMutableContact_New(void)                                                                                { return (CNMutableContact)bean_new(bean_cls("CNMutableContact")); }
+#endif
 
 /* ===== CNMutableGroup ===== */
 #ifndef BEAN_TYPEDEF_CNMutableGroup
 #define BEAN_TYPEDEF_CNMutableGroup
 typedef bean_id CNMutableGroup;
 #endif
-static inline NSString    CNMutableGroup_Name(CNMutableGroup self)                      { return ((NSString (*)(CNMutableGroup, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        CNMutableGroup_SetName(CNMutableGroup self, NSString name)    { ((void (*)(CNMutableGroup, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString          CNMutableGroup_Name(CNMutableGroup self)                      { return ((NSString (*)(CNMutableGroup, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void              CNMutableGroup_SetName(CNMutableGroup self, NSString name)    { ((void (*)(CNMutableGroup, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+#ifndef BEAN_ALLOC_CNMutableGroup
+#define BEAN_ALLOC_CNMutableGroup
+static inline CNMutableGroup    CNMutableGroup_Alloc(void)                                    { return (CNMutableGroup)bean_alloc(bean_cls("CNMutableGroup")); }
+#endif
+#ifndef BEAN_NEW_CNMutableGroup
+#define BEAN_NEW_CNMutableGroup
+static inline CNMutableGroup    CNMutableGroup_New(void)                                      { return (CNMutableGroup)bean_new(bean_cls("CNMutableGroup")); }
+#endif
 
 /* ===== CNMutablePostalAddress ===== */
 #ifndef BEAN_TYPEDEF_CNMutablePostalAddress
 #define BEAN_TYPEDEF_CNMutablePostalAddress
 typedef bean_id CNMutablePostalAddress;
 #endif
-static inline NSString    CNMutablePostalAddress_Street(CNMutablePostalAddress self)                                                      { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("street")); }
-static inline void        CNMutablePostalAddress_SetStreet(CNMutablePostalAddress self, NSString street)                                  { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setStreet:"), street); }
-static inline NSString    CNMutablePostalAddress_SubLocality(CNMutablePostalAddress self)                                                 { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("subLocality")); }
-static inline void        CNMutablePostalAddress_SetSubLocality(CNMutablePostalAddress self, NSString subLocality)                        { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setSubLocality:"), subLocality); }
-static inline NSString    CNMutablePostalAddress_City(CNMutablePostalAddress self)                                                        { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("city")); }
-static inline void        CNMutablePostalAddress_SetCity(CNMutablePostalAddress self, NSString city)                                      { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setCity:"), city); }
-static inline NSString    CNMutablePostalAddress_SubAdministrativeArea(CNMutablePostalAddress self)                                       { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("subAdministrativeArea")); }
-static inline void        CNMutablePostalAddress_SetSubAdministrativeArea(CNMutablePostalAddress self, NSString subAdministrativeArea)    { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setSubAdministrativeArea:"), subAdministrativeArea); }
-static inline NSString    CNMutablePostalAddress_State(CNMutablePostalAddress self)                                                       { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("state")); }
-static inline void        CNMutablePostalAddress_SetState(CNMutablePostalAddress self, NSString state)                                    { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setState:"), state); }
-static inline NSString    CNMutablePostalAddress_PostalCode(CNMutablePostalAddress self)                                                  { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("postalCode")); }
-static inline void        CNMutablePostalAddress_SetPostalCode(CNMutablePostalAddress self, NSString postalCode)                          { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setPostalCode:"), postalCode); }
-static inline NSString    CNMutablePostalAddress_Country(CNMutablePostalAddress self)                                                     { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("country")); }
-static inline void        CNMutablePostalAddress_SetCountry(CNMutablePostalAddress self, NSString country)                                { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setCountry:"), country); }
-static inline NSString    CNMutablePostalAddress_ISOCountryCode(CNMutablePostalAddress self)                                              { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("ISOCountryCode")); }
-static inline void        CNMutablePostalAddress_SetISOCountryCode(CNMutablePostalAddress self, NSString ISOCountryCode)                  { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setISOCountryCode:"), ISOCountryCode); }
+static inline NSString                  CNMutablePostalAddress_Street(CNMutablePostalAddress self)                                                      { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("street")); }
+static inline void                      CNMutablePostalAddress_SetStreet(CNMutablePostalAddress self, NSString street)                                  { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setStreet:"), street); }
+static inline NSString                  CNMutablePostalAddress_SubLocality(CNMutablePostalAddress self)                                                 { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("subLocality")); }
+static inline void                      CNMutablePostalAddress_SetSubLocality(CNMutablePostalAddress self, NSString subLocality)                        { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setSubLocality:"), subLocality); }
+static inline NSString                  CNMutablePostalAddress_City(CNMutablePostalAddress self)                                                        { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("city")); }
+static inline void                      CNMutablePostalAddress_SetCity(CNMutablePostalAddress self, NSString city)                                      { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setCity:"), city); }
+static inline NSString                  CNMutablePostalAddress_SubAdministrativeArea(CNMutablePostalAddress self)                                       { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("subAdministrativeArea")); }
+static inline void                      CNMutablePostalAddress_SetSubAdministrativeArea(CNMutablePostalAddress self, NSString subAdministrativeArea)    { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setSubAdministrativeArea:"), subAdministrativeArea); }
+static inline NSString                  CNMutablePostalAddress_State(CNMutablePostalAddress self)                                                       { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("state")); }
+static inline void                      CNMutablePostalAddress_SetState(CNMutablePostalAddress self, NSString state)                                    { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setState:"), state); }
+static inline NSString                  CNMutablePostalAddress_PostalCode(CNMutablePostalAddress self)                                                  { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("postalCode")); }
+static inline void                      CNMutablePostalAddress_SetPostalCode(CNMutablePostalAddress self, NSString postalCode)                          { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setPostalCode:"), postalCode); }
+static inline NSString                  CNMutablePostalAddress_Country(CNMutablePostalAddress self)                                                     { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("country")); }
+static inline void                      CNMutablePostalAddress_SetCountry(CNMutablePostalAddress self, NSString country)                                { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setCountry:"), country); }
+static inline NSString                  CNMutablePostalAddress_ISOCountryCode(CNMutablePostalAddress self)                                              { return ((NSString (*)(CNMutablePostalAddress, SEL))bean_msgSend)(self, bean_sel("ISOCountryCode")); }
+static inline void                      CNMutablePostalAddress_SetISOCountryCode(CNMutablePostalAddress self, NSString ISOCountryCode)                  { ((void (*)(CNMutablePostalAddress, SEL, NSString))bean_msgSend)(self, bean_sel("setISOCountryCode:"), ISOCountryCode); }
+#ifndef BEAN_ALLOC_CNMutablePostalAddress
+#define BEAN_ALLOC_CNMutablePostalAddress
+static inline CNMutablePostalAddress    CNMutablePostalAddress_Alloc(void)                                                                              { return (CNMutablePostalAddress)bean_alloc(bean_cls("CNMutablePostalAddress")); }
+#endif
+#ifndef BEAN_NEW_CNMutablePostalAddress
+#define BEAN_NEW_CNMutablePostalAddress
+static inline CNMutablePostalAddress    CNMutablePostalAddress_New(void)                                                                                { return (CNMutablePostalAddress)bean_new(bean_cls("CNMutablePostalAddress")); }
+#endif
 
 /* ===== CNPhoneNumber ===== */
 #ifndef BEAN_TYPEDEF_CNPhoneNumber
@@ -1634,28 +1760,43 @@ typedef bean_id CNPhoneNumber;
 static inline CNPhoneNumber    CNPhoneNumber_PhoneNumberWithStringValue(NSString stringValue)            { return ((CNPhoneNumber (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CNPhoneNumber"), bean_sel("phoneNumberWithStringValue:"), stringValue); }
 static inline CNPhoneNumber    CNPhoneNumber_InitWithStringValue(CNPhoneNumber self, NSString string)    { return ((CNPhoneNumber (*)(CNPhoneNumber, SEL, NSString))bean_msgSend)(self, bean_sel("initWithStringValue:"), string); }
 static inline CNPhoneNumber    CNPhoneNumber_Init(CNPhoneNumber self)                                    { return ((CNPhoneNumber (*)(CNPhoneNumber, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CNPhoneNumber
+#define BEAN_NEW_CNPhoneNumber
 static inline CNPhoneNumber    CNPhoneNumber_New(void)                                                   { return ((CNPhoneNumber (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNPhoneNumber"), bean_sel("new")); }
+#endif
 static inline NSString         CNPhoneNumber_StringValue(CNPhoneNumber self)                             { return ((NSString (*)(CNPhoneNumber, SEL))bean_msgSend)(self, bean_sel("stringValue")); }
 static inline id               CNPhoneNumber_CopyWithZone(CNPhoneNumber self, NSZone* zone)              { return ((id (*)(CNPhoneNumber, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL             CNPhoneNumber_SupportsSecureCoding(void)                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNPhoneNumber"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNPhoneNumber
+#define BEAN_ALLOC_CNPhoneNumber
+static inline CNPhoneNumber    CNPhoneNumber_Alloc(void)                                                 { return (CNPhoneNumber)bean_alloc(bean_cls("CNPhoneNumber")); }
+#endif
 
 /* ===== CNPostalAddress ===== */
 #ifndef BEAN_TYPEDEF_CNPostalAddress
 #define BEAN_TYPEDEF_CNPostalAddress
 typedef bean_id CNPostalAddress;
 #endif
-static inline NSString    CNPostalAddress_LocalizedStringForKey(NSString key)                        { return ((NSString (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CNPostalAddress"), bean_sel("localizedStringForKey:"), key); }
-static inline NSString    CNPostalAddress_Street(CNPostalAddress self)                               { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("street")); }
-static inline NSString    CNPostalAddress_SubLocality(CNPostalAddress self)                          { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("subLocality")); }
-static inline NSString    CNPostalAddress_City(CNPostalAddress self)                                 { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("city")); }
-static inline NSString    CNPostalAddress_SubAdministrativeArea(CNPostalAddress self)                { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("subAdministrativeArea")); }
-static inline NSString    CNPostalAddress_State(CNPostalAddress self)                                { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("state")); }
-static inline NSString    CNPostalAddress_PostalCode(CNPostalAddress self)                           { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("postalCode")); }
-static inline NSString    CNPostalAddress_Country(CNPostalAddress self)                              { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("country")); }
-static inline NSString    CNPostalAddress_ISOCountryCode(CNPostalAddress self)                       { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("ISOCountryCode")); }
-static inline id          CNPostalAddress_CopyWithZone(CNPostalAddress self, NSZone* zone)           { return ((id (*)(CNPostalAddress, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline id          CNPostalAddress_MutableCopyWithZone(CNPostalAddress self, NSZone* zone)    { return ((id (*)(CNPostalAddress, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
-static inline BOOL        CNPostalAddress_SupportsSecureCoding(void)                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNPostalAddress"), bean_sel("supportsSecureCoding")); }
+static inline NSString           CNPostalAddress_LocalizedStringForKey(NSString key)                        { return ((NSString (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("CNPostalAddress"), bean_sel("localizedStringForKey:"), key); }
+static inline NSString           CNPostalAddress_Street(CNPostalAddress self)                               { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("street")); }
+static inline NSString           CNPostalAddress_SubLocality(CNPostalAddress self)                          { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("subLocality")); }
+static inline NSString           CNPostalAddress_City(CNPostalAddress self)                                 { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("city")); }
+static inline NSString           CNPostalAddress_SubAdministrativeArea(CNPostalAddress self)                { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("subAdministrativeArea")); }
+static inline NSString           CNPostalAddress_State(CNPostalAddress self)                                { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("state")); }
+static inline NSString           CNPostalAddress_PostalCode(CNPostalAddress self)                           { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("postalCode")); }
+static inline NSString           CNPostalAddress_Country(CNPostalAddress self)                              { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("country")); }
+static inline NSString           CNPostalAddress_ISOCountryCode(CNPostalAddress self)                       { return ((NSString (*)(CNPostalAddress, SEL))bean_msgSend)(self, bean_sel("ISOCountryCode")); }
+static inline id                 CNPostalAddress_CopyWithZone(CNPostalAddress self, NSZone* zone)           { return ((id (*)(CNPostalAddress, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline id                 CNPostalAddress_MutableCopyWithZone(CNPostalAddress self, NSZone* zone)    { return ((id (*)(CNPostalAddress, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
+static inline BOOL               CNPostalAddress_SupportsSecureCoding(void)                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNPostalAddress"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNPostalAddress
+#define BEAN_ALLOC_CNPostalAddress
+static inline CNPostalAddress    CNPostalAddress_Alloc(void)                                                { return (CNPostalAddress)bean_alloc(bean_cls("CNPostalAddress")); }
+#endif
+#ifndef BEAN_NEW_CNPostalAddress
+#define BEAN_NEW_CNPostalAddress
+static inline CNPostalAddress    CNPostalAddress_New(void)                                                  { return (CNPostalAddress)bean_new(bean_cls("CNPostalAddress")); }
+#endif
 
 /* ===== CNSocialProfile ===== */
 #ifndef BEAN_TYPEDEF_CNSocialProfile
@@ -1671,37 +1812,77 @@ static inline NSString           CNSocialProfile_UserIdentifier(CNSocialProfile 
 static inline NSString           CNSocialProfile_Service(CNSocialProfile self)                                                                                                                                { return ((NSString (*)(CNSocialProfile, SEL))bean_msgSend)(self, bean_sel("service")); }
 static inline id                 CNSocialProfile_CopyWithZone(CNSocialProfile self, NSZone* zone)                                                                                                             { return ((id (*)(CNSocialProfile, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL               CNSocialProfile_SupportsSecureCoding(void)                                                                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNSocialProfile"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNSocialProfile
+#define BEAN_ALLOC_CNSocialProfile
+static inline CNSocialProfile    CNSocialProfile_Alloc(void)                                                                                                                                                  { return (CNSocialProfile)bean_alloc(bean_cls("CNSocialProfile")); }
+#endif
+#ifndef BEAN_NEW_CNSocialProfile
+#define BEAN_NEW_CNSocialProfile
+static inline CNSocialProfile    CNSocialProfile_New(void)                                                                                                                                                    { return (CNSocialProfile)bean_new(bean_cls("CNSocialProfile")); }
+#endif
 
 /* ===== CNChangeHistoryAddGroupEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryAddGroupEvent
 #define BEAN_TYPEDEF_CNChangeHistoryAddGroupEvent
 typedef bean_id CNChangeHistoryAddGroupEvent;
 #endif
-static inline CNGroup     CNChangeHistoryAddGroupEvent_Group(CNChangeHistoryAddGroupEvent self)                  { return ((CNGroup (*)(CNChangeHistoryAddGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
-static inline NSString    CNChangeHistoryAddGroupEvent_ContainerIdentifier(CNChangeHistoryAddGroupEvent self)    { return ((NSString (*)(CNChangeHistoryAddGroupEvent, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
+static inline CNGroup                         CNChangeHistoryAddGroupEvent_Group(CNChangeHistoryAddGroupEvent self)                  { return ((CNGroup (*)(CNChangeHistoryAddGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+static inline NSString                        CNChangeHistoryAddGroupEvent_ContainerIdentifier(CNChangeHistoryAddGroupEvent self)    { return ((NSString (*)(CNChangeHistoryAddGroupEvent, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryAddGroupEvent
+#define BEAN_ALLOC_CNChangeHistoryAddGroupEvent
+static inline CNChangeHistoryAddGroupEvent    CNChangeHistoryAddGroupEvent_Alloc(void)                                               { return (CNChangeHistoryAddGroupEvent)bean_alloc(bean_cls("CNChangeHistoryAddGroupEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryAddGroupEvent
+#define BEAN_NEW_CNChangeHistoryAddGroupEvent
+static inline CNChangeHistoryAddGroupEvent    CNChangeHistoryAddGroupEvent_New(void)                                                 { return (CNChangeHistoryAddGroupEvent)bean_new(bean_cls("CNChangeHistoryAddGroupEvent")); }
+#endif
 
 /* ===== CNChangeHistoryAddSubgroupToGroupEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryAddSubgroupToGroupEvent
 #define BEAN_TYPEDEF_CNChangeHistoryAddSubgroupToGroupEvent
 typedef bean_id CNChangeHistoryAddSubgroupToGroupEvent;
 #endif
-static inline CNGroup    CNChangeHistoryAddSubgroupToGroupEvent_Subgroup(CNChangeHistoryAddSubgroupToGroupEvent self)    { return ((CNGroup (*)(CNChangeHistoryAddSubgroupToGroupEvent, SEL))bean_msgSend)(self, bean_sel("subgroup")); }
-static inline CNGroup    CNChangeHistoryAddSubgroupToGroupEvent_Group(CNChangeHistoryAddSubgroupToGroupEvent self)       { return ((CNGroup (*)(CNChangeHistoryAddSubgroupToGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+static inline CNGroup                                   CNChangeHistoryAddSubgroupToGroupEvent_Subgroup(CNChangeHistoryAddSubgroupToGroupEvent self)    { return ((CNGroup (*)(CNChangeHistoryAddSubgroupToGroupEvent, SEL))bean_msgSend)(self, bean_sel("subgroup")); }
+static inline CNGroup                                   CNChangeHistoryAddSubgroupToGroupEvent_Group(CNChangeHistoryAddSubgroupToGroupEvent self)       { return ((CNGroup (*)(CNChangeHistoryAddSubgroupToGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryAddSubgroupToGroupEvent
+#define BEAN_ALLOC_CNChangeHistoryAddSubgroupToGroupEvent
+static inline CNChangeHistoryAddSubgroupToGroupEvent    CNChangeHistoryAddSubgroupToGroupEvent_Alloc(void)                                              { return (CNChangeHistoryAddSubgroupToGroupEvent)bean_alloc(bean_cls("CNChangeHistoryAddSubgroupToGroupEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryAddSubgroupToGroupEvent
+#define BEAN_NEW_CNChangeHistoryAddSubgroupToGroupEvent
+static inline CNChangeHistoryAddSubgroupToGroupEvent    CNChangeHistoryAddSubgroupToGroupEvent_New(void)                                                { return (CNChangeHistoryAddSubgroupToGroupEvent)bean_new(bean_cls("CNChangeHistoryAddSubgroupToGroupEvent")); }
+#endif
 
 /* ===== CNChangeHistoryRemoveSubgroupFromGroupEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryRemoveSubgroupFromGroupEvent
 #define BEAN_TYPEDEF_CNChangeHistoryRemoveSubgroupFromGroupEvent
 typedef bean_id CNChangeHistoryRemoveSubgroupFromGroupEvent;
 #endif
-static inline CNGroup    CNChangeHistoryRemoveSubgroupFromGroupEvent_Subgroup(CNChangeHistoryRemoveSubgroupFromGroupEvent self)    { return ((CNGroup (*)(CNChangeHistoryRemoveSubgroupFromGroupEvent, SEL))bean_msgSend)(self, bean_sel("subgroup")); }
-static inline CNGroup    CNChangeHistoryRemoveSubgroupFromGroupEvent_Group(CNChangeHistoryRemoveSubgroupFromGroupEvent self)       { return ((CNGroup (*)(CNChangeHistoryRemoveSubgroupFromGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+static inline CNGroup                                        CNChangeHistoryRemoveSubgroupFromGroupEvent_Subgroup(CNChangeHistoryRemoveSubgroupFromGroupEvent self)    { return ((CNGroup (*)(CNChangeHistoryRemoveSubgroupFromGroupEvent, SEL))bean_msgSend)(self, bean_sel("subgroup")); }
+static inline CNGroup                                        CNChangeHistoryRemoveSubgroupFromGroupEvent_Group(CNChangeHistoryRemoveSubgroupFromGroupEvent self)       { return ((CNGroup (*)(CNChangeHistoryRemoveSubgroupFromGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryRemoveSubgroupFromGroupEvent
+#define BEAN_ALLOC_CNChangeHistoryRemoveSubgroupFromGroupEvent
+static inline CNChangeHistoryRemoveSubgroupFromGroupEvent    CNChangeHistoryRemoveSubgroupFromGroupEvent_Alloc(void)                                                   { return (CNChangeHistoryRemoveSubgroupFromGroupEvent)bean_alloc(bean_cls("CNChangeHistoryRemoveSubgroupFromGroupEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryRemoveSubgroupFromGroupEvent
+#define BEAN_NEW_CNChangeHistoryRemoveSubgroupFromGroupEvent
+static inline CNChangeHistoryRemoveSubgroupFromGroupEvent    CNChangeHistoryRemoveSubgroupFromGroupEvent_New(void)                                                     { return (CNChangeHistoryRemoveSubgroupFromGroupEvent)bean_new(bean_cls("CNChangeHistoryRemoveSubgroupFromGroupEvent")); }
+#endif
 
 /* ===== CNChangeHistoryUpdateGroupEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryUpdateGroupEvent
 #define BEAN_TYPEDEF_CNChangeHistoryUpdateGroupEvent
 typedef bean_id CNChangeHistoryUpdateGroupEvent;
 #endif
-static inline CNGroup    CNChangeHistoryUpdateGroupEvent_Group(CNChangeHistoryUpdateGroupEvent self)    { return ((CNGroup (*)(CNChangeHistoryUpdateGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+static inline CNGroup                            CNChangeHistoryUpdateGroupEvent_Group(CNChangeHistoryUpdateGroupEvent self)    { return ((CNGroup (*)(CNChangeHistoryUpdateGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryUpdateGroupEvent
+#define BEAN_ALLOC_CNChangeHistoryUpdateGroupEvent
+static inline CNChangeHistoryUpdateGroupEvent    CNChangeHistoryUpdateGroupEvent_Alloc(void)                                    { return (CNChangeHistoryUpdateGroupEvent)bean_alloc(bean_cls("CNChangeHistoryUpdateGroupEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryUpdateGroupEvent
+#define BEAN_NEW_CNChangeHistoryUpdateGroupEvent
+static inline CNChangeHistoryUpdateGroupEvent    CNChangeHistoryUpdateGroupEvent_New(void)                                      { return (CNChangeHistoryUpdateGroupEvent)bean_new(bean_cls("CNChangeHistoryUpdateGroupEvent")); }
+#endif
 
 /* ===== CNContact ===== */
 #ifndef BEAN_TYPEDEF_CNContact
@@ -1753,6 +1934,14 @@ static inline NSPredicate         CNContact_PredicateForContactsInContainerWithI
 static inline id                  CNContact_CopyWithZone(CNContact self, NSZone* zone)                                        { return ((id (*)(CNContact, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline id                  CNContact_MutableCopyWithZone(CNContact self, NSZone* zone)                                 { return ((id (*)(CNContact, SEL, NSZone*))bean_msgSend)(self, bean_sel("mutableCopyWithZone:"), zone); }
 static inline BOOL                CNContact_SupportsSecureCoding(void)                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContact"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNContact
+#define BEAN_ALLOC_CNContact
+static inline CNContact           CNContact_Alloc(void)                                                                       { return (CNContact)bean_alloc(bean_cls("CNContact")); }
+#endif
+#ifndef BEAN_NEW_CNContact
+#define BEAN_NEW_CNContact
+static inline CNContact           CNContact_New(void)                                                                         { return (CNContact)bean_new(bean_cls("CNContact")); }
+#endif
 
 /* ===== CNPostalAddressFormatter ===== */
 #ifndef BEAN_TYPEDEF_CNPostalAddressFormatter
@@ -1765,37 +1954,77 @@ static inline NSString                         CNPostalAddressFormatter_StringFr
 static inline NSAttributedString               CNPostalAddressFormatter_AttributedStringFromPostalAddress_WithDefaultAttributes(CNPostalAddressFormatter self, CNPostalAddress postalAddress, NSDictionary attributes)                { return ((NSAttributedString (*)(CNPostalAddressFormatter, SEL, CNPostalAddress, NSDictionary))bean_msgSend)(self, bean_sel("attributedStringFromPostalAddress:withDefaultAttributes:"), postalAddress, attributes); }
 static inline CNPostalAddressFormatterStyle    CNPostalAddressFormatter_Style(CNPostalAddressFormatter self)                                                                                                                          { return ((CNPostalAddressFormatterStyle (*)(CNPostalAddressFormatter, SEL))bean_msgSend)(self, bean_sel("style")); }
 static inline void                             CNPostalAddressFormatter_SetStyle(CNPostalAddressFormatter self, CNPostalAddressFormatterStyle style)                                                                                  { ((void (*)(CNPostalAddressFormatter, SEL, CNPostalAddressFormatterStyle))bean_msgSend)(self, bean_sel("setStyle:"), style); }
+#ifndef BEAN_ALLOC_CNPostalAddressFormatter
+#define BEAN_ALLOC_CNPostalAddressFormatter
+static inline CNPostalAddressFormatter         CNPostalAddressFormatter_Alloc(void)                                                                                                                                                   { return (CNPostalAddressFormatter)bean_alloc(bean_cls("CNPostalAddressFormatter")); }
+#endif
+#ifndef BEAN_NEW_CNPostalAddressFormatter
+#define BEAN_NEW_CNPostalAddressFormatter
+static inline CNPostalAddressFormatter         CNPostalAddressFormatter_New(void)                                                                                                                                                     { return (CNPostalAddressFormatter)bean_new(bean_cls("CNPostalAddressFormatter")); }
+#endif
 
 /* ===== CNChangeHistoryAddContactEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryAddContactEvent
 #define BEAN_TYPEDEF_CNChangeHistoryAddContactEvent
 typedef bean_id CNChangeHistoryAddContactEvent;
 #endif
-static inline CNContact    CNChangeHistoryAddContactEvent_Contact(CNChangeHistoryAddContactEvent self)                { return ((CNContact (*)(CNChangeHistoryAddContactEvent, SEL))bean_msgSend)(self, bean_sel("contact")); }
-static inline NSString     CNChangeHistoryAddContactEvent_ContainerIdentifier(CNChangeHistoryAddContactEvent self)    { return ((NSString (*)(CNChangeHistoryAddContactEvent, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
+static inline CNContact                         CNChangeHistoryAddContactEvent_Contact(CNChangeHistoryAddContactEvent self)                { return ((CNContact (*)(CNChangeHistoryAddContactEvent, SEL))bean_msgSend)(self, bean_sel("contact")); }
+static inline NSString                          CNChangeHistoryAddContactEvent_ContainerIdentifier(CNChangeHistoryAddContactEvent self)    { return ((NSString (*)(CNChangeHistoryAddContactEvent, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryAddContactEvent
+#define BEAN_ALLOC_CNChangeHistoryAddContactEvent
+static inline CNChangeHistoryAddContactEvent    CNChangeHistoryAddContactEvent_Alloc(void)                                                 { return (CNChangeHistoryAddContactEvent)bean_alloc(bean_cls("CNChangeHistoryAddContactEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryAddContactEvent
+#define BEAN_NEW_CNChangeHistoryAddContactEvent
+static inline CNChangeHistoryAddContactEvent    CNChangeHistoryAddContactEvent_New(void)                                                   { return (CNChangeHistoryAddContactEvent)bean_new(bean_cls("CNChangeHistoryAddContactEvent")); }
+#endif
 
 /* ===== CNChangeHistoryAddMemberToGroupEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryAddMemberToGroupEvent
 #define BEAN_TYPEDEF_CNChangeHistoryAddMemberToGroupEvent
 typedef bean_id CNChangeHistoryAddMemberToGroupEvent;
 #endif
-static inline CNContact    CNChangeHistoryAddMemberToGroupEvent_Member(CNChangeHistoryAddMemberToGroupEvent self)    { return ((CNContact (*)(CNChangeHistoryAddMemberToGroupEvent, SEL))bean_msgSend)(self, bean_sel("member")); }
-static inline CNGroup      CNChangeHistoryAddMemberToGroupEvent_Group(CNChangeHistoryAddMemberToGroupEvent self)     { return ((CNGroup (*)(CNChangeHistoryAddMemberToGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+static inline CNContact                               CNChangeHistoryAddMemberToGroupEvent_Member(CNChangeHistoryAddMemberToGroupEvent self)    { return ((CNContact (*)(CNChangeHistoryAddMemberToGroupEvent, SEL))bean_msgSend)(self, bean_sel("member")); }
+static inline CNGroup                                 CNChangeHistoryAddMemberToGroupEvent_Group(CNChangeHistoryAddMemberToGroupEvent self)     { return ((CNGroup (*)(CNChangeHistoryAddMemberToGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryAddMemberToGroupEvent
+#define BEAN_ALLOC_CNChangeHistoryAddMemberToGroupEvent
+static inline CNChangeHistoryAddMemberToGroupEvent    CNChangeHistoryAddMemberToGroupEvent_Alloc(void)                                          { return (CNChangeHistoryAddMemberToGroupEvent)bean_alloc(bean_cls("CNChangeHistoryAddMemberToGroupEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryAddMemberToGroupEvent
+#define BEAN_NEW_CNChangeHistoryAddMemberToGroupEvent
+static inline CNChangeHistoryAddMemberToGroupEvent    CNChangeHistoryAddMemberToGroupEvent_New(void)                                            { return (CNChangeHistoryAddMemberToGroupEvent)bean_new(bean_cls("CNChangeHistoryAddMemberToGroupEvent")); }
+#endif
 
 /* ===== CNChangeHistoryRemoveMemberFromGroupEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryRemoveMemberFromGroupEvent
 #define BEAN_TYPEDEF_CNChangeHistoryRemoveMemberFromGroupEvent
 typedef bean_id CNChangeHistoryRemoveMemberFromGroupEvent;
 #endif
-static inline CNContact    CNChangeHistoryRemoveMemberFromGroupEvent_Member(CNChangeHistoryRemoveMemberFromGroupEvent self)    { return ((CNContact (*)(CNChangeHistoryRemoveMemberFromGroupEvent, SEL))bean_msgSend)(self, bean_sel("member")); }
-static inline CNGroup      CNChangeHistoryRemoveMemberFromGroupEvent_Group(CNChangeHistoryRemoveMemberFromGroupEvent self)     { return ((CNGroup (*)(CNChangeHistoryRemoveMemberFromGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+static inline CNContact                                    CNChangeHistoryRemoveMemberFromGroupEvent_Member(CNChangeHistoryRemoveMemberFromGroupEvent self)    { return ((CNContact (*)(CNChangeHistoryRemoveMemberFromGroupEvent, SEL))bean_msgSend)(self, bean_sel("member")); }
+static inline CNGroup                                      CNChangeHistoryRemoveMemberFromGroupEvent_Group(CNChangeHistoryRemoveMemberFromGroupEvent self)     { return ((CNGroup (*)(CNChangeHistoryRemoveMemberFromGroupEvent, SEL))bean_msgSend)(self, bean_sel("group")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryRemoveMemberFromGroupEvent
+#define BEAN_ALLOC_CNChangeHistoryRemoveMemberFromGroupEvent
+static inline CNChangeHistoryRemoveMemberFromGroupEvent    CNChangeHistoryRemoveMemberFromGroupEvent_Alloc(void)                                               { return (CNChangeHistoryRemoveMemberFromGroupEvent)bean_alloc(bean_cls("CNChangeHistoryRemoveMemberFromGroupEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryRemoveMemberFromGroupEvent
+#define BEAN_NEW_CNChangeHistoryRemoveMemberFromGroupEvent
+static inline CNChangeHistoryRemoveMemberFromGroupEvent    CNChangeHistoryRemoveMemberFromGroupEvent_New(void)                                                 { return (CNChangeHistoryRemoveMemberFromGroupEvent)bean_new(bean_cls("CNChangeHistoryRemoveMemberFromGroupEvent")); }
+#endif
 
 /* ===== CNChangeHistoryUpdateContactEvent ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryUpdateContactEvent
 #define BEAN_TYPEDEF_CNChangeHistoryUpdateContactEvent
 typedef bean_id CNChangeHistoryUpdateContactEvent;
 #endif
-static inline CNContact    CNChangeHistoryUpdateContactEvent_Contact(CNChangeHistoryUpdateContactEvent self)    { return ((CNContact (*)(CNChangeHistoryUpdateContactEvent, SEL))bean_msgSend)(self, bean_sel("contact")); }
+static inline CNContact                            CNChangeHistoryUpdateContactEvent_Contact(CNChangeHistoryUpdateContactEvent self)    { return ((CNContact (*)(CNChangeHistoryUpdateContactEvent, SEL))bean_msgSend)(self, bean_sel("contact")); }
+#ifndef BEAN_ALLOC_CNChangeHistoryUpdateContactEvent
+#define BEAN_ALLOC_CNChangeHistoryUpdateContactEvent
+static inline CNChangeHistoryUpdateContactEvent    CNChangeHistoryUpdateContactEvent_Alloc(void)                                        { return (CNChangeHistoryUpdateContactEvent)bean_alloc(bean_cls("CNChangeHistoryUpdateContactEvent")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryUpdateContactEvent
+#define BEAN_NEW_CNChangeHistoryUpdateContactEvent
+static inline CNChangeHistoryUpdateContactEvent    CNChangeHistoryUpdateContactEvent_New(void)                                          { return (CNChangeHistoryUpdateContactEvent)bean_new(bean_cls("CNChangeHistoryUpdateContactEvent")); }
+#endif
 
 /* ===== CNContactFormatter ===== */
 #ifndef BEAN_TYPEDEF_CNContactFormatter
@@ -1814,56 +2043,88 @@ static inline id                           CNContactFormatter_DescriptorForRequi
 static inline CNContactFormatterStyle      CNContactFormatter_Style(CNContactFormatter self)                                                                                                    { return ((CNContactFormatterStyle (*)(CNContactFormatter, SEL))bean_msgSend)(self, bean_sel("style")); }
 static inline void                         CNContactFormatter_SetStyle(CNContactFormatter self, CNContactFormatterStyle style)                                                                  { ((void (*)(CNContactFormatter, SEL, CNContactFormatterStyle))bean_msgSend)(self, bean_sel("setStyle:"), style); }
 static inline BOOL                         CNContactFormatter_SupportsSecureCoding(void)                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactFormatter"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNContactFormatter
+#define BEAN_ALLOC_CNContactFormatter
+static inline CNContactFormatter           CNContactFormatter_Alloc(void)                                                                                                                       { return (CNContactFormatter)bean_alloc(bean_cls("CNContactFormatter")); }
+#endif
+#ifndef BEAN_NEW_CNContactFormatter
+#define BEAN_NEW_CNContactFormatter
+static inline CNContactFormatter           CNContactFormatter_New(void)                                                                                                                         { return (CNContactFormatter)bean_new(bean_cls("CNContactFormatter")); }
+#endif
 
 /* ===== CNContactProperty ===== */
 #ifndef BEAN_TYPEDEF_CNContactProperty
 #define BEAN_TYPEDEF_CNContactProperty
 typedef bean_id CNContactProperty;
 #endif
-static inline CNContact    CNContactProperty_Contact(CNContactProperty self)                       { return ((CNContact (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("contact")); }
-static inline NSString     CNContactProperty_Key(CNContactProperty self)                           { return ((NSString (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("key")); }
-static inline id           CNContactProperty_Value(CNContactProperty self)                         { return ((id (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline NSString     CNContactProperty_Identifier(CNContactProperty self)                    { return ((NSString (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("identifier")); }
-static inline NSString     CNContactProperty_Label(CNContactProperty self)                         { return ((NSString (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("label")); }
-static inline id           CNContactProperty_CopyWithZone(CNContactProperty self, NSZone* zone)    { return ((id (*)(CNContactProperty, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL         CNContactProperty_SupportsSecureCoding(void)                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactProperty"), bean_sel("supportsSecureCoding")); }
+static inline CNContact            CNContactProperty_Contact(CNContactProperty self)                       { return ((CNContact (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("contact")); }
+static inline NSString             CNContactProperty_Key(CNContactProperty self)                           { return ((NSString (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("key")); }
+static inline id                   CNContactProperty_Value(CNContactProperty self)                         { return ((id (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline NSString             CNContactProperty_Identifier(CNContactProperty self)                    { return ((NSString (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline NSString             CNContactProperty_Label(CNContactProperty self)                         { return ((NSString (*)(CNContactProperty, SEL))bean_msgSend)(self, bean_sel("label")); }
+static inline id                   CNContactProperty_CopyWithZone(CNContactProperty self, NSZone* zone)    { return ((id (*)(CNContactProperty, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                 CNContactProperty_SupportsSecureCoding(void)                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CNContactProperty"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CNContactProperty
+#define BEAN_ALLOC_CNContactProperty
+static inline CNContactProperty    CNContactProperty_Alloc(void)                                           { return (CNContactProperty)bean_alloc(bean_cls("CNContactProperty")); }
+#endif
+#ifndef BEAN_NEW_CNContactProperty
+#define BEAN_NEW_CNContactProperty
+static inline CNContactProperty    CNContactProperty_New(void)                                             { return (CNContactProperty)bean_new(bean_cls("CNContactProperty")); }
+#endif
 
 /* ===== CNSaveRequest ===== */
 #ifndef BEAN_TYPEDEF_CNSaveRequest
 #define BEAN_TYPEDEF_CNSaveRequest
 typedef bean_id CNSaveRequest;
 #endif
-static inline void        CNSaveRequest_AddContact_ToContainerWithIdentifier(CNSaveRequest self, CNMutableContact contact, NSString identifier)    { ((void (*)(CNSaveRequest, SEL, CNMutableContact, NSString))bean_msgSend)(self, bean_sel("addContact:toContainerWithIdentifier:"), contact, identifier); }
-static inline void        CNSaveRequest_UpdateContact(CNSaveRequest self, CNMutableContact contact)                                                { ((void (*)(CNSaveRequest, SEL, CNMutableContact))bean_msgSend)(self, bean_sel("updateContact:"), contact); }
-static inline void        CNSaveRequest_DeleteContact(CNSaveRequest self, CNMutableContact contact)                                                { ((void (*)(CNSaveRequest, SEL, CNMutableContact))bean_msgSend)(self, bean_sel("deleteContact:"), contact); }
-static inline void        CNSaveRequest_AddGroup_ToContainerWithIdentifier(CNSaveRequest self, CNMutableGroup group, NSString identifier)          { ((void (*)(CNSaveRequest, SEL, CNMutableGroup, NSString))bean_msgSend)(self, bean_sel("addGroup:toContainerWithIdentifier:"), group, identifier); }
-static inline void        CNSaveRequest_UpdateGroup(CNSaveRequest self, CNMutableGroup group)                                                      { ((void (*)(CNSaveRequest, SEL, CNMutableGroup))bean_msgSend)(self, bean_sel("updateGroup:"), group); }
-static inline void        CNSaveRequest_DeleteGroup(CNSaveRequest self, CNMutableGroup group)                                                      { ((void (*)(CNSaveRequest, SEL, CNMutableGroup))bean_msgSend)(self, bean_sel("deleteGroup:"), group); }
-static inline void        CNSaveRequest_AddSubgroup_ToGroup(CNSaveRequest self, CNGroup subgroup, CNGroup group)                                   { ((void (*)(CNSaveRequest, SEL, CNGroup, CNGroup))bean_msgSend)(self, bean_sel("addSubgroup:toGroup:"), subgroup, group); }
-static inline void        CNSaveRequest_RemoveSubgroup_FromGroup(CNSaveRequest self, CNGroup subgroup, CNGroup group)                              { ((void (*)(CNSaveRequest, SEL, CNGroup, CNGroup))bean_msgSend)(self, bean_sel("removeSubgroup:fromGroup:"), subgroup, group); }
-static inline void        CNSaveRequest_AddMember_ToGroup(CNSaveRequest self, CNContact contact, CNGroup group)                                    { ((void (*)(CNSaveRequest, SEL, CNContact, CNGroup))bean_msgSend)(self, bean_sel("addMember:toGroup:"), contact, group); }
-static inline void        CNSaveRequest_RemoveMember_FromGroup(CNSaveRequest self, CNContact contact, CNGroup group)                               { ((void (*)(CNSaveRequest, SEL, CNContact, CNGroup))bean_msgSend)(self, bean_sel("removeMember:fromGroup:"), contact, group); }
-static inline NSString    CNSaveRequest_TransactionAuthor(CNSaveRequest self)                                                                      { return ((NSString (*)(CNSaveRequest, SEL))bean_msgSend)(self, bean_sel("transactionAuthor")); }
-static inline void        CNSaveRequest_SetTransactionAuthor(CNSaveRequest self, NSString transactionAuthor)                                       { ((void (*)(CNSaveRequest, SEL, NSString))bean_msgSend)(self, bean_sel("setTransactionAuthor:"), transactionAuthor); }
-static inline BOOL        CNSaveRequest_ShouldRefetchContacts(CNSaveRequest self)                                                                  { return ((BOOL (*)(CNSaveRequest, SEL))bean_msgSend)(self, bean_sel("shouldRefetchContacts")); }
-static inline void        CNSaveRequest_SetShouldRefetchContacts(CNSaveRequest self, BOOL shouldRefetchContacts)                                   { ((void (*)(CNSaveRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldRefetchContacts:"), shouldRefetchContacts); }
+static inline void             CNSaveRequest_AddContact_ToContainerWithIdentifier(CNSaveRequest self, CNMutableContact contact, NSString identifier)    { ((void (*)(CNSaveRequest, SEL, CNMutableContact, NSString))bean_msgSend)(self, bean_sel("addContact:toContainerWithIdentifier:"), contact, identifier); }
+static inline void             CNSaveRequest_UpdateContact(CNSaveRequest self, CNMutableContact contact)                                                { ((void (*)(CNSaveRequest, SEL, CNMutableContact))bean_msgSend)(self, bean_sel("updateContact:"), contact); }
+static inline void             CNSaveRequest_DeleteContact(CNSaveRequest self, CNMutableContact contact)                                                { ((void (*)(CNSaveRequest, SEL, CNMutableContact))bean_msgSend)(self, bean_sel("deleteContact:"), contact); }
+static inline void             CNSaveRequest_AddGroup_ToContainerWithIdentifier(CNSaveRequest self, CNMutableGroup group, NSString identifier)          { ((void (*)(CNSaveRequest, SEL, CNMutableGroup, NSString))bean_msgSend)(self, bean_sel("addGroup:toContainerWithIdentifier:"), group, identifier); }
+static inline void             CNSaveRequest_UpdateGroup(CNSaveRequest self, CNMutableGroup group)                                                      { ((void (*)(CNSaveRequest, SEL, CNMutableGroup))bean_msgSend)(self, bean_sel("updateGroup:"), group); }
+static inline void             CNSaveRequest_DeleteGroup(CNSaveRequest self, CNMutableGroup group)                                                      { ((void (*)(CNSaveRequest, SEL, CNMutableGroup))bean_msgSend)(self, bean_sel("deleteGroup:"), group); }
+static inline void             CNSaveRequest_AddSubgroup_ToGroup(CNSaveRequest self, CNGroup subgroup, CNGroup group)                                   { ((void (*)(CNSaveRequest, SEL, CNGroup, CNGroup))bean_msgSend)(self, bean_sel("addSubgroup:toGroup:"), subgroup, group); }
+static inline void             CNSaveRequest_RemoveSubgroup_FromGroup(CNSaveRequest self, CNGroup subgroup, CNGroup group)                              { ((void (*)(CNSaveRequest, SEL, CNGroup, CNGroup))bean_msgSend)(self, bean_sel("removeSubgroup:fromGroup:"), subgroup, group); }
+static inline void             CNSaveRequest_AddMember_ToGroup(CNSaveRequest self, CNContact contact, CNGroup group)                                    { ((void (*)(CNSaveRequest, SEL, CNContact, CNGroup))bean_msgSend)(self, bean_sel("addMember:toGroup:"), contact, group); }
+static inline void             CNSaveRequest_RemoveMember_FromGroup(CNSaveRequest self, CNContact contact, CNGroup group)                               { ((void (*)(CNSaveRequest, SEL, CNContact, CNGroup))bean_msgSend)(self, bean_sel("removeMember:fromGroup:"), contact, group); }
+static inline NSString         CNSaveRequest_TransactionAuthor(CNSaveRequest self)                                                                      { return ((NSString (*)(CNSaveRequest, SEL))bean_msgSend)(self, bean_sel("transactionAuthor")); }
+static inline void             CNSaveRequest_SetTransactionAuthor(CNSaveRequest self, NSString transactionAuthor)                                       { ((void (*)(CNSaveRequest, SEL, NSString))bean_msgSend)(self, bean_sel("setTransactionAuthor:"), transactionAuthor); }
+static inline BOOL             CNSaveRequest_ShouldRefetchContacts(CNSaveRequest self)                                                                  { return ((BOOL (*)(CNSaveRequest, SEL))bean_msgSend)(self, bean_sel("shouldRefetchContacts")); }
+static inline void             CNSaveRequest_SetShouldRefetchContacts(CNSaveRequest self, BOOL shouldRefetchContacts)                                   { ((void (*)(CNSaveRequest, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldRefetchContacts:"), shouldRefetchContacts); }
+#ifndef BEAN_ALLOC_CNSaveRequest
+#define BEAN_ALLOC_CNSaveRequest
+static inline CNSaveRequest    CNSaveRequest_Alloc(void)                                                                                                { return (CNSaveRequest)bean_alloc(bean_cls("CNSaveRequest")); }
+#endif
+#ifndef BEAN_NEW_CNSaveRequest
+#define BEAN_NEW_CNSaveRequest
+static inline CNSaveRequest    CNSaveRequest_New(void)                                                                                                  { return (CNSaveRequest)bean_new(bean_cls("CNSaveRequest")); }
+#endif
 
 /* ===== CNChangeHistoryEventVisitor ===== */
 #ifndef BEAN_TYPEDEF_CNChangeHistoryEventVisitor
 #define BEAN_TYPEDEF_CNChangeHistoryEventVisitor
 typedef bean_id CNChangeHistoryEventVisitor;
 #endif
-static inline void    CNChangeHistoryEventVisitor_VisitDropEverythingEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryDropEverythingEvent event)                      { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryDropEverythingEvent))bean_msgSend)(self, bean_sel("visitDropEverythingEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitAddContactEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryAddContactEvent event)                              { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryAddContactEvent))bean_msgSend)(self, bean_sel("visitAddContactEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitUpdateContactEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryUpdateContactEvent event)                        { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryUpdateContactEvent))bean_msgSend)(self, bean_sel("visitUpdateContactEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitDeleteContactEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryDeleteContactEvent event)                        { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryDeleteContactEvent))bean_msgSend)(self, bean_sel("visitDeleteContactEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitAddGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryAddGroupEvent event)                                  { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryAddGroupEvent))bean_msgSend)(self, bean_sel("visitAddGroupEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitUpdateGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryUpdateGroupEvent event)                            { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryUpdateGroupEvent))bean_msgSend)(self, bean_sel("visitUpdateGroupEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitDeleteGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryDeleteGroupEvent event)                            { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryDeleteGroupEvent))bean_msgSend)(self, bean_sel("visitDeleteGroupEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitAddMemberToGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryAddMemberToGroupEvent event)                  { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryAddMemberToGroupEvent))bean_msgSend)(self, bean_sel("visitAddMemberToGroupEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitRemoveMemberFromGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryRemoveMemberFromGroupEvent event)        { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryRemoveMemberFromGroupEvent))bean_msgSend)(self, bean_sel("visitRemoveMemberFromGroupEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitAddSubgroupToGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryAddSubgroupToGroupEvent event)              { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryAddSubgroupToGroupEvent))bean_msgSend)(self, bean_sel("visitAddSubgroupToGroupEvent:"), event); }
-static inline void    CNChangeHistoryEventVisitor_VisitRemoveSubgroupFromGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryRemoveSubgroupFromGroupEvent event)    { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryRemoveSubgroupFromGroupEvent))bean_msgSend)(self, bean_sel("visitRemoveSubgroupFromGroupEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitDropEverythingEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryDropEverythingEvent event)                      { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryDropEverythingEvent))bean_msgSend)(self, bean_sel("visitDropEverythingEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitAddContactEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryAddContactEvent event)                              { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryAddContactEvent))bean_msgSend)(self, bean_sel("visitAddContactEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitUpdateContactEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryUpdateContactEvent event)                        { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryUpdateContactEvent))bean_msgSend)(self, bean_sel("visitUpdateContactEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitDeleteContactEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryDeleteContactEvent event)                        { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryDeleteContactEvent))bean_msgSend)(self, bean_sel("visitDeleteContactEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitAddGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryAddGroupEvent event)                                  { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryAddGroupEvent))bean_msgSend)(self, bean_sel("visitAddGroupEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitUpdateGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryUpdateGroupEvent event)                            { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryUpdateGroupEvent))bean_msgSend)(self, bean_sel("visitUpdateGroupEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitDeleteGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryDeleteGroupEvent event)                            { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryDeleteGroupEvent))bean_msgSend)(self, bean_sel("visitDeleteGroupEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitAddMemberToGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryAddMemberToGroupEvent event)                  { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryAddMemberToGroupEvent))bean_msgSend)(self, bean_sel("visitAddMemberToGroupEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitRemoveMemberFromGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryRemoveMemberFromGroupEvent event)        { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryRemoveMemberFromGroupEvent))bean_msgSend)(self, bean_sel("visitRemoveMemberFromGroupEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitAddSubgroupToGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryAddSubgroupToGroupEvent event)              { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryAddSubgroupToGroupEvent))bean_msgSend)(self, bean_sel("visitAddSubgroupToGroupEvent:"), event); }
+static inline void                           CNChangeHistoryEventVisitor_VisitRemoveSubgroupFromGroupEvent(CNChangeHistoryEventVisitor self, CNChangeHistoryRemoveSubgroupFromGroupEvent event)    { ((void (*)(CNChangeHistoryEventVisitor, SEL, CNChangeHistoryRemoveSubgroupFromGroupEvent))bean_msgSend)(self, bean_sel("visitRemoveSubgroupFromGroupEvent:"), event); }
+#ifndef BEAN_ALLOC_CNChangeHistoryEventVisitor
+#define BEAN_ALLOC_CNChangeHistoryEventVisitor
+static inline CNChangeHistoryEventVisitor    CNChangeHistoryEventVisitor_Alloc(void)                                                                                                               { return (CNChangeHistoryEventVisitor)bean_alloc(bean_cls("CNChangeHistoryEventVisitor")); }
+#endif
+#ifndef BEAN_NEW_CNChangeHistoryEventVisitor
+#define BEAN_NEW_CNChangeHistoryEventVisitor
+static inline CNChangeHistoryEventVisitor    CNChangeHistoryEventVisitor_New(void)                                                                                                                 { return (CNChangeHistoryEventVisitor)bean_new(bean_cls("CNChangeHistoryEventVisitor")); }
+#endif
 
 /* ===== CNContactStore ===== */
 #ifndef BEAN_TYPEDEF_CNContactStore
@@ -1883,6 +2144,14 @@ static inline NSArray                  CNContactStore_ContainersMatchingPredicat
 static inline BOOL                     CNContactStore_ExecuteSaveRequest_Error(CNContactStore self, CNSaveRequest saveRequest, NSError* error)                                                    { return ((BOOL (*)(CNContactStore, SEL, CNSaveRequest, NSError*))bean_msgSend)(self, bean_sel("executeSaveRequest:error:"), saveRequest, error); }
 static inline NSString                 CNContactStore_DefaultContainerIdentifier(CNContactStore self)                                                                                             { return ((NSString (*)(CNContactStore, SEL))bean_msgSend)(self, bean_sel("defaultContainerIdentifier")); }
 static inline NSData                   CNContactStore_CurrentHistoryToken(CNContactStore self)                                                                                                    { return ((NSData (*)(CNContactStore, SEL))bean_msgSend)(self, bean_sel("currentHistoryToken")); }
+#ifndef BEAN_ALLOC_CNContactStore
+#define BEAN_ALLOC_CNContactStore
+static inline CNContactStore           CNContactStore_Alloc(void)                                                                                                                                 { return (CNContactStore)bean_alloc(bean_cls("CNContactStore")); }
+#endif
+#ifndef BEAN_NEW_CNContactStore
+#define BEAN_NEW_CNContactStore
+static inline CNContactStore           CNContactStore_New(void)                                                                                                                                   { return (CNContactStore)bean_new(bean_cls("CNContactStore")); }
+#endif
 
 
 #ifdef __cplusplus

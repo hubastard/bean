@@ -3699,7 +3699,15 @@ typedef NSUInteger NSStringEncoding;
 #define BEAN_TYPEDEF_DOMAbstractView
 typedef bean_id DOMAbstractView;
 #endif
-static inline void*    DOMAbstractView_Document(DOMAbstractView self)    { return ((void* (*)(DOMAbstractView, SEL))bean_msgSend)(self, bean_sel("document")); }
+static inline void*              DOMAbstractView_Document(DOMAbstractView self)    { return ((void* (*)(DOMAbstractView, SEL))bean_msgSend)(self, bean_sel("document")); }
+#ifndef BEAN_ALLOC_DOMAbstractView
+#define BEAN_ALLOC_DOMAbstractView
+static inline DOMAbstractView    DOMAbstractView_Alloc(void)                       { return (DOMAbstractView)bean_alloc(bean_cls("DOMAbstractView")); }
+#endif
+#ifndef BEAN_NEW_DOMAbstractView
+#define BEAN_NEW_DOMAbstractView
+static inline DOMAbstractView    DOMAbstractView_New(void)                         { return (DOMAbstractView)bean_new(bean_cls("DOMAbstractView")); }
+#endif
 
 /* ===== DOMAttr ===== */
 #ifndef BEAN_TYPEDEF_DOMAttr
@@ -3712,6 +3720,14 @@ static inline NSString    DOMAttr_Value(DOMAttr self)                       { re
 static inline void        DOMAttr_SetValue(DOMAttr self, NSString value)    { ((void (*)(DOMAttr, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
 static inline void*       DOMAttr_OwnerElement(DOMAttr self)                { return ((void* (*)(DOMAttr, SEL))bean_msgSend)(self, bean_sel("ownerElement")); }
 static inline void*       DOMAttr_Style(DOMAttr self)                       { return ((void* (*)(DOMAttr, SEL))bean_msgSend)(self, bean_sel("style")); }
+#ifndef BEAN_ALLOC_DOMAttr
+#define BEAN_ALLOC_DOMAttr
+static inline DOMAttr     DOMAttr_Alloc(void)                               { return (DOMAttr)bean_alloc(bean_cls("DOMAttr")); }
+#endif
+#ifndef BEAN_NEW_DOMAttr
+#define BEAN_NEW_DOMAttr
+static inline DOMAttr     DOMAttr_New(void)                                 { return (DOMAttr)bean_new(bean_cls("DOMAttr")); }
+#endif
 
 /* ===== DOMBlob ===== */
 #ifndef BEAN_TYPEDEF_DOMBlob
@@ -3719,65 +3735,121 @@ static inline void*       DOMAttr_Style(DOMAttr self)                       { re
 typedef bean_id DOMBlob;
 #endif
 static inline unsigned long long    DOMBlob_Size(DOMBlob self)    { return ((unsigned long long (*)(DOMBlob, SEL))bean_msgSend)(self, bean_sel("size")); }
+#ifndef BEAN_ALLOC_DOMBlob
+#define BEAN_ALLOC_DOMBlob
+static inline DOMBlob               DOMBlob_Alloc(void)           { return (DOMBlob)bean_alloc(bean_cls("DOMBlob")); }
+#endif
+#ifndef BEAN_NEW_DOMBlob
+#define BEAN_NEW_DOMBlob
+static inline DOMBlob               DOMBlob_New(void)             { return (DOMBlob)bean_new(bean_cls("DOMBlob")); }
+#endif
 
 /* ===== DOMCSSCharsetRule ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSCharsetRule
 #define BEAN_TYPEDEF_DOMCSSCharsetRule
 typedef bean_id DOMCSSCharsetRule;
 #endif
-static inline NSString    DOMCSSCharsetRule_Encoding(DOMCSSCharsetRule self)    { return ((NSString (*)(DOMCSSCharsetRule, SEL))bean_msgSend)(self, bean_sel("encoding")); }
+static inline NSString             DOMCSSCharsetRule_Encoding(DOMCSSCharsetRule self)    { return ((NSString (*)(DOMCSSCharsetRule, SEL))bean_msgSend)(self, bean_sel("encoding")); }
+#ifndef BEAN_ALLOC_DOMCSSCharsetRule
+#define BEAN_ALLOC_DOMCSSCharsetRule
+static inline DOMCSSCharsetRule    DOMCSSCharsetRule_Alloc(void)                         { return (DOMCSSCharsetRule)bean_alloc(bean_cls("DOMCSSCharsetRule")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSCharsetRule
+#define BEAN_NEW_DOMCSSCharsetRule
+static inline DOMCSSCharsetRule    DOMCSSCharsetRule_New(void)                           { return (DOMCSSCharsetRule)bean_new(bean_cls("DOMCSSCharsetRule")); }
+#endif
 
 /* ===== DOMCSSFontFaceRule ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSFontFaceRule
 #define BEAN_TYPEDEF_DOMCSSFontFaceRule
 typedef bean_id DOMCSSFontFaceRule;
 #endif
-static inline void*    DOMCSSFontFaceRule_Style(DOMCSSFontFaceRule self)    { return ((void* (*)(DOMCSSFontFaceRule, SEL))bean_msgSend)(self, bean_sel("style")); }
+static inline void*                 DOMCSSFontFaceRule_Style(DOMCSSFontFaceRule self)    { return ((void* (*)(DOMCSSFontFaceRule, SEL))bean_msgSend)(self, bean_sel("style")); }
+#ifndef BEAN_ALLOC_DOMCSSFontFaceRule
+#define BEAN_ALLOC_DOMCSSFontFaceRule
+static inline DOMCSSFontFaceRule    DOMCSSFontFaceRule_Alloc(void)                       { return (DOMCSSFontFaceRule)bean_alloc(bean_cls("DOMCSSFontFaceRule")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSFontFaceRule
+#define BEAN_NEW_DOMCSSFontFaceRule
+static inline DOMCSSFontFaceRule    DOMCSSFontFaceRule_New(void)                         { return (DOMCSSFontFaceRule)bean_new(bean_cls("DOMCSSFontFaceRule")); }
+#endif
 
 /* ===== DOMCSSImportRule ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSImportRule
 #define BEAN_TYPEDEF_DOMCSSImportRule
 typedef bean_id DOMCSSImportRule;
 #endif
-static inline NSString    DOMCSSImportRule_Href(DOMCSSImportRule self)          { return ((NSString (*)(DOMCSSImportRule, SEL))bean_msgSend)(self, bean_sel("href")); }
-static inline void*       DOMCSSImportRule_Media(DOMCSSImportRule self)         { return ((void* (*)(DOMCSSImportRule, SEL))bean_msgSend)(self, bean_sel("media")); }
-static inline void*       DOMCSSImportRule_StyleSheet(DOMCSSImportRule self)    { return ((void* (*)(DOMCSSImportRule, SEL))bean_msgSend)(self, bean_sel("styleSheet")); }
+static inline NSString            DOMCSSImportRule_Href(DOMCSSImportRule self)          { return ((NSString (*)(DOMCSSImportRule, SEL))bean_msgSend)(self, bean_sel("href")); }
+static inline void*               DOMCSSImportRule_Media(DOMCSSImportRule self)         { return ((void* (*)(DOMCSSImportRule, SEL))bean_msgSend)(self, bean_sel("media")); }
+static inline void*               DOMCSSImportRule_StyleSheet(DOMCSSImportRule self)    { return ((void* (*)(DOMCSSImportRule, SEL))bean_msgSend)(self, bean_sel("styleSheet")); }
+#ifndef BEAN_ALLOC_DOMCSSImportRule
+#define BEAN_ALLOC_DOMCSSImportRule
+static inline DOMCSSImportRule    DOMCSSImportRule_Alloc(void)                          { return (DOMCSSImportRule)bean_alloc(bean_cls("DOMCSSImportRule")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSImportRule
+#define BEAN_NEW_DOMCSSImportRule
+static inline DOMCSSImportRule    DOMCSSImportRule_New(void)                            { return (DOMCSSImportRule)bean_new(bean_cls("DOMCSSImportRule")); }
+#endif
 
 /* ===== DOMCSSMediaRule ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSMediaRule
 #define BEAN_TYPEDEF_DOMCSSMediaRule
 typedef bean_id DOMCSSMediaRule;
 #endif
-static inline NSUInteger    DOMCSSMediaRule_InsertRule_Index(DOMCSSMediaRule self, NSString rule, NSUInteger index)    { return ((NSUInteger (*)(DOMCSSMediaRule, SEL, NSString, NSUInteger))bean_msgSend)(self, bean_sel("insertRule:index:"), rule, index); }
-static inline void          DOMCSSMediaRule_DeleteRule(DOMCSSMediaRule self, NSUInteger index)                         { ((void (*)(DOMCSSMediaRule, SEL, NSUInteger))bean_msgSend)(self, bean_sel("deleteRule:"), index); }
-static inline void*         DOMCSSMediaRule_Media(DOMCSSMediaRule self)                                                { return ((void* (*)(DOMCSSMediaRule, SEL))bean_msgSend)(self, bean_sel("media")); }
-static inline void*         DOMCSSMediaRule_CssRules(DOMCSSMediaRule self)                                             { return ((void* (*)(DOMCSSMediaRule, SEL))bean_msgSend)(self, bean_sel("cssRules")); }
-static inline NSUInteger    DOMCSSMediaRule_InsertRule(DOMCSSMediaRule self, NSString rule, NSUInteger index)          { return ((NSUInteger (*)(DOMCSSMediaRule, SEL, NSString, NSUInteger))bean_msgSend)(self, bean_sel("insertRule::"), rule, index); }
+static inline NSUInteger         DOMCSSMediaRule_InsertRule_Index(DOMCSSMediaRule self, NSString rule, NSUInteger index)    { return ((NSUInteger (*)(DOMCSSMediaRule, SEL, NSString, NSUInteger))bean_msgSend)(self, bean_sel("insertRule:index:"), rule, index); }
+static inline void               DOMCSSMediaRule_DeleteRule(DOMCSSMediaRule self, NSUInteger index)                         { ((void (*)(DOMCSSMediaRule, SEL, NSUInteger))bean_msgSend)(self, bean_sel("deleteRule:"), index); }
+static inline void*              DOMCSSMediaRule_Media(DOMCSSMediaRule self)                                                { return ((void* (*)(DOMCSSMediaRule, SEL))bean_msgSend)(self, bean_sel("media")); }
+static inline void*              DOMCSSMediaRule_CssRules(DOMCSSMediaRule self)                                             { return ((void* (*)(DOMCSSMediaRule, SEL))bean_msgSend)(self, bean_sel("cssRules")); }
+static inline NSUInteger         DOMCSSMediaRule_InsertRule(DOMCSSMediaRule self, NSString rule, NSUInteger index)          { return ((NSUInteger (*)(DOMCSSMediaRule, SEL, NSString, NSUInteger))bean_msgSend)(self, bean_sel("insertRule::"), rule, index); }
+#ifndef BEAN_ALLOC_DOMCSSMediaRule
+#define BEAN_ALLOC_DOMCSSMediaRule
+static inline DOMCSSMediaRule    DOMCSSMediaRule_Alloc(void)                                                                { return (DOMCSSMediaRule)bean_alloc(bean_cls("DOMCSSMediaRule")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSMediaRule
+#define BEAN_NEW_DOMCSSMediaRule
+static inline DOMCSSMediaRule    DOMCSSMediaRule_New(void)                                                                  { return (DOMCSSMediaRule)bean_new(bean_cls("DOMCSSMediaRule")); }
+#endif
 
 /* ===== DOMCSSPageRule ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSPageRule
 #define BEAN_TYPEDEF_DOMCSSPageRule
 typedef bean_id DOMCSSPageRule;
 #endif
-static inline NSString    DOMCSSPageRule_SelectorText(DOMCSSPageRule self)                              { return ((NSString (*)(DOMCSSPageRule, SEL))bean_msgSend)(self, bean_sel("selectorText")); }
-static inline void        DOMCSSPageRule_SetSelectorText(DOMCSSPageRule self, NSString selectorText)    { ((void (*)(DOMCSSPageRule, SEL, NSString))bean_msgSend)(self, bean_sel("setSelectorText:"), selectorText); }
-static inline void*       DOMCSSPageRule_Style(DOMCSSPageRule self)                                     { return ((void* (*)(DOMCSSPageRule, SEL))bean_msgSend)(self, bean_sel("style")); }
+static inline NSString          DOMCSSPageRule_SelectorText(DOMCSSPageRule self)                              { return ((NSString (*)(DOMCSSPageRule, SEL))bean_msgSend)(self, bean_sel("selectorText")); }
+static inline void              DOMCSSPageRule_SetSelectorText(DOMCSSPageRule self, NSString selectorText)    { ((void (*)(DOMCSSPageRule, SEL, NSString))bean_msgSend)(self, bean_sel("setSelectorText:"), selectorText); }
+static inline void*             DOMCSSPageRule_Style(DOMCSSPageRule self)                                     { return ((void* (*)(DOMCSSPageRule, SEL))bean_msgSend)(self, bean_sel("style")); }
+#ifndef BEAN_ALLOC_DOMCSSPageRule
+#define BEAN_ALLOC_DOMCSSPageRule
+static inline DOMCSSPageRule    DOMCSSPageRule_Alloc(void)                                                    { return (DOMCSSPageRule)bean_alloc(bean_cls("DOMCSSPageRule")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSPageRule
+#define BEAN_NEW_DOMCSSPageRule
+static inline DOMCSSPageRule    DOMCSSPageRule_New(void)                                                      { return (DOMCSSPageRule)bean_new(bean_cls("DOMCSSPageRule")); }
+#endif
 
 /* ===== DOMCSSPrimitiveValue ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSPrimitiveValue
 #define BEAN_TYPEDEF_DOMCSSPrimitiveValue
 typedef bean_id DOMCSSPrimitiveValue;
 #endif
-static inline void              DOMCSSPrimitiveValue_SetFloatValue_FloatValue(DOMCSSPrimitiveValue self, unsigned short unitType, CGFloat floatValue)          { ((void (*)(DOMCSSPrimitiveValue, SEL, unsigned short, CGFloat))bean_msgSend)(self, bean_sel("setFloatValue:floatValue:"), unitType, floatValue); }
-static inline CGFloat           DOMCSSPrimitiveValue_GetFloatValue(DOMCSSPrimitiveValue self, unsigned short unitType)                                         { return ((CGFloat (*)(DOMCSSPrimitiveValue, SEL, unsigned short))bean_msgSend_fpret)(self, bean_sel("getFloatValue:"), unitType); }
-static inline void              DOMCSSPrimitiveValue_SetStringValue_StringValue(DOMCSSPrimitiveValue self, unsigned short stringType, NSString stringValue)    { ((void (*)(DOMCSSPrimitiveValue, SEL, unsigned short, NSString))bean_msgSend)(self, bean_sel("setStringValue:stringValue:"), stringType, stringValue); }
-static inline NSString          DOMCSSPrimitiveValue_GetStringValue(DOMCSSPrimitiveValue self)                                                                 { return ((NSString (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("getStringValue")); }
-static inline void*             DOMCSSPrimitiveValue_GetCounterValue(DOMCSSPrimitiveValue self)                                                                { return ((void* (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("getCounterValue")); }
-static inline void*             DOMCSSPrimitiveValue_GetRectValue(DOMCSSPrimitiveValue self)                                                                   { return ((void* (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("getRectValue")); }
-static inline void*             DOMCSSPrimitiveValue_GetRGBColorValue(DOMCSSPrimitiveValue self)                                                               { return ((void* (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("getRGBColorValue")); }
-static inline unsigned short    DOMCSSPrimitiveValue_PrimitiveType(DOMCSSPrimitiveValue self)                                                                  { return ((unsigned short (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("primitiveType")); }
-static inline void              DOMCSSPrimitiveValue_SetFloatValue(DOMCSSPrimitiveValue self, unsigned short unitType, CGFloat floatValue)                     { ((void (*)(DOMCSSPrimitiveValue, SEL, unsigned short, CGFloat))bean_msgSend)(self, bean_sel("setFloatValue::"), unitType, floatValue); }
-static inline void              DOMCSSPrimitiveValue_SetStringValue(DOMCSSPrimitiveValue self, unsigned short stringType, NSString stringValue)                { ((void (*)(DOMCSSPrimitiveValue, SEL, unsigned short, NSString))bean_msgSend)(self, bean_sel("setStringValue::"), stringType, stringValue); }
+static inline void                    DOMCSSPrimitiveValue_SetFloatValue_FloatValue(DOMCSSPrimitiveValue self, unsigned short unitType, CGFloat floatValue)          { ((void (*)(DOMCSSPrimitiveValue, SEL, unsigned short, CGFloat))bean_msgSend)(self, bean_sel("setFloatValue:floatValue:"), unitType, floatValue); }
+static inline CGFloat                 DOMCSSPrimitiveValue_GetFloatValue(DOMCSSPrimitiveValue self, unsigned short unitType)                                         { return ((CGFloat (*)(DOMCSSPrimitiveValue, SEL, unsigned short))bean_msgSend_fpret)(self, bean_sel("getFloatValue:"), unitType); }
+static inline void                    DOMCSSPrimitiveValue_SetStringValue_StringValue(DOMCSSPrimitiveValue self, unsigned short stringType, NSString stringValue)    { ((void (*)(DOMCSSPrimitiveValue, SEL, unsigned short, NSString))bean_msgSend)(self, bean_sel("setStringValue:stringValue:"), stringType, stringValue); }
+static inline NSString                DOMCSSPrimitiveValue_GetStringValue(DOMCSSPrimitiveValue self)                                                                 { return ((NSString (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("getStringValue")); }
+static inline void*                   DOMCSSPrimitiveValue_GetCounterValue(DOMCSSPrimitiveValue self)                                                                { return ((void* (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("getCounterValue")); }
+static inline void*                   DOMCSSPrimitiveValue_GetRectValue(DOMCSSPrimitiveValue self)                                                                   { return ((void* (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("getRectValue")); }
+static inline void*                   DOMCSSPrimitiveValue_GetRGBColorValue(DOMCSSPrimitiveValue self)                                                               { return ((void* (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("getRGBColorValue")); }
+static inline unsigned short          DOMCSSPrimitiveValue_PrimitiveType(DOMCSSPrimitiveValue self)                                                                  { return ((unsigned short (*)(DOMCSSPrimitiveValue, SEL))bean_msgSend)(self, bean_sel("primitiveType")); }
+static inline void                    DOMCSSPrimitiveValue_SetFloatValue(DOMCSSPrimitiveValue self, unsigned short unitType, CGFloat floatValue)                     { ((void (*)(DOMCSSPrimitiveValue, SEL, unsigned short, CGFloat))bean_msgSend)(self, bean_sel("setFloatValue::"), unitType, floatValue); }
+static inline void                    DOMCSSPrimitiveValue_SetStringValue(DOMCSSPrimitiveValue self, unsigned short stringType, NSString stringValue)                { ((void (*)(DOMCSSPrimitiveValue, SEL, unsigned short, NSString))bean_msgSend)(self, bean_sel("setStringValue::"), stringType, stringValue); }
+#ifndef BEAN_ALLOC_DOMCSSPrimitiveValue
+#define BEAN_ALLOC_DOMCSSPrimitiveValue
+static inline DOMCSSPrimitiveValue    DOMCSSPrimitiveValue_Alloc(void)                                                                                               { return (DOMCSSPrimitiveValue)bean_alloc(bean_cls("DOMCSSPrimitiveValue")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSPrimitiveValue
+#define BEAN_NEW_DOMCSSPrimitiveValue
+static inline DOMCSSPrimitiveValue    DOMCSSPrimitiveValue_New(void)                                                                                                 { return (DOMCSSPrimitiveValue)bean_new(bean_cls("DOMCSSPrimitiveValue")); }
+#endif
 
 /* ===== DOMCSSRule ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSRule
@@ -3789,300 +3861,340 @@ static inline NSString          DOMCSSRule_CssText(DOMCSSRule self)             
 static inline void              DOMCSSRule_SetCssText(DOMCSSRule self, NSString cssText)    { ((void (*)(DOMCSSRule, SEL, NSString))bean_msgSend)(self, bean_sel("setCssText:"), cssText); }
 static inline void*             DOMCSSRule_ParentStyleSheet(DOMCSSRule self)                { return ((void* (*)(DOMCSSRule, SEL))bean_msgSend)(self, bean_sel("parentStyleSheet")); }
 static inline void*             DOMCSSRule_ParentRule(DOMCSSRule self)                      { return ((void* (*)(DOMCSSRule, SEL))bean_msgSend)(self, bean_sel("parentRule")); }
+#ifndef BEAN_ALLOC_DOMCSSRule
+#define BEAN_ALLOC_DOMCSSRule
+static inline DOMCSSRule        DOMCSSRule_Alloc(void)                                      { return (DOMCSSRule)bean_alloc(bean_cls("DOMCSSRule")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSRule
+#define BEAN_NEW_DOMCSSRule
+static inline DOMCSSRule        DOMCSSRule_New(void)                                        { return (DOMCSSRule)bean_new(bean_cls("DOMCSSRule")); }
+#endif
 
 /* ===== DOMCSSRuleList ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSRuleList
 #define BEAN_TYPEDEF_DOMCSSRuleList
 typedef bean_id DOMCSSRuleList;
 #endif
-static inline void*         DOMCSSRuleList_Item(DOMCSSRuleList self, NSUInteger index)    { return ((void* (*)(DOMCSSRuleList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline NSUInteger    DOMCSSRuleList_Length(DOMCSSRuleList self)                    { return ((NSUInteger (*)(DOMCSSRuleList, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void*             DOMCSSRuleList_Item(DOMCSSRuleList self, NSUInteger index)    { return ((void* (*)(DOMCSSRuleList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline NSUInteger        DOMCSSRuleList_Length(DOMCSSRuleList self)                    { return ((NSUInteger (*)(DOMCSSRuleList, SEL))bean_msgSend)(self, bean_sel("length")); }
+#ifndef BEAN_ALLOC_DOMCSSRuleList
+#define BEAN_ALLOC_DOMCSSRuleList
+static inline DOMCSSRuleList    DOMCSSRuleList_Alloc(void)                                    { return (DOMCSSRuleList)bean_alloc(bean_cls("DOMCSSRuleList")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSRuleList
+#define BEAN_NEW_DOMCSSRuleList
+static inline DOMCSSRuleList    DOMCSSRuleList_New(void)                                      { return (DOMCSSRuleList)bean_new(bean_cls("DOMCSSRuleList")); }
+#endif
 
 /* ===== DOMCSSStyleDeclaration ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSStyleDeclaration
 #define BEAN_TYPEDEF_DOMCSSStyleDeclaration
 typedef bean_id DOMCSSStyleDeclaration;
 #endif
-static inline NSString      DOMCSSStyleDeclaration_GetPropertyValue(DOMCSSStyleDeclaration self, NSString propertyName)                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("getPropertyValue:"), propertyName); }
-static inline void*         DOMCSSStyleDeclaration_GetPropertyCSSValue(DOMCSSStyleDeclaration self, NSString propertyName)                                              { return ((void* (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("getPropertyCSSValue:"), propertyName); }
-static inline NSString      DOMCSSStyleDeclaration_RemoveProperty(DOMCSSStyleDeclaration self, NSString propertyName)                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("removeProperty:"), propertyName); }
-static inline NSString      DOMCSSStyleDeclaration_GetPropertyPriority(DOMCSSStyleDeclaration self, NSString propertyName)                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("getPropertyPriority:"), propertyName); }
-static inline void          DOMCSSStyleDeclaration_SetProperty_Value_Priority(DOMCSSStyleDeclaration self, NSString propertyName, NSString value, NSString priority)    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("setProperty:value:priority:"), propertyName, value, priority); }
-static inline NSString      DOMCSSStyleDeclaration_Item(DOMCSSStyleDeclaration self, NSUInteger index)                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline NSString      DOMCSSStyleDeclaration_GetPropertyShorthand(DOMCSSStyleDeclaration self, NSString propertyName)                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("getPropertyShorthand:"), propertyName); }
-static inline BOOL          DOMCSSStyleDeclaration_IsPropertyImplicit(DOMCSSStyleDeclaration self, NSString propertyName)                                               { return ((BOOL (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("isPropertyImplicit:"), propertyName); }
-static inline NSString      DOMCSSStyleDeclaration_CssText(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cssText")); }
-static inline void          DOMCSSStyleDeclaration_SetCssText(DOMCSSStyleDeclaration self, NSString cssText)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCssText:"), cssText); }
-static inline NSUInteger    DOMCSSStyleDeclaration_Length(DOMCSSStyleDeclaration self)                                                                                  { return ((NSUInteger (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("length")); }
-static inline void*         DOMCSSStyleDeclaration_ParentRule(DOMCSSStyleDeclaration self)                                                                              { return ((void* (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("parentRule")); }
-static inline void          DOMCSSStyleDeclaration_SetProperty(DOMCSSStyleDeclaration self, NSString propertyName, NSString value, NSString priority)                   { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("setProperty:::"), propertyName, value, priority); }
-static inline NSString      DOMCSSStyleDeclaration_Azimuth(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("azimuth")); }
-static inline void          DOMCSSStyleDeclaration_SetAzimuth(DOMCSSStyleDeclaration self, NSString azimuth)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setAzimuth:"), azimuth); }
-static inline NSString      DOMCSSStyleDeclaration_Background(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("background")); }
-static inline void          DOMCSSStyleDeclaration_SetBackground(DOMCSSStyleDeclaration self, NSString background)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackground:"), background); }
-static inline NSString      DOMCSSStyleDeclaration_BackgroundAttachment(DOMCSSStyleDeclaration self)                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundAttachment")); }
-static inline void          DOMCSSStyleDeclaration_SetBackgroundAttachment(DOMCSSStyleDeclaration self, NSString backgroundAttachment)                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundAttachment:"), backgroundAttachment); }
-static inline NSString      DOMCSSStyleDeclaration_BackgroundColor(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundColor")); }
-static inline void          DOMCSSStyleDeclaration_SetBackgroundColor(DOMCSSStyleDeclaration self, NSString backgroundColor)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundColor:"), backgroundColor); }
-static inline NSString      DOMCSSStyleDeclaration_BackgroundImage(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundImage")); }
-static inline void          DOMCSSStyleDeclaration_SetBackgroundImage(DOMCSSStyleDeclaration self, NSString backgroundImage)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundImage:"), backgroundImage); }
-static inline NSString      DOMCSSStyleDeclaration_BackgroundPosition(DOMCSSStyleDeclaration self)                                                                      { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundPosition")); }
-static inline void          DOMCSSStyleDeclaration_SetBackgroundPosition(DOMCSSStyleDeclaration self, NSString backgroundPosition)                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundPosition:"), backgroundPosition); }
-static inline NSString      DOMCSSStyleDeclaration_BackgroundRepeat(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundRepeat")); }
-static inline void          DOMCSSStyleDeclaration_SetBackgroundRepeat(DOMCSSStyleDeclaration self, NSString backgroundRepeat)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundRepeat:"), backgroundRepeat); }
-static inline NSString      DOMCSSStyleDeclaration_Border(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("border")); }
-static inline void          DOMCSSStyleDeclaration_SetBorder(DOMCSSStyleDeclaration self, NSString border)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorder:"), border); }
-static inline NSString      DOMCSSStyleDeclaration_BorderCollapse(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderCollapse")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderCollapse(DOMCSSStyleDeclaration self, NSString borderCollapse)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderCollapse:"), borderCollapse); }
-static inline NSString      DOMCSSStyleDeclaration_BorderColor(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderColor")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderColor(DOMCSSStyleDeclaration self, NSString borderColor)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderColor:"), borderColor); }
-static inline NSString      DOMCSSStyleDeclaration_BorderSpacing(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderSpacing")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderSpacing(DOMCSSStyleDeclaration self, NSString borderSpacing)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderSpacing:"), borderSpacing); }
-static inline NSString      DOMCSSStyleDeclaration_BorderStyle(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderStyle")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderStyle(DOMCSSStyleDeclaration self, NSString borderStyle)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderStyle:"), borderStyle); }
-static inline NSString      DOMCSSStyleDeclaration_BorderTop(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderTop")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderTop(DOMCSSStyleDeclaration self, NSString borderTop)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderTop:"), borderTop); }
-static inline NSString      DOMCSSStyleDeclaration_BorderRight(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderRight")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderRight(DOMCSSStyleDeclaration self, NSString borderRight)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderRight:"), borderRight); }
-static inline NSString      DOMCSSStyleDeclaration_BorderBottom(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderBottom")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderBottom(DOMCSSStyleDeclaration self, NSString borderBottom)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderBottom:"), borderBottom); }
-static inline NSString      DOMCSSStyleDeclaration_BorderLeft(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderLeft")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderLeft(DOMCSSStyleDeclaration self, NSString borderLeft)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderLeft:"), borderLeft); }
-static inline NSString      DOMCSSStyleDeclaration_BorderTopColor(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderTopColor")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderTopColor(DOMCSSStyleDeclaration self, NSString borderTopColor)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderTopColor:"), borderTopColor); }
-static inline NSString      DOMCSSStyleDeclaration_BorderRightColor(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderRightColor")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderRightColor(DOMCSSStyleDeclaration self, NSString borderRightColor)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderRightColor:"), borderRightColor); }
-static inline NSString      DOMCSSStyleDeclaration_BorderBottomColor(DOMCSSStyleDeclaration self)                                                                       { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderBottomColor")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderBottomColor(DOMCSSStyleDeclaration self, NSString borderBottomColor)                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderBottomColor:"), borderBottomColor); }
-static inline NSString      DOMCSSStyleDeclaration_BorderLeftColor(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderLeftColor")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderLeftColor(DOMCSSStyleDeclaration self, NSString borderLeftColor)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderLeftColor:"), borderLeftColor); }
-static inline NSString      DOMCSSStyleDeclaration_BorderTopStyle(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderTopStyle")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderTopStyle(DOMCSSStyleDeclaration self, NSString borderTopStyle)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderTopStyle:"), borderTopStyle); }
-static inline NSString      DOMCSSStyleDeclaration_BorderRightStyle(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderRightStyle")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderRightStyle(DOMCSSStyleDeclaration self, NSString borderRightStyle)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderRightStyle:"), borderRightStyle); }
-static inline NSString      DOMCSSStyleDeclaration_BorderBottomStyle(DOMCSSStyleDeclaration self)                                                                       { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderBottomStyle")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderBottomStyle(DOMCSSStyleDeclaration self, NSString borderBottomStyle)                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderBottomStyle:"), borderBottomStyle); }
-static inline NSString      DOMCSSStyleDeclaration_BorderLeftStyle(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderLeftStyle")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderLeftStyle(DOMCSSStyleDeclaration self, NSString borderLeftStyle)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderLeftStyle:"), borderLeftStyle); }
-static inline NSString      DOMCSSStyleDeclaration_BorderTopWidth(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderTopWidth")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderTopWidth(DOMCSSStyleDeclaration self, NSString borderTopWidth)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderTopWidth:"), borderTopWidth); }
-static inline NSString      DOMCSSStyleDeclaration_BorderRightWidth(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderRightWidth")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderRightWidth(DOMCSSStyleDeclaration self, NSString borderRightWidth)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderRightWidth:"), borderRightWidth); }
-static inline NSString      DOMCSSStyleDeclaration_BorderBottomWidth(DOMCSSStyleDeclaration self)                                                                       { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderBottomWidth")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderBottomWidth(DOMCSSStyleDeclaration self, NSString borderBottomWidth)                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderBottomWidth:"), borderBottomWidth); }
-static inline NSString      DOMCSSStyleDeclaration_BorderLeftWidth(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderLeftWidth")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderLeftWidth(DOMCSSStyleDeclaration self, NSString borderLeftWidth)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderLeftWidth:"), borderLeftWidth); }
-static inline NSString      DOMCSSStyleDeclaration_BorderWidth(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderWidth")); }
-static inline void          DOMCSSStyleDeclaration_SetBorderWidth(DOMCSSStyleDeclaration self, NSString borderWidth)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderWidth:"), borderWidth); }
-static inline NSString      DOMCSSStyleDeclaration_Bottom(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("bottom")); }
-static inline void          DOMCSSStyleDeclaration_SetBottom(DOMCSSStyleDeclaration self, NSString bottom)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBottom:"), bottom); }
-static inline NSString      DOMCSSStyleDeclaration_CaptionSide(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("captionSide")); }
-static inline void          DOMCSSStyleDeclaration_SetCaptionSide(DOMCSSStyleDeclaration self, NSString captionSide)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCaptionSide:"), captionSide); }
-static inline NSString      DOMCSSStyleDeclaration_Clear(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("clear")); }
-static inline void          DOMCSSStyleDeclaration_SetClear(DOMCSSStyleDeclaration self, NSString clear)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setClear:"), clear); }
-static inline NSString      DOMCSSStyleDeclaration_Clip(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("clip")); }
-static inline void          DOMCSSStyleDeclaration_SetClip(DOMCSSStyleDeclaration self, NSString clip)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setClip:"), clip); }
-static inline NSString      DOMCSSStyleDeclaration_Color(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("color")); }
-static inline void          DOMCSSStyleDeclaration_SetColor(DOMCSSStyleDeclaration self, NSString color)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setColor:"), color); }
-static inline NSString      DOMCSSStyleDeclaration_Content(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("content")); }
-static inline void          DOMCSSStyleDeclaration_SetContent(DOMCSSStyleDeclaration self, NSString content)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setContent:"), content); }
-static inline NSString      DOMCSSStyleDeclaration_CounterIncrement(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("counterIncrement")); }
-static inline void          DOMCSSStyleDeclaration_SetCounterIncrement(DOMCSSStyleDeclaration self, NSString counterIncrement)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCounterIncrement:"), counterIncrement); }
-static inline NSString      DOMCSSStyleDeclaration_CounterReset(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("counterReset")); }
-static inline void          DOMCSSStyleDeclaration_SetCounterReset(DOMCSSStyleDeclaration self, NSString counterReset)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCounterReset:"), counterReset); }
-static inline NSString      DOMCSSStyleDeclaration_Cue(DOMCSSStyleDeclaration self)                                                                                     { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cue")); }
-static inline void          DOMCSSStyleDeclaration_SetCue(DOMCSSStyleDeclaration self, NSString cue)                                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCue:"), cue); }
-static inline NSString      DOMCSSStyleDeclaration_CueAfter(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cueAfter")); }
-static inline void          DOMCSSStyleDeclaration_SetCueAfter(DOMCSSStyleDeclaration self, NSString cueAfter)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCueAfter:"), cueAfter); }
-static inline NSString      DOMCSSStyleDeclaration_CueBefore(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cueBefore")); }
-static inline void          DOMCSSStyleDeclaration_SetCueBefore(DOMCSSStyleDeclaration self, NSString cueBefore)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCueBefore:"), cueBefore); }
-static inline NSString      DOMCSSStyleDeclaration_Cursor(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cursor")); }
-static inline void          DOMCSSStyleDeclaration_SetCursor(DOMCSSStyleDeclaration self, NSString cursor)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCursor:"), cursor); }
-static inline NSString      DOMCSSStyleDeclaration_Direction(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("direction")); }
-static inline void          DOMCSSStyleDeclaration_SetDirection(DOMCSSStyleDeclaration self, NSString direction)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setDirection:"), direction); }
-static inline NSString      DOMCSSStyleDeclaration_Display(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("display")); }
-static inline void          DOMCSSStyleDeclaration_SetDisplay(DOMCSSStyleDeclaration self, NSString display)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setDisplay:"), display); }
-static inline NSString      DOMCSSStyleDeclaration_Elevation(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("elevation")); }
-static inline void          DOMCSSStyleDeclaration_SetElevation(DOMCSSStyleDeclaration self, NSString elevation)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setElevation:"), elevation); }
-static inline NSString      DOMCSSStyleDeclaration_EmptyCells(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("emptyCells")); }
-static inline void          DOMCSSStyleDeclaration_SetEmptyCells(DOMCSSStyleDeclaration self, NSString emptyCells)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setEmptyCells:"), emptyCells); }
-static inline NSString      DOMCSSStyleDeclaration_CssFloat(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cssFloat")); }
-static inline void          DOMCSSStyleDeclaration_SetCssFloat(DOMCSSStyleDeclaration self, NSString cssFloat)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCssFloat:"), cssFloat); }
-static inline NSString      DOMCSSStyleDeclaration_Font(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("font")); }
-static inline void          DOMCSSStyleDeclaration_SetFont(DOMCSSStyleDeclaration self, NSString font)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFont:"), font); }
-static inline NSString      DOMCSSStyleDeclaration_FontFamily(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontFamily")); }
-static inline void          DOMCSSStyleDeclaration_SetFontFamily(DOMCSSStyleDeclaration self, NSString fontFamily)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontFamily:"), fontFamily); }
-static inline NSString      DOMCSSStyleDeclaration_FontSize(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontSize")); }
-static inline void          DOMCSSStyleDeclaration_SetFontSize(DOMCSSStyleDeclaration self, NSString fontSize)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontSize:"), fontSize); }
-static inline NSString      DOMCSSStyleDeclaration_FontSizeAdjust(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontSizeAdjust")); }
-static inline void          DOMCSSStyleDeclaration_SetFontSizeAdjust(DOMCSSStyleDeclaration self, NSString fontSizeAdjust)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontSizeAdjust:"), fontSizeAdjust); }
-static inline NSString      DOMCSSStyleDeclaration_FontStretch(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontStretch")); }
-static inline void          DOMCSSStyleDeclaration_SetFontStretch(DOMCSSStyleDeclaration self, NSString fontStretch)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontStretch:"), fontStretch); }
-static inline NSString      DOMCSSStyleDeclaration_FontStyle(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontStyle")); }
-static inline void          DOMCSSStyleDeclaration_SetFontStyle(DOMCSSStyleDeclaration self, NSString fontStyle)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontStyle:"), fontStyle); }
-static inline NSString      DOMCSSStyleDeclaration_FontVariant(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontVariant")); }
-static inline void          DOMCSSStyleDeclaration_SetFontVariant(DOMCSSStyleDeclaration self, NSString fontVariant)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontVariant:"), fontVariant); }
-static inline NSString      DOMCSSStyleDeclaration_FontWeight(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontWeight")); }
-static inline void          DOMCSSStyleDeclaration_SetFontWeight(DOMCSSStyleDeclaration self, NSString fontWeight)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontWeight:"), fontWeight); }
-static inline NSString      DOMCSSStyleDeclaration_Height(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline void          DOMCSSStyleDeclaration_SetHeight(DOMCSSStyleDeclaration self, NSString height)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
-static inline NSString      DOMCSSStyleDeclaration_Left(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("left")); }
-static inline void          DOMCSSStyleDeclaration_SetLeft(DOMCSSStyleDeclaration self, NSString left)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setLeft:"), left); }
-static inline NSString      DOMCSSStyleDeclaration_LetterSpacing(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("letterSpacing")); }
-static inline void          DOMCSSStyleDeclaration_SetLetterSpacing(DOMCSSStyleDeclaration self, NSString letterSpacing)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setLetterSpacing:"), letterSpacing); }
-static inline NSString      DOMCSSStyleDeclaration_LineHeight(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("lineHeight")); }
-static inline void          DOMCSSStyleDeclaration_SetLineHeight(DOMCSSStyleDeclaration self, NSString lineHeight)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setLineHeight:"), lineHeight); }
-static inline NSString      DOMCSSStyleDeclaration_ListStyle(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("listStyle")); }
-static inline void          DOMCSSStyleDeclaration_SetListStyle(DOMCSSStyleDeclaration self, NSString listStyle)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setListStyle:"), listStyle); }
-static inline NSString      DOMCSSStyleDeclaration_ListStyleImage(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("listStyleImage")); }
-static inline void          DOMCSSStyleDeclaration_SetListStyleImage(DOMCSSStyleDeclaration self, NSString listStyleImage)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setListStyleImage:"), listStyleImage); }
-static inline NSString      DOMCSSStyleDeclaration_ListStylePosition(DOMCSSStyleDeclaration self)                                                                       { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("listStylePosition")); }
-static inline void          DOMCSSStyleDeclaration_SetListStylePosition(DOMCSSStyleDeclaration self, NSString listStylePosition)                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setListStylePosition:"), listStylePosition); }
-static inline NSString      DOMCSSStyleDeclaration_ListStyleType(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("listStyleType")); }
-static inline void          DOMCSSStyleDeclaration_SetListStyleType(DOMCSSStyleDeclaration self, NSString listStyleType)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setListStyleType:"), listStyleType); }
-static inline NSString      DOMCSSStyleDeclaration_Margin(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("margin")); }
-static inline void          DOMCSSStyleDeclaration_SetMargin(DOMCSSStyleDeclaration self, NSString margin)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMargin:"), margin); }
-static inline NSString      DOMCSSStyleDeclaration_MarginTop(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marginTop")); }
-static inline void          DOMCSSStyleDeclaration_SetMarginTop(DOMCSSStyleDeclaration self, NSString marginTop)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginTop:"), marginTop); }
-static inline NSString      DOMCSSStyleDeclaration_MarginRight(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marginRight")); }
-static inline void          DOMCSSStyleDeclaration_SetMarginRight(DOMCSSStyleDeclaration self, NSString marginRight)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginRight:"), marginRight); }
-static inline NSString      DOMCSSStyleDeclaration_MarginBottom(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marginBottom")); }
-static inline void          DOMCSSStyleDeclaration_SetMarginBottom(DOMCSSStyleDeclaration self, NSString marginBottom)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginBottom:"), marginBottom); }
-static inline NSString      DOMCSSStyleDeclaration_MarginLeft(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marginLeft")); }
-static inline void          DOMCSSStyleDeclaration_SetMarginLeft(DOMCSSStyleDeclaration self, NSString marginLeft)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginLeft:"), marginLeft); }
-static inline NSString      DOMCSSStyleDeclaration_MarkerOffset(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("markerOffset")); }
-static inline void          DOMCSSStyleDeclaration_SetMarkerOffset(DOMCSSStyleDeclaration self, NSString markerOffset)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarkerOffset:"), markerOffset); }
-static inline NSString      DOMCSSStyleDeclaration_Marks(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marks")); }
-static inline void          DOMCSSStyleDeclaration_SetMarks(DOMCSSStyleDeclaration self, NSString marks)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarks:"), marks); }
-static inline NSString      DOMCSSStyleDeclaration_MaxHeight(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("maxHeight")); }
-static inline void          DOMCSSStyleDeclaration_SetMaxHeight(DOMCSSStyleDeclaration self, NSString maxHeight)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMaxHeight:"), maxHeight); }
-static inline NSString      DOMCSSStyleDeclaration_MaxWidth(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("maxWidth")); }
-static inline void          DOMCSSStyleDeclaration_SetMaxWidth(DOMCSSStyleDeclaration self, NSString maxWidth)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMaxWidth:"), maxWidth); }
-static inline NSString      DOMCSSStyleDeclaration_MinHeight(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("minHeight")); }
-static inline void          DOMCSSStyleDeclaration_SetMinHeight(DOMCSSStyleDeclaration self, NSString minHeight)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMinHeight:"), minHeight); }
-static inline NSString      DOMCSSStyleDeclaration_MinWidth(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("minWidth")); }
-static inline void          DOMCSSStyleDeclaration_SetMinWidth(DOMCSSStyleDeclaration self, NSString minWidth)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMinWidth:"), minWidth); }
-static inline NSString      DOMCSSStyleDeclaration_Orphans(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("orphans")); }
-static inline void          DOMCSSStyleDeclaration_SetOrphans(DOMCSSStyleDeclaration self, NSString orphans)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOrphans:"), orphans); }
-static inline NSString      DOMCSSStyleDeclaration_Outline(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("outline")); }
-static inline void          DOMCSSStyleDeclaration_SetOutline(DOMCSSStyleDeclaration self, NSString outline)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOutline:"), outline); }
-static inline NSString      DOMCSSStyleDeclaration_OutlineColor(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("outlineColor")); }
-static inline void          DOMCSSStyleDeclaration_SetOutlineColor(DOMCSSStyleDeclaration self, NSString outlineColor)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOutlineColor:"), outlineColor); }
-static inline NSString      DOMCSSStyleDeclaration_OutlineStyle(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("outlineStyle")); }
-static inline void          DOMCSSStyleDeclaration_SetOutlineStyle(DOMCSSStyleDeclaration self, NSString outlineStyle)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOutlineStyle:"), outlineStyle); }
-static inline NSString      DOMCSSStyleDeclaration_OutlineWidth(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("outlineWidth")); }
-static inline void          DOMCSSStyleDeclaration_SetOutlineWidth(DOMCSSStyleDeclaration self, NSString outlineWidth)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOutlineWidth:"), outlineWidth); }
-static inline NSString      DOMCSSStyleDeclaration_Overflow(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("overflow")); }
-static inline void          DOMCSSStyleDeclaration_SetOverflow(DOMCSSStyleDeclaration self, NSString overflow)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOverflow:"), overflow); }
-static inline NSString      DOMCSSStyleDeclaration_Padding(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("padding")); }
-static inline void          DOMCSSStyleDeclaration_SetPadding(DOMCSSStyleDeclaration self, NSString padding)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPadding:"), padding); }
-static inline NSString      DOMCSSStyleDeclaration_PaddingTop(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("paddingTop")); }
-static inline void          DOMCSSStyleDeclaration_SetPaddingTop(DOMCSSStyleDeclaration self, NSString paddingTop)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPaddingTop:"), paddingTop); }
-static inline NSString      DOMCSSStyleDeclaration_PaddingRight(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("paddingRight")); }
-static inline void          DOMCSSStyleDeclaration_SetPaddingRight(DOMCSSStyleDeclaration self, NSString paddingRight)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPaddingRight:"), paddingRight); }
-static inline NSString      DOMCSSStyleDeclaration_PaddingBottom(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("paddingBottom")); }
-static inline void          DOMCSSStyleDeclaration_SetPaddingBottom(DOMCSSStyleDeclaration self, NSString paddingBottom)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPaddingBottom:"), paddingBottom); }
-static inline NSString      DOMCSSStyleDeclaration_PaddingLeft(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("paddingLeft")); }
-static inline void          DOMCSSStyleDeclaration_SetPaddingLeft(DOMCSSStyleDeclaration self, NSString paddingLeft)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPaddingLeft:"), paddingLeft); }
-static inline NSString      DOMCSSStyleDeclaration_Page(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("page")); }
-static inline void          DOMCSSStyleDeclaration_SetPage(DOMCSSStyleDeclaration self, NSString page)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPage:"), page); }
-static inline NSString      DOMCSSStyleDeclaration_PageBreakAfter(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pageBreakAfter")); }
-static inline void          DOMCSSStyleDeclaration_SetPageBreakAfter(DOMCSSStyleDeclaration self, NSString pageBreakAfter)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPageBreakAfter:"), pageBreakAfter); }
-static inline NSString      DOMCSSStyleDeclaration_PageBreakBefore(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pageBreakBefore")); }
-static inline void          DOMCSSStyleDeclaration_SetPageBreakBefore(DOMCSSStyleDeclaration self, NSString pageBreakBefore)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPageBreakBefore:"), pageBreakBefore); }
-static inline NSString      DOMCSSStyleDeclaration_PageBreakInside(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pageBreakInside")); }
-static inline void          DOMCSSStyleDeclaration_SetPageBreakInside(DOMCSSStyleDeclaration self, NSString pageBreakInside)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPageBreakInside:"), pageBreakInside); }
-static inline NSString      DOMCSSStyleDeclaration_Pause(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pause")); }
-static inline void          DOMCSSStyleDeclaration_SetPause(DOMCSSStyleDeclaration self, NSString pause)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPause:"), pause); }
-static inline NSString      DOMCSSStyleDeclaration_PauseAfter(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pauseAfter")); }
-static inline void          DOMCSSStyleDeclaration_SetPauseAfter(DOMCSSStyleDeclaration self, NSString pauseAfter)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPauseAfter:"), pauseAfter); }
-static inline NSString      DOMCSSStyleDeclaration_PauseBefore(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pauseBefore")); }
-static inline void          DOMCSSStyleDeclaration_SetPauseBefore(DOMCSSStyleDeclaration self, NSString pauseBefore)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPauseBefore:"), pauseBefore); }
-static inline NSString      DOMCSSStyleDeclaration_Pitch(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pitch")); }
-static inline void          DOMCSSStyleDeclaration_SetPitch(DOMCSSStyleDeclaration self, NSString pitch)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPitch:"), pitch); }
-static inline NSString      DOMCSSStyleDeclaration_PitchRange(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pitchRange")); }
-static inline void          DOMCSSStyleDeclaration_SetPitchRange(DOMCSSStyleDeclaration self, NSString pitchRange)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPitchRange:"), pitchRange); }
-static inline NSString      DOMCSSStyleDeclaration_PlayDuring(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("playDuring")); }
-static inline void          DOMCSSStyleDeclaration_SetPlayDuring(DOMCSSStyleDeclaration self, NSString playDuring)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPlayDuring:"), playDuring); }
-static inline NSString      DOMCSSStyleDeclaration_Position(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("position")); }
-static inline void          DOMCSSStyleDeclaration_SetPosition(DOMCSSStyleDeclaration self, NSString position)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPosition:"), position); }
-static inline NSString      DOMCSSStyleDeclaration_Quotes(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("quotes")); }
-static inline void          DOMCSSStyleDeclaration_SetQuotes(DOMCSSStyleDeclaration self, NSString quotes)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setQuotes:"), quotes); }
-static inline NSString      DOMCSSStyleDeclaration_Richness(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("richness")); }
-static inline void          DOMCSSStyleDeclaration_SetRichness(DOMCSSStyleDeclaration self, NSString richness)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setRichness:"), richness); }
-static inline NSString      DOMCSSStyleDeclaration_Right(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("right")); }
-static inline void          DOMCSSStyleDeclaration_SetRight(DOMCSSStyleDeclaration self, NSString right)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setRight:"), right); }
-static inline NSString      DOMCSSStyleDeclaration_Size(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("size")); }
-static inline void          DOMCSSStyleDeclaration_SetSize(DOMCSSStyleDeclaration self, NSString size)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
-static inline NSString      DOMCSSStyleDeclaration_Speak(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speak")); }
-static inline void          DOMCSSStyleDeclaration_SetSpeak(DOMCSSStyleDeclaration self, NSString speak)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeak:"), speak); }
-static inline NSString      DOMCSSStyleDeclaration_SpeakHeader(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speakHeader")); }
-static inline void          DOMCSSStyleDeclaration_SetSpeakHeader(DOMCSSStyleDeclaration self, NSString speakHeader)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeakHeader:"), speakHeader); }
-static inline NSString      DOMCSSStyleDeclaration_SpeakNumeral(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speakNumeral")); }
-static inline void          DOMCSSStyleDeclaration_SetSpeakNumeral(DOMCSSStyleDeclaration self, NSString speakNumeral)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeakNumeral:"), speakNumeral); }
-static inline NSString      DOMCSSStyleDeclaration_SpeakPunctuation(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speakPunctuation")); }
-static inline void          DOMCSSStyleDeclaration_SetSpeakPunctuation(DOMCSSStyleDeclaration self, NSString speakPunctuation)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeakPunctuation:"), speakPunctuation); }
-static inline NSString      DOMCSSStyleDeclaration_SpeechRate(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speechRate")); }
-static inline void          DOMCSSStyleDeclaration_SetSpeechRate(DOMCSSStyleDeclaration self, NSString speechRate)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeechRate:"), speechRate); }
-static inline NSString      DOMCSSStyleDeclaration_Stress(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("stress")); }
-static inline void          DOMCSSStyleDeclaration_SetStress(DOMCSSStyleDeclaration self, NSString stress)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setStress:"), stress); }
-static inline NSString      DOMCSSStyleDeclaration_TableLayout(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("tableLayout")); }
-static inline void          DOMCSSStyleDeclaration_SetTableLayout(DOMCSSStyleDeclaration self, NSString tableLayout)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTableLayout:"), tableLayout); }
-static inline NSString      DOMCSSStyleDeclaration_TextAlign(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textAlign")); }
-static inline void          DOMCSSStyleDeclaration_SetTextAlign(DOMCSSStyleDeclaration self, NSString textAlign)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextAlign:"), textAlign); }
-static inline NSString      DOMCSSStyleDeclaration_TextDecoration(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textDecoration")); }
-static inline void          DOMCSSStyleDeclaration_SetTextDecoration(DOMCSSStyleDeclaration self, NSString textDecoration)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextDecoration:"), textDecoration); }
-static inline NSString      DOMCSSStyleDeclaration_TextIndent(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textIndent")); }
-static inline void          DOMCSSStyleDeclaration_SetTextIndent(DOMCSSStyleDeclaration self, NSString textIndent)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextIndent:"), textIndent); }
-static inline NSString      DOMCSSStyleDeclaration_TextShadow(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textShadow")); }
-static inline void          DOMCSSStyleDeclaration_SetTextShadow(DOMCSSStyleDeclaration self, NSString textShadow)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextShadow:"), textShadow); }
-static inline NSString      DOMCSSStyleDeclaration_TextTransform(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textTransform")); }
-static inline void          DOMCSSStyleDeclaration_SetTextTransform(DOMCSSStyleDeclaration self, NSString textTransform)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextTransform:"), textTransform); }
-static inline NSString      DOMCSSStyleDeclaration_Top(DOMCSSStyleDeclaration self)                                                                                     { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("top")); }
-static inline void          DOMCSSStyleDeclaration_SetTop(DOMCSSStyleDeclaration self, NSString top)                                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTop:"), top); }
-static inline NSString      DOMCSSStyleDeclaration_UnicodeBidi(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("unicodeBidi")); }
-static inline void          DOMCSSStyleDeclaration_SetUnicodeBidi(DOMCSSStyleDeclaration self, NSString unicodeBidi)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setUnicodeBidi:"), unicodeBidi); }
-static inline NSString      DOMCSSStyleDeclaration_VerticalAlign(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("verticalAlign")); }
-static inline void          DOMCSSStyleDeclaration_SetVerticalAlign(DOMCSSStyleDeclaration self, NSString verticalAlign)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setVerticalAlign:"), verticalAlign); }
-static inline NSString      DOMCSSStyleDeclaration_Visibility(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("visibility")); }
-static inline void          DOMCSSStyleDeclaration_SetVisibility(DOMCSSStyleDeclaration self, NSString visibility)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setVisibility:"), visibility); }
-static inline NSString      DOMCSSStyleDeclaration_VoiceFamily(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("voiceFamily")); }
-static inline void          DOMCSSStyleDeclaration_SetVoiceFamily(DOMCSSStyleDeclaration self, NSString voiceFamily)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setVoiceFamily:"), voiceFamily); }
-static inline NSString      DOMCSSStyleDeclaration_Volume(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("volume")); }
-static inline void          DOMCSSStyleDeclaration_SetVolume(DOMCSSStyleDeclaration self, NSString volume)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setVolume:"), volume); }
-static inline NSString      DOMCSSStyleDeclaration_WhiteSpace(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("whiteSpace")); }
-static inline void          DOMCSSStyleDeclaration_SetWhiteSpace(DOMCSSStyleDeclaration self, NSString whiteSpace)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setWhiteSpace:"), whiteSpace); }
-static inline NSString      DOMCSSStyleDeclaration_Widows(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("widows")); }
-static inline void          DOMCSSStyleDeclaration_SetWidows(DOMCSSStyleDeclaration self, NSString widows)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setWidows:"), widows); }
-static inline NSString      DOMCSSStyleDeclaration_Width(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void          DOMCSSStyleDeclaration_SetWidth(DOMCSSStyleDeclaration self, NSString width)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
-static inline NSString      DOMCSSStyleDeclaration_WordSpacing(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("wordSpacing")); }
-static inline void          DOMCSSStyleDeclaration_SetWordSpacing(DOMCSSStyleDeclaration self, NSString wordSpacing)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setWordSpacing:"), wordSpacing); }
-static inline NSString      DOMCSSStyleDeclaration_ZIndex(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("zIndex")); }
-static inline void          DOMCSSStyleDeclaration_SetZIndex(DOMCSSStyleDeclaration self, NSString zIndex)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setZIndex:"), zIndex); }
+static inline NSString                  DOMCSSStyleDeclaration_GetPropertyValue(DOMCSSStyleDeclaration self, NSString propertyName)                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("getPropertyValue:"), propertyName); }
+static inline void*                     DOMCSSStyleDeclaration_GetPropertyCSSValue(DOMCSSStyleDeclaration self, NSString propertyName)                                              { return ((void* (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("getPropertyCSSValue:"), propertyName); }
+static inline NSString                  DOMCSSStyleDeclaration_RemoveProperty(DOMCSSStyleDeclaration self, NSString propertyName)                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("removeProperty:"), propertyName); }
+static inline NSString                  DOMCSSStyleDeclaration_GetPropertyPriority(DOMCSSStyleDeclaration self, NSString propertyName)                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("getPropertyPriority:"), propertyName); }
+static inline void                      DOMCSSStyleDeclaration_SetProperty_Value_Priority(DOMCSSStyleDeclaration self, NSString propertyName, NSString value, NSString priority)    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("setProperty:value:priority:"), propertyName, value, priority); }
+static inline NSString                  DOMCSSStyleDeclaration_Item(DOMCSSStyleDeclaration self, NSUInteger index)                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline NSString                  DOMCSSStyleDeclaration_GetPropertyShorthand(DOMCSSStyleDeclaration self, NSString propertyName)                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("getPropertyShorthand:"), propertyName); }
+static inline BOOL                      DOMCSSStyleDeclaration_IsPropertyImplicit(DOMCSSStyleDeclaration self, NSString propertyName)                                               { return ((BOOL (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("isPropertyImplicit:"), propertyName); }
+static inline NSString                  DOMCSSStyleDeclaration_CssText(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cssText")); }
+static inline void                      DOMCSSStyleDeclaration_SetCssText(DOMCSSStyleDeclaration self, NSString cssText)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCssText:"), cssText); }
+static inline NSUInteger                DOMCSSStyleDeclaration_Length(DOMCSSStyleDeclaration self)                                                                                  { return ((NSUInteger (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void*                     DOMCSSStyleDeclaration_ParentRule(DOMCSSStyleDeclaration self)                                                                              { return ((void* (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("parentRule")); }
+static inline void                      DOMCSSStyleDeclaration_SetProperty(DOMCSSStyleDeclaration self, NSString propertyName, NSString value, NSString priority)                   { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("setProperty:::"), propertyName, value, priority); }
+static inline NSString                  DOMCSSStyleDeclaration_Azimuth(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("azimuth")); }
+static inline void                      DOMCSSStyleDeclaration_SetAzimuth(DOMCSSStyleDeclaration self, NSString azimuth)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setAzimuth:"), azimuth); }
+static inline NSString                  DOMCSSStyleDeclaration_Background(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("background")); }
+static inline void                      DOMCSSStyleDeclaration_SetBackground(DOMCSSStyleDeclaration self, NSString background)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackground:"), background); }
+static inline NSString                  DOMCSSStyleDeclaration_BackgroundAttachment(DOMCSSStyleDeclaration self)                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundAttachment")); }
+static inline void                      DOMCSSStyleDeclaration_SetBackgroundAttachment(DOMCSSStyleDeclaration self, NSString backgroundAttachment)                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundAttachment:"), backgroundAttachment); }
+static inline NSString                  DOMCSSStyleDeclaration_BackgroundColor(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundColor")); }
+static inline void                      DOMCSSStyleDeclaration_SetBackgroundColor(DOMCSSStyleDeclaration self, NSString backgroundColor)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundColor:"), backgroundColor); }
+static inline NSString                  DOMCSSStyleDeclaration_BackgroundImage(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundImage")); }
+static inline void                      DOMCSSStyleDeclaration_SetBackgroundImage(DOMCSSStyleDeclaration self, NSString backgroundImage)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundImage:"), backgroundImage); }
+static inline NSString                  DOMCSSStyleDeclaration_BackgroundPosition(DOMCSSStyleDeclaration self)                                                                      { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundPosition")); }
+static inline void                      DOMCSSStyleDeclaration_SetBackgroundPosition(DOMCSSStyleDeclaration self, NSString backgroundPosition)                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundPosition:"), backgroundPosition); }
+static inline NSString                  DOMCSSStyleDeclaration_BackgroundRepeat(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("backgroundRepeat")); }
+static inline void                      DOMCSSStyleDeclaration_SetBackgroundRepeat(DOMCSSStyleDeclaration self, NSString backgroundRepeat)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBackgroundRepeat:"), backgroundRepeat); }
+static inline NSString                  DOMCSSStyleDeclaration_Border(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("border")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorder(DOMCSSStyleDeclaration self, NSString border)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorder:"), border); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderCollapse(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderCollapse")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderCollapse(DOMCSSStyleDeclaration self, NSString borderCollapse)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderCollapse:"), borderCollapse); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderColor(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderColor")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderColor(DOMCSSStyleDeclaration self, NSString borderColor)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderColor:"), borderColor); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderSpacing(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderSpacing")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderSpacing(DOMCSSStyleDeclaration self, NSString borderSpacing)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderSpacing:"), borderSpacing); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderStyle(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderStyle")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderStyle(DOMCSSStyleDeclaration self, NSString borderStyle)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderStyle:"), borderStyle); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderTop(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderTop")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderTop(DOMCSSStyleDeclaration self, NSString borderTop)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderTop:"), borderTop); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderRight(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderRight")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderRight(DOMCSSStyleDeclaration self, NSString borderRight)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderRight:"), borderRight); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderBottom(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderBottom")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderBottom(DOMCSSStyleDeclaration self, NSString borderBottom)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderBottom:"), borderBottom); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderLeft(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderLeft")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderLeft(DOMCSSStyleDeclaration self, NSString borderLeft)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderLeft:"), borderLeft); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderTopColor(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderTopColor")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderTopColor(DOMCSSStyleDeclaration self, NSString borderTopColor)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderTopColor:"), borderTopColor); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderRightColor(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderRightColor")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderRightColor(DOMCSSStyleDeclaration self, NSString borderRightColor)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderRightColor:"), borderRightColor); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderBottomColor(DOMCSSStyleDeclaration self)                                                                       { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderBottomColor")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderBottomColor(DOMCSSStyleDeclaration self, NSString borderBottomColor)                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderBottomColor:"), borderBottomColor); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderLeftColor(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderLeftColor")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderLeftColor(DOMCSSStyleDeclaration self, NSString borderLeftColor)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderLeftColor:"), borderLeftColor); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderTopStyle(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderTopStyle")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderTopStyle(DOMCSSStyleDeclaration self, NSString borderTopStyle)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderTopStyle:"), borderTopStyle); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderRightStyle(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderRightStyle")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderRightStyle(DOMCSSStyleDeclaration self, NSString borderRightStyle)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderRightStyle:"), borderRightStyle); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderBottomStyle(DOMCSSStyleDeclaration self)                                                                       { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderBottomStyle")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderBottomStyle(DOMCSSStyleDeclaration self, NSString borderBottomStyle)                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderBottomStyle:"), borderBottomStyle); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderLeftStyle(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderLeftStyle")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderLeftStyle(DOMCSSStyleDeclaration self, NSString borderLeftStyle)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderLeftStyle:"), borderLeftStyle); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderTopWidth(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderTopWidth")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderTopWidth(DOMCSSStyleDeclaration self, NSString borderTopWidth)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderTopWidth:"), borderTopWidth); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderRightWidth(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderRightWidth")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderRightWidth(DOMCSSStyleDeclaration self, NSString borderRightWidth)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderRightWidth:"), borderRightWidth); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderBottomWidth(DOMCSSStyleDeclaration self)                                                                       { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderBottomWidth")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderBottomWidth(DOMCSSStyleDeclaration self, NSString borderBottomWidth)                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderBottomWidth:"), borderBottomWidth); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderLeftWidth(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderLeftWidth")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderLeftWidth(DOMCSSStyleDeclaration self, NSString borderLeftWidth)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderLeftWidth:"), borderLeftWidth); }
+static inline NSString                  DOMCSSStyleDeclaration_BorderWidth(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("borderWidth")); }
+static inline void                      DOMCSSStyleDeclaration_SetBorderWidth(DOMCSSStyleDeclaration self, NSString borderWidth)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBorderWidth:"), borderWidth); }
+static inline NSString                  DOMCSSStyleDeclaration_Bottom(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("bottom")); }
+static inline void                      DOMCSSStyleDeclaration_SetBottom(DOMCSSStyleDeclaration self, NSString bottom)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setBottom:"), bottom); }
+static inline NSString                  DOMCSSStyleDeclaration_CaptionSide(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("captionSide")); }
+static inline void                      DOMCSSStyleDeclaration_SetCaptionSide(DOMCSSStyleDeclaration self, NSString captionSide)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCaptionSide:"), captionSide); }
+static inline NSString                  DOMCSSStyleDeclaration_Clear(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("clear")); }
+static inline void                      DOMCSSStyleDeclaration_SetClear(DOMCSSStyleDeclaration self, NSString clear)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setClear:"), clear); }
+static inline NSString                  DOMCSSStyleDeclaration_Clip(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("clip")); }
+static inline void                      DOMCSSStyleDeclaration_SetClip(DOMCSSStyleDeclaration self, NSString clip)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setClip:"), clip); }
+static inline NSString                  DOMCSSStyleDeclaration_Color(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("color")); }
+static inline void                      DOMCSSStyleDeclaration_SetColor(DOMCSSStyleDeclaration self, NSString color)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setColor:"), color); }
+static inline NSString                  DOMCSSStyleDeclaration_Content(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("content")); }
+static inline void                      DOMCSSStyleDeclaration_SetContent(DOMCSSStyleDeclaration self, NSString content)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setContent:"), content); }
+static inline NSString                  DOMCSSStyleDeclaration_CounterIncrement(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("counterIncrement")); }
+static inline void                      DOMCSSStyleDeclaration_SetCounterIncrement(DOMCSSStyleDeclaration self, NSString counterIncrement)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCounterIncrement:"), counterIncrement); }
+static inline NSString                  DOMCSSStyleDeclaration_CounterReset(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("counterReset")); }
+static inline void                      DOMCSSStyleDeclaration_SetCounterReset(DOMCSSStyleDeclaration self, NSString counterReset)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCounterReset:"), counterReset); }
+static inline NSString                  DOMCSSStyleDeclaration_Cue(DOMCSSStyleDeclaration self)                                                                                     { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cue")); }
+static inline void                      DOMCSSStyleDeclaration_SetCue(DOMCSSStyleDeclaration self, NSString cue)                                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCue:"), cue); }
+static inline NSString                  DOMCSSStyleDeclaration_CueAfter(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cueAfter")); }
+static inline void                      DOMCSSStyleDeclaration_SetCueAfter(DOMCSSStyleDeclaration self, NSString cueAfter)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCueAfter:"), cueAfter); }
+static inline NSString                  DOMCSSStyleDeclaration_CueBefore(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cueBefore")); }
+static inline void                      DOMCSSStyleDeclaration_SetCueBefore(DOMCSSStyleDeclaration self, NSString cueBefore)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCueBefore:"), cueBefore); }
+static inline NSString                  DOMCSSStyleDeclaration_Cursor(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cursor")); }
+static inline void                      DOMCSSStyleDeclaration_SetCursor(DOMCSSStyleDeclaration self, NSString cursor)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCursor:"), cursor); }
+static inline NSString                  DOMCSSStyleDeclaration_Direction(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("direction")); }
+static inline void                      DOMCSSStyleDeclaration_SetDirection(DOMCSSStyleDeclaration self, NSString direction)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setDirection:"), direction); }
+static inline NSString                  DOMCSSStyleDeclaration_Display(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("display")); }
+static inline void                      DOMCSSStyleDeclaration_SetDisplay(DOMCSSStyleDeclaration self, NSString display)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setDisplay:"), display); }
+static inline NSString                  DOMCSSStyleDeclaration_Elevation(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("elevation")); }
+static inline void                      DOMCSSStyleDeclaration_SetElevation(DOMCSSStyleDeclaration self, NSString elevation)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setElevation:"), elevation); }
+static inline NSString                  DOMCSSStyleDeclaration_EmptyCells(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("emptyCells")); }
+static inline void                      DOMCSSStyleDeclaration_SetEmptyCells(DOMCSSStyleDeclaration self, NSString emptyCells)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setEmptyCells:"), emptyCells); }
+static inline NSString                  DOMCSSStyleDeclaration_CssFloat(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("cssFloat")); }
+static inline void                      DOMCSSStyleDeclaration_SetCssFloat(DOMCSSStyleDeclaration self, NSString cssFloat)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setCssFloat:"), cssFloat); }
+static inline NSString                  DOMCSSStyleDeclaration_Font(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("font")); }
+static inline void                      DOMCSSStyleDeclaration_SetFont(DOMCSSStyleDeclaration self, NSString font)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFont:"), font); }
+static inline NSString                  DOMCSSStyleDeclaration_FontFamily(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontFamily")); }
+static inline void                      DOMCSSStyleDeclaration_SetFontFamily(DOMCSSStyleDeclaration self, NSString fontFamily)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontFamily:"), fontFamily); }
+static inline NSString                  DOMCSSStyleDeclaration_FontSize(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontSize")); }
+static inline void                      DOMCSSStyleDeclaration_SetFontSize(DOMCSSStyleDeclaration self, NSString fontSize)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontSize:"), fontSize); }
+static inline NSString                  DOMCSSStyleDeclaration_FontSizeAdjust(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontSizeAdjust")); }
+static inline void                      DOMCSSStyleDeclaration_SetFontSizeAdjust(DOMCSSStyleDeclaration self, NSString fontSizeAdjust)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontSizeAdjust:"), fontSizeAdjust); }
+static inline NSString                  DOMCSSStyleDeclaration_FontStretch(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontStretch")); }
+static inline void                      DOMCSSStyleDeclaration_SetFontStretch(DOMCSSStyleDeclaration self, NSString fontStretch)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontStretch:"), fontStretch); }
+static inline NSString                  DOMCSSStyleDeclaration_FontStyle(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontStyle")); }
+static inline void                      DOMCSSStyleDeclaration_SetFontStyle(DOMCSSStyleDeclaration self, NSString fontStyle)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontStyle:"), fontStyle); }
+static inline NSString                  DOMCSSStyleDeclaration_FontVariant(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontVariant")); }
+static inline void                      DOMCSSStyleDeclaration_SetFontVariant(DOMCSSStyleDeclaration self, NSString fontVariant)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontVariant:"), fontVariant); }
+static inline NSString                  DOMCSSStyleDeclaration_FontWeight(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("fontWeight")); }
+static inline void                      DOMCSSStyleDeclaration_SetFontWeight(DOMCSSStyleDeclaration self, NSString fontWeight)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setFontWeight:"), fontWeight); }
+static inline NSString                  DOMCSSStyleDeclaration_Height(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline void                      DOMCSSStyleDeclaration_SetHeight(DOMCSSStyleDeclaration self, NSString height)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
+static inline NSString                  DOMCSSStyleDeclaration_Left(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("left")); }
+static inline void                      DOMCSSStyleDeclaration_SetLeft(DOMCSSStyleDeclaration self, NSString left)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setLeft:"), left); }
+static inline NSString                  DOMCSSStyleDeclaration_LetterSpacing(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("letterSpacing")); }
+static inline void                      DOMCSSStyleDeclaration_SetLetterSpacing(DOMCSSStyleDeclaration self, NSString letterSpacing)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setLetterSpacing:"), letterSpacing); }
+static inline NSString                  DOMCSSStyleDeclaration_LineHeight(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("lineHeight")); }
+static inline void                      DOMCSSStyleDeclaration_SetLineHeight(DOMCSSStyleDeclaration self, NSString lineHeight)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setLineHeight:"), lineHeight); }
+static inline NSString                  DOMCSSStyleDeclaration_ListStyle(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("listStyle")); }
+static inline void                      DOMCSSStyleDeclaration_SetListStyle(DOMCSSStyleDeclaration self, NSString listStyle)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setListStyle:"), listStyle); }
+static inline NSString                  DOMCSSStyleDeclaration_ListStyleImage(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("listStyleImage")); }
+static inline void                      DOMCSSStyleDeclaration_SetListStyleImage(DOMCSSStyleDeclaration self, NSString listStyleImage)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setListStyleImage:"), listStyleImage); }
+static inline NSString                  DOMCSSStyleDeclaration_ListStylePosition(DOMCSSStyleDeclaration self)                                                                       { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("listStylePosition")); }
+static inline void                      DOMCSSStyleDeclaration_SetListStylePosition(DOMCSSStyleDeclaration self, NSString listStylePosition)                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setListStylePosition:"), listStylePosition); }
+static inline NSString                  DOMCSSStyleDeclaration_ListStyleType(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("listStyleType")); }
+static inline void                      DOMCSSStyleDeclaration_SetListStyleType(DOMCSSStyleDeclaration self, NSString listStyleType)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setListStyleType:"), listStyleType); }
+static inline NSString                  DOMCSSStyleDeclaration_Margin(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("margin")); }
+static inline void                      DOMCSSStyleDeclaration_SetMargin(DOMCSSStyleDeclaration self, NSString margin)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMargin:"), margin); }
+static inline NSString                  DOMCSSStyleDeclaration_MarginTop(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marginTop")); }
+static inline void                      DOMCSSStyleDeclaration_SetMarginTop(DOMCSSStyleDeclaration self, NSString marginTop)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginTop:"), marginTop); }
+static inline NSString                  DOMCSSStyleDeclaration_MarginRight(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marginRight")); }
+static inline void                      DOMCSSStyleDeclaration_SetMarginRight(DOMCSSStyleDeclaration self, NSString marginRight)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginRight:"), marginRight); }
+static inline NSString                  DOMCSSStyleDeclaration_MarginBottom(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marginBottom")); }
+static inline void                      DOMCSSStyleDeclaration_SetMarginBottom(DOMCSSStyleDeclaration self, NSString marginBottom)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginBottom:"), marginBottom); }
+static inline NSString                  DOMCSSStyleDeclaration_MarginLeft(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marginLeft")); }
+static inline void                      DOMCSSStyleDeclaration_SetMarginLeft(DOMCSSStyleDeclaration self, NSString marginLeft)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginLeft:"), marginLeft); }
+static inline NSString                  DOMCSSStyleDeclaration_MarkerOffset(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("markerOffset")); }
+static inline void                      DOMCSSStyleDeclaration_SetMarkerOffset(DOMCSSStyleDeclaration self, NSString markerOffset)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarkerOffset:"), markerOffset); }
+static inline NSString                  DOMCSSStyleDeclaration_Marks(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("marks")); }
+static inline void                      DOMCSSStyleDeclaration_SetMarks(DOMCSSStyleDeclaration self, NSString marks)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMarks:"), marks); }
+static inline NSString                  DOMCSSStyleDeclaration_MaxHeight(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("maxHeight")); }
+static inline void                      DOMCSSStyleDeclaration_SetMaxHeight(DOMCSSStyleDeclaration self, NSString maxHeight)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMaxHeight:"), maxHeight); }
+static inline NSString                  DOMCSSStyleDeclaration_MaxWidth(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("maxWidth")); }
+static inline void                      DOMCSSStyleDeclaration_SetMaxWidth(DOMCSSStyleDeclaration self, NSString maxWidth)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMaxWidth:"), maxWidth); }
+static inline NSString                  DOMCSSStyleDeclaration_MinHeight(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("minHeight")); }
+static inline void                      DOMCSSStyleDeclaration_SetMinHeight(DOMCSSStyleDeclaration self, NSString minHeight)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMinHeight:"), minHeight); }
+static inline NSString                  DOMCSSStyleDeclaration_MinWidth(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("minWidth")); }
+static inline void                      DOMCSSStyleDeclaration_SetMinWidth(DOMCSSStyleDeclaration self, NSString minWidth)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setMinWidth:"), minWidth); }
+static inline NSString                  DOMCSSStyleDeclaration_Orphans(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("orphans")); }
+static inline void                      DOMCSSStyleDeclaration_SetOrphans(DOMCSSStyleDeclaration self, NSString orphans)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOrphans:"), orphans); }
+static inline NSString                  DOMCSSStyleDeclaration_Outline(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("outline")); }
+static inline void                      DOMCSSStyleDeclaration_SetOutline(DOMCSSStyleDeclaration self, NSString outline)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOutline:"), outline); }
+static inline NSString                  DOMCSSStyleDeclaration_OutlineColor(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("outlineColor")); }
+static inline void                      DOMCSSStyleDeclaration_SetOutlineColor(DOMCSSStyleDeclaration self, NSString outlineColor)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOutlineColor:"), outlineColor); }
+static inline NSString                  DOMCSSStyleDeclaration_OutlineStyle(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("outlineStyle")); }
+static inline void                      DOMCSSStyleDeclaration_SetOutlineStyle(DOMCSSStyleDeclaration self, NSString outlineStyle)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOutlineStyle:"), outlineStyle); }
+static inline NSString                  DOMCSSStyleDeclaration_OutlineWidth(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("outlineWidth")); }
+static inline void                      DOMCSSStyleDeclaration_SetOutlineWidth(DOMCSSStyleDeclaration self, NSString outlineWidth)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOutlineWidth:"), outlineWidth); }
+static inline NSString                  DOMCSSStyleDeclaration_Overflow(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("overflow")); }
+static inline void                      DOMCSSStyleDeclaration_SetOverflow(DOMCSSStyleDeclaration self, NSString overflow)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setOverflow:"), overflow); }
+static inline NSString                  DOMCSSStyleDeclaration_Padding(DOMCSSStyleDeclaration self)                                                                                 { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("padding")); }
+static inline void                      DOMCSSStyleDeclaration_SetPadding(DOMCSSStyleDeclaration self, NSString padding)                                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPadding:"), padding); }
+static inline NSString                  DOMCSSStyleDeclaration_PaddingTop(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("paddingTop")); }
+static inline void                      DOMCSSStyleDeclaration_SetPaddingTop(DOMCSSStyleDeclaration self, NSString paddingTop)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPaddingTop:"), paddingTop); }
+static inline NSString                  DOMCSSStyleDeclaration_PaddingRight(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("paddingRight")); }
+static inline void                      DOMCSSStyleDeclaration_SetPaddingRight(DOMCSSStyleDeclaration self, NSString paddingRight)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPaddingRight:"), paddingRight); }
+static inline NSString                  DOMCSSStyleDeclaration_PaddingBottom(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("paddingBottom")); }
+static inline void                      DOMCSSStyleDeclaration_SetPaddingBottom(DOMCSSStyleDeclaration self, NSString paddingBottom)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPaddingBottom:"), paddingBottom); }
+static inline NSString                  DOMCSSStyleDeclaration_PaddingLeft(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("paddingLeft")); }
+static inline void                      DOMCSSStyleDeclaration_SetPaddingLeft(DOMCSSStyleDeclaration self, NSString paddingLeft)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPaddingLeft:"), paddingLeft); }
+static inline NSString                  DOMCSSStyleDeclaration_Page(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("page")); }
+static inline void                      DOMCSSStyleDeclaration_SetPage(DOMCSSStyleDeclaration self, NSString page)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPage:"), page); }
+static inline NSString                  DOMCSSStyleDeclaration_PageBreakAfter(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pageBreakAfter")); }
+static inline void                      DOMCSSStyleDeclaration_SetPageBreakAfter(DOMCSSStyleDeclaration self, NSString pageBreakAfter)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPageBreakAfter:"), pageBreakAfter); }
+static inline NSString                  DOMCSSStyleDeclaration_PageBreakBefore(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pageBreakBefore")); }
+static inline void                      DOMCSSStyleDeclaration_SetPageBreakBefore(DOMCSSStyleDeclaration self, NSString pageBreakBefore)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPageBreakBefore:"), pageBreakBefore); }
+static inline NSString                  DOMCSSStyleDeclaration_PageBreakInside(DOMCSSStyleDeclaration self)                                                                         { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pageBreakInside")); }
+static inline void                      DOMCSSStyleDeclaration_SetPageBreakInside(DOMCSSStyleDeclaration self, NSString pageBreakInside)                                            { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPageBreakInside:"), pageBreakInside); }
+static inline NSString                  DOMCSSStyleDeclaration_Pause(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pause")); }
+static inline void                      DOMCSSStyleDeclaration_SetPause(DOMCSSStyleDeclaration self, NSString pause)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPause:"), pause); }
+static inline NSString                  DOMCSSStyleDeclaration_PauseAfter(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pauseAfter")); }
+static inline void                      DOMCSSStyleDeclaration_SetPauseAfter(DOMCSSStyleDeclaration self, NSString pauseAfter)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPauseAfter:"), pauseAfter); }
+static inline NSString                  DOMCSSStyleDeclaration_PauseBefore(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pauseBefore")); }
+static inline void                      DOMCSSStyleDeclaration_SetPauseBefore(DOMCSSStyleDeclaration self, NSString pauseBefore)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPauseBefore:"), pauseBefore); }
+static inline NSString                  DOMCSSStyleDeclaration_Pitch(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pitch")); }
+static inline void                      DOMCSSStyleDeclaration_SetPitch(DOMCSSStyleDeclaration self, NSString pitch)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPitch:"), pitch); }
+static inline NSString                  DOMCSSStyleDeclaration_PitchRange(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("pitchRange")); }
+static inline void                      DOMCSSStyleDeclaration_SetPitchRange(DOMCSSStyleDeclaration self, NSString pitchRange)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPitchRange:"), pitchRange); }
+static inline NSString                  DOMCSSStyleDeclaration_PlayDuring(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("playDuring")); }
+static inline void                      DOMCSSStyleDeclaration_SetPlayDuring(DOMCSSStyleDeclaration self, NSString playDuring)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPlayDuring:"), playDuring); }
+static inline NSString                  DOMCSSStyleDeclaration_Position(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("position")); }
+static inline void                      DOMCSSStyleDeclaration_SetPosition(DOMCSSStyleDeclaration self, NSString position)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+static inline NSString                  DOMCSSStyleDeclaration_Quotes(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("quotes")); }
+static inline void                      DOMCSSStyleDeclaration_SetQuotes(DOMCSSStyleDeclaration self, NSString quotes)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setQuotes:"), quotes); }
+static inline NSString                  DOMCSSStyleDeclaration_Richness(DOMCSSStyleDeclaration self)                                                                                { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("richness")); }
+static inline void                      DOMCSSStyleDeclaration_SetRichness(DOMCSSStyleDeclaration self, NSString richness)                                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setRichness:"), richness); }
+static inline NSString                  DOMCSSStyleDeclaration_Right(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("right")); }
+static inline void                      DOMCSSStyleDeclaration_SetRight(DOMCSSStyleDeclaration self, NSString right)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setRight:"), right); }
+static inline NSString                  DOMCSSStyleDeclaration_Size(DOMCSSStyleDeclaration self)                                                                                    { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("size")); }
+static inline void                      DOMCSSStyleDeclaration_SetSize(DOMCSSStyleDeclaration self, NSString size)                                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
+static inline NSString                  DOMCSSStyleDeclaration_Speak(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speak")); }
+static inline void                      DOMCSSStyleDeclaration_SetSpeak(DOMCSSStyleDeclaration self, NSString speak)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeak:"), speak); }
+static inline NSString                  DOMCSSStyleDeclaration_SpeakHeader(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speakHeader")); }
+static inline void                      DOMCSSStyleDeclaration_SetSpeakHeader(DOMCSSStyleDeclaration self, NSString speakHeader)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeakHeader:"), speakHeader); }
+static inline NSString                  DOMCSSStyleDeclaration_SpeakNumeral(DOMCSSStyleDeclaration self)                                                                            { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speakNumeral")); }
+static inline void                      DOMCSSStyleDeclaration_SetSpeakNumeral(DOMCSSStyleDeclaration self, NSString speakNumeral)                                                  { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeakNumeral:"), speakNumeral); }
+static inline NSString                  DOMCSSStyleDeclaration_SpeakPunctuation(DOMCSSStyleDeclaration self)                                                                        { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speakPunctuation")); }
+static inline void                      DOMCSSStyleDeclaration_SetSpeakPunctuation(DOMCSSStyleDeclaration self, NSString speakPunctuation)                                          { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeakPunctuation:"), speakPunctuation); }
+static inline NSString                  DOMCSSStyleDeclaration_SpeechRate(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("speechRate")); }
+static inline void                      DOMCSSStyleDeclaration_SetSpeechRate(DOMCSSStyleDeclaration self, NSString speechRate)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setSpeechRate:"), speechRate); }
+static inline NSString                  DOMCSSStyleDeclaration_Stress(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("stress")); }
+static inline void                      DOMCSSStyleDeclaration_SetStress(DOMCSSStyleDeclaration self, NSString stress)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setStress:"), stress); }
+static inline NSString                  DOMCSSStyleDeclaration_TableLayout(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("tableLayout")); }
+static inline void                      DOMCSSStyleDeclaration_SetTableLayout(DOMCSSStyleDeclaration self, NSString tableLayout)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTableLayout:"), tableLayout); }
+static inline NSString                  DOMCSSStyleDeclaration_TextAlign(DOMCSSStyleDeclaration self)                                                                               { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textAlign")); }
+static inline void                      DOMCSSStyleDeclaration_SetTextAlign(DOMCSSStyleDeclaration self, NSString textAlign)                                                        { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextAlign:"), textAlign); }
+static inline NSString                  DOMCSSStyleDeclaration_TextDecoration(DOMCSSStyleDeclaration self)                                                                          { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textDecoration")); }
+static inline void                      DOMCSSStyleDeclaration_SetTextDecoration(DOMCSSStyleDeclaration self, NSString textDecoration)                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextDecoration:"), textDecoration); }
+static inline NSString                  DOMCSSStyleDeclaration_TextIndent(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textIndent")); }
+static inline void                      DOMCSSStyleDeclaration_SetTextIndent(DOMCSSStyleDeclaration self, NSString textIndent)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextIndent:"), textIndent); }
+static inline NSString                  DOMCSSStyleDeclaration_TextShadow(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textShadow")); }
+static inline void                      DOMCSSStyleDeclaration_SetTextShadow(DOMCSSStyleDeclaration self, NSString textShadow)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextShadow:"), textShadow); }
+static inline NSString                  DOMCSSStyleDeclaration_TextTransform(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("textTransform")); }
+static inline void                      DOMCSSStyleDeclaration_SetTextTransform(DOMCSSStyleDeclaration self, NSString textTransform)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTextTransform:"), textTransform); }
+static inline NSString                  DOMCSSStyleDeclaration_Top(DOMCSSStyleDeclaration self)                                                                                     { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("top")); }
+static inline void                      DOMCSSStyleDeclaration_SetTop(DOMCSSStyleDeclaration self, NSString top)                                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setTop:"), top); }
+static inline NSString                  DOMCSSStyleDeclaration_UnicodeBidi(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("unicodeBidi")); }
+static inline void                      DOMCSSStyleDeclaration_SetUnicodeBidi(DOMCSSStyleDeclaration self, NSString unicodeBidi)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setUnicodeBidi:"), unicodeBidi); }
+static inline NSString                  DOMCSSStyleDeclaration_VerticalAlign(DOMCSSStyleDeclaration self)                                                                           { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("verticalAlign")); }
+static inline void                      DOMCSSStyleDeclaration_SetVerticalAlign(DOMCSSStyleDeclaration self, NSString verticalAlign)                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setVerticalAlign:"), verticalAlign); }
+static inline NSString                  DOMCSSStyleDeclaration_Visibility(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("visibility")); }
+static inline void                      DOMCSSStyleDeclaration_SetVisibility(DOMCSSStyleDeclaration self, NSString visibility)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setVisibility:"), visibility); }
+static inline NSString                  DOMCSSStyleDeclaration_VoiceFamily(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("voiceFamily")); }
+static inline void                      DOMCSSStyleDeclaration_SetVoiceFamily(DOMCSSStyleDeclaration self, NSString voiceFamily)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setVoiceFamily:"), voiceFamily); }
+static inline NSString                  DOMCSSStyleDeclaration_Volume(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("volume")); }
+static inline void                      DOMCSSStyleDeclaration_SetVolume(DOMCSSStyleDeclaration self, NSString volume)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setVolume:"), volume); }
+static inline NSString                  DOMCSSStyleDeclaration_WhiteSpace(DOMCSSStyleDeclaration self)                                                                              { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("whiteSpace")); }
+static inline void                      DOMCSSStyleDeclaration_SetWhiteSpace(DOMCSSStyleDeclaration self, NSString whiteSpace)                                                      { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setWhiteSpace:"), whiteSpace); }
+static inline NSString                  DOMCSSStyleDeclaration_Widows(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("widows")); }
+static inline void                      DOMCSSStyleDeclaration_SetWidows(DOMCSSStyleDeclaration self, NSString widows)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setWidows:"), widows); }
+static inline NSString                  DOMCSSStyleDeclaration_Width(DOMCSSStyleDeclaration self)                                                                                   { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                      DOMCSSStyleDeclaration_SetWidth(DOMCSSStyleDeclaration self, NSString width)                                                                { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline NSString                  DOMCSSStyleDeclaration_WordSpacing(DOMCSSStyleDeclaration self)                                                                             { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("wordSpacing")); }
+static inline void                      DOMCSSStyleDeclaration_SetWordSpacing(DOMCSSStyleDeclaration self, NSString wordSpacing)                                                    { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setWordSpacing:"), wordSpacing); }
+static inline NSString                  DOMCSSStyleDeclaration_ZIndex(DOMCSSStyleDeclaration self)                                                                                  { return ((NSString (*)(DOMCSSStyleDeclaration, SEL))bean_msgSend)(self, bean_sel("zIndex")); }
+static inline void                      DOMCSSStyleDeclaration_SetZIndex(DOMCSSStyleDeclaration self, NSString zIndex)                                                              { ((void (*)(DOMCSSStyleDeclaration, SEL, NSString))bean_msgSend)(self, bean_sel("setZIndex:"), zIndex); }
+#ifndef BEAN_ALLOC_DOMCSSStyleDeclaration
+#define BEAN_ALLOC_DOMCSSStyleDeclaration
+static inline DOMCSSStyleDeclaration    DOMCSSStyleDeclaration_Alloc(void)                                                                                                          { return (DOMCSSStyleDeclaration)bean_alloc(bean_cls("DOMCSSStyleDeclaration")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSStyleDeclaration
+#define BEAN_NEW_DOMCSSStyleDeclaration
+static inline DOMCSSStyleDeclaration    DOMCSSStyleDeclaration_New(void)                                                                                                            { return (DOMCSSStyleDeclaration)bean_new(bean_cls("DOMCSSStyleDeclaration")); }
+#endif
 
 /* ===== DOMCSSStyleRule ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSStyleRule
 #define BEAN_TYPEDEF_DOMCSSStyleRule
 typedef bean_id DOMCSSStyleRule;
 #endif
-static inline NSString    DOMCSSStyleRule_SelectorText(DOMCSSStyleRule self)                              { return ((NSString (*)(DOMCSSStyleRule, SEL))bean_msgSend)(self, bean_sel("selectorText")); }
-static inline void        DOMCSSStyleRule_SetSelectorText(DOMCSSStyleRule self, NSString selectorText)    { ((void (*)(DOMCSSStyleRule, SEL, NSString))bean_msgSend)(self, bean_sel("setSelectorText:"), selectorText); }
-static inline void*       DOMCSSStyleRule_Style(DOMCSSStyleRule self)                                     { return ((void* (*)(DOMCSSStyleRule, SEL))bean_msgSend)(self, bean_sel("style")); }
+static inline NSString           DOMCSSStyleRule_SelectorText(DOMCSSStyleRule self)                              { return ((NSString (*)(DOMCSSStyleRule, SEL))bean_msgSend)(self, bean_sel("selectorText")); }
+static inline void               DOMCSSStyleRule_SetSelectorText(DOMCSSStyleRule self, NSString selectorText)    { ((void (*)(DOMCSSStyleRule, SEL, NSString))bean_msgSend)(self, bean_sel("setSelectorText:"), selectorText); }
+static inline void*              DOMCSSStyleRule_Style(DOMCSSStyleRule self)                                     { return ((void* (*)(DOMCSSStyleRule, SEL))bean_msgSend)(self, bean_sel("style")); }
+#ifndef BEAN_ALLOC_DOMCSSStyleRule
+#define BEAN_ALLOC_DOMCSSStyleRule
+static inline DOMCSSStyleRule    DOMCSSStyleRule_Alloc(void)                                                     { return (DOMCSSStyleRule)bean_alloc(bean_cls("DOMCSSStyleRule")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSStyleRule
+#define BEAN_NEW_DOMCSSStyleRule
+static inline DOMCSSStyleRule    DOMCSSStyleRule_New(void)                                                       { return (DOMCSSStyleRule)bean_new(bean_cls("DOMCSSStyleRule")); }
+#endif
 
 /* ===== DOMCSSStyleSheet ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSStyleSheet
 #define BEAN_TYPEDEF_DOMCSSStyleSheet
 typedef bean_id DOMCSSStyleSheet;
 #endif
-static inline NSUInteger    DOMCSSStyleSheet_InsertRule_Index(DOMCSSStyleSheet self, NSString rule, NSUInteger index)                           { return ((NSUInteger (*)(DOMCSSStyleSheet, SEL, NSString, NSUInteger))bean_msgSend)(self, bean_sel("insertRule:index:"), rule, index); }
-static inline void          DOMCSSStyleSheet_DeleteRule(DOMCSSStyleSheet self, NSUInteger index)                                                { ((void (*)(DOMCSSStyleSheet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("deleteRule:"), index); }
-static inline int           DOMCSSStyleSheet_AddRule_Style_Index(DOMCSSStyleSheet self, NSString selector, NSString style, NSUInteger index)    { return ((int (*)(DOMCSSStyleSheet, SEL, NSString, NSString, NSUInteger))bean_msgSend)(self, bean_sel("addRule:style:index:"), selector, style, index); }
-static inline void          DOMCSSStyleSheet_RemoveRule(DOMCSSStyleSheet self, NSUInteger index)                                                { ((void (*)(DOMCSSStyleSheet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("removeRule:"), index); }
-static inline void*         DOMCSSStyleSheet_OwnerRule(DOMCSSStyleSheet self)                                                                   { return ((void* (*)(DOMCSSStyleSheet, SEL))bean_msgSend)(self, bean_sel("ownerRule")); }
-static inline void*         DOMCSSStyleSheet_CssRules(DOMCSSStyleSheet self)                                                                    { return ((void* (*)(DOMCSSStyleSheet, SEL))bean_msgSend)(self, bean_sel("cssRules")); }
-static inline void*         DOMCSSStyleSheet_Rules(DOMCSSStyleSheet self)                                                                       { return ((void* (*)(DOMCSSStyleSheet, SEL))bean_msgSend)(self, bean_sel("rules")); }
-static inline NSUInteger    DOMCSSStyleSheet_InsertRule(DOMCSSStyleSheet self, NSString rule, NSUInteger index)                                 { return ((NSUInteger (*)(DOMCSSStyleSheet, SEL, NSString, NSUInteger))bean_msgSend)(self, bean_sel("insertRule::"), rule, index); }
+static inline NSUInteger          DOMCSSStyleSheet_InsertRule_Index(DOMCSSStyleSheet self, NSString rule, NSUInteger index)                           { return ((NSUInteger (*)(DOMCSSStyleSheet, SEL, NSString, NSUInteger))bean_msgSend)(self, bean_sel("insertRule:index:"), rule, index); }
+static inline void                DOMCSSStyleSheet_DeleteRule(DOMCSSStyleSheet self, NSUInteger index)                                                { ((void (*)(DOMCSSStyleSheet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("deleteRule:"), index); }
+static inline int                 DOMCSSStyleSheet_AddRule_Style_Index(DOMCSSStyleSheet self, NSString selector, NSString style, NSUInteger index)    { return ((int (*)(DOMCSSStyleSheet, SEL, NSString, NSString, NSUInteger))bean_msgSend)(self, bean_sel("addRule:style:index:"), selector, style, index); }
+static inline void                DOMCSSStyleSheet_RemoveRule(DOMCSSStyleSheet self, NSUInteger index)                                                { ((void (*)(DOMCSSStyleSheet, SEL, NSUInteger))bean_msgSend)(self, bean_sel("removeRule:"), index); }
+static inline void*               DOMCSSStyleSheet_OwnerRule(DOMCSSStyleSheet self)                                                                   { return ((void* (*)(DOMCSSStyleSheet, SEL))bean_msgSend)(self, bean_sel("ownerRule")); }
+static inline void*               DOMCSSStyleSheet_CssRules(DOMCSSStyleSheet self)                                                                    { return ((void* (*)(DOMCSSStyleSheet, SEL))bean_msgSend)(self, bean_sel("cssRules")); }
+static inline void*               DOMCSSStyleSheet_Rules(DOMCSSStyleSheet self)                                                                       { return ((void* (*)(DOMCSSStyleSheet, SEL))bean_msgSend)(self, bean_sel("rules")); }
+static inline NSUInteger          DOMCSSStyleSheet_InsertRule(DOMCSSStyleSheet self, NSString rule, NSUInteger index)                                 { return ((NSUInteger (*)(DOMCSSStyleSheet, SEL, NSString, NSUInteger))bean_msgSend)(self, bean_sel("insertRule::"), rule, index); }
+#ifndef BEAN_ALLOC_DOMCSSStyleSheet
+#define BEAN_ALLOC_DOMCSSStyleSheet
+static inline DOMCSSStyleSheet    DOMCSSStyleSheet_Alloc(void)                                                                                        { return (DOMCSSStyleSheet)bean_alloc(bean_cls("DOMCSSStyleSheet")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSStyleSheet
+#define BEAN_NEW_DOMCSSStyleSheet
+static inline DOMCSSStyleSheet    DOMCSSStyleSheet_New(void)                                                                                          { return (DOMCSSStyleSheet)bean_new(bean_cls("DOMCSSStyleSheet")); }
+#endif
 
 /* ===== DOMCSSValue ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSValue
@@ -4092,53 +4204,93 @@ typedef bean_id DOMCSSValue;
 static inline NSString          DOMCSSValue_CssText(DOMCSSValue self)                         { return ((NSString (*)(DOMCSSValue, SEL))bean_msgSend)(self, bean_sel("cssText")); }
 static inline void              DOMCSSValue_SetCssText(DOMCSSValue self, NSString cssText)    { ((void (*)(DOMCSSValue, SEL, NSString))bean_msgSend)(self, bean_sel("setCssText:"), cssText); }
 static inline unsigned short    DOMCSSValue_CssValueType(DOMCSSValue self)                    { return ((unsigned short (*)(DOMCSSValue, SEL))bean_msgSend)(self, bean_sel("cssValueType")); }
+#ifndef BEAN_ALLOC_DOMCSSValue
+#define BEAN_ALLOC_DOMCSSValue
+static inline DOMCSSValue       DOMCSSValue_Alloc(void)                                       { return (DOMCSSValue)bean_alloc(bean_cls("DOMCSSValue")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSValue
+#define BEAN_NEW_DOMCSSValue
+static inline DOMCSSValue       DOMCSSValue_New(void)                                         { return (DOMCSSValue)bean_new(bean_cls("DOMCSSValue")); }
+#endif
 
 /* ===== DOMCSSValueList ===== */
 #ifndef BEAN_TYPEDEF_DOMCSSValueList
 #define BEAN_TYPEDEF_DOMCSSValueList
 typedef bean_id DOMCSSValueList;
 #endif
-static inline void*         DOMCSSValueList_Item(DOMCSSValueList self, NSUInteger index)    { return ((void* (*)(DOMCSSValueList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline NSUInteger    DOMCSSValueList_Length(DOMCSSValueList self)                    { return ((NSUInteger (*)(DOMCSSValueList, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void*              DOMCSSValueList_Item(DOMCSSValueList self, NSUInteger index)    { return ((void* (*)(DOMCSSValueList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline NSUInteger         DOMCSSValueList_Length(DOMCSSValueList self)                    { return ((NSUInteger (*)(DOMCSSValueList, SEL))bean_msgSend)(self, bean_sel("length")); }
+#ifndef BEAN_ALLOC_DOMCSSValueList
+#define BEAN_ALLOC_DOMCSSValueList
+static inline DOMCSSValueList    DOMCSSValueList_Alloc(void)                                     { return (DOMCSSValueList)bean_alloc(bean_cls("DOMCSSValueList")); }
+#endif
+#ifndef BEAN_NEW_DOMCSSValueList
+#define BEAN_NEW_DOMCSSValueList
+static inline DOMCSSValueList    DOMCSSValueList_New(void)                                       { return (DOMCSSValueList)bean_new(bean_cls("DOMCSSValueList")); }
+#endif
 
 /* ===== DOMCharacterData ===== */
 #ifndef BEAN_TYPEDEF_DOMCharacterData
 #define BEAN_TYPEDEF_DOMCharacterData
 typedef bean_id DOMCharacterData;
 #endif
-static inline NSString      DOMCharacterData_SubstringData_Length(DOMCharacterData self, NSUInteger offset, NSUInteger length)                      { return ((NSString (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("substringData:length:"), offset, length); }
-static inline void          DOMCharacterData_AppendData(DOMCharacterData self, NSString data)                                                       { ((void (*)(DOMCharacterData, SEL, NSString))bean_msgSend)(self, bean_sel("appendData:"), data); }
-static inline void          DOMCharacterData_InsertData_Data(DOMCharacterData self, NSUInteger offset, NSString data)                               { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSString))bean_msgSend)(self, bean_sel("insertData:data:"), offset, data); }
-static inline void          DOMCharacterData_DeleteData_Length(DOMCharacterData self, NSUInteger offset, NSUInteger length)                         { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("deleteData:length:"), offset, length); }
-static inline void          DOMCharacterData_ReplaceData_Length_Data(DOMCharacterData self, NSUInteger offset, NSUInteger length, NSString data)    { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger, NSString))bean_msgSend)(self, bean_sel("replaceData:length:data:"), offset, length, data); }
-static inline NSString      DOMCharacterData_Data(DOMCharacterData self)                                                                            { return ((NSString (*)(DOMCharacterData, SEL))bean_msgSend)(self, bean_sel("data")); }
-static inline void          DOMCharacterData_SetData(DOMCharacterData self, NSString data)                                                          { ((void (*)(DOMCharacterData, SEL, NSString))bean_msgSend)(self, bean_sel("setData:"), data); }
-static inline NSUInteger    DOMCharacterData_Length(DOMCharacterData self)                                                                          { return ((NSUInteger (*)(DOMCharacterData, SEL))bean_msgSend)(self, bean_sel("length")); }
-static inline NSString      DOMCharacterData_SubstringData(DOMCharacterData self, NSUInteger offset, NSUInteger length)                             { return ((NSString (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("substringData::"), offset, length); }
-static inline void          DOMCharacterData_InsertData(DOMCharacterData self, NSUInteger offset, NSString data)                                    { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSString))bean_msgSend)(self, bean_sel("insertData::"), offset, data); }
-static inline void          DOMCharacterData_DeleteData(DOMCharacterData self, NSUInteger offset, NSUInteger length)                                { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("deleteData::"), offset, length); }
-static inline void          DOMCharacterData_ReplaceData(DOMCharacterData self, NSUInteger offset, NSUInteger length, NSString data)                { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger, NSString))bean_msgSend)(self, bean_sel("replaceData:::"), offset, length, data); }
+static inline NSString            DOMCharacterData_SubstringData_Length(DOMCharacterData self, NSUInteger offset, NSUInteger length)                      { return ((NSString (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("substringData:length:"), offset, length); }
+static inline void                DOMCharacterData_AppendData(DOMCharacterData self, NSString data)                                                       { ((void (*)(DOMCharacterData, SEL, NSString))bean_msgSend)(self, bean_sel("appendData:"), data); }
+static inline void                DOMCharacterData_InsertData_Data(DOMCharacterData self, NSUInteger offset, NSString data)                               { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSString))bean_msgSend)(self, bean_sel("insertData:data:"), offset, data); }
+static inline void                DOMCharacterData_DeleteData_Length(DOMCharacterData self, NSUInteger offset, NSUInteger length)                         { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("deleteData:length:"), offset, length); }
+static inline void                DOMCharacterData_ReplaceData_Length_Data(DOMCharacterData self, NSUInteger offset, NSUInteger length, NSString data)    { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger, NSString))bean_msgSend)(self, bean_sel("replaceData:length:data:"), offset, length, data); }
+static inline NSString            DOMCharacterData_Data(DOMCharacterData self)                                                                            { return ((NSString (*)(DOMCharacterData, SEL))bean_msgSend)(self, bean_sel("data")); }
+static inline void                DOMCharacterData_SetData(DOMCharacterData self, NSString data)                                                          { ((void (*)(DOMCharacterData, SEL, NSString))bean_msgSend)(self, bean_sel("setData:"), data); }
+static inline NSUInteger          DOMCharacterData_Length(DOMCharacterData self)                                                                          { return ((NSUInteger (*)(DOMCharacterData, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline NSString            DOMCharacterData_SubstringData(DOMCharacterData self, NSUInteger offset, NSUInteger length)                             { return ((NSString (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("substringData::"), offset, length); }
+static inline void                DOMCharacterData_InsertData(DOMCharacterData self, NSUInteger offset, NSString data)                                    { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSString))bean_msgSend)(self, bean_sel("insertData::"), offset, data); }
+static inline void                DOMCharacterData_DeleteData(DOMCharacterData self, NSUInteger offset, NSUInteger length)                                { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger))bean_msgSend)(self, bean_sel("deleteData::"), offset, length); }
+static inline void                DOMCharacterData_ReplaceData(DOMCharacterData self, NSUInteger offset, NSUInteger length, NSString data)                { ((void (*)(DOMCharacterData, SEL, NSUInteger, NSUInteger, NSString))bean_msgSend)(self, bean_sel("replaceData:::"), offset, length, data); }
+#ifndef BEAN_ALLOC_DOMCharacterData
+#define BEAN_ALLOC_DOMCharacterData
+static inline DOMCharacterData    DOMCharacterData_Alloc(void)                                                                                            { return (DOMCharacterData)bean_alloc(bean_cls("DOMCharacterData")); }
+#endif
+#ifndef BEAN_NEW_DOMCharacterData
+#define BEAN_NEW_DOMCharacterData
+static inline DOMCharacterData    DOMCharacterData_New(void)                                                                                              { return (DOMCharacterData)bean_new(bean_cls("DOMCharacterData")); }
+#endif
 
 /* ===== DOMCounter ===== */
 #ifndef BEAN_TYPEDEF_DOMCounter
 #define BEAN_TYPEDEF_DOMCounter
 typedef bean_id DOMCounter;
 #endif
-static inline NSString    DOMCounter_Identifier(DOMCounter self)    { return ((NSString (*)(DOMCounter, SEL))bean_msgSend)(self, bean_sel("identifier")); }
-static inline NSString    DOMCounter_ListStyle(DOMCounter self)     { return ((NSString (*)(DOMCounter, SEL))bean_msgSend)(self, bean_sel("listStyle")); }
-static inline NSString    DOMCounter_Separator(DOMCounter self)     { return ((NSString (*)(DOMCounter, SEL))bean_msgSend)(self, bean_sel("separator")); }
+static inline NSString      DOMCounter_Identifier(DOMCounter self)    { return ((NSString (*)(DOMCounter, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline NSString      DOMCounter_ListStyle(DOMCounter self)     { return ((NSString (*)(DOMCounter, SEL))bean_msgSend)(self, bean_sel("listStyle")); }
+static inline NSString      DOMCounter_Separator(DOMCounter self)     { return ((NSString (*)(DOMCounter, SEL))bean_msgSend)(self, bean_sel("separator")); }
+#ifndef BEAN_ALLOC_DOMCounter
+#define BEAN_ALLOC_DOMCounter
+static inline DOMCounter    DOMCounter_Alloc(void)                    { return (DOMCounter)bean_alloc(bean_cls("DOMCounter")); }
+#endif
+#ifndef BEAN_NEW_DOMCounter
+#define BEAN_NEW_DOMCounter
+static inline DOMCounter    DOMCounter_New(void)                      { return (DOMCounter)bean_new(bean_cls("DOMCounter")); }
+#endif
 
 /* ===== DOMDocumentType ===== */
 #ifndef BEAN_TYPEDEF_DOMDocumentType
 #define BEAN_TYPEDEF_DOMDocumentType
 typedef bean_id DOMDocumentType;
 #endif
-static inline NSString    DOMDocumentType_Name(DOMDocumentType self)              { return ((NSString (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void*       DOMDocumentType_Entities(DOMDocumentType self)          { return ((void* (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("entities")); }
-static inline void*       DOMDocumentType_Notations(DOMDocumentType self)         { return ((void* (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("notations")); }
-static inline NSString    DOMDocumentType_PublicId(DOMDocumentType self)          { return ((NSString (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("publicId")); }
-static inline NSString    DOMDocumentType_SystemId(DOMDocumentType self)          { return ((NSString (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("systemId")); }
-static inline NSString    DOMDocumentType_InternalSubset(DOMDocumentType self)    { return ((NSString (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("internalSubset")); }
+static inline NSString           DOMDocumentType_Name(DOMDocumentType self)              { return ((NSString (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void*              DOMDocumentType_Entities(DOMDocumentType self)          { return ((void* (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("entities")); }
+static inline void*              DOMDocumentType_Notations(DOMDocumentType self)         { return ((void* (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("notations")); }
+static inline NSString           DOMDocumentType_PublicId(DOMDocumentType self)          { return ((NSString (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("publicId")); }
+static inline NSString           DOMDocumentType_SystemId(DOMDocumentType self)          { return ((NSString (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("systemId")); }
+static inline NSString           DOMDocumentType_InternalSubset(DOMDocumentType self)    { return ((NSString (*)(DOMDocumentType, SEL))bean_msgSend)(self, bean_sel("internalSubset")); }
+#ifndef BEAN_ALLOC_DOMDocumentType
+#define BEAN_ALLOC_DOMDocumentType
+static inline DOMDocumentType    DOMDocumentType_Alloc(void)                             { return (DOMDocumentType)bean_alloc(bean_cls("DOMDocumentType")); }
+#endif
+#ifndef BEAN_NEW_DOMDocumentType
+#define BEAN_NEW_DOMDocumentType
+static inline DOMDocumentType    DOMDocumentType_New(void)                               { return (DOMDocumentType)bean_new(bean_cls("DOMDocumentType")); }
+#endif
 
 /* ===== DOMElement ===== */
 #ifndef BEAN_TYPEDEF_DOMElement
@@ -4207,15 +4359,31 @@ static inline BOOL          DOMElement_HasAttributeNS(DOMElement self, NSString 
 static inline void          DOMElement_ScrollByLines(DOMElement self, int lines)                                                                             { ((void (*)(DOMElement, SEL, int))bean_msgSend)(self, bean_sel("scrollByLines:"), lines); }
 static inline void          DOMElement_ScrollByPages(DOMElement self, int pages)                                                                             { ((void (*)(DOMElement, SEL, int))bean_msgSend)(self, bean_sel("scrollByPages:"), pages); }
 static inline NSImage       DOMElement_Image(DOMElement self)                                                                                                { return ((NSImage (*)(DOMElement, SEL))bean_msgSend)(self, bean_sel("image")); }
+#ifndef BEAN_ALLOC_DOMElement
+#define BEAN_ALLOC_DOMElement
+static inline DOMElement    DOMElement_Alloc(void)                                                                                                           { return (DOMElement)bean_alloc(bean_cls("DOMElement")); }
+#endif
+#ifndef BEAN_NEW_DOMElement
+#define BEAN_NEW_DOMElement
+static inline DOMElement    DOMElement_New(void)                                                                                                             { return (DOMElement)bean_new(bean_cls("DOMElement")); }
+#endif
 
 /* ===== DOMEntity ===== */
 #ifndef BEAN_TYPEDEF_DOMEntity
 #define BEAN_TYPEDEF_DOMEntity
 typedef bean_id DOMEntity;
 #endif
-static inline NSString    DOMEntity_PublicId(DOMEntity self)        { return ((NSString (*)(DOMEntity, SEL))bean_msgSend)(self, bean_sel("publicId")); }
-static inline NSString    DOMEntity_SystemId(DOMEntity self)        { return ((NSString (*)(DOMEntity, SEL))bean_msgSend)(self, bean_sel("systemId")); }
-static inline NSString    DOMEntity_NotationName(DOMEntity self)    { return ((NSString (*)(DOMEntity, SEL))bean_msgSend)(self, bean_sel("notationName")); }
+static inline NSString     DOMEntity_PublicId(DOMEntity self)        { return ((NSString (*)(DOMEntity, SEL))bean_msgSend)(self, bean_sel("publicId")); }
+static inline NSString     DOMEntity_SystemId(DOMEntity self)        { return ((NSString (*)(DOMEntity, SEL))bean_msgSend)(self, bean_sel("systemId")); }
+static inline NSString     DOMEntity_NotationName(DOMEntity self)    { return ((NSString (*)(DOMEntity, SEL))bean_msgSend)(self, bean_sel("notationName")); }
+#ifndef BEAN_ALLOC_DOMEntity
+#define BEAN_ALLOC_DOMEntity
+static inline DOMEntity    DOMEntity_Alloc(void)                     { return (DOMEntity)bean_alloc(bean_cls("DOMEntity")); }
+#endif
+#ifndef BEAN_NEW_DOMEntity
+#define BEAN_NEW_DOMEntity
+static inline DOMEntity    DOMEntity_New(void)                       { return (DOMEntity)bean_new(bean_cls("DOMEntity")); }
+#endif
 
 /* ===== DOMEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMEvent
@@ -4238,24 +4406,48 @@ static inline void                  DOMEvent_SetReturnValue(DOMEvent self, BOOL 
 static inline BOOL                  DOMEvent_CancelBubble(DOMEvent self)                                                                                          { return ((BOOL (*)(DOMEvent, SEL))bean_msgSend)(self, bean_sel("cancelBubble")); }
 static inline void                  DOMEvent_SetCancelBubble(DOMEvent self, BOOL cancelBubble)                                                                    { ((void (*)(DOMEvent, SEL, BOOL))bean_msgSend)(self, bean_sel("setCancelBubble:"), cancelBubble); }
 static inline DOMEvent              DOMEvent_InitEvent(DOMEvent self, NSString eventTypeArg, BOOL canBubbleArg, BOOL cancelableArg)                               { return ((DOMEvent (*)(DOMEvent, SEL, NSString, BOOL, BOOL))bean_msgSend)(self, bean_sel("initEvent:::"), eventTypeArg, canBubbleArg, cancelableArg); }
+#ifndef BEAN_ALLOC_DOMEvent
+#define BEAN_ALLOC_DOMEvent
+static inline DOMEvent              DOMEvent_Alloc(void)                                                                                                          { return (DOMEvent)bean_alloc(bean_cls("DOMEvent")); }
+#endif
+#ifndef BEAN_NEW_DOMEvent
+#define BEAN_NEW_DOMEvent
+static inline DOMEvent              DOMEvent_New(void)                                                                                                            { return (DOMEvent)bean_new(bean_cls("DOMEvent")); }
+#endif
 
 /* ===== DOMEventListener ===== */
 #ifndef BEAN_TYPEDEF_DOMEventListener
 #define BEAN_TYPEDEF_DOMEventListener
 typedef bean_id DOMEventListener;
 #endif
-static inline void    DOMEventListener_HandleEvent(DOMEventListener self, void* event)    { ((void (*)(DOMEventListener, SEL, void*))bean_msgSend)(self, bean_sel("handleEvent:"), event); }
+static inline void                DOMEventListener_HandleEvent(DOMEventListener self, void* event)    { ((void (*)(DOMEventListener, SEL, void*))bean_msgSend)(self, bean_sel("handleEvent:"), event); }
+#ifndef BEAN_ALLOC_DOMEventListener
+#define BEAN_ALLOC_DOMEventListener
+static inline DOMEventListener    DOMEventListener_Alloc(void)                                        { return (DOMEventListener)bean_alloc(bean_cls("DOMEventListener")); }
+#endif
+#ifndef BEAN_NEW_DOMEventListener
+#define BEAN_NEW_DOMEventListener
+static inline DOMEventListener    DOMEventListener_New(void)                                          { return (DOMEventListener)bean_new(bean_cls("DOMEventListener")); }
+#endif
 
 /* ===== DOMEventTarget ===== */
 #ifndef BEAN_TYPEDEF_DOMEventTarget
 #define BEAN_TYPEDEF_DOMEventTarget
 typedef bean_id DOMEventTarget;
 #endif
-static inline void    DOMEventTarget_AddEventListener_Listener_UseCapture(DOMEventTarget self, NSString type, id listener, BOOL useCapture)       { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:listener:useCapture:"), type, listener, useCapture); }
-static inline void    DOMEventTarget_RemoveEventListener_Listener_UseCapture(DOMEventTarget self, NSString type, id listener, BOOL useCapture)    { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:listener:useCapture:"), type, listener, useCapture); }
-static inline BOOL    DOMEventTarget_DispatchEvent(DOMEventTarget self, void* event)                                                              { return ((BOOL (*)(DOMEventTarget, SEL, void*))bean_msgSend)(self, bean_sel("dispatchEvent:"), event); }
-static inline void    DOMEventTarget_AddEventListener(DOMEventTarget self, NSString type, id listener, BOOL useCapture)                           { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:::"), type, listener, useCapture); }
-static inline void    DOMEventTarget_RemoveEventListener(DOMEventTarget self, NSString type, id listener, BOOL useCapture)                        { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:::"), type, listener, useCapture); }
+static inline void              DOMEventTarget_AddEventListener_Listener_UseCapture(DOMEventTarget self, NSString type, id listener, BOOL useCapture)       { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:listener:useCapture:"), type, listener, useCapture); }
+static inline void              DOMEventTarget_RemoveEventListener_Listener_UseCapture(DOMEventTarget self, NSString type, id listener, BOOL useCapture)    { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:listener:useCapture:"), type, listener, useCapture); }
+static inline BOOL              DOMEventTarget_DispatchEvent(DOMEventTarget self, void* event)                                                              { return ((BOOL (*)(DOMEventTarget, SEL, void*))bean_msgSend)(self, bean_sel("dispatchEvent:"), event); }
+static inline void              DOMEventTarget_AddEventListener(DOMEventTarget self, NSString type, id listener, BOOL useCapture)                           { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:::"), type, listener, useCapture); }
+static inline void              DOMEventTarget_RemoveEventListener(DOMEventTarget self, NSString type, id listener, BOOL useCapture)                        { ((void (*)(DOMEventTarget, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:::"), type, listener, useCapture); }
+#ifndef BEAN_ALLOC_DOMEventTarget
+#define BEAN_ALLOC_DOMEventTarget
+static inline DOMEventTarget    DOMEventTarget_Alloc(void)                                                                                                  { return (DOMEventTarget)bean_alloc(bean_cls("DOMEventTarget")); }
+#endif
+#ifndef BEAN_NEW_DOMEventTarget
+#define BEAN_NEW_DOMEventTarget
+static inline DOMEventTarget    DOMEventTarget_New(void)                                                                                                    { return (DOMEventTarget)bean_new(bean_cls("DOMEventTarget")); }
+#endif
 
 /* ===== DOMFile ===== */
 #ifndef BEAN_TYPEDEF_DOMFile
@@ -4263,948 +4455,1404 @@ static inline void    DOMEventTarget_RemoveEventListener(DOMEventTarget self, NS
 typedef bean_id DOMFile;
 #endif
 static inline NSString    DOMFile_Name(DOMFile self)    { return ((NSString (*)(DOMFile, SEL))bean_msgSend)(self, bean_sel("name")); }
+#ifndef BEAN_ALLOC_DOMFile
+#define BEAN_ALLOC_DOMFile
+static inline DOMFile     DOMFile_Alloc(void)           { return (DOMFile)bean_alloc(bean_cls("DOMFile")); }
+#endif
+#ifndef BEAN_NEW_DOMFile
+#define BEAN_NEW_DOMFile
+static inline DOMFile     DOMFile_New(void)             { return (DOMFile)bean_new(bean_cls("DOMFile")); }
+#endif
 
 /* ===== DOMFileList ===== */
 #ifndef BEAN_TYPEDEF_DOMFileList
 #define BEAN_TYPEDEF_DOMFileList
 typedef bean_id DOMFileList;
 #endif
-static inline void*         DOMFileList_Item(DOMFileList self, NSUInteger index)    { return ((void* (*)(DOMFileList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline NSUInteger    DOMFileList_Length(DOMFileList self)                    { return ((NSUInteger (*)(DOMFileList, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void*          DOMFileList_Item(DOMFileList self, NSUInteger index)    { return ((void* (*)(DOMFileList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline NSUInteger     DOMFileList_Length(DOMFileList self)                    { return ((NSUInteger (*)(DOMFileList, SEL))bean_msgSend)(self, bean_sel("length")); }
+#ifndef BEAN_ALLOC_DOMFileList
+#define BEAN_ALLOC_DOMFileList
+static inline DOMFileList    DOMFileList_Alloc(void)                                 { return (DOMFileList)bean_alloc(bean_cls("DOMFileList")); }
+#endif
+#ifndef BEAN_NEW_DOMFileList
+#define BEAN_NEW_DOMFileList
+static inline DOMFileList    DOMFileList_New(void)                                   { return (DOMFileList)bean_new(bean_cls("DOMFileList")); }
+#endif
 
 /* ===== DOMHTMLAnchorElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLAnchorElement
 #define BEAN_TYPEDEF_DOMHTMLAnchorElement
 typedef bean_id DOMHTMLAnchorElement;
 #endif
-static inline NSString    DOMHTMLAnchorElement_Charset(DOMHTMLAnchorElement self)                             { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("charset")); }
-static inline void        DOMHTMLAnchorElement_SetCharset(DOMHTMLAnchorElement self, NSString charset)        { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCharset:"), charset); }
-static inline NSString    DOMHTMLAnchorElement_Coords(DOMHTMLAnchorElement self)                              { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("coords")); }
-static inline void        DOMHTMLAnchorElement_SetCoords(DOMHTMLAnchorElement self, NSString coords)          { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCoords:"), coords); }
-static inline NSString    DOMHTMLAnchorElement_Hreflang(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("hreflang")); }
-static inline void        DOMHTMLAnchorElement_SetHreflang(DOMHTMLAnchorElement self, NSString hreflang)      { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHreflang:"), hreflang); }
-static inline NSString    DOMHTMLAnchorElement_Name(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLAnchorElement_SetName(DOMHTMLAnchorElement self, NSString name)              { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLAnchorElement_Rel(DOMHTMLAnchorElement self)                                 { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("rel")); }
-static inline void        DOMHTMLAnchorElement_SetRel(DOMHTMLAnchorElement self, NSString rel)                { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRel:"), rel); }
-static inline NSString    DOMHTMLAnchorElement_Rev(DOMHTMLAnchorElement self)                                 { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("rev")); }
-static inline void        DOMHTMLAnchorElement_SetRev(DOMHTMLAnchorElement self, NSString rev)                { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRev:"), rev); }
-static inline NSString    DOMHTMLAnchorElement_Shape(DOMHTMLAnchorElement self)                               { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("shape")); }
-static inline void        DOMHTMLAnchorElement_SetShape(DOMHTMLAnchorElement self, NSString shape)            { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setShape:"), shape); }
-static inline NSString    DOMHTMLAnchorElement_Target(DOMHTMLAnchorElement self)                              { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("target")); }
-static inline void        DOMHTMLAnchorElement_SetTarget(DOMHTMLAnchorElement self, NSString target)          { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
-static inline NSString    DOMHTMLAnchorElement_Type(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLAnchorElement_SetType(DOMHTMLAnchorElement self, NSString type)              { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline NSString    DOMHTMLAnchorElement_AccessKey(DOMHTMLAnchorElement self)                           { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
-static inline void        DOMHTMLAnchorElement_SetAccessKey(DOMHTMLAnchorElement self, NSString accessKey)    { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
-static inline NSString    DOMHTMLAnchorElement_Text(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("text")); }
-static inline NSURL       DOMHTMLAnchorElement_AbsoluteLinkURL(DOMHTMLAnchorElement self)                     { return ((NSURL (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("absoluteLinkURL")); }
-static inline NSString    DOMHTMLAnchorElement_Href(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("href")); }
-static inline void        DOMHTMLAnchorElement_SetHref(DOMHTMLAnchorElement self, NSString href)              { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHref:"), href); }
-static inline NSString    DOMHTMLAnchorElement_Protocol(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("protocol")); }
-static inline NSString    DOMHTMLAnchorElement_Host(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("host")); }
-static inline NSString    DOMHTMLAnchorElement_Hostname(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("hostname")); }
-static inline NSString    DOMHTMLAnchorElement_Port(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("port")); }
-static inline NSString    DOMHTMLAnchorElement_Pathname(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("pathname")); }
-static inline NSString    DOMHTMLAnchorElement_Search(DOMHTMLAnchorElement self)                              { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("search")); }
-static inline NSString    DOMHTMLAnchorElement_HashName(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("hashName")); }
+static inline NSString                DOMHTMLAnchorElement_Charset(DOMHTMLAnchorElement self)                             { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("charset")); }
+static inline void                    DOMHTMLAnchorElement_SetCharset(DOMHTMLAnchorElement self, NSString charset)        { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCharset:"), charset); }
+static inline NSString                DOMHTMLAnchorElement_Coords(DOMHTMLAnchorElement self)                              { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("coords")); }
+static inline void                    DOMHTMLAnchorElement_SetCoords(DOMHTMLAnchorElement self, NSString coords)          { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCoords:"), coords); }
+static inline NSString                DOMHTMLAnchorElement_Hreflang(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("hreflang")); }
+static inline void                    DOMHTMLAnchorElement_SetHreflang(DOMHTMLAnchorElement self, NSString hreflang)      { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHreflang:"), hreflang); }
+static inline NSString                DOMHTMLAnchorElement_Name(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                    DOMHTMLAnchorElement_SetName(DOMHTMLAnchorElement self, NSString name)              { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString                DOMHTMLAnchorElement_Rel(DOMHTMLAnchorElement self)                                 { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("rel")); }
+static inline void                    DOMHTMLAnchorElement_SetRel(DOMHTMLAnchorElement self, NSString rel)                { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRel:"), rel); }
+static inline NSString                DOMHTMLAnchorElement_Rev(DOMHTMLAnchorElement self)                                 { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("rev")); }
+static inline void                    DOMHTMLAnchorElement_SetRev(DOMHTMLAnchorElement self, NSString rev)                { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRev:"), rev); }
+static inline NSString                DOMHTMLAnchorElement_Shape(DOMHTMLAnchorElement self)                               { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("shape")); }
+static inline void                    DOMHTMLAnchorElement_SetShape(DOMHTMLAnchorElement self, NSString shape)            { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setShape:"), shape); }
+static inline NSString                DOMHTMLAnchorElement_Target(DOMHTMLAnchorElement self)                              { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("target")); }
+static inline void                    DOMHTMLAnchorElement_SetTarget(DOMHTMLAnchorElement self, NSString target)          { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
+static inline NSString                DOMHTMLAnchorElement_Type(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                    DOMHTMLAnchorElement_SetType(DOMHTMLAnchorElement self, NSString type)              { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline NSString                DOMHTMLAnchorElement_AccessKey(DOMHTMLAnchorElement self)                           { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
+static inline void                    DOMHTMLAnchorElement_SetAccessKey(DOMHTMLAnchorElement self, NSString accessKey)    { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+static inline NSString                DOMHTMLAnchorElement_Text(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("text")); }
+static inline NSURL                   DOMHTMLAnchorElement_AbsoluteLinkURL(DOMHTMLAnchorElement self)                     { return ((NSURL (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("absoluteLinkURL")); }
+static inline NSString                DOMHTMLAnchorElement_Href(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("href")); }
+static inline void                    DOMHTMLAnchorElement_SetHref(DOMHTMLAnchorElement self, NSString href)              { ((void (*)(DOMHTMLAnchorElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHref:"), href); }
+static inline NSString                DOMHTMLAnchorElement_Protocol(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("protocol")); }
+static inline NSString                DOMHTMLAnchorElement_Host(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("host")); }
+static inline NSString                DOMHTMLAnchorElement_Hostname(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("hostname")); }
+static inline NSString                DOMHTMLAnchorElement_Port(DOMHTMLAnchorElement self)                                { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("port")); }
+static inline NSString                DOMHTMLAnchorElement_Pathname(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("pathname")); }
+static inline NSString                DOMHTMLAnchorElement_Search(DOMHTMLAnchorElement self)                              { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("search")); }
+static inline NSString                DOMHTMLAnchorElement_HashName(DOMHTMLAnchorElement self)                            { return ((NSString (*)(DOMHTMLAnchorElement, SEL))bean_msgSend)(self, bean_sel("hashName")); }
+#ifndef BEAN_ALLOC_DOMHTMLAnchorElement
+#define BEAN_ALLOC_DOMHTMLAnchorElement
+static inline DOMHTMLAnchorElement    DOMHTMLAnchorElement_Alloc(void)                                                    { return (DOMHTMLAnchorElement)bean_alloc(bean_cls("DOMHTMLAnchorElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLAnchorElement
+#define BEAN_NEW_DOMHTMLAnchorElement
+static inline DOMHTMLAnchorElement    DOMHTMLAnchorElement_New(void)                                                      { return (DOMHTMLAnchorElement)bean_new(bean_cls("DOMHTMLAnchorElement")); }
+#endif
 
 /* ===== DOMHTMLAppletElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLAppletElement
 #define BEAN_TYPEDEF_DOMHTMLAppletElement
 typedef bean_id DOMHTMLAppletElement;
 #endif
-static inline NSString    DOMHTMLAppletElement_Align(DOMHTMLAppletElement self)                             { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLAppletElement_SetAlign(DOMHTMLAppletElement self, NSString align)          { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLAppletElement_Alt(DOMHTMLAppletElement self)                               { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("alt")); }
-static inline void        DOMHTMLAppletElement_SetAlt(DOMHTMLAppletElement self, NSString alt)              { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlt:"), alt); }
-static inline NSString    DOMHTMLAppletElement_Archive(DOMHTMLAppletElement self)                           { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("archive")); }
-static inline void        DOMHTMLAppletElement_SetArchive(DOMHTMLAppletElement self, NSString archive)      { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setArchive:"), archive); }
-static inline NSString    DOMHTMLAppletElement_Code(DOMHTMLAppletElement self)                              { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("code")); }
-static inline void        DOMHTMLAppletElement_SetCode(DOMHTMLAppletElement self, NSString code)            { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCode:"), code); }
-static inline NSString    DOMHTMLAppletElement_CodeBase(DOMHTMLAppletElement self)                          { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("codeBase")); }
-static inline void        DOMHTMLAppletElement_SetCodeBase(DOMHTMLAppletElement self, NSString codeBase)    { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCodeBase:"), codeBase); }
-static inline NSString    DOMHTMLAppletElement_Height(DOMHTMLAppletElement self)                            { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline void        DOMHTMLAppletElement_SetHeight(DOMHTMLAppletElement self, NSString height)        { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
-static inline int         DOMHTMLAppletElement_Hspace(DOMHTMLAppletElement self)                            { return ((int (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("hspace")); }
-static inline void        DOMHTMLAppletElement_SetHspace(DOMHTMLAppletElement self, int hspace)             { ((void (*)(DOMHTMLAppletElement, SEL, int))bean_msgSend)(self, bean_sel("setHspace:"), hspace); }
-static inline NSString    DOMHTMLAppletElement_Name(DOMHTMLAppletElement self)                              { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLAppletElement_SetName(DOMHTMLAppletElement self, NSString name)            { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLAppletElement_Object(DOMHTMLAppletElement self)                            { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("object")); }
-static inline void        DOMHTMLAppletElement_SetObject(DOMHTMLAppletElement self, NSString object)        { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setObject:"), object); }
-static inline int         DOMHTMLAppletElement_Vspace(DOMHTMLAppletElement self)                            { return ((int (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("vspace")); }
-static inline void        DOMHTMLAppletElement_SetVspace(DOMHTMLAppletElement self, int vspace)             { ((void (*)(DOMHTMLAppletElement, SEL, int))bean_msgSend)(self, bean_sel("setVspace:"), vspace); }
-static inline NSString    DOMHTMLAppletElement_Width(DOMHTMLAppletElement self)                             { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLAppletElement_SetWidth(DOMHTMLAppletElement self, NSString width)          { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline NSString                DOMHTMLAppletElement_Align(DOMHTMLAppletElement self)                             { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                    DOMHTMLAppletElement_SetAlign(DOMHTMLAppletElement self, NSString align)          { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                DOMHTMLAppletElement_Alt(DOMHTMLAppletElement self)                               { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("alt")); }
+static inline void                    DOMHTMLAppletElement_SetAlt(DOMHTMLAppletElement self, NSString alt)              { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlt:"), alt); }
+static inline NSString                DOMHTMLAppletElement_Archive(DOMHTMLAppletElement self)                           { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("archive")); }
+static inline void                    DOMHTMLAppletElement_SetArchive(DOMHTMLAppletElement self, NSString archive)      { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setArchive:"), archive); }
+static inline NSString                DOMHTMLAppletElement_Code(DOMHTMLAppletElement self)                              { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("code")); }
+static inline void                    DOMHTMLAppletElement_SetCode(DOMHTMLAppletElement self, NSString code)            { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCode:"), code); }
+static inline NSString                DOMHTMLAppletElement_CodeBase(DOMHTMLAppletElement self)                          { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("codeBase")); }
+static inline void                    DOMHTMLAppletElement_SetCodeBase(DOMHTMLAppletElement self, NSString codeBase)    { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCodeBase:"), codeBase); }
+static inline NSString                DOMHTMLAppletElement_Height(DOMHTMLAppletElement self)                            { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline void                    DOMHTMLAppletElement_SetHeight(DOMHTMLAppletElement self, NSString height)        { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
+static inline int                     DOMHTMLAppletElement_Hspace(DOMHTMLAppletElement self)                            { return ((int (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("hspace")); }
+static inline void                    DOMHTMLAppletElement_SetHspace(DOMHTMLAppletElement self, int hspace)             { ((void (*)(DOMHTMLAppletElement, SEL, int))bean_msgSend)(self, bean_sel("setHspace:"), hspace); }
+static inline NSString                DOMHTMLAppletElement_Name(DOMHTMLAppletElement self)                              { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                    DOMHTMLAppletElement_SetName(DOMHTMLAppletElement self, NSString name)            { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString                DOMHTMLAppletElement_Object(DOMHTMLAppletElement self)                            { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("object")); }
+static inline void                    DOMHTMLAppletElement_SetObject(DOMHTMLAppletElement self, NSString object)        { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setObject:"), object); }
+static inline int                     DOMHTMLAppletElement_Vspace(DOMHTMLAppletElement self)                            { return ((int (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("vspace")); }
+static inline void                    DOMHTMLAppletElement_SetVspace(DOMHTMLAppletElement self, int vspace)             { ((void (*)(DOMHTMLAppletElement, SEL, int))bean_msgSend)(self, bean_sel("setVspace:"), vspace); }
+static inline NSString                DOMHTMLAppletElement_Width(DOMHTMLAppletElement self)                             { return ((NSString (*)(DOMHTMLAppletElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                    DOMHTMLAppletElement_SetWidth(DOMHTMLAppletElement self, NSString width)          { ((void (*)(DOMHTMLAppletElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+#ifndef BEAN_ALLOC_DOMHTMLAppletElement
+#define BEAN_ALLOC_DOMHTMLAppletElement
+static inline DOMHTMLAppletElement    DOMHTMLAppletElement_Alloc(void)                                                  { return (DOMHTMLAppletElement)bean_alloc(bean_cls("DOMHTMLAppletElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLAppletElement
+#define BEAN_NEW_DOMHTMLAppletElement
+static inline DOMHTMLAppletElement    DOMHTMLAppletElement_New(void)                                                    { return (DOMHTMLAppletElement)bean_new(bean_cls("DOMHTMLAppletElement")); }
+#endif
 
 /* ===== DOMHTMLAreaElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLAreaElement
 #define BEAN_TYPEDEF_DOMHTMLAreaElement
 typedef bean_id DOMHTMLAreaElement;
 #endif
-static inline NSString    DOMHTMLAreaElement_Alt(DOMHTMLAreaElement self)                                 { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("alt")); }
-static inline void        DOMHTMLAreaElement_SetAlt(DOMHTMLAreaElement self, NSString alt)                { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlt:"), alt); }
-static inline NSString    DOMHTMLAreaElement_Coords(DOMHTMLAreaElement self)                              { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("coords")); }
-static inline void        DOMHTMLAreaElement_SetCoords(DOMHTMLAreaElement self, NSString coords)          { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCoords:"), coords); }
-static inline BOOL        DOMHTMLAreaElement_NoHref(DOMHTMLAreaElement self)                              { return ((BOOL (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("noHref")); }
-static inline void        DOMHTMLAreaElement_SetNoHref(DOMHTMLAreaElement self, BOOL noHref)              { ((void (*)(DOMHTMLAreaElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setNoHref:"), noHref); }
-static inline NSString    DOMHTMLAreaElement_Shape(DOMHTMLAreaElement self)                               { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("shape")); }
-static inline void        DOMHTMLAreaElement_SetShape(DOMHTMLAreaElement self, NSString shape)            { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setShape:"), shape); }
-static inline NSString    DOMHTMLAreaElement_Target(DOMHTMLAreaElement self)                              { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("target")); }
-static inline void        DOMHTMLAreaElement_SetTarget(DOMHTMLAreaElement self, NSString target)          { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
-static inline NSString    DOMHTMLAreaElement_AccessKey(DOMHTMLAreaElement self)                           { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
-static inline void        DOMHTMLAreaElement_SetAccessKey(DOMHTMLAreaElement self, NSString accessKey)    { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
-static inline NSURL       DOMHTMLAreaElement_AbsoluteLinkURL(DOMHTMLAreaElement self)                     { return ((NSURL (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("absoluteLinkURL")); }
-static inline NSString    DOMHTMLAreaElement_Href(DOMHTMLAreaElement self)                                { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("href")); }
-static inline void        DOMHTMLAreaElement_SetHref(DOMHTMLAreaElement self, NSString href)              { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHref:"), href); }
-static inline NSString    DOMHTMLAreaElement_Protocol(DOMHTMLAreaElement self)                            { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("protocol")); }
-static inline NSString    DOMHTMLAreaElement_Host(DOMHTMLAreaElement self)                                { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("host")); }
-static inline NSString    DOMHTMLAreaElement_Hostname(DOMHTMLAreaElement self)                            { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("hostname")); }
-static inline NSString    DOMHTMLAreaElement_Port(DOMHTMLAreaElement self)                                { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("port")); }
-static inline NSString    DOMHTMLAreaElement_Pathname(DOMHTMLAreaElement self)                            { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("pathname")); }
-static inline NSString    DOMHTMLAreaElement_Search(DOMHTMLAreaElement self)                              { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("search")); }
-static inline NSString    DOMHTMLAreaElement_HashName(DOMHTMLAreaElement self)                            { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("hashName")); }
+static inline NSString              DOMHTMLAreaElement_Alt(DOMHTMLAreaElement self)                                 { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("alt")); }
+static inline void                  DOMHTMLAreaElement_SetAlt(DOMHTMLAreaElement self, NSString alt)                { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlt:"), alt); }
+static inline NSString              DOMHTMLAreaElement_Coords(DOMHTMLAreaElement self)                              { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("coords")); }
+static inline void                  DOMHTMLAreaElement_SetCoords(DOMHTMLAreaElement self, NSString coords)          { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCoords:"), coords); }
+static inline BOOL                  DOMHTMLAreaElement_NoHref(DOMHTMLAreaElement self)                              { return ((BOOL (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("noHref")); }
+static inline void                  DOMHTMLAreaElement_SetNoHref(DOMHTMLAreaElement self, BOOL noHref)              { ((void (*)(DOMHTMLAreaElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setNoHref:"), noHref); }
+static inline NSString              DOMHTMLAreaElement_Shape(DOMHTMLAreaElement self)                               { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("shape")); }
+static inline void                  DOMHTMLAreaElement_SetShape(DOMHTMLAreaElement self, NSString shape)            { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setShape:"), shape); }
+static inline NSString              DOMHTMLAreaElement_Target(DOMHTMLAreaElement self)                              { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("target")); }
+static inline void                  DOMHTMLAreaElement_SetTarget(DOMHTMLAreaElement self, NSString target)          { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
+static inline NSString              DOMHTMLAreaElement_AccessKey(DOMHTMLAreaElement self)                           { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
+static inline void                  DOMHTMLAreaElement_SetAccessKey(DOMHTMLAreaElement self, NSString accessKey)    { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+static inline NSURL                 DOMHTMLAreaElement_AbsoluteLinkURL(DOMHTMLAreaElement self)                     { return ((NSURL (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("absoluteLinkURL")); }
+static inline NSString              DOMHTMLAreaElement_Href(DOMHTMLAreaElement self)                                { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("href")); }
+static inline void                  DOMHTMLAreaElement_SetHref(DOMHTMLAreaElement self, NSString href)              { ((void (*)(DOMHTMLAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHref:"), href); }
+static inline NSString              DOMHTMLAreaElement_Protocol(DOMHTMLAreaElement self)                            { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("protocol")); }
+static inline NSString              DOMHTMLAreaElement_Host(DOMHTMLAreaElement self)                                { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("host")); }
+static inline NSString              DOMHTMLAreaElement_Hostname(DOMHTMLAreaElement self)                            { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("hostname")); }
+static inline NSString              DOMHTMLAreaElement_Port(DOMHTMLAreaElement self)                                { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("port")); }
+static inline NSString              DOMHTMLAreaElement_Pathname(DOMHTMLAreaElement self)                            { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("pathname")); }
+static inline NSString              DOMHTMLAreaElement_Search(DOMHTMLAreaElement self)                              { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("search")); }
+static inline NSString              DOMHTMLAreaElement_HashName(DOMHTMLAreaElement self)                            { return ((NSString (*)(DOMHTMLAreaElement, SEL))bean_msgSend)(self, bean_sel("hashName")); }
+#ifndef BEAN_ALLOC_DOMHTMLAreaElement
+#define BEAN_ALLOC_DOMHTMLAreaElement
+static inline DOMHTMLAreaElement    DOMHTMLAreaElement_Alloc(void)                                                  { return (DOMHTMLAreaElement)bean_alloc(bean_cls("DOMHTMLAreaElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLAreaElement
+#define BEAN_NEW_DOMHTMLAreaElement
+static inline DOMHTMLAreaElement    DOMHTMLAreaElement_New(void)                                                    { return (DOMHTMLAreaElement)bean_new(bean_cls("DOMHTMLAreaElement")); }
+#endif
 
 /* ===== DOMHTMLBRElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLBRElement
 #define BEAN_TYPEDEF_DOMHTMLBRElement
 typedef bean_id DOMHTMLBRElement;
 #endif
-static inline NSString    DOMHTMLBRElement_Clear(DOMHTMLBRElement self)                       { return ((NSString (*)(DOMHTMLBRElement, SEL))bean_msgSend)(self, bean_sel("clear")); }
-static inline void        DOMHTMLBRElement_SetClear(DOMHTMLBRElement self, NSString clear)    { ((void (*)(DOMHTMLBRElement, SEL, NSString))bean_msgSend)(self, bean_sel("setClear:"), clear); }
+static inline NSString            DOMHTMLBRElement_Clear(DOMHTMLBRElement self)                       { return ((NSString (*)(DOMHTMLBRElement, SEL))bean_msgSend)(self, bean_sel("clear")); }
+static inline void                DOMHTMLBRElement_SetClear(DOMHTMLBRElement self, NSString clear)    { ((void (*)(DOMHTMLBRElement, SEL, NSString))bean_msgSend)(self, bean_sel("setClear:"), clear); }
+#ifndef BEAN_ALLOC_DOMHTMLBRElement
+#define BEAN_ALLOC_DOMHTMLBRElement
+static inline DOMHTMLBRElement    DOMHTMLBRElement_Alloc(void)                                        { return (DOMHTMLBRElement)bean_alloc(bean_cls("DOMHTMLBRElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLBRElement
+#define BEAN_NEW_DOMHTMLBRElement
+static inline DOMHTMLBRElement    DOMHTMLBRElement_New(void)                                          { return (DOMHTMLBRElement)bean_new(bean_cls("DOMHTMLBRElement")); }
+#endif
 
 /* ===== DOMHTMLBaseElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLBaseElement
 #define BEAN_TYPEDEF_DOMHTMLBaseElement
 typedef bean_id DOMHTMLBaseElement;
 #endif
-static inline NSString    DOMHTMLBaseElement_Href(DOMHTMLBaseElement self)                          { return ((NSString (*)(DOMHTMLBaseElement, SEL))bean_msgSend)(self, bean_sel("href")); }
-static inline void        DOMHTMLBaseElement_SetHref(DOMHTMLBaseElement self, NSString href)        { ((void (*)(DOMHTMLBaseElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHref:"), href); }
-static inline NSString    DOMHTMLBaseElement_Target(DOMHTMLBaseElement self)                        { return ((NSString (*)(DOMHTMLBaseElement, SEL))bean_msgSend)(self, bean_sel("target")); }
-static inline void        DOMHTMLBaseElement_SetTarget(DOMHTMLBaseElement self, NSString target)    { ((void (*)(DOMHTMLBaseElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
+static inline NSString              DOMHTMLBaseElement_Href(DOMHTMLBaseElement self)                          { return ((NSString (*)(DOMHTMLBaseElement, SEL))bean_msgSend)(self, bean_sel("href")); }
+static inline void                  DOMHTMLBaseElement_SetHref(DOMHTMLBaseElement self, NSString href)        { ((void (*)(DOMHTMLBaseElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHref:"), href); }
+static inline NSString              DOMHTMLBaseElement_Target(DOMHTMLBaseElement self)                        { return ((NSString (*)(DOMHTMLBaseElement, SEL))bean_msgSend)(self, bean_sel("target")); }
+static inline void                  DOMHTMLBaseElement_SetTarget(DOMHTMLBaseElement self, NSString target)    { ((void (*)(DOMHTMLBaseElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
+#ifndef BEAN_ALLOC_DOMHTMLBaseElement
+#define BEAN_ALLOC_DOMHTMLBaseElement
+static inline DOMHTMLBaseElement    DOMHTMLBaseElement_Alloc(void)                                            { return (DOMHTMLBaseElement)bean_alloc(bean_cls("DOMHTMLBaseElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLBaseElement
+#define BEAN_NEW_DOMHTMLBaseElement
+static inline DOMHTMLBaseElement    DOMHTMLBaseElement_New(void)                                              { return (DOMHTMLBaseElement)bean_new(bean_cls("DOMHTMLBaseElement")); }
+#endif
 
 /* ===== DOMHTMLBaseFontElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLBaseFontElement
 #define BEAN_TYPEDEF_DOMHTMLBaseFontElement
 typedef bean_id DOMHTMLBaseFontElement;
 #endif
-static inline NSString    DOMHTMLBaseFontElement_Color(DOMHTMLBaseFontElement self)                       { return ((NSString (*)(DOMHTMLBaseFontElement, SEL))bean_msgSend)(self, bean_sel("color")); }
-static inline void        DOMHTMLBaseFontElement_SetColor(DOMHTMLBaseFontElement self, NSString color)    { ((void (*)(DOMHTMLBaseFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setColor:"), color); }
-static inline NSString    DOMHTMLBaseFontElement_Face(DOMHTMLBaseFontElement self)                        { return ((NSString (*)(DOMHTMLBaseFontElement, SEL))bean_msgSend)(self, bean_sel("face")); }
-static inline void        DOMHTMLBaseFontElement_SetFace(DOMHTMLBaseFontElement self, NSString face)      { ((void (*)(DOMHTMLBaseFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFace:"), face); }
-static inline NSString    DOMHTMLBaseFontElement_Size(DOMHTMLBaseFontElement self)                        { return ((NSString (*)(DOMHTMLBaseFontElement, SEL))bean_msgSend)(self, bean_sel("size")); }
-static inline void        DOMHTMLBaseFontElement_SetSize(DOMHTMLBaseFontElement self, NSString size)      { ((void (*)(DOMHTMLBaseFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
+static inline NSString                  DOMHTMLBaseFontElement_Color(DOMHTMLBaseFontElement self)                       { return ((NSString (*)(DOMHTMLBaseFontElement, SEL))bean_msgSend)(self, bean_sel("color")); }
+static inline void                      DOMHTMLBaseFontElement_SetColor(DOMHTMLBaseFontElement self, NSString color)    { ((void (*)(DOMHTMLBaseFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setColor:"), color); }
+static inline NSString                  DOMHTMLBaseFontElement_Face(DOMHTMLBaseFontElement self)                        { return ((NSString (*)(DOMHTMLBaseFontElement, SEL))bean_msgSend)(self, bean_sel("face")); }
+static inline void                      DOMHTMLBaseFontElement_SetFace(DOMHTMLBaseFontElement self, NSString face)      { ((void (*)(DOMHTMLBaseFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFace:"), face); }
+static inline NSString                  DOMHTMLBaseFontElement_Size(DOMHTMLBaseFontElement self)                        { return ((NSString (*)(DOMHTMLBaseFontElement, SEL))bean_msgSend)(self, bean_sel("size")); }
+static inline void                      DOMHTMLBaseFontElement_SetSize(DOMHTMLBaseFontElement self, NSString size)      { ((void (*)(DOMHTMLBaseFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
+#ifndef BEAN_ALLOC_DOMHTMLBaseFontElement
+#define BEAN_ALLOC_DOMHTMLBaseFontElement
+static inline DOMHTMLBaseFontElement    DOMHTMLBaseFontElement_Alloc(void)                                              { return (DOMHTMLBaseFontElement)bean_alloc(bean_cls("DOMHTMLBaseFontElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLBaseFontElement
+#define BEAN_NEW_DOMHTMLBaseFontElement
+static inline DOMHTMLBaseFontElement    DOMHTMLBaseFontElement_New(void)                                                { return (DOMHTMLBaseFontElement)bean_new(bean_cls("DOMHTMLBaseFontElement")); }
+#endif
 
 /* ===== DOMHTMLBodyElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLBodyElement
 #define BEAN_TYPEDEF_DOMHTMLBodyElement
 typedef bean_id DOMHTMLBodyElement;
 #endif
-static inline NSString    DOMHTMLBodyElement_ALink(DOMHTMLBodyElement self)                                 { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("aLink")); }
-static inline void        DOMHTMLBodyElement_SetALink(DOMHTMLBodyElement self, NSString aLink)              { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setALink:"), aLink); }
-static inline NSString    DOMHTMLBodyElement_Background(DOMHTMLBodyElement self)                            { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("background")); }
-static inline void        DOMHTMLBodyElement_SetBackground(DOMHTMLBodyElement self, NSString background)    { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBackground:"), background); }
-static inline NSString    DOMHTMLBodyElement_BgColor(DOMHTMLBodyElement self)                               { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
-static inline void        DOMHTMLBodyElement_SetBgColor(DOMHTMLBodyElement self, NSString bgColor)          { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
-static inline NSString    DOMHTMLBodyElement_Link(DOMHTMLBodyElement self)                                  { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("link")); }
-static inline void        DOMHTMLBodyElement_SetLink(DOMHTMLBodyElement self, NSString link)                { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLink:"), link); }
-static inline NSString    DOMHTMLBodyElement_Text(DOMHTMLBodyElement self)                                  { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("text")); }
-static inline void        DOMHTMLBodyElement_SetText(DOMHTMLBodyElement self, NSString text)                { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setText:"), text); }
-static inline NSString    DOMHTMLBodyElement_VLink(DOMHTMLBodyElement self)                                 { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("vLink")); }
-static inline void        DOMHTMLBodyElement_SetVLink(DOMHTMLBodyElement self, NSString vLink)              { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVLink:"), vLink); }
+static inline NSString              DOMHTMLBodyElement_ALink(DOMHTMLBodyElement self)                                 { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("aLink")); }
+static inline void                  DOMHTMLBodyElement_SetALink(DOMHTMLBodyElement self, NSString aLink)              { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setALink:"), aLink); }
+static inline NSString              DOMHTMLBodyElement_Background(DOMHTMLBodyElement self)                            { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("background")); }
+static inline void                  DOMHTMLBodyElement_SetBackground(DOMHTMLBodyElement self, NSString background)    { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBackground:"), background); }
+static inline NSString              DOMHTMLBodyElement_BgColor(DOMHTMLBodyElement self)                               { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
+static inline void                  DOMHTMLBodyElement_SetBgColor(DOMHTMLBodyElement self, NSString bgColor)          { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
+static inline NSString              DOMHTMLBodyElement_Link(DOMHTMLBodyElement self)                                  { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("link")); }
+static inline void                  DOMHTMLBodyElement_SetLink(DOMHTMLBodyElement self, NSString link)                { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLink:"), link); }
+static inline NSString              DOMHTMLBodyElement_Text(DOMHTMLBodyElement self)                                  { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("text")); }
+static inline void                  DOMHTMLBodyElement_SetText(DOMHTMLBodyElement self, NSString text)                { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setText:"), text); }
+static inline NSString              DOMHTMLBodyElement_VLink(DOMHTMLBodyElement self)                                 { return ((NSString (*)(DOMHTMLBodyElement, SEL))bean_msgSend)(self, bean_sel("vLink")); }
+static inline void                  DOMHTMLBodyElement_SetVLink(DOMHTMLBodyElement self, NSString vLink)              { ((void (*)(DOMHTMLBodyElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVLink:"), vLink); }
+#ifndef BEAN_ALLOC_DOMHTMLBodyElement
+#define BEAN_ALLOC_DOMHTMLBodyElement
+static inline DOMHTMLBodyElement    DOMHTMLBodyElement_Alloc(void)                                                    { return (DOMHTMLBodyElement)bean_alloc(bean_cls("DOMHTMLBodyElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLBodyElement
+#define BEAN_NEW_DOMHTMLBodyElement
+static inline DOMHTMLBodyElement    DOMHTMLBodyElement_New(void)                                                      { return (DOMHTMLBodyElement)bean_new(bean_cls("DOMHTMLBodyElement")); }
+#endif
 
 /* ===== DOMHTMLButtonElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLButtonElement
 #define BEAN_TYPEDEF_DOMHTMLButtonElement
 typedef bean_id DOMHTMLButtonElement;
 #endif
-static inline void        DOMHTMLButtonElement_Click(DOMHTMLButtonElement self)                               { ((void (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("click")); }
-static inline BOOL        DOMHTMLButtonElement_Autofocus(DOMHTMLButtonElement self)                           { return ((BOOL (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("autofocus")); }
-static inline void        DOMHTMLButtonElement_SetAutofocus(DOMHTMLButtonElement self, BOOL autofocus)        { ((void (*)(DOMHTMLButtonElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutofocus:"), autofocus); }
-static inline BOOL        DOMHTMLButtonElement_Disabled(DOMHTMLButtonElement self)                            { return ((BOOL (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMHTMLButtonElement_SetDisabled(DOMHTMLButtonElement self, BOOL disabled)          { ((void (*)(DOMHTMLButtonElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline void*       DOMHTMLButtonElement_Form(DOMHTMLButtonElement self)                                { return ((void* (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("form")); }
-static inline NSString    DOMHTMLButtonElement_Type(DOMHTMLButtonElement self)                                { return ((NSString (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLButtonElement_SetType(DOMHTMLButtonElement self, NSString type)              { ((void (*)(DOMHTMLButtonElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline NSString    DOMHTMLButtonElement_Name(DOMHTMLButtonElement self)                                { return ((NSString (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLButtonElement_SetName(DOMHTMLButtonElement self, NSString name)              { ((void (*)(DOMHTMLButtonElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLButtonElement_Value(DOMHTMLButtonElement self)                               { return ((NSString (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline void        DOMHTMLButtonElement_SetValue(DOMHTMLButtonElement self, NSString value)            { ((void (*)(DOMHTMLButtonElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
-static inline BOOL        DOMHTMLButtonElement_WillValidate(DOMHTMLButtonElement self)                        { return ((BOOL (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("willValidate")); }
-static inline NSString    DOMHTMLButtonElement_AccessKey(DOMHTMLButtonElement self)                           { return ((NSString (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
-static inline void        DOMHTMLButtonElement_SetAccessKey(DOMHTMLButtonElement self, NSString accessKey)    { ((void (*)(DOMHTMLButtonElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+static inline void                    DOMHTMLButtonElement_Click(DOMHTMLButtonElement self)                               { ((void (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("click")); }
+static inline BOOL                    DOMHTMLButtonElement_Autofocus(DOMHTMLButtonElement self)                           { return ((BOOL (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("autofocus")); }
+static inline void                    DOMHTMLButtonElement_SetAutofocus(DOMHTMLButtonElement self, BOOL autofocus)        { ((void (*)(DOMHTMLButtonElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutofocus:"), autofocus); }
+static inline BOOL                    DOMHTMLButtonElement_Disabled(DOMHTMLButtonElement self)                            { return ((BOOL (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void                    DOMHTMLButtonElement_SetDisabled(DOMHTMLButtonElement self, BOOL disabled)          { ((void (*)(DOMHTMLButtonElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline void*                   DOMHTMLButtonElement_Form(DOMHTMLButtonElement self)                                { return ((void* (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline NSString                DOMHTMLButtonElement_Type(DOMHTMLButtonElement self)                                { return ((NSString (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                    DOMHTMLButtonElement_SetType(DOMHTMLButtonElement self, NSString type)              { ((void (*)(DOMHTMLButtonElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline NSString                DOMHTMLButtonElement_Name(DOMHTMLButtonElement self)                                { return ((NSString (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                    DOMHTMLButtonElement_SetName(DOMHTMLButtonElement self, NSString name)              { ((void (*)(DOMHTMLButtonElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString                DOMHTMLButtonElement_Value(DOMHTMLButtonElement self)                               { return ((NSString (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void                    DOMHTMLButtonElement_SetValue(DOMHTMLButtonElement self, NSString value)            { ((void (*)(DOMHTMLButtonElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline BOOL                    DOMHTMLButtonElement_WillValidate(DOMHTMLButtonElement self)                        { return ((BOOL (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("willValidate")); }
+static inline NSString                DOMHTMLButtonElement_AccessKey(DOMHTMLButtonElement self)                           { return ((NSString (*)(DOMHTMLButtonElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
+static inline void                    DOMHTMLButtonElement_SetAccessKey(DOMHTMLButtonElement self, NSString accessKey)    { ((void (*)(DOMHTMLButtonElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+#ifndef BEAN_ALLOC_DOMHTMLButtonElement
+#define BEAN_ALLOC_DOMHTMLButtonElement
+static inline DOMHTMLButtonElement    DOMHTMLButtonElement_Alloc(void)                                                    { return (DOMHTMLButtonElement)bean_alloc(bean_cls("DOMHTMLButtonElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLButtonElement
+#define BEAN_NEW_DOMHTMLButtonElement
+static inline DOMHTMLButtonElement    DOMHTMLButtonElement_New(void)                                                      { return (DOMHTMLButtonElement)bean_new(bean_cls("DOMHTMLButtonElement")); }
+#endif
 
 /* ===== DOMHTMLCollection ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLCollection
 #define BEAN_TYPEDEF_DOMHTMLCollection
 typedef bean_id DOMHTMLCollection;
 #endif
-static inline void*         DOMHTMLCollection_Item(DOMHTMLCollection self, NSUInteger index)      { return ((void* (*)(DOMHTMLCollection, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline void*         DOMHTMLCollection_NamedItem(DOMHTMLCollection self, NSString name)    { return ((void* (*)(DOMHTMLCollection, SEL, NSString))bean_msgSend)(self, bean_sel("namedItem:"), name); }
-static inline void*         DOMHTMLCollection_Tags(DOMHTMLCollection self, NSString name)         { return ((void* (*)(DOMHTMLCollection, SEL, NSString))bean_msgSend)(self, bean_sel("tags:"), name); }
-static inline NSUInteger    DOMHTMLCollection_Length(DOMHTMLCollection self)                      { return ((NSUInteger (*)(DOMHTMLCollection, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void*                DOMHTMLCollection_Item(DOMHTMLCollection self, NSUInteger index)      { return ((void* (*)(DOMHTMLCollection, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline void*                DOMHTMLCollection_NamedItem(DOMHTMLCollection self, NSString name)    { return ((void* (*)(DOMHTMLCollection, SEL, NSString))bean_msgSend)(self, bean_sel("namedItem:"), name); }
+static inline void*                DOMHTMLCollection_Tags(DOMHTMLCollection self, NSString name)         { return ((void* (*)(DOMHTMLCollection, SEL, NSString))bean_msgSend)(self, bean_sel("tags:"), name); }
+static inline NSUInteger           DOMHTMLCollection_Length(DOMHTMLCollection self)                      { return ((NSUInteger (*)(DOMHTMLCollection, SEL))bean_msgSend)(self, bean_sel("length")); }
+#ifndef BEAN_ALLOC_DOMHTMLCollection
+#define BEAN_ALLOC_DOMHTMLCollection
+static inline DOMHTMLCollection    DOMHTMLCollection_Alloc(void)                                         { return (DOMHTMLCollection)bean_alloc(bean_cls("DOMHTMLCollection")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLCollection
+#define BEAN_NEW_DOMHTMLCollection
+static inline DOMHTMLCollection    DOMHTMLCollection_New(void)                                           { return (DOMHTMLCollection)bean_new(bean_cls("DOMHTMLCollection")); }
+#endif
 
 /* ===== DOMHTMLDListElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLDListElement
 #define BEAN_TYPEDEF_DOMHTMLDListElement
 typedef bean_id DOMHTMLDListElement;
 #endif
-static inline BOOL    DOMHTMLDListElement_Compact(DOMHTMLDListElement self)                     { return ((BOOL (*)(DOMHTMLDListElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
-static inline void    DOMHTMLDListElement_SetCompact(DOMHTMLDListElement self, BOOL compact)    { ((void (*)(DOMHTMLDListElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
+static inline BOOL                   DOMHTMLDListElement_Compact(DOMHTMLDListElement self)                     { return ((BOOL (*)(DOMHTMLDListElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
+static inline void                   DOMHTMLDListElement_SetCompact(DOMHTMLDListElement self, BOOL compact)    { ((void (*)(DOMHTMLDListElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
+#ifndef BEAN_ALLOC_DOMHTMLDListElement
+#define BEAN_ALLOC_DOMHTMLDListElement
+static inline DOMHTMLDListElement    DOMHTMLDListElement_Alloc(void)                                           { return (DOMHTMLDListElement)bean_alloc(bean_cls("DOMHTMLDListElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLDListElement
+#define BEAN_NEW_DOMHTMLDListElement
+static inline DOMHTMLDListElement    DOMHTMLDListElement_New(void)                                             { return (DOMHTMLDListElement)bean_new(bean_cls("DOMHTMLDListElement")); }
+#endif
 
 /* ===== DOMHTMLDirectoryElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLDirectoryElement
 #define BEAN_TYPEDEF_DOMHTMLDirectoryElement
 typedef bean_id DOMHTMLDirectoryElement;
 #endif
-static inline BOOL    DOMHTMLDirectoryElement_Compact(DOMHTMLDirectoryElement self)                     { return ((BOOL (*)(DOMHTMLDirectoryElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
-static inline void    DOMHTMLDirectoryElement_SetCompact(DOMHTMLDirectoryElement self, BOOL compact)    { ((void (*)(DOMHTMLDirectoryElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
+static inline BOOL                       DOMHTMLDirectoryElement_Compact(DOMHTMLDirectoryElement self)                     { return ((BOOL (*)(DOMHTMLDirectoryElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
+static inline void                       DOMHTMLDirectoryElement_SetCompact(DOMHTMLDirectoryElement self, BOOL compact)    { ((void (*)(DOMHTMLDirectoryElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
+#ifndef BEAN_ALLOC_DOMHTMLDirectoryElement
+#define BEAN_ALLOC_DOMHTMLDirectoryElement
+static inline DOMHTMLDirectoryElement    DOMHTMLDirectoryElement_Alloc(void)                                               { return (DOMHTMLDirectoryElement)bean_alloc(bean_cls("DOMHTMLDirectoryElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLDirectoryElement
+#define BEAN_NEW_DOMHTMLDirectoryElement
+static inline DOMHTMLDirectoryElement    DOMHTMLDirectoryElement_New(void)                                                 { return (DOMHTMLDirectoryElement)bean_new(bean_cls("DOMHTMLDirectoryElement")); }
+#endif
 
 /* ===== DOMHTMLDivElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLDivElement
 #define BEAN_TYPEDEF_DOMHTMLDivElement
 typedef bean_id DOMHTMLDivElement;
 #endif
-static inline NSString    DOMHTMLDivElement_Align(DOMHTMLDivElement self)                       { return ((NSString (*)(DOMHTMLDivElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLDivElement_SetAlign(DOMHTMLDivElement self, NSString align)    { ((void (*)(DOMHTMLDivElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString             DOMHTMLDivElement_Align(DOMHTMLDivElement self)                       { return ((NSString (*)(DOMHTMLDivElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                 DOMHTMLDivElement_SetAlign(DOMHTMLDivElement self, NSString align)    { ((void (*)(DOMHTMLDivElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+#ifndef BEAN_ALLOC_DOMHTMLDivElement
+#define BEAN_ALLOC_DOMHTMLDivElement
+static inline DOMHTMLDivElement    DOMHTMLDivElement_Alloc(void)                                         { return (DOMHTMLDivElement)bean_alloc(bean_cls("DOMHTMLDivElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLDivElement
+#define BEAN_NEW_DOMHTMLDivElement
+static inline DOMHTMLDivElement    DOMHTMLDivElement_New(void)                                           { return (DOMHTMLDivElement)bean_new(bean_cls("DOMHTMLDivElement")); }
+#endif
 
 /* ===== DOMHTMLDocument ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLDocument
 #define BEAN_TYPEDEF_DOMHTMLDocument
 typedef bean_id DOMHTMLDocument;
 #endif
-static inline void        DOMHTMLDocument_Open(DOMHTMLDocument self)                                                                                    { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("open")); }
-static inline void        DOMHTMLDocument_Close(DOMHTMLDocument self)                                                                                   { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("close")); }
-static inline void        DOMHTMLDocument_Write(DOMHTMLDocument self, NSString text)                                                                    { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("write:"), text); }
-static inline void        DOMHTMLDocument_Writeln(DOMHTMLDocument self, NSString text)                                                                  { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("writeln:"), text); }
-static inline void        DOMHTMLDocument_Clear(DOMHTMLDocument self)                                                                                   { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("clear")); }
-static inline void        DOMHTMLDocument_CaptureEvents(DOMHTMLDocument self)                                                                           { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("captureEvents")); }
-static inline void        DOMHTMLDocument_ReleaseEvents(DOMHTMLDocument self)                                                                           { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("releaseEvents")); }
-static inline void*       DOMHTMLDocument_Embeds(DOMHTMLDocument self)                                                                                  { return ((void* (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("embeds")); }
-static inline void*       DOMHTMLDocument_Plugins(DOMHTMLDocument self)                                                                                 { return ((void* (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("plugins")); }
-static inline void*       DOMHTMLDocument_Scripts(DOMHTMLDocument self)                                                                                 { return ((void* (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("scripts")); }
-static inline int         DOMHTMLDocument_Width(DOMHTMLDocument self)                                                                                   { return ((int (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline int         DOMHTMLDocument_Height(DOMHTMLDocument self)                                                                                  { return ((int (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline NSString    DOMHTMLDocument_Dir(DOMHTMLDocument self)                                                                                     { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("dir")); }
-static inline void        DOMHTMLDocument_SetDir(DOMHTMLDocument self, NSString dir)                                                                    { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setDir:"), dir); }
-static inline NSString    DOMHTMLDocument_DesignMode(DOMHTMLDocument self)                                                                              { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("designMode")); }
-static inline void        DOMHTMLDocument_SetDesignMode(DOMHTMLDocument self, NSString designMode)                                                      { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setDesignMode:"), designMode); }
-static inline NSString    DOMHTMLDocument_CompatMode(DOMHTMLDocument self)                                                                              { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("compatMode")); }
-static inline NSString    DOMHTMLDocument_BgColor(DOMHTMLDocument self)                                                                                 { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
-static inline void        DOMHTMLDocument_SetBgColor(DOMHTMLDocument self, NSString bgColor)                                                            { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
-static inline NSString    DOMHTMLDocument_FgColor(DOMHTMLDocument self)                                                                                 { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("fgColor")); }
-static inline void        DOMHTMLDocument_SetFgColor(DOMHTMLDocument self, NSString fgColor)                                                            { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setFgColor:"), fgColor); }
-static inline NSString    DOMHTMLDocument_AlinkColor(DOMHTMLDocument self)                                                                              { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("alinkColor")); }
-static inline void        DOMHTMLDocument_SetAlinkColor(DOMHTMLDocument self, NSString alinkColor)                                                      { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setAlinkColor:"), alinkColor); }
-static inline NSString    DOMHTMLDocument_LinkColor(DOMHTMLDocument self)                                                                               { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("linkColor")); }
-static inline void        DOMHTMLDocument_SetLinkColor(DOMHTMLDocument self, NSString linkColor)                                                        { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setLinkColor:"), linkColor); }
-static inline NSString    DOMHTMLDocument_VlinkColor(DOMHTMLDocument self)                                                                              { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("vlinkColor")); }
-static inline void        DOMHTMLDocument_SetVlinkColor(DOMHTMLDocument self, NSString vlinkColor)                                                      { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setVlinkColor:"), vlinkColor); }
-static inline void*       DOMHTMLDocument_CreateDocumentFragmentWithMarkupString_BaseURL(DOMHTMLDocument self, NSString markupString, NSURL baseURL)    { return ((void* (*)(DOMHTMLDocument, SEL, NSString, NSURL))bean_msgSend)(self, bean_sel("createDocumentFragmentWithMarkupString:baseURL:"), markupString, baseURL); }
-static inline void*       DOMHTMLDocument_CreateDocumentFragmentWithText(DOMHTMLDocument self, NSString text)                                           { return ((void* (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createDocumentFragmentWithText:"), text); }
+static inline void               DOMHTMLDocument_Open(DOMHTMLDocument self)                                                                                    { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("open")); }
+static inline void               DOMHTMLDocument_Close(DOMHTMLDocument self)                                                                                   { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("close")); }
+static inline void               DOMHTMLDocument_Write(DOMHTMLDocument self, NSString text)                                                                    { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("write:"), text); }
+static inline void               DOMHTMLDocument_Writeln(DOMHTMLDocument self, NSString text)                                                                  { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("writeln:"), text); }
+static inline void               DOMHTMLDocument_Clear(DOMHTMLDocument self)                                                                                   { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("clear")); }
+static inline void               DOMHTMLDocument_CaptureEvents(DOMHTMLDocument self)                                                                           { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("captureEvents")); }
+static inline void               DOMHTMLDocument_ReleaseEvents(DOMHTMLDocument self)                                                                           { ((void (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("releaseEvents")); }
+static inline void*              DOMHTMLDocument_Embeds(DOMHTMLDocument self)                                                                                  { return ((void* (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("embeds")); }
+static inline void*              DOMHTMLDocument_Plugins(DOMHTMLDocument self)                                                                                 { return ((void* (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("plugins")); }
+static inline void*              DOMHTMLDocument_Scripts(DOMHTMLDocument self)                                                                                 { return ((void* (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("scripts")); }
+static inline int                DOMHTMLDocument_Width(DOMHTMLDocument self)                                                                                   { return ((int (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline int                DOMHTMLDocument_Height(DOMHTMLDocument self)                                                                                  { return ((int (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline NSString           DOMHTMLDocument_Dir(DOMHTMLDocument self)                                                                                     { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("dir")); }
+static inline void               DOMHTMLDocument_SetDir(DOMHTMLDocument self, NSString dir)                                                                    { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setDir:"), dir); }
+static inline NSString           DOMHTMLDocument_DesignMode(DOMHTMLDocument self)                                                                              { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("designMode")); }
+static inline void               DOMHTMLDocument_SetDesignMode(DOMHTMLDocument self, NSString designMode)                                                      { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setDesignMode:"), designMode); }
+static inline NSString           DOMHTMLDocument_CompatMode(DOMHTMLDocument self)                                                                              { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("compatMode")); }
+static inline NSString           DOMHTMLDocument_BgColor(DOMHTMLDocument self)                                                                                 { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
+static inline void               DOMHTMLDocument_SetBgColor(DOMHTMLDocument self, NSString bgColor)                                                            { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
+static inline NSString           DOMHTMLDocument_FgColor(DOMHTMLDocument self)                                                                                 { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("fgColor")); }
+static inline void               DOMHTMLDocument_SetFgColor(DOMHTMLDocument self, NSString fgColor)                                                            { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setFgColor:"), fgColor); }
+static inline NSString           DOMHTMLDocument_AlinkColor(DOMHTMLDocument self)                                                                              { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("alinkColor")); }
+static inline void               DOMHTMLDocument_SetAlinkColor(DOMHTMLDocument self, NSString alinkColor)                                                      { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setAlinkColor:"), alinkColor); }
+static inline NSString           DOMHTMLDocument_LinkColor(DOMHTMLDocument self)                                                                               { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("linkColor")); }
+static inline void               DOMHTMLDocument_SetLinkColor(DOMHTMLDocument self, NSString linkColor)                                                        { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setLinkColor:"), linkColor); }
+static inline NSString           DOMHTMLDocument_VlinkColor(DOMHTMLDocument self)                                                                              { return ((NSString (*)(DOMHTMLDocument, SEL))bean_msgSend)(self, bean_sel("vlinkColor")); }
+static inline void               DOMHTMLDocument_SetVlinkColor(DOMHTMLDocument self, NSString vlinkColor)                                                      { ((void (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setVlinkColor:"), vlinkColor); }
+static inline void*              DOMHTMLDocument_CreateDocumentFragmentWithMarkupString_BaseURL(DOMHTMLDocument self, NSString markupString, NSURL baseURL)    { return ((void* (*)(DOMHTMLDocument, SEL, NSString, NSURL))bean_msgSend)(self, bean_sel("createDocumentFragmentWithMarkupString:baseURL:"), markupString, baseURL); }
+static inline void*              DOMHTMLDocument_CreateDocumentFragmentWithText(DOMHTMLDocument self, NSString text)                                           { return ((void* (*)(DOMHTMLDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createDocumentFragmentWithText:"), text); }
+#ifndef BEAN_ALLOC_DOMHTMLDocument
+#define BEAN_ALLOC_DOMHTMLDocument
+static inline DOMHTMLDocument    DOMHTMLDocument_Alloc(void)                                                                                                   { return (DOMHTMLDocument)bean_alloc(bean_cls("DOMHTMLDocument")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLDocument
+#define BEAN_NEW_DOMHTMLDocument
+static inline DOMHTMLDocument    DOMHTMLDocument_New(void)                                                                                                     { return (DOMHTMLDocument)bean_new(bean_cls("DOMHTMLDocument")); }
+#endif
 
 /* ===== DOMHTMLElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLElement
 #define BEAN_TYPEDEF_DOMHTMLElement
 typedef bean_id DOMHTMLElement;
 #endif
-static inline void        DOMHTMLElement_Click(DOMHTMLElement self)                                           { ((void (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("click")); }
-static inline NSString    DOMHTMLElement_Title(DOMHTMLElement self)                                           { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline void        DOMHTMLElement_SetTitle(DOMHTMLElement self, NSString title)                        { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
-static inline NSString    DOMHTMLElement_Lang(DOMHTMLElement self)                                            { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("lang")); }
-static inline void        DOMHTMLElement_SetLang(DOMHTMLElement self, NSString lang)                          { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLang:"), lang); }
-static inline NSString    DOMHTMLElement_Dir(DOMHTMLElement self)                                             { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("dir")); }
-static inline void        DOMHTMLElement_SetDir(DOMHTMLElement self, NSString dir)                            { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setDir:"), dir); }
-static inline int         DOMHTMLElement_TabIndex(DOMHTMLElement self)                                        { return ((int (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("tabIndex")); }
-static inline void        DOMHTMLElement_SetTabIndex(DOMHTMLElement self, int tabIndex)                       { ((void (*)(DOMHTMLElement, SEL, int))bean_msgSend)(self, bean_sel("setTabIndex:"), tabIndex); }
-static inline NSString    DOMHTMLElement_AccessKey(DOMHTMLElement self)                                       { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
-static inline void        DOMHTMLElement_SetAccessKey(DOMHTMLElement self, NSString accessKey)                { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
-static inline NSString    DOMHTMLElement_InnerText(DOMHTMLElement self)                                       { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("innerText")); }
-static inline void        DOMHTMLElement_SetInnerText(DOMHTMLElement self, NSString innerText)                { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setInnerText:"), innerText); }
-static inline NSString    DOMHTMLElement_OuterText(DOMHTMLElement self)                                       { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("outerText")); }
-static inline void        DOMHTMLElement_SetOuterText(DOMHTMLElement self, NSString outerText)                { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setOuterText:"), outerText); }
-static inline NSString    DOMHTMLElement_ContentEditable(DOMHTMLElement self)                                 { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("contentEditable")); }
-static inline void        DOMHTMLElement_SetContentEditable(DOMHTMLElement self, NSString contentEditable)    { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setContentEditable:"), contentEditable); }
-static inline BOOL        DOMHTMLElement_IsContentEditable(DOMHTMLElement self)                               { return ((BOOL (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("isContentEditable")); }
-static inline NSString    DOMHTMLElement_IdName(DOMHTMLElement self)                                          { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("idName")); }
-static inline void        DOMHTMLElement_SetIdName(DOMHTMLElement self, NSString idName)                      { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setIdName:"), idName); }
-static inline void*       DOMHTMLElement_Children(DOMHTMLElement self)                                        { return ((void* (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("children")); }
-static inline NSString    DOMHTMLElement_TitleDisplayString(DOMHTMLElement self)                              { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("titleDisplayString")); }
+static inline void              DOMHTMLElement_Click(DOMHTMLElement self)                                           { ((void (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("click")); }
+static inline NSString          DOMHTMLElement_Title(DOMHTMLElement self)                                           { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline void              DOMHTMLElement_SetTitle(DOMHTMLElement self, NSString title)                        { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
+static inline NSString          DOMHTMLElement_Lang(DOMHTMLElement self)                                            { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("lang")); }
+static inline void              DOMHTMLElement_SetLang(DOMHTMLElement self, NSString lang)                          { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLang:"), lang); }
+static inline NSString          DOMHTMLElement_Dir(DOMHTMLElement self)                                             { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("dir")); }
+static inline void              DOMHTMLElement_SetDir(DOMHTMLElement self, NSString dir)                            { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setDir:"), dir); }
+static inline int               DOMHTMLElement_TabIndex(DOMHTMLElement self)                                        { return ((int (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("tabIndex")); }
+static inline void              DOMHTMLElement_SetTabIndex(DOMHTMLElement self, int tabIndex)                       { ((void (*)(DOMHTMLElement, SEL, int))bean_msgSend)(self, bean_sel("setTabIndex:"), tabIndex); }
+static inline NSString          DOMHTMLElement_AccessKey(DOMHTMLElement self)                                       { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
+static inline void              DOMHTMLElement_SetAccessKey(DOMHTMLElement self, NSString accessKey)                { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+static inline NSString          DOMHTMLElement_InnerText(DOMHTMLElement self)                                       { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("innerText")); }
+static inline void              DOMHTMLElement_SetInnerText(DOMHTMLElement self, NSString innerText)                { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setInnerText:"), innerText); }
+static inline NSString          DOMHTMLElement_OuterText(DOMHTMLElement self)                                       { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("outerText")); }
+static inline void              DOMHTMLElement_SetOuterText(DOMHTMLElement self, NSString outerText)                { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setOuterText:"), outerText); }
+static inline NSString          DOMHTMLElement_ContentEditable(DOMHTMLElement self)                                 { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("contentEditable")); }
+static inline void              DOMHTMLElement_SetContentEditable(DOMHTMLElement self, NSString contentEditable)    { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setContentEditable:"), contentEditable); }
+static inline BOOL              DOMHTMLElement_IsContentEditable(DOMHTMLElement self)                               { return ((BOOL (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("isContentEditable")); }
+static inline NSString          DOMHTMLElement_IdName(DOMHTMLElement self)                                          { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("idName")); }
+static inline void              DOMHTMLElement_SetIdName(DOMHTMLElement self, NSString idName)                      { ((void (*)(DOMHTMLElement, SEL, NSString))bean_msgSend)(self, bean_sel("setIdName:"), idName); }
+static inline void*             DOMHTMLElement_Children(DOMHTMLElement self)                                        { return ((void* (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("children")); }
+static inline NSString          DOMHTMLElement_TitleDisplayString(DOMHTMLElement self)                              { return ((NSString (*)(DOMHTMLElement, SEL))bean_msgSend)(self, bean_sel("titleDisplayString")); }
+#ifndef BEAN_ALLOC_DOMHTMLElement
+#define BEAN_ALLOC_DOMHTMLElement
+static inline DOMHTMLElement    DOMHTMLElement_Alloc(void)                                                          { return (DOMHTMLElement)bean_alloc(bean_cls("DOMHTMLElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLElement
+#define BEAN_NEW_DOMHTMLElement
+static inline DOMHTMLElement    DOMHTMLElement_New(void)                                                            { return (DOMHTMLElement)bean_new(bean_cls("DOMHTMLElement")); }
+#endif
 
 /* ===== DOMHTMLEmbedElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLEmbedElement
 #define BEAN_TYPEDEF_DOMHTMLEmbedElement
 typedef bean_id DOMHTMLEmbedElement;
 #endif
-static inline NSString    DOMHTMLEmbedElement_Align(DOMHTMLEmbedElement self)                       { return ((NSString (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLEmbedElement_SetAlign(DOMHTMLEmbedElement self, NSString align)    { ((void (*)(DOMHTMLEmbedElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline int         DOMHTMLEmbedElement_Height(DOMHTMLEmbedElement self)                      { return ((int (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline void        DOMHTMLEmbedElement_SetHeight(DOMHTMLEmbedElement self, int height)       { ((void (*)(DOMHTMLEmbedElement, SEL, int))bean_msgSend)(self, bean_sel("setHeight:"), height); }
-static inline NSString    DOMHTMLEmbedElement_Name(DOMHTMLEmbedElement self)                        { return ((NSString (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLEmbedElement_SetName(DOMHTMLEmbedElement self, NSString name)      { ((void (*)(DOMHTMLEmbedElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLEmbedElement_Src(DOMHTMLEmbedElement self)                         { return ((NSString (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("src")); }
-static inline void        DOMHTMLEmbedElement_SetSrc(DOMHTMLEmbedElement self, NSString src)        { ((void (*)(DOMHTMLEmbedElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
-static inline NSString    DOMHTMLEmbedElement_Type(DOMHTMLEmbedElement self)                        { return ((NSString (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLEmbedElement_SetType(DOMHTMLEmbedElement self, NSString type)      { ((void (*)(DOMHTMLEmbedElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline int         DOMHTMLEmbedElement_Width(DOMHTMLEmbedElement self)                       { return ((int (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLEmbedElement_SetWidth(DOMHTMLEmbedElement self, int width)         { ((void (*)(DOMHTMLEmbedElement, SEL, int))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline NSString               DOMHTMLEmbedElement_Align(DOMHTMLEmbedElement self)                       { return ((NSString (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                   DOMHTMLEmbedElement_SetAlign(DOMHTMLEmbedElement self, NSString align)    { ((void (*)(DOMHTMLEmbedElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline int                    DOMHTMLEmbedElement_Height(DOMHTMLEmbedElement self)                      { return ((int (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline void                   DOMHTMLEmbedElement_SetHeight(DOMHTMLEmbedElement self, int height)       { ((void (*)(DOMHTMLEmbedElement, SEL, int))bean_msgSend)(self, bean_sel("setHeight:"), height); }
+static inline NSString               DOMHTMLEmbedElement_Name(DOMHTMLEmbedElement self)                        { return ((NSString (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                   DOMHTMLEmbedElement_SetName(DOMHTMLEmbedElement self, NSString name)      { ((void (*)(DOMHTMLEmbedElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString               DOMHTMLEmbedElement_Src(DOMHTMLEmbedElement self)                         { return ((NSString (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("src")); }
+static inline void                   DOMHTMLEmbedElement_SetSrc(DOMHTMLEmbedElement self, NSString src)        { ((void (*)(DOMHTMLEmbedElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
+static inline NSString               DOMHTMLEmbedElement_Type(DOMHTMLEmbedElement self)                        { return ((NSString (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                   DOMHTMLEmbedElement_SetType(DOMHTMLEmbedElement self, NSString type)      { ((void (*)(DOMHTMLEmbedElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline int                    DOMHTMLEmbedElement_Width(DOMHTMLEmbedElement self)                       { return ((int (*)(DOMHTMLEmbedElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                   DOMHTMLEmbedElement_SetWidth(DOMHTMLEmbedElement self, int width)         { ((void (*)(DOMHTMLEmbedElement, SEL, int))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+#ifndef BEAN_ALLOC_DOMHTMLEmbedElement
+#define BEAN_ALLOC_DOMHTMLEmbedElement
+static inline DOMHTMLEmbedElement    DOMHTMLEmbedElement_Alloc(void)                                           { return (DOMHTMLEmbedElement)bean_alloc(bean_cls("DOMHTMLEmbedElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLEmbedElement
+#define BEAN_NEW_DOMHTMLEmbedElement
+static inline DOMHTMLEmbedElement    DOMHTMLEmbedElement_New(void)                                             { return (DOMHTMLEmbedElement)bean_new(bean_cls("DOMHTMLEmbedElement")); }
+#endif
 
 /* ===== DOMHTMLFieldSetElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLFieldSetElement
 #define BEAN_TYPEDEF_DOMHTMLFieldSetElement
 typedef bean_id DOMHTMLFieldSetElement;
 #endif
-static inline void*    DOMHTMLFieldSetElement_Form(DOMHTMLFieldSetElement self)    { return ((void* (*)(DOMHTMLFieldSetElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline void*                     DOMHTMLFieldSetElement_Form(DOMHTMLFieldSetElement self)    { return ((void* (*)(DOMHTMLFieldSetElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+#ifndef BEAN_ALLOC_DOMHTMLFieldSetElement
+#define BEAN_ALLOC_DOMHTMLFieldSetElement
+static inline DOMHTMLFieldSetElement    DOMHTMLFieldSetElement_Alloc(void)                          { return (DOMHTMLFieldSetElement)bean_alloc(bean_cls("DOMHTMLFieldSetElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLFieldSetElement
+#define BEAN_NEW_DOMHTMLFieldSetElement
+static inline DOMHTMLFieldSetElement    DOMHTMLFieldSetElement_New(void)                            { return (DOMHTMLFieldSetElement)bean_new(bean_cls("DOMHTMLFieldSetElement")); }
+#endif
 
 /* ===== DOMHTMLFontElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLFontElement
 #define BEAN_TYPEDEF_DOMHTMLFontElement
 typedef bean_id DOMHTMLFontElement;
 #endif
-static inline NSString    DOMHTMLFontElement_Color(DOMHTMLFontElement self)                       { return ((NSString (*)(DOMHTMLFontElement, SEL))bean_msgSend)(self, bean_sel("color")); }
-static inline void        DOMHTMLFontElement_SetColor(DOMHTMLFontElement self, NSString color)    { ((void (*)(DOMHTMLFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setColor:"), color); }
-static inline NSString    DOMHTMLFontElement_Face(DOMHTMLFontElement self)                        { return ((NSString (*)(DOMHTMLFontElement, SEL))bean_msgSend)(self, bean_sel("face")); }
-static inline void        DOMHTMLFontElement_SetFace(DOMHTMLFontElement self, NSString face)      { ((void (*)(DOMHTMLFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFace:"), face); }
-static inline NSString    DOMHTMLFontElement_Size(DOMHTMLFontElement self)                        { return ((NSString (*)(DOMHTMLFontElement, SEL))bean_msgSend)(self, bean_sel("size")); }
-static inline void        DOMHTMLFontElement_SetSize(DOMHTMLFontElement self, NSString size)      { ((void (*)(DOMHTMLFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
+static inline NSString              DOMHTMLFontElement_Color(DOMHTMLFontElement self)                       { return ((NSString (*)(DOMHTMLFontElement, SEL))bean_msgSend)(self, bean_sel("color")); }
+static inline void                  DOMHTMLFontElement_SetColor(DOMHTMLFontElement self, NSString color)    { ((void (*)(DOMHTMLFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setColor:"), color); }
+static inline NSString              DOMHTMLFontElement_Face(DOMHTMLFontElement self)                        { return ((NSString (*)(DOMHTMLFontElement, SEL))bean_msgSend)(self, bean_sel("face")); }
+static inline void                  DOMHTMLFontElement_SetFace(DOMHTMLFontElement self, NSString face)      { ((void (*)(DOMHTMLFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFace:"), face); }
+static inline NSString              DOMHTMLFontElement_Size(DOMHTMLFontElement self)                        { return ((NSString (*)(DOMHTMLFontElement, SEL))bean_msgSend)(self, bean_sel("size")); }
+static inline void                  DOMHTMLFontElement_SetSize(DOMHTMLFontElement self, NSString size)      { ((void (*)(DOMHTMLFontElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
+#ifndef BEAN_ALLOC_DOMHTMLFontElement
+#define BEAN_ALLOC_DOMHTMLFontElement
+static inline DOMHTMLFontElement    DOMHTMLFontElement_Alloc(void)                                          { return (DOMHTMLFontElement)bean_alloc(bean_cls("DOMHTMLFontElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLFontElement
+#define BEAN_NEW_DOMHTMLFontElement
+static inline DOMHTMLFontElement    DOMHTMLFontElement_New(void)                                            { return (DOMHTMLFontElement)bean_new(bean_cls("DOMHTMLFontElement")); }
+#endif
 
 /* ===== DOMHTMLFormElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLFormElement
 #define BEAN_TYPEDEF_DOMHTMLFormElement
 typedef bean_id DOMHTMLFormElement;
 #endif
-static inline void        DOMHTMLFormElement_Submit(DOMHTMLFormElement self)                                      { ((void (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("submit")); }
-static inline void        DOMHTMLFormElement_Reset(DOMHTMLFormElement self)                                       { ((void (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("reset")); }
-static inline NSString    DOMHTMLFormElement_AcceptCharset(DOMHTMLFormElement self)                               { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("acceptCharset")); }
-static inline void        DOMHTMLFormElement_SetAcceptCharset(DOMHTMLFormElement self, NSString acceptCharset)    { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAcceptCharset:"), acceptCharset); }
-static inline NSString    DOMHTMLFormElement_Action(DOMHTMLFormElement self)                                      { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("action")); }
-static inline void        DOMHTMLFormElement_SetAction(DOMHTMLFormElement self, NSString action)                  { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAction:"), action); }
-static inline NSString    DOMHTMLFormElement_Enctype(DOMHTMLFormElement self)                                     { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("enctype")); }
-static inline void        DOMHTMLFormElement_SetEnctype(DOMHTMLFormElement self, NSString enctype)                { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setEnctype:"), enctype); }
-static inline NSString    DOMHTMLFormElement_Encoding(DOMHTMLFormElement self)                                    { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("encoding")); }
-static inline void        DOMHTMLFormElement_SetEncoding(DOMHTMLFormElement self, NSString encoding)              { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setEncoding:"), encoding); }
-static inline NSString    DOMHTMLFormElement_Method(DOMHTMLFormElement self)                                      { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("method")); }
-static inline void        DOMHTMLFormElement_SetMethod(DOMHTMLFormElement self, NSString method)                  { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMethod:"), method); }
-static inline NSString    DOMHTMLFormElement_Name(DOMHTMLFormElement self)                                        { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLFormElement_SetName(DOMHTMLFormElement self, NSString name)                      { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLFormElement_Target(DOMHTMLFormElement self)                                      { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("target")); }
-static inline void        DOMHTMLFormElement_SetTarget(DOMHTMLFormElement self, NSString target)                  { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
-static inline void*       DOMHTMLFormElement_Elements(DOMHTMLFormElement self)                                    { return ((void* (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("elements")); }
-static inline int         DOMHTMLFormElement_Length(DOMHTMLFormElement self)                                      { return ((int (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void                  DOMHTMLFormElement_Submit(DOMHTMLFormElement self)                                      { ((void (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("submit")); }
+static inline void                  DOMHTMLFormElement_Reset(DOMHTMLFormElement self)                                       { ((void (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("reset")); }
+static inline NSString              DOMHTMLFormElement_AcceptCharset(DOMHTMLFormElement self)                               { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("acceptCharset")); }
+static inline void                  DOMHTMLFormElement_SetAcceptCharset(DOMHTMLFormElement self, NSString acceptCharset)    { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAcceptCharset:"), acceptCharset); }
+static inline NSString              DOMHTMLFormElement_Action(DOMHTMLFormElement self)                                      { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("action")); }
+static inline void                  DOMHTMLFormElement_SetAction(DOMHTMLFormElement self, NSString action)                  { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAction:"), action); }
+static inline NSString              DOMHTMLFormElement_Enctype(DOMHTMLFormElement self)                                     { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("enctype")); }
+static inline void                  DOMHTMLFormElement_SetEnctype(DOMHTMLFormElement self, NSString enctype)                { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setEnctype:"), enctype); }
+static inline NSString              DOMHTMLFormElement_Encoding(DOMHTMLFormElement self)                                    { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("encoding")); }
+static inline void                  DOMHTMLFormElement_SetEncoding(DOMHTMLFormElement self, NSString encoding)              { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setEncoding:"), encoding); }
+static inline NSString              DOMHTMLFormElement_Method(DOMHTMLFormElement self)                                      { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("method")); }
+static inline void                  DOMHTMLFormElement_SetMethod(DOMHTMLFormElement self, NSString method)                  { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMethod:"), method); }
+static inline NSString              DOMHTMLFormElement_Name(DOMHTMLFormElement self)                                        { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                  DOMHTMLFormElement_SetName(DOMHTMLFormElement self, NSString name)                      { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString              DOMHTMLFormElement_Target(DOMHTMLFormElement self)                                      { return ((NSString (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("target")); }
+static inline void                  DOMHTMLFormElement_SetTarget(DOMHTMLFormElement self, NSString target)                  { ((void (*)(DOMHTMLFormElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
+static inline void*                 DOMHTMLFormElement_Elements(DOMHTMLFormElement self)                                    { return ((void* (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("elements")); }
+static inline int                   DOMHTMLFormElement_Length(DOMHTMLFormElement self)                                      { return ((int (*)(DOMHTMLFormElement, SEL))bean_msgSend)(self, bean_sel("length")); }
+#ifndef BEAN_ALLOC_DOMHTMLFormElement
+#define BEAN_ALLOC_DOMHTMLFormElement
+static inline DOMHTMLFormElement    DOMHTMLFormElement_Alloc(void)                                                          { return (DOMHTMLFormElement)bean_alloc(bean_cls("DOMHTMLFormElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLFormElement
+#define BEAN_NEW_DOMHTMLFormElement
+static inline DOMHTMLFormElement    DOMHTMLFormElement_New(void)                                                            { return (DOMHTMLFormElement)bean_new(bean_cls("DOMHTMLFormElement")); }
+#endif
 
 /* ===== DOMHTMLFrameSetElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLFrameSetElement
 #define BEAN_TYPEDEF_DOMHTMLFrameSetElement
 typedef bean_id DOMHTMLFrameSetElement;
 #endif
-static inline NSString    DOMHTMLFrameSetElement_Cols(DOMHTMLFrameSetElement self)                      { return ((NSString (*)(DOMHTMLFrameSetElement, SEL))bean_msgSend)(self, bean_sel("cols")); }
-static inline void        DOMHTMLFrameSetElement_SetCols(DOMHTMLFrameSetElement self, NSString cols)    { ((void (*)(DOMHTMLFrameSetElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCols:"), cols); }
-static inline NSString    DOMHTMLFrameSetElement_Rows(DOMHTMLFrameSetElement self)                      { return ((NSString (*)(DOMHTMLFrameSetElement, SEL))bean_msgSend)(self, bean_sel("rows")); }
-static inline void        DOMHTMLFrameSetElement_SetRows(DOMHTMLFrameSetElement self, NSString rows)    { ((void (*)(DOMHTMLFrameSetElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRows:"), rows); }
+static inline NSString                  DOMHTMLFrameSetElement_Cols(DOMHTMLFrameSetElement self)                      { return ((NSString (*)(DOMHTMLFrameSetElement, SEL))bean_msgSend)(self, bean_sel("cols")); }
+static inline void                      DOMHTMLFrameSetElement_SetCols(DOMHTMLFrameSetElement self, NSString cols)    { ((void (*)(DOMHTMLFrameSetElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCols:"), cols); }
+static inline NSString                  DOMHTMLFrameSetElement_Rows(DOMHTMLFrameSetElement self)                      { return ((NSString (*)(DOMHTMLFrameSetElement, SEL))bean_msgSend)(self, bean_sel("rows")); }
+static inline void                      DOMHTMLFrameSetElement_SetRows(DOMHTMLFrameSetElement self, NSString rows)    { ((void (*)(DOMHTMLFrameSetElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRows:"), rows); }
+#ifndef BEAN_ALLOC_DOMHTMLFrameSetElement
+#define BEAN_ALLOC_DOMHTMLFrameSetElement
+static inline DOMHTMLFrameSetElement    DOMHTMLFrameSetElement_Alloc(void)                                            { return (DOMHTMLFrameSetElement)bean_alloc(bean_cls("DOMHTMLFrameSetElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLFrameSetElement
+#define BEAN_NEW_DOMHTMLFrameSetElement
+static inline DOMHTMLFrameSetElement    DOMHTMLFrameSetElement_New(void)                                              { return (DOMHTMLFrameSetElement)bean_new(bean_cls("DOMHTMLFrameSetElement")); }
+#endif
 
 /* ===== DOMHTMLHRElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLHRElement
 #define BEAN_TYPEDEF_DOMHTMLHRElement
 typedef bean_id DOMHTMLHRElement;
 #endif
-static inline NSString    DOMHTMLHRElement_Align(DOMHTMLHRElement self)                       { return ((NSString (*)(DOMHTMLHRElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLHRElement_SetAlign(DOMHTMLHRElement self, NSString align)    { ((void (*)(DOMHTMLHRElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline BOOL        DOMHTMLHRElement_NoShade(DOMHTMLHRElement self)                     { return ((BOOL (*)(DOMHTMLHRElement, SEL))bean_msgSend)(self, bean_sel("noShade")); }
-static inline void        DOMHTMLHRElement_SetNoShade(DOMHTMLHRElement self, BOOL noShade)    { ((void (*)(DOMHTMLHRElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setNoShade:"), noShade); }
-static inline NSString    DOMHTMLHRElement_Size(DOMHTMLHRElement self)                        { return ((NSString (*)(DOMHTMLHRElement, SEL))bean_msgSend)(self, bean_sel("size")); }
-static inline void        DOMHTMLHRElement_SetSize(DOMHTMLHRElement self, NSString size)      { ((void (*)(DOMHTMLHRElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
-static inline NSString    DOMHTMLHRElement_Width(DOMHTMLHRElement self)                       { return ((NSString (*)(DOMHTMLHRElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLHRElement_SetWidth(DOMHTMLHRElement self, NSString width)    { ((void (*)(DOMHTMLHRElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline NSString            DOMHTMLHRElement_Align(DOMHTMLHRElement self)                       { return ((NSString (*)(DOMHTMLHRElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                DOMHTMLHRElement_SetAlign(DOMHTMLHRElement self, NSString align)    { ((void (*)(DOMHTMLHRElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline BOOL                DOMHTMLHRElement_NoShade(DOMHTMLHRElement self)                     { return ((BOOL (*)(DOMHTMLHRElement, SEL))bean_msgSend)(self, bean_sel("noShade")); }
+static inline void                DOMHTMLHRElement_SetNoShade(DOMHTMLHRElement self, BOOL noShade)    { ((void (*)(DOMHTMLHRElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setNoShade:"), noShade); }
+static inline NSString            DOMHTMLHRElement_Size(DOMHTMLHRElement self)                        { return ((NSString (*)(DOMHTMLHRElement, SEL))bean_msgSend)(self, bean_sel("size")); }
+static inline void                DOMHTMLHRElement_SetSize(DOMHTMLHRElement self, NSString size)      { ((void (*)(DOMHTMLHRElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
+static inline NSString            DOMHTMLHRElement_Width(DOMHTMLHRElement self)                       { return ((NSString (*)(DOMHTMLHRElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                DOMHTMLHRElement_SetWidth(DOMHTMLHRElement self, NSString width)    { ((void (*)(DOMHTMLHRElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+#ifndef BEAN_ALLOC_DOMHTMLHRElement
+#define BEAN_ALLOC_DOMHTMLHRElement
+static inline DOMHTMLHRElement    DOMHTMLHRElement_Alloc(void)                                        { return (DOMHTMLHRElement)bean_alloc(bean_cls("DOMHTMLHRElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLHRElement
+#define BEAN_NEW_DOMHTMLHRElement
+static inline DOMHTMLHRElement    DOMHTMLHRElement_New(void)                                          { return (DOMHTMLHRElement)bean_new(bean_cls("DOMHTMLHRElement")); }
+#endif
 
 /* ===== DOMHTMLHeadElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLHeadElement
 #define BEAN_TYPEDEF_DOMHTMLHeadElement
 typedef bean_id DOMHTMLHeadElement;
 #endif
-static inline NSString    DOMHTMLHeadElement_Profile(DOMHTMLHeadElement self)                         { return ((NSString (*)(DOMHTMLHeadElement, SEL))bean_msgSend)(self, bean_sel("profile")); }
-static inline void        DOMHTMLHeadElement_SetProfile(DOMHTMLHeadElement self, NSString profile)    { ((void (*)(DOMHTMLHeadElement, SEL, NSString))bean_msgSend)(self, bean_sel("setProfile:"), profile); }
+static inline NSString              DOMHTMLHeadElement_Profile(DOMHTMLHeadElement self)                         { return ((NSString (*)(DOMHTMLHeadElement, SEL))bean_msgSend)(self, bean_sel("profile")); }
+static inline void                  DOMHTMLHeadElement_SetProfile(DOMHTMLHeadElement self, NSString profile)    { ((void (*)(DOMHTMLHeadElement, SEL, NSString))bean_msgSend)(self, bean_sel("setProfile:"), profile); }
+#ifndef BEAN_ALLOC_DOMHTMLHeadElement
+#define BEAN_ALLOC_DOMHTMLHeadElement
+static inline DOMHTMLHeadElement    DOMHTMLHeadElement_Alloc(void)                                              { return (DOMHTMLHeadElement)bean_alloc(bean_cls("DOMHTMLHeadElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLHeadElement
+#define BEAN_NEW_DOMHTMLHeadElement
+static inline DOMHTMLHeadElement    DOMHTMLHeadElement_New(void)                                                { return (DOMHTMLHeadElement)bean_new(bean_cls("DOMHTMLHeadElement")); }
+#endif
 
 /* ===== DOMHTMLHeadingElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLHeadingElement
 #define BEAN_TYPEDEF_DOMHTMLHeadingElement
 typedef bean_id DOMHTMLHeadingElement;
 #endif
-static inline NSString    DOMHTMLHeadingElement_Align(DOMHTMLHeadingElement self)                       { return ((NSString (*)(DOMHTMLHeadingElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLHeadingElement_SetAlign(DOMHTMLHeadingElement self, NSString align)    { ((void (*)(DOMHTMLHeadingElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                 DOMHTMLHeadingElement_Align(DOMHTMLHeadingElement self)                       { return ((NSString (*)(DOMHTMLHeadingElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                     DOMHTMLHeadingElement_SetAlign(DOMHTMLHeadingElement self, NSString align)    { ((void (*)(DOMHTMLHeadingElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+#ifndef BEAN_ALLOC_DOMHTMLHeadingElement
+#define BEAN_ALLOC_DOMHTMLHeadingElement
+static inline DOMHTMLHeadingElement    DOMHTMLHeadingElement_Alloc(void)                                             { return (DOMHTMLHeadingElement)bean_alloc(bean_cls("DOMHTMLHeadingElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLHeadingElement
+#define BEAN_NEW_DOMHTMLHeadingElement
+static inline DOMHTMLHeadingElement    DOMHTMLHeadingElement_New(void)                                               { return (DOMHTMLHeadingElement)bean_new(bean_cls("DOMHTMLHeadingElement")); }
+#endif
 
 /* ===== DOMHTMLHtmlElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLHtmlElement
 #define BEAN_TYPEDEF_DOMHTMLHtmlElement
 typedef bean_id DOMHTMLHtmlElement;
 #endif
-static inline NSString    DOMHTMLHtmlElement_Version(DOMHTMLHtmlElement self)                         { return ((NSString (*)(DOMHTMLHtmlElement, SEL))bean_msgSend)(self, bean_sel("version")); }
-static inline void        DOMHTMLHtmlElement_SetVersion(DOMHTMLHtmlElement self, NSString version)    { ((void (*)(DOMHTMLHtmlElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVersion:"), version); }
+static inline NSString              DOMHTMLHtmlElement_Version(DOMHTMLHtmlElement self)                         { return ((NSString (*)(DOMHTMLHtmlElement, SEL))bean_msgSend)(self, bean_sel("version")); }
+static inline void                  DOMHTMLHtmlElement_SetVersion(DOMHTMLHtmlElement self, NSString version)    { ((void (*)(DOMHTMLHtmlElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVersion:"), version); }
+#ifndef BEAN_ALLOC_DOMHTMLHtmlElement
+#define BEAN_ALLOC_DOMHTMLHtmlElement
+static inline DOMHTMLHtmlElement    DOMHTMLHtmlElement_Alloc(void)                                              { return (DOMHTMLHtmlElement)bean_alloc(bean_cls("DOMHTMLHtmlElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLHtmlElement
+#define BEAN_NEW_DOMHTMLHtmlElement
+static inline DOMHTMLHtmlElement    DOMHTMLHtmlElement_New(void)                                                { return (DOMHTMLHtmlElement)bean_new(bean_cls("DOMHTMLHtmlElement")); }
+#endif
 
 /* ===== DOMHTMLImageElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLImageElement
 #define BEAN_TYPEDEF_DOMHTMLImageElement
 typedef bean_id DOMHTMLImageElement;
 #endif
-static inline NSString    DOMHTMLImageElement_Name(DOMHTMLImageElement self)                              { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLImageElement_SetName(DOMHTMLImageElement self, NSString name)            { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLImageElement_Align(DOMHTMLImageElement self)                             { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLImageElement_SetAlign(DOMHTMLImageElement self, NSString align)          { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLImageElement_Alt(DOMHTMLImageElement self)                               { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("alt")); }
-static inline void        DOMHTMLImageElement_SetAlt(DOMHTMLImageElement self, NSString alt)              { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlt:"), alt); }
-static inline NSString    DOMHTMLImageElement_Border(DOMHTMLImageElement self)                            { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("border")); }
-static inline void        DOMHTMLImageElement_SetBorder(DOMHTMLImageElement self, NSString border)        { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBorder:"), border); }
-static inline int         DOMHTMLImageElement_Height(DOMHTMLImageElement self)                            { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline void        DOMHTMLImageElement_SetHeight(DOMHTMLImageElement self, int height)             { ((void (*)(DOMHTMLImageElement, SEL, int))bean_msgSend)(self, bean_sel("setHeight:"), height); }
-static inline int         DOMHTMLImageElement_Hspace(DOMHTMLImageElement self)                            { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("hspace")); }
-static inline void        DOMHTMLImageElement_SetHspace(DOMHTMLImageElement self, int hspace)             { ((void (*)(DOMHTMLImageElement, SEL, int))bean_msgSend)(self, bean_sel("setHspace:"), hspace); }
-static inline BOOL        DOMHTMLImageElement_IsMap(DOMHTMLImageElement self)                             { return ((BOOL (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("isMap")); }
-static inline void        DOMHTMLImageElement_SetIsMap(DOMHTMLImageElement self, BOOL isMap)              { ((void (*)(DOMHTMLImageElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setIsMap:"), isMap); }
-static inline NSString    DOMHTMLImageElement_LongDesc(DOMHTMLImageElement self)                          { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("longDesc")); }
-static inline void        DOMHTMLImageElement_SetLongDesc(DOMHTMLImageElement self, NSString longDesc)    { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLongDesc:"), longDesc); }
-static inline NSString    DOMHTMLImageElement_Src(DOMHTMLImageElement self)                               { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("src")); }
-static inline void        DOMHTMLImageElement_SetSrc(DOMHTMLImageElement self, NSString src)              { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
-static inline NSString    DOMHTMLImageElement_UseMap(DOMHTMLImageElement self)                            { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("useMap")); }
-static inline void        DOMHTMLImageElement_SetUseMap(DOMHTMLImageElement self, NSString useMap)        { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setUseMap:"), useMap); }
-static inline int         DOMHTMLImageElement_Vspace(DOMHTMLImageElement self)                            { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("vspace")); }
-static inline void        DOMHTMLImageElement_SetVspace(DOMHTMLImageElement self, int vspace)             { ((void (*)(DOMHTMLImageElement, SEL, int))bean_msgSend)(self, bean_sel("setVspace:"), vspace); }
-static inline int         DOMHTMLImageElement_Width(DOMHTMLImageElement self)                             { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLImageElement_SetWidth(DOMHTMLImageElement self, int width)               { ((void (*)(DOMHTMLImageElement, SEL, int))bean_msgSend)(self, bean_sel("setWidth:"), width); }
-static inline BOOL        DOMHTMLImageElement_Complete(DOMHTMLImageElement self)                          { return ((BOOL (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("complete")); }
-static inline NSString    DOMHTMLImageElement_Lowsrc(DOMHTMLImageElement self)                            { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("lowsrc")); }
-static inline void        DOMHTMLImageElement_SetLowsrc(DOMHTMLImageElement self, NSString lowsrc)        { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLowsrc:"), lowsrc); }
-static inline int         DOMHTMLImageElement_NaturalHeight(DOMHTMLImageElement self)                     { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("naturalHeight")); }
-static inline int         DOMHTMLImageElement_NaturalWidth(DOMHTMLImageElement self)                      { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("naturalWidth")); }
-static inline int         DOMHTMLImageElement_X(DOMHTMLImageElement self)                                 { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("x")); }
-static inline int         DOMHTMLImageElement_Y(DOMHTMLImageElement self)                                 { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("y")); }
-static inline NSString    DOMHTMLImageElement_AltDisplayString(DOMHTMLImageElement self)                  { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("altDisplayString")); }
-static inline NSURL       DOMHTMLImageElement_AbsoluteImageURL(DOMHTMLImageElement self)                  { return ((NSURL (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("absoluteImageURL")); }
+static inline NSString               DOMHTMLImageElement_Name(DOMHTMLImageElement self)                              { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                   DOMHTMLImageElement_SetName(DOMHTMLImageElement self, NSString name)            { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString               DOMHTMLImageElement_Align(DOMHTMLImageElement self)                             { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                   DOMHTMLImageElement_SetAlign(DOMHTMLImageElement self, NSString align)          { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString               DOMHTMLImageElement_Alt(DOMHTMLImageElement self)                               { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("alt")); }
+static inline void                   DOMHTMLImageElement_SetAlt(DOMHTMLImageElement self, NSString alt)              { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlt:"), alt); }
+static inline NSString               DOMHTMLImageElement_Border(DOMHTMLImageElement self)                            { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("border")); }
+static inline void                   DOMHTMLImageElement_SetBorder(DOMHTMLImageElement self, NSString border)        { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBorder:"), border); }
+static inline int                    DOMHTMLImageElement_Height(DOMHTMLImageElement self)                            { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline void                   DOMHTMLImageElement_SetHeight(DOMHTMLImageElement self, int height)             { ((void (*)(DOMHTMLImageElement, SEL, int))bean_msgSend)(self, bean_sel("setHeight:"), height); }
+static inline int                    DOMHTMLImageElement_Hspace(DOMHTMLImageElement self)                            { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("hspace")); }
+static inline void                   DOMHTMLImageElement_SetHspace(DOMHTMLImageElement self, int hspace)             { ((void (*)(DOMHTMLImageElement, SEL, int))bean_msgSend)(self, bean_sel("setHspace:"), hspace); }
+static inline BOOL                   DOMHTMLImageElement_IsMap(DOMHTMLImageElement self)                             { return ((BOOL (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("isMap")); }
+static inline void                   DOMHTMLImageElement_SetIsMap(DOMHTMLImageElement self, BOOL isMap)              { ((void (*)(DOMHTMLImageElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setIsMap:"), isMap); }
+static inline NSString               DOMHTMLImageElement_LongDesc(DOMHTMLImageElement self)                          { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("longDesc")); }
+static inline void                   DOMHTMLImageElement_SetLongDesc(DOMHTMLImageElement self, NSString longDesc)    { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLongDesc:"), longDesc); }
+static inline NSString               DOMHTMLImageElement_Src(DOMHTMLImageElement self)                               { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("src")); }
+static inline void                   DOMHTMLImageElement_SetSrc(DOMHTMLImageElement self, NSString src)              { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
+static inline NSString               DOMHTMLImageElement_UseMap(DOMHTMLImageElement self)                            { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("useMap")); }
+static inline void                   DOMHTMLImageElement_SetUseMap(DOMHTMLImageElement self, NSString useMap)        { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setUseMap:"), useMap); }
+static inline int                    DOMHTMLImageElement_Vspace(DOMHTMLImageElement self)                            { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("vspace")); }
+static inline void                   DOMHTMLImageElement_SetVspace(DOMHTMLImageElement self, int vspace)             { ((void (*)(DOMHTMLImageElement, SEL, int))bean_msgSend)(self, bean_sel("setVspace:"), vspace); }
+static inline int                    DOMHTMLImageElement_Width(DOMHTMLImageElement self)                             { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                   DOMHTMLImageElement_SetWidth(DOMHTMLImageElement self, int width)               { ((void (*)(DOMHTMLImageElement, SEL, int))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline BOOL                   DOMHTMLImageElement_Complete(DOMHTMLImageElement self)                          { return ((BOOL (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("complete")); }
+static inline NSString               DOMHTMLImageElement_Lowsrc(DOMHTMLImageElement self)                            { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("lowsrc")); }
+static inline void                   DOMHTMLImageElement_SetLowsrc(DOMHTMLImageElement self, NSString lowsrc)        { ((void (*)(DOMHTMLImageElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLowsrc:"), lowsrc); }
+static inline int                    DOMHTMLImageElement_NaturalHeight(DOMHTMLImageElement self)                     { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("naturalHeight")); }
+static inline int                    DOMHTMLImageElement_NaturalWidth(DOMHTMLImageElement self)                      { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("naturalWidth")); }
+static inline int                    DOMHTMLImageElement_X(DOMHTMLImageElement self)                                 { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("x")); }
+static inline int                    DOMHTMLImageElement_Y(DOMHTMLImageElement self)                                 { return ((int (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("y")); }
+static inline NSString               DOMHTMLImageElement_AltDisplayString(DOMHTMLImageElement self)                  { return ((NSString (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("altDisplayString")); }
+static inline NSURL                  DOMHTMLImageElement_AbsoluteImageURL(DOMHTMLImageElement self)                  { return ((NSURL (*)(DOMHTMLImageElement, SEL))bean_msgSend)(self, bean_sel("absoluteImageURL")); }
+#ifndef BEAN_ALLOC_DOMHTMLImageElement
+#define BEAN_ALLOC_DOMHTMLImageElement
+static inline DOMHTMLImageElement    DOMHTMLImageElement_Alloc(void)                                                 { return (DOMHTMLImageElement)bean_alloc(bean_cls("DOMHTMLImageElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLImageElement
+#define BEAN_NEW_DOMHTMLImageElement
+static inline DOMHTMLImageElement    DOMHTMLImageElement_New(void)                                                   { return (DOMHTMLImageElement)bean_new(bean_cls("DOMHTMLImageElement")); }
+#endif
 
 /* ===== DOMHTMLInputElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLInputElement
 #define BEAN_TYPEDEF_DOMHTMLInputElement
 typedef bean_id DOMHTMLInputElement;
 #endif
-static inline void        DOMHTMLInputElement_Select(DOMHTMLInputElement self)                                       { ((void (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("select")); }
-static inline void        DOMHTMLInputElement_SetSelectionRange_End(DOMHTMLInputElement self, int start, int end)    { ((void (*)(DOMHTMLInputElement, SEL, int, int))bean_msgSend)(self, bean_sel("setSelectionRange:end:"), start, end); }
-static inline void        DOMHTMLInputElement_Click(DOMHTMLInputElement self)                                        { ((void (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("click")); }
-static inline NSString    DOMHTMLInputElement_Accept(DOMHTMLInputElement self)                                       { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("accept")); }
-static inline void        DOMHTMLInputElement_SetAccept(DOMHTMLInputElement self, NSString accept)                   { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccept:"), accept); }
-static inline NSString    DOMHTMLInputElement_Alt(DOMHTMLInputElement self)                                          { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("alt")); }
-static inline void        DOMHTMLInputElement_SetAlt(DOMHTMLInputElement self, NSString alt)                         { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlt:"), alt); }
-static inline BOOL        DOMHTMLInputElement_Autofocus(DOMHTMLInputElement self)                                    { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("autofocus")); }
-static inline void        DOMHTMLInputElement_SetAutofocus(DOMHTMLInputElement self, BOOL autofocus)                 { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutofocus:"), autofocus); }
-static inline BOOL        DOMHTMLInputElement_DefaultChecked(DOMHTMLInputElement self)                               { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("defaultChecked")); }
-static inline void        DOMHTMLInputElement_SetDefaultChecked(DOMHTMLInputElement self, BOOL defaultChecked)       { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDefaultChecked:"), defaultChecked); }
-static inline BOOL        DOMHTMLInputElement_Checked(DOMHTMLInputElement self)                                      { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("checked")); }
-static inline void        DOMHTMLInputElement_SetChecked(DOMHTMLInputElement self, BOOL checked)                     { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setChecked:"), checked); }
-static inline BOOL        DOMHTMLInputElement_Disabled(DOMHTMLInputElement self)                                     { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMHTMLInputElement_SetDisabled(DOMHTMLInputElement self, BOOL disabled)                   { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline void*       DOMHTMLInputElement_Form(DOMHTMLInputElement self)                                         { return ((void* (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("form")); }
-static inline void*       DOMHTMLInputElement_Files(DOMHTMLInputElement self)                                        { return ((void* (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("files")); }
-static inline void        DOMHTMLInputElement_SetFiles(DOMHTMLInputElement self, void* files)                        { ((void (*)(DOMHTMLInputElement, SEL, void*))bean_msgSend)(self, bean_sel("setFiles:"), files); }
-static inline BOOL        DOMHTMLInputElement_Indeterminate(DOMHTMLInputElement self)                                { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("indeterminate")); }
-static inline void        DOMHTMLInputElement_SetIndeterminate(DOMHTMLInputElement self, BOOL indeterminate)         { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setIndeterminate:"), indeterminate); }
-static inline int         DOMHTMLInputElement_MaxLength(DOMHTMLInputElement self)                                    { return ((int (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("maxLength")); }
-static inline void        DOMHTMLInputElement_SetMaxLength(DOMHTMLInputElement self, int maxLength)                  { ((void (*)(DOMHTMLInputElement, SEL, int))bean_msgSend)(self, bean_sel("setMaxLength:"), maxLength); }
-static inline BOOL        DOMHTMLInputElement_Multiple(DOMHTMLInputElement self)                                     { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("multiple")); }
-static inline void        DOMHTMLInputElement_SetMultiple(DOMHTMLInputElement self, BOOL multiple)                   { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setMultiple:"), multiple); }
-static inline NSString    DOMHTMLInputElement_Name(DOMHTMLInputElement self)                                         { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLInputElement_SetName(DOMHTMLInputElement self, NSString name)                       { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline BOOL        DOMHTMLInputElement_ReadOnly(DOMHTMLInputElement self)                                     { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
-static inline void        DOMHTMLInputElement_SetReadOnly(DOMHTMLInputElement self, BOOL readOnly)                   { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setReadOnly:"), readOnly); }
-static inline NSString    DOMHTMLInputElement_Size(DOMHTMLInputElement self)                                         { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("size")); }
-static inline void        DOMHTMLInputElement_SetSize(DOMHTMLInputElement self, NSString size)                       { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
-static inline NSString    DOMHTMLInputElement_Src(DOMHTMLInputElement self)                                          { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("src")); }
-static inline void        DOMHTMLInputElement_SetSrc(DOMHTMLInputElement self, NSString src)                         { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
-static inline NSString    DOMHTMLInputElement_Type(DOMHTMLInputElement self)                                         { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLInputElement_SetType(DOMHTMLInputElement self, NSString type)                       { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline NSString    DOMHTMLInputElement_DefaultValue(DOMHTMLInputElement self)                                 { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("defaultValue")); }
-static inline void        DOMHTMLInputElement_SetDefaultValue(DOMHTMLInputElement self, NSString defaultValue)       { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setDefaultValue:"), defaultValue); }
-static inline NSString    DOMHTMLInputElement_Value(DOMHTMLInputElement self)                                        { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline void        DOMHTMLInputElement_SetValue(DOMHTMLInputElement self, NSString value)                     { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
-static inline BOOL        DOMHTMLInputElement_WillValidate(DOMHTMLInputElement self)                                 { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("willValidate")); }
-static inline int         DOMHTMLInputElement_SelectionStart(DOMHTMLInputElement self)                               { return ((int (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("selectionStart")); }
-static inline void        DOMHTMLInputElement_SetSelectionStart(DOMHTMLInputElement self, int selectionStart)        { ((void (*)(DOMHTMLInputElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectionStart:"), selectionStart); }
-static inline int         DOMHTMLInputElement_SelectionEnd(DOMHTMLInputElement self)                                 { return ((int (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("selectionEnd")); }
-static inline void        DOMHTMLInputElement_SetSelectionEnd(DOMHTMLInputElement self, int selectionEnd)            { ((void (*)(DOMHTMLInputElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectionEnd:"), selectionEnd); }
-static inline NSString    DOMHTMLInputElement_Align(DOMHTMLInputElement self)                                        { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLInputElement_SetAlign(DOMHTMLInputElement self, NSString align)                     { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLInputElement_UseMap(DOMHTMLInputElement self)                                       { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("useMap")); }
-static inline void        DOMHTMLInputElement_SetUseMap(DOMHTMLInputElement self, NSString useMap)                   { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setUseMap:"), useMap); }
-static inline NSString    DOMHTMLInputElement_AccessKey(DOMHTMLInputElement self)                                    { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
-static inline void        DOMHTMLInputElement_SetAccessKey(DOMHTMLInputElement self, NSString accessKey)             { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
-static inline NSString    DOMHTMLInputElement_AltDisplayString(DOMHTMLInputElement self)                             { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("altDisplayString")); }
-static inline NSURL       DOMHTMLInputElement_AbsoluteImageURL(DOMHTMLInputElement self)                             { return ((NSURL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("absoluteImageURL")); }
+static inline void                   DOMHTMLInputElement_Select(DOMHTMLInputElement self)                                       { ((void (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("select")); }
+static inline void                   DOMHTMLInputElement_SetSelectionRange_End(DOMHTMLInputElement self, int start, int end)    { ((void (*)(DOMHTMLInputElement, SEL, int, int))bean_msgSend)(self, bean_sel("setSelectionRange:end:"), start, end); }
+static inline void                   DOMHTMLInputElement_Click(DOMHTMLInputElement self)                                        { ((void (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("click")); }
+static inline NSString               DOMHTMLInputElement_Accept(DOMHTMLInputElement self)                                       { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("accept")); }
+static inline void                   DOMHTMLInputElement_SetAccept(DOMHTMLInputElement self, NSString accept)                   { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccept:"), accept); }
+static inline NSString               DOMHTMLInputElement_Alt(DOMHTMLInputElement self)                                          { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("alt")); }
+static inline void                   DOMHTMLInputElement_SetAlt(DOMHTMLInputElement self, NSString alt)                         { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlt:"), alt); }
+static inline BOOL                   DOMHTMLInputElement_Autofocus(DOMHTMLInputElement self)                                    { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("autofocus")); }
+static inline void                   DOMHTMLInputElement_SetAutofocus(DOMHTMLInputElement self, BOOL autofocus)                 { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutofocus:"), autofocus); }
+static inline BOOL                   DOMHTMLInputElement_DefaultChecked(DOMHTMLInputElement self)                               { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("defaultChecked")); }
+static inline void                   DOMHTMLInputElement_SetDefaultChecked(DOMHTMLInputElement self, BOOL defaultChecked)       { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDefaultChecked:"), defaultChecked); }
+static inline BOOL                   DOMHTMLInputElement_Checked(DOMHTMLInputElement self)                                      { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("checked")); }
+static inline void                   DOMHTMLInputElement_SetChecked(DOMHTMLInputElement self, BOOL checked)                     { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setChecked:"), checked); }
+static inline BOOL                   DOMHTMLInputElement_Disabled(DOMHTMLInputElement self)                                     { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void                   DOMHTMLInputElement_SetDisabled(DOMHTMLInputElement self, BOOL disabled)                   { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline void*                  DOMHTMLInputElement_Form(DOMHTMLInputElement self)                                         { return ((void* (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline void*                  DOMHTMLInputElement_Files(DOMHTMLInputElement self)                                        { return ((void* (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("files")); }
+static inline void                   DOMHTMLInputElement_SetFiles(DOMHTMLInputElement self, void* files)                        { ((void (*)(DOMHTMLInputElement, SEL, void*))bean_msgSend)(self, bean_sel("setFiles:"), files); }
+static inline BOOL                   DOMHTMLInputElement_Indeterminate(DOMHTMLInputElement self)                                { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("indeterminate")); }
+static inline void                   DOMHTMLInputElement_SetIndeterminate(DOMHTMLInputElement self, BOOL indeterminate)         { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setIndeterminate:"), indeterminate); }
+static inline int                    DOMHTMLInputElement_MaxLength(DOMHTMLInputElement self)                                    { return ((int (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("maxLength")); }
+static inline void                   DOMHTMLInputElement_SetMaxLength(DOMHTMLInputElement self, int maxLength)                  { ((void (*)(DOMHTMLInputElement, SEL, int))bean_msgSend)(self, bean_sel("setMaxLength:"), maxLength); }
+static inline BOOL                   DOMHTMLInputElement_Multiple(DOMHTMLInputElement self)                                     { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("multiple")); }
+static inline void                   DOMHTMLInputElement_SetMultiple(DOMHTMLInputElement self, BOOL multiple)                   { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setMultiple:"), multiple); }
+static inline NSString               DOMHTMLInputElement_Name(DOMHTMLInputElement self)                                         { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                   DOMHTMLInputElement_SetName(DOMHTMLInputElement self, NSString name)                       { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline BOOL                   DOMHTMLInputElement_ReadOnly(DOMHTMLInputElement self)                                     { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
+static inline void                   DOMHTMLInputElement_SetReadOnly(DOMHTMLInputElement self, BOOL readOnly)                   { ((void (*)(DOMHTMLInputElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setReadOnly:"), readOnly); }
+static inline NSString               DOMHTMLInputElement_Size(DOMHTMLInputElement self)                                         { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("size")); }
+static inline void                   DOMHTMLInputElement_SetSize(DOMHTMLInputElement self, NSString size)                       { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSize:"), size); }
+static inline NSString               DOMHTMLInputElement_Src(DOMHTMLInputElement self)                                          { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("src")); }
+static inline void                   DOMHTMLInputElement_SetSrc(DOMHTMLInputElement self, NSString src)                         { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
+static inline NSString               DOMHTMLInputElement_Type(DOMHTMLInputElement self)                                         { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                   DOMHTMLInputElement_SetType(DOMHTMLInputElement self, NSString type)                       { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline NSString               DOMHTMLInputElement_DefaultValue(DOMHTMLInputElement self)                                 { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("defaultValue")); }
+static inline void                   DOMHTMLInputElement_SetDefaultValue(DOMHTMLInputElement self, NSString defaultValue)       { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setDefaultValue:"), defaultValue); }
+static inline NSString               DOMHTMLInputElement_Value(DOMHTMLInputElement self)                                        { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void                   DOMHTMLInputElement_SetValue(DOMHTMLInputElement self, NSString value)                     { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline BOOL                   DOMHTMLInputElement_WillValidate(DOMHTMLInputElement self)                                 { return ((BOOL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("willValidate")); }
+static inline int                    DOMHTMLInputElement_SelectionStart(DOMHTMLInputElement self)                               { return ((int (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("selectionStart")); }
+static inline void                   DOMHTMLInputElement_SetSelectionStart(DOMHTMLInputElement self, int selectionStart)        { ((void (*)(DOMHTMLInputElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectionStart:"), selectionStart); }
+static inline int                    DOMHTMLInputElement_SelectionEnd(DOMHTMLInputElement self)                                 { return ((int (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("selectionEnd")); }
+static inline void                   DOMHTMLInputElement_SetSelectionEnd(DOMHTMLInputElement self, int selectionEnd)            { ((void (*)(DOMHTMLInputElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectionEnd:"), selectionEnd); }
+static inline NSString               DOMHTMLInputElement_Align(DOMHTMLInputElement self)                                        { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                   DOMHTMLInputElement_SetAlign(DOMHTMLInputElement self, NSString align)                     { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString               DOMHTMLInputElement_UseMap(DOMHTMLInputElement self)                                       { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("useMap")); }
+static inline void                   DOMHTMLInputElement_SetUseMap(DOMHTMLInputElement self, NSString useMap)                   { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setUseMap:"), useMap); }
+static inline NSString               DOMHTMLInputElement_AccessKey(DOMHTMLInputElement self)                                    { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
+static inline void                   DOMHTMLInputElement_SetAccessKey(DOMHTMLInputElement self, NSString accessKey)             { ((void (*)(DOMHTMLInputElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+static inline NSString               DOMHTMLInputElement_AltDisplayString(DOMHTMLInputElement self)                             { return ((NSString (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("altDisplayString")); }
+static inline NSURL                  DOMHTMLInputElement_AbsoluteImageURL(DOMHTMLInputElement self)                             { return ((NSURL (*)(DOMHTMLInputElement, SEL))bean_msgSend)(self, bean_sel("absoluteImageURL")); }
+#ifndef BEAN_ALLOC_DOMHTMLInputElement
+#define BEAN_ALLOC_DOMHTMLInputElement
+static inline DOMHTMLInputElement    DOMHTMLInputElement_Alloc(void)                                                            { return (DOMHTMLInputElement)bean_alloc(bean_cls("DOMHTMLInputElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLInputElement
+#define BEAN_NEW_DOMHTMLInputElement
+static inline DOMHTMLInputElement    DOMHTMLInputElement_New(void)                                                              { return (DOMHTMLInputElement)bean_new(bean_cls("DOMHTMLInputElement")); }
+#endif
 
 /* ===== DOMHTMLLIElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLLIElement
 #define BEAN_TYPEDEF_DOMHTMLLIElement
 typedef bean_id DOMHTMLLIElement;
 #endif
-static inline NSString    DOMHTMLLIElement_Type(DOMHTMLLIElement self)                      { return ((NSString (*)(DOMHTMLLIElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLLIElement_SetType(DOMHTMLLIElement self, NSString type)    { ((void (*)(DOMHTMLLIElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline int         DOMHTMLLIElement_Value(DOMHTMLLIElement self)                     { return ((int (*)(DOMHTMLLIElement, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline void        DOMHTMLLIElement_SetValue(DOMHTMLLIElement self, int value)       { ((void (*)(DOMHTMLLIElement, SEL, int))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline NSString            DOMHTMLLIElement_Type(DOMHTMLLIElement self)                      { return ((NSString (*)(DOMHTMLLIElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                DOMHTMLLIElement_SetType(DOMHTMLLIElement self, NSString type)    { ((void (*)(DOMHTMLLIElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline int                 DOMHTMLLIElement_Value(DOMHTMLLIElement self)                     { return ((int (*)(DOMHTMLLIElement, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void                DOMHTMLLIElement_SetValue(DOMHTMLLIElement self, int value)       { ((void (*)(DOMHTMLLIElement, SEL, int))bean_msgSend)(self, bean_sel("setValue:"), value); }
+#ifndef BEAN_ALLOC_DOMHTMLLIElement
+#define BEAN_ALLOC_DOMHTMLLIElement
+static inline DOMHTMLLIElement    DOMHTMLLIElement_Alloc(void)                                      { return (DOMHTMLLIElement)bean_alloc(bean_cls("DOMHTMLLIElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLLIElement
+#define BEAN_NEW_DOMHTMLLIElement
+static inline DOMHTMLLIElement    DOMHTMLLIElement_New(void)                                        { return (DOMHTMLLIElement)bean_new(bean_cls("DOMHTMLLIElement")); }
+#endif
 
 /* ===== DOMHTMLLabelElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLLabelElement
 #define BEAN_TYPEDEF_DOMHTMLLabelElement
 typedef bean_id DOMHTMLLabelElement;
 #endif
-static inline void*       DOMHTMLLabelElement_Form(DOMHTMLLabelElement self)                                { return ((void* (*)(DOMHTMLLabelElement, SEL))bean_msgSend)(self, bean_sel("form")); }
-static inline NSString    DOMHTMLLabelElement_HtmlFor(DOMHTMLLabelElement self)                             { return ((NSString (*)(DOMHTMLLabelElement, SEL))bean_msgSend)(self, bean_sel("htmlFor")); }
-static inline void        DOMHTMLLabelElement_SetHtmlFor(DOMHTMLLabelElement self, NSString htmlFor)        { ((void (*)(DOMHTMLLabelElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHtmlFor:"), htmlFor); }
-static inline NSString    DOMHTMLLabelElement_AccessKey(DOMHTMLLabelElement self)                           { return ((NSString (*)(DOMHTMLLabelElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
-static inline void        DOMHTMLLabelElement_SetAccessKey(DOMHTMLLabelElement self, NSString accessKey)    { ((void (*)(DOMHTMLLabelElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+static inline void*                  DOMHTMLLabelElement_Form(DOMHTMLLabelElement self)                                { return ((void* (*)(DOMHTMLLabelElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline NSString               DOMHTMLLabelElement_HtmlFor(DOMHTMLLabelElement self)                             { return ((NSString (*)(DOMHTMLLabelElement, SEL))bean_msgSend)(self, bean_sel("htmlFor")); }
+static inline void                   DOMHTMLLabelElement_SetHtmlFor(DOMHTMLLabelElement self, NSString htmlFor)        { ((void (*)(DOMHTMLLabelElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHtmlFor:"), htmlFor); }
+static inline NSString               DOMHTMLLabelElement_AccessKey(DOMHTMLLabelElement self)                           { return ((NSString (*)(DOMHTMLLabelElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
+static inline void                   DOMHTMLLabelElement_SetAccessKey(DOMHTMLLabelElement self, NSString accessKey)    { ((void (*)(DOMHTMLLabelElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+#ifndef BEAN_ALLOC_DOMHTMLLabelElement
+#define BEAN_ALLOC_DOMHTMLLabelElement
+static inline DOMHTMLLabelElement    DOMHTMLLabelElement_Alloc(void)                                                   { return (DOMHTMLLabelElement)bean_alloc(bean_cls("DOMHTMLLabelElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLLabelElement
+#define BEAN_NEW_DOMHTMLLabelElement
+static inline DOMHTMLLabelElement    DOMHTMLLabelElement_New(void)                                                     { return (DOMHTMLLabelElement)bean_new(bean_cls("DOMHTMLLabelElement")); }
+#endif
 
 /* ===== DOMHTMLLegendElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLLegendElement
 #define BEAN_TYPEDEF_DOMHTMLLegendElement
 typedef bean_id DOMHTMLLegendElement;
 #endif
-static inline void*       DOMHTMLLegendElement_Form(DOMHTMLLegendElement self)                                { return ((void* (*)(DOMHTMLLegendElement, SEL))bean_msgSend)(self, bean_sel("form")); }
-static inline NSString    DOMHTMLLegendElement_Align(DOMHTMLLegendElement self)                               { return ((NSString (*)(DOMHTMLLegendElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLLegendElement_SetAlign(DOMHTMLLegendElement self, NSString align)            { ((void (*)(DOMHTMLLegendElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLLegendElement_AccessKey(DOMHTMLLegendElement self)                           { return ((NSString (*)(DOMHTMLLegendElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
-static inline void        DOMHTMLLegendElement_SetAccessKey(DOMHTMLLegendElement self, NSString accessKey)    { ((void (*)(DOMHTMLLegendElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+static inline void*                   DOMHTMLLegendElement_Form(DOMHTMLLegendElement self)                                { return ((void* (*)(DOMHTMLLegendElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline NSString                DOMHTMLLegendElement_Align(DOMHTMLLegendElement self)                               { return ((NSString (*)(DOMHTMLLegendElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                    DOMHTMLLegendElement_SetAlign(DOMHTMLLegendElement self, NSString align)            { ((void (*)(DOMHTMLLegendElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                DOMHTMLLegendElement_AccessKey(DOMHTMLLegendElement self)                           { return ((NSString (*)(DOMHTMLLegendElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
+static inline void                    DOMHTMLLegendElement_SetAccessKey(DOMHTMLLegendElement self, NSString accessKey)    { ((void (*)(DOMHTMLLegendElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+#ifndef BEAN_ALLOC_DOMHTMLLegendElement
+#define BEAN_ALLOC_DOMHTMLLegendElement
+static inline DOMHTMLLegendElement    DOMHTMLLegendElement_Alloc(void)                                                    { return (DOMHTMLLegendElement)bean_alloc(bean_cls("DOMHTMLLegendElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLLegendElement
+#define BEAN_NEW_DOMHTMLLegendElement
+static inline DOMHTMLLegendElement    DOMHTMLLegendElement_New(void)                                                      { return (DOMHTMLLegendElement)bean_new(bean_cls("DOMHTMLLegendElement")); }
+#endif
 
 /* ===== DOMHTMLLinkElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLLinkElement
 #define BEAN_TYPEDEF_DOMHTMLLinkElement
 typedef bean_id DOMHTMLLinkElement;
 #endif
-static inline BOOL        DOMHTMLLinkElement_Disabled(DOMHTMLLinkElement self)                          { return ((BOOL (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMHTMLLinkElement_SetDisabled(DOMHTMLLinkElement self, BOOL disabled)        { ((void (*)(DOMHTMLLinkElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline NSString    DOMHTMLLinkElement_Charset(DOMHTMLLinkElement self)                           { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("charset")); }
-static inline void        DOMHTMLLinkElement_SetCharset(DOMHTMLLinkElement self, NSString charset)      { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCharset:"), charset); }
-static inline NSString    DOMHTMLLinkElement_Href(DOMHTMLLinkElement self)                              { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("href")); }
-static inline void        DOMHTMLLinkElement_SetHref(DOMHTMLLinkElement self, NSString href)            { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHref:"), href); }
-static inline NSString    DOMHTMLLinkElement_Hreflang(DOMHTMLLinkElement self)                          { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("hreflang")); }
-static inline void        DOMHTMLLinkElement_SetHreflang(DOMHTMLLinkElement self, NSString hreflang)    { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHreflang:"), hreflang); }
-static inline NSString    DOMHTMLLinkElement_Media(DOMHTMLLinkElement self)                             { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("media")); }
-static inline void        DOMHTMLLinkElement_SetMedia(DOMHTMLLinkElement self, NSString media)          { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMedia:"), media); }
-static inline NSString    DOMHTMLLinkElement_Rel(DOMHTMLLinkElement self)                               { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("rel")); }
-static inline void        DOMHTMLLinkElement_SetRel(DOMHTMLLinkElement self, NSString rel)              { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRel:"), rel); }
-static inline NSString    DOMHTMLLinkElement_Rev(DOMHTMLLinkElement self)                               { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("rev")); }
-static inline void        DOMHTMLLinkElement_SetRev(DOMHTMLLinkElement self, NSString rev)              { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRev:"), rev); }
-static inline NSString    DOMHTMLLinkElement_Target(DOMHTMLLinkElement self)                            { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("target")); }
-static inline void        DOMHTMLLinkElement_SetTarget(DOMHTMLLinkElement self, NSString target)        { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
-static inline NSString    DOMHTMLLinkElement_Type(DOMHTMLLinkElement self)                              { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLLinkElement_SetType(DOMHTMLLinkElement self, NSString type)            { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline void*       DOMHTMLLinkElement_Sheet(DOMHTMLLinkElement self)                             { return ((void* (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("sheet")); }
-static inline NSURL       DOMHTMLLinkElement_AbsoluteLinkURL(DOMHTMLLinkElement self)                   { return ((NSURL (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("absoluteLinkURL")); }
+static inline BOOL                  DOMHTMLLinkElement_Disabled(DOMHTMLLinkElement self)                          { return ((BOOL (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void                  DOMHTMLLinkElement_SetDisabled(DOMHTMLLinkElement self, BOOL disabled)        { ((void (*)(DOMHTMLLinkElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline NSString              DOMHTMLLinkElement_Charset(DOMHTMLLinkElement self)                           { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("charset")); }
+static inline void                  DOMHTMLLinkElement_SetCharset(DOMHTMLLinkElement self, NSString charset)      { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCharset:"), charset); }
+static inline NSString              DOMHTMLLinkElement_Href(DOMHTMLLinkElement self)                              { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("href")); }
+static inline void                  DOMHTMLLinkElement_SetHref(DOMHTMLLinkElement self, NSString href)            { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHref:"), href); }
+static inline NSString              DOMHTMLLinkElement_Hreflang(DOMHTMLLinkElement self)                          { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("hreflang")); }
+static inline void                  DOMHTMLLinkElement_SetHreflang(DOMHTMLLinkElement self, NSString hreflang)    { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHreflang:"), hreflang); }
+static inline NSString              DOMHTMLLinkElement_Media(DOMHTMLLinkElement self)                             { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("media")); }
+static inline void                  DOMHTMLLinkElement_SetMedia(DOMHTMLLinkElement self, NSString media)          { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMedia:"), media); }
+static inline NSString              DOMHTMLLinkElement_Rel(DOMHTMLLinkElement self)                               { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("rel")); }
+static inline void                  DOMHTMLLinkElement_SetRel(DOMHTMLLinkElement self, NSString rel)              { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRel:"), rel); }
+static inline NSString              DOMHTMLLinkElement_Rev(DOMHTMLLinkElement self)                               { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("rev")); }
+static inline void                  DOMHTMLLinkElement_SetRev(DOMHTMLLinkElement self, NSString rev)              { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRev:"), rev); }
+static inline NSString              DOMHTMLLinkElement_Target(DOMHTMLLinkElement self)                            { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("target")); }
+static inline void                  DOMHTMLLinkElement_SetTarget(DOMHTMLLinkElement self, NSString target)        { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setTarget:"), target); }
+static inline NSString              DOMHTMLLinkElement_Type(DOMHTMLLinkElement self)                              { return ((NSString (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                  DOMHTMLLinkElement_SetType(DOMHTMLLinkElement self, NSString type)            { ((void (*)(DOMHTMLLinkElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline void*                 DOMHTMLLinkElement_Sheet(DOMHTMLLinkElement self)                             { return ((void* (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("sheet")); }
+static inline NSURL                 DOMHTMLLinkElement_AbsoluteLinkURL(DOMHTMLLinkElement self)                   { return ((NSURL (*)(DOMHTMLLinkElement, SEL))bean_msgSend)(self, bean_sel("absoluteLinkURL")); }
+#ifndef BEAN_ALLOC_DOMHTMLLinkElement
+#define BEAN_ALLOC_DOMHTMLLinkElement
+static inline DOMHTMLLinkElement    DOMHTMLLinkElement_Alloc(void)                                                { return (DOMHTMLLinkElement)bean_alloc(bean_cls("DOMHTMLLinkElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLLinkElement
+#define BEAN_NEW_DOMHTMLLinkElement
+static inline DOMHTMLLinkElement    DOMHTMLLinkElement_New(void)                                                  { return (DOMHTMLLinkElement)bean_new(bean_cls("DOMHTMLLinkElement")); }
+#endif
 
 /* ===== DOMHTMLMapElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLMapElement
 #define BEAN_TYPEDEF_DOMHTMLMapElement
 typedef bean_id DOMHTMLMapElement;
 #endif
-static inline void*       DOMHTMLMapElement_Areas(DOMHTMLMapElement self)                     { return ((void* (*)(DOMHTMLMapElement, SEL))bean_msgSend)(self, bean_sel("areas")); }
-static inline NSString    DOMHTMLMapElement_Name(DOMHTMLMapElement self)                      { return ((NSString (*)(DOMHTMLMapElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLMapElement_SetName(DOMHTMLMapElement self, NSString name)    { ((void (*)(DOMHTMLMapElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline void*                DOMHTMLMapElement_Areas(DOMHTMLMapElement self)                     { return ((void* (*)(DOMHTMLMapElement, SEL))bean_msgSend)(self, bean_sel("areas")); }
+static inline NSString             DOMHTMLMapElement_Name(DOMHTMLMapElement self)                      { return ((NSString (*)(DOMHTMLMapElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                 DOMHTMLMapElement_SetName(DOMHTMLMapElement self, NSString name)    { ((void (*)(DOMHTMLMapElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+#ifndef BEAN_ALLOC_DOMHTMLMapElement
+#define BEAN_ALLOC_DOMHTMLMapElement
+static inline DOMHTMLMapElement    DOMHTMLMapElement_Alloc(void)                                       { return (DOMHTMLMapElement)bean_alloc(bean_cls("DOMHTMLMapElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLMapElement
+#define BEAN_NEW_DOMHTMLMapElement
+static inline DOMHTMLMapElement    DOMHTMLMapElement_New(void)                                         { return (DOMHTMLMapElement)bean_new(bean_cls("DOMHTMLMapElement")); }
+#endif
 
 /* ===== DOMHTMLMarqueeElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLMarqueeElement
 #define BEAN_TYPEDEF_DOMHTMLMarqueeElement
 typedef bean_id DOMHTMLMarqueeElement;
 #endif
-static inline void    DOMHTMLMarqueeElement_Start(DOMHTMLMarqueeElement self)    { ((void (*)(DOMHTMLMarqueeElement, SEL))bean_msgSend)(self, bean_sel("start")); }
-static inline void    DOMHTMLMarqueeElement_Stop(DOMHTMLMarqueeElement self)     { ((void (*)(DOMHTMLMarqueeElement, SEL))bean_msgSend)(self, bean_sel("stop")); }
+static inline void                     DOMHTMLMarqueeElement_Start(DOMHTMLMarqueeElement self)    { ((void (*)(DOMHTMLMarqueeElement, SEL))bean_msgSend)(self, bean_sel("start")); }
+static inline void                     DOMHTMLMarqueeElement_Stop(DOMHTMLMarqueeElement self)     { ((void (*)(DOMHTMLMarqueeElement, SEL))bean_msgSend)(self, bean_sel("stop")); }
+#ifndef BEAN_ALLOC_DOMHTMLMarqueeElement
+#define BEAN_ALLOC_DOMHTMLMarqueeElement
+static inline DOMHTMLMarqueeElement    DOMHTMLMarqueeElement_Alloc(void)                          { return (DOMHTMLMarqueeElement)bean_alloc(bean_cls("DOMHTMLMarqueeElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLMarqueeElement
+#define BEAN_NEW_DOMHTMLMarqueeElement
+static inline DOMHTMLMarqueeElement    DOMHTMLMarqueeElement_New(void)                            { return (DOMHTMLMarqueeElement)bean_new(bean_cls("DOMHTMLMarqueeElement")); }
+#endif
 
 /* ===== DOMHTMLMenuElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLMenuElement
 #define BEAN_TYPEDEF_DOMHTMLMenuElement
 typedef bean_id DOMHTMLMenuElement;
 #endif
-static inline BOOL    DOMHTMLMenuElement_Compact(DOMHTMLMenuElement self)                     { return ((BOOL (*)(DOMHTMLMenuElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
-static inline void    DOMHTMLMenuElement_SetCompact(DOMHTMLMenuElement self, BOOL compact)    { ((void (*)(DOMHTMLMenuElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
+static inline BOOL                  DOMHTMLMenuElement_Compact(DOMHTMLMenuElement self)                     { return ((BOOL (*)(DOMHTMLMenuElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
+static inline void                  DOMHTMLMenuElement_SetCompact(DOMHTMLMenuElement self, BOOL compact)    { ((void (*)(DOMHTMLMenuElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
+#ifndef BEAN_ALLOC_DOMHTMLMenuElement
+#define BEAN_ALLOC_DOMHTMLMenuElement
+static inline DOMHTMLMenuElement    DOMHTMLMenuElement_Alloc(void)                                          { return (DOMHTMLMenuElement)bean_alloc(bean_cls("DOMHTMLMenuElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLMenuElement
+#define BEAN_NEW_DOMHTMLMenuElement
+static inline DOMHTMLMenuElement    DOMHTMLMenuElement_New(void)                                            { return (DOMHTMLMenuElement)bean_new(bean_cls("DOMHTMLMenuElement")); }
+#endif
 
 /* ===== DOMHTMLMetaElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLMetaElement
 #define BEAN_TYPEDEF_DOMHTMLMetaElement
 typedef bean_id DOMHTMLMetaElement;
 #endif
-static inline NSString    DOMHTMLMetaElement_Content(DOMHTMLMetaElement self)                             { return ((NSString (*)(DOMHTMLMetaElement, SEL))bean_msgSend)(self, bean_sel("content")); }
-static inline void        DOMHTMLMetaElement_SetContent(DOMHTMLMetaElement self, NSString content)        { ((void (*)(DOMHTMLMetaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setContent:"), content); }
-static inline NSString    DOMHTMLMetaElement_HttpEquiv(DOMHTMLMetaElement self)                           { return ((NSString (*)(DOMHTMLMetaElement, SEL))bean_msgSend)(self, bean_sel("httpEquiv")); }
-static inline void        DOMHTMLMetaElement_SetHttpEquiv(DOMHTMLMetaElement self, NSString httpEquiv)    { ((void (*)(DOMHTMLMetaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHttpEquiv:"), httpEquiv); }
-static inline NSString    DOMHTMLMetaElement_Name(DOMHTMLMetaElement self)                                { return ((NSString (*)(DOMHTMLMetaElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLMetaElement_SetName(DOMHTMLMetaElement self, NSString name)              { ((void (*)(DOMHTMLMetaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLMetaElement_Scheme(DOMHTMLMetaElement self)                              { return ((NSString (*)(DOMHTMLMetaElement, SEL))bean_msgSend)(self, bean_sel("scheme")); }
-static inline void        DOMHTMLMetaElement_SetScheme(DOMHTMLMetaElement self, NSString scheme)          { ((void (*)(DOMHTMLMetaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setScheme:"), scheme); }
+static inline NSString              DOMHTMLMetaElement_Content(DOMHTMLMetaElement self)                             { return ((NSString (*)(DOMHTMLMetaElement, SEL))bean_msgSend)(self, bean_sel("content")); }
+static inline void                  DOMHTMLMetaElement_SetContent(DOMHTMLMetaElement self, NSString content)        { ((void (*)(DOMHTMLMetaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setContent:"), content); }
+static inline NSString              DOMHTMLMetaElement_HttpEquiv(DOMHTMLMetaElement self)                           { return ((NSString (*)(DOMHTMLMetaElement, SEL))bean_msgSend)(self, bean_sel("httpEquiv")); }
+static inline void                  DOMHTMLMetaElement_SetHttpEquiv(DOMHTMLMetaElement self, NSString httpEquiv)    { ((void (*)(DOMHTMLMetaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHttpEquiv:"), httpEquiv); }
+static inline NSString              DOMHTMLMetaElement_Name(DOMHTMLMetaElement self)                                { return ((NSString (*)(DOMHTMLMetaElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                  DOMHTMLMetaElement_SetName(DOMHTMLMetaElement self, NSString name)              { ((void (*)(DOMHTMLMetaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString              DOMHTMLMetaElement_Scheme(DOMHTMLMetaElement self)                              { return ((NSString (*)(DOMHTMLMetaElement, SEL))bean_msgSend)(self, bean_sel("scheme")); }
+static inline void                  DOMHTMLMetaElement_SetScheme(DOMHTMLMetaElement self, NSString scheme)          { ((void (*)(DOMHTMLMetaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setScheme:"), scheme); }
+#ifndef BEAN_ALLOC_DOMHTMLMetaElement
+#define BEAN_ALLOC_DOMHTMLMetaElement
+static inline DOMHTMLMetaElement    DOMHTMLMetaElement_Alloc(void)                                                  { return (DOMHTMLMetaElement)bean_alloc(bean_cls("DOMHTMLMetaElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLMetaElement
+#define BEAN_NEW_DOMHTMLMetaElement
+static inline DOMHTMLMetaElement    DOMHTMLMetaElement_New(void)                                                    { return (DOMHTMLMetaElement)bean_new(bean_cls("DOMHTMLMetaElement")); }
+#endif
 
 /* ===== DOMHTMLModElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLModElement
 #define BEAN_TYPEDEF_DOMHTMLModElement
 typedef bean_id DOMHTMLModElement;
 #endif
-static inline NSString    DOMHTMLModElement_Cite(DOMHTMLModElement self)                              { return ((NSString (*)(DOMHTMLModElement, SEL))bean_msgSend)(self, bean_sel("cite")); }
-static inline void        DOMHTMLModElement_SetCite(DOMHTMLModElement self, NSString cite)            { ((void (*)(DOMHTMLModElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCite:"), cite); }
-static inline NSString    DOMHTMLModElement_DateTime(DOMHTMLModElement self)                          { return ((NSString (*)(DOMHTMLModElement, SEL))bean_msgSend)(self, bean_sel("dateTime")); }
-static inline void        DOMHTMLModElement_SetDateTime(DOMHTMLModElement self, NSString dateTime)    { ((void (*)(DOMHTMLModElement, SEL, NSString))bean_msgSend)(self, bean_sel("setDateTime:"), dateTime); }
+static inline NSString             DOMHTMLModElement_Cite(DOMHTMLModElement self)                              { return ((NSString (*)(DOMHTMLModElement, SEL))bean_msgSend)(self, bean_sel("cite")); }
+static inline void                 DOMHTMLModElement_SetCite(DOMHTMLModElement self, NSString cite)            { ((void (*)(DOMHTMLModElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCite:"), cite); }
+static inline NSString             DOMHTMLModElement_DateTime(DOMHTMLModElement self)                          { return ((NSString (*)(DOMHTMLModElement, SEL))bean_msgSend)(self, bean_sel("dateTime")); }
+static inline void                 DOMHTMLModElement_SetDateTime(DOMHTMLModElement self, NSString dateTime)    { ((void (*)(DOMHTMLModElement, SEL, NSString))bean_msgSend)(self, bean_sel("setDateTime:"), dateTime); }
+#ifndef BEAN_ALLOC_DOMHTMLModElement
+#define BEAN_ALLOC_DOMHTMLModElement
+static inline DOMHTMLModElement    DOMHTMLModElement_Alloc(void)                                               { return (DOMHTMLModElement)bean_alloc(bean_cls("DOMHTMLModElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLModElement
+#define BEAN_NEW_DOMHTMLModElement
+static inline DOMHTMLModElement    DOMHTMLModElement_New(void)                                                 { return (DOMHTMLModElement)bean_new(bean_cls("DOMHTMLModElement")); }
+#endif
 
 /* ===== DOMHTMLOListElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLOListElement
 #define BEAN_TYPEDEF_DOMHTMLOListElement
 typedef bean_id DOMHTMLOListElement;
 #endif
-static inline BOOL        DOMHTMLOListElement_Compact(DOMHTMLOListElement self)                     { return ((BOOL (*)(DOMHTMLOListElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
-static inline void        DOMHTMLOListElement_SetCompact(DOMHTMLOListElement self, BOOL compact)    { ((void (*)(DOMHTMLOListElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
-static inline int         DOMHTMLOListElement_Start(DOMHTMLOListElement self)                       { return ((int (*)(DOMHTMLOListElement, SEL))bean_msgSend)(self, bean_sel("start")); }
-static inline void        DOMHTMLOListElement_SetStart(DOMHTMLOListElement self, int start)         { ((void (*)(DOMHTMLOListElement, SEL, int))bean_msgSend)(self, bean_sel("setStart:"), start); }
-static inline NSString    DOMHTMLOListElement_Type(DOMHTMLOListElement self)                        { return ((NSString (*)(DOMHTMLOListElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLOListElement_SetType(DOMHTMLOListElement self, NSString type)      { ((void (*)(DOMHTMLOListElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline BOOL                   DOMHTMLOListElement_Compact(DOMHTMLOListElement self)                     { return ((BOOL (*)(DOMHTMLOListElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
+static inline void                   DOMHTMLOListElement_SetCompact(DOMHTMLOListElement self, BOOL compact)    { ((void (*)(DOMHTMLOListElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
+static inline int                    DOMHTMLOListElement_Start(DOMHTMLOListElement self)                       { return ((int (*)(DOMHTMLOListElement, SEL))bean_msgSend)(self, bean_sel("start")); }
+static inline void                   DOMHTMLOListElement_SetStart(DOMHTMLOListElement self, int start)         { ((void (*)(DOMHTMLOListElement, SEL, int))bean_msgSend)(self, bean_sel("setStart:"), start); }
+static inline NSString               DOMHTMLOListElement_Type(DOMHTMLOListElement self)                        { return ((NSString (*)(DOMHTMLOListElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                   DOMHTMLOListElement_SetType(DOMHTMLOListElement self, NSString type)      { ((void (*)(DOMHTMLOListElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+#ifndef BEAN_ALLOC_DOMHTMLOListElement
+#define BEAN_ALLOC_DOMHTMLOListElement
+static inline DOMHTMLOListElement    DOMHTMLOListElement_Alloc(void)                                           { return (DOMHTMLOListElement)bean_alloc(bean_cls("DOMHTMLOListElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLOListElement
+#define BEAN_NEW_DOMHTMLOListElement
+static inline DOMHTMLOListElement    DOMHTMLOListElement_New(void)                                             { return (DOMHTMLOListElement)bean_new(bean_cls("DOMHTMLOListElement")); }
+#endif
 
 /* ===== DOMHTMLOptGroupElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLOptGroupElement
 #define BEAN_TYPEDEF_DOMHTMLOptGroupElement
 typedef bean_id DOMHTMLOptGroupElement;
 #endif
-static inline BOOL        DOMHTMLOptGroupElement_Disabled(DOMHTMLOptGroupElement self)                      { return ((BOOL (*)(DOMHTMLOptGroupElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMHTMLOptGroupElement_SetDisabled(DOMHTMLOptGroupElement self, BOOL disabled)    { ((void (*)(DOMHTMLOptGroupElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline NSString    DOMHTMLOptGroupElement_Label(DOMHTMLOptGroupElement self)                         { return ((NSString (*)(DOMHTMLOptGroupElement, SEL))bean_msgSend)(self, bean_sel("label")); }
-static inline void        DOMHTMLOptGroupElement_SetLabel(DOMHTMLOptGroupElement self, NSString label)      { ((void (*)(DOMHTMLOptGroupElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLabel:"), label); }
+static inline BOOL                      DOMHTMLOptGroupElement_Disabled(DOMHTMLOptGroupElement self)                      { return ((BOOL (*)(DOMHTMLOptGroupElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void                      DOMHTMLOptGroupElement_SetDisabled(DOMHTMLOptGroupElement self, BOOL disabled)    { ((void (*)(DOMHTMLOptGroupElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline NSString                  DOMHTMLOptGroupElement_Label(DOMHTMLOptGroupElement self)                         { return ((NSString (*)(DOMHTMLOptGroupElement, SEL))bean_msgSend)(self, bean_sel("label")); }
+static inline void                      DOMHTMLOptGroupElement_SetLabel(DOMHTMLOptGroupElement self, NSString label)      { ((void (*)(DOMHTMLOptGroupElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLabel:"), label); }
+#ifndef BEAN_ALLOC_DOMHTMLOptGroupElement
+#define BEAN_ALLOC_DOMHTMLOptGroupElement
+static inline DOMHTMLOptGroupElement    DOMHTMLOptGroupElement_Alloc(void)                                                { return (DOMHTMLOptGroupElement)bean_alloc(bean_cls("DOMHTMLOptGroupElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLOptGroupElement
+#define BEAN_NEW_DOMHTMLOptGroupElement
+static inline DOMHTMLOptGroupElement    DOMHTMLOptGroupElement_New(void)                                                  { return (DOMHTMLOptGroupElement)bean_new(bean_cls("DOMHTMLOptGroupElement")); }
+#endif
 
 /* ===== DOMHTMLOptionElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLOptionElement
 #define BEAN_TYPEDEF_DOMHTMLOptionElement
 typedef bean_id DOMHTMLOptionElement;
 #endif
-static inline BOOL        DOMHTMLOptionElement_Disabled(DOMHTMLOptionElement self)                                    { return ((BOOL (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMHTMLOptionElement_SetDisabled(DOMHTMLOptionElement self, BOOL disabled)                  { ((void (*)(DOMHTMLOptionElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline void*       DOMHTMLOptionElement_Form(DOMHTMLOptionElement self)                                        { return ((void* (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("form")); }
-static inline NSString    DOMHTMLOptionElement_Label(DOMHTMLOptionElement self)                                       { return ((NSString (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("label")); }
-static inline void        DOMHTMLOptionElement_SetLabel(DOMHTMLOptionElement self, NSString label)                    { ((void (*)(DOMHTMLOptionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLabel:"), label); }
-static inline BOOL        DOMHTMLOptionElement_DefaultSelected(DOMHTMLOptionElement self)                             { return ((BOOL (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("defaultSelected")); }
-static inline void        DOMHTMLOptionElement_SetDefaultSelected(DOMHTMLOptionElement self, BOOL defaultSelected)    { ((void (*)(DOMHTMLOptionElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDefaultSelected:"), defaultSelected); }
-static inline BOOL        DOMHTMLOptionElement_Selected(DOMHTMLOptionElement self)                                    { return ((BOOL (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("selected")); }
-static inline void        DOMHTMLOptionElement_SetSelected(DOMHTMLOptionElement self, BOOL selected)                  { ((void (*)(DOMHTMLOptionElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setSelected:"), selected); }
-static inline NSString    DOMHTMLOptionElement_Value(DOMHTMLOptionElement self)                                       { return ((NSString (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline void        DOMHTMLOptionElement_SetValue(DOMHTMLOptionElement self, NSString value)                    { ((void (*)(DOMHTMLOptionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
-static inline NSString    DOMHTMLOptionElement_Text(DOMHTMLOptionElement self)                                        { return ((NSString (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("text")); }
-static inline int         DOMHTMLOptionElement_Index(DOMHTMLOptionElement self)                                       { return ((int (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("index")); }
+static inline BOOL                    DOMHTMLOptionElement_Disabled(DOMHTMLOptionElement self)                                    { return ((BOOL (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void                    DOMHTMLOptionElement_SetDisabled(DOMHTMLOptionElement self, BOOL disabled)                  { ((void (*)(DOMHTMLOptionElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline void*                   DOMHTMLOptionElement_Form(DOMHTMLOptionElement self)                                        { return ((void* (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline NSString                DOMHTMLOptionElement_Label(DOMHTMLOptionElement self)                                       { return ((NSString (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("label")); }
+static inline void                    DOMHTMLOptionElement_SetLabel(DOMHTMLOptionElement self, NSString label)                    { ((void (*)(DOMHTMLOptionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLabel:"), label); }
+static inline BOOL                    DOMHTMLOptionElement_DefaultSelected(DOMHTMLOptionElement self)                             { return ((BOOL (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("defaultSelected")); }
+static inline void                    DOMHTMLOptionElement_SetDefaultSelected(DOMHTMLOptionElement self, BOOL defaultSelected)    { ((void (*)(DOMHTMLOptionElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDefaultSelected:"), defaultSelected); }
+static inline BOOL                    DOMHTMLOptionElement_Selected(DOMHTMLOptionElement self)                                    { return ((BOOL (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("selected")); }
+static inline void                    DOMHTMLOptionElement_SetSelected(DOMHTMLOptionElement self, BOOL selected)                  { ((void (*)(DOMHTMLOptionElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setSelected:"), selected); }
+static inline NSString                DOMHTMLOptionElement_Value(DOMHTMLOptionElement self)                                       { return ((NSString (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void                    DOMHTMLOptionElement_SetValue(DOMHTMLOptionElement self, NSString value)                    { ((void (*)(DOMHTMLOptionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline NSString                DOMHTMLOptionElement_Text(DOMHTMLOptionElement self)                                        { return ((NSString (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("text")); }
+static inline int                     DOMHTMLOptionElement_Index(DOMHTMLOptionElement self)                                       { return ((int (*)(DOMHTMLOptionElement, SEL))bean_msgSend)(self, bean_sel("index")); }
+#ifndef BEAN_ALLOC_DOMHTMLOptionElement
+#define BEAN_ALLOC_DOMHTMLOptionElement
+static inline DOMHTMLOptionElement    DOMHTMLOptionElement_Alloc(void)                                                            { return (DOMHTMLOptionElement)bean_alloc(bean_cls("DOMHTMLOptionElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLOptionElement
+#define BEAN_NEW_DOMHTMLOptionElement
+static inline DOMHTMLOptionElement    DOMHTMLOptionElement_New(void)                                                              { return (DOMHTMLOptionElement)bean_new(bean_cls("DOMHTMLOptionElement")); }
+#endif
 
 /* ===== DOMHTMLOptionsCollection ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLOptionsCollection
 #define BEAN_TYPEDEF_DOMHTMLOptionsCollection
 typedef bean_id DOMHTMLOptionsCollection;
 #endif
-static inline void*         DOMHTMLOptionsCollection_NamedItem(DOMHTMLOptionsCollection self, NSString name)                     { return ((void* (*)(DOMHTMLOptionsCollection, SEL, NSString))bean_msgSend)(self, bean_sel("namedItem:"), name); }
-static inline void          DOMHTMLOptionsCollection_Add_Index(DOMHTMLOptionsCollection self, void* option, NSUInteger index)    { ((void (*)(DOMHTMLOptionsCollection, SEL, void*, NSUInteger))bean_msgSend)(self, bean_sel("add:index:"), option, index); }
-static inline void          DOMHTMLOptionsCollection_Remove(DOMHTMLOptionsCollection self, NSUInteger index)                     { ((void (*)(DOMHTMLOptionsCollection, SEL, NSUInteger))bean_msgSend)(self, bean_sel("remove:"), index); }
-static inline void*         DOMHTMLOptionsCollection_Item(DOMHTMLOptionsCollection self, NSUInteger index)                       { return ((void* (*)(DOMHTMLOptionsCollection, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline int           DOMHTMLOptionsCollection_SelectedIndex(DOMHTMLOptionsCollection self)                                { return ((int (*)(DOMHTMLOptionsCollection, SEL))bean_msgSend)(self, bean_sel("selectedIndex")); }
-static inline void          DOMHTMLOptionsCollection_SetSelectedIndex(DOMHTMLOptionsCollection self, int selectedIndex)          { ((void (*)(DOMHTMLOptionsCollection, SEL, int))bean_msgSend)(self, bean_sel("setSelectedIndex:"), selectedIndex); }
-static inline NSUInteger    DOMHTMLOptionsCollection_Length(DOMHTMLOptionsCollection self)                                       { return ((NSUInteger (*)(DOMHTMLOptionsCollection, SEL))bean_msgSend)(self, bean_sel("length")); }
-static inline void          DOMHTMLOptionsCollection_SetLength(DOMHTMLOptionsCollection self, NSUInteger length)                 { ((void (*)(DOMHTMLOptionsCollection, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setLength:"), length); }
+static inline void*                       DOMHTMLOptionsCollection_NamedItem(DOMHTMLOptionsCollection self, NSString name)                     { return ((void* (*)(DOMHTMLOptionsCollection, SEL, NSString))bean_msgSend)(self, bean_sel("namedItem:"), name); }
+static inline void                        DOMHTMLOptionsCollection_Add_Index(DOMHTMLOptionsCollection self, void* option, NSUInteger index)    { ((void (*)(DOMHTMLOptionsCollection, SEL, void*, NSUInteger))bean_msgSend)(self, bean_sel("add:index:"), option, index); }
+static inline void                        DOMHTMLOptionsCollection_Remove(DOMHTMLOptionsCollection self, NSUInteger index)                     { ((void (*)(DOMHTMLOptionsCollection, SEL, NSUInteger))bean_msgSend)(self, bean_sel("remove:"), index); }
+static inline void*                       DOMHTMLOptionsCollection_Item(DOMHTMLOptionsCollection self, NSUInteger index)                       { return ((void* (*)(DOMHTMLOptionsCollection, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline int                         DOMHTMLOptionsCollection_SelectedIndex(DOMHTMLOptionsCollection self)                                { return ((int (*)(DOMHTMLOptionsCollection, SEL))bean_msgSend)(self, bean_sel("selectedIndex")); }
+static inline void                        DOMHTMLOptionsCollection_SetSelectedIndex(DOMHTMLOptionsCollection self, int selectedIndex)          { ((void (*)(DOMHTMLOptionsCollection, SEL, int))bean_msgSend)(self, bean_sel("setSelectedIndex:"), selectedIndex); }
+static inline NSUInteger                  DOMHTMLOptionsCollection_Length(DOMHTMLOptionsCollection self)                                       { return ((NSUInteger (*)(DOMHTMLOptionsCollection, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void                        DOMHTMLOptionsCollection_SetLength(DOMHTMLOptionsCollection self, NSUInteger length)                 { ((void (*)(DOMHTMLOptionsCollection, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setLength:"), length); }
+#ifndef BEAN_ALLOC_DOMHTMLOptionsCollection
+#define BEAN_ALLOC_DOMHTMLOptionsCollection
+static inline DOMHTMLOptionsCollection    DOMHTMLOptionsCollection_Alloc(void)                                                                 { return (DOMHTMLOptionsCollection)bean_alloc(bean_cls("DOMHTMLOptionsCollection")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLOptionsCollection
+#define BEAN_NEW_DOMHTMLOptionsCollection
+static inline DOMHTMLOptionsCollection    DOMHTMLOptionsCollection_New(void)                                                                   { return (DOMHTMLOptionsCollection)bean_new(bean_cls("DOMHTMLOptionsCollection")); }
+#endif
 
 /* ===== DOMHTMLParagraphElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLParagraphElement
 #define BEAN_TYPEDEF_DOMHTMLParagraphElement
 typedef bean_id DOMHTMLParagraphElement;
 #endif
-static inline NSString    DOMHTMLParagraphElement_Align(DOMHTMLParagraphElement self)                       { return ((NSString (*)(DOMHTMLParagraphElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLParagraphElement_SetAlign(DOMHTMLParagraphElement self, NSString align)    { ((void (*)(DOMHTMLParagraphElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                   DOMHTMLParagraphElement_Align(DOMHTMLParagraphElement self)                       { return ((NSString (*)(DOMHTMLParagraphElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                       DOMHTMLParagraphElement_SetAlign(DOMHTMLParagraphElement self, NSString align)    { ((void (*)(DOMHTMLParagraphElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+#ifndef BEAN_ALLOC_DOMHTMLParagraphElement
+#define BEAN_ALLOC_DOMHTMLParagraphElement
+static inline DOMHTMLParagraphElement    DOMHTMLParagraphElement_Alloc(void)                                               { return (DOMHTMLParagraphElement)bean_alloc(bean_cls("DOMHTMLParagraphElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLParagraphElement
+#define BEAN_NEW_DOMHTMLParagraphElement
+static inline DOMHTMLParagraphElement    DOMHTMLParagraphElement_New(void)                                                 { return (DOMHTMLParagraphElement)bean_new(bean_cls("DOMHTMLParagraphElement")); }
+#endif
 
 /* ===== DOMHTMLParamElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLParamElement
 #define BEAN_TYPEDEF_DOMHTMLParamElement
 typedef bean_id DOMHTMLParamElement;
 #endif
-static inline NSString    DOMHTMLParamElement_Name(DOMHTMLParamElement self)                                { return ((NSString (*)(DOMHTMLParamElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLParamElement_SetName(DOMHTMLParamElement self, NSString name)              { ((void (*)(DOMHTMLParamElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLParamElement_Type(DOMHTMLParamElement self)                                { return ((NSString (*)(DOMHTMLParamElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLParamElement_SetType(DOMHTMLParamElement self, NSString type)              { ((void (*)(DOMHTMLParamElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline NSString    DOMHTMLParamElement_Value(DOMHTMLParamElement self)                               { return ((NSString (*)(DOMHTMLParamElement, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline void        DOMHTMLParamElement_SetValue(DOMHTMLParamElement self, NSString value)            { ((void (*)(DOMHTMLParamElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
-static inline NSString    DOMHTMLParamElement_ValueType(DOMHTMLParamElement self)                           { return ((NSString (*)(DOMHTMLParamElement, SEL))bean_msgSend)(self, bean_sel("valueType")); }
-static inline void        DOMHTMLParamElement_SetValueType(DOMHTMLParamElement self, NSString valueType)    { ((void (*)(DOMHTMLParamElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValueType:"), valueType); }
+static inline NSString               DOMHTMLParamElement_Name(DOMHTMLParamElement self)                                { return ((NSString (*)(DOMHTMLParamElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                   DOMHTMLParamElement_SetName(DOMHTMLParamElement self, NSString name)              { ((void (*)(DOMHTMLParamElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString               DOMHTMLParamElement_Type(DOMHTMLParamElement self)                                { return ((NSString (*)(DOMHTMLParamElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                   DOMHTMLParamElement_SetType(DOMHTMLParamElement self, NSString type)              { ((void (*)(DOMHTMLParamElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline NSString               DOMHTMLParamElement_Value(DOMHTMLParamElement self)                               { return ((NSString (*)(DOMHTMLParamElement, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void                   DOMHTMLParamElement_SetValue(DOMHTMLParamElement self, NSString value)            { ((void (*)(DOMHTMLParamElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline NSString               DOMHTMLParamElement_ValueType(DOMHTMLParamElement self)                           { return ((NSString (*)(DOMHTMLParamElement, SEL))bean_msgSend)(self, bean_sel("valueType")); }
+static inline void                   DOMHTMLParamElement_SetValueType(DOMHTMLParamElement self, NSString valueType)    { ((void (*)(DOMHTMLParamElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValueType:"), valueType); }
+#ifndef BEAN_ALLOC_DOMHTMLParamElement
+#define BEAN_ALLOC_DOMHTMLParamElement
+static inline DOMHTMLParamElement    DOMHTMLParamElement_Alloc(void)                                                   { return (DOMHTMLParamElement)bean_alloc(bean_cls("DOMHTMLParamElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLParamElement
+#define BEAN_NEW_DOMHTMLParamElement
+static inline DOMHTMLParamElement    DOMHTMLParamElement_New(void)                                                     { return (DOMHTMLParamElement)bean_new(bean_cls("DOMHTMLParamElement")); }
+#endif
 
 /* ===== DOMHTMLPreElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLPreElement
 #define BEAN_TYPEDEF_DOMHTMLPreElement
 typedef bean_id DOMHTMLPreElement;
 #endif
-static inline int     DOMHTMLPreElement_Width(DOMHTMLPreElement self)                  { return ((int (*)(DOMHTMLPreElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void    DOMHTMLPreElement_SetWidth(DOMHTMLPreElement self, int width)    { ((void (*)(DOMHTMLPreElement, SEL, int))bean_msgSend)(self, bean_sel("setWidth:"), width); }
-static inline BOOL    DOMHTMLPreElement_Wrap(DOMHTMLPreElement self)                   { return ((BOOL (*)(DOMHTMLPreElement, SEL))bean_msgSend)(self, bean_sel("wrap")); }
-static inline void    DOMHTMLPreElement_SetWrap(DOMHTMLPreElement self, BOOL wrap)     { ((void (*)(DOMHTMLPreElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setWrap:"), wrap); }
+static inline int                  DOMHTMLPreElement_Width(DOMHTMLPreElement self)                  { return ((int (*)(DOMHTMLPreElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                 DOMHTMLPreElement_SetWidth(DOMHTMLPreElement self, int width)    { ((void (*)(DOMHTMLPreElement, SEL, int))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline BOOL                 DOMHTMLPreElement_Wrap(DOMHTMLPreElement self)                   { return ((BOOL (*)(DOMHTMLPreElement, SEL))bean_msgSend)(self, bean_sel("wrap")); }
+static inline void                 DOMHTMLPreElement_SetWrap(DOMHTMLPreElement self, BOOL wrap)     { ((void (*)(DOMHTMLPreElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setWrap:"), wrap); }
+#ifndef BEAN_ALLOC_DOMHTMLPreElement
+#define BEAN_ALLOC_DOMHTMLPreElement
+static inline DOMHTMLPreElement    DOMHTMLPreElement_Alloc(void)                                    { return (DOMHTMLPreElement)bean_alloc(bean_cls("DOMHTMLPreElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLPreElement
+#define BEAN_NEW_DOMHTMLPreElement
+static inline DOMHTMLPreElement    DOMHTMLPreElement_New(void)                                      { return (DOMHTMLPreElement)bean_new(bean_cls("DOMHTMLPreElement")); }
+#endif
 
 /* ===== DOMHTMLQuoteElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLQuoteElement
 #define BEAN_TYPEDEF_DOMHTMLQuoteElement
 typedef bean_id DOMHTMLQuoteElement;
 #endif
-static inline NSString    DOMHTMLQuoteElement_Cite(DOMHTMLQuoteElement self)                      { return ((NSString (*)(DOMHTMLQuoteElement, SEL))bean_msgSend)(self, bean_sel("cite")); }
-static inline void        DOMHTMLQuoteElement_SetCite(DOMHTMLQuoteElement self, NSString cite)    { ((void (*)(DOMHTMLQuoteElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCite:"), cite); }
+static inline NSString               DOMHTMLQuoteElement_Cite(DOMHTMLQuoteElement self)                      { return ((NSString (*)(DOMHTMLQuoteElement, SEL))bean_msgSend)(self, bean_sel("cite")); }
+static inline void                   DOMHTMLQuoteElement_SetCite(DOMHTMLQuoteElement self, NSString cite)    { ((void (*)(DOMHTMLQuoteElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCite:"), cite); }
+#ifndef BEAN_ALLOC_DOMHTMLQuoteElement
+#define BEAN_ALLOC_DOMHTMLQuoteElement
+static inline DOMHTMLQuoteElement    DOMHTMLQuoteElement_Alloc(void)                                         { return (DOMHTMLQuoteElement)bean_alloc(bean_cls("DOMHTMLQuoteElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLQuoteElement
+#define BEAN_NEW_DOMHTMLQuoteElement
+static inline DOMHTMLQuoteElement    DOMHTMLQuoteElement_New(void)                                           { return (DOMHTMLQuoteElement)bean_new(bean_cls("DOMHTMLQuoteElement")); }
+#endif
 
 /* ===== DOMHTMLScriptElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLScriptElement
 #define BEAN_TYPEDEF_DOMHTMLScriptElement
 typedef bean_id DOMHTMLScriptElement;
 #endif
-static inline NSString    DOMHTMLScriptElement_Text(DOMHTMLScriptElement self)                            { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("text")); }
-static inline void        DOMHTMLScriptElement_SetText(DOMHTMLScriptElement self, NSString text)          { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setText:"), text); }
-static inline NSString    DOMHTMLScriptElement_HtmlFor(DOMHTMLScriptElement self)                         { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("htmlFor")); }
-static inline void        DOMHTMLScriptElement_SetHtmlFor(DOMHTMLScriptElement self, NSString htmlFor)    { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHtmlFor:"), htmlFor); }
-static inline NSString    DOMHTMLScriptElement_Event(DOMHTMLScriptElement self)                           { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("event")); }
-static inline void        DOMHTMLScriptElement_SetEvent(DOMHTMLScriptElement self, NSString event)        { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setEvent:"), event); }
-static inline NSString    DOMHTMLScriptElement_Charset(DOMHTMLScriptElement self)                         { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("charset")); }
-static inline void        DOMHTMLScriptElement_SetCharset(DOMHTMLScriptElement self, NSString charset)    { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCharset:"), charset); }
-static inline BOOL        DOMHTMLScriptElement_Defer(DOMHTMLScriptElement self)                           { return ((BOOL (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("defer")); }
-static inline void        DOMHTMLScriptElement_SetDefer(DOMHTMLScriptElement self, BOOL defer)            { ((void (*)(DOMHTMLScriptElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDefer:"), defer); }
-static inline NSString    DOMHTMLScriptElement_Src(DOMHTMLScriptElement self)                             { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("src")); }
-static inline void        DOMHTMLScriptElement_SetSrc(DOMHTMLScriptElement self, NSString src)            { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
-static inline NSString    DOMHTMLScriptElement_Type(DOMHTMLScriptElement self)                            { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLScriptElement_SetType(DOMHTMLScriptElement self, NSString type)          { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline NSString                DOMHTMLScriptElement_Text(DOMHTMLScriptElement self)                            { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("text")); }
+static inline void                    DOMHTMLScriptElement_SetText(DOMHTMLScriptElement self, NSString text)          { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setText:"), text); }
+static inline NSString                DOMHTMLScriptElement_HtmlFor(DOMHTMLScriptElement self)                         { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("htmlFor")); }
+static inline void                    DOMHTMLScriptElement_SetHtmlFor(DOMHTMLScriptElement self, NSString htmlFor)    { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHtmlFor:"), htmlFor); }
+static inline NSString                DOMHTMLScriptElement_Event(DOMHTMLScriptElement self)                           { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("event")); }
+static inline void                    DOMHTMLScriptElement_SetEvent(DOMHTMLScriptElement self, NSString event)        { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setEvent:"), event); }
+static inline NSString                DOMHTMLScriptElement_Charset(DOMHTMLScriptElement self)                         { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("charset")); }
+static inline void                    DOMHTMLScriptElement_SetCharset(DOMHTMLScriptElement self, NSString charset)    { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCharset:"), charset); }
+static inline BOOL                    DOMHTMLScriptElement_Defer(DOMHTMLScriptElement self)                           { return ((BOOL (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("defer")); }
+static inline void                    DOMHTMLScriptElement_SetDefer(DOMHTMLScriptElement self, BOOL defer)            { ((void (*)(DOMHTMLScriptElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDefer:"), defer); }
+static inline NSString                DOMHTMLScriptElement_Src(DOMHTMLScriptElement self)                             { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("src")); }
+static inline void                    DOMHTMLScriptElement_SetSrc(DOMHTMLScriptElement self, NSString src)            { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
+static inline NSString                DOMHTMLScriptElement_Type(DOMHTMLScriptElement self)                            { return ((NSString (*)(DOMHTMLScriptElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                    DOMHTMLScriptElement_SetType(DOMHTMLScriptElement self, NSString type)          { ((void (*)(DOMHTMLScriptElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+#ifndef BEAN_ALLOC_DOMHTMLScriptElement
+#define BEAN_ALLOC_DOMHTMLScriptElement
+static inline DOMHTMLScriptElement    DOMHTMLScriptElement_Alloc(void)                                                { return (DOMHTMLScriptElement)bean_alloc(bean_cls("DOMHTMLScriptElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLScriptElement
+#define BEAN_NEW_DOMHTMLScriptElement
+static inline DOMHTMLScriptElement    DOMHTMLScriptElement_New(void)                                                  { return (DOMHTMLScriptElement)bean_new(bean_cls("DOMHTMLScriptElement")); }
+#endif
 
 /* ===== DOMHTMLSelectElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLSelectElement
 #define BEAN_TYPEDEF_DOMHTMLSelectElement
 typedef bean_id DOMHTMLSelectElement;
 #endif
-static inline void*       DOMHTMLSelectElement_Item(DOMHTMLSelectElement self, NSUInteger index)                     { return ((void* (*)(DOMHTMLSelectElement, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline void*       DOMHTMLSelectElement_NamedItem(DOMHTMLSelectElement self, NSString name)                   { return ((void* (*)(DOMHTMLSelectElement, SEL, NSString))bean_msgSend)(self, bean_sel("namedItem:"), name); }
-static inline void        DOMHTMLSelectElement_Add_Before(DOMHTMLSelectElement self, void* element, void* before)    { ((void (*)(DOMHTMLSelectElement, SEL, void*, void*))bean_msgSend)(self, bean_sel("add:before:"), element, before); }
-static inline void        DOMHTMLSelectElement_Remove(DOMHTMLSelectElement self, int index)                          { ((void (*)(DOMHTMLSelectElement, SEL, int))bean_msgSend)(self, bean_sel("remove:"), index); }
-static inline BOOL        DOMHTMLSelectElement_Autofocus(DOMHTMLSelectElement self)                                  { return ((BOOL (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("autofocus")); }
-static inline void        DOMHTMLSelectElement_SetAutofocus(DOMHTMLSelectElement self, BOOL autofocus)               { ((void (*)(DOMHTMLSelectElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutofocus:"), autofocus); }
-static inline BOOL        DOMHTMLSelectElement_Disabled(DOMHTMLSelectElement self)                                   { return ((BOOL (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMHTMLSelectElement_SetDisabled(DOMHTMLSelectElement self, BOOL disabled)                 { ((void (*)(DOMHTMLSelectElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline void*       DOMHTMLSelectElement_Form(DOMHTMLSelectElement self)                                       { return ((void* (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("form")); }
-static inline BOOL        DOMHTMLSelectElement_Multiple(DOMHTMLSelectElement self)                                   { return ((BOOL (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("multiple")); }
-static inline void        DOMHTMLSelectElement_SetMultiple(DOMHTMLSelectElement self, BOOL multiple)                 { ((void (*)(DOMHTMLSelectElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setMultiple:"), multiple); }
-static inline NSString    DOMHTMLSelectElement_Name(DOMHTMLSelectElement self)                                       { return ((NSString (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLSelectElement_SetName(DOMHTMLSelectElement self, NSString name)                     { ((void (*)(DOMHTMLSelectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline int         DOMHTMLSelectElement_Size(DOMHTMLSelectElement self)                                       { return ((int (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("size")); }
-static inline void        DOMHTMLSelectElement_SetSize(DOMHTMLSelectElement self, int size)                          { ((void (*)(DOMHTMLSelectElement, SEL, int))bean_msgSend)(self, bean_sel("setSize:"), size); }
-static inline NSString    DOMHTMLSelectElement_Type(DOMHTMLSelectElement self)                                       { return ((NSString (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void*       DOMHTMLSelectElement_Options(DOMHTMLSelectElement self)                                    { return ((void* (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("options")); }
-static inline int         DOMHTMLSelectElement_Length(DOMHTMLSelectElement self)                                     { return ((int (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("length")); }
-static inline int         DOMHTMLSelectElement_SelectedIndex(DOMHTMLSelectElement self)                              { return ((int (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("selectedIndex")); }
-static inline void        DOMHTMLSelectElement_SetSelectedIndex(DOMHTMLSelectElement self, int selectedIndex)        { ((void (*)(DOMHTMLSelectElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectedIndex:"), selectedIndex); }
-static inline NSString    DOMHTMLSelectElement_Value(DOMHTMLSelectElement self)                                      { return ((NSString (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline void        DOMHTMLSelectElement_SetValue(DOMHTMLSelectElement self, NSString value)                   { ((void (*)(DOMHTMLSelectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
-static inline BOOL        DOMHTMLSelectElement_WillValidate(DOMHTMLSelectElement self)                               { return ((BOOL (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("willValidate")); }
-static inline void        DOMHTMLSelectElement_Add(DOMHTMLSelectElement self, void* element, void* before)           { ((void (*)(DOMHTMLSelectElement, SEL, void*, void*))bean_msgSend)(self, bean_sel("add::"), element, before); }
+static inline void*                   DOMHTMLSelectElement_Item(DOMHTMLSelectElement self, NSUInteger index)                     { return ((void* (*)(DOMHTMLSelectElement, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline void*                   DOMHTMLSelectElement_NamedItem(DOMHTMLSelectElement self, NSString name)                   { return ((void* (*)(DOMHTMLSelectElement, SEL, NSString))bean_msgSend)(self, bean_sel("namedItem:"), name); }
+static inline void                    DOMHTMLSelectElement_Add_Before(DOMHTMLSelectElement self, void* element, void* before)    { ((void (*)(DOMHTMLSelectElement, SEL, void*, void*))bean_msgSend)(self, bean_sel("add:before:"), element, before); }
+static inline void                    DOMHTMLSelectElement_Remove(DOMHTMLSelectElement self, int index)                          { ((void (*)(DOMHTMLSelectElement, SEL, int))bean_msgSend)(self, bean_sel("remove:"), index); }
+static inline BOOL                    DOMHTMLSelectElement_Autofocus(DOMHTMLSelectElement self)                                  { return ((BOOL (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("autofocus")); }
+static inline void                    DOMHTMLSelectElement_SetAutofocus(DOMHTMLSelectElement self, BOOL autofocus)               { ((void (*)(DOMHTMLSelectElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutofocus:"), autofocus); }
+static inline BOOL                    DOMHTMLSelectElement_Disabled(DOMHTMLSelectElement self)                                   { return ((BOOL (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void                    DOMHTMLSelectElement_SetDisabled(DOMHTMLSelectElement self, BOOL disabled)                 { ((void (*)(DOMHTMLSelectElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline void*                   DOMHTMLSelectElement_Form(DOMHTMLSelectElement self)                                       { return ((void* (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline BOOL                    DOMHTMLSelectElement_Multiple(DOMHTMLSelectElement self)                                   { return ((BOOL (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("multiple")); }
+static inline void                    DOMHTMLSelectElement_SetMultiple(DOMHTMLSelectElement self, BOOL multiple)                 { ((void (*)(DOMHTMLSelectElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setMultiple:"), multiple); }
+static inline NSString                DOMHTMLSelectElement_Name(DOMHTMLSelectElement self)                                       { return ((NSString (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                    DOMHTMLSelectElement_SetName(DOMHTMLSelectElement self, NSString name)                     { ((void (*)(DOMHTMLSelectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline int                     DOMHTMLSelectElement_Size(DOMHTMLSelectElement self)                                       { return ((int (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("size")); }
+static inline void                    DOMHTMLSelectElement_SetSize(DOMHTMLSelectElement self, int size)                          { ((void (*)(DOMHTMLSelectElement, SEL, int))bean_msgSend)(self, bean_sel("setSize:"), size); }
+static inline NSString                DOMHTMLSelectElement_Type(DOMHTMLSelectElement self)                                       { return ((NSString (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void*                   DOMHTMLSelectElement_Options(DOMHTMLSelectElement self)                                    { return ((void* (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("options")); }
+static inline int                     DOMHTMLSelectElement_Length(DOMHTMLSelectElement self)                                     { return ((int (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline int                     DOMHTMLSelectElement_SelectedIndex(DOMHTMLSelectElement self)                              { return ((int (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("selectedIndex")); }
+static inline void                    DOMHTMLSelectElement_SetSelectedIndex(DOMHTMLSelectElement self, int selectedIndex)        { ((void (*)(DOMHTMLSelectElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectedIndex:"), selectedIndex); }
+static inline NSString                DOMHTMLSelectElement_Value(DOMHTMLSelectElement self)                                      { return ((NSString (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void                    DOMHTMLSelectElement_SetValue(DOMHTMLSelectElement self, NSString value)                   { ((void (*)(DOMHTMLSelectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline BOOL                    DOMHTMLSelectElement_WillValidate(DOMHTMLSelectElement self)                               { return ((BOOL (*)(DOMHTMLSelectElement, SEL))bean_msgSend)(self, bean_sel("willValidate")); }
+static inline void                    DOMHTMLSelectElement_Add(DOMHTMLSelectElement self, void* element, void* before)           { ((void (*)(DOMHTMLSelectElement, SEL, void*, void*))bean_msgSend)(self, bean_sel("add::"), element, before); }
+#ifndef BEAN_ALLOC_DOMHTMLSelectElement
+#define BEAN_ALLOC_DOMHTMLSelectElement
+static inline DOMHTMLSelectElement    DOMHTMLSelectElement_Alloc(void)                                                           { return (DOMHTMLSelectElement)bean_alloc(bean_cls("DOMHTMLSelectElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLSelectElement
+#define BEAN_NEW_DOMHTMLSelectElement
+static inline DOMHTMLSelectElement    DOMHTMLSelectElement_New(void)                                                             { return (DOMHTMLSelectElement)bean_new(bean_cls("DOMHTMLSelectElement")); }
+#endif
 
 /* ===== DOMHTMLStyleElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLStyleElement
 #define BEAN_TYPEDEF_DOMHTMLStyleElement
 typedef bean_id DOMHTMLStyleElement;
 #endif
-static inline BOOL        DOMHTMLStyleElement_Disabled(DOMHTMLStyleElement self)                      { return ((BOOL (*)(DOMHTMLStyleElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMHTMLStyleElement_SetDisabled(DOMHTMLStyleElement self, BOOL disabled)    { ((void (*)(DOMHTMLStyleElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline NSString    DOMHTMLStyleElement_Media(DOMHTMLStyleElement self)                         { return ((NSString (*)(DOMHTMLStyleElement, SEL))bean_msgSend)(self, bean_sel("media")); }
-static inline void        DOMHTMLStyleElement_SetMedia(DOMHTMLStyleElement self, NSString media)      { ((void (*)(DOMHTMLStyleElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMedia:"), media); }
-static inline NSString    DOMHTMLStyleElement_Type(DOMHTMLStyleElement self)                          { return ((NSString (*)(DOMHTMLStyleElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLStyleElement_SetType(DOMHTMLStyleElement self, NSString type)        { ((void (*)(DOMHTMLStyleElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline void*       DOMHTMLStyleElement_Sheet(DOMHTMLStyleElement self)                         { return ((void* (*)(DOMHTMLStyleElement, SEL))bean_msgSend)(self, bean_sel("sheet")); }
+static inline BOOL                   DOMHTMLStyleElement_Disabled(DOMHTMLStyleElement self)                      { return ((BOOL (*)(DOMHTMLStyleElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void                   DOMHTMLStyleElement_SetDisabled(DOMHTMLStyleElement self, BOOL disabled)    { ((void (*)(DOMHTMLStyleElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline NSString               DOMHTMLStyleElement_Media(DOMHTMLStyleElement self)                         { return ((NSString (*)(DOMHTMLStyleElement, SEL))bean_msgSend)(self, bean_sel("media")); }
+static inline void                   DOMHTMLStyleElement_SetMedia(DOMHTMLStyleElement self, NSString media)      { ((void (*)(DOMHTMLStyleElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMedia:"), media); }
+static inline NSString               DOMHTMLStyleElement_Type(DOMHTMLStyleElement self)                          { return ((NSString (*)(DOMHTMLStyleElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                   DOMHTMLStyleElement_SetType(DOMHTMLStyleElement self, NSString type)        { ((void (*)(DOMHTMLStyleElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline void*                  DOMHTMLStyleElement_Sheet(DOMHTMLStyleElement self)                         { return ((void* (*)(DOMHTMLStyleElement, SEL))bean_msgSend)(self, bean_sel("sheet")); }
+#ifndef BEAN_ALLOC_DOMHTMLStyleElement
+#define BEAN_ALLOC_DOMHTMLStyleElement
+static inline DOMHTMLStyleElement    DOMHTMLStyleElement_Alloc(void)                                             { return (DOMHTMLStyleElement)bean_alloc(bean_cls("DOMHTMLStyleElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLStyleElement
+#define BEAN_NEW_DOMHTMLStyleElement
+static inline DOMHTMLStyleElement    DOMHTMLStyleElement_New(void)                                               { return (DOMHTMLStyleElement)bean_new(bean_cls("DOMHTMLStyleElement")); }
+#endif
 
 /* ===== DOMHTMLTableCaptionElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLTableCaptionElement
 #define BEAN_TYPEDEF_DOMHTMLTableCaptionElement
 typedef bean_id DOMHTMLTableCaptionElement;
 #endif
-static inline NSString    DOMHTMLTableCaptionElement_Align(DOMHTMLTableCaptionElement self)                       { return ((NSString (*)(DOMHTMLTableCaptionElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLTableCaptionElement_SetAlign(DOMHTMLTableCaptionElement self, NSString align)    { ((void (*)(DOMHTMLTableCaptionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                      DOMHTMLTableCaptionElement_Align(DOMHTMLTableCaptionElement self)                       { return ((NSString (*)(DOMHTMLTableCaptionElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                          DOMHTMLTableCaptionElement_SetAlign(DOMHTMLTableCaptionElement self, NSString align)    { ((void (*)(DOMHTMLTableCaptionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+#ifndef BEAN_ALLOC_DOMHTMLTableCaptionElement
+#define BEAN_ALLOC_DOMHTMLTableCaptionElement
+static inline DOMHTMLTableCaptionElement    DOMHTMLTableCaptionElement_Alloc(void)                                                  { return (DOMHTMLTableCaptionElement)bean_alloc(bean_cls("DOMHTMLTableCaptionElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLTableCaptionElement
+#define BEAN_NEW_DOMHTMLTableCaptionElement
+static inline DOMHTMLTableCaptionElement    DOMHTMLTableCaptionElement_New(void)                                                    { return (DOMHTMLTableCaptionElement)bean_new(bean_cls("DOMHTMLTableCaptionElement")); }
+#endif
 
 /* ===== DOMHTMLTableCellElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLTableCellElement
 #define BEAN_TYPEDEF_DOMHTMLTableCellElement
 typedef bean_id DOMHTMLTableCellElement;
 #endif
-static inline int         DOMHTMLTableCellElement_CellIndex(DOMHTMLTableCellElement self)                       { return ((int (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("cellIndex")); }
-static inline NSString    DOMHTMLTableCellElement_Align(DOMHTMLTableCellElement self)                           { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLTableCellElement_SetAlign(DOMHTMLTableCellElement self, NSString align)        { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLTableCellElement_Axis(DOMHTMLTableCellElement self)                            { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("axis")); }
-static inline void        DOMHTMLTableCellElement_SetAxis(DOMHTMLTableCellElement self, NSString axis)          { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAxis:"), axis); }
-static inline NSString    DOMHTMLTableCellElement_BgColor(DOMHTMLTableCellElement self)                         { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
-static inline void        DOMHTMLTableCellElement_SetBgColor(DOMHTMLTableCellElement self, NSString bgColor)    { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
-static inline NSString    DOMHTMLTableCellElement_Ch(DOMHTMLTableCellElement self)                              { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("ch")); }
-static inline void        DOMHTMLTableCellElement_SetCh(DOMHTMLTableCellElement self, NSString ch)              { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCh:"), ch); }
-static inline NSString    DOMHTMLTableCellElement_ChOff(DOMHTMLTableCellElement self)                           { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("chOff")); }
-static inline void        DOMHTMLTableCellElement_SetChOff(DOMHTMLTableCellElement self, NSString chOff)        { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setChOff:"), chOff); }
-static inline int         DOMHTMLTableCellElement_ColSpan(DOMHTMLTableCellElement self)                         { return ((int (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("colSpan")); }
-static inline void        DOMHTMLTableCellElement_SetColSpan(DOMHTMLTableCellElement self, int colSpan)         { ((void (*)(DOMHTMLTableCellElement, SEL, int))bean_msgSend)(self, bean_sel("setColSpan:"), colSpan); }
-static inline int         DOMHTMLTableCellElement_RowSpan(DOMHTMLTableCellElement self)                         { return ((int (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("rowSpan")); }
-static inline void        DOMHTMLTableCellElement_SetRowSpan(DOMHTMLTableCellElement self, int rowSpan)         { ((void (*)(DOMHTMLTableCellElement, SEL, int))bean_msgSend)(self, bean_sel("setRowSpan:"), rowSpan); }
-static inline NSString    DOMHTMLTableCellElement_Headers(DOMHTMLTableCellElement self)                         { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("headers")); }
-static inline void        DOMHTMLTableCellElement_SetHeaders(DOMHTMLTableCellElement self, NSString headers)    { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeaders:"), headers); }
-static inline NSString    DOMHTMLTableCellElement_Height(DOMHTMLTableCellElement self)                          { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline void        DOMHTMLTableCellElement_SetHeight(DOMHTMLTableCellElement self, NSString height)      { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
-static inline BOOL        DOMHTMLTableCellElement_NoWrap(DOMHTMLTableCellElement self)                          { return ((BOOL (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("noWrap")); }
-static inline void        DOMHTMLTableCellElement_SetNoWrap(DOMHTMLTableCellElement self, BOOL noWrap)          { ((void (*)(DOMHTMLTableCellElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setNoWrap:"), noWrap); }
-static inline NSString    DOMHTMLTableCellElement_VAlign(DOMHTMLTableCellElement self)                          { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("vAlign")); }
-static inline void        DOMHTMLTableCellElement_SetVAlign(DOMHTMLTableCellElement self, NSString vAlign)      { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVAlign:"), vAlign); }
-static inline NSString    DOMHTMLTableCellElement_Width(DOMHTMLTableCellElement self)                           { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLTableCellElement_SetWidth(DOMHTMLTableCellElement self, NSString width)        { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
-static inline NSString    DOMHTMLTableCellElement_Abbr(DOMHTMLTableCellElement self)                            { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("abbr")); }
-static inline void        DOMHTMLTableCellElement_SetAbbr(DOMHTMLTableCellElement self, NSString abbr)          { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAbbr:"), abbr); }
-static inline NSString    DOMHTMLTableCellElement_Scope(DOMHTMLTableCellElement self)                           { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("scope")); }
-static inline void        DOMHTMLTableCellElement_SetScope(DOMHTMLTableCellElement self, NSString scope)        { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setScope:"), scope); }
+static inline int                        DOMHTMLTableCellElement_CellIndex(DOMHTMLTableCellElement self)                       { return ((int (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("cellIndex")); }
+static inline NSString                   DOMHTMLTableCellElement_Align(DOMHTMLTableCellElement self)                           { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                       DOMHTMLTableCellElement_SetAlign(DOMHTMLTableCellElement self, NSString align)        { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                   DOMHTMLTableCellElement_Axis(DOMHTMLTableCellElement self)                            { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("axis")); }
+static inline void                       DOMHTMLTableCellElement_SetAxis(DOMHTMLTableCellElement self, NSString axis)          { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAxis:"), axis); }
+static inline NSString                   DOMHTMLTableCellElement_BgColor(DOMHTMLTableCellElement self)                         { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
+static inline void                       DOMHTMLTableCellElement_SetBgColor(DOMHTMLTableCellElement self, NSString bgColor)    { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
+static inline NSString                   DOMHTMLTableCellElement_Ch(DOMHTMLTableCellElement self)                              { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("ch")); }
+static inline void                       DOMHTMLTableCellElement_SetCh(DOMHTMLTableCellElement self, NSString ch)              { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCh:"), ch); }
+static inline NSString                   DOMHTMLTableCellElement_ChOff(DOMHTMLTableCellElement self)                           { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("chOff")); }
+static inline void                       DOMHTMLTableCellElement_SetChOff(DOMHTMLTableCellElement self, NSString chOff)        { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setChOff:"), chOff); }
+static inline int                        DOMHTMLTableCellElement_ColSpan(DOMHTMLTableCellElement self)                         { return ((int (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("colSpan")); }
+static inline void                       DOMHTMLTableCellElement_SetColSpan(DOMHTMLTableCellElement self, int colSpan)         { ((void (*)(DOMHTMLTableCellElement, SEL, int))bean_msgSend)(self, bean_sel("setColSpan:"), colSpan); }
+static inline int                        DOMHTMLTableCellElement_RowSpan(DOMHTMLTableCellElement self)                         { return ((int (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("rowSpan")); }
+static inline void                       DOMHTMLTableCellElement_SetRowSpan(DOMHTMLTableCellElement self, int rowSpan)         { ((void (*)(DOMHTMLTableCellElement, SEL, int))bean_msgSend)(self, bean_sel("setRowSpan:"), rowSpan); }
+static inline NSString                   DOMHTMLTableCellElement_Headers(DOMHTMLTableCellElement self)                         { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("headers")); }
+static inline void                       DOMHTMLTableCellElement_SetHeaders(DOMHTMLTableCellElement self, NSString headers)    { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeaders:"), headers); }
+static inline NSString                   DOMHTMLTableCellElement_Height(DOMHTMLTableCellElement self)                          { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline void                       DOMHTMLTableCellElement_SetHeight(DOMHTMLTableCellElement self, NSString height)      { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
+static inline BOOL                       DOMHTMLTableCellElement_NoWrap(DOMHTMLTableCellElement self)                          { return ((BOOL (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("noWrap")); }
+static inline void                       DOMHTMLTableCellElement_SetNoWrap(DOMHTMLTableCellElement self, BOOL noWrap)          { ((void (*)(DOMHTMLTableCellElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setNoWrap:"), noWrap); }
+static inline NSString                   DOMHTMLTableCellElement_VAlign(DOMHTMLTableCellElement self)                          { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("vAlign")); }
+static inline void                       DOMHTMLTableCellElement_SetVAlign(DOMHTMLTableCellElement self, NSString vAlign)      { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVAlign:"), vAlign); }
+static inline NSString                   DOMHTMLTableCellElement_Width(DOMHTMLTableCellElement self)                           { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                       DOMHTMLTableCellElement_SetWidth(DOMHTMLTableCellElement self, NSString width)        { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline NSString                   DOMHTMLTableCellElement_Abbr(DOMHTMLTableCellElement self)                            { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("abbr")); }
+static inline void                       DOMHTMLTableCellElement_SetAbbr(DOMHTMLTableCellElement self, NSString abbr)          { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAbbr:"), abbr); }
+static inline NSString                   DOMHTMLTableCellElement_Scope(DOMHTMLTableCellElement self)                           { return ((NSString (*)(DOMHTMLTableCellElement, SEL))bean_msgSend)(self, bean_sel("scope")); }
+static inline void                       DOMHTMLTableCellElement_SetScope(DOMHTMLTableCellElement self, NSString scope)        { ((void (*)(DOMHTMLTableCellElement, SEL, NSString))bean_msgSend)(self, bean_sel("setScope:"), scope); }
+#ifndef BEAN_ALLOC_DOMHTMLTableCellElement
+#define BEAN_ALLOC_DOMHTMLTableCellElement
+static inline DOMHTMLTableCellElement    DOMHTMLTableCellElement_Alloc(void)                                                   { return (DOMHTMLTableCellElement)bean_alloc(bean_cls("DOMHTMLTableCellElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLTableCellElement
+#define BEAN_NEW_DOMHTMLTableCellElement
+static inline DOMHTMLTableCellElement    DOMHTMLTableCellElement_New(void)                                                     { return (DOMHTMLTableCellElement)bean_new(bean_cls("DOMHTMLTableCellElement")); }
+#endif
 
 /* ===== DOMHTMLTableColElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLTableColElement
 #define BEAN_TYPEDEF_DOMHTMLTableColElement
 typedef bean_id DOMHTMLTableColElement;
 #endif
-static inline NSString    DOMHTMLTableColElement_Align(DOMHTMLTableColElement self)                         { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLTableColElement_SetAlign(DOMHTMLTableColElement self, NSString align)      { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLTableColElement_Ch(DOMHTMLTableColElement self)                            { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("ch")); }
-static inline void        DOMHTMLTableColElement_SetCh(DOMHTMLTableColElement self, NSString ch)            { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCh:"), ch); }
-static inline NSString    DOMHTMLTableColElement_ChOff(DOMHTMLTableColElement self)                         { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("chOff")); }
-static inline void        DOMHTMLTableColElement_SetChOff(DOMHTMLTableColElement self, NSString chOff)      { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setChOff:"), chOff); }
-static inline int         DOMHTMLTableColElement_Span(DOMHTMLTableColElement self)                          { return ((int (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("span")); }
-static inline void        DOMHTMLTableColElement_SetSpan(DOMHTMLTableColElement self, int span)             { ((void (*)(DOMHTMLTableColElement, SEL, int))bean_msgSend)(self, bean_sel("setSpan:"), span); }
-static inline NSString    DOMHTMLTableColElement_VAlign(DOMHTMLTableColElement self)                        { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("vAlign")); }
-static inline void        DOMHTMLTableColElement_SetVAlign(DOMHTMLTableColElement self, NSString vAlign)    { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVAlign:"), vAlign); }
-static inline NSString    DOMHTMLTableColElement_Width(DOMHTMLTableColElement self)                         { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLTableColElement_SetWidth(DOMHTMLTableColElement self, NSString width)      { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline NSString                  DOMHTMLTableColElement_Align(DOMHTMLTableColElement self)                         { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                      DOMHTMLTableColElement_SetAlign(DOMHTMLTableColElement self, NSString align)      { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                  DOMHTMLTableColElement_Ch(DOMHTMLTableColElement self)                            { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("ch")); }
+static inline void                      DOMHTMLTableColElement_SetCh(DOMHTMLTableColElement self, NSString ch)            { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCh:"), ch); }
+static inline NSString                  DOMHTMLTableColElement_ChOff(DOMHTMLTableColElement self)                         { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("chOff")); }
+static inline void                      DOMHTMLTableColElement_SetChOff(DOMHTMLTableColElement self, NSString chOff)      { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setChOff:"), chOff); }
+static inline int                       DOMHTMLTableColElement_Span(DOMHTMLTableColElement self)                          { return ((int (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("span")); }
+static inline void                      DOMHTMLTableColElement_SetSpan(DOMHTMLTableColElement self, int span)             { ((void (*)(DOMHTMLTableColElement, SEL, int))bean_msgSend)(self, bean_sel("setSpan:"), span); }
+static inline NSString                  DOMHTMLTableColElement_VAlign(DOMHTMLTableColElement self)                        { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("vAlign")); }
+static inline void                      DOMHTMLTableColElement_SetVAlign(DOMHTMLTableColElement self, NSString vAlign)    { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVAlign:"), vAlign); }
+static inline NSString                  DOMHTMLTableColElement_Width(DOMHTMLTableColElement self)                         { return ((NSString (*)(DOMHTMLTableColElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                      DOMHTMLTableColElement_SetWidth(DOMHTMLTableColElement self, NSString width)      { ((void (*)(DOMHTMLTableColElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+#ifndef BEAN_ALLOC_DOMHTMLTableColElement
+#define BEAN_ALLOC_DOMHTMLTableColElement
+static inline DOMHTMLTableColElement    DOMHTMLTableColElement_Alloc(void)                                                { return (DOMHTMLTableColElement)bean_alloc(bean_cls("DOMHTMLTableColElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLTableColElement
+#define BEAN_NEW_DOMHTMLTableColElement
+static inline DOMHTMLTableColElement    DOMHTMLTableColElement_New(void)                                                  { return (DOMHTMLTableColElement)bean_new(bean_cls("DOMHTMLTableColElement")); }
+#endif
 
 /* ===== DOMHTMLTableElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLTableElement
 #define BEAN_TYPEDEF_DOMHTMLTableElement
 typedef bean_id DOMHTMLTableElement;
 #endif
-static inline void*       DOMHTMLTableElement_CreateTHead(DOMHTMLTableElement self)                               { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("createTHead")); }
-static inline void        DOMHTMLTableElement_DeleteTHead(DOMHTMLTableElement self)                               { ((void (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("deleteTHead")); }
-static inline void*       DOMHTMLTableElement_CreateTFoot(DOMHTMLTableElement self)                               { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("createTFoot")); }
-static inline void        DOMHTMLTableElement_DeleteTFoot(DOMHTMLTableElement self)                               { ((void (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("deleteTFoot")); }
-static inline void*       DOMHTMLTableElement_CreateCaption(DOMHTMLTableElement self)                             { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("createCaption")); }
-static inline void        DOMHTMLTableElement_DeleteCaption(DOMHTMLTableElement self)                             { ((void (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("deleteCaption")); }
-static inline void*       DOMHTMLTableElement_InsertRow(DOMHTMLTableElement self, int index)                      { return ((void* (*)(DOMHTMLTableElement, SEL, int))bean_msgSend)(self, bean_sel("insertRow:"), index); }
-static inline void        DOMHTMLTableElement_DeleteRow(DOMHTMLTableElement self, int index)                      { ((void (*)(DOMHTMLTableElement, SEL, int))bean_msgSend)(self, bean_sel("deleteRow:"), index); }
-static inline void*       DOMHTMLTableElement_Caption(DOMHTMLTableElement self)                                   { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("caption")); }
-static inline void        DOMHTMLTableElement_SetCaption(DOMHTMLTableElement self, void* caption)                 { ((void (*)(DOMHTMLTableElement, SEL, void*))bean_msgSend)(self, bean_sel("setCaption:"), caption); }
-static inline void*       DOMHTMLTableElement_THead(DOMHTMLTableElement self)                                     { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("tHead")); }
-static inline void        DOMHTMLTableElement_SetTHead(DOMHTMLTableElement self, void* tHead)                     { ((void (*)(DOMHTMLTableElement, SEL, void*))bean_msgSend)(self, bean_sel("setTHead:"), tHead); }
-static inline void*       DOMHTMLTableElement_TFoot(DOMHTMLTableElement self)                                     { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("tFoot")); }
-static inline void        DOMHTMLTableElement_SetTFoot(DOMHTMLTableElement self, void* tFoot)                     { ((void (*)(DOMHTMLTableElement, SEL, void*))bean_msgSend)(self, bean_sel("setTFoot:"), tFoot); }
-static inline void*       DOMHTMLTableElement_Rows(DOMHTMLTableElement self)                                      { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("rows")); }
-static inline void*       DOMHTMLTableElement_TBodies(DOMHTMLTableElement self)                                   { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("tBodies")); }
-static inline NSString    DOMHTMLTableElement_Align(DOMHTMLTableElement self)                                     { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLTableElement_SetAlign(DOMHTMLTableElement self, NSString align)                  { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLTableElement_BgColor(DOMHTMLTableElement self)                                   { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
-static inline void        DOMHTMLTableElement_SetBgColor(DOMHTMLTableElement self, NSString bgColor)              { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
-static inline NSString    DOMHTMLTableElement_Border(DOMHTMLTableElement self)                                    { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("border")); }
-static inline void        DOMHTMLTableElement_SetBorder(DOMHTMLTableElement self, NSString border)                { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBorder:"), border); }
-static inline NSString    DOMHTMLTableElement_CellPadding(DOMHTMLTableElement self)                               { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("cellPadding")); }
-static inline void        DOMHTMLTableElement_SetCellPadding(DOMHTMLTableElement self, NSString cellPadding)      { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCellPadding:"), cellPadding); }
-static inline NSString    DOMHTMLTableElement_CellSpacing(DOMHTMLTableElement self)                               { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("cellSpacing")); }
-static inline void        DOMHTMLTableElement_SetCellSpacing(DOMHTMLTableElement self, NSString cellSpacing)      { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCellSpacing:"), cellSpacing); }
-static inline NSString    DOMHTMLTableElement_FrameBorders(DOMHTMLTableElement self)                              { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("frameBorders")); }
-static inline void        DOMHTMLTableElement_SetFrameBorders(DOMHTMLTableElement self, NSString frameBorders)    { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFrameBorders:"), frameBorders); }
-static inline NSString    DOMHTMLTableElement_Rules(DOMHTMLTableElement self)                                     { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("rules")); }
-static inline void        DOMHTMLTableElement_SetRules(DOMHTMLTableElement self, NSString rules)                  { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRules:"), rules); }
-static inline NSString    DOMHTMLTableElement_Summary(DOMHTMLTableElement self)                                   { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("summary")); }
-static inline void        DOMHTMLTableElement_SetSummary(DOMHTMLTableElement self, NSString summary)              { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSummary:"), summary); }
-static inline NSString    DOMHTMLTableElement_Width(DOMHTMLTableElement self)                                     { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLTableElement_SetWidth(DOMHTMLTableElement self, NSString width)                  { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline void*                  DOMHTMLTableElement_CreateTHead(DOMHTMLTableElement self)                               { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("createTHead")); }
+static inline void                   DOMHTMLTableElement_DeleteTHead(DOMHTMLTableElement self)                               { ((void (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("deleteTHead")); }
+static inline void*                  DOMHTMLTableElement_CreateTFoot(DOMHTMLTableElement self)                               { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("createTFoot")); }
+static inline void                   DOMHTMLTableElement_DeleteTFoot(DOMHTMLTableElement self)                               { ((void (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("deleteTFoot")); }
+static inline void*                  DOMHTMLTableElement_CreateCaption(DOMHTMLTableElement self)                             { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("createCaption")); }
+static inline void                   DOMHTMLTableElement_DeleteCaption(DOMHTMLTableElement self)                             { ((void (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("deleteCaption")); }
+static inline void*                  DOMHTMLTableElement_InsertRow(DOMHTMLTableElement self, int index)                      { return ((void* (*)(DOMHTMLTableElement, SEL, int))bean_msgSend)(self, bean_sel("insertRow:"), index); }
+static inline void                   DOMHTMLTableElement_DeleteRow(DOMHTMLTableElement self, int index)                      { ((void (*)(DOMHTMLTableElement, SEL, int))bean_msgSend)(self, bean_sel("deleteRow:"), index); }
+static inline void*                  DOMHTMLTableElement_Caption(DOMHTMLTableElement self)                                   { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("caption")); }
+static inline void                   DOMHTMLTableElement_SetCaption(DOMHTMLTableElement self, void* caption)                 { ((void (*)(DOMHTMLTableElement, SEL, void*))bean_msgSend)(self, bean_sel("setCaption:"), caption); }
+static inline void*                  DOMHTMLTableElement_THead(DOMHTMLTableElement self)                                     { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("tHead")); }
+static inline void                   DOMHTMLTableElement_SetTHead(DOMHTMLTableElement self, void* tHead)                     { ((void (*)(DOMHTMLTableElement, SEL, void*))bean_msgSend)(self, bean_sel("setTHead:"), tHead); }
+static inline void*                  DOMHTMLTableElement_TFoot(DOMHTMLTableElement self)                                     { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("tFoot")); }
+static inline void                   DOMHTMLTableElement_SetTFoot(DOMHTMLTableElement self, void* tFoot)                     { ((void (*)(DOMHTMLTableElement, SEL, void*))bean_msgSend)(self, bean_sel("setTFoot:"), tFoot); }
+static inline void*                  DOMHTMLTableElement_Rows(DOMHTMLTableElement self)                                      { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("rows")); }
+static inline void*                  DOMHTMLTableElement_TBodies(DOMHTMLTableElement self)                                   { return ((void* (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("tBodies")); }
+static inline NSString               DOMHTMLTableElement_Align(DOMHTMLTableElement self)                                     { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                   DOMHTMLTableElement_SetAlign(DOMHTMLTableElement self, NSString align)                  { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString               DOMHTMLTableElement_BgColor(DOMHTMLTableElement self)                                   { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
+static inline void                   DOMHTMLTableElement_SetBgColor(DOMHTMLTableElement self, NSString bgColor)              { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
+static inline NSString               DOMHTMLTableElement_Border(DOMHTMLTableElement self)                                    { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("border")); }
+static inline void                   DOMHTMLTableElement_SetBorder(DOMHTMLTableElement self, NSString border)                { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBorder:"), border); }
+static inline NSString               DOMHTMLTableElement_CellPadding(DOMHTMLTableElement self)                               { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("cellPadding")); }
+static inline void                   DOMHTMLTableElement_SetCellPadding(DOMHTMLTableElement self, NSString cellPadding)      { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCellPadding:"), cellPadding); }
+static inline NSString               DOMHTMLTableElement_CellSpacing(DOMHTMLTableElement self)                               { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("cellSpacing")); }
+static inline void                   DOMHTMLTableElement_SetCellSpacing(DOMHTMLTableElement self, NSString cellSpacing)      { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCellSpacing:"), cellSpacing); }
+static inline NSString               DOMHTMLTableElement_FrameBorders(DOMHTMLTableElement self)                              { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("frameBorders")); }
+static inline void                   DOMHTMLTableElement_SetFrameBorders(DOMHTMLTableElement self, NSString frameBorders)    { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFrameBorders:"), frameBorders); }
+static inline NSString               DOMHTMLTableElement_Rules(DOMHTMLTableElement self)                                     { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("rules")); }
+static inline void                   DOMHTMLTableElement_SetRules(DOMHTMLTableElement self, NSString rules)                  { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setRules:"), rules); }
+static inline NSString               DOMHTMLTableElement_Summary(DOMHTMLTableElement self)                                   { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("summary")); }
+static inline void                   DOMHTMLTableElement_SetSummary(DOMHTMLTableElement self, NSString summary)              { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSummary:"), summary); }
+static inline NSString               DOMHTMLTableElement_Width(DOMHTMLTableElement self)                                     { return ((NSString (*)(DOMHTMLTableElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                   DOMHTMLTableElement_SetWidth(DOMHTMLTableElement self, NSString width)                  { ((void (*)(DOMHTMLTableElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+#ifndef BEAN_ALLOC_DOMHTMLTableElement
+#define BEAN_ALLOC_DOMHTMLTableElement
+static inline DOMHTMLTableElement    DOMHTMLTableElement_Alloc(void)                                                         { return (DOMHTMLTableElement)bean_alloc(bean_cls("DOMHTMLTableElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLTableElement
+#define BEAN_NEW_DOMHTMLTableElement
+static inline DOMHTMLTableElement    DOMHTMLTableElement_New(void)                                                           { return (DOMHTMLTableElement)bean_new(bean_cls("DOMHTMLTableElement")); }
+#endif
 
 /* ===== DOMHTMLTableRowElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLTableRowElement
 #define BEAN_TYPEDEF_DOMHTMLTableRowElement
 typedef bean_id DOMHTMLTableRowElement;
 #endif
-static inline void*       DOMHTMLTableRowElement_InsertCell(DOMHTMLTableRowElement self, int index)           { return ((void* (*)(DOMHTMLTableRowElement, SEL, int))bean_msgSend)(self, bean_sel("insertCell:"), index); }
-static inline void        DOMHTMLTableRowElement_DeleteCell(DOMHTMLTableRowElement self, int index)           { ((void (*)(DOMHTMLTableRowElement, SEL, int))bean_msgSend)(self, bean_sel("deleteCell:"), index); }
-static inline int         DOMHTMLTableRowElement_RowIndex(DOMHTMLTableRowElement self)                        { return ((int (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("rowIndex")); }
-static inline int         DOMHTMLTableRowElement_SectionRowIndex(DOMHTMLTableRowElement self)                 { return ((int (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("sectionRowIndex")); }
-static inline void*       DOMHTMLTableRowElement_Cells(DOMHTMLTableRowElement self)                           { return ((void* (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("cells")); }
-static inline NSString    DOMHTMLTableRowElement_Align(DOMHTMLTableRowElement self)                           { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLTableRowElement_SetAlign(DOMHTMLTableRowElement self, NSString align)        { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLTableRowElement_BgColor(DOMHTMLTableRowElement self)                         { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
-static inline void        DOMHTMLTableRowElement_SetBgColor(DOMHTMLTableRowElement self, NSString bgColor)    { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
-static inline NSString    DOMHTMLTableRowElement_Ch(DOMHTMLTableRowElement self)                              { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("ch")); }
-static inline void        DOMHTMLTableRowElement_SetCh(DOMHTMLTableRowElement self, NSString ch)              { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCh:"), ch); }
-static inline NSString    DOMHTMLTableRowElement_ChOff(DOMHTMLTableRowElement self)                           { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("chOff")); }
-static inline void        DOMHTMLTableRowElement_SetChOff(DOMHTMLTableRowElement self, NSString chOff)        { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setChOff:"), chOff); }
-static inline NSString    DOMHTMLTableRowElement_VAlign(DOMHTMLTableRowElement self)                          { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("vAlign")); }
-static inline void        DOMHTMLTableRowElement_SetVAlign(DOMHTMLTableRowElement self, NSString vAlign)      { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVAlign:"), vAlign); }
+static inline void*                     DOMHTMLTableRowElement_InsertCell(DOMHTMLTableRowElement self, int index)           { return ((void* (*)(DOMHTMLTableRowElement, SEL, int))bean_msgSend)(self, bean_sel("insertCell:"), index); }
+static inline void                      DOMHTMLTableRowElement_DeleteCell(DOMHTMLTableRowElement self, int index)           { ((void (*)(DOMHTMLTableRowElement, SEL, int))bean_msgSend)(self, bean_sel("deleteCell:"), index); }
+static inline int                       DOMHTMLTableRowElement_RowIndex(DOMHTMLTableRowElement self)                        { return ((int (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("rowIndex")); }
+static inline int                       DOMHTMLTableRowElement_SectionRowIndex(DOMHTMLTableRowElement self)                 { return ((int (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("sectionRowIndex")); }
+static inline void*                     DOMHTMLTableRowElement_Cells(DOMHTMLTableRowElement self)                           { return ((void* (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("cells")); }
+static inline NSString                  DOMHTMLTableRowElement_Align(DOMHTMLTableRowElement self)                           { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                      DOMHTMLTableRowElement_SetAlign(DOMHTMLTableRowElement self, NSString align)        { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                  DOMHTMLTableRowElement_BgColor(DOMHTMLTableRowElement self)                         { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("bgColor")); }
+static inline void                      DOMHTMLTableRowElement_SetBgColor(DOMHTMLTableRowElement self, NSString bgColor)    { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBgColor:"), bgColor); }
+static inline NSString                  DOMHTMLTableRowElement_Ch(DOMHTMLTableRowElement self)                              { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("ch")); }
+static inline void                      DOMHTMLTableRowElement_SetCh(DOMHTMLTableRowElement self, NSString ch)              { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCh:"), ch); }
+static inline NSString                  DOMHTMLTableRowElement_ChOff(DOMHTMLTableRowElement self)                           { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("chOff")); }
+static inline void                      DOMHTMLTableRowElement_SetChOff(DOMHTMLTableRowElement self, NSString chOff)        { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setChOff:"), chOff); }
+static inline NSString                  DOMHTMLTableRowElement_VAlign(DOMHTMLTableRowElement self)                          { return ((NSString (*)(DOMHTMLTableRowElement, SEL))bean_msgSend)(self, bean_sel("vAlign")); }
+static inline void                      DOMHTMLTableRowElement_SetVAlign(DOMHTMLTableRowElement self, NSString vAlign)      { ((void (*)(DOMHTMLTableRowElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVAlign:"), vAlign); }
+#ifndef BEAN_ALLOC_DOMHTMLTableRowElement
+#define BEAN_ALLOC_DOMHTMLTableRowElement
+static inline DOMHTMLTableRowElement    DOMHTMLTableRowElement_Alloc(void)                                                  { return (DOMHTMLTableRowElement)bean_alloc(bean_cls("DOMHTMLTableRowElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLTableRowElement
+#define BEAN_NEW_DOMHTMLTableRowElement
+static inline DOMHTMLTableRowElement    DOMHTMLTableRowElement_New(void)                                                    { return (DOMHTMLTableRowElement)bean_new(bean_cls("DOMHTMLTableRowElement")); }
+#endif
 
 /* ===== DOMHTMLTableSectionElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLTableSectionElement
 #define BEAN_TYPEDEF_DOMHTMLTableSectionElement
 typedef bean_id DOMHTMLTableSectionElement;
 #endif
-static inline void*       DOMHTMLTableSectionElement_InsertRow(DOMHTMLTableSectionElement self, int index)          { return ((void* (*)(DOMHTMLTableSectionElement, SEL, int))bean_msgSend)(self, bean_sel("insertRow:"), index); }
-static inline void        DOMHTMLTableSectionElement_DeleteRow(DOMHTMLTableSectionElement self, int index)          { ((void (*)(DOMHTMLTableSectionElement, SEL, int))bean_msgSend)(self, bean_sel("deleteRow:"), index); }
-static inline NSString    DOMHTMLTableSectionElement_Align(DOMHTMLTableSectionElement self)                         { return ((NSString (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLTableSectionElement_SetAlign(DOMHTMLTableSectionElement self, NSString align)      { ((void (*)(DOMHTMLTableSectionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLTableSectionElement_Ch(DOMHTMLTableSectionElement self)                            { return ((NSString (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("ch")); }
-static inline void        DOMHTMLTableSectionElement_SetCh(DOMHTMLTableSectionElement self, NSString ch)            { ((void (*)(DOMHTMLTableSectionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCh:"), ch); }
-static inline NSString    DOMHTMLTableSectionElement_ChOff(DOMHTMLTableSectionElement self)                         { return ((NSString (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("chOff")); }
-static inline void        DOMHTMLTableSectionElement_SetChOff(DOMHTMLTableSectionElement self, NSString chOff)      { ((void (*)(DOMHTMLTableSectionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setChOff:"), chOff); }
-static inline NSString    DOMHTMLTableSectionElement_VAlign(DOMHTMLTableSectionElement self)                        { return ((NSString (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("vAlign")); }
-static inline void        DOMHTMLTableSectionElement_SetVAlign(DOMHTMLTableSectionElement self, NSString vAlign)    { ((void (*)(DOMHTMLTableSectionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVAlign:"), vAlign); }
-static inline void*       DOMHTMLTableSectionElement_Rows(DOMHTMLTableSectionElement self)                          { return ((void* (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("rows")); }
+static inline void*                         DOMHTMLTableSectionElement_InsertRow(DOMHTMLTableSectionElement self, int index)          { return ((void* (*)(DOMHTMLTableSectionElement, SEL, int))bean_msgSend)(self, bean_sel("insertRow:"), index); }
+static inline void                          DOMHTMLTableSectionElement_DeleteRow(DOMHTMLTableSectionElement self, int index)          { ((void (*)(DOMHTMLTableSectionElement, SEL, int))bean_msgSend)(self, bean_sel("deleteRow:"), index); }
+static inline NSString                      DOMHTMLTableSectionElement_Align(DOMHTMLTableSectionElement self)                         { return ((NSString (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                          DOMHTMLTableSectionElement_SetAlign(DOMHTMLTableSectionElement self, NSString align)      { ((void (*)(DOMHTMLTableSectionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                      DOMHTMLTableSectionElement_Ch(DOMHTMLTableSectionElement self)                            { return ((NSString (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("ch")); }
+static inline void                          DOMHTMLTableSectionElement_SetCh(DOMHTMLTableSectionElement self, NSString ch)            { ((void (*)(DOMHTMLTableSectionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCh:"), ch); }
+static inline NSString                      DOMHTMLTableSectionElement_ChOff(DOMHTMLTableSectionElement self)                         { return ((NSString (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("chOff")); }
+static inline void                          DOMHTMLTableSectionElement_SetChOff(DOMHTMLTableSectionElement self, NSString chOff)      { ((void (*)(DOMHTMLTableSectionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setChOff:"), chOff); }
+static inline NSString                      DOMHTMLTableSectionElement_VAlign(DOMHTMLTableSectionElement self)                        { return ((NSString (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("vAlign")); }
+static inline void                          DOMHTMLTableSectionElement_SetVAlign(DOMHTMLTableSectionElement self, NSString vAlign)    { ((void (*)(DOMHTMLTableSectionElement, SEL, NSString))bean_msgSend)(self, bean_sel("setVAlign:"), vAlign); }
+static inline void*                         DOMHTMLTableSectionElement_Rows(DOMHTMLTableSectionElement self)                          { return ((void* (*)(DOMHTMLTableSectionElement, SEL))bean_msgSend)(self, bean_sel("rows")); }
+#ifndef BEAN_ALLOC_DOMHTMLTableSectionElement
+#define BEAN_ALLOC_DOMHTMLTableSectionElement
+static inline DOMHTMLTableSectionElement    DOMHTMLTableSectionElement_Alloc(void)                                                    { return (DOMHTMLTableSectionElement)bean_alloc(bean_cls("DOMHTMLTableSectionElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLTableSectionElement
+#define BEAN_NEW_DOMHTMLTableSectionElement
+static inline DOMHTMLTableSectionElement    DOMHTMLTableSectionElement_New(void)                                                      { return (DOMHTMLTableSectionElement)bean_new(bean_cls("DOMHTMLTableSectionElement")); }
+#endif
 
 /* ===== DOMHTMLTextAreaElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLTextAreaElement
 #define BEAN_TYPEDEF_DOMHTMLTextAreaElement
 typedef bean_id DOMHTMLTextAreaElement;
 #endif
-static inline void        DOMHTMLTextAreaElement_Select(DOMHTMLTextAreaElement self)                                       { ((void (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("select")); }
-static inline void        DOMHTMLTextAreaElement_SetSelectionRange_End(DOMHTMLTextAreaElement self, int start, int end)    { ((void (*)(DOMHTMLTextAreaElement, SEL, int, int))bean_msgSend)(self, bean_sel("setSelectionRange:end:"), start, end); }
-static inline BOOL        DOMHTMLTextAreaElement_Autofocus(DOMHTMLTextAreaElement self)                                    { return ((BOOL (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("autofocus")); }
-static inline void        DOMHTMLTextAreaElement_SetAutofocus(DOMHTMLTextAreaElement self, BOOL autofocus)                 { ((void (*)(DOMHTMLTextAreaElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutofocus:"), autofocus); }
-static inline BOOL        DOMHTMLTextAreaElement_Disabled(DOMHTMLTextAreaElement self)                                     { return ((BOOL (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMHTMLTextAreaElement_SetDisabled(DOMHTMLTextAreaElement self, BOOL disabled)                   { ((void (*)(DOMHTMLTextAreaElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline void*       DOMHTMLTextAreaElement_Form(DOMHTMLTextAreaElement self)                                         { return ((void* (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("form")); }
-static inline NSString    DOMHTMLTextAreaElement_Name(DOMHTMLTextAreaElement self)                                         { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLTextAreaElement_SetName(DOMHTMLTextAreaElement self, NSString name)                       { ((void (*)(DOMHTMLTextAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline BOOL        DOMHTMLTextAreaElement_ReadOnly(DOMHTMLTextAreaElement self)                                     { return ((BOOL (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
-static inline void        DOMHTMLTextAreaElement_SetReadOnly(DOMHTMLTextAreaElement self, BOOL readOnly)                   { ((void (*)(DOMHTMLTextAreaElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setReadOnly:"), readOnly); }
-static inline int         DOMHTMLTextAreaElement_Rows(DOMHTMLTextAreaElement self)                                         { return ((int (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("rows")); }
-static inline void        DOMHTMLTextAreaElement_SetRows(DOMHTMLTextAreaElement self, int rows)                            { ((void (*)(DOMHTMLTextAreaElement, SEL, int))bean_msgSend)(self, bean_sel("setRows:"), rows); }
-static inline int         DOMHTMLTextAreaElement_Cols(DOMHTMLTextAreaElement self)                                         { return ((int (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("cols")); }
-static inline void        DOMHTMLTextAreaElement_SetCols(DOMHTMLTextAreaElement self, int cols)                            { ((void (*)(DOMHTMLTextAreaElement, SEL, int))bean_msgSend)(self, bean_sel("setCols:"), cols); }
-static inline NSString    DOMHTMLTextAreaElement_Type(DOMHTMLTextAreaElement self)                                         { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline NSString    DOMHTMLTextAreaElement_DefaultValue(DOMHTMLTextAreaElement self)                                 { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("defaultValue")); }
-static inline void        DOMHTMLTextAreaElement_SetDefaultValue(DOMHTMLTextAreaElement self, NSString defaultValue)       { ((void (*)(DOMHTMLTextAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setDefaultValue:"), defaultValue); }
-static inline NSString    DOMHTMLTextAreaElement_Value(DOMHTMLTextAreaElement self)                                        { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline void        DOMHTMLTextAreaElement_SetValue(DOMHTMLTextAreaElement self, NSString value)                     { ((void (*)(DOMHTMLTextAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
-static inline BOOL        DOMHTMLTextAreaElement_WillValidate(DOMHTMLTextAreaElement self)                                 { return ((BOOL (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("willValidate")); }
-static inline int         DOMHTMLTextAreaElement_SelectionStart(DOMHTMLTextAreaElement self)                               { return ((int (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("selectionStart")); }
-static inline void        DOMHTMLTextAreaElement_SetSelectionStart(DOMHTMLTextAreaElement self, int selectionStart)        { ((void (*)(DOMHTMLTextAreaElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectionStart:"), selectionStart); }
-static inline int         DOMHTMLTextAreaElement_SelectionEnd(DOMHTMLTextAreaElement self)                                 { return ((int (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("selectionEnd")); }
-static inline void        DOMHTMLTextAreaElement_SetSelectionEnd(DOMHTMLTextAreaElement self, int selectionEnd)            { ((void (*)(DOMHTMLTextAreaElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectionEnd:"), selectionEnd); }
-static inline NSString    DOMHTMLTextAreaElement_AccessKey(DOMHTMLTextAreaElement self)                                    { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
-static inline void        DOMHTMLTextAreaElement_SetAccessKey(DOMHTMLTextAreaElement self, NSString accessKey)             { ((void (*)(DOMHTMLTextAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+static inline void                      DOMHTMLTextAreaElement_Select(DOMHTMLTextAreaElement self)                                       { ((void (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("select")); }
+static inline void                      DOMHTMLTextAreaElement_SetSelectionRange_End(DOMHTMLTextAreaElement self, int start, int end)    { ((void (*)(DOMHTMLTextAreaElement, SEL, int, int))bean_msgSend)(self, bean_sel("setSelectionRange:end:"), start, end); }
+static inline BOOL                      DOMHTMLTextAreaElement_Autofocus(DOMHTMLTextAreaElement self)                                    { return ((BOOL (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("autofocus")); }
+static inline void                      DOMHTMLTextAreaElement_SetAutofocus(DOMHTMLTextAreaElement self, BOOL autofocus)                 { ((void (*)(DOMHTMLTextAreaElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutofocus:"), autofocus); }
+static inline BOOL                      DOMHTMLTextAreaElement_Disabled(DOMHTMLTextAreaElement self)                                     { return ((BOOL (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void                      DOMHTMLTextAreaElement_SetDisabled(DOMHTMLTextAreaElement self, BOOL disabled)                   { ((void (*)(DOMHTMLTextAreaElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline void*                     DOMHTMLTextAreaElement_Form(DOMHTMLTextAreaElement self)                                         { return ((void* (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline NSString                  DOMHTMLTextAreaElement_Name(DOMHTMLTextAreaElement self)                                         { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                      DOMHTMLTextAreaElement_SetName(DOMHTMLTextAreaElement self, NSString name)                       { ((void (*)(DOMHTMLTextAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline BOOL                      DOMHTMLTextAreaElement_ReadOnly(DOMHTMLTextAreaElement self)                                     { return ((BOOL (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
+static inline void                      DOMHTMLTextAreaElement_SetReadOnly(DOMHTMLTextAreaElement self, BOOL readOnly)                   { ((void (*)(DOMHTMLTextAreaElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setReadOnly:"), readOnly); }
+static inline int                       DOMHTMLTextAreaElement_Rows(DOMHTMLTextAreaElement self)                                         { return ((int (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("rows")); }
+static inline void                      DOMHTMLTextAreaElement_SetRows(DOMHTMLTextAreaElement self, int rows)                            { ((void (*)(DOMHTMLTextAreaElement, SEL, int))bean_msgSend)(self, bean_sel("setRows:"), rows); }
+static inline int                       DOMHTMLTextAreaElement_Cols(DOMHTMLTextAreaElement self)                                         { return ((int (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("cols")); }
+static inline void                      DOMHTMLTextAreaElement_SetCols(DOMHTMLTextAreaElement self, int cols)                            { ((void (*)(DOMHTMLTextAreaElement, SEL, int))bean_msgSend)(self, bean_sel("setCols:"), cols); }
+static inline NSString                  DOMHTMLTextAreaElement_Type(DOMHTMLTextAreaElement self)                                         { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline NSString                  DOMHTMLTextAreaElement_DefaultValue(DOMHTMLTextAreaElement self)                                 { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("defaultValue")); }
+static inline void                      DOMHTMLTextAreaElement_SetDefaultValue(DOMHTMLTextAreaElement self, NSString defaultValue)       { ((void (*)(DOMHTMLTextAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setDefaultValue:"), defaultValue); }
+static inline NSString                  DOMHTMLTextAreaElement_Value(DOMHTMLTextAreaElement self)                                        { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void                      DOMHTMLTextAreaElement_SetValue(DOMHTMLTextAreaElement self, NSString value)                     { ((void (*)(DOMHTMLTextAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline BOOL                      DOMHTMLTextAreaElement_WillValidate(DOMHTMLTextAreaElement self)                                 { return ((BOOL (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("willValidate")); }
+static inline int                       DOMHTMLTextAreaElement_SelectionStart(DOMHTMLTextAreaElement self)                               { return ((int (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("selectionStart")); }
+static inline void                      DOMHTMLTextAreaElement_SetSelectionStart(DOMHTMLTextAreaElement self, int selectionStart)        { ((void (*)(DOMHTMLTextAreaElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectionStart:"), selectionStart); }
+static inline int                       DOMHTMLTextAreaElement_SelectionEnd(DOMHTMLTextAreaElement self)                                 { return ((int (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("selectionEnd")); }
+static inline void                      DOMHTMLTextAreaElement_SetSelectionEnd(DOMHTMLTextAreaElement self, int selectionEnd)            { ((void (*)(DOMHTMLTextAreaElement, SEL, int))bean_msgSend)(self, bean_sel("setSelectionEnd:"), selectionEnd); }
+static inline NSString                  DOMHTMLTextAreaElement_AccessKey(DOMHTMLTextAreaElement self)                                    { return ((NSString (*)(DOMHTMLTextAreaElement, SEL))bean_msgSend)(self, bean_sel("accessKey")); }
+static inline void                      DOMHTMLTextAreaElement_SetAccessKey(DOMHTMLTextAreaElement self, NSString accessKey)             { ((void (*)(DOMHTMLTextAreaElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAccessKey:"), accessKey); }
+#ifndef BEAN_ALLOC_DOMHTMLTextAreaElement
+#define BEAN_ALLOC_DOMHTMLTextAreaElement
+static inline DOMHTMLTextAreaElement    DOMHTMLTextAreaElement_Alloc(void)                                                               { return (DOMHTMLTextAreaElement)bean_alloc(bean_cls("DOMHTMLTextAreaElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLTextAreaElement
+#define BEAN_NEW_DOMHTMLTextAreaElement
+static inline DOMHTMLTextAreaElement    DOMHTMLTextAreaElement_New(void)                                                                 { return (DOMHTMLTextAreaElement)bean_new(bean_cls("DOMHTMLTextAreaElement")); }
+#endif
 
 /* ===== DOMHTMLTitleElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLTitleElement
 #define BEAN_TYPEDEF_DOMHTMLTitleElement
 typedef bean_id DOMHTMLTitleElement;
 #endif
-static inline NSString    DOMHTMLTitleElement_Text(DOMHTMLTitleElement self)                      { return ((NSString (*)(DOMHTMLTitleElement, SEL))bean_msgSend)(self, bean_sel("text")); }
-static inline void        DOMHTMLTitleElement_SetText(DOMHTMLTitleElement self, NSString text)    { ((void (*)(DOMHTMLTitleElement, SEL, NSString))bean_msgSend)(self, bean_sel("setText:"), text); }
+static inline NSString               DOMHTMLTitleElement_Text(DOMHTMLTitleElement self)                      { return ((NSString (*)(DOMHTMLTitleElement, SEL))bean_msgSend)(self, bean_sel("text")); }
+static inline void                   DOMHTMLTitleElement_SetText(DOMHTMLTitleElement self, NSString text)    { ((void (*)(DOMHTMLTitleElement, SEL, NSString))bean_msgSend)(self, bean_sel("setText:"), text); }
+#ifndef BEAN_ALLOC_DOMHTMLTitleElement
+#define BEAN_ALLOC_DOMHTMLTitleElement
+static inline DOMHTMLTitleElement    DOMHTMLTitleElement_Alloc(void)                                         { return (DOMHTMLTitleElement)bean_alloc(bean_cls("DOMHTMLTitleElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLTitleElement
+#define BEAN_NEW_DOMHTMLTitleElement
+static inline DOMHTMLTitleElement    DOMHTMLTitleElement_New(void)                                           { return (DOMHTMLTitleElement)bean_new(bean_cls("DOMHTMLTitleElement")); }
+#endif
 
 /* ===== DOMHTMLUListElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLUListElement
 #define BEAN_TYPEDEF_DOMHTMLUListElement
 typedef bean_id DOMHTMLUListElement;
 #endif
-static inline BOOL        DOMHTMLUListElement_Compact(DOMHTMLUListElement self)                     { return ((BOOL (*)(DOMHTMLUListElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
-static inline void        DOMHTMLUListElement_SetCompact(DOMHTMLUListElement self, BOOL compact)    { ((void (*)(DOMHTMLUListElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
-static inline NSString    DOMHTMLUListElement_Type(DOMHTMLUListElement self)                        { return ((NSString (*)(DOMHTMLUListElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLUListElement_SetType(DOMHTMLUListElement self, NSString type)      { ((void (*)(DOMHTMLUListElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline BOOL                   DOMHTMLUListElement_Compact(DOMHTMLUListElement self)                     { return ((BOOL (*)(DOMHTMLUListElement, SEL))bean_msgSend)(self, bean_sel("compact")); }
+static inline void                   DOMHTMLUListElement_SetCompact(DOMHTMLUListElement self, BOOL compact)    { ((void (*)(DOMHTMLUListElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setCompact:"), compact); }
+static inline NSString               DOMHTMLUListElement_Type(DOMHTMLUListElement self)                        { return ((NSString (*)(DOMHTMLUListElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                   DOMHTMLUListElement_SetType(DOMHTMLUListElement self, NSString type)      { ((void (*)(DOMHTMLUListElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+#ifndef BEAN_ALLOC_DOMHTMLUListElement
+#define BEAN_ALLOC_DOMHTMLUListElement
+static inline DOMHTMLUListElement    DOMHTMLUListElement_Alloc(void)                                           { return (DOMHTMLUListElement)bean_alloc(bean_cls("DOMHTMLUListElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLUListElement
+#define BEAN_NEW_DOMHTMLUListElement
+static inline DOMHTMLUListElement    DOMHTMLUListElement_New(void)                                             { return (DOMHTMLUListElement)bean_new(bean_cls("DOMHTMLUListElement")); }
+#endif
 
 /* ===== DOMImplementation ===== */
 #ifndef BEAN_TYPEDEF_DOMImplementation
 #define BEAN_TYPEDEF_DOMImplementation
 typedef bean_id DOMImplementation;
 #endif
-static inline BOOL     DOMImplementation_HasFeature_Version(DOMImplementation self, NSString feature, NSString version)                                                { return ((BOOL (*)(DOMImplementation, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("hasFeature:version:"), feature, version); }
-static inline void*    DOMImplementation_CreateDocumentType_PublicId_SystemId(DOMImplementation self, NSString qualifiedName, NSString publicId, NSString systemId)    { return ((void* (*)(DOMImplementation, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("createDocumentType:publicId:systemId:"), qualifiedName, publicId, systemId); }
-static inline void*    DOMImplementation_CreateDocument_QualifiedName_Doctype(DOMImplementation self, NSString namespaceURI, NSString qualifiedName, void* doctype)    { return ((void* (*)(DOMImplementation, SEL, NSString, NSString, void*))bean_msgSend)(self, bean_sel("createDocument:qualifiedName:doctype:"), namespaceURI, qualifiedName, doctype); }
-static inline void*    DOMImplementation_CreateCSSStyleSheet_Media(DOMImplementation self, NSString title, NSString media)                                             { return ((void* (*)(DOMImplementation, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createCSSStyleSheet:media:"), title, media); }
-static inline void*    DOMImplementation_CreateHTMLDocument(DOMImplementation self, NSString title)                                                                    { return ((void* (*)(DOMImplementation, SEL, NSString))bean_msgSend)(self, bean_sel("createHTMLDocument:"), title); }
-static inline BOOL     DOMImplementation_HasFeature(DOMImplementation self, NSString feature, NSString version)                                                        { return ((BOOL (*)(DOMImplementation, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("hasFeature::"), feature, version); }
-static inline void*    DOMImplementation_CreateDocumentType(DOMImplementation self, NSString qualifiedName, NSString publicId, NSString systemId)                      { return ((void* (*)(DOMImplementation, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("createDocumentType:::"), qualifiedName, publicId, systemId); }
-static inline void*    DOMImplementation_CreateDocument(DOMImplementation self, NSString namespaceURI, NSString qualifiedName, void* doctype)                          { return ((void* (*)(DOMImplementation, SEL, NSString, NSString, void*))bean_msgSend)(self, bean_sel("createDocument:::"), namespaceURI, qualifiedName, doctype); }
-static inline void*    DOMImplementation_CreateCSSStyleSheet(DOMImplementation self, NSString title, NSString media)                                                   { return ((void* (*)(DOMImplementation, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createCSSStyleSheet::"), title, media); }
+static inline BOOL                 DOMImplementation_HasFeature_Version(DOMImplementation self, NSString feature, NSString version)                                                { return ((BOOL (*)(DOMImplementation, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("hasFeature:version:"), feature, version); }
+static inline void*                DOMImplementation_CreateDocumentType_PublicId_SystemId(DOMImplementation self, NSString qualifiedName, NSString publicId, NSString systemId)    { return ((void* (*)(DOMImplementation, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("createDocumentType:publicId:systemId:"), qualifiedName, publicId, systemId); }
+static inline void*                DOMImplementation_CreateDocument_QualifiedName_Doctype(DOMImplementation self, NSString namespaceURI, NSString qualifiedName, void* doctype)    { return ((void* (*)(DOMImplementation, SEL, NSString, NSString, void*))bean_msgSend)(self, bean_sel("createDocument:qualifiedName:doctype:"), namespaceURI, qualifiedName, doctype); }
+static inline void*                DOMImplementation_CreateCSSStyleSheet_Media(DOMImplementation self, NSString title, NSString media)                                             { return ((void* (*)(DOMImplementation, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createCSSStyleSheet:media:"), title, media); }
+static inline void*                DOMImplementation_CreateHTMLDocument(DOMImplementation self, NSString title)                                                                    { return ((void* (*)(DOMImplementation, SEL, NSString))bean_msgSend)(self, bean_sel("createHTMLDocument:"), title); }
+static inline BOOL                 DOMImplementation_HasFeature(DOMImplementation self, NSString feature, NSString version)                                                        { return ((BOOL (*)(DOMImplementation, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("hasFeature::"), feature, version); }
+static inline void*                DOMImplementation_CreateDocumentType(DOMImplementation self, NSString qualifiedName, NSString publicId, NSString systemId)                      { return ((void* (*)(DOMImplementation, SEL, NSString, NSString, NSString))bean_msgSend)(self, bean_sel("createDocumentType:::"), qualifiedName, publicId, systemId); }
+static inline void*                DOMImplementation_CreateDocument(DOMImplementation self, NSString namespaceURI, NSString qualifiedName, void* doctype)                          { return ((void* (*)(DOMImplementation, SEL, NSString, NSString, void*))bean_msgSend)(self, bean_sel("createDocument:::"), namespaceURI, qualifiedName, doctype); }
+static inline void*                DOMImplementation_CreateCSSStyleSheet(DOMImplementation self, NSString title, NSString media)                                                   { return ((void* (*)(DOMImplementation, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createCSSStyleSheet::"), title, media); }
+#ifndef BEAN_ALLOC_DOMImplementation
+#define BEAN_ALLOC_DOMImplementation
+static inline DOMImplementation    DOMImplementation_Alloc(void)                                                                                                                   { return (DOMImplementation)bean_alloc(bean_cls("DOMImplementation")); }
+#endif
+#ifndef BEAN_NEW_DOMImplementation
+#define BEAN_NEW_DOMImplementation
+static inline DOMImplementation    DOMImplementation_New(void)                                                                                                                     { return (DOMImplementation)bean_new(bean_cls("DOMImplementation")); }
+#endif
 
 /* ===== DOMKeyboardEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMKeyboardEvent
@@ -5226,18 +5874,34 @@ static inline BOOL                DOMKeyboardEvent_MetaKey(DOMKeyboardEvent self
 static inline BOOL                DOMKeyboardEvent_AltGraphKey(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                { return ((BOOL (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("altGraphKey")); }
 static inline int                 DOMKeyboardEvent_KeyCode(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                    { return ((int (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("keyCode")); }
 static inline int                 DOMKeyboardEvent_CharCode(DOMKeyboardEvent self)                                                                                                                                                                                                                                                                                                   { return ((int (*)(DOMKeyboardEvent, SEL))bean_msgSend)(self, bean_sel("charCode")); }
+#ifndef BEAN_ALLOC_DOMKeyboardEvent
+#define BEAN_ALLOC_DOMKeyboardEvent
+static inline DOMKeyboardEvent    DOMKeyboardEvent_Alloc(void)                                                                                                                                                                                                                                                                                                                       { return (DOMKeyboardEvent)bean_alloc(bean_cls("DOMKeyboardEvent")); }
+#endif
+#ifndef BEAN_NEW_DOMKeyboardEvent
+#define BEAN_NEW_DOMKeyboardEvent
+static inline DOMKeyboardEvent    DOMKeyboardEvent_New(void)                                                                                                                                                                                                                                                                                                                         { return (DOMKeyboardEvent)bean_new(bean_cls("DOMKeyboardEvent")); }
+#endif
 
 /* ===== DOMMediaList ===== */
 #ifndef BEAN_TYPEDEF_DOMMediaList
 #define BEAN_TYPEDEF_DOMMediaList
 typedef bean_id DOMMediaList;
 #endif
-static inline NSString      DOMMediaList_Item(DOMMediaList self, NSUInteger index)              { return ((NSString (*)(DOMMediaList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline void          DOMMediaList_DeleteMedium(DOMMediaList self, NSString oldMedium)    { ((void (*)(DOMMediaList, SEL, NSString))bean_msgSend)(self, bean_sel("deleteMedium:"), oldMedium); }
-static inline void          DOMMediaList_AppendMedium(DOMMediaList self, NSString newMedium)    { ((void (*)(DOMMediaList, SEL, NSString))bean_msgSend)(self, bean_sel("appendMedium:"), newMedium); }
-static inline NSString      DOMMediaList_MediaText(DOMMediaList self)                           { return ((NSString (*)(DOMMediaList, SEL))bean_msgSend)(self, bean_sel("mediaText")); }
-static inline void          DOMMediaList_SetMediaText(DOMMediaList self, NSString mediaText)    { ((void (*)(DOMMediaList, SEL, NSString))bean_msgSend)(self, bean_sel("setMediaText:"), mediaText); }
-static inline NSUInteger    DOMMediaList_Length(DOMMediaList self)                              { return ((NSUInteger (*)(DOMMediaList, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline NSString        DOMMediaList_Item(DOMMediaList self, NSUInteger index)              { return ((NSString (*)(DOMMediaList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline void            DOMMediaList_DeleteMedium(DOMMediaList self, NSString oldMedium)    { ((void (*)(DOMMediaList, SEL, NSString))bean_msgSend)(self, bean_sel("deleteMedium:"), oldMedium); }
+static inline void            DOMMediaList_AppendMedium(DOMMediaList self, NSString newMedium)    { ((void (*)(DOMMediaList, SEL, NSString))bean_msgSend)(self, bean_sel("appendMedium:"), newMedium); }
+static inline NSString        DOMMediaList_MediaText(DOMMediaList self)                           { return ((NSString (*)(DOMMediaList, SEL))bean_msgSend)(self, bean_sel("mediaText")); }
+static inline void            DOMMediaList_SetMediaText(DOMMediaList self, NSString mediaText)    { ((void (*)(DOMMediaList, SEL, NSString))bean_msgSend)(self, bean_sel("setMediaText:"), mediaText); }
+static inline NSUInteger      DOMMediaList_Length(DOMMediaList self)                              { return ((NSUInteger (*)(DOMMediaList, SEL))bean_msgSend)(self, bean_sel("length")); }
+#ifndef BEAN_ALLOC_DOMMediaList
+#define BEAN_ALLOC_DOMMediaList
+static inline DOMMediaList    DOMMediaList_Alloc(void)                                            { return (DOMMediaList)bean_alloc(bean_cls("DOMMediaList")); }
+#endif
+#ifndef BEAN_NEW_DOMMediaList
+#define BEAN_NEW_DOMMediaList
+static inline DOMMediaList    DOMMediaList_New(void)                                              { return (DOMMediaList)bean_new(bean_cls("DOMMediaList")); }
+#endif
 
 /* ===== DOMMouseEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMMouseEvent
@@ -5262,6 +5926,14 @@ static inline int              DOMMouseEvent_Y(DOMMouseEvent self)              
 static inline void*            DOMMouseEvent_FromElement(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                          { return ((void* (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("fromElement")); }
 static inline void*            DOMMouseEvent_ToElement(DOMMouseEvent self)                                                                                                                                                                                                                                                                                                                                                            { return ((void* (*)(DOMMouseEvent, SEL))bean_msgSend)(self, bean_sel("toElement")); }
 static inline DOMMouseEvent    DOMMouseEvent_InitMouseEvent(DOMMouseEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail, int screenX, int screenY, int clientX, int clientY, BOOL ctrlKey, BOOL altKey, BOOL shiftKey, BOOL metaKey, unsigned short button, id relatedTarget)                                                                                                                          { return ((DOMMouseEvent (*)(DOMMouseEvent, SEL, NSString, BOOL, BOOL, void*, int, int, int, int, int, BOOL, BOOL, BOOL, BOOL, unsigned short, id))bean_msgSend)(self, bean_sel("initMouseEvent:::::::::::::::"), type, canBubble, cancelable, view, detail, screenX, screenY, clientX, clientY, ctrlKey, altKey, shiftKey, metaKey, button, relatedTarget); }
+#ifndef BEAN_ALLOC_DOMMouseEvent
+#define BEAN_ALLOC_DOMMouseEvent
+static inline DOMMouseEvent    DOMMouseEvent_Alloc(void)                                                                                                                                                                                                                                                                                                                                                                              { return (DOMMouseEvent)bean_alloc(bean_cls("DOMMouseEvent")); }
+#endif
+#ifndef BEAN_NEW_DOMMouseEvent
+#define BEAN_NEW_DOMMouseEvent
+static inline DOMMouseEvent    DOMMouseEvent_New(void)                                                                                                                                                                                                                                                                                                                                                                                { return (DOMMouseEvent)bean_new(bean_cls("DOMMouseEvent")); }
+#endif
 
 /* ===== DOMMutationEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMMutationEvent
@@ -5275,22 +5947,38 @@ static inline NSString            DOMMutationEvent_PrevValue(DOMMutationEvent se
 static inline NSString            DOMMutationEvent_AttrName(DOMMutationEvent self)                                                                                                                                                                                                                                             { return ((NSString (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("attrName")); }
 static inline unsigned short      DOMMutationEvent_AttrChange(DOMMutationEvent self)                                                                                                                                                                                                                                           { return ((unsigned short (*)(DOMMutationEvent, SEL))bean_msgSend)(self, bean_sel("attrChange")); }
 static inline DOMMutationEvent    DOMMutationEvent_InitMutationEvent(DOMMutationEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* relatedNode, NSString prevValue, NSString newValue, NSString attrName, unsigned short attrChange)                                                                            { return ((DOMMutationEvent (*)(DOMMutationEvent, SEL, NSString, BOOL, BOOL, void*, NSString, NSString, NSString, unsigned short))bean_msgSend)(self, bean_sel("initMutationEvent::::::::"), type, canBubble, cancelable, relatedNode, prevValue, newValue, attrName, attrChange); }
+#ifndef BEAN_ALLOC_DOMMutationEvent
+#define BEAN_ALLOC_DOMMutationEvent
+static inline DOMMutationEvent    DOMMutationEvent_Alloc(void)                                                                                                                                                                                                                                                                 { return (DOMMutationEvent)bean_alloc(bean_cls("DOMMutationEvent")); }
+#endif
+#ifndef BEAN_NEW_DOMMutationEvent
+#define BEAN_NEW_DOMMutationEvent
+static inline DOMMutationEvent    DOMMutationEvent_New(void)                                                                                                                                                                                                                                                                   { return (DOMMutationEvent)bean_new(bean_cls("DOMMutationEvent")); }
+#endif
 
 /* ===== DOMNamedNodeMap ===== */
 #ifndef BEAN_TYPEDEF_DOMNamedNodeMap
 #define BEAN_TYPEDEF_DOMNamedNodeMap
 typedef bean_id DOMNamedNodeMap;
 #endif
-static inline void*         DOMNamedNodeMap_GetNamedItem(DOMNamedNodeMap self, NSString name)                                               { return ((void* (*)(DOMNamedNodeMap, SEL, NSString))bean_msgSend)(self, bean_sel("getNamedItem:"), name); }
-static inline void*         DOMNamedNodeMap_SetNamedItem(DOMNamedNodeMap self, void* node)                                                  { return ((void* (*)(DOMNamedNodeMap, SEL, void*))bean_msgSend)(self, bean_sel("setNamedItem:"), node); }
-static inline void*         DOMNamedNodeMap_RemoveNamedItem(DOMNamedNodeMap self, NSString name)                                            { return ((void* (*)(DOMNamedNodeMap, SEL, NSString))bean_msgSend)(self, bean_sel("removeNamedItem:"), name); }
-static inline void*         DOMNamedNodeMap_Item(DOMNamedNodeMap self, NSUInteger index)                                                    { return ((void* (*)(DOMNamedNodeMap, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline void*         DOMNamedNodeMap_GetNamedItemNS_LocalName(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)       { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getNamedItemNS:localName:"), namespaceURI, localName); }
-static inline void*         DOMNamedNodeMap_SetNamedItemNS(DOMNamedNodeMap self, void* node)                                                { return ((void* (*)(DOMNamedNodeMap, SEL, void*))bean_msgSend)(self, bean_sel("setNamedItemNS:"), node); }
-static inline void*         DOMNamedNodeMap_RemoveNamedItemNS_LocalName(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)    { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("removeNamedItemNS:localName:"), namespaceURI, localName); }
-static inline NSUInteger    DOMNamedNodeMap_Length(DOMNamedNodeMap self)                                                                    { return ((NSUInteger (*)(DOMNamedNodeMap, SEL))bean_msgSend)(self, bean_sel("length")); }
-static inline void*         DOMNamedNodeMap_GetNamedItemNS(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)                 { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getNamedItemNS::"), namespaceURI, localName); }
-static inline void*         DOMNamedNodeMap_RemoveNamedItemNS(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)              { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("removeNamedItemNS::"), namespaceURI, localName); }
+static inline void*              DOMNamedNodeMap_GetNamedItem(DOMNamedNodeMap self, NSString name)                                               { return ((void* (*)(DOMNamedNodeMap, SEL, NSString))bean_msgSend)(self, bean_sel("getNamedItem:"), name); }
+static inline void*              DOMNamedNodeMap_SetNamedItem(DOMNamedNodeMap self, void* node)                                                  { return ((void* (*)(DOMNamedNodeMap, SEL, void*))bean_msgSend)(self, bean_sel("setNamedItem:"), node); }
+static inline void*              DOMNamedNodeMap_RemoveNamedItem(DOMNamedNodeMap self, NSString name)                                            { return ((void* (*)(DOMNamedNodeMap, SEL, NSString))bean_msgSend)(self, bean_sel("removeNamedItem:"), name); }
+static inline void*              DOMNamedNodeMap_Item(DOMNamedNodeMap self, NSUInteger index)                                                    { return ((void* (*)(DOMNamedNodeMap, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline void*              DOMNamedNodeMap_GetNamedItemNS_LocalName(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)       { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getNamedItemNS:localName:"), namespaceURI, localName); }
+static inline void*              DOMNamedNodeMap_SetNamedItemNS(DOMNamedNodeMap self, void* node)                                                { return ((void* (*)(DOMNamedNodeMap, SEL, void*))bean_msgSend)(self, bean_sel("setNamedItemNS:"), node); }
+static inline void*              DOMNamedNodeMap_RemoveNamedItemNS_LocalName(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)    { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("removeNamedItemNS:localName:"), namespaceURI, localName); }
+static inline NSUInteger         DOMNamedNodeMap_Length(DOMNamedNodeMap self)                                                                    { return ((NSUInteger (*)(DOMNamedNodeMap, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void*              DOMNamedNodeMap_GetNamedItemNS(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)                 { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getNamedItemNS::"), namespaceURI, localName); }
+static inline void*              DOMNamedNodeMap_RemoveNamedItemNS(DOMNamedNodeMap self, NSString namespaceURI, NSString localName)              { return ((void* (*)(DOMNamedNodeMap, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("removeNamedItemNS::"), namespaceURI, localName); }
+#ifndef BEAN_ALLOC_DOMNamedNodeMap
+#define BEAN_ALLOC_DOMNamedNodeMap
+static inline DOMNamedNodeMap    DOMNamedNodeMap_Alloc(void)                                                                                     { return (DOMNamedNodeMap)bean_alloc(bean_cls("DOMNamedNodeMap")); }
+#endif
+#ifndef BEAN_NEW_DOMNamedNodeMap
+#define BEAN_NEW_DOMNamedNodeMap
+static inline DOMNamedNodeMap    DOMNamedNodeMap_New(void)                                                                                       { return (DOMNamedNodeMap)bean_new(bean_cls("DOMNamedNodeMap")); }
+#endif
 
 /* ===== DOMNode ===== */
 #ifndef BEAN_TYPEDEF_DOMNode
@@ -5344,36 +6032,68 @@ static inline void              DOMNode_RemoveEventListener_Listener_UseCapture(
 static inline BOOL              DOMNode_DispatchEvent(DOMNode self, void* event)                                                              { return ((BOOL (*)(DOMNode, SEL, void*))bean_msgSend)(self, bean_sel("dispatchEvent:"), event); }
 static inline void              DOMNode_AddEventListener(DOMNode self, NSString type, id listener, BOOL useCapture)                           { ((void (*)(DOMNode, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("addEventListener:::"), type, listener, useCapture); }
 static inline void              DOMNode_RemoveEventListener(DOMNode self, NSString type, id listener, BOOL useCapture)                        { ((void (*)(DOMNode, SEL, NSString, id, BOOL))bean_msgSend)(self, bean_sel("removeEventListener:::"), type, listener, useCapture); }
+#ifndef BEAN_ALLOC_DOMNode
+#define BEAN_ALLOC_DOMNode
+static inline DOMNode           DOMNode_Alloc(void)                                                                                           { return (DOMNode)bean_alloc(bean_cls("DOMNode")); }
+#endif
+#ifndef BEAN_NEW_DOMNode
+#define BEAN_NEW_DOMNode
+static inline DOMNode           DOMNode_New(void)                                                                                             { return (DOMNode)bean_new(bean_cls("DOMNode")); }
+#endif
 
 /* ===== DOMNodeFilter ===== */
 #ifndef BEAN_TYPEDEF_DOMNodeFilter
 #define BEAN_TYPEDEF_DOMNodeFilter
 typedef bean_id DOMNodeFilter;
 #endif
-static inline short    DOMNodeFilter_AcceptNode(DOMNodeFilter self, void* n)    { return ((short (*)(DOMNodeFilter, SEL, void*))bean_msgSend)(self, bean_sel("acceptNode:"), n); }
+static inline short            DOMNodeFilter_AcceptNode(DOMNodeFilter self, void* n)    { return ((short (*)(DOMNodeFilter, SEL, void*))bean_msgSend)(self, bean_sel("acceptNode:"), n); }
+#ifndef BEAN_ALLOC_DOMNodeFilter
+#define BEAN_ALLOC_DOMNodeFilter
+static inline DOMNodeFilter    DOMNodeFilter_Alloc(void)                                { return (DOMNodeFilter)bean_alloc(bean_cls("DOMNodeFilter")); }
+#endif
+#ifndef BEAN_NEW_DOMNodeFilter
+#define BEAN_NEW_DOMNodeFilter
+static inline DOMNodeFilter    DOMNodeFilter_New(void)                                  { return (DOMNodeFilter)bean_new(bean_cls("DOMNodeFilter")); }
+#endif
 
 /* ===== DOMNodeIterator ===== */
 #ifndef BEAN_TYPEDEF_DOMNodeIterator
 #define BEAN_TYPEDEF_DOMNodeIterator
 typedef bean_id DOMNodeIterator;
 #endif
-static inline void*         DOMNodeIterator_NextNode(DOMNodeIterator self)                      { return ((void* (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("nextNode")); }
-static inline void*         DOMNodeIterator_PreviousNode(DOMNodeIterator self)                  { return ((void* (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("previousNode")); }
-static inline void          DOMNodeIterator_Detach(DOMNodeIterator self)                        { ((void (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("detach")); }
-static inline void*         DOMNodeIterator_Root(DOMNodeIterator self)                          { return ((void* (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("root")); }
-static inline NSUInteger    DOMNodeIterator_WhatToShow(DOMNodeIterator self)                    { return ((NSUInteger (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("whatToShow")); }
-static inline id            DOMNodeIterator_Filter(DOMNodeIterator self)                        { return ((id (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("filter")); }
-static inline BOOL          DOMNodeIterator_ExpandEntityReferences(DOMNodeIterator self)        { return ((BOOL (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("expandEntityReferences")); }
-static inline void*         DOMNodeIterator_ReferenceNode(DOMNodeIterator self)                 { return ((void* (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("referenceNode")); }
-static inline BOOL          DOMNodeIterator_PointerBeforeReferenceNode(DOMNodeIterator self)    { return ((BOOL (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("pointerBeforeReferenceNode")); }
+static inline void*              DOMNodeIterator_NextNode(DOMNodeIterator self)                      { return ((void* (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("nextNode")); }
+static inline void*              DOMNodeIterator_PreviousNode(DOMNodeIterator self)                  { return ((void* (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("previousNode")); }
+static inline void               DOMNodeIterator_Detach(DOMNodeIterator self)                        { ((void (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("detach")); }
+static inline void*              DOMNodeIterator_Root(DOMNodeIterator self)                          { return ((void* (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("root")); }
+static inline NSUInteger         DOMNodeIterator_WhatToShow(DOMNodeIterator self)                    { return ((NSUInteger (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("whatToShow")); }
+static inline id                 DOMNodeIterator_Filter(DOMNodeIterator self)                        { return ((id (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("filter")); }
+static inline BOOL               DOMNodeIterator_ExpandEntityReferences(DOMNodeIterator self)        { return ((BOOL (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("expandEntityReferences")); }
+static inline void*              DOMNodeIterator_ReferenceNode(DOMNodeIterator self)                 { return ((void* (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("referenceNode")); }
+static inline BOOL               DOMNodeIterator_PointerBeforeReferenceNode(DOMNodeIterator self)    { return ((BOOL (*)(DOMNodeIterator, SEL))bean_msgSend)(self, bean_sel("pointerBeforeReferenceNode")); }
+#ifndef BEAN_ALLOC_DOMNodeIterator
+#define BEAN_ALLOC_DOMNodeIterator
+static inline DOMNodeIterator    DOMNodeIterator_Alloc(void)                                         { return (DOMNodeIterator)bean_alloc(bean_cls("DOMNodeIterator")); }
+#endif
+#ifndef BEAN_NEW_DOMNodeIterator
+#define BEAN_NEW_DOMNodeIterator
+static inline DOMNodeIterator    DOMNodeIterator_New(void)                                           { return (DOMNodeIterator)bean_new(bean_cls("DOMNodeIterator")); }
+#endif
 
 /* ===== DOMNodeList ===== */
 #ifndef BEAN_TYPEDEF_DOMNodeList
 #define BEAN_TYPEDEF_DOMNodeList
 typedef bean_id DOMNodeList;
 #endif
-static inline void*         DOMNodeList_Item(DOMNodeList self, NSUInteger index)    { return ((void* (*)(DOMNodeList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline NSUInteger    DOMNodeList_Length(DOMNodeList self)                    { return ((NSUInteger (*)(DOMNodeList, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void*          DOMNodeList_Item(DOMNodeList self, NSUInteger index)    { return ((void* (*)(DOMNodeList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline NSUInteger     DOMNodeList_Length(DOMNodeList self)                    { return ((NSUInteger (*)(DOMNodeList, SEL))bean_msgSend)(self, bean_sel("length")); }
+#ifndef BEAN_ALLOC_DOMNodeList
+#define BEAN_ALLOC_DOMNodeList
+static inline DOMNodeList    DOMNodeList_Alloc(void)                                 { return (DOMNodeList)bean_alloc(bean_cls("DOMNodeList")); }
+#endif
+#ifndef BEAN_NEW_DOMNodeList
+#define BEAN_NEW_DOMNodeList
+static inline DOMNodeList    DOMNodeList_New(void)                                   { return (DOMNodeList)bean_new(bean_cls("DOMNodeList")); }
+#endif
 
 /* ===== DOMObject ===== */
 #ifndef BEAN_TYPEDEF_DOMObject
@@ -5383,6 +6103,14 @@ typedef bean_id DOMObject;
 static inline DOMObject    DOMObject_Init(DOMObject self)                          { return ((DOMObject (*)(DOMObject, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline void*        DOMObject_Sheet(DOMObject self)                         { return ((void* (*)(DOMObject, SEL))bean_msgSend)(self, bean_sel("sheet")); }
 static inline id           DOMObject_CopyWithZone(DOMObject self, NSZone* zone)    { return ((id (*)(DOMObject, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_DOMObject
+#define BEAN_ALLOC_DOMObject
+static inline DOMObject    DOMObject_Alloc(void)                                   { return (DOMObject)bean_alloc(bean_cls("DOMObject")); }
+#endif
+#ifndef BEAN_NEW_DOMObject
+#define BEAN_NEW_DOMObject
+static inline DOMObject    DOMObject_New(void)                                     { return (DOMObject)bean_new(bean_cls("DOMObject")); }
+#endif
 
 /* ===== DOMOverflowEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMOverflowEvent
@@ -5393,14 +6121,30 @@ static inline DOMOverflowEvent    DOMOverflowEvent_InitOverflowEvent_HorizontalO
 static inline unsigned short      DOMOverflowEvent_Orient(DOMOverflowEvent self)                                                                                                                          { return ((unsigned short (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("orient")); }
 static inline BOOL                DOMOverflowEvent_HorizontalOverflow(DOMOverflowEvent self)                                                                                                              { return ((BOOL (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("horizontalOverflow")); }
 static inline BOOL                DOMOverflowEvent_VerticalOverflow(DOMOverflowEvent self)                                                                                                                { return ((BOOL (*)(DOMOverflowEvent, SEL))bean_msgSend)(self, bean_sel("verticalOverflow")); }
+#ifndef BEAN_ALLOC_DOMOverflowEvent
+#define BEAN_ALLOC_DOMOverflowEvent
+static inline DOMOverflowEvent    DOMOverflowEvent_Alloc(void)                                                                                                                                            { return (DOMOverflowEvent)bean_alloc(bean_cls("DOMOverflowEvent")); }
+#endif
+#ifndef BEAN_NEW_DOMOverflowEvent
+#define BEAN_NEW_DOMOverflowEvent
+static inline DOMOverflowEvent    DOMOverflowEvent_New(void)                                                                                                                                              { return (DOMOverflowEvent)bean_new(bean_cls("DOMOverflowEvent")); }
+#endif
 
 /* ===== DOMProcessingInstruction ===== */
 #ifndef BEAN_TYPEDEF_DOMProcessingInstruction
 #define BEAN_TYPEDEF_DOMProcessingInstruction
 typedef bean_id DOMProcessingInstruction;
 #endif
-static inline NSString    DOMProcessingInstruction_Target(DOMProcessingInstruction self)    { return ((NSString (*)(DOMProcessingInstruction, SEL))bean_msgSend)(self, bean_sel("target")); }
-static inline void*       DOMProcessingInstruction_Sheet(DOMProcessingInstruction self)     { return ((void* (*)(DOMProcessingInstruction, SEL))bean_msgSend)(self, bean_sel("sheet")); }
+static inline NSString                    DOMProcessingInstruction_Target(DOMProcessingInstruction self)    { return ((NSString (*)(DOMProcessingInstruction, SEL))bean_msgSend)(self, bean_sel("target")); }
+static inline void*                       DOMProcessingInstruction_Sheet(DOMProcessingInstruction self)     { return ((void* (*)(DOMProcessingInstruction, SEL))bean_msgSend)(self, bean_sel("sheet")); }
+#ifndef BEAN_ALLOC_DOMProcessingInstruction
+#define BEAN_ALLOC_DOMProcessingInstruction
+static inline DOMProcessingInstruction    DOMProcessingInstruction_Alloc(void)                              { return (DOMProcessingInstruction)bean_alloc(bean_cls("DOMProcessingInstruction")); }
+#endif
+#ifndef BEAN_NEW_DOMProcessingInstruction
+#define BEAN_NEW_DOMProcessingInstruction
+static inline DOMProcessingInstruction    DOMProcessingInstruction_New(void)                                { return (DOMProcessingInstruction)bean_new(bean_cls("DOMProcessingInstruction")); }
+#endif
 
 /* ===== DOMProgressEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMProgressEvent
@@ -5410,17 +6154,33 @@ typedef bean_id DOMProgressEvent;
 static inline BOOL                  DOMProgressEvent_LengthComputable(DOMProgressEvent self)    { return ((BOOL (*)(DOMProgressEvent, SEL))bean_msgSend)(self, bean_sel("lengthComputable")); }
 static inline unsigned long long    DOMProgressEvent_Loaded(DOMProgressEvent self)              { return ((unsigned long long (*)(DOMProgressEvent, SEL))bean_msgSend)(self, bean_sel("loaded")); }
 static inline unsigned long long    DOMProgressEvent_Total(DOMProgressEvent self)               { return ((unsigned long long (*)(DOMProgressEvent, SEL))bean_msgSend)(self, bean_sel("total")); }
+#ifndef BEAN_ALLOC_DOMProgressEvent
+#define BEAN_ALLOC_DOMProgressEvent
+static inline DOMProgressEvent      DOMProgressEvent_Alloc(void)                                { return (DOMProgressEvent)bean_alloc(bean_cls("DOMProgressEvent")); }
+#endif
+#ifndef BEAN_NEW_DOMProgressEvent
+#define BEAN_NEW_DOMProgressEvent
+static inline DOMProgressEvent      DOMProgressEvent_New(void)                                  { return (DOMProgressEvent)bean_new(bean_cls("DOMProgressEvent")); }
+#endif
 
 /* ===== DOMRGBColor ===== */
 #ifndef BEAN_TYPEDEF_DOMRGBColor
 #define BEAN_TYPEDEF_DOMRGBColor
 typedef bean_id DOMRGBColor;
 #endif
-static inline void*      DOMRGBColor_Red(DOMRGBColor self)      { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("red")); }
-static inline void*      DOMRGBColor_Green(DOMRGBColor self)    { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("green")); }
-static inline void*      DOMRGBColor_Blue(DOMRGBColor self)     { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("blue")); }
-static inline void*      DOMRGBColor_Alpha(DOMRGBColor self)    { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("alpha")); }
-static inline NSColor    DOMRGBColor_Color(DOMRGBColor self)    { return ((NSColor (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("color")); }
+static inline void*          DOMRGBColor_Red(DOMRGBColor self)      { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("red")); }
+static inline void*          DOMRGBColor_Green(DOMRGBColor self)    { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("green")); }
+static inline void*          DOMRGBColor_Blue(DOMRGBColor self)     { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("blue")); }
+static inline void*          DOMRGBColor_Alpha(DOMRGBColor self)    { return ((void* (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("alpha")); }
+static inline NSColor        DOMRGBColor_Color(DOMRGBColor self)    { return ((NSColor (*)(DOMRGBColor, SEL))bean_msgSend)(self, bean_sel("color")); }
+#ifndef BEAN_ALLOC_DOMRGBColor
+#define BEAN_ALLOC_DOMRGBColor
+static inline DOMRGBColor    DOMRGBColor_Alloc(void)                { return (DOMRGBColor)bean_alloc(bean_cls("DOMRGBColor")); }
+#endif
+#ifndef BEAN_NEW_DOMRGBColor
+#define BEAN_NEW_DOMRGBColor
+static inline DOMRGBColor    DOMRGBColor_New(void)                  { return (DOMRGBColor)bean_new(bean_cls("DOMRGBColor")); }
+#endif
 
 /* ===== DOMRange ===== */
 #ifndef BEAN_TYPEDEF_DOMRange
@@ -5461,38 +6221,70 @@ static inline void        DOMRange_SetStart(DOMRange self, void* refNode, int of
 static inline void        DOMRange_SetEnd(DOMRange self, void* refNode, int offset)                                           { ((void (*)(DOMRange, SEL, void*, int))bean_msgSend)(self, bean_sel("setEnd::"), refNode, offset); }
 static inline short       DOMRange_CompareBoundaryPoints(DOMRange self, unsigned short how, void* sourceRange)                { return ((short (*)(DOMRange, SEL, unsigned short, void*))bean_msgSend)(self, bean_sel("compareBoundaryPoints::"), how, sourceRange); }
 static inline NSString    DOMRange_MarkupString(DOMRange self)                                                                { return ((NSString (*)(DOMRange, SEL))bean_msgSend)(self, bean_sel("markupString")); }
+#ifndef BEAN_ALLOC_DOMRange
+#define BEAN_ALLOC_DOMRange
+static inline DOMRange    DOMRange_Alloc(void)                                                                                { return (DOMRange)bean_alloc(bean_cls("DOMRange")); }
+#endif
+#ifndef BEAN_NEW_DOMRange
+#define BEAN_NEW_DOMRange
+static inline DOMRange    DOMRange_New(void)                                                                                  { return (DOMRange)bean_new(bean_cls("DOMRange")); }
+#endif
 
 /* ===== DOMRect ===== */
 #ifndef BEAN_TYPEDEF_DOMRect
 #define BEAN_TYPEDEF_DOMRect
 typedef bean_id DOMRect;
 #endif
-static inline void*    DOMRect_Top(DOMRect self)       { return ((void* (*)(DOMRect, SEL))bean_msgSend)(self, bean_sel("top")); }
-static inline void*    DOMRect_Right(DOMRect self)     { return ((void* (*)(DOMRect, SEL))bean_msgSend)(self, bean_sel("right")); }
-static inline void*    DOMRect_Bottom(DOMRect self)    { return ((void* (*)(DOMRect, SEL))bean_msgSend)(self, bean_sel("bottom")); }
-static inline void*    DOMRect_Left(DOMRect self)      { return ((void* (*)(DOMRect, SEL))bean_msgSend)(self, bean_sel("left")); }
+static inline void*      DOMRect_Top(DOMRect self)       { return ((void* (*)(DOMRect, SEL))bean_msgSend)(self, bean_sel("top")); }
+static inline void*      DOMRect_Right(DOMRect self)     { return ((void* (*)(DOMRect, SEL))bean_msgSend)(self, bean_sel("right")); }
+static inline void*      DOMRect_Bottom(DOMRect self)    { return ((void* (*)(DOMRect, SEL))bean_msgSend)(self, bean_sel("bottom")); }
+static inline void*      DOMRect_Left(DOMRect self)      { return ((void* (*)(DOMRect, SEL))bean_msgSend)(self, bean_sel("left")); }
+#ifndef BEAN_ALLOC_DOMRect
+#define BEAN_ALLOC_DOMRect
+static inline DOMRect    DOMRect_Alloc(void)             { return (DOMRect)bean_alloc(bean_cls("DOMRect")); }
+#endif
+#ifndef BEAN_NEW_DOMRect
+#define BEAN_NEW_DOMRect
+static inline DOMRect    DOMRect_New(void)               { return (DOMRect)bean_new(bean_cls("DOMRect")); }
+#endif
 
 /* ===== DOMStyleSheet ===== */
 #ifndef BEAN_TYPEDEF_DOMStyleSheet
 #define BEAN_TYPEDEF_DOMStyleSheet
 typedef bean_id DOMStyleSheet;
 #endif
-static inline NSString    DOMStyleSheet_Type(DOMStyleSheet self)                          { return ((NSString (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline BOOL        DOMStyleSheet_Disabled(DOMStyleSheet self)                      { return ((BOOL (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("disabled")); }
-static inline void        DOMStyleSheet_SetDisabled(DOMStyleSheet self, BOOL disabled)    { ((void (*)(DOMStyleSheet, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
-static inline void*       DOMStyleSheet_OwnerNode(DOMStyleSheet self)                     { return ((void* (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("ownerNode")); }
-static inline void*       DOMStyleSheet_ParentStyleSheet(DOMStyleSheet self)              { return ((void* (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("parentStyleSheet")); }
-static inline NSString    DOMStyleSheet_Href(DOMStyleSheet self)                          { return ((NSString (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("href")); }
-static inline NSString    DOMStyleSheet_Title(DOMStyleSheet self)                         { return ((NSString (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline void*       DOMStyleSheet_Media(DOMStyleSheet self)                         { return ((void* (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("media")); }
+static inline NSString         DOMStyleSheet_Type(DOMStyleSheet self)                          { return ((NSString (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline BOOL             DOMStyleSheet_Disabled(DOMStyleSheet self)                      { return ((BOOL (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("disabled")); }
+static inline void             DOMStyleSheet_SetDisabled(DOMStyleSheet self, BOOL disabled)    { ((void (*)(DOMStyleSheet, SEL, BOOL))bean_msgSend)(self, bean_sel("setDisabled:"), disabled); }
+static inline void*            DOMStyleSheet_OwnerNode(DOMStyleSheet self)                     { return ((void* (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("ownerNode")); }
+static inline void*            DOMStyleSheet_ParentStyleSheet(DOMStyleSheet self)              { return ((void* (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("parentStyleSheet")); }
+static inline NSString         DOMStyleSheet_Href(DOMStyleSheet self)                          { return ((NSString (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("href")); }
+static inline NSString         DOMStyleSheet_Title(DOMStyleSheet self)                         { return ((NSString (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline void*            DOMStyleSheet_Media(DOMStyleSheet self)                         { return ((void* (*)(DOMStyleSheet, SEL))bean_msgSend)(self, bean_sel("media")); }
+#ifndef BEAN_ALLOC_DOMStyleSheet
+#define BEAN_ALLOC_DOMStyleSheet
+static inline DOMStyleSheet    DOMStyleSheet_Alloc(void)                                       { return (DOMStyleSheet)bean_alloc(bean_cls("DOMStyleSheet")); }
+#endif
+#ifndef BEAN_NEW_DOMStyleSheet
+#define BEAN_NEW_DOMStyleSheet
+static inline DOMStyleSheet    DOMStyleSheet_New(void)                                         { return (DOMStyleSheet)bean_new(bean_cls("DOMStyleSheet")); }
+#endif
 
 /* ===== DOMStyleSheetList ===== */
 #ifndef BEAN_TYPEDEF_DOMStyleSheetList
 #define BEAN_TYPEDEF_DOMStyleSheetList
 typedef bean_id DOMStyleSheetList;
 #endif
-static inline void*         DOMStyleSheetList_Item(DOMStyleSheetList self, NSUInteger index)    { return ((void* (*)(DOMStyleSheetList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
-static inline NSUInteger    DOMStyleSheetList_Length(DOMStyleSheetList self)                    { return ((NSUInteger (*)(DOMStyleSheetList, SEL))bean_msgSend)(self, bean_sel("length")); }
+static inline void*                DOMStyleSheetList_Item(DOMStyleSheetList self, NSUInteger index)    { return ((void* (*)(DOMStyleSheetList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("item:"), index); }
+static inline NSUInteger           DOMStyleSheetList_Length(DOMStyleSheetList self)                    { return ((NSUInteger (*)(DOMStyleSheetList, SEL))bean_msgSend)(self, bean_sel("length")); }
+#ifndef BEAN_ALLOC_DOMStyleSheetList
+#define BEAN_ALLOC_DOMStyleSheetList
+static inline DOMStyleSheetList    DOMStyleSheetList_Alloc(void)                                       { return (DOMStyleSheetList)bean_alloc(bean_cls("DOMStyleSheetList")); }
+#endif
+#ifndef BEAN_NEW_DOMStyleSheetList
+#define BEAN_NEW_DOMStyleSheetList
+static inline DOMStyleSheetList    DOMStyleSheetList_New(void)                                         { return (DOMStyleSheetList)bean_new(bean_cls("DOMStyleSheetList")); }
+#endif
 
 /* ===== DOMText ===== */
 #ifndef BEAN_TYPEDEF_DOMText
@@ -5502,25 +6294,41 @@ typedef bean_id DOMText;
 static inline void*       DOMText_SplitText(DOMText self, NSUInteger offset)          { return ((void* (*)(DOMText, SEL, NSUInteger))bean_msgSend)(self, bean_sel("splitText:"), offset); }
 static inline void*       DOMText_ReplaceWholeText(DOMText self, NSString content)    { return ((void* (*)(DOMText, SEL, NSString))bean_msgSend)(self, bean_sel("replaceWholeText:"), content); }
 static inline NSString    DOMText_WholeText(DOMText self)                             { return ((NSString (*)(DOMText, SEL))bean_msgSend)(self, bean_sel("wholeText")); }
+#ifndef BEAN_ALLOC_DOMText
+#define BEAN_ALLOC_DOMText
+static inline DOMText     DOMText_Alloc(void)                                         { return (DOMText)bean_alloc(bean_cls("DOMText")); }
+#endif
+#ifndef BEAN_NEW_DOMText
+#define BEAN_NEW_DOMText
+static inline DOMText     DOMText_New(void)                                           { return (DOMText)bean_new(bean_cls("DOMText")); }
+#endif
 
 /* ===== DOMTreeWalker ===== */
 #ifndef BEAN_TYPEDEF_DOMTreeWalker
 #define BEAN_TYPEDEF_DOMTreeWalker
 typedef bean_id DOMTreeWalker;
 #endif
-static inline void*         DOMTreeWalker_ParentNode(DOMTreeWalker self)                           { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("parentNode")); }
-static inline void*         DOMTreeWalker_FirstChild(DOMTreeWalker self)                           { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("firstChild")); }
-static inline void*         DOMTreeWalker_LastChild(DOMTreeWalker self)                            { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("lastChild")); }
-static inline void*         DOMTreeWalker_PreviousSibling(DOMTreeWalker self)                      { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("previousSibling")); }
-static inline void*         DOMTreeWalker_NextSibling(DOMTreeWalker self)                          { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("nextSibling")); }
-static inline void*         DOMTreeWalker_PreviousNode(DOMTreeWalker self)                         { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("previousNode")); }
-static inline void*         DOMTreeWalker_NextNode(DOMTreeWalker self)                             { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("nextNode")); }
-static inline void*         DOMTreeWalker_Root(DOMTreeWalker self)                                 { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("root")); }
-static inline NSUInteger    DOMTreeWalker_WhatToShow(DOMTreeWalker self)                           { return ((NSUInteger (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("whatToShow")); }
-static inline id            DOMTreeWalker_Filter(DOMTreeWalker self)                               { return ((id (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("filter")); }
-static inline BOOL          DOMTreeWalker_ExpandEntityReferences(DOMTreeWalker self)               { return ((BOOL (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("expandEntityReferences")); }
-static inline void*         DOMTreeWalker_CurrentNode(DOMTreeWalker self)                          { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("currentNode")); }
-static inline void          DOMTreeWalker_SetCurrentNode(DOMTreeWalker self, void* currentNode)    { ((void (*)(DOMTreeWalker, SEL, void*))bean_msgSend)(self, bean_sel("setCurrentNode:"), currentNode); }
+static inline void*            DOMTreeWalker_ParentNode(DOMTreeWalker self)                           { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("parentNode")); }
+static inline void*            DOMTreeWalker_FirstChild(DOMTreeWalker self)                           { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("firstChild")); }
+static inline void*            DOMTreeWalker_LastChild(DOMTreeWalker self)                            { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("lastChild")); }
+static inline void*            DOMTreeWalker_PreviousSibling(DOMTreeWalker self)                      { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("previousSibling")); }
+static inline void*            DOMTreeWalker_NextSibling(DOMTreeWalker self)                          { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("nextSibling")); }
+static inline void*            DOMTreeWalker_PreviousNode(DOMTreeWalker self)                         { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("previousNode")); }
+static inline void*            DOMTreeWalker_NextNode(DOMTreeWalker self)                             { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("nextNode")); }
+static inline void*            DOMTreeWalker_Root(DOMTreeWalker self)                                 { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("root")); }
+static inline NSUInteger       DOMTreeWalker_WhatToShow(DOMTreeWalker self)                           { return ((NSUInteger (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("whatToShow")); }
+static inline id               DOMTreeWalker_Filter(DOMTreeWalker self)                               { return ((id (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("filter")); }
+static inline BOOL             DOMTreeWalker_ExpandEntityReferences(DOMTreeWalker self)               { return ((BOOL (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("expandEntityReferences")); }
+static inline void*            DOMTreeWalker_CurrentNode(DOMTreeWalker self)                          { return ((void* (*)(DOMTreeWalker, SEL))bean_msgSend)(self, bean_sel("currentNode")); }
+static inline void             DOMTreeWalker_SetCurrentNode(DOMTreeWalker self, void* currentNode)    { ((void (*)(DOMTreeWalker, SEL, void*))bean_msgSend)(self, bean_sel("setCurrentNode:"), currentNode); }
+#ifndef BEAN_ALLOC_DOMTreeWalker
+#define BEAN_ALLOC_DOMTreeWalker
+static inline DOMTreeWalker    DOMTreeWalker_Alloc(void)                                              { return (DOMTreeWalker)bean_alloc(bean_cls("DOMTreeWalker")); }
+#endif
+#ifndef BEAN_NEW_DOMTreeWalker
+#define BEAN_NEW_DOMTreeWalker
+static inline DOMTreeWalker    DOMTreeWalker_New(void)                                                { return (DOMTreeWalker)bean_new(bean_cls("DOMTreeWalker")); }
+#endif
 
 /* ===== DOMUIEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMUIEvent
@@ -5538,6 +6346,14 @@ static inline int           DOMUIEvent_PageX(DOMUIEvent self)                   
 static inline int           DOMUIEvent_PageY(DOMUIEvent self)                                                                                                                   { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("pageY")); }
 static inline int           DOMUIEvent_Which(DOMUIEvent self)                                                                                                                   { return ((int (*)(DOMUIEvent, SEL))bean_msgSend)(self, bean_sel("which")); }
 static inline DOMUIEvent    DOMUIEvent_InitUIEvent(DOMUIEvent self, NSString type, BOOL canBubble, BOOL cancelable, void* view, int detail)                                     { return ((DOMUIEvent (*)(DOMUIEvent, SEL, NSString, BOOL, BOOL, void*, int))bean_msgSend)(self, bean_sel("initUIEvent:::::"), type, canBubble, cancelable, view, detail); }
+#ifndef BEAN_ALLOC_DOMUIEvent
+#define BEAN_ALLOC_DOMUIEvent
+static inline DOMUIEvent    DOMUIEvent_Alloc(void)                                                                                                                              { return (DOMUIEvent)bean_alloc(bean_cls("DOMUIEvent")); }
+#endif
+#ifndef BEAN_NEW_DOMUIEvent
+#define BEAN_NEW_DOMUIEvent
+static inline DOMUIEvent    DOMUIEvent_New(void)                                                                                                                                { return (DOMUIEvent)bean_new(bean_cls("DOMUIEvent")); }
+#endif
 
 /* ===== DOMWheelEvent ===== */
 #ifndef BEAN_TYPEDEF_DOMWheelEvent
@@ -5549,21 +6365,45 @@ static inline int              DOMWheelEvent_WheelDeltaX(DOMWheelEvent self)    
 static inline int              DOMWheelEvent_WheelDeltaY(DOMWheelEvent self)                                                                                                                                                                                                                                                  { return ((int (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("wheelDeltaY")); }
 static inline int              DOMWheelEvent_WheelDelta(DOMWheelEvent self)                                                                                                                                                                                                                                                   { return ((int (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("wheelDelta")); }
 static inline BOOL             DOMWheelEvent_IsHorizontal(DOMWheelEvent self)                                                                                                                                                                                                                                                 { return ((BOOL (*)(DOMWheelEvent, SEL))bean_msgSend)(self, bean_sel("isHorizontal")); }
+#ifndef BEAN_ALLOC_DOMWheelEvent
+#define BEAN_ALLOC_DOMWheelEvent
+static inline DOMWheelEvent    DOMWheelEvent_Alloc(void)                                                                                                                                                                                                                                                                      { return (DOMWheelEvent)bean_alloc(bean_cls("DOMWheelEvent")); }
+#endif
+#ifndef BEAN_NEW_DOMWheelEvent
+#define BEAN_NEW_DOMWheelEvent
+static inline DOMWheelEvent    DOMWheelEvent_New(void)                                                                                                                                                                                                                                                                        { return (DOMWheelEvent)bean_new(bean_cls("DOMWheelEvent")); }
+#endif
 
 /* ===== DOMXPathExpression ===== */
 #ifndef BEAN_TYPEDEF_DOMXPathExpression
 #define BEAN_TYPEDEF_DOMXPathExpression
 typedef bean_id DOMXPathExpression;
 #endif
-static inline void*    DOMXPathExpression_Evaluate_Type_InResult(DOMXPathExpression self, void* contextNode, unsigned short type, void* inResult)    { return ((void* (*)(DOMXPathExpression, SEL, void*, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:type:inResult:"), contextNode, type, inResult); }
-static inline void*    DOMXPathExpression_Evaluate(DOMXPathExpression self, void* contextNode, unsigned short type, void* inResult)                  { return ((void* (*)(DOMXPathExpression, SEL, void*, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:::"), contextNode, type, inResult); }
+static inline void*                 DOMXPathExpression_Evaluate_Type_InResult(DOMXPathExpression self, void* contextNode, unsigned short type, void* inResult)    { return ((void* (*)(DOMXPathExpression, SEL, void*, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:type:inResult:"), contextNode, type, inResult); }
+static inline void*                 DOMXPathExpression_Evaluate(DOMXPathExpression self, void* contextNode, unsigned short type, void* inResult)                  { return ((void* (*)(DOMXPathExpression, SEL, void*, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:::"), contextNode, type, inResult); }
+#ifndef BEAN_ALLOC_DOMXPathExpression
+#define BEAN_ALLOC_DOMXPathExpression
+static inline DOMXPathExpression    DOMXPathExpression_Alloc(void)                                                                                                { return (DOMXPathExpression)bean_alloc(bean_cls("DOMXPathExpression")); }
+#endif
+#ifndef BEAN_NEW_DOMXPathExpression
+#define BEAN_NEW_DOMXPathExpression
+static inline DOMXPathExpression    DOMXPathExpression_New(void)                                                                                                  { return (DOMXPathExpression)bean_new(bean_cls("DOMXPathExpression")); }
+#endif
 
 /* ===== DOMXPathNSResolver ===== */
 #ifndef BEAN_TYPEDEF_DOMXPathNSResolver
 #define BEAN_TYPEDEF_DOMXPathNSResolver
 typedef bean_id DOMXPathNSResolver;
 #endif
-static inline NSString    DOMXPathNSResolver_LookupNamespaceURI(DOMXPathNSResolver self, NSString prefix)    { return ((NSString (*)(DOMXPathNSResolver, SEL, NSString))bean_msgSend)(self, bean_sel("lookupNamespaceURI:"), prefix); }
+static inline NSString              DOMXPathNSResolver_LookupNamespaceURI(DOMXPathNSResolver self, NSString prefix)    { return ((NSString (*)(DOMXPathNSResolver, SEL, NSString))bean_msgSend)(self, bean_sel("lookupNamespaceURI:"), prefix); }
+#ifndef BEAN_ALLOC_DOMXPathNSResolver
+#define BEAN_ALLOC_DOMXPathNSResolver
+static inline DOMXPathNSResolver    DOMXPathNSResolver_Alloc(void)                                                     { return (DOMXPathNSResolver)bean_alloc(bean_cls("DOMXPathNSResolver")); }
+#endif
+#ifndef BEAN_NEW_DOMXPathNSResolver
+#define BEAN_NEW_DOMXPathNSResolver
+static inline DOMXPathNSResolver    DOMXPathNSResolver_New(void)                                                       { return (DOMXPathNSResolver)bean_new(bean_cls("DOMXPathNSResolver")); }
+#endif
 
 /* ===== DOMXPathResult ===== */
 #ifndef BEAN_TYPEDEF_DOMXPathResult
@@ -5579,16 +6419,32 @@ static inline BOOL              DOMXPathResult_BooleanValue(DOMXPathResult self)
 static inline void*             DOMXPathResult_SingleNodeValue(DOMXPathResult self)                   { return ((void* (*)(DOMXPathResult, SEL))bean_msgSend)(self, bean_sel("singleNodeValue")); }
 static inline BOOL              DOMXPathResult_InvalidIteratorState(DOMXPathResult self)              { return ((BOOL (*)(DOMXPathResult, SEL))bean_msgSend)(self, bean_sel("invalidIteratorState")); }
 static inline NSUInteger        DOMXPathResult_SnapshotLength(DOMXPathResult self)                    { return ((NSUInteger (*)(DOMXPathResult, SEL))bean_msgSend)(self, bean_sel("snapshotLength")); }
+#ifndef BEAN_ALLOC_DOMXPathResult
+#define BEAN_ALLOC_DOMXPathResult
+static inline DOMXPathResult    DOMXPathResult_Alloc(void)                                            { return (DOMXPathResult)bean_alloc(bean_cls("DOMXPathResult")); }
+#endif
+#ifndef BEAN_NEW_DOMXPathResult
+#define BEAN_NEW_DOMXPathResult
+static inline DOMXPathResult    DOMXPathResult_New(void)                                              { return (DOMXPathResult)bean_new(bean_cls("DOMXPathResult")); }
+#endif
 
 /* ===== NSAttributedString ===== */
 #ifndef BEAN_TYPEDEF_NSAttributedString
 #define BEAN_TYPEDEF_NSAttributedString
 typedef bean_id NSAttributedString;
 #endif
-static inline void    NSAttributedString_LoadFromHTMLWithRequest_Options_CompletionHandler(NSURLRequest request, NSDictionary options, void* completionHandler)    { ((void (*)(bean_class, SEL, NSURLRequest, NSDictionary, void*))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("loadFromHTMLWithRequest:options:completionHandler:"), request, options, completionHandler); }
-static inline void    NSAttributedString_LoadFromHTMLWithFileURL_Options_CompletionHandler(NSURL fileURL, NSDictionary options, void* completionHandler)           { ((void (*)(bean_class, SEL, NSURL, NSDictionary, void*))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("loadFromHTMLWithFileURL:options:completionHandler:"), fileURL, options, completionHandler); }
-static inline void    NSAttributedString_LoadFromHTMLWithString_Options_CompletionHandler(NSString string, NSDictionary options, void* completionHandler)          { ((void (*)(bean_class, SEL, NSString, NSDictionary, void*))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("loadFromHTMLWithString:options:completionHandler:"), string, options, completionHandler); }
-static inline void    NSAttributedString_LoadFromHTMLWithData_Options_CompletionHandler(NSData data, NSDictionary options, void* completionHandler)                { ((void (*)(bean_class, SEL, NSData, NSDictionary, void*))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("loadFromHTMLWithData:options:completionHandler:"), data, options, completionHandler); }
+static inline void                  NSAttributedString_LoadFromHTMLWithRequest_Options_CompletionHandler(NSURLRequest request, NSDictionary options, void* completionHandler)    { ((void (*)(bean_class, SEL, NSURLRequest, NSDictionary, void*))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("loadFromHTMLWithRequest:options:completionHandler:"), request, options, completionHandler); }
+static inline void                  NSAttributedString_LoadFromHTMLWithFileURL_Options_CompletionHandler(NSURL fileURL, NSDictionary options, void* completionHandler)           { ((void (*)(bean_class, SEL, NSURL, NSDictionary, void*))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("loadFromHTMLWithFileURL:options:completionHandler:"), fileURL, options, completionHandler); }
+static inline void                  NSAttributedString_LoadFromHTMLWithString_Options_CompletionHandler(NSString string, NSDictionary options, void* completionHandler)          { ((void (*)(bean_class, SEL, NSString, NSDictionary, void*))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("loadFromHTMLWithString:options:completionHandler:"), string, options, completionHandler); }
+static inline void                  NSAttributedString_LoadFromHTMLWithData_Options_CompletionHandler(NSData data, NSDictionary options, void* completionHandler)                { ((void (*)(bean_class, SEL, NSData, NSDictionary, void*))bean_msgSend)(bean_cls("NSAttributedString"), bean_sel("loadFromHTMLWithData:options:completionHandler:"), data, options, completionHandler); }
+#ifndef BEAN_ALLOC_NSAttributedString
+#define BEAN_ALLOC_NSAttributedString
+static inline NSAttributedString    NSAttributedString_Alloc(void)                                                                                                               { return (NSAttributedString)bean_alloc(bean_cls("NSAttributedString")); }
+#endif
+#ifndef BEAN_NEW_NSAttributedString
+#define BEAN_NEW_NSAttributedString
+static inline NSAttributedString    NSAttributedString_New(void)                                                                                                                 { return (NSAttributedString)bean_new(bean_cls("NSAttributedString")); }
+#endif
 
 /* ===== WKBackForwardListItem ===== */
 #ifndef BEAN_TYPEDEF_WKBackForwardListItem
@@ -5599,13 +6455,29 @@ static inline WKBackForwardListItem    WKBackForwardListItem_Init(WKBackForwardL
 static inline NSURL                    WKBackForwardListItem_URL(WKBackForwardListItem self)           { return ((NSURL (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("URL")); }
 static inline NSString                 WKBackForwardListItem_Title(WKBackForwardListItem self)         { return ((NSString (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline WKBackForwardListItem    WKBackForwardListItem_InitialURL(WKBackForwardListItem self)    { return ((WKBackForwardListItem (*)(WKBackForwardListItem, SEL))bean_msgSend)(self, bean_sel("initialURL")); }
+#ifndef BEAN_ALLOC_WKBackForwardListItem
+#define BEAN_ALLOC_WKBackForwardListItem
+static inline WKBackForwardListItem    WKBackForwardListItem_Alloc(void)                               { return (WKBackForwardListItem)bean_alloc(bean_cls("WKBackForwardListItem")); }
+#endif
+#ifndef BEAN_NEW_WKBackForwardListItem
+#define BEAN_NEW_WKBackForwardListItem
+static inline WKBackForwardListItem    WKBackForwardListItem_New(void)                                 { return (WKBackForwardListItem)bean_new(bean_cls("WKBackForwardListItem")); }
+#endif
 
 /* ===== WKContentRuleList ===== */
 #ifndef BEAN_TYPEDEF_WKContentRuleList
 #define BEAN_TYPEDEF_WKContentRuleList
 typedef bean_id WKContentRuleList;
 #endif
-static inline NSString    WKContentRuleList_Identifier(WKContentRuleList self)    { return ((NSString (*)(WKContentRuleList, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+static inline NSString             WKContentRuleList_Identifier(WKContentRuleList self)    { return ((NSString (*)(WKContentRuleList, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+#ifndef BEAN_ALLOC_WKContentRuleList
+#define BEAN_ALLOC_WKContentRuleList
+static inline WKContentRuleList    WKContentRuleList_Alloc(void)                           { return (WKContentRuleList)bean_alloc(bean_cls("WKContentRuleList")); }
+#endif
+#ifndef BEAN_NEW_WKContentRuleList
+#define BEAN_NEW_WKContentRuleList
+static inline WKContentRuleList    WKContentRuleList_New(void)                             { return (WKContentRuleList)bean_new(bean_cls("WKContentRuleList")); }
+#endif
 
 /* ===== WKContentRuleListStore ===== */
 #ifndef BEAN_TYPEDEF_WKContentRuleListStore
@@ -5618,31 +6490,54 @@ static inline void                      WKContentRuleListStore_CompileContentRul
 static inline void                      WKContentRuleListStore_LookUpContentRuleListForIdentifier_CompletionHandler(WKContentRuleListStore self, NSString identifier, void* completionHandler)                                                             { ((void (*)(WKContentRuleListStore, SEL, NSString, void*))bean_msgSend)(self, bean_sel("lookUpContentRuleListForIdentifier:completionHandler:"), identifier, completionHandler); }
 static inline void                      WKContentRuleListStore_RemoveContentRuleListForIdentifier_CompletionHandler(WKContentRuleListStore self, NSString identifier, void* completionHandler)                                                             { ((void (*)(WKContentRuleListStore, SEL, NSString, void*))bean_msgSend)(self, bean_sel("removeContentRuleListForIdentifier:completionHandler:"), identifier, completionHandler); }
 static inline void                      WKContentRuleListStore_GetAvailableContentRuleListIdentifiers(WKContentRuleListStore self, void* completionHandler)                                                                                                { ((void (*)(WKContentRuleListStore, SEL, void*))bean_msgSend)(self, bean_sel("getAvailableContentRuleListIdentifiers:"), completionHandler); }
+#ifndef BEAN_ALLOC_WKContentRuleListStore
+#define BEAN_ALLOC_WKContentRuleListStore
+static inline WKContentRuleListStore    WKContentRuleListStore_Alloc(void)                                                                                                                                                                                 { return (WKContentRuleListStore)bean_alloc(bean_cls("WKContentRuleListStore")); }
+#endif
+#ifndef BEAN_NEW_WKContentRuleListStore
+#define BEAN_NEW_WKContentRuleListStore
+static inline WKContentRuleListStore    WKContentRuleListStore_New(void)                                                                                                                                                                                   { return (WKContentRuleListStore)bean_new(bean_cls("WKContentRuleListStore")); }
+#endif
 
 /* ===== WKContentWorld ===== */
 #ifndef BEAN_TYPEDEF_WKContentWorld
 #define BEAN_TYPEDEF_WKContentWorld
 typedef bean_id WKContentWorld;
 #endif
+#ifndef BEAN_NEW_WKContentWorld
+#define BEAN_NEW_WKContentWorld
 static inline WKContentWorld    WKContentWorld_New(void)                       { return ((WKContentWorld (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("new")); }
+#endif
 static inline WKContentWorld    WKContentWorld_Init(WKContentWorld self)       { return ((WKContentWorld (*)(WKContentWorld, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline WKContentWorld    WKContentWorld_WorldWithName(NSString name)    { return ((WKContentWorld (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("worldWithName:"), name); }
 static inline WKContentWorld    WKContentWorld_PageWorld(void)                 { return ((WKContentWorld (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("pageWorld")); }
 static inline WKContentWorld    WKContentWorld_DefaultClientWorld(void)        { return ((WKContentWorld (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKContentWorld"), bean_sel("defaultClientWorld")); }
 static inline NSString          WKContentWorld_Name(WKContentWorld self)       { return ((NSString (*)(WKContentWorld, SEL))bean_msgSend)(self, bean_sel("name")); }
+#ifndef BEAN_ALLOC_WKContentWorld
+#define BEAN_ALLOC_WKContentWorld
+static inline WKContentWorld    WKContentWorld_Alloc(void)                     { return (WKContentWorld)bean_alloc(bean_cls("WKContentWorld")); }
+#endif
 
 /* ===== WKFindConfiguration ===== */
 #ifndef BEAN_TYPEDEF_WKFindConfiguration
 #define BEAN_TYPEDEF_WKFindConfiguration
 typedef bean_id WKFindConfiguration;
 #endif
-static inline BOOL    WKFindConfiguration_Backwards(WKFindConfiguration self)                               { return ((BOOL (*)(WKFindConfiguration, SEL))bean_msgSend)(self, bean_sel("backwards")); }
-static inline void    WKFindConfiguration_SetBackwards(WKFindConfiguration self, BOOL backwards)            { ((void (*)(WKFindConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setBackwards:"), backwards); }
-static inline BOOL    WKFindConfiguration_CaseSensitive(WKFindConfiguration self)                           { return ((BOOL (*)(WKFindConfiguration, SEL))bean_msgSend)(self, bean_sel("caseSensitive")); }
-static inline void    WKFindConfiguration_SetCaseSensitive(WKFindConfiguration self, BOOL caseSensitive)    { ((void (*)(WKFindConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setCaseSensitive:"), caseSensitive); }
-static inline BOOL    WKFindConfiguration_Wraps(WKFindConfiguration self)                                   { return ((BOOL (*)(WKFindConfiguration, SEL))bean_msgSend)(self, bean_sel("wraps")); }
-static inline void    WKFindConfiguration_SetWraps(WKFindConfiguration self, BOOL wraps)                    { ((void (*)(WKFindConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setWraps:"), wraps); }
-static inline id      WKFindConfiguration_CopyWithZone(WKFindConfiguration self, NSZone* zone)              { return ((id (*)(WKFindConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                   WKFindConfiguration_Backwards(WKFindConfiguration self)                               { return ((BOOL (*)(WKFindConfiguration, SEL))bean_msgSend)(self, bean_sel("backwards")); }
+static inline void                   WKFindConfiguration_SetBackwards(WKFindConfiguration self, BOOL backwards)            { ((void (*)(WKFindConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setBackwards:"), backwards); }
+static inline BOOL                   WKFindConfiguration_CaseSensitive(WKFindConfiguration self)                           { return ((BOOL (*)(WKFindConfiguration, SEL))bean_msgSend)(self, bean_sel("caseSensitive")); }
+static inline void                   WKFindConfiguration_SetCaseSensitive(WKFindConfiguration self, BOOL caseSensitive)    { ((void (*)(WKFindConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setCaseSensitive:"), caseSensitive); }
+static inline BOOL                   WKFindConfiguration_Wraps(WKFindConfiguration self)                                   { return ((BOOL (*)(WKFindConfiguration, SEL))bean_msgSend)(self, bean_sel("wraps")); }
+static inline void                   WKFindConfiguration_SetWraps(WKFindConfiguration self, BOOL wraps)                    { ((void (*)(WKFindConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setWraps:"), wraps); }
+static inline id                     WKFindConfiguration_CopyWithZone(WKFindConfiguration self, NSZone* zone)              { return ((id (*)(WKFindConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WKFindConfiguration
+#define BEAN_ALLOC_WKFindConfiguration
+static inline WKFindConfiguration    WKFindConfiguration_Alloc(void)                                                       { return (WKFindConfiguration)bean_alloc(bean_cls("WKFindConfiguration")); }
+#endif
+#ifndef BEAN_NEW_WKFindConfiguration
+#define BEAN_NEW_WKFindConfiguration
+static inline WKFindConfiguration    WKFindConfiguration_New(void)                                                         { return (WKFindConfiguration)bean_new(bean_cls("WKFindConfiguration")); }
+#endif
 
 /* ===== WKFindResult ===== */
 #ifndef BEAN_TYPEDEF_WKFindResult
@@ -5652,6 +6547,14 @@ typedef bean_id WKFindResult;
 static inline WKFindResult    WKFindResult_Init(WKFindResult self)                          { return ((WKFindResult (*)(WKFindResult, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline BOOL            WKFindResult_MatchFound(WKFindResult self)                    { return ((BOOL (*)(WKFindResult, SEL))bean_msgSend)(self, bean_sel("matchFound")); }
 static inline id              WKFindResult_CopyWithZone(WKFindResult self, NSZone* zone)    { return ((id (*)(WKFindResult, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WKFindResult
+#define BEAN_ALLOC_WKFindResult
+static inline WKFindResult    WKFindResult_Alloc(void)                                      { return (WKFindResult)bean_alloc(bean_cls("WKFindResult")); }
+#endif
+#ifndef BEAN_NEW_WKFindResult
+#define BEAN_NEW_WKFindResult
+static inline WKFindResult    WKFindResult_New(void)                                        { return (WKFindResult)bean_new(bean_cls("WKFindResult")); }
+#endif
 
 /* ===== WKHTTPCookieStore ===== */
 #ifndef BEAN_TYPEDEF_WKHTTPCookieStore
@@ -5667,6 +6570,14 @@ static inline void                 WKHTTPCookieStore_AddObserver(WKHTTPCookieSto
 static inline void                 WKHTTPCookieStore_RemoveObserver(WKHTTPCookieStore self, id observer)                                                          { ((void (*)(WKHTTPCookieStore, SEL, id))bean_msgSend)(self, bean_sel("removeObserver:"), observer); }
 static inline void                 WKHTTPCookieStore_SetCookiePolicy_CompletionHandler(WKHTTPCookieStore self, WKCookiePolicy policy, void* completionHandler)    { ((void (*)(WKHTTPCookieStore, SEL, WKCookiePolicy, void*))bean_msgSend)(self, bean_sel("setCookiePolicy:completionHandler:"), policy, completionHandler); }
 static inline void                 WKHTTPCookieStore_GetCookiePolicy(WKHTTPCookieStore self, void* completionHandler)                                             { ((void (*)(WKHTTPCookieStore, SEL, void*))bean_msgSend)(self, bean_sel("getCookiePolicy:"), completionHandler); }
+#ifndef BEAN_ALLOC_WKHTTPCookieStore
+#define BEAN_ALLOC_WKHTTPCookieStore
+static inline WKHTTPCookieStore    WKHTTPCookieStore_Alloc(void)                                                                                                  { return (WKHTTPCookieStore)bean_alloc(bean_cls("WKHTTPCookieStore")); }
+#endif
+#ifndef BEAN_NEW_WKHTTPCookieStore
+#define BEAN_NEW_WKHTTPCookieStore
+static inline WKHTTPCookieStore    WKHTTPCookieStore_New(void)                                                                                                    { return (WKHTTPCookieStore)bean_new(bean_cls("WKHTTPCookieStore")); }
+#endif
 
 /* ===== WKNavigation ===== */
 #ifndef BEAN_TYPEDEF_WKNavigation
@@ -5674,35 +6585,67 @@ static inline void                 WKHTTPCookieStore_GetCookiePolicy(WKHTTPCooki
 typedef bean_id WKNavigation;
 #endif
 static inline WKContentMode    WKNavigation_EffectiveContentMode(WKNavigation self)    { return ((WKContentMode (*)(WKNavigation, SEL))bean_msgSend)(self, bean_sel("effectiveContentMode")); }
+#ifndef BEAN_ALLOC_WKNavigation
+#define BEAN_ALLOC_WKNavigation
+static inline WKNavigation     WKNavigation_Alloc(void)                                { return (WKNavigation)bean_alloc(bean_cls("WKNavigation")); }
+#endif
+#ifndef BEAN_NEW_WKNavigation
+#define BEAN_NEW_WKNavigation
+static inline WKNavigation     WKNavigation_New(void)                                  { return (WKNavigation)bean_new(bean_cls("WKNavigation")); }
+#endif
 
 /* ===== WKNavigationResponse ===== */
 #ifndef BEAN_TYPEDEF_WKNavigationResponse
 #define BEAN_TYPEDEF_WKNavigationResponse
 typedef bean_id WKNavigationResponse;
 #endif
-static inline BOOL             WKNavigationResponse_IsForMainFrame(WKNavigationResponse self)     { return ((BOOL (*)(WKNavigationResponse, SEL))bean_msgSend)(self, bean_sel("isForMainFrame")); }
-static inline NSURLResponse    WKNavigationResponse_Response(WKNavigationResponse self)           { return ((NSURLResponse (*)(WKNavigationResponse, SEL))bean_msgSend)(self, bean_sel("response")); }
-static inline BOOL             WKNavigationResponse_CanShowMIMEType(WKNavigationResponse self)    { return ((BOOL (*)(WKNavigationResponse, SEL))bean_msgSend)(self, bean_sel("canShowMIMEType")); }
-static inline BOOL             WKNavigationResponse_ForMainFrame(WKNavigationResponse self)       { return ((BOOL (*)(WKNavigationResponse, SEL))bean_msgSend)(self, bean_sel("forMainFrame")); }
+static inline BOOL                    WKNavigationResponse_IsForMainFrame(WKNavigationResponse self)     { return ((BOOL (*)(WKNavigationResponse, SEL))bean_msgSend)(self, bean_sel("isForMainFrame")); }
+static inline NSURLResponse           WKNavigationResponse_Response(WKNavigationResponse self)           { return ((NSURLResponse (*)(WKNavigationResponse, SEL))bean_msgSend)(self, bean_sel("response")); }
+static inline BOOL                    WKNavigationResponse_CanShowMIMEType(WKNavigationResponse self)    { return ((BOOL (*)(WKNavigationResponse, SEL))bean_msgSend)(self, bean_sel("canShowMIMEType")); }
+static inline BOOL                    WKNavigationResponse_ForMainFrame(WKNavigationResponse self)       { return ((BOOL (*)(WKNavigationResponse, SEL))bean_msgSend)(self, bean_sel("forMainFrame")); }
+#ifndef BEAN_ALLOC_WKNavigationResponse
+#define BEAN_ALLOC_WKNavigationResponse
+static inline WKNavigationResponse    WKNavigationResponse_Alloc(void)                                   { return (WKNavigationResponse)bean_alloc(bean_cls("WKNavigationResponse")); }
+#endif
+#ifndef BEAN_NEW_WKNavigationResponse
+#define BEAN_NEW_WKNavigationResponse
+static inline WKNavigationResponse    WKNavigationResponse_New(void)                                     { return (WKNavigationResponse)bean_new(bean_cls("WKNavigationResponse")); }
+#endif
 
 /* ===== WKOpenPanelParameters ===== */
 #ifndef BEAN_TYPEDEF_WKOpenPanelParameters
 #define BEAN_TYPEDEF_WKOpenPanelParameters
 typedef bean_id WKOpenPanelParameters;
 #endif
-static inline BOOL    WKOpenPanelParameters_AllowsMultipleSelection(WKOpenPanelParameters self)    { return ((BOOL (*)(WKOpenPanelParameters, SEL))bean_msgSend)(self, bean_sel("allowsMultipleSelection")); }
-static inline BOOL    WKOpenPanelParameters_AllowsDirectories(WKOpenPanelParameters self)          { return ((BOOL (*)(WKOpenPanelParameters, SEL))bean_msgSend)(self, bean_sel("allowsDirectories")); }
+static inline BOOL                     WKOpenPanelParameters_AllowsMultipleSelection(WKOpenPanelParameters self)    { return ((BOOL (*)(WKOpenPanelParameters, SEL))bean_msgSend)(self, bean_sel("allowsMultipleSelection")); }
+static inline BOOL                     WKOpenPanelParameters_AllowsDirectories(WKOpenPanelParameters self)          { return ((BOOL (*)(WKOpenPanelParameters, SEL))bean_msgSend)(self, bean_sel("allowsDirectories")); }
+#ifndef BEAN_ALLOC_WKOpenPanelParameters
+#define BEAN_ALLOC_WKOpenPanelParameters
+static inline WKOpenPanelParameters    WKOpenPanelParameters_Alloc(void)                                            { return (WKOpenPanelParameters)bean_alloc(bean_cls("WKOpenPanelParameters")); }
+#endif
+#ifndef BEAN_NEW_WKOpenPanelParameters
+#define BEAN_NEW_WKOpenPanelParameters
+static inline WKOpenPanelParameters    WKOpenPanelParameters_New(void)                                              { return (WKOpenPanelParameters)bean_new(bean_cls("WKOpenPanelParameters")); }
+#endif
 
 /* ===== WKPDFConfiguration ===== */
 #ifndef BEAN_TYPEDEF_WKPDFConfiguration
 #define BEAN_TYPEDEF_WKPDFConfiguration
 typedef bean_id WKPDFConfiguration;
 #endif
-static inline CGRect    WKPDFConfiguration_Rect(WKPDFConfiguration self)                                                              { return ((CGRect (*)(WKPDFConfiguration, SEL))bean_msgSend_stret)(self, bean_sel("rect")); }
-static inline void      WKPDFConfiguration_SetRect(WKPDFConfiguration self, CGRect rect)                                              { ((void (*)(WKPDFConfiguration, SEL, CGRect))bean_msgSend)(self, bean_sel("setRect:"), rect); }
-static inline BOOL      WKPDFConfiguration_AllowTransparentBackground(WKPDFConfiguration self)                                        { return ((BOOL (*)(WKPDFConfiguration, SEL))bean_msgSend)(self, bean_sel("allowTransparentBackground")); }
-static inline void      WKPDFConfiguration_SetAllowTransparentBackground(WKPDFConfiguration self, BOOL allowTransparentBackground)    { ((void (*)(WKPDFConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowTransparentBackground:"), allowTransparentBackground); }
-static inline id        WKPDFConfiguration_CopyWithZone(WKPDFConfiguration self, NSZone* zone)                                        { return ((id (*)(WKPDFConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline CGRect                WKPDFConfiguration_Rect(WKPDFConfiguration self)                                                              { return ((CGRect (*)(WKPDFConfiguration, SEL))bean_msgSend_stret)(self, bean_sel("rect")); }
+static inline void                  WKPDFConfiguration_SetRect(WKPDFConfiguration self, CGRect rect)                                              { ((void (*)(WKPDFConfiguration, SEL, CGRect))bean_msgSend)(self, bean_sel("setRect:"), rect); }
+static inline BOOL                  WKPDFConfiguration_AllowTransparentBackground(WKPDFConfiguration self)                                        { return ((BOOL (*)(WKPDFConfiguration, SEL))bean_msgSend)(self, bean_sel("allowTransparentBackground")); }
+static inline void                  WKPDFConfiguration_SetAllowTransparentBackground(WKPDFConfiguration self, BOOL allowTransparentBackground)    { ((void (*)(WKPDFConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowTransparentBackground:"), allowTransparentBackground); }
+static inline id                    WKPDFConfiguration_CopyWithZone(WKPDFConfiguration self, NSZone* zone)                                        { return ((id (*)(WKPDFConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WKPDFConfiguration
+#define BEAN_ALLOC_WKPDFConfiguration
+static inline WKPDFConfiguration    WKPDFConfiguration_Alloc(void)                                                                                { return (WKPDFConfiguration)bean_alloc(bean_cls("WKPDFConfiguration")); }
+#endif
+#ifndef BEAN_NEW_WKPDFConfiguration
+#define BEAN_NEW_WKPDFConfiguration
+static inline WKPDFConfiguration    WKPDFConfiguration_New(void)                                                                                  { return (WKPDFConfiguration)bean_new(bean_cls("WKPDFConfiguration")); }
+#endif
 
 /* ===== WKPreferences ===== */
 #ifndef BEAN_TYPEDEF_WKPreferences
@@ -5740,13 +6683,29 @@ static inline BOOL                          WKPreferences_FraudulentWebsiteWarni
 static inline BOOL                          WKPreferences_TextInteractionEnabled(WKPreferences self)                                                                  { return ((BOOL (*)(WKPreferences, SEL))bean_msgSend)(self, bean_sel("textInteractionEnabled")); }
 static inline BOOL                          WKPreferences_SiteSpecificQuirksModeEnabled(WKPreferences self)                                                           { return ((BOOL (*)(WKPreferences, SEL))bean_msgSend)(self, bean_sel("siteSpecificQuirksModeEnabled")); }
 static inline BOOL                          WKPreferences_ElementFullscreenEnabled(WKPreferences self)                                                                { return ((BOOL (*)(WKPreferences, SEL))bean_msgSend)(self, bean_sel("elementFullscreenEnabled")); }
+#ifndef BEAN_ALLOC_WKPreferences
+#define BEAN_ALLOC_WKPreferences
+static inline WKPreferences                 WKPreferences_Alloc(void)                                                                                                 { return (WKPreferences)bean_alloc(bean_cls("WKPreferences")); }
+#endif
+#ifndef BEAN_NEW_WKPreferences
+#define BEAN_NEW_WKPreferences
+static inline WKPreferences                 WKPreferences_New(void)                                                                                                   { return (WKPreferences)bean_new(bean_cls("WKPreferences")); }
+#endif
 
 /* ===== WKProcessPool ===== */
 #ifndef BEAN_TYPEDEF_WKProcessPool
 #define BEAN_TYPEDEF_WKProcessPool
 typedef bean_id WKProcessPool;
 #endif
-static inline BOOL    WKProcessPool_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKProcessPool"), bean_sel("supportsSecureCoding")); }
+static inline BOOL             WKProcessPool_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKProcessPool"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_WKProcessPool
+#define BEAN_ALLOC_WKProcessPool
+static inline WKProcessPool    WKProcessPool_Alloc(void)                   { return (WKProcessPool)bean_alloc(bean_cls("WKProcessPool")); }
+#endif
+#ifndef BEAN_NEW_WKProcessPool
+#define BEAN_NEW_WKProcessPool
+static inline WKProcessPool    WKProcessPool_New(void)                     { return (WKProcessPool)bean_new(bean_cls("WKProcessPool")); }
+#endif
 
 /* ===== WKSecurityOrigin ===== */
 #ifndef BEAN_TYPEDEF_WKSecurityOrigin
@@ -5757,37 +6716,64 @@ static inline WKSecurityOrigin    WKSecurityOrigin_Init(WKSecurityOrigin self)  
 static inline NSString            WKSecurityOrigin_Protocol(WKSecurityOrigin self)    { return ((NSString (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("protocol")); }
 static inline NSString            WKSecurityOrigin_Host(WKSecurityOrigin self)        { return ((NSString (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("host")); }
 static inline NSInteger           WKSecurityOrigin_Port(WKSecurityOrigin self)        { return ((NSInteger (*)(WKSecurityOrigin, SEL))bean_msgSend)(self, bean_sel("port")); }
+#ifndef BEAN_ALLOC_WKSecurityOrigin
+#define BEAN_ALLOC_WKSecurityOrigin
+static inline WKSecurityOrigin    WKSecurityOrigin_Alloc(void)                        { return (WKSecurityOrigin)bean_alloc(bean_cls("WKSecurityOrigin")); }
+#endif
+#ifndef BEAN_NEW_WKSecurityOrigin
+#define BEAN_NEW_WKSecurityOrigin
+static inline WKSecurityOrigin    WKSecurityOrigin_New(void)                          { return (WKSecurityOrigin)bean_new(bean_cls("WKSecurityOrigin")); }
+#endif
 
 /* ===== WKSnapshotConfiguration ===== */
 #ifndef BEAN_TYPEDEF_WKSnapshotConfiguration
 #define BEAN_TYPEDEF_WKSnapshotConfiguration
 typedef bean_id WKSnapshotConfiguration;
 #endif
-static inline CGRect      WKSnapshotConfiguration_Rect(WKSnapshotConfiguration self)                                              { return ((CGRect (*)(WKSnapshotConfiguration, SEL))bean_msgSend_stret)(self, bean_sel("rect")); }
-static inline void        WKSnapshotConfiguration_SetRect(WKSnapshotConfiguration self, CGRect rect)                              { ((void (*)(WKSnapshotConfiguration, SEL, CGRect))bean_msgSend)(self, bean_sel("setRect:"), rect); }
-static inline NSNumber    WKSnapshotConfiguration_SnapshotWidth(WKSnapshotConfiguration self)                                     { return ((NSNumber (*)(WKSnapshotConfiguration, SEL))bean_msgSend)(self, bean_sel("snapshotWidth")); }
-static inline void        WKSnapshotConfiguration_SetSnapshotWidth(WKSnapshotConfiguration self, NSNumber snapshotWidth)          { ((void (*)(WKSnapshotConfiguration, SEL, NSNumber))bean_msgSend)(self, bean_sel("setSnapshotWidth:"), snapshotWidth); }
-static inline BOOL        WKSnapshotConfiguration_AfterScreenUpdates(WKSnapshotConfiguration self)                                { return ((BOOL (*)(WKSnapshotConfiguration, SEL))bean_msgSend)(self, bean_sel("afterScreenUpdates")); }
-static inline void        WKSnapshotConfiguration_SetAfterScreenUpdates(WKSnapshotConfiguration self, BOOL afterScreenUpdates)    { ((void (*)(WKSnapshotConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAfterScreenUpdates:"), afterScreenUpdates); }
-static inline id          WKSnapshotConfiguration_CopyWithZone(WKSnapshotConfiguration self, NSZone* zone)                        { return ((id (*)(WKSnapshotConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline CGRect                     WKSnapshotConfiguration_Rect(WKSnapshotConfiguration self)                                              { return ((CGRect (*)(WKSnapshotConfiguration, SEL))bean_msgSend_stret)(self, bean_sel("rect")); }
+static inline void                       WKSnapshotConfiguration_SetRect(WKSnapshotConfiguration self, CGRect rect)                              { ((void (*)(WKSnapshotConfiguration, SEL, CGRect))bean_msgSend)(self, bean_sel("setRect:"), rect); }
+static inline NSNumber                   WKSnapshotConfiguration_SnapshotWidth(WKSnapshotConfiguration self)                                     { return ((NSNumber (*)(WKSnapshotConfiguration, SEL))bean_msgSend)(self, bean_sel("snapshotWidth")); }
+static inline void                       WKSnapshotConfiguration_SetSnapshotWidth(WKSnapshotConfiguration self, NSNumber snapshotWidth)          { ((void (*)(WKSnapshotConfiguration, SEL, NSNumber))bean_msgSend)(self, bean_sel("setSnapshotWidth:"), snapshotWidth); }
+static inline BOOL                       WKSnapshotConfiguration_AfterScreenUpdates(WKSnapshotConfiguration self)                                { return ((BOOL (*)(WKSnapshotConfiguration, SEL))bean_msgSend)(self, bean_sel("afterScreenUpdates")); }
+static inline void                       WKSnapshotConfiguration_SetAfterScreenUpdates(WKSnapshotConfiguration self, BOOL afterScreenUpdates)    { ((void (*)(WKSnapshotConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAfterScreenUpdates:"), afterScreenUpdates); }
+static inline id                         WKSnapshotConfiguration_CopyWithZone(WKSnapshotConfiguration self, NSZone* zone)                        { return ((id (*)(WKSnapshotConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WKSnapshotConfiguration
+#define BEAN_ALLOC_WKSnapshotConfiguration
+static inline WKSnapshotConfiguration    WKSnapshotConfiguration_Alloc(void)                                                                     { return (WKSnapshotConfiguration)bean_alloc(bean_cls("WKSnapshotConfiguration")); }
+#endif
+#ifndef BEAN_NEW_WKSnapshotConfiguration
+#define BEAN_NEW_WKSnapshotConfiguration
+static inline WKSnapshotConfiguration    WKSnapshotConfiguration_New(void)                                                                       { return (WKSnapshotConfiguration)bean_new(bean_cls("WKSnapshotConfiguration")); }
+#endif
 
 /* ===== WKURLSchemeTask ===== */
 #ifndef BEAN_TYPEDEF_WKURLSchemeTask
 #define BEAN_TYPEDEF_WKURLSchemeTask
 typedef bean_id WKURLSchemeTask;
 #endif
-static inline void            WKURLSchemeTask_DidReceiveResponse(WKURLSchemeTask self, NSURLResponse response)    { ((void (*)(WKURLSchemeTask, SEL, NSURLResponse))bean_msgSend)(self, bean_sel("didReceiveResponse:"), response); }
-static inline void            WKURLSchemeTask_DidReceiveData(WKURLSchemeTask self, NSData data)                   { ((void (*)(WKURLSchemeTask, SEL, NSData))bean_msgSend)(self, bean_sel("didReceiveData:"), data); }
-static inline void            WKURLSchemeTask_DidFinish(WKURLSchemeTask self)                                     { ((void (*)(WKURLSchemeTask, SEL))bean_msgSend)(self, bean_sel("didFinish")); }
-static inline void            WKURLSchemeTask_DidFailWithError(WKURLSchemeTask self, NSError error)               { ((void (*)(WKURLSchemeTask, SEL, NSError))bean_msgSend)(self, bean_sel("didFailWithError:"), error); }
-static inline NSURLRequest    WKURLSchemeTask_Request(WKURLSchemeTask self)                                       { return ((NSURLRequest (*)(WKURLSchemeTask, SEL))bean_msgSend)(self, bean_sel("request")); }
+static inline void               WKURLSchemeTask_DidReceiveResponse(WKURLSchemeTask self, NSURLResponse response)    { ((void (*)(WKURLSchemeTask, SEL, NSURLResponse))bean_msgSend)(self, bean_sel("didReceiveResponse:"), response); }
+static inline void               WKURLSchemeTask_DidReceiveData(WKURLSchemeTask self, NSData data)                   { ((void (*)(WKURLSchemeTask, SEL, NSData))bean_msgSend)(self, bean_sel("didReceiveData:"), data); }
+static inline void               WKURLSchemeTask_DidFinish(WKURLSchemeTask self)                                     { ((void (*)(WKURLSchemeTask, SEL))bean_msgSend)(self, bean_sel("didFinish")); }
+static inline void               WKURLSchemeTask_DidFailWithError(WKURLSchemeTask self, NSError error)               { ((void (*)(WKURLSchemeTask, SEL, NSError))bean_msgSend)(self, bean_sel("didFailWithError:"), error); }
+static inline NSURLRequest       WKURLSchemeTask_Request(WKURLSchemeTask self)                                       { return ((NSURLRequest (*)(WKURLSchemeTask, SEL))bean_msgSend)(self, bean_sel("request")); }
+#ifndef BEAN_ALLOC_WKURLSchemeTask
+#define BEAN_ALLOC_WKURLSchemeTask
+static inline WKURLSchemeTask    WKURLSchemeTask_Alloc(void)                                                         { return (WKURLSchemeTask)bean_alloc(bean_cls("WKURLSchemeTask")); }
+#endif
+#ifndef BEAN_NEW_WKURLSchemeTask
+#define BEAN_NEW_WKURLSchemeTask
+static inline WKURLSchemeTask    WKURLSchemeTask_New(void)                                                           { return (WKURLSchemeTask)bean_new(bean_cls("WKURLSchemeTask")); }
+#endif
 
 /* ===== WKWebExtension ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtension
 #define BEAN_TYPEDEF_WKWebExtension
 typedef bean_id WKWebExtension;
 #endif
+#ifndef BEAN_NEW_WKWebExtension
+#define BEAN_NEW_WKWebExtension
 static inline WKWebExtension    WKWebExtension_New(void)                                                                                                  { return ((WKWebExtension (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("new")); }
+#endif
 static inline WKWebExtension    WKWebExtension_Init(WKWebExtension self)                                                                                  { return ((WKWebExtension (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline void              WKWebExtension_ExtensionWithAppExtensionBundle_CompletionHandler(NSBundle appExtensionBundle, void* completionHandler)    { ((void (*)(bean_class, SEL, NSBundle, void*))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("extensionWithAppExtensionBundle:completionHandler:"), appExtensionBundle, completionHandler); }
 static inline void              WKWebExtension_ExtensionWithResourceBaseURL_CompletionHandler(NSURL resourceBaseURL, void* completionHandler)             { ((void (*)(bean_class, SEL, NSURL, void*))bean_msgSend)(bean_cls("WKWebExtension"), bean_sel("extensionWithResourceBaseURL:completionHandler:"), resourceBaseURL, completionHandler); }
@@ -5816,13 +6802,20 @@ static inline BOOL              WKWebExtension_HasOptionsPage(WKWebExtension sel
 static inline BOOL              WKWebExtension_HasOverrideNewTabPage(WKWebExtension self)                                                                 { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasOverrideNewTabPage")); }
 static inline BOOL              WKWebExtension_HasCommands(WKWebExtension self)                                                                           { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasCommands")); }
 static inline BOOL              WKWebExtension_HasContentModificationRules(WKWebExtension self)                                                           { return ((BOOL (*)(WKWebExtension, SEL))bean_msgSend)(self, bean_sel("hasContentModificationRules")); }
+#ifndef BEAN_ALLOC_WKWebExtension
+#define BEAN_ALLOC_WKWebExtension
+static inline WKWebExtension    WKWebExtension_Alloc(void)                                                                                                { return (WKWebExtension)bean_alloc(bean_cls("WKWebExtension")); }
+#endif
 
 /* ===== WKWebExtensionDataRecord ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionDataRecord
 #define BEAN_TYPEDEF_WKWebExtensionDataRecord
 typedef bean_id WKWebExtensionDataRecord;
 #endif
+#ifndef BEAN_NEW_WKWebExtensionDataRecord
+#define BEAN_NEW_WKWebExtensionDataRecord
 static inline WKWebExtensionDataRecord    WKWebExtensionDataRecord_New(void)                                                             { return ((WKWebExtensionDataRecord (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionDataRecord"), bean_sel("new")); }
+#endif
 static inline WKWebExtensionDataRecord    WKWebExtensionDataRecord_Init(WKWebExtensionDataRecord self)                                   { return ((WKWebExtensionDataRecord (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSUInteger                  WKWebExtensionDataRecord_SizeInBytesOfTypes(WKWebExtensionDataRecord self, NSSet dataTypes)    { return ((NSUInteger (*)(WKWebExtensionDataRecord, SEL, NSSet))bean_msgSend)(self, bean_sel("sizeInBytesOfTypes:"), dataTypes); }
 static inline NSString                    WKWebExtensionDataRecord_DisplayName(WKWebExtensionDataRecord self)                            { return ((NSString (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("displayName")); }
@@ -5830,13 +6823,20 @@ static inline NSString                    WKWebExtensionDataRecord_UniqueIdentif
 static inline NSSet                       WKWebExtensionDataRecord_ContainedDataTypes(WKWebExtensionDataRecord self)                     { return ((NSSet (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("containedDataTypes")); }
 static inline NSArray                     WKWebExtensionDataRecord_Errors(WKWebExtensionDataRecord self)                                 { return ((NSArray (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("errors")); }
 static inline NSUInteger                  WKWebExtensionDataRecord_TotalSizeInBytes(WKWebExtensionDataRecord self)                       { return ((NSUInteger (*)(WKWebExtensionDataRecord, SEL))bean_msgSend)(self, bean_sel("totalSizeInBytes")); }
+#ifndef BEAN_ALLOC_WKWebExtensionDataRecord
+#define BEAN_ALLOC_WKWebExtensionDataRecord
+static inline WKWebExtensionDataRecord    WKWebExtensionDataRecord_Alloc(void)                                                           { return (WKWebExtensionDataRecord)bean_alloc(bean_cls("WKWebExtensionDataRecord")); }
+#endif
 
 /* ===== WKWebExtensionMatchPattern ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionMatchPattern
 #define BEAN_TYPEDEF_WKWebExtensionMatchPattern
 typedef bean_id WKWebExtensionMatchPattern;
 #endif
+#ifndef BEAN_NEW_WKWebExtensionMatchPattern
+#define BEAN_NEW_WKWebExtensionMatchPattern
 static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_New(void)                                                                                                                                 { return ((WKWebExtensionMatchPattern (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("new")); }
+#endif
 static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_Init(WKWebExtensionMatchPattern self)                                                                                                     { return ((WKWebExtensionMatchPattern (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline void                          WKWebExtensionMatchPattern_RegisterCustomURLScheme(NSString urlScheme)                                                                                               { ((void (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("registerCustomURLScheme:"), urlScheme); }
 static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_AllURLsMatchPattern(void)                                                                                                                 { return ((WKWebExtensionMatchPattern (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("allURLsMatchPattern")); }
@@ -5857,13 +6857,20 @@ static inline BOOL                          WKWebExtensionMatchPattern_MatchesAl
 static inline BOOL                          WKWebExtensionMatchPattern_MatchesAllHosts(WKWebExtensionMatchPattern self)                                                                                          { return ((BOOL (*)(WKWebExtensionMatchPattern, SEL))bean_msgSend)(self, bean_sel("matchesAllHosts")); }
 static inline BOOL                          WKWebExtensionMatchPattern_SupportsSecureCoding(void)                                                                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMatchPattern"), bean_sel("supportsSecureCoding")); }
 static inline id                            WKWebExtensionMatchPattern_CopyWithZone(WKWebExtensionMatchPattern self, NSZone* zone)                                                                               { return ((id (*)(WKWebExtensionMatchPattern, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WKWebExtensionMatchPattern
+#define BEAN_ALLOC_WKWebExtensionMatchPattern
+static inline WKWebExtensionMatchPattern    WKWebExtensionMatchPattern_Alloc(void)                                                                                                                               { return (WKWebExtensionMatchPattern)bean_alloc(bean_cls("WKWebExtensionMatchPattern")); }
+#endif
 
 /* ===== WKWebExtensionMessagePort ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionMessagePort
 #define BEAN_TYPEDEF_WKWebExtensionMessagePort
 typedef bean_id WKWebExtensionMessagePort;
 #endif
+#ifndef BEAN_NEW_WKWebExtensionMessagePort
+#define BEAN_NEW_WKWebExtensionMessagePort
 static inline WKWebExtensionMessagePort    WKWebExtensionMessagePort_New(void)                                                                                             { return ((WKWebExtensionMessagePort (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionMessagePort"), bean_sel("new")); }
+#endif
 static inline WKWebExtensionMessagePort    WKWebExtensionMessagePort_Init(WKWebExtensionMessagePort self)                                                                  { return ((WKWebExtensionMessagePort (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline void                         WKWebExtensionMessagePort_SendMessage_CompletionHandler(WKWebExtensionMessagePort self, id message, void* completionHandler)    { ((void (*)(WKWebExtensionMessagePort, SEL, id, void*))bean_msgSend)(self, bean_sel("sendMessage:completionHandler:"), message, completionHandler); }
 static inline void                         WKWebExtensionMessagePort_Disconnect(WKWebExtensionMessagePort self)                                                            { ((void (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("disconnect")); }
@@ -5875,13 +6882,20 @@ static inline void*                        WKWebExtensionMessagePort_DisconnectH
 static inline void                         WKWebExtensionMessagePort_SetDisconnectHandler(WKWebExtensionMessagePort self, void* disconnectHandler)                         { ((void (*)(WKWebExtensionMessagePort, SEL, void*))bean_msgSend)(self, bean_sel("setDisconnectHandler:"), disconnectHandler); }
 static inline BOOL                         WKWebExtensionMessagePort_IsDisconnected(WKWebExtensionMessagePort self)                                                        { return ((BOOL (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("isDisconnected")); }
 static inline BOOL                         WKWebExtensionMessagePort_Disconnected(WKWebExtensionMessagePort self)                                                          { return ((BOOL (*)(WKWebExtensionMessagePort, SEL))bean_msgSend)(self, bean_sel("disconnected")); }
+#ifndef BEAN_ALLOC_WKWebExtensionMessagePort
+#define BEAN_ALLOC_WKWebExtensionMessagePort
+static inline WKWebExtensionMessagePort    WKWebExtensionMessagePort_Alloc(void)                                                                                           { return (WKWebExtensionMessagePort)bean_alloc(bean_cls("WKWebExtensionMessagePort")); }
+#endif
 
 /* ===== WKWebExtensionTabConfiguration ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionTabConfiguration
 #define BEAN_TYPEDEF_WKWebExtensionTabConfiguration
 typedef bean_id WKWebExtensionTabConfiguration;
 #endif
+#ifndef BEAN_NEW_WKWebExtensionTabConfiguration
+#define BEAN_NEW_WKWebExtensionTabConfiguration
 static inline WKWebExtensionTabConfiguration    WKWebExtensionTabConfiguration_New(void)                                                        { return ((WKWebExtensionTabConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionTabConfiguration"), bean_sel("new")); }
+#endif
 static inline WKWebExtensionTabConfiguration    WKWebExtensionTabConfiguration_Init(WKWebExtensionTabConfiguration self)                        { return ((WKWebExtensionTabConfiguration (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline id                                WKWebExtensionTabConfiguration_Window(WKWebExtensionTabConfiguration self)                      { return ((id (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("window")); }
 static inline NSUInteger                        WKWebExtensionTabConfiguration_Index(WKWebExtensionTabConfiguration self)                       { return ((NSUInteger (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("index")); }
@@ -5892,13 +6906,20 @@ static inline BOOL                              WKWebExtensionTabConfiguration_S
 static inline BOOL                              WKWebExtensionTabConfiguration_ShouldBePinned(WKWebExtensionTabConfiguration self)              { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBePinned")); }
 static inline BOOL                              WKWebExtensionTabConfiguration_ShouldBeMuted(WKWebExtensionTabConfiguration self)               { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBeMuted")); }
 static inline BOOL                              WKWebExtensionTabConfiguration_ShouldReaderModeBeActive(WKWebExtensionTabConfiguration self)    { return ((BOOL (*)(WKWebExtensionTabConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldReaderModeBeActive")); }
+#ifndef BEAN_ALLOC_WKWebExtensionTabConfiguration
+#define BEAN_ALLOC_WKWebExtensionTabConfiguration
+static inline WKWebExtensionTabConfiguration    WKWebExtensionTabConfiguration_Alloc(void)                                                      { return (WKWebExtensionTabConfiguration)bean_alloc(bean_cls("WKWebExtensionTabConfiguration")); }
+#endif
 
 /* ===== WKWebExtensionWindowConfiguration ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionWindowConfiguration
 #define BEAN_TYPEDEF_WKWebExtensionWindowConfiguration
 typedef bean_id WKWebExtensionWindowConfiguration;
 #endif
+#ifndef BEAN_NEW_WKWebExtensionWindowConfiguration
+#define BEAN_NEW_WKWebExtensionWindowConfiguration
 static inline WKWebExtensionWindowConfiguration    WKWebExtensionWindowConfiguration_New(void)                                                  { return ((WKWebExtensionWindowConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionWindowConfiguration"), bean_sel("new")); }
+#endif
 static inline WKWebExtensionWindowConfiguration    WKWebExtensionWindowConfiguration_Init(WKWebExtensionWindowConfiguration self)               { return ((WKWebExtensionWindowConfiguration (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline WKWebExtensionWindowType             WKWebExtensionWindowConfiguration_WindowType(WKWebExtensionWindowConfiguration self)         { return ((WKWebExtensionWindowType (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("windowType")); }
 static inline WKWebExtensionWindowState            WKWebExtensionWindowConfiguration_WindowState(WKWebExtensionWindowConfiguration self)        { return ((WKWebExtensionWindowState (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("windowState")); }
@@ -5907,6 +6928,10 @@ static inline NSArray                              WKWebExtensionWindowConfigura
 static inline NSArray                              WKWebExtensionWindowConfiguration_Tabs(WKWebExtensionWindowConfiguration self)               { return ((NSArray (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("tabs")); }
 static inline BOOL                                 WKWebExtensionWindowConfiguration_ShouldBeFocused(WKWebExtensionWindowConfiguration self)    { return ((BOOL (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBeFocused")); }
 static inline BOOL                                 WKWebExtensionWindowConfiguration_ShouldBePrivate(WKWebExtensionWindowConfiguration self)    { return ((BOOL (*)(WKWebExtensionWindowConfiguration, SEL))bean_msgSend)(self, bean_sel("shouldBePrivate")); }
+#ifndef BEAN_ALLOC_WKWebExtensionWindowConfiguration
+#define BEAN_ALLOC_WKWebExtensionWindowConfiguration
+static inline WKWebExtensionWindowConfiguration    WKWebExtensionWindowConfiguration_Alloc(void)                                                { return (WKWebExtensionWindowConfiguration)bean_alloc(bean_cls("WKWebExtensionWindowConfiguration")); }
+#endif
 
 /* ===== WKWebpagePreferences ===== */
 #ifndef BEAN_TYPEDEF_WKWebpagePreferences
@@ -5922,70 +6947,126 @@ static inline void                                        WKWebpagePreferences_S
 static inline WKWebpagePreferencesUpgradeToHTTPSPolicy    WKWebpagePreferences_PreferredHTTPSNavigationPolicy(WKWebpagePreferences self)                                                                                { return ((WKWebpagePreferencesUpgradeToHTTPSPolicy (*)(WKWebpagePreferences, SEL))bean_msgSend)(self, bean_sel("preferredHTTPSNavigationPolicy")); }
 static inline void                                        WKWebpagePreferences_SetPreferredHTTPSNavigationPolicy(WKWebpagePreferences self, WKWebpagePreferencesUpgradeToHTTPSPolicy preferredHTTPSNavigationPolicy)    { ((void (*)(WKWebpagePreferences, SEL, WKWebpagePreferencesUpgradeToHTTPSPolicy))bean_msgSend)(self, bean_sel("setPreferredHTTPSNavigationPolicy:"), preferredHTTPSNavigationPolicy); }
 static inline BOOL                                        WKWebpagePreferences_LockdownModeEnabled(WKWebpagePreferences self)                                                                                           { return ((BOOL (*)(WKWebpagePreferences, SEL))bean_msgSend)(self, bean_sel("lockdownModeEnabled")); }
+#ifndef BEAN_ALLOC_WKWebpagePreferences
+#define BEAN_ALLOC_WKWebpagePreferences
+static inline WKWebpagePreferences                        WKWebpagePreferences_Alloc(void)                                                                                                                              { return (WKWebpagePreferences)bean_alloc(bean_cls("WKWebpagePreferences")); }
+#endif
+#ifndef BEAN_NEW_WKWebpagePreferences
+#define BEAN_NEW_WKWebpagePreferences
+static inline WKWebpagePreferences                        WKWebpagePreferences_New(void)                                                                                                                                { return (WKWebpagePreferences)bean_new(bean_cls("WKWebpagePreferences")); }
+#endif
 
 /* ===== WKWebsiteDataRecord ===== */
 #ifndef BEAN_TYPEDEF_WKWebsiteDataRecord
 #define BEAN_TYPEDEF_WKWebsiteDataRecord
 typedef bean_id WKWebsiteDataRecord;
 #endif
-static inline NSString    WKWebsiteDataRecord_DisplayName(WKWebsiteDataRecord self)    { return ((NSString (*)(WKWebsiteDataRecord, SEL))bean_msgSend)(self, bean_sel("displayName")); }
-static inline NSSet       WKWebsiteDataRecord_DataTypes(WKWebsiteDataRecord self)      { return ((NSSet (*)(WKWebsiteDataRecord, SEL))bean_msgSend)(self, bean_sel("dataTypes")); }
+static inline NSString               WKWebsiteDataRecord_DisplayName(WKWebsiteDataRecord self)    { return ((NSString (*)(WKWebsiteDataRecord, SEL))bean_msgSend)(self, bean_sel("displayName")); }
+static inline NSSet                  WKWebsiteDataRecord_DataTypes(WKWebsiteDataRecord self)      { return ((NSSet (*)(WKWebsiteDataRecord, SEL))bean_msgSend)(self, bean_sel("dataTypes")); }
+#ifndef BEAN_ALLOC_WKWebsiteDataRecord
+#define BEAN_ALLOC_WKWebsiteDataRecord
+static inline WKWebsiteDataRecord    WKWebsiteDataRecord_Alloc(void)                              { return (WKWebsiteDataRecord)bean_alloc(bean_cls("WKWebsiteDataRecord")); }
+#endif
+#ifndef BEAN_NEW_WKWebsiteDataRecord
+#define BEAN_NEW_WKWebsiteDataRecord
+static inline WKWebsiteDataRecord    WKWebsiteDataRecord_New(void)                                { return (WKWebsiteDataRecord)bean_new(bean_cls("WKWebsiteDataRecord")); }
+#endif
 
 /* ===== WKWindowFeatures ===== */
 #ifndef BEAN_TYPEDEF_WKWindowFeatures
 #define BEAN_TYPEDEF_WKWindowFeatures
 typedef bean_id WKWindowFeatures;
 #endif
-static inline NSNumber    WKWindowFeatures_MenuBarVisibility(WKWindowFeatures self)      { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("menuBarVisibility")); }
-static inline NSNumber    WKWindowFeatures_StatusBarVisibility(WKWindowFeatures self)    { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("statusBarVisibility")); }
-static inline NSNumber    WKWindowFeatures_ToolbarsVisibility(WKWindowFeatures self)     { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("toolbarsVisibility")); }
-static inline NSNumber    WKWindowFeatures_AllowsResizing(WKWindowFeatures self)         { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("allowsResizing")); }
-static inline NSNumber    WKWindowFeatures_X(WKWindowFeatures self)                      { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("x")); }
-static inline NSNumber    WKWindowFeatures_Y(WKWindowFeatures self)                      { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("y")); }
-static inline NSNumber    WKWindowFeatures_Width(WKWindowFeatures self)                  { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline NSNumber    WKWindowFeatures_Height(WKWindowFeatures self)                 { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline NSNumber            WKWindowFeatures_MenuBarVisibility(WKWindowFeatures self)      { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("menuBarVisibility")); }
+static inline NSNumber            WKWindowFeatures_StatusBarVisibility(WKWindowFeatures self)    { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("statusBarVisibility")); }
+static inline NSNumber            WKWindowFeatures_ToolbarsVisibility(WKWindowFeatures self)     { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("toolbarsVisibility")); }
+static inline NSNumber            WKWindowFeatures_AllowsResizing(WKWindowFeatures self)         { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("allowsResizing")); }
+static inline NSNumber            WKWindowFeatures_X(WKWindowFeatures self)                      { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("x")); }
+static inline NSNumber            WKWindowFeatures_Y(WKWindowFeatures self)                      { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("y")); }
+static inline NSNumber            WKWindowFeatures_Width(WKWindowFeatures self)                  { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline NSNumber            WKWindowFeatures_Height(WKWindowFeatures self)                 { return ((NSNumber (*)(WKWindowFeatures, SEL))bean_msgSend)(self, bean_sel("height")); }
+#ifndef BEAN_ALLOC_WKWindowFeatures
+#define BEAN_ALLOC_WKWindowFeatures
+static inline WKWindowFeatures    WKWindowFeatures_Alloc(void)                                   { return (WKWindowFeatures)bean_alloc(bean_cls("WKWindowFeatures")); }
+#endif
+#ifndef BEAN_NEW_WKWindowFeatures
+#define BEAN_NEW_WKWindowFeatures
+static inline WKWindowFeatures    WKWindowFeatures_New(void)                                     { return (WKWindowFeatures)bean_new(bean_cls("WKWindowFeatures")); }
+#endif
 
 /* ===== WebBackForwardList ===== */
 #ifndef BEAN_TYPEDEF_WebBackForwardList
 #define BEAN_TYPEDEF_WebBackForwardList
 typedef bean_id WebBackForwardList;
 #endif
-static inline void          WebBackForwardList_GoBack(WebBackForwardList self)                               { ((void (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("goBack")); }
-static inline void          WebBackForwardList_GoForward(WebBackForwardList self)                            { ((void (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("goForward")); }
-static inline NSArray       WebBackForwardList_BackListWithLimit(WebBackForwardList self, int limit)         { return ((NSArray (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("backListWithLimit:"), limit); }
-static inline NSArray       WebBackForwardList_ForwardListWithLimit(WebBackForwardList self, int limit)      { return ((NSArray (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("forwardListWithLimit:"), limit); }
-static inline int           WebBackForwardList_Capacity(WebBackForwardList self)                             { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("capacity")); }
-static inline void          WebBackForwardList_SetCapacity(WebBackForwardList self, int capacity)            { ((void (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("setCapacity:"), capacity); }
-static inline int           WebBackForwardList_BackListCount(WebBackForwardList self)                        { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("backListCount")); }
-static inline int           WebBackForwardList_ForwardListCount(WebBackForwardList self)                     { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("forwardListCount")); }
-static inline void          WebBackForwardList_SetPageCacheSize(WebBackForwardList self, NSUInteger size)    { ((void (*)(WebBackForwardList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setPageCacheSize:"), size); }
-static inline NSUInteger    WebBackForwardList_PageCacheSize(WebBackForwardList self)                        { return ((NSUInteger (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("pageCacheSize")); }
+static inline void                  WebBackForwardList_GoBack(WebBackForwardList self)                               { ((void (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("goBack")); }
+static inline void                  WebBackForwardList_GoForward(WebBackForwardList self)                            { ((void (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("goForward")); }
+static inline NSArray               WebBackForwardList_BackListWithLimit(WebBackForwardList self, int limit)         { return ((NSArray (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("backListWithLimit:"), limit); }
+static inline NSArray               WebBackForwardList_ForwardListWithLimit(WebBackForwardList self, int limit)      { return ((NSArray (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("forwardListWithLimit:"), limit); }
+static inline int                   WebBackForwardList_Capacity(WebBackForwardList self)                             { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("capacity")); }
+static inline void                  WebBackForwardList_SetCapacity(WebBackForwardList self, int capacity)            { ((void (*)(WebBackForwardList, SEL, int))bean_msgSend)(self, bean_sel("setCapacity:"), capacity); }
+static inline int                   WebBackForwardList_BackListCount(WebBackForwardList self)                        { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("backListCount")); }
+static inline int                   WebBackForwardList_ForwardListCount(WebBackForwardList self)                     { return ((int (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("forwardListCount")); }
+static inline void                  WebBackForwardList_SetPageCacheSize(WebBackForwardList self, NSUInteger size)    { ((void (*)(WebBackForwardList, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setPageCacheSize:"), size); }
+static inline NSUInteger            WebBackForwardList_PageCacheSize(WebBackForwardList self)                        { return ((NSUInteger (*)(WebBackForwardList, SEL))bean_msgSend)(self, bean_sel("pageCacheSize")); }
+#ifndef BEAN_ALLOC_WebBackForwardList
+#define BEAN_ALLOC_WebBackForwardList
+static inline WebBackForwardList    WebBackForwardList_Alloc(void)                                                   { return (WebBackForwardList)bean_alloc(bean_cls("WebBackForwardList")); }
+#endif
+#ifndef BEAN_NEW_WebBackForwardList
+#define BEAN_NEW_WebBackForwardList
+static inline WebBackForwardList    WebBackForwardList_New(void)                                                     { return (WebBackForwardList)bean_new(bean_cls("WebBackForwardList")); }
+#endif
 
 /* ===== WebDocumentRepresentation ===== */
 #ifndef BEAN_TYPEDEF_WebDocumentRepresentation
 #define BEAN_TYPEDEF_WebDocumentRepresentation
 typedef bean_id WebDocumentRepresentation;
 #endif
-static inline BOOL        WebDocumentRepresentation_CanProvideDocumentSource(WebDocumentRepresentation self)    { return ((BOOL (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("canProvideDocumentSource")); }
-static inline NSString    WebDocumentRepresentation_DocumentSource(WebDocumentRepresentation self)              { return ((NSString (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("documentSource")); }
-static inline NSString    WebDocumentRepresentation_Title(WebDocumentRepresentation self)                       { return ((NSString (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline BOOL                         WebDocumentRepresentation_CanProvideDocumentSource(WebDocumentRepresentation self)    { return ((BOOL (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("canProvideDocumentSource")); }
+static inline NSString                     WebDocumentRepresentation_DocumentSource(WebDocumentRepresentation self)              { return ((NSString (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("documentSource")); }
+static inline NSString                     WebDocumentRepresentation_Title(WebDocumentRepresentation self)                       { return ((NSString (*)(WebDocumentRepresentation, SEL))bean_msgSend)(self, bean_sel("title")); }
+#ifndef BEAN_ALLOC_WebDocumentRepresentation
+#define BEAN_ALLOC_WebDocumentRepresentation
+static inline WebDocumentRepresentation    WebDocumentRepresentation_Alloc(void)                                                 { return (WebDocumentRepresentation)bean_alloc(bean_cls("WebDocumentRepresentation")); }
+#endif
+#ifndef BEAN_NEW_WebDocumentRepresentation
+#define BEAN_NEW_WebDocumentRepresentation
+static inline WebDocumentRepresentation    WebDocumentRepresentation_New(void)                                                   { return (WebDocumentRepresentation)bean_new(bean_cls("WebDocumentRepresentation")); }
+#endif
 
 /* ===== WebDocumentSearching ===== */
 #ifndef BEAN_TYPEDEF_WebDocumentSearching
 #define BEAN_TYPEDEF_WebDocumentSearching
 typedef bean_id WebDocumentSearching;
 #endif
-static inline BOOL    WebDocumentSearching_SearchFor_Direction_CaseSensitive_Wrap(WebDocumentSearching self, NSString string, BOOL forward, BOOL caseFlag, BOOL wrapFlag)    { return ((BOOL (*)(WebDocumentSearching, SEL, NSString, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("searchFor:direction:caseSensitive:wrap:"), string, forward, caseFlag, wrapFlag); }
+static inline BOOL                    WebDocumentSearching_SearchFor_Direction_CaseSensitive_Wrap(WebDocumentSearching self, NSString string, BOOL forward, BOOL caseFlag, BOOL wrapFlag)    { return ((BOOL (*)(WebDocumentSearching, SEL, NSString, BOOL, BOOL, BOOL))bean_msgSend)(self, bean_sel("searchFor:direction:caseSensitive:wrap:"), string, forward, caseFlag, wrapFlag); }
+#ifndef BEAN_ALLOC_WebDocumentSearching
+#define BEAN_ALLOC_WebDocumentSearching
+static inline WebDocumentSearching    WebDocumentSearching_Alloc(void)                                                                                                                       { return (WebDocumentSearching)bean_alloc(bean_cls("WebDocumentSearching")); }
+#endif
+#ifndef BEAN_NEW_WebDocumentSearching
+#define BEAN_NEW_WebDocumentSearching
+static inline WebDocumentSearching    WebDocumentSearching_New(void)                                                                                                                         { return (WebDocumentSearching)bean_new(bean_cls("WebDocumentSearching")); }
+#endif
 
 /* ===== WebDocumentView ===== */
 #ifndef BEAN_TYPEDEF_WebDocumentView
 #define BEAN_TYPEDEF_WebDocumentView
 typedef bean_id WebDocumentView;
 #endif
-static inline void    WebDocumentView_SetNeedsLayout(WebDocumentView self, BOOL flag)                        { ((void (*)(WebDocumentView, SEL, BOOL))bean_msgSend)(self, bean_sel("setNeedsLayout:"), flag); }
-static inline void    WebDocumentView_Layout(WebDocumentView self)                                           { ((void (*)(WebDocumentView, SEL))bean_msgSend)(self, bean_sel("layout")); }
-static inline void    WebDocumentView_ViewWillMoveToHostWindow(WebDocumentView self, NSWindow hostWindow)    { ((void (*)(WebDocumentView, SEL, NSWindow))bean_msgSend)(self, bean_sel("viewWillMoveToHostWindow:"), hostWindow); }
-static inline void    WebDocumentView_ViewDidMoveToHostWindow(WebDocumentView self)                          { ((void (*)(WebDocumentView, SEL))bean_msgSend)(self, bean_sel("viewDidMoveToHostWindow")); }
+static inline void               WebDocumentView_SetNeedsLayout(WebDocumentView self, BOOL flag)                        { ((void (*)(WebDocumentView, SEL, BOOL))bean_msgSend)(self, bean_sel("setNeedsLayout:"), flag); }
+static inline void               WebDocumentView_Layout(WebDocumentView self)                                           { ((void (*)(WebDocumentView, SEL))bean_msgSend)(self, bean_sel("layout")); }
+static inline void               WebDocumentView_ViewWillMoveToHostWindow(WebDocumentView self, NSWindow hostWindow)    { ((void (*)(WebDocumentView, SEL, NSWindow))bean_msgSend)(self, bean_sel("viewWillMoveToHostWindow:"), hostWindow); }
+static inline void               WebDocumentView_ViewDidMoveToHostWindow(WebDocumentView self)                          { ((void (*)(WebDocumentView, SEL))bean_msgSend)(self, bean_sel("viewDidMoveToHostWindow")); }
+#ifndef BEAN_ALLOC_WebDocumentView
+#define BEAN_ALLOC_WebDocumentView
+static inline WebDocumentView    WebDocumentView_Alloc(void)                                                            { return (WebDocumentView)bean_alloc(bean_cls("WebDocumentView")); }
+#endif
+#ifndef BEAN_NEW_WebDocumentView
+#define BEAN_NEW_WebDocumentView
+static inline WebDocumentView    WebDocumentView_New(void)                                                              { return (WebDocumentView)bean_new(bean_cls("WebDocumentView")); }
+#endif
 
 /* ===== WebHistory ===== */
 #ifndef BEAN_TYPEDEF_WebHistory
@@ -6005,45 +7086,85 @@ static inline int           WebHistory_HistoryItemLimit(WebHistory self)        
 static inline void          WebHistory_SetHistoryItemLimit(WebHistory self, int historyItemLimit)                    { ((void (*)(WebHistory, SEL, int))bean_msgSend)(self, bean_sel("setHistoryItemLimit:"), historyItemLimit); }
 static inline int           WebHistory_HistoryAgeInDaysLimit(WebHistory self)                                        { return ((int (*)(WebHistory, SEL))bean_msgSend)(self, bean_sel("historyAgeInDaysLimit")); }
 static inline void          WebHistory_SetHistoryAgeInDaysLimit(WebHistory self, int historyAgeInDaysLimit)          { ((void (*)(WebHistory, SEL, int))bean_msgSend)(self, bean_sel("setHistoryAgeInDaysLimit:"), historyAgeInDaysLimit); }
+#ifndef BEAN_ALLOC_WebHistory
+#define BEAN_ALLOC_WebHistory
+static inline WebHistory    WebHistory_Alloc(void)                                                                   { return (WebHistory)bean_alloc(bean_cls("WebHistory")); }
+#endif
+#ifndef BEAN_NEW_WebHistory
+#define BEAN_NEW_WebHistory
+static inline WebHistory    WebHistory_New(void)                                                                     { return (WebHistory)bean_new(bean_cls("WebHistory")); }
+#endif
 
 /* ===== WebHistoryItem ===== */
 #ifndef BEAN_TYPEDEF_WebHistoryItem
 #define BEAN_TYPEDEF_WebHistoryItem
 typedef bean_id WebHistoryItem;
 #endif
-static inline NSString    WebHistoryItem_OriginalURLString(WebHistoryItem self)                             { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("originalURLString")); }
-static inline NSString    WebHistoryItem_URLString(WebHistoryItem self)                                     { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("URLString")); }
-static inline NSString    WebHistoryItem_Title(WebHistoryItem self)                                         { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline CGFloat     WebHistoryItem_LastVisitedTimeInterval(WebHistoryItem self)                       { return ((CGFloat (*)(WebHistoryItem, SEL))bean_msgSend_fpret)(self, bean_sel("lastVisitedTimeInterval")); }
-static inline NSString    WebHistoryItem_AlternateTitle(WebHistoryItem self)                                { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("alternateTitle")); }
-static inline void        WebHistoryItem_SetAlternateTitle(WebHistoryItem self, NSString alternateTitle)    { ((void (*)(WebHistoryItem, SEL, NSString))bean_msgSend)(self, bean_sel("setAlternateTitle:"), alternateTitle); }
-static inline NSImage     WebHistoryItem_Icon(WebHistoryItem self)                                          { return ((NSImage (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("icon")); }
-static inline id          WebHistoryItem_CopyWithZone(WebHistoryItem self, NSZone* zone)                    { return ((id (*)(WebHistoryItem, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline NSString          WebHistoryItem_OriginalURLString(WebHistoryItem self)                             { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("originalURLString")); }
+static inline NSString          WebHistoryItem_URLString(WebHistoryItem self)                                     { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("URLString")); }
+static inline NSString          WebHistoryItem_Title(WebHistoryItem self)                                         { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline CGFloat           WebHistoryItem_LastVisitedTimeInterval(WebHistoryItem self)                       { return ((CGFloat (*)(WebHistoryItem, SEL))bean_msgSend_fpret)(self, bean_sel("lastVisitedTimeInterval")); }
+static inline NSString          WebHistoryItem_AlternateTitle(WebHistoryItem self)                                { return ((NSString (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("alternateTitle")); }
+static inline void              WebHistoryItem_SetAlternateTitle(WebHistoryItem self, NSString alternateTitle)    { ((void (*)(WebHistoryItem, SEL, NSString))bean_msgSend)(self, bean_sel("setAlternateTitle:"), alternateTitle); }
+static inline NSImage           WebHistoryItem_Icon(WebHistoryItem self)                                          { return ((NSImage (*)(WebHistoryItem, SEL))bean_msgSend)(self, bean_sel("icon")); }
+static inline id                WebHistoryItem_CopyWithZone(WebHistoryItem self, NSZone* zone)                    { return ((id (*)(WebHistoryItem, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WebHistoryItem
+#define BEAN_ALLOC_WebHistoryItem
+static inline WebHistoryItem    WebHistoryItem_Alloc(void)                                                        { return (WebHistoryItem)bean_alloc(bean_cls("WebHistoryItem")); }
+#endif
+#ifndef BEAN_NEW_WebHistoryItem
+#define BEAN_NEW_WebHistoryItem
+static inline WebHistoryItem    WebHistoryItem_New(void)                                                          { return (WebHistoryItem)bean_new(bean_cls("WebHistoryItem")); }
+#endif
 
 /* ===== WebOpenPanelResultListener ===== */
 #ifndef BEAN_TYPEDEF_WebOpenPanelResultListener
 #define BEAN_TYPEDEF_WebOpenPanelResultListener
 typedef bean_id WebOpenPanelResultListener;
 #endif
-static inline void    WebOpenPanelResultListener_ChooseFilename(WebOpenPanelResultListener self, NSString fileName)     { ((void (*)(WebOpenPanelResultListener, SEL, NSString))bean_msgSend)(self, bean_sel("chooseFilename:"), fileName); }
-static inline void    WebOpenPanelResultListener_ChooseFilenames(WebOpenPanelResultListener self, NSArray fileNames)    { ((void (*)(WebOpenPanelResultListener, SEL, NSArray))bean_msgSend)(self, bean_sel("chooseFilenames:"), fileNames); }
-static inline void    WebOpenPanelResultListener_Cancel(WebOpenPanelResultListener self)                                { ((void (*)(WebOpenPanelResultListener, SEL))bean_msgSend)(self, bean_sel("cancel")); }
+static inline void                          WebOpenPanelResultListener_ChooseFilename(WebOpenPanelResultListener self, NSString fileName)     { ((void (*)(WebOpenPanelResultListener, SEL, NSString))bean_msgSend)(self, bean_sel("chooseFilename:"), fileName); }
+static inline void                          WebOpenPanelResultListener_ChooseFilenames(WebOpenPanelResultListener self, NSArray fileNames)    { ((void (*)(WebOpenPanelResultListener, SEL, NSArray))bean_msgSend)(self, bean_sel("chooseFilenames:"), fileNames); }
+static inline void                          WebOpenPanelResultListener_Cancel(WebOpenPanelResultListener self)                                { ((void (*)(WebOpenPanelResultListener, SEL))bean_msgSend)(self, bean_sel("cancel")); }
+#ifndef BEAN_ALLOC_WebOpenPanelResultListener
+#define BEAN_ALLOC_WebOpenPanelResultListener
+static inline WebOpenPanelResultListener    WebOpenPanelResultListener_Alloc(void)                                                            { return (WebOpenPanelResultListener)bean_alloc(bean_cls("WebOpenPanelResultListener")); }
+#endif
+#ifndef BEAN_NEW_WebOpenPanelResultListener
+#define BEAN_NEW_WebOpenPanelResultListener
+static inline WebOpenPanelResultListener    WebOpenPanelResultListener_New(void)                                                              { return (WebOpenPanelResultListener)bean_new(bean_cls("WebOpenPanelResultListener")); }
+#endif
 
 /* ===== WebPlugInViewFactory ===== */
 #ifndef BEAN_TYPEDEF_WebPlugInViewFactory
 #define BEAN_TYPEDEF_WebPlugInViewFactory
 typedef bean_id WebPlugInViewFactory;
 #endif
-static inline NSView    WebPlugInViewFactory_PlugInViewWithArguments(NSDictionary arguments)    { return ((NSView (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("WebPlugInViewFactory"), bean_sel("plugInViewWithArguments:"), arguments); }
+static inline NSView                  WebPlugInViewFactory_PlugInViewWithArguments(NSDictionary arguments)    { return ((NSView (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("WebPlugInViewFactory"), bean_sel("plugInViewWithArguments:"), arguments); }
+#ifndef BEAN_ALLOC_WebPlugInViewFactory
+#define BEAN_ALLOC_WebPlugInViewFactory
+static inline WebPlugInViewFactory    WebPlugInViewFactory_Alloc(void)                                        { return (WebPlugInViewFactory)bean_alloc(bean_cls("WebPlugInViewFactory")); }
+#endif
+#ifndef BEAN_NEW_WebPlugInViewFactory
+#define BEAN_NEW_WebPlugInViewFactory
+static inline WebPlugInViewFactory    WebPlugInViewFactory_New(void)                                          { return (WebPlugInViewFactory)bean_new(bean_cls("WebPlugInViewFactory")); }
+#endif
 
 /* ===== WebPolicyDecisionListener ===== */
 #ifndef BEAN_TYPEDEF_WebPolicyDecisionListener
 #define BEAN_TYPEDEF_WebPolicyDecisionListener
 typedef bean_id WebPolicyDecisionListener;
 #endif
-static inline void    WebPolicyDecisionListener_Use(WebPolicyDecisionListener self)         { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("use")); }
-static inline void    WebPolicyDecisionListener_Download(WebPolicyDecisionListener self)    { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("download")); }
-static inline void    WebPolicyDecisionListener_Ignore(WebPolicyDecisionListener self)      { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("ignore")); }
+static inline void                         WebPolicyDecisionListener_Use(WebPolicyDecisionListener self)         { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("use")); }
+static inline void                         WebPolicyDecisionListener_Download(WebPolicyDecisionListener self)    { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("download")); }
+static inline void                         WebPolicyDecisionListener_Ignore(WebPolicyDecisionListener self)      { ((void (*)(WebPolicyDecisionListener, SEL))bean_msgSend)(self, bean_sel("ignore")); }
+#ifndef BEAN_ALLOC_WebPolicyDecisionListener
+#define BEAN_ALLOC_WebPolicyDecisionListener
+static inline WebPolicyDecisionListener    WebPolicyDecisionListener_Alloc(void)                                 { return (WebPolicyDecisionListener)bean_alloc(bean_cls("WebPolicyDecisionListener")); }
+#endif
+#ifndef BEAN_NEW_WebPolicyDecisionListener
+#define BEAN_NEW_WebPolicyDecisionListener
+static inline WebPolicyDecisionListener    WebPolicyDecisionListener_New(void)                                   { return (WebPolicyDecisionListener)bean_new(bean_cls("WebPolicyDecisionListener")); }
+#endif
 
 /* ===== WebPreferences ===== */
 #ifndef BEAN_TYPEDEF_WebPreferences
@@ -6114,6 +7235,14 @@ static inline NSCoding          WebPreferences_InitWithCoder(WebPreferences self
 static inline BOOL              WebPreferences_JavaEnabled(WebPreferences self)                                                                             { return ((BOOL (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("javaEnabled")); }
 static inline BOOL              WebPreferences_JavaScriptEnabled(WebPreferences self)                                                                       { return ((BOOL (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("javaScriptEnabled")); }
 static inline BOOL              WebPreferences_PlugInsEnabled(WebPreferences self)                                                                          { return ((BOOL (*)(WebPreferences, SEL))bean_msgSend)(self, bean_sel("plugInsEnabled")); }
+#ifndef BEAN_ALLOC_WebPreferences
+#define BEAN_ALLOC_WebPreferences
+static inline WebPreferences    WebPreferences_Alloc(void)                                                                                                  { return (WebPreferences)bean_alloc(bean_cls("WebPreferences")); }
+#endif
+#ifndef BEAN_NEW_WebPreferences
+#define BEAN_NEW_WebPreferences
+static inline WebPreferences    WebPreferences_New(void)                                                                                                    { return (WebPreferences)bean_new(bean_cls("WebPreferences")); }
+#endif
 
 /* ===== WebResource ===== */
 #ifndef BEAN_TYPEDEF_WebResource
@@ -6129,22 +7258,38 @@ static inline NSString       WebResource_FrameName(WebResource self)            
 static inline void           WebResource_EncodeWithCoder(WebResource self, NSCoder coder)                                                                                                                    { ((void (*)(WebResource, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding       WebResource_InitWithCoder(WebResource self, NSCoder coder)                                                                                                                      { return ((NSCoding (*)(WebResource, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id             WebResource_CopyWithZone(WebResource self, NSZone* zone)                                                                                                                        { return ((id (*)(WebResource, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WebResource
+#define BEAN_ALLOC_WebResource
+static inline WebResource    WebResource_Alloc(void)                                                                                                                                                         { return (WebResource)bean_alloc(bean_cls("WebResource")); }
+#endif
+#ifndef BEAN_NEW_WebResource
+#define BEAN_NEW_WebResource
+static inline WebResource    WebResource_New(void)                                                                                                                                                           { return (WebResource)bean_new(bean_cls("WebResource")); }
+#endif
 
 /* ===== WebScriptObject ===== */
 #ifndef BEAN_TYPEDEF_WebScriptObject
 #define BEAN_TYPEDEF_WebScriptObject
 typedef bean_id WebScriptObject;
 #endif
-static inline BOOL        WebScriptObject_ThrowException(NSString exceptionMessage)                                                    { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WebScriptObject"), bean_sel("throwException:"), exceptionMessage); }
-static inline void*       WebScriptObject_JSObject(WebScriptObject self)                                                               { return ((void* (*)(WebScriptObject, SEL))bean_msgSend)(self, bean_sel("JSObject")); }
-static inline id          WebScriptObject_CallWebScriptMethod_WithArguments(WebScriptObject self, NSString name, NSArray arguments)    { return ((id (*)(WebScriptObject, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("callWebScriptMethod:withArguments:"), name, arguments); }
-static inline id          WebScriptObject_EvaluateWebScript(WebScriptObject self, NSString script)                                     { return ((id (*)(WebScriptObject, SEL, NSString))bean_msgSend)(self, bean_sel("evaluateWebScript:"), script); }
-static inline void        WebScriptObject_RemoveWebScriptKey(WebScriptObject self, NSString name)                                      { ((void (*)(WebScriptObject, SEL, NSString))bean_msgSend)(self, bean_sel("removeWebScriptKey:"), name); }
-static inline NSString    WebScriptObject_StringRepresentation(WebScriptObject self)                                                   { return ((NSString (*)(WebScriptObject, SEL))bean_msgSend)(self, bean_sel("stringRepresentation")); }
-static inline id          WebScriptObject_WebScriptValueAtIndex(WebScriptObject self, NSUInteger index)                                { return ((id (*)(WebScriptObject, SEL, NSUInteger))bean_msgSend)(self, bean_sel("webScriptValueAtIndex:"), index); }
-static inline void        WebScriptObject_SetWebScriptValueAtIndex_Value(WebScriptObject self, NSUInteger index, id value)             { ((void (*)(WebScriptObject, SEL, NSUInteger, id))bean_msgSend)(self, bean_sel("setWebScriptValueAtIndex:value:"), index, value); }
-static inline void        WebScriptObject_SetException(WebScriptObject self, NSString description)                                     { ((void (*)(WebScriptObject, SEL, NSString))bean_msgSend)(self, bean_sel("setException:"), description); }
-static inline void*       WebScriptObject_JSValue(WebScriptObject self)                                                                { return ((void* (*)(WebScriptObject, SEL))bean_msgSend)(self, bean_sel("JSValue")); }
+static inline BOOL               WebScriptObject_ThrowException(NSString exceptionMessage)                                                    { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WebScriptObject"), bean_sel("throwException:"), exceptionMessage); }
+static inline void*              WebScriptObject_JSObject(WebScriptObject self)                                                               { return ((void* (*)(WebScriptObject, SEL))bean_msgSend)(self, bean_sel("JSObject")); }
+static inline id                 WebScriptObject_CallWebScriptMethod_WithArguments(WebScriptObject self, NSString name, NSArray arguments)    { return ((id (*)(WebScriptObject, SEL, NSString, NSArray))bean_msgSend)(self, bean_sel("callWebScriptMethod:withArguments:"), name, arguments); }
+static inline id                 WebScriptObject_EvaluateWebScript(WebScriptObject self, NSString script)                                     { return ((id (*)(WebScriptObject, SEL, NSString))bean_msgSend)(self, bean_sel("evaluateWebScript:"), script); }
+static inline void               WebScriptObject_RemoveWebScriptKey(WebScriptObject self, NSString name)                                      { ((void (*)(WebScriptObject, SEL, NSString))bean_msgSend)(self, bean_sel("removeWebScriptKey:"), name); }
+static inline NSString           WebScriptObject_StringRepresentation(WebScriptObject self)                                                   { return ((NSString (*)(WebScriptObject, SEL))bean_msgSend)(self, bean_sel("stringRepresentation")); }
+static inline id                 WebScriptObject_WebScriptValueAtIndex(WebScriptObject self, NSUInteger index)                                { return ((id (*)(WebScriptObject, SEL, NSUInteger))bean_msgSend)(self, bean_sel("webScriptValueAtIndex:"), index); }
+static inline void               WebScriptObject_SetWebScriptValueAtIndex_Value(WebScriptObject self, NSUInteger index, id value)             { ((void (*)(WebScriptObject, SEL, NSUInteger, id))bean_msgSend)(self, bean_sel("setWebScriptValueAtIndex:value:"), index, value); }
+static inline void               WebScriptObject_SetException(WebScriptObject self, NSString description)                                     { ((void (*)(WebScriptObject, SEL, NSString))bean_msgSend)(self, bean_sel("setException:"), description); }
+static inline void*              WebScriptObject_JSValue(WebScriptObject self)                                                                { return ((void* (*)(WebScriptObject, SEL))bean_msgSend)(self, bean_sel("JSValue")); }
+#ifndef BEAN_ALLOC_WebScriptObject
+#define BEAN_ALLOC_WebScriptObject
+static inline WebScriptObject    WebScriptObject_Alloc(void)                                                                                  { return (WebScriptObject)bean_alloc(bean_cls("WebScriptObject")); }
+#endif
+#ifndef BEAN_NEW_WebScriptObject
+#define BEAN_NEW_WebScriptObject
+static inline WebScriptObject    WebScriptObject_New(void)                                                                                    { return (WebScriptObject)bean_new(bean_cls("WebScriptObject")); }
+#endif
 
 /* ===== WebUndefined ===== */
 #ifndef BEAN_TYPEDEF_WebUndefined
@@ -6155,6 +7300,14 @@ static inline WebUndefined    WebUndefined_Undefined(void)                      
 static inline void            WebUndefined_EncodeWithCoder(WebUndefined self, NSCoder coder)    { ((void (*)(WebUndefined, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding        WebUndefined_InitWithCoder(WebUndefined self, NSCoder coder)      { return ((NSCoding (*)(WebUndefined, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id              WebUndefined_CopyWithZone(WebUndefined self, NSZone* zone)        { return ((id (*)(WebUndefined, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WebUndefined
+#define BEAN_ALLOC_WebUndefined
+static inline WebUndefined    WebUndefined_Alloc(void)                                          { return (WebUndefined)bean_alloc(bean_cls("WebUndefined")); }
+#endif
+#ifndef BEAN_NEW_WebUndefined
+#define BEAN_NEW_WebUndefined
+static inline WebUndefined    WebUndefined_New(void)                                            { return (WebUndefined)bean_new(bean_cls("WebUndefined")); }
+#endif
 
 /* ===== WKBackForwardList ===== */
 #ifndef BEAN_TYPEDEF_WKBackForwardList
@@ -6167,13 +7320,29 @@ static inline WKBackForwardListItem    WKBackForwardList_BackItem(WKBackForwardL
 static inline WKBackForwardListItem    WKBackForwardList_ForwardItem(WKBackForwardList self)                     { return ((WKBackForwardListItem (*)(WKBackForwardList, SEL))bean_msgSend)(self, bean_sel("forwardItem")); }
 static inline NSArray                  WKBackForwardList_BackList(WKBackForwardList self)                        { return ((NSArray (*)(WKBackForwardList, SEL))bean_msgSend)(self, bean_sel("backList")); }
 static inline NSArray                  WKBackForwardList_ForwardList(WKBackForwardList self)                     { return ((NSArray (*)(WKBackForwardList, SEL))bean_msgSend)(self, bean_sel("forwardList")); }
+#ifndef BEAN_ALLOC_WKBackForwardList
+#define BEAN_ALLOC_WKBackForwardList
+static inline WKBackForwardList        WKBackForwardList_Alloc(void)                                             { return (WKBackForwardList)bean_alloc(bean_cls("WKBackForwardList")); }
+#endif
+#ifndef BEAN_NEW_WKBackForwardList
+#define BEAN_NEW_WKBackForwardList
+static inline WKBackForwardList        WKBackForwardList_New(void)                                               { return (WKBackForwardList)bean_new(bean_cls("WKBackForwardList")); }
+#endif
 
 /* ===== WKHTTPCookieStoreObserver ===== */
 #ifndef BEAN_TYPEDEF_WKHTTPCookieStoreObserver
 #define BEAN_TYPEDEF_WKHTTPCookieStoreObserver
 typedef bean_id WKHTTPCookieStoreObserver;
 #endif
-static inline void    WKHTTPCookieStoreObserver_CookiesDidChangeInCookieStore(WKHTTPCookieStoreObserver self, WKHTTPCookieStore cookieStore)    { ((void (*)(WKHTTPCookieStoreObserver, SEL, WKHTTPCookieStore))bean_msgSend)(self, bean_sel("cookiesDidChangeInCookieStore:"), cookieStore); }
+static inline void                         WKHTTPCookieStoreObserver_CookiesDidChangeInCookieStore(WKHTTPCookieStoreObserver self, WKHTTPCookieStore cookieStore)    { ((void (*)(WKHTTPCookieStoreObserver, SEL, WKHTTPCookieStore))bean_msgSend)(self, bean_sel("cookiesDidChangeInCookieStore:"), cookieStore); }
+#ifndef BEAN_ALLOC_WKHTTPCookieStoreObserver
+#define BEAN_ALLOC_WKHTTPCookieStoreObserver
+static inline WKHTTPCookieStoreObserver    WKHTTPCookieStoreObserver_Alloc(void)                                                                                     { return (WKHTTPCookieStoreObserver)bean_alloc(bean_cls("WKHTTPCookieStoreObserver")); }
+#endif
+#ifndef BEAN_NEW_WKHTTPCookieStoreObserver
+#define BEAN_NEW_WKHTTPCookieStoreObserver
+static inline WKHTTPCookieStoreObserver    WKHTTPCookieStoreObserver_New(void)                                                                                       { return (WKHTTPCookieStoreObserver)bean_new(bean_cls("WKHTTPCookieStoreObserver")); }
+#endif
 
 /* ===== WKUserScript ===== */
 #ifndef BEAN_TYPEDEF_WKUserScript
@@ -6187,6 +7356,14 @@ static inline WKUserScriptInjectionTime    WKUserScript_InjectionTime(WKUserScri
 static inline BOOL                         WKUserScript_IsForMainFrameOnly(WKUserScript self)                                                                                                                                                            { return ((BOOL (*)(WKUserScript, SEL))bean_msgSend)(self, bean_sel("isForMainFrameOnly")); }
 static inline id                           WKUserScript_CopyWithZone(WKUserScript self, NSZone* zone)                                                                                                                                                    { return ((id (*)(WKUserScript, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                         WKUserScript_ForMainFrameOnly(WKUserScript self)                                                                                                                                                              { return ((BOOL (*)(WKUserScript, SEL))bean_msgSend)(self, bean_sel("forMainFrameOnly")); }
+#ifndef BEAN_ALLOC_WKUserScript
+#define BEAN_ALLOC_WKUserScript
+static inline WKUserScript                 WKUserScript_Alloc(void)                                                                                                                                                                                      { return (WKUserScript)bean_alloc(bean_cls("WKUserScript")); }
+#endif
+#ifndef BEAN_NEW_WKUserScript
+#define BEAN_NEW_WKUserScript
+static inline WKUserScript                 WKUserScript_New(void)                                                                                                                                                                                        { return (WKUserScript)bean_new(bean_cls("WKUserScript")); }
+#endif
 
 /* ===== WKWebsiteDataStore ===== */
 #ifndef BEAN_TYPEDEF_WKWebsiteDataStore
@@ -6195,7 +7372,10 @@ typedef bean_id WKWebsiteDataStore;
 #endif
 static inline WKWebsiteDataStore    WKWebsiteDataStore_DefaultDataStore(void)                                                                                                                        { return ((WKWebsiteDataStore (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebsiteDataStore"), bean_sel("defaultDataStore")); }
 static inline WKWebsiteDataStore    WKWebsiteDataStore_NonPersistentDataStore(void)                                                                                                                  { return ((WKWebsiteDataStore (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebsiteDataStore"), bean_sel("nonPersistentDataStore")); }
+#ifndef BEAN_NEW_WKWebsiteDataStore
+#define BEAN_NEW_WKWebsiteDataStore
 static inline WKWebsiteDataStore    WKWebsiteDataStore_New(WKWebsiteDataStore self)                                                                                                                  { return ((WKWebsiteDataStore (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("new")); }
+#endif
 static inline WKWebsiteDataStore    WKWebsiteDataStore_Init(WKWebsiteDataStore self)                                                                                                                 { return ((WKWebsiteDataStore (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSSet                 WKWebsiteDataStore_AllWebsiteDataTypes(void)                                                                                                                     { return ((NSSet (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebsiteDataStore"), bean_sel("allWebsiteDataTypes")); }
 static inline void                  WKWebsiteDataStore_FetchDataRecordsOfTypes_CompletionHandler(WKWebsiteDataStore self, NSSet dataTypes, void* completionHandler)                                  { ((void (*)(WKWebsiteDataStore, SEL, NSSet, void*))bean_msgSend)(self, bean_sel("fetchDataRecordsOfTypes:completionHandler:"), dataTypes, completionHandler); }
@@ -6213,6 +7393,10 @@ static inline NSArray               WKWebsiteDataStore_ProxyConfigurations(WKWeb
 static inline void                  WKWebsiteDataStore_SetProxyConfigurations(WKWebsiteDataStore self, NSArray proxyConfigurations)                                                                  { ((void (*)(WKWebsiteDataStore, SEL, NSArray))bean_msgSend)(self, bean_sel("setProxyConfigurations:"), proxyConfigurations); }
 static inline BOOL                  WKWebsiteDataStore_SupportsSecureCoding(void)                                                                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebsiteDataStore"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                  WKWebsiteDataStore_Persistent(WKWebsiteDataStore self)                                                                                                           { return ((BOOL (*)(WKWebsiteDataStore, SEL))bean_msgSend)(self, bean_sel("persistent")); }
+#ifndef BEAN_ALLOC_WKWebsiteDataStore
+#define BEAN_ALLOC_WKWebsiteDataStore
+static inline WKWebsiteDataStore    WKWebsiteDataStore_Alloc(void)                                                                                                                                   { return (WKWebsiteDataStore)bean_alloc(bean_cls("WKWebsiteDataStore")); }
+#endif
 
 /* ===== WebArchive ===== */
 #ifndef BEAN_TYPEDEF_WebArchive
@@ -6226,6 +7410,14 @@ static inline NSData         WebArchive_Data(WebArchive self)                   
 static inline void           WebArchive_EncodeWithCoder(WebArchive self, NSCoder coder)    { ((void (*)(WebArchive, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding       WebArchive_InitWithCoder(WebArchive self, NSCoder coder)      { return ((NSCoding (*)(WebArchive, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id             WebArchive_CopyWithZone(WebArchive self, NSZone* zone)        { return ((id (*)(WebArchive, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WebArchive
+#define BEAN_ALLOC_WebArchive
+static inline WebArchive     WebArchive_Alloc(void)                                        { return (WebArchive)bean_alloc(bean_cls("WebArchive")); }
+#endif
+#ifndef BEAN_NEW_WebArchive
+#define BEAN_NEW_WebArchive
+static inline WebArchive     WebArchive_New(void)                                          { return (WebArchive)bean_new(bean_cls("WebArchive")); }
+#endif
 
 /* ===== WebDocumentText ===== */
 #ifndef BEAN_TYPEDEF_WebDocumentText
@@ -6239,224 +7431,272 @@ static inline NSString              WebDocumentText_SelectedString(WebDocumentTe
 static inline NSAttributedString    WebDocumentText_SelectedAttributedString(WebDocumentText self)    { return ((NSAttributedString (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("selectedAttributedString")); }
 static inline void                  WebDocumentText_SelectAll(WebDocumentText self)                   { ((void (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("selectAll")); }
 static inline void                  WebDocumentText_DeselectAll(WebDocumentText self)                 { ((void (*)(WebDocumentText, SEL))bean_msgSend)(self, bean_sel("deselectAll")); }
+#ifndef BEAN_ALLOC_WebDocumentText
+#define BEAN_ALLOC_WebDocumentText
+static inline WebDocumentText       WebDocumentText_Alloc(void)                                       { return (WebDocumentText)bean_alloc(bean_cls("WebDocumentText")); }
+#endif
+#ifndef BEAN_NEW_WebDocumentText
+#define BEAN_NEW_WebDocumentText
+static inline WebDocumentText       WebDocumentText_New(void)                                         { return (WebDocumentText)bean_new(bean_cls("WebDocumentText")); }
+#endif
 
 /* ===== WKUserContentController ===== */
 #ifndef BEAN_TYPEDEF_WKUserContentController
 #define BEAN_TYPEDEF_WKUserContentController
 typedef bean_id WKUserContentController;
 #endif
-static inline void       WKUserContentController_AddUserScript(WKUserContentController self, WKUserScript userScript)                                                                                              { ((void (*)(WKUserContentController, SEL, WKUserScript))bean_msgSend)(self, bean_sel("addUserScript:"), userScript); }
-static inline void       WKUserContentController_RemoveAllUserScripts(WKUserContentController self)                                                                                                                { ((void (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("removeAllUserScripts")); }
-static inline void       WKUserContentController_AddScriptMessageHandler_ContentWorld_Name(WKUserContentController self, id scriptMessageHandler, WKContentWorld world, NSString name)                             { ((void (*)(WKUserContentController, SEL, id, WKContentWorld, NSString))bean_msgSend)(self, bean_sel("addScriptMessageHandler:contentWorld:name:"), scriptMessageHandler, world, name); }
-static inline void       WKUserContentController_AddScriptMessageHandlerWithReply_ContentWorld_Name(WKUserContentController self, id scriptMessageHandlerWithReply, WKContentWorld contentWorld, NSString name)    { ((void (*)(WKUserContentController, SEL, id, WKContentWorld, NSString))bean_msgSend)(self, bean_sel("addScriptMessageHandlerWithReply:contentWorld:name:"), scriptMessageHandlerWithReply, contentWorld, name); }
-static inline void       WKUserContentController_AddScriptMessageHandler_Name(WKUserContentController self, id scriptMessageHandler, NSString name)                                                                { ((void (*)(WKUserContentController, SEL, id, NSString))bean_msgSend)(self, bean_sel("addScriptMessageHandler:name:"), scriptMessageHandler, name); }
-static inline void       WKUserContentController_RemoveScriptMessageHandlerForName_ContentWorld(WKUserContentController self, NSString name, WKContentWorld contentWorld)                                          { ((void (*)(WKUserContentController, SEL, NSString, WKContentWorld))bean_msgSend)(self, bean_sel("removeScriptMessageHandlerForName:contentWorld:"), name, contentWorld); }
-static inline void       WKUserContentController_RemoveScriptMessageHandlerForName(WKUserContentController self, NSString name)                                                                                    { ((void (*)(WKUserContentController, SEL, NSString))bean_msgSend)(self, bean_sel("removeScriptMessageHandlerForName:"), name); }
-static inline void       WKUserContentController_RemoveAllScriptMessageHandlersFromContentWorld(WKUserContentController self, WKContentWorld contentWorld)                                                         { ((void (*)(WKUserContentController, SEL, WKContentWorld))bean_msgSend)(self, bean_sel("removeAllScriptMessageHandlersFromContentWorld:"), contentWorld); }
-static inline void       WKUserContentController_RemoveAllScriptMessageHandlers(WKUserContentController self)                                                                                                      { ((void (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("removeAllScriptMessageHandlers")); }
-static inline void       WKUserContentController_AddContentRuleList(WKUserContentController self, WKContentRuleList contentRuleList)                                                                               { ((void (*)(WKUserContentController, SEL, WKContentRuleList))bean_msgSend)(self, bean_sel("addContentRuleList:"), contentRuleList); }
-static inline void       WKUserContentController_RemoveContentRuleList(WKUserContentController self, WKContentRuleList contentRuleList)                                                                            { ((void (*)(WKUserContentController, SEL, WKContentRuleList))bean_msgSend)(self, bean_sel("removeContentRuleList:"), contentRuleList); }
-static inline void       WKUserContentController_RemoveAllContentRuleLists(WKUserContentController self)                                                                                                           { ((void (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("removeAllContentRuleLists")); }
-static inline NSArray    WKUserContentController_UserScripts(WKUserContentController self)                                                                                                                         { return ((NSArray (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("userScripts")); }
-static inline BOOL       WKUserContentController_SupportsSecureCoding(void)                                                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKUserContentController"), bean_sel("supportsSecureCoding")); }
+static inline void                       WKUserContentController_AddUserScript(WKUserContentController self, WKUserScript userScript)                                                                                              { ((void (*)(WKUserContentController, SEL, WKUserScript))bean_msgSend)(self, bean_sel("addUserScript:"), userScript); }
+static inline void                       WKUserContentController_RemoveAllUserScripts(WKUserContentController self)                                                                                                                { ((void (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("removeAllUserScripts")); }
+static inline void                       WKUserContentController_AddScriptMessageHandler_ContentWorld_Name(WKUserContentController self, id scriptMessageHandler, WKContentWorld world, NSString name)                             { ((void (*)(WKUserContentController, SEL, id, WKContentWorld, NSString))bean_msgSend)(self, bean_sel("addScriptMessageHandler:contentWorld:name:"), scriptMessageHandler, world, name); }
+static inline void                       WKUserContentController_AddScriptMessageHandlerWithReply_ContentWorld_Name(WKUserContentController self, id scriptMessageHandlerWithReply, WKContentWorld contentWorld, NSString name)    { ((void (*)(WKUserContentController, SEL, id, WKContentWorld, NSString))bean_msgSend)(self, bean_sel("addScriptMessageHandlerWithReply:contentWorld:name:"), scriptMessageHandlerWithReply, contentWorld, name); }
+static inline void                       WKUserContentController_AddScriptMessageHandler_Name(WKUserContentController self, id scriptMessageHandler, NSString name)                                                                { ((void (*)(WKUserContentController, SEL, id, NSString))bean_msgSend)(self, bean_sel("addScriptMessageHandler:name:"), scriptMessageHandler, name); }
+static inline void                       WKUserContentController_RemoveScriptMessageHandlerForName_ContentWorld(WKUserContentController self, NSString name, WKContentWorld contentWorld)                                          { ((void (*)(WKUserContentController, SEL, NSString, WKContentWorld))bean_msgSend)(self, bean_sel("removeScriptMessageHandlerForName:contentWorld:"), name, contentWorld); }
+static inline void                       WKUserContentController_RemoveScriptMessageHandlerForName(WKUserContentController self, NSString name)                                                                                    { ((void (*)(WKUserContentController, SEL, NSString))bean_msgSend)(self, bean_sel("removeScriptMessageHandlerForName:"), name); }
+static inline void                       WKUserContentController_RemoveAllScriptMessageHandlersFromContentWorld(WKUserContentController self, WKContentWorld contentWorld)                                                         { ((void (*)(WKUserContentController, SEL, WKContentWorld))bean_msgSend)(self, bean_sel("removeAllScriptMessageHandlersFromContentWorld:"), contentWorld); }
+static inline void                       WKUserContentController_RemoveAllScriptMessageHandlers(WKUserContentController self)                                                                                                      { ((void (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("removeAllScriptMessageHandlers")); }
+static inline void                       WKUserContentController_AddContentRuleList(WKUserContentController self, WKContentRuleList contentRuleList)                                                                               { ((void (*)(WKUserContentController, SEL, WKContentRuleList))bean_msgSend)(self, bean_sel("addContentRuleList:"), contentRuleList); }
+static inline void                       WKUserContentController_RemoveContentRuleList(WKUserContentController self, WKContentRuleList contentRuleList)                                                                            { ((void (*)(WKUserContentController, SEL, WKContentRuleList))bean_msgSend)(self, bean_sel("removeContentRuleList:"), contentRuleList); }
+static inline void                       WKUserContentController_RemoveAllContentRuleLists(WKUserContentController self)                                                                                                           { ((void (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("removeAllContentRuleLists")); }
+static inline NSArray                    WKUserContentController_UserScripts(WKUserContentController self)                                                                                                                         { return ((NSArray (*)(WKUserContentController, SEL))bean_msgSend)(self, bean_sel("userScripts")); }
+static inline BOOL                       WKUserContentController_SupportsSecureCoding(void)                                                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKUserContentController"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_WKUserContentController
+#define BEAN_ALLOC_WKUserContentController
+static inline WKUserContentController    WKUserContentController_Alloc(void)                                                                                                                                                       { return (WKUserContentController)bean_alloc(bean_cls("WKUserContentController")); }
+#endif
+#ifndef BEAN_NEW_WKUserContentController
+#define BEAN_NEW_WKUserContentController
+static inline WKUserContentController    WKUserContentController_New(void)                                                                                                                                                         { return (WKUserContentController)bean_new(bean_cls("WKUserContentController")); }
+#endif
 
 /* ===== DOMDocument ===== */
 #ifndef BEAN_TYPEDEF_DOMDocument
 #define BEAN_TYPEDEF_DOMDocument
 typedef bean_id DOMDocument;
 #endif
-static inline void*       DOMDocument_CreateElement(DOMDocument self, NSString tagName)                                                                                                           { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createElement:"), tagName); }
-static inline void*       DOMDocument_CreateDocumentFragment(DOMDocument self)                                                                                                                    { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("createDocumentFragment")); }
-static inline void*       DOMDocument_CreateTextNode(DOMDocument self, NSString data)                                                                                                             { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createTextNode:"), data); }
-static inline void*       DOMDocument_CreateComment(DOMDocument self, NSString data)                                                                                                              { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createComment:"), data); }
-static inline void*       DOMDocument_CreateCDATASection(DOMDocument self, NSString data)                                                                                                         { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createCDATASection:"), data); }
-static inline void*       DOMDocument_CreateProcessingInstruction_Data(DOMDocument self, NSString target, NSString data)                                                                          { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createProcessingInstruction:data:"), target, data); }
-static inline void*       DOMDocument_CreateAttribute(DOMDocument self, NSString name)                                                                                                            { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createAttribute:"), name); }
-static inline void*       DOMDocument_CreateEntityReference(DOMDocument self, NSString name)                                                                                                      { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createEntityReference:"), name); }
-static inline void*       DOMDocument_GetElementsByTagName(DOMDocument self, NSString tagname)                                                                                                    { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("getElementsByTagName:"), tagname); }
-static inline void*       DOMDocument_ImportNode_Deep(DOMDocument self, void* importedNode, BOOL deep)                                                                                            { return ((void* (*)(DOMDocument, SEL, void*, BOOL))bean_msgSend)(self, bean_sel("importNode:deep:"), importedNode, deep); }
-static inline void*       DOMDocument_CreateElementNS_QualifiedName(DOMDocument self, NSString namespaceURI, NSString qualifiedName)                                                              { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createElementNS:qualifiedName:"), namespaceURI, qualifiedName); }
-static inline void*       DOMDocument_CreateAttributeNS_QualifiedName(DOMDocument self, NSString namespaceURI, NSString qualifiedName)                                                            { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createAttributeNS:qualifiedName:"), namespaceURI, qualifiedName); }
-static inline void*       DOMDocument_GetElementsByTagNameNS_LocalName(DOMDocument self, NSString namespaceURI, NSString localName)                                                               { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getElementsByTagNameNS:localName:"), namespaceURI, localName); }
-static inline void*       DOMDocument_AdoptNode(DOMDocument self, void* source)                                                                                                                   { return ((void* (*)(DOMDocument, SEL, void*))bean_msgSend)(self, bean_sel("adoptNode:"), source); }
-static inline void*       DOMDocument_CreateEvent(DOMDocument self, NSString eventType)                                                                                                           { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createEvent:"), eventType); }
-static inline void*       DOMDocument_CreateRange(DOMDocument self)                                                                                                                               { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("createRange")); }
-static inline void*       DOMDocument_CreateNodeIterator_WhatToShow_Filter_ExpandEntityReferences(DOMDocument self, void* root, NSUInteger whatToShow, id filter, BOOL expandEntityReferences)    { return ((void* (*)(DOMDocument, SEL, void*, NSUInteger, id, BOOL))bean_msgSend)(self, bean_sel("createNodeIterator:whatToShow:filter:expandEntityReferences:"), root, whatToShow, filter, expandEntityReferences); }
-static inline void*       DOMDocument_CreateTreeWalker_WhatToShow_Filter_ExpandEntityReferences(DOMDocument self, void* root, NSUInteger whatToShow, id filter, BOOL expandEntityReferences)      { return ((void* (*)(DOMDocument, SEL, void*, NSUInteger, id, BOOL))bean_msgSend)(self, bean_sel("createTreeWalker:whatToShow:filter:expandEntityReferences:"), root, whatToShow, filter, expandEntityReferences); }
-static inline void*       DOMDocument_GetOverrideStyle_PseudoElement(DOMDocument self, void* element, NSString pseudoElement)                                                                     { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getOverrideStyle:pseudoElement:"), element, pseudoElement); }
-static inline void*       DOMDocument_CreateExpression_Resolver(DOMDocument self, NSString expression, id resolver)                                                                               { return ((void* (*)(DOMDocument, SEL, NSString, id))bean_msgSend)(self, bean_sel("createExpression:resolver:"), expression, resolver); }
-static inline id          DOMDocument_CreateNSResolver(DOMDocument self, void* nodeResolver)                                                                                                      { return ((id (*)(DOMDocument, SEL, void*))bean_msgSend)(self, bean_sel("createNSResolver:"), nodeResolver); }
-static inline void*       DOMDocument_Evaluate_ContextNode_Resolver_Type_InResult(DOMDocument self, NSString expression, void* contextNode, id resolver, unsigned short type, void* inResult)     { return ((void* (*)(DOMDocument, SEL, NSString, void*, id, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:contextNode:resolver:type:inResult:"), expression, contextNode, resolver, type, inResult); }
-static inline BOOL        DOMDocument_ExecCommand_UserInterface_Value(DOMDocument self, NSString command, BOOL userInterface, NSString value)                                                     { return ((BOOL (*)(DOMDocument, SEL, NSString, BOOL, NSString))bean_msgSend)(self, bean_sel("execCommand:userInterface:value:"), command, userInterface, value); }
-static inline BOOL        DOMDocument_ExecCommand_UserInterface(DOMDocument self, NSString command, BOOL userInterface)                                                                           { return ((BOOL (*)(DOMDocument, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("execCommand:userInterface:"), command, userInterface); }
-static inline BOOL        DOMDocument_ExecCommand(DOMDocument self, NSString command)                                                                                                             { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("execCommand:"), command); }
-static inline BOOL        DOMDocument_QueryCommandEnabled(DOMDocument self, NSString command)                                                                                                     { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandEnabled:"), command); }
-static inline BOOL        DOMDocument_QueryCommandIndeterm(DOMDocument self, NSString command)                                                                                                    { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandIndeterm:"), command); }
-static inline BOOL        DOMDocument_QueryCommandState(DOMDocument self, NSString command)                                                                                                       { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandState:"), command); }
-static inline BOOL        DOMDocument_QueryCommandSupported(DOMDocument self, NSString command)                                                                                                   { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandSupported:"), command); }
-static inline NSString    DOMDocument_QueryCommandValue(DOMDocument self, NSString command)                                                                                                       { return ((NSString (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandValue:"), command); }
-static inline void*       DOMDocument_GetElementsByName(DOMDocument self, NSString elementName)                                                                                                   { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("getElementsByName:"), elementName); }
-static inline void*       DOMDocument_ElementFromPoint_Y(DOMDocument self, int x, int y)                                                                                                          { return ((void* (*)(DOMDocument, SEL, int, int))bean_msgSend)(self, bean_sel("elementFromPoint:y:"), x, y); }
-static inline void*       DOMDocument_CreateCSSStyleDeclaration(DOMDocument self)                                                                                                                 { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("createCSSStyleDeclaration")); }
-static inline void*       DOMDocument_GetComputedStyle_PseudoElement(DOMDocument self, void* element, NSString pseudoElement)                                                                     { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getComputedStyle:pseudoElement:"), element, pseudoElement); }
-static inline void*       DOMDocument_GetMatchedCSSRules_PseudoElement(DOMDocument self, void* element, NSString pseudoElement)                                                                   { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getMatchedCSSRules:pseudoElement:"), element, pseudoElement); }
-static inline void*       DOMDocument_GetMatchedCSSRules_PseudoElement_AuthorOnly(DOMDocument self, void* element, NSString pseudoElement, BOOL authorOnly)                                       { return ((void* (*)(DOMDocument, SEL, void*, NSString, BOOL))bean_msgSend)(self, bean_sel("getMatchedCSSRules:pseudoElement:authorOnly:"), element, pseudoElement, authorOnly); }
-static inline void*       DOMDocument_GetElementsByClassName(DOMDocument self, NSString classNames)                                                                                               { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("getElementsByClassName:"), classNames); }
-static inline BOOL        DOMDocument_HasFocus(DOMDocument self)                                                                                                                                  { return ((BOOL (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("hasFocus")); }
-static inline void        DOMDocument_WebkitCancelFullScreen(DOMDocument self)                                                                                                                    { ((void (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("webkitCancelFullScreen")); }
-static inline void*       DOMDocument_GetElementById(DOMDocument self, NSString elementId)                                                                                                        { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("getElementById:"), elementId); }
-static inline void*       DOMDocument_QuerySelector(DOMDocument self, NSString selectors)                                                                                                         { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("querySelector:"), selectors); }
-static inline void*       DOMDocument_QuerySelectorAll(DOMDocument self, NSString selectors)                                                                                                      { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("querySelectorAll:"), selectors); }
-static inline void*       DOMDocument_Doctype(DOMDocument self)                                                                                                                                   { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("doctype")); }
-static inline void*       DOMDocument_Implementation(DOMDocument self)                                                                                                                            { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("implementation")); }
-static inline void*       DOMDocument_DocumentElement(DOMDocument self)                                                                                                                           { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("documentElement")); }
-static inline NSString    DOMDocument_InputEncoding(DOMDocument self)                                                                                                                             { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("inputEncoding")); }
-static inline NSString    DOMDocument_XmlEncoding(DOMDocument self)                                                                                                                               { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("xmlEncoding")); }
-static inline NSString    DOMDocument_XmlVersion(DOMDocument self)                                                                                                                                { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("xmlVersion")); }
-static inline void        DOMDocument_SetXmlVersion(DOMDocument self, NSString xmlVersion)                                                                                                        { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setXmlVersion:"), xmlVersion); }
-static inline BOOL        DOMDocument_XmlStandalone(DOMDocument self)                                                                                                                             { return ((BOOL (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("xmlStandalone")); }
-static inline void        DOMDocument_SetXmlStandalone(DOMDocument self, BOOL xmlStandalone)                                                                                                      { ((void (*)(DOMDocument, SEL, BOOL))bean_msgSend)(self, bean_sel("setXmlStandalone:"), xmlStandalone); }
-static inline NSString    DOMDocument_DocumentURI(DOMDocument self)                                                                                                                               { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("documentURI")); }
-static inline void        DOMDocument_SetDocumentURI(DOMDocument self, NSString documentURI)                                                                                                      { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setDocumentURI:"), documentURI); }
-static inline void*       DOMDocument_DefaultView(DOMDocument self)                                                                                                                               { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("defaultView")); }
-static inline void*       DOMDocument_StyleSheets(DOMDocument self)                                                                                                                               { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("styleSheets")); }
-static inline NSString    DOMDocument_Title(DOMDocument self)                                                                                                                                     { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline void        DOMDocument_SetTitle(DOMDocument self, NSString title)                                                                                                                  { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
-static inline NSString    DOMDocument_Referrer(DOMDocument self)                                                                                                                                  { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("referrer")); }
-static inline NSString    DOMDocument_Domain(DOMDocument self)                                                                                                                                    { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("domain")); }
-static inline NSString    DOMDocument_URL(DOMDocument self)                                                                                                                                       { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("URL")); }
-static inline NSString    DOMDocument_Cookie(DOMDocument self)                                                                                                                                    { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("cookie")); }
-static inline void        DOMDocument_SetCookie(DOMDocument self, NSString cookie)                                                                                                                { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setCookie:"), cookie); }
-static inline void*       DOMDocument_Body(DOMDocument self)                                                                                                                                      { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("body")); }
-static inline void        DOMDocument_SetBody(DOMDocument self, void* body)                                                                                                                       { ((void (*)(DOMDocument, SEL, void*))bean_msgSend)(self, bean_sel("setBody:"), body); }
-static inline void*       DOMDocument_Images(DOMDocument self)                                                                                                                                    { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("images")); }
-static inline void*       DOMDocument_Applets(DOMDocument self)                                                                                                                                   { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("applets")); }
-static inline void*       DOMDocument_Links(DOMDocument self)                                                                                                                                     { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("links")); }
-static inline void*       DOMDocument_Forms(DOMDocument self)                                                                                                                                     { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("forms")); }
-static inline void*       DOMDocument_Anchors(DOMDocument self)                                                                                                                                   { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("anchors")); }
-static inline NSString    DOMDocument_LastModified(DOMDocument self)                                                                                                                              { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("lastModified")); }
-static inline NSString    DOMDocument_Charset(DOMDocument self)                                                                                                                                   { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("charset")); }
-static inline void        DOMDocument_SetCharset(DOMDocument self, NSString charset)                                                                                                              { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setCharset:"), charset); }
-static inline NSString    DOMDocument_DefaultCharset(DOMDocument self)                                                                                                                            { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("defaultCharset")); }
-static inline NSString    DOMDocument_ReadyState(DOMDocument self)                                                                                                                                { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("readyState")); }
-static inline NSString    DOMDocument_CharacterSet(DOMDocument self)                                                                                                                              { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("characterSet")); }
-static inline NSString    DOMDocument_PreferredStylesheetSet(DOMDocument self)                                                                                                                    { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("preferredStylesheetSet")); }
-static inline NSString    DOMDocument_SelectedStylesheetSet(DOMDocument self)                                                                                                                     { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("selectedStylesheetSet")); }
-static inline void        DOMDocument_SetSelectedStylesheetSet(DOMDocument self, NSString selectedStylesheetSet)                                                                                  { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setSelectedStylesheetSet:"), selectedStylesheetSet); }
-static inline void*       DOMDocument_ActiveElement(DOMDocument self)                                                                                                                             { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("activeElement")); }
-static inline void*       DOMDocument_CreateProcessingInstruction(DOMDocument self, NSString target, NSString data)                                                                               { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createProcessingInstruction::"), target, data); }
-static inline void*       DOMDocument_ImportNode(DOMDocument self, void* importedNode, BOOL deep)                                                                                                 { return ((void* (*)(DOMDocument, SEL, void*, BOOL))bean_msgSend)(self, bean_sel("importNode::"), importedNode, deep); }
-static inline void*       DOMDocument_CreateElementNS(DOMDocument self, NSString namespaceURI, NSString qualifiedName)                                                                            { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createElementNS::"), namespaceURI, qualifiedName); }
-static inline void*       DOMDocument_CreateAttributeNS(DOMDocument self, NSString namespaceURI, NSString qualifiedName)                                                                          { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createAttributeNS::"), namespaceURI, qualifiedName); }
-static inline void*       DOMDocument_GetElementsByTagNameNS(DOMDocument self, NSString namespaceURI, NSString localName)                                                                         { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getElementsByTagNameNS::"), namespaceURI, localName); }
-static inline void*       DOMDocument_CreateNodeIterator(DOMDocument self, void* root, NSUInteger whatToShow, id filter, BOOL expandEntityReferences)                                             { return ((void* (*)(DOMDocument, SEL, void*, NSUInteger, id, BOOL))bean_msgSend)(self, bean_sel("createNodeIterator::::"), root, whatToShow, filter, expandEntityReferences); }
-static inline void*       DOMDocument_CreateTreeWalker(DOMDocument self, void* root, NSUInteger whatToShow, id filter, BOOL expandEntityReferences)                                               { return ((void* (*)(DOMDocument, SEL, void*, NSUInteger, id, BOOL))bean_msgSend)(self, bean_sel("createTreeWalker::::"), root, whatToShow, filter, expandEntityReferences); }
-static inline void*       DOMDocument_GetOverrideStyle(DOMDocument self, void* element, NSString pseudoElement)                                                                                   { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getOverrideStyle::"), element, pseudoElement); }
-static inline void*       DOMDocument_CreateExpression(DOMDocument self, NSString expression, id resolver)                                                                                        { return ((void* (*)(DOMDocument, SEL, NSString, id))bean_msgSend)(self, bean_sel("createExpression::"), expression, resolver); }
-static inline void*       DOMDocument_Evaluate(DOMDocument self, NSString expression, void* contextNode, id resolver, unsigned short type, void* inResult)                                        { return ((void* (*)(DOMDocument, SEL, NSString, void*, id, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:::::"), expression, contextNode, resolver, type, inResult); }
-static inline void*       DOMDocument_GetComputedStyle(DOMDocument self, void* element, NSString pseudoElement)                                                                                   { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getComputedStyle::"), element, pseudoElement); }
-static inline NSURL       DOMDocument_URLWithAttributeString(DOMDocument self, NSString string)                                                                                                   { return ((NSURL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("URLWithAttributeString:"), string); }
-static inline WebFrame    DOMDocument_WebFrame(DOMDocument self)                                                                                                                                  { return ((WebFrame (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("webFrame")); }
+static inline void*          DOMDocument_CreateElement(DOMDocument self, NSString tagName)                                                                                                           { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createElement:"), tagName); }
+static inline void*          DOMDocument_CreateDocumentFragment(DOMDocument self)                                                                                                                    { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("createDocumentFragment")); }
+static inline void*          DOMDocument_CreateTextNode(DOMDocument self, NSString data)                                                                                                             { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createTextNode:"), data); }
+static inline void*          DOMDocument_CreateComment(DOMDocument self, NSString data)                                                                                                              { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createComment:"), data); }
+static inline void*          DOMDocument_CreateCDATASection(DOMDocument self, NSString data)                                                                                                         { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createCDATASection:"), data); }
+static inline void*          DOMDocument_CreateProcessingInstruction_Data(DOMDocument self, NSString target, NSString data)                                                                          { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createProcessingInstruction:data:"), target, data); }
+static inline void*          DOMDocument_CreateAttribute(DOMDocument self, NSString name)                                                                                                            { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createAttribute:"), name); }
+static inline void*          DOMDocument_CreateEntityReference(DOMDocument self, NSString name)                                                                                                      { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createEntityReference:"), name); }
+static inline void*          DOMDocument_GetElementsByTagName(DOMDocument self, NSString tagname)                                                                                                    { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("getElementsByTagName:"), tagname); }
+static inline void*          DOMDocument_ImportNode_Deep(DOMDocument self, void* importedNode, BOOL deep)                                                                                            { return ((void* (*)(DOMDocument, SEL, void*, BOOL))bean_msgSend)(self, bean_sel("importNode:deep:"), importedNode, deep); }
+static inline void*          DOMDocument_CreateElementNS_QualifiedName(DOMDocument self, NSString namespaceURI, NSString qualifiedName)                                                              { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createElementNS:qualifiedName:"), namespaceURI, qualifiedName); }
+static inline void*          DOMDocument_CreateAttributeNS_QualifiedName(DOMDocument self, NSString namespaceURI, NSString qualifiedName)                                                            { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createAttributeNS:qualifiedName:"), namespaceURI, qualifiedName); }
+static inline void*          DOMDocument_GetElementsByTagNameNS_LocalName(DOMDocument self, NSString namespaceURI, NSString localName)                                                               { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getElementsByTagNameNS:localName:"), namespaceURI, localName); }
+static inline void*          DOMDocument_AdoptNode(DOMDocument self, void* source)                                                                                                                   { return ((void* (*)(DOMDocument, SEL, void*))bean_msgSend)(self, bean_sel("adoptNode:"), source); }
+static inline void*          DOMDocument_CreateEvent(DOMDocument self, NSString eventType)                                                                                                           { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("createEvent:"), eventType); }
+static inline void*          DOMDocument_CreateRange(DOMDocument self)                                                                                                                               { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("createRange")); }
+static inline void*          DOMDocument_CreateNodeIterator_WhatToShow_Filter_ExpandEntityReferences(DOMDocument self, void* root, NSUInteger whatToShow, id filter, BOOL expandEntityReferences)    { return ((void* (*)(DOMDocument, SEL, void*, NSUInteger, id, BOOL))bean_msgSend)(self, bean_sel("createNodeIterator:whatToShow:filter:expandEntityReferences:"), root, whatToShow, filter, expandEntityReferences); }
+static inline void*          DOMDocument_CreateTreeWalker_WhatToShow_Filter_ExpandEntityReferences(DOMDocument self, void* root, NSUInteger whatToShow, id filter, BOOL expandEntityReferences)      { return ((void* (*)(DOMDocument, SEL, void*, NSUInteger, id, BOOL))bean_msgSend)(self, bean_sel("createTreeWalker:whatToShow:filter:expandEntityReferences:"), root, whatToShow, filter, expandEntityReferences); }
+static inline void*          DOMDocument_GetOverrideStyle_PseudoElement(DOMDocument self, void* element, NSString pseudoElement)                                                                     { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getOverrideStyle:pseudoElement:"), element, pseudoElement); }
+static inline void*          DOMDocument_CreateExpression_Resolver(DOMDocument self, NSString expression, id resolver)                                                                               { return ((void* (*)(DOMDocument, SEL, NSString, id))bean_msgSend)(self, bean_sel("createExpression:resolver:"), expression, resolver); }
+static inline id             DOMDocument_CreateNSResolver(DOMDocument self, void* nodeResolver)                                                                                                      { return ((id (*)(DOMDocument, SEL, void*))bean_msgSend)(self, bean_sel("createNSResolver:"), nodeResolver); }
+static inline void*          DOMDocument_Evaluate_ContextNode_Resolver_Type_InResult(DOMDocument self, NSString expression, void* contextNode, id resolver, unsigned short type, void* inResult)     { return ((void* (*)(DOMDocument, SEL, NSString, void*, id, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:contextNode:resolver:type:inResult:"), expression, contextNode, resolver, type, inResult); }
+static inline BOOL           DOMDocument_ExecCommand_UserInterface_Value(DOMDocument self, NSString command, BOOL userInterface, NSString value)                                                     { return ((BOOL (*)(DOMDocument, SEL, NSString, BOOL, NSString))bean_msgSend)(self, bean_sel("execCommand:userInterface:value:"), command, userInterface, value); }
+static inline BOOL           DOMDocument_ExecCommand_UserInterface(DOMDocument self, NSString command, BOOL userInterface)                                                                           { return ((BOOL (*)(DOMDocument, SEL, NSString, BOOL))bean_msgSend)(self, bean_sel("execCommand:userInterface:"), command, userInterface); }
+static inline BOOL           DOMDocument_ExecCommand(DOMDocument self, NSString command)                                                                                                             { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("execCommand:"), command); }
+static inline BOOL           DOMDocument_QueryCommandEnabled(DOMDocument self, NSString command)                                                                                                     { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandEnabled:"), command); }
+static inline BOOL           DOMDocument_QueryCommandIndeterm(DOMDocument self, NSString command)                                                                                                    { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandIndeterm:"), command); }
+static inline BOOL           DOMDocument_QueryCommandState(DOMDocument self, NSString command)                                                                                                       { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandState:"), command); }
+static inline BOOL           DOMDocument_QueryCommandSupported(DOMDocument self, NSString command)                                                                                                   { return ((BOOL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandSupported:"), command); }
+static inline NSString       DOMDocument_QueryCommandValue(DOMDocument self, NSString command)                                                                                                       { return ((NSString (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("queryCommandValue:"), command); }
+static inline void*          DOMDocument_GetElementsByName(DOMDocument self, NSString elementName)                                                                                                   { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("getElementsByName:"), elementName); }
+static inline void*          DOMDocument_ElementFromPoint_Y(DOMDocument self, int x, int y)                                                                                                          { return ((void* (*)(DOMDocument, SEL, int, int))bean_msgSend)(self, bean_sel("elementFromPoint:y:"), x, y); }
+static inline void*          DOMDocument_CreateCSSStyleDeclaration(DOMDocument self)                                                                                                                 { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("createCSSStyleDeclaration")); }
+static inline void*          DOMDocument_GetComputedStyle_PseudoElement(DOMDocument self, void* element, NSString pseudoElement)                                                                     { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getComputedStyle:pseudoElement:"), element, pseudoElement); }
+static inline void*          DOMDocument_GetMatchedCSSRules_PseudoElement(DOMDocument self, void* element, NSString pseudoElement)                                                                   { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getMatchedCSSRules:pseudoElement:"), element, pseudoElement); }
+static inline void*          DOMDocument_GetMatchedCSSRules_PseudoElement_AuthorOnly(DOMDocument self, void* element, NSString pseudoElement, BOOL authorOnly)                                       { return ((void* (*)(DOMDocument, SEL, void*, NSString, BOOL))bean_msgSend)(self, bean_sel("getMatchedCSSRules:pseudoElement:authorOnly:"), element, pseudoElement, authorOnly); }
+static inline void*          DOMDocument_GetElementsByClassName(DOMDocument self, NSString classNames)                                                                                               { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("getElementsByClassName:"), classNames); }
+static inline BOOL           DOMDocument_HasFocus(DOMDocument self)                                                                                                                                  { return ((BOOL (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("hasFocus")); }
+static inline void           DOMDocument_WebkitCancelFullScreen(DOMDocument self)                                                                                                                    { ((void (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("webkitCancelFullScreen")); }
+static inline void*          DOMDocument_GetElementById(DOMDocument self, NSString elementId)                                                                                                        { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("getElementById:"), elementId); }
+static inline void*          DOMDocument_QuerySelector(DOMDocument self, NSString selectors)                                                                                                         { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("querySelector:"), selectors); }
+static inline void*          DOMDocument_QuerySelectorAll(DOMDocument self, NSString selectors)                                                                                                      { return ((void* (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("querySelectorAll:"), selectors); }
+static inline void*          DOMDocument_Doctype(DOMDocument self)                                                                                                                                   { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("doctype")); }
+static inline void*          DOMDocument_Implementation(DOMDocument self)                                                                                                                            { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("implementation")); }
+static inline void*          DOMDocument_DocumentElement(DOMDocument self)                                                                                                                           { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("documentElement")); }
+static inline NSString       DOMDocument_InputEncoding(DOMDocument self)                                                                                                                             { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("inputEncoding")); }
+static inline NSString       DOMDocument_XmlEncoding(DOMDocument self)                                                                                                                               { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("xmlEncoding")); }
+static inline NSString       DOMDocument_XmlVersion(DOMDocument self)                                                                                                                                { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("xmlVersion")); }
+static inline void           DOMDocument_SetXmlVersion(DOMDocument self, NSString xmlVersion)                                                                                                        { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setXmlVersion:"), xmlVersion); }
+static inline BOOL           DOMDocument_XmlStandalone(DOMDocument self)                                                                                                                             { return ((BOOL (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("xmlStandalone")); }
+static inline void           DOMDocument_SetXmlStandalone(DOMDocument self, BOOL xmlStandalone)                                                                                                      { ((void (*)(DOMDocument, SEL, BOOL))bean_msgSend)(self, bean_sel("setXmlStandalone:"), xmlStandalone); }
+static inline NSString       DOMDocument_DocumentURI(DOMDocument self)                                                                                                                               { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("documentURI")); }
+static inline void           DOMDocument_SetDocumentURI(DOMDocument self, NSString documentURI)                                                                                                      { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setDocumentURI:"), documentURI); }
+static inline void*          DOMDocument_DefaultView(DOMDocument self)                                                                                                                               { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("defaultView")); }
+static inline void*          DOMDocument_StyleSheets(DOMDocument self)                                                                                                                               { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("styleSheets")); }
+static inline NSString       DOMDocument_Title(DOMDocument self)                                                                                                                                     { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline void           DOMDocument_SetTitle(DOMDocument self, NSString title)                                                                                                                  { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
+static inline NSString       DOMDocument_Referrer(DOMDocument self)                                                                                                                                  { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("referrer")); }
+static inline NSString       DOMDocument_Domain(DOMDocument self)                                                                                                                                    { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("domain")); }
+static inline NSString       DOMDocument_URL(DOMDocument self)                                                                                                                                       { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("URL")); }
+static inline NSString       DOMDocument_Cookie(DOMDocument self)                                                                                                                                    { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("cookie")); }
+static inline void           DOMDocument_SetCookie(DOMDocument self, NSString cookie)                                                                                                                { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setCookie:"), cookie); }
+static inline void*          DOMDocument_Body(DOMDocument self)                                                                                                                                      { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("body")); }
+static inline void           DOMDocument_SetBody(DOMDocument self, void* body)                                                                                                                       { ((void (*)(DOMDocument, SEL, void*))bean_msgSend)(self, bean_sel("setBody:"), body); }
+static inline void*          DOMDocument_Images(DOMDocument self)                                                                                                                                    { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("images")); }
+static inline void*          DOMDocument_Applets(DOMDocument self)                                                                                                                                   { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("applets")); }
+static inline void*          DOMDocument_Links(DOMDocument self)                                                                                                                                     { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("links")); }
+static inline void*          DOMDocument_Forms(DOMDocument self)                                                                                                                                     { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("forms")); }
+static inline void*          DOMDocument_Anchors(DOMDocument self)                                                                                                                                   { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("anchors")); }
+static inline NSString       DOMDocument_LastModified(DOMDocument self)                                                                                                                              { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("lastModified")); }
+static inline NSString       DOMDocument_Charset(DOMDocument self)                                                                                                                                   { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("charset")); }
+static inline void           DOMDocument_SetCharset(DOMDocument self, NSString charset)                                                                                                              { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setCharset:"), charset); }
+static inline NSString       DOMDocument_DefaultCharset(DOMDocument self)                                                                                                                            { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("defaultCharset")); }
+static inline NSString       DOMDocument_ReadyState(DOMDocument self)                                                                                                                                { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("readyState")); }
+static inline NSString       DOMDocument_CharacterSet(DOMDocument self)                                                                                                                              { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("characterSet")); }
+static inline NSString       DOMDocument_PreferredStylesheetSet(DOMDocument self)                                                                                                                    { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("preferredStylesheetSet")); }
+static inline NSString       DOMDocument_SelectedStylesheetSet(DOMDocument self)                                                                                                                     { return ((NSString (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("selectedStylesheetSet")); }
+static inline void           DOMDocument_SetSelectedStylesheetSet(DOMDocument self, NSString selectedStylesheetSet)                                                                                  { ((void (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("setSelectedStylesheetSet:"), selectedStylesheetSet); }
+static inline void*          DOMDocument_ActiveElement(DOMDocument self)                                                                                                                             { return ((void* (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("activeElement")); }
+static inline void*          DOMDocument_CreateProcessingInstruction(DOMDocument self, NSString target, NSString data)                                                                               { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createProcessingInstruction::"), target, data); }
+static inline void*          DOMDocument_ImportNode(DOMDocument self, void* importedNode, BOOL deep)                                                                                                 { return ((void* (*)(DOMDocument, SEL, void*, BOOL))bean_msgSend)(self, bean_sel("importNode::"), importedNode, deep); }
+static inline void*          DOMDocument_CreateElementNS(DOMDocument self, NSString namespaceURI, NSString qualifiedName)                                                                            { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createElementNS::"), namespaceURI, qualifiedName); }
+static inline void*          DOMDocument_CreateAttributeNS(DOMDocument self, NSString namespaceURI, NSString qualifiedName)                                                                          { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("createAttributeNS::"), namespaceURI, qualifiedName); }
+static inline void*          DOMDocument_GetElementsByTagNameNS(DOMDocument self, NSString namespaceURI, NSString localName)                                                                         { return ((void* (*)(DOMDocument, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("getElementsByTagNameNS::"), namespaceURI, localName); }
+static inline void*          DOMDocument_CreateNodeIterator(DOMDocument self, void* root, NSUInteger whatToShow, id filter, BOOL expandEntityReferences)                                             { return ((void* (*)(DOMDocument, SEL, void*, NSUInteger, id, BOOL))bean_msgSend)(self, bean_sel("createNodeIterator::::"), root, whatToShow, filter, expandEntityReferences); }
+static inline void*          DOMDocument_CreateTreeWalker(DOMDocument self, void* root, NSUInteger whatToShow, id filter, BOOL expandEntityReferences)                                               { return ((void* (*)(DOMDocument, SEL, void*, NSUInteger, id, BOOL))bean_msgSend)(self, bean_sel("createTreeWalker::::"), root, whatToShow, filter, expandEntityReferences); }
+static inline void*          DOMDocument_GetOverrideStyle(DOMDocument self, void* element, NSString pseudoElement)                                                                                   { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getOverrideStyle::"), element, pseudoElement); }
+static inline void*          DOMDocument_CreateExpression(DOMDocument self, NSString expression, id resolver)                                                                                        { return ((void* (*)(DOMDocument, SEL, NSString, id))bean_msgSend)(self, bean_sel("createExpression::"), expression, resolver); }
+static inline void*          DOMDocument_Evaluate(DOMDocument self, NSString expression, void* contextNode, id resolver, unsigned short type, void* inResult)                                        { return ((void* (*)(DOMDocument, SEL, NSString, void*, id, unsigned short, void*))bean_msgSend)(self, bean_sel("evaluate:::::"), expression, contextNode, resolver, type, inResult); }
+static inline void*          DOMDocument_GetComputedStyle(DOMDocument self, void* element, NSString pseudoElement)                                                                                   { return ((void* (*)(DOMDocument, SEL, void*, NSString))bean_msgSend)(self, bean_sel("getComputedStyle::"), element, pseudoElement); }
+static inline NSURL          DOMDocument_URLWithAttributeString(DOMDocument self, NSString string)                                                                                                   { return ((NSURL (*)(DOMDocument, SEL, NSString))bean_msgSend)(self, bean_sel("URLWithAttributeString:"), string); }
+static inline WebFrame       DOMDocument_WebFrame(DOMDocument self)                                                                                                                                  { return ((WebFrame (*)(DOMDocument, SEL))bean_msgSend)(self, bean_sel("webFrame")); }
+#ifndef BEAN_ALLOC_DOMDocument
+#define BEAN_ALLOC_DOMDocument
+static inline DOMDocument    DOMDocument_Alloc(void)                                                                                                                                                 { return (DOMDocument)bean_alloc(bean_cls("DOMDocument")); }
+#endif
+#ifndef BEAN_NEW_DOMDocument
+#define BEAN_NEW_DOMDocument
+static inline DOMDocument    DOMDocument_New(void)                                                                                                                                                   { return (DOMDocument)bean_new(bean_cls("DOMDocument")); }
+#endif
 
 /* ===== DOMHTMLFrameElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLFrameElement
 #define BEAN_TYPEDEF_DOMHTMLFrameElement
 typedef bean_id DOMHTMLFrameElement;
 #endif
-static inline NSString    DOMHTMLFrameElement_FrameBorder(DOMHTMLFrameElement self)                               { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("frameBorder")); }
-static inline void        DOMHTMLFrameElement_SetFrameBorder(DOMHTMLFrameElement self, NSString frameBorder)      { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFrameBorder:"), frameBorder); }
-static inline NSString    DOMHTMLFrameElement_LongDesc(DOMHTMLFrameElement self)                                  { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("longDesc")); }
-static inline void        DOMHTMLFrameElement_SetLongDesc(DOMHTMLFrameElement self, NSString longDesc)            { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLongDesc:"), longDesc); }
-static inline NSString    DOMHTMLFrameElement_MarginHeight(DOMHTMLFrameElement self)                              { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("marginHeight")); }
-static inline void        DOMHTMLFrameElement_SetMarginHeight(DOMHTMLFrameElement self, NSString marginHeight)    { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginHeight:"), marginHeight); }
-static inline NSString    DOMHTMLFrameElement_MarginWidth(DOMHTMLFrameElement self)                               { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("marginWidth")); }
-static inline void        DOMHTMLFrameElement_SetMarginWidth(DOMHTMLFrameElement self, NSString marginWidth)      { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginWidth:"), marginWidth); }
-static inline NSString    DOMHTMLFrameElement_Name(DOMHTMLFrameElement self)                                      { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLFrameElement_SetName(DOMHTMLFrameElement self, NSString name)                    { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline BOOL        DOMHTMLFrameElement_NoResize(DOMHTMLFrameElement self)                                  { return ((BOOL (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("noResize")); }
-static inline void        DOMHTMLFrameElement_SetNoResize(DOMHTMLFrameElement self, BOOL noResize)                { ((void (*)(DOMHTMLFrameElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setNoResize:"), noResize); }
-static inline NSString    DOMHTMLFrameElement_Scrolling(DOMHTMLFrameElement self)                                 { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("scrolling")); }
-static inline void        DOMHTMLFrameElement_SetScrolling(DOMHTMLFrameElement self, NSString scrolling)          { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setScrolling:"), scrolling); }
-static inline NSString    DOMHTMLFrameElement_Src(DOMHTMLFrameElement self)                                       { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("src")); }
-static inline void        DOMHTMLFrameElement_SetSrc(DOMHTMLFrameElement self, NSString src)                      { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
-static inline void*       DOMHTMLFrameElement_ContentDocument(DOMHTMLFrameElement self)                           { return ((void* (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("contentDocument")); }
-static inline void*       DOMHTMLFrameElement_ContentWindow(DOMHTMLFrameElement self)                             { return ((void* (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("contentWindow")); }
-static inline NSString    DOMHTMLFrameElement_Location(DOMHTMLFrameElement self)                                  { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("location")); }
-static inline void        DOMHTMLFrameElement_SetLocation(DOMHTMLFrameElement self, NSString location)            { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLocation:"), location); }
-static inline int         DOMHTMLFrameElement_Width(DOMHTMLFrameElement self)                                     { return ((int (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline int         DOMHTMLFrameElement_Height(DOMHTMLFrameElement self)                                    { return ((int (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline WebFrame    DOMHTMLFrameElement_ContentFrame(DOMHTMLFrameElement self)                              { return ((WebFrame (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("contentFrame")); }
+static inline NSString               DOMHTMLFrameElement_FrameBorder(DOMHTMLFrameElement self)                               { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("frameBorder")); }
+static inline void                   DOMHTMLFrameElement_SetFrameBorder(DOMHTMLFrameElement self, NSString frameBorder)      { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFrameBorder:"), frameBorder); }
+static inline NSString               DOMHTMLFrameElement_LongDesc(DOMHTMLFrameElement self)                                  { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("longDesc")); }
+static inline void                   DOMHTMLFrameElement_SetLongDesc(DOMHTMLFrameElement self, NSString longDesc)            { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLongDesc:"), longDesc); }
+static inline NSString               DOMHTMLFrameElement_MarginHeight(DOMHTMLFrameElement self)                              { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("marginHeight")); }
+static inline void                   DOMHTMLFrameElement_SetMarginHeight(DOMHTMLFrameElement self, NSString marginHeight)    { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginHeight:"), marginHeight); }
+static inline NSString               DOMHTMLFrameElement_MarginWidth(DOMHTMLFrameElement self)                               { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("marginWidth")); }
+static inline void                   DOMHTMLFrameElement_SetMarginWidth(DOMHTMLFrameElement self, NSString marginWidth)      { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginWidth:"), marginWidth); }
+static inline NSString               DOMHTMLFrameElement_Name(DOMHTMLFrameElement self)                                      { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                   DOMHTMLFrameElement_SetName(DOMHTMLFrameElement self, NSString name)                    { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline BOOL                   DOMHTMLFrameElement_NoResize(DOMHTMLFrameElement self)                                  { return ((BOOL (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("noResize")); }
+static inline void                   DOMHTMLFrameElement_SetNoResize(DOMHTMLFrameElement self, BOOL noResize)                { ((void (*)(DOMHTMLFrameElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setNoResize:"), noResize); }
+static inline NSString               DOMHTMLFrameElement_Scrolling(DOMHTMLFrameElement self)                                 { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("scrolling")); }
+static inline void                   DOMHTMLFrameElement_SetScrolling(DOMHTMLFrameElement self, NSString scrolling)          { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setScrolling:"), scrolling); }
+static inline NSString               DOMHTMLFrameElement_Src(DOMHTMLFrameElement self)                                       { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("src")); }
+static inline void                   DOMHTMLFrameElement_SetSrc(DOMHTMLFrameElement self, NSString src)                      { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
+static inline void*                  DOMHTMLFrameElement_ContentDocument(DOMHTMLFrameElement self)                           { return ((void* (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("contentDocument")); }
+static inline void*                  DOMHTMLFrameElement_ContentWindow(DOMHTMLFrameElement self)                             { return ((void* (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("contentWindow")); }
+static inline NSString               DOMHTMLFrameElement_Location(DOMHTMLFrameElement self)                                  { return ((NSString (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("location")); }
+static inline void                   DOMHTMLFrameElement_SetLocation(DOMHTMLFrameElement self, NSString location)            { ((void (*)(DOMHTMLFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLocation:"), location); }
+static inline int                    DOMHTMLFrameElement_Width(DOMHTMLFrameElement self)                                     { return ((int (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline int                    DOMHTMLFrameElement_Height(DOMHTMLFrameElement self)                                    { return ((int (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline WebFrame               DOMHTMLFrameElement_ContentFrame(DOMHTMLFrameElement self)                              { return ((WebFrame (*)(DOMHTMLFrameElement, SEL))bean_msgSend)(self, bean_sel("contentFrame")); }
+#ifndef BEAN_ALLOC_DOMHTMLFrameElement
+#define BEAN_ALLOC_DOMHTMLFrameElement
+static inline DOMHTMLFrameElement    DOMHTMLFrameElement_Alloc(void)                                                         { return (DOMHTMLFrameElement)bean_alloc(bean_cls("DOMHTMLFrameElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLFrameElement
+#define BEAN_NEW_DOMHTMLFrameElement
+static inline DOMHTMLFrameElement    DOMHTMLFrameElement_New(void)                                                           { return (DOMHTMLFrameElement)bean_new(bean_cls("DOMHTMLFrameElement")); }
+#endif
 
 /* ===== DOMHTMLIFrameElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLIFrameElement
 #define BEAN_TYPEDEF_DOMHTMLIFrameElement
 typedef bean_id DOMHTMLIFrameElement;
 #endif
-static inline NSString    DOMHTMLIFrameElement_Align(DOMHTMLIFrameElement self)                                     { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLIFrameElement_SetAlign(DOMHTMLIFrameElement self, NSString align)                  { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLIFrameElement_FrameBorder(DOMHTMLIFrameElement self)                               { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("frameBorder")); }
-static inline void        DOMHTMLIFrameElement_SetFrameBorder(DOMHTMLIFrameElement self, NSString frameBorder)      { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFrameBorder:"), frameBorder); }
-static inline NSString    DOMHTMLIFrameElement_Height(DOMHTMLIFrameElement self)                                    { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline void        DOMHTMLIFrameElement_SetHeight(DOMHTMLIFrameElement self, NSString height)                { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
-static inline NSString    DOMHTMLIFrameElement_LongDesc(DOMHTMLIFrameElement self)                                  { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("longDesc")); }
-static inline void        DOMHTMLIFrameElement_SetLongDesc(DOMHTMLIFrameElement self, NSString longDesc)            { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLongDesc:"), longDesc); }
-static inline NSString    DOMHTMLIFrameElement_MarginHeight(DOMHTMLIFrameElement self)                              { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("marginHeight")); }
-static inline void        DOMHTMLIFrameElement_SetMarginHeight(DOMHTMLIFrameElement self, NSString marginHeight)    { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginHeight:"), marginHeight); }
-static inline NSString    DOMHTMLIFrameElement_MarginWidth(DOMHTMLIFrameElement self)                               { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("marginWidth")); }
-static inline void        DOMHTMLIFrameElement_SetMarginWidth(DOMHTMLIFrameElement self, NSString marginWidth)      { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginWidth:"), marginWidth); }
-static inline NSString    DOMHTMLIFrameElement_Name(DOMHTMLIFrameElement self)                                      { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLIFrameElement_SetName(DOMHTMLIFrameElement self, NSString name)                    { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLIFrameElement_Scrolling(DOMHTMLIFrameElement self)                                 { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("scrolling")); }
-static inline void        DOMHTMLIFrameElement_SetScrolling(DOMHTMLIFrameElement self, NSString scrolling)          { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setScrolling:"), scrolling); }
-static inline NSString    DOMHTMLIFrameElement_Src(DOMHTMLIFrameElement self)                                       { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("src")); }
-static inline void        DOMHTMLIFrameElement_SetSrc(DOMHTMLIFrameElement self, NSString src)                      { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
-static inline NSString    DOMHTMLIFrameElement_Width(DOMHTMLIFrameElement self)                                     { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLIFrameElement_SetWidth(DOMHTMLIFrameElement self, NSString width)                  { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
-static inline void*       DOMHTMLIFrameElement_ContentDocument(DOMHTMLIFrameElement self)                           { return ((void* (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("contentDocument")); }
-static inline void*       DOMHTMLIFrameElement_ContentWindow(DOMHTMLIFrameElement self)                             { return ((void* (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("contentWindow")); }
-static inline WebFrame    DOMHTMLIFrameElement_ContentFrame(DOMHTMLIFrameElement self)                              { return ((WebFrame (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("contentFrame")); }
+static inline NSString                DOMHTMLIFrameElement_Align(DOMHTMLIFrameElement self)                                     { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                    DOMHTMLIFrameElement_SetAlign(DOMHTMLIFrameElement self, NSString align)                  { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                DOMHTMLIFrameElement_FrameBorder(DOMHTMLIFrameElement self)                               { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("frameBorder")); }
+static inline void                    DOMHTMLIFrameElement_SetFrameBorder(DOMHTMLIFrameElement self, NSString frameBorder)      { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setFrameBorder:"), frameBorder); }
+static inline NSString                DOMHTMLIFrameElement_Height(DOMHTMLIFrameElement self)                                    { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline void                    DOMHTMLIFrameElement_SetHeight(DOMHTMLIFrameElement self, NSString height)                { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
+static inline NSString                DOMHTMLIFrameElement_LongDesc(DOMHTMLIFrameElement self)                                  { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("longDesc")); }
+static inline void                    DOMHTMLIFrameElement_SetLongDesc(DOMHTMLIFrameElement self, NSString longDesc)            { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setLongDesc:"), longDesc); }
+static inline NSString                DOMHTMLIFrameElement_MarginHeight(DOMHTMLIFrameElement self)                              { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("marginHeight")); }
+static inline void                    DOMHTMLIFrameElement_SetMarginHeight(DOMHTMLIFrameElement self, NSString marginHeight)    { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginHeight:"), marginHeight); }
+static inline NSString                DOMHTMLIFrameElement_MarginWidth(DOMHTMLIFrameElement self)                               { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("marginWidth")); }
+static inline void                    DOMHTMLIFrameElement_SetMarginWidth(DOMHTMLIFrameElement self, NSString marginWidth)      { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setMarginWidth:"), marginWidth); }
+static inline NSString                DOMHTMLIFrameElement_Name(DOMHTMLIFrameElement self)                                      { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                    DOMHTMLIFrameElement_SetName(DOMHTMLIFrameElement self, NSString name)                    { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString                DOMHTMLIFrameElement_Scrolling(DOMHTMLIFrameElement self)                                 { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("scrolling")); }
+static inline void                    DOMHTMLIFrameElement_SetScrolling(DOMHTMLIFrameElement self, NSString scrolling)          { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setScrolling:"), scrolling); }
+static inline NSString                DOMHTMLIFrameElement_Src(DOMHTMLIFrameElement self)                                       { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("src")); }
+static inline void                    DOMHTMLIFrameElement_SetSrc(DOMHTMLIFrameElement self, NSString src)                      { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setSrc:"), src); }
+static inline NSString                DOMHTMLIFrameElement_Width(DOMHTMLIFrameElement self)                                     { return ((NSString (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                    DOMHTMLIFrameElement_SetWidth(DOMHTMLIFrameElement self, NSString width)                  { ((void (*)(DOMHTMLIFrameElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline void*                   DOMHTMLIFrameElement_ContentDocument(DOMHTMLIFrameElement self)                           { return ((void* (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("contentDocument")); }
+static inline void*                   DOMHTMLIFrameElement_ContentWindow(DOMHTMLIFrameElement self)                             { return ((void* (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("contentWindow")); }
+static inline WebFrame                DOMHTMLIFrameElement_ContentFrame(DOMHTMLIFrameElement self)                              { return ((WebFrame (*)(DOMHTMLIFrameElement, SEL))bean_msgSend)(self, bean_sel("contentFrame")); }
+#ifndef BEAN_ALLOC_DOMHTMLIFrameElement
+#define BEAN_ALLOC_DOMHTMLIFrameElement
+static inline DOMHTMLIFrameElement    DOMHTMLIFrameElement_Alloc(void)                                                          { return (DOMHTMLIFrameElement)bean_alloc(bean_cls("DOMHTMLIFrameElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLIFrameElement
+#define BEAN_NEW_DOMHTMLIFrameElement
+static inline DOMHTMLIFrameElement    DOMHTMLIFrameElement_New(void)                                                            { return (DOMHTMLIFrameElement)bean_new(bean_cls("DOMHTMLIFrameElement")); }
+#endif
 
 /* ===== DOMHTMLObjectElement ===== */
 #ifndef BEAN_TYPEDEF_DOMHTMLObjectElement
 #define BEAN_TYPEDEF_DOMHTMLObjectElement
 typedef bean_id DOMHTMLObjectElement;
 #endif
-static inline void*       DOMHTMLObjectElement_Form(DOMHTMLObjectElement self)                              { return ((void* (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("form")); }
-static inline NSString    DOMHTMLObjectElement_Code(DOMHTMLObjectElement self)                              { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("code")); }
-static inline void        DOMHTMLObjectElement_SetCode(DOMHTMLObjectElement self, NSString code)            { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCode:"), code); }
-static inline NSString    DOMHTMLObjectElement_Align(DOMHTMLObjectElement self)                             { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("align")); }
-static inline void        DOMHTMLObjectElement_SetAlign(DOMHTMLObjectElement self, NSString align)          { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
-static inline NSString    DOMHTMLObjectElement_Archive(DOMHTMLObjectElement self)                           { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("archive")); }
-static inline void        DOMHTMLObjectElement_SetArchive(DOMHTMLObjectElement self, NSString archive)      { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setArchive:"), archive); }
-static inline NSString    DOMHTMLObjectElement_Border(DOMHTMLObjectElement self)                            { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("border")); }
-static inline void        DOMHTMLObjectElement_SetBorder(DOMHTMLObjectElement self, NSString border)        { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBorder:"), border); }
-static inline NSString    DOMHTMLObjectElement_CodeBase(DOMHTMLObjectElement self)                          { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("codeBase")); }
-static inline void        DOMHTMLObjectElement_SetCodeBase(DOMHTMLObjectElement self, NSString codeBase)    { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCodeBase:"), codeBase); }
-static inline NSString    DOMHTMLObjectElement_CodeType(DOMHTMLObjectElement self)                          { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("codeType")); }
-static inline void        DOMHTMLObjectElement_SetCodeType(DOMHTMLObjectElement self, NSString codeType)    { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCodeType:"), codeType); }
-static inline NSString    DOMHTMLObjectElement_Data(DOMHTMLObjectElement self)                              { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("data")); }
-static inline void        DOMHTMLObjectElement_SetData(DOMHTMLObjectElement self, NSString data)            { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setData:"), data); }
-static inline BOOL        DOMHTMLObjectElement_Declare(DOMHTMLObjectElement self)                           { return ((BOOL (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("declare")); }
-static inline void        DOMHTMLObjectElement_SetDeclare(DOMHTMLObjectElement self, BOOL declare)          { ((void (*)(DOMHTMLObjectElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDeclare:"), declare); }
-static inline NSString    DOMHTMLObjectElement_Height(DOMHTMLObjectElement self)                            { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("height")); }
-static inline void        DOMHTMLObjectElement_SetHeight(DOMHTMLObjectElement self, NSString height)        { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
-static inline int         DOMHTMLObjectElement_Hspace(DOMHTMLObjectElement self)                            { return ((int (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("hspace")); }
-static inline void        DOMHTMLObjectElement_SetHspace(DOMHTMLObjectElement self, int hspace)             { ((void (*)(DOMHTMLObjectElement, SEL, int))bean_msgSend)(self, bean_sel("setHspace:"), hspace); }
-static inline NSString    DOMHTMLObjectElement_Name(DOMHTMLObjectElement self)                              { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void        DOMHTMLObjectElement_SetName(DOMHTMLObjectElement self, NSString name)            { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSString    DOMHTMLObjectElement_Standby(DOMHTMLObjectElement self)                           { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("standby")); }
-static inline void        DOMHTMLObjectElement_SetStandby(DOMHTMLObjectElement self, NSString standby)      { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setStandby:"), standby); }
-static inline NSString    DOMHTMLObjectElement_Type(DOMHTMLObjectElement self)                              { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("type")); }
-static inline void        DOMHTMLObjectElement_SetType(DOMHTMLObjectElement self, NSString type)            { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
-static inline NSString    DOMHTMLObjectElement_UseMap(DOMHTMLObjectElement self)                            { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("useMap")); }
-static inline void        DOMHTMLObjectElement_SetUseMap(DOMHTMLObjectElement self, NSString useMap)        { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setUseMap:"), useMap); }
-static inline int         DOMHTMLObjectElement_Vspace(DOMHTMLObjectElement self)                            { return ((int (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("vspace")); }
-static inline void        DOMHTMLObjectElement_SetVspace(DOMHTMLObjectElement self, int vspace)             { ((void (*)(DOMHTMLObjectElement, SEL, int))bean_msgSend)(self, bean_sel("setVspace:"), vspace); }
-static inline NSString    DOMHTMLObjectElement_Width(DOMHTMLObjectElement self)                             { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("width")); }
-static inline void        DOMHTMLObjectElement_SetWidth(DOMHTMLObjectElement self, NSString width)          { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
-static inline void*       DOMHTMLObjectElement_ContentDocument(DOMHTMLObjectElement self)                   { return ((void* (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("contentDocument")); }
-static inline NSURL       DOMHTMLObjectElement_AbsoluteImageURL(DOMHTMLObjectElement self)                  { return ((NSURL (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("absoluteImageURL")); }
-static inline WebFrame    DOMHTMLObjectElement_ContentFrame(DOMHTMLObjectElement self)                      { return ((WebFrame (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("contentFrame")); }
+static inline void*                   DOMHTMLObjectElement_Form(DOMHTMLObjectElement self)                              { return ((void* (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("form")); }
+static inline NSString                DOMHTMLObjectElement_Code(DOMHTMLObjectElement self)                              { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("code")); }
+static inline void                    DOMHTMLObjectElement_SetCode(DOMHTMLObjectElement self, NSString code)            { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCode:"), code); }
+static inline NSString                DOMHTMLObjectElement_Align(DOMHTMLObjectElement self)                             { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("align")); }
+static inline void                    DOMHTMLObjectElement_SetAlign(DOMHTMLObjectElement self, NSString align)          { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setAlign:"), align); }
+static inline NSString                DOMHTMLObjectElement_Archive(DOMHTMLObjectElement self)                           { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("archive")); }
+static inline void                    DOMHTMLObjectElement_SetArchive(DOMHTMLObjectElement self, NSString archive)      { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setArchive:"), archive); }
+static inline NSString                DOMHTMLObjectElement_Border(DOMHTMLObjectElement self)                            { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("border")); }
+static inline void                    DOMHTMLObjectElement_SetBorder(DOMHTMLObjectElement self, NSString border)        { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setBorder:"), border); }
+static inline NSString                DOMHTMLObjectElement_CodeBase(DOMHTMLObjectElement self)                          { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("codeBase")); }
+static inline void                    DOMHTMLObjectElement_SetCodeBase(DOMHTMLObjectElement self, NSString codeBase)    { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCodeBase:"), codeBase); }
+static inline NSString                DOMHTMLObjectElement_CodeType(DOMHTMLObjectElement self)                          { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("codeType")); }
+static inline void                    DOMHTMLObjectElement_SetCodeType(DOMHTMLObjectElement self, NSString codeType)    { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setCodeType:"), codeType); }
+static inline NSString                DOMHTMLObjectElement_Data(DOMHTMLObjectElement self)                              { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("data")); }
+static inline void                    DOMHTMLObjectElement_SetData(DOMHTMLObjectElement self, NSString data)            { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setData:"), data); }
+static inline BOOL                    DOMHTMLObjectElement_Declare(DOMHTMLObjectElement self)                           { return ((BOOL (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("declare")); }
+static inline void                    DOMHTMLObjectElement_SetDeclare(DOMHTMLObjectElement self, BOOL declare)          { ((void (*)(DOMHTMLObjectElement, SEL, BOOL))bean_msgSend)(self, bean_sel("setDeclare:"), declare); }
+static inline NSString                DOMHTMLObjectElement_Height(DOMHTMLObjectElement self)                            { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("height")); }
+static inline void                    DOMHTMLObjectElement_SetHeight(DOMHTMLObjectElement self, NSString height)        { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setHeight:"), height); }
+static inline int                     DOMHTMLObjectElement_Hspace(DOMHTMLObjectElement self)                            { return ((int (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("hspace")); }
+static inline void                    DOMHTMLObjectElement_SetHspace(DOMHTMLObjectElement self, int hspace)             { ((void (*)(DOMHTMLObjectElement, SEL, int))bean_msgSend)(self, bean_sel("setHspace:"), hspace); }
+static inline NSString                DOMHTMLObjectElement_Name(DOMHTMLObjectElement self)                              { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                    DOMHTMLObjectElement_SetName(DOMHTMLObjectElement self, NSString name)            { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSString                DOMHTMLObjectElement_Standby(DOMHTMLObjectElement self)                           { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("standby")); }
+static inline void                    DOMHTMLObjectElement_SetStandby(DOMHTMLObjectElement self, NSString standby)      { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setStandby:"), standby); }
+static inline NSString                DOMHTMLObjectElement_Type(DOMHTMLObjectElement self)                              { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("type")); }
+static inline void                    DOMHTMLObjectElement_SetType(DOMHTMLObjectElement self, NSString type)            { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setType:"), type); }
+static inline NSString                DOMHTMLObjectElement_UseMap(DOMHTMLObjectElement self)                            { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("useMap")); }
+static inline void                    DOMHTMLObjectElement_SetUseMap(DOMHTMLObjectElement self, NSString useMap)        { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setUseMap:"), useMap); }
+static inline int                     DOMHTMLObjectElement_Vspace(DOMHTMLObjectElement self)                            { return ((int (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("vspace")); }
+static inline void                    DOMHTMLObjectElement_SetVspace(DOMHTMLObjectElement self, int vspace)             { ((void (*)(DOMHTMLObjectElement, SEL, int))bean_msgSend)(self, bean_sel("setVspace:"), vspace); }
+static inline NSString                DOMHTMLObjectElement_Width(DOMHTMLObjectElement self)                             { return ((NSString (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("width")); }
+static inline void                    DOMHTMLObjectElement_SetWidth(DOMHTMLObjectElement self, NSString width)          { ((void (*)(DOMHTMLObjectElement, SEL, NSString))bean_msgSend)(self, bean_sel("setWidth:"), width); }
+static inline void*                   DOMHTMLObjectElement_ContentDocument(DOMHTMLObjectElement self)                   { return ((void* (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("contentDocument")); }
+static inline NSURL                   DOMHTMLObjectElement_AbsoluteImageURL(DOMHTMLObjectElement self)                  { return ((NSURL (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("absoluteImageURL")); }
+static inline WebFrame                DOMHTMLObjectElement_ContentFrame(DOMHTMLObjectElement self)                      { return ((WebFrame (*)(DOMHTMLObjectElement, SEL))bean_msgSend)(self, bean_sel("contentFrame")); }
+#ifndef BEAN_ALLOC_DOMHTMLObjectElement
+#define BEAN_ALLOC_DOMHTMLObjectElement
+static inline DOMHTMLObjectElement    DOMHTMLObjectElement_Alloc(void)                                                  { return (DOMHTMLObjectElement)bean_alloc(bean_cls("DOMHTMLObjectElement")); }
+#endif
+#ifndef BEAN_NEW_DOMHTMLObjectElement
+#define BEAN_NEW_DOMHTMLObjectElement
+static inline DOMHTMLObjectElement    DOMHTMLObjectElement_New(void)                                                    { return (DOMHTMLObjectElement)bean_new(bean_cls("DOMHTMLObjectElement")); }
+#endif
 
 /* ===== NSObject ===== */
 #ifndef BEAN_TYPEDEF_NSObject
@@ -6484,6 +7724,14 @@ static inline void        NSObject_WebPlugInContainerLoadRequest_InFrame(NSObjec
 static inline void        NSObject_WebPlugInContainerShowStatus(NSObject self, NSString message)                                        { ((void (*)(NSObject, SEL, NSString))bean_msgSend)(self, bean_sel("webPlugInContainerShowStatus:"), message); }
 static inline NSColor     NSObject_WebPlugInContainerSelectionColor(NSObject self)                                                      { return ((NSColor (*)(NSObject, SEL))bean_msgSend)(self, bean_sel("webPlugInContainerSelectionColor")); }
 static inline WebFrame    NSObject_WebFrame(NSObject self)                                                                              { return ((WebFrame (*)(NSObject, SEL))bean_msgSend)(self, bean_sel("webFrame")); }
+#ifndef BEAN_ALLOC_NSObject
+#define BEAN_ALLOC_NSObject
+static inline NSObject    NSObject_Alloc(void)                                                                                          { return (NSObject)bean_alloc(bean_cls("NSObject")); }
+#endif
+#ifndef BEAN_NEW_NSObject
+#define BEAN_NEW_NSObject
+static inline NSObject    NSObject_New(void)                                                                                            { return (NSObject)bean_new(bean_cls("NSObject")); }
+#endif
 
 /* ===== WKDownload ===== */
 #ifndef BEAN_TYPEDEF_WKDownload
@@ -6499,20 +7747,36 @@ static inline BOOL            WKDownload_IsUserInitiated(WKDownload self)       
 static inline WKFrameInfo     WKDownload_OriginatingFrame(WKDownload self)                   { return ((WKFrameInfo (*)(WKDownload, SEL))bean_msgSend)(self, bean_sel("originatingFrame")); }
 static inline NSProgress      WKDownload_Progress(WKDownload self)                           { return ((NSProgress (*)(WKDownload, SEL))bean_msgSend)(self, bean_sel("progress")); }
 static inline BOOL            WKDownload_UserInitiated(WKDownload self)                      { return ((BOOL (*)(WKDownload, SEL))bean_msgSend)(self, bean_sel("userInitiated")); }
+#ifndef BEAN_ALLOC_WKDownload
+#define BEAN_ALLOC_WKDownload
+static inline WKDownload      WKDownload_Alloc(void)                                         { return (WKDownload)bean_alloc(bean_cls("WKDownload")); }
+#endif
+#ifndef BEAN_NEW_WKDownload
+#define BEAN_NEW_WKDownload
+static inline WKDownload      WKDownload_New(void)                                           { return (WKDownload)bean_new(bean_cls("WKDownload")); }
+#endif
 
 /* ===== WKDownloadDelegate ===== */
 #ifndef BEAN_TYPEDEF_WKDownloadDelegate
 #define BEAN_TYPEDEF_WKDownloadDelegate
 typedef bean_id WKDownloadDelegate;
 #endif
-static inline void    WKDownloadDelegate_Download_DecideDestinationUsingResponse_SuggestedFilename_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURLResponse response, NSString suggestedFilename, void* completionHandler)    { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURLResponse, NSString, void*))bean_msgSend)(self, bean_sel("download:decideDestinationUsingResponse:suggestedFilename:completionHandler:"), download, response, suggestedFilename, completionHandler); }
-static inline void    WKDownloadDelegate_Download_WillPerformHTTPRedirection_NewRequest_DecisionHandler(WKDownloadDelegate self, WKDownload download, NSHTTPURLResponse response, NSURLRequest request, void* decisionHandler)                     { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSHTTPURLResponse, NSURLRequest, void*))bean_msgSend)(self, bean_sel("download:willPerformHTTPRedirection:newRequest:decisionHandler:"), download, response, request, decisionHandler); }
-static inline void    WKDownloadDelegate_Download_DidReceiveAuthenticationChallenge_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURLAuthenticationChallenge challenge, void* completionHandler)                               { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("download:didReceiveAuthenticationChallenge:completionHandler:"), download, challenge, completionHandler); }
-static inline void    WKDownloadDelegate_DownloadDidFinish(WKDownloadDelegate self, WKDownload download)                                                                                                                                           { ((void (*)(WKDownloadDelegate, SEL, WKDownload))bean_msgSend)(self, bean_sel("downloadDidFinish:"), download); }
-static inline void    WKDownloadDelegate_Download_DidFailWithError_ResumeData(WKDownloadDelegate self, WKDownload download, NSError error, NSData resumeData)                                                                                      { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSError, NSData))bean_msgSend)(self, bean_sel("download:didFailWithError:resumeData:"), download, error, resumeData); }
-static inline void    WKDownloadDelegate_Download_DecidePlaceholderPolicy(WKDownloadDelegate self, WKDownload download, void* completionHandler)                                                                                                   { ((void (*)(WKDownloadDelegate, SEL, WKDownload, void*))bean_msgSend)(self, bean_sel("download:decidePlaceholderPolicy:"), download, completionHandler); }
-static inline void    WKDownloadDelegate_Download_DidReceivePlaceholderURL_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURL url, void* completionHandler)                                                                     { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURL, void*))bean_msgSend)(self, bean_sel("download:didReceivePlaceholderURL:completionHandler:"), download, url, completionHandler); }
-static inline void    WKDownloadDelegate_Download_DidReceiveFinalURL(WKDownloadDelegate self, WKDownload download, NSURL url)                                                                                                                      { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURL))bean_msgSend)(self, bean_sel("download:didReceiveFinalURL:"), download, url); }
+static inline void                  WKDownloadDelegate_Download_DecideDestinationUsingResponse_SuggestedFilename_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURLResponse response, NSString suggestedFilename, void* completionHandler)    { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURLResponse, NSString, void*))bean_msgSend)(self, bean_sel("download:decideDestinationUsingResponse:suggestedFilename:completionHandler:"), download, response, suggestedFilename, completionHandler); }
+static inline void                  WKDownloadDelegate_Download_WillPerformHTTPRedirection_NewRequest_DecisionHandler(WKDownloadDelegate self, WKDownload download, NSHTTPURLResponse response, NSURLRequest request, void* decisionHandler)                     { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSHTTPURLResponse, NSURLRequest, void*))bean_msgSend)(self, bean_sel("download:willPerformHTTPRedirection:newRequest:decisionHandler:"), download, response, request, decisionHandler); }
+static inline void                  WKDownloadDelegate_Download_DidReceiveAuthenticationChallenge_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURLAuthenticationChallenge challenge, void* completionHandler)                               { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("download:didReceiveAuthenticationChallenge:completionHandler:"), download, challenge, completionHandler); }
+static inline void                  WKDownloadDelegate_DownloadDidFinish(WKDownloadDelegate self, WKDownload download)                                                                                                                                           { ((void (*)(WKDownloadDelegate, SEL, WKDownload))bean_msgSend)(self, bean_sel("downloadDidFinish:"), download); }
+static inline void                  WKDownloadDelegate_Download_DidFailWithError_ResumeData(WKDownloadDelegate self, WKDownload download, NSError error, NSData resumeData)                                                                                      { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSError, NSData))bean_msgSend)(self, bean_sel("download:didFailWithError:resumeData:"), download, error, resumeData); }
+static inline void                  WKDownloadDelegate_Download_DecidePlaceholderPolicy(WKDownloadDelegate self, WKDownload download, void* completionHandler)                                                                                                   { ((void (*)(WKDownloadDelegate, SEL, WKDownload, void*))bean_msgSend)(self, bean_sel("download:decidePlaceholderPolicy:"), download, completionHandler); }
+static inline void                  WKDownloadDelegate_Download_DidReceivePlaceholderURL_CompletionHandler(WKDownloadDelegate self, WKDownload download, NSURL url, void* completionHandler)                                                                     { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURL, void*))bean_msgSend)(self, bean_sel("download:didReceivePlaceholderURL:completionHandler:"), download, url, completionHandler); }
+static inline void                  WKDownloadDelegate_Download_DidReceiveFinalURL(WKDownloadDelegate self, WKDownload download, NSURL url)                                                                                                                      { ((void (*)(WKDownloadDelegate, SEL, WKDownload, NSURL))bean_msgSend)(self, bean_sel("download:didReceiveFinalURL:"), download, url); }
+#ifndef BEAN_ALLOC_WKDownloadDelegate
+#define BEAN_ALLOC_WKDownloadDelegate
+static inline WKDownloadDelegate    WKDownloadDelegate_Alloc(void)                                                                                                                                                                                               { return (WKDownloadDelegate)bean_alloc(bean_cls("WKDownloadDelegate")); }
+#endif
+#ifndef BEAN_NEW_WKDownloadDelegate
+#define BEAN_NEW_WKDownloadDelegate
+static inline WKDownloadDelegate    WKDownloadDelegate_New(void)                                                                                                                                                                                                 { return (WKDownloadDelegate)bean_new(bean_cls("WKDownloadDelegate")); }
+#endif
 
 /* ===== WKFrameInfo ===== */
 static inline BOOL                WKFrameInfo_IsMainFrame(WKFrameInfo self)                   { return ((BOOL (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("isMainFrame")); }
@@ -6521,6 +7785,14 @@ static inline WKSecurityOrigin    WKFrameInfo_SecurityOrigin(WKFrameInfo self)  
 static inline WKWebView           WKFrameInfo_WebView(WKFrameInfo self)                       { return ((WKWebView (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("webView")); }
 static inline id                  WKFrameInfo_CopyWithZone(WKFrameInfo self, NSZone* zone)    { return ((id (*)(WKFrameInfo, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                WKFrameInfo_MainFrame(WKFrameInfo self)                     { return ((BOOL (*)(WKFrameInfo, SEL))bean_msgSend)(self, bean_sel("mainFrame")); }
+#ifndef BEAN_ALLOC_WKFrameInfo
+#define BEAN_ALLOC_WKFrameInfo
+static inline WKFrameInfo         WKFrameInfo_Alloc(void)                                     { return (WKFrameInfo)bean_alloc(bean_cls("WKFrameInfo")); }
+#endif
+#ifndef BEAN_NEW_WKFrameInfo
+#define BEAN_NEW_WKFrameInfo
+static inline WKFrameInfo         WKFrameInfo_New(void)                                       { return (WKFrameInfo)bean_new(bean_cls("WKFrameInfo")); }
+#endif
 
 /* ===== WKNavigationAction ===== */
 #ifndef BEAN_TYPEDEF_WKNavigationAction
@@ -6535,74 +7807,130 @@ static inline BOOL                    WKNavigationAction_ShouldPerformDownload(W
 static inline BOOL                    WKNavigationAction_IsContentRuleListRedirect(WKNavigationAction self)    { return ((BOOL (*)(WKNavigationAction, SEL))bean_msgSend)(self, bean_sel("isContentRuleListRedirect")); }
 static inline NSEventModifierFlags    WKNavigationAction_ModifierFlags(WKNavigationAction self)                { return ((NSEventModifierFlags (*)(WKNavigationAction, SEL))bean_msgSend)(self, bean_sel("modifierFlags")); }
 static inline NSInteger               WKNavigationAction_ButtonNumber(WKNavigationAction self)                 { return ((NSInteger (*)(WKNavigationAction, SEL))bean_msgSend)(self, bean_sel("buttonNumber")); }
+#ifndef BEAN_ALLOC_WKNavigationAction
+#define BEAN_ALLOC_WKNavigationAction
+static inline WKNavigationAction      WKNavigationAction_Alloc(void)                                           { return (WKNavigationAction)bean_alloc(bean_cls("WKNavigationAction")); }
+#endif
+#ifndef BEAN_NEW_WKNavigationAction
+#define BEAN_NEW_WKNavigationAction
+static inline WKNavigationAction      WKNavigationAction_New(void)                                             { return (WKNavigationAction)bean_new(bean_cls("WKNavigationAction")); }
+#endif
 
 /* ===== WKNavigationDelegate ===== */
 #ifndef BEAN_TYPEDEF_WKNavigationDelegate
 #define BEAN_TYPEDEF_WKNavigationDelegate
 typedef bean_id WKNavigationDelegate;
 #endif
-static inline void    WKNavigationDelegate_WebView_DecidePolicyForNavigationAction_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, void* decisionHandler)                                                        { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:decisionHandler:"), webView, navigationAction, decisionHandler); }
-static inline void    WKNavigationDelegate_WebView_DecidePolicyForNavigationAction_Preferences_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, WKWebpagePreferences preferences, void* decisionHandler)          { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, WKWebpagePreferences, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:preferences:decisionHandler:"), webView, navigationAction, preferences, decisionHandler); }
-static inline void    WKNavigationDelegate_WebView_DecidePolicyForNavigationResponse_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationResponse navigationResponse, void* decisionHandler)                                                  { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationResponse, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationResponse:decisionHandler:"), webView, navigationResponse, decisionHandler); }
-static inline void    WKNavigationDelegate_WebView_DidStartProvisionalNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                             { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didStartProvisionalNavigation:"), webView, navigation); }
-static inline void    WKNavigationDelegate_WebView_DidReceiveServerRedirectForProvisionalNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                          { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didReceiveServerRedirectForProvisionalNavigation:"), webView, navigation); }
-static inline void    WKNavigationDelegate_WebView_DidFailProvisionalNavigation_WithError(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation, NSError error)                                                                                     { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation, NSError))bean_msgSend)(self, bean_sel("webView:didFailProvisionalNavigation:withError:"), webView, navigation, error); }
-static inline void    WKNavigationDelegate_WebView_DidCommitNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didCommitNavigation:"), webView, navigation); }
-static inline void    WKNavigationDelegate_WebView_DidFinishNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didFinishNavigation:"), webView, navigation); }
-static inline void    WKNavigationDelegate_WebView_DidFailNavigation_WithError(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation, NSError error)                                                                                                { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation, NSError))bean_msgSend)(self, bean_sel("webView:didFailNavigation:withError:"), webView, navigation, error); }
-static inline void    WKNavigationDelegate_WebView_DidReceiveAuthenticationChallenge_CompletionHandler(WKNavigationDelegate self, WKWebView webView, NSURLAuthenticationChallenge challenge, void* completionHandler)                                               { ((void (*)(WKNavigationDelegate, SEL, WKWebView, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("webView:didReceiveAuthenticationChallenge:completionHandler:"), webView, challenge, completionHandler); }
-static inline void    WKNavigationDelegate_WebViewWebContentProcessDidTerminate(WKNavigationDelegate self, WKWebView webView)                                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView))bean_msgSend)(self, bean_sel("webViewWebContentProcessDidTerminate:"), webView); }
-static inline void    WKNavigationDelegate_WebView_AuthenticationChallenge_ShouldAllowDeprecatedTLS(WKNavigationDelegate self, WKWebView webView, NSURLAuthenticationChallenge challenge, void* decisionHandler)                                                    { ((void (*)(WKNavigationDelegate, SEL, WKWebView, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("webView:authenticationChallenge:shouldAllowDeprecatedTLS:"), webView, challenge, decisionHandler); }
-static inline void    WKNavigationDelegate_WebView_NavigationAction_DidBecomeDownload(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, WKDownload download)                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, WKDownload))bean_msgSend)(self, bean_sel("webView:navigationAction:didBecomeDownload:"), webView, navigationAction, download); }
-static inline void    WKNavigationDelegate_WebView_NavigationResponse_DidBecomeDownload(WKNavigationDelegate self, WKWebView webView, WKNavigationResponse navigationResponse, WKDownload download)                                                                 { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationResponse, WKDownload))bean_msgSend)(self, bean_sel("webView:navigationResponse:didBecomeDownload:"), webView, navigationResponse, download); }
-static inline void    WKNavigationDelegate_WebView_ShouldGoToBackForwardListItem_WillUseInstantBack_CompletionHandler(WKNavigationDelegate self, WKWebView webView, WKBackForwardListItem backForwardListItem, BOOL willUseInstantBack, void* completionHandler)    { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKBackForwardListItem, BOOL, void*))bean_msgSend)(self, bean_sel("webView:shouldGoToBackForwardListItem:willUseInstantBack:completionHandler:"), webView, backForwardListItem, willUseInstantBack, completionHandler); }
+static inline void                    WKNavigationDelegate_WebView_DecidePolicyForNavigationAction_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, void* decisionHandler)                                                        { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:decisionHandler:"), webView, navigationAction, decisionHandler); }
+static inline void                    WKNavigationDelegate_WebView_DecidePolicyForNavigationAction_Preferences_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, WKWebpagePreferences preferences, void* decisionHandler)          { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, WKWebpagePreferences, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:preferences:decisionHandler:"), webView, navigationAction, preferences, decisionHandler); }
+static inline void                    WKNavigationDelegate_WebView_DecidePolicyForNavigationResponse_DecisionHandler(WKNavigationDelegate self, WKWebView webView, WKNavigationResponse navigationResponse, void* decisionHandler)                                                  { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationResponse, void*))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationResponse:decisionHandler:"), webView, navigationResponse, decisionHandler); }
+static inline void                    WKNavigationDelegate_WebView_DidStartProvisionalNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                             { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didStartProvisionalNavigation:"), webView, navigation); }
+static inline void                    WKNavigationDelegate_WebView_DidReceiveServerRedirectForProvisionalNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                          { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didReceiveServerRedirectForProvisionalNavigation:"), webView, navigation); }
+static inline void                    WKNavigationDelegate_WebView_DidFailProvisionalNavigation_WithError(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation, NSError error)                                                                                     { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation, NSError))bean_msgSend)(self, bean_sel("webView:didFailProvisionalNavigation:withError:"), webView, navigation, error); }
+static inline void                    WKNavigationDelegate_WebView_DidCommitNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didCommitNavigation:"), webView, navigation); }
+static inline void                    WKNavigationDelegate_WebView_DidFinishNavigation(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation)                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation))bean_msgSend)(self, bean_sel("webView:didFinishNavigation:"), webView, navigation); }
+static inline void                    WKNavigationDelegate_WebView_DidFailNavigation_WithError(WKNavigationDelegate self, WKWebView webView, WKNavigation navigation, NSError error)                                                                                                { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigation, NSError))bean_msgSend)(self, bean_sel("webView:didFailNavigation:withError:"), webView, navigation, error); }
+static inline void                    WKNavigationDelegate_WebView_DidReceiveAuthenticationChallenge_CompletionHandler(WKNavigationDelegate self, WKWebView webView, NSURLAuthenticationChallenge challenge, void* completionHandler)                                               { ((void (*)(WKNavigationDelegate, SEL, WKWebView, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("webView:didReceiveAuthenticationChallenge:completionHandler:"), webView, challenge, completionHandler); }
+static inline void                    WKNavigationDelegate_WebViewWebContentProcessDidTerminate(WKNavigationDelegate self, WKWebView webView)                                                                                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView))bean_msgSend)(self, bean_sel("webViewWebContentProcessDidTerminate:"), webView); }
+static inline void                    WKNavigationDelegate_WebView_AuthenticationChallenge_ShouldAllowDeprecatedTLS(WKNavigationDelegate self, WKWebView webView, NSURLAuthenticationChallenge challenge, void* decisionHandler)                                                    { ((void (*)(WKNavigationDelegate, SEL, WKWebView, NSURLAuthenticationChallenge, void*))bean_msgSend)(self, bean_sel("webView:authenticationChallenge:shouldAllowDeprecatedTLS:"), webView, challenge, decisionHandler); }
+static inline void                    WKNavigationDelegate_WebView_NavigationAction_DidBecomeDownload(WKNavigationDelegate self, WKWebView webView, WKNavigationAction navigationAction, WKDownload download)                                                                       { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationAction, WKDownload))bean_msgSend)(self, bean_sel("webView:navigationAction:didBecomeDownload:"), webView, navigationAction, download); }
+static inline void                    WKNavigationDelegate_WebView_NavigationResponse_DidBecomeDownload(WKNavigationDelegate self, WKWebView webView, WKNavigationResponse navigationResponse, WKDownload download)                                                                 { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKNavigationResponse, WKDownload))bean_msgSend)(self, bean_sel("webView:navigationResponse:didBecomeDownload:"), webView, navigationResponse, download); }
+static inline void                    WKNavigationDelegate_WebView_ShouldGoToBackForwardListItem_WillUseInstantBack_CompletionHandler(WKNavigationDelegate self, WKWebView webView, WKBackForwardListItem backForwardListItem, BOOL willUseInstantBack, void* completionHandler)    { ((void (*)(WKNavigationDelegate, SEL, WKWebView, WKBackForwardListItem, BOOL, void*))bean_msgSend)(self, bean_sel("webView:shouldGoToBackForwardListItem:willUseInstantBack:completionHandler:"), webView, backForwardListItem, willUseInstantBack, completionHandler); }
+#ifndef BEAN_ALLOC_WKNavigationDelegate
+#define BEAN_ALLOC_WKNavigationDelegate
+static inline WKNavigationDelegate    WKNavigationDelegate_Alloc(void)                                                                                                                                                                                                              { return (WKNavigationDelegate)bean_alloc(bean_cls("WKNavigationDelegate")); }
+#endif
+#ifndef BEAN_NEW_WKNavigationDelegate
+#define BEAN_NEW_WKNavigationDelegate
+static inline WKNavigationDelegate    WKNavigationDelegate_New(void)                                                                                                                                                                                                                { return (WKNavigationDelegate)bean_new(bean_cls("WKNavigationDelegate")); }
+#endif
 
 /* ===== WKScriptMessage ===== */
 #ifndef BEAN_TYPEDEF_WKScriptMessage
 #define BEAN_TYPEDEF_WKScriptMessage
 typedef bean_id WKScriptMessage;
 #endif
-static inline id                WKScriptMessage_Body(WKScriptMessage self)         { return ((id (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("body")); }
-static inline WKWebView         WKScriptMessage_WebView(WKScriptMessage self)      { return ((WKWebView (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("webView")); }
-static inline WKFrameInfo       WKScriptMessage_FrameInfo(WKScriptMessage self)    { return ((WKFrameInfo (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("frameInfo")); }
-static inline NSString          WKScriptMessage_Name(WKScriptMessage self)         { return ((NSString (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline WKContentWorld    WKScriptMessage_World(WKScriptMessage self)        { return ((WKContentWorld (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("world")); }
+static inline id                 WKScriptMessage_Body(WKScriptMessage self)         { return ((id (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("body")); }
+static inline WKWebView          WKScriptMessage_WebView(WKScriptMessage self)      { return ((WKWebView (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("webView")); }
+static inline WKFrameInfo        WKScriptMessage_FrameInfo(WKScriptMessage self)    { return ((WKFrameInfo (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("frameInfo")); }
+static inline NSString           WKScriptMessage_Name(WKScriptMessage self)         { return ((NSString (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline WKContentWorld     WKScriptMessage_World(WKScriptMessage self)        { return ((WKContentWorld (*)(WKScriptMessage, SEL))bean_msgSend)(self, bean_sel("world")); }
+#ifndef BEAN_ALLOC_WKScriptMessage
+#define BEAN_ALLOC_WKScriptMessage
+static inline WKScriptMessage    WKScriptMessage_Alloc(void)                        { return (WKScriptMessage)bean_alloc(bean_cls("WKScriptMessage")); }
+#endif
+#ifndef BEAN_NEW_WKScriptMessage
+#define BEAN_NEW_WKScriptMessage
+static inline WKScriptMessage    WKScriptMessage_New(void)                          { return (WKScriptMessage)bean_new(bean_cls("WKScriptMessage")); }
+#endif
 
 /* ===== WKScriptMessageHandler ===== */
 #ifndef BEAN_TYPEDEF_WKScriptMessageHandler
 #define BEAN_TYPEDEF_WKScriptMessageHandler
 typedef bean_id WKScriptMessageHandler;
 #endif
-static inline void    WKScriptMessageHandler_UserContentController_DidReceiveScriptMessage(WKScriptMessageHandler self, WKUserContentController userContentController, WKScriptMessage message)    { ((void (*)(WKScriptMessageHandler, SEL, WKUserContentController, WKScriptMessage))bean_msgSend)(self, bean_sel("userContentController:didReceiveScriptMessage:"), userContentController, message); }
+static inline void                      WKScriptMessageHandler_UserContentController_DidReceiveScriptMessage(WKScriptMessageHandler self, WKUserContentController userContentController, WKScriptMessage message)    { ((void (*)(WKScriptMessageHandler, SEL, WKUserContentController, WKScriptMessage))bean_msgSend)(self, bean_sel("userContentController:didReceiveScriptMessage:"), userContentController, message); }
+#ifndef BEAN_ALLOC_WKScriptMessageHandler
+#define BEAN_ALLOC_WKScriptMessageHandler
+static inline WKScriptMessageHandler    WKScriptMessageHandler_Alloc(void)                                                                                                                                           { return (WKScriptMessageHandler)bean_alloc(bean_cls("WKScriptMessageHandler")); }
+#endif
+#ifndef BEAN_NEW_WKScriptMessageHandler
+#define BEAN_NEW_WKScriptMessageHandler
+static inline WKScriptMessageHandler    WKScriptMessageHandler_New(void)                                                                                                                                             { return (WKScriptMessageHandler)bean_new(bean_cls("WKScriptMessageHandler")); }
+#endif
 
 /* ===== WKScriptMessageHandlerWithReply ===== */
 #ifndef BEAN_TYPEDEF_WKScriptMessageHandlerWithReply
 #define BEAN_TYPEDEF_WKScriptMessageHandlerWithReply
 typedef bean_id WKScriptMessageHandlerWithReply;
 #endif
-static inline void    WKScriptMessageHandlerWithReply_UserContentController_DidReceiveScriptMessage_ReplyHandler(WKScriptMessageHandlerWithReply self, WKUserContentController userContentController, WKScriptMessage message, void* replyHandler)    { ((void (*)(WKScriptMessageHandlerWithReply, SEL, WKUserContentController, WKScriptMessage, void*))bean_msgSend)(self, bean_sel("userContentController:didReceiveScriptMessage:replyHandler:"), userContentController, message, replyHandler); }
+static inline void                               WKScriptMessageHandlerWithReply_UserContentController_DidReceiveScriptMessage_ReplyHandler(WKScriptMessageHandlerWithReply self, WKUserContentController userContentController, WKScriptMessage message, void* replyHandler)    { ((void (*)(WKScriptMessageHandlerWithReply, SEL, WKUserContentController, WKScriptMessage, void*))bean_msgSend)(self, bean_sel("userContentController:didReceiveScriptMessage:replyHandler:"), userContentController, message, replyHandler); }
+#ifndef BEAN_ALLOC_WKScriptMessageHandlerWithReply
+#define BEAN_ALLOC_WKScriptMessageHandlerWithReply
+static inline WKScriptMessageHandlerWithReply    WKScriptMessageHandlerWithReply_Alloc(void)                                                                                                                                                                                     { return (WKScriptMessageHandlerWithReply)bean_alloc(bean_cls("WKScriptMessageHandlerWithReply")); }
+#endif
+#ifndef BEAN_NEW_WKScriptMessageHandlerWithReply
+#define BEAN_NEW_WKScriptMessageHandlerWithReply
+static inline WKScriptMessageHandlerWithReply    WKScriptMessageHandlerWithReply_New(void)                                                                                                                                                                                       { return (WKScriptMessageHandlerWithReply)bean_new(bean_cls("WKScriptMessageHandlerWithReply")); }
+#endif
 
 /* ===== WKUIDelegate ===== */
 #ifndef BEAN_TYPEDEF_WKUIDelegate
 #define BEAN_TYPEDEF_WKUIDelegate
 typedef bean_id WKUIDelegate;
 #endif
-static inline WKWebView    WKUIDelegate_WebView_CreateWebViewWithConfiguration_ForNavigationAction_WindowFeatures(WKUIDelegate self, WKWebView webView, WKWebViewConfiguration configuration, WKNavigationAction navigationAction, WKWindowFeatures windowFeatures)    { return ((WKWebView (*)(WKUIDelegate, SEL, WKWebView, WKWebViewConfiguration, WKNavigationAction, WKWindowFeatures))bean_msgSend)(self, bean_sel("webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:"), webView, configuration, navigationAction, windowFeatures); }
-static inline void         WKUIDelegate_WebViewDidClose(WKUIDelegate self, WKWebView webView)                                                                                                                                                                          { ((void (*)(WKUIDelegate, SEL, WKWebView))bean_msgSend)(self, bean_sel("webViewDidClose:"), webView); }
-static inline void         WKUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString message, WKFrameInfo frame, void* completionHandler)                                              { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:"), webView, message, frame, completionHandler); }
-static inline void         WKUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString message, WKFrameInfo frame, void* completionHandler)                                            { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:completionHandler:"), webView, message, frame, completionHandler); }
-static inline void         WKUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString prompt, NSString defaultText, WKFrameInfo frame, void* completionHandler)          { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:completionHandler:"), webView, prompt, defaultText, frame, completionHandler); }
-static inline void         WKUIDelegate_WebView_RequestMediaCapturePermissionForOrigin_InitiatedByFrame_Type_DecisionHandler(WKUIDelegate self, WKWebView webView, WKSecurityOrigin origin, WKFrameInfo frame, WKMediaCaptureType type, void* decisionHandler)         { ((void (*)(WKUIDelegate, SEL, WKWebView, WKSecurityOrigin, WKFrameInfo, WKMediaCaptureType, void*))bean_msgSend)(self, bean_sel("webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:"), webView, origin, frame, type, decisionHandler); }
-static inline void         WKUIDelegate_WebView_RequestDeviceOrientationAndMotionPermissionForOrigin_InitiatedByFrame_DecisionHandler(WKUIDelegate self, WKWebView webView, WKSecurityOrigin origin, WKFrameInfo frame, void* decisionHandler)                         { ((void (*)(WKUIDelegate, SEL, WKWebView, WKSecurityOrigin, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:requestDeviceOrientationAndMotionPermissionForOrigin:initiatedByFrame:decisionHandler:"), webView, origin, frame, decisionHandler); }
-static inline void         WKUIDelegate_WebView_RunOpenPanelWithParameters_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, WKOpenPanelParameters parameters, WKFrameInfo frame, void* completionHandler)                                      { ((void (*)(WKUIDelegate, SEL, WKWebView, WKOpenPanelParameters, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runOpenPanelWithParameters:initiatedByFrame:completionHandler:"), webView, parameters, frame, completionHandler); }
+static inline WKWebView       WKUIDelegate_WebView_CreateWebViewWithConfiguration_ForNavigationAction_WindowFeatures(WKUIDelegate self, WKWebView webView, WKWebViewConfiguration configuration, WKNavigationAction navigationAction, WKWindowFeatures windowFeatures)    { return ((WKWebView (*)(WKUIDelegate, SEL, WKWebView, WKWebViewConfiguration, WKNavigationAction, WKWindowFeatures))bean_msgSend)(self, bean_sel("webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:"), webView, configuration, navigationAction, windowFeatures); }
+static inline void            WKUIDelegate_WebViewDidClose(WKUIDelegate self, WKWebView webView)                                                                                                                                                                          { ((void (*)(WKUIDelegate, SEL, WKWebView))bean_msgSend)(self, bean_sel("webViewDidClose:"), webView); }
+static inline void            WKUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString message, WKFrameInfo frame, void* completionHandler)                                              { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:"), webView, message, frame, completionHandler); }
+static inline void            WKUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString message, WKFrameInfo frame, void* completionHandler)                                            { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:completionHandler:"), webView, message, frame, completionHandler); }
+static inline void            WKUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, NSString prompt, NSString defaultText, WKFrameInfo frame, void* completionHandler)          { ((void (*)(WKUIDelegate, SEL, WKWebView, NSString, NSString, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:completionHandler:"), webView, prompt, defaultText, frame, completionHandler); }
+static inline void            WKUIDelegate_WebView_RequestMediaCapturePermissionForOrigin_InitiatedByFrame_Type_DecisionHandler(WKUIDelegate self, WKWebView webView, WKSecurityOrigin origin, WKFrameInfo frame, WKMediaCaptureType type, void* decisionHandler)         { ((void (*)(WKUIDelegate, SEL, WKWebView, WKSecurityOrigin, WKFrameInfo, WKMediaCaptureType, void*))bean_msgSend)(self, bean_sel("webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:"), webView, origin, frame, type, decisionHandler); }
+static inline void            WKUIDelegate_WebView_RequestDeviceOrientationAndMotionPermissionForOrigin_InitiatedByFrame_DecisionHandler(WKUIDelegate self, WKWebView webView, WKSecurityOrigin origin, WKFrameInfo frame, void* decisionHandler)                         { ((void (*)(WKUIDelegate, SEL, WKWebView, WKSecurityOrigin, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:requestDeviceOrientationAndMotionPermissionForOrigin:initiatedByFrame:decisionHandler:"), webView, origin, frame, decisionHandler); }
+static inline void            WKUIDelegate_WebView_RunOpenPanelWithParameters_InitiatedByFrame_CompletionHandler(WKUIDelegate self, WKWebView webView, WKOpenPanelParameters parameters, WKFrameInfo frame, void* completionHandler)                                      { ((void (*)(WKUIDelegate, SEL, WKWebView, WKOpenPanelParameters, WKFrameInfo, void*))bean_msgSend)(self, bean_sel("webView:runOpenPanelWithParameters:initiatedByFrame:completionHandler:"), webView, parameters, frame, completionHandler); }
+#ifndef BEAN_ALLOC_WKUIDelegate
+#define BEAN_ALLOC_WKUIDelegate
+static inline WKUIDelegate    WKUIDelegate_Alloc(void)                                                                                                                                                                                                                    { return (WKUIDelegate)bean_alloc(bean_cls("WKUIDelegate")); }
+#endif
+#ifndef BEAN_NEW_WKUIDelegate
+#define BEAN_NEW_WKUIDelegate
+static inline WKUIDelegate    WKUIDelegate_New(void)                                                                                                                                                                                                                      { return (WKUIDelegate)bean_new(bean_cls("WKUIDelegate")); }
+#endif
 
 /* ===== WKURLSchemeHandler ===== */
 #ifndef BEAN_TYPEDEF_WKURLSchemeHandler
 #define BEAN_TYPEDEF_WKURLSchemeHandler
 typedef bean_id WKURLSchemeHandler;
 #endif
-static inline void    WKURLSchemeHandler_WebView_StartURLSchemeTask(WKURLSchemeHandler self, WKWebView webView, id urlSchemeTask)    { ((void (*)(WKURLSchemeHandler, SEL, WKWebView, id))bean_msgSend)(self, bean_sel("webView:startURLSchemeTask:"), webView, urlSchemeTask); }
-static inline void    WKURLSchemeHandler_WebView_StopURLSchemeTask(WKURLSchemeHandler self, WKWebView webView, id urlSchemeTask)     { ((void (*)(WKURLSchemeHandler, SEL, WKWebView, id))bean_msgSend)(self, bean_sel("webView:stopURLSchemeTask:"), webView, urlSchemeTask); }
+static inline void                  WKURLSchemeHandler_WebView_StartURLSchemeTask(WKURLSchemeHandler self, WKWebView webView, id urlSchemeTask)    { ((void (*)(WKURLSchemeHandler, SEL, WKWebView, id))bean_msgSend)(self, bean_sel("webView:startURLSchemeTask:"), webView, urlSchemeTask); }
+static inline void                  WKURLSchemeHandler_WebView_StopURLSchemeTask(WKURLSchemeHandler self, WKWebView webView, id urlSchemeTask)     { ((void (*)(WKURLSchemeHandler, SEL, WKWebView, id))bean_msgSend)(self, bean_sel("webView:stopURLSchemeTask:"), webView, urlSchemeTask); }
+#ifndef BEAN_ALLOC_WKURLSchemeHandler
+#define BEAN_ALLOC_WKURLSchemeHandler
+static inline WKURLSchemeHandler    WKURLSchemeHandler_Alloc(void)                                                                                 { return (WKURLSchemeHandler)bean_alloc(bean_cls("WKURLSchemeHandler")); }
+#endif
+#ifndef BEAN_NEW_WKURLSchemeHandler
+#define BEAN_NEW_WKURLSchemeHandler
+static inline WKURLSchemeHandler    WKURLSchemeHandler_New(void)                                                                                   { return (WKURLSchemeHandler)bean_new(bean_cls("WKURLSchemeHandler")); }
+#endif
 
 /* ===== WKWebExtensionAction ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionAction
@@ -6610,7 +7938,10 @@ static inline void    WKURLSchemeHandler_WebView_StopURLSchemeTask(WKURLSchemeHa
 typedef bean_id WKWebExtensionAction;
 #endif
 static inline WKWebExtensionAction     WKWebExtensionAction_Init(WKWebExtensionAction self)                                              { return ((WKWebExtensionAction (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_WKWebExtensionAction
+#define BEAN_NEW_WKWebExtensionAction
 static inline WKWebExtensionAction     WKWebExtensionAction_New(WKWebExtensionAction self)                                               { return ((WKWebExtensionAction (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("new")); }
+#endif
 static inline NSImage                  WKWebExtensionAction_IconForSize(WKWebExtensionAction self, CGSize size)                          { return ((NSImage (*)(WKWebExtensionAction, SEL, CGSize))bean_msgSend)(self, bean_sel("iconForSize:"), size); }
 static inline void                     WKWebExtensionAction_ClosePopup(WKWebExtensionAction self)                                        { ((void (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("closePopup")); }
 static inline WKWebExtensionContext    WKWebExtensionAction_WebExtensionContext(WKWebExtensionAction self)                               { return ((WKWebExtensionContext (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("webExtensionContext")); }
@@ -6627,13 +7958,20 @@ static inline BOOL                     WKWebExtensionAction_PresentsPopup(WKWebE
 static inline NSPopover                WKWebExtensionAction_PopupPopover(WKWebExtensionAction self)                                      { return ((NSPopover (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("popupPopover")); }
 static inline WKWebView                WKWebExtensionAction_PopupWebView(WKWebExtensionAction self)                                      { return ((WKWebView (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("popupWebView")); }
 static inline BOOL                     WKWebExtensionAction_Enabled(WKWebExtensionAction self)                                           { return ((BOOL (*)(WKWebExtensionAction, SEL))bean_msgSend)(self, bean_sel("enabled")); }
+#ifndef BEAN_ALLOC_WKWebExtensionAction
+#define BEAN_ALLOC_WKWebExtensionAction
+static inline WKWebExtensionAction     WKWebExtensionAction_Alloc(void)                                                                  { return (WKWebExtensionAction)bean_alloc(bean_cls("WKWebExtensionAction")); }
+#endif
 
 /* ===== WKWebExtensionCommand ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionCommand
 #define BEAN_TYPEDEF_WKWebExtensionCommand
 typedef bean_id WKWebExtensionCommand;
 #endif
+#ifndef BEAN_NEW_WKWebExtensionCommand
+#define BEAN_NEW_WKWebExtensionCommand
 static inline WKWebExtensionCommand    WKWebExtensionCommand_New(void)                                                                           { return ((WKWebExtensionCommand (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionCommand"), bean_sel("new")); }
+#endif
 static inline WKWebExtensionCommand    WKWebExtensionCommand_Init(WKWebExtensionCommand self)                                                    { return ((WKWebExtensionCommand (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline WKWebExtensionContext    WKWebExtensionCommand_WebExtensionContext(WKWebExtensionCommand self)                                     { return ((WKWebExtensionContext (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("webExtensionContext")); }
 static inline NSString                 WKWebExtensionCommand_Identifier(WKWebExtensionCommand self)                                              { return ((NSString (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("identifier")); }
@@ -6643,9 +7981,16 @@ static inline void                     WKWebExtensionCommand_SetActivationKey(WK
 static inline NSEventModifierFlags     WKWebExtensionCommand_ModifierFlags(WKWebExtensionCommand self)                                           { return ((NSEventModifierFlags (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("modifierFlags")); }
 static inline void                     WKWebExtensionCommand_SetModifierFlags(WKWebExtensionCommand self, NSEventModifierFlags modifierFlags)    { ((void (*)(WKWebExtensionCommand, SEL, NSEventModifierFlags))bean_msgSend)(self, bean_sel("setModifierFlags:"), modifierFlags); }
 static inline NSMenuItem               WKWebExtensionCommand_MenuItem(WKWebExtensionCommand self)                                                { return ((NSMenuItem (*)(WKWebExtensionCommand, SEL))bean_msgSend)(self, bean_sel("menuItem")); }
+#ifndef BEAN_ALLOC_WKWebExtensionCommand
+#define BEAN_ALLOC_WKWebExtensionCommand
+static inline WKWebExtensionCommand    WKWebExtensionCommand_Alloc(void)                                                                         { return (WKWebExtensionCommand)bean_alloc(bean_cls("WKWebExtensionCommand")); }
+#endif
 
 /* ===== WKWebExtensionContext ===== */
+#ifndef BEAN_NEW_WKWebExtensionContext
+#define BEAN_NEW_WKWebExtensionContext
 static inline WKWebExtensionContext                    WKWebExtensionContext_New(void)                                                                                                                                                                                  { return ((WKWebExtensionContext (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionContext"), bean_sel("new")); }
+#endif
 static inline WKWebExtensionContext                    WKWebExtensionContext_Init(WKWebExtensionContext self)                                                                                                                                                           { return ((WKWebExtensionContext (*)(WKWebExtensionContext, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline WKWebExtensionContext                    WKWebExtensionContext_ContextForExtension(WKWebExtension extension)                                                                                                                                              { return ((WKWebExtensionContext (*)(bean_class, SEL, WKWebExtension))bean_msgSend)(bean_cls("WKWebExtensionContext"), bean_sel("contextForExtension:"), extension); }
 static inline WKWebExtensionContext                    WKWebExtensionContext_InitForExtension(WKWebExtensionContext self, WKWebExtension extension)                                                                                                                     { return ((WKWebExtensionContext (*)(WKWebExtensionContext, SEL, WKWebExtension))bean_msgSend)(self, bean_sel("initForExtension:"), extension); }
@@ -6728,6 +8073,10 @@ static inline id                                       WKWebExtensionContext_Foc
 static inline NSSet                                    WKWebExtensionContext_OpenTabs(WKWebExtensionContext self)                                                                                                                                                       { return ((NSSet (*)(WKWebExtensionContext, SEL))bean_msgSend)(self, bean_sel("openTabs")); }
 static inline BOOL                                     WKWebExtensionContext_Loaded(WKWebExtensionContext self)                                                                                                                                                         { return ((BOOL (*)(WKWebExtensionContext, SEL))bean_msgSend)(self, bean_sel("loaded")); }
 static inline BOOL                                     WKWebExtensionContext_Inspectable(WKWebExtensionContext self)                                                                                                                                                    { return ((BOOL (*)(WKWebExtensionContext, SEL))bean_msgSend)(self, bean_sel("inspectable")); }
+#ifndef BEAN_ALLOC_WKWebExtensionContext
+#define BEAN_ALLOC_WKWebExtensionContext
+static inline WKWebExtensionContext                    WKWebExtensionContext_Alloc(void)                                                                                                                                                                                { return (WKWebExtensionContext)bean_alloc(bean_cls("WKWebExtensionContext")); }
+#endif
 
 /* ===== WKWebExtensionController ===== */
 static inline WKWebExtensionController                 WKWebExtensionController_Init(WKWebExtensionController self)                                                                                                                                              { return ((WKWebExtensionController (*)(WKWebExtensionController, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -6756,9 +8105,20 @@ static inline WKWebExtensionControllerConfiguration    WKWebExtensionController_
 static inline NSSet                                    WKWebExtensionController_Extensions(WKWebExtensionController self)                                                                                                                                        { return ((NSSet (*)(WKWebExtensionController, SEL))bean_msgSend)(self, bean_sel("extensions")); }
 static inline NSSet                                    WKWebExtensionController_ExtensionContexts(WKWebExtensionController self)                                                                                                                                 { return ((NSSet (*)(WKWebExtensionController, SEL))bean_msgSend)(self, bean_sel("extensionContexts")); }
 static inline NSSet                                    WKWebExtensionController_AllExtensionDataTypes(void)                                                                                                                                                      { return ((NSSet (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionController"), bean_sel("allExtensionDataTypes")); }
+#ifndef BEAN_ALLOC_WKWebExtensionController
+#define BEAN_ALLOC_WKWebExtensionController
+static inline WKWebExtensionController                 WKWebExtensionController_Alloc(void)                                                                                                                                                                      { return (WKWebExtensionController)bean_alloc(bean_cls("WKWebExtensionController")); }
+#endif
+#ifndef BEAN_NEW_WKWebExtensionController
+#define BEAN_NEW_WKWebExtensionController
+static inline WKWebExtensionController                 WKWebExtensionController_New(void)                                                                                                                                                                        { return (WKWebExtensionController)bean_new(bean_cls("WKWebExtensionController")); }
+#endif
 
 /* ===== WKWebExtensionControllerConfiguration ===== */
+#ifndef BEAN_NEW_WKWebExtensionControllerConfiguration
+#define BEAN_NEW_WKWebExtensionControllerConfiguration
 static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_New(void)                                                                                                             { return ((WKWebExtensionControllerConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("new")); }
+#endif
 static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_Init(WKWebExtensionControllerConfiguration self)                                                                      { return ((WKWebExtensionControllerConfiguration (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_DefaultConfiguration(void)                                                                                            { return ((WKWebExtensionControllerConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("defaultConfiguration")); }
 static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_NonPersistentConfiguration(void)                                                                                      { return ((WKWebExtensionControllerConfiguration (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("nonPersistentConfiguration")); }
@@ -6772,63 +8132,83 @@ static inline void                                     WKWebExtensionControllerC
 static inline BOOL                                     WKWebExtensionControllerConfiguration_SupportsSecureCoding(void)                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebExtensionControllerConfiguration"), bean_sel("supportsSecureCoding")); }
 static inline id                                       WKWebExtensionControllerConfiguration_CopyWithZone(WKWebExtensionControllerConfiguration self, NSZone* zone)                                                { return ((id (*)(WKWebExtensionControllerConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                                     WKWebExtensionControllerConfiguration_Persistent(WKWebExtensionControllerConfiguration self)                                                                { return ((BOOL (*)(WKWebExtensionControllerConfiguration, SEL))bean_msgSend)(self, bean_sel("persistent")); }
+#ifndef BEAN_ALLOC_WKWebExtensionControllerConfiguration
+#define BEAN_ALLOC_WKWebExtensionControllerConfiguration
+static inline WKWebExtensionControllerConfiguration    WKWebExtensionControllerConfiguration_Alloc(void)                                                                                                           { return (WKWebExtensionControllerConfiguration)bean_alloc(bean_cls("WKWebExtensionControllerConfiguration")); }
+#endif
 
 /* ===== WKWebExtensionControllerDelegate ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionControllerDelegate
 #define BEAN_TYPEDEF_WKWebExtensionControllerDelegate
 typedef bean_id WKWebExtensionControllerDelegate;
 #endif
-static inline NSArray    WKWebExtensionControllerDelegate_WebExtensionController_OpenWindowsForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext)                                                                                                                     { return ((NSArray (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:openWindowsForExtensionContext:"), controller, extensionContext); }
-static inline id         WKWebExtensionControllerDelegate_WebExtensionController_FocusedWindowForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext)                                                                                                                   { return ((id (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:focusedWindowForExtensionContext:"), controller, extensionContext); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_OpenNewWindowUsingConfiguration_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionWindowConfiguration configuration, WKWebExtensionContext extensionContext, void* completionHandler)    { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionWindowConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openNewWindowUsingConfiguration:forExtensionContext:completionHandler:"), controller, configuration, extensionContext, completionHandler); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_OpenNewTabUsingConfiguration_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionTabConfiguration configuration, WKWebExtensionContext extensionContext, void* completionHandler)          { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionTabConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openNewTabUsingConfiguration:forExtensionContext:completionHandler:"), controller, configuration, extensionContext, completionHandler); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_OpenOptionsPageForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext, void* completionHandler)                                                                      { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openOptionsPageForExtensionContext:completionHandler:"), controller, extensionContext, completionHandler); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissions_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet permissions, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                               { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissions:inTab:forExtensionContext:completionHandler:"), controller, permissions, tab, extensionContext, completionHandler); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissionToAccessURLs_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet urls, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissionToAccessURLs:inTab:forExtensionContext:completionHandler:"), controller, urls, tab, extensionContext, completionHandler); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissionMatchPatterns_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet matchPatterns, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                 { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissionMatchPatterns:inTab:forExtensionContext:completionHandler:"), controller, matchPatterns, tab, extensionContext, completionHandler); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_DidUpdateAction_ForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionAction action, WKWebExtensionContext context)                                                                                            { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionAction, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:didUpdateAction:forExtensionContext:"), controller, action, context); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_PresentPopupForAction_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionAction action, WKWebExtensionContext context, void* completionHandler)                                           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionAction, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:presentPopupForAction:forExtensionContext:completionHandler:"), controller, action, context, completionHandler); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_SendMessage_ToApplicationWithIdentifier_ForExtensionContext_ReplyHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, id message, NSString applicationIdentifier, WKWebExtensionContext extensionContext, void* replyHandler)           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, id, NSString, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:sendMessage:toApplicationWithIdentifier:forExtensionContext:replyHandler:"), controller, message, applicationIdentifier, extensionContext, replyHandler); }
-static inline void       WKWebExtensionControllerDelegate_WebExtensionController_ConnectUsingMessagePort_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionMessagePort port, WKWebExtensionContext extensionContext, void* completionHandler)                             { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionMessagePort, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:connectUsingMessagePort:forExtensionContext:completionHandler:"), controller, port, extensionContext, completionHandler); }
+static inline NSArray                             WKWebExtensionControllerDelegate_WebExtensionController_OpenWindowsForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext)                                                                                                                     { return ((NSArray (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:openWindowsForExtensionContext:"), controller, extensionContext); }
+static inline id                                  WKWebExtensionControllerDelegate_WebExtensionController_FocusedWindowForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext)                                                                                                                   { return ((id (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:focusedWindowForExtensionContext:"), controller, extensionContext); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_OpenNewWindowUsingConfiguration_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionWindowConfiguration configuration, WKWebExtensionContext extensionContext, void* completionHandler)    { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionWindowConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openNewWindowUsingConfiguration:forExtensionContext:completionHandler:"), controller, configuration, extensionContext, completionHandler); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_OpenNewTabUsingConfiguration_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionTabConfiguration configuration, WKWebExtensionContext extensionContext, void* completionHandler)          { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionTabConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openNewTabUsingConfiguration:forExtensionContext:completionHandler:"), controller, configuration, extensionContext, completionHandler); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_OpenOptionsPageForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionContext extensionContext, void* completionHandler)                                                                      { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:openOptionsPageForExtensionContext:completionHandler:"), controller, extensionContext, completionHandler); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissions_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet permissions, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                               { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissions:inTab:forExtensionContext:completionHandler:"), controller, permissions, tab, extensionContext, completionHandler); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissionToAccessURLs_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet urls, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissionToAccessURLs:inTab:forExtensionContext:completionHandler:"), controller, urls, tab, extensionContext, completionHandler); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_PromptForPermissionMatchPatterns_InTab_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, NSSet matchPatterns, id tab, WKWebExtensionContext extensionContext, void* completionHandler)                 { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, NSSet, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:promptForPermissionMatchPatterns:inTab:forExtensionContext:completionHandler:"), controller, matchPatterns, tab, extensionContext, completionHandler); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_DidUpdateAction_ForExtensionContext(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionAction action, WKWebExtensionContext context)                                                                                            { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionAction, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webExtensionController:didUpdateAction:forExtensionContext:"), controller, action, context); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_PresentPopupForAction_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionAction action, WKWebExtensionContext context, void* completionHandler)                                           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionAction, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:presentPopupForAction:forExtensionContext:completionHandler:"), controller, action, context, completionHandler); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_SendMessage_ToApplicationWithIdentifier_ForExtensionContext_ReplyHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, id message, NSString applicationIdentifier, WKWebExtensionContext extensionContext, void* replyHandler)           { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, id, NSString, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:sendMessage:toApplicationWithIdentifier:forExtensionContext:replyHandler:"), controller, message, applicationIdentifier, extensionContext, replyHandler); }
+static inline void                                WKWebExtensionControllerDelegate_WebExtensionController_ConnectUsingMessagePort_ForExtensionContext_CompletionHandler(WKWebExtensionControllerDelegate self, WKWebExtensionController controller, WKWebExtensionMessagePort port, WKWebExtensionContext extensionContext, void* completionHandler)                             { ((void (*)(WKWebExtensionControllerDelegate, SEL, WKWebExtensionController, WKWebExtensionMessagePort, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("webExtensionController:connectUsingMessagePort:forExtensionContext:completionHandler:"), controller, port, extensionContext, completionHandler); }
+#ifndef BEAN_ALLOC_WKWebExtensionControllerDelegate
+#define BEAN_ALLOC_WKWebExtensionControllerDelegate
+static inline WKWebExtensionControllerDelegate    WKWebExtensionControllerDelegate_Alloc(void)                                                                                                                                                                                                                                                                                   { return (WKWebExtensionControllerDelegate)bean_alloc(bean_cls("WKWebExtensionControllerDelegate")); }
+#endif
+#ifndef BEAN_NEW_WKWebExtensionControllerDelegate
+#define BEAN_NEW_WKWebExtensionControllerDelegate
+static inline WKWebExtensionControllerDelegate    WKWebExtensionControllerDelegate_New(void)                                                                                                                                                                                                                                                                                     { return (WKWebExtensionControllerDelegate)bean_new(bean_cls("WKWebExtensionControllerDelegate")); }
+#endif
 
 /* ===== WKWebExtensionTab ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionTab
 #define BEAN_TYPEDEF_WKWebExtensionTab
 typedef bean_id WKWebExtensionTab;
 #endif
-static inline id            WKWebExtensionTab_WindowForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                   { return ((id (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("windowForWebExtensionContext:"), context); }
-static inline NSUInteger    WKWebExtensionTab_IndexInWindowForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                            { return ((NSUInteger (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("indexInWindowForWebExtensionContext:"), context); }
-static inline id            WKWebExtensionTab_ParentTabForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                { return ((id (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("parentTabForWebExtensionContext:"), context); }
-static inline void          WKWebExtensionTab_SetParentTab_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, id parentTab, WKWebExtensionContext context, void* completionHandler)                                                   { ((void (*)(WKWebExtensionTab, SEL, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setParentTab:forWebExtensionContext:completionHandler:"), parentTab, context, completionHandler); }
-static inline WKWebView     WKWebExtensionTab_WebViewForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                  { return ((WKWebView (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webViewForWebExtensionContext:"), context); }
-static inline NSString      WKWebExtensionTab_TitleForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                    { return ((NSString (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("titleForWebExtensionContext:"), context); }
-static inline BOOL          WKWebExtensionTab_IsPinnedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                 { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isPinnedForWebExtensionContext:"), context); }
-static inline void          WKWebExtensionTab_SetPinned_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL pinned, WKWebExtensionContext context, void* completionHandler)                                                       { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setPinned:forWebExtensionContext:completionHandler:"), pinned, context, completionHandler); }
-static inline BOOL          WKWebExtensionTab_IsReaderModeAvailableForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                    { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isReaderModeAvailableForWebExtensionContext:"), context); }
-static inline BOOL          WKWebExtensionTab_IsReaderModeActiveForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                       { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isReaderModeActiveForWebExtensionContext:"), context); }
-static inline void          WKWebExtensionTab_SetReaderModeActive_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL active, WKWebExtensionContext context, void* completionHandler)                                             { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setReaderModeActive:forWebExtensionContext:completionHandler:"), active, context, completionHandler); }
-static inline BOOL          WKWebExtensionTab_IsPlayingAudioForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                           { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isPlayingAudioForWebExtensionContext:"), context); }
-static inline BOOL          WKWebExtensionTab_IsMutedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                  { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isMutedForWebExtensionContext:"), context); }
-static inline void          WKWebExtensionTab_SetMuted_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL muted, WKWebExtensionContext context, void* completionHandler)                                                         { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setMuted:forWebExtensionContext:completionHandler:"), muted, context, completionHandler); }
-static inline CGSize        WKWebExtensionTab_SizeForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                     { return ((CGSize (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend_stret)(self, bean_sel("sizeForWebExtensionContext:"), context); }
-static inline CGFloat       WKWebExtensionTab_ZoomFactorForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((CGFloat (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend_fpret)(self, bean_sel("zoomFactorForWebExtensionContext:"), context); }
-static inline void          WKWebExtensionTab_SetZoomFactor_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, CGFloat zoomFactor, WKWebExtensionContext context, void* completionHandler)                                            { ((void (*)(WKWebExtensionTab, SEL, CGFloat, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setZoomFactor:forWebExtensionContext:completionHandler:"), zoomFactor, context, completionHandler); }
-static inline NSURL         WKWebExtensionTab_UrlForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                      { return ((NSURL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("urlForWebExtensionContext:"), context); }
-static inline NSURL         WKWebExtensionTab_PendingURLForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((NSURL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("pendingURLForWebExtensionContext:"), context); }
-static inline BOOL          WKWebExtensionTab_IsLoadingCompleteForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                        { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isLoadingCompleteForWebExtensionContext:"), context); }
-static inline void          WKWebExtensionTab_DetectWebpageLocaleForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                           { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("detectWebpageLocaleForWebExtensionContext:completionHandler:"), context, completionHandler); }
-static inline void          WKWebExtensionTab_TakeSnapshotUsingConfiguration_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKSnapshotConfiguration configuration, WKWebExtensionContext context, void* completionHandler)        { ((void (*)(WKWebExtensionTab, SEL, WKSnapshotConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("takeSnapshotUsingConfiguration:forWebExtensionContext:completionHandler:"), configuration, context, completionHandler); }
-static inline void          WKWebExtensionTab_LoadURL_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, NSURL url, WKWebExtensionContext context, void* completionHandler)                                                           { ((void (*)(WKWebExtensionTab, SEL, NSURL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("loadURL:forWebExtensionContext:completionHandler:"), url, context, completionHandler); }
-static inline void          WKWebExtensionTab_ReloadFromOrigin_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL fromOrigin, WKWebExtensionContext context, void* completionHandler)                                            { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("reloadFromOrigin:forWebExtensionContext:completionHandler:"), fromOrigin, context, completionHandler); }
-static inline void          WKWebExtensionTab_GoBackForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                        { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("goBackForWebExtensionContext:completionHandler:"), context, completionHandler); }
-static inline void          WKWebExtensionTab_GoForwardForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                     { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("goForwardForWebExtensionContext:completionHandler:"), context, completionHandler); }
-static inline void          WKWebExtensionTab_ActivateForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                      { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("activateForWebExtensionContext:completionHandler:"), context, completionHandler); }
-static inline BOOL          WKWebExtensionTab_IsSelectedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isSelectedForWebExtensionContext:"), context); }
-static inline void          WKWebExtensionTab_SetSelected_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL selected, WKWebExtensionContext context, void* completionHandler)                                                   { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setSelected:forWebExtensionContext:completionHandler:"), selected, context, completionHandler); }
-static inline void          WKWebExtensionTab_DuplicateUsingConfiguration_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionTabConfiguration configuration, WKWebExtensionContext context, void* completionHandler)    { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionTabConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("duplicateUsingConfiguration:forWebExtensionContext:completionHandler:"), configuration, context, completionHandler); }
-static inline void          WKWebExtensionTab_CloseForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                         { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("closeForWebExtensionContext:completionHandler:"), context, completionHandler); }
-static inline BOOL          WKWebExtensionTab_ShouldGrantPermissionsOnUserGestureForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                      { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("shouldGrantPermissionsOnUserGestureForWebExtensionContext:"), context); }
-static inline BOOL          WKWebExtensionTab_ShouldBypassPermissionsForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                  { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("shouldBypassPermissionsForWebExtensionContext:"), context); }
+static inline id                   WKWebExtensionTab_WindowForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                   { return ((id (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("windowForWebExtensionContext:"), context); }
+static inline NSUInteger           WKWebExtensionTab_IndexInWindowForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                            { return ((NSUInteger (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("indexInWindowForWebExtensionContext:"), context); }
+static inline id                   WKWebExtensionTab_ParentTabForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                { return ((id (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("parentTabForWebExtensionContext:"), context); }
+static inline void                 WKWebExtensionTab_SetParentTab_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, id parentTab, WKWebExtensionContext context, void* completionHandler)                                                   { ((void (*)(WKWebExtensionTab, SEL, id, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setParentTab:forWebExtensionContext:completionHandler:"), parentTab, context, completionHandler); }
+static inline WKWebView            WKWebExtensionTab_WebViewForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                  { return ((WKWebView (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("webViewForWebExtensionContext:"), context); }
+static inline NSString             WKWebExtensionTab_TitleForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                    { return ((NSString (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("titleForWebExtensionContext:"), context); }
+static inline BOOL                 WKWebExtensionTab_IsPinnedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                 { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isPinnedForWebExtensionContext:"), context); }
+static inline void                 WKWebExtensionTab_SetPinned_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL pinned, WKWebExtensionContext context, void* completionHandler)                                                       { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setPinned:forWebExtensionContext:completionHandler:"), pinned, context, completionHandler); }
+static inline BOOL                 WKWebExtensionTab_IsReaderModeAvailableForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                    { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isReaderModeAvailableForWebExtensionContext:"), context); }
+static inline BOOL                 WKWebExtensionTab_IsReaderModeActiveForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                       { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isReaderModeActiveForWebExtensionContext:"), context); }
+static inline void                 WKWebExtensionTab_SetReaderModeActive_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL active, WKWebExtensionContext context, void* completionHandler)                                             { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setReaderModeActive:forWebExtensionContext:completionHandler:"), active, context, completionHandler); }
+static inline BOOL                 WKWebExtensionTab_IsPlayingAudioForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                           { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isPlayingAudioForWebExtensionContext:"), context); }
+static inline BOOL                 WKWebExtensionTab_IsMutedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                  { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isMutedForWebExtensionContext:"), context); }
+static inline void                 WKWebExtensionTab_SetMuted_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL muted, WKWebExtensionContext context, void* completionHandler)                                                         { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setMuted:forWebExtensionContext:completionHandler:"), muted, context, completionHandler); }
+static inline CGSize               WKWebExtensionTab_SizeForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                     { return ((CGSize (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend_stret)(self, bean_sel("sizeForWebExtensionContext:"), context); }
+static inline CGFloat              WKWebExtensionTab_ZoomFactorForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((CGFloat (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend_fpret)(self, bean_sel("zoomFactorForWebExtensionContext:"), context); }
+static inline void                 WKWebExtensionTab_SetZoomFactor_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, CGFloat zoomFactor, WKWebExtensionContext context, void* completionHandler)                                            { ((void (*)(WKWebExtensionTab, SEL, CGFloat, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setZoomFactor:forWebExtensionContext:completionHandler:"), zoomFactor, context, completionHandler); }
+static inline NSURL                WKWebExtensionTab_UrlForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                                      { return ((NSURL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("urlForWebExtensionContext:"), context); }
+static inline NSURL                WKWebExtensionTab_PendingURLForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((NSURL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("pendingURLForWebExtensionContext:"), context); }
+static inline BOOL                 WKWebExtensionTab_IsLoadingCompleteForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                        { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isLoadingCompleteForWebExtensionContext:"), context); }
+static inline void                 WKWebExtensionTab_DetectWebpageLocaleForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                           { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("detectWebpageLocaleForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline void                 WKWebExtensionTab_TakeSnapshotUsingConfiguration_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKSnapshotConfiguration configuration, WKWebExtensionContext context, void* completionHandler)        { ((void (*)(WKWebExtensionTab, SEL, WKSnapshotConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("takeSnapshotUsingConfiguration:forWebExtensionContext:completionHandler:"), configuration, context, completionHandler); }
+static inline void                 WKWebExtensionTab_LoadURL_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, NSURL url, WKWebExtensionContext context, void* completionHandler)                                                           { ((void (*)(WKWebExtensionTab, SEL, NSURL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("loadURL:forWebExtensionContext:completionHandler:"), url, context, completionHandler); }
+static inline void                 WKWebExtensionTab_ReloadFromOrigin_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL fromOrigin, WKWebExtensionContext context, void* completionHandler)                                            { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("reloadFromOrigin:forWebExtensionContext:completionHandler:"), fromOrigin, context, completionHandler); }
+static inline void                 WKWebExtensionTab_GoBackForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                        { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("goBackForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline void                 WKWebExtensionTab_GoForwardForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                     { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("goForwardForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline void                 WKWebExtensionTab_ActivateForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                      { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("activateForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline BOOL                 WKWebExtensionTab_IsSelectedForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                               { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("isSelectedForWebExtensionContext:"), context); }
+static inline void                 WKWebExtensionTab_SetSelected_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, BOOL selected, WKWebExtensionContext context, void* completionHandler)                                                   { ((void (*)(WKWebExtensionTab, SEL, BOOL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setSelected:forWebExtensionContext:completionHandler:"), selected, context, completionHandler); }
+static inline void                 WKWebExtensionTab_DuplicateUsingConfiguration_ForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionTabConfiguration configuration, WKWebExtensionContext context, void* completionHandler)    { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionTabConfiguration, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("duplicateUsingConfiguration:forWebExtensionContext:completionHandler:"), configuration, context, completionHandler); }
+static inline void                 WKWebExtensionTab_CloseForWebExtensionContext_CompletionHandler(WKWebExtensionTab self, WKWebExtensionContext context, void* completionHandler)                                                                         { ((void (*)(WKWebExtensionTab, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("closeForWebExtensionContext:completionHandler:"), context, completionHandler); }
+static inline BOOL                 WKWebExtensionTab_ShouldGrantPermissionsOnUserGestureForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                      { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("shouldGrantPermissionsOnUserGestureForWebExtensionContext:"), context); }
+static inline BOOL                 WKWebExtensionTab_ShouldBypassPermissionsForWebExtensionContext(WKWebExtensionTab self, WKWebExtensionContext context)                                                                                                  { return ((BOOL (*)(WKWebExtensionTab, SEL, WKWebExtensionContext))bean_msgSend)(self, bean_sel("shouldBypassPermissionsForWebExtensionContext:"), context); }
+#ifndef BEAN_ALLOC_WKWebExtensionTab
+#define BEAN_ALLOC_WKWebExtensionTab
+static inline WKWebExtensionTab    WKWebExtensionTab_Alloc(void)                                                                                                                                                                                           { return (WKWebExtensionTab)bean_alloc(bean_cls("WKWebExtensionTab")); }
+#endif
+#ifndef BEAN_NEW_WKWebExtensionTab
+#define BEAN_NEW_WKWebExtensionTab
+static inline WKWebExtensionTab    WKWebExtensionTab_New(void)                                                                                                                                                                                             { return (WKWebExtensionTab)bean_new(bean_cls("WKWebExtensionTab")); }
+#endif
 
 /* ===== WKWebExtensionWindow ===== */
 #ifndef BEAN_TYPEDEF_WKWebExtensionWindow
@@ -6846,6 +8226,14 @@ static inline CGRect                       WKWebExtensionWindow_FrameForWebExten
 static inline void                         WKWebExtensionWindow_SetFrame_ForWebExtensionContext_CompletionHandler(WKWebExtensionWindow self, CGRect frame, WKWebExtensionContext context, void* completionHandler)                             { ((void (*)(WKWebExtensionWindow, SEL, CGRect, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("setFrame:forWebExtensionContext:completionHandler:"), frame, context, completionHandler); }
 static inline void                         WKWebExtensionWindow_FocusForWebExtensionContext_CompletionHandler(WKWebExtensionWindow self, WKWebExtensionContext context, void* completionHandler)                                               { ((void (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("focusForWebExtensionContext:completionHandler:"), context, completionHandler); }
 static inline void                         WKWebExtensionWindow_CloseForWebExtensionContext_CompletionHandler(WKWebExtensionWindow self, WKWebExtensionContext context, void* completionHandler)                                               { ((void (*)(WKWebExtensionWindow, SEL, WKWebExtensionContext, void*))bean_msgSend)(self, bean_sel("closeForWebExtensionContext:completionHandler:"), context, completionHandler); }
+#ifndef BEAN_ALLOC_WKWebExtensionWindow
+#define BEAN_ALLOC_WKWebExtensionWindow
+static inline WKWebExtensionWindow         WKWebExtensionWindow_Alloc(void)                                                                                                                                                                    { return (WKWebExtensionWindow)bean_alloc(bean_cls("WKWebExtensionWindow")); }
+#endif
+#ifndef BEAN_NEW_WKWebExtensionWindow
+#define BEAN_NEW_WKWebExtensionWindow
+static inline WKWebExtensionWindow         WKWebExtensionWindow_New(void)                                                                                                                                                                      { return (WKWebExtensionWindow)bean_new(bean_cls("WKWebExtensionWindow")); }
+#endif
 
 /* ===== WKWebView ===== */
 static inline WKWebView                 WKWebView_InitWithFrame_Configuration(WKWebView self, CGRect frame, WKWebViewConfiguration configuration)                                                                                                                   { return ((WKWebView (*)(WKWebView, SEL, CGRect, WKWebViewConfiguration))bean_msgSend)(self, bean_sel("initWithFrame:configuration:"), frame, configuration); }
@@ -6939,6 +8327,14 @@ static inline NSArray                   WKWebView_CertificateChain(WKWebView sel
 static inline BOOL                      WKWebView_Loading(WKWebView self)                                                                                                                                                                                           { return ((BOOL (*)(WKWebView, SEL))bean_msgSend)(self, bean_sel("loading")); }
 static inline BOOL                      WKWebView_Inspectable(WKWebView self)                                                                                                                                                                                       { return ((BOOL (*)(WKWebView, SEL))bean_msgSend)(self, bean_sel("inspectable")); }
 static inline BOOL                      WKWebView_WritingToolsActive(WKWebView self)                                                                                                                                                                                { return ((BOOL (*)(WKWebView, SEL))bean_msgSend)(self, bean_sel("writingToolsActive")); }
+#ifndef BEAN_ALLOC_WKWebView
+#define BEAN_ALLOC_WKWebView
+static inline WKWebView                 WKWebView_Alloc(void)                                                                                                                                                                                                       { return (WKWebView)bean_alloc(bean_cls("WKWebView")); }
+#endif
+#ifndef BEAN_NEW_WKWebView
+#define BEAN_NEW_WKWebView
+static inline WKWebView                 WKWebView_New(void)                                                                                                                                                                                                         { return (WKWebView)bean_new(bean_cls("WKWebView")); }
+#endif
 
 /* ===== WKWebViewConfiguration ===== */
 static inline void                              WKWebViewConfiguration_SetURLSchemeHandler_ForURLScheme(WKWebViewConfiguration self, id urlSchemeHandler, NSString urlScheme)                                        { ((void (*)(WKWebViewConfiguration, SEL, id, NSString))bean_msgSend)(self, bean_sel("setURLSchemeHandler:forURLScheme:"), urlSchemeHandler, urlScheme); }
@@ -6979,6 +8375,14 @@ static inline NSWritingToolsBehavior            WKWebViewConfiguration_WritingTo
 static inline void                              WKWebViewConfiguration_SetWritingToolsBehavior(WKWebViewConfiguration self, NSWritingToolsBehavior writingToolsBehavior)                                             { ((void (*)(WKWebViewConfiguration, SEL, NSWritingToolsBehavior))bean_msgSend)(self, bean_sel("setWritingToolsBehavior:"), writingToolsBehavior); }
 static inline BOOL                              WKWebViewConfiguration_SupportsSecureCoding(void)                                                                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("WKWebViewConfiguration"), bean_sel("supportsSecureCoding")); }
 static inline id                                WKWebViewConfiguration_CopyWithZone(WKWebViewConfiguration self, NSZone* zone)                                                                                       { return ((id (*)(WKWebViewConfiguration, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_WKWebViewConfiguration
+#define BEAN_ALLOC_WKWebViewConfiguration
+static inline WKWebViewConfiguration            WKWebViewConfiguration_Alloc(void)                                                                                                                                   { return (WKWebViewConfiguration)bean_alloc(bean_cls("WKWebViewConfiguration")); }
+#endif
+#ifndef BEAN_NEW_WKWebViewConfiguration
+#define BEAN_NEW_WKWebViewConfiguration
+static inline WKWebViewConfiguration            WKWebViewConfiguration_New(void)                                                                                                                                     { return (WKWebViewConfiguration)bean_new(bean_cls("WKWebViewConfiguration")); }
+#endif
 
 /* ===== WebDataSource ===== */
 #ifndef BEAN_TYPEDEF_WebDataSource
@@ -6999,27 +8403,43 @@ static inline NSURL                  WebDataSource_UnreachableURL(WebDataSource 
 static inline WebResource            WebDataSource_MainResource(WebDataSource self)                               { return ((WebResource (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("mainResource")); }
 static inline NSArray                WebDataSource_Subresources(WebDataSource self)                               { return ((NSArray (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("subresources")); }
 static inline BOOL                   WebDataSource_Loading(WebDataSource self)                                    { return ((BOOL (*)(WebDataSource, SEL))bean_msgSend)(self, bean_sel("loading")); }
+#ifndef BEAN_ALLOC_WebDataSource
+#define BEAN_ALLOC_WebDataSource
+static inline WebDataSource          WebDataSource_Alloc(void)                                                    { return (WebDataSource)bean_alloc(bean_cls("WebDataSource")); }
+#endif
+#ifndef BEAN_NEW_WebDataSource
+#define BEAN_NEW_WebDataSource
+static inline WebDataSource          WebDataSource_New(void)                                                      { return (WebDataSource)bean_new(bean_cls("WebDataSource")); }
+#endif
 
 /* ===== WebEditingDelegate ===== */
 #ifndef BEAN_TYPEDEF_WebEditingDelegate
 #define BEAN_TYPEDEF_WebEditingDelegate
 typedef bean_id WebEditingDelegate;
 #endif
-static inline BOOL             WebEditingDelegate_WebView_ShouldBeginEditingInDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                     { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldBeginEditingInDOMRange:"), webView, range); }
-static inline BOOL             WebEditingDelegate_WebView_ShouldEndEditingInDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                       { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldEndEditingInDOMRange:"), webView, range); }
-static inline BOOL             WebEditingDelegate_WebView_ShouldInsertNode_ReplacingDOMRange_GivenAction(WebEditingDelegate self, WebView webView, void* node, void* range, WebViewInsertAction action)                                                           { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*, WebViewInsertAction))bean_msgSend)(self, bean_sel("webView:shouldInsertNode:replacingDOMRange:givenAction:"), webView, node, range, action); }
-static inline BOOL             WebEditingDelegate_WebView_ShouldInsertText_ReplacingDOMRange_GivenAction(WebEditingDelegate self, WebView webView, NSString text, void* range, WebViewInsertAction action)                                                        { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, NSString, void*, WebViewInsertAction))bean_msgSend)(self, bean_sel("webView:shouldInsertText:replacingDOMRange:givenAction:"), webView, text, range, action); }
-static inline BOOL             WebEditingDelegate_WebView_ShouldDeleteDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                             { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldDeleteDOMRange:"), webView, range); }
-static inline BOOL             WebEditingDelegate_WebView_ShouldChangeSelectedDOMRange_ToDOMRange_Affinity_StillSelecting(WebEditingDelegate self, WebView webView, void* currentRange, void* proposedRange, NSSelectionAffinity selectionAffinity, BOOL flag)    { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*, NSSelectionAffinity, BOOL))bean_msgSend)(self, bean_sel("webView:shouldChangeSelectedDOMRange:toDOMRange:affinity:stillSelecting:"), webView, currentRange, proposedRange, selectionAffinity, flag); }
-static inline BOOL             WebEditingDelegate_WebView_ShouldApplyStyle_ToElementsInDOMRange(WebEditingDelegate self, WebView webView, void* style, void* range)                                                                                               { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*))bean_msgSend)(self, bean_sel("webView:shouldApplyStyle:toElementsInDOMRange:"), webView, style, range); }
-static inline BOOL             WebEditingDelegate_WebView_ShouldChangeTypingStyle_ToStyle(WebEditingDelegate self, WebView webView, void* currentStyle, void* proposedStyle)                                                                                      { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*))bean_msgSend)(self, bean_sel("webView:shouldChangeTypingStyle:toStyle:"), webView, currentStyle, proposedStyle); }
-static inline BOOL             WebEditingDelegate_WebView_DoCommandBySelector(WebEditingDelegate self, WebView webView, SEL selector)                                                                                                                             { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, SEL))bean_msgSend)(self, bean_sel("webView:doCommandBySelector:"), webView, selector); }
-static inline void             WebEditingDelegate_WebViewDidBeginEditing(WebEditingDelegate self, NSNotification notification)                                                                                                                                    { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidBeginEditing:"), notification); }
-static inline void             WebEditingDelegate_WebViewDidChange(WebEditingDelegate self, NSNotification notification)                                                                                                                                          { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChange:"), notification); }
-static inline void             WebEditingDelegate_WebViewDidEndEditing(WebEditingDelegate self, NSNotification notification)                                                                                                                                      { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidEndEditing:"), notification); }
-static inline void             WebEditingDelegate_WebViewDidChangeTypingStyle(WebEditingDelegate self, NSNotification notification)                                                                                                                               { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChangeTypingStyle:"), notification); }
-static inline void             WebEditingDelegate_WebViewDidChangeSelection(WebEditingDelegate self, NSNotification notification)                                                                                                                                 { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChangeSelection:"), notification); }
-static inline NSUndoManager    WebEditingDelegate_UndoManagerForWebView(WebEditingDelegate self, WebView webView)                                                                                                                                                 { return ((NSUndoManager (*)(WebEditingDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("undoManagerForWebView:"), webView); }
+static inline BOOL                  WebEditingDelegate_WebView_ShouldBeginEditingInDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                     { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldBeginEditingInDOMRange:"), webView, range); }
+static inline BOOL                  WebEditingDelegate_WebView_ShouldEndEditingInDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                       { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldEndEditingInDOMRange:"), webView, range); }
+static inline BOOL                  WebEditingDelegate_WebView_ShouldInsertNode_ReplacingDOMRange_GivenAction(WebEditingDelegate self, WebView webView, void* node, void* range, WebViewInsertAction action)                                                           { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*, WebViewInsertAction))bean_msgSend)(self, bean_sel("webView:shouldInsertNode:replacingDOMRange:givenAction:"), webView, node, range, action); }
+static inline BOOL                  WebEditingDelegate_WebView_ShouldInsertText_ReplacingDOMRange_GivenAction(WebEditingDelegate self, WebView webView, NSString text, void* range, WebViewInsertAction action)                                                        { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, NSString, void*, WebViewInsertAction))bean_msgSend)(self, bean_sel("webView:shouldInsertText:replacingDOMRange:givenAction:"), webView, text, range, action); }
+static inline BOOL                  WebEditingDelegate_WebView_ShouldDeleteDOMRange(WebEditingDelegate self, WebView webView, void* range)                                                                                                                             { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*))bean_msgSend)(self, bean_sel("webView:shouldDeleteDOMRange:"), webView, range); }
+static inline BOOL                  WebEditingDelegate_WebView_ShouldChangeSelectedDOMRange_ToDOMRange_Affinity_StillSelecting(WebEditingDelegate self, WebView webView, void* currentRange, void* proposedRange, NSSelectionAffinity selectionAffinity, BOOL flag)    { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*, NSSelectionAffinity, BOOL))bean_msgSend)(self, bean_sel("webView:shouldChangeSelectedDOMRange:toDOMRange:affinity:stillSelecting:"), webView, currentRange, proposedRange, selectionAffinity, flag); }
+static inline BOOL                  WebEditingDelegate_WebView_ShouldApplyStyle_ToElementsInDOMRange(WebEditingDelegate self, WebView webView, void* style, void* range)                                                                                               { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*))bean_msgSend)(self, bean_sel("webView:shouldApplyStyle:toElementsInDOMRange:"), webView, style, range); }
+static inline BOOL                  WebEditingDelegate_WebView_ShouldChangeTypingStyle_ToStyle(WebEditingDelegate self, WebView webView, void* currentStyle, void* proposedStyle)                                                                                      { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, void*, void*))bean_msgSend)(self, bean_sel("webView:shouldChangeTypingStyle:toStyle:"), webView, currentStyle, proposedStyle); }
+static inline BOOL                  WebEditingDelegate_WebView_DoCommandBySelector(WebEditingDelegate self, WebView webView, SEL selector)                                                                                                                             { return ((BOOL (*)(WebEditingDelegate, SEL, WebView, SEL))bean_msgSend)(self, bean_sel("webView:doCommandBySelector:"), webView, selector); }
+static inline void                  WebEditingDelegate_WebViewDidBeginEditing(WebEditingDelegate self, NSNotification notification)                                                                                                                                    { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidBeginEditing:"), notification); }
+static inline void                  WebEditingDelegate_WebViewDidChange(WebEditingDelegate self, NSNotification notification)                                                                                                                                          { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChange:"), notification); }
+static inline void                  WebEditingDelegate_WebViewDidEndEditing(WebEditingDelegate self, NSNotification notification)                                                                                                                                      { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidEndEditing:"), notification); }
+static inline void                  WebEditingDelegate_WebViewDidChangeTypingStyle(WebEditingDelegate self, NSNotification notification)                                                                                                                               { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChangeTypingStyle:"), notification); }
+static inline void                  WebEditingDelegate_WebViewDidChangeSelection(WebEditingDelegate self, NSNotification notification)                                                                                                                                 { ((void (*)(WebEditingDelegate, SEL, NSNotification))bean_msgSend)(self, bean_sel("webViewDidChangeSelection:"), notification); }
+static inline NSUndoManager         WebEditingDelegate_UndoManagerForWebView(WebEditingDelegate self, WebView webView)                                                                                                                                                 { return ((NSUndoManager (*)(WebEditingDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("undoManagerForWebView:"), webView); }
+#ifndef BEAN_ALLOC_WebEditingDelegate
+#define BEAN_ALLOC_WebEditingDelegate
+static inline WebEditingDelegate    WebEditingDelegate_Alloc(void)                                                                                                                                                                                                     { return (WebEditingDelegate)bean_alloc(bean_cls("WebEditingDelegate")); }
+#endif
+#ifndef BEAN_NEW_WebEditingDelegate
+#define BEAN_NEW_WebEditingDelegate
+static inline WebEditingDelegate    WebEditingDelegate_New(void)                                                                                                                                                                                                       { return (WebEditingDelegate)bean_new(bean_cls("WebEditingDelegate")); }
+#endif
 
 /* ===== WebFrame ===== */
 static inline WebFrame           WebFrame_InitWithName_WebFrameView_WebView(WebFrame self, NSString name, WebFrameView view, WebView webView)                            { return ((WebFrame (*)(WebFrame, SEL, NSString, WebFrameView, WebView))bean_msgSend)(self, bean_sel("initWithName:webFrameView:webView:"), name, view, webView); }
@@ -7041,27 +8461,43 @@ static inline NSArray            WebFrame_ChildFrames(WebFrame self)            
 static inline WebScriptObject    WebFrame_WindowObject(WebFrame self)                                                                                                    { return ((WebScriptObject (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("windowObject")); }
 static inline void*              WebFrame_GlobalContext(WebFrame self)                                                                                                   { return ((void* (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("globalContext")); }
 static inline void*              WebFrame_JavaScriptContext(WebFrame self)                                                                                               { return ((void* (*)(WebFrame, SEL))bean_msgSend)(self, bean_sel("javaScriptContext")); }
+#ifndef BEAN_ALLOC_WebFrame
+#define BEAN_ALLOC_WebFrame
+static inline WebFrame           WebFrame_Alloc(void)                                                                                                                    { return (WebFrame)bean_alloc(bean_cls("WebFrame")); }
+#endif
+#ifndef BEAN_NEW_WebFrame
+#define BEAN_NEW_WebFrame
+static inline WebFrame           WebFrame_New(void)                                                                                                                      { return (WebFrame)bean_new(bean_cls("WebFrame")); }
+#endif
 
 /* ===== WebFrameLoadDelegate ===== */
 #ifndef BEAN_TYPEDEF_WebFrameLoadDelegate
 #define BEAN_TYPEDEF_WebFrameLoadDelegate
 typedef bean_id WebFrameLoadDelegate;
 #endif
-static inline void    WebFrameLoadDelegate_WebView_DidStartProvisionalLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didStartProvisionalLoadForFrame:"), sender, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidReceiveServerRedirectForProvisionalLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                 { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveServerRedirectForProvisionalLoadForFrame:"), sender, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidFailProvisionalLoadWithError_ForFrame(WebFrameLoadDelegate self, WebView sender, NSError error, WebFrame frame)                                            { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:didFailProvisionalLoadWithError:forFrame:"), sender, error, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidCommitLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                              { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didCommitLoadForFrame:"), sender, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidReceiveTitle_ForFrame(WebFrameLoadDelegate self, WebView sender, NSString title, WebFrame frame)                                                           { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveTitle:forFrame:"), sender, title, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidReceiveIcon_ForFrame(WebFrameLoadDelegate self, WebView sender, NSImage image, WebFrame frame)                                                             { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSImage, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveIcon:forFrame:"), sender, image, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidFinishLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                              { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didFinishLoadForFrame:"), sender, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidFailLoadWithError_ForFrame(WebFrameLoadDelegate self, WebView sender, NSError error, WebFrame frame)                                                       { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:didFailLoadWithError:forFrame:"), sender, error, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidChangeLocationWithinPageForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didChangeLocationWithinPageForFrame:"), sender, frame); }
-static inline void    WebFrameLoadDelegate_WebView_WillPerformClientRedirectToURL_Delay_FireDate_ForFrame(WebFrameLoadDelegate self, WebView sender, NSURL URL, CGFloat seconds, NSDate date, WebFrame frame)    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSURL, CGFloat, NSDate, WebFrame))bean_msgSend)(self, bean_sel("webView:willPerformClientRedirectToURL:delay:fireDate:forFrame:"), sender, URL, seconds, date, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidCancelClientRedirectForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didCancelClientRedirectForFrame:"), sender, frame); }
-static inline void    WebFrameLoadDelegate_WebView_WillCloseFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                                     { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:willCloseFrame:"), sender, frame); }
-static inline void    WebFrameLoadDelegate_WebView_DidClearWindowObject_ForFrame(WebFrameLoadDelegate self, WebView webView, WebScriptObject windowObject, WebFrame frame)                                       { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebScriptObject, WebFrame))bean_msgSend)(self, bean_sel("webView:didClearWindowObject:forFrame:"), webView, windowObject, frame); }
-static inline void    WebFrameLoadDelegate_WebView_WindowScriptObjectAvailable(WebFrameLoadDelegate self, WebView webView, WebScriptObject windowScriptObject)                                                   { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebScriptObject))bean_msgSend)(self, bean_sel("webView:windowScriptObjectAvailable:"), webView, windowScriptObject); }
-static inline void    WebFrameLoadDelegate_WebView_DidCreateJavaScriptContext_ForFrame(WebFrameLoadDelegate self, WebView webView, void* context, WebFrame frame)                                                { ((void (*)(WebFrameLoadDelegate, SEL, WebView, void*, WebFrame))bean_msgSend)(self, bean_sel("webView:didCreateJavaScriptContext:forFrame:"), webView, context, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidStartProvisionalLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didStartProvisionalLoadForFrame:"), sender, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidReceiveServerRedirectForProvisionalLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                 { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveServerRedirectForProvisionalLoadForFrame:"), sender, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidFailProvisionalLoadWithError_ForFrame(WebFrameLoadDelegate self, WebView sender, NSError error, WebFrame frame)                                            { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:didFailProvisionalLoadWithError:forFrame:"), sender, error, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidCommitLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                              { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didCommitLoadForFrame:"), sender, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidReceiveTitle_ForFrame(WebFrameLoadDelegate self, WebView sender, NSString title, WebFrame frame)                                                           { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveTitle:forFrame:"), sender, title, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidReceiveIcon_ForFrame(WebFrameLoadDelegate self, WebView sender, NSImage image, WebFrame frame)                                                             { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSImage, WebFrame))bean_msgSend)(self, bean_sel("webView:didReceiveIcon:forFrame:"), sender, image, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidFinishLoadForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                              { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didFinishLoadForFrame:"), sender, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidFailLoadWithError_ForFrame(WebFrameLoadDelegate self, WebView sender, NSError error, WebFrame frame)                                                       { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:didFailLoadWithError:forFrame:"), sender, error, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidChangeLocationWithinPageForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didChangeLocationWithinPageForFrame:"), sender, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_WillPerformClientRedirectToURL_Delay_FireDate_ForFrame(WebFrameLoadDelegate self, WebView sender, NSURL URL, CGFloat seconds, NSDate date, WebFrame frame)    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, NSURL, CGFloat, NSDate, WebFrame))bean_msgSend)(self, bean_sel("webView:willPerformClientRedirectToURL:delay:fireDate:forFrame:"), sender, URL, seconds, date, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidCancelClientRedirectForFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                    { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:didCancelClientRedirectForFrame:"), sender, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_WillCloseFrame(WebFrameLoadDelegate self, WebView sender, WebFrame frame)                                                                                     { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebFrame))bean_msgSend)(self, bean_sel("webView:willCloseFrame:"), sender, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_DidClearWindowObject_ForFrame(WebFrameLoadDelegate self, WebView webView, WebScriptObject windowObject, WebFrame frame)                                       { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebScriptObject, WebFrame))bean_msgSend)(self, bean_sel("webView:didClearWindowObject:forFrame:"), webView, windowObject, frame); }
+static inline void                    WebFrameLoadDelegate_WebView_WindowScriptObjectAvailable(WebFrameLoadDelegate self, WebView webView, WebScriptObject windowScriptObject)                                                   { ((void (*)(WebFrameLoadDelegate, SEL, WebView, WebScriptObject))bean_msgSend)(self, bean_sel("webView:windowScriptObjectAvailable:"), webView, windowScriptObject); }
+static inline void                    WebFrameLoadDelegate_WebView_DidCreateJavaScriptContext_ForFrame(WebFrameLoadDelegate self, WebView webView, void* context, WebFrame frame)                                                { ((void (*)(WebFrameLoadDelegate, SEL, WebView, void*, WebFrame))bean_msgSend)(self, bean_sel("webView:didCreateJavaScriptContext:forFrame:"), webView, context, frame); }
+#ifndef BEAN_ALLOC_WebFrameLoadDelegate
+#define BEAN_ALLOC_WebFrameLoadDelegate
+static inline WebFrameLoadDelegate    WebFrameLoadDelegate_Alloc(void)                                                                                                                                                           { return (WebFrameLoadDelegate)bean_alloc(bean_cls("WebFrameLoadDelegate")); }
+#endif
+#ifndef BEAN_NEW_WebFrameLoadDelegate
+#define BEAN_NEW_WebFrameLoadDelegate
+static inline WebFrameLoadDelegate    WebFrameLoadDelegate_New(void)                                                                                                                                                             { return (WebFrameLoadDelegate)bean_new(bean_cls("WebFrameLoadDelegate")); }
+#endif
 
 /* ===== WebFrameView ===== */
 static inline NSPrintOperation    WebFrameView_PrintOperationWithPrintInfo(WebFrameView self, NSPrintInfo printInfo)    { return ((NSPrintOperation (*)(WebFrameView, SEL, NSPrintInfo))bean_msgSend)(self, bean_sel("printOperationWithPrintInfo:"), printInfo); }
@@ -7072,65 +8508,89 @@ static inline BOOL                WebFrameView_AllowsScrolling(WebFrameView self
 static inline void                WebFrameView_SetAllowsScrolling(WebFrameView self, BOOL allowsScrolling)              { ((void (*)(WebFrameView, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsScrolling:"), allowsScrolling); }
 static inline BOOL                WebFrameView_CanPrintHeadersAndFooters(WebFrameView self)                             { return ((BOOL (*)(WebFrameView, SEL))bean_msgSend)(self, bean_sel("canPrintHeadersAndFooters")); }
 static inline BOOL                WebFrameView_DocumentViewShouldHandlePrint(WebFrameView self)                         { return ((BOOL (*)(WebFrameView, SEL))bean_msgSend)(self, bean_sel("documentViewShouldHandlePrint")); }
+#ifndef BEAN_ALLOC_WebFrameView
+#define BEAN_ALLOC_WebFrameView
+static inline WebFrameView        WebFrameView_Alloc(void)                                                              { return (WebFrameView)bean_alloc(bean_cls("WebFrameView")); }
+#endif
+#ifndef BEAN_NEW_WebFrameView
+#define BEAN_NEW_WebFrameView
+static inline WebFrameView        WebFrameView_New(void)                                                                { return (WebFrameView)bean_new(bean_cls("WebFrameView")); }
+#endif
 
 /* ===== WebPolicyDelegate ===== */
 #ifndef BEAN_TYPEDEF_WebPolicyDelegate
 #define BEAN_TYPEDEF_WebPolicyDelegate
 typedef bean_id WebPolicyDelegate;
 #endif
-static inline void    WebPolicyDelegate_WebView_DecidePolicyForNavigationAction_Request_Frame_DecisionListener(WebPolicyDelegate self, WebView webView, NSDictionary actionInformation, NSURLRequest request, WebFrame frame, id listener)              { ((void (*)(WebPolicyDelegate, SEL, WebView, NSDictionary, NSURLRequest, WebFrame, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:request:frame:decisionListener:"), webView, actionInformation, request, frame, listener); }
-static inline void    WebPolicyDelegate_WebView_DecidePolicyForNewWindowAction_Request_NewFrameName_DecisionListener(WebPolicyDelegate self, WebView webView, NSDictionary actionInformation, NSURLRequest request, NSString frameName, id listener)    { ((void (*)(WebPolicyDelegate, SEL, WebView, NSDictionary, NSURLRequest, NSString, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForNewWindowAction:request:newFrameName:decisionListener:"), webView, actionInformation, request, frameName, listener); }
-static inline void    WebPolicyDelegate_WebView_DecidePolicyForMIMEType_Request_Frame_DecisionListener(WebPolicyDelegate self, WebView webView, NSString type, NSURLRequest request, WebFrame frame, id listener)                                       { ((void (*)(WebPolicyDelegate, SEL, WebView, NSString, NSURLRequest, WebFrame, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForMIMEType:request:frame:decisionListener:"), webView, type, request, frame, listener); }
-static inline void    WebPolicyDelegate_WebView_UnableToImplementPolicyWithError_Frame(WebPolicyDelegate self, WebView webView, NSError error, WebFrame frame)                                                                                          { ((void (*)(WebPolicyDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:unableToImplementPolicyWithError:frame:"), webView, error, frame); }
+static inline void                 WebPolicyDelegate_WebView_DecidePolicyForNavigationAction_Request_Frame_DecisionListener(WebPolicyDelegate self, WebView webView, NSDictionary actionInformation, NSURLRequest request, WebFrame frame, id listener)              { ((void (*)(WebPolicyDelegate, SEL, WebView, NSDictionary, NSURLRequest, WebFrame, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForNavigationAction:request:frame:decisionListener:"), webView, actionInformation, request, frame, listener); }
+static inline void                 WebPolicyDelegate_WebView_DecidePolicyForNewWindowAction_Request_NewFrameName_DecisionListener(WebPolicyDelegate self, WebView webView, NSDictionary actionInformation, NSURLRequest request, NSString frameName, id listener)    { ((void (*)(WebPolicyDelegate, SEL, WebView, NSDictionary, NSURLRequest, NSString, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForNewWindowAction:request:newFrameName:decisionListener:"), webView, actionInformation, request, frameName, listener); }
+static inline void                 WebPolicyDelegate_WebView_DecidePolicyForMIMEType_Request_Frame_DecisionListener(WebPolicyDelegate self, WebView webView, NSString type, NSURLRequest request, WebFrame frame, id listener)                                       { ((void (*)(WebPolicyDelegate, SEL, WebView, NSString, NSURLRequest, WebFrame, id))bean_msgSend)(self, bean_sel("webView:decidePolicyForMIMEType:request:frame:decisionListener:"), webView, type, request, frame, listener); }
+static inline void                 WebPolicyDelegate_WebView_UnableToImplementPolicyWithError_Frame(WebPolicyDelegate self, WebView webView, NSError error, WebFrame frame)                                                                                          { ((void (*)(WebPolicyDelegate, SEL, WebView, NSError, WebFrame))bean_msgSend)(self, bean_sel("webView:unableToImplementPolicyWithError:frame:"), webView, error, frame); }
+#ifndef BEAN_ALLOC_WebPolicyDelegate
+#define BEAN_ALLOC_WebPolicyDelegate
+static inline WebPolicyDelegate    WebPolicyDelegate_Alloc(void)                                                                                                                                                                                                     { return (WebPolicyDelegate)bean_alloc(bean_cls("WebPolicyDelegate")); }
+#endif
+#ifndef BEAN_NEW_WebPolicyDelegate
+#define BEAN_NEW_WebPolicyDelegate
+static inline WebPolicyDelegate    WebPolicyDelegate_New(void)                                                                                                                                                                                                       { return (WebPolicyDelegate)bean_new(bean_cls("WebPolicyDelegate")); }
+#endif
 
 /* ===== WebUIDelegate ===== */
 #ifndef BEAN_TYPEDEF_WebUIDelegate
 #define BEAN_TYPEDEF_WebUIDelegate
 typedef bean_id WebUIDelegate;
 #endif
-static inline WebView        WebUIDelegate_WebView_CreateWebViewWithRequest(WebUIDelegate self, WebView sender, NSURLRequest request)                                                                               { return ((WebView (*)(WebUIDelegate, SEL, WebView, NSURLRequest))bean_msgSend)(self, bean_sel("webView:createWebViewWithRequest:"), sender, request); }
-static inline void           WebUIDelegate_WebViewShow(WebUIDelegate self, WebView sender)                                                                                                                          { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewShow:"), sender); }
-static inline WebView        WebUIDelegate_WebView_CreateWebViewModalDialogWithRequest(WebUIDelegate self, WebView sender, NSURLRequest request)                                                                    { return ((WebView (*)(WebUIDelegate, SEL, WebView, NSURLRequest))bean_msgSend)(self, bean_sel("webView:createWebViewModalDialogWithRequest:"), sender, request); }
-static inline void           WebUIDelegate_WebViewRunModal(WebUIDelegate self, WebView sender)                                                                                                                      { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewRunModal:"), sender); }
-static inline void           WebUIDelegate_WebViewClose(WebUIDelegate self, WebView sender)                                                                                                                         { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewClose:"), sender); }
-static inline void           WebUIDelegate_WebViewFocus(WebUIDelegate self, WebView sender)                                                                                                                         { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewFocus:"), sender); }
-static inline void           WebUIDelegate_WebViewUnfocus(WebUIDelegate self, WebView sender)                                                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewUnfocus:"), sender); }
-static inline NSResponder    WebUIDelegate_WebViewFirstResponder(WebUIDelegate self, WebView sender)                                                                                                                { return ((NSResponder (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewFirstResponder:"), sender); }
-static inline void           WebUIDelegate_WebView_MakeFirstResponder(WebUIDelegate self, WebView sender, NSResponder responder)                                                                                    { ((void (*)(WebUIDelegate, SEL, WebView, NSResponder))bean_msgSend)(self, bean_sel("webView:makeFirstResponder:"), sender, responder); }
-static inline void           WebUIDelegate_WebView_SetStatusText(WebUIDelegate self, WebView sender, NSString text)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:setStatusText:"), sender, text); }
-static inline NSString       WebUIDelegate_WebViewStatusText(WebUIDelegate self, WebView sender)                                                                                                                    { return ((NSString (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewStatusText:"), sender); }
-static inline BOOL           WebUIDelegate_WebViewAreToolbarsVisible(WebUIDelegate self, WebView sender)                                                                                                            { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewAreToolbarsVisible:"), sender); }
-static inline void           WebUIDelegate_WebView_SetToolbarsVisible(WebUIDelegate self, WebView sender, BOOL visible)                                                                                             { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setToolbarsVisible:"), sender, visible); }
-static inline BOOL           WebUIDelegate_WebViewIsStatusBarVisible(WebUIDelegate self, WebView sender)                                                                                                            { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewIsStatusBarVisible:"), sender); }
-static inline void           WebUIDelegate_WebView_SetStatusBarVisible(WebUIDelegate self, WebView sender, BOOL visible)                                                                                            { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setStatusBarVisible:"), sender, visible); }
-static inline BOOL           WebUIDelegate_WebViewIsResizable(WebUIDelegate self, WebView sender)                                                                                                                   { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewIsResizable:"), sender); }
-static inline void           WebUIDelegate_WebView_SetResizable(WebUIDelegate self, WebView sender, BOOL resizable)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setResizable:"), sender, resizable); }
-static inline void           WebUIDelegate_WebView_SetFrame(WebUIDelegate self, WebView sender, CGRect frame)                                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:setFrame:"), sender, frame); }
-static inline CGRect         WebUIDelegate_WebViewFrame(WebUIDelegate self, WebView sender)                                                                                                                         { return ((CGRect (*)(WebUIDelegate, SEL, WebView))bean_msgSend_stret)(self, bean_sel("webViewFrame:"), sender); }
-static inline void           WebUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                        { ((void (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
-static inline BOOL           WebUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                      { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
-static inline NSString       WebUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString prompt, NSString defaultText, WebFrame frame)    { return ((NSString (*)(WebUIDelegate, SEL, WebView, NSString, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:"), sender, prompt, defaultText, frame); }
-static inline BOOL           WebUIDelegate_WebView_RunBeforeUnloadConfirmPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                    { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runBeforeUnloadConfirmPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
-static inline void           WebUIDelegate_WebView_RunOpenPanelForFileButtonWithResultListener(WebUIDelegate self, WebView sender, id resultListener)                                                               { ((void (*)(WebUIDelegate, SEL, WebView, id))bean_msgSend)(self, bean_sel("webView:runOpenPanelForFileButtonWithResultListener:"), sender, resultListener); }
-static inline void           WebUIDelegate_WebView_RunOpenPanelForFileButtonWithResultListener_AllowMultipleFiles(WebUIDelegate self, WebView sender, id resultListener, BOOL allowMultipleFiles)                   { ((void (*)(WebUIDelegate, SEL, WebView, id, BOOL))bean_msgSend)(self, bean_sel("webView:runOpenPanelForFileButtonWithResultListener:allowMultipleFiles:"), sender, resultListener, allowMultipleFiles); }
-static inline void           WebUIDelegate_WebView_MouseDidMoveOverElement_ModifierFlags(WebUIDelegate self, WebView sender, NSDictionary elementInformation, NSUInteger modifierFlags)                             { ((void (*)(WebUIDelegate, SEL, WebView, NSDictionary, NSUInteger))bean_msgSend)(self, bean_sel("webView:mouseDidMoveOverElement:modifierFlags:"), sender, elementInformation, modifierFlags); }
-static inline NSArray        WebUIDelegate_WebView_ContextMenuItemsForElement_DefaultMenuItems(WebUIDelegate self, WebView sender, NSDictionary element, NSArray defaultMenuItems)                                  { return ((NSArray (*)(WebUIDelegate, SEL, WebView, NSDictionary, NSArray))bean_msgSend)(self, bean_sel("webView:contextMenuItemsForElement:defaultMenuItems:"), sender, element, defaultMenuItems); }
-static inline BOOL           WebUIDelegate_WebView_ValidateUserInterfaceItem_DefaultValidation(WebUIDelegate self, WebView webView, id item, BOOL defaultValidation)                                                { return ((BOOL (*)(WebUIDelegate, SEL, WebView, id, BOOL))bean_msgSend)(self, bean_sel("webView:validateUserInterfaceItem:defaultValidation:"), webView, item, defaultValidation); }
-static inline BOOL           WebUIDelegate_WebView_ShouldPerformAction_FromSender(WebUIDelegate self, WebView webView, SEL action, id sender)                                                                       { return ((BOOL (*)(WebUIDelegate, SEL, WebView, SEL, id))bean_msgSend)(self, bean_sel("webView:shouldPerformAction:fromSender:"), webView, action, sender); }
-static inline NSUInteger     WebUIDelegate_WebView_DragDestinationActionMaskForDraggingInfo(WebUIDelegate self, WebView webView, id draggingInfo)                                                                   { return ((NSUInteger (*)(WebUIDelegate, SEL, WebView, id))bean_msgSend)(self, bean_sel("webView:dragDestinationActionMaskForDraggingInfo:"), webView, draggingInfo); }
-static inline void           WebUIDelegate_WebView_WillPerformDragDestinationAction_ForDraggingInfo(WebUIDelegate self, WebView webView, WebDragDestinationAction action, id draggingInfo)                          { ((void (*)(WebUIDelegate, SEL, WebView, WebDragDestinationAction, id))bean_msgSend)(self, bean_sel("webView:willPerformDragDestinationAction:forDraggingInfo:"), webView, action, draggingInfo); }
-static inline NSUInteger     WebUIDelegate_WebView_DragSourceActionMaskForPoint(WebUIDelegate self, WebView webView, CGPoint point)                                                                                 { return ((NSUInteger (*)(WebUIDelegate, SEL, WebView, CGPoint))bean_msgSend)(self, bean_sel("webView:dragSourceActionMaskForPoint:"), webView, point); }
-static inline void           WebUIDelegate_WebView_WillPerformDragSourceAction_FromPoint_WithPasteboard(WebUIDelegate self, WebView webView, WebDragSourceAction action, CGPoint point, NSPasteboard pasteboard)    { ((void (*)(WebUIDelegate, SEL, WebView, WebDragSourceAction, CGPoint, NSPasteboard))bean_msgSend)(self, bean_sel("webView:willPerformDragSourceAction:fromPoint:withPasteboard:"), webView, action, point, pasteboard); }
-static inline void           WebUIDelegate_WebView_PrintFrameView(WebUIDelegate self, WebView sender, WebFrameView frameView)                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView, WebFrameView))bean_msgSend)(self, bean_sel("webView:printFrameView:"), sender, frameView); }
-static inline CGFloat        WebUIDelegate_WebViewHeaderHeight(WebUIDelegate self, WebView sender)                                                                                                                  { return ((CGFloat (*)(WebUIDelegate, SEL, WebView))bean_msgSend_fpret)(self, bean_sel("webViewHeaderHeight:"), sender); }
-static inline CGFloat        WebUIDelegate_WebViewFooterHeight(WebUIDelegate self, WebView sender)                                                                                                                  { return ((CGFloat (*)(WebUIDelegate, SEL, WebView))bean_msgSend_fpret)(self, bean_sel("webViewFooterHeight:"), sender); }
-static inline void           WebUIDelegate_WebView_DrawHeaderInRect(WebUIDelegate self, WebView sender, CGRect rect)                                                                                                { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:drawHeaderInRect:"), sender, rect); }
-static inline void           WebUIDelegate_WebView_DrawFooterInRect(WebUIDelegate self, WebView sender, CGRect rect)                                                                                                { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:drawFooterInRect:"), sender, rect); }
-static inline void           WebUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage(WebUIDelegate self, WebView sender, NSString message)                                                                         { ((void (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:"), sender, message); }
-static inline BOOL           WebUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage(WebUIDelegate self, WebView sender, NSString message)                                                                       { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:"), sender, message); }
-static inline NSString       WebUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText(WebUIDelegate self, WebView sender, NSString prompt, NSString defaultText)                                     { return ((NSString (*)(WebUIDelegate, SEL, WebView, NSString, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:"), sender, prompt, defaultText); }
-static inline void           WebUIDelegate_WebView_SetContentRect(WebUIDelegate self, WebView sender, CGRect frame)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:setContentRect:"), sender, frame); }
-static inline CGRect         WebUIDelegate_WebViewContentRect(WebUIDelegate self, WebView sender)                                                                                                                   { return ((CGRect (*)(WebUIDelegate, SEL, WebView))bean_msgSend_stret)(self, bean_sel("webViewContentRect:"), sender); }
+static inline WebView          WebUIDelegate_WebView_CreateWebViewWithRequest(WebUIDelegate self, WebView sender, NSURLRequest request)                                                                               { return ((WebView (*)(WebUIDelegate, SEL, WebView, NSURLRequest))bean_msgSend)(self, bean_sel("webView:createWebViewWithRequest:"), sender, request); }
+static inline void             WebUIDelegate_WebViewShow(WebUIDelegate self, WebView sender)                                                                                                                          { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewShow:"), sender); }
+static inline WebView          WebUIDelegate_WebView_CreateWebViewModalDialogWithRequest(WebUIDelegate self, WebView sender, NSURLRequest request)                                                                    { return ((WebView (*)(WebUIDelegate, SEL, WebView, NSURLRequest))bean_msgSend)(self, bean_sel("webView:createWebViewModalDialogWithRequest:"), sender, request); }
+static inline void             WebUIDelegate_WebViewRunModal(WebUIDelegate self, WebView sender)                                                                                                                      { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewRunModal:"), sender); }
+static inline void             WebUIDelegate_WebViewClose(WebUIDelegate self, WebView sender)                                                                                                                         { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewClose:"), sender); }
+static inline void             WebUIDelegate_WebViewFocus(WebUIDelegate self, WebView sender)                                                                                                                         { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewFocus:"), sender); }
+static inline void             WebUIDelegate_WebViewUnfocus(WebUIDelegate self, WebView sender)                                                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewUnfocus:"), sender); }
+static inline NSResponder      WebUIDelegate_WebViewFirstResponder(WebUIDelegate self, WebView sender)                                                                                                                { return ((NSResponder (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewFirstResponder:"), sender); }
+static inline void             WebUIDelegate_WebView_MakeFirstResponder(WebUIDelegate self, WebView sender, NSResponder responder)                                                                                    { ((void (*)(WebUIDelegate, SEL, WebView, NSResponder))bean_msgSend)(self, bean_sel("webView:makeFirstResponder:"), sender, responder); }
+static inline void             WebUIDelegate_WebView_SetStatusText(WebUIDelegate self, WebView sender, NSString text)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:setStatusText:"), sender, text); }
+static inline NSString         WebUIDelegate_WebViewStatusText(WebUIDelegate self, WebView sender)                                                                                                                    { return ((NSString (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewStatusText:"), sender); }
+static inline BOOL             WebUIDelegate_WebViewAreToolbarsVisible(WebUIDelegate self, WebView sender)                                                                                                            { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewAreToolbarsVisible:"), sender); }
+static inline void             WebUIDelegate_WebView_SetToolbarsVisible(WebUIDelegate self, WebView sender, BOOL visible)                                                                                             { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setToolbarsVisible:"), sender, visible); }
+static inline BOOL             WebUIDelegate_WebViewIsStatusBarVisible(WebUIDelegate self, WebView sender)                                                                                                            { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewIsStatusBarVisible:"), sender); }
+static inline void             WebUIDelegate_WebView_SetStatusBarVisible(WebUIDelegate self, WebView sender, BOOL visible)                                                                                            { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setStatusBarVisible:"), sender, visible); }
+static inline BOOL             WebUIDelegate_WebViewIsResizable(WebUIDelegate self, WebView sender)                                                                                                                   { return ((BOOL (*)(WebUIDelegate, SEL, WebView))bean_msgSend)(self, bean_sel("webViewIsResizable:"), sender); }
+static inline void             WebUIDelegate_WebView_SetResizable(WebUIDelegate self, WebView sender, BOOL resizable)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, BOOL))bean_msgSend)(self, bean_sel("webView:setResizable:"), sender, resizable); }
+static inline void             WebUIDelegate_WebView_SetFrame(WebUIDelegate self, WebView sender, CGRect frame)                                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:setFrame:"), sender, frame); }
+static inline CGRect           WebUIDelegate_WebViewFrame(WebUIDelegate self, WebView sender)                                                                                                                         { return ((CGRect (*)(WebUIDelegate, SEL, WebView))bean_msgSend_stret)(self, bean_sel("webViewFrame:"), sender); }
+static inline void             WebUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                        { ((void (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
+static inline BOOL             WebUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                      { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
+static inline NSString         WebUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString prompt, NSString defaultText, WebFrame frame)    { return ((NSString (*)(WebUIDelegate, SEL, WebView, NSString, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:"), sender, prompt, defaultText, frame); }
+static inline BOOL             WebUIDelegate_WebView_RunBeforeUnloadConfirmPanelWithMessage_InitiatedByFrame(WebUIDelegate self, WebView sender, NSString message, WebFrame frame)                                    { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString, WebFrame))bean_msgSend)(self, bean_sel("webView:runBeforeUnloadConfirmPanelWithMessage:initiatedByFrame:"), sender, message, frame); }
+static inline void             WebUIDelegate_WebView_RunOpenPanelForFileButtonWithResultListener(WebUIDelegate self, WebView sender, id resultListener)                                                               { ((void (*)(WebUIDelegate, SEL, WebView, id))bean_msgSend)(self, bean_sel("webView:runOpenPanelForFileButtonWithResultListener:"), sender, resultListener); }
+static inline void             WebUIDelegate_WebView_RunOpenPanelForFileButtonWithResultListener_AllowMultipleFiles(WebUIDelegate self, WebView sender, id resultListener, BOOL allowMultipleFiles)                   { ((void (*)(WebUIDelegate, SEL, WebView, id, BOOL))bean_msgSend)(self, bean_sel("webView:runOpenPanelForFileButtonWithResultListener:allowMultipleFiles:"), sender, resultListener, allowMultipleFiles); }
+static inline void             WebUIDelegate_WebView_MouseDidMoveOverElement_ModifierFlags(WebUIDelegate self, WebView sender, NSDictionary elementInformation, NSUInteger modifierFlags)                             { ((void (*)(WebUIDelegate, SEL, WebView, NSDictionary, NSUInteger))bean_msgSend)(self, bean_sel("webView:mouseDidMoveOverElement:modifierFlags:"), sender, elementInformation, modifierFlags); }
+static inline NSArray          WebUIDelegate_WebView_ContextMenuItemsForElement_DefaultMenuItems(WebUIDelegate self, WebView sender, NSDictionary element, NSArray defaultMenuItems)                                  { return ((NSArray (*)(WebUIDelegate, SEL, WebView, NSDictionary, NSArray))bean_msgSend)(self, bean_sel("webView:contextMenuItemsForElement:defaultMenuItems:"), sender, element, defaultMenuItems); }
+static inline BOOL             WebUIDelegate_WebView_ValidateUserInterfaceItem_DefaultValidation(WebUIDelegate self, WebView webView, id item, BOOL defaultValidation)                                                { return ((BOOL (*)(WebUIDelegate, SEL, WebView, id, BOOL))bean_msgSend)(self, bean_sel("webView:validateUserInterfaceItem:defaultValidation:"), webView, item, defaultValidation); }
+static inline BOOL             WebUIDelegate_WebView_ShouldPerformAction_FromSender(WebUIDelegate self, WebView webView, SEL action, id sender)                                                                       { return ((BOOL (*)(WebUIDelegate, SEL, WebView, SEL, id))bean_msgSend)(self, bean_sel("webView:shouldPerformAction:fromSender:"), webView, action, sender); }
+static inline NSUInteger       WebUIDelegate_WebView_DragDestinationActionMaskForDraggingInfo(WebUIDelegate self, WebView webView, id draggingInfo)                                                                   { return ((NSUInteger (*)(WebUIDelegate, SEL, WebView, id))bean_msgSend)(self, bean_sel("webView:dragDestinationActionMaskForDraggingInfo:"), webView, draggingInfo); }
+static inline void             WebUIDelegate_WebView_WillPerformDragDestinationAction_ForDraggingInfo(WebUIDelegate self, WebView webView, WebDragDestinationAction action, id draggingInfo)                          { ((void (*)(WebUIDelegate, SEL, WebView, WebDragDestinationAction, id))bean_msgSend)(self, bean_sel("webView:willPerformDragDestinationAction:forDraggingInfo:"), webView, action, draggingInfo); }
+static inline NSUInteger       WebUIDelegate_WebView_DragSourceActionMaskForPoint(WebUIDelegate self, WebView webView, CGPoint point)                                                                                 { return ((NSUInteger (*)(WebUIDelegate, SEL, WebView, CGPoint))bean_msgSend)(self, bean_sel("webView:dragSourceActionMaskForPoint:"), webView, point); }
+static inline void             WebUIDelegate_WebView_WillPerformDragSourceAction_FromPoint_WithPasteboard(WebUIDelegate self, WebView webView, WebDragSourceAction action, CGPoint point, NSPasteboard pasteboard)    { ((void (*)(WebUIDelegate, SEL, WebView, WebDragSourceAction, CGPoint, NSPasteboard))bean_msgSend)(self, bean_sel("webView:willPerformDragSourceAction:fromPoint:withPasteboard:"), webView, action, point, pasteboard); }
+static inline void             WebUIDelegate_WebView_PrintFrameView(WebUIDelegate self, WebView sender, WebFrameView frameView)                                                                                       { ((void (*)(WebUIDelegate, SEL, WebView, WebFrameView))bean_msgSend)(self, bean_sel("webView:printFrameView:"), sender, frameView); }
+static inline CGFloat          WebUIDelegate_WebViewHeaderHeight(WebUIDelegate self, WebView sender)                                                                                                                  { return ((CGFloat (*)(WebUIDelegate, SEL, WebView))bean_msgSend_fpret)(self, bean_sel("webViewHeaderHeight:"), sender); }
+static inline CGFloat          WebUIDelegate_WebViewFooterHeight(WebUIDelegate self, WebView sender)                                                                                                                  { return ((CGFloat (*)(WebUIDelegate, SEL, WebView))bean_msgSend_fpret)(self, bean_sel("webViewFooterHeight:"), sender); }
+static inline void             WebUIDelegate_WebView_DrawHeaderInRect(WebUIDelegate self, WebView sender, CGRect rect)                                                                                                { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:drawHeaderInRect:"), sender, rect); }
+static inline void             WebUIDelegate_WebView_DrawFooterInRect(WebUIDelegate self, WebView sender, CGRect rect)                                                                                                { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:drawFooterInRect:"), sender, rect); }
+static inline void             WebUIDelegate_WebView_RunJavaScriptAlertPanelWithMessage(WebUIDelegate self, WebView sender, NSString message)                                                                         { ((void (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptAlertPanelWithMessage:"), sender, message); }
+static inline BOOL             WebUIDelegate_WebView_RunJavaScriptConfirmPanelWithMessage(WebUIDelegate self, WebView sender, NSString message)                                                                       { return ((BOOL (*)(WebUIDelegate, SEL, WebView, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptConfirmPanelWithMessage:"), sender, message); }
+static inline NSString         WebUIDelegate_WebView_RunJavaScriptTextInputPanelWithPrompt_DefaultText(WebUIDelegate self, WebView sender, NSString prompt, NSString defaultText)                                     { return ((NSString (*)(WebUIDelegate, SEL, WebView, NSString, NSString))bean_msgSend)(self, bean_sel("webView:runJavaScriptTextInputPanelWithPrompt:defaultText:"), sender, prompt, defaultText); }
+static inline void             WebUIDelegate_WebView_SetContentRect(WebUIDelegate self, WebView sender, CGRect frame)                                                                                                 { ((void (*)(WebUIDelegate, SEL, WebView, CGRect))bean_msgSend)(self, bean_sel("webView:setContentRect:"), sender, frame); }
+static inline CGRect           WebUIDelegate_WebViewContentRect(WebUIDelegate self, WebView sender)                                                                                                                   { return ((CGRect (*)(WebUIDelegate, SEL, WebView))bean_msgSend_stret)(self, bean_sel("webViewContentRect:"), sender); }
+#ifndef BEAN_ALLOC_WebUIDelegate
+#define BEAN_ALLOC_WebUIDelegate
+static inline WebUIDelegate    WebUIDelegate_Alloc(void)                                                                                                                                                              { return (WebUIDelegate)bean_alloc(bean_cls("WebUIDelegate")); }
+#endif
+#ifndef BEAN_NEW_WebUIDelegate
+#define BEAN_NEW_WebUIDelegate
+static inline WebUIDelegate    WebUIDelegate_New(void)                                                                                                                                                                { return (WebUIDelegate)bean_new(bean_cls("WebUIDelegate")); }
+#endif
 
 /* ===== WebView ===== */
 static inline BOOL                   WebView_CanShowMIMEType(NSString MIMEType)                                                                                            { return ((BOOL (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("WebView"), bean_sel("canShowMIMEType:"), MIMEType); }
@@ -7270,6 +8730,14 @@ static inline void                   WebView_OverWrite(WebView self, id sender) 
 static inline BOOL                   WebView_Loading(WebView self)                                                                                                         { return ((BOOL (*)(WebView, SEL))bean_msgSend)(self, bean_sel("loading")); }
 static inline BOOL                   WebView_Editable(WebView self)                                                                                                        { return ((BOOL (*)(WebView, SEL))bean_msgSend)(self, bean_sel("editable")); }
 static inline BOOL                   WebView_ContinuousSpellCheckingEnabled(WebView self)                                                                                  { return ((BOOL (*)(WebView, SEL))bean_msgSend)(self, bean_sel("continuousSpellCheckingEnabled")); }
+#ifndef BEAN_ALLOC_WebView
+#define BEAN_ALLOC_WebView
+static inline WebView                WebView_Alloc(void)                                                                                                                   { return (WebView)bean_alloc(bean_cls("WebView")); }
+#endif
+#ifndef BEAN_NEW_WebView
+#define BEAN_NEW_WebView
+static inline WebView                WebView_New(void)                                                                                                                     { return (WebView)bean_new(bean_cls("WebView")); }
+#endif
 
 
 #ifdef __cplusplus

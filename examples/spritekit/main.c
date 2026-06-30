@@ -156,7 +156,7 @@ int main(void) {
         NSView content = NSWindow_ContentView(window);
         CGRect bounds = NSView_Bounds(content);
 
-        SKView sprite_view = (SKView)bean_alloc(bean_cls("SKView"));
+        SKView sprite_view = SKView_Alloc();
         sprite_view = (SKView)NSView_InitWithFrame((NSView)sprite_view, bounds);
         bean_example_add_fill_subview(content, (NSView)sprite_view);
 

@@ -1612,21 +1612,29 @@ typedef NSUInteger NSStringEncoding;
 #define BEAN_TYPEDEF_NSAttributeDescription
 typedef bean_id NSAttributeDescription;
 #endif
-static inline NSAttributeType    NSAttributeDescription_AttributeType(NSAttributeDescription self)                                                                   { return ((NSAttributeType (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("attributeType")); }
-static inline void               NSAttributeDescription_SetAttributeType(NSAttributeDescription self, NSAttributeType attributeType)                                 { ((void (*)(NSAttributeDescription, SEL, NSAttributeType))bean_msgSend)(self, bean_sel("setAttributeType:"), attributeType); }
-static inline NSString           NSAttributeDescription_AttributeValueClassName(NSAttributeDescription self)                                                         { return ((NSString (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("attributeValueClassName")); }
-static inline void               NSAttributeDescription_SetAttributeValueClassName(NSAttributeDescription self, NSString attributeValueClassName)                    { ((void (*)(NSAttributeDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setAttributeValueClassName:"), attributeValueClassName); }
-static inline id                 NSAttributeDescription_DefaultValue(NSAttributeDescription self)                                                                    { return ((id (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("defaultValue")); }
-static inline void               NSAttributeDescription_SetDefaultValue(NSAttributeDescription self, id defaultValue)                                                { ((void (*)(NSAttributeDescription, SEL, id))bean_msgSend)(self, bean_sel("setDefaultValue:"), defaultValue); }
-static inline NSData             NSAttributeDescription_VersionHash(NSAttributeDescription self)                                                                     { return ((NSData (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("versionHash")); }
-static inline NSString           NSAttributeDescription_ValueTransformerName(NSAttributeDescription self)                                                            { return ((NSString (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("valueTransformerName")); }
-static inline void               NSAttributeDescription_SetValueTransformerName(NSAttributeDescription self, NSString valueTransformerName)                          { ((void (*)(NSAttributeDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setValueTransformerName:"), valueTransformerName); }
-static inline BOOL               NSAttributeDescription_AllowsExternalBinaryDataStorage(NSAttributeDescription self)                                                 { return ((BOOL (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("allowsExternalBinaryDataStorage")); }
-static inline void               NSAttributeDescription_SetAllowsExternalBinaryDataStorage(NSAttributeDescription self, BOOL allowsExternalBinaryDataStorage)        { ((void (*)(NSAttributeDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsExternalBinaryDataStorage:"), allowsExternalBinaryDataStorage); }
-static inline BOOL               NSAttributeDescription_PreservesValueInHistoryOnDeletion(NSAttributeDescription self)                                               { return ((BOOL (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("preservesValueInHistoryOnDeletion")); }
-static inline void               NSAttributeDescription_SetPreservesValueInHistoryOnDeletion(NSAttributeDescription self, BOOL preservesValueInHistoryOnDeletion)    { ((void (*)(NSAttributeDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setPreservesValueInHistoryOnDeletion:"), preservesValueInHistoryOnDeletion); }
-static inline BOOL               NSAttributeDescription_AllowsCloudEncryption(NSAttributeDescription self)                                                           { return ((BOOL (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("allowsCloudEncryption")); }
-static inline void               NSAttributeDescription_SetAllowsCloudEncryption(NSAttributeDescription self, BOOL allowsCloudEncryption)                            { ((void (*)(NSAttributeDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsCloudEncryption:"), allowsCloudEncryption); }
+static inline NSAttributeType           NSAttributeDescription_AttributeType(NSAttributeDescription self)                                                                   { return ((NSAttributeType (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("attributeType")); }
+static inline void                      NSAttributeDescription_SetAttributeType(NSAttributeDescription self, NSAttributeType attributeType)                                 { ((void (*)(NSAttributeDescription, SEL, NSAttributeType))bean_msgSend)(self, bean_sel("setAttributeType:"), attributeType); }
+static inline NSString                  NSAttributeDescription_AttributeValueClassName(NSAttributeDescription self)                                                         { return ((NSString (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("attributeValueClassName")); }
+static inline void                      NSAttributeDescription_SetAttributeValueClassName(NSAttributeDescription self, NSString attributeValueClassName)                    { ((void (*)(NSAttributeDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setAttributeValueClassName:"), attributeValueClassName); }
+static inline id                        NSAttributeDescription_DefaultValue(NSAttributeDescription self)                                                                    { return ((id (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("defaultValue")); }
+static inline void                      NSAttributeDescription_SetDefaultValue(NSAttributeDescription self, id defaultValue)                                                { ((void (*)(NSAttributeDescription, SEL, id))bean_msgSend)(self, bean_sel("setDefaultValue:"), defaultValue); }
+static inline NSData                    NSAttributeDescription_VersionHash(NSAttributeDescription self)                                                                     { return ((NSData (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("versionHash")); }
+static inline NSString                  NSAttributeDescription_ValueTransformerName(NSAttributeDescription self)                                                            { return ((NSString (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("valueTransformerName")); }
+static inline void                      NSAttributeDescription_SetValueTransformerName(NSAttributeDescription self, NSString valueTransformerName)                          { ((void (*)(NSAttributeDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setValueTransformerName:"), valueTransformerName); }
+static inline BOOL                      NSAttributeDescription_AllowsExternalBinaryDataStorage(NSAttributeDescription self)                                                 { return ((BOOL (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("allowsExternalBinaryDataStorage")); }
+static inline void                      NSAttributeDescription_SetAllowsExternalBinaryDataStorage(NSAttributeDescription self, BOOL allowsExternalBinaryDataStorage)        { ((void (*)(NSAttributeDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsExternalBinaryDataStorage:"), allowsExternalBinaryDataStorage); }
+static inline BOOL                      NSAttributeDescription_PreservesValueInHistoryOnDeletion(NSAttributeDescription self)                                               { return ((BOOL (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("preservesValueInHistoryOnDeletion")); }
+static inline void                      NSAttributeDescription_SetPreservesValueInHistoryOnDeletion(NSAttributeDescription self, BOOL preservesValueInHistoryOnDeletion)    { ((void (*)(NSAttributeDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setPreservesValueInHistoryOnDeletion:"), preservesValueInHistoryOnDeletion); }
+static inline BOOL                      NSAttributeDescription_AllowsCloudEncryption(NSAttributeDescription self)                                                           { return ((BOOL (*)(NSAttributeDescription, SEL))bean_msgSend)(self, bean_sel("allowsCloudEncryption")); }
+static inline void                      NSAttributeDescription_SetAllowsCloudEncryption(NSAttributeDescription self, BOOL allowsCloudEncryption)                            { ((void (*)(NSAttributeDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsCloudEncryption:"), allowsCloudEncryption); }
+#ifndef BEAN_ALLOC_NSAttributeDescription
+#define BEAN_ALLOC_NSAttributeDescription
+static inline NSAttributeDescription    NSAttributeDescription_Alloc(void)                                                                                                  { return (NSAttributeDescription)bean_alloc(bean_cls("NSAttributeDescription")); }
+#endif
+#ifndef BEAN_NEW_NSAttributeDescription
+#define BEAN_NEW_NSAttributeDescription
+static inline NSAttributeDescription    NSAttributeDescription_New(void)                                                                                                    { return (NSAttributeDescription)bean_new(bean_cls("NSAttributeDescription")); }
+#endif
 
 /* ===== NSBatchDeleteResult ===== */
 #ifndef BEAN_TYPEDEF_NSBatchDeleteResult
@@ -1635,6 +1643,14 @@ typedef bean_id NSBatchDeleteResult;
 #endif
 static inline id                                NSBatchDeleteResult_Result(NSBatchDeleteResult self)        { return ((id (*)(NSBatchDeleteResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSBatchDeleteRequestResultType    NSBatchDeleteResult_ResultType(NSBatchDeleteResult self)    { return ((NSBatchDeleteRequestResultType (*)(NSBatchDeleteResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSBatchDeleteResult
+#define BEAN_ALLOC_NSBatchDeleteResult
+static inline NSBatchDeleteResult               NSBatchDeleteResult_Alloc(void)                             { return (NSBatchDeleteResult)bean_alloc(bean_cls("NSBatchDeleteResult")); }
+#endif
+#ifndef BEAN_NEW_NSBatchDeleteResult
+#define BEAN_NEW_NSBatchDeleteResult
+static inline NSBatchDeleteResult               NSBatchDeleteResult_New(void)                               { return (NSBatchDeleteResult)bean_new(bean_cls("NSBatchDeleteResult")); }
+#endif
 
 /* ===== NSBatchInsertResult ===== */
 #ifndef BEAN_TYPEDEF_NSBatchInsertResult
@@ -1643,6 +1659,14 @@ typedef bean_id NSBatchInsertResult;
 #endif
 static inline id                                NSBatchInsertResult_Result(NSBatchInsertResult self)        { return ((id (*)(NSBatchInsertResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSBatchInsertRequestResultType    NSBatchInsertResult_ResultType(NSBatchInsertResult self)    { return ((NSBatchInsertRequestResultType (*)(NSBatchInsertResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSBatchInsertResult
+#define BEAN_ALLOC_NSBatchInsertResult
+static inline NSBatchInsertResult               NSBatchInsertResult_Alloc(void)                             { return (NSBatchInsertResult)bean_alloc(bean_cls("NSBatchInsertResult")); }
+#endif
+#ifndef BEAN_NEW_NSBatchInsertResult
+#define BEAN_NEW_NSBatchInsertResult
+static inline NSBatchInsertResult               NSBatchInsertResult_New(void)                               { return (NSBatchInsertResult)bean_new(bean_cls("NSBatchInsertResult")); }
+#endif
 
 /* ===== NSBatchUpdateResult ===== */
 #ifndef BEAN_TYPEDEF_NSBatchUpdateResult
@@ -1651,22 +1675,46 @@ typedef bean_id NSBatchUpdateResult;
 #endif
 static inline id                                NSBatchUpdateResult_Result(NSBatchUpdateResult self)        { return ((id (*)(NSBatchUpdateResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSBatchUpdateRequestResultType    NSBatchUpdateResult_ResultType(NSBatchUpdateResult self)    { return ((NSBatchUpdateRequestResultType (*)(NSBatchUpdateResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSBatchUpdateResult
+#define BEAN_ALLOC_NSBatchUpdateResult
+static inline NSBatchUpdateResult               NSBatchUpdateResult_Alloc(void)                             { return (NSBatchUpdateResult)bean_alloc(bean_cls("NSBatchUpdateResult")); }
+#endif
+#ifndef BEAN_NEW_NSBatchUpdateResult
+#define BEAN_NEW_NSBatchUpdateResult
+static inline NSBatchUpdateResult               NSBatchUpdateResult_New(void)                               { return (NSBatchUpdateResult)bean_new(bean_cls("NSBatchUpdateResult")); }
+#endif
 
 /* ===== NSCompositeAttributeDescription ===== */
 #ifndef BEAN_TYPEDEF_NSCompositeAttributeDescription
 #define BEAN_TYPEDEF_NSCompositeAttributeDescription
 typedef bean_id NSCompositeAttributeDescription;
 #endif
-static inline NSArray    NSCompositeAttributeDescription_Elements(NSCompositeAttributeDescription self)                         { return ((NSArray (*)(NSCompositeAttributeDescription, SEL))bean_msgSend)(self, bean_sel("elements")); }
-static inline void       NSCompositeAttributeDescription_SetElements(NSCompositeAttributeDescription self, NSArray elements)    { ((void (*)(NSCompositeAttributeDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setElements:"), elements); }
+static inline NSArray                            NSCompositeAttributeDescription_Elements(NSCompositeAttributeDescription self)                         { return ((NSArray (*)(NSCompositeAttributeDescription, SEL))bean_msgSend)(self, bean_sel("elements")); }
+static inline void                               NSCompositeAttributeDescription_SetElements(NSCompositeAttributeDescription self, NSArray elements)    { ((void (*)(NSCompositeAttributeDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setElements:"), elements); }
+#ifndef BEAN_ALLOC_NSCompositeAttributeDescription
+#define BEAN_ALLOC_NSCompositeAttributeDescription
+static inline NSCompositeAttributeDescription    NSCompositeAttributeDescription_Alloc(void)                                                            { return (NSCompositeAttributeDescription)bean_alloc(bean_cls("NSCompositeAttributeDescription")); }
+#endif
+#ifndef BEAN_NEW_NSCompositeAttributeDescription
+#define BEAN_NEW_NSCompositeAttributeDescription
+static inline NSCompositeAttributeDescription    NSCompositeAttributeDescription_New(void)                                                              { return (NSCompositeAttributeDescription)bean_new(bean_cls("NSCompositeAttributeDescription")); }
+#endif
 
 /* ===== NSDerivedAttributeDescription ===== */
 #ifndef BEAN_TYPEDEF_NSDerivedAttributeDescription
 #define BEAN_TYPEDEF_NSDerivedAttributeDescription
 typedef bean_id NSDerivedAttributeDescription;
 #endif
-static inline NSExpression    NSDerivedAttributeDescription_DerivationExpression(NSDerivedAttributeDescription self)                                          { return ((NSExpression (*)(NSDerivedAttributeDescription, SEL))bean_msgSend)(self, bean_sel("derivationExpression")); }
-static inline void            NSDerivedAttributeDescription_SetDerivationExpression(NSDerivedAttributeDescription self, NSExpression derivationExpression)    { ((void (*)(NSDerivedAttributeDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setDerivationExpression:"), derivationExpression); }
+static inline NSExpression                     NSDerivedAttributeDescription_DerivationExpression(NSDerivedAttributeDescription self)                                          { return ((NSExpression (*)(NSDerivedAttributeDescription, SEL))bean_msgSend)(self, bean_sel("derivationExpression")); }
+static inline void                             NSDerivedAttributeDescription_SetDerivationExpression(NSDerivedAttributeDescription self, NSExpression derivationExpression)    { ((void (*)(NSDerivedAttributeDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setDerivationExpression:"), derivationExpression); }
+#ifndef BEAN_ALLOC_NSDerivedAttributeDescription
+#define BEAN_ALLOC_NSDerivedAttributeDescription
+static inline NSDerivedAttributeDescription    NSDerivedAttributeDescription_Alloc(void)                                                                                       { return (NSDerivedAttributeDescription)bean_alloc(bean_cls("NSDerivedAttributeDescription")); }
+#endif
+#ifndef BEAN_NEW_NSDerivedAttributeDescription
+#define BEAN_NEW_NSDerivedAttributeDescription
+static inline NSDerivedAttributeDescription    NSDerivedAttributeDescription_New(void)                                                                                         { return (NSDerivedAttributeDescription)bean_new(bean_cls("NSDerivedAttributeDescription")); }
+#endif
 
 /* ===== NSEntityMapping ===== */
 #ifndef BEAN_TYPEDEF_NSEntityMapping
@@ -1695,37 +1743,69 @@ static inline NSDictionary           NSEntityMapping_UserInfo(NSEntityMapping se
 static inline void                   NSEntityMapping_SetUserInfo(NSEntityMapping self, NSDictionary userInfo)                                            { ((void (*)(NSEntityMapping, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
 static inline NSString               NSEntityMapping_EntityMigrationPolicyClassName(NSEntityMapping self)                                                { return ((NSString (*)(NSEntityMapping, SEL))bean_msgSend)(self, bean_sel("entityMigrationPolicyClassName")); }
 static inline void                   NSEntityMapping_SetEntityMigrationPolicyClassName(NSEntityMapping self, NSString entityMigrationPolicyClassName)    { ((void (*)(NSEntityMapping, SEL, NSString))bean_msgSend)(self, bean_sel("setEntityMigrationPolicyClassName:"), entityMigrationPolicyClassName); }
+#ifndef BEAN_ALLOC_NSEntityMapping
+#define BEAN_ALLOC_NSEntityMapping
+static inline NSEntityMapping        NSEntityMapping_Alloc(void)                                                                                         { return (NSEntityMapping)bean_alloc(bean_cls("NSEntityMapping")); }
+#endif
+#ifndef BEAN_NEW_NSEntityMapping
+#define BEAN_NEW_NSEntityMapping
+static inline NSEntityMapping        NSEntityMapping_New(void)                                                                                           { return (NSEntityMapping)bean_new(bean_cls("NSEntityMapping")); }
+#endif
 
 /* ===== NSExpressionDescription ===== */
 #ifndef BEAN_TYPEDEF_NSExpressionDescription
 #define BEAN_TYPEDEF_NSExpressionDescription
 typedef bean_id NSExpressionDescription;
 #endif
-static inline NSExpression       NSExpressionDescription_Expression(NSExpressionDescription self)                                                       { return ((NSExpression (*)(NSExpressionDescription, SEL))bean_msgSend)(self, bean_sel("expression")); }
-static inline void               NSExpressionDescription_SetExpression(NSExpressionDescription self, NSExpression expression)                           { ((void (*)(NSExpressionDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setExpression:"), expression); }
-static inline NSAttributeType    NSExpressionDescription_ExpressionResultType(NSExpressionDescription self)                                             { return ((NSAttributeType (*)(NSExpressionDescription, SEL))bean_msgSend)(self, bean_sel("expressionResultType")); }
-static inline void               NSExpressionDescription_SetExpressionResultType(NSExpressionDescription self, NSAttributeType expressionResultType)    { ((void (*)(NSExpressionDescription, SEL, NSAttributeType))bean_msgSend)(self, bean_sel("setExpressionResultType:"), expressionResultType); }
+static inline NSExpression               NSExpressionDescription_Expression(NSExpressionDescription self)                                                       { return ((NSExpression (*)(NSExpressionDescription, SEL))bean_msgSend)(self, bean_sel("expression")); }
+static inline void                       NSExpressionDescription_SetExpression(NSExpressionDescription self, NSExpression expression)                           { ((void (*)(NSExpressionDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setExpression:"), expression); }
+static inline NSAttributeType            NSExpressionDescription_ExpressionResultType(NSExpressionDescription self)                                             { return ((NSAttributeType (*)(NSExpressionDescription, SEL))bean_msgSend)(self, bean_sel("expressionResultType")); }
+static inline void                       NSExpressionDescription_SetExpressionResultType(NSExpressionDescription self, NSAttributeType expressionResultType)    { ((void (*)(NSExpressionDescription, SEL, NSAttributeType))bean_msgSend)(self, bean_sel("setExpressionResultType:"), expressionResultType); }
+#ifndef BEAN_ALLOC_NSExpressionDescription
+#define BEAN_ALLOC_NSExpressionDescription
+static inline NSExpressionDescription    NSExpressionDescription_Alloc(void)                                                                                    { return (NSExpressionDescription)bean_alloc(bean_cls("NSExpressionDescription")); }
+#endif
+#ifndef BEAN_NEW_NSExpressionDescription
+#define BEAN_NEW_NSExpressionDescription
+static inline NSExpressionDescription    NSExpressionDescription_New(void)                                                                                      { return (NSExpressionDescription)bean_new(bean_cls("NSExpressionDescription")); }
+#endif
 
 /* ===== NSFetchRequestExpression ===== */
 #ifndef BEAN_TYPEDEF_NSFetchRequestExpression
 #define BEAN_TYPEDEF_NSFetchRequestExpression
 typedef bean_id NSFetchRequestExpression;
 #endif
-static inline NSExpression    NSFetchRequestExpression_ExpressionForFetch_Context_CountOnly(NSExpression fetch, NSExpression context, BOOL countFlag)    { return ((NSExpression (*)(bean_class, SEL, NSExpression, NSExpression, BOOL))bean_msgSend)(bean_cls("NSFetchRequestExpression"), bean_sel("expressionForFetch:context:countOnly:"), fetch, context, countFlag); }
-static inline NSExpression    NSFetchRequestExpression_RequestExpression(NSFetchRequestExpression self)                                                  { return ((NSExpression (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("requestExpression")); }
-static inline NSExpression    NSFetchRequestExpression_ContextExpression(NSFetchRequestExpression self)                                                  { return ((NSExpression (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("contextExpression")); }
-static inline BOOL            NSFetchRequestExpression_IsCountOnlyRequest(NSFetchRequestExpression self)                                                 { return ((BOOL (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("isCountOnlyRequest")); }
-static inline BOOL            NSFetchRequestExpression_CountOnlyRequest(NSFetchRequestExpression self)                                                   { return ((BOOL (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("countOnlyRequest")); }
+static inline NSExpression                NSFetchRequestExpression_ExpressionForFetch_Context_CountOnly(NSExpression fetch, NSExpression context, BOOL countFlag)    { return ((NSExpression (*)(bean_class, SEL, NSExpression, NSExpression, BOOL))bean_msgSend)(bean_cls("NSFetchRequestExpression"), bean_sel("expressionForFetch:context:countOnly:"), fetch, context, countFlag); }
+static inline NSExpression                NSFetchRequestExpression_RequestExpression(NSFetchRequestExpression self)                                                  { return ((NSExpression (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("requestExpression")); }
+static inline NSExpression                NSFetchRequestExpression_ContextExpression(NSFetchRequestExpression self)                                                  { return ((NSExpression (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("contextExpression")); }
+static inline BOOL                        NSFetchRequestExpression_IsCountOnlyRequest(NSFetchRequestExpression self)                                                 { return ((BOOL (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("isCountOnlyRequest")); }
+static inline BOOL                        NSFetchRequestExpression_CountOnlyRequest(NSFetchRequestExpression self)                                                   { return ((BOOL (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("countOnlyRequest")); }
+#ifndef BEAN_ALLOC_NSFetchRequestExpression
+#define BEAN_ALLOC_NSFetchRequestExpression
+static inline NSFetchRequestExpression    NSFetchRequestExpression_Alloc(void)                                                                                       { return (NSFetchRequestExpression)bean_alloc(bean_cls("NSFetchRequestExpression")); }
+#endif
+#ifndef BEAN_NEW_NSFetchRequestExpression
+#define BEAN_NEW_NSFetchRequestExpression
+static inline NSFetchRequestExpression    NSFetchRequestExpression_New(void)                                                                                         { return (NSFetchRequestExpression)bean_new(bean_cls("NSFetchRequestExpression")); }
+#endif
 
 /* ===== NSFetchedResultsSectionInfo ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedResultsSectionInfo
 #define BEAN_TYPEDEF_NSFetchedResultsSectionInfo
 typedef bean_id NSFetchedResultsSectionInfo;
 #endif
-static inline NSString      NSFetchedResultsSectionInfo_Name(NSFetchedResultsSectionInfo self)               { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline NSString      NSFetchedResultsSectionInfo_IndexTitle(NSFetchedResultsSectionInfo self)         { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("indexTitle")); }
-static inline NSUInteger    NSFetchedResultsSectionInfo_NumberOfObjects(NSFetchedResultsSectionInfo self)    { return ((NSUInteger (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("numberOfObjects")); }
-static inline NSArray       NSFetchedResultsSectionInfo_Objects(NSFetchedResultsSectionInfo self)            { return ((NSArray (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("objects")); }
+static inline NSString                       NSFetchedResultsSectionInfo_Name(NSFetchedResultsSectionInfo self)               { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline NSString                       NSFetchedResultsSectionInfo_IndexTitle(NSFetchedResultsSectionInfo self)         { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("indexTitle")); }
+static inline NSUInteger                     NSFetchedResultsSectionInfo_NumberOfObjects(NSFetchedResultsSectionInfo self)    { return ((NSUInteger (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("numberOfObjects")); }
+static inline NSArray                        NSFetchedResultsSectionInfo_Objects(NSFetchedResultsSectionInfo self)            { return ((NSArray (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("objects")); }
+#ifndef BEAN_ALLOC_NSFetchedResultsSectionInfo
+#define BEAN_ALLOC_NSFetchedResultsSectionInfo
+static inline NSFetchedResultsSectionInfo    NSFetchedResultsSectionInfo_Alloc(void)                                          { return (NSFetchedResultsSectionInfo)bean_alloc(bean_cls("NSFetchedResultsSectionInfo")); }
+#endif
+#ifndef BEAN_NEW_NSFetchedResultsSectionInfo
+#define BEAN_NEW_NSFetchedResultsSectionInfo
+static inline NSFetchedResultsSectionInfo    NSFetchedResultsSectionInfo_New(void)                                            { return (NSFetchedResultsSectionInfo)bean_new(bean_cls("NSFetchedResultsSectionInfo")); }
+#endif
 
 /* ===== NSLightweightMigrationStage ===== */
 #ifndef BEAN_TYPEDEF_NSLightweightMigrationStage
@@ -1735,6 +1815,14 @@ typedef bean_id NSLightweightMigrationStage;
 static inline NSLightweightMigrationStage    NSLightweightMigrationStage_Init(NSLightweightMigrationStage self)                                                  { return ((NSLightweightMigrationStage (*)(NSLightweightMigrationStage, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSLightweightMigrationStage    NSLightweightMigrationStage_InitWithVersionChecksums(NSLightweightMigrationStage self, NSArray versionChecksums)    { return ((NSLightweightMigrationStage (*)(NSLightweightMigrationStage, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithVersionChecksums:"), versionChecksums); }
 static inline NSArray                        NSLightweightMigrationStage_VersionChecksums(NSLightweightMigrationStage self)                                      { return ((NSArray (*)(NSLightweightMigrationStage, SEL))bean_msgSend)(self, bean_sel("versionChecksums")); }
+#ifndef BEAN_ALLOC_NSLightweightMigrationStage
+#define BEAN_ALLOC_NSLightweightMigrationStage
+static inline NSLightweightMigrationStage    NSLightweightMigrationStage_Alloc(void)                                                                             { return (NSLightweightMigrationStage)bean_alloc(bean_cls("NSLightweightMigrationStage")); }
+#endif
+#ifndef BEAN_NEW_NSLightweightMigrationStage
+#define BEAN_NEW_NSLightweightMigrationStage
+static inline NSLightweightMigrationStage    NSLightweightMigrationStage_New(void)                                                                               { return (NSLightweightMigrationStage)bean_new(bean_cls("NSLightweightMigrationStage")); }
+#endif
 
 /* ===== NSMergePolicy ===== */
 #ifndef BEAN_TYPEDEF_NSMergePolicy
@@ -1752,21 +1840,40 @@ static inline NSMergePolicy        NSMergePolicy_OverwriteMergePolicy(void)     
 static inline NSMergePolicy        NSMergePolicy_MergeByPropertyObjectTrumpMergePolicy(void)                                                         { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("mergeByPropertyObjectTrumpMergePolicy")); }
 static inline NSMergePolicy        NSMergePolicy_MergeByPropertyStoreTrumpMergePolicy(void)                                                          { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("mergeByPropertyStoreTrumpMergePolicy")); }
 static inline NSMergePolicyType    NSMergePolicy_MergeType(NSMergePolicy self)                                                                       { return ((NSMergePolicyType (*)(NSMergePolicy, SEL))bean_msgSend)(self, bean_sel("mergeType")); }
+#ifndef BEAN_ALLOC_NSMergePolicy
+#define BEAN_ALLOC_NSMergePolicy
+static inline NSMergePolicy        NSMergePolicy_Alloc(void)                                                                                         { return (NSMergePolicy)bean_alloc(bean_cls("NSMergePolicy")); }
+#endif
+#ifndef BEAN_NEW_NSMergePolicy
+#define BEAN_NEW_NSMergePolicy
+static inline NSMergePolicy        NSMergePolicy_New(void)                                                                                           { return (NSMergePolicy)bean_new(bean_cls("NSMergePolicy")); }
+#endif
 
 /* ===== NSMigrationStage ===== */
 #ifndef BEAN_TYPEDEF_NSMigrationStage
 #define BEAN_TYPEDEF_NSMigrationStage
 typedef bean_id NSMigrationStage;
 #endif
-static inline NSString    NSMigrationStage_Label(NSMigrationStage self)                       { return ((NSString (*)(NSMigrationStage, SEL))bean_msgSend)(self, bean_sel("label")); }
-static inline void        NSMigrationStage_SetLabel(NSMigrationStage self, NSString label)    { ((void (*)(NSMigrationStage, SEL, NSString))bean_msgSend)(self, bean_sel("setLabel:"), label); }
+static inline NSString            NSMigrationStage_Label(NSMigrationStage self)                       { return ((NSString (*)(NSMigrationStage, SEL))bean_msgSend)(self, bean_sel("label")); }
+static inline void                NSMigrationStage_SetLabel(NSMigrationStage self, NSString label)    { ((void (*)(NSMigrationStage, SEL, NSString))bean_msgSend)(self, bean_sel("setLabel:"), label); }
+#ifndef BEAN_ALLOC_NSMigrationStage
+#define BEAN_ALLOC_NSMigrationStage
+static inline NSMigrationStage    NSMigrationStage_Alloc(void)                                        { return (NSMigrationStage)bean_alloc(bean_cls("NSMigrationStage")); }
+#endif
+#ifndef BEAN_NEW_NSMigrationStage
+#define BEAN_NEW_NSMigrationStage
+static inline NSMigrationStage    NSMigrationStage_New(void)                                          { return (NSMigrationStage)bean_new(bean_cls("NSMigrationStage")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainerEvent ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerEvent
 #define BEAN_TYPEDEF_NSPersistentCloudKitContainerEvent
 typedef bean_id NSPersistentCloudKitContainerEvent;
 #endif
+#ifndef BEAN_NEW_NSPersistentCloudKitContainerEvent
+#define BEAN_NEW_NSPersistentCloudKitContainerEvent
 static inline NSPersistentCloudKitContainerEvent        NSPersistentCloudKitContainerEvent_New(void)                                                              { return ((NSPersistentCloudKitContainerEvent (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEvent"), bean_sel("new")); }
+#endif
 static inline NSPersistentCloudKitContainerEvent        NSPersistentCloudKitContainerEvent_Init(NSPersistentCloudKitContainerEvent self)                          { return ((NSPersistentCloudKitContainerEvent (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSUUID                                    NSPersistentCloudKitContainerEvent_Identifier(NSPersistentCloudKitContainerEvent self)                    { return ((NSUUID (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("identifier")); }
 static inline NSString                                  NSPersistentCloudKitContainerEvent_StoreIdentifier(NSPersistentCloudKitContainerEvent self)               { return ((NSString (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("storeIdentifier")); }
@@ -1776,6 +1883,10 @@ static inline NSDate                                    NSPersistentCloudKitCont
 static inline BOOL                                      NSPersistentCloudKitContainerEvent_Succeeded(NSPersistentCloudKitContainerEvent self)                     { return ((BOOL (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("succeeded")); }
 static inline NSError                                   NSPersistentCloudKitContainerEvent_Error(NSPersistentCloudKitContainerEvent self)                         { return ((NSError (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("error")); }
 static inline id                                        NSPersistentCloudKitContainerEvent_CopyWithZone(NSPersistentCloudKitContainerEvent self, NSZone* zone)    { return ((id (*)(NSPersistentCloudKitContainerEvent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainerEvent
+#define BEAN_ALLOC_NSPersistentCloudKitContainerEvent
+static inline NSPersistentCloudKitContainerEvent        NSPersistentCloudKitContainerEvent_Alloc(void)                                                            { return (NSPersistentCloudKitContainerEvent)bean_alloc(bean_cls("NSPersistentCloudKitContainerEvent")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainerEventResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerEventResult
@@ -1783,9 +1894,16 @@ static inline id                                        NSPersistentCloudKitCont
 typedef bean_id NSPersistentCloudKitContainerEventResult;
 #endif
 static inline NSPersistentCloudKitContainerEventResult        NSPersistentCloudKitContainerEventResult_Init(NSPersistentCloudKitContainerEventResult self)          { return ((NSPersistentCloudKitContainerEventResult (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSPersistentCloudKitContainerEventResult
+#define BEAN_NEW_NSPersistentCloudKitContainerEventResult
 static inline NSPersistentCloudKitContainerEventResult        NSPersistentCloudKitContainerEventResult_New(void)                                                    { return ((NSPersistentCloudKitContainerEventResult (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventResult"), bean_sel("new")); }
+#endif
 static inline id                                              NSPersistentCloudKitContainerEventResult_Result(NSPersistentCloudKitContainerEventResult self)        { return ((id (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSPersistentCloudKitContainerEventResultType    NSPersistentCloudKitContainerEventResult_ResultType(NSPersistentCloudKitContainerEventResult self)    { return ((NSPersistentCloudKitContainerEventResultType (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainerEventResult
+#define BEAN_ALLOC_NSPersistentCloudKitContainerEventResult
+static inline NSPersistentCloudKitContainerEventResult        NSPersistentCloudKitContainerEventResult_Alloc(void)                                                  { return (NSPersistentCloudKitContainerEventResult)bean_alloc(bean_cls("NSPersistentCloudKitContainerEventResult")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainerOptions ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerOptions
@@ -1797,6 +1915,14 @@ static inline NSPersistentCloudKitContainerOptions    NSPersistentCloudKitContai
 static inline NSString                                NSPersistentCloudKitContainerOptions_ContainerIdentifier(NSPersistentCloudKitContainerOptions self)                                          { return ((NSString (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
 static inline CKDatabaseScope                         NSPersistentCloudKitContainerOptions_DatabaseScope(NSPersistentCloudKitContainerOptions self)                                                { return ((CKDatabaseScope (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("databaseScope")); }
 static inline void                                    NSPersistentCloudKitContainerOptions_SetDatabaseScope(NSPersistentCloudKitContainerOptions self, CKDatabaseScope databaseScope)              { ((void (*)(NSPersistentCloudKitContainerOptions, SEL, CKDatabaseScope))bean_msgSend)(self, bean_sel("setDatabaseScope:"), databaseScope); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainerOptions
+#define BEAN_ALLOC_NSPersistentCloudKitContainerOptions
+static inline NSPersistentCloudKitContainerOptions    NSPersistentCloudKitContainerOptions_Alloc(void)                                                                                             { return (NSPersistentCloudKitContainerOptions)bean_alloc(bean_cls("NSPersistentCloudKitContainerOptions")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentCloudKitContainerOptions
+#define BEAN_NEW_NSPersistentCloudKitContainerOptions
+static inline NSPersistentCloudKitContainerOptions    NSPersistentCloudKitContainerOptions_New(void)                                                                                               { return (NSPersistentCloudKitContainerOptions)bean_new(bean_cls("NSPersistentCloudKitContainerOptions")); }
+#endif
 
 /* ===== NSPersistentHistoryResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryResult
@@ -1805,14 +1931,30 @@ typedef bean_id NSPersistentHistoryResult;
 #endif
 static inline id                               NSPersistentHistoryResult_Result(NSPersistentHistoryResult self)        { return ((id (*)(NSPersistentHistoryResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSPersistentHistoryResultType    NSPersistentHistoryResult_ResultType(NSPersistentHistoryResult self)    { return ((NSPersistentHistoryResultType (*)(NSPersistentHistoryResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryResult
+#define BEAN_ALLOC_NSPersistentHistoryResult
+static inline NSPersistentHistoryResult        NSPersistentHistoryResult_Alloc(void)                                   { return (NSPersistentHistoryResult)bean_alloc(bean_cls("NSPersistentHistoryResult")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryResult
+#define BEAN_NEW_NSPersistentHistoryResult
+static inline NSPersistentHistoryResult        NSPersistentHistoryResult_New(void)                                     { return (NSPersistentHistoryResult)bean_new(bean_cls("NSPersistentHistoryResult")); }
+#endif
 
 /* ===== NSPersistentHistoryToken ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryToken
 #define BEAN_TYPEDEF_NSPersistentHistoryToken
 typedef bean_id NSPersistentHistoryToken;
 #endif
-static inline id      NSPersistentHistoryToken_CopyWithZone(NSPersistentHistoryToken self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL    NSPersistentHistoryToken_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryToken"), bean_sel("supportsSecureCoding")); }
+static inline id                          NSPersistentHistoryToken_CopyWithZone(NSPersistentHistoryToken self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                        NSPersistentHistoryToken_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryToken"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryToken
+#define BEAN_ALLOC_NSPersistentHistoryToken
+static inline NSPersistentHistoryToken    NSPersistentHistoryToken_Alloc(void)                                                  { return (NSPersistentHistoryToken)bean_alloc(bean_cls("NSPersistentHistoryToken")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryToken
+#define BEAN_NEW_NSPersistentHistoryToken
+static inline NSPersistentHistoryToken    NSPersistentHistoryToken_New(void)                                                    { return (NSPersistentHistoryToken)bean_new(bean_cls("NSPersistentHistoryToken")); }
+#endif
 
 /* ===== NSPersistentStoreRequest ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentStoreRequest
@@ -1823,18 +1965,34 @@ static inline NSArray                         NSPersistentStoreRequest_AffectedS
 static inline void                            NSPersistentStoreRequest_SetAffectedStores(NSPersistentStoreRequest self, NSArray affectedStores)    { ((void (*)(NSPersistentStoreRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("setAffectedStores:"), affectedStores); }
 static inline NSPersistentStoreRequestType    NSPersistentStoreRequest_RequestType(NSPersistentStoreRequest self)                                  { return ((NSPersistentStoreRequestType (*)(NSPersistentStoreRequest, SEL))bean_msgSend)(self, bean_sel("requestType")); }
 static inline id                              NSPersistentStoreRequest_CopyWithZone(NSPersistentStoreRequest self, NSZone* zone)                   { return ((id (*)(NSPersistentStoreRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPersistentStoreRequest
+#define BEAN_ALLOC_NSPersistentStoreRequest
+static inline NSPersistentStoreRequest        NSPersistentStoreRequest_Alloc(void)                                                                 { return (NSPersistentStoreRequest)bean_alloc(bean_cls("NSPersistentStoreRequest")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStoreRequest
+#define BEAN_NEW_NSPersistentStoreRequest
+static inline NSPersistentStoreRequest        NSPersistentStoreRequest_New(void)                                                                   { return (NSPersistentStoreRequest)bean_new(bean_cls("NSPersistentStoreRequest")); }
+#endif
 
 /* ===== NSPropertyMapping ===== */
 #ifndef BEAN_TYPEDEF_NSPropertyMapping
 #define BEAN_TYPEDEF_NSPropertyMapping
 typedef bean_id NSPropertyMapping;
 #endif
-static inline NSString        NSPropertyMapping_Name(NSPropertyMapping self)                                                { return ((NSString (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void            NSPropertyMapping_SetName(NSPropertyMapping self, NSString name)                              { ((void (*)(NSPropertyMapping, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSExpression    NSPropertyMapping_ValueExpression(NSPropertyMapping self)                                     { return ((NSExpression (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("valueExpression")); }
-static inline void            NSPropertyMapping_SetValueExpression(NSPropertyMapping self, NSExpression valueExpression)    { ((void (*)(NSPropertyMapping, SEL, NSExpression))bean_msgSend)(self, bean_sel("setValueExpression:"), valueExpression); }
-static inline NSDictionary    NSPropertyMapping_UserInfo(NSPropertyMapping self)                                            { return ((NSDictionary (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
-static inline void            NSPropertyMapping_SetUserInfo(NSPropertyMapping self, NSDictionary userInfo)                  { ((void (*)(NSPropertyMapping, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+static inline NSString             NSPropertyMapping_Name(NSPropertyMapping self)                                                { return ((NSString (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                 NSPropertyMapping_SetName(NSPropertyMapping self, NSString name)                              { ((void (*)(NSPropertyMapping, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSExpression         NSPropertyMapping_ValueExpression(NSPropertyMapping self)                                     { return ((NSExpression (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("valueExpression")); }
+static inline void                 NSPropertyMapping_SetValueExpression(NSPropertyMapping self, NSExpression valueExpression)    { ((void (*)(NSPropertyMapping, SEL, NSExpression))bean_msgSend)(self, bean_sel("setValueExpression:"), valueExpression); }
+static inline NSDictionary         NSPropertyMapping_UserInfo(NSPropertyMapping self)                                            { return ((NSDictionary (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
+static inline void                 NSPropertyMapping_SetUserInfo(NSPropertyMapping self, NSDictionary userInfo)                  { ((void (*)(NSPropertyMapping, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+#ifndef BEAN_ALLOC_NSPropertyMapping
+#define BEAN_ALLOC_NSPropertyMapping
+static inline NSPropertyMapping    NSPropertyMapping_Alloc(void)                                                                 { return (NSPropertyMapping)bean_alloc(bean_cls("NSPropertyMapping")); }
+#endif
+#ifndef BEAN_NEW_NSPropertyMapping
+#define BEAN_NEW_NSPropertyMapping
+static inline NSPropertyMapping    NSPropertyMapping_New(void)                                                                   { return (NSPropertyMapping)bean_new(bean_cls("NSPropertyMapping")); }
+#endif
 
 /* ===== NSQueryGenerationToken ===== */
 #ifndef BEAN_TYPEDEF_NSQueryGenerationToken
@@ -1844,6 +2002,14 @@ typedef bean_id NSQueryGenerationToken;
 static inline NSQueryGenerationToken    NSQueryGenerationToken_CurrentQueryGenerationToken(void)                          { return ((NSQueryGenerationToken (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSQueryGenerationToken"), bean_sel("currentQueryGenerationToken")); }
 static inline id                        NSQueryGenerationToken_CopyWithZone(NSQueryGenerationToken self, NSZone* zone)    { return ((id (*)(NSQueryGenerationToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      NSQueryGenerationToken_SupportsSecureCoding(void)                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSQueryGenerationToken"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSQueryGenerationToken
+#define BEAN_ALLOC_NSQueryGenerationToken
+static inline NSQueryGenerationToken    NSQueryGenerationToken_Alloc(void)                                                { return (NSQueryGenerationToken)bean_alloc(bean_cls("NSQueryGenerationToken")); }
+#endif
+#ifndef BEAN_NEW_NSQueryGenerationToken
+#define BEAN_NEW_NSQueryGenerationToken
+static inline NSQueryGenerationToken    NSQueryGenerationToken_New(void)                                                  { return (NSQueryGenerationToken)bean_new(bean_cls("NSQueryGenerationToken")); }
+#endif
 
 /* ===== NSSaveChangesRequest ===== */
 #ifndef BEAN_TYPEDEF_NSSaveChangesRequest
@@ -1855,6 +2021,14 @@ static inline NSSet                   NSSaveChangesRequest_InsertedObjects(NSSav
 static inline NSSet                   NSSaveChangesRequest_UpdatedObjects(NSSaveChangesRequest self)                                                                                                                                                 { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("updatedObjects")); }
 static inline NSSet                   NSSaveChangesRequest_DeletedObjects(NSSaveChangesRequest self)                                                                                                                                                 { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("deletedObjects")); }
 static inline NSSet                   NSSaveChangesRequest_LockedObjects(NSSaveChangesRequest self)                                                                                                                                                  { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("lockedObjects")); }
+#ifndef BEAN_ALLOC_NSSaveChangesRequest
+#define BEAN_ALLOC_NSSaveChangesRequest
+static inline NSSaveChangesRequest    NSSaveChangesRequest_Alloc(void)                                                                                                                                                                               { return (NSSaveChangesRequest)bean_alloc(bean_cls("NSSaveChangesRequest")); }
+#endif
+#ifndef BEAN_NEW_NSSaveChangesRequest
+#define BEAN_NEW_NSSaveChangesRequest
+static inline NSSaveChangesRequest    NSSaveChangesRequest_New(void)                                                                                                                                                                                 { return (NSSaveChangesRequest)bean_new(bean_cls("NSSaveChangesRequest")); }
+#endif
 
 /* ===== NSPersistentStoreDescription ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentStoreDescription
@@ -1887,6 +2061,14 @@ static inline NSPersistentCloudKitContainerOptions    NSPersistentStoreDescripti
 static inline void                                    NSPersistentStoreDescription_SetCloudKitContainerOptions(NSPersistentStoreDescription self, NSPersistentCloudKitContainerOptions cloudKitContainerOptions)    { ((void (*)(NSPersistentStoreDescription, SEL, NSPersistentCloudKitContainerOptions))bean_msgSend)(self, bean_sel("setCloudKitContainerOptions:"), cloudKitContainerOptions); }
 static inline id                                      NSPersistentStoreDescription_CopyWithZone(NSPersistentStoreDescription self, NSZone* zone)                                                                    { return ((id (*)(NSPersistentStoreDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                                    NSPersistentStoreDescription_ReadOnly(NSPersistentStoreDescription self)                                                                                      { return ((BOOL (*)(NSPersistentStoreDescription, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
+#ifndef BEAN_ALLOC_NSPersistentStoreDescription
+#define BEAN_ALLOC_NSPersistentStoreDescription
+static inline NSPersistentStoreDescription            NSPersistentStoreDescription_Alloc(void)                                                                                                                      { return (NSPersistentStoreDescription)bean_alloc(bean_cls("NSPersistentStoreDescription")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStoreDescription
+#define BEAN_NEW_NSPersistentStoreDescription
+static inline NSPersistentStoreDescription            NSPersistentStoreDescription_New(void)                                                                                                                        { return (NSPersistentStoreDescription)bean_new(bean_cls("NSPersistentStoreDescription")); }
+#endif
 
 /* ===== NSAsynchronousFetchRequest ===== */
 #ifndef BEAN_TYPEDEF_NSAsynchronousFetchRequest
@@ -1898,6 +2080,14 @@ static inline NSFetchRequest                NSAsynchronousFetchRequest_FetchRequ
 static inline void*                         NSAsynchronousFetchRequest_CompletionBlock(NSAsynchronousFetchRequest self)                                                            { return ((void* (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("completionBlock")); }
 static inline NSInteger                     NSAsynchronousFetchRequest_EstimatedResultCount(NSAsynchronousFetchRequest self)                                                       { return ((NSInteger (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("estimatedResultCount")); }
 static inline void                          NSAsynchronousFetchRequest_SetEstimatedResultCount(NSAsynchronousFetchRequest self, NSInteger estimatedResultCount)                    { ((void (*)(NSAsynchronousFetchRequest, SEL, NSInteger))bean_msgSend)(self, bean_sel("setEstimatedResultCount:"), estimatedResultCount); }
+#ifndef BEAN_ALLOC_NSAsynchronousFetchRequest
+#define BEAN_ALLOC_NSAsynchronousFetchRequest
+static inline NSAsynchronousFetchRequest    NSAsynchronousFetchRequest_Alloc(void)                                                                                                 { return (NSAsynchronousFetchRequest)bean_alloc(bean_cls("NSAsynchronousFetchRequest")); }
+#endif
+#ifndef BEAN_NEW_NSAsynchronousFetchRequest
+#define BEAN_NEW_NSAsynchronousFetchRequest
+static inline NSAsynchronousFetchRequest    NSAsynchronousFetchRequest_New(void)                                                                                                   { return (NSAsynchronousFetchRequest)bean_new(bean_cls("NSAsynchronousFetchRequest")); }
+#endif
 
 /* ===== NSAsynchronousFetchResult ===== */
 #ifndef BEAN_TYPEDEF_NSAsynchronousFetchResult
@@ -1906,6 +2096,14 @@ typedef bean_id NSAsynchronousFetchResult;
 #endif
 static inline NSAsynchronousFetchRequest    NSAsynchronousFetchResult_FetchRequest(NSAsynchronousFetchResult self)    { return ((NSAsynchronousFetchRequest (*)(NSAsynchronousFetchResult, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
 static inline NSArray                       NSAsynchronousFetchResult_FinalResult(NSAsynchronousFetchResult self)     { return ((NSArray (*)(NSAsynchronousFetchResult, SEL))bean_msgSend)(self, bean_sel("finalResult")); }
+#ifndef BEAN_ALLOC_NSAsynchronousFetchResult
+#define BEAN_ALLOC_NSAsynchronousFetchResult
+static inline NSAsynchronousFetchResult     NSAsynchronousFetchResult_Alloc(void)                                     { return (NSAsynchronousFetchResult)bean_alloc(bean_cls("NSAsynchronousFetchResult")); }
+#endif
+#ifndef BEAN_NEW_NSAsynchronousFetchResult
+#define BEAN_NEW_NSAsynchronousFetchResult
+static inline NSAsynchronousFetchResult     NSAsynchronousFetchResult_New(void)                                       { return (NSAsynchronousFetchResult)bean_new(bean_cls("NSAsynchronousFetchResult")); }
+#endif
 
 /* ===== NSAtomicStore ===== */
 #ifndef BEAN_TYPEDEF_NSAtomicStore
@@ -1924,6 +2122,14 @@ static inline NSAtomicStoreCacheNode    NSAtomicStore_CacheNodeForObjectID(NSAto
 static inline NSManagedObjectID         NSAtomicStore_ObjectIDForEntity_ReferenceObject(NSAtomicStore self, NSEntityDescription entity, id data)                                                                                                     { return ((NSManagedObjectID (*)(NSAtomicStore, SEL, NSEntityDescription, id))bean_msgSend)(self, bean_sel("objectIDForEntity:referenceObject:"), entity, data); }
 static inline id                        NSAtomicStore_NewReferenceObjectForManagedObject(NSAtomicStore self, NSManagedObject managedObject)                                                                                                          { return ((id (*)(NSAtomicStore, SEL, NSManagedObject))bean_msgSend)(self, bean_sel("newReferenceObjectForManagedObject:"), managedObject); }
 static inline id                        NSAtomicStore_ReferenceObjectForObjectID(NSAtomicStore self, NSManagedObjectID objectID)                                                                                                                     { return ((id (*)(NSAtomicStore, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("referenceObjectForObjectID:"), objectID); }
+#ifndef BEAN_ALLOC_NSAtomicStore
+#define BEAN_ALLOC_NSAtomicStore
+static inline NSAtomicStore             NSAtomicStore_Alloc(void)                                                                                                                                                                                    { return (NSAtomicStore)bean_alloc(bean_cls("NSAtomicStore")); }
+#endif
+#ifndef BEAN_NEW_NSAtomicStore
+#define BEAN_NEW_NSAtomicStore
+static inline NSAtomicStore             NSAtomicStore_New(void)                                                                                                                                                                                      { return (NSAtomicStore)bean_new(bean_cls("NSAtomicStore")); }
+#endif
 
 /* ===== NSAtomicStoreCacheNode ===== */
 static inline NSAtomicStoreCacheNode    NSAtomicStoreCacheNode_InitWithObjectID(NSAtomicStoreCacheNode self, NSManagedObjectID moid)               { return ((NSAtomicStoreCacheNode (*)(NSAtomicStoreCacheNode, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("initWithObjectID:"), moid); }
@@ -1932,6 +2138,14 @@ static inline void                      NSAtomicStoreCacheNode_SetValue_ForKey(N
 static inline NSManagedObjectID         NSAtomicStoreCacheNode_ObjectID(NSAtomicStoreCacheNode self)                                               { return ((NSManagedObjectID (*)(NSAtomicStoreCacheNode, SEL))bean_msgSend)(self, bean_sel("objectID")); }
 static inline NSMutableDictionary       NSAtomicStoreCacheNode_PropertyCache(NSAtomicStoreCacheNode self)                                          { return ((NSMutableDictionary (*)(NSAtomicStoreCacheNode, SEL))bean_msgSend)(self, bean_sel("propertyCache")); }
 static inline void                      NSAtomicStoreCacheNode_SetPropertyCache(NSAtomicStoreCacheNode self, NSMutableDictionary propertyCache)    { ((void (*)(NSAtomicStoreCacheNode, SEL, NSMutableDictionary))bean_msgSend)(self, bean_sel("setPropertyCache:"), propertyCache); }
+#ifndef BEAN_ALLOC_NSAtomicStoreCacheNode
+#define BEAN_ALLOC_NSAtomicStoreCacheNode
+static inline NSAtomicStoreCacheNode    NSAtomicStoreCacheNode_Alloc(void)                                                                         { return (NSAtomicStoreCacheNode)bean_alloc(bean_cls("NSAtomicStoreCacheNode")); }
+#endif
+#ifndef BEAN_NEW_NSAtomicStoreCacheNode
+#define BEAN_NEW_NSAtomicStoreCacheNode
+static inline NSAtomicStoreCacheNode    NSAtomicStoreCacheNode_New(void)                                                                           { return (NSAtomicStoreCacheNode)bean_new(bean_cls("NSAtomicStoreCacheNode")); }
+#endif
 
 /* ===== NSBatchDeleteRequest ===== */
 #ifndef BEAN_TYPEDEF_NSBatchDeleteRequest
@@ -1944,6 +2158,14 @@ static inline NSBatchDeleteRequest              NSBatchDeleteRequest_InitWithObj
 static inline NSBatchDeleteRequestResultType    NSBatchDeleteRequest_ResultType(NSBatchDeleteRequest self)                                                  { return ((NSBatchDeleteRequestResultType (*)(NSBatchDeleteRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 static inline void                              NSBatchDeleteRequest_SetResultType(NSBatchDeleteRequest self, NSBatchDeleteRequestResultType resultType)    { ((void (*)(NSBatchDeleteRequest, SEL, NSBatchDeleteRequestResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
 static inline NSFetchRequest                    NSBatchDeleteRequest_FetchRequest(NSBatchDeleteRequest self)                                                { return ((NSFetchRequest (*)(NSBatchDeleteRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
+#ifndef BEAN_ALLOC_NSBatchDeleteRequest
+#define BEAN_ALLOC_NSBatchDeleteRequest
+static inline NSBatchDeleteRequest              NSBatchDeleteRequest_Alloc(void)                                                                            { return (NSBatchDeleteRequest)bean_alloc(bean_cls("NSBatchDeleteRequest")); }
+#endif
+#ifndef BEAN_NEW_NSBatchDeleteRequest
+#define BEAN_NEW_NSBatchDeleteRequest
+static inline NSBatchDeleteRequest              NSBatchDeleteRequest_New(void)                                                                              { return (NSBatchDeleteRequest)bean_new(bean_cls("NSBatchDeleteRequest")); }
+#endif
 
 /* ===== NSBatchInsertRequest ===== */
 #ifndef BEAN_TYPEDEF_NSBatchInsertRequest
@@ -1970,6 +2192,14 @@ static inline void*                             NSBatchInsertRequest_ManagedObje
 static inline void                              NSBatchInsertRequest_SetManagedObjectHandler(NSBatchInsertRequest self, void* managedObjectHandler)                               { ((void (*)(NSBatchInsertRequest, SEL, void*))bean_msgSend)(self, bean_sel("setManagedObjectHandler:"), managedObjectHandler); }
 static inline NSBatchInsertRequestResultType    NSBatchInsertRequest_ResultType(NSBatchInsertRequest self)                                                                        { return ((NSBatchInsertRequestResultType (*)(NSBatchInsertRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 static inline void                              NSBatchInsertRequest_SetResultType(NSBatchInsertRequest self, NSBatchInsertRequestResultType resultType)                          { ((void (*)(NSBatchInsertRequest, SEL, NSBatchInsertRequestResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
+#ifndef BEAN_ALLOC_NSBatchInsertRequest
+#define BEAN_ALLOC_NSBatchInsertRequest
+static inline NSBatchInsertRequest              NSBatchInsertRequest_Alloc(void)                                                                                                  { return (NSBatchInsertRequest)bean_alloc(bean_cls("NSBatchInsertRequest")); }
+#endif
+#ifndef BEAN_NEW_NSBatchInsertRequest
+#define BEAN_NEW_NSBatchInsertRequest
+static inline NSBatchInsertRequest              NSBatchInsertRequest_New(void)                                                                                                    { return (NSBatchInsertRequest)bean_new(bean_cls("NSBatchInsertRequest")); }
+#endif
 
 /* ===== NSBatchUpdateRequest ===== */
 #ifndef BEAN_TYPEDEF_NSBatchUpdateRequest
@@ -1989,6 +2219,14 @@ static inline NSBatchUpdateRequestResultType    NSBatchUpdateRequest_ResultType(
 static inline void                              NSBatchUpdateRequest_SetResultType(NSBatchUpdateRequest self, NSBatchUpdateRequestResultType resultType)    { ((void (*)(NSBatchUpdateRequest, SEL, NSBatchUpdateRequestResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
 static inline NSDictionary                      NSBatchUpdateRequest_PropertiesToUpdate(NSBatchUpdateRequest self)                                          { return ((NSDictionary (*)(NSBatchUpdateRequest, SEL))bean_msgSend)(self, bean_sel("propertiesToUpdate")); }
 static inline void                              NSBatchUpdateRequest_SetPropertiesToUpdate(NSBatchUpdateRequest self, NSDictionary propertiesToUpdate)      { ((void (*)(NSBatchUpdateRequest, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setPropertiesToUpdate:"), propertiesToUpdate); }
+#ifndef BEAN_ALLOC_NSBatchUpdateRequest
+#define BEAN_ALLOC_NSBatchUpdateRequest
+static inline NSBatchUpdateRequest              NSBatchUpdateRequest_Alloc(void)                                                                            { return (NSBatchUpdateRequest)bean_alloc(bean_cls("NSBatchUpdateRequest")); }
+#endif
+#ifndef BEAN_NEW_NSBatchUpdateRequest
+#define BEAN_NEW_NSBatchUpdateRequest
+static inline NSBatchUpdateRequest              NSBatchUpdateRequest_New(void)                                                                              { return (NSBatchUpdateRequest)bean_new(bean_cls("NSBatchUpdateRequest")); }
+#endif
 
 /* ===== NSConstraintConflict ===== */
 #ifndef BEAN_TYPEDEF_NSConstraintConflict
@@ -2002,6 +2240,14 @@ static inline NSManagedObject         NSConstraintConflict_DatabaseObject(NSCons
 static inline NSDictionary            NSConstraintConflict_DatabaseSnapshot(NSConstraintConflict self)                                                                                                                                                                                                                          { return ((NSDictionary (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("databaseSnapshot")); }
 static inline NSArray                 NSConstraintConflict_ConflictingObjects(NSConstraintConflict self)                                                                                                                                                                                                                        { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("conflictingObjects")); }
 static inline NSArray                 NSConstraintConflict_ConflictingSnapshots(NSConstraintConflict self)                                                                                                                                                                                                                      { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("conflictingSnapshots")); }
+#ifndef BEAN_ALLOC_NSConstraintConflict
+#define BEAN_ALLOC_NSConstraintConflict
+static inline NSConstraintConflict    NSConstraintConflict_Alloc(void)                                                                                                                                                                                                                                                          { return (NSConstraintConflict)bean_alloc(bean_cls("NSConstraintConflict")); }
+#endif
+#ifndef BEAN_NEW_NSConstraintConflict
+#define BEAN_NEW_NSConstraintConflict
+static inline NSConstraintConflict    NSConstraintConflict_New(void)                                                                                                                                                                                                                                                            { return (NSConstraintConflict)bean_new(bean_cls("NSConstraintConflict")); }
+#endif
 
 /* ===== NSCoreDataCoreSpotlightDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSCoreDataCoreSpotlightDelegate
@@ -2021,6 +2267,14 @@ static inline void                               NSCoreDataCoreSpotlightDelegate
 static inline void                               NSCoreDataCoreSpotlightDelegate_SearchableIndex_ReindexSearchableItemsWithIdentifiers_AcknowledgementHandler(NSCoreDataCoreSpotlightDelegate self, CSSearchableIndex searchableIndex, NSArray identifiers, void* acknowledgementHandler)    { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL, CSSearchableIndex, NSArray, void*))bean_msgSend)(self, bean_sel("searchableIndex:reindexSearchableItemsWithIdentifiers:acknowledgementHandler:"), searchableIndex, identifiers, acknowledgementHandler); }
 static inline BOOL                               NSCoreDataCoreSpotlightDelegate_IsIndexingEnabled(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                     { return ((BOOL (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("isIndexingEnabled")); }
 static inline BOOL                               NSCoreDataCoreSpotlightDelegate_IndexingEnabled(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                       { return ((BOOL (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("indexingEnabled")); }
+#ifndef BEAN_ALLOC_NSCoreDataCoreSpotlightDelegate
+#define BEAN_ALLOC_NSCoreDataCoreSpotlightDelegate
+static inline NSCoreDataCoreSpotlightDelegate    NSCoreDataCoreSpotlightDelegate_Alloc(void)                                                                                                                                                                                                 { return (NSCoreDataCoreSpotlightDelegate)bean_alloc(bean_cls("NSCoreDataCoreSpotlightDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSCoreDataCoreSpotlightDelegate
+#define BEAN_NEW_NSCoreDataCoreSpotlightDelegate
+static inline NSCoreDataCoreSpotlightDelegate    NSCoreDataCoreSpotlightDelegate_New(void)                                                                                                                                                                                                   { return (NSCoreDataCoreSpotlightDelegate)bean_new(bean_cls("NSCoreDataCoreSpotlightDelegate")); }
+#endif
 
 /* ===== NSCustomMigrationStage ===== */
 #ifndef BEAN_TYPEDEF_NSCustomMigrationStage
@@ -2035,6 +2289,14 @@ static inline void*                            NSCustomMigrationStage_WillMigrat
 static inline void                             NSCustomMigrationStage_SetWillMigrateHandler(NSCustomMigrationStage self, void* willMigrateHandler)                                                                                          { ((void (*)(NSCustomMigrationStage, SEL, void*))bean_msgSend)(self, bean_sel("setWillMigrateHandler:"), willMigrateHandler); }
 static inline void*                            NSCustomMigrationStage_DidMigrateHandler(NSCustomMigrationStage self)                                                                                                                        { return ((void* (*)(NSCustomMigrationStage, SEL))bean_msgSend)(self, bean_sel("didMigrateHandler")); }
 static inline void                             NSCustomMigrationStage_SetDidMigrateHandler(NSCustomMigrationStage self, void* didMigrateHandler)                                                                                            { ((void (*)(NSCustomMigrationStage, SEL, void*))bean_msgSend)(self, bean_sel("setDidMigrateHandler:"), didMigrateHandler); }
+#ifndef BEAN_ALLOC_NSCustomMigrationStage
+#define BEAN_ALLOC_NSCustomMigrationStage
+static inline NSCustomMigrationStage           NSCustomMigrationStage_Alloc(void)                                                                                                                                                           { return (NSCustomMigrationStage)bean_alloc(bean_cls("NSCustomMigrationStage")); }
+#endif
+#ifndef BEAN_NEW_NSCustomMigrationStage
+#define BEAN_NEW_NSCustomMigrationStage
+static inline NSCustomMigrationStage           NSCustomMigrationStage_New(void)                                                                                                                                                             { return (NSCustomMigrationStage)bean_new(bean_cls("NSCustomMigrationStage")); }
+#endif
 
 /* ===== NSEntityDescription ===== */
 static inline NSEntityDescription     NSEntityDescription_EntityForName_InManagedObjectContext(NSString entityName, NSManagedObjectContext context)                                         { return ((NSEntityDescription (*)(bean_class, SEL, NSString, NSManagedObjectContext))bean_msgSend)(bean_cls("NSEntityDescription"), bean_sel("entityForName:inManagedObjectContext:"), entityName, context); }
@@ -2077,19 +2339,35 @@ static inline NSCoding                NSEntityDescription_InitWithCoder(NSEntity
 static inline id                      NSEntityDescription_CopyWithZone(NSEntityDescription self, NSZone* zone)                                                                              { return ((id (*)(NSEntityDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline NSUInteger              NSEntityDescription_CountByEnumeratingWithState_Objects_Count(NSEntityDescription self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSEntityDescription, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
 static inline BOOL                    NSEntityDescription_Abstract(NSEntityDescription self)                                                                                                { return ((BOOL (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("abstract")); }
+#ifndef BEAN_ALLOC_NSEntityDescription
+#define BEAN_ALLOC_NSEntityDescription
+static inline NSEntityDescription     NSEntityDescription_Alloc(void)                                                                                                                       { return (NSEntityDescription)bean_alloc(bean_cls("NSEntityDescription")); }
+#endif
+#ifndef BEAN_NEW_NSEntityDescription
+#define BEAN_NEW_NSEntityDescription
+static inline NSEntityDescription     NSEntityDescription_New(void)                                                                                                                         { return (NSEntityDescription)bean_new(bean_cls("NSEntityDescription")); }
+#endif
 
 /* ===== NSEntityMigrationPolicy ===== */
 #ifndef BEAN_TYPEDEF_NSEntityMigrationPolicy
 #define BEAN_TYPEDEF_NSEntityMigrationPolicy
 typedef bean_id NSEntityMigrationPolicy;
 #endif
-static inline BOOL    NSEntityMigrationPolicy_BeginEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("beginEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_CreateDestinationInstancesForSourceInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject sInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)    { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createDestinationInstancesForSourceInstance:entityMapping:manager:error:"), sInstance, mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndInstanceCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                     { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endInstanceCreationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_CreateRelationshipsForDestinationInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject dInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createRelationshipsForDestinationInstance:entityMapping:manager:error:"), dInstance, mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndRelationshipCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endRelationshipCreationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_PerformCustomValidationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("performCustomValidationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                        { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_BeginEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("beginEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_CreateDestinationInstancesForSourceInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject sInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)    { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createDestinationInstancesForSourceInstance:entityMapping:manager:error:"), sInstance, mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_EndInstanceCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                     { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endInstanceCreationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_CreateRelationshipsForDestinationInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject dInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createRelationshipsForDestinationInstance:entityMapping:manager:error:"), dInstance, mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_EndRelationshipCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endRelationshipCreationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_PerformCustomValidationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("performCustomValidationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_EndEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                        { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endEntityMapping:manager:error:"), mapping, manager, error); }
+#ifndef BEAN_ALLOC_NSEntityMigrationPolicy
+#define BEAN_ALLOC_NSEntityMigrationPolicy
+static inline NSEntityMigrationPolicy    NSEntityMigrationPolicy_Alloc(void)                                                                                                                                                                                              { return (NSEntityMigrationPolicy)bean_alloc(bean_cls("NSEntityMigrationPolicy")); }
+#endif
+#ifndef BEAN_NEW_NSEntityMigrationPolicy
+#define BEAN_NEW_NSEntityMigrationPolicy
+static inline NSEntityMigrationPolicy    NSEntityMigrationPolicy_New(void)                                                                                                                                                                                                { return (NSEntityMigrationPolicy)bean_new(bean_cls("NSEntityMigrationPolicy")); }
+#endif
 
 /* ===== NSFetchIndexDescription ===== */
 #ifndef BEAN_TYPEDEF_NSFetchIndexDescription
@@ -2107,6 +2385,14 @@ static inline void                       NSFetchIndexDescription_SetPartialIndex
 static inline void                       NSFetchIndexDescription_EncodeWithCoder(NSFetchIndexDescription self, NSCoder coder)                                 { ((void (*)(NSFetchIndexDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding                   NSFetchIndexDescription_InitWithCoder(NSFetchIndexDescription self, NSCoder coder)                                   { return ((NSCoding (*)(NSFetchIndexDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                         NSFetchIndexDescription_CopyWithZone(NSFetchIndexDescription self, NSZone* zone)                                     { return ((id (*)(NSFetchIndexDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSFetchIndexDescription
+#define BEAN_ALLOC_NSFetchIndexDescription
+static inline NSFetchIndexDescription    NSFetchIndexDescription_Alloc(void)                                                                                  { return (NSFetchIndexDescription)bean_alloc(bean_cls("NSFetchIndexDescription")); }
+#endif
+#ifndef BEAN_NEW_NSFetchIndexDescription
+#define BEAN_NEW_NSFetchIndexDescription
+static inline NSFetchIndexDescription    NSFetchIndexDescription_New(void)                                                                                    { return (NSFetchIndexDescription)bean_new(bean_cls("NSFetchIndexDescription")); }
+#endif
 
 /* ===== NSFetchIndexElementDescription ===== */
 #ifndef BEAN_TYPEDEF_NSFetchIndexElementDescription
@@ -2125,6 +2411,14 @@ static inline void                              NSFetchIndexElementDescription_E
 static inline NSCoding                          NSFetchIndexElementDescription_InitWithCoder(NSFetchIndexElementDescription self, NSCoder coder)                                                                             { return ((NSCoding (*)(NSFetchIndexElementDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                                NSFetchIndexElementDescription_CopyWithZone(NSFetchIndexElementDescription self, NSZone* zone)                                                                               { return ((id (*)(NSFetchIndexElementDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                              NSFetchIndexElementDescription_Ascending(NSFetchIndexElementDescription self)                                                                                                { return ((BOOL (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("ascending")); }
+#ifndef BEAN_ALLOC_NSFetchIndexElementDescription
+#define BEAN_ALLOC_NSFetchIndexElementDescription
+static inline NSFetchIndexElementDescription    NSFetchIndexElementDescription_Alloc(void)                                                                                                                                   { return (NSFetchIndexElementDescription)bean_alloc(bean_cls("NSFetchIndexElementDescription")); }
+#endif
+#ifndef BEAN_NEW_NSFetchIndexElementDescription
+#define BEAN_NEW_NSFetchIndexElementDescription
+static inline NSFetchIndexElementDescription    NSFetchIndexElementDescription_New(void)                                                                                                                                     { return (NSFetchIndexElementDescription)bean_new(bean_cls("NSFetchIndexElementDescription")); }
+#endif
 
 /* ===== NSFetchRequest ===== */
 static inline NSFetchRequest              NSFetchRequest_FetchRequestWithEntityName(NSString entityName)                                                           { return ((NSFetchRequest (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSFetchRequest"), bean_sel("fetchRequestWithEntityName:"), entityName); }
@@ -2171,14 +2465,30 @@ static inline void                        NSFetchRequest_SetHavingPredicate(NSFe
 static inline void                        NSFetchRequest_EncodeWithCoder(NSFetchRequest self, NSCoder coder)                                                       { ((void (*)(NSFetchRequest, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding                    NSFetchRequest_InitWithCoder(NSFetchRequest self, NSCoder coder)                                                         { return ((NSCoding (*)(NSFetchRequest, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                          NSFetchRequest_CopyWithZone(NSFetchRequest self, NSZone* zone)                                                           { return ((id (*)(NSFetchRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSFetchRequest
+#define BEAN_ALLOC_NSFetchRequest
+static inline NSFetchRequest              NSFetchRequest_Alloc(void)                                                                                               { return (NSFetchRequest)bean_alloc(bean_cls("NSFetchRequest")); }
+#endif
+#ifndef BEAN_NEW_NSFetchRequest
+#define BEAN_NEW_NSFetchRequest
+static inline NSFetchRequest              NSFetchRequest_New(void)                                                                                                 { return (NSFetchRequest)bean_new(bean_cls("NSFetchRequest")); }
+#endif
 
 /* ===== NSFetchedPropertyDescription ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedPropertyDescription
 #define BEAN_TYPEDEF_NSFetchedPropertyDescription
 typedef bean_id NSFetchedPropertyDescription;
 #endif
-static inline NSFetchRequest    NSFetchedPropertyDescription_FetchRequest(NSFetchedPropertyDescription self)                                    { return ((NSFetchRequest (*)(NSFetchedPropertyDescription, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
-static inline void              NSFetchedPropertyDescription_SetFetchRequest(NSFetchedPropertyDescription self, NSFetchRequest fetchRequest)    { ((void (*)(NSFetchedPropertyDescription, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("setFetchRequest:"), fetchRequest); }
+static inline NSFetchRequest                  NSFetchedPropertyDescription_FetchRequest(NSFetchedPropertyDescription self)                                    { return ((NSFetchRequest (*)(NSFetchedPropertyDescription, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
+static inline void                            NSFetchedPropertyDescription_SetFetchRequest(NSFetchedPropertyDescription self, NSFetchRequest fetchRequest)    { ((void (*)(NSFetchedPropertyDescription, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("setFetchRequest:"), fetchRequest); }
+#ifndef BEAN_ALLOC_NSFetchedPropertyDescription
+#define BEAN_ALLOC_NSFetchedPropertyDescription
+static inline NSFetchedPropertyDescription    NSFetchedPropertyDescription_Alloc(void)                                                                        { return (NSFetchedPropertyDescription)bean_alloc(bean_cls("NSFetchedPropertyDescription")); }
+#endif
+#ifndef BEAN_NEW_NSFetchedPropertyDescription
+#define BEAN_NEW_NSFetchedPropertyDescription
+static inline NSFetchedPropertyDescription    NSFetchedPropertyDescription_New(void)                                                                          { return (NSFetchedPropertyDescription)bean_new(bean_cls("NSFetchedPropertyDescription")); }
+#endif
 
 /* ===== NSFetchedResultsController ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedResultsController
@@ -2201,19 +2511,35 @@ static inline void                          NSFetchedResultsController_SetDelega
 static inline NSArray                       NSFetchedResultsController_FetchedObjects(NSFetchedResultsController self)                                                                                                                                                                     { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("fetchedObjects")); }
 static inline NSArray                       NSFetchedResultsController_SectionIndexTitles(NSFetchedResultsController self)                                                                                                                                                                 { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sectionIndexTitles")); }
 static inline NSArray                       NSFetchedResultsController_Sections(NSFetchedResultsController self)                                                                                                                                                                           { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sections")); }
+#ifndef BEAN_ALLOC_NSFetchedResultsController
+#define BEAN_ALLOC_NSFetchedResultsController
+static inline NSFetchedResultsController    NSFetchedResultsController_Alloc(void)                                                                                                                                                                                                         { return (NSFetchedResultsController)bean_alloc(bean_cls("NSFetchedResultsController")); }
+#endif
+#ifndef BEAN_NEW_NSFetchedResultsController
+#define BEAN_NEW_NSFetchedResultsController
+static inline NSFetchedResultsController    NSFetchedResultsController_New(void)                                                                                                                                                                                                           { return (NSFetchedResultsController)bean_new(bean_cls("NSFetchedResultsController")); }
+#endif
 
 /* ===== NSFetchedResultsControllerDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedResultsControllerDelegate
 #define BEAN_TYPEDEF_NSFetchedResultsControllerDelegate
 typedef bean_id NSFetchedResultsControllerDelegate;
 #endif
-static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithSnapshot(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSDiffableDataSourceSnapshot snapshot)                                                                                      { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSDiffableDataSourceSnapshot))bean_msgSend)(self, bean_sel("controller:didChangeContentWithSnapshot:"), controller, snapshot); }
-static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithDifference(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSOrderedCollectionDifference diff)                                                                                       { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSOrderedCollectionDifference))bean_msgSend)(self, bean_sel("controller:didChangeContentWithDifference:"), controller, diff); }
-static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeObject_AtIndexPath_ForChangeType_NewIndexPath(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id anObject, NSIndexPath indexPath, NSFetchedResultsChangeType type, NSIndexPath newIndexPath)    { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSIndexPath, NSFetchedResultsChangeType, NSIndexPath))bean_msgSend)(self, bean_sel("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:"), controller, anObject, indexPath, type, newIndexPath); }
-static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeSection_AtIndex_ForChangeType(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id sectionInfo, NSUInteger sectionIndex, NSFetchedResultsChangeType type)                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSUInteger, NSFetchedResultsChangeType))bean_msgSend)(self, bean_sel("controller:didChangeSection:atIndex:forChangeType:"), controller, sectionInfo, sectionIndex, type); }
-static inline void        NSFetchedResultsControllerDelegate_ControllerWillChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerWillChangeContent:"), controller); }
-static inline void        NSFetchedResultsControllerDelegate_ControllerDidChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                          { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerDidChangeContent:"), controller); }
-static inline NSString    NSFetchedResultsControllerDelegate_Controller_SectionIndexTitleForSectionName(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSString sectionName)                                                                                                    { return ((NSString (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSString))bean_msgSend)(self, bean_sel("controller:sectionIndexTitleForSectionName:"), controller, sectionName); }
+static inline void                                  NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithSnapshot(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSDiffableDataSourceSnapshot snapshot)                                                                                      { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSDiffableDataSourceSnapshot))bean_msgSend)(self, bean_sel("controller:didChangeContentWithSnapshot:"), controller, snapshot); }
+static inline void                                  NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithDifference(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSOrderedCollectionDifference diff)                                                                                       { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSOrderedCollectionDifference))bean_msgSend)(self, bean_sel("controller:didChangeContentWithDifference:"), controller, diff); }
+static inline void                                  NSFetchedResultsControllerDelegate_Controller_DidChangeObject_AtIndexPath_ForChangeType_NewIndexPath(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id anObject, NSIndexPath indexPath, NSFetchedResultsChangeType type, NSIndexPath newIndexPath)    { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSIndexPath, NSFetchedResultsChangeType, NSIndexPath))bean_msgSend)(self, bean_sel("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:"), controller, anObject, indexPath, type, newIndexPath); }
+static inline void                                  NSFetchedResultsControllerDelegate_Controller_DidChangeSection_AtIndex_ForChangeType(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id sectionInfo, NSUInteger sectionIndex, NSFetchedResultsChangeType type)                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSUInteger, NSFetchedResultsChangeType))bean_msgSend)(self, bean_sel("controller:didChangeSection:atIndex:forChangeType:"), controller, sectionInfo, sectionIndex, type); }
+static inline void                                  NSFetchedResultsControllerDelegate_ControllerWillChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerWillChangeContent:"), controller); }
+static inline void                                  NSFetchedResultsControllerDelegate_ControllerDidChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                          { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerDidChangeContent:"), controller); }
+static inline NSString                              NSFetchedResultsControllerDelegate_Controller_SectionIndexTitleForSectionName(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSString sectionName)                                                                                                    { return ((NSString (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSString))bean_msgSend)(self, bean_sel("controller:sectionIndexTitleForSectionName:"), controller, sectionName); }
+#ifndef BEAN_ALLOC_NSFetchedResultsControllerDelegate
+#define BEAN_ALLOC_NSFetchedResultsControllerDelegate
+static inline NSFetchedResultsControllerDelegate    NSFetchedResultsControllerDelegate_Alloc(void)                                                                                                                                                                                                                                         { return (NSFetchedResultsControllerDelegate)bean_alloc(bean_cls("NSFetchedResultsControllerDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSFetchedResultsControllerDelegate
+#define BEAN_NEW_NSFetchedResultsControllerDelegate
+static inline NSFetchedResultsControllerDelegate    NSFetchedResultsControllerDelegate_New(void)                                                                                                                                                                                                                                           { return (NSFetchedResultsControllerDelegate)bean_new(bean_cls("NSFetchedResultsControllerDelegate")); }
+#endif
 
 /* ===== NSIncrementalStore ===== */
 #ifndef BEAN_TYPEDEF_NSIncrementalStore
@@ -2230,6 +2556,14 @@ static inline void                      NSIncrementalStore_ManagedObjectContextD
 static inline void                      NSIncrementalStore_ManagedObjectContextDidUnregisterObjectsWithIDs(NSIncrementalStore self, NSArray objectIDs)                                                                                                               { ((void (*)(NSIncrementalStore, SEL, NSArray))bean_msgSend)(self, bean_sel("managedObjectContextDidUnregisterObjectsWithIDs:"), objectIDs); }
 static inline NSManagedObjectID         NSIncrementalStore_NewObjectIDForEntity_ReferenceObject(NSIncrementalStore self, NSEntityDescription entity, id data)                                                                                                        { return ((NSManagedObjectID (*)(NSIncrementalStore, SEL, NSEntityDescription, id))bean_msgSend)(self, bean_sel("newObjectIDForEntity:referenceObject:"), entity, data); }
 static inline id                        NSIncrementalStore_ReferenceObjectForObjectID(NSIncrementalStore self, NSManagedObjectID objectID)                                                                                                                           { return ((id (*)(NSIncrementalStore, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("referenceObjectForObjectID:"), objectID); }
+#ifndef BEAN_ALLOC_NSIncrementalStore
+#define BEAN_ALLOC_NSIncrementalStore
+static inline NSIncrementalStore        NSIncrementalStore_Alloc(void)                                                                                                                                                                                               { return (NSIncrementalStore)bean_alloc(bean_cls("NSIncrementalStore")); }
+#endif
+#ifndef BEAN_NEW_NSIncrementalStore
+#define BEAN_NEW_NSIncrementalStore
+static inline NSIncrementalStore        NSIncrementalStore_New(void)                                                                                                                                                                                                 { return (NSIncrementalStore)bean_new(bean_cls("NSIncrementalStore")); }
+#endif
 
 /* ===== NSIncrementalStoreNode ===== */
 static inline NSIncrementalStoreNode    NSIncrementalStoreNode_InitWithObjectID_WithValues_Version(NSIncrementalStoreNode self, NSManagedObjectID objectID, NSDictionary values, unsigned long long version)    { return ((NSIncrementalStoreNode (*)(NSIncrementalStoreNode, SEL, NSManagedObjectID, NSDictionary, unsigned long long))bean_msgSend)(self, bean_sel("initWithObjectID:withValues:version:"), objectID, values, version); }
@@ -2237,6 +2571,14 @@ static inline void                      NSIncrementalStoreNode_UpdateWithValues_
 static inline id                        NSIncrementalStoreNode_ValueForPropertyDescription(NSIncrementalStoreNode self, NSPropertyDescription prop)                                                             { return ((id (*)(NSIncrementalStoreNode, SEL, NSPropertyDescription))bean_msgSend)(self, bean_sel("valueForPropertyDescription:"), prop); }
 static inline NSManagedObjectID         NSIncrementalStoreNode_ObjectID(NSIncrementalStoreNode self)                                                                                                            { return ((NSManagedObjectID (*)(NSIncrementalStoreNode, SEL))bean_msgSend)(self, bean_sel("objectID")); }
 static inline unsigned long long        NSIncrementalStoreNode_Version(NSIncrementalStoreNode self)                                                                                                             { return ((unsigned long long (*)(NSIncrementalStoreNode, SEL))bean_msgSend)(self, bean_sel("version")); }
+#ifndef BEAN_ALLOC_NSIncrementalStoreNode
+#define BEAN_ALLOC_NSIncrementalStoreNode
+static inline NSIncrementalStoreNode    NSIncrementalStoreNode_Alloc(void)                                                                                                                                      { return (NSIncrementalStoreNode)bean_alloc(bean_cls("NSIncrementalStoreNode")); }
+#endif
+#ifndef BEAN_NEW_NSIncrementalStoreNode
+#define BEAN_NEW_NSIncrementalStoreNode
+static inline NSIncrementalStoreNode    NSIncrementalStoreNode_New(void)                                                                                                                                        { return (NSIncrementalStoreNode)bean_new(bean_cls("NSIncrementalStoreNode")); }
+#endif
 
 /* ===== NSManagedObject ===== */
 static inline NSEntityDescription       NSManagedObject_Entity(void)                                                                                                                                           { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSManagedObject"), bean_sel("entity")); }
@@ -2286,9 +2628,20 @@ static inline BOOL                      NSManagedObject_Inserted(NSManagedObject
 static inline BOOL                      NSManagedObject_Updated(NSManagedObject self)                                                                                                                          { return ((BOOL (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("updated")); }
 static inline BOOL                      NSManagedObject_Deleted(NSManagedObject self)                                                                                                                          { return ((BOOL (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("deleted")); }
 static inline BOOL                      NSManagedObject_Fault(NSManagedObject self)                                                                                                                            { return ((BOOL (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("fault")); }
+#ifndef BEAN_ALLOC_NSManagedObject
+#define BEAN_ALLOC_NSManagedObject
+static inline NSManagedObject           NSManagedObject_Alloc(void)                                                                                                                                            { return (NSManagedObject)bean_alloc(bean_cls("NSManagedObject")); }
+#endif
+#ifndef BEAN_NEW_NSManagedObject
+#define BEAN_NEW_NSManagedObject
+static inline NSManagedObject           NSManagedObject_New(void)                                                                                                                                              { return (NSManagedObject)bean_new(bean_cls("NSManagedObject")); }
+#endif
 
 /* ===== NSManagedObjectContext ===== */
+#ifndef BEAN_NEW_NSManagedObjectContext
+#define BEAN_NEW_NSManagedObjectContext
 static inline NSManagedObjectContext                   NSManagedObjectContext_New(void)                                                                                                                                                                   { return ((NSManagedObjectContext (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSManagedObjectContext"), bean_sel("new")); }
+#endif
 static inline NSManagedObjectContext                   NSManagedObjectContext_Init(NSManagedObjectContext self)                                                                                                                                           { return ((NSManagedObjectContext (*)(NSManagedObjectContext, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSManagedObjectContext                   NSManagedObjectContext_InitWithConcurrencyType(NSManagedObjectContext self, NSManagedObjectContextConcurrencyType ct)                                                                              { return ((NSManagedObjectContext (*)(NSManagedObjectContext, SEL, NSManagedObjectContextConcurrencyType))bean_msgSend)(self, bean_sel("initWithConcurrencyType:"), ct); }
 static inline void                                     NSManagedObjectContext_PerformBlock(NSManagedObjectContext self, void* block)                                                                                                                      { ((void (*)(NSManagedObjectContext, SEL, void*))bean_msgSend)(self, bean_sel("performBlock:"), block); }
@@ -2352,6 +2705,10 @@ static inline NSString                                 NSManagedObjectContext_Tr
 static inline void                                     NSManagedObjectContext_SetTransactionAuthor(NSManagedObjectContext self, NSString transactionAuthor)                                                                                               { ((void (*)(NSManagedObjectContext, SEL, NSString))bean_msgSend)(self, bean_sel("setTransactionAuthor:"), transactionAuthor); }
 static inline void                                     NSManagedObjectContext_EncodeWithCoder(NSManagedObjectContext self, NSCoder coder)                                                                                                                 { ((void (*)(NSManagedObjectContext, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding                                 NSManagedObjectContext_InitWithCoder(NSManagedObjectContext self, NSCoder coder)                                                                                                                   { return ((NSCoding (*)(NSManagedObjectContext, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+#ifndef BEAN_ALLOC_NSManagedObjectContext
+#define BEAN_ALLOC_NSManagedObjectContext
+static inline NSManagedObjectContext                   NSManagedObjectContext_Alloc(void)                                                                                                                                                                 { return (NSManagedObjectContext)bean_alloc(bean_cls("NSManagedObjectContext")); }
+#endif
 
 /* ===== NSManagedObjectID ===== */
 static inline NSURL                  NSManagedObjectID_URIRepresentation(NSManagedObjectID self)             { return ((NSURL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("URIRepresentation")); }
@@ -2360,6 +2717,14 @@ static inline NSPersistentStore      NSManagedObjectID_PersistentStore(NSManaged
 static inline BOOL                   NSManagedObjectID_IsTemporaryID(NSManagedObjectID self)                 { return ((BOOL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("isTemporaryID")); }
 static inline id                     NSManagedObjectID_CopyWithZone(NSManagedObjectID self, NSZone* zone)    { return ((id (*)(NSManagedObjectID, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                   NSManagedObjectID_TemporaryID(NSManagedObjectID self)                   { return ((BOOL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("temporaryID")); }
+#ifndef BEAN_ALLOC_NSManagedObjectID
+#define BEAN_ALLOC_NSManagedObjectID
+static inline NSManagedObjectID      NSManagedObjectID_Alloc(void)                                           { return (NSManagedObjectID)bean_alloc(bean_cls("NSManagedObjectID")); }
+#endif
+#ifndef BEAN_NEW_NSManagedObjectID
+#define BEAN_NEW_NSManagedObjectID
+static inline NSManagedObjectID      NSManagedObjectID_New(void)                                             { return (NSManagedObjectID)bean_new(bean_cls("NSManagedObjectID")); }
+#endif
 
 /* ===== NSManagedObjectModel ===== */
 static inline NSManagedObjectModel    NSManagedObjectModel_MergedModelFromBundles(NSArray bundles)                                                                                            { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("mergedModelFromBundles:"), bundles); }
@@ -2390,6 +2755,14 @@ static inline void                    NSManagedObjectModel_EncodeWithCoder(NSMan
 static inline NSCoding                NSManagedObjectModel_InitWithCoder(NSManagedObjectModel self, NSCoder coder)                                                                            { return ((NSCoding (*)(NSManagedObjectModel, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                      NSManagedObjectModel_CopyWithZone(NSManagedObjectModel self, NSZone* zone)                                                                              { return ((id (*)(NSManagedObjectModel, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline NSUInteger              NSManagedObjectModel_CountByEnumeratingWithState_Objects_Count(NSManagedObjectModel self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSManagedObjectModel, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSManagedObjectModel
+#define BEAN_ALLOC_NSManagedObjectModel
+static inline NSManagedObjectModel    NSManagedObjectModel_Alloc(void)                                                                                                                        { return (NSManagedObjectModel)bean_alloc(bean_cls("NSManagedObjectModel")); }
+#endif
+#ifndef BEAN_NEW_NSManagedObjectModel
+#define BEAN_NEW_NSManagedObjectModel
+static inline NSManagedObjectModel    NSManagedObjectModel_New(void)                                                                                                                          { return (NSManagedObjectModel)bean_new(bean_cls("NSManagedObjectModel")); }
+#endif
 
 /* ===== NSManagedObjectModelReference ===== */
 static inline NSManagedObjectModelReference    NSManagedObjectModelReference_Init(NSManagedObjectModelReference self)                                                                                                                         { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -2399,6 +2772,14 @@ static inline NSManagedObjectModelReference    NSManagedObjectModelReference_Ini
 static inline NSManagedObjectModelReference    NSManagedObjectModelReference_InitWithName_InBundle_VersionChecksum(NSManagedObjectModelReference self, NSString modelName, NSBundle bundle, NSString versionChecksum)                         { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL, NSString, NSBundle, NSString))bean_msgSend)(self, bean_sel("initWithName:inBundle:versionChecksum:"), modelName, bundle, versionChecksum); }
 static inline NSManagedObjectModel             NSManagedObjectModelReference_ResolvedModel(NSManagedObjectModelReference self)                                                                                                                { return ((NSManagedObjectModel (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("resolvedModel")); }
 static inline NSString                         NSManagedObjectModelReference_VersionChecksum(NSManagedObjectModelReference self)                                                                                                              { return ((NSString (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("versionChecksum")); }
+#ifndef BEAN_ALLOC_NSManagedObjectModelReference
+#define BEAN_ALLOC_NSManagedObjectModelReference
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_Alloc(void)                                                                                                                                                      { return (NSManagedObjectModelReference)bean_alloc(bean_cls("NSManagedObjectModelReference")); }
+#endif
+#ifndef BEAN_NEW_NSManagedObjectModelReference
+#define BEAN_NEW_NSManagedObjectModelReference
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_New(void)                                                                                                                                                        { return (NSManagedObjectModelReference)bean_new(bean_cls("NSManagedObjectModelReference")); }
+#endif
 
 /* ===== NSMappingModel ===== */
 #ifndef BEAN_TYPEDEF_NSMappingModel
@@ -2411,6 +2792,14 @@ static inline NSMappingModel    NSMappingModel_InitWithContentsOfURL(NSMappingMo
 static inline NSArray           NSMappingModel_EntityMappings(NSMappingModel self)                                                                                                                   { return ((NSArray (*)(NSMappingModel, SEL))bean_msgSend)(self, bean_sel("entityMappings")); }
 static inline void              NSMappingModel_SetEntityMappings(NSMappingModel self, NSArray entityMappings)                                                                                        { ((void (*)(NSMappingModel, SEL, NSArray))bean_msgSend)(self, bean_sel("setEntityMappings:"), entityMappings); }
 static inline NSDictionary      NSMappingModel_EntityMappingsByName(NSMappingModel self)                                                                                                             { return ((NSDictionary (*)(NSMappingModel, SEL))bean_msgSend)(self, bean_sel("entityMappingsByName")); }
+#ifndef BEAN_ALLOC_NSMappingModel
+#define BEAN_ALLOC_NSMappingModel
+static inline NSMappingModel    NSMappingModel_Alloc(void)                                                                                                                                           { return (NSMappingModel)bean_alloc(bean_cls("NSMappingModel")); }
+#endif
+#ifndef BEAN_NEW_NSMappingModel
+#define BEAN_NEW_NSMappingModel
+static inline NSMappingModel    NSMappingModel_New(void)                                                                                                                                             { return (NSMappingModel)bean_new(bean_cls("NSMappingModel")); }
+#endif
 
 /* ===== NSMergeConflict ===== */
 #ifndef BEAN_TYPEDEF_NSMergeConflict
@@ -2425,6 +2814,14 @@ static inline NSDictionary       NSMergeConflict_CachedSnapshot(NSMergeConflict 
 static inline NSDictionary       NSMergeConflict_PersistedSnapshot(NSMergeConflict self)                                                                                                                                                                         { return ((NSDictionary (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("persistedSnapshot")); }
 static inline NSUInteger         NSMergeConflict_NewVersionNumber(NSMergeConflict self)                                                                                                                                                                          { return ((NSUInteger (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("newVersionNumber")); }
 static inline NSUInteger         NSMergeConflict_OldVersionNumber(NSMergeConflict self)                                                                                                                                                                          { return ((NSUInteger (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("oldVersionNumber")); }
+#ifndef BEAN_ALLOC_NSMergeConflict
+#define BEAN_ALLOC_NSMergeConflict
+static inline NSMergeConflict    NSMergeConflict_Alloc(void)                                                                                                                                                                                                     { return (NSMergeConflict)bean_alloc(bean_cls("NSMergeConflict")); }
+#endif
+#ifndef BEAN_NEW_NSMergeConflict
+#define BEAN_NEW_NSMergeConflict
+static inline NSMergeConflict    NSMergeConflict_New(void)                                                                                                                                                                                                       { return (NSMergeConflict)bean_new(bean_cls("NSMergeConflict")); }
+#endif
 
 /* ===== NSMigrationManager ===== */
 static inline NSMigrationManager        NSMigrationManager_InitWithSourceModel_DestinationModel(NSMigrationManager self, NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel)                                                                                                                                                                { return ((NSMigrationManager (*)(NSMigrationManager, SEL, NSManagedObjectModel, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithSourceModel:destinationModel:"), sourceModel, destinationModel); }
@@ -2447,6 +2844,14 @@ static inline NSEntityMapping           NSMigrationManager_CurrentEntityMapping(
 static inline CGFloat                   NSMigrationManager_MigrationProgress(NSMigrationManager self)                                                                                                                                                                                                                                                            { return ((CGFloat (*)(NSMigrationManager, SEL))bean_msgSend_fpret)(self, bean_sel("migrationProgress")); }
 static inline NSDictionary              NSMigrationManager_UserInfo(NSMigrationManager self)                                                                                                                                                                                                                                                                     { return ((NSDictionary (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
 static inline void                      NSMigrationManager_SetUserInfo(NSMigrationManager self, NSDictionary userInfo)                                                                                                                                                                                                                                           { ((void (*)(NSMigrationManager, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+#ifndef BEAN_ALLOC_NSMigrationManager
+#define BEAN_ALLOC_NSMigrationManager
+static inline NSMigrationManager        NSMigrationManager_Alloc(void)                                                                                                                                                                                                                                                                                           { return (NSMigrationManager)bean_alloc(bean_cls("NSMigrationManager")); }
+#endif
+#ifndef BEAN_NEW_NSMigrationManager
+#define BEAN_NEW_NSMigrationManager
+static inline NSMigrationManager        NSMigrationManager_New(void)                                                                                                                                                                                                                                                                                             { return (NSMigrationManager)bean_new(bean_cls("NSMigrationManager")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainer ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainer
@@ -2461,6 +2866,14 @@ static inline NSDictionary                     NSPersistentCloudKitContainer_Rec
 static inline BOOL                             NSPersistentCloudKitContainer_CanUpdateRecordForManagedObjectWithID(NSPersistentCloudKitContainer self, NSManagedObjectID objectID)                                                              { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("canUpdateRecordForManagedObjectWithID:"), objectID); }
 static inline BOOL                             NSPersistentCloudKitContainer_CanDeleteRecordForManagedObjectWithID(NSPersistentCloudKitContainer self, NSManagedObjectID objectID)                                                              { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("canDeleteRecordForManagedObjectWithID:"), objectID); }
 static inline BOOL                             NSPersistentCloudKitContainer_CanModifyManagedObjectsInStore(NSPersistentCloudKitContainer self, NSPersistentStore store)                                                                        { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSPersistentStore))bean_msgSend)(self, bean_sel("canModifyManagedObjectsInStore:"), store); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainer
+#define BEAN_ALLOC_NSPersistentCloudKitContainer
+static inline NSPersistentCloudKitContainer    NSPersistentCloudKitContainer_Alloc(void)                                                                                                                                                        { return (NSPersistentCloudKitContainer)bean_alloc(bean_cls("NSPersistentCloudKitContainer")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentCloudKitContainer
+#define BEAN_NEW_NSPersistentCloudKitContainer
+static inline NSPersistentCloudKitContainer    NSPersistentCloudKitContainer_New(void)                                                                                                                                                          { return (NSPersistentCloudKitContainer)bean_new(bean_cls("NSPersistentCloudKitContainer")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainerEventRequest ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerEventRequest
@@ -2473,6 +2886,14 @@ static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudK
 static inline NSFetchRequest                                  NSPersistentCloudKitContainerEventRequest_FetchRequestForEvents(void)                                                                                               { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchRequestForEvents")); }
 static inline NSPersistentCloudKitContainerEventResultType    NSPersistentCloudKitContainerEventRequest_ResultType(NSPersistentCloudKitContainerEventRequest self)                                                                { return ((NSPersistentCloudKitContainerEventResultType (*)(NSPersistentCloudKitContainerEventRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 static inline void                                            NSPersistentCloudKitContainerEventRequest_SetResultType(NSPersistentCloudKitContainerEventRequest self, NSPersistentCloudKitContainerEventResultType resultType)    { ((void (*)(NSPersistentCloudKitContainerEventRequest, SEL, NSPersistentCloudKitContainerEventResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainerEventRequest
+#define BEAN_ALLOC_NSPersistentCloudKitContainerEventRequest
+static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudKitContainerEventRequest_Alloc(void)                                                                                                               { return (NSPersistentCloudKitContainerEventRequest)bean_alloc(bean_cls("NSPersistentCloudKitContainerEventRequest")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentCloudKitContainerEventRequest
+#define BEAN_NEW_NSPersistentCloudKitContainerEventRequest
+static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudKitContainerEventRequest_New(void)                                                                                                                 { return (NSPersistentCloudKitContainerEventRequest)bean_new(bean_cls("NSPersistentCloudKitContainerEventRequest")); }
+#endif
 
 /* ===== NSPersistentContainer ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentContainer
@@ -2493,6 +2914,14 @@ static inline NSManagedObjectModel            NSPersistentContainer_ManagedObjec
 static inline NSPersistentStoreCoordinator    NSPersistentContainer_PersistentStoreCoordinator(NSPersistentContainer self)                                                    { return ((NSPersistentStoreCoordinator (*)(NSPersistentContainer, SEL))bean_msgSend)(self, bean_sel("persistentStoreCoordinator")); }
 static inline NSArray                         NSPersistentContainer_PersistentStoreDescriptions(NSPersistentContainer self)                                                   { return ((NSArray (*)(NSPersistentContainer, SEL))bean_msgSend)(self, bean_sel("persistentStoreDescriptions")); }
 static inline void                            NSPersistentContainer_SetPersistentStoreDescriptions(NSPersistentContainer self, NSArray persistentStoreDescriptions)           { ((void (*)(NSPersistentContainer, SEL, NSArray))bean_msgSend)(self, bean_sel("setPersistentStoreDescriptions:"), persistentStoreDescriptions); }
+#ifndef BEAN_ALLOC_NSPersistentContainer
+#define BEAN_ALLOC_NSPersistentContainer
+static inline NSPersistentContainer           NSPersistentContainer_Alloc(void)                                                                                               { return (NSPersistentContainer)bean_alloc(bean_cls("NSPersistentContainer")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentContainer
+#define BEAN_NEW_NSPersistentContainer
+static inline NSPersistentContainer           NSPersistentContainer_New(void)                                                                                                 { return (NSPersistentContainer)bean_new(bean_cls("NSPersistentContainer")); }
+#endif
 
 /* ===== NSPersistentHistoryChange ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryChange
@@ -2509,6 +2938,14 @@ static inline NSDictionary                      NSPersistentHistoryChange_Tombst
 static inline NSPersistentHistoryTransaction    NSPersistentHistoryChange_Transaction(NSPersistentHistoryChange self)                     { return ((NSPersistentHistoryTransaction (*)(NSPersistentHistoryChange, SEL))bean_msgSend)(self, bean_sel("transaction")); }
 static inline NSSet                             NSPersistentHistoryChange_UpdatedProperties(NSPersistentHistoryChange self)               { return ((NSSet (*)(NSPersistentHistoryChange, SEL))bean_msgSend)(self, bean_sel("updatedProperties")); }
 static inline id                                NSPersistentHistoryChange_CopyWithZone(NSPersistentHistoryChange self, NSZone* zone)      { return ((id (*)(NSPersistentHistoryChange, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryChange
+#define BEAN_ALLOC_NSPersistentHistoryChange
+static inline NSPersistentHistoryChange         NSPersistentHistoryChange_Alloc(void)                                                     { return (NSPersistentHistoryChange)bean_alloc(bean_cls("NSPersistentHistoryChange")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryChange
+#define BEAN_NEW_NSPersistentHistoryChange
+static inline NSPersistentHistoryChange         NSPersistentHistoryChange_New(void)                                                       { return (NSPersistentHistoryChange)bean_new(bean_cls("NSPersistentHistoryChange")); }
+#endif
 
 /* ===== NSPersistentHistoryChangeRequest ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryChangeRequest
@@ -2527,22 +2964,38 @@ static inline void                                NSPersistentHistoryChangeReque
 static inline NSPersistentHistoryToken            NSPersistentHistoryChangeRequest_Token(NSPersistentHistoryChangeRequest self)                                                      { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("token")); }
 static inline NSFetchRequest                      NSPersistentHistoryChangeRequest_FetchRequest(NSPersistentHistoryChangeRequest self)                                               { return ((NSFetchRequest (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
 static inline void                                NSPersistentHistoryChangeRequest_SetFetchRequest(NSPersistentHistoryChangeRequest self, NSFetchRequest fetchRequest)               { ((void (*)(NSPersistentHistoryChangeRequest, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("setFetchRequest:"), fetchRequest); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryChangeRequest
+#define BEAN_ALLOC_NSPersistentHistoryChangeRequest
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_Alloc(void)                                                                                       { return (NSPersistentHistoryChangeRequest)bean_alloc(bean_cls("NSPersistentHistoryChangeRequest")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryChangeRequest
+#define BEAN_NEW_NSPersistentHistoryChangeRequest
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_New(void)                                                                                         { return (NSPersistentHistoryChangeRequest)bean_new(bean_cls("NSPersistentHistoryChangeRequest")); }
+#endif
 
 /* ===== NSPersistentHistoryTransaction ===== */
-static inline NSEntityDescription         NSPersistentHistoryTransaction_EntityDescriptionWithContext(NSManagedObjectContext context)       { return ((NSEntityDescription (*)(bean_class, SEL, NSManagedObjectContext))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescriptionWithContext:"), context); }
-static inline NSNotification              NSPersistentHistoryTransaction_ObjectIDNotification(NSPersistentHistoryTransaction self)          { return ((NSNotification (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("objectIDNotification")); }
-static inline NSEntityDescription         NSPersistentHistoryTransaction_EntityDescription(void)                                            { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescription")); }
-static inline NSFetchRequest              NSPersistentHistoryTransaction_FetchRequest(void)                                                 { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("fetchRequest")); }
-static inline NSDate                      NSPersistentHistoryTransaction_Timestamp(NSPersistentHistoryTransaction self)                     { return ((NSDate (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
-static inline NSArray                     NSPersistentHistoryTransaction_Changes(NSPersistentHistoryTransaction self)                       { return ((NSArray (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("changes")); }
-static inline long long                   NSPersistentHistoryTransaction_TransactionNumber(NSPersistentHistoryTransaction self)             { return ((long long (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("transactionNumber")); }
-static inline NSString                    NSPersistentHistoryTransaction_StoreID(NSPersistentHistoryTransaction self)                       { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("storeID")); }
-static inline NSString                    NSPersistentHistoryTransaction_BundleID(NSPersistentHistoryTransaction self)                      { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("bundleID")); }
-static inline NSString                    NSPersistentHistoryTransaction_ProcessID(NSPersistentHistoryTransaction self)                     { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("processID")); }
-static inline NSString                    NSPersistentHistoryTransaction_ContextName(NSPersistentHistoryTransaction self)                   { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("contextName")); }
-static inline NSString                    NSPersistentHistoryTransaction_Author(NSPersistentHistoryTransaction self)                        { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("author")); }
-static inline NSPersistentHistoryToken    NSPersistentHistoryTransaction_Token(NSPersistentHistoryTransaction self)                         { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("token")); }
-static inline id                          NSPersistentHistoryTransaction_CopyWithZone(NSPersistentHistoryTransaction self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryTransaction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline NSEntityDescription               NSPersistentHistoryTransaction_EntityDescriptionWithContext(NSManagedObjectContext context)       { return ((NSEntityDescription (*)(bean_class, SEL, NSManagedObjectContext))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescriptionWithContext:"), context); }
+static inline NSNotification                    NSPersistentHistoryTransaction_ObjectIDNotification(NSPersistentHistoryTransaction self)          { return ((NSNotification (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("objectIDNotification")); }
+static inline NSEntityDescription               NSPersistentHistoryTransaction_EntityDescription(void)                                            { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescription")); }
+static inline NSFetchRequest                    NSPersistentHistoryTransaction_FetchRequest(void)                                                 { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("fetchRequest")); }
+static inline NSDate                            NSPersistentHistoryTransaction_Timestamp(NSPersistentHistoryTransaction self)                     { return ((NSDate (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
+static inline NSArray                           NSPersistentHistoryTransaction_Changes(NSPersistentHistoryTransaction self)                       { return ((NSArray (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("changes")); }
+static inline long long                         NSPersistentHistoryTransaction_TransactionNumber(NSPersistentHistoryTransaction self)             { return ((long long (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("transactionNumber")); }
+static inline NSString                          NSPersistentHistoryTransaction_StoreID(NSPersistentHistoryTransaction self)                       { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("storeID")); }
+static inline NSString                          NSPersistentHistoryTransaction_BundleID(NSPersistentHistoryTransaction self)                      { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("bundleID")); }
+static inline NSString                          NSPersistentHistoryTransaction_ProcessID(NSPersistentHistoryTransaction self)                     { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("processID")); }
+static inline NSString                          NSPersistentHistoryTransaction_ContextName(NSPersistentHistoryTransaction self)                   { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("contextName")); }
+static inline NSString                          NSPersistentHistoryTransaction_Author(NSPersistentHistoryTransaction self)                        { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("author")); }
+static inline NSPersistentHistoryToken          NSPersistentHistoryTransaction_Token(NSPersistentHistoryTransaction self)                         { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("token")); }
+static inline id                                NSPersistentHistoryTransaction_CopyWithZone(NSPersistentHistoryTransaction self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryTransaction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryTransaction
+#define BEAN_ALLOC_NSPersistentHistoryTransaction
+static inline NSPersistentHistoryTransaction    NSPersistentHistoryTransaction_Alloc(void)                                                        { return (NSPersistentHistoryTransaction)bean_alloc(bean_cls("NSPersistentHistoryTransaction")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryTransaction
+#define BEAN_NEW_NSPersistentHistoryTransaction
+static inline NSPersistentHistoryTransaction    NSPersistentHistoryTransaction_New(void)                                                          { return (NSPersistentHistoryTransaction)bean_new(bean_cls("NSPersistentHistoryTransaction")); }
+#endif
 
 /* ===== NSPersistentStore ===== */
 static inline NSDictionary                       NSPersistentStore_MetadataForPersistentStoreWithURL_Error(NSURL url, NSError* error)                                                                                                             { return ((NSDictionary (*)(bean_class, SEL, NSURL, NSError*))bean_msgSend)(bean_cls("NSPersistentStore"), bean_sel("metadataForPersistentStoreWithURL:error:"), url, error); }
@@ -2567,16 +3020,32 @@ static inline NSDictionary                       NSPersistentStore_Metadata(NSPe
 static inline void                               NSPersistentStore_SetMetadata(NSPersistentStore self, NSDictionary metadata)                                                                                                                     { ((void (*)(NSPersistentStore, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setMetadata:"), metadata); }
 static inline NSCoreDataCoreSpotlightDelegate    NSPersistentStore_CoreSpotlightExporter(NSPersistentStore self)                                                                                                                                  { return ((NSCoreDataCoreSpotlightDelegate (*)(NSPersistentStore, SEL))bean_msgSend)(self, bean_sel("coreSpotlightExporter")); }
 static inline BOOL                               NSPersistentStore_ReadOnly(NSPersistentStore self)                                                                                                                                               { return ((BOOL (*)(NSPersistentStore, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
+#ifndef BEAN_ALLOC_NSPersistentStore
+#define BEAN_ALLOC_NSPersistentStore
+static inline NSPersistentStore                  NSPersistentStore_Alloc(void)                                                                                                                                                                    { return (NSPersistentStore)bean_alloc(bean_cls("NSPersistentStore")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStore
+#define BEAN_NEW_NSPersistentStore
+static inline NSPersistentStore                  NSPersistentStore_New(void)                                                                                                                                                                      { return (NSPersistentStore)bean_new(bean_cls("NSPersistentStore")); }
+#endif
 
 /* ===== NSPersistentStoreAsynchronousResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentStoreAsynchronousResult
 #define BEAN_TYPEDEF_NSPersistentStoreAsynchronousResult
 typedef bean_id NSPersistentStoreAsynchronousResult;
 #endif
-static inline void                      NSPersistentStoreAsynchronousResult_Cancel(NSPersistentStoreAsynchronousResult self)                  { ((void (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("cancel")); }
-static inline NSManagedObjectContext    NSPersistentStoreAsynchronousResult_ManagedObjectContext(NSPersistentStoreAsynchronousResult self)    { return ((NSManagedObjectContext (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("managedObjectContext")); }
-static inline NSError                   NSPersistentStoreAsynchronousResult_OperationError(NSPersistentStoreAsynchronousResult self)          { return ((NSError (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("operationError")); }
-static inline NSProgress                NSPersistentStoreAsynchronousResult_Progress(NSPersistentStoreAsynchronousResult self)                { return ((NSProgress (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("progress")); }
+static inline void                                   NSPersistentStoreAsynchronousResult_Cancel(NSPersistentStoreAsynchronousResult self)                  { ((void (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("cancel")); }
+static inline NSManagedObjectContext                 NSPersistentStoreAsynchronousResult_ManagedObjectContext(NSPersistentStoreAsynchronousResult self)    { return ((NSManagedObjectContext (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("managedObjectContext")); }
+static inline NSError                                NSPersistentStoreAsynchronousResult_OperationError(NSPersistentStoreAsynchronousResult self)          { return ((NSError (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("operationError")); }
+static inline NSProgress                             NSPersistentStoreAsynchronousResult_Progress(NSPersistentStoreAsynchronousResult self)                { return ((NSProgress (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("progress")); }
+#ifndef BEAN_ALLOC_NSPersistentStoreAsynchronousResult
+#define BEAN_ALLOC_NSPersistentStoreAsynchronousResult
+static inline NSPersistentStoreAsynchronousResult    NSPersistentStoreAsynchronousResult_Alloc(void)                                                       { return (NSPersistentStoreAsynchronousResult)bean_alloc(bean_cls("NSPersistentStoreAsynchronousResult")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStoreAsynchronousResult
+#define BEAN_NEW_NSPersistentStoreAsynchronousResult
+static inline NSPersistentStoreAsynchronousResult    NSPersistentStoreAsynchronousResult_New(void)                                                         { return (NSPersistentStoreAsynchronousResult)bean_new(bean_cls("NSPersistentStoreAsynchronousResult")); }
+#endif
 
 /* ===== NSPersistentStoreCoordinator ===== */
 static inline NSPersistentStoreCoordinator    NSPersistentStoreCoordinator_InitWithManagedObjectModel(NSPersistentStoreCoordinator self, NSManagedObjectModel model)                                                                                                                                                                                             { return ((NSPersistentStoreCoordinator (*)(NSPersistentStoreCoordinator, SEL, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithManagedObjectModel:"), model); }
@@ -2616,39 +3085,55 @@ static inline NSArray                         NSPersistentStoreCoordinator_Persi
 static inline NSString                        NSPersistentStoreCoordinator_Name(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                               { return ((NSString (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline void                            NSPersistentStoreCoordinator_SetName(NSPersistentStoreCoordinator self, NSString name)                                                                                                                                                                                                                             { ((void (*)(NSPersistentStoreCoordinator, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 static inline NSDictionary                    NSPersistentStoreCoordinator_RegisteredStoreTypes(void)                                                                                                                                                                                                                                                            { return ((NSDictionary (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("registeredStoreTypes")); }
+#ifndef BEAN_ALLOC_NSPersistentStoreCoordinator
+#define BEAN_ALLOC_NSPersistentStoreCoordinator
+static inline NSPersistentStoreCoordinator    NSPersistentStoreCoordinator_Alloc(void)                                                                                                                                                                                                                                                                           { return (NSPersistentStoreCoordinator)bean_alloc(bean_cls("NSPersistentStoreCoordinator")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStoreCoordinator
+#define BEAN_NEW_NSPersistentStoreCoordinator
+static inline NSPersistentStoreCoordinator    NSPersistentStoreCoordinator_New(void)                                                                                                                                                                                                                                                                             { return (NSPersistentStoreCoordinator)bean_new(bean_cls("NSPersistentStoreCoordinator")); }
+#endif
 
 /* ===== NSPropertyDescription ===== */
-static inline void                   NSPropertyDescription_SetValidationPredicates_WithValidationWarnings(NSPropertyDescription self, NSArray validationPredicates, NSArray validationWarnings)    { ((void (*)(NSPropertyDescription, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("setValidationPredicates:withValidationWarnings:"), validationPredicates, validationWarnings); }
-static inline NSEntityDescription    NSPropertyDescription_Entity(NSPropertyDescription self)                                                                                                      { return ((NSEntityDescription (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("entity")); }
-static inline NSString               NSPropertyDescription_Name(NSPropertyDescription self)                                                                                                        { return ((NSString (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void                   NSPropertyDescription_SetName(NSPropertyDescription self, NSString name)                                                                                      { ((void (*)(NSPropertyDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline BOOL                   NSPropertyDescription_IsOptional(NSPropertyDescription self)                                                                                                  { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isOptional")); }
-static inline void                   NSPropertyDescription_SetOptional(NSPropertyDescription self, BOOL optional)                                                                                  { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setOptional:"), optional); }
-static inline BOOL                   NSPropertyDescription_IsTransient(NSPropertyDescription self)                                                                                                 { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isTransient")); }
-static inline void                   NSPropertyDescription_SetTransient(NSPropertyDescription self, BOOL transient)                                                                                { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setTransient:"), transient); }
-static inline NSArray                NSPropertyDescription_ValidationPredicates(NSPropertyDescription self)                                                                                        { return ((NSArray (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("validationPredicates")); }
-static inline NSArray                NSPropertyDescription_ValidationWarnings(NSPropertyDescription self)                                                                                          { return ((NSArray (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("validationWarnings")); }
-static inline NSDictionary           NSPropertyDescription_UserInfo(NSPropertyDescription self)                                                                                                    { return ((NSDictionary (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
-static inline void                   NSPropertyDescription_SetUserInfo(NSPropertyDescription self, NSDictionary userInfo)                                                                          { ((void (*)(NSPropertyDescription, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
-static inline BOOL                   NSPropertyDescription_IsIndexed(NSPropertyDescription self)                                                                                                   { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isIndexed")); }
-static inline void                   NSPropertyDescription_SetIndexed(NSPropertyDescription self, BOOL indexed)                                                                                    { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setIndexed:"), indexed); }
-static inline NSData                 NSPropertyDescription_VersionHash(NSPropertyDescription self)                                                                                                 { return ((NSData (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("versionHash")); }
-static inline NSString               NSPropertyDescription_VersionHashModifier(NSPropertyDescription self)                                                                                         { return ((NSString (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("versionHashModifier")); }
-static inline void                   NSPropertyDescription_SetVersionHashModifier(NSPropertyDescription self, NSString versionHashModifier)                                                        { ((void (*)(NSPropertyDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setVersionHashModifier:"), versionHashModifier); }
-static inline BOOL                   NSPropertyDescription_IsIndexedBySpotlight(NSPropertyDescription self)                                                                                        { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isIndexedBySpotlight")); }
-static inline void                   NSPropertyDescription_SetIndexedBySpotlight(NSPropertyDescription self, BOOL indexedBySpotlight)                                                              { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setIndexedBySpotlight:"), indexedBySpotlight); }
-static inline BOOL                   NSPropertyDescription_IsStoredInExternalRecord(NSPropertyDescription self)                                                                                    { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isStoredInExternalRecord")); }
-static inline void                   NSPropertyDescription_SetStoredInExternalRecord(NSPropertyDescription self, BOOL storedInExternalRecord)                                                      { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setStoredInExternalRecord:"), storedInExternalRecord); }
-static inline NSString               NSPropertyDescription_RenamingIdentifier(NSPropertyDescription self)                                                                                          { return ((NSString (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("renamingIdentifier")); }
-static inline void                   NSPropertyDescription_SetRenamingIdentifier(NSPropertyDescription self, NSString renamingIdentifier)                                                          { ((void (*)(NSPropertyDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setRenamingIdentifier:"), renamingIdentifier); }
-static inline void                   NSPropertyDescription_EncodeWithCoder(NSPropertyDescription self, NSCoder coder)                                                                              { ((void (*)(NSPropertyDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
-static inline NSCoding               NSPropertyDescription_InitWithCoder(NSPropertyDescription self, NSCoder coder)                                                                                { return ((NSCoding (*)(NSPropertyDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
-static inline id                     NSPropertyDescription_CopyWithZone(NSPropertyDescription self, NSZone* zone)                                                                                  { return ((id (*)(NSPropertyDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL                   NSPropertyDescription_Optional(NSPropertyDescription self)                                                                                                    { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("optional")); }
-static inline BOOL                   NSPropertyDescription_Transient(NSPropertyDescription self)                                                                                                   { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("transient")); }
-static inline BOOL                   NSPropertyDescription_Indexed(NSPropertyDescription self)                                                                                                     { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("indexed")); }
-static inline BOOL                   NSPropertyDescription_IndexedBySpotlight(NSPropertyDescription self)                                                                                          { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("indexedBySpotlight")); }
-static inline BOOL                   NSPropertyDescription_StoredInExternalRecord(NSPropertyDescription self)                                                                                      { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("storedInExternalRecord")); }
+static inline void                     NSPropertyDescription_SetValidationPredicates_WithValidationWarnings(NSPropertyDescription self, NSArray validationPredicates, NSArray validationWarnings)    { ((void (*)(NSPropertyDescription, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("setValidationPredicates:withValidationWarnings:"), validationPredicates, validationWarnings); }
+static inline NSEntityDescription      NSPropertyDescription_Entity(NSPropertyDescription self)                                                                                                      { return ((NSEntityDescription (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("entity")); }
+static inline NSString                 NSPropertyDescription_Name(NSPropertyDescription self)                                                                                                        { return ((NSString (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                     NSPropertyDescription_SetName(NSPropertyDescription self, NSString name)                                                                                      { ((void (*)(NSPropertyDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline BOOL                     NSPropertyDescription_IsOptional(NSPropertyDescription self)                                                                                                  { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isOptional")); }
+static inline void                     NSPropertyDescription_SetOptional(NSPropertyDescription self, BOOL optional)                                                                                  { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setOptional:"), optional); }
+static inline BOOL                     NSPropertyDescription_IsTransient(NSPropertyDescription self)                                                                                                 { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isTransient")); }
+static inline void                     NSPropertyDescription_SetTransient(NSPropertyDescription self, BOOL transient)                                                                                { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setTransient:"), transient); }
+static inline NSArray                  NSPropertyDescription_ValidationPredicates(NSPropertyDescription self)                                                                                        { return ((NSArray (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("validationPredicates")); }
+static inline NSArray                  NSPropertyDescription_ValidationWarnings(NSPropertyDescription self)                                                                                          { return ((NSArray (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("validationWarnings")); }
+static inline NSDictionary             NSPropertyDescription_UserInfo(NSPropertyDescription self)                                                                                                    { return ((NSDictionary (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
+static inline void                     NSPropertyDescription_SetUserInfo(NSPropertyDescription self, NSDictionary userInfo)                                                                          { ((void (*)(NSPropertyDescription, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+static inline BOOL                     NSPropertyDescription_IsIndexed(NSPropertyDescription self)                                                                                                   { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isIndexed")); }
+static inline void                     NSPropertyDescription_SetIndexed(NSPropertyDescription self, BOOL indexed)                                                                                    { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setIndexed:"), indexed); }
+static inline NSData                   NSPropertyDescription_VersionHash(NSPropertyDescription self)                                                                                                 { return ((NSData (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("versionHash")); }
+static inline NSString                 NSPropertyDescription_VersionHashModifier(NSPropertyDescription self)                                                                                         { return ((NSString (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("versionHashModifier")); }
+static inline void                     NSPropertyDescription_SetVersionHashModifier(NSPropertyDescription self, NSString versionHashModifier)                                                        { ((void (*)(NSPropertyDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setVersionHashModifier:"), versionHashModifier); }
+static inline BOOL                     NSPropertyDescription_IsIndexedBySpotlight(NSPropertyDescription self)                                                                                        { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isIndexedBySpotlight")); }
+static inline void                     NSPropertyDescription_SetIndexedBySpotlight(NSPropertyDescription self, BOOL indexedBySpotlight)                                                              { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setIndexedBySpotlight:"), indexedBySpotlight); }
+static inline BOOL                     NSPropertyDescription_IsStoredInExternalRecord(NSPropertyDescription self)                                                                                    { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("isStoredInExternalRecord")); }
+static inline void                     NSPropertyDescription_SetStoredInExternalRecord(NSPropertyDescription self, BOOL storedInExternalRecord)                                                      { ((void (*)(NSPropertyDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setStoredInExternalRecord:"), storedInExternalRecord); }
+static inline NSString                 NSPropertyDescription_RenamingIdentifier(NSPropertyDescription self)                                                                                          { return ((NSString (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("renamingIdentifier")); }
+static inline void                     NSPropertyDescription_SetRenamingIdentifier(NSPropertyDescription self, NSString renamingIdentifier)                                                          { ((void (*)(NSPropertyDescription, SEL, NSString))bean_msgSend)(self, bean_sel("setRenamingIdentifier:"), renamingIdentifier); }
+static inline void                     NSPropertyDescription_EncodeWithCoder(NSPropertyDescription self, NSCoder coder)                                                                              { ((void (*)(NSPropertyDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
+static inline NSCoding                 NSPropertyDescription_InitWithCoder(NSPropertyDescription self, NSCoder coder)                                                                                { return ((NSCoding (*)(NSPropertyDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
+static inline id                       NSPropertyDescription_CopyWithZone(NSPropertyDescription self, NSZone* zone)                                                                                  { return ((id (*)(NSPropertyDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                     NSPropertyDescription_Optional(NSPropertyDescription self)                                                                                                    { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("optional")); }
+static inline BOOL                     NSPropertyDescription_Transient(NSPropertyDescription self)                                                                                                   { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("transient")); }
+static inline BOOL                     NSPropertyDescription_Indexed(NSPropertyDescription self)                                                                                                     { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("indexed")); }
+static inline BOOL                     NSPropertyDescription_IndexedBySpotlight(NSPropertyDescription self)                                                                                          { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("indexedBySpotlight")); }
+static inline BOOL                     NSPropertyDescription_StoredInExternalRecord(NSPropertyDescription self)                                                                                      { return ((BOOL (*)(NSPropertyDescription, SEL))bean_msgSend)(self, bean_sel("storedInExternalRecord")); }
+#ifndef BEAN_ALLOC_NSPropertyDescription
+#define BEAN_ALLOC_NSPropertyDescription
+static inline NSPropertyDescription    NSPropertyDescription_Alloc(void)                                                                                                                             { return (NSPropertyDescription)bean_alloc(bean_cls("NSPropertyDescription")); }
+#endif
+#ifndef BEAN_NEW_NSPropertyDescription
+#define BEAN_NEW_NSPropertyDescription
+static inline NSPropertyDescription    NSPropertyDescription_New(void)                                                                                                                               { return (NSPropertyDescription)bean_new(bean_cls("NSPropertyDescription")); }
+#endif
 
 /* ===== NSRelationshipDescription ===== */
 static inline NSEntityDescription          NSRelationshipDescription_DestinationEntity(NSRelationshipDescription self)                                                        { return ((NSEntityDescription (*)(NSRelationshipDescription, SEL))bean_msgSend)(self, bean_sel("destinationEntity")); }
@@ -2667,6 +3152,14 @@ static inline BOOL                         NSRelationshipDescription_IsOrdered(N
 static inline void                         NSRelationshipDescription_SetOrdered(NSRelationshipDescription self, BOOL ordered)                                                 { ((void (*)(NSRelationshipDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setOrdered:"), ordered); }
 static inline BOOL                         NSRelationshipDescription_ToMany(NSRelationshipDescription self)                                                                   { return ((BOOL (*)(NSRelationshipDescription, SEL))bean_msgSend)(self, bean_sel("toMany")); }
 static inline BOOL                         NSRelationshipDescription_Ordered(NSRelationshipDescription self)                                                                  { return ((BOOL (*)(NSRelationshipDescription, SEL))bean_msgSend)(self, bean_sel("ordered")); }
+#ifndef BEAN_ALLOC_NSRelationshipDescription
+#define BEAN_ALLOC_NSRelationshipDescription
+static inline NSRelationshipDescription    NSRelationshipDescription_Alloc(void)                                                                                              { return (NSRelationshipDescription)bean_alloc(bean_cls("NSRelationshipDescription")); }
+#endif
+#ifndef BEAN_NEW_NSRelationshipDescription
+#define BEAN_NEW_NSRelationshipDescription
+static inline NSRelationshipDescription    NSRelationshipDescription_New(void)                                                                                                { return (NSRelationshipDescription)bean_new(bean_cls("NSRelationshipDescription")); }
+#endif
 
 /* ===== NSStagedMigrationManager ===== */
 #ifndef BEAN_TYPEDEF_NSStagedMigrationManager
@@ -2677,6 +3170,14 @@ static inline NSStagedMigrationManager    NSStagedMigrationManager_Init(NSStaged
 static inline NSStagedMigrationManager    NSStagedMigrationManager_InitWithMigrationStages(NSStagedMigrationManager self, NSArray stages)    { return ((NSStagedMigrationManager (*)(NSStagedMigrationManager, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithMigrationStages:"), stages); }
 static inline NSArray                     NSStagedMigrationManager_Stages(NSStagedMigrationManager self)                                     { return ((NSArray (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("stages")); }
 static inline NSPersistentContainer       NSStagedMigrationManager_Container(NSStagedMigrationManager self)                                  { return ((NSPersistentContainer (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("container")); }
+#ifndef BEAN_ALLOC_NSStagedMigrationManager
+#define BEAN_ALLOC_NSStagedMigrationManager
+static inline NSStagedMigrationManager    NSStagedMigrationManager_Alloc(void)                                                               { return (NSStagedMigrationManager)bean_alloc(bean_cls("NSStagedMigrationManager")); }
+#endif
+#ifndef BEAN_NEW_NSStagedMigrationManager
+#define BEAN_NEW_NSStagedMigrationManager
+static inline NSStagedMigrationManager    NSStagedMigrationManager_New(void)                                                                 { return (NSStagedMigrationManager)bean_new(bean_cls("NSStagedMigrationManager")); }
+#endif
 
 
 #ifdef __cplusplus

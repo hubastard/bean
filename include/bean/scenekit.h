@@ -4895,6 +4895,14 @@ static inline NSValue          NSValue_ValueWithSCNMatrix4(CATransform3D v)    {
 static inline SCNVector3       NSValue_SCNVector3Value(NSValue self)           { return ((SCNVector3 (*)(NSValue, SEL))bean_msgSend_stret)(self, bean_sel("SCNVector3Value")); }
 static inline SCNVector4       NSValue_SCNVector4Value(NSValue self)           { return ((SCNVector4 (*)(NSValue, SEL))bean_msgSend_stret)(self, bean_sel("SCNVector4Value")); }
 static inline CATransform3D    NSValue_SCNMatrix4Value(NSValue self)           { return ((CATransform3D (*)(NSValue, SEL))bean_msgSend_stret)(self, bean_sel("SCNMatrix4Value")); }
+#ifndef BEAN_ALLOC_NSValue
+#define BEAN_ALLOC_NSValue
+static inline NSValue          NSValue_Alloc(void)                             { return (NSValue)bean_alloc(bean_cls("NSValue")); }
+#endif
+#ifndef BEAN_NEW_NSValue
+#define BEAN_NEW_NSValue
+static inline NSValue          NSValue_New(void)                               { return (NSValue)bean_new(bean_cls("NSValue")); }
+#endif
 
 /* ===== SCNAccelerationConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNAccelerationConstraint
@@ -4910,6 +4918,14 @@ static inline CGFloat                      SCNAccelerationConstraint_Deceleratio
 static inline void                         SCNAccelerationConstraint_SetDecelerationDistance(SCNAccelerationConstraint self, CGFloat decelerationDistance)              { ((void (*)(SCNAccelerationConstraint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDecelerationDistance:"), decelerationDistance); }
 static inline CGFloat                      SCNAccelerationConstraint_Damping(SCNAccelerationConstraint self)                                                            { return ((CGFloat (*)(SCNAccelerationConstraint, SEL))bean_msgSend_fpret)(self, bean_sel("damping")); }
 static inline void                         SCNAccelerationConstraint_SetDamping(SCNAccelerationConstraint self, CGFloat damping)                                        { ((void (*)(SCNAccelerationConstraint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDamping:"), damping); }
+#ifndef BEAN_ALLOC_SCNAccelerationConstraint
+#define BEAN_ALLOC_SCNAccelerationConstraint
+static inline SCNAccelerationConstraint    SCNAccelerationConstraint_Alloc(void)                                                                                        { return (SCNAccelerationConstraint)bean_alloc(bean_cls("SCNAccelerationConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNAccelerationConstraint
+#define BEAN_NEW_SCNAccelerationConstraint
+static inline SCNAccelerationConstraint    SCNAccelerationConstraint_New(void)                                                                                          { return (SCNAccelerationConstraint)bean_new(bean_cls("SCNAccelerationConstraint")); }
+#endif
 
 /* ===== SCNAnimationEvent ===== */
 #ifndef BEAN_TYPEDEF_SCNAnimationEvent
@@ -4917,6 +4933,14 @@ static inline void                         SCNAccelerationConstraint_SetDamping(
 typedef bean_id SCNAnimationEvent;
 #endif
 static inline SCNAnimationEvent    SCNAnimationEvent_AnimationEventWithKeyTime_Block(CGFloat time, void* eventBlock)    { return ((SCNAnimationEvent (*)(bean_class, SEL, CGFloat, void*))bean_msgSend)(bean_cls("SCNAnimationEvent"), bean_sel("animationEventWithKeyTime:block:"), time, eventBlock); }
+#ifndef BEAN_ALLOC_SCNAnimationEvent
+#define BEAN_ALLOC_SCNAnimationEvent
+static inline SCNAnimationEvent    SCNAnimationEvent_Alloc(void)                                                        { return (SCNAnimationEvent)bean_alloc(bean_cls("SCNAnimationEvent")); }
+#endif
+#ifndef BEAN_NEW_SCNAnimationEvent
+#define BEAN_NEW_SCNAnimationEvent
+static inline SCNAnimationEvent    SCNAnimationEvent_New(void)                                                          { return (SCNAnimationEvent)bean_new(bean_cls("SCNAnimationEvent")); }
+#endif
 
 /* ===== SCNAudioSource ===== */
 #ifndef BEAN_TYPEDEF_SCNAudioSource
@@ -4942,6 +4966,14 @@ static inline void              SCNAudioSource_SetShouldStream(SCNAudioSource se
 static inline id                SCNAudioSource_CopyWithZone(SCNAudioSource self, NSZone* zone)             { return ((id (*)(SCNAudioSource, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL              SCNAudioSource_SupportsSecureCoding(void)                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNAudioSource"), bean_sel("supportsSecureCoding")); }
 static inline BOOL              SCNAudioSource_Positional(SCNAudioSource self)                             { return ((BOOL (*)(SCNAudioSource, SEL))bean_msgSend)(self, bean_sel("positional")); }
+#ifndef BEAN_ALLOC_SCNAudioSource
+#define BEAN_ALLOC_SCNAudioSource
+static inline SCNAudioSource    SCNAudioSource_Alloc(void)                                                 { return (SCNAudioSource)bean_alloc(bean_cls("SCNAudioSource")); }
+#endif
+#ifndef BEAN_NEW_SCNAudioSource
+#define BEAN_NEW_SCNAudioSource
+static inline SCNAudioSource    SCNAudioSource_New(void)                                                   { return (SCNAudioSource)bean_new(bean_cls("SCNAudioSource")); }
+#endif
 
 /* ===== SCNBillboardConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNBillboardConstraint
@@ -4951,15 +4983,31 @@ typedef bean_id SCNBillboardConstraint;
 static inline SCNBillboardConstraint    SCNBillboardConstraint_BillboardConstraint(void)                                              { return ((SCNBillboardConstraint (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNBillboardConstraint"), bean_sel("billboardConstraint")); }
 static inline SCNBillboardAxis          SCNBillboardConstraint_FreeAxes(SCNBillboardConstraint self)                                  { return ((SCNBillboardAxis (*)(SCNBillboardConstraint, SEL))bean_msgSend)(self, bean_sel("freeAxes")); }
 static inline void                      SCNBillboardConstraint_SetFreeAxes(SCNBillboardConstraint self, SCNBillboardAxis freeAxes)    { ((void (*)(SCNBillboardConstraint, SEL, SCNBillboardAxis))bean_msgSend)(self, bean_sel("setFreeAxes:"), freeAxes); }
+#ifndef BEAN_ALLOC_SCNBillboardConstraint
+#define BEAN_ALLOC_SCNBillboardConstraint
+static inline SCNBillboardConstraint    SCNBillboardConstraint_Alloc(void)                                                            { return (SCNBillboardConstraint)bean_alloc(bean_cls("SCNBillboardConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNBillboardConstraint
+#define BEAN_NEW_SCNBillboardConstraint
+static inline SCNBillboardConstraint    SCNBillboardConstraint_New(void)                                                              { return (SCNBillboardConstraint)bean_new(bean_cls("SCNBillboardConstraint")); }
+#endif
 
 /* ===== SCNBoundingVolume ===== */
 #ifndef BEAN_TYPEDEF_SCNBoundingVolume
 #define BEAN_TYPEDEF_SCNBoundingVolume
 typedef bean_id SCNBoundingVolume;
 #endif
-static inline BOOL    SCNBoundingVolume_GetBoundingBoxMin_Max(SCNBoundingVolume self, SCNVector3* min, SCNVector3* max)               { return ((BOOL (*)(SCNBoundingVolume, SEL, SCNVector3*, SCNVector3*))bean_msgSend)(self, bean_sel("getBoundingBoxMin:max:"), min, max); }
-static inline void    SCNBoundingVolume_SetBoundingBoxMin_Max(SCNBoundingVolume self, SCNVector3* min, SCNVector3* max)               { ((void (*)(SCNBoundingVolume, SEL, SCNVector3*, SCNVector3*))bean_msgSend)(self, bean_sel("setBoundingBoxMin:max:"), min, max); }
-static inline BOOL    SCNBoundingVolume_GetBoundingSphereCenter_Radius(SCNBoundingVolume self, SCNVector3* center, CGFloat radius)    { return ((BOOL (*)(SCNBoundingVolume, SEL, SCNVector3*, CGFloat))bean_msgSend)(self, bean_sel("getBoundingSphereCenter:radius:"), center, radius); }
+static inline BOOL                 SCNBoundingVolume_GetBoundingBoxMin_Max(SCNBoundingVolume self, SCNVector3* min, SCNVector3* max)               { return ((BOOL (*)(SCNBoundingVolume, SEL, SCNVector3*, SCNVector3*))bean_msgSend)(self, bean_sel("getBoundingBoxMin:max:"), min, max); }
+static inline void                 SCNBoundingVolume_SetBoundingBoxMin_Max(SCNBoundingVolume self, SCNVector3* min, SCNVector3* max)               { ((void (*)(SCNBoundingVolume, SEL, SCNVector3*, SCNVector3*))bean_msgSend)(self, bean_sel("setBoundingBoxMin:max:"), min, max); }
+static inline BOOL                 SCNBoundingVolume_GetBoundingSphereCenter_Radius(SCNBoundingVolume self, SCNVector3* center, CGFloat radius)    { return ((BOOL (*)(SCNBoundingVolume, SEL, SCNVector3*, CGFloat))bean_msgSend)(self, bean_sel("getBoundingSphereCenter:radius:"), center, radius); }
+#ifndef BEAN_ALLOC_SCNBoundingVolume
+#define BEAN_ALLOC_SCNBoundingVolume
+static inline SCNBoundingVolume    SCNBoundingVolume_Alloc(void)                                                                                   { return (SCNBoundingVolume)bean_alloc(bean_cls("SCNBoundingVolume")); }
+#endif
+#ifndef BEAN_NEW_SCNBoundingVolume
+#define BEAN_NEW_SCNBoundingVolume
+static inline SCNBoundingVolume    SCNBoundingVolume_New(void)                                                                                     { return (SCNBoundingVolume)bean_new(bean_cls("SCNBoundingVolume")); }
+#endif
 
 /* ===== SCNBox ===== */
 #ifndef BEAN_TYPEDEF_SCNBox
@@ -4983,31 +5031,55 @@ static inline NSInteger    SCNBox_LengthSegmentCount(SCNBox self)               
 static inline void         SCNBox_SetLengthSegmentCount(SCNBox self, NSInteger lengthSegmentCount)                                                  { ((void (*)(SCNBox, SEL, NSInteger))bean_msgSend)(self, bean_sel("setLengthSegmentCount:"), lengthSegmentCount); }
 static inline NSInteger    SCNBox_ChamferSegmentCount(SCNBox self)                                                                                  { return ((NSInteger (*)(SCNBox, SEL))bean_msgSend)(self, bean_sel("chamferSegmentCount")); }
 static inline void         SCNBox_SetChamferSegmentCount(SCNBox self, NSInteger chamferSegmentCount)                                                { ((void (*)(SCNBox, SEL, NSInteger))bean_msgSend)(self, bean_sel("setChamferSegmentCount:"), chamferSegmentCount); }
+#ifndef BEAN_ALLOC_SCNBox
+#define BEAN_ALLOC_SCNBox
+static inline SCNBox       SCNBox_Alloc(void)                                                                                                       { return (SCNBox)bean_alloc(bean_cls("SCNBox")); }
+#endif
+#ifndef BEAN_NEW_SCNBox
+#define BEAN_NEW_SCNBox
+static inline SCNBox       SCNBox_New(void)                                                                                                         { return (SCNBox)bean_new(bean_cls("SCNBox")); }
+#endif
 
 /* ===== SCNBufferStream ===== */
 #ifndef BEAN_TYPEDEF_SCNBufferStream
 #define BEAN_TYPEDEF_SCNBufferStream
 typedef bean_id SCNBufferStream;
 #endif
-static inline void    SCNBufferStream_WriteBytes_Length(SCNBufferStream self, const void* bytes, NSUInteger length)    { ((void (*)(SCNBufferStream, SEL, const void*, NSUInteger))bean_msgSend)(self, bean_sel("writeBytes:length:"), bytes, length); }
+static inline void               SCNBufferStream_WriteBytes_Length(SCNBufferStream self, const void* bytes, NSUInteger length)    { ((void (*)(SCNBufferStream, SEL, const void*, NSUInteger))bean_msgSend)(self, bean_sel("writeBytes:length:"), bytes, length); }
+#ifndef BEAN_ALLOC_SCNBufferStream
+#define BEAN_ALLOC_SCNBufferStream
+static inline SCNBufferStream    SCNBufferStream_Alloc(void)                                                                      { return (SCNBufferStream)bean_alloc(bean_cls("SCNBufferStream")); }
+#endif
+#ifndef BEAN_NEW_SCNBufferStream
+#define BEAN_NEW_SCNBufferStream
+static inline SCNBufferStream    SCNBufferStream_New(void)                                                                        { return (SCNBufferStream)bean_new(bean_cls("SCNBufferStream")); }
+#endif
 
 /* ===== SCNCameraControlConfiguration ===== */
 #ifndef BEAN_TYPEDEF_SCNCameraControlConfiguration
 #define BEAN_TYPEDEF_SCNCameraControlConfiguration
 typedef bean_id SCNCameraControlConfiguration;
 #endif
-static inline BOOL       SCNCameraControlConfiguration_AutoSwitchToFreeCamera(SCNCameraControlConfiguration self)                                    { return ((BOOL (*)(SCNCameraControlConfiguration, SEL))bean_msgSend)(self, bean_sel("autoSwitchToFreeCamera")); }
-static inline void       SCNCameraControlConfiguration_SetAutoSwitchToFreeCamera(SCNCameraControlConfiguration self, BOOL autoSwitchToFreeCamera)    { ((void (*)(SCNCameraControlConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutoSwitchToFreeCamera:"), autoSwitchToFreeCamera); }
-static inline BOOL       SCNCameraControlConfiguration_AllowsTranslation(SCNCameraControlConfiguration self)                                         { return ((BOOL (*)(SCNCameraControlConfiguration, SEL))bean_msgSend)(self, bean_sel("allowsTranslation")); }
-static inline void       SCNCameraControlConfiguration_SetAllowsTranslation(SCNCameraControlConfiguration self, BOOL allowsTranslation)              { ((void (*)(SCNCameraControlConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsTranslation:"), allowsTranslation); }
-static inline CGFloat    SCNCameraControlConfiguration_FlyModeVelocity(SCNCameraControlConfiguration self)                                           { return ((CGFloat (*)(SCNCameraControlConfiguration, SEL))bean_msgSend_fpret)(self, bean_sel("flyModeVelocity")); }
-static inline void       SCNCameraControlConfiguration_SetFlyModeVelocity(SCNCameraControlConfiguration self, CGFloat flyModeVelocity)               { ((void (*)(SCNCameraControlConfiguration, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFlyModeVelocity:"), flyModeVelocity); }
-static inline CGFloat    SCNCameraControlConfiguration_PanSensitivity(SCNCameraControlConfiguration self)                                            { return ((CGFloat (*)(SCNCameraControlConfiguration, SEL))bean_msgSend_fpret)(self, bean_sel("panSensitivity")); }
-static inline void       SCNCameraControlConfiguration_SetPanSensitivity(SCNCameraControlConfiguration self, CGFloat panSensitivity)                 { ((void (*)(SCNCameraControlConfiguration, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPanSensitivity:"), panSensitivity); }
-static inline CGFloat    SCNCameraControlConfiguration_TruckSensitivity(SCNCameraControlConfiguration self)                                          { return ((CGFloat (*)(SCNCameraControlConfiguration, SEL))bean_msgSend_fpret)(self, bean_sel("truckSensitivity")); }
-static inline void       SCNCameraControlConfiguration_SetTruckSensitivity(SCNCameraControlConfiguration self, CGFloat truckSensitivity)             { ((void (*)(SCNCameraControlConfiguration, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTruckSensitivity:"), truckSensitivity); }
-static inline CGFloat    SCNCameraControlConfiguration_RotationSensitivity(SCNCameraControlConfiguration self)                                       { return ((CGFloat (*)(SCNCameraControlConfiguration, SEL))bean_msgSend_fpret)(self, bean_sel("rotationSensitivity")); }
-static inline void       SCNCameraControlConfiguration_SetRotationSensitivity(SCNCameraControlConfiguration self, CGFloat rotationSensitivity)       { ((void (*)(SCNCameraControlConfiguration, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRotationSensitivity:"), rotationSensitivity); }
+static inline BOOL                             SCNCameraControlConfiguration_AutoSwitchToFreeCamera(SCNCameraControlConfiguration self)                                    { return ((BOOL (*)(SCNCameraControlConfiguration, SEL))bean_msgSend)(self, bean_sel("autoSwitchToFreeCamera")); }
+static inline void                             SCNCameraControlConfiguration_SetAutoSwitchToFreeCamera(SCNCameraControlConfiguration self, BOOL autoSwitchToFreeCamera)    { ((void (*)(SCNCameraControlConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutoSwitchToFreeCamera:"), autoSwitchToFreeCamera); }
+static inline BOOL                             SCNCameraControlConfiguration_AllowsTranslation(SCNCameraControlConfiguration self)                                         { return ((BOOL (*)(SCNCameraControlConfiguration, SEL))bean_msgSend)(self, bean_sel("allowsTranslation")); }
+static inline void                             SCNCameraControlConfiguration_SetAllowsTranslation(SCNCameraControlConfiguration self, BOOL allowsTranslation)              { ((void (*)(SCNCameraControlConfiguration, SEL, BOOL))bean_msgSend)(self, bean_sel("setAllowsTranslation:"), allowsTranslation); }
+static inline CGFloat                          SCNCameraControlConfiguration_FlyModeVelocity(SCNCameraControlConfiguration self)                                           { return ((CGFloat (*)(SCNCameraControlConfiguration, SEL))bean_msgSend_fpret)(self, bean_sel("flyModeVelocity")); }
+static inline void                             SCNCameraControlConfiguration_SetFlyModeVelocity(SCNCameraControlConfiguration self, CGFloat flyModeVelocity)               { ((void (*)(SCNCameraControlConfiguration, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFlyModeVelocity:"), flyModeVelocity); }
+static inline CGFloat                          SCNCameraControlConfiguration_PanSensitivity(SCNCameraControlConfiguration self)                                            { return ((CGFloat (*)(SCNCameraControlConfiguration, SEL))bean_msgSend_fpret)(self, bean_sel("panSensitivity")); }
+static inline void                             SCNCameraControlConfiguration_SetPanSensitivity(SCNCameraControlConfiguration self, CGFloat panSensitivity)                 { ((void (*)(SCNCameraControlConfiguration, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPanSensitivity:"), panSensitivity); }
+static inline CGFloat                          SCNCameraControlConfiguration_TruckSensitivity(SCNCameraControlConfiguration self)                                          { return ((CGFloat (*)(SCNCameraControlConfiguration, SEL))bean_msgSend_fpret)(self, bean_sel("truckSensitivity")); }
+static inline void                             SCNCameraControlConfiguration_SetTruckSensitivity(SCNCameraControlConfiguration self, CGFloat truckSensitivity)             { ((void (*)(SCNCameraControlConfiguration, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTruckSensitivity:"), truckSensitivity); }
+static inline CGFloat                          SCNCameraControlConfiguration_RotationSensitivity(SCNCameraControlConfiguration self)                                       { return ((CGFloat (*)(SCNCameraControlConfiguration, SEL))bean_msgSend_fpret)(self, bean_sel("rotationSensitivity")); }
+static inline void                             SCNCameraControlConfiguration_SetRotationSensitivity(SCNCameraControlConfiguration self, CGFloat rotationSensitivity)       { ((void (*)(SCNCameraControlConfiguration, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRotationSensitivity:"), rotationSensitivity); }
+#ifndef BEAN_ALLOC_SCNCameraControlConfiguration
+#define BEAN_ALLOC_SCNCameraControlConfiguration
+static inline SCNCameraControlConfiguration    SCNCameraControlConfiguration_Alloc(void)                                                                                   { return (SCNCameraControlConfiguration)bean_alloc(bean_cls("SCNCameraControlConfiguration")); }
+#endif
+#ifndef BEAN_NEW_SCNCameraControlConfiguration
+#define BEAN_NEW_SCNCameraControlConfiguration
+static inline SCNCameraControlConfiguration    SCNCameraControlConfiguration_New(void)                                                                                     { return (SCNCameraControlConfiguration)bean_new(bean_cls("SCNCameraControlConfiguration")); }
+#endif
 
 /* ===== SCNCapsule ===== */
 #ifndef BEAN_TYPEDEF_SCNCapsule
@@ -5025,6 +5097,14 @@ static inline NSInteger     SCNCapsule_HeightSegmentCount(SCNCapsule self)      
 static inline void          SCNCapsule_SetHeightSegmentCount(SCNCapsule self, NSInteger heightSegmentCount)    { ((void (*)(SCNCapsule, SEL, NSInteger))bean_msgSend)(self, bean_sel("setHeightSegmentCount:"), heightSegmentCount); }
 static inline NSInteger     SCNCapsule_CapSegmentCount(SCNCapsule self)                                        { return ((NSInteger (*)(SCNCapsule, SEL))bean_msgSend)(self, bean_sel("capSegmentCount")); }
 static inline void          SCNCapsule_SetCapSegmentCount(SCNCapsule self, NSInteger capSegmentCount)          { ((void (*)(SCNCapsule, SEL, NSInteger))bean_msgSend)(self, bean_sel("setCapSegmentCount:"), capSegmentCount); }
+#ifndef BEAN_ALLOC_SCNCapsule
+#define BEAN_ALLOC_SCNCapsule
+static inline SCNCapsule    SCNCapsule_Alloc(void)                                                             { return (SCNCapsule)bean_alloc(bean_cls("SCNCapsule")); }
+#endif
+#ifndef BEAN_NEW_SCNCapsule
+#define BEAN_NEW_SCNCapsule
+static inline SCNCapsule    SCNCapsule_New(void)                                                               { return (SCNCapsule)bean_new(bean_cls("SCNCapsule")); }
+#endif
 
 /* ===== SCNCone ===== */
 #ifndef BEAN_TYPEDEF_SCNCone
@@ -5042,6 +5122,14 @@ static inline NSInteger    SCNCone_RadialSegmentCount(SCNCone self)             
 static inline void         SCNCone_SetRadialSegmentCount(SCNCone self, NSInteger radialSegmentCount)                                 { ((void (*)(SCNCone, SEL, NSInteger))bean_msgSend)(self, bean_sel("setRadialSegmentCount:"), radialSegmentCount); }
 static inline NSInteger    SCNCone_HeightSegmentCount(SCNCone self)                                                                  { return ((NSInteger (*)(SCNCone, SEL))bean_msgSend)(self, bean_sel("heightSegmentCount")); }
 static inline void         SCNCone_SetHeightSegmentCount(SCNCone self, NSInteger heightSegmentCount)                                 { ((void (*)(SCNCone, SEL, NSInteger))bean_msgSend)(self, bean_sel("setHeightSegmentCount:"), heightSegmentCount); }
+#ifndef BEAN_ALLOC_SCNCone
+#define BEAN_ALLOC_SCNCone
+static inline SCNCone      SCNCone_Alloc(void)                                                                                       { return (SCNCone)bean_alloc(bean_cls("SCNCone")); }
+#endif
+#ifndef BEAN_NEW_SCNCone
+#define BEAN_NEW_SCNCone
+static inline SCNCone      SCNCone_New(void)                                                                                         { return (SCNCone)bean_new(bean_cls("SCNCone")); }
+#endif
 
 /* ===== SCNCylinder ===== */
 #ifndef BEAN_TYPEDEF_SCNCylinder
@@ -5057,6 +5145,14 @@ static inline NSInteger      SCNCylinder_RadialSegmentCount(SCNCylinder self)   
 static inline void           SCNCylinder_SetRadialSegmentCount(SCNCylinder self, NSInteger radialSegmentCount)    { ((void (*)(SCNCylinder, SEL, NSInteger))bean_msgSend)(self, bean_sel("setRadialSegmentCount:"), radialSegmentCount); }
 static inline NSInteger      SCNCylinder_HeightSegmentCount(SCNCylinder self)                                     { return ((NSInteger (*)(SCNCylinder, SEL))bean_msgSend)(self, bean_sel("heightSegmentCount")); }
 static inline void           SCNCylinder_SetHeightSegmentCount(SCNCylinder self, NSInteger heightSegmentCount)    { ((void (*)(SCNCylinder, SEL, NSInteger))bean_msgSend)(self, bean_sel("setHeightSegmentCount:"), heightSegmentCount); }
+#ifndef BEAN_ALLOC_SCNCylinder
+#define BEAN_ALLOC_SCNCylinder
+static inline SCNCylinder    SCNCylinder_Alloc(void)                                                              { return (SCNCylinder)bean_alloc(bean_cls("SCNCylinder")); }
+#endif
+#ifndef BEAN_NEW_SCNCylinder
+#define BEAN_NEW_SCNCylinder
+static inline SCNCylinder    SCNCylinder_New(void)                                                                { return (SCNCylinder)bean_new(bean_cls("SCNCylinder")); }
+#endif
 
 /* ===== SCNFloor ===== */
 #ifndef BEAN_TYPEDEF_SCNFloor
@@ -5078,6 +5174,14 @@ static inline CGFloat       SCNFloor_Length(SCNFloor self)                      
 static inline void          SCNFloor_SetLength(SCNFloor self, CGFloat length)                                                      { ((void (*)(SCNFloor, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLength:"), length); }
 static inline CGFloat       SCNFloor_ReflectionResolutionScaleFactor(SCNFloor self)                                                { return ((CGFloat (*)(SCNFloor, SEL))bean_msgSend_fpret)(self, bean_sel("reflectionResolutionScaleFactor")); }
 static inline void          SCNFloor_SetReflectionResolutionScaleFactor(SCNFloor self, CGFloat reflectionResolutionScaleFactor)    { ((void (*)(SCNFloor, SEL, CGFloat))bean_msgSend)(self, bean_sel("setReflectionResolutionScaleFactor:"), reflectionResolutionScaleFactor); }
+#ifndef BEAN_ALLOC_SCNFloor
+#define BEAN_ALLOC_SCNFloor
+static inline SCNFloor      SCNFloor_Alloc(void)                                                                                   { return (SCNFloor)bean_alloc(bean_cls("SCNFloor")); }
+#endif
+#ifndef BEAN_NEW_SCNFloor
+#define BEAN_NEW_SCNFloor
+static inline SCNFloor      SCNFloor_New(void)                                                                                     { return (SCNFloor)bean_new(bean_cls("SCNFloor")); }
+#endif
 
 /* ===== SCNGeometryElement ===== */
 #ifndef BEAN_TYPEDEF_SCNGeometryElement
@@ -5104,6 +5208,14 @@ static inline CGFloat                     SCNGeometryElement_MaximumPointScreenS
 static inline void                        SCNGeometryElement_SetMaximumPointScreenSpaceRadius(SCNGeometryElement self, CGFloat maximumPointScreenSpaceRadius)                                                                                                                                                                                             { ((void (*)(SCNGeometryElement, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaximumPointScreenSpaceRadius:"), maximumPointScreenSpaceRadius); }
 static inline BOOL                        SCNGeometryElement_SupportsSecureCoding(void)                                                                                                                                                                                                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNGeometryElement"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                        SCNGeometryElement_InterleavedIndicesChannels(SCNGeometryElement self)                                                                                                                                                                                                                                          { return ((BOOL (*)(SCNGeometryElement, SEL))bean_msgSend)(self, bean_sel("interleavedIndicesChannels")); }
+#ifndef BEAN_ALLOC_SCNGeometryElement
+#define BEAN_ALLOC_SCNGeometryElement
+static inline SCNGeometryElement          SCNGeometryElement_Alloc(void)                                                                                                                                                                                                                                                                                  { return (SCNGeometryElement)bean_alloc(bean_cls("SCNGeometryElement")); }
+#endif
+#ifndef BEAN_NEW_SCNGeometryElement
+#define BEAN_NEW_SCNGeometryElement
+static inline SCNGeometryElement          SCNGeometryElement_New(void)                                                                                                                                                                                                                                                                                    { return (SCNGeometryElement)bean_new(bean_cls("SCNGeometryElement")); }
+#endif
 
 /* ===== SCNGeometrySource ===== */
 #ifndef BEAN_TYPEDEF_SCNGeometrySource
@@ -5124,6 +5236,14 @@ static inline NSInteger            SCNGeometrySource_BytesPerComponent(SCNGeomet
 static inline NSInteger            SCNGeometrySource_DataOffset(SCNGeometrySource self)                                                                                                                                                                                                                                                                      { return ((NSInteger (*)(SCNGeometrySource, SEL))bean_msgSend)(self, bean_sel("dataOffset")); }
 static inline NSInteger            SCNGeometrySource_DataStride(SCNGeometrySource self)                                                                                                                                                                                                                                                                      { return ((NSInteger (*)(SCNGeometrySource, SEL))bean_msgSend)(self, bean_sel("dataStride")); }
 static inline BOOL                 SCNGeometrySource_SupportsSecureCoding(void)                                                                                                                                                                                                                                                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNGeometrySource"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNGeometrySource
+#define BEAN_ALLOC_SCNGeometrySource
+static inline SCNGeometrySource    SCNGeometrySource_Alloc(void)                                                                                                                                                                                                                                                                                             { return (SCNGeometrySource)bean_alloc(bean_cls("SCNGeometrySource")); }
+#endif
+#ifndef BEAN_NEW_SCNGeometrySource
+#define BEAN_NEW_SCNGeometrySource
+static inline SCNGeometrySource    SCNGeometrySource_New(void)                                                                                                                                                                                                                                                                                               { return (SCNGeometrySource)bean_new(bean_cls("SCNGeometrySource")); }
+#endif
 
 /* ===== SCNGeometryTessellator ===== */
 #ifndef BEAN_TYPEDEF_SCNGeometryTessellator
@@ -5150,13 +5270,29 @@ static inline id                              SCNGeometryTessellator_CopyWithZon
 static inline BOOL                            SCNGeometryTessellator_SupportsSecureCoding(void)                                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNGeometryTessellator"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                            SCNGeometryTessellator_Adaptive(SCNGeometryTessellator self)                                                                                { return ((BOOL (*)(SCNGeometryTessellator, SEL))bean_msgSend)(self, bean_sel("adaptive")); }
 static inline BOOL                            SCNGeometryTessellator_ScreenSpace(SCNGeometryTessellator self)                                                                             { return ((BOOL (*)(SCNGeometryTessellator, SEL))bean_msgSend)(self, bean_sel("screenSpace")); }
+#ifndef BEAN_ALLOC_SCNGeometryTessellator
+#define BEAN_ALLOC_SCNGeometryTessellator
+static inline SCNGeometryTessellator          SCNGeometryTessellator_Alloc(void)                                                                                                          { return (SCNGeometryTessellator)bean_alloc(bean_cls("SCNGeometryTessellator")); }
+#endif
+#ifndef BEAN_NEW_SCNGeometryTessellator
+#define BEAN_NEW_SCNGeometryTessellator
+static inline SCNGeometryTessellator          SCNGeometryTessellator_New(void)                                                                                                            { return (SCNGeometryTessellator)bean_new(bean_cls("SCNGeometryTessellator")); }
+#endif
 
 /* ===== SCNPhysicsBehavior ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsBehavior
 #define BEAN_TYPEDEF_SCNPhysicsBehavior
 typedef bean_id SCNPhysicsBehavior;
 #endif
-static inline BOOL    SCNPhysicsBehavior_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsBehavior"), bean_sel("supportsSecureCoding")); }
+static inline BOOL                  SCNPhysicsBehavior_SupportsSecureCoding(void)    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsBehavior"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNPhysicsBehavior
+#define BEAN_ALLOC_SCNPhysicsBehavior
+static inline SCNPhysicsBehavior    SCNPhysicsBehavior_Alloc(void)                   { return (SCNPhysicsBehavior)bean_alloc(bean_cls("SCNPhysicsBehavior")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsBehavior
+#define BEAN_NEW_SCNPhysicsBehavior
+static inline SCNPhysicsBehavior    SCNPhysicsBehavior_New(void)                     { return (SCNPhysicsBehavior)bean_new(bean_cls("SCNPhysicsBehavior")); }
+#endif
 
 /* ===== SCNPhysicsField ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsField
@@ -5199,6 +5335,14 @@ static inline id                      SCNPhysicsField_CopyWithZone(SCNPhysicsFie
 static inline BOOL                    SCNPhysicsField_SupportsSecureCoding(void)                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsField"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                    SCNPhysicsField_Active(SCNPhysicsField self)                                                       { return ((BOOL (*)(SCNPhysicsField, SEL))bean_msgSend)(self, bean_sel("active")); }
 static inline BOOL                    SCNPhysicsField_Exclusive(SCNPhysicsField self)                                                    { return ((BOOL (*)(SCNPhysicsField, SEL))bean_msgSend)(self, bean_sel("exclusive")); }
+#ifndef BEAN_ALLOC_SCNPhysicsField
+#define BEAN_ALLOC_SCNPhysicsField
+static inline SCNPhysicsField         SCNPhysicsField_Alloc(void)                                                                        { return (SCNPhysicsField)bean_alloc(bean_cls("SCNPhysicsField")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsField
+#define BEAN_NEW_SCNPhysicsField
+static inline SCNPhysicsField         SCNPhysicsField_New(void)                                                                          { return (SCNPhysicsField)bean_new(bean_cls("SCNPhysicsField")); }
+#endif
 
 /* ===== SCNPlane ===== */
 #ifndef BEAN_TYPEDEF_SCNPlane
@@ -5218,6 +5362,14 @@ static inline CGFloat      SCNPlane_CornerRadius(SCNPlane self)                 
 static inline void         SCNPlane_SetCornerRadius(SCNPlane self, CGFloat cornerRadius)                  { ((void (*)(SCNPlane, SEL, CGFloat))bean_msgSend)(self, bean_sel("setCornerRadius:"), cornerRadius); }
 static inline NSInteger    SCNPlane_CornerSegmentCount(SCNPlane self)                                     { return ((NSInteger (*)(SCNPlane, SEL))bean_msgSend)(self, bean_sel("cornerSegmentCount")); }
 static inline void         SCNPlane_SetCornerSegmentCount(SCNPlane self, NSInteger cornerSegmentCount)    { ((void (*)(SCNPlane, SEL, NSInteger))bean_msgSend)(self, bean_sel("setCornerSegmentCount:"), cornerSegmentCount); }
+#ifndef BEAN_ALLOC_SCNPlane
+#define BEAN_ALLOC_SCNPlane
+static inline SCNPlane     SCNPlane_Alloc(void)                                                           { return (SCNPlane)bean_alloc(bean_cls("SCNPlane")); }
+#endif
+#ifndef BEAN_NEW_SCNPlane
+#define BEAN_NEW_SCNPlane
+static inline SCNPlane     SCNPlane_New(void)                                                             { return (SCNPlane)bean_new(bean_cls("SCNPlane")); }
+#endif
 
 /* ===== SCNProgram ===== */
 #ifndef BEAN_TYPEDEF_SCNProgram
@@ -5251,6 +5403,14 @@ static inline void          SCNProgram_SetLibrary(SCNProgram self, id library)  
 static inline id            SCNProgram_CopyWithZone(SCNProgram self, NSZone* zone)                                                                                   { return ((id (*)(SCNProgram, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL          SCNProgram_SupportsSecureCoding(void)                                                                                                    { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNProgram"), bean_sel("supportsSecureCoding")); }
 static inline BOOL          SCNProgram_Opaque(SCNProgram self)                                                                                                       { return ((BOOL (*)(SCNProgram, SEL))bean_msgSend)(self, bean_sel("opaque")); }
+#ifndef BEAN_ALLOC_SCNProgram
+#define BEAN_ALLOC_SCNProgram
+static inline SCNProgram    SCNProgram_Alloc(void)                                                                                                                   { return (SCNProgram)bean_alloc(bean_cls("SCNProgram")); }
+#endif
+#ifndef BEAN_NEW_SCNProgram
+#define BEAN_NEW_SCNProgram
+static inline SCNProgram    SCNProgram_New(void)                                                                                                                     { return (SCNProgram)bean_new(bean_cls("SCNProgram")); }
+#endif
 
 /* ===== SCNPyramid ===== */
 #ifndef BEAN_TYPEDEF_SCNPyramid
@@ -5270,6 +5430,14 @@ static inline NSInteger     SCNPyramid_HeightSegmentCount(SCNPyramid self)      
 static inline void          SCNPyramid_SetHeightSegmentCount(SCNPyramid self, NSInteger heightSegmentCount)             { ((void (*)(SCNPyramid, SEL, NSInteger))bean_msgSend)(self, bean_sel("setHeightSegmentCount:"), heightSegmentCount); }
 static inline NSInteger     SCNPyramid_LengthSegmentCount(SCNPyramid self)                                              { return ((NSInteger (*)(SCNPyramid, SEL))bean_msgSend)(self, bean_sel("lengthSegmentCount")); }
 static inline void          SCNPyramid_SetLengthSegmentCount(SCNPyramid self, NSInteger lengthSegmentCount)             { ((void (*)(SCNPyramid, SEL, NSInteger))bean_msgSend)(self, bean_sel("setLengthSegmentCount:"), lengthSegmentCount); }
+#ifndef BEAN_ALLOC_SCNPyramid
+#define BEAN_ALLOC_SCNPyramid
+static inline SCNPyramid    SCNPyramid_Alloc(void)                                                                      { return (SCNPyramid)bean_alloc(bean_cls("SCNPyramid")); }
+#endif
+#ifndef BEAN_NEW_SCNPyramid
+#define BEAN_NEW_SCNPyramid
+static inline SCNPyramid    SCNPyramid_New(void)                                                                        { return (SCNPyramid)bean_new(bean_cls("SCNPyramid")); }
+#endif
 
 /* ===== SCNReferenceNode ===== */
 #ifndef BEAN_TYPEDEF_SCNReferenceNode
@@ -5287,13 +5455,29 @@ static inline SCNReferenceLoadingPolicy    SCNReferenceNode_LoadingPolicy(SCNRef
 static inline void                         SCNReferenceNode_SetLoadingPolicy(SCNReferenceNode self, SCNReferenceLoadingPolicy loadingPolicy)    { ((void (*)(SCNReferenceNode, SEL, SCNReferenceLoadingPolicy))bean_msgSend)(self, bean_sel("setLoadingPolicy:"), loadingPolicy); }
 static inline BOOL                         SCNReferenceNode_IsLoaded(SCNReferenceNode self)                                                     { return ((BOOL (*)(SCNReferenceNode, SEL))bean_msgSend)(self, bean_sel("isLoaded")); }
 static inline BOOL                         SCNReferenceNode_Loaded(SCNReferenceNode self)                                                       { return ((BOOL (*)(SCNReferenceNode, SEL))bean_msgSend)(self, bean_sel("loaded")); }
+#ifndef BEAN_ALLOC_SCNReferenceNode
+#define BEAN_ALLOC_SCNReferenceNode
+static inline SCNReferenceNode             SCNReferenceNode_Alloc(void)                                                                         { return (SCNReferenceNode)bean_alloc(bean_cls("SCNReferenceNode")); }
+#endif
+#ifndef BEAN_NEW_SCNReferenceNode
+#define BEAN_NEW_SCNReferenceNode
+static inline SCNReferenceNode             SCNReferenceNode_New(void)                                                                           { return (SCNReferenceNode)bean_new(bean_cls("SCNReferenceNode")); }
+#endif
 
 /* ===== SCNSceneExportDelegate ===== */
 #ifndef BEAN_TYPEDEF_SCNSceneExportDelegate
 #define BEAN_TYPEDEF_SCNSceneExportDelegate
 typedef bean_id SCNSceneExportDelegate;
 #endif
-static inline NSURL    SCNSceneExportDelegate_WriteImage_WithSceneDocumentURL_OriginalImageURL(SCNSceneExportDelegate self, NSImage image, NSURL documentURL, NSURL originalImageURL)    { return ((NSURL (*)(SCNSceneExportDelegate, SEL, NSImage, NSURL, NSURL))bean_msgSend)(self, bean_sel("writeImage:withSceneDocumentURL:originalImageURL:"), image, documentURL, originalImageURL); }
+static inline NSURL                     SCNSceneExportDelegate_WriteImage_WithSceneDocumentURL_OriginalImageURL(SCNSceneExportDelegate self, NSImage image, NSURL documentURL, NSURL originalImageURL)    { return ((NSURL (*)(SCNSceneExportDelegate, SEL, NSImage, NSURL, NSURL))bean_msgSend)(self, bean_sel("writeImage:withSceneDocumentURL:originalImageURL:"), image, documentURL, originalImageURL); }
+#ifndef BEAN_ALLOC_SCNSceneExportDelegate
+#define BEAN_ALLOC_SCNSceneExportDelegate
+static inline SCNSceneExportDelegate    SCNSceneExportDelegate_Alloc(void)                                                                                                                                { return (SCNSceneExportDelegate)bean_alloc(bean_cls("SCNSceneExportDelegate")); }
+#endif
+#ifndef BEAN_NEW_SCNSceneExportDelegate
+#define BEAN_NEW_SCNSceneExportDelegate
+static inline SCNSceneExportDelegate    SCNSceneExportDelegate_New(void)                                                                                                                                  { return (SCNSceneExportDelegate)bean_new(bean_cls("SCNSceneExportDelegate")); }
+#endif
 
 /* ===== SCNShape ===== */
 #ifndef BEAN_TYPEDEF_SCNShape
@@ -5311,6 +5495,14 @@ static inline CGFloat           SCNShape_ChamferRadius(SCNShape self)           
 static inline void              SCNShape_SetChamferRadius(SCNShape self, CGFloat chamferRadius)                     { ((void (*)(SCNShape, SEL, CGFloat))bean_msgSend)(self, bean_sel("setChamferRadius:"), chamferRadius); }
 static inline NSBezierPath      SCNShape_ChamferProfile(SCNShape self)                                              { return ((NSBezierPath (*)(SCNShape, SEL))bean_msgSend)(self, bean_sel("chamferProfile")); }
 static inline void              SCNShape_SetChamferProfile(SCNShape self, NSBezierPath chamferProfile)              { ((void (*)(SCNShape, SEL, NSBezierPath))bean_msgSend)(self, bean_sel("setChamferProfile:"), chamferProfile); }
+#ifndef BEAN_ALLOC_SCNShape
+#define BEAN_ALLOC_SCNShape
+static inline SCNShape          SCNShape_Alloc(void)                                                                { return (SCNShape)bean_alloc(bean_cls("SCNShape")); }
+#endif
+#ifndef BEAN_NEW_SCNShape
+#define BEAN_NEW_SCNShape
+static inline SCNShape          SCNShape_New(void)                                                                  { return (SCNShape)bean_new(bean_cls("SCNShape")); }
+#endif
 
 /* ===== SCNSliderConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNSliderConstraint
@@ -5324,6 +5516,14 @@ static inline CGFloat                SCNSliderConstraint_Radius(SCNSliderConstra
 static inline void                   SCNSliderConstraint_SetRadius(SCNSliderConstraint self, CGFloat radius)                                           { ((void (*)(SCNSliderConstraint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
 static inline SCNVector3             SCNSliderConstraint_Offset(SCNSliderConstraint self)                                                              { return ((SCNVector3 (*)(SCNSliderConstraint, SEL))bean_msgSend_stret)(self, bean_sel("offset")); }
 static inline void                   SCNSliderConstraint_SetOffset(SCNSliderConstraint self, SCNVector3 offset)                                        { ((void (*)(SCNSliderConstraint, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setOffset:"), offset); }
+#ifndef BEAN_ALLOC_SCNSliderConstraint
+#define BEAN_ALLOC_SCNSliderConstraint
+static inline SCNSliderConstraint    SCNSliderConstraint_Alloc(void)                                                                                   { return (SCNSliderConstraint)bean_alloc(bean_cls("SCNSliderConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNSliderConstraint
+#define BEAN_NEW_SCNSliderConstraint
+static inline SCNSliderConstraint    SCNSliderConstraint_New(void)                                                                                     { return (SCNSliderConstraint)bean_new(bean_cls("SCNSliderConstraint")); }
+#endif
 
 /* ===== SCNSphere ===== */
 #ifndef BEAN_TYPEDEF_SCNSphere
@@ -5338,6 +5538,14 @@ static inline void         SCNSphere_SetGeodesic(SCNSphere self, BOOL geodesic) 
 static inline NSInteger    SCNSphere_SegmentCount(SCNSphere self)                               { return ((NSInteger (*)(SCNSphere, SEL))bean_msgSend)(self, bean_sel("segmentCount")); }
 static inline void         SCNSphere_SetSegmentCount(SCNSphere self, NSInteger segmentCount)    { ((void (*)(SCNSphere, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSegmentCount:"), segmentCount); }
 static inline BOOL         SCNSphere_Geodesic(SCNSphere self)                                   { return ((BOOL (*)(SCNSphere, SEL))bean_msgSend)(self, bean_sel("geodesic")); }
+#ifndef BEAN_ALLOC_SCNSphere
+#define BEAN_ALLOC_SCNSphere
+static inline SCNSphere    SCNSphere_Alloc(void)                                                { return (SCNSphere)bean_alloc(bean_cls("SCNSphere")); }
+#endif
+#ifndef BEAN_NEW_SCNSphere
+#define BEAN_NEW_SCNSphere
+static inline SCNSphere    SCNSphere_New(void)                                                  { return (SCNSphere)bean_new(bean_cls("SCNSphere")); }
+#endif
 
 /* ===== SCNText ===== */
 #ifndef BEAN_TYPEDEF_SCNText
@@ -5369,6 +5577,14 @@ static inline void            SCNText_SetChamferProfile(SCNText self, NSBezierPa
 static inline CGFloat         SCNText_Flatness(SCNText self)                                                 { return ((CGFloat (*)(SCNText, SEL))bean_msgSend_fpret)(self, bean_sel("flatness")); }
 static inline void            SCNText_SetFlatness(SCNText self, CGFloat flatness)                            { ((void (*)(SCNText, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFlatness:"), flatness); }
 static inline BOOL            SCNText_Wrapped(SCNText self)                                                  { return ((BOOL (*)(SCNText, SEL))bean_msgSend)(self, bean_sel("wrapped")); }
+#ifndef BEAN_ALLOC_SCNText
+#define BEAN_ALLOC_SCNText
+static inline SCNText         SCNText_Alloc(void)                                                            { return (SCNText)bean_alloc(bean_cls("SCNText")); }
+#endif
+#ifndef BEAN_NEW_SCNText
+#define BEAN_NEW_SCNText
+static inline SCNText         SCNText_New(void)                                                              { return (SCNText)bean_new(bean_cls("SCNText")); }
+#endif
 
 /* ===== SCNTimingFunction ===== */
 #ifndef BEAN_TYPEDEF_SCNTimingFunction
@@ -5378,6 +5594,14 @@ typedef bean_id SCNTimingFunction;
 static inline SCNTimingFunction    SCNTimingFunction_FunctionWithTimingMode(SCNActionTimingMode timingMode)                       { return ((SCNTimingFunction (*)(bean_class, SEL, SCNActionTimingMode))bean_msgSend)(bean_cls("SCNTimingFunction"), bean_sel("functionWithTimingMode:"), timingMode); }
 static inline SCNTimingFunction    SCNTimingFunction_FunctionWithCAMediaTimingFunction(CAMediaTimingFunction caTimingFunction)    { return ((SCNTimingFunction (*)(bean_class, SEL, CAMediaTimingFunction))bean_msgSend)(bean_cls("SCNTimingFunction"), bean_sel("functionWithCAMediaTimingFunction:"), caTimingFunction); }
 static inline BOOL                 SCNTimingFunction_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNTimingFunction"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNTimingFunction
+#define BEAN_ALLOC_SCNTimingFunction
+static inline SCNTimingFunction    SCNTimingFunction_Alloc(void)                                                                  { return (SCNTimingFunction)bean_alloc(bean_cls("SCNTimingFunction")); }
+#endif
+#ifndef BEAN_NEW_SCNTimingFunction
+#define BEAN_NEW_SCNTimingFunction
+static inline SCNTimingFunction    SCNTimingFunction_New(void)                                                                    { return (SCNTimingFunction)bean_new(bean_cls("SCNTimingFunction")); }
+#endif
 
 /* ===== SCNTorus ===== */
 #ifndef BEAN_TYPEDEF_SCNTorus
@@ -5393,6 +5617,14 @@ static inline NSInteger    SCNTorus_RingSegmentCount(SCNTorus self)             
 static inline void         SCNTorus_SetRingSegmentCount(SCNTorus self, NSInteger ringSegmentCount)            { ((void (*)(SCNTorus, SEL, NSInteger))bean_msgSend)(self, bean_sel("setRingSegmentCount:"), ringSegmentCount); }
 static inline NSInteger    SCNTorus_PipeSegmentCount(SCNTorus self)                                           { return ((NSInteger (*)(SCNTorus, SEL))bean_msgSend)(self, bean_sel("pipeSegmentCount")); }
 static inline void         SCNTorus_SetPipeSegmentCount(SCNTorus self, NSInteger pipeSegmentCount)            { ((void (*)(SCNTorus, SEL, NSInteger))bean_msgSend)(self, bean_sel("setPipeSegmentCount:"), pipeSegmentCount); }
+#ifndef BEAN_ALLOC_SCNTorus
+#define BEAN_ALLOC_SCNTorus
+static inline SCNTorus     SCNTorus_Alloc(void)                                                               { return (SCNTorus)bean_alloc(bean_cls("SCNTorus")); }
+#endif
+#ifndef BEAN_NEW_SCNTorus
+#define BEAN_NEW_SCNTorus
+static inline SCNTorus     SCNTorus_New(void)                                                                 { return (SCNTorus)bean_new(bean_cls("SCNTorus")); }
+#endif
 
 /* ===== SCNTransaction ===== */
 #ifndef BEAN_TYPEDEF_SCNTransaction
@@ -5414,6 +5646,14 @@ static inline BOOL                     SCNTransaction_DisableActions(void)      
 static inline void                     SCNTransaction_SetDisableActions(BOOL disableActions)                                       { ((void (*)(bean_class, SEL, BOOL))bean_msgSend)(bean_cls("SCNTransaction"), bean_sel("setDisableActions:"), disableActions); }
 static inline void*                    SCNTransaction_CompletionBlock(void)                                                        { return ((void* (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNTransaction"), bean_sel("completionBlock")); }
 static inline void                     SCNTransaction_SetCompletionBlock(void* completionBlock)                                    { ((void (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("SCNTransaction"), bean_sel("setCompletionBlock:"), completionBlock); }
+#ifndef BEAN_ALLOC_SCNTransaction
+#define BEAN_ALLOC_SCNTransaction
+static inline SCNTransaction           SCNTransaction_Alloc(void)                                                                  { return (SCNTransaction)bean_alloc(bean_cls("SCNTransaction")); }
+#endif
+#ifndef BEAN_NEW_SCNTransaction
+#define BEAN_NEW_SCNTransaction
+static inline SCNTransaction           SCNTransaction_New(void)                                                                    { return (SCNTransaction)bean_new(bean_cls("SCNTransaction")); }
+#endif
 
 /* ===== SCNTransformConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNTransformConstraint
@@ -5423,6 +5663,14 @@ typedef bean_id SCNTransformConstraint;
 static inline SCNTransformConstraint    SCNTransformConstraint_TransformConstraintInWorldSpace_WithBlock(BOOL world, void* block)      { return ((SCNTransformConstraint (*)(bean_class, SEL, BOOL, void*))bean_msgSend)(bean_cls("SCNTransformConstraint"), bean_sel("transformConstraintInWorldSpace:withBlock:"), world, block); }
 static inline SCNTransformConstraint    SCNTransformConstraint_PositionConstraintInWorldSpace_WithBlock(BOOL world, void* block)       { return ((SCNTransformConstraint (*)(bean_class, SEL, BOOL, void*))bean_msgSend)(bean_cls("SCNTransformConstraint"), bean_sel("positionConstraintInWorldSpace:withBlock:"), world, block); }
 static inline SCNTransformConstraint    SCNTransformConstraint_OrientationConstraintInWorldSpace_WithBlock(BOOL world, void* block)    { return ((SCNTransformConstraint (*)(bean_class, SEL, BOOL, void*))bean_msgSend)(bean_cls("SCNTransformConstraint"), bean_sel("orientationConstraintInWorldSpace:withBlock:"), world, block); }
+#ifndef BEAN_ALLOC_SCNTransformConstraint
+#define BEAN_ALLOC_SCNTransformConstraint
+static inline SCNTransformConstraint    SCNTransformConstraint_Alloc(void)                                                             { return (SCNTransformConstraint)bean_alloc(bean_cls("SCNTransformConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNTransformConstraint
+#define BEAN_NEW_SCNTransformConstraint
+static inline SCNTransformConstraint    SCNTransformConstraint_New(void)                                                               { return (SCNTransformConstraint)bean_new(bean_cls("SCNTransformConstraint")); }
+#endif
 
 /* ===== SCNTube ===== */
 #ifndef BEAN_TYPEDEF_SCNTube
@@ -5440,6 +5688,14 @@ static inline NSInteger    SCNTube_RadialSegmentCount(SCNTube self)             
 static inline void         SCNTube_SetRadialSegmentCount(SCNTube self, NSInteger radialSegmentCount)                                   { ((void (*)(SCNTube, SEL, NSInteger))bean_msgSend)(self, bean_sel("setRadialSegmentCount:"), radialSegmentCount); }
 static inline NSInteger    SCNTube_HeightSegmentCount(SCNTube self)                                                                    { return ((NSInteger (*)(SCNTube, SEL))bean_msgSend)(self, bean_sel("heightSegmentCount")); }
 static inline void         SCNTube_SetHeightSegmentCount(SCNTube self, NSInteger heightSegmentCount)                                   { ((void (*)(SCNTube, SEL, NSInteger))bean_msgSend)(self, bean_sel("setHeightSegmentCount:"), heightSegmentCount); }
+#ifndef BEAN_ALLOC_SCNTube
+#define BEAN_ALLOC_SCNTube
+static inline SCNTube      SCNTube_Alloc(void)                                                                                         { return (SCNTube)bean_alloc(bean_cls("SCNTube")); }
+#endif
+#ifndef BEAN_NEW_SCNTube
+#define BEAN_NEW_SCNTube
+static inline SCNTube      SCNTube_New(void)                                                                                           { return (SCNTube)bean_new(bean_cls("SCNTube")); }
+#endif
 
 /* ===== SCNAction ===== */
 #ifndef BEAN_TYPEDEF_SCNAction
@@ -5485,6 +5741,14 @@ static inline CGFloat                SCNAction_Speed(SCNAction self)            
 static inline void                   SCNAction_SetSpeed(SCNAction self, CGFloat speed)                                                                                           { ((void (*)(SCNAction, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
 static inline id                     SCNAction_CopyWithZone(SCNAction self, NSZone* zone)                                                                                        { return ((id (*)(SCNAction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                   SCNAction_SupportsSecureCoding(void)                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNAction"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNAction
+#define BEAN_ALLOC_SCNAction
+static inline SCNAction              SCNAction_Alloc(void)                                                                                                                       { return (SCNAction)bean_alloc(bean_cls("SCNAction")); }
+#endif
+#ifndef BEAN_NEW_SCNAction
+#define BEAN_NEW_SCNAction
+static inline SCNAction              SCNAction_New(void)                                                                                                                         { return (SCNAction)bean_new(bean_cls("SCNAction")); }
+#endif
 
 /* ===== SCNAudioPlayer ===== */
 #ifndef BEAN_TYPEDEF_SCNAudioPlayer
@@ -5502,6 +5766,14 @@ static inline void*             SCNAudioPlayer_DidFinishPlayback(SCNAudioPlayer 
 static inline void              SCNAudioPlayer_SetDidFinishPlayback(SCNAudioPlayer self, void* didFinishPlayback)    { ((void (*)(SCNAudioPlayer, SEL, void*))bean_msgSend)(self, bean_sel("setDidFinishPlayback:"), didFinishPlayback); }
 static inline AVAudioNode       SCNAudioPlayer_AudioNode(SCNAudioPlayer self)                                        { return ((AVAudioNode (*)(SCNAudioPlayer, SEL))bean_msgSend)(self, bean_sel("audioNode")); }
 static inline SCNAudioSource    SCNAudioPlayer_AudioSource(SCNAudioPlayer self)                                      { return ((SCNAudioSource (*)(SCNAudioPlayer, SEL))bean_msgSend)(self, bean_sel("audioSource")); }
+#ifndef BEAN_ALLOC_SCNAudioPlayer
+#define BEAN_ALLOC_SCNAudioPlayer
+static inline SCNAudioPlayer    SCNAudioPlayer_Alloc(void)                                                           { return (SCNAudioPlayer)bean_alloc(bean_cls("SCNAudioPlayer")); }
+#endif
+#ifndef BEAN_NEW_SCNAudioPlayer
+#define BEAN_NEW_SCNAudioPlayer
+static inline SCNAudioPlayer    SCNAudioPlayer_New(void)                                                             { return (SCNAudioPlayer)bean_new(bean_cls("SCNAudioPlayer")); }
+#endif
 
 /* ===== SCNShadable ===== */
 #ifndef BEAN_TYPEDEF_SCNShadable
@@ -5516,21 +5788,37 @@ static inline NSDictionary    SCNShadable_ShaderModifiers(SCNShadable self)     
 static inline void            SCNShadable_SetShaderModifiers(SCNShadable self, NSDictionary shaderModifiers)                    { ((void (*)(SCNShadable, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setShaderModifiers:"), shaderModifiers); }
 static inline NSNumber        SCNShadable_MinimumLanguageVersion(SCNShadable self)                                              { return ((NSNumber (*)(SCNShadable, SEL))bean_msgSend)(self, bean_sel("minimumLanguageVersion")); }
 static inline void            SCNShadable_SetMinimumLanguageVersion(SCNShadable self, NSNumber minimumLanguageVersion)          { ((void (*)(SCNShadable, SEL, NSNumber))bean_msgSend)(self, bean_sel("setMinimumLanguageVersion:"), minimumLanguageVersion); }
+#ifndef BEAN_ALLOC_SCNShadable
+#define BEAN_ALLOC_SCNShadable
+static inline SCNShadable     SCNShadable_Alloc(void)                                                                           { return (SCNShadable)bean_alloc(bean_cls("SCNShadable")); }
+#endif
+#ifndef BEAN_NEW_SCNShadable
+#define BEAN_NEW_SCNShadable
+static inline SCNShadable     SCNShadable_New(void)                                                                             { return (SCNShadable)bean_new(bean_cls("SCNShadable")); }
+#endif
 
 /* ===== SCNActionable ===== */
 #ifndef BEAN_TYPEDEF_SCNActionable
 #define BEAN_TYPEDEF_SCNActionable
 typedef bean_id SCNActionable;
 #endif
-static inline void         SCNActionable_RunAction(SCNActionable self, SCNAction action)                                                        { ((void (*)(SCNActionable, SEL, SCNAction))bean_msgSend)(self, bean_sel("runAction:"), action); }
-static inline void         SCNActionable_RunAction_CompletionHandler(SCNActionable self, SCNAction action, void* block)                         { ((void (*)(SCNActionable, SEL, SCNAction, void*))bean_msgSend)(self, bean_sel("runAction:completionHandler:"), action, block); }
-static inline void         SCNActionable_RunAction_ForKey(SCNActionable self, SCNAction action, NSString key)                                   { ((void (*)(SCNActionable, SEL, SCNAction, NSString))bean_msgSend)(self, bean_sel("runAction:forKey:"), action, key); }
-static inline void         SCNActionable_RunAction_ForKey_CompletionHandler(SCNActionable self, SCNAction action, NSString key, void* block)    { ((void (*)(SCNActionable, SEL, SCNAction, NSString, void*))bean_msgSend)(self, bean_sel("runAction:forKey:completionHandler:"), action, key, block); }
-static inline SCNAction    SCNActionable_ActionForKey(SCNActionable self, NSString key)                                                         { return ((SCNAction (*)(SCNActionable, SEL, NSString))bean_msgSend)(self, bean_sel("actionForKey:"), key); }
-static inline void         SCNActionable_RemoveActionForKey(SCNActionable self, NSString key)                                                   { ((void (*)(SCNActionable, SEL, NSString))bean_msgSend)(self, bean_sel("removeActionForKey:"), key); }
-static inline void         SCNActionable_RemoveAllActions(SCNActionable self)                                                                   { ((void (*)(SCNActionable, SEL))bean_msgSend)(self, bean_sel("removeAllActions")); }
-static inline BOOL         SCNActionable_HasActions(SCNActionable self)                                                                         { return ((BOOL (*)(SCNActionable, SEL))bean_msgSend)(self, bean_sel("hasActions")); }
-static inline NSArray      SCNActionable_ActionKeys(SCNActionable self)                                                                         { return ((NSArray (*)(SCNActionable, SEL))bean_msgSend)(self, bean_sel("actionKeys")); }
+static inline void             SCNActionable_RunAction(SCNActionable self, SCNAction action)                                                        { ((void (*)(SCNActionable, SEL, SCNAction))bean_msgSend)(self, bean_sel("runAction:"), action); }
+static inline void             SCNActionable_RunAction_CompletionHandler(SCNActionable self, SCNAction action, void* block)                         { ((void (*)(SCNActionable, SEL, SCNAction, void*))bean_msgSend)(self, bean_sel("runAction:completionHandler:"), action, block); }
+static inline void             SCNActionable_RunAction_ForKey(SCNActionable self, SCNAction action, NSString key)                                   { ((void (*)(SCNActionable, SEL, SCNAction, NSString))bean_msgSend)(self, bean_sel("runAction:forKey:"), action, key); }
+static inline void             SCNActionable_RunAction_ForKey_CompletionHandler(SCNActionable self, SCNAction action, NSString key, void* block)    { ((void (*)(SCNActionable, SEL, SCNAction, NSString, void*))bean_msgSend)(self, bean_sel("runAction:forKey:completionHandler:"), action, key, block); }
+static inline SCNAction        SCNActionable_ActionForKey(SCNActionable self, NSString key)                                                         { return ((SCNAction (*)(SCNActionable, SEL, NSString))bean_msgSend)(self, bean_sel("actionForKey:"), key); }
+static inline void             SCNActionable_RemoveActionForKey(SCNActionable self, NSString key)                                                   { ((void (*)(SCNActionable, SEL, NSString))bean_msgSend)(self, bean_sel("removeActionForKey:"), key); }
+static inline void             SCNActionable_RemoveAllActions(SCNActionable self)                                                                   { ((void (*)(SCNActionable, SEL))bean_msgSend)(self, bean_sel("removeAllActions")); }
+static inline BOOL             SCNActionable_HasActions(SCNActionable self)                                                                         { return ((BOOL (*)(SCNActionable, SEL))bean_msgSend)(self, bean_sel("hasActions")); }
+static inline NSArray          SCNActionable_ActionKeys(SCNActionable self)                                                                         { return ((NSArray (*)(SCNActionable, SEL))bean_msgSend)(self, bean_sel("actionKeys")); }
+#ifndef BEAN_ALLOC_SCNActionable
+#define BEAN_ALLOC_SCNActionable
+static inline SCNActionable    SCNActionable_Alloc(void)                                                                                            { return (SCNActionable)bean_alloc(bean_cls("SCNActionable")); }
+#endif
+#ifndef BEAN_NEW_SCNActionable
+#define BEAN_NEW_SCNActionable
+static inline SCNActionable    SCNActionable_New(void)                                                                                              { return (SCNActionable)bean_new(bean_cls("SCNActionable")); }
+#endif
 
 /* ===== CAAnimation ===== */
 #ifndef BEAN_TYPEDEF_CAAnimation
@@ -5546,6 +5834,14 @@ static inline CGFloat        CAAnimation_FadeOutDuration(CAAnimation self)      
 static inline void           CAAnimation_SetFadeOutDuration(CAAnimation self, CGFloat fadeOutDuration)     { ((void (*)(CAAnimation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFadeOutDuration:"), fadeOutDuration); }
 static inline NSArray        CAAnimation_AnimationEvents(CAAnimation self)                                 { return ((NSArray (*)(CAAnimation, SEL))bean_msgSend)(self, bean_sel("animationEvents")); }
 static inline void           CAAnimation_SetAnimationEvents(CAAnimation self, NSArray animationEvents)     { ((void (*)(CAAnimation, SEL, NSArray))bean_msgSend)(self, bean_sel("setAnimationEvents:"), animationEvents); }
+#ifndef BEAN_ALLOC_CAAnimation
+#define BEAN_ALLOC_CAAnimation
+static inline CAAnimation    CAAnimation_Alloc(void)                                                       { return (CAAnimation)bean_alloc(bean_cls("CAAnimation")); }
+#endif
+#ifndef BEAN_NEW_CAAnimation
+#define BEAN_NEW_CAAnimation
+static inline CAAnimation    CAAnimation_New(void)                                                         { return (CAAnimation)bean_new(bean_cls("CAAnimation")); }
+#endif
 
 /* ===== SCNAnimatable ===== */
 #ifndef BEAN_TYPEDEF_SCNAnimatable
@@ -5566,6 +5862,14 @@ static inline void                  SCNAnimatable_ResumeAnimationForKey(SCNAnima
 static inline void                  SCNAnimatable_SetSpeed_ForAnimationKey(SCNAnimatable self, CGFloat speed, NSString key)                     { ((void (*)(SCNAnimatable, SEL, CGFloat, NSString))bean_msgSend)(self, bean_sel("setSpeed:forAnimationKey:"), speed, key); }
 static inline BOOL                  SCNAnimatable_IsAnimationForKeyPaused(SCNAnimatable self, NSString key)                                     { return ((BOOL (*)(SCNAnimatable, SEL, NSString))bean_msgSend)(self, bean_sel("isAnimationForKeyPaused:"), key); }
 static inline NSArray               SCNAnimatable_AnimationKeys(SCNAnimatable self)                                                             { return ((NSArray (*)(SCNAnimatable, SEL))bean_msgSend)(self, bean_sel("animationKeys")); }
+#ifndef BEAN_ALLOC_SCNAnimatable
+#define BEAN_ALLOC_SCNAnimatable
+static inline SCNAnimatable         SCNAnimatable_Alloc(void)                                                                                   { return (SCNAnimatable)bean_alloc(bean_cls("SCNAnimatable")); }
+#endif
+#ifndef BEAN_NEW_SCNAnimatable
+#define BEAN_NEW_SCNAnimatable
+static inline SCNAnimatable         SCNAnimatable_New(void)                                                                                     { return (SCNAnimatable)bean_new(bean_cls("SCNAnimatable")); }
+#endif
 
 /* ===== SCNAnimation ===== */
 static inline SCNAnimation         SCNAnimation_AnimationWithContentsOfURL(NSURL animationUrl)                            { return ((SCNAnimation (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("SCNAnimation"), bean_sel("animationWithContentsOfURL:"), animationUrl); }
@@ -5615,6 +5919,14 @@ static inline BOOL                 SCNAnimation_RemovedOnCompletion(SCNAnimation
 static inline BOOL                 SCNAnimation_AppliedOnCompletion(SCNAnimation self)                                    { return ((BOOL (*)(SCNAnimation, SEL))bean_msgSend)(self, bean_sel("appliedOnCompletion")); }
 static inline BOOL                 SCNAnimation_Additive(SCNAnimation self)                                               { return ((BOOL (*)(SCNAnimation, SEL))bean_msgSend)(self, bean_sel("additive")); }
 static inline BOOL                 SCNAnimation_Cumulative(SCNAnimation self)                                             { return ((BOOL (*)(SCNAnimation, SEL))bean_msgSend)(self, bean_sel("cumulative")); }
+#ifndef BEAN_ALLOC_SCNAnimation
+#define BEAN_ALLOC_SCNAnimation
+static inline SCNAnimation         SCNAnimation_Alloc(void)                                                               { return (SCNAnimation)bean_alloc(bean_cls("SCNAnimation")); }
+#endif
+#ifndef BEAN_NEW_SCNAnimation
+#define BEAN_NEW_SCNAnimation
+static inline SCNAnimation         SCNAnimation_New(void)                                                                 { return (SCNAnimation)bean_new(bean_cls("SCNAnimation")); }
+#endif
 
 /* ===== SCNAnimationPlayer ===== */
 static inline SCNAnimationPlayer    SCNAnimationPlayer_AnimationPlayerWithAnimation(SCNAnimation animation)                                               { return ((SCNAnimationPlayer (*)(bean_class, SEL, SCNAnimation))bean_msgSend)(bean_cls("SCNAnimationPlayer"), bean_sel("animationPlayerWithAnimation:"), animation); }
@@ -5644,6 +5956,14 @@ static inline BOOL                  SCNAnimationPlayer_IsAnimationForKeyPaused(S
 static inline NSArray               SCNAnimationPlayer_AnimationKeys(SCNAnimationPlayer self)                                                             { return ((NSArray (*)(SCNAnimationPlayer, SEL))bean_msgSend)(self, bean_sel("animationKeys")); }
 static inline id                    SCNAnimationPlayer_CopyWithZone(SCNAnimationPlayer self, NSZone* zone)                                                { return ((id (*)(SCNAnimationPlayer, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  SCNAnimationPlayer_SupportsSecureCoding(void)                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNAnimationPlayer"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNAnimationPlayer
+#define BEAN_ALLOC_SCNAnimationPlayer
+static inline SCNAnimationPlayer    SCNAnimationPlayer_Alloc(void)                                                                                        { return (SCNAnimationPlayer)bean_alloc(bean_cls("SCNAnimationPlayer")); }
+#endif
+#ifndef BEAN_NEW_SCNAnimationPlayer
+#define BEAN_NEW_SCNAnimationPlayer
+static inline SCNAnimationPlayer    SCNAnimationPlayer_New(void)                                                                                          { return (SCNAnimationPlayer)bean_new(bean_cls("SCNAnimationPlayer")); }
+#endif
 
 /* ===== SCNAvoidOccluderConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNAvoidOccluderConstraint
@@ -5659,14 +5979,30 @@ static inline NSUInteger                    SCNAvoidOccluderConstraint_OccluderC
 static inline void                          SCNAvoidOccluderConstraint_SetOccluderCategoryBitMask(SCNAvoidOccluderConstraint self, NSUInteger occluderCategoryBitMask)    { ((void (*)(SCNAvoidOccluderConstraint, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setOccluderCategoryBitMask:"), occluderCategoryBitMask); }
 static inline CGFloat                       SCNAvoidOccluderConstraint_Bias(SCNAvoidOccluderConstraint self)                                                              { return ((CGFloat (*)(SCNAvoidOccluderConstraint, SEL))bean_msgSend_fpret)(self, bean_sel("bias")); }
 static inline void                          SCNAvoidOccluderConstraint_SetBias(SCNAvoidOccluderConstraint self, CGFloat bias)                                             { ((void (*)(SCNAvoidOccluderConstraint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setBias:"), bias); }
+#ifndef BEAN_ALLOC_SCNAvoidOccluderConstraint
+#define BEAN_ALLOC_SCNAvoidOccluderConstraint
+static inline SCNAvoidOccluderConstraint    SCNAvoidOccluderConstraint_Alloc(void)                                                                                        { return (SCNAvoidOccluderConstraint)bean_alloc(bean_cls("SCNAvoidOccluderConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNAvoidOccluderConstraint
+#define BEAN_NEW_SCNAvoidOccluderConstraint
+static inline SCNAvoidOccluderConstraint    SCNAvoidOccluderConstraint_New(void)                                                                                          { return (SCNAvoidOccluderConstraint)bean_new(bean_cls("SCNAvoidOccluderConstraint")); }
+#endif
 
 /* ===== SCNAvoidOccluderConstraintDelegate ===== */
 #ifndef BEAN_TYPEDEF_SCNAvoidOccluderConstraintDelegate
 #define BEAN_TYPEDEF_SCNAvoidOccluderConstraintDelegate
 typedef bean_id SCNAvoidOccluderConstraintDelegate;
 #endif
-static inline BOOL    SCNAvoidOccluderConstraintDelegate_AvoidOccluderConstraint_ShouldAvoidOccluder_ForNode(SCNAvoidOccluderConstraintDelegate self, SCNAvoidOccluderConstraint constraint, SCNNode occluder, SCNNode node)    { return ((BOOL (*)(SCNAvoidOccluderConstraintDelegate, SEL, SCNAvoidOccluderConstraint, SCNNode, SCNNode))bean_msgSend)(self, bean_sel("avoidOccluderConstraint:shouldAvoidOccluder:forNode:"), constraint, occluder, node); }
-static inline void    SCNAvoidOccluderConstraintDelegate_AvoidOccluderConstraint_DidAvoidOccluder_ForNode(SCNAvoidOccluderConstraintDelegate self, SCNAvoidOccluderConstraint constraint, SCNNode occluder, SCNNode node)       { ((void (*)(SCNAvoidOccluderConstraintDelegate, SEL, SCNAvoidOccluderConstraint, SCNNode, SCNNode))bean_msgSend)(self, bean_sel("avoidOccluderConstraint:didAvoidOccluder:forNode:"), constraint, occluder, node); }
+static inline BOOL                                  SCNAvoidOccluderConstraintDelegate_AvoidOccluderConstraint_ShouldAvoidOccluder_ForNode(SCNAvoidOccluderConstraintDelegate self, SCNAvoidOccluderConstraint constraint, SCNNode occluder, SCNNode node)    { return ((BOOL (*)(SCNAvoidOccluderConstraintDelegate, SEL, SCNAvoidOccluderConstraint, SCNNode, SCNNode))bean_msgSend)(self, bean_sel("avoidOccluderConstraint:shouldAvoidOccluder:forNode:"), constraint, occluder, node); }
+static inline void                                  SCNAvoidOccluderConstraintDelegate_AvoidOccluderConstraint_DidAvoidOccluder_ForNode(SCNAvoidOccluderConstraintDelegate self, SCNAvoidOccluderConstraint constraint, SCNNode occluder, SCNNode node)       { ((void (*)(SCNAvoidOccluderConstraintDelegate, SEL, SCNAvoidOccluderConstraint, SCNNode, SCNNode))bean_msgSend)(self, bean_sel("avoidOccluderConstraint:didAvoidOccluder:forNode:"), constraint, occluder, node); }
+#ifndef BEAN_ALLOC_SCNAvoidOccluderConstraintDelegate
+#define BEAN_ALLOC_SCNAvoidOccluderConstraintDelegate
+static inline SCNAvoidOccluderConstraintDelegate    SCNAvoidOccluderConstraintDelegate_Alloc(void)                                                                                                                                                            { return (SCNAvoidOccluderConstraintDelegate)bean_alloc(bean_cls("SCNAvoidOccluderConstraintDelegate")); }
+#endif
+#ifndef BEAN_NEW_SCNAvoidOccluderConstraintDelegate
+#define BEAN_NEW_SCNAvoidOccluderConstraintDelegate
+static inline SCNAvoidOccluderConstraintDelegate    SCNAvoidOccluderConstraintDelegate_New(void)                                                                                                                                                              { return (SCNAvoidOccluderConstraintDelegate)bean_new(bean_cls("SCNAvoidOccluderConstraintDelegate")); }
+#endif
 
 /* ===== SCNCamera ===== */
 #ifndef BEAN_TYPEDEF_SCNCamera
@@ -5802,58 +6138,82 @@ static inline SCNTechnique                    SCNCamera_Technique(SCNCamera self
 static inline void                            SCNCamera_SetTechnique(SCNCamera self, SCNTechnique technique)                                                                 { ((void (*)(SCNCamera, SEL, SCNTechnique))bean_msgSend)(self, bean_sel("setTechnique:"), technique); }
 static inline id                              SCNCamera_CopyWithZone(SCNCamera self, NSZone* zone)                                                                           { return ((id (*)(SCNCamera, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                            SCNCamera_SupportsSecureCoding(void)                                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNCamera"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNCamera
+#define BEAN_ALLOC_SCNCamera
+static inline SCNCamera                       SCNCamera_Alloc(void)                                                                                                          { return (SCNCamera)bean_alloc(bean_cls("SCNCamera")); }
+#endif
+#ifndef BEAN_NEW_SCNCamera
+#define BEAN_NEW_SCNCamera
+static inline SCNCamera                       SCNCamera_New(void)                                                                                                            { return (SCNCamera)bean_new(bean_cls("SCNCamera")); }
+#endif
 
 /* ===== SCNCameraController ===== */
 #ifndef BEAN_TYPEDEF_SCNCameraController
 #define BEAN_TYPEDEF_SCNCameraController
 typedef bean_id SCNCameraController;
 #endif
-static inline void                  SCNCameraController_TranslateInCameraSpaceByX_Y_Z(SCNCameraController self, CGFloat deltaX, CGFloat deltaY, CGFloat deltaZ)                           { ((void (*)(SCNCameraController, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("translateInCameraSpaceByX:Y:Z:"), deltaX, deltaY, deltaZ); }
-static inline void                  SCNCameraController_FrameNodes(SCNCameraController self, NSArray nodes)                                                                               { ((void (*)(SCNCameraController, SEL, NSArray))bean_msgSend)(self, bean_sel("frameNodes:"), nodes); }
-static inline void                  SCNCameraController_RotateByX_Y(SCNCameraController self, CGFloat deltaX, CGFloat deltaY)                                                             { ((void (*)(SCNCameraController, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("rotateByX:Y:"), deltaX, deltaY); }
-static inline void                  SCNCameraController_RollBy_AroundScreenPoint_Viewport(SCNCameraController self, CGFloat delta, CGPoint point, CGSize viewport)                        { ((void (*)(SCNCameraController, SEL, CGFloat, CGPoint, CGSize))bean_msgSend)(self, bean_sel("rollBy:aroundScreenPoint:viewport:"), delta, point, viewport); }
-static inline void                  SCNCameraController_DollyBy_OnScreenPoint_Viewport(SCNCameraController self, CGFloat delta, CGPoint point, CGSize viewport)                           { ((void (*)(SCNCameraController, SEL, CGFloat, CGPoint, CGSize))bean_msgSend)(self, bean_sel("dollyBy:onScreenPoint:viewport:"), delta, point, viewport); }
-static inline void                  SCNCameraController_RollAroundTarget(SCNCameraController self, CGFloat delta)                                                                         { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("rollAroundTarget:"), delta); }
-static inline void                  SCNCameraController_DollyToTarget(SCNCameraController self, CGFloat delta)                                                                            { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("dollyToTarget:"), delta); }
-static inline void                  SCNCameraController_ClearRoll(SCNCameraController self)                                                                                               { ((void (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("clearRoll")); }
-static inline void                  SCNCameraController_StopInertia(SCNCameraController self)                                                                                             { ((void (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("stopInertia")); }
-static inline void                  SCNCameraController_BeginInteraction_WithViewport(SCNCameraController self, CGPoint location, CGSize viewport)                                        { ((void (*)(SCNCameraController, SEL, CGPoint, CGSize))bean_msgSend)(self, bean_sel("beginInteraction:withViewport:"), location, viewport); }
-static inline void                  SCNCameraController_ContinueInteraction_WithViewport_Sensitivity(SCNCameraController self, CGPoint location, CGSize viewport, CGFloat sensitivity)    { ((void (*)(SCNCameraController, SEL, CGPoint, CGSize, CGFloat))bean_msgSend)(self, bean_sel("continueInteraction:withViewport:sensitivity:"), location, viewport, sensitivity); }
-static inline void                  SCNCameraController_EndInteraction_WithViewport_Velocity(SCNCameraController self, CGPoint location, CGSize viewport, CGPoint velocity)               { ((void (*)(SCNCameraController, SEL, CGPoint, CGSize, CGPoint))bean_msgSend)(self, bean_sel("endInteraction:withViewport:velocity:"), location, viewport, velocity); }
-static inline id                    SCNCameraController_Delegate(SCNCameraController self)                                                                                                { return ((id (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("delegate")); }
-static inline void                  SCNCameraController_SetDelegate(SCNCameraController self, id delegate)                                                                                { ((void (*)(SCNCameraController, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
-static inline SCNNode               SCNCameraController_PointOfView(SCNCameraController self)                                                                                             { return ((SCNNode (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("pointOfView")); }
-static inline void                  SCNCameraController_SetPointOfView(SCNCameraController self, SCNNode pointOfView)                                                                     { ((void (*)(SCNCameraController, SEL, SCNNode))bean_msgSend)(self, bean_sel("setPointOfView:"), pointOfView); }
-static inline SCNInteractionMode    SCNCameraController_InteractionMode(SCNCameraController self)                                                                                         { return ((SCNInteractionMode (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("interactionMode")); }
-static inline void                  SCNCameraController_SetInteractionMode(SCNCameraController self, SCNInteractionMode interactionMode)                                                  { ((void (*)(SCNCameraController, SEL, SCNInteractionMode))bean_msgSend)(self, bean_sel("setInteractionMode:"), interactionMode); }
-static inline SCNVector3            SCNCameraController_Target(SCNCameraController self)                                                                                                  { return ((SCNVector3 (*)(SCNCameraController, SEL))bean_msgSend_stret)(self, bean_sel("target")); }
-static inline void                  SCNCameraController_SetTarget(SCNCameraController self, SCNVector3 target)                                                                            { ((void (*)(SCNCameraController, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setTarget:"), target); }
-static inline BOOL                  SCNCameraController_AutomaticTarget(SCNCameraController self)                                                                                         { return ((BOOL (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("automaticTarget")); }
-static inline void                  SCNCameraController_SetAutomaticTarget(SCNCameraController self, BOOL automaticTarget)                                                                { ((void (*)(SCNCameraController, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutomaticTarget:"), automaticTarget); }
-static inline SCNVector3            SCNCameraController_WorldUp(SCNCameraController self)                                                                                                 { return ((SCNVector3 (*)(SCNCameraController, SEL))bean_msgSend_stret)(self, bean_sel("worldUp")); }
-static inline void                  SCNCameraController_SetWorldUp(SCNCameraController self, SCNVector3 worldUp)                                                                          { ((void (*)(SCNCameraController, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setWorldUp:"), worldUp); }
-static inline BOOL                  SCNCameraController_InertiaEnabled(SCNCameraController self)                                                                                          { return ((BOOL (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("inertiaEnabled")); }
-static inline void                  SCNCameraController_SetInertiaEnabled(SCNCameraController self, BOOL inertiaEnabled)                                                                  { ((void (*)(SCNCameraController, SEL, BOOL))bean_msgSend)(self, bean_sel("setInertiaEnabled:"), inertiaEnabled); }
-static inline CGFloat               SCNCameraController_InertiaFriction(SCNCameraController self)                                                                                         { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("inertiaFriction")); }
-static inline void                  SCNCameraController_SetInertiaFriction(SCNCameraController self, CGFloat inertiaFriction)                                                             { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setInertiaFriction:"), inertiaFriction); }
-static inline BOOL                  SCNCameraController_IsInertiaRunning(SCNCameraController self)                                                                                        { return ((BOOL (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("isInertiaRunning")); }
-static inline CGFloat               SCNCameraController_MinimumVerticalAngle(SCNCameraController self)                                                                                    { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("minimumVerticalAngle")); }
-static inline void                  SCNCameraController_SetMinimumVerticalAngle(SCNCameraController self, CGFloat minimumVerticalAngle)                                                   { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMinimumVerticalAngle:"), minimumVerticalAngle); }
-static inline CGFloat               SCNCameraController_MaximumVerticalAngle(SCNCameraController self)                                                                                    { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("maximumVerticalAngle")); }
-static inline void                  SCNCameraController_SetMaximumVerticalAngle(SCNCameraController self, CGFloat maximumVerticalAngle)                                                   { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaximumVerticalAngle:"), maximumVerticalAngle); }
-static inline CGFloat               SCNCameraController_MinimumHorizontalAngle(SCNCameraController self)                                                                                  { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("minimumHorizontalAngle")); }
-static inline void                  SCNCameraController_SetMinimumHorizontalAngle(SCNCameraController self, CGFloat minimumHorizontalAngle)                                               { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMinimumHorizontalAngle:"), minimumHorizontalAngle); }
-static inline CGFloat               SCNCameraController_MaximumHorizontalAngle(SCNCameraController self)                                                                                  { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("maximumHorizontalAngle")); }
-static inline void                  SCNCameraController_SetMaximumHorizontalAngle(SCNCameraController self, CGFloat maximumHorizontalAngle)                                               { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaximumHorizontalAngle:"), maximumHorizontalAngle); }
-static inline BOOL                  SCNCameraController_InertiaRunning(SCNCameraController self)                                                                                          { return ((BOOL (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("inertiaRunning")); }
+static inline void                   SCNCameraController_TranslateInCameraSpaceByX_Y_Z(SCNCameraController self, CGFloat deltaX, CGFloat deltaY, CGFloat deltaZ)                           { ((void (*)(SCNCameraController, SEL, CGFloat, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("translateInCameraSpaceByX:Y:Z:"), deltaX, deltaY, deltaZ); }
+static inline void                   SCNCameraController_FrameNodes(SCNCameraController self, NSArray nodes)                                                                               { ((void (*)(SCNCameraController, SEL, NSArray))bean_msgSend)(self, bean_sel("frameNodes:"), nodes); }
+static inline void                   SCNCameraController_RotateByX_Y(SCNCameraController self, CGFloat deltaX, CGFloat deltaY)                                                             { ((void (*)(SCNCameraController, SEL, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("rotateByX:Y:"), deltaX, deltaY); }
+static inline void                   SCNCameraController_RollBy_AroundScreenPoint_Viewport(SCNCameraController self, CGFloat delta, CGPoint point, CGSize viewport)                        { ((void (*)(SCNCameraController, SEL, CGFloat, CGPoint, CGSize))bean_msgSend)(self, bean_sel("rollBy:aroundScreenPoint:viewport:"), delta, point, viewport); }
+static inline void                   SCNCameraController_DollyBy_OnScreenPoint_Viewport(SCNCameraController self, CGFloat delta, CGPoint point, CGSize viewport)                           { ((void (*)(SCNCameraController, SEL, CGFloat, CGPoint, CGSize))bean_msgSend)(self, bean_sel("dollyBy:onScreenPoint:viewport:"), delta, point, viewport); }
+static inline void                   SCNCameraController_RollAroundTarget(SCNCameraController self, CGFloat delta)                                                                         { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("rollAroundTarget:"), delta); }
+static inline void                   SCNCameraController_DollyToTarget(SCNCameraController self, CGFloat delta)                                                                            { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("dollyToTarget:"), delta); }
+static inline void                   SCNCameraController_ClearRoll(SCNCameraController self)                                                                                               { ((void (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("clearRoll")); }
+static inline void                   SCNCameraController_StopInertia(SCNCameraController self)                                                                                             { ((void (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("stopInertia")); }
+static inline void                   SCNCameraController_BeginInteraction_WithViewport(SCNCameraController self, CGPoint location, CGSize viewport)                                        { ((void (*)(SCNCameraController, SEL, CGPoint, CGSize))bean_msgSend)(self, bean_sel("beginInteraction:withViewport:"), location, viewport); }
+static inline void                   SCNCameraController_ContinueInteraction_WithViewport_Sensitivity(SCNCameraController self, CGPoint location, CGSize viewport, CGFloat sensitivity)    { ((void (*)(SCNCameraController, SEL, CGPoint, CGSize, CGFloat))bean_msgSend)(self, bean_sel("continueInteraction:withViewport:sensitivity:"), location, viewport, sensitivity); }
+static inline void                   SCNCameraController_EndInteraction_WithViewport_Velocity(SCNCameraController self, CGPoint location, CGSize viewport, CGPoint velocity)               { ((void (*)(SCNCameraController, SEL, CGPoint, CGSize, CGPoint))bean_msgSend)(self, bean_sel("endInteraction:withViewport:velocity:"), location, viewport, velocity); }
+static inline id                     SCNCameraController_Delegate(SCNCameraController self)                                                                                                { return ((id (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("delegate")); }
+static inline void                   SCNCameraController_SetDelegate(SCNCameraController self, id delegate)                                                                                { ((void (*)(SCNCameraController, SEL, id))bean_msgSend)(self, bean_sel("setDelegate:"), delegate); }
+static inline SCNNode                SCNCameraController_PointOfView(SCNCameraController self)                                                                                             { return ((SCNNode (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("pointOfView")); }
+static inline void                   SCNCameraController_SetPointOfView(SCNCameraController self, SCNNode pointOfView)                                                                     { ((void (*)(SCNCameraController, SEL, SCNNode))bean_msgSend)(self, bean_sel("setPointOfView:"), pointOfView); }
+static inline SCNInteractionMode     SCNCameraController_InteractionMode(SCNCameraController self)                                                                                         { return ((SCNInteractionMode (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("interactionMode")); }
+static inline void                   SCNCameraController_SetInteractionMode(SCNCameraController self, SCNInteractionMode interactionMode)                                                  { ((void (*)(SCNCameraController, SEL, SCNInteractionMode))bean_msgSend)(self, bean_sel("setInteractionMode:"), interactionMode); }
+static inline SCNVector3             SCNCameraController_Target(SCNCameraController self)                                                                                                  { return ((SCNVector3 (*)(SCNCameraController, SEL))bean_msgSend_stret)(self, bean_sel("target")); }
+static inline void                   SCNCameraController_SetTarget(SCNCameraController self, SCNVector3 target)                                                                            { ((void (*)(SCNCameraController, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setTarget:"), target); }
+static inline BOOL                   SCNCameraController_AutomaticTarget(SCNCameraController self)                                                                                         { return ((BOOL (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("automaticTarget")); }
+static inline void                   SCNCameraController_SetAutomaticTarget(SCNCameraController self, BOOL automaticTarget)                                                                { ((void (*)(SCNCameraController, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutomaticTarget:"), automaticTarget); }
+static inline SCNVector3             SCNCameraController_WorldUp(SCNCameraController self)                                                                                                 { return ((SCNVector3 (*)(SCNCameraController, SEL))bean_msgSend_stret)(self, bean_sel("worldUp")); }
+static inline void                   SCNCameraController_SetWorldUp(SCNCameraController self, SCNVector3 worldUp)                                                                          { ((void (*)(SCNCameraController, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setWorldUp:"), worldUp); }
+static inline BOOL                   SCNCameraController_InertiaEnabled(SCNCameraController self)                                                                                          { return ((BOOL (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("inertiaEnabled")); }
+static inline void                   SCNCameraController_SetInertiaEnabled(SCNCameraController self, BOOL inertiaEnabled)                                                                  { ((void (*)(SCNCameraController, SEL, BOOL))bean_msgSend)(self, bean_sel("setInertiaEnabled:"), inertiaEnabled); }
+static inline CGFloat                SCNCameraController_InertiaFriction(SCNCameraController self)                                                                                         { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("inertiaFriction")); }
+static inline void                   SCNCameraController_SetInertiaFriction(SCNCameraController self, CGFloat inertiaFriction)                                                             { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setInertiaFriction:"), inertiaFriction); }
+static inline BOOL                   SCNCameraController_IsInertiaRunning(SCNCameraController self)                                                                                        { return ((BOOL (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("isInertiaRunning")); }
+static inline CGFloat                SCNCameraController_MinimumVerticalAngle(SCNCameraController self)                                                                                    { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("minimumVerticalAngle")); }
+static inline void                   SCNCameraController_SetMinimumVerticalAngle(SCNCameraController self, CGFloat minimumVerticalAngle)                                                   { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMinimumVerticalAngle:"), minimumVerticalAngle); }
+static inline CGFloat                SCNCameraController_MaximumVerticalAngle(SCNCameraController self)                                                                                    { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("maximumVerticalAngle")); }
+static inline void                   SCNCameraController_SetMaximumVerticalAngle(SCNCameraController self, CGFloat maximumVerticalAngle)                                                   { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaximumVerticalAngle:"), maximumVerticalAngle); }
+static inline CGFloat                SCNCameraController_MinimumHorizontalAngle(SCNCameraController self)                                                                                  { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("minimumHorizontalAngle")); }
+static inline void                   SCNCameraController_SetMinimumHorizontalAngle(SCNCameraController self, CGFloat minimumHorizontalAngle)                                               { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMinimumHorizontalAngle:"), minimumHorizontalAngle); }
+static inline CGFloat                SCNCameraController_MaximumHorizontalAngle(SCNCameraController self)                                                                                  { return ((CGFloat (*)(SCNCameraController, SEL))bean_msgSend_fpret)(self, bean_sel("maximumHorizontalAngle")); }
+static inline void                   SCNCameraController_SetMaximumHorizontalAngle(SCNCameraController self, CGFloat maximumHorizontalAngle)                                               { ((void (*)(SCNCameraController, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaximumHorizontalAngle:"), maximumHorizontalAngle); }
+static inline BOOL                   SCNCameraController_InertiaRunning(SCNCameraController self)                                                                                          { return ((BOOL (*)(SCNCameraController, SEL))bean_msgSend)(self, bean_sel("inertiaRunning")); }
+#ifndef BEAN_ALLOC_SCNCameraController
+#define BEAN_ALLOC_SCNCameraController
+static inline SCNCameraController    SCNCameraController_Alloc(void)                                                                                                                       { return (SCNCameraController)bean_alloc(bean_cls("SCNCameraController")); }
+#endif
+#ifndef BEAN_NEW_SCNCameraController
+#define BEAN_NEW_SCNCameraController
+static inline SCNCameraController    SCNCameraController_New(void)                                                                                                                         { return (SCNCameraController)bean_new(bean_cls("SCNCameraController")); }
+#endif
 
 /* ===== SCNCameraControllerDelegate ===== */
 #ifndef BEAN_TYPEDEF_SCNCameraControllerDelegate
 #define BEAN_TYPEDEF_SCNCameraControllerDelegate
 typedef bean_id SCNCameraControllerDelegate;
 #endif
-static inline void    SCNCameraControllerDelegate_CameraInertiaWillStartForController(SCNCameraControllerDelegate self, SCNCameraController cameraController)    { ((void (*)(SCNCameraControllerDelegate, SEL, SCNCameraController))bean_msgSend)(self, bean_sel("cameraInertiaWillStartForController:"), cameraController); }
-static inline void    SCNCameraControllerDelegate_CameraInertiaDidEndForController(SCNCameraControllerDelegate self, SCNCameraController cameraController)       { ((void (*)(SCNCameraControllerDelegate, SEL, SCNCameraController))bean_msgSend)(self, bean_sel("cameraInertiaDidEndForController:"), cameraController); }
+static inline void                           SCNCameraControllerDelegate_CameraInertiaWillStartForController(SCNCameraControllerDelegate self, SCNCameraController cameraController)    { ((void (*)(SCNCameraControllerDelegate, SEL, SCNCameraController))bean_msgSend)(self, bean_sel("cameraInertiaWillStartForController:"), cameraController); }
+static inline void                           SCNCameraControllerDelegate_CameraInertiaDidEndForController(SCNCameraControllerDelegate self, SCNCameraController cameraController)       { ((void (*)(SCNCameraControllerDelegate, SEL, SCNCameraController))bean_msgSend)(self, bean_sel("cameraInertiaDidEndForController:"), cameraController); }
+#ifndef BEAN_ALLOC_SCNCameraControllerDelegate
+#define BEAN_ALLOC_SCNCameraControllerDelegate
+static inline SCNCameraControllerDelegate    SCNCameraControllerDelegate_Alloc(void)                                                                                                    { return (SCNCameraControllerDelegate)bean_alloc(bean_cls("SCNCameraControllerDelegate")); }
+#endif
+#ifndef BEAN_NEW_SCNCameraControllerDelegate
+#define BEAN_NEW_SCNCameraControllerDelegate
+static inline SCNCameraControllerDelegate    SCNCameraControllerDelegate_New(void)                                                                                                      { return (SCNCameraControllerDelegate)bean_new(bean_cls("SCNCameraControllerDelegate")); }
+#endif
 
 /* ===== SCNConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNConstraint
@@ -5884,6 +6244,14 @@ static inline BOOL                  SCNConstraint_IsAnimationForKeyPaused(SCNCon
 static inline NSArray               SCNConstraint_AnimationKeys(SCNConstraint self)                                                             { return ((NSArray (*)(SCNConstraint, SEL))bean_msgSend)(self, bean_sel("animationKeys")); }
 static inline BOOL                  SCNConstraint_Enabled(SCNConstraint self)                                                                   { return ((BOOL (*)(SCNConstraint, SEL))bean_msgSend)(self, bean_sel("enabled")); }
 static inline BOOL                  SCNConstraint_Incremental(SCNConstraint self)                                                               { return ((BOOL (*)(SCNConstraint, SEL))bean_msgSend)(self, bean_sel("incremental")); }
+#ifndef BEAN_ALLOC_SCNConstraint
+#define BEAN_ALLOC_SCNConstraint
+static inline SCNConstraint         SCNConstraint_Alloc(void)                                                                                   { return (SCNConstraint)bean_alloc(bean_cls("SCNConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNConstraint
+#define BEAN_NEW_SCNConstraint
+static inline SCNConstraint         SCNConstraint_New(void)                                                                                     { return (SCNConstraint)bean_new(bean_cls("SCNConstraint")); }
+#endif
 
 /* ===== SCNDistanceConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNDistanceConstraint
@@ -5897,6 +6265,14 @@ static inline CGFloat                  SCNDistanceConstraint_MinimumDistance(SCN
 static inline void                     SCNDistanceConstraint_SetMinimumDistance(SCNDistanceConstraint self, CGFloat minimumDistance)    { ((void (*)(SCNDistanceConstraint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMinimumDistance:"), minimumDistance); }
 static inline CGFloat                  SCNDistanceConstraint_MaximumDistance(SCNDistanceConstraint self)                                { return ((CGFloat (*)(SCNDistanceConstraint, SEL))bean_msgSend_fpret)(self, bean_sel("maximumDistance")); }
 static inline void                     SCNDistanceConstraint_SetMaximumDistance(SCNDistanceConstraint self, CGFloat maximumDistance)    { ((void (*)(SCNDistanceConstraint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaximumDistance:"), maximumDistance); }
+#ifndef BEAN_ALLOC_SCNDistanceConstraint
+#define BEAN_ALLOC_SCNDistanceConstraint
+static inline SCNDistanceConstraint    SCNDistanceConstraint_Alloc(void)                                                                { return (SCNDistanceConstraint)bean_alloc(bean_cls("SCNDistanceConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNDistanceConstraint
+#define BEAN_NEW_SCNDistanceConstraint
+static inline SCNDistanceConstraint    SCNDistanceConstraint_New(void)                                                                  { return (SCNDistanceConstraint)bean_new(bean_cls("SCNDistanceConstraint")); }
+#endif
 
 /* ===== SCNGeometry ===== */
 #ifndef BEAN_TYPEDEF_SCNGeometry
@@ -5961,27 +6337,43 @@ static inline NSNumber                  SCNGeometry_MinimumLanguageVersion(SCNGe
 static inline void                      SCNGeometry_SetMinimumLanguageVersion(SCNGeometry self, NSNumber minimumLanguageVersion)                              { ((void (*)(SCNGeometry, SEL, NSNumber))bean_msgSend)(self, bean_sel("setMinimumLanguageVersion:"), minimumLanguageVersion); }
 static inline id                        SCNGeometry_CopyWithZone(SCNGeometry self, NSZone* zone)                                                              { return ((id (*)(SCNGeometry, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      SCNGeometry_SupportsSecureCoding(void)                                                                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNGeometry"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNGeometry
+#define BEAN_ALLOC_SCNGeometry
+static inline SCNGeometry               SCNGeometry_Alloc(void)                                                                                               { return (SCNGeometry)bean_alloc(bean_cls("SCNGeometry")); }
+#endif
+#ifndef BEAN_NEW_SCNGeometry
+#define BEAN_NEW_SCNGeometry
+static inline SCNGeometry               SCNGeometry_New(void)                                                                                                 { return (SCNGeometry)bean_new(bean_cls("SCNGeometry")); }
+#endif
 
 /* ===== SCNHitTestResult ===== */
 #ifndef BEAN_TYPEDEF_SCNHitTestResult
 #define BEAN_TYPEDEF_SCNHitTestResult
 typedef bean_id SCNHitTestResult;
 #endif
-static inline CGPoint          SCNHitTestResult_TextureCoordinatesWithMappingChannel(SCNHitTestResult self, NSInteger channel)    { return ((CGPoint (*)(SCNHitTestResult, SEL, NSInteger))bean_msgSend_stret)(self, bean_sel("textureCoordinatesWithMappingChannel:"), channel); }
-static inline SCNNode          SCNHitTestResult_Node(SCNHitTestResult self)                                                       { return ((SCNNode (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("node")); }
-static inline NSInteger        SCNHitTestResult_GeometryIndex(SCNHitTestResult self)                                              { return ((NSInteger (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("geometryIndex")); }
-static inline NSInteger        SCNHitTestResult_FaceIndex(SCNHitTestResult self)                                                  { return ((NSInteger (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("faceIndex")); }
-static inline SCNVector3       SCNHitTestResult_LocalCoordinates(SCNHitTestResult self)                                           { return ((SCNVector3 (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("localCoordinates")); }
-static inline SCNVector3       SCNHitTestResult_WorldCoordinates(SCNHitTestResult self)                                           { return ((SCNVector3 (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("worldCoordinates")); }
-static inline SCNVector3       SCNHitTestResult_LocalNormal(SCNHitTestResult self)                                                { return ((SCNVector3 (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("localNormal")); }
-static inline SCNVector3       SCNHitTestResult_WorldNormal(SCNHitTestResult self)                                                { return ((SCNVector3 (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("worldNormal")); }
-static inline CATransform3D    SCNHitTestResult_ModelTransform(SCNHitTestResult self)                                             { return ((CATransform3D (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("modelTransform")); }
-static inline SCNNode          SCNHitTestResult_BoneNode(SCNHitTestResult self)                                                   { return ((SCNNode (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("boneNode")); }
-static inline void*            SCNHitTestResult_SimdLocalCoordinates(SCNHitTestResult self)                                       { return ((void* (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdLocalCoordinates")); }
-static inline void*            SCNHitTestResult_SimdWorldCoordinates(SCNHitTestResult self)                                       { return ((void* (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdWorldCoordinates")); }
-static inline void*            SCNHitTestResult_SimdLocalNormal(SCNHitTestResult self)                                            { return ((void* (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdLocalNormal")); }
-static inline void*            SCNHitTestResult_SimdWorldNormal(SCNHitTestResult self)                                            { return ((void* (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdWorldNormal")); }
-static inline simd_float4x4    SCNHitTestResult_SimdModelTransform(SCNHitTestResult self)                                         { return ((simd_float4x4 (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdModelTransform")); }
+static inline CGPoint             SCNHitTestResult_TextureCoordinatesWithMappingChannel(SCNHitTestResult self, NSInteger channel)    { return ((CGPoint (*)(SCNHitTestResult, SEL, NSInteger))bean_msgSend_stret)(self, bean_sel("textureCoordinatesWithMappingChannel:"), channel); }
+static inline SCNNode             SCNHitTestResult_Node(SCNHitTestResult self)                                                       { return ((SCNNode (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("node")); }
+static inline NSInteger           SCNHitTestResult_GeometryIndex(SCNHitTestResult self)                                              { return ((NSInteger (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("geometryIndex")); }
+static inline NSInteger           SCNHitTestResult_FaceIndex(SCNHitTestResult self)                                                  { return ((NSInteger (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("faceIndex")); }
+static inline SCNVector3          SCNHitTestResult_LocalCoordinates(SCNHitTestResult self)                                           { return ((SCNVector3 (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("localCoordinates")); }
+static inline SCNVector3          SCNHitTestResult_WorldCoordinates(SCNHitTestResult self)                                           { return ((SCNVector3 (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("worldCoordinates")); }
+static inline SCNVector3          SCNHitTestResult_LocalNormal(SCNHitTestResult self)                                                { return ((SCNVector3 (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("localNormal")); }
+static inline SCNVector3          SCNHitTestResult_WorldNormal(SCNHitTestResult self)                                                { return ((SCNVector3 (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("worldNormal")); }
+static inline CATransform3D       SCNHitTestResult_ModelTransform(SCNHitTestResult self)                                             { return ((CATransform3D (*)(SCNHitTestResult, SEL))bean_msgSend_stret)(self, bean_sel("modelTransform")); }
+static inline SCNNode             SCNHitTestResult_BoneNode(SCNHitTestResult self)                                                   { return ((SCNNode (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("boneNode")); }
+static inline void*               SCNHitTestResult_SimdLocalCoordinates(SCNHitTestResult self)                                       { return ((void* (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdLocalCoordinates")); }
+static inline void*               SCNHitTestResult_SimdWorldCoordinates(SCNHitTestResult self)                                       { return ((void* (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdWorldCoordinates")); }
+static inline void*               SCNHitTestResult_SimdLocalNormal(SCNHitTestResult self)                                            { return ((void* (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdLocalNormal")); }
+static inline void*               SCNHitTestResult_SimdWorldNormal(SCNHitTestResult self)                                            { return ((void* (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdWorldNormal")); }
+static inline simd_float4x4       SCNHitTestResult_SimdModelTransform(SCNHitTestResult self)                                         { return ((simd_float4x4 (*)(SCNHitTestResult, SEL))bean_msgSend)(self, bean_sel("simdModelTransform")); }
+#ifndef BEAN_ALLOC_SCNHitTestResult
+#define BEAN_ALLOC_SCNHitTestResult
+static inline SCNHitTestResult    SCNHitTestResult_Alloc(void)                                                                       { return (SCNHitTestResult)bean_alloc(bean_cls("SCNHitTestResult")); }
+#endif
+#ifndef BEAN_NEW_SCNHitTestResult
+#define BEAN_NEW_SCNHitTestResult
+static inline SCNHitTestResult    SCNHitTestResult_New(void)                                                                         { return (SCNHitTestResult)bean_new(bean_cls("SCNHitTestResult")); }
+#endif
 
 /* ===== SCNIKConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNIKConstraint
@@ -5995,6 +6387,14 @@ static inline CGFloat            SCNIKConstraint_MaxAllowedRotationAngleForJoint
 static inline SCNNode            SCNIKConstraint_ChainRootNode(SCNIKConstraint self)                                                       { return ((SCNNode (*)(SCNIKConstraint, SEL))bean_msgSend)(self, bean_sel("chainRootNode")); }
 static inline SCNVector3         SCNIKConstraint_TargetPosition(SCNIKConstraint self)                                                      { return ((SCNVector3 (*)(SCNIKConstraint, SEL))bean_msgSend_stret)(self, bean_sel("targetPosition")); }
 static inline void               SCNIKConstraint_SetTargetPosition(SCNIKConstraint self, SCNVector3 targetPosition)                        { ((void (*)(SCNIKConstraint, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setTargetPosition:"), targetPosition); }
+#ifndef BEAN_ALLOC_SCNIKConstraint
+#define BEAN_ALLOC_SCNIKConstraint
+static inline SCNIKConstraint    SCNIKConstraint_Alloc(void)                                                                               { return (SCNIKConstraint)bean_alloc(bean_cls("SCNIKConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNIKConstraint
+#define BEAN_NEW_SCNIKConstraint
+static inline SCNIKConstraint    SCNIKConstraint_New(void)                                                                                 { return (SCNIKConstraint)bean_new(bean_cls("SCNIKConstraint")); }
+#endif
 
 /* ===== SCNLayer ===== */
 #ifndef BEAN_TYPEDEF_SCNLayer
@@ -6057,6 +6457,14 @@ static inline void                       SCNLayer_SetTechnique(SCNLayer self, SC
 static inline BOOL                       SCNLayer_Playing(SCNLayer self)                                                                                                                                                     { return ((BOOL (*)(SCNLayer, SEL))bean_msgSend)(self, bean_sel("playing")); }
 static inline BOOL                       SCNLayer_JitteringEnabled(SCNLayer self)                                                                                                                                            { return ((BOOL (*)(SCNLayer, SEL))bean_msgSend)(self, bean_sel("jitteringEnabled")); }
 static inline BOOL                       SCNLayer_TemporalAntialiasingEnabled(SCNLayer self)                                                                                                                                 { return ((BOOL (*)(SCNLayer, SEL))bean_msgSend)(self, bean_sel("temporalAntialiasingEnabled")); }
+#ifndef BEAN_ALLOC_SCNLayer
+#define BEAN_ALLOC_SCNLayer
+static inline SCNLayer                   SCNLayer_Alloc(void)                                                                                                                                                                { return (SCNLayer)bean_alloc(bean_cls("SCNLayer")); }
+#endif
+#ifndef BEAN_NEW_SCNLayer
+#define BEAN_NEW_SCNLayer
+static inline SCNLayer                   SCNLayer_New(void)                                                                                                                                                                  { return (SCNLayer)bean_new(bean_cls("SCNLayer")); }
+#endif
 
 /* ===== SCNLevelOfDetail ===== */
 #ifndef BEAN_TYPEDEF_SCNLevelOfDetail
@@ -6070,6 +6478,14 @@ static inline CGFloat             SCNLevelOfDetail_ScreenSpaceRadius(SCNLevelOfD
 static inline CGFloat             SCNLevelOfDetail_WorldSpaceDistance(SCNLevelOfDetail self)                                               { return ((CGFloat (*)(SCNLevelOfDetail, SEL))bean_msgSend_fpret)(self, bean_sel("worldSpaceDistance")); }
 static inline id                  SCNLevelOfDetail_CopyWithZone(SCNLevelOfDetail self, NSZone* zone)                                       { return ((id (*)(SCNLevelOfDetail, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                SCNLevelOfDetail_SupportsSecureCoding(void)                                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNLevelOfDetail"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNLevelOfDetail
+#define BEAN_ALLOC_SCNLevelOfDetail
+static inline SCNLevelOfDetail    SCNLevelOfDetail_Alloc(void)                                                                             { return (SCNLevelOfDetail)bean_alloc(bean_cls("SCNLevelOfDetail")); }
+#endif
+#ifndef BEAN_NEW_SCNLevelOfDetail
+#define BEAN_NEW_SCNLevelOfDetail
+static inline SCNLevelOfDetail    SCNLevelOfDetail_New(void)                                                                               { return (SCNLevelOfDetail)bean_new(bean_cls("SCNLevelOfDetail")); }
+#endif
 
 /* ===== SCNLight ===== */
 #ifndef BEAN_TYPEDEF_SCNLight
@@ -6178,6 +6594,14 @@ static inline BOOL                       SCNLight_IsAnimationForKeyPaused(SCNLig
 static inline NSArray                    SCNLight_AnimationKeys(SCNLight self)                                                                         { return ((NSArray (*)(SCNLight, SEL))bean_msgSend)(self, bean_sel("animationKeys")); }
 static inline id                         SCNLight_CopyWithZone(SCNLight self, NSZone* zone)                                                            { return ((id (*)(SCNLight, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                       SCNLight_SupportsSecureCoding(void)                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNLight"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNLight
+#define BEAN_ALLOC_SCNLight
+static inline SCNLight                   SCNLight_Alloc(void)                                                                                          { return (SCNLight)bean_alloc(bean_cls("SCNLight")); }
+#endif
+#ifndef BEAN_NEW_SCNLight
+#define BEAN_NEW_SCNLight
+static inline SCNLight                   SCNLight_New(void)                                                                                            { return (SCNLight)bean_new(bean_cls("SCNLight")); }
+#endif
 
 /* ===== SCNLookAtConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNLookAtConstraint
@@ -6195,6 +6619,14 @@ static inline SCNVector3             SCNLookAtConstraint_WorldUp(SCNLookAtConstr
 static inline void                   SCNLookAtConstraint_SetWorldUp(SCNLookAtConstraint self, SCNVector3 worldUp)                  { ((void (*)(SCNLookAtConstraint, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setWorldUp:"), worldUp); }
 static inline BOOL                   SCNLookAtConstraint_GimbalLockEnabled(SCNLookAtConstraint self)                               { return ((BOOL (*)(SCNLookAtConstraint, SEL))bean_msgSend)(self, bean_sel("gimbalLockEnabled")); }
 static inline void                   SCNLookAtConstraint_SetGimbalLockEnabled(SCNLookAtConstraint self, BOOL gimbalLockEnabled)    { ((void (*)(SCNLookAtConstraint, SEL, BOOL))bean_msgSend)(self, bean_sel("setGimbalLockEnabled:"), gimbalLockEnabled); }
+#ifndef BEAN_ALLOC_SCNLookAtConstraint
+#define BEAN_ALLOC_SCNLookAtConstraint
+static inline SCNLookAtConstraint    SCNLookAtConstraint_Alloc(void)                                                               { return (SCNLookAtConstraint)bean_alloc(bean_cls("SCNLookAtConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNLookAtConstraint
+#define BEAN_NEW_SCNLookAtConstraint
+static inline SCNLookAtConstraint    SCNLookAtConstraint_New(void)                                                                 { return (SCNLookAtConstraint)bean_new(bean_cls("SCNLookAtConstraint")); }
+#endif
 
 /* ===== SCNMaterial ===== */
 static inline SCNMaterial            SCNMaterial_Material(void)                                                                              { return ((SCNMaterial (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNMaterial"), bean_sel("material")); }
@@ -6270,6 +6702,14 @@ static inline id                     SCNMaterial_CopyWithZone(SCNMaterial self, 
 static inline BOOL                   SCNMaterial_SupportsSecureCoding(void)                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNMaterial"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                   SCNMaterial_LitPerPixel(SCNMaterial self)                                                               { return ((BOOL (*)(SCNMaterial, SEL))bean_msgSend)(self, bean_sel("litPerPixel")); }
 static inline BOOL                   SCNMaterial_DoubleSided(SCNMaterial self)                                                               { return ((BOOL (*)(SCNMaterial, SEL))bean_msgSend)(self, bean_sel("doubleSided")); }
+#ifndef BEAN_ALLOC_SCNMaterial
+#define BEAN_ALLOC_SCNMaterial
+static inline SCNMaterial            SCNMaterial_Alloc(void)                                                                                 { return (SCNMaterial)bean_alloc(bean_cls("SCNMaterial")); }
+#endif
+#ifndef BEAN_NEW_SCNMaterial
+#define BEAN_NEW_SCNMaterial
+static inline SCNMaterial            SCNMaterial_New(void)                                                                                   { return (SCNMaterial)bean_new(bean_cls("SCNMaterial")); }
+#endif
 
 /* ===== SCNMaterialProperty ===== */
 static inline SCNMaterialProperty    SCNMaterialProperty_MaterialPropertyWithContents(id contents)                                                             { return ((SCNMaterialProperty (*)(bean_class, SEL, id))bean_msgSend)(bean_cls("SCNMaterialProperty"), bean_sel("materialPropertyWithContents:"), contents); }
@@ -6315,6 +6755,14 @@ static inline void                   SCNMaterialProperty_SetSpeed_ForAnimationKe
 static inline BOOL                   SCNMaterialProperty_IsAnimationForKeyPaused(SCNMaterialProperty self, NSString key)                                       { return ((BOOL (*)(SCNMaterialProperty, SEL, NSString))bean_msgSend)(self, bean_sel("isAnimationForKeyPaused:"), key); }
 static inline NSArray                SCNMaterialProperty_AnimationKeys(SCNMaterialProperty self)                                                               { return ((NSArray (*)(SCNMaterialProperty, SEL))bean_msgSend)(self, bean_sel("animationKeys")); }
 static inline BOOL                   SCNMaterialProperty_SupportsSecureCoding(void)                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNMaterialProperty"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNMaterialProperty
+#define BEAN_ALLOC_SCNMaterialProperty
+static inline SCNMaterialProperty    SCNMaterialProperty_Alloc(void)                                                                                           { return (SCNMaterialProperty)bean_alloc(bean_cls("SCNMaterialProperty")); }
+#endif
+#ifndef BEAN_NEW_SCNMaterialProperty
+#define BEAN_NEW_SCNMaterialProperty
+static inline SCNMaterialProperty    SCNMaterialProperty_New(void)                                                                                             { return (SCNMaterialProperty)bean_new(bean_cls("SCNMaterialProperty")); }
+#endif
 
 /* ===== SCNMorpher ===== */
 #ifndef BEAN_TYPEDEF_SCNMorpher
@@ -6348,6 +6796,14 @@ static inline void                         SCNMorpher_SetSpeed_ForAnimationKey(S
 static inline BOOL                         SCNMorpher_IsAnimationForKeyPaused(SCNMorpher self, NSString key)                                     { return ((BOOL (*)(SCNMorpher, SEL, NSString))bean_msgSend)(self, bean_sel("isAnimationForKeyPaused:"), key); }
 static inline NSArray                      SCNMorpher_AnimationKeys(SCNMorpher self)                                                             { return ((NSArray (*)(SCNMorpher, SEL))bean_msgSend)(self, bean_sel("animationKeys")); }
 static inline BOOL                         SCNMorpher_SupportsSecureCoding(void)                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNMorpher"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNMorpher
+#define BEAN_ALLOC_SCNMorpher
+static inline SCNMorpher                   SCNMorpher_Alloc(void)                                                                                { return (SCNMorpher)bean_alloc(bean_cls("SCNMorpher")); }
+#endif
+#ifndef BEAN_NEW_SCNMorpher
+#define BEAN_NEW_SCNMorpher
+static inline SCNMorpher                   SCNMorpher_New(void)                                                                                  { return (SCNMorpher)bean_new(bean_cls("SCNMorpher")); }
+#endif
 
 /* ===== SCNNode ===== */
 static inline SCNNode                 SCNNode_Node(void)                                                                                                               { return ((SCNNode (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNNode"), bean_sel("node")); }
@@ -6516,13 +6972,29 @@ static inline void                    SCNNode_SetBoundingBoxMin_Max(SCNNode self
 static inline BOOL                    SCNNode_GetBoundingSphereCenter_Radius(SCNNode self, SCNVector3* center, CGFloat radius)                                         { return ((BOOL (*)(SCNNode, SEL, SCNVector3*, CGFloat))bean_msgSend)(self, bean_sel("getBoundingSphereCenter:radius:"), center, radius); }
 static inline BOOL                    SCNNode_Hidden(SCNNode self)                                                                                                     { return ((BOOL (*)(SCNNode, SEL))bean_msgSend)(self, bean_sel("hidden")); }
 static inline BOOL                    SCNNode_Paused(SCNNode self)                                                                                                     { return ((BOOL (*)(SCNNode, SEL))bean_msgSend)(self, bean_sel("paused")); }
+#ifndef BEAN_ALLOC_SCNNode
+#define BEAN_ALLOC_SCNNode
+static inline SCNNode                 SCNNode_Alloc(void)                                                                                                              { return (SCNNode)bean_alloc(bean_cls("SCNNode")); }
+#endif
+#ifndef BEAN_NEW_SCNNode
+#define BEAN_NEW_SCNNode
+static inline SCNNode                 SCNNode_New(void)                                                                                                                { return (SCNNode)bean_new(bean_cls("SCNNode")); }
+#endif
 
 /* ===== SCNNodeRendererDelegate ===== */
 #ifndef BEAN_TYPEDEF_SCNNodeRendererDelegate
 #define BEAN_TYPEDEF_SCNNodeRendererDelegate
 typedef bean_id SCNNodeRendererDelegate;
 #endif
-static inline void    SCNNodeRendererDelegate_RenderNode_Renderer_Arguments(SCNNodeRendererDelegate self, SCNNode node, SCNRenderer renderer, NSDictionary arguments)    { ((void (*)(SCNNodeRendererDelegate, SEL, SCNNode, SCNRenderer, NSDictionary))bean_msgSend)(self, bean_sel("renderNode:renderer:arguments:"), node, renderer, arguments); }
+static inline void                       SCNNodeRendererDelegate_RenderNode_Renderer_Arguments(SCNNodeRendererDelegate self, SCNNode node, SCNRenderer renderer, NSDictionary arguments)    { ((void (*)(SCNNodeRendererDelegate, SEL, SCNNode, SCNRenderer, NSDictionary))bean_msgSend)(self, bean_sel("renderNode:renderer:arguments:"), node, renderer, arguments); }
+#ifndef BEAN_ALLOC_SCNNodeRendererDelegate
+#define BEAN_ALLOC_SCNNodeRendererDelegate
+static inline SCNNodeRendererDelegate    SCNNodeRendererDelegate_Alloc(void)                                                                                                                { return (SCNNodeRendererDelegate)bean_alloc(bean_cls("SCNNodeRendererDelegate")); }
+#endif
+#ifndef BEAN_NEW_SCNNodeRendererDelegate
+#define BEAN_NEW_SCNNodeRendererDelegate
+static inline SCNNodeRendererDelegate    SCNNodeRendererDelegate_New(void)                                                                                                                  { return (SCNNodeRendererDelegate)bean_new(bean_cls("SCNNodeRendererDelegate")); }
+#endif
 
 /* ===== SCNParticlePropertyController ===== */
 #ifndef BEAN_TYPEDEF_SCNParticlePropertyController
@@ -6544,6 +7016,14 @@ static inline NSString                         SCNParticlePropertyController_Inp
 static inline void                             SCNParticlePropertyController_SetInputProperty(SCNParticlePropertyController self, NSString inputProperty)        { ((void (*)(SCNParticlePropertyController, SEL, NSString))bean_msgSend)(self, bean_sel("setInputProperty:"), inputProperty); }
 static inline BOOL                             SCNParticlePropertyController_SupportsSecureCoding(void)                                                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNParticlePropertyController"), bean_sel("supportsSecureCoding")); }
 static inline id                               SCNParticlePropertyController_CopyWithZone(SCNParticlePropertyController self, NSZone* zone)                      { return ((id (*)(SCNParticlePropertyController, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_SCNParticlePropertyController
+#define BEAN_ALLOC_SCNParticlePropertyController
+static inline SCNParticlePropertyController    SCNParticlePropertyController_Alloc(void)                                                                         { return (SCNParticlePropertyController)bean_alloc(bean_cls("SCNParticlePropertyController")); }
+#endif
+#ifndef BEAN_NEW_SCNParticlePropertyController
+#define BEAN_NEW_SCNParticlePropertyController
+static inline SCNParticlePropertyController    SCNParticlePropertyController_New(void)                                                                           { return (SCNParticlePropertyController)bean_new(bean_cls("SCNParticlePropertyController")); }
+#endif
 
 /* ===== SCNParticleSystem ===== */
 static inline SCNParticleSystem                        SCNParticleSystem_ParticleSystem(void)                                                                                                                   { return ((SCNParticleSystem (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNParticleSystem"), bean_sel("particleSystem")); }
@@ -6700,6 +7180,14 @@ static inline NSArray                                  SCNParticleSystem_Animati
 static inline BOOL                                     SCNParticleSystem_Local(SCNParticleSystem self)                                                                                                          { return ((BOOL (*)(SCNParticleSystem, SEL))bean_msgSend)(self, bean_sel("local")); }
 static inline BOOL                                     SCNParticleSystem_BlackPassEnabled(SCNParticleSystem self)                                                                                               { return ((BOOL (*)(SCNParticleSystem, SEL))bean_msgSend)(self, bean_sel("blackPassEnabled")); }
 static inline BOOL                                     SCNParticleSystem_LightingEnabled(SCNParticleSystem self)                                                                                                { return ((BOOL (*)(SCNParticleSystem, SEL))bean_msgSend)(self, bean_sel("lightingEnabled")); }
+#ifndef BEAN_ALLOC_SCNParticleSystem
+#define BEAN_ALLOC_SCNParticleSystem
+static inline SCNParticleSystem                        SCNParticleSystem_Alloc(void)                                                                                                                            { return (SCNParticleSystem)bean_alloc(bean_cls("SCNParticleSystem")); }
+#endif
+#ifndef BEAN_NEW_SCNParticleSystem
+#define BEAN_NEW_SCNParticleSystem
+static inline SCNParticleSystem                        SCNParticleSystem_New(void)                                                                                                                              { return (SCNParticleSystem)bean_new(bean_cls("SCNParticleSystem")); }
+#endif
 
 /* ===== SCNPhysicsBallSocketJoint ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsBallSocketJoint
@@ -6714,6 +7202,14 @@ static inline void                         SCNPhysicsBallSocketJoint_SetAnchorA(
 static inline SCNPhysicsBody               SCNPhysicsBallSocketJoint_BodyB(SCNPhysicsBallSocketJoint self)                                                                                       { return ((SCNPhysicsBody (*)(SCNPhysicsBallSocketJoint, SEL))bean_msgSend)(self, bean_sel("bodyB")); }
 static inline SCNVector3                   SCNPhysicsBallSocketJoint_AnchorB(SCNPhysicsBallSocketJoint self)                                                                                     { return ((SCNVector3 (*)(SCNPhysicsBallSocketJoint, SEL))bean_msgSend_stret)(self, bean_sel("anchorB")); }
 static inline void                         SCNPhysicsBallSocketJoint_SetAnchorB(SCNPhysicsBallSocketJoint self, SCNVector3 anchorB)                                                              { ((void (*)(SCNPhysicsBallSocketJoint, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setAnchorB:"), anchorB); }
+#ifndef BEAN_ALLOC_SCNPhysicsBallSocketJoint
+#define BEAN_ALLOC_SCNPhysicsBallSocketJoint
+static inline SCNPhysicsBallSocketJoint    SCNPhysicsBallSocketJoint_Alloc(void)                                                                                                                 { return (SCNPhysicsBallSocketJoint)bean_alloc(bean_cls("SCNPhysicsBallSocketJoint")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsBallSocketJoint
+#define BEAN_NEW_SCNPhysicsBallSocketJoint
+static inline SCNPhysicsBallSocketJoint    SCNPhysicsBallSocketJoint_New(void)                                                                                                                   { return (SCNPhysicsBallSocketJoint)bean_new(bean_cls("SCNPhysicsBallSocketJoint")); }
+#endif
 
 /* ===== SCNPhysicsBody ===== */
 static inline SCNPhysicsBody        SCNPhysicsBody_StaticBody(void)                                                                                                { return ((SCNPhysicsBody (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsBody"), bean_sel("staticBody")); }
@@ -6778,6 +7274,14 @@ static inline void                  SCNPhysicsBody_SetAngularRestingThreshold(SC
 static inline id                    SCNPhysicsBody_CopyWithZone(SCNPhysicsBody self, NSZone* zone)                                                                 { return ((id (*)(SCNPhysicsBody, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  SCNPhysicsBody_SupportsSecureCoding(void)                                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsBody"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                  SCNPhysicsBody_AffectedByGravity(SCNPhysicsBody self)                                                                          { return ((BOOL (*)(SCNPhysicsBody, SEL))bean_msgSend)(self, bean_sel("affectedByGravity")); }
+#ifndef BEAN_ALLOC_SCNPhysicsBody
+#define BEAN_ALLOC_SCNPhysicsBody
+static inline SCNPhysicsBody        SCNPhysicsBody_Alloc(void)                                                                                                     { return (SCNPhysicsBody)bean_alloc(bean_cls("SCNPhysicsBody")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsBody
+#define BEAN_NEW_SCNPhysicsBody
+static inline SCNPhysicsBody        SCNPhysicsBody_New(void)                                                                                                       { return (SCNPhysicsBody)bean_new(bean_cls("SCNPhysicsBody")); }
+#endif
 
 /* ===== SCNPhysicsConeTwistJoint ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsConeTwistJoint
@@ -6798,28 +7302,52 @@ static inline CGFloat                     SCNPhysicsConeTwistJoint_MaximumAngula
 static inline void                        SCNPhysicsConeTwistJoint_SetMaximumAngularLimit2(SCNPhysicsConeTwistJoint self, CGFloat maximumAngularLimit2)                                          { ((void (*)(SCNPhysicsConeTwistJoint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaximumAngularLimit2:"), maximumAngularLimit2); }
 static inline CGFloat                     SCNPhysicsConeTwistJoint_MaximumTwistAngle(SCNPhysicsConeTwistJoint self)                                                                              { return ((CGFloat (*)(SCNPhysicsConeTwistJoint, SEL))bean_msgSend_fpret)(self, bean_sel("maximumTwistAngle")); }
 static inline void                        SCNPhysicsConeTwistJoint_SetMaximumTwistAngle(SCNPhysicsConeTwistJoint self, CGFloat maximumTwistAngle)                                                { ((void (*)(SCNPhysicsConeTwistJoint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaximumTwistAngle:"), maximumTwistAngle); }
+#ifndef BEAN_ALLOC_SCNPhysicsConeTwistJoint
+#define BEAN_ALLOC_SCNPhysicsConeTwistJoint
+static inline SCNPhysicsConeTwistJoint    SCNPhysicsConeTwistJoint_Alloc(void)                                                                                                                   { return (SCNPhysicsConeTwistJoint)bean_alloc(bean_cls("SCNPhysicsConeTwistJoint")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsConeTwistJoint
+#define BEAN_NEW_SCNPhysicsConeTwistJoint
+static inline SCNPhysicsConeTwistJoint    SCNPhysicsConeTwistJoint_New(void)                                                                                                                     { return (SCNPhysicsConeTwistJoint)bean_new(bean_cls("SCNPhysicsConeTwistJoint")); }
+#endif
 
 /* ===== SCNPhysicsContact ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsContact
 #define BEAN_TYPEDEF_SCNPhysicsContact
 typedef bean_id SCNPhysicsContact;
 #endif
-static inline SCNNode       SCNPhysicsContact_NodeA(SCNPhysicsContact self)                  { return ((SCNNode (*)(SCNPhysicsContact, SEL))bean_msgSend)(self, bean_sel("nodeA")); }
-static inline SCNNode       SCNPhysicsContact_NodeB(SCNPhysicsContact self)                  { return ((SCNNode (*)(SCNPhysicsContact, SEL))bean_msgSend)(self, bean_sel("nodeB")); }
-static inline SCNVector3    SCNPhysicsContact_ContactPoint(SCNPhysicsContact self)           { return ((SCNVector3 (*)(SCNPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactPoint")); }
-static inline SCNVector3    SCNPhysicsContact_ContactNormal(SCNPhysicsContact self)          { return ((SCNVector3 (*)(SCNPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactNormal")); }
-static inline CGFloat       SCNPhysicsContact_CollisionImpulse(SCNPhysicsContact self)       { return ((CGFloat (*)(SCNPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("collisionImpulse")); }
-static inline CGFloat       SCNPhysicsContact_PenetrationDistance(SCNPhysicsContact self)    { return ((CGFloat (*)(SCNPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("penetrationDistance")); }
-static inline CGFloat       SCNPhysicsContact_SweepTestFraction(SCNPhysicsContact self)      { return ((CGFloat (*)(SCNPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("sweepTestFraction")); }
+static inline SCNNode              SCNPhysicsContact_NodeA(SCNPhysicsContact self)                  { return ((SCNNode (*)(SCNPhysicsContact, SEL))bean_msgSend)(self, bean_sel("nodeA")); }
+static inline SCNNode              SCNPhysicsContact_NodeB(SCNPhysicsContact self)                  { return ((SCNNode (*)(SCNPhysicsContact, SEL))bean_msgSend)(self, bean_sel("nodeB")); }
+static inline SCNVector3           SCNPhysicsContact_ContactPoint(SCNPhysicsContact self)           { return ((SCNVector3 (*)(SCNPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactPoint")); }
+static inline SCNVector3           SCNPhysicsContact_ContactNormal(SCNPhysicsContact self)          { return ((SCNVector3 (*)(SCNPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactNormal")); }
+static inline CGFloat              SCNPhysicsContact_CollisionImpulse(SCNPhysicsContact self)       { return ((CGFloat (*)(SCNPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("collisionImpulse")); }
+static inline CGFloat              SCNPhysicsContact_PenetrationDistance(SCNPhysicsContact self)    { return ((CGFloat (*)(SCNPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("penetrationDistance")); }
+static inline CGFloat              SCNPhysicsContact_SweepTestFraction(SCNPhysicsContact self)      { return ((CGFloat (*)(SCNPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("sweepTestFraction")); }
+#ifndef BEAN_ALLOC_SCNPhysicsContact
+#define BEAN_ALLOC_SCNPhysicsContact
+static inline SCNPhysicsContact    SCNPhysicsContact_Alloc(void)                                    { return (SCNPhysicsContact)bean_alloc(bean_cls("SCNPhysicsContact")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsContact
+#define BEAN_NEW_SCNPhysicsContact
+static inline SCNPhysicsContact    SCNPhysicsContact_New(void)                                      { return (SCNPhysicsContact)bean_new(bean_cls("SCNPhysicsContact")); }
+#endif
 
 /* ===== SCNPhysicsContactDelegate ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsContactDelegate
 #define BEAN_TYPEDEF_SCNPhysicsContactDelegate
 typedef bean_id SCNPhysicsContactDelegate;
 #endif
-static inline void    SCNPhysicsContactDelegate_PhysicsWorld_DidBeginContact(SCNPhysicsContactDelegate self, SCNPhysicsWorld world, SCNPhysicsContact contact)     { ((void (*)(SCNPhysicsContactDelegate, SEL, SCNPhysicsWorld, SCNPhysicsContact))bean_msgSend)(self, bean_sel("physicsWorld:didBeginContact:"), world, contact); }
-static inline void    SCNPhysicsContactDelegate_PhysicsWorld_DidUpdateContact(SCNPhysicsContactDelegate self, SCNPhysicsWorld world, SCNPhysicsContact contact)    { ((void (*)(SCNPhysicsContactDelegate, SEL, SCNPhysicsWorld, SCNPhysicsContact))bean_msgSend)(self, bean_sel("physicsWorld:didUpdateContact:"), world, contact); }
-static inline void    SCNPhysicsContactDelegate_PhysicsWorld_DidEndContact(SCNPhysicsContactDelegate self, SCNPhysicsWorld world, SCNPhysicsContact contact)       { ((void (*)(SCNPhysicsContactDelegate, SEL, SCNPhysicsWorld, SCNPhysicsContact))bean_msgSend)(self, bean_sel("physicsWorld:didEndContact:"), world, contact); }
+static inline void                         SCNPhysicsContactDelegate_PhysicsWorld_DidBeginContact(SCNPhysicsContactDelegate self, SCNPhysicsWorld world, SCNPhysicsContact contact)     { ((void (*)(SCNPhysicsContactDelegate, SEL, SCNPhysicsWorld, SCNPhysicsContact))bean_msgSend)(self, bean_sel("physicsWorld:didBeginContact:"), world, contact); }
+static inline void                         SCNPhysicsContactDelegate_PhysicsWorld_DidUpdateContact(SCNPhysicsContactDelegate self, SCNPhysicsWorld world, SCNPhysicsContact contact)    { ((void (*)(SCNPhysicsContactDelegate, SEL, SCNPhysicsWorld, SCNPhysicsContact))bean_msgSend)(self, bean_sel("physicsWorld:didUpdateContact:"), world, contact); }
+static inline void                         SCNPhysicsContactDelegate_PhysicsWorld_DidEndContact(SCNPhysicsContactDelegate self, SCNPhysicsWorld world, SCNPhysicsContact contact)       { ((void (*)(SCNPhysicsContactDelegate, SEL, SCNPhysicsWorld, SCNPhysicsContact))bean_msgSend)(self, bean_sel("physicsWorld:didEndContact:"), world, contact); }
+#ifndef BEAN_ALLOC_SCNPhysicsContactDelegate
+#define BEAN_ALLOC_SCNPhysicsContactDelegate
+static inline SCNPhysicsContactDelegate    SCNPhysicsContactDelegate_Alloc(void)                                                                                                        { return (SCNPhysicsContactDelegate)bean_alloc(bean_cls("SCNPhysicsContactDelegate")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsContactDelegate
+#define BEAN_NEW_SCNPhysicsContactDelegate
+static inline SCNPhysicsContactDelegate    SCNPhysicsContactDelegate_New(void)                                                                                                          { return (SCNPhysicsContactDelegate)bean_new(bean_cls("SCNPhysicsContactDelegate")); }
+#endif
 
 /* ===== SCNPhysicsHingeJoint ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsHingeJoint
@@ -6838,6 +7366,14 @@ static inline SCNVector3              SCNPhysicsHingeJoint_AxisB(SCNPhysicsHinge
 static inline void                    SCNPhysicsHingeJoint_SetAxisB(SCNPhysicsHingeJoint self, SCNVector3 axisB)                                                                                                                       { ((void (*)(SCNPhysicsHingeJoint, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setAxisB:"), axisB); }
 static inline SCNVector3              SCNPhysicsHingeJoint_AnchorB(SCNPhysicsHingeJoint self)                                                                                                                                          { return ((SCNVector3 (*)(SCNPhysicsHingeJoint, SEL))bean_msgSend_stret)(self, bean_sel("anchorB")); }
 static inline void                    SCNPhysicsHingeJoint_SetAnchorB(SCNPhysicsHingeJoint self, SCNVector3 anchorB)                                                                                                                   { ((void (*)(SCNPhysicsHingeJoint, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setAnchorB:"), anchorB); }
+#ifndef BEAN_ALLOC_SCNPhysicsHingeJoint
+#define BEAN_ALLOC_SCNPhysicsHingeJoint
+static inline SCNPhysicsHingeJoint    SCNPhysicsHingeJoint_Alloc(void)                                                                                                                                                                 { return (SCNPhysicsHingeJoint)bean_alloc(bean_cls("SCNPhysicsHingeJoint")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsHingeJoint
+#define BEAN_NEW_SCNPhysicsHingeJoint
+static inline SCNPhysicsHingeJoint    SCNPhysicsHingeJoint_New(void)                                                                                                                                                                   { return (SCNPhysicsHingeJoint)bean_new(bean_cls("SCNPhysicsHingeJoint")); }
+#endif
 
 /* ===== SCNPhysicsShape ===== */
 static inline SCNPhysicsShape    SCNPhysicsShape_ShapeWithGeometry_Options(SCNGeometry geometry, NSDictionary options)    { return ((SCNPhysicsShape (*)(bean_class, SEL, SCNGeometry, NSDictionary))bean_msgSend)(bean_cls("SCNPhysicsShape"), bean_sel("shapeWithGeometry:options:"), geometry, options); }
@@ -6848,6 +7384,14 @@ static inline id                 SCNPhysicsShape_SourceObject(SCNPhysicsShape se
 static inline NSArray            SCNPhysicsShape_Transforms(SCNPhysicsShape self)                                         { return ((NSArray (*)(SCNPhysicsShape, SEL))bean_msgSend)(self, bean_sel("transforms")); }
 static inline id                 SCNPhysicsShape_CopyWithZone(SCNPhysicsShape self, NSZone* zone)                         { return ((id (*)(SCNPhysicsShape, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL               SCNPhysicsShape_SupportsSecureCoding(void)                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsShape"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNPhysicsShape
+#define BEAN_ALLOC_SCNPhysicsShape
+static inline SCNPhysicsShape    SCNPhysicsShape_Alloc(void)                                                              { return (SCNPhysicsShape)bean_alloc(bean_cls("SCNPhysicsShape")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsShape
+#define BEAN_NEW_SCNPhysicsShape
+static inline SCNPhysicsShape    SCNPhysicsShape_New(void)                                                                { return (SCNPhysicsShape)bean_new(bean_cls("SCNPhysicsShape")); }
+#endif
 
 /* ===== SCNPhysicsSliderJoint ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsSliderJoint
@@ -6882,6 +7426,14 @@ static inline CGFloat                  SCNPhysicsSliderJoint_MotorTargetAngularV
 static inline void                     SCNPhysicsSliderJoint_SetMotorTargetAngularVelocity(SCNPhysicsSliderJoint self, CGFloat motorTargetAngularVelocity)                                                                               { ((void (*)(SCNPhysicsSliderJoint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMotorTargetAngularVelocity:"), motorTargetAngularVelocity); }
 static inline CGFloat                  SCNPhysicsSliderJoint_MotorMaximumTorque(SCNPhysicsSliderJoint self)                                                                                                                              { return ((CGFloat (*)(SCNPhysicsSliderJoint, SEL))bean_msgSend_fpret)(self, bean_sel("motorMaximumTorque")); }
 static inline void                     SCNPhysicsSliderJoint_SetMotorMaximumTorque(SCNPhysicsSliderJoint self, CGFloat motorMaximumTorque)                                                                                               { ((void (*)(SCNPhysicsSliderJoint, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMotorMaximumTorque:"), motorMaximumTorque); }
+#ifndef BEAN_ALLOC_SCNPhysicsSliderJoint
+#define BEAN_ALLOC_SCNPhysicsSliderJoint
+static inline SCNPhysicsSliderJoint    SCNPhysicsSliderJoint_Alloc(void)                                                                                                                                                                 { return (SCNPhysicsSliderJoint)bean_alloc(bean_cls("SCNPhysicsSliderJoint")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsSliderJoint
+#define BEAN_NEW_SCNPhysicsSliderJoint
+static inline SCNPhysicsSliderJoint    SCNPhysicsSliderJoint_New(void)                                                                                                                                                                   { return (SCNPhysicsSliderJoint)bean_new(bean_cls("SCNPhysicsSliderJoint")); }
+#endif
 
 /* ===== SCNPhysicsVehicle ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsVehicle
@@ -6895,6 +7447,14 @@ static inline void                 SCNPhysicsVehicle_ApplyBrakingForce_ForWheelA
 static inline CGFloat              SCNPhysicsVehicle_SpeedInKilometersPerHour(SCNPhysicsVehicle self)                                             { return ((CGFloat (*)(SCNPhysicsVehicle, SEL))bean_msgSend_fpret)(self, bean_sel("speedInKilometersPerHour")); }
 static inline NSArray              SCNPhysicsVehicle_Wheels(SCNPhysicsVehicle self)                                                               { return ((NSArray (*)(SCNPhysicsVehicle, SEL))bean_msgSend)(self, bean_sel("wheels")); }
 static inline SCNPhysicsBody       SCNPhysicsVehicle_ChassisBody(SCNPhysicsVehicle self)                                                          { return ((SCNPhysicsBody (*)(SCNPhysicsVehicle, SEL))bean_msgSend)(self, bean_sel("chassisBody")); }
+#ifndef BEAN_ALLOC_SCNPhysicsVehicle
+#define BEAN_ALLOC_SCNPhysicsVehicle
+static inline SCNPhysicsVehicle    SCNPhysicsVehicle_Alloc(void)                                                                                  { return (SCNPhysicsVehicle)bean_alloc(bean_cls("SCNPhysicsVehicle")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsVehicle
+#define BEAN_NEW_SCNPhysicsVehicle
+static inline SCNPhysicsVehicle    SCNPhysicsVehicle_New(void)                                                                                    { return (SCNPhysicsVehicle)bean_new(bean_cls("SCNPhysicsVehicle")); }
+#endif
 
 /* ===== SCNPhysicsVehicleWheel ===== */
 #ifndef BEAN_TYPEDEF_SCNPhysicsVehicleWheel
@@ -6927,36 +7487,60 @@ static inline CGFloat                   SCNPhysicsVehicleWheel_SuspensionRestLen
 static inline void                      SCNPhysicsVehicleWheel_SetSuspensionRestLength(SCNPhysicsVehicleWheel self, CGFloat suspensionRestLength)          { ((void (*)(SCNPhysicsVehicleWheel, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSuspensionRestLength:"), suspensionRestLength); }
 static inline id                        SCNPhysicsVehicleWheel_CopyWithZone(SCNPhysicsVehicleWheel self, NSZone* zone)                                     { return ((id (*)(SCNPhysicsVehicleWheel, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      SCNPhysicsVehicleWheel_SupportsSecureCoding(void)                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsVehicleWheel"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNPhysicsVehicleWheel
+#define BEAN_ALLOC_SCNPhysicsVehicleWheel
+static inline SCNPhysicsVehicleWheel    SCNPhysicsVehicleWheel_Alloc(void)                                                                                 { return (SCNPhysicsVehicleWheel)bean_alloc(bean_cls("SCNPhysicsVehicleWheel")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsVehicleWheel
+#define BEAN_NEW_SCNPhysicsVehicleWheel
+static inline SCNPhysicsVehicleWheel    SCNPhysicsVehicleWheel_New(void)                                                                                   { return (SCNPhysicsVehicleWheel)bean_new(bean_cls("SCNPhysicsVehicleWheel")); }
+#endif
 
 /* ===== SCNPhysicsWorld ===== */
-static inline void          SCNPhysicsWorld_AddBehavior(SCNPhysicsWorld self, SCNPhysicsBehavior behavior)                                                                                                         { ((void (*)(SCNPhysicsWorld, SEL, SCNPhysicsBehavior))bean_msgSend)(self, bean_sel("addBehavior:"), behavior); }
-static inline void          SCNPhysicsWorld_RemoveBehavior(SCNPhysicsWorld self, SCNPhysicsBehavior behavior)                                                                                                      { ((void (*)(SCNPhysicsWorld, SEL, SCNPhysicsBehavior))bean_msgSend)(self, bean_sel("removeBehavior:"), behavior); }
-static inline void          SCNPhysicsWorld_RemoveAllBehaviors(SCNPhysicsWorld self)                                                                                                                               { ((void (*)(SCNPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("removeAllBehaviors")); }
-static inline NSArray       SCNPhysicsWorld_RayTestWithSegmentFromPoint_ToPoint_Options(SCNPhysicsWorld self, SCNVector3 origin, SCNVector3 dest, NSDictionary options)                                            { return ((NSArray (*)(SCNPhysicsWorld, SEL, SCNVector3, SCNVector3, NSDictionary))bean_msgSend)(self, bean_sel("rayTestWithSegmentFromPoint:toPoint:options:"), origin, dest, options); }
-static inline NSArray       SCNPhysicsWorld_ContactTestBetweenBody_AndBody_Options(SCNPhysicsWorld self, SCNPhysicsBody bodyA, SCNPhysicsBody bodyB, NSDictionary options)                                         { return ((NSArray (*)(SCNPhysicsWorld, SEL, SCNPhysicsBody, SCNPhysicsBody, NSDictionary))bean_msgSend)(self, bean_sel("contactTestBetweenBody:andBody:options:"), bodyA, bodyB, options); }
-static inline NSArray       SCNPhysicsWorld_ContactTestWithBody_Options(SCNPhysicsWorld self, SCNPhysicsBody body, NSDictionary options)                                                                           { return ((NSArray (*)(SCNPhysicsWorld, SEL, SCNPhysicsBody, NSDictionary))bean_msgSend)(self, bean_sel("contactTestWithBody:options:"), body, options); }
-static inline NSArray       SCNPhysicsWorld_ConvexSweepTestWithShape_FromTransform_ToTransform_Options(SCNPhysicsWorld self, SCNPhysicsShape shape, CATransform3D from, CATransform3D to, NSDictionary options)    { return ((NSArray (*)(SCNPhysicsWorld, SEL, SCNPhysicsShape, CATransform3D, CATransform3D, NSDictionary))bean_msgSend)(self, bean_sel("convexSweepTestWithShape:fromTransform:toTransform:options:"), shape, from, to, options); }
-static inline void          SCNPhysicsWorld_UpdateCollisionPairs(SCNPhysicsWorld self)                                                                                                                             { ((void (*)(SCNPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("updateCollisionPairs")); }
-static inline SCNVector3    SCNPhysicsWorld_Gravity(SCNPhysicsWorld self)                                                                                                                                          { return ((SCNVector3 (*)(SCNPhysicsWorld, SEL))bean_msgSend_stret)(self, bean_sel("gravity")); }
-static inline void          SCNPhysicsWorld_SetGravity(SCNPhysicsWorld self, SCNVector3 gravity)                                                                                                                   { ((void (*)(SCNPhysicsWorld, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setGravity:"), gravity); }
-static inline CGFloat       SCNPhysicsWorld_Speed(SCNPhysicsWorld self)                                                                                                                                            { return ((CGFloat (*)(SCNPhysicsWorld, SEL))bean_msgSend_fpret)(self, bean_sel("speed")); }
-static inline void          SCNPhysicsWorld_SetSpeed(SCNPhysicsWorld self, CGFloat speed)                                                                                                                          { ((void (*)(SCNPhysicsWorld, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
-static inline CGFloat       SCNPhysicsWorld_TimeStep(SCNPhysicsWorld self)                                                                                                                                         { return ((CGFloat (*)(SCNPhysicsWorld, SEL))bean_msgSend_fpret)(self, bean_sel("timeStep")); }
-static inline void          SCNPhysicsWorld_SetTimeStep(SCNPhysicsWorld self, CGFloat timeStep)                                                                                                                    { ((void (*)(SCNPhysicsWorld, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTimeStep:"), timeStep); }
-static inline id            SCNPhysicsWorld_ContactDelegate(SCNPhysicsWorld self)                                                                                                                                  { return ((id (*)(SCNPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("contactDelegate")); }
-static inline void          SCNPhysicsWorld_SetContactDelegate(SCNPhysicsWorld self, id contactDelegate)                                                                                                           { ((void (*)(SCNPhysicsWorld, SEL, id))bean_msgSend)(self, bean_sel("setContactDelegate:"), contactDelegate); }
-static inline NSArray       SCNPhysicsWorld_AllBehaviors(SCNPhysicsWorld self)                                                                                                                                     { return ((NSArray (*)(SCNPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("allBehaviors")); }
-static inline BOOL          SCNPhysicsWorld_SupportsSecureCoding(void)                                                                                                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsWorld"), bean_sel("supportsSecureCoding")); }
+static inline void               SCNPhysicsWorld_AddBehavior(SCNPhysicsWorld self, SCNPhysicsBehavior behavior)                                                                                                         { ((void (*)(SCNPhysicsWorld, SEL, SCNPhysicsBehavior))bean_msgSend)(self, bean_sel("addBehavior:"), behavior); }
+static inline void               SCNPhysicsWorld_RemoveBehavior(SCNPhysicsWorld self, SCNPhysicsBehavior behavior)                                                                                                      { ((void (*)(SCNPhysicsWorld, SEL, SCNPhysicsBehavior))bean_msgSend)(self, bean_sel("removeBehavior:"), behavior); }
+static inline void               SCNPhysicsWorld_RemoveAllBehaviors(SCNPhysicsWorld self)                                                                                                                               { ((void (*)(SCNPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("removeAllBehaviors")); }
+static inline NSArray            SCNPhysicsWorld_RayTestWithSegmentFromPoint_ToPoint_Options(SCNPhysicsWorld self, SCNVector3 origin, SCNVector3 dest, NSDictionary options)                                            { return ((NSArray (*)(SCNPhysicsWorld, SEL, SCNVector3, SCNVector3, NSDictionary))bean_msgSend)(self, bean_sel("rayTestWithSegmentFromPoint:toPoint:options:"), origin, dest, options); }
+static inline NSArray            SCNPhysicsWorld_ContactTestBetweenBody_AndBody_Options(SCNPhysicsWorld self, SCNPhysicsBody bodyA, SCNPhysicsBody bodyB, NSDictionary options)                                         { return ((NSArray (*)(SCNPhysicsWorld, SEL, SCNPhysicsBody, SCNPhysicsBody, NSDictionary))bean_msgSend)(self, bean_sel("contactTestBetweenBody:andBody:options:"), bodyA, bodyB, options); }
+static inline NSArray            SCNPhysicsWorld_ContactTestWithBody_Options(SCNPhysicsWorld self, SCNPhysicsBody body, NSDictionary options)                                                                           { return ((NSArray (*)(SCNPhysicsWorld, SEL, SCNPhysicsBody, NSDictionary))bean_msgSend)(self, bean_sel("contactTestWithBody:options:"), body, options); }
+static inline NSArray            SCNPhysicsWorld_ConvexSweepTestWithShape_FromTransform_ToTransform_Options(SCNPhysicsWorld self, SCNPhysicsShape shape, CATransform3D from, CATransform3D to, NSDictionary options)    { return ((NSArray (*)(SCNPhysicsWorld, SEL, SCNPhysicsShape, CATransform3D, CATransform3D, NSDictionary))bean_msgSend)(self, bean_sel("convexSweepTestWithShape:fromTransform:toTransform:options:"), shape, from, to, options); }
+static inline void               SCNPhysicsWorld_UpdateCollisionPairs(SCNPhysicsWorld self)                                                                                                                             { ((void (*)(SCNPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("updateCollisionPairs")); }
+static inline SCNVector3         SCNPhysicsWorld_Gravity(SCNPhysicsWorld self)                                                                                                                                          { return ((SCNVector3 (*)(SCNPhysicsWorld, SEL))bean_msgSend_stret)(self, bean_sel("gravity")); }
+static inline void               SCNPhysicsWorld_SetGravity(SCNPhysicsWorld self, SCNVector3 gravity)                                                                                                                   { ((void (*)(SCNPhysicsWorld, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setGravity:"), gravity); }
+static inline CGFloat            SCNPhysicsWorld_Speed(SCNPhysicsWorld self)                                                                                                                                            { return ((CGFloat (*)(SCNPhysicsWorld, SEL))bean_msgSend_fpret)(self, bean_sel("speed")); }
+static inline void               SCNPhysicsWorld_SetSpeed(SCNPhysicsWorld self, CGFloat speed)                                                                                                                          { ((void (*)(SCNPhysicsWorld, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
+static inline CGFloat            SCNPhysicsWorld_TimeStep(SCNPhysicsWorld self)                                                                                                                                         { return ((CGFloat (*)(SCNPhysicsWorld, SEL))bean_msgSend_fpret)(self, bean_sel("timeStep")); }
+static inline void               SCNPhysicsWorld_SetTimeStep(SCNPhysicsWorld self, CGFloat timeStep)                                                                                                                    { ((void (*)(SCNPhysicsWorld, SEL, CGFloat))bean_msgSend)(self, bean_sel("setTimeStep:"), timeStep); }
+static inline id                 SCNPhysicsWorld_ContactDelegate(SCNPhysicsWorld self)                                                                                                                                  { return ((id (*)(SCNPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("contactDelegate")); }
+static inline void               SCNPhysicsWorld_SetContactDelegate(SCNPhysicsWorld self, id contactDelegate)                                                                                                           { ((void (*)(SCNPhysicsWorld, SEL, id))bean_msgSend)(self, bean_sel("setContactDelegate:"), contactDelegate); }
+static inline NSArray            SCNPhysicsWorld_AllBehaviors(SCNPhysicsWorld self)                                                                                                                                     { return ((NSArray (*)(SCNPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("allBehaviors")); }
+static inline BOOL               SCNPhysicsWorld_SupportsSecureCoding(void)                                                                                                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNPhysicsWorld"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNPhysicsWorld
+#define BEAN_ALLOC_SCNPhysicsWorld
+static inline SCNPhysicsWorld    SCNPhysicsWorld_Alloc(void)                                                                                                                                                            { return (SCNPhysicsWorld)bean_alloc(bean_cls("SCNPhysicsWorld")); }
+#endif
+#ifndef BEAN_NEW_SCNPhysicsWorld
+#define BEAN_NEW_SCNPhysicsWorld
+static inline SCNPhysicsWorld    SCNPhysicsWorld_New(void)                                                                                                                                                              { return (SCNPhysicsWorld)bean_new(bean_cls("SCNPhysicsWorld")); }
+#endif
 
 /* ===== SCNProgramDelegate ===== */
 #ifndef BEAN_TYPEDEF_SCNProgramDelegate
 #define BEAN_TYPEDEF_SCNProgramDelegate
 typedef bean_id SCNProgramDelegate;
 #endif
-static inline BOOL    SCNProgramDelegate_Program_BindValueForSymbol_AtLocation_ProgramID_Renderer(SCNProgramDelegate self, SCNProgram program, NSString symbol, NSUInteger location, NSUInteger programID, SCNRenderer renderer)      { return ((BOOL (*)(SCNProgramDelegate, SEL, SCNProgram, NSString, NSUInteger, NSUInteger, SCNRenderer))bean_msgSend)(self, bean_sel("program:bindValueForSymbol:atLocation:programID:renderer:"), program, symbol, location, programID, renderer); }
-static inline void    SCNProgramDelegate_Program_UnbindValueForSymbol_AtLocation_ProgramID_Renderer(SCNProgramDelegate self, SCNProgram program, NSString symbol, NSUInteger location, NSUInteger programID, SCNRenderer renderer)    { ((void (*)(SCNProgramDelegate, SEL, SCNProgram, NSString, NSUInteger, NSUInteger, SCNRenderer))bean_msgSend)(self, bean_sel("program:unbindValueForSymbol:atLocation:programID:renderer:"), program, symbol, location, programID, renderer); }
-static inline void    SCNProgramDelegate_Program_HandleError(SCNProgramDelegate self, SCNProgram program, NSError error)                                                                                                              { ((void (*)(SCNProgramDelegate, SEL, SCNProgram, NSError))bean_msgSend)(self, bean_sel("program:handleError:"), program, error); }
-static inline BOOL    SCNProgramDelegate_ProgramIsOpaque(SCNProgramDelegate self, SCNProgram program)                                                                                                                                 { return ((BOOL (*)(SCNProgramDelegate, SEL, SCNProgram))bean_msgSend)(self, bean_sel("programIsOpaque:"), program); }
+static inline BOOL                  SCNProgramDelegate_Program_BindValueForSymbol_AtLocation_ProgramID_Renderer(SCNProgramDelegate self, SCNProgram program, NSString symbol, NSUInteger location, NSUInteger programID, SCNRenderer renderer)      { return ((BOOL (*)(SCNProgramDelegate, SEL, SCNProgram, NSString, NSUInteger, NSUInteger, SCNRenderer))bean_msgSend)(self, bean_sel("program:bindValueForSymbol:atLocation:programID:renderer:"), program, symbol, location, programID, renderer); }
+static inline void                  SCNProgramDelegate_Program_UnbindValueForSymbol_AtLocation_ProgramID_Renderer(SCNProgramDelegate self, SCNProgram program, NSString symbol, NSUInteger location, NSUInteger programID, SCNRenderer renderer)    { ((void (*)(SCNProgramDelegate, SEL, SCNProgram, NSString, NSUInteger, NSUInteger, SCNRenderer))bean_msgSend)(self, bean_sel("program:unbindValueForSymbol:atLocation:programID:renderer:"), program, symbol, location, programID, renderer); }
+static inline void                  SCNProgramDelegate_Program_HandleError(SCNProgramDelegate self, SCNProgram program, NSError error)                                                                                                              { ((void (*)(SCNProgramDelegate, SEL, SCNProgram, NSError))bean_msgSend)(self, bean_sel("program:handleError:"), program, error); }
+static inline BOOL                  SCNProgramDelegate_ProgramIsOpaque(SCNProgramDelegate self, SCNProgram program)                                                                                                                                 { return ((BOOL (*)(SCNProgramDelegate, SEL, SCNProgram))bean_msgSend)(self, bean_sel("programIsOpaque:"), program); }
+#ifndef BEAN_ALLOC_SCNProgramDelegate
+#define BEAN_ALLOC_SCNProgramDelegate
+static inline SCNProgramDelegate    SCNProgramDelegate_Alloc(void)                                                                                                                                                                                  { return (SCNProgramDelegate)bean_alloc(bean_cls("SCNProgramDelegate")); }
+#endif
+#ifndef BEAN_NEW_SCNProgramDelegate
+#define BEAN_NEW_SCNProgramDelegate
+static inline SCNProgramDelegate    SCNProgramDelegate_New(void)                                                                                                                                                                                    { return (SCNProgramDelegate)bean_new(bean_cls("SCNProgramDelegate")); }
+#endif
 
 /* ===== SCNRenderer ===== */
 static inline SCNRenderer                SCNRenderer_RendererWithContext_Options(void* context, NSDictionary options)                                                                                                              { return ((SCNRenderer (*)(bean_class, SEL, void*, NSDictionary))bean_msgSend)(bean_cls("SCNRenderer"), bean_sel("rendererWithContext:options:"), context, options); }
@@ -7025,6 +7609,14 @@ static inline void                       SCNRenderer_SetTechnique(SCNRenderer se
 static inline BOOL                       SCNRenderer_Playing(SCNRenderer self)                                                                                                                                                     { return ((BOOL (*)(SCNRenderer, SEL))bean_msgSend)(self, bean_sel("playing")); }
 static inline BOOL                       SCNRenderer_JitteringEnabled(SCNRenderer self)                                                                                                                                            { return ((BOOL (*)(SCNRenderer, SEL))bean_msgSend)(self, bean_sel("jitteringEnabled")); }
 static inline BOOL                       SCNRenderer_TemporalAntialiasingEnabled(SCNRenderer self)                                                                                                                                 { return ((BOOL (*)(SCNRenderer, SEL))bean_msgSend)(self, bean_sel("temporalAntialiasingEnabled")); }
+#ifndef BEAN_ALLOC_SCNRenderer
+#define BEAN_ALLOC_SCNRenderer
+static inline SCNRenderer                SCNRenderer_Alloc(void)                                                                                                                                                                   { return (SCNRenderer)bean_alloc(bean_cls("SCNRenderer")); }
+#endif
+#ifndef BEAN_NEW_SCNRenderer
+#define BEAN_NEW_SCNRenderer
+static inline SCNRenderer                SCNRenderer_New(void)                                                                                                                                                                     { return (SCNRenderer)bean_new(bean_cls("SCNRenderer")); }
+#endif
 
 /* ===== SCNReplicatorConstraint ===== */
 #ifndef BEAN_TYPEDEF_SCNReplicatorConstraint
@@ -7046,6 +7638,14 @@ static inline SCNVector3                 SCNReplicatorConstraint_PositionOffset(
 static inline void                       SCNReplicatorConstraint_SetPositionOffset(SCNReplicatorConstraint self, SCNVector3 positionOffset)            { ((void (*)(SCNReplicatorConstraint, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setPositionOffset:"), positionOffset); }
 static inline SCNVector3                 SCNReplicatorConstraint_ScaleOffset(SCNReplicatorConstraint self)                                             { return ((SCNVector3 (*)(SCNReplicatorConstraint, SEL))bean_msgSend_stret)(self, bean_sel("scaleOffset")); }
 static inline void                       SCNReplicatorConstraint_SetScaleOffset(SCNReplicatorConstraint self, SCNVector3 scaleOffset)                  { ((void (*)(SCNReplicatorConstraint, SEL, SCNVector3))bean_msgSend)(self, bean_sel("setScaleOffset:"), scaleOffset); }
+#ifndef BEAN_ALLOC_SCNReplicatorConstraint
+#define BEAN_ALLOC_SCNReplicatorConstraint
+static inline SCNReplicatorConstraint    SCNReplicatorConstraint_Alloc(void)                                                                           { return (SCNReplicatorConstraint)bean_alloc(bean_cls("SCNReplicatorConstraint")); }
+#endif
+#ifndef BEAN_NEW_SCNReplicatorConstraint
+#define BEAN_NEW_SCNReplicatorConstraint
+static inline SCNReplicatorConstraint    SCNReplicatorConstraint_New(void)                                                                             { return (SCNReplicatorConstraint)bean_new(bean_cls("SCNReplicatorConstraint")); }
+#endif
 
 /* ===== SCNScene ===== */
 static inline SCNScene               SCNScene_Scene(void)                                                                                                                        { return ((SCNScene (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNScene"), bean_sel("scene")); }
@@ -7083,6 +7683,14 @@ static inline void                   SCNScene_RemoveParticleSystem(SCNScene self
 static inline NSArray                SCNScene_ParticleSystems(SCNScene self)                                                                                                     { return ((NSArray (*)(SCNScene, SEL))bean_msgSend)(self, bean_sel("particleSystems")); }
 static inline BOOL                   SCNScene_SupportsSecureCoding(void)                                                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNScene"), bean_sel("supportsSecureCoding")); }
 static inline BOOL                   SCNScene_Paused(SCNScene self)                                                                                                              { return ((BOOL (*)(SCNScene, SEL))bean_msgSend)(self, bean_sel("paused")); }
+#ifndef BEAN_ALLOC_SCNScene
+#define BEAN_ALLOC_SCNScene
+static inline SCNScene               SCNScene_Alloc(void)                                                                                                                        { return (SCNScene)bean_alloc(bean_cls("SCNScene")); }
+#endif
+#ifndef BEAN_NEW_SCNScene
+#define BEAN_NEW_SCNScene
+static inline SCNScene               SCNScene_New(void)                                                                                                                          { return (SCNScene)bean_new(bean_cls("SCNScene")); }
+#endif
 
 /* ===== SCNSceneRenderer ===== */
 #ifndef BEAN_TYPEDEF_SCNSceneRenderer
@@ -7143,18 +7751,34 @@ static inline void                       SCNSceneRenderer_SetUsesReverseZ(SCNSce
 static inline BOOL                       SCNSceneRenderer_Playing(SCNSceneRenderer self)                                                                                                                                                     { return ((BOOL (*)(SCNSceneRenderer, SEL))bean_msgSend)(self, bean_sel("playing")); }
 static inline BOOL                       SCNSceneRenderer_JitteringEnabled(SCNSceneRenderer self)                                                                                                                                            { return ((BOOL (*)(SCNSceneRenderer, SEL))bean_msgSend)(self, bean_sel("jitteringEnabled")); }
 static inline BOOL                       SCNSceneRenderer_TemporalAntialiasingEnabled(SCNSceneRenderer self)                                                                                                                                 { return ((BOOL (*)(SCNSceneRenderer, SEL))bean_msgSend)(self, bean_sel("temporalAntialiasingEnabled")); }
+#ifndef BEAN_ALLOC_SCNSceneRenderer
+#define BEAN_ALLOC_SCNSceneRenderer
+static inline SCNSceneRenderer           SCNSceneRenderer_Alloc(void)                                                                                                                                                                        { return (SCNSceneRenderer)bean_alloc(bean_cls("SCNSceneRenderer")); }
+#endif
+#ifndef BEAN_NEW_SCNSceneRenderer
+#define BEAN_NEW_SCNSceneRenderer
+static inline SCNSceneRenderer           SCNSceneRenderer_New(void)                                                                                                                                                                          { return (SCNSceneRenderer)bean_new(bean_cls("SCNSceneRenderer")); }
+#endif
 
 /* ===== SCNSceneRendererDelegate ===== */
 #ifndef BEAN_TYPEDEF_SCNSceneRendererDelegate
 #define BEAN_TYPEDEF_SCNSceneRendererDelegate
 typedef bean_id SCNSceneRendererDelegate;
 #endif
-static inline void    SCNSceneRendererDelegate_Renderer_UpdateAtTime(SCNSceneRendererDelegate self, id renderer, CGFloat time)                              { ((void (*)(SCNSceneRendererDelegate, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("renderer:updateAtTime:"), renderer, time); }
-static inline void    SCNSceneRendererDelegate_Renderer_DidApplyAnimationsAtTime(SCNSceneRendererDelegate self, id renderer, CGFloat time)                  { ((void (*)(SCNSceneRendererDelegate, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("renderer:didApplyAnimationsAtTime:"), renderer, time); }
-static inline void    SCNSceneRendererDelegate_Renderer_DidSimulatePhysicsAtTime(SCNSceneRendererDelegate self, id renderer, CGFloat time)                  { ((void (*)(SCNSceneRendererDelegate, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("renderer:didSimulatePhysicsAtTime:"), renderer, time); }
-static inline void    SCNSceneRendererDelegate_Renderer_DidApplyConstraintsAtTime(SCNSceneRendererDelegate self, id renderer, CGFloat time)                 { ((void (*)(SCNSceneRendererDelegate, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("renderer:didApplyConstraintsAtTime:"), renderer, time); }
-static inline void    SCNSceneRendererDelegate_Renderer_WillRenderScene_AtTime(SCNSceneRendererDelegate self, id renderer, SCNScene scene, CGFloat time)    { ((void (*)(SCNSceneRendererDelegate, SEL, id, SCNScene, CGFloat))bean_msgSend)(self, bean_sel("renderer:willRenderScene:atTime:"), renderer, scene, time); }
-static inline void    SCNSceneRendererDelegate_Renderer_DidRenderScene_AtTime(SCNSceneRendererDelegate self, id renderer, SCNScene scene, CGFloat time)     { ((void (*)(SCNSceneRendererDelegate, SEL, id, SCNScene, CGFloat))bean_msgSend)(self, bean_sel("renderer:didRenderScene:atTime:"), renderer, scene, time); }
+static inline void                        SCNSceneRendererDelegate_Renderer_UpdateAtTime(SCNSceneRendererDelegate self, id renderer, CGFloat time)                              { ((void (*)(SCNSceneRendererDelegate, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("renderer:updateAtTime:"), renderer, time); }
+static inline void                        SCNSceneRendererDelegate_Renderer_DidApplyAnimationsAtTime(SCNSceneRendererDelegate self, id renderer, CGFloat time)                  { ((void (*)(SCNSceneRendererDelegate, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("renderer:didApplyAnimationsAtTime:"), renderer, time); }
+static inline void                        SCNSceneRendererDelegate_Renderer_DidSimulatePhysicsAtTime(SCNSceneRendererDelegate self, id renderer, CGFloat time)                  { ((void (*)(SCNSceneRendererDelegate, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("renderer:didSimulatePhysicsAtTime:"), renderer, time); }
+static inline void                        SCNSceneRendererDelegate_Renderer_DidApplyConstraintsAtTime(SCNSceneRendererDelegate self, id renderer, CGFloat time)                 { ((void (*)(SCNSceneRendererDelegate, SEL, id, CGFloat))bean_msgSend)(self, bean_sel("renderer:didApplyConstraintsAtTime:"), renderer, time); }
+static inline void                        SCNSceneRendererDelegate_Renderer_WillRenderScene_AtTime(SCNSceneRendererDelegate self, id renderer, SCNScene scene, CGFloat time)    { ((void (*)(SCNSceneRendererDelegate, SEL, id, SCNScene, CGFloat))bean_msgSend)(self, bean_sel("renderer:willRenderScene:atTime:"), renderer, scene, time); }
+static inline void                        SCNSceneRendererDelegate_Renderer_DidRenderScene_AtTime(SCNSceneRendererDelegate self, id renderer, SCNScene scene, CGFloat time)     { ((void (*)(SCNSceneRendererDelegate, SEL, id, SCNScene, CGFloat))bean_msgSend)(self, bean_sel("renderer:didRenderScene:atTime:"), renderer, scene, time); }
+#ifndef BEAN_ALLOC_SCNSceneRendererDelegate
+#define BEAN_ALLOC_SCNSceneRendererDelegate
+static inline SCNSceneRendererDelegate    SCNSceneRendererDelegate_Alloc(void)                                                                                                  { return (SCNSceneRendererDelegate)bean_alloc(bean_cls("SCNSceneRendererDelegate")); }
+#endif
+#ifndef BEAN_NEW_SCNSceneRendererDelegate
+#define BEAN_NEW_SCNSceneRendererDelegate
+static inline SCNSceneRendererDelegate    SCNSceneRendererDelegate_New(void)                                                                                                    { return (SCNSceneRendererDelegate)bean_new(bean_cls("SCNSceneRendererDelegate")); }
+#endif
 
 /* ===== SCNSceneSource ===== */
 #ifndef BEAN_TYPEDEF_SCNSceneSource
@@ -7173,6 +7797,14 @@ static inline NSArray           SCNSceneSource_IdentifiersOfEntriesWithClass(SCN
 static inline NSArray           SCNSceneSource_EntriesPassingTest(SCNSceneSource self, void* predicate)                                          { return ((NSArray (*)(SCNSceneSource, SEL, void*))bean_msgSend)(self, bean_sel("entriesPassingTest:"), predicate); }
 static inline NSURL             SCNSceneSource_Url(SCNSceneSource self)                                                                          { return ((NSURL (*)(SCNSceneSource, SEL))bean_msgSend)(self, bean_sel("url")); }
 static inline NSData            SCNSceneSource_Data(SCNSceneSource self)                                                                         { return ((NSData (*)(SCNSceneSource, SEL))bean_msgSend)(self, bean_sel("data")); }
+#ifndef BEAN_ALLOC_SCNSceneSource
+#define BEAN_ALLOC_SCNSceneSource
+static inline SCNSceneSource    SCNSceneSource_Alloc(void)                                                                                       { return (SCNSceneSource)bean_alloc(bean_cls("SCNSceneSource")); }
+#endif
+#ifndef BEAN_NEW_SCNSceneSource
+#define BEAN_NEW_SCNSceneSource
+static inline SCNSceneSource    SCNSceneSource_New(void)                                                                                         { return (SCNSceneSource)bean_new(bean_cls("SCNSceneSource")); }
+#endif
 
 /* ===== SCNSkinner ===== */
 static inline SCNSkinner           SCNSkinner_SkinnerWithBaseGeometry_Bones_BoneInverseBindTransforms_BoneWeights_BoneIndices(SCNGeometry baseGeometry, NSArray bones, NSArray boneInverseBindTransforms, SCNGeometrySource boneWeights, SCNGeometrySource boneIndices)    { return ((SCNSkinner (*)(bean_class, SEL, SCNGeometry, NSArray, NSArray, SCNGeometrySource, SCNGeometrySource))bean_msgSend)(bean_cls("SCNSkinner"), bean_sel("skinnerWithBaseGeometry:bones:boneInverseBindTransforms:boneWeights:boneIndices:"), baseGeometry, bones, boneInverseBindTransforms, boneWeights, boneIndices); }
@@ -7187,6 +7819,14 @@ static inline NSArray              SCNSkinner_Bones(SCNSkinner self)            
 static inline SCNGeometrySource    SCNSkinner_BoneWeights(SCNSkinner self)                                                                                                                                                                                                 { return ((SCNGeometrySource (*)(SCNSkinner, SEL))bean_msgSend)(self, bean_sel("boneWeights")); }
 static inline SCNGeometrySource    SCNSkinner_BoneIndices(SCNSkinner self)                                                                                                                                                                                                 { return ((SCNGeometrySource (*)(SCNSkinner, SEL))bean_msgSend)(self, bean_sel("boneIndices")); }
 static inline BOOL                 SCNSkinner_SupportsSecureCoding(void)                                                                                                                                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNSkinner"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNSkinner
+#define BEAN_ALLOC_SCNSkinner
+static inline SCNSkinner           SCNSkinner_Alloc(void)                                                                                                                                                                                                                  { return (SCNSkinner)bean_alloc(bean_cls("SCNSkinner")); }
+#endif
+#ifndef BEAN_NEW_SCNSkinner
+#define BEAN_NEW_SCNSkinner
+static inline SCNSkinner           SCNSkinner_New(void)                                                                                                                                                                                                                    { return (SCNSkinner)bean_new(bean_cls("SCNSkinner")); }
+#endif
 
 /* ===== SCNTechnique ===== */
 static inline SCNTechnique          SCNTechnique_TechniqueWithDictionary(NSDictionary dictionary)                                             { return ((SCNTechnique (*)(bean_class, SEL, NSDictionary))bean_msgSend)(bean_cls("SCNTechnique"), bean_sel("techniqueWithDictionary:"), dictionary); }
@@ -7213,14 +7853,30 @@ static inline BOOL                  SCNTechnique_IsAnimationForKeyPaused(SCNTech
 static inline NSArray               SCNTechnique_AnimationKeys(SCNTechnique self)                                                             { return ((NSArray (*)(SCNTechnique, SEL))bean_msgSend)(self, bean_sel("animationKeys")); }
 static inline id                    SCNTechnique_CopyWithZone(SCNTechnique self, NSZone* zone)                                                { return ((id (*)(SCNTechnique, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  SCNTechnique_SupportsSecureCoding(void)                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SCNTechnique"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SCNTechnique
+#define BEAN_ALLOC_SCNTechnique
+static inline SCNTechnique          SCNTechnique_Alloc(void)                                                                                  { return (SCNTechnique)bean_alloc(bean_cls("SCNTechnique")); }
+#endif
+#ifndef BEAN_NEW_SCNTechnique
+#define BEAN_NEW_SCNTechnique
+static inline SCNTechnique          SCNTechnique_New(void)                                                                                    { return (SCNTechnique)bean_new(bean_cls("SCNTechnique")); }
+#endif
 
 /* ===== SCNTechniqueSupport ===== */
 #ifndef BEAN_TYPEDEF_SCNTechniqueSupport
 #define BEAN_TYPEDEF_SCNTechniqueSupport
 typedef bean_id SCNTechniqueSupport;
 #endif
-static inline SCNTechnique    SCNTechniqueSupport_Technique(SCNTechniqueSupport self)                               { return ((SCNTechnique (*)(SCNTechniqueSupport, SEL))bean_msgSend)(self, bean_sel("technique")); }
-static inline void            SCNTechniqueSupport_SetTechnique(SCNTechniqueSupport self, SCNTechnique technique)    { ((void (*)(SCNTechniqueSupport, SEL, SCNTechnique))bean_msgSend)(self, bean_sel("setTechnique:"), technique); }
+static inline SCNTechnique           SCNTechniqueSupport_Technique(SCNTechniqueSupport self)                               { return ((SCNTechnique (*)(SCNTechniqueSupport, SEL))bean_msgSend)(self, bean_sel("technique")); }
+static inline void                   SCNTechniqueSupport_SetTechnique(SCNTechniqueSupport self, SCNTechnique technique)    { ((void (*)(SCNTechniqueSupport, SEL, SCNTechnique))bean_msgSend)(self, bean_sel("setTechnique:"), technique); }
+#ifndef BEAN_ALLOC_SCNTechniqueSupport
+#define BEAN_ALLOC_SCNTechniqueSupport
+static inline SCNTechniqueSupport    SCNTechniqueSupport_Alloc(void)                                                       { return (SCNTechniqueSupport)bean_alloc(bean_cls("SCNTechniqueSupport")); }
+#endif
+#ifndef BEAN_NEW_SCNTechniqueSupport
+#define BEAN_NEW_SCNTechniqueSupport
+static inline SCNTechniqueSupport    SCNTechniqueSupport_New(void)                                                         { return (SCNTechniqueSupport)bean_new(bean_cls("SCNTechniqueSupport")); }
+#endif
 
 /* ===== SCNView ===== */
 #ifndef BEAN_TYPEDEF_SCNView
@@ -7306,6 +7962,14 @@ static inline void                       SCNView_SetTechnique(SCNView self, SCNT
 static inline BOOL                       SCNView_Playing(SCNView self)                                                                                                                                                     { return ((BOOL (*)(SCNView, SEL))bean_msgSend)(self, bean_sel("playing")); }
 static inline BOOL                       SCNView_JitteringEnabled(SCNView self)                                                                                                                                            { return ((BOOL (*)(SCNView, SEL))bean_msgSend)(self, bean_sel("jitteringEnabled")); }
 static inline BOOL                       SCNView_TemporalAntialiasingEnabled(SCNView self)                                                                                                                                 { return ((BOOL (*)(SCNView, SEL))bean_msgSend)(self, bean_sel("temporalAntialiasingEnabled")); }
+#ifndef BEAN_ALLOC_SCNView
+#define BEAN_ALLOC_SCNView
+static inline SCNView                    SCNView_Alloc(void)                                                                                                                                                               { return (SCNView)bean_alloc(bean_cls("SCNView")); }
+#endif
+#ifndef BEAN_NEW_SCNView
+#define BEAN_NEW_SCNView
+static inline SCNView                    SCNView_New(void)                                                                                                                                                                 { return (SCNView)bean_new(bean_cls("SCNView")); }
+#endif
 
 
 #ifdef __cplusplus

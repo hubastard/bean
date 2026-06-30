@@ -113,7 +113,7 @@ static inline NSWindow bean_example_window(const char* title, CGFloat width, CGF
 
     CGRect frame = CGRectMake(100.0, 100.0, width, height);
     NSWindow window = NSWindow_InitWithContentRect_StyleMask_Backing_Defer(
-        (NSWindow)bean_alloc(bean_cls("NSWindow")),
+        NSWindow_Alloc(),
         frame,
         NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable,
         NSBackingStoreBuffered,

@@ -1536,6 +1536,14 @@ typedef bean_id CLFloor;
 static inline NSInteger    CLFloor_Level(CLFloor self)                         { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
 static inline id           CLFloor_CopyWithZone(CLFloor self, NSZone* zone)    { return ((id (*)(CLFloor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL         CLFloor_SupportsSecureCoding(void)                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLFloor"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLFloor
+#define BEAN_ALLOC_CLFloor
+static inline CLFloor      CLFloor_Alloc(void)                                 { return (CLFloor)bean_alloc(bean_cls("CLFloor")); }
+#endif
+#ifndef BEAN_NEW_CLFloor
+#define BEAN_NEW_CLFloor
+static inline CLFloor      CLFloor_New(void)                                   { return (CLFloor)bean_new(bean_cls("CLFloor")); }
+#endif
 
 /* ===== CLLocationSourceInformation ===== */
 #ifndef BEAN_TYPEDEF_CLLocationSourceInformation
@@ -1547,18 +1555,33 @@ static inline BOOL                           CLLocationSourceInformation_IsSimul
 static inline BOOL                           CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
 static inline id                             CLLocationSourceInformation_CopyWithZone(CLLocationSourceInformation self, NSZone* zone)                                                                      { return ((id (*)(CLLocationSourceInformation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                           CLLocationSourceInformation_SupportsSecureCoding(void)                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocationSourceInformation"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLLocationSourceInformation
+#define BEAN_ALLOC_CLLocationSourceInformation
+static inline CLLocationSourceInformation    CLLocationSourceInformation_Alloc(void)                                                                                                                       { return (CLLocationSourceInformation)bean_alloc(bean_cls("CLLocationSourceInformation")); }
+#endif
+#ifndef BEAN_NEW_CLLocationSourceInformation
+#define BEAN_NEW_CLLocationSourceInformation
+static inline CLLocationSourceInformation    CLLocationSourceInformation_New(void)                                                                                                                         { return (CLLocationSourceInformation)bean_new(bean_cls("CLLocationSourceInformation")); }
+#endif
 
 /* ===== EKObject ===== */
 #ifndef BEAN_TYPEDEF_EKObject
 #define BEAN_TYPEDEF_EKObject
 typedef bean_id EKObject;
 #endif
-static inline void    EKObject_Reset(EKObject self)         { ((void (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("reset")); }
-static inline void    EKObject_Rollback(EKObject self)      { ((void (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("rollback")); }
-static inline BOOL    EKObject_Refresh(EKObject self)       { return ((BOOL (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("refresh")); }
-static inline BOOL    EKObject_HasChanges(EKObject self)    { return ((BOOL (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("hasChanges")); }
-static inline BOOL    EKObject_IsNew(EKObject self)         { return ((BOOL (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("isNew")); }
-static inline BOOL    EKObject_New(EKObject self)           { return ((BOOL (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("new")); }
+static inline void        EKObject_Reset(EKObject self)         { ((void (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("reset")); }
+static inline void        EKObject_Rollback(EKObject self)      { ((void (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("rollback")); }
+static inline BOOL        EKObject_Refresh(EKObject self)       { return ((BOOL (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("refresh")); }
+static inline BOOL        EKObject_HasChanges(EKObject self)    { return ((BOOL (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("hasChanges")); }
+static inline BOOL        EKObject_IsNew(EKObject self)         { return ((BOOL (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("isNew")); }
+#ifndef BEAN_NEW_EKObject
+#define BEAN_NEW_EKObject
+static inline BOOL        EKObject_New(EKObject self)           { return ((BOOL (*)(EKObject, SEL))bean_msgSend)(self, bean_sel("new")); }
+#endif
+#ifndef BEAN_ALLOC_EKObject
+#define BEAN_ALLOC_EKObject
+static inline EKObject    EKObject_Alloc(void)                  { return (EKObject)bean_alloc(bean_cls("EKObject")); }
+#endif
 
 /* ===== EKParticipant ===== */
 #ifndef BEAN_TYPEDEF_EKParticipant
@@ -1575,6 +1598,14 @@ static inline BOOL                   EKParticipant_IsCurrentUser(EKParticipant s
 static inline NSPredicate            EKParticipant_ContactPredicate(EKParticipant self)                                    { return ((NSPredicate (*)(EKParticipant, SEL))bean_msgSend)(self, bean_sel("contactPredicate")); }
 static inline id                     EKParticipant_CopyWithZone(EKParticipant self, NSZone* zone)                          { return ((id (*)(EKParticipant, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                   EKParticipant_CurrentUser(EKParticipant self)                                         { return ((BOOL (*)(EKParticipant, SEL))bean_msgSend)(self, bean_sel("currentUser")); }
+#ifndef BEAN_ALLOC_EKParticipant
+#define BEAN_ALLOC_EKParticipant
+static inline EKParticipant          EKParticipant_Alloc(void)                                                             { return (EKParticipant)bean_alloc(bean_cls("EKParticipant")); }
+#endif
+#ifndef BEAN_NEW_EKParticipant
+#define BEAN_NEW_EKParticipant
+static inline EKParticipant          EKParticipant_New(void)                                                               { return (EKParticipant)bean_new(bean_cls("EKParticipant")); }
+#endif
 
 /* ===== EKRecurrenceDayOfWeek ===== */
 #ifndef BEAN_TYPEDEF_EKRecurrenceDayOfWeek
@@ -1588,6 +1619,14 @@ static inline EKWeekday                EKRecurrenceDayOfWeek_DayOfTheWeek(EKRecu
 static inline NSInteger                EKRecurrenceDayOfWeek_WeekNumber(EKRecurrenceDayOfWeek self)                                                                       { return ((NSInteger (*)(EKRecurrenceDayOfWeek, SEL))bean_msgSend)(self, bean_sel("weekNumber")); }
 static inline id                       EKRecurrenceDayOfWeek_CopyWithZone(EKRecurrenceDayOfWeek self, NSZone* zone)                                                       { return ((id (*)(EKRecurrenceDayOfWeek, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                     EKRecurrenceDayOfWeek_SupportsSecureCoding(void)                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKRecurrenceDayOfWeek"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_EKRecurrenceDayOfWeek
+#define BEAN_ALLOC_EKRecurrenceDayOfWeek
+static inline EKRecurrenceDayOfWeek    EKRecurrenceDayOfWeek_Alloc(void)                                                                                                  { return (EKRecurrenceDayOfWeek)bean_alloc(bean_cls("EKRecurrenceDayOfWeek")); }
+#endif
+#ifndef BEAN_NEW_EKRecurrenceDayOfWeek
+#define BEAN_NEW_EKRecurrenceDayOfWeek
+static inline EKRecurrenceDayOfWeek    EKRecurrenceDayOfWeek_New(void)                                                                                                    { return (EKRecurrenceDayOfWeek)bean_new(bean_cls("EKRecurrenceDayOfWeek")); }
+#endif
 
 /* ===== EKRecurrenceEnd ===== */
 #ifndef BEAN_TYPEDEF_EKRecurrenceEnd
@@ -1600,6 +1639,14 @@ static inline NSDate             EKRecurrenceEnd_EndDate(EKRecurrenceEnd self)  
 static inline NSUInteger         EKRecurrenceEnd_OccurrenceCount(EKRecurrenceEnd self)                           { return ((NSUInteger (*)(EKRecurrenceEnd, SEL))bean_msgSend)(self, bean_sel("occurrenceCount")); }
 static inline id                 EKRecurrenceEnd_CopyWithZone(EKRecurrenceEnd self, NSZone* zone)                { return ((id (*)(EKRecurrenceEnd, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL               EKRecurrenceEnd_SupportsSecureCoding(void)                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKRecurrenceEnd"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_EKRecurrenceEnd
+#define BEAN_ALLOC_EKRecurrenceEnd
+static inline EKRecurrenceEnd    EKRecurrenceEnd_Alloc(void)                                                     { return (EKRecurrenceEnd)bean_alloc(bean_cls("EKRecurrenceEnd")); }
+#endif
+#ifndef BEAN_NEW_EKRecurrenceEnd
+#define BEAN_NEW_EKRecurrenceEnd
+static inline EKRecurrenceEnd    EKRecurrenceEnd_New(void)                                                       { return (EKRecurrenceEnd)bean_new(bean_cls("EKRecurrenceEnd")); }
+#endif
 
 /* ===== EKSource ===== */
 #ifndef BEAN_TYPEDEF_EKSource
@@ -1612,6 +1659,14 @@ static inline EKSourceType    EKSource_SourceType(EKSource self)                
 static inline NSString        EKSource_Title(EKSource self)                                              { return ((NSString (*)(EKSource, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline NSSet           EKSource_Calendars(EKSource self)                                          { return ((NSSet (*)(EKSource, SEL))bean_msgSend)(self, bean_sel("calendars")); }
 static inline BOOL            EKSource_IsDelegate(EKSource self)                                         { return ((BOOL (*)(EKSource, SEL))bean_msgSend)(self, bean_sel("isDelegate")); }
+#ifndef BEAN_ALLOC_EKSource
+#define BEAN_ALLOC_EKSource
+static inline EKSource        EKSource_Alloc(void)                                                       { return (EKSource)bean_alloc(bean_cls("EKSource")); }
+#endif
+#ifndef BEAN_NEW_EKSource
+#define BEAN_NEW_EKSource
+static inline EKSource        EKSource_New(void)                                                         { return (EKSource)bean_new(bean_cls("EKSource")); }
+#endif
 
 /* ===== EKVirtualConferenceDescriptor ===== */
 #ifndef BEAN_TYPEDEF_EKVirtualConferenceDescriptor
@@ -1620,19 +1675,34 @@ typedef bean_id EKVirtualConferenceDescriptor;
 #endif
 static inline EKVirtualConferenceDescriptor    EKVirtualConferenceDescriptor_InitWithTitle_URLDescriptors_ConferenceDetails(EKVirtualConferenceDescriptor self, NSString title, NSArray URLDescriptors, NSString conferenceDetails)    { return ((EKVirtualConferenceDescriptor (*)(EKVirtualConferenceDescriptor, SEL, NSString, NSArray, NSString))bean_msgSend)(self, bean_sel("initWithTitle:URLDescriptors:conferenceDetails:"), title, URLDescriptors, conferenceDetails); }
 static inline EKVirtualConferenceDescriptor    EKVirtualConferenceDescriptor_Init(EKVirtualConferenceDescriptor self)                                                                                                                  { return ((EKVirtualConferenceDescriptor (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_EKVirtualConferenceDescriptor
+#define BEAN_NEW_EKVirtualConferenceDescriptor
 static inline EKVirtualConferenceDescriptor    EKVirtualConferenceDescriptor_New(void)                                                                                                                                                 { return ((EKVirtualConferenceDescriptor (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceDescriptor"), bean_sel("new")); }
+#endif
 static inline NSString                         EKVirtualConferenceDescriptor_Title(EKVirtualConferenceDescriptor self)                                                                                                                 { return ((NSString (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline NSArray                          EKVirtualConferenceDescriptor_URLDescriptors(EKVirtualConferenceDescriptor self)                                                                                                        { return ((NSArray (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("URLDescriptors")); }
 static inline NSString                         EKVirtualConferenceDescriptor_ConferenceDetails(EKVirtualConferenceDescriptor self)                                                                                                     { return ((NSString (*)(EKVirtualConferenceDescriptor, SEL))bean_msgSend)(self, bean_sel("conferenceDetails")); }
+#ifndef BEAN_ALLOC_EKVirtualConferenceDescriptor
+#define BEAN_ALLOC_EKVirtualConferenceDescriptor
+static inline EKVirtualConferenceDescriptor    EKVirtualConferenceDescriptor_Alloc(void)                                                                                                                                               { return (EKVirtualConferenceDescriptor)bean_alloc(bean_cls("EKVirtualConferenceDescriptor")); }
+#endif
 
 /* ===== EKVirtualConferenceProvider ===== */
 #ifndef BEAN_TYPEDEF_EKVirtualConferenceProvider
 #define BEAN_TYPEDEF_EKVirtualConferenceProvider
 typedef bean_id EKVirtualConferenceProvider;
 #endif
-static inline void    EKVirtualConferenceProvider_FetchAvailableRoomTypesWithCompletionHandler(EKVirtualConferenceProvider self, void* completionHandler)                                  { ((void (*)(EKVirtualConferenceProvider, SEL, void*))bean_msgSend)(self, bean_sel("fetchAvailableRoomTypesWithCompletionHandler:"), completionHandler); }
-static inline void    EKVirtualConferenceProvider_FetchVirtualConferenceForIdentifier_CompletionHandler(EKVirtualConferenceProvider self, NSString identifier, void* completionHandler)    { ((void (*)(EKVirtualConferenceProvider, SEL, NSString, void*))bean_msgSend)(self, bean_sel("fetchVirtualConferenceForIdentifier:completionHandler:"), identifier, completionHandler); }
-static inline void    EKVirtualConferenceProvider_BeginRequestWithExtensionContext(EKVirtualConferenceProvider self, NSExtensionContext context)                                           { ((void (*)(EKVirtualConferenceProvider, SEL, NSExtensionContext))bean_msgSend)(self, bean_sel("beginRequestWithExtensionContext:"), context); }
+static inline void                           EKVirtualConferenceProvider_FetchAvailableRoomTypesWithCompletionHandler(EKVirtualConferenceProvider self, void* completionHandler)                                  { ((void (*)(EKVirtualConferenceProvider, SEL, void*))bean_msgSend)(self, bean_sel("fetchAvailableRoomTypesWithCompletionHandler:"), completionHandler); }
+static inline void                           EKVirtualConferenceProvider_FetchVirtualConferenceForIdentifier_CompletionHandler(EKVirtualConferenceProvider self, NSString identifier, void* completionHandler)    { ((void (*)(EKVirtualConferenceProvider, SEL, NSString, void*))bean_msgSend)(self, bean_sel("fetchVirtualConferenceForIdentifier:completionHandler:"), identifier, completionHandler); }
+static inline void                           EKVirtualConferenceProvider_BeginRequestWithExtensionContext(EKVirtualConferenceProvider self, NSExtensionContext context)                                           { ((void (*)(EKVirtualConferenceProvider, SEL, NSExtensionContext))bean_msgSend)(self, bean_sel("beginRequestWithExtensionContext:"), context); }
+#ifndef BEAN_ALLOC_EKVirtualConferenceProvider
+#define BEAN_ALLOC_EKVirtualConferenceProvider
+static inline EKVirtualConferenceProvider    EKVirtualConferenceProvider_Alloc(void)                                                                                                                              { return (EKVirtualConferenceProvider)bean_alloc(bean_cls("EKVirtualConferenceProvider")); }
+#endif
+#ifndef BEAN_NEW_EKVirtualConferenceProvider
+#define BEAN_NEW_EKVirtualConferenceProvider
+static inline EKVirtualConferenceProvider    EKVirtualConferenceProvider_New(void)                                                                                                                                { return (EKVirtualConferenceProvider)bean_new(bean_cls("EKVirtualConferenceProvider")); }
+#endif
 
 /* ===== EKVirtualConferenceRoomTypeDescriptor ===== */
 #ifndef BEAN_TYPEDEF_EKVirtualConferenceRoomTypeDescriptor
@@ -1641,9 +1711,16 @@ typedef bean_id EKVirtualConferenceRoomTypeDescriptor;
 #endif
 static inline EKVirtualConferenceRoomTypeDescriptor    EKVirtualConferenceRoomTypeDescriptor_InitWithTitle_Identifier(EKVirtualConferenceRoomTypeDescriptor self, NSString title, NSString identifier)    { return ((EKVirtualConferenceRoomTypeDescriptor (*)(EKVirtualConferenceRoomTypeDescriptor, SEL, NSString, NSString))bean_msgSend)(self, bean_sel("initWithTitle:identifier:"), title, identifier); }
 static inline EKVirtualConferenceRoomTypeDescriptor    EKVirtualConferenceRoomTypeDescriptor_Init(EKVirtualConferenceRoomTypeDescriptor self)                                                             { return ((EKVirtualConferenceRoomTypeDescriptor (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_EKVirtualConferenceRoomTypeDescriptor
+#define BEAN_NEW_EKVirtualConferenceRoomTypeDescriptor
 static inline EKVirtualConferenceRoomTypeDescriptor    EKVirtualConferenceRoomTypeDescriptor_New(void)                                                                                                    { return ((EKVirtualConferenceRoomTypeDescriptor (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceRoomTypeDescriptor"), bean_sel("new")); }
+#endif
 static inline NSString                                 EKVirtualConferenceRoomTypeDescriptor_Title(EKVirtualConferenceRoomTypeDescriptor self)                                                            { return ((NSString (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline NSString                                 EKVirtualConferenceRoomTypeDescriptor_Identifier(EKVirtualConferenceRoomTypeDescriptor self)                                                       { return ((NSString (*)(EKVirtualConferenceRoomTypeDescriptor, SEL))bean_msgSend)(self, bean_sel("identifier")); }
+#ifndef BEAN_ALLOC_EKVirtualConferenceRoomTypeDescriptor
+#define BEAN_ALLOC_EKVirtualConferenceRoomTypeDescriptor
+static inline EKVirtualConferenceRoomTypeDescriptor    EKVirtualConferenceRoomTypeDescriptor_Alloc(void)                                                                                                  { return (EKVirtualConferenceRoomTypeDescriptor)bean_alloc(bean_cls("EKVirtualConferenceRoomTypeDescriptor")); }
+#endif
 
 /* ===== EKVirtualConferenceURLDescriptor ===== */
 #ifndef BEAN_TYPEDEF_EKVirtualConferenceURLDescriptor
@@ -1652,9 +1729,16 @@ typedef bean_id EKVirtualConferenceURLDescriptor;
 #endif
 static inline EKVirtualConferenceURLDescriptor    EKVirtualConferenceURLDescriptor_InitWithTitle_URL(EKVirtualConferenceURLDescriptor self, NSString title, NSURL URL)    { return ((EKVirtualConferenceURLDescriptor (*)(EKVirtualConferenceURLDescriptor, SEL, NSString, NSURL))bean_msgSend)(self, bean_sel("initWithTitle:URL:"), title, URL); }
 static inline EKVirtualConferenceURLDescriptor    EKVirtualConferenceURLDescriptor_Init(EKVirtualConferenceURLDescriptor self)                                            { return ((EKVirtualConferenceURLDescriptor (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_EKVirtualConferenceURLDescriptor
+#define BEAN_NEW_EKVirtualConferenceURLDescriptor
 static inline EKVirtualConferenceURLDescriptor    EKVirtualConferenceURLDescriptor_New(void)                                                                              { return ((EKVirtualConferenceURLDescriptor (*)(bean_class, SEL))bean_msgSend)(bean_cls("EKVirtualConferenceURLDescriptor"), bean_sel("new")); }
+#endif
 static inline NSString                            EKVirtualConferenceURLDescriptor_Title(EKVirtualConferenceURLDescriptor self)                                           { return ((NSString (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("title")); }
 static inline NSURL                               EKVirtualConferenceURLDescriptor_URL(EKVirtualConferenceURLDescriptor self)                                             { return ((NSURL (*)(EKVirtualConferenceURLDescriptor, SEL))bean_msgSend)(self, bean_sel("URL")); }
+#ifndef BEAN_ALLOC_EKVirtualConferenceURLDescriptor
+#define BEAN_ALLOC_EKVirtualConferenceURLDescriptor
+static inline EKVirtualConferenceURLDescriptor    EKVirtualConferenceURLDescriptor_Alloc(void)                                                                            { return (EKVirtualConferenceURLDescriptor)bean_alloc(bean_cls("EKVirtualConferenceURLDescriptor")); }
+#endif
 
 /* ===== CLLocation ===== */
 #ifndef BEAN_TYPEDEF_CLLocation
@@ -1682,6 +1766,14 @@ static inline CLFloor                        CLLocation_Floor(CLLocation self)  
 static inline CLLocationSourceInformation    CLLocation_SourceInformation(CLLocation self)                                                                                                                                                                                                                                                                                                                                                    { return ((CLLocationSourceInformation (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("sourceInformation")); }
 static inline id                             CLLocation_CopyWithZone(CLLocation self, NSZone* zone)                                                                                                                                                                                                                                                                                                                                           { return ((id (*)(CLLocation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                           CLLocation_SupportsSecureCoding(void)                                                                                                                                                                                                                                                                                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocation"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLLocation
+#define BEAN_ALLOC_CLLocation
+static inline CLLocation                     CLLocation_Alloc(void)                                                                                                                                                                                                                                                                                                                                                                           { return (CLLocation)bean_alloc(bean_cls("CLLocation")); }
+#endif
+#ifndef BEAN_NEW_CLLocation
+#define BEAN_NEW_CLLocation
+static inline CLLocation                     CLLocation_New(void)                                                                                                                                                                                                                                                                                                                                                                             { return (CLLocation)bean_new(bean_cls("CLLocation")); }
+#endif
 
 /* ===== EKRecurrenceRule ===== */
 #ifndef BEAN_TYPEDEF_EKRecurrenceRule
@@ -1703,6 +1795,14 @@ static inline NSArray                  EKRecurrenceRule_WeeksOfTheYear(EKRecurre
 static inline NSArray                  EKRecurrenceRule_MonthsOfTheYear(EKRecurrenceRule self)                                                                                                                                                                                                                                                                                                               { return ((NSArray (*)(EKRecurrenceRule, SEL))bean_msgSend)(self, bean_sel("monthsOfTheYear")); }
 static inline NSArray                  EKRecurrenceRule_SetPositions(EKRecurrenceRule self)                                                                                                                                                                                                                                                                                                                  { return ((NSArray (*)(EKRecurrenceRule, SEL))bean_msgSend)(self, bean_sel("setPositions")); }
 static inline id                       EKRecurrenceRule_CopyWithZone(EKRecurrenceRule self, NSZone* zone)                                                                                                                                                                                                                                                                                                    { return ((id (*)(EKRecurrenceRule, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_EKRecurrenceRule
+#define BEAN_ALLOC_EKRecurrenceRule
+static inline EKRecurrenceRule         EKRecurrenceRule_Alloc(void)                                                                                                                                                                                                                                                                                                                                          { return (EKRecurrenceRule)bean_alloc(bean_cls("EKRecurrenceRule")); }
+#endif
+#ifndef BEAN_NEW_EKRecurrenceRule
+#define BEAN_NEW_EKRecurrenceRule
+static inline EKRecurrenceRule         EKRecurrenceRule_New(void)                                                                                                                                                                                                                                                                                                                                            { return (EKRecurrenceRule)bean_new(bean_cls("EKRecurrenceRule")); }
+#endif
 
 /* ===== EKStructuredLocation ===== */
 #ifndef BEAN_TYPEDEF_EKStructuredLocation
@@ -1718,6 +1818,14 @@ static inline void                    EKStructuredLocation_SetGeoLocation(EKStru
 static inline CGFloat                 EKStructuredLocation_Radius(EKStructuredLocation self)                                    { return ((CGFloat (*)(EKStructuredLocation, SEL))bean_msgSend_fpret)(self, bean_sel("radius")); }
 static inline void                    EKStructuredLocation_SetRadius(EKStructuredLocation self, CGFloat radius)                 { ((void (*)(EKStructuredLocation, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
 static inline id                      EKStructuredLocation_CopyWithZone(EKStructuredLocation self, NSZone* zone)                { return ((id (*)(EKStructuredLocation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_EKStructuredLocation
+#define BEAN_ALLOC_EKStructuredLocation
+static inline EKStructuredLocation    EKStructuredLocation_Alloc(void)                                                          { return (EKStructuredLocation)bean_alloc(bean_cls("EKStructuredLocation")); }
+#endif
+#ifndef BEAN_NEW_EKStructuredLocation
+#define BEAN_NEW_EKStructuredLocation
+static inline EKStructuredLocation    EKStructuredLocation_New(void)                                                            { return (EKStructuredLocation)bean_new(bean_cls("EKStructuredLocation")); }
+#endif
 
 /* ===== EKAlarm ===== */
 #ifndef BEAN_TYPEDEF_EKAlarm
@@ -1742,6 +1850,14 @@ static inline void                    EKAlarm_SetSoundName(EKAlarm self, NSStrin
 static inline NSURL                   EKAlarm_Url(EKAlarm self)                                                               { return ((NSURL (*)(EKAlarm, SEL))bean_msgSend)(self, bean_sel("url")); }
 static inline void                    EKAlarm_SetUrl(EKAlarm self, NSURL url)                                                 { ((void (*)(EKAlarm, SEL, NSURL))bean_msgSend)(self, bean_sel("setUrl:"), url); }
 static inline id                      EKAlarm_CopyWithZone(EKAlarm self, NSZone* zone)                                        { return ((id (*)(EKAlarm, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_EKAlarm
+#define BEAN_ALLOC_EKAlarm
+static inline EKAlarm                 EKAlarm_Alloc(void)                                                                     { return (EKAlarm)bean_alloc(bean_cls("EKAlarm")); }
+#endif
+#ifndef BEAN_NEW_EKAlarm
+#define BEAN_NEW_EKAlarm
+static inline EKAlarm                 EKAlarm_New(void)                                                                       { return (EKAlarm)bean_new(bean_cls("EKAlarm")); }
+#endif
 
 /* ===== EKCalendar ===== */
 #ifndef BEAN_TYPEDEF_EKCalendar
@@ -1767,42 +1883,58 @@ static inline EKCalendarEventAvailabilityMask    EKCalendar_SupportedEventAvaila
 static inline EKEntityMask                       EKCalendar_AllowedEntityTypes(EKCalendar self)                                                   { return ((EKEntityMask (*)(EKCalendar, SEL))bean_msgSend)(self, bean_sel("allowedEntityTypes")); }
 static inline BOOL                               EKCalendar_Subscribed(EKCalendar self)                                                           { return ((BOOL (*)(EKCalendar, SEL))bean_msgSend)(self, bean_sel("subscribed")); }
 static inline BOOL                               EKCalendar_Immutable(EKCalendar self)                                                            { return ((BOOL (*)(EKCalendar, SEL))bean_msgSend)(self, bean_sel("immutable")); }
+#ifndef BEAN_ALLOC_EKCalendar
+#define BEAN_ALLOC_EKCalendar
+static inline EKCalendar                         EKCalendar_Alloc(void)                                                                           { return (EKCalendar)bean_alloc(bean_cls("EKCalendar")); }
+#endif
+#ifndef BEAN_NEW_EKCalendar
+#define BEAN_NEW_EKCalendar
+static inline EKCalendar                         EKCalendar_New(void)                                                                             { return (EKCalendar)bean_new(bean_cls("EKCalendar")); }
+#endif
 
 /* ===== EKCalendarItem ===== */
 #ifndef BEAN_TYPEDEF_EKCalendarItem
 #define BEAN_TYPEDEF_EKCalendarItem
 typedef bean_id EKCalendarItem;
 #endif
-static inline void          EKCalendarItem_AddAlarm(EKCalendarItem self, EKAlarm alarm)                        { ((void (*)(EKCalendarItem, SEL, EKAlarm))bean_msgSend)(self, bean_sel("addAlarm:"), alarm); }
-static inline void          EKCalendarItem_RemoveAlarm(EKCalendarItem self, EKAlarm alarm)                     { ((void (*)(EKCalendarItem, SEL, EKAlarm))bean_msgSend)(self, bean_sel("removeAlarm:"), alarm); }
-static inline void          EKCalendarItem_AddRecurrenceRule(EKCalendarItem self, EKRecurrenceRule rule)       { ((void (*)(EKCalendarItem, SEL, EKRecurrenceRule))bean_msgSend)(self, bean_sel("addRecurrenceRule:"), rule); }
-static inline void          EKCalendarItem_RemoveRecurrenceRule(EKCalendarItem self, EKRecurrenceRule rule)    { ((void (*)(EKCalendarItem, SEL, EKRecurrenceRule))bean_msgSend)(self, bean_sel("removeRecurrenceRule:"), rule); }
-static inline NSString      EKCalendarItem_UUID(EKCalendarItem self)                                           { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("UUID")); }
-static inline EKCalendar    EKCalendarItem_Calendar(EKCalendarItem self)                                       { return ((EKCalendar (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("calendar")); }
-static inline void          EKCalendarItem_SetCalendar(EKCalendarItem self, EKCalendar calendar)               { ((void (*)(EKCalendarItem, SEL, EKCalendar))bean_msgSend)(self, bean_sel("setCalendar:"), calendar); }
-static inline NSString      EKCalendarItem_CalendarItemIdentifier(EKCalendarItem self)                         { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("calendarItemIdentifier")); }
-static inline NSString      EKCalendarItem_CalendarItemExternalIdentifier(EKCalendarItem self)                 { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("calendarItemExternalIdentifier")); }
-static inline NSString      EKCalendarItem_Title(EKCalendarItem self)                                          { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline void          EKCalendarItem_SetTitle(EKCalendarItem self, NSString title)                       { ((void (*)(EKCalendarItem, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
-static inline NSString      EKCalendarItem_Location(EKCalendarItem self)                                       { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("location")); }
-static inline void          EKCalendarItem_SetLocation(EKCalendarItem self, NSString location)                 { ((void (*)(EKCalendarItem, SEL, NSString))bean_msgSend)(self, bean_sel("setLocation:"), location); }
-static inline NSString      EKCalendarItem_Notes(EKCalendarItem self)                                          { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("notes")); }
-static inline void          EKCalendarItem_SetNotes(EKCalendarItem self, NSString notes)                       { ((void (*)(EKCalendarItem, SEL, NSString))bean_msgSend)(self, bean_sel("setNotes:"), notes); }
-static inline NSURL         EKCalendarItem_URL(EKCalendarItem self)                                            { return ((NSURL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("URL")); }
-static inline void          EKCalendarItem_SetURL(EKCalendarItem self, NSURL URL)                              { ((void (*)(EKCalendarItem, SEL, NSURL))bean_msgSend)(self, bean_sel("setURL:"), URL); }
-static inline NSDate        EKCalendarItem_LastModifiedDate(EKCalendarItem self)                               { return ((NSDate (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("lastModifiedDate")); }
-static inline NSDate        EKCalendarItem_CreationDate(EKCalendarItem self)                                   { return ((NSDate (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("creationDate")); }
-static inline NSTimeZone    EKCalendarItem_TimeZone(EKCalendarItem self)                                       { return ((NSTimeZone (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("timeZone")); }
-static inline void          EKCalendarItem_SetTimeZone(EKCalendarItem self, NSTimeZone timeZone)               { ((void (*)(EKCalendarItem, SEL, NSTimeZone))bean_msgSend)(self, bean_sel("setTimeZone:"), timeZone); }
-static inline BOOL          EKCalendarItem_HasAlarms(EKCalendarItem self)                                      { return ((BOOL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("hasAlarms")); }
-static inline BOOL          EKCalendarItem_HasRecurrenceRules(EKCalendarItem self)                             { return ((BOOL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("hasRecurrenceRules")); }
-static inline BOOL          EKCalendarItem_HasAttendees(EKCalendarItem self)                                   { return ((BOOL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("hasAttendees")); }
-static inline BOOL          EKCalendarItem_HasNotes(EKCalendarItem self)                                       { return ((BOOL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("hasNotes")); }
-static inline NSArray       EKCalendarItem_Attendees(EKCalendarItem self)                                      { return ((NSArray (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("attendees")); }
-static inline NSArray       EKCalendarItem_Alarms(EKCalendarItem self)                                         { return ((NSArray (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("alarms")); }
-static inline void          EKCalendarItem_SetAlarms(EKCalendarItem self, NSArray alarms)                      { ((void (*)(EKCalendarItem, SEL, NSArray))bean_msgSend)(self, bean_sel("setAlarms:"), alarms); }
-static inline NSArray       EKCalendarItem_RecurrenceRules(EKCalendarItem self)                                { return ((NSArray (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("recurrenceRules")); }
-static inline void          EKCalendarItem_SetRecurrenceRules(EKCalendarItem self, NSArray recurrenceRules)    { ((void (*)(EKCalendarItem, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecurrenceRules:"), recurrenceRules); }
+static inline void              EKCalendarItem_AddAlarm(EKCalendarItem self, EKAlarm alarm)                        { ((void (*)(EKCalendarItem, SEL, EKAlarm))bean_msgSend)(self, bean_sel("addAlarm:"), alarm); }
+static inline void              EKCalendarItem_RemoveAlarm(EKCalendarItem self, EKAlarm alarm)                     { ((void (*)(EKCalendarItem, SEL, EKAlarm))bean_msgSend)(self, bean_sel("removeAlarm:"), alarm); }
+static inline void              EKCalendarItem_AddRecurrenceRule(EKCalendarItem self, EKRecurrenceRule rule)       { ((void (*)(EKCalendarItem, SEL, EKRecurrenceRule))bean_msgSend)(self, bean_sel("addRecurrenceRule:"), rule); }
+static inline void              EKCalendarItem_RemoveRecurrenceRule(EKCalendarItem self, EKRecurrenceRule rule)    { ((void (*)(EKCalendarItem, SEL, EKRecurrenceRule))bean_msgSend)(self, bean_sel("removeRecurrenceRule:"), rule); }
+static inline NSString          EKCalendarItem_UUID(EKCalendarItem self)                                           { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("UUID")); }
+static inline EKCalendar        EKCalendarItem_Calendar(EKCalendarItem self)                                       { return ((EKCalendar (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("calendar")); }
+static inline void              EKCalendarItem_SetCalendar(EKCalendarItem self, EKCalendar calendar)               { ((void (*)(EKCalendarItem, SEL, EKCalendar))bean_msgSend)(self, bean_sel("setCalendar:"), calendar); }
+static inline NSString          EKCalendarItem_CalendarItemIdentifier(EKCalendarItem self)                         { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("calendarItemIdentifier")); }
+static inline NSString          EKCalendarItem_CalendarItemExternalIdentifier(EKCalendarItem self)                 { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("calendarItemExternalIdentifier")); }
+static inline NSString          EKCalendarItem_Title(EKCalendarItem self)                                          { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline void              EKCalendarItem_SetTitle(EKCalendarItem self, NSString title)                       { ((void (*)(EKCalendarItem, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
+static inline NSString          EKCalendarItem_Location(EKCalendarItem self)                                       { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("location")); }
+static inline void              EKCalendarItem_SetLocation(EKCalendarItem self, NSString location)                 { ((void (*)(EKCalendarItem, SEL, NSString))bean_msgSend)(self, bean_sel("setLocation:"), location); }
+static inline NSString          EKCalendarItem_Notes(EKCalendarItem self)                                          { return ((NSString (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("notes")); }
+static inline void              EKCalendarItem_SetNotes(EKCalendarItem self, NSString notes)                       { ((void (*)(EKCalendarItem, SEL, NSString))bean_msgSend)(self, bean_sel("setNotes:"), notes); }
+static inline NSURL             EKCalendarItem_URL(EKCalendarItem self)                                            { return ((NSURL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("URL")); }
+static inline void              EKCalendarItem_SetURL(EKCalendarItem self, NSURL URL)                              { ((void (*)(EKCalendarItem, SEL, NSURL))bean_msgSend)(self, bean_sel("setURL:"), URL); }
+static inline NSDate            EKCalendarItem_LastModifiedDate(EKCalendarItem self)                               { return ((NSDate (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("lastModifiedDate")); }
+static inline NSDate            EKCalendarItem_CreationDate(EKCalendarItem self)                                   { return ((NSDate (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("creationDate")); }
+static inline NSTimeZone        EKCalendarItem_TimeZone(EKCalendarItem self)                                       { return ((NSTimeZone (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("timeZone")); }
+static inline void              EKCalendarItem_SetTimeZone(EKCalendarItem self, NSTimeZone timeZone)               { ((void (*)(EKCalendarItem, SEL, NSTimeZone))bean_msgSend)(self, bean_sel("setTimeZone:"), timeZone); }
+static inline BOOL              EKCalendarItem_HasAlarms(EKCalendarItem self)                                      { return ((BOOL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("hasAlarms")); }
+static inline BOOL              EKCalendarItem_HasRecurrenceRules(EKCalendarItem self)                             { return ((BOOL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("hasRecurrenceRules")); }
+static inline BOOL              EKCalendarItem_HasAttendees(EKCalendarItem self)                                   { return ((BOOL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("hasAttendees")); }
+static inline BOOL              EKCalendarItem_HasNotes(EKCalendarItem self)                                       { return ((BOOL (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("hasNotes")); }
+static inline NSArray           EKCalendarItem_Attendees(EKCalendarItem self)                                      { return ((NSArray (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("attendees")); }
+static inline NSArray           EKCalendarItem_Alarms(EKCalendarItem self)                                         { return ((NSArray (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("alarms")); }
+static inline void              EKCalendarItem_SetAlarms(EKCalendarItem self, NSArray alarms)                      { ((void (*)(EKCalendarItem, SEL, NSArray))bean_msgSend)(self, bean_sel("setAlarms:"), alarms); }
+static inline NSArray           EKCalendarItem_RecurrenceRules(EKCalendarItem self)                                { return ((NSArray (*)(EKCalendarItem, SEL))bean_msgSend)(self, bean_sel("recurrenceRules")); }
+static inline void              EKCalendarItem_SetRecurrenceRules(EKCalendarItem self, NSArray recurrenceRules)    { ((void (*)(EKCalendarItem, SEL, NSArray))bean_msgSend)(self, bean_sel("setRecurrenceRules:"), recurrenceRules); }
+#ifndef BEAN_ALLOC_EKCalendarItem
+#define BEAN_ALLOC_EKCalendarItem
+static inline EKCalendarItem    EKCalendarItem_Alloc(void)                                                         { return (EKCalendarItem)bean_alloc(bean_cls("EKCalendarItem")); }
+#endif
+#ifndef BEAN_NEW_EKCalendarItem
+#define BEAN_NEW_EKCalendarItem
+static inline EKCalendarItem    EKCalendarItem_New(void)                                                           { return (EKCalendarItem)bean_new(bean_cls("EKCalendarItem")); }
+#endif
 
 /* ===== EKEvent ===== */
 #ifndef BEAN_TYPEDEF_EKEvent
@@ -1831,6 +1963,14 @@ static inline NSString                EKEvent_BirthdayContactIdentifier(EKEvent 
 static inline NSInteger               EKEvent_BirthdayPersonID(EKEvent self)                                                  { return ((NSInteger (*)(EKEvent, SEL))bean_msgSend)(self, bean_sel("birthdayPersonID")); }
 static inline NSString                EKEvent_BirthdayPersonUniqueID(EKEvent self)                                            { return ((NSString (*)(EKEvent, SEL))bean_msgSend)(self, bean_sel("birthdayPersonUniqueID")); }
 static inline BOOL                    EKEvent_AllDay(EKEvent self)                                                            { return ((BOOL (*)(EKEvent, SEL))bean_msgSend)(self, bean_sel("allDay")); }
+#ifndef BEAN_ALLOC_EKEvent
+#define BEAN_ALLOC_EKEvent
+static inline EKEvent                 EKEvent_Alloc(void)                                                                     { return (EKEvent)bean_alloc(bean_cls("EKEvent")); }
+#endif
+#ifndef BEAN_NEW_EKEvent
+#define BEAN_NEW_EKEvent
+static inline EKEvent                 EKEvent_New(void)                                                                       { return (EKEvent)bean_new(bean_cls("EKEvent")); }
+#endif
 
 /* ===== EKEventStore ===== */
 static inline EKAuthorizationStatus    EKEventStore_AuthorizationStatusForEntityType(EKEntityType entityType)                                                                                            { return ((EKAuthorizationStatus (*)(bean_class, SEL, EKEntityType))bean_msgSend)(bean_cls("EKEventStore"), bean_sel("authorizationStatusForEntityType:"), entityType); }
@@ -1872,6 +2012,14 @@ static inline NSArray                  EKEventStore_DelegateSources(EKEventStore
 static inline NSArray                  EKEventStore_Sources(EKEventStore self)                                                                                                                           { return ((NSArray (*)(EKEventStore, SEL))bean_msgSend)(self, bean_sel("sources")); }
 static inline NSArray                  EKEventStore_Calendars(EKEventStore self)                                                                                                                         { return ((NSArray (*)(EKEventStore, SEL))bean_msgSend)(self, bean_sel("calendars")); }
 static inline EKCalendar               EKEventStore_DefaultCalendarForNewEvents(EKEventStore self)                                                                                                       { return ((EKCalendar (*)(EKEventStore, SEL))bean_msgSend)(self, bean_sel("defaultCalendarForNewEvents")); }
+#ifndef BEAN_ALLOC_EKEventStore
+#define BEAN_ALLOC_EKEventStore
+static inline EKEventStore             EKEventStore_Alloc(void)                                                                                                                                          { return (EKEventStore)bean_alloc(bean_cls("EKEventStore")); }
+#endif
+#ifndef BEAN_NEW_EKEventStore
+#define BEAN_NEW_EKEventStore
+static inline EKEventStore             EKEventStore_New(void)                                                                                                                                            { return (EKEventStore)bean_new(bean_cls("EKEventStore")); }
+#endif
 
 /* ===== EKReminder ===== */
 static inline EKReminder          EKReminder_ReminderWithEventStore(EKEventStore eventStore)                                  { return ((EKReminder (*)(bean_class, SEL, EKEventStore))bean_msgSend)(bean_cls("EKReminder"), bean_sel("reminderWithEventStore:"), eventStore); }
@@ -1886,6 +2034,14 @@ static inline void                EKReminder_SetCompletionDate(EKReminder self, 
 static inline NSUInteger          EKReminder_Priority(EKReminder self)                                                        { return ((NSUInteger (*)(EKReminder, SEL))bean_msgSend)(self, bean_sel("priority")); }
 static inline void                EKReminder_SetPriority(EKReminder self, NSUInteger priority)                                { ((void (*)(EKReminder, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setPriority:"), priority); }
 static inline BOOL                EKReminder_Completed(EKReminder self)                                                       { return ((BOOL (*)(EKReminder, SEL))bean_msgSend)(self, bean_sel("completed")); }
+#ifndef BEAN_ALLOC_EKReminder
+#define BEAN_ALLOC_EKReminder
+static inline EKReminder          EKReminder_Alloc(void)                                                                      { return (EKReminder)bean_alloc(bean_cls("EKReminder")); }
+#endif
+#ifndef BEAN_NEW_EKReminder
+#define BEAN_NEW_EKReminder
+static inline EKReminder          EKReminder_New(void)                                                                        { return (EKReminder)bean_new(bean_cls("EKReminder")); }
+#endif
 
 
 #ifdef __cplusplus

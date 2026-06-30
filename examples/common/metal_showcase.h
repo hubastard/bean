@@ -104,7 +104,7 @@ static inline BOOL bean_metal_showcase_setup(
         return NO;
     }
 
-    pipeline_desc = (MTLRenderPipelineDescriptor)bean_alloc(bean_cls("MTLRenderPipelineDescriptor"));
+    pipeline_desc = MTLRenderPipelineDescriptor_Alloc();
     pipeline_desc = (MTLRenderPipelineDescriptor)bean_init(pipeline_desc);
     MTLRenderPipelineDescriptor_SetVertexFunction(pipeline_desc, vertex_fn);
     MTLRenderPipelineDescriptor_SetFragmentFunction(pipeline_desc, fragment_fn);

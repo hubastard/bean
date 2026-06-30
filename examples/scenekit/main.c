@@ -37,7 +37,7 @@ int main(void) {
         NSView content = NSWindow_ContentView(window);
         CGRect bounds = NSView_Bounds(content);
 
-        SCNView scene_view = (SCNView)bean_alloc(bean_cls("SCNView"));
+        SCNView scene_view = SCNView_Alloc();
         scene_view = (SCNView)SCNView_InitWithFrame_Options(scene_view, bounds, NULL);
         bean_example_add_fill_subview(content, (NSView)scene_view);
 

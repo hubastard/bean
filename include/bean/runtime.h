@@ -52,6 +52,10 @@ static inline bean_id bean_new(bean_class cls) {
     return bean_init(bean_alloc(cls));
 }
 
+/* Prefer ClassName_Alloc() from generated headers; these avoid spelling class names as strings. */
+#define bean_class_alloc(Class) ((Class)bean_alloc(bean_cls(#Class)))
+#define bean_class_new(Class) ((Class)bean_new(bean_cls(#Class)))
+
 #define autoreleasepool \
     for (bean_autorelease_pool_scope bean_pool__ = bean_autorelease_pool_push(), \
          *bean_pool_ptr__ = &bean_pool__; \

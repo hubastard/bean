@@ -5105,9 +5105,16 @@ typedef NSUInteger NSStringEncoding;
 typedef bean_id CKAsset;
 #endif
 static inline CKAsset    CKAsset_Init(CKAsset self)                              { return ((CKAsset (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CKAsset
+#define BEAN_NEW_CKAsset
 static inline CKAsset    CKAsset_New(void)                                       { return ((CKAsset (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKAsset"), bean_sel("new")); }
+#endif
 static inline CKAsset    CKAsset_InitWithFileURL(CKAsset self, NSURL fileURL)    { return ((CKAsset (*)(CKAsset, SEL, NSURL))bean_msgSend)(self, bean_sel("initWithFileURL:"), fileURL); }
 static inline NSURL      CKAsset_FileURL(CKAsset self)                           { return ((NSURL (*)(CKAsset, SEL))bean_msgSend)(self, bean_sel("fileURL")); }
+#ifndef BEAN_ALLOC_CKAsset
+#define BEAN_ALLOC_CKAsset
+static inline CKAsset    CKAsset_Alloc(void)                                     { return (CKAsset)bean_alloc(bean_cls("CKAsset")); }
+#endif
 
 /* ===== CKDatabaseSubscription ===== */
 #ifndef BEAN_TYPEDEF_CKDatabaseSubscription
@@ -5115,13 +5122,20 @@ static inline NSURL      CKAsset_FileURL(CKAsset self)                          
 typedef bean_id CKDatabaseSubscription;
 #endif
 static inline CKDatabaseSubscription    CKDatabaseSubscription_Init(CKDatabaseSubscription self)                                               { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CKDatabaseSubscription
+#define BEAN_NEW_CKDatabaseSubscription
 static inline CKDatabaseSubscription    CKDatabaseSubscription_New(void)                                                                       { return ((CKDatabaseSubscription (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabaseSubscription"), bean_sel("new")); }
+#endif
 static inline CKDatabaseSubscription    CKDatabaseSubscription_InitWithSubscriptionID(CKDatabaseSubscription self, NSString subscriptionID)    { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSubscriptionID:"), subscriptionID); }
 static inline CKDatabaseSubscription    CKDatabaseSubscription_InitWithCoder(CKDatabaseSubscription self, NSCoder aDecoder)                    { return ((CKDatabaseSubscription (*)(CKDatabaseSubscription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), aDecoder); }
 static inline NSString                  CKDatabaseSubscription_RecordType(CKDatabaseSubscription self)                                         { return ((NSString (*)(CKDatabaseSubscription, SEL))bean_msgSend)(self, bean_sel("recordType")); }
 static inline void                      CKDatabaseSubscription_SetRecordType(CKDatabaseSubscription self, NSString recordType)                 { ((void (*)(CKDatabaseSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
 static inline BOOL                      CKDatabaseSubscription_SupportsSecureCoding(void)                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabaseSubscription"), bean_sel("supportsSecureCoding")); }
 static inline id                        CKDatabaseSubscription_CopyWithZone(CKDatabaseSubscription self, NSZone* zone)                         { return ((id (*)(CKDatabaseSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CKDatabaseSubscription
+#define BEAN_ALLOC_CKDatabaseSubscription
+static inline CKDatabaseSubscription    CKDatabaseSubscription_Alloc(void)                                                                     { return (CKDatabaseSubscription)bean_alloc(bean_cls("CKDatabaseSubscription")); }
+#endif
 
 /* ===== CKQuerySubscription ===== */
 #ifndef BEAN_TYPEDEF_CKQuerySubscription
@@ -5138,6 +5152,14 @@ static inline void                          CKQuerySubscription_SetZoneID(CKQuer
 static inline CKQuerySubscriptionOptions    CKQuerySubscription_QuerySubscriptionOptions(CKQuerySubscription self)                                                                                                                                                         { return ((CKQuerySubscriptionOptions (*)(CKQuerySubscription, SEL))bean_msgSend)(self, bean_sel("querySubscriptionOptions")); }
 static inline BOOL                          CKQuerySubscription_SupportsSecureCoding(void)                                                                                                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKQuerySubscription"), bean_sel("supportsSecureCoding")); }
 static inline id                            CKQuerySubscription_CopyWithZone(CKQuerySubscription self, NSZone* zone)                                                                                                                                                       { return ((id (*)(CKQuerySubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CKQuerySubscription
+#define BEAN_ALLOC_CKQuerySubscription
+static inline CKQuerySubscription           CKQuerySubscription_Alloc(void)                                                                                                                                                                                                { return (CKQuerySubscription)bean_alloc(bean_cls("CKQuerySubscription")); }
+#endif
+#ifndef BEAN_NEW_CKQuerySubscription
+#define BEAN_NEW_CKQuerySubscription
+static inline CKQuerySubscription           CKQuerySubscription_New(void)                                                                                                                                                                                                  { return (CKQuerySubscription)bean_new(bean_cls("CKQuerySubscription")); }
+#endif
 
 /* ===== CKRecordZoneSubscription ===== */
 #ifndef BEAN_TYPEDEF_CKRecordZoneSubscription
@@ -5152,6 +5174,14 @@ static inline NSString                    CKRecordZoneSubscription_RecordType(CK
 static inline void                        CKRecordZoneSubscription_SetRecordType(CKRecordZoneSubscription self, NSString recordType)                                               { ((void (*)(CKRecordZoneSubscription, SEL, NSString))bean_msgSend)(self, bean_sel("setRecordType:"), recordType); }
 static inline BOOL                        CKRecordZoneSubscription_SupportsSecureCoding(void)                                                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecordZoneSubscription"), bean_sel("supportsSecureCoding")); }
 static inline id                          CKRecordZoneSubscription_CopyWithZone(CKRecordZoneSubscription self, NSZone* zone)                                                       { return ((id (*)(CKRecordZoneSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CKRecordZoneSubscription
+#define BEAN_ALLOC_CKRecordZoneSubscription
+static inline CKRecordZoneSubscription    CKRecordZoneSubscription_Alloc(void)                                                                                                     { return (CKRecordZoneSubscription)bean_alloc(bean_cls("CKRecordZoneSubscription")); }
+#endif
+#ifndef BEAN_NEW_CKRecordZoneSubscription
+#define BEAN_NEW_CKRecordZoneSubscription
+static inline CKRecordZoneSubscription    CKRecordZoneSubscription_New(void)                                                                                                       { return (CKRecordZoneSubscription)bean_new(bean_cls("CKRecordZoneSubscription")); }
+#endif
 
 /* ===== CLFloor ===== */
 #ifndef BEAN_TYPEDEF_CLFloor
@@ -5161,6 +5191,14 @@ typedef bean_id CLFloor;
 static inline NSInteger    CLFloor_Level(CLFloor self)                         { return ((NSInteger (*)(CLFloor, SEL))bean_msgSend)(self, bean_sel("level")); }
 static inline id           CLFloor_CopyWithZone(CLFloor self, NSZone* zone)    { return ((id (*)(CLFloor, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL         CLFloor_SupportsSecureCoding(void)                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLFloor"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLFloor
+#define BEAN_ALLOC_CLFloor
+static inline CLFloor      CLFloor_Alloc(void)                                 { return (CLFloor)bean_alloc(bean_cls("CLFloor")); }
+#endif
+#ifndef BEAN_NEW_CLFloor
+#define BEAN_NEW_CLFloor
+static inline CLFloor      CLFloor_New(void)                                   { return (CLFloor)bean_new(bean_cls("CLFloor")); }
+#endif
 
 /* ===== CLLocationSourceInformation ===== */
 #ifndef BEAN_TYPEDEF_CLLocationSourceInformation
@@ -5172,6 +5210,14 @@ static inline BOOL                           CLLocationSourceInformation_IsSimul
 static inline BOOL                           CLLocationSourceInformation_IsProducedByAccessory(CLLocationSourceInformation self)                                                                           { return ((BOOL (*)(CLLocationSourceInformation, SEL))bean_msgSend)(self, bean_sel("isProducedByAccessory")); }
 static inline id                             CLLocationSourceInformation_CopyWithZone(CLLocationSourceInformation self, NSZone* zone)                                                                      { return ((id (*)(CLLocationSourceInformation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                           CLLocationSourceInformation_SupportsSecureCoding(void)                                                                                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocationSourceInformation"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLLocationSourceInformation
+#define BEAN_ALLOC_CLLocationSourceInformation
+static inline CLLocationSourceInformation    CLLocationSourceInformation_Alloc(void)                                                                                                                       { return (CLLocationSourceInformation)bean_alloc(bean_cls("CLLocationSourceInformation")); }
+#endif
+#ifndef BEAN_NEW_CLLocationSourceInformation
+#define BEAN_NEW_CLLocationSourceInformation
+static inline CLLocationSourceInformation    CLLocationSourceInformation_New(void)                                                                                                                         { return (CLLocationSourceInformation)bean_new(bean_cls("CLLocationSourceInformation")); }
+#endif
 
 /* ===== GKARC4RandomSource ===== */
 #ifndef BEAN_TYPEDEF_GKARC4RandomSource
@@ -5183,19 +5229,35 @@ static inline GKARC4RandomSource    GKARC4RandomSource_InitWithSeed(GKARC4Random
 static inline void                  GKARC4RandomSource_DropValuesWithCount(GKARC4RandomSource self, NSUInteger count)    { ((void (*)(GKARC4RandomSource, SEL, NSUInteger))bean_msgSend)(self, bean_sel("dropValuesWithCount:"), count); }
 static inline NSData                GKARC4RandomSource_Seed(GKARC4RandomSource self)                                     { return ((NSData (*)(GKARC4RandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
 static inline void                  GKARC4RandomSource_SetSeed(GKARC4RandomSource self, NSData seed)                     { ((void (*)(GKARC4RandomSource, SEL, NSData))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+#ifndef BEAN_ALLOC_GKARC4RandomSource
+#define BEAN_ALLOC_GKARC4RandomSource
+static inline GKARC4RandomSource    GKARC4RandomSource_Alloc(void)                                                       { return (GKARC4RandomSource)bean_alloc(bean_cls("GKARC4RandomSource")); }
+#endif
+#ifndef BEAN_NEW_GKARC4RandomSource
+#define BEAN_NEW_GKARC4RandomSource
+static inline GKARC4RandomSource    GKARC4RandomSource_New(void)                                                         { return (GKARC4RandomSource)bean_new(bean_cls("GKARC4RandomSource")); }
+#endif
 
 /* ===== GKAgent2D ===== */
 #ifndef BEAN_TYPEDEF_GKAgent2D
 #define BEAN_TYPEDEF_GKAgent2D
 typedef bean_id GKAgent2D;
 #endif
-static inline void       GKAgent2D_UpdateWithDeltaTime(GKAgent2D self, CGFloat seconds)    { ((void (*)(GKAgent2D, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
-static inline void*      GKAgent2D_Position(GKAgent2D self)                                { return ((void* (*)(GKAgent2D, SEL))bean_msgSend)(self, bean_sel("position")); }
-static inline void       GKAgent2D_SetPosition(GKAgent2D self, void* position)             { ((void (*)(GKAgent2D, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
-static inline void*      GKAgent2D_Velocity(GKAgent2D self)                                { return ((void* (*)(GKAgent2D, SEL))bean_msgSend)(self, bean_sel("velocity")); }
-static inline CGFloat    GKAgent2D_Rotation(GKAgent2D self)                                { return ((CGFloat (*)(GKAgent2D, SEL))bean_msgSend_fpret)(self, bean_sel("rotation")); }
-static inline void       GKAgent2D_SetRotation(GKAgent2D self, CGFloat rotation)           { ((void (*)(GKAgent2D, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRotation:"), rotation); }
-static inline BOOL       GKAgent2D_SupportsSecureCoding(void)                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKAgent2D"), bean_sel("supportsSecureCoding")); }
+static inline void         GKAgent2D_UpdateWithDeltaTime(GKAgent2D self, CGFloat seconds)    { ((void (*)(GKAgent2D, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
+static inline void*        GKAgent2D_Position(GKAgent2D self)                                { return ((void* (*)(GKAgent2D, SEL))bean_msgSend)(self, bean_sel("position")); }
+static inline void         GKAgent2D_SetPosition(GKAgent2D self, void* position)             { ((void (*)(GKAgent2D, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+static inline void*        GKAgent2D_Velocity(GKAgent2D self)                                { return ((void* (*)(GKAgent2D, SEL))bean_msgSend)(self, bean_sel("velocity")); }
+static inline CGFloat      GKAgent2D_Rotation(GKAgent2D self)                                { return ((CGFloat (*)(GKAgent2D, SEL))bean_msgSend_fpret)(self, bean_sel("rotation")); }
+static inline void         GKAgent2D_SetRotation(GKAgent2D self, CGFloat rotation)           { ((void (*)(GKAgent2D, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRotation:"), rotation); }
+static inline BOOL         GKAgent2D_SupportsSecureCoding(void)                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKAgent2D"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKAgent2D
+#define BEAN_ALLOC_GKAgent2D
+static inline GKAgent2D    GKAgent2D_Alloc(void)                                             { return (GKAgent2D)bean_alloc(bean_cls("GKAgent2D")); }
+#endif
+#ifndef BEAN_NEW_GKAgent2D
+#define BEAN_NEW_GKAgent2D
+static inline GKAgent2D    GKAgent2D_New(void)                                               { return (GKAgent2D)bean_new(bean_cls("GKAgent2D")); }
+#endif
 
 /* ===== GKAgent3D ===== */
 #ifndef BEAN_TYPEDEF_GKAgent3D
@@ -5210,6 +5272,14 @@ static inline BOOL             GKAgent3D_RightHanded(GKAgent3D self)            
 static inline void             GKAgent3D_SetRightHanded(GKAgent3D self, BOOL rightHanded)        { ((void (*)(GKAgent3D, SEL, BOOL))bean_msgSend)(self, bean_sel("setRightHanded:"), rightHanded); }
 static inline simd_float3x3    GKAgent3D_Rotation(GKAgent3D self)                                { return ((simd_float3x3 (*)(GKAgent3D, SEL))bean_msgSend)(self, bean_sel("rotation")); }
 static inline void             GKAgent3D_SetRotation(GKAgent3D self, simd_float3x3 rotation)     { ((void (*)(GKAgent3D, SEL, simd_float3x3))bean_msgSend)(self, bean_sel("setRotation:"), rotation); }
+#ifndef BEAN_ALLOC_GKAgent3D
+#define BEAN_ALLOC_GKAgent3D
+static inline GKAgent3D        GKAgent3D_Alloc(void)                                             { return (GKAgent3D)bean_alloc(bean_cls("GKAgent3D")); }
+#endif
+#ifndef BEAN_NEW_GKAgent3D
+#define BEAN_NEW_GKAgent3D
+static inline GKAgent3D        GKAgent3D_New(void)                                               { return (GKAgent3D)bean_new(bean_cls("GKAgent3D")); }
+#endif
 
 /* ===== GKBillowNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKBillowNoiseSource
@@ -5220,6 +5290,14 @@ static inline GKBillowNoiseSource    GKBillowNoiseSource_BillowNoiseSourceWithFr
 static inline GKBillowNoiseSource    GKBillowNoiseSource_InitWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(GKBillowNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)    { return ((GKBillowNoiseSource (*)(GKBillowNoiseSource, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
 static inline CGFloat                GKBillowNoiseSource_Persistence(GKBillowNoiseSource self)                                                                                                                                               { return ((CGFloat (*)(GKBillowNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("persistence")); }
 static inline void                   GKBillowNoiseSource_SetPersistence(GKBillowNoiseSource self, CGFloat persistence)                                                                                                                       { ((void (*)(GKBillowNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPersistence:"), persistence); }
+#ifndef BEAN_ALLOC_GKBillowNoiseSource
+#define BEAN_ALLOC_GKBillowNoiseSource
+static inline GKBillowNoiseSource    GKBillowNoiseSource_Alloc(void)                                                                                                                                                                         { return (GKBillowNoiseSource)bean_alloc(bean_cls("GKBillowNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKBillowNoiseSource
+#define BEAN_NEW_GKBillowNoiseSource
+static inline GKBillowNoiseSource    GKBillowNoiseSource_New(void)                                                                                                                                                                           { return (GKBillowNoiseSource)bean_new(bean_cls("GKBillowNoiseSource")); }
+#endif
 
 /* ===== GKCheckerboardNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKCheckerboardNoiseSource
@@ -5230,6 +5308,14 @@ static inline GKCheckerboardNoiseSource    GKCheckerboardNoiseSource_Checkerboar
 static inline GKCheckerboardNoiseSource    GKCheckerboardNoiseSource_InitWithSquareSize(GKCheckerboardNoiseSource self, CGFloat squareSize)    { return ((GKCheckerboardNoiseSource (*)(GKCheckerboardNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithSquareSize:"), squareSize); }
 static inline CGFloat                      GKCheckerboardNoiseSource_SquareSize(GKCheckerboardNoiseSource self)                                { return ((CGFloat (*)(GKCheckerboardNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("squareSize")); }
 static inline void                         GKCheckerboardNoiseSource_SetSquareSize(GKCheckerboardNoiseSource self, CGFloat squareSize)         { ((void (*)(GKCheckerboardNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSquareSize:"), squareSize); }
+#ifndef BEAN_ALLOC_GKCheckerboardNoiseSource
+#define BEAN_ALLOC_GKCheckerboardNoiseSource
+static inline GKCheckerboardNoiseSource    GKCheckerboardNoiseSource_Alloc(void)                                                               { return (GKCheckerboardNoiseSource)bean_alloc(bean_cls("GKCheckerboardNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKCheckerboardNoiseSource
+#define BEAN_NEW_GKCheckerboardNoiseSource
+static inline GKCheckerboardNoiseSource    GKCheckerboardNoiseSource_New(void)                                                                 { return (GKCheckerboardNoiseSource)bean_new(bean_cls("GKCheckerboardNoiseSource")); }
+#endif
 
 /* ===== GKCircleObstacle ===== */
 #ifndef BEAN_TYPEDEF_GKCircleObstacle
@@ -5242,20 +5328,36 @@ static inline CGFloat             GKCircleObstacle_Radius(GKCircleObstacle self)
 static inline void                GKCircleObstacle_SetRadius(GKCircleObstacle self, CGFloat radius)         { ((void (*)(GKCircleObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
 static inline void*               GKCircleObstacle_Position(GKCircleObstacle self)                          { return ((void* (*)(GKCircleObstacle, SEL))bean_msgSend)(self, bean_sel("position")); }
 static inline void                GKCircleObstacle_SetPosition(GKCircleObstacle self, void* position)       { ((void (*)(GKCircleObstacle, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+#ifndef BEAN_ALLOC_GKCircleObstacle
+#define BEAN_ALLOC_GKCircleObstacle
+static inline GKCircleObstacle    GKCircleObstacle_Alloc(void)                                              { return (GKCircleObstacle)bean_alloc(bean_cls("GKCircleObstacle")); }
+#endif
+#ifndef BEAN_NEW_GKCircleObstacle
+#define BEAN_NEW_GKCircleObstacle
+static inline GKCircleObstacle    GKCircleObstacle_New(void)                                                { return (GKCircleObstacle)bean_new(bean_cls("GKCircleObstacle")); }
+#endif
 
 /* ===== GKCoherentNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKCoherentNoiseSource
 #define BEAN_TYPEDEF_GKCoherentNoiseSource
 typedef bean_id GKCoherentNoiseSource;
 #endif
-static inline CGFloat      GKCoherentNoiseSource_Frequency(GKCoherentNoiseSource self)                                { return ((CGFloat (*)(GKCoherentNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
-static inline void         GKCoherentNoiseSource_SetFrequency(GKCoherentNoiseSource self, CGFloat frequency)          { ((void (*)(GKCoherentNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
-static inline NSInteger    GKCoherentNoiseSource_OctaveCount(GKCoherentNoiseSource self)                              { return ((NSInteger (*)(GKCoherentNoiseSource, SEL))bean_msgSend)(self, bean_sel("octaveCount")); }
-static inline void         GKCoherentNoiseSource_SetOctaveCount(GKCoherentNoiseSource self, NSInteger octaveCount)    { ((void (*)(GKCoherentNoiseSource, SEL, NSInteger))bean_msgSend)(self, bean_sel("setOctaveCount:"), octaveCount); }
-static inline CGFloat      GKCoherentNoiseSource_Lacunarity(GKCoherentNoiseSource self)                               { return ((CGFloat (*)(GKCoherentNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("lacunarity")); }
-static inline void         GKCoherentNoiseSource_SetLacunarity(GKCoherentNoiseSource self, CGFloat lacunarity)        { ((void (*)(GKCoherentNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLacunarity:"), lacunarity); }
-static inline int          GKCoherentNoiseSource_Seed(GKCoherentNoiseSource self)                                     { return ((int (*)(GKCoherentNoiseSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
-static inline void         GKCoherentNoiseSource_SetSeed(GKCoherentNoiseSource self, int seed)                        { ((void (*)(GKCoherentNoiseSource, SEL, int))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+static inline CGFloat                  GKCoherentNoiseSource_Frequency(GKCoherentNoiseSource self)                                { return ((CGFloat (*)(GKCoherentNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
+static inline void                     GKCoherentNoiseSource_SetFrequency(GKCoherentNoiseSource self, CGFloat frequency)          { ((void (*)(GKCoherentNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
+static inline NSInteger                GKCoherentNoiseSource_OctaveCount(GKCoherentNoiseSource self)                              { return ((NSInteger (*)(GKCoherentNoiseSource, SEL))bean_msgSend)(self, bean_sel("octaveCount")); }
+static inline void                     GKCoherentNoiseSource_SetOctaveCount(GKCoherentNoiseSource self, NSInteger octaveCount)    { ((void (*)(GKCoherentNoiseSource, SEL, NSInteger))bean_msgSend)(self, bean_sel("setOctaveCount:"), octaveCount); }
+static inline CGFloat                  GKCoherentNoiseSource_Lacunarity(GKCoherentNoiseSource self)                               { return ((CGFloat (*)(GKCoherentNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("lacunarity")); }
+static inline void                     GKCoherentNoiseSource_SetLacunarity(GKCoherentNoiseSource self, CGFloat lacunarity)        { ((void (*)(GKCoherentNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLacunarity:"), lacunarity); }
+static inline int                      GKCoherentNoiseSource_Seed(GKCoherentNoiseSource self)                                     { return ((int (*)(GKCoherentNoiseSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
+static inline void                     GKCoherentNoiseSource_SetSeed(GKCoherentNoiseSource self, int seed)                        { ((void (*)(GKCoherentNoiseSource, SEL, int))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+#ifndef BEAN_ALLOC_GKCoherentNoiseSource
+#define BEAN_ALLOC_GKCoherentNoiseSource
+static inline GKCoherentNoiseSource    GKCoherentNoiseSource_Alloc(void)                                                          { return (GKCoherentNoiseSource)bean_alloc(bean_cls("GKCoherentNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKCoherentNoiseSource
+#define BEAN_NEW_GKCoherentNoiseSource
+static inline GKCoherentNoiseSource    GKCoherentNoiseSource_New(void)                                                            { return (GKCoherentNoiseSource)bean_new(bean_cls("GKCoherentNoiseSource")); }
+#endif
 
 /* ===== GKConstantNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKConstantNoiseSource
@@ -5266,6 +5368,14 @@ static inline GKConstantNoiseSource    GKConstantNoiseSource_ConstantNoiseWithVa
 static inline GKConstantNoiseSource    GKConstantNoiseSource_InitWithValue(GKConstantNoiseSource self, CGFloat value)    { return ((GKConstantNoiseSource (*)(GKConstantNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithValue:"), value); }
 static inline CGFloat                  GKConstantNoiseSource_Value(GKConstantNoiseSource self)                           { return ((CGFloat (*)(GKConstantNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("value")); }
 static inline void                     GKConstantNoiseSource_SetValue(GKConstantNoiseSource self, CGFloat value)         { ((void (*)(GKConstantNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setValue:"), value); }
+#ifndef BEAN_ALLOC_GKConstantNoiseSource
+#define BEAN_ALLOC_GKConstantNoiseSource
+static inline GKConstantNoiseSource    GKConstantNoiseSource_Alloc(void)                                                 { return (GKConstantNoiseSource)bean_alloc(bean_cls("GKConstantNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKConstantNoiseSource
+#define BEAN_NEW_GKConstantNoiseSource
+static inline GKConstantNoiseSource    GKConstantNoiseSource_New(void)                                                   { return (GKConstantNoiseSource)bean_new(bean_cls("GKConstantNoiseSource")); }
+#endif
 
 /* ===== GKCylindersNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKCylindersNoiseSource
@@ -5276,6 +5386,14 @@ static inline GKCylindersNoiseSource    GKCylindersNoiseSource_CylindersNoiseWit
 static inline GKCylindersNoiseSource    GKCylindersNoiseSource_InitWithFrequency(GKCylindersNoiseSource self, CGFloat frequency)    { return ((GKCylindersNoiseSource (*)(GKCylindersNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithFrequency:"), frequency); }
 static inline CGFloat                   GKCylindersNoiseSource_Frequency(GKCylindersNoiseSource self)                               { return ((CGFloat (*)(GKCylindersNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
 static inline void                      GKCylindersNoiseSource_SetFrequency(GKCylindersNoiseSource self, CGFloat frequency)         { ((void (*)(GKCylindersNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
+#ifndef BEAN_ALLOC_GKCylindersNoiseSource
+#define BEAN_ALLOC_GKCylindersNoiseSource
+static inline GKCylindersNoiseSource    GKCylindersNoiseSource_Alloc(void)                                                          { return (GKCylindersNoiseSource)bean_alloc(bean_cls("GKCylindersNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKCylindersNoiseSource
+#define BEAN_NEW_GKCylindersNoiseSource
+static inline GKCylindersNoiseSource    GKCylindersNoiseSource_New(void)                                                            { return (GKCylindersNoiseSource)bean_new(bean_cls("GKCylindersNoiseSource")); }
+#endif
 
 /* ===== GKDecisionNode ===== */
 #ifndef BEAN_TYPEDEF_GKDecisionNode
@@ -5285,21 +5403,45 @@ typedef bean_id GKDecisionNode;
 static inline GKDecisionNode    GKDecisionNode_CreateBranchWithValue_Attribute(GKDecisionNode self, NSNumber value, id attribute)               { return ((GKDecisionNode (*)(GKDecisionNode, SEL, NSNumber, id))bean_msgSend)(self, bean_sel("createBranchWithValue:attribute:"), value, attribute); }
 static inline GKDecisionNode    GKDecisionNode_CreateBranchWithPredicate_Attribute(GKDecisionNode self, NSPredicate predicate, id attribute)    { return ((GKDecisionNode (*)(GKDecisionNode, SEL, NSPredicate, id))bean_msgSend)(self, bean_sel("createBranchWithPredicate:attribute:"), predicate, attribute); }
 static inline GKDecisionNode    GKDecisionNode_CreateBranchWithWeight_Attribute(GKDecisionNode self, NSInteger weight, id attribute)            { return ((GKDecisionNode (*)(GKDecisionNode, SEL, NSInteger, id))bean_msgSend)(self, bean_sel("createBranchWithWeight:attribute:"), weight, attribute); }
+#ifndef BEAN_ALLOC_GKDecisionNode
+#define BEAN_ALLOC_GKDecisionNode
+static inline GKDecisionNode    GKDecisionNode_Alloc(void)                                                                                      { return (GKDecisionNode)bean_alloc(bean_cls("GKDecisionNode")); }
+#endif
+#ifndef BEAN_NEW_GKDecisionNode
+#define BEAN_NEW_GKDecisionNode
+static inline GKDecisionNode    GKDecisionNode_New(void)                                                                                        { return (GKDecisionNode)bean_new(bean_cls("GKDecisionNode")); }
+#endif
 
 /* ===== GKGameModelPlayer ===== */
 #ifndef BEAN_TYPEDEF_GKGameModelPlayer
 #define BEAN_TYPEDEF_GKGameModelPlayer
 typedef bean_id GKGameModelPlayer;
 #endif
-static inline NSInteger    GKGameModelPlayer_PlayerId(GKGameModelPlayer self)    { return ((NSInteger (*)(GKGameModelPlayer, SEL))bean_msgSend)(self, bean_sel("playerId")); }
+static inline NSInteger            GKGameModelPlayer_PlayerId(GKGameModelPlayer self)    { return ((NSInteger (*)(GKGameModelPlayer, SEL))bean_msgSend)(self, bean_sel("playerId")); }
+#ifndef BEAN_ALLOC_GKGameModelPlayer
+#define BEAN_ALLOC_GKGameModelPlayer
+static inline GKGameModelPlayer    GKGameModelPlayer_Alloc(void)                         { return (GKGameModelPlayer)bean_alloc(bean_cls("GKGameModelPlayer")); }
+#endif
+#ifndef BEAN_NEW_GKGameModelPlayer
+#define BEAN_NEW_GKGameModelPlayer
+static inline GKGameModelPlayer    GKGameModelPlayer_New(void)                           { return (GKGameModelPlayer)bean_new(bean_cls("GKGameModelPlayer")); }
+#endif
 
 /* ===== GKGameModelUpdate ===== */
 #ifndef BEAN_TYPEDEF_GKGameModelUpdate
 #define BEAN_TYPEDEF_GKGameModelUpdate
 typedef bean_id GKGameModelUpdate;
 #endif
-static inline NSInteger    GKGameModelUpdate_Value(GKGameModelUpdate self)                        { return ((NSInteger (*)(GKGameModelUpdate, SEL))bean_msgSend)(self, bean_sel("value")); }
-static inline void         GKGameModelUpdate_SetValue(GKGameModelUpdate self, NSInteger value)    { ((void (*)(GKGameModelUpdate, SEL, NSInteger))bean_msgSend)(self, bean_sel("setValue:"), value); }
+static inline NSInteger            GKGameModelUpdate_Value(GKGameModelUpdate self)                        { return ((NSInteger (*)(GKGameModelUpdate, SEL))bean_msgSend)(self, bean_sel("value")); }
+static inline void                 GKGameModelUpdate_SetValue(GKGameModelUpdate self, NSInteger value)    { ((void (*)(GKGameModelUpdate, SEL, NSInteger))bean_msgSend)(self, bean_sel("setValue:"), value); }
+#ifndef BEAN_ALLOC_GKGameModelUpdate
+#define BEAN_ALLOC_GKGameModelUpdate
+static inline GKGameModelUpdate    GKGameModelUpdate_Alloc(void)                                          { return (GKGameModelUpdate)bean_alloc(bean_cls("GKGameModelUpdate")); }
+#endif
+#ifndef BEAN_NEW_GKGameModelUpdate
+#define BEAN_NEW_GKGameModelUpdate
+static inline GKGameModelUpdate    GKGameModelUpdate_New(void)                                            { return (GKGameModelUpdate)bean_new(bean_cls("GKGameModelUpdate")); }
+#endif
 
 /* ===== GKGaussianDistribution ===== */
 #ifndef BEAN_TYPEDEF_GKGaussianDistribution
@@ -5310,6 +5452,14 @@ static inline GKGaussianDistribution    GKGaussianDistribution_InitWithRandomSou
 static inline GKGaussianDistribution    GKGaussianDistribution_InitWithRandomSource_Mean_Deviation(GKGaussianDistribution self, id source, CGFloat mean, CGFloat deviation)                                    { return ((GKGaussianDistribution (*)(GKGaussianDistribution, SEL, id, CGFloat, CGFloat))bean_msgSend)(self, bean_sel("initWithRandomSource:mean:deviation:"), source, mean, deviation); }
 static inline CGFloat                   GKGaussianDistribution_Mean(GKGaussianDistribution self)                                                                                                               { return ((CGFloat (*)(GKGaussianDistribution, SEL))bean_msgSend_fpret)(self, bean_sel("mean")); }
 static inline CGFloat                   GKGaussianDistribution_Deviation(GKGaussianDistribution self)                                                                                                          { return ((CGFloat (*)(GKGaussianDistribution, SEL))bean_msgSend_fpret)(self, bean_sel("deviation")); }
+#ifndef BEAN_ALLOC_GKGaussianDistribution
+#define BEAN_ALLOC_GKGaussianDistribution
+static inline GKGaussianDistribution    GKGaussianDistribution_Alloc(void)                                                                                                                                     { return (GKGaussianDistribution)bean_alloc(bean_cls("GKGaussianDistribution")); }
+#endif
+#ifndef BEAN_NEW_GKGaussianDistribution
+#define BEAN_NEW_GKGaussianDistribution
+static inline GKGaussianDistribution    GKGaussianDistribution_New(void)                                                                                                                                       { return (GKGaussianDistribution)bean_new(bean_cls("GKGaussianDistribution")); }
+#endif
 
 /* ===== GKGraphNode2D ===== */
 #ifndef BEAN_TYPEDEF_GKGraphNode2D
@@ -5320,6 +5470,14 @@ static inline GKGraphNode2D    GKGraphNode2D_NodeWithPoint(void* point)         
 static inline GKGraphNode2D    GKGraphNode2D_InitWithPoint(GKGraphNode2D self, void* point)     { return ((GKGraphNode2D (*)(GKGraphNode2D, SEL, void*))bean_msgSend)(self, bean_sel("initWithPoint:"), point); }
 static inline void*            GKGraphNode2D_Position(GKGraphNode2D self)                       { return ((void* (*)(GKGraphNode2D, SEL))bean_msgSend)(self, bean_sel("position")); }
 static inline void             GKGraphNode2D_SetPosition(GKGraphNode2D self, void* position)    { ((void (*)(GKGraphNode2D, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+#ifndef BEAN_ALLOC_GKGraphNode2D
+#define BEAN_ALLOC_GKGraphNode2D
+static inline GKGraphNode2D    GKGraphNode2D_Alloc(void)                                        { return (GKGraphNode2D)bean_alloc(bean_cls("GKGraphNode2D")); }
+#endif
+#ifndef BEAN_NEW_GKGraphNode2D
+#define BEAN_NEW_GKGraphNode2D
+static inline GKGraphNode2D    GKGraphNode2D_New(void)                                          { return (GKGraphNode2D)bean_new(bean_cls("GKGraphNode2D")); }
+#endif
 
 /* ===== GKGraphNode3D ===== */
 #ifndef BEAN_TYPEDEF_GKGraphNode3D
@@ -5330,6 +5488,14 @@ static inline GKGraphNode3D    GKGraphNode3D_NodeWithPoint(void* point)         
 static inline GKGraphNode3D    GKGraphNode3D_InitWithPoint(GKGraphNode3D self, void* point)     { return ((GKGraphNode3D (*)(GKGraphNode3D, SEL, void*))bean_msgSend)(self, bean_sel("initWithPoint:"), point); }
 static inline void*            GKGraphNode3D_Position(GKGraphNode3D self)                       { return ((void* (*)(GKGraphNode3D, SEL))bean_msgSend)(self, bean_sel("position")); }
 static inline void             GKGraphNode3D_SetPosition(GKGraphNode3D self, void* position)    { ((void (*)(GKGraphNode3D, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+#ifndef BEAN_ALLOC_GKGraphNode3D
+#define BEAN_ALLOC_GKGraphNode3D
+static inline GKGraphNode3D    GKGraphNode3D_Alloc(void)                                        { return (GKGraphNode3D)bean_alloc(bean_cls("GKGraphNode3D")); }
+#endif
+#ifndef BEAN_NEW_GKGraphNode3D
+#define BEAN_NEW_GKGraphNode3D
+static inline GKGraphNode3D    GKGraphNode3D_New(void)                                          { return (GKGraphNode3D)bean_new(bean_cls("GKGraphNode3D")); }
+#endif
 
 /* ===== GKGridGraphNode ===== */
 #ifndef BEAN_TYPEDEF_GKGridGraphNode
@@ -5339,6 +5505,14 @@ typedef bean_id GKGridGraphNode;
 static inline GKGridGraphNode    GKGridGraphNode_NodeWithGridPosition(void* gridPosition)                          { return ((GKGridGraphNode (*)(bean_class, SEL, void*))bean_msgSend)(bean_cls("GKGridGraphNode"), bean_sel("nodeWithGridPosition:"), gridPosition); }
 static inline GKGridGraphNode    GKGridGraphNode_InitWithGridPosition(GKGridGraphNode self, void* gridPosition)    { return ((GKGridGraphNode (*)(GKGridGraphNode, SEL, void*))bean_msgSend)(self, bean_sel("initWithGridPosition:"), gridPosition); }
 static inline void*              GKGridGraphNode_GridPosition(GKGridGraphNode self)                                { return ((void* (*)(GKGridGraphNode, SEL))bean_msgSend)(self, bean_sel("gridPosition")); }
+#ifndef BEAN_ALLOC_GKGridGraphNode
+#define BEAN_ALLOC_GKGridGraphNode
+static inline GKGridGraphNode    GKGridGraphNode_Alloc(void)                                                       { return (GKGridGraphNode)bean_alloc(bean_cls("GKGridGraphNode")); }
+#endif
+#ifndef BEAN_NEW_GKGridGraphNode
+#define BEAN_NEW_GKGridGraphNode
+static inline GKGridGraphNode    GKGridGraphNode_New(void)                                                         { return (GKGridGraphNode)bean_new(bean_cls("GKGridGraphNode")); }
+#endif
 
 /* ===== GKLinearCongruentialRandomSource ===== */
 #ifndef BEAN_TYPEDEF_GKLinearCongruentialRandomSource
@@ -5349,6 +5523,14 @@ static inline GKLinearCongruentialRandomSource    GKLinearCongruentialRandomSour
 static inline GKLinearCongruentialRandomSource    GKLinearCongruentialRandomSource_InitWithSeed(GKLinearCongruentialRandomSource self, unsigned long long seed)    { return ((GKLinearCongruentialRandomSource (*)(GKLinearCongruentialRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("initWithSeed:"), seed); }
 static inline unsigned long long                  GKLinearCongruentialRandomSource_Seed(GKLinearCongruentialRandomSource self)                                     { return ((unsigned long long (*)(GKLinearCongruentialRandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
 static inline void                                GKLinearCongruentialRandomSource_SetSeed(GKLinearCongruentialRandomSource self, unsigned long long seed)         { ((void (*)(GKLinearCongruentialRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+#ifndef BEAN_ALLOC_GKLinearCongruentialRandomSource
+#define BEAN_ALLOC_GKLinearCongruentialRandomSource
+static inline GKLinearCongruentialRandomSource    GKLinearCongruentialRandomSource_Alloc(void)                                                                     { return (GKLinearCongruentialRandomSource)bean_alloc(bean_cls("GKLinearCongruentialRandomSource")); }
+#endif
+#ifndef BEAN_NEW_GKLinearCongruentialRandomSource
+#define BEAN_NEW_GKLinearCongruentialRandomSource
+static inline GKLinearCongruentialRandomSource    GKLinearCongruentialRandomSource_New(void)                                                                       { return (GKLinearCongruentialRandomSource)bean_new(bean_cls("GKLinearCongruentialRandomSource")); }
+#endif
 
 /* ===== GKMersenneTwisterRandomSource ===== */
 #ifndef BEAN_TYPEDEF_GKMersenneTwisterRandomSource
@@ -5359,43 +5541,75 @@ static inline GKMersenneTwisterRandomSource    GKMersenneTwisterRandomSource_Ini
 static inline GKMersenneTwisterRandomSource    GKMersenneTwisterRandomSource_InitWithSeed(GKMersenneTwisterRandomSource self, unsigned long long seed)    { return ((GKMersenneTwisterRandomSource (*)(GKMersenneTwisterRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("initWithSeed:"), seed); }
 static inline unsigned long long               GKMersenneTwisterRandomSource_Seed(GKMersenneTwisterRandomSource self)                                     { return ((unsigned long long (*)(GKMersenneTwisterRandomSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
 static inline void                             GKMersenneTwisterRandomSource_SetSeed(GKMersenneTwisterRandomSource self, unsigned long long seed)         { ((void (*)(GKMersenneTwisterRandomSource, SEL, unsigned long long))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
+#ifndef BEAN_ALLOC_GKMersenneTwisterRandomSource
+#define BEAN_ALLOC_GKMersenneTwisterRandomSource
+static inline GKMersenneTwisterRandomSource    GKMersenneTwisterRandomSource_Alloc(void)                                                                  { return (GKMersenneTwisterRandomSource)bean_alloc(bean_cls("GKMersenneTwisterRandomSource")); }
+#endif
+#ifndef BEAN_NEW_GKMersenneTwisterRandomSource
+#define BEAN_NEW_GKMersenneTwisterRandomSource
+static inline GKMersenneTwisterRandomSource    GKMersenneTwisterRandomSource_New(void)                                                                    { return (GKMersenneTwisterRandomSource)bean_new(bean_cls("GKMersenneTwisterRandomSource")); }
+#endif
 
 /* ===== GKMinmaxStrategist ===== */
 #ifndef BEAN_TYPEDEF_GKMinmaxStrategist
 #define BEAN_TYPEDEF_GKMinmaxStrategist
 typedef bean_id GKMinmaxStrategist;
 #endif
-static inline id           GKMinmaxStrategist_BestMoveForPlayer(GKMinmaxStrategist self, id player)                                                          { return ((id (*)(GKMinmaxStrategist, SEL, id))bean_msgSend)(self, bean_sel("bestMoveForPlayer:"), player); }
-static inline id           GKMinmaxStrategist_RandomMoveForPlayer_FromNumberOfBestMoves(GKMinmaxStrategist self, id player, NSInteger numMovesToConsider)    { return ((id (*)(GKMinmaxStrategist, SEL, id, NSInteger))bean_msgSend)(self, bean_sel("randomMoveForPlayer:fromNumberOfBestMoves:"), player, numMovesToConsider); }
-static inline NSInteger    GKMinmaxStrategist_MaxLookAheadDepth(GKMinmaxStrategist self)                                                                     { return ((NSInteger (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("maxLookAheadDepth")); }
-static inline void         GKMinmaxStrategist_SetMaxLookAheadDepth(GKMinmaxStrategist self, NSInteger maxLookAheadDepth)                                     { ((void (*)(GKMinmaxStrategist, SEL, NSInteger))bean_msgSend)(self, bean_sel("setMaxLookAheadDepth:"), maxLookAheadDepth); }
-static inline id           GKMinmaxStrategist_BestMoveForActivePlayer(GKMinmaxStrategist self)                                                               { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
-static inline id           GKMinmaxStrategist_GameModel(GKMinmaxStrategist self)                                                                             { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
-static inline void         GKMinmaxStrategist_SetGameModel(GKMinmaxStrategist self, id gameModel)                                                            { ((void (*)(GKMinmaxStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
-static inline id           GKMinmaxStrategist_RandomSource(GKMinmaxStrategist self)                                                                          { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
-static inline void         GKMinmaxStrategist_SetRandomSource(GKMinmaxStrategist self, id randomSource)                                                      { ((void (*)(GKMinmaxStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
+static inline id                    GKMinmaxStrategist_BestMoveForPlayer(GKMinmaxStrategist self, id player)                                                          { return ((id (*)(GKMinmaxStrategist, SEL, id))bean_msgSend)(self, bean_sel("bestMoveForPlayer:"), player); }
+static inline id                    GKMinmaxStrategist_RandomMoveForPlayer_FromNumberOfBestMoves(GKMinmaxStrategist self, id player, NSInteger numMovesToConsider)    { return ((id (*)(GKMinmaxStrategist, SEL, id, NSInteger))bean_msgSend)(self, bean_sel("randomMoveForPlayer:fromNumberOfBestMoves:"), player, numMovesToConsider); }
+static inline NSInteger             GKMinmaxStrategist_MaxLookAheadDepth(GKMinmaxStrategist self)                                                                     { return ((NSInteger (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("maxLookAheadDepth")); }
+static inline void                  GKMinmaxStrategist_SetMaxLookAheadDepth(GKMinmaxStrategist self, NSInteger maxLookAheadDepth)                                     { ((void (*)(GKMinmaxStrategist, SEL, NSInteger))bean_msgSend)(self, bean_sel("setMaxLookAheadDepth:"), maxLookAheadDepth); }
+static inline id                    GKMinmaxStrategist_BestMoveForActivePlayer(GKMinmaxStrategist self)                                                               { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
+static inline id                    GKMinmaxStrategist_GameModel(GKMinmaxStrategist self)                                                                             { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
+static inline void                  GKMinmaxStrategist_SetGameModel(GKMinmaxStrategist self, id gameModel)                                                            { ((void (*)(GKMinmaxStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
+static inline id                    GKMinmaxStrategist_RandomSource(GKMinmaxStrategist self)                                                                          { return ((id (*)(GKMinmaxStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
+static inline void                  GKMinmaxStrategist_SetRandomSource(GKMinmaxStrategist self, id randomSource)                                                      { ((void (*)(GKMinmaxStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
+#ifndef BEAN_ALLOC_GKMinmaxStrategist
+#define BEAN_ALLOC_GKMinmaxStrategist
+static inline GKMinmaxStrategist    GKMinmaxStrategist_Alloc(void)                                                                                                    { return (GKMinmaxStrategist)bean_alloc(bean_cls("GKMinmaxStrategist")); }
+#endif
+#ifndef BEAN_NEW_GKMinmaxStrategist
+#define BEAN_NEW_GKMinmaxStrategist
+static inline GKMinmaxStrategist    GKMinmaxStrategist_New(void)                                                                                                      { return (GKMinmaxStrategist)bean_new(bean_cls("GKMinmaxStrategist")); }
+#endif
 
 /* ===== GKMonteCarloStrategist ===== */
 #ifndef BEAN_TYPEDEF_GKMonteCarloStrategist
 #define BEAN_TYPEDEF_GKMonteCarloStrategist
 typedef bean_id GKMonteCarloStrategist;
 #endif
-static inline NSUInteger    GKMonteCarloStrategist_Budget(GKMonteCarloStrategist self)                                                      { return ((NSUInteger (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("budget")); }
-static inline void          GKMonteCarloStrategist_SetBudget(GKMonteCarloStrategist self, NSUInteger budget)                                { ((void (*)(GKMonteCarloStrategist, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setBudget:"), budget); }
-static inline NSUInteger    GKMonteCarloStrategist_ExplorationParameter(GKMonteCarloStrategist self)                                        { return ((NSUInteger (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("explorationParameter")); }
-static inline void          GKMonteCarloStrategist_SetExplorationParameter(GKMonteCarloStrategist self, NSUInteger explorationParameter)    { ((void (*)(GKMonteCarloStrategist, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setExplorationParameter:"), explorationParameter); }
-static inline id            GKMonteCarloStrategist_BestMoveForActivePlayer(GKMonteCarloStrategist self)                                     { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
-static inline id            GKMonteCarloStrategist_GameModel(GKMonteCarloStrategist self)                                                   { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
-static inline void          GKMonteCarloStrategist_SetGameModel(GKMonteCarloStrategist self, id gameModel)                                  { ((void (*)(GKMonteCarloStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
-static inline id            GKMonteCarloStrategist_RandomSource(GKMonteCarloStrategist self)                                                { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
-static inline void          GKMonteCarloStrategist_SetRandomSource(GKMonteCarloStrategist self, id randomSource)                            { ((void (*)(GKMonteCarloStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
+static inline NSUInteger                GKMonteCarloStrategist_Budget(GKMonteCarloStrategist self)                                                      { return ((NSUInteger (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("budget")); }
+static inline void                      GKMonteCarloStrategist_SetBudget(GKMonteCarloStrategist self, NSUInteger budget)                                { ((void (*)(GKMonteCarloStrategist, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setBudget:"), budget); }
+static inline NSUInteger                GKMonteCarloStrategist_ExplorationParameter(GKMonteCarloStrategist self)                                        { return ((NSUInteger (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("explorationParameter")); }
+static inline void                      GKMonteCarloStrategist_SetExplorationParameter(GKMonteCarloStrategist self, NSUInteger explorationParameter)    { ((void (*)(GKMonteCarloStrategist, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setExplorationParameter:"), explorationParameter); }
+static inline id                        GKMonteCarloStrategist_BestMoveForActivePlayer(GKMonteCarloStrategist self)                                     { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
+static inline id                        GKMonteCarloStrategist_GameModel(GKMonteCarloStrategist self)                                                   { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
+static inline void                      GKMonteCarloStrategist_SetGameModel(GKMonteCarloStrategist self, id gameModel)                                  { ((void (*)(GKMonteCarloStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
+static inline id                        GKMonteCarloStrategist_RandomSource(GKMonteCarloStrategist self)                                                { return ((id (*)(GKMonteCarloStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
+static inline void                      GKMonteCarloStrategist_SetRandomSource(GKMonteCarloStrategist self, id randomSource)                            { ((void (*)(GKMonteCarloStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
+#ifndef BEAN_ALLOC_GKMonteCarloStrategist
+#define BEAN_ALLOC_GKMonteCarloStrategist
+static inline GKMonteCarloStrategist    GKMonteCarloStrategist_Alloc(void)                                                                              { return (GKMonteCarloStrategist)bean_alloc(bean_cls("GKMonteCarloStrategist")); }
+#endif
+#ifndef BEAN_NEW_GKMonteCarloStrategist
+#define BEAN_NEW_GKMonteCarloStrategist
+static inline GKMonteCarloStrategist    GKMonteCarloStrategist_New(void)                                                                                { return (GKMonteCarloStrategist)bean_new(bean_cls("GKMonteCarloStrategist")); }
+#endif
 
 /* ===== GKOctreeNode ===== */
 #ifndef BEAN_TYPEDEF_GKOctreeNode
 #define BEAN_TYPEDEF_GKOctreeNode
 typedef bean_id GKOctreeNode;
 #endif
-static inline GKBox    GKOctreeNode_Box(GKOctreeNode self)    { return ((GKBox (*)(GKOctreeNode, SEL))bean_msgSend_stret)(self, bean_sel("box")); }
+static inline GKBox           GKOctreeNode_Box(GKOctreeNode self)    { return ((GKBox (*)(GKOctreeNode, SEL))bean_msgSend_stret)(self, bean_sel("box")); }
+#ifndef BEAN_ALLOC_GKOctreeNode
+#define BEAN_ALLOC_GKOctreeNode
+static inline GKOctreeNode    GKOctreeNode_Alloc(void)               { return (GKOctreeNode)bean_alloc(bean_cls("GKOctreeNode")); }
+#endif
+#ifndef BEAN_NEW_GKOctreeNode
+#define BEAN_NEW_GKOctreeNode
+static inline GKOctreeNode    GKOctreeNode_New(void)                 { return (GKOctreeNode)bean_new(bean_cls("GKOctreeNode")); }
+#endif
 
 /* ===== GKPerlinNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKPerlinNoiseSource
@@ -5406,6 +5620,14 @@ static inline GKPerlinNoiseSource    GKPerlinNoiseSource_PerlinNoiseSourceWithFr
 static inline GKPerlinNoiseSource    GKPerlinNoiseSource_InitWithFrequency_OctaveCount_Persistence_Lacunarity_Seed(GKPerlinNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat persistence, CGFloat lacunarity, int seed)    { return ((GKPerlinNoiseSource (*)(GKPerlinNoiseSource, SEL, CGFloat, NSInteger, CGFloat, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:persistence:lacunarity:seed:"), frequency, octaveCount, persistence, lacunarity, seed); }
 static inline CGFloat                GKPerlinNoiseSource_Persistence(GKPerlinNoiseSource self)                                                                                                                                               { return ((CGFloat (*)(GKPerlinNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("persistence")); }
 static inline void                   GKPerlinNoiseSource_SetPersistence(GKPerlinNoiseSource self, CGFloat persistence)                                                                                                                       { ((void (*)(GKPerlinNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setPersistence:"), persistence); }
+#ifndef BEAN_ALLOC_GKPerlinNoiseSource
+#define BEAN_ALLOC_GKPerlinNoiseSource
+static inline GKPerlinNoiseSource    GKPerlinNoiseSource_Alloc(void)                                                                                                                                                                         { return (GKPerlinNoiseSource)bean_alloc(bean_cls("GKPerlinNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKPerlinNoiseSource
+#define BEAN_NEW_GKPerlinNoiseSource
+static inline GKPerlinNoiseSource    GKPerlinNoiseSource_New(void)                                                                                                                                                                           { return (GKPerlinNoiseSource)bean_new(bean_cls("GKPerlinNoiseSource")); }
+#endif
 
 /* ===== GKPolygonObstacle ===== */
 #ifndef BEAN_TYPEDEF_GKPolygonObstacle
@@ -5417,13 +5639,29 @@ static inline GKPolygonObstacle    GKPolygonObstacle_InitWithPoints_Count(GKPoly
 static inline void*                GKPolygonObstacle_VertexAtIndex(GKPolygonObstacle self, NSUInteger index)                                      { return ((void* (*)(GKPolygonObstacle, SEL, NSUInteger))bean_msgSend)(self, bean_sel("vertexAtIndex:"), index); }
 static inline NSUInteger           GKPolygonObstacle_VertexCount(GKPolygonObstacle self)                                                          { return ((NSUInteger (*)(GKPolygonObstacle, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
 static inline BOOL                 GKPolygonObstacle_SupportsSecureCoding(void)                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKPolygonObstacle"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKPolygonObstacle
+#define BEAN_ALLOC_GKPolygonObstacle
+static inline GKPolygonObstacle    GKPolygonObstacle_Alloc(void)                                                                                  { return (GKPolygonObstacle)bean_alloc(bean_cls("GKPolygonObstacle")); }
+#endif
+#ifndef BEAN_NEW_GKPolygonObstacle
+#define BEAN_NEW_GKPolygonObstacle
+static inline GKPolygonObstacle    GKPolygonObstacle_New(void)                                                                                    { return (GKPolygonObstacle)bean_new(bean_cls("GKPolygonObstacle")); }
+#endif
 
 /* ===== GKQuadtreeNode ===== */
 #ifndef BEAN_TYPEDEF_GKQuadtreeNode
 #define BEAN_TYPEDEF_GKQuadtreeNode
 typedef bean_id GKQuadtreeNode;
 #endif
-static inline GKQuad    GKQuadtreeNode_Quad(GKQuadtreeNode self)    { return ((GKQuad (*)(GKQuadtreeNode, SEL))bean_msgSend_stret)(self, bean_sel("quad")); }
+static inline GKQuad            GKQuadtreeNode_Quad(GKQuadtreeNode self)    { return ((GKQuad (*)(GKQuadtreeNode, SEL))bean_msgSend_stret)(self, bean_sel("quad")); }
+#ifndef BEAN_ALLOC_GKQuadtreeNode
+#define BEAN_ALLOC_GKQuadtreeNode
+static inline GKQuadtreeNode    GKQuadtreeNode_Alloc(void)                  { return (GKQuadtreeNode)bean_alloc(bean_cls("GKQuadtreeNode")); }
+#endif
+#ifndef BEAN_NEW_GKQuadtreeNode
+#define BEAN_NEW_GKQuadtreeNode
+static inline GKQuadtreeNode    GKQuadtreeNode_New(void)                    { return (GKQuadtreeNode)bean_new(bean_cls("GKQuadtreeNode")); }
+#endif
 
 /* ===== GKRandom ===== */
 #ifndef BEAN_TYPEDEF_GKRandom
@@ -5434,6 +5672,14 @@ static inline NSInteger     GKRandom_NextInt(GKRandom self)                     
 static inline NSUInteger    GKRandom_NextIntWithUpperBound(GKRandom self, NSUInteger upperBound)    { return ((NSUInteger (*)(GKRandom, SEL, NSUInteger))bean_msgSend)(self, bean_sel("nextIntWithUpperBound:"), upperBound); }
 static inline CGFloat       GKRandom_NextUniform(GKRandom self)                                     { return ((CGFloat (*)(GKRandom, SEL))bean_msgSend_fpret)(self, bean_sel("nextUniform")); }
 static inline BOOL          GKRandom_NextBool(GKRandom self)                                        { return ((BOOL (*)(GKRandom, SEL))bean_msgSend)(self, bean_sel("nextBool")); }
+#ifndef BEAN_ALLOC_GKRandom
+#define BEAN_ALLOC_GKRandom
+static inline GKRandom      GKRandom_Alloc(void)                                                    { return (GKRandom)bean_alloc(bean_cls("GKRandom")); }
+#endif
+#ifndef BEAN_NEW_GKRandom
+#define BEAN_NEW_GKRandom
+static inline GKRandom      GKRandom_New(void)                                                      { return (GKRandom)bean_new(bean_cls("GKRandom")); }
+#endif
 
 /* ===== GKRandomDistribution ===== */
 #ifndef BEAN_TYPEDEF_GKRandomDistribution
@@ -5452,6 +5698,14 @@ static inline GKRandomDistribution    GKRandomDistribution_D20(void)            
 static inline NSInteger               GKRandomDistribution_LowestValue(GKRandomDistribution self)                                                                                                        { return ((NSInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("lowestValue")); }
 static inline NSInteger               GKRandomDistribution_HighestValue(GKRandomDistribution self)                                                                                                       { return ((NSInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("highestValue")); }
 static inline NSUInteger              GKRandomDistribution_NumberOfPossibleOutcomes(GKRandomDistribution self)                                                                                           { return ((NSUInteger (*)(GKRandomDistribution, SEL))bean_msgSend)(self, bean_sel("numberOfPossibleOutcomes")); }
+#ifndef BEAN_ALLOC_GKRandomDistribution
+#define BEAN_ALLOC_GKRandomDistribution
+static inline GKRandomDistribution    GKRandomDistribution_Alloc(void)                                                                                                                                   { return (GKRandomDistribution)bean_alloc(bean_cls("GKRandomDistribution")); }
+#endif
+#ifndef BEAN_NEW_GKRandomDistribution
+#define BEAN_NEW_GKRandomDistribution
+static inline GKRandomDistribution    GKRandomDistribution_New(void)                                                                                                                                     { return (GKRandomDistribution)bean_new(bean_cls("GKRandomDistribution")); }
+#endif
 
 /* ===== GKRidgedNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKRidgedNoiseSource
@@ -5460,6 +5714,14 @@ typedef bean_id GKRidgedNoiseSource;
 #endif
 static inline GKRidgedNoiseSource    GKRidgedNoiseSource_RidgedNoiseSourceWithFrequency_OctaveCount_Lacunarity_Seed(CGFloat frequency, NSInteger octaveCount, CGFloat lacunarity, int seed)                 { return ((GKRidgedNoiseSource (*)(bean_class, SEL, CGFloat, NSInteger, CGFloat, int))bean_msgSend)(bean_cls("GKRidgedNoiseSource"), bean_sel("ridgedNoiseSourceWithFrequency:octaveCount:lacunarity:seed:"), frequency, octaveCount, lacunarity, seed); }
 static inline GKRidgedNoiseSource    GKRidgedNoiseSource_InitWithFrequency_OctaveCount_Lacunarity_Seed(GKRidgedNoiseSource self, CGFloat frequency, NSInteger octaveCount, CGFloat lacunarity, int seed)    { return ((GKRidgedNoiseSource (*)(GKRidgedNoiseSource, SEL, CGFloat, NSInteger, CGFloat, int))bean_msgSend)(self, bean_sel("initWithFrequency:octaveCount:lacunarity:seed:"), frequency, octaveCount, lacunarity, seed); }
+#ifndef BEAN_ALLOC_GKRidgedNoiseSource
+#define BEAN_ALLOC_GKRidgedNoiseSource
+static inline GKRidgedNoiseSource    GKRidgedNoiseSource_Alloc(void)                                                                                                                                        { return (GKRidgedNoiseSource)bean_alloc(bean_cls("GKRidgedNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKRidgedNoiseSource
+#define BEAN_NEW_GKRidgedNoiseSource
+static inline GKRidgedNoiseSource    GKRidgedNoiseSource_New(void)                                                                                                                                          { return (GKRidgedNoiseSource)bean_new(bean_cls("GKRidgedNoiseSource")); }
+#endif
 
 /* ===== GKSphereObstacle ===== */
 #ifndef BEAN_TYPEDEF_GKSphereObstacle
@@ -5472,6 +5734,14 @@ static inline CGFloat             GKSphereObstacle_Radius(GKSphereObstacle self)
 static inline void                GKSphereObstacle_SetRadius(GKSphereObstacle self, CGFloat radius)         { ((void (*)(GKSphereObstacle, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRadius:"), radius); }
 static inline void*               GKSphereObstacle_Position(GKSphereObstacle self)                          { return ((void* (*)(GKSphereObstacle, SEL))bean_msgSend)(self, bean_sel("position")); }
 static inline void                GKSphereObstacle_SetPosition(GKSphereObstacle self, void* position)       { ((void (*)(GKSphereObstacle, SEL, void*))bean_msgSend)(self, bean_sel("setPosition:"), position); }
+#ifndef BEAN_ALLOC_GKSphereObstacle
+#define BEAN_ALLOC_GKSphereObstacle
+static inline GKSphereObstacle    GKSphereObstacle_Alloc(void)                                              { return (GKSphereObstacle)bean_alloc(bean_cls("GKSphereObstacle")); }
+#endif
+#ifndef BEAN_NEW_GKSphereObstacle
+#define BEAN_NEW_GKSphereObstacle
+static inline GKSphereObstacle    GKSphereObstacle_New(void)                                                { return (GKSphereObstacle)bean_new(bean_cls("GKSphereObstacle")); }
+#endif
 
 /* ===== GKSpheresNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKSpheresNoiseSource
@@ -5482,17 +5752,33 @@ static inline GKSpheresNoiseSource    GKSpheresNoiseSource_SpheresNoiseWithFrequ
 static inline GKSpheresNoiseSource    GKSpheresNoiseSource_InitWithFrequency(GKSpheresNoiseSource self, CGFloat frequency)    { return ((GKSpheresNoiseSource (*)(GKSpheresNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("initWithFrequency:"), frequency); }
 static inline CGFloat                 GKSpheresNoiseSource_Frequency(GKSpheresNoiseSource self)                               { return ((CGFloat (*)(GKSpheresNoiseSource, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
 static inline void                    GKSpheresNoiseSource_SetFrequency(GKSpheresNoiseSource self, CGFloat frequency)         { ((void (*)(GKSpheresNoiseSource, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
+#ifndef BEAN_ALLOC_GKSpheresNoiseSource
+#define BEAN_ALLOC_GKSpheresNoiseSource
+static inline GKSpheresNoiseSource    GKSpheresNoiseSource_Alloc(void)                                                        { return (GKSpheresNoiseSource)bean_alloc(bean_cls("GKSpheresNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKSpheresNoiseSource
+#define BEAN_NEW_GKSpheresNoiseSource
+static inline GKSpheresNoiseSource    GKSpheresNoiseSource_New(void)                                                          { return (GKSpheresNoiseSource)bean_new(bean_cls("GKSpheresNoiseSource")); }
+#endif
 
 /* ===== GKStrategist ===== */
 #ifndef BEAN_TYPEDEF_GKStrategist
 #define BEAN_TYPEDEF_GKStrategist
 typedef bean_id GKStrategist;
 #endif
-static inline id      GKStrategist_BestMoveForActivePlayer(GKStrategist self)             { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
-static inline id      GKStrategist_GameModel(GKStrategist self)                           { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
-static inline void    GKStrategist_SetGameModel(GKStrategist self, id gameModel)          { ((void (*)(GKStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
-static inline id      GKStrategist_RandomSource(GKStrategist self)                        { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
-static inline void    GKStrategist_SetRandomSource(GKStrategist self, id randomSource)    { ((void (*)(GKStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
+static inline id              GKStrategist_BestMoveForActivePlayer(GKStrategist self)             { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("bestMoveForActivePlayer")); }
+static inline id              GKStrategist_GameModel(GKStrategist self)                           { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("gameModel")); }
+static inline void            GKStrategist_SetGameModel(GKStrategist self, id gameModel)          { ((void (*)(GKStrategist, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
+static inline id              GKStrategist_RandomSource(GKStrategist self)                        { return ((id (*)(GKStrategist, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
+static inline void            GKStrategist_SetRandomSource(GKStrategist self, id randomSource)    { ((void (*)(GKStrategist, SEL, id))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
+#ifndef BEAN_ALLOC_GKStrategist
+#define BEAN_ALLOC_GKStrategist
+static inline GKStrategist    GKStrategist_Alloc(void)                                            { return (GKStrategist)bean_alloc(bean_cls("GKStrategist")); }
+#endif
+#ifndef BEAN_NEW_GKStrategist
+#define BEAN_NEW_GKStrategist
+static inline GKStrategist    GKStrategist_New(void)                                              { return (GKStrategist)bean_new(bean_cls("GKStrategist")); }
+#endif
 
 /* ===== GKVoronoiNoiseSource ===== */
 #ifndef BEAN_TYPEDEF_GKVoronoiNoiseSource
@@ -5510,6 +5796,14 @@ static inline void                    GKVoronoiNoiseSource_SetDistanceEnabled(GK
 static inline int                     GKVoronoiNoiseSource_Seed(GKVoronoiNoiseSource self)                                                                                                                            { return ((int (*)(GKVoronoiNoiseSource, SEL))bean_msgSend)(self, bean_sel("seed")); }
 static inline void                    GKVoronoiNoiseSource_SetSeed(GKVoronoiNoiseSource self, int seed)                                                                                                               { ((void (*)(GKVoronoiNoiseSource, SEL, int))bean_msgSend)(self, bean_sel("setSeed:"), seed); }
 static inline BOOL                    GKVoronoiNoiseSource_DistanceEnabled(GKVoronoiNoiseSource self)                                                                                                                 { return ((BOOL (*)(GKVoronoiNoiseSource, SEL))bean_msgSend)(self, bean_sel("distanceEnabled")); }
+#ifndef BEAN_ALLOC_GKVoronoiNoiseSource
+#define BEAN_ALLOC_GKVoronoiNoiseSource
+static inline GKVoronoiNoiseSource    GKVoronoiNoiseSource_Alloc(void)                                                                                                                                                { return (GKVoronoiNoiseSource)bean_alloc(bean_cls("GKVoronoiNoiseSource")); }
+#endif
+#ifndef BEAN_NEW_GKVoronoiNoiseSource
+#define BEAN_NEW_GKVoronoiNoiseSource
+static inline GKVoronoiNoiseSource    GKVoronoiNoiseSource_New(void)                                                                                                                                                  { return (GKVoronoiNoiseSource)bean_new(bean_cls("GKVoronoiNoiseSource")); }
+#endif
 
 /* ===== NSBatchDeleteResult ===== */
 #ifndef BEAN_TYPEDEF_NSBatchDeleteResult
@@ -5518,6 +5812,14 @@ typedef bean_id NSBatchDeleteResult;
 #endif
 static inline id                                NSBatchDeleteResult_Result(NSBatchDeleteResult self)        { return ((id (*)(NSBatchDeleteResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSBatchDeleteRequestResultType    NSBatchDeleteResult_ResultType(NSBatchDeleteResult self)    { return ((NSBatchDeleteRequestResultType (*)(NSBatchDeleteResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSBatchDeleteResult
+#define BEAN_ALLOC_NSBatchDeleteResult
+static inline NSBatchDeleteResult               NSBatchDeleteResult_Alloc(void)                             { return (NSBatchDeleteResult)bean_alloc(bean_cls("NSBatchDeleteResult")); }
+#endif
+#ifndef BEAN_NEW_NSBatchDeleteResult
+#define BEAN_NEW_NSBatchDeleteResult
+static inline NSBatchDeleteResult               NSBatchDeleteResult_New(void)                               { return (NSBatchDeleteResult)bean_new(bean_cls("NSBatchDeleteResult")); }
+#endif
 
 /* ===== NSBatchInsertResult ===== */
 #ifndef BEAN_TYPEDEF_NSBatchInsertResult
@@ -5526,6 +5828,14 @@ typedef bean_id NSBatchInsertResult;
 #endif
 static inline id                                NSBatchInsertResult_Result(NSBatchInsertResult self)        { return ((id (*)(NSBatchInsertResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSBatchInsertRequestResultType    NSBatchInsertResult_ResultType(NSBatchInsertResult self)    { return ((NSBatchInsertRequestResultType (*)(NSBatchInsertResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSBatchInsertResult
+#define BEAN_ALLOC_NSBatchInsertResult
+static inline NSBatchInsertResult               NSBatchInsertResult_Alloc(void)                             { return (NSBatchInsertResult)bean_alloc(bean_cls("NSBatchInsertResult")); }
+#endif
+#ifndef BEAN_NEW_NSBatchInsertResult
+#define BEAN_NEW_NSBatchInsertResult
+static inline NSBatchInsertResult               NSBatchInsertResult_New(void)                               { return (NSBatchInsertResult)bean_new(bean_cls("NSBatchInsertResult")); }
+#endif
 
 /* ===== NSBatchUpdateResult ===== */
 #ifndef BEAN_TYPEDEF_NSBatchUpdateResult
@@ -5534,50 +5844,93 @@ typedef bean_id NSBatchUpdateResult;
 #endif
 static inline id                                NSBatchUpdateResult_Result(NSBatchUpdateResult self)        { return ((id (*)(NSBatchUpdateResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSBatchUpdateRequestResultType    NSBatchUpdateResult_ResultType(NSBatchUpdateResult self)    { return ((NSBatchUpdateRequestResultType (*)(NSBatchUpdateResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSBatchUpdateResult
+#define BEAN_ALLOC_NSBatchUpdateResult
+static inline NSBatchUpdateResult               NSBatchUpdateResult_Alloc(void)                             { return (NSBatchUpdateResult)bean_alloc(bean_cls("NSBatchUpdateResult")); }
+#endif
+#ifndef BEAN_NEW_NSBatchUpdateResult
+#define BEAN_NEW_NSBatchUpdateResult
+static inline NSBatchUpdateResult               NSBatchUpdateResult_New(void)                               { return (NSBatchUpdateResult)bean_new(bean_cls("NSBatchUpdateResult")); }
+#endif
 
 /* ===== NSDerivedAttributeDescription ===== */
 #ifndef BEAN_TYPEDEF_NSDerivedAttributeDescription
 #define BEAN_TYPEDEF_NSDerivedAttributeDescription
 typedef bean_id NSDerivedAttributeDescription;
 #endif
-static inline NSExpression    NSDerivedAttributeDescription_DerivationExpression(NSDerivedAttributeDescription self)                                          { return ((NSExpression (*)(NSDerivedAttributeDescription, SEL))bean_msgSend)(self, bean_sel("derivationExpression")); }
-static inline void            NSDerivedAttributeDescription_SetDerivationExpression(NSDerivedAttributeDescription self, NSExpression derivationExpression)    { ((void (*)(NSDerivedAttributeDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setDerivationExpression:"), derivationExpression); }
+static inline NSExpression                     NSDerivedAttributeDescription_DerivationExpression(NSDerivedAttributeDescription self)                                          { return ((NSExpression (*)(NSDerivedAttributeDescription, SEL))bean_msgSend)(self, bean_sel("derivationExpression")); }
+static inline void                             NSDerivedAttributeDescription_SetDerivationExpression(NSDerivedAttributeDescription self, NSExpression derivationExpression)    { ((void (*)(NSDerivedAttributeDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setDerivationExpression:"), derivationExpression); }
+#ifndef BEAN_ALLOC_NSDerivedAttributeDescription
+#define BEAN_ALLOC_NSDerivedAttributeDescription
+static inline NSDerivedAttributeDescription    NSDerivedAttributeDescription_Alloc(void)                                                                                       { return (NSDerivedAttributeDescription)bean_alloc(bean_cls("NSDerivedAttributeDescription")); }
+#endif
+#ifndef BEAN_NEW_NSDerivedAttributeDescription
+#define BEAN_NEW_NSDerivedAttributeDescription
+static inline NSDerivedAttributeDescription    NSDerivedAttributeDescription_New(void)                                                                                         { return (NSDerivedAttributeDescription)bean_new(bean_cls("NSDerivedAttributeDescription")); }
+#endif
 
 /* ===== NSExpressionDescription ===== */
 #ifndef BEAN_TYPEDEF_NSExpressionDescription
 #define BEAN_TYPEDEF_NSExpressionDescription
 typedef bean_id NSExpressionDescription;
 #endif
-static inline NSExpression       NSExpressionDescription_Expression(NSExpressionDescription self)                                                       { return ((NSExpression (*)(NSExpressionDescription, SEL))bean_msgSend)(self, bean_sel("expression")); }
-static inline void               NSExpressionDescription_SetExpression(NSExpressionDescription self, NSExpression expression)                           { ((void (*)(NSExpressionDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setExpression:"), expression); }
-static inline NSAttributeType    NSExpressionDescription_ExpressionResultType(NSExpressionDescription self)                                             { return ((NSAttributeType (*)(NSExpressionDescription, SEL))bean_msgSend)(self, bean_sel("expressionResultType")); }
-static inline void               NSExpressionDescription_SetExpressionResultType(NSExpressionDescription self, NSAttributeType expressionResultType)    { ((void (*)(NSExpressionDescription, SEL, NSAttributeType))bean_msgSend)(self, bean_sel("setExpressionResultType:"), expressionResultType); }
+static inline NSExpression               NSExpressionDescription_Expression(NSExpressionDescription self)                                                       { return ((NSExpression (*)(NSExpressionDescription, SEL))bean_msgSend)(self, bean_sel("expression")); }
+static inline void                       NSExpressionDescription_SetExpression(NSExpressionDescription self, NSExpression expression)                           { ((void (*)(NSExpressionDescription, SEL, NSExpression))bean_msgSend)(self, bean_sel("setExpression:"), expression); }
+static inline NSAttributeType            NSExpressionDescription_ExpressionResultType(NSExpressionDescription self)                                             { return ((NSAttributeType (*)(NSExpressionDescription, SEL))bean_msgSend)(self, bean_sel("expressionResultType")); }
+static inline void                       NSExpressionDescription_SetExpressionResultType(NSExpressionDescription self, NSAttributeType expressionResultType)    { ((void (*)(NSExpressionDescription, SEL, NSAttributeType))bean_msgSend)(self, bean_sel("setExpressionResultType:"), expressionResultType); }
+#ifndef BEAN_ALLOC_NSExpressionDescription
+#define BEAN_ALLOC_NSExpressionDescription
+static inline NSExpressionDescription    NSExpressionDescription_Alloc(void)                                                                                    { return (NSExpressionDescription)bean_alloc(bean_cls("NSExpressionDescription")); }
+#endif
+#ifndef BEAN_NEW_NSExpressionDescription
+#define BEAN_NEW_NSExpressionDescription
+static inline NSExpressionDescription    NSExpressionDescription_New(void)                                                                                      { return (NSExpressionDescription)bean_new(bean_cls("NSExpressionDescription")); }
+#endif
 
 /* ===== NSFetchRequestExpression ===== */
 #ifndef BEAN_TYPEDEF_NSFetchRequestExpression
 #define BEAN_TYPEDEF_NSFetchRequestExpression
 typedef bean_id NSFetchRequestExpression;
 #endif
-static inline NSExpression    NSFetchRequestExpression_ExpressionForFetch_Context_CountOnly(NSExpression fetch, NSExpression context, BOOL countFlag)    { return ((NSExpression (*)(bean_class, SEL, NSExpression, NSExpression, BOOL))bean_msgSend)(bean_cls("NSFetchRequestExpression"), bean_sel("expressionForFetch:context:countOnly:"), fetch, context, countFlag); }
-static inline NSExpression    NSFetchRequestExpression_RequestExpression(NSFetchRequestExpression self)                                                  { return ((NSExpression (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("requestExpression")); }
-static inline NSExpression    NSFetchRequestExpression_ContextExpression(NSFetchRequestExpression self)                                                  { return ((NSExpression (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("contextExpression")); }
-static inline BOOL            NSFetchRequestExpression_IsCountOnlyRequest(NSFetchRequestExpression self)                                                 { return ((BOOL (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("isCountOnlyRequest")); }
-static inline BOOL            NSFetchRequestExpression_CountOnlyRequest(NSFetchRequestExpression self)                                                   { return ((BOOL (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("countOnlyRequest")); }
+static inline NSExpression                NSFetchRequestExpression_ExpressionForFetch_Context_CountOnly(NSExpression fetch, NSExpression context, BOOL countFlag)    { return ((NSExpression (*)(bean_class, SEL, NSExpression, NSExpression, BOOL))bean_msgSend)(bean_cls("NSFetchRequestExpression"), bean_sel("expressionForFetch:context:countOnly:"), fetch, context, countFlag); }
+static inline NSExpression                NSFetchRequestExpression_RequestExpression(NSFetchRequestExpression self)                                                  { return ((NSExpression (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("requestExpression")); }
+static inline NSExpression                NSFetchRequestExpression_ContextExpression(NSFetchRequestExpression self)                                                  { return ((NSExpression (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("contextExpression")); }
+static inline BOOL                        NSFetchRequestExpression_IsCountOnlyRequest(NSFetchRequestExpression self)                                                 { return ((BOOL (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("isCountOnlyRequest")); }
+static inline BOOL                        NSFetchRequestExpression_CountOnlyRequest(NSFetchRequestExpression self)                                                   { return ((BOOL (*)(NSFetchRequestExpression, SEL))bean_msgSend)(self, bean_sel("countOnlyRequest")); }
+#ifndef BEAN_ALLOC_NSFetchRequestExpression
+#define BEAN_ALLOC_NSFetchRequestExpression
+static inline NSFetchRequestExpression    NSFetchRequestExpression_Alloc(void)                                                                                       { return (NSFetchRequestExpression)bean_alloc(bean_cls("NSFetchRequestExpression")); }
+#endif
+#ifndef BEAN_NEW_NSFetchRequestExpression
+#define BEAN_NEW_NSFetchRequestExpression
+static inline NSFetchRequestExpression    NSFetchRequestExpression_New(void)                                                                                         { return (NSFetchRequestExpression)bean_new(bean_cls("NSFetchRequestExpression")); }
+#endif
 
 /* ===== NSMigrationStage ===== */
 #ifndef BEAN_TYPEDEF_NSMigrationStage
 #define BEAN_TYPEDEF_NSMigrationStage
 typedef bean_id NSMigrationStage;
 #endif
-static inline NSString    NSMigrationStage_Label(NSMigrationStage self)                       { return ((NSString (*)(NSMigrationStage, SEL))bean_msgSend)(self, bean_sel("label")); }
-static inline void        NSMigrationStage_SetLabel(NSMigrationStage self, NSString label)    { ((void (*)(NSMigrationStage, SEL, NSString))bean_msgSend)(self, bean_sel("setLabel:"), label); }
+static inline NSString            NSMigrationStage_Label(NSMigrationStage self)                       { return ((NSString (*)(NSMigrationStage, SEL))bean_msgSend)(self, bean_sel("label")); }
+static inline void                NSMigrationStage_SetLabel(NSMigrationStage self, NSString label)    { ((void (*)(NSMigrationStage, SEL, NSString))bean_msgSend)(self, bean_sel("setLabel:"), label); }
+#ifndef BEAN_ALLOC_NSMigrationStage
+#define BEAN_ALLOC_NSMigrationStage
+static inline NSMigrationStage    NSMigrationStage_Alloc(void)                                        { return (NSMigrationStage)bean_alloc(bean_cls("NSMigrationStage")); }
+#endif
+#ifndef BEAN_NEW_NSMigrationStage
+#define BEAN_NEW_NSMigrationStage
+static inline NSMigrationStage    NSMigrationStage_New(void)                                          { return (NSMigrationStage)bean_new(bean_cls("NSMigrationStage")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainerEvent ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerEvent
 #define BEAN_TYPEDEF_NSPersistentCloudKitContainerEvent
 typedef bean_id NSPersistentCloudKitContainerEvent;
 #endif
+#ifndef BEAN_NEW_NSPersistentCloudKitContainerEvent
+#define BEAN_NEW_NSPersistentCloudKitContainerEvent
 static inline NSPersistentCloudKitContainerEvent        NSPersistentCloudKitContainerEvent_New(void)                                                              { return ((NSPersistentCloudKitContainerEvent (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEvent"), bean_sel("new")); }
+#endif
 static inline NSPersistentCloudKitContainerEvent        NSPersistentCloudKitContainerEvent_Init(NSPersistentCloudKitContainerEvent self)                          { return ((NSPersistentCloudKitContainerEvent (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSUUID                                    NSPersistentCloudKitContainerEvent_Identifier(NSPersistentCloudKitContainerEvent self)                    { return ((NSUUID (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("identifier")); }
 static inline NSString                                  NSPersistentCloudKitContainerEvent_StoreIdentifier(NSPersistentCloudKitContainerEvent self)               { return ((NSString (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("storeIdentifier")); }
@@ -5587,6 +5940,10 @@ static inline NSDate                                    NSPersistentCloudKitCont
 static inline BOOL                                      NSPersistentCloudKitContainerEvent_Succeeded(NSPersistentCloudKitContainerEvent self)                     { return ((BOOL (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("succeeded")); }
 static inline NSError                                   NSPersistentCloudKitContainerEvent_Error(NSPersistentCloudKitContainerEvent self)                         { return ((NSError (*)(NSPersistentCloudKitContainerEvent, SEL))bean_msgSend)(self, bean_sel("error")); }
 static inline id                                        NSPersistentCloudKitContainerEvent_CopyWithZone(NSPersistentCloudKitContainerEvent self, NSZone* zone)    { return ((id (*)(NSPersistentCloudKitContainerEvent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainerEvent
+#define BEAN_ALLOC_NSPersistentCloudKitContainerEvent
+static inline NSPersistentCloudKitContainerEvent        NSPersistentCloudKitContainerEvent_Alloc(void)                                                            { return (NSPersistentCloudKitContainerEvent)bean_alloc(bean_cls("NSPersistentCloudKitContainerEvent")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainerEventResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerEventResult
@@ -5594,9 +5951,16 @@ static inline id                                        NSPersistentCloudKitCont
 typedef bean_id NSPersistentCloudKitContainerEventResult;
 #endif
 static inline NSPersistentCloudKitContainerEventResult        NSPersistentCloudKitContainerEventResult_Init(NSPersistentCloudKitContainerEventResult self)          { return ((NSPersistentCloudKitContainerEventResult (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_NSPersistentCloudKitContainerEventResult
+#define BEAN_NEW_NSPersistentCloudKitContainerEventResult
 static inline NSPersistentCloudKitContainerEventResult        NSPersistentCloudKitContainerEventResult_New(void)                                                    { return ((NSPersistentCloudKitContainerEventResult (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventResult"), bean_sel("new")); }
+#endif
 static inline id                                              NSPersistentCloudKitContainerEventResult_Result(NSPersistentCloudKitContainerEventResult self)        { return ((id (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSPersistentCloudKitContainerEventResultType    NSPersistentCloudKitContainerEventResult_ResultType(NSPersistentCloudKitContainerEventResult self)    { return ((NSPersistentCloudKitContainerEventResultType (*)(NSPersistentCloudKitContainerEventResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainerEventResult
+#define BEAN_ALLOC_NSPersistentCloudKitContainerEventResult
+static inline NSPersistentCloudKitContainerEventResult        NSPersistentCloudKitContainerEventResult_Alloc(void)                                                  { return (NSPersistentCloudKitContainerEventResult)bean_alloc(bean_cls("NSPersistentCloudKitContainerEventResult")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainerOptions ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerOptions
@@ -5608,6 +5972,14 @@ static inline NSPersistentCloudKitContainerOptions    NSPersistentCloudKitContai
 static inline NSString                                NSPersistentCloudKitContainerOptions_ContainerIdentifier(NSPersistentCloudKitContainerOptions self)                                          { return ((NSString (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("containerIdentifier")); }
 static inline CKDatabaseScope                         NSPersistentCloudKitContainerOptions_DatabaseScope(NSPersistentCloudKitContainerOptions self)                                                { return ((CKDatabaseScope (*)(NSPersistentCloudKitContainerOptions, SEL))bean_msgSend)(self, bean_sel("databaseScope")); }
 static inline void                                    NSPersistentCloudKitContainerOptions_SetDatabaseScope(NSPersistentCloudKitContainerOptions self, CKDatabaseScope databaseScope)              { ((void (*)(NSPersistentCloudKitContainerOptions, SEL, CKDatabaseScope))bean_msgSend)(self, bean_sel("setDatabaseScope:"), databaseScope); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainerOptions
+#define BEAN_ALLOC_NSPersistentCloudKitContainerOptions
+static inline NSPersistentCloudKitContainerOptions    NSPersistentCloudKitContainerOptions_Alloc(void)                                                                                             { return (NSPersistentCloudKitContainerOptions)bean_alloc(bean_cls("NSPersistentCloudKitContainerOptions")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentCloudKitContainerOptions
+#define BEAN_NEW_NSPersistentCloudKitContainerOptions
+static inline NSPersistentCloudKitContainerOptions    NSPersistentCloudKitContainerOptions_New(void)                                                                                               { return (NSPersistentCloudKitContainerOptions)bean_new(bean_cls("NSPersistentCloudKitContainerOptions")); }
+#endif
 
 /* ===== NSPersistentHistoryResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryResult
@@ -5616,36 +5988,68 @@ typedef bean_id NSPersistentHistoryResult;
 #endif
 static inline id                               NSPersistentHistoryResult_Result(NSPersistentHistoryResult self)        { return ((id (*)(NSPersistentHistoryResult, SEL))bean_msgSend)(self, bean_sel("result")); }
 static inline NSPersistentHistoryResultType    NSPersistentHistoryResult_ResultType(NSPersistentHistoryResult self)    { return ((NSPersistentHistoryResultType (*)(NSPersistentHistoryResult, SEL))bean_msgSend)(self, bean_sel("resultType")); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryResult
+#define BEAN_ALLOC_NSPersistentHistoryResult
+static inline NSPersistentHistoryResult        NSPersistentHistoryResult_Alloc(void)                                   { return (NSPersistentHistoryResult)bean_alloc(bean_cls("NSPersistentHistoryResult")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryResult
+#define BEAN_NEW_NSPersistentHistoryResult
+static inline NSPersistentHistoryResult        NSPersistentHistoryResult_New(void)                                     { return (NSPersistentHistoryResult)bean_new(bean_cls("NSPersistentHistoryResult")); }
+#endif
 
 /* ===== NSPersistentHistoryToken ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryToken
 #define BEAN_TYPEDEF_NSPersistentHistoryToken
 typedef bean_id NSPersistentHistoryToken;
 #endif
-static inline id      NSPersistentHistoryToken_CopyWithZone(NSPersistentHistoryToken self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL    NSPersistentHistoryToken_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryToken"), bean_sel("supportsSecureCoding")); }
+static inline id                          NSPersistentHistoryToken_CopyWithZone(NSPersistentHistoryToken self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL                        NSPersistentHistoryToken_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryToken"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryToken
+#define BEAN_ALLOC_NSPersistentHistoryToken
+static inline NSPersistentHistoryToken    NSPersistentHistoryToken_Alloc(void)                                                  { return (NSPersistentHistoryToken)bean_alloc(bean_cls("NSPersistentHistoryToken")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryToken
+#define BEAN_NEW_NSPersistentHistoryToken
+static inline NSPersistentHistoryToken    NSPersistentHistoryToken_New(void)                                                    { return (NSPersistentHistoryToken)bean_new(bean_cls("NSPersistentHistoryToken")); }
+#endif
 
 /* ===== NSPersistentStoreAsynchronousResult ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentStoreAsynchronousResult
 #define BEAN_TYPEDEF_NSPersistentStoreAsynchronousResult
 typedef bean_id NSPersistentStoreAsynchronousResult;
 #endif
-static inline void                      NSPersistentStoreAsynchronousResult_Cancel(NSPersistentStoreAsynchronousResult self)                  { ((void (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("cancel")); }
-static inline NSManagedObjectContext    NSPersistentStoreAsynchronousResult_ManagedObjectContext(NSPersistentStoreAsynchronousResult self)    { return ((NSManagedObjectContext (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("managedObjectContext")); }
-static inline NSError                   NSPersistentStoreAsynchronousResult_OperationError(NSPersistentStoreAsynchronousResult self)          { return ((NSError (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("operationError")); }
-static inline NSProgress                NSPersistentStoreAsynchronousResult_Progress(NSPersistentStoreAsynchronousResult self)                { return ((NSProgress (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("progress")); }
+static inline void                                   NSPersistentStoreAsynchronousResult_Cancel(NSPersistentStoreAsynchronousResult self)                  { ((void (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("cancel")); }
+static inline NSManagedObjectContext                 NSPersistentStoreAsynchronousResult_ManagedObjectContext(NSPersistentStoreAsynchronousResult self)    { return ((NSManagedObjectContext (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("managedObjectContext")); }
+static inline NSError                                NSPersistentStoreAsynchronousResult_OperationError(NSPersistentStoreAsynchronousResult self)          { return ((NSError (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("operationError")); }
+static inline NSProgress                             NSPersistentStoreAsynchronousResult_Progress(NSPersistentStoreAsynchronousResult self)                { return ((NSProgress (*)(NSPersistentStoreAsynchronousResult, SEL))bean_msgSend)(self, bean_sel("progress")); }
+#ifndef BEAN_ALLOC_NSPersistentStoreAsynchronousResult
+#define BEAN_ALLOC_NSPersistentStoreAsynchronousResult
+static inline NSPersistentStoreAsynchronousResult    NSPersistentStoreAsynchronousResult_Alloc(void)                                                       { return (NSPersistentStoreAsynchronousResult)bean_alloc(bean_cls("NSPersistentStoreAsynchronousResult")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStoreAsynchronousResult
+#define BEAN_NEW_NSPersistentStoreAsynchronousResult
+static inline NSPersistentStoreAsynchronousResult    NSPersistentStoreAsynchronousResult_New(void)                                                         { return (NSPersistentStoreAsynchronousResult)bean_new(bean_cls("NSPersistentStoreAsynchronousResult")); }
+#endif
 
 /* ===== NSPropertyMapping ===== */
 #ifndef BEAN_TYPEDEF_NSPropertyMapping
 #define BEAN_TYPEDEF_NSPropertyMapping
 typedef bean_id NSPropertyMapping;
 #endif
-static inline NSString        NSPropertyMapping_Name(NSPropertyMapping self)                                                { return ((NSString (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline void            NSPropertyMapping_SetName(NSPropertyMapping self, NSString name)                              { ((void (*)(NSPropertyMapping, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
-static inline NSExpression    NSPropertyMapping_ValueExpression(NSPropertyMapping self)                                     { return ((NSExpression (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("valueExpression")); }
-static inline void            NSPropertyMapping_SetValueExpression(NSPropertyMapping self, NSExpression valueExpression)    { ((void (*)(NSPropertyMapping, SEL, NSExpression))bean_msgSend)(self, bean_sel("setValueExpression:"), valueExpression); }
-static inline NSDictionary    NSPropertyMapping_UserInfo(NSPropertyMapping self)                                            { return ((NSDictionary (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
-static inline void            NSPropertyMapping_SetUserInfo(NSPropertyMapping self, NSDictionary userInfo)                  { ((void (*)(NSPropertyMapping, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+static inline NSString             NSPropertyMapping_Name(NSPropertyMapping self)                                                { return ((NSString (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline void                 NSPropertyMapping_SetName(NSPropertyMapping self, NSString name)                              { ((void (*)(NSPropertyMapping, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
+static inline NSExpression         NSPropertyMapping_ValueExpression(NSPropertyMapping self)                                     { return ((NSExpression (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("valueExpression")); }
+static inline void                 NSPropertyMapping_SetValueExpression(NSPropertyMapping self, NSExpression valueExpression)    { ((void (*)(NSPropertyMapping, SEL, NSExpression))bean_msgSend)(self, bean_sel("setValueExpression:"), valueExpression); }
+static inline NSDictionary         NSPropertyMapping_UserInfo(NSPropertyMapping self)                                            { return ((NSDictionary (*)(NSPropertyMapping, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
+static inline void                 NSPropertyMapping_SetUserInfo(NSPropertyMapping self, NSDictionary userInfo)                  { ((void (*)(NSPropertyMapping, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+#ifndef BEAN_ALLOC_NSPropertyMapping
+#define BEAN_ALLOC_NSPropertyMapping
+static inline NSPropertyMapping    NSPropertyMapping_Alloc(void)                                                                 { return (NSPropertyMapping)bean_alloc(bean_cls("NSPropertyMapping")); }
+#endif
+#ifndef BEAN_NEW_NSPropertyMapping
+#define BEAN_NEW_NSPropertyMapping
+static inline NSPropertyMapping    NSPropertyMapping_New(void)                                                                   { return (NSPropertyMapping)bean_new(bean_cls("NSPropertyMapping")); }
+#endif
 
 /* ===== NSQueryGenerationToken ===== */
 #ifndef BEAN_TYPEDEF_NSQueryGenerationToken
@@ -5655,6 +6059,14 @@ typedef bean_id NSQueryGenerationToken;
 static inline NSQueryGenerationToken    NSQueryGenerationToken_CurrentQueryGenerationToken(void)                          { return ((NSQueryGenerationToken (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSQueryGenerationToken"), bean_sel("currentQueryGenerationToken")); }
 static inline id                        NSQueryGenerationToken_CopyWithZone(NSQueryGenerationToken self, NSZone* zone)    { return ((id (*)(NSQueryGenerationToken, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      NSQueryGenerationToken_SupportsSecureCoding(void)                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSQueryGenerationToken"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_NSQueryGenerationToken
+#define BEAN_ALLOC_NSQueryGenerationToken
+static inline NSQueryGenerationToken    NSQueryGenerationToken_Alloc(void)                                                { return (NSQueryGenerationToken)bean_alloc(bean_cls("NSQueryGenerationToken")); }
+#endif
+#ifndef BEAN_NEW_NSQueryGenerationToken
+#define BEAN_NEW_NSQueryGenerationToken
+static inline NSQueryGenerationToken    NSQueryGenerationToken_New(void)                                                  { return (NSQueryGenerationToken)bean_new(bean_cls("NSQueryGenerationToken")); }
+#endif
 
 /* ===== NSSaveChangesRequest ===== */
 #ifndef BEAN_TYPEDEF_NSSaveChangesRequest
@@ -5666,6 +6078,14 @@ static inline NSSet                   NSSaveChangesRequest_InsertedObjects(NSSav
 static inline NSSet                   NSSaveChangesRequest_UpdatedObjects(NSSaveChangesRequest self)                                                                                                                                                 { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("updatedObjects")); }
 static inline NSSet                   NSSaveChangesRequest_DeletedObjects(NSSaveChangesRequest self)                                                                                                                                                 { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("deletedObjects")); }
 static inline NSSet                   NSSaveChangesRequest_LockedObjects(NSSaveChangesRequest self)                                                                                                                                                  { return ((NSSet (*)(NSSaveChangesRequest, SEL))bean_msgSend)(self, bean_sel("lockedObjects")); }
+#ifndef BEAN_ALLOC_NSSaveChangesRequest
+#define BEAN_ALLOC_NSSaveChangesRequest
+static inline NSSaveChangesRequest    NSSaveChangesRequest_Alloc(void)                                                                                                                                                                               { return (NSSaveChangesRequest)bean_alloc(bean_cls("NSSaveChangesRequest")); }
+#endif
+#ifndef BEAN_NEW_NSSaveChangesRequest
+#define BEAN_NEW_NSSaveChangesRequest
+static inline NSSaveChangesRequest    NSSaveChangesRequest_New(void)                                                                                                                                                                                 { return (NSSaveChangesRequest)bean_new(bean_cls("NSSaveChangesRequest")); }
+#endif
 
 /* ===== SKAttribute ===== */
 #ifndef BEAN_TYPEDEF_SKAttribute
@@ -5677,6 +6097,14 @@ static inline SKAttribute        SKAttribute_InitWithName_Type(SKAttribute self,
 static inline NSString           SKAttribute_Name(SKAttribute self)                                                      { return ((NSString (*)(SKAttribute, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline SKAttributeType    SKAttribute_Type(SKAttribute self)                                                      { return ((SKAttributeType (*)(SKAttribute, SEL))bean_msgSend)(self, bean_sel("type")); }
 static inline BOOL               SKAttribute_SupportsSecureCoding(void)                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKAttribute"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKAttribute
+#define BEAN_ALLOC_SKAttribute
+static inline SKAttribute        SKAttribute_Alloc(void)                                                                 { return (SKAttribute)bean_alloc(bean_cls("SKAttribute")); }
+#endif
+#ifndef BEAN_NEW_SKAttribute
+#define BEAN_NEW_SKAttribute
+static inline SKAttribute        SKAttribute_New(void)                                                                   { return (SKAttribute)bean_new(bean_cls("SKAttribute")); }
+#endif
 
 /* ===== SKAttributeValue ===== */
 #ifndef BEAN_TYPEDEF_SKAttributeValue
@@ -5697,6 +6125,14 @@ static inline void                SKAttributeValue_SetVectorFloat3Value(SKAttrib
 static inline void*               SKAttributeValue_VectorFloat4Value(SKAttributeValue self)                                { return ((void* (*)(SKAttributeValue, SEL))bean_msgSend)(self, bean_sel("vectorFloat4Value")); }
 static inline void                SKAttributeValue_SetVectorFloat4Value(SKAttributeValue self, void* vectorFloat4Value)    { ((void (*)(SKAttributeValue, SEL, void*))bean_msgSend)(self, bean_sel("setVectorFloat4Value:"), vectorFloat4Value); }
 static inline BOOL                SKAttributeValue_SupportsSecureCoding(void)                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKAttributeValue"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKAttributeValue
+#define BEAN_ALLOC_SKAttributeValue
+static inline SKAttributeValue    SKAttributeValue_Alloc(void)                                                             { return (SKAttributeValue)bean_alloc(bean_cls("SKAttributeValue")); }
+#endif
+#ifndef BEAN_NEW_SKAttributeValue
+#define BEAN_NEW_SKAttributeValue
+static inline SKAttributeValue    SKAttributeValue_New(void)                                                               { return (SKAttributeValue)bean_new(bean_cls("SKAttributeValue")); }
+#endif
 
 /* ===== SKAudioNode ===== */
 #ifndef BEAN_TYPEDEF_SKAudioNode
@@ -5715,6 +6151,14 @@ static inline BOOL           SKAudioNode_IsPositional(SKAudioNode self)         
 static inline void           SKAudioNode_SetPositional(SKAudioNode self, BOOL positional)             { ((void (*)(SKAudioNode, SEL, BOOL))bean_msgSend)(self, bean_sel("setPositional:"), positional); }
 static inline BOOL           SKAudioNode_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKAudioNode"), bean_sel("supportsSecureCoding")); }
 static inline BOOL           SKAudioNode_Positional(SKAudioNode self)                                 { return ((BOOL (*)(SKAudioNode, SEL))bean_msgSend)(self, bean_sel("positional")); }
+#ifndef BEAN_ALLOC_SKAudioNode
+#define BEAN_ALLOC_SKAudioNode
+static inline SKAudioNode    SKAudioNode_Alloc(void)                                                  { return (SKAudioNode)bean_alloc(bean_cls("SKAudioNode")); }
+#endif
+#ifndef BEAN_NEW_SKAudioNode
+#define BEAN_NEW_SKAudioNode
+static inline SKAudioNode    SKAudioNode_New(void)                                                    { return (SKAudioNode)bean_new(bean_cls("SKAudioNode")); }
+#endif
 
 /* ===== SKLabelNode ===== */
 #ifndef BEAN_TYPEDEF_SKLabelNode
@@ -5751,25 +6195,41 @@ static inline NSColor                           SKLabelNode_Color(SKLabelNode se
 static inline void                              SKLabelNode_SetColor(SKLabelNode self, NSColor color)                                                               { ((void (*)(SKLabelNode, SEL, NSColor))bean_msgSend)(self, bean_sel("setColor:"), color); }
 static inline SKBlendMode                       SKLabelNode_BlendMode(SKLabelNode self)                                                                             { return ((SKBlendMode (*)(SKLabelNode, SEL))bean_msgSend)(self, bean_sel("blendMode")); }
 static inline void                              SKLabelNode_SetBlendMode(SKLabelNode self, SKBlendMode blendMode)                                                   { ((void (*)(SKLabelNode, SEL, SKBlendMode))bean_msgSend)(self, bean_sel("setBlendMode:"), blendMode); }
+#ifndef BEAN_ALLOC_SKLabelNode
+#define BEAN_ALLOC_SKLabelNode
+static inline SKLabelNode                       SKLabelNode_Alloc(void)                                                                                             { return (SKLabelNode)bean_alloc(bean_cls("SKLabelNode")); }
+#endif
+#ifndef BEAN_NEW_SKLabelNode
+#define BEAN_NEW_SKLabelNode
+static inline SKLabelNode                       SKLabelNode_New(void)                                                                                               { return (SKLabelNode)bean_new(bean_cls("SKLabelNode")); }
+#endif
 
 /* ===== SKLightNode ===== */
 #ifndef BEAN_TYPEDEF_SKLightNode
 #define BEAN_TYPEDEF_SKLightNode
 typedef bean_id SKLightNode;
 #endif
-static inline BOOL          SKLightNode_IsEnabled(SKLightNode self)                                         { return ((BOOL (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("isEnabled")); }
-static inline void          SKLightNode_SetEnabled(SKLightNode self, BOOL enabled)                          { ((void (*)(SKLightNode, SEL, BOOL))bean_msgSend)(self, bean_sel("setEnabled:"), enabled); }
-static inline NSColor       SKLightNode_LightColor(SKLightNode self)                                        { return ((NSColor (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("lightColor")); }
-static inline void          SKLightNode_SetLightColor(SKLightNode self, NSColor lightColor)                 { ((void (*)(SKLightNode, SEL, NSColor))bean_msgSend)(self, bean_sel("setLightColor:"), lightColor); }
-static inline NSColor       SKLightNode_AmbientColor(SKLightNode self)                                      { return ((NSColor (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("ambientColor")); }
-static inline void          SKLightNode_SetAmbientColor(SKLightNode self, NSColor ambientColor)             { ((void (*)(SKLightNode, SEL, NSColor))bean_msgSend)(self, bean_sel("setAmbientColor:"), ambientColor); }
-static inline NSColor       SKLightNode_ShadowColor(SKLightNode self)                                       { return ((NSColor (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("shadowColor")); }
-static inline void          SKLightNode_SetShadowColor(SKLightNode self, NSColor shadowColor)               { ((void (*)(SKLightNode, SEL, NSColor))bean_msgSend)(self, bean_sel("setShadowColor:"), shadowColor); }
-static inline CGFloat       SKLightNode_Falloff(SKLightNode self)                                           { return ((CGFloat (*)(SKLightNode, SEL))bean_msgSend_fpret)(self, bean_sel("falloff")); }
-static inline void          SKLightNode_SetFalloff(SKLightNode self, CGFloat falloff)                       { ((void (*)(SKLightNode, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFalloff:"), falloff); }
-static inline NSUInteger    SKLightNode_CategoryBitMask(SKLightNode self)                                   { return ((NSUInteger (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("categoryBitMask")); }
-static inline void          SKLightNode_SetCategoryBitMask(SKLightNode self, NSUInteger categoryBitMask)    { ((void (*)(SKLightNode, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setCategoryBitMask:"), categoryBitMask); }
-static inline BOOL          SKLightNode_Enabled(SKLightNode self)                                           { return ((BOOL (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("enabled")); }
+static inline BOOL           SKLightNode_IsEnabled(SKLightNode self)                                         { return ((BOOL (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("isEnabled")); }
+static inline void           SKLightNode_SetEnabled(SKLightNode self, BOOL enabled)                          { ((void (*)(SKLightNode, SEL, BOOL))bean_msgSend)(self, bean_sel("setEnabled:"), enabled); }
+static inline NSColor        SKLightNode_LightColor(SKLightNode self)                                        { return ((NSColor (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("lightColor")); }
+static inline void           SKLightNode_SetLightColor(SKLightNode self, NSColor lightColor)                 { ((void (*)(SKLightNode, SEL, NSColor))bean_msgSend)(self, bean_sel("setLightColor:"), lightColor); }
+static inline NSColor        SKLightNode_AmbientColor(SKLightNode self)                                      { return ((NSColor (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("ambientColor")); }
+static inline void           SKLightNode_SetAmbientColor(SKLightNode self, NSColor ambientColor)             { ((void (*)(SKLightNode, SEL, NSColor))bean_msgSend)(self, bean_sel("setAmbientColor:"), ambientColor); }
+static inline NSColor        SKLightNode_ShadowColor(SKLightNode self)                                       { return ((NSColor (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("shadowColor")); }
+static inline void           SKLightNode_SetShadowColor(SKLightNode self, NSColor shadowColor)               { ((void (*)(SKLightNode, SEL, NSColor))bean_msgSend)(self, bean_sel("setShadowColor:"), shadowColor); }
+static inline CGFloat        SKLightNode_Falloff(SKLightNode self)                                           { return ((CGFloat (*)(SKLightNode, SEL))bean_msgSend_fpret)(self, bean_sel("falloff")); }
+static inline void           SKLightNode_SetFalloff(SKLightNode self, CGFloat falloff)                       { ((void (*)(SKLightNode, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFalloff:"), falloff); }
+static inline NSUInteger     SKLightNode_CategoryBitMask(SKLightNode self)                                   { return ((NSUInteger (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("categoryBitMask")); }
+static inline void           SKLightNode_SetCategoryBitMask(SKLightNode self, NSUInteger categoryBitMask)    { ((void (*)(SKLightNode, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setCategoryBitMask:"), categoryBitMask); }
+static inline BOOL           SKLightNode_Enabled(SKLightNode self)                                           { return ((BOOL (*)(SKLightNode, SEL))bean_msgSend)(self, bean_sel("enabled")); }
+#ifndef BEAN_ALLOC_SKLightNode
+#define BEAN_ALLOC_SKLightNode
+static inline SKLightNode    SKLightNode_Alloc(void)                                                         { return (SKLightNode)bean_alloc(bean_cls("SKLightNode")); }
+#endif
+#ifndef BEAN_NEW_SKLightNode
+#define BEAN_NEW_SKLightNode
+static inline SKLightNode    SKLightNode_New(void)                                                           { return (SKLightNode)bean_new(bean_cls("SKLightNode")); }
+#endif
 
 /* ===== SKMutableTexture ===== */
 #ifndef BEAN_TYPEDEF_SKMutableTexture
@@ -5780,6 +6240,14 @@ static inline SKMutableTexture    SKMutableTexture_InitWithSize(SKMutableTexture
 static inline SKMutableTexture    SKMutableTexture_MutableTextureWithSize(CGSize size)                                         { return ((SKMutableTexture (*)(bean_class, SEL, CGSize))bean_msgSend)(bean_cls("SKMutableTexture"), bean_sel("mutableTextureWithSize:"), size); }
 static inline SKMutableTexture    SKMutableTexture_InitWithSize_PixelFormat(SKMutableTexture self, CGSize size, int format)    { return ((SKMutableTexture (*)(SKMutableTexture, SEL, CGSize, int))bean_msgSend)(self, bean_sel("initWithSize:pixelFormat:"), size, format); }
 static inline void                SKMutableTexture_ModifyPixelDataWithBlock(SKMutableTexture self, void* block)                { ((void (*)(SKMutableTexture, SEL, void*))bean_msgSend)(self, bean_sel("modifyPixelDataWithBlock:"), block); }
+#ifndef BEAN_ALLOC_SKMutableTexture
+#define BEAN_ALLOC_SKMutableTexture
+static inline SKMutableTexture    SKMutableTexture_Alloc(void)                                                                 { return (SKMutableTexture)bean_alloc(bean_cls("SKMutableTexture")); }
+#endif
+#ifndef BEAN_NEW_SKMutableTexture
+#define BEAN_NEW_SKMutableTexture
+static inline SKMutableTexture    SKMutableTexture_New(void)                                                                   { return (SKMutableTexture)bean_new(bean_cls("SKMutableTexture")); }
+#endif
 
 /* ===== SKRange ===== */
 #ifndef BEAN_TYPEDEF_SKRange
@@ -5799,6 +6267,14 @@ static inline CGFloat    SKRange_UpperLimit(SKRange self)                       
 static inline void       SKRange_SetUpperLimit(SKRange self, CGFloat upperLimit)                              { ((void (*)(SKRange, SEL, CGFloat))bean_msgSend)(self, bean_sel("setUpperLimit:"), upperLimit); }
 static inline BOOL       SKRange_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKRange"), bean_sel("supportsSecureCoding")); }
 static inline id         SKRange_CopyWithZone(SKRange self, NSZone* zone)                                     { return ((id (*)(SKRange, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_SKRange
+#define BEAN_ALLOC_SKRange
+static inline SKRange    SKRange_Alloc(void)                                                                  { return (SKRange)bean_alloc(bean_cls("SKRange")); }
+#endif
+#ifndef BEAN_NEW_SKRange
+#define BEAN_NEW_SKRange
+static inline SKRange    SKRange_New(void)                                                                    { return (SKRange)bean_new(bean_cls("SKRange")); }
+#endif
 
 /* ===== SKReachConstraints ===== */
 #ifndef BEAN_TYPEDEF_SKReachConstraints
@@ -5811,6 +6287,14 @@ static inline void                  SKReachConstraints_SetLowerAngleLimit(SKReac
 static inline CGFloat               SKReachConstraints_UpperAngleLimit(SKReachConstraints self)                                                                              { return ((CGFloat (*)(SKReachConstraints, SEL))bean_msgSend_fpret)(self, bean_sel("upperAngleLimit")); }
 static inline void                  SKReachConstraints_SetUpperAngleLimit(SKReachConstraints self, CGFloat upperAngleLimit)                                                  { ((void (*)(SKReachConstraints, SEL, CGFloat))bean_msgSend)(self, bean_sel("setUpperAngleLimit:"), upperAngleLimit); }
 static inline BOOL                  SKReachConstraints_SupportsSecureCoding(void)                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKReachConstraints"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKReachConstraints
+#define BEAN_ALLOC_SKReachConstraints
+static inline SKReachConstraints    SKReachConstraints_Alloc(void)                                                                                                           { return (SKReachConstraints)bean_alloc(bean_cls("SKReachConstraints")); }
+#endif
+#ifndef BEAN_NEW_SKReachConstraints
+#define BEAN_NEW_SKReachConstraints
+static inline SKReachConstraints    SKReachConstraints_New(void)                                                                                                             { return (SKReachConstraints)bean_new(bean_cls("SKReachConstraints")); }
+#endif
 
 /* ===== SKRegion ===== */
 #ifndef BEAN_TYPEDEF_SKRegion
@@ -5829,22 +6313,38 @@ static inline BOOL              SKRegion_ContainsPoint(SKRegion self, CGPoint po
 static inline struct CGPath*    SKRegion_Path(SKRegion self)                                               { return ((struct CGPath* (*)(SKRegion, SEL))bean_msgSend)(self, bean_sel("path")); }
 static inline id                SKRegion_CopyWithZone(SKRegion self, NSZone* zone)                         { return ((id (*)(SKRegion, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL              SKRegion_SupportsSecureCoding(void)                                        { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKRegion"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKRegion
+#define BEAN_ALLOC_SKRegion
+static inline SKRegion          SKRegion_Alloc(void)                                                       { return (SKRegion)bean_alloc(bean_cls("SKRegion")); }
+#endif
+#ifndef BEAN_NEW_SKRegion
+#define BEAN_NEW_SKRegion
+static inline SKRegion          SKRegion_New(void)                                                         { return (SKRegion)bean_new(bean_cls("SKRegion")); }
+#endif
 
 /* ===== SKTransformNode ===== */
 #ifndef BEAN_TYPEDEF_SKTransformNode
 #define BEAN_TYPEDEF_SKTransformNode
 typedef bean_id SKTransformNode;
 #endif
-static inline void             SKTransformNode_SetEulerAngles(SKTransformNode self, void* euler)                        { ((void (*)(SKTransformNode, SEL, void*))bean_msgSend)(self, bean_sel("setEulerAngles:"), euler); }
-static inline void*            SKTransformNode_EulerAngles(SKTransformNode self)                                        { return ((void* (*)(SKTransformNode, SEL))bean_msgSend)(self, bean_sel("eulerAngles")); }
-static inline void             SKTransformNode_SetRotationMatrix(SKTransformNode self, simd_float3x3 rotationMatrix)    { ((void (*)(SKTransformNode, SEL, simd_float3x3))bean_msgSend)(self, bean_sel("setRotationMatrix:"), rotationMatrix); }
-static inline simd_float3x3    SKTransformNode_RotationMatrix(SKTransformNode self)                                     { return ((simd_float3x3 (*)(SKTransformNode, SEL))bean_msgSend)(self, bean_sel("rotationMatrix")); }
-static inline void             SKTransformNode_SetQuaternion(SKTransformNode self, simd_quatf quaternion)               { ((void (*)(SKTransformNode, SEL, simd_quatf))bean_msgSend)(self, bean_sel("setQuaternion:"), quaternion); }
-static inline simd_quatf       SKTransformNode_Quaternion(SKTransformNode self)                                         { return ((simd_quatf (*)(SKTransformNode, SEL))bean_msgSend)(self, bean_sel("quaternion")); }
-static inline CGFloat          SKTransformNode_XRotation(SKTransformNode self)                                          { return ((CGFloat (*)(SKTransformNode, SEL))bean_msgSend_fpret)(self, bean_sel("xRotation")); }
-static inline void             SKTransformNode_SetXRotation(SKTransformNode self, CGFloat xRotation)                    { ((void (*)(SKTransformNode, SEL, CGFloat))bean_msgSend)(self, bean_sel("setXRotation:"), xRotation); }
-static inline CGFloat          SKTransformNode_YRotation(SKTransformNode self)                                          { return ((CGFloat (*)(SKTransformNode, SEL))bean_msgSend_fpret)(self, bean_sel("yRotation")); }
-static inline void             SKTransformNode_SetYRotation(SKTransformNode self, CGFloat yRotation)                    { ((void (*)(SKTransformNode, SEL, CGFloat))bean_msgSend)(self, bean_sel("setYRotation:"), yRotation); }
+static inline void               SKTransformNode_SetEulerAngles(SKTransformNode self, void* euler)                        { ((void (*)(SKTransformNode, SEL, void*))bean_msgSend)(self, bean_sel("setEulerAngles:"), euler); }
+static inline void*              SKTransformNode_EulerAngles(SKTransformNode self)                                        { return ((void* (*)(SKTransformNode, SEL))bean_msgSend)(self, bean_sel("eulerAngles")); }
+static inline void               SKTransformNode_SetRotationMatrix(SKTransformNode self, simd_float3x3 rotationMatrix)    { ((void (*)(SKTransformNode, SEL, simd_float3x3))bean_msgSend)(self, bean_sel("setRotationMatrix:"), rotationMatrix); }
+static inline simd_float3x3      SKTransformNode_RotationMatrix(SKTransformNode self)                                     { return ((simd_float3x3 (*)(SKTransformNode, SEL))bean_msgSend)(self, bean_sel("rotationMatrix")); }
+static inline void               SKTransformNode_SetQuaternion(SKTransformNode self, simd_quatf quaternion)               { ((void (*)(SKTransformNode, SEL, simd_quatf))bean_msgSend)(self, bean_sel("setQuaternion:"), quaternion); }
+static inline simd_quatf         SKTransformNode_Quaternion(SKTransformNode self)                                         { return ((simd_quatf (*)(SKTransformNode, SEL))bean_msgSend)(self, bean_sel("quaternion")); }
+static inline CGFloat            SKTransformNode_XRotation(SKTransformNode self)                                          { return ((CGFloat (*)(SKTransformNode, SEL))bean_msgSend_fpret)(self, bean_sel("xRotation")); }
+static inline void               SKTransformNode_SetXRotation(SKTransformNode self, CGFloat xRotation)                    { ((void (*)(SKTransformNode, SEL, CGFloat))bean_msgSend)(self, bean_sel("setXRotation:"), xRotation); }
+static inline CGFloat            SKTransformNode_YRotation(SKTransformNode self)                                          { return ((CGFloat (*)(SKTransformNode, SEL))bean_msgSend_fpret)(self, bean_sel("yRotation")); }
+static inline void               SKTransformNode_SetYRotation(SKTransformNode self, CGFloat yRotation)                    { ((void (*)(SKTransformNode, SEL, CGFloat))bean_msgSend)(self, bean_sel("setYRotation:"), yRotation); }
+#ifndef BEAN_ALLOC_SKTransformNode
+#define BEAN_ALLOC_SKTransformNode
+static inline SKTransformNode    SKTransformNode_Alloc(void)                                                              { return (SKTransformNode)bean_alloc(bean_cls("SKTransformNode")); }
+#endif
+#ifndef BEAN_NEW_SKTransformNode
+#define BEAN_NEW_SKTransformNode
+static inline SKTransformNode    SKTransformNode_New(void)                                                                { return (SKTransformNode)bean_new(bean_cls("SKTransformNode")); }
+#endif
 
 /* ===== SKTransition ===== */
 #ifndef BEAN_TYPEDEF_SKTransition
@@ -5870,6 +6370,14 @@ static inline void            SKTransition_SetPausesIncomingScene(SKTransition s
 static inline BOOL            SKTransition_PausesOutgoingScene(SKTransition self)                                        { return ((BOOL (*)(SKTransition, SEL))bean_msgSend)(self, bean_sel("pausesOutgoingScene")); }
 static inline void            SKTransition_SetPausesOutgoingScene(SKTransition self, BOOL pausesOutgoingScene)           { ((void (*)(SKTransition, SEL, BOOL))bean_msgSend)(self, bean_sel("setPausesOutgoingScene:"), pausesOutgoingScene); }
 static inline id              SKTransition_CopyWithZone(SKTransition self, NSZone* zone)                                 { return ((id (*)(SKTransition, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_SKTransition
+#define BEAN_ALLOC_SKTransition
+static inline SKTransition    SKTransition_Alloc(void)                                                                   { return (SKTransition)bean_alloc(bean_cls("SKTransition")); }
+#endif
+#ifndef BEAN_NEW_SKTransition
+#define BEAN_NEW_SKTransition
+static inline SKTransition    SKTransition_New(void)                                                                     { return (SKTransition)bean_new(bean_cls("SKTransition")); }
+#endif
 
 /* ===== SKVideoNode ===== */
 #ifndef BEAN_TYPEDEF_SKVideoNode
@@ -5893,14 +6401,30 @@ static inline CGSize         SKVideoNode_Size(SKVideoNode self)                 
 static inline void           SKVideoNode_SetSize(SKVideoNode self, CGSize size)                          { ((void (*)(SKVideoNode, SEL, CGSize))bean_msgSend)(self, bean_sel("setSize:"), size); }
 static inline CGPoint        SKVideoNode_AnchorPoint(SKVideoNode self)                                   { return ((CGPoint (*)(SKVideoNode, SEL))bean_msgSend_stret)(self, bean_sel("anchorPoint")); }
 static inline void           SKVideoNode_SetAnchorPoint(SKVideoNode self, CGPoint anchorPoint)           { ((void (*)(SKVideoNode, SEL, CGPoint))bean_msgSend)(self, bean_sel("setAnchorPoint:"), anchorPoint); }
+#ifndef BEAN_ALLOC_SKVideoNode
+#define BEAN_ALLOC_SKVideoNode
+static inline SKVideoNode    SKVideoNode_Alloc(void)                                                     { return (SKVideoNode)bean_alloc(bean_cls("SKVideoNode")); }
+#endif
+#ifndef BEAN_NEW_SKVideoNode
+#define BEAN_NEW_SKVideoNode
+static inline SKVideoNode    SKVideoNode_New(void)                                                       { return (SKVideoNode)bean_new(bean_cls("SKVideoNode")); }
+#endif
 
 /* ===== SKWarpGeometry ===== */
 #ifndef BEAN_TYPEDEF_SKWarpGeometry
 #define BEAN_TYPEDEF_SKWarpGeometry
 typedef bean_id SKWarpGeometry;
 #endif
-static inline id      SKWarpGeometry_CopyWithZone(SKWarpGeometry self, NSZone* zone)    { return ((id (*)(SKWarpGeometry, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL    SKWarpGeometry_SupportsSecureCoding(void)                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKWarpGeometry"), bean_sel("supportsSecureCoding")); }
+static inline id                SKWarpGeometry_CopyWithZone(SKWarpGeometry self, NSZone* zone)    { return ((id (*)(SKWarpGeometry, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL              SKWarpGeometry_SupportsSecureCoding(void)                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKWarpGeometry"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKWarpGeometry
+#define BEAN_ALLOC_SKWarpGeometry
+static inline SKWarpGeometry    SKWarpGeometry_Alloc(void)                                        { return (SKWarpGeometry)bean_alloc(bean_cls("SKWarpGeometry")); }
+#endif
+#ifndef BEAN_NEW_SKWarpGeometry
+#define BEAN_NEW_SKWarpGeometry
+static inline SKWarpGeometry    SKWarpGeometry_New(void)                                          { return (SKWarpGeometry)bean_new(bean_cls("SKWarpGeometry")); }
+#endif
 
 /* ===== SKWarpGeometryGrid ===== */
 #ifndef BEAN_TYPEDEF_SKWarpGeometryGrid
@@ -5920,6 +6444,14 @@ static inline NSInteger             SKWarpGeometryGrid_NumberOfColumns(SKWarpGeo
 static inline NSInteger             SKWarpGeometryGrid_NumberOfRows(SKWarpGeometryGrid self)                                                                                                                                                    { return ((NSInteger (*)(SKWarpGeometryGrid, SEL))bean_msgSend)(self, bean_sel("numberOfRows")); }
 static inline NSInteger             SKWarpGeometryGrid_VertexCount(SKWarpGeometryGrid self)                                                                                                                                                     { return ((NSInteger (*)(SKWarpGeometryGrid, SEL))bean_msgSend)(self, bean_sel("vertexCount")); }
 static inline BOOL                  SKWarpGeometryGrid_SupportsSecureCoding(void)                                                                                                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKWarpGeometryGrid"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKWarpGeometryGrid
+#define BEAN_ALLOC_SKWarpGeometryGrid
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_Alloc(void)                                                                                                                                                                              { return (SKWarpGeometryGrid)bean_alloc(bean_cls("SKWarpGeometryGrid")); }
+#endif
+#ifndef BEAN_NEW_SKWarpGeometryGrid
+#define BEAN_NEW_SKWarpGeometryGrid
+static inline SKWarpGeometryGrid    SKWarpGeometryGrid_New(void)                                                                                                                                                                                { return (SKWarpGeometryGrid)bean_new(bean_cls("SKWarpGeometryGrid")); }
+#endif
 
 /* ===== CLLocation ===== */
 #ifndef BEAN_TYPEDEF_CLLocation
@@ -5947,6 +6479,14 @@ static inline CLFloor                        CLLocation_Floor(CLLocation self)  
 static inline CLLocationSourceInformation    CLLocation_SourceInformation(CLLocation self)                                                                                                                                                                                                                                                                                                                                                    { return ((CLLocationSourceInformation (*)(CLLocation, SEL))bean_msgSend)(self, bean_sel("sourceInformation")); }
 static inline id                             CLLocation_CopyWithZone(CLLocation self, NSZone* zone)                                                                                                                                                                                                                                                                                                                                           { return ((id (*)(CLLocation, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                           CLLocation_SupportsSecureCoding(void)                                                                                                                                                                                                                                                                                                                                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CLLocation"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_CLLocation
+#define BEAN_ALLOC_CLLocation
+static inline CLLocation                     CLLocation_Alloc(void)                                                                                                                                                                                                                                                                                                                                                                           { return (CLLocation)bean_alloc(bean_cls("CLLocation")); }
+#endif
+#ifndef BEAN_NEW_CLLocation
+#define BEAN_NEW_CLLocation
+static inline CLLocation                     CLLocation_New(void)                                                                                                                                                                                                                                                                                                                                                                             { return (CLLocation)bean_new(bean_cls("CLLocation")); }
+#endif
 
 /* ===== GKGridGraph ===== */
 #ifndef BEAN_TYPEDEF_GKGridGraph
@@ -5964,6 +6504,14 @@ static inline void*              GKGridGraph_GridOrigin(GKGridGraph self)       
 static inline NSUInteger         GKGridGraph_GridWidth(GKGridGraph self)                                                                                                                                             { return ((NSUInteger (*)(GKGridGraph, SEL))bean_msgSend)(self, bean_sel("gridWidth")); }
 static inline NSUInteger         GKGridGraph_GridHeight(GKGridGraph self)                                                                                                                                            { return ((NSUInteger (*)(GKGridGraph, SEL))bean_msgSend)(self, bean_sel("gridHeight")); }
 static inline BOOL               GKGridGraph_DiagonalsAllowed(GKGridGraph self)                                                                                                                                      { return ((BOOL (*)(GKGridGraph, SEL))bean_msgSend)(self, bean_sel("diagonalsAllowed")); }
+#ifndef BEAN_ALLOC_GKGridGraph
+#define BEAN_ALLOC_GKGridGraph
+static inline GKGridGraph        GKGridGraph_Alloc(void)                                                                                                                                                             { return (GKGridGraph)bean_alloc(bean_cls("GKGridGraph")); }
+#endif
+#ifndef BEAN_NEW_GKGridGraph
+#define BEAN_NEW_GKGridGraph
+static inline GKGridGraph        GKGridGraph_New(void)                                                                                                                                                               { return (GKGridGraph)bean_new(bean_cls("GKGridGraph")); }
+#endif
 
 /* ===== NSPersistentStoreDescription ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentStoreDescription
@@ -5996,6 +6544,14 @@ static inline NSPersistentCloudKitContainerOptions    NSPersistentStoreDescripti
 static inline void                                    NSPersistentStoreDescription_SetCloudKitContainerOptions(NSPersistentStoreDescription self, NSPersistentCloudKitContainerOptions cloudKitContainerOptions)    { ((void (*)(NSPersistentStoreDescription, SEL, NSPersistentCloudKitContainerOptions))bean_msgSend)(self, bean_sel("setCloudKitContainerOptions:"), cloudKitContainerOptions); }
 static inline id                                      NSPersistentStoreDescription_CopyWithZone(NSPersistentStoreDescription self, NSZone* zone)                                                                    { return ((id (*)(NSPersistentStoreDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                                    NSPersistentStoreDescription_ReadOnly(NSPersistentStoreDescription self)                                                                                      { return ((BOOL (*)(NSPersistentStoreDescription, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
+#ifndef BEAN_ALLOC_NSPersistentStoreDescription
+#define BEAN_ALLOC_NSPersistentStoreDescription
+static inline NSPersistentStoreDescription            NSPersistentStoreDescription_Alloc(void)                                                                                                                      { return (NSPersistentStoreDescription)bean_alloc(bean_cls("NSPersistentStoreDescription")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStoreDescription
+#define BEAN_NEW_NSPersistentStoreDescription
+static inline NSPersistentStoreDescription            NSPersistentStoreDescription_New(void)                                                                                                                        { return (NSPersistentStoreDescription)bean_new(bean_cls("NSPersistentStoreDescription")); }
+#endif
 
 /* ===== SKWarpable ===== */
 #ifndef BEAN_TYPEDEF_SKWarpable
@@ -6006,6 +6562,14 @@ static inline SKWarpGeometry    SKWarpable_WarpGeometry(SKWarpable self)        
 static inline void              SKWarpable_SetWarpGeometry(SKWarpable self, SKWarpGeometry warpGeometry)         { ((void (*)(SKWarpable, SEL, SKWarpGeometry))bean_msgSend)(self, bean_sel("setWarpGeometry:"), warpGeometry); }
 static inline NSInteger         SKWarpable_SubdivisionLevels(SKWarpable self)                                    { return ((NSInteger (*)(SKWarpable, SEL))bean_msgSend)(self, bean_sel("subdivisionLevels")); }
 static inline void              SKWarpable_SetSubdivisionLevels(SKWarpable self, NSInteger subdivisionLevels)    { ((void (*)(SKWarpable, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSubdivisionLevels:"), subdivisionLevels); }
+#ifndef BEAN_ALLOC_SKWarpable
+#define BEAN_ALLOC_SKWarpable
+static inline SKWarpable        SKWarpable_Alloc(void)                                                           { return (SKWarpable)bean_alloc(bean_cls("SKWarpable")); }
+#endif
+#ifndef BEAN_NEW_SKWarpable
+#define BEAN_NEW_SKWarpable
+static inline SKWarpable        SKWarpable_New(void)                                                             { return (SKWarpable)bean_new(bean_cls("SKWarpable")); }
+#endif
 
 /* ===== CKDatabase ===== */
 #ifndef BEAN_TYPEDEF_CKDatabase
@@ -6013,7 +6577,10 @@ static inline void              SKWarpable_SetSubdivisionLevels(SKWarpable self,
 typedef bean_id CKDatabase;
 #endif
 static inline CKDatabase         CKDatabase_Init(CKDatabase self)                                                                                                          { return ((CKDatabase (*)(CKDatabase, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CKDatabase
+#define BEAN_NEW_CKDatabase
 static inline CKDatabase         CKDatabase_New(void)                                                                                                                      { return ((CKDatabase (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKDatabase"), bean_sel("new")); }
+#endif
 static inline void               CKDatabase_AddOperation(CKDatabase self, CKDatabaseOperation operation)                                                                   { ((void (*)(CKDatabase, SEL, CKDatabaseOperation))bean_msgSend)(self, bean_sel("addOperation:"), operation); }
 static inline CKDatabaseScope    CKDatabase_DatabaseScope(CKDatabase self)                                                                                                 { return ((CKDatabaseScope (*)(CKDatabase, SEL))bean_msgSend)(self, bean_sel("databaseScope")); }
 static inline void               CKDatabase_FetchRecordWithID_CompletionHandler(CKDatabase self, CKRecordID recordID, void* completionHandler)                             { ((void (*)(CKDatabase, SEL, CKRecordID, void*))bean_msgSend)(self, bean_sel("fetchRecordWithID:completionHandler:"), recordID, completionHandler); }
@@ -6028,54 +6595,69 @@ static inline void               CKDatabase_FetchSubscriptionWithID_CompletionHa
 static inline void               CKDatabase_FetchAllSubscriptionsWithCompletionHandler(CKDatabase self, void* completionHandler)                                           { ((void (*)(CKDatabase, SEL, void*))bean_msgSend)(self, bean_sel("fetchAllSubscriptionsWithCompletionHandler:"), completionHandler); }
 static inline void               CKDatabase_SaveSubscription_CompletionHandler(CKDatabase self, CKSubscription subscription, void* completionHandler)                      { ((void (*)(CKDatabase, SEL, CKSubscription, void*))bean_msgSend)(self, bean_sel("saveSubscription:completionHandler:"), subscription, completionHandler); }
 static inline void               CKDatabase_DeleteSubscriptionWithID_CompletionHandler(CKDatabase self, NSString subscriptionID, void* completionHandler)                  { ((void (*)(CKDatabase, SEL, NSString, void*))bean_msgSend)(self, bean_sel("deleteSubscriptionWithID:completionHandler:"), subscriptionID, completionHandler); }
+#ifndef BEAN_ALLOC_CKDatabase
+#define BEAN_ALLOC_CKDatabase
+static inline CKDatabase         CKDatabase_Alloc(void)                                                                                                                    { return (CKDatabase)bean_alloc(bean_cls("CKDatabase")); }
+#endif
 
 /* ===== CKNotificationInfo ===== */
 #ifndef BEAN_TYPEDEF_CKNotificationInfo
 #define BEAN_TYPEDEF_CKNotificationInfo
 typedef bean_id CKNotificationInfo;
 #endif
-static inline NSString    CKNotificationInfo_AlertBody(CKNotificationInfo self)                                                             { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertBody")); }
-static inline void        CKNotificationInfo_SetAlertBody(CKNotificationInfo self, NSString alertBody)                                      { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setAlertBody:"), alertBody); }
-static inline NSString    CKNotificationInfo_AlertLocalizationKey(CKNotificationInfo self)                                                  { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertLocalizationKey")); }
-static inline void        CKNotificationInfo_SetAlertLocalizationKey(CKNotificationInfo self, NSString alertLocalizationKey)                { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setAlertLocalizationKey:"), alertLocalizationKey); }
-static inline NSArray     CKNotificationInfo_AlertLocalizationArgs(CKNotificationInfo self)                                                 { return ((NSArray (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertLocalizationArgs")); }
-static inline void        CKNotificationInfo_SetAlertLocalizationArgs(CKNotificationInfo self, NSArray alertLocalizationArgs)               { ((void (*)(CKNotificationInfo, SEL, NSArray))bean_msgSend)(self, bean_sel("setAlertLocalizationArgs:"), alertLocalizationArgs); }
-static inline NSString    CKNotificationInfo_Title(CKNotificationInfo self)                                                                 { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("title")); }
-static inline void        CKNotificationInfo_SetTitle(CKNotificationInfo self, NSString title)                                              { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
-static inline NSString    CKNotificationInfo_TitleLocalizationKey(CKNotificationInfo self)                                                  { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("titleLocalizationKey")); }
-static inline void        CKNotificationInfo_SetTitleLocalizationKey(CKNotificationInfo self, NSString titleLocalizationKey)                { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setTitleLocalizationKey:"), titleLocalizationKey); }
-static inline NSArray     CKNotificationInfo_TitleLocalizationArgs(CKNotificationInfo self)                                                 { return ((NSArray (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("titleLocalizationArgs")); }
-static inline void        CKNotificationInfo_SetTitleLocalizationArgs(CKNotificationInfo self, NSArray titleLocalizationArgs)               { ((void (*)(CKNotificationInfo, SEL, NSArray))bean_msgSend)(self, bean_sel("setTitleLocalizationArgs:"), titleLocalizationArgs); }
-static inline NSString    CKNotificationInfo_Subtitle(CKNotificationInfo self)                                                              { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("subtitle")); }
-static inline void        CKNotificationInfo_SetSubtitle(CKNotificationInfo self, NSString subtitle)                                        { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setSubtitle:"), subtitle); }
-static inline NSString    CKNotificationInfo_SubtitleLocalizationKey(CKNotificationInfo self)                                               { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("subtitleLocalizationKey")); }
-static inline void        CKNotificationInfo_SetSubtitleLocalizationKey(CKNotificationInfo self, NSString subtitleLocalizationKey)          { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setSubtitleLocalizationKey:"), subtitleLocalizationKey); }
-static inline NSArray     CKNotificationInfo_SubtitleLocalizationArgs(CKNotificationInfo self)                                              { return ((NSArray (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("subtitleLocalizationArgs")); }
-static inline void        CKNotificationInfo_SetSubtitleLocalizationArgs(CKNotificationInfo self, NSArray subtitleLocalizationArgs)         { ((void (*)(CKNotificationInfo, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubtitleLocalizationArgs:"), subtitleLocalizationArgs); }
-static inline NSString    CKNotificationInfo_AlertActionLocalizationKey(CKNotificationInfo self)                                            { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertActionLocalizationKey")); }
-static inline void        CKNotificationInfo_SetAlertActionLocalizationKey(CKNotificationInfo self, NSString alertActionLocalizationKey)    { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setAlertActionLocalizationKey:"), alertActionLocalizationKey); }
-static inline NSString    CKNotificationInfo_AlertLaunchImage(CKNotificationInfo self)                                                      { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertLaunchImage")); }
-static inline void        CKNotificationInfo_SetAlertLaunchImage(CKNotificationInfo self, NSString alertLaunchImage)                        { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setAlertLaunchImage:"), alertLaunchImage); }
-static inline NSString    CKNotificationInfo_SoundName(CKNotificationInfo self)                                                             { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("soundName")); }
-static inline void        CKNotificationInfo_SetSoundName(CKNotificationInfo self, NSString soundName)                                      { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setSoundName:"), soundName); }
-static inline NSArray     CKNotificationInfo_DesiredKeys(CKNotificationInfo self)                                                           { return ((NSArray (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
-static inline void        CKNotificationInfo_SetDesiredKeys(CKNotificationInfo self, NSArray desiredKeys)                                   { ((void (*)(CKNotificationInfo, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
-static inline BOOL        CKNotificationInfo_ShouldBadge(CKNotificationInfo self)                                                           { return ((BOOL (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("shouldBadge")); }
-static inline void        CKNotificationInfo_SetShouldBadge(CKNotificationInfo self, BOOL shouldBadge)                                      { ((void (*)(CKNotificationInfo, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldBadge:"), shouldBadge); }
-static inline BOOL        CKNotificationInfo_ShouldSendContentAvailable(CKNotificationInfo self)                                            { return ((BOOL (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("shouldSendContentAvailable")); }
-static inline void        CKNotificationInfo_SetShouldSendContentAvailable(CKNotificationInfo self, BOOL shouldSendContentAvailable)        { ((void (*)(CKNotificationInfo, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldSendContentAvailable:"), shouldSendContentAvailable); }
-static inline BOOL        CKNotificationInfo_ShouldSendMutableContent(CKNotificationInfo self)                                              { return ((BOOL (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("shouldSendMutableContent")); }
-static inline void        CKNotificationInfo_SetShouldSendMutableContent(CKNotificationInfo self, BOOL shouldSendMutableContent)            { ((void (*)(CKNotificationInfo, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldSendMutableContent:"), shouldSendMutableContent); }
-static inline NSString    CKNotificationInfo_Category(CKNotificationInfo self)                                                              { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("category")); }
-static inline void        CKNotificationInfo_SetCategory(CKNotificationInfo self, NSString category)                                        { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setCategory:"), category); }
-static inline NSString    CKNotificationInfo_CollapseIDKey(CKNotificationInfo self)                                                         { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("collapseIDKey")); }
-static inline void        CKNotificationInfo_SetCollapseIDKey(CKNotificationInfo self, NSString collapseIDKey)                              { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setCollapseIDKey:"), collapseIDKey); }
-static inline BOOL        CKNotificationInfo_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKNotificationInfo"), bean_sel("supportsSecureCoding")); }
-static inline id          CKNotificationInfo_CopyWithZone(CKNotificationInfo self, NSZone* zone)                                            { return ((id (*)(CKNotificationInfo, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline NSString              CKNotificationInfo_AlertBody(CKNotificationInfo self)                                                             { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertBody")); }
+static inline void                  CKNotificationInfo_SetAlertBody(CKNotificationInfo self, NSString alertBody)                                      { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setAlertBody:"), alertBody); }
+static inline NSString              CKNotificationInfo_AlertLocalizationKey(CKNotificationInfo self)                                                  { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertLocalizationKey")); }
+static inline void                  CKNotificationInfo_SetAlertLocalizationKey(CKNotificationInfo self, NSString alertLocalizationKey)                { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setAlertLocalizationKey:"), alertLocalizationKey); }
+static inline NSArray               CKNotificationInfo_AlertLocalizationArgs(CKNotificationInfo self)                                                 { return ((NSArray (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertLocalizationArgs")); }
+static inline void                  CKNotificationInfo_SetAlertLocalizationArgs(CKNotificationInfo self, NSArray alertLocalizationArgs)               { ((void (*)(CKNotificationInfo, SEL, NSArray))bean_msgSend)(self, bean_sel("setAlertLocalizationArgs:"), alertLocalizationArgs); }
+static inline NSString              CKNotificationInfo_Title(CKNotificationInfo self)                                                                 { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("title")); }
+static inline void                  CKNotificationInfo_SetTitle(CKNotificationInfo self, NSString title)                                              { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setTitle:"), title); }
+static inline NSString              CKNotificationInfo_TitleLocalizationKey(CKNotificationInfo self)                                                  { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("titleLocalizationKey")); }
+static inline void                  CKNotificationInfo_SetTitleLocalizationKey(CKNotificationInfo self, NSString titleLocalizationKey)                { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setTitleLocalizationKey:"), titleLocalizationKey); }
+static inline NSArray               CKNotificationInfo_TitleLocalizationArgs(CKNotificationInfo self)                                                 { return ((NSArray (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("titleLocalizationArgs")); }
+static inline void                  CKNotificationInfo_SetTitleLocalizationArgs(CKNotificationInfo self, NSArray titleLocalizationArgs)               { ((void (*)(CKNotificationInfo, SEL, NSArray))bean_msgSend)(self, bean_sel("setTitleLocalizationArgs:"), titleLocalizationArgs); }
+static inline NSString              CKNotificationInfo_Subtitle(CKNotificationInfo self)                                                              { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("subtitle")); }
+static inline void                  CKNotificationInfo_SetSubtitle(CKNotificationInfo self, NSString subtitle)                                        { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setSubtitle:"), subtitle); }
+static inline NSString              CKNotificationInfo_SubtitleLocalizationKey(CKNotificationInfo self)                                               { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("subtitleLocalizationKey")); }
+static inline void                  CKNotificationInfo_SetSubtitleLocalizationKey(CKNotificationInfo self, NSString subtitleLocalizationKey)          { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setSubtitleLocalizationKey:"), subtitleLocalizationKey); }
+static inline NSArray               CKNotificationInfo_SubtitleLocalizationArgs(CKNotificationInfo self)                                              { return ((NSArray (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("subtitleLocalizationArgs")); }
+static inline void                  CKNotificationInfo_SetSubtitleLocalizationArgs(CKNotificationInfo self, NSArray subtitleLocalizationArgs)         { ((void (*)(CKNotificationInfo, SEL, NSArray))bean_msgSend)(self, bean_sel("setSubtitleLocalizationArgs:"), subtitleLocalizationArgs); }
+static inline NSString              CKNotificationInfo_AlertActionLocalizationKey(CKNotificationInfo self)                                            { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertActionLocalizationKey")); }
+static inline void                  CKNotificationInfo_SetAlertActionLocalizationKey(CKNotificationInfo self, NSString alertActionLocalizationKey)    { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setAlertActionLocalizationKey:"), alertActionLocalizationKey); }
+static inline NSString              CKNotificationInfo_AlertLaunchImage(CKNotificationInfo self)                                                      { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("alertLaunchImage")); }
+static inline void                  CKNotificationInfo_SetAlertLaunchImage(CKNotificationInfo self, NSString alertLaunchImage)                        { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setAlertLaunchImage:"), alertLaunchImage); }
+static inline NSString              CKNotificationInfo_SoundName(CKNotificationInfo self)                                                             { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("soundName")); }
+static inline void                  CKNotificationInfo_SetSoundName(CKNotificationInfo self, NSString soundName)                                      { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setSoundName:"), soundName); }
+static inline NSArray               CKNotificationInfo_DesiredKeys(CKNotificationInfo self)                                                           { return ((NSArray (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("desiredKeys")); }
+static inline void                  CKNotificationInfo_SetDesiredKeys(CKNotificationInfo self, NSArray desiredKeys)                                   { ((void (*)(CKNotificationInfo, SEL, NSArray))bean_msgSend)(self, bean_sel("setDesiredKeys:"), desiredKeys); }
+static inline BOOL                  CKNotificationInfo_ShouldBadge(CKNotificationInfo self)                                                           { return ((BOOL (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("shouldBadge")); }
+static inline void                  CKNotificationInfo_SetShouldBadge(CKNotificationInfo self, BOOL shouldBadge)                                      { ((void (*)(CKNotificationInfo, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldBadge:"), shouldBadge); }
+static inline BOOL                  CKNotificationInfo_ShouldSendContentAvailable(CKNotificationInfo self)                                            { return ((BOOL (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("shouldSendContentAvailable")); }
+static inline void                  CKNotificationInfo_SetShouldSendContentAvailable(CKNotificationInfo self, BOOL shouldSendContentAvailable)        { ((void (*)(CKNotificationInfo, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldSendContentAvailable:"), shouldSendContentAvailable); }
+static inline BOOL                  CKNotificationInfo_ShouldSendMutableContent(CKNotificationInfo self)                                              { return ((BOOL (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("shouldSendMutableContent")); }
+static inline void                  CKNotificationInfo_SetShouldSendMutableContent(CKNotificationInfo self, BOOL shouldSendMutableContent)            { ((void (*)(CKNotificationInfo, SEL, BOOL))bean_msgSend)(self, bean_sel("setShouldSendMutableContent:"), shouldSendMutableContent); }
+static inline NSString              CKNotificationInfo_Category(CKNotificationInfo self)                                                              { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("category")); }
+static inline void                  CKNotificationInfo_SetCategory(CKNotificationInfo self, NSString category)                                        { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setCategory:"), category); }
+static inline NSString              CKNotificationInfo_CollapseIDKey(CKNotificationInfo self)                                                         { return ((NSString (*)(CKNotificationInfo, SEL))bean_msgSend)(self, bean_sel("collapseIDKey")); }
+static inline void                  CKNotificationInfo_SetCollapseIDKey(CKNotificationInfo self, NSString collapseIDKey)                              { ((void (*)(CKNotificationInfo, SEL, NSString))bean_msgSend)(self, bean_sel("setCollapseIDKey:"), collapseIDKey); }
+static inline BOOL                  CKNotificationInfo_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKNotificationInfo"), bean_sel("supportsSecureCoding")); }
+static inline id                    CKNotificationInfo_CopyWithZone(CKNotificationInfo self, NSZone* zone)                                            { return ((id (*)(CKNotificationInfo, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CKNotificationInfo
+#define BEAN_ALLOC_CKNotificationInfo
+static inline CKNotificationInfo    CKNotificationInfo_Alloc(void)                                                                                    { return (CKNotificationInfo)bean_alloc(bean_cls("CKNotificationInfo")); }
+#endif
+#ifndef BEAN_NEW_CKNotificationInfo
+#define BEAN_NEW_CKNotificationInfo
+static inline CKNotificationInfo    CKNotificationInfo_New(void)                                                                                      { return (CKNotificationInfo)bean_new(bean_cls("CKNotificationInfo")); }
+#endif
 
 /* ===== CKRecord ===== */
 static inline CKRecord       CKRecord_Init(CKRecord self)                                                                     { return ((CKRecord (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CKRecord
+#define BEAN_NEW_CKRecord
 static inline CKRecord       CKRecord_New(void)                                                                               { return ((CKRecord (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecord"), bean_sel("new")); }
+#endif
 static inline CKRecord       CKRecord_InitWithRecordType(CKRecord self, NSString recordType)                                  { return ((CKRecord (*)(CKRecord, SEL, NSString))bean_msgSend)(self, bean_sel("initWithRecordType:"), recordType); }
 static inline CKRecord       CKRecord_InitWithRecordType_RecordID(CKRecord self, NSString recordType, CKRecordID recordID)    { return ((CKRecord (*)(CKRecord, SEL, NSString, CKRecordID))bean_msgSend)(self, bean_sel("initWithRecordType:recordID:"), recordType, recordID); }
 static inline CKRecord       CKRecord_InitWithRecordType_ZoneID(CKRecord self, NSString recordType, CKRecordZoneID zoneID)    { return ((CKRecord (*)(CKRecord, SEL, NSString, CKRecordZoneID))bean_msgSend)(self, bean_sel("initWithRecordType:zoneID:"), recordType, zoneID); }
@@ -6102,38 +6684,64 @@ static inline void           CKRecord_SetParent(CKRecord self, CKReference paren
 static inline id             CKRecord_EncryptedValues(CKRecord self)                                                          { return ((id (*)(CKRecord, SEL))bean_msgSend)(self, bean_sel("encryptedValues")); }
 static inline BOOL           CKRecord_SupportsSecureCoding(void)                                                              { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKRecord"), bean_sel("supportsSecureCoding")); }
 static inline id             CKRecord_CopyWithZone(CKRecord self, NSZone* zone)                                               { return ((id (*)(CKRecord, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CKRecord
+#define BEAN_ALLOC_CKRecord
+static inline CKRecord       CKRecord_Alloc(void)                                                                             { return (CKRecord)bean_alloc(bean_cls("CKRecord")); }
+#endif
 
 /* ===== CKRecordKeyValueSetting ===== */
 #ifndef BEAN_TYPEDEF_CKRecordKeyValueSetting
 #define BEAN_TYPEDEF_CKRecordKeyValueSetting
 typedef bean_id CKRecordKeyValueSetting;
 #endif
-static inline id         CKRecordKeyValueSetting_ObjectForKey(CKRecordKeyValueSetting self, NSString key)                              { return ((id (*)(CKRecordKeyValueSetting, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKey:"), key); }
-static inline void       CKRecordKeyValueSetting_SetObject_ForKey(CKRecordKeyValueSetting self, id object, NSString key)               { ((void (*)(CKRecordKeyValueSetting, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKey:"), object, key); }
-static inline id         CKRecordKeyValueSetting_ObjectForKeyedSubscript(CKRecordKeyValueSetting self, NSString key)                   { return ((id (*)(CKRecordKeyValueSetting, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), key); }
-static inline void       CKRecordKeyValueSetting_SetObject_ForKeyedSubscript(CKRecordKeyValueSetting self, id object, NSString key)    { ((void (*)(CKRecordKeyValueSetting, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), object, key); }
-static inline NSArray    CKRecordKeyValueSetting_AllKeys(CKRecordKeyValueSetting self)                                                 { return ((NSArray (*)(CKRecordKeyValueSetting, SEL))bean_msgSend)(self, bean_sel("allKeys")); }
-static inline NSArray    CKRecordKeyValueSetting_ChangedKeys(CKRecordKeyValueSetting self)                                             { return ((NSArray (*)(CKRecordKeyValueSetting, SEL))bean_msgSend)(self, bean_sel("changedKeys")); }
+static inline id                         CKRecordKeyValueSetting_ObjectForKey(CKRecordKeyValueSetting self, NSString key)                              { return ((id (*)(CKRecordKeyValueSetting, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKey:"), key); }
+static inline void                       CKRecordKeyValueSetting_SetObject_ForKey(CKRecordKeyValueSetting self, id object, NSString key)               { ((void (*)(CKRecordKeyValueSetting, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKey:"), object, key); }
+static inline id                         CKRecordKeyValueSetting_ObjectForKeyedSubscript(CKRecordKeyValueSetting self, NSString key)                   { return ((id (*)(CKRecordKeyValueSetting, SEL, NSString))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), key); }
+static inline void                       CKRecordKeyValueSetting_SetObject_ForKeyedSubscript(CKRecordKeyValueSetting self, id object, NSString key)    { ((void (*)(CKRecordKeyValueSetting, SEL, id, NSString))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), object, key); }
+static inline NSArray                    CKRecordKeyValueSetting_AllKeys(CKRecordKeyValueSetting self)                                                 { return ((NSArray (*)(CKRecordKeyValueSetting, SEL))bean_msgSend)(self, bean_sel("allKeys")); }
+static inline NSArray                    CKRecordKeyValueSetting_ChangedKeys(CKRecordKeyValueSetting self)                                             { return ((NSArray (*)(CKRecordKeyValueSetting, SEL))bean_msgSend)(self, bean_sel("changedKeys")); }
+#ifndef BEAN_ALLOC_CKRecordKeyValueSetting
+#define BEAN_ALLOC_CKRecordKeyValueSetting
+static inline CKRecordKeyValueSetting    CKRecordKeyValueSetting_Alloc(void)                                                                           { return (CKRecordKeyValueSetting)bean_alloc(bean_cls("CKRecordKeyValueSetting")); }
+#endif
+#ifndef BEAN_NEW_CKRecordKeyValueSetting
+#define BEAN_NEW_CKRecordKeyValueSetting
+static inline CKRecordKeyValueSetting    CKRecordKeyValueSetting_New(void)                                                                             { return (CKRecordKeyValueSetting)bean_new(bean_cls("CKRecordKeyValueSetting")); }
+#endif
 
 /* ===== CKReference ===== */
 static inline CKReference          CKReference_Init(CKReference self)                                                                      { return ((CKReference (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CKReference
+#define BEAN_NEW_CKReference
 static inline CKReference          CKReference_New(void)                                                                                   { return ((CKReference (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKReference"), bean_sel("new")); }
+#endif
 static inline CKReference          CKReference_InitWithRecordID_Action(CKReference self, CKRecordID recordID, CKReferenceAction action)    { return ((CKReference (*)(CKReference, SEL, CKRecordID, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecordID:action:"), recordID, action); }
 static inline CKReference          CKReference_InitWithRecord_Action(CKReference self, CKRecord record, CKReferenceAction action)          { return ((CKReference (*)(CKReference, SEL, CKRecord, CKReferenceAction))bean_msgSend)(self, bean_sel("initWithRecord:action:"), record, action); }
 static inline CKReferenceAction    CKReference_ReferenceAction(CKReference self)                                                           { return ((CKReferenceAction (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("referenceAction")); }
 static inline CKRecordID           CKReference_RecordID(CKReference self)                                                                  { return ((CKRecordID (*)(CKReference, SEL))bean_msgSend)(self, bean_sel("recordID")); }
 static inline BOOL                 CKReference_SupportsSecureCoding(void)                                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKReference"), bean_sel("supportsSecureCoding")); }
 static inline id                   CKReference_CopyWithZone(CKReference self, NSZone* zone)                                                { return ((id (*)(CKReference, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CKReference
+#define BEAN_ALLOC_CKReference
+static inline CKReference          CKReference_Alloc(void)                                                                                 { return (CKReference)bean_alloc(bean_cls("CKReference")); }
+#endif
 
 /* ===== CKSubscription ===== */
 static inline CKSubscription        CKSubscription_Init(CKSubscription self)                                                        { return ((CKSubscription (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("init")); }
+#ifndef BEAN_NEW_CKSubscription
+#define BEAN_NEW_CKSubscription
 static inline CKSubscription        CKSubscription_New(void)                                                                        { return ((CKSubscription (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSubscription"), bean_sel("new")); }
+#endif
 static inline NSString              CKSubscription_SubscriptionID(CKSubscription self)                                              { return ((NSString (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("subscriptionID")); }
 static inline CKSubscriptionType    CKSubscription_SubscriptionType(CKSubscription self)                                            { return ((CKSubscriptionType (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("subscriptionType")); }
 static inline CKNotificationInfo    CKSubscription_NotificationInfo(CKSubscription self)                                            { return ((CKNotificationInfo (*)(CKSubscription, SEL))bean_msgSend)(self, bean_sel("notificationInfo")); }
 static inline void                  CKSubscription_SetNotificationInfo(CKSubscription self, CKNotificationInfo notificationInfo)    { ((void (*)(CKSubscription, SEL, CKNotificationInfo))bean_msgSend)(self, bean_sel("setNotificationInfo:"), notificationInfo); }
 static inline BOOL                  CKSubscription_SupportsSecureCoding(void)                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("CKSubscription"), bean_sel("supportsSecureCoding")); }
 static inline id                    CKSubscription_CopyWithZone(CKSubscription self, NSZone* zone)                                  { return ((id (*)(CKSubscription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_CKSubscription
+#define BEAN_ALLOC_CKSubscription
+static inline CKSubscription        CKSubscription_Alloc(void)                                                                      { return (CKSubscription)bean_alloc(bean_cls("CKSubscription")); }
+#endif
 
 /* ===== GKAgent ===== */
 #ifndef BEAN_TYPEDEF_GKAgent
@@ -6155,14 +6763,30 @@ static inline void          GKAgent_SetMaxAcceleration(GKAgent self, CGFloat max
 static inline CGFloat       GKAgent_MaxSpeed(GKAgent self)                                       { return ((CGFloat (*)(GKAgent, SEL))bean_msgSend_fpret)(self, bean_sel("maxSpeed")); }
 static inline void          GKAgent_SetMaxSpeed(GKAgent self, CGFloat maxSpeed)                  { ((void (*)(GKAgent, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaxSpeed:"), maxSpeed); }
 static inline BOOL          GKAgent_SupportsSecureCoding(void)                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKAgent"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKAgent
+#define BEAN_ALLOC_GKAgent
+static inline GKAgent       GKAgent_Alloc(void)                                                  { return (GKAgent)bean_alloc(bean_cls("GKAgent")); }
+#endif
+#ifndef BEAN_NEW_GKAgent
+#define BEAN_NEW_GKAgent
+static inline GKAgent       GKAgent_New(void)                                                    { return (GKAgent)bean_new(bean_cls("GKAgent")); }
+#endif
 
 /* ===== GKAgentDelegate ===== */
 #ifndef BEAN_TYPEDEF_GKAgentDelegate
 #define BEAN_TYPEDEF_GKAgentDelegate
 typedef bean_id GKAgentDelegate;
 #endif
-static inline void    GKAgentDelegate_AgentWillUpdate(GKAgentDelegate self, GKAgent agent)    { ((void (*)(GKAgentDelegate, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentWillUpdate:"), agent); }
-static inline void    GKAgentDelegate_AgentDidUpdate(GKAgentDelegate self, GKAgent agent)     { ((void (*)(GKAgentDelegate, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentDidUpdate:"), agent); }
+static inline void               GKAgentDelegate_AgentWillUpdate(GKAgentDelegate self, GKAgent agent)    { ((void (*)(GKAgentDelegate, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentWillUpdate:"), agent); }
+static inline void               GKAgentDelegate_AgentDidUpdate(GKAgentDelegate self, GKAgent agent)     { ((void (*)(GKAgentDelegate, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentDidUpdate:"), agent); }
+#ifndef BEAN_ALLOC_GKAgentDelegate
+#define BEAN_ALLOC_GKAgentDelegate
+static inline GKAgentDelegate    GKAgentDelegate_Alloc(void)                                             { return (GKAgentDelegate)bean_alloc(bean_cls("GKAgentDelegate")); }
+#endif
+#ifndef BEAN_NEW_GKAgentDelegate
+#define BEAN_NEW_GKAgentDelegate
+static inline GKAgentDelegate    GKAgentDelegate_New(void)                                               { return (GKAgentDelegate)bean_new(bean_cls("GKAgentDelegate")); }
+#endif
 
 /* ===== GKBehavior ===== */
 static inline GKBehavior    GKBehavior_BehaviorWithGoal_Weight(GKGoal goal, CGFloat weight)                                                                     { return ((GKBehavior (*)(bean_class, SEL, GKGoal, CGFloat))bean_msgSend)(bean_cls("GKBehavior"), bean_sel("behaviorWithGoal:weight:"), goal, weight); }
@@ -6179,18 +6803,34 @@ static inline NSNumber      GKBehavior_ObjectForKeyedSubscript(GKBehavior self, 
 static inline NSInteger     GKBehavior_GoalCount(GKBehavior self)                                                                                               { return ((NSInteger (*)(GKBehavior, SEL))bean_msgSend)(self, bean_sel("goalCount")); }
 static inline NSUInteger    GKBehavior_CountByEnumeratingWithState_Objects_Count(GKBehavior self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(GKBehavior, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
 static inline id            GKBehavior_CopyWithZone(GKBehavior self, NSZone* zone)                                                                              { return ((id (*)(GKBehavior, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_GKBehavior
+#define BEAN_ALLOC_GKBehavior
+static inline GKBehavior    GKBehavior_Alloc(void)                                                                                                              { return (GKBehavior)bean_alloc(bean_cls("GKBehavior")); }
+#endif
+#ifndef BEAN_NEW_GKBehavior
+#define BEAN_NEW_GKBehavior
+static inline GKBehavior    GKBehavior_New(void)                                                                                                                { return (GKBehavior)bean_new(bean_cls("GKBehavior")); }
+#endif
 
 /* ===== GKComponent ===== */
 #ifndef BEAN_TYPEDEF_GKComponent
 #define BEAN_TYPEDEF_GKComponent
 typedef bean_id GKComponent;
 #endif
-static inline void        GKComponent_UpdateWithDeltaTime(GKComponent self, CGFloat seconds)    { ((void (*)(GKComponent, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
-static inline void        GKComponent_DidAddToEntity(GKComponent self)                          { ((void (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("didAddToEntity")); }
-static inline void        GKComponent_WillRemoveFromEntity(GKComponent self)                    { ((void (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("willRemoveFromEntity")); }
-static inline GKEntity    GKComponent_Entity(GKComponent self)                                  { return ((GKEntity (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("entity")); }
-static inline id          GKComponent_CopyWithZone(GKComponent self, NSZone* zone)              { return ((id (*)(GKComponent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
-static inline BOOL        GKComponent_SupportsSecureCoding(void)                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKComponent"), bean_sel("supportsSecureCoding")); }
+static inline void           GKComponent_UpdateWithDeltaTime(GKComponent self, CGFloat seconds)    { ((void (*)(GKComponent, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
+static inline void           GKComponent_DidAddToEntity(GKComponent self)                          { ((void (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("didAddToEntity")); }
+static inline void           GKComponent_WillRemoveFromEntity(GKComponent self)                    { ((void (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("willRemoveFromEntity")); }
+static inline GKEntity       GKComponent_Entity(GKComponent self)                                  { return ((GKEntity (*)(GKComponent, SEL))bean_msgSend)(self, bean_sel("entity")); }
+static inline id             GKComponent_CopyWithZone(GKComponent self, NSZone* zone)              { return ((id (*)(GKComponent, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline BOOL           GKComponent_SupportsSecureCoding(void)                                { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKComponent"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKComponent
+#define BEAN_ALLOC_GKComponent
+static inline GKComponent    GKComponent_Alloc(void)                                               { return (GKComponent)bean_alloc(bean_cls("GKComponent")); }
+#endif
+#ifndef BEAN_NEW_GKComponent
+#define BEAN_NEW_GKComponent
+static inline GKComponent    GKComponent_New(void)                                                 { return (GKComponent)bean_new(bean_cls("GKComponent")); }
+#endif
 
 /* ===== GKComponentSystem ===== */
 #ifndef BEAN_TYPEDEF_GKComponentSystem
@@ -6208,6 +6848,14 @@ static inline bean_class           GKComponentSystem_ClassForGenericArgumentAtIn
 static inline bean_class           GKComponentSystem_ComponentClass(GKComponentSystem self)                                                                                          { return ((bean_class (*)(GKComponentSystem, SEL))bean_msgSend)(self, bean_sel("componentClass")); }
 static inline NSArray              GKComponentSystem_Components(GKComponentSystem self)                                                                                              { return ((NSArray (*)(GKComponentSystem, SEL))bean_msgSend)(self, bean_sel("components")); }
 static inline NSUInteger           GKComponentSystem_CountByEnumeratingWithState_Objects_Count(GKComponentSystem self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(GKComponentSystem, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_GKComponentSystem
+#define BEAN_ALLOC_GKComponentSystem
+static inline GKComponentSystem    GKComponentSystem_Alloc(void)                                                                                                                     { return (GKComponentSystem)bean_alloc(bean_cls("GKComponentSystem")); }
+#endif
+#ifndef BEAN_NEW_GKComponentSystem
+#define BEAN_NEW_GKComponentSystem
+static inline GKComponentSystem    GKComponentSystem_New(void)                                                                                                                       { return (GKComponentSystem)bean_new(bean_cls("GKComponentSystem")); }
+#endif
 
 /* ===== GKCompositeBehavior ===== */
 #ifndef BEAN_TYPEDEF_GKCompositeBehavior
@@ -6224,6 +6872,14 @@ static inline GKBehavior             GKCompositeBehavior_ObjectAtIndexedSubscrip
 static inline void                   GKCompositeBehavior_SetObject_ForKeyedSubscript(GKCompositeBehavior self, NSNumber weight, GKBehavior behavior)    { ((void (*)(GKCompositeBehavior, SEL, NSNumber, GKBehavior))bean_msgSend)(self, bean_sel("setObject:forKeyedSubscript:"), weight, behavior); }
 static inline NSNumber               GKCompositeBehavior_ObjectForKeyedSubscript(GKCompositeBehavior self, GKBehavior behavior)                         { return ((NSNumber (*)(GKCompositeBehavior, SEL, GKBehavior))bean_msgSend)(self, bean_sel("objectForKeyedSubscript:"), behavior); }
 static inline NSInteger              GKCompositeBehavior_BehaviorCount(GKCompositeBehavior self)                                                        { return ((NSInteger (*)(GKCompositeBehavior, SEL))bean_msgSend)(self, bean_sel("behaviorCount")); }
+#ifndef BEAN_ALLOC_GKCompositeBehavior
+#define BEAN_ALLOC_GKCompositeBehavior
+static inline GKCompositeBehavior    GKCompositeBehavior_Alloc(void)                                                                                    { return (GKCompositeBehavior)bean_alloc(bean_cls("GKCompositeBehavior")); }
+#endif
+#ifndef BEAN_NEW_GKCompositeBehavior
+#define BEAN_NEW_GKCompositeBehavior
+static inline GKCompositeBehavior    GKCompositeBehavior_New(void)                                                                                      { return (GKCompositeBehavior)bean_new(bean_cls("GKCompositeBehavior")); }
+#endif
 
 /* ===== GKDecisionTree ===== */
 #ifndef BEAN_TYPEDEF_GKDecisionTree
@@ -6239,6 +6895,14 @@ static inline GKDecisionNode    GKDecisionTree_RootNode(GKDecisionTree self)    
 static inline GKRandomSource    GKDecisionTree_RandomSource(GKDecisionTree self)                                                                                  { return ((GKRandomSource (*)(GKDecisionTree, SEL))bean_msgSend)(self, bean_sel("randomSource")); }
 static inline void              GKDecisionTree_SetRandomSource(GKDecisionTree self, GKRandomSource randomSource)                                                  { ((void (*)(GKDecisionTree, SEL, GKRandomSource))bean_msgSend)(self, bean_sel("setRandomSource:"), randomSource); }
 static inline BOOL              GKDecisionTree_SupportsSecureCoding(void)                                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKDecisionTree"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKDecisionTree
+#define BEAN_ALLOC_GKDecisionTree
+static inline GKDecisionTree    GKDecisionTree_Alloc(void)                                                                                                        { return (GKDecisionTree)bean_alloc(bean_cls("GKDecisionTree")); }
+#endif
+#ifndef BEAN_NEW_GKDecisionTree
+#define BEAN_NEW_GKDecisionTree
+static inline GKDecisionTree    GKDecisionTree_New(void)                                                                                                          { return (GKDecisionTree)bean_new(bean_cls("GKDecisionTree")); }
+#endif
 
 /* ===== GKEntity ===== */
 static inline GKEntity       GKEntity_Entity(void)                                                         { return ((GKEntity (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKEntity"), bean_sel("entity")); }
@@ -6250,21 +6914,37 @@ static inline GKComponent    GKEntity_ComponentForClass(GKEntity self, bean_clas
 static inline NSArray        GKEntity_Components(GKEntity self)                                            { return ((NSArray (*)(GKEntity, SEL))bean_msgSend)(self, bean_sel("components")); }
 static inline id             GKEntity_CopyWithZone(GKEntity self, NSZone* zone)                            { return ((id (*)(GKEntity, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL           GKEntity_SupportsSecureCoding(void)                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKEntity"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKEntity
+#define BEAN_ALLOC_GKEntity
+static inline GKEntity       GKEntity_Alloc(void)                                                          { return (GKEntity)bean_alloc(bean_cls("GKEntity")); }
+#endif
+#ifndef BEAN_NEW_GKEntity
+#define BEAN_NEW_GKEntity
+static inline GKEntity       GKEntity_New(void)                                                            { return (GKEntity)bean_new(bean_cls("GKEntity")); }
+#endif
 
 /* ===== GKGameModel ===== */
 #ifndef BEAN_TYPEDEF_GKGameModel
 #define BEAN_TYPEDEF_GKGameModel
 typedef bean_id GKGameModel;
 #endif
-static inline void         GKGameModel_SetGameModel(GKGameModel self, id gameModel)                    { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
-static inline NSArray      GKGameModel_GameModelUpdatesForPlayer(GKGameModel self, id player)          { return ((NSArray (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("gameModelUpdatesForPlayer:"), player); }
-static inline void         GKGameModel_ApplyGameModelUpdate(GKGameModel self, id gameModelUpdate)      { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("applyGameModelUpdate:"), gameModelUpdate); }
-static inline NSInteger    GKGameModel_ScoreForPlayer(GKGameModel self, id player)                     { return ((NSInteger (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("scoreForPlayer:"), player); }
-static inline BOOL         GKGameModel_IsWinForPlayer(GKGameModel self, id player)                     { return ((BOOL (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("isWinForPlayer:"), player); }
-static inline BOOL         GKGameModel_IsLossForPlayer(GKGameModel self, id player)                    { return ((BOOL (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("isLossForPlayer:"), player); }
-static inline void         GKGameModel_UnapplyGameModelUpdate(GKGameModel self, id gameModelUpdate)    { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("unapplyGameModelUpdate:"), gameModelUpdate); }
-static inline NSArray      GKGameModel_Players(GKGameModel self)                                       { return ((NSArray (*)(GKGameModel, SEL))bean_msgSend)(self, bean_sel("players")); }
-static inline id           GKGameModel_ActivePlayer(GKGameModel self)                                  { return ((id (*)(GKGameModel, SEL))bean_msgSend)(self, bean_sel("activePlayer")); }
+static inline void           GKGameModel_SetGameModel(GKGameModel self, id gameModel)                    { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("setGameModel:"), gameModel); }
+static inline NSArray        GKGameModel_GameModelUpdatesForPlayer(GKGameModel self, id player)          { return ((NSArray (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("gameModelUpdatesForPlayer:"), player); }
+static inline void           GKGameModel_ApplyGameModelUpdate(GKGameModel self, id gameModelUpdate)      { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("applyGameModelUpdate:"), gameModelUpdate); }
+static inline NSInteger      GKGameModel_ScoreForPlayer(GKGameModel self, id player)                     { return ((NSInteger (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("scoreForPlayer:"), player); }
+static inline BOOL           GKGameModel_IsWinForPlayer(GKGameModel self, id player)                     { return ((BOOL (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("isWinForPlayer:"), player); }
+static inline BOOL           GKGameModel_IsLossForPlayer(GKGameModel self, id player)                    { return ((BOOL (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("isLossForPlayer:"), player); }
+static inline void           GKGameModel_UnapplyGameModelUpdate(GKGameModel self, id gameModelUpdate)    { ((void (*)(GKGameModel, SEL, id))bean_msgSend)(self, bean_sel("unapplyGameModelUpdate:"), gameModelUpdate); }
+static inline NSArray        GKGameModel_Players(GKGameModel self)                                       { return ((NSArray (*)(GKGameModel, SEL))bean_msgSend)(self, bean_sel("players")); }
+static inline id             GKGameModel_ActivePlayer(GKGameModel self)                                  { return ((id (*)(GKGameModel, SEL))bean_msgSend)(self, bean_sel("activePlayer")); }
+#ifndef BEAN_ALLOC_GKGameModel
+#define BEAN_ALLOC_GKGameModel
+static inline GKGameModel    GKGameModel_Alloc(void)                                                     { return (GKGameModel)bean_alloc(bean_cls("GKGameModel")); }
+#endif
+#ifndef BEAN_NEW_GKGameModel
+#define BEAN_NEW_GKGameModel
+static inline GKGameModel    GKGameModel_New(void)                                                       { return (GKGameModel)bean_new(bean_cls("GKGameModel")); }
+#endif
 
 /* ===== GKGoal ===== */
 static inline GKGoal    GKGoal_GoalToSeekAgent(GKAgent agent)                                                                          { return ((GKGoal (*)(bean_class, SEL, GKAgent))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToSeekAgent:"), agent); }
@@ -6280,6 +6960,14 @@ static inline GKGoal    GKGoal_GoalToInterceptAgent_MaxPredictionTime(GKAgent ta
 static inline GKGoal    GKGoal_GoalToFollowPath_MaxPredictionTime_Forward(GKPath path, CGFloat maxPredictionTime, BOOL forward)        { return ((GKGoal (*)(bean_class, SEL, GKPath, CGFloat, BOOL))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToFollowPath:maxPredictionTime:forward:"), path, maxPredictionTime, forward); }
 static inline GKGoal    GKGoal_GoalToStayOnPath_MaxPredictionTime(GKPath path, CGFloat maxPredictionTime)                              { return ((GKGoal (*)(bean_class, SEL, GKPath, CGFloat))bean_msgSend)(bean_cls("GKGoal"), bean_sel("goalToStayOnPath:maxPredictionTime:"), path, maxPredictionTime); }
 static inline id        GKGoal_CopyWithZone(GKGoal self, NSZone* zone)                                                                 { return ((id (*)(GKGoal, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_GKGoal
+#define BEAN_ALLOC_GKGoal
+static inline GKGoal    GKGoal_Alloc(void)                                                                                             { return (GKGoal)bean_alloc(bean_cls("GKGoal")); }
+#endif
+#ifndef BEAN_NEW_GKGoal
+#define BEAN_NEW_GKGoal
+static inline GKGoal    GKGoal_New(void)                                                                                               { return (GKGoal)bean_new(bean_cls("GKGoal")); }
+#endif
 
 /* ===== GKGraph ===== */
 #ifndef BEAN_TYPEDEF_GKGraph
@@ -6295,16 +6983,32 @@ static inline NSArray    GKGraph_FindPathFromNode_ToNode(GKGraph self, GKGraphNo
 static inline NSArray    GKGraph_Nodes(GKGraph self)                                                                              { return ((NSArray (*)(GKGraph, SEL))bean_msgSend)(self, bean_sel("nodes")); }
 static inline id         GKGraph_CopyWithZone(GKGraph self, NSZone* zone)                                                         { return ((id (*)(GKGraph, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL       GKGraph_SupportsSecureCoding(void)                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKGraph"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKGraph
+#define BEAN_ALLOC_GKGraph
+static inline GKGraph    GKGraph_Alloc(void)                                                                                      { return (GKGraph)bean_alloc(bean_cls("GKGraph")); }
+#endif
+#ifndef BEAN_NEW_GKGraph
+#define BEAN_NEW_GKGraph
+static inline GKGraph    GKGraph_New(void)                                                                                        { return (GKGraph)bean_new(bean_cls("GKGraph")); }
+#endif
 
 /* ===== GKGraphNode ===== */
-static inline void       GKGraphNode_AddConnectionsToNodes_Bidirectional(GKGraphNode self, NSArray nodes, BOOL bidirectional)       { ((void (*)(GKGraphNode, SEL, NSArray, BOOL))bean_msgSend)(self, bean_sel("addConnectionsToNodes:bidirectional:"), nodes, bidirectional); }
-static inline void       GKGraphNode_RemoveConnectionsToNodes_Bidirectional(GKGraphNode self, NSArray nodes, BOOL bidirectional)    { ((void (*)(GKGraphNode, SEL, NSArray, BOOL))bean_msgSend)(self, bean_sel("removeConnectionsToNodes:bidirectional:"), nodes, bidirectional); }
-static inline CGFloat    GKGraphNode_EstimatedCostToNode(GKGraphNode self, GKGraphNode node)                                        { return ((CGFloat (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend_fpret)(self, bean_sel("estimatedCostToNode:"), node); }
-static inline CGFloat    GKGraphNode_CostToNode(GKGraphNode self, GKGraphNode node)                                                 { return ((CGFloat (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend_fpret)(self, bean_sel("costToNode:"), node); }
-static inline NSArray    GKGraphNode_FindPathToNode(GKGraphNode self, GKGraphNode goalNode)                                         { return ((NSArray (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend)(self, bean_sel("findPathToNode:"), goalNode); }
-static inline NSArray    GKGraphNode_FindPathFromNode(GKGraphNode self, GKGraphNode startNode)                                      { return ((NSArray (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend)(self, bean_sel("findPathFromNode:"), startNode); }
-static inline NSArray    GKGraphNode_ConnectedNodes(GKGraphNode self)                                                               { return ((NSArray (*)(GKGraphNode, SEL))bean_msgSend)(self, bean_sel("connectedNodes")); }
-static inline BOOL       GKGraphNode_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKGraphNode"), bean_sel("supportsSecureCoding")); }
+static inline void           GKGraphNode_AddConnectionsToNodes_Bidirectional(GKGraphNode self, NSArray nodes, BOOL bidirectional)       { ((void (*)(GKGraphNode, SEL, NSArray, BOOL))bean_msgSend)(self, bean_sel("addConnectionsToNodes:bidirectional:"), nodes, bidirectional); }
+static inline void           GKGraphNode_RemoveConnectionsToNodes_Bidirectional(GKGraphNode self, NSArray nodes, BOOL bidirectional)    { ((void (*)(GKGraphNode, SEL, NSArray, BOOL))bean_msgSend)(self, bean_sel("removeConnectionsToNodes:bidirectional:"), nodes, bidirectional); }
+static inline CGFloat        GKGraphNode_EstimatedCostToNode(GKGraphNode self, GKGraphNode node)                                        { return ((CGFloat (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend_fpret)(self, bean_sel("estimatedCostToNode:"), node); }
+static inline CGFloat        GKGraphNode_CostToNode(GKGraphNode self, GKGraphNode node)                                                 { return ((CGFloat (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend_fpret)(self, bean_sel("costToNode:"), node); }
+static inline NSArray        GKGraphNode_FindPathToNode(GKGraphNode self, GKGraphNode goalNode)                                         { return ((NSArray (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend)(self, bean_sel("findPathToNode:"), goalNode); }
+static inline NSArray        GKGraphNode_FindPathFromNode(GKGraphNode self, GKGraphNode startNode)                                      { return ((NSArray (*)(GKGraphNode, SEL, GKGraphNode))bean_msgSend)(self, bean_sel("findPathFromNode:"), startNode); }
+static inline NSArray        GKGraphNode_ConnectedNodes(GKGraphNode self)                                                               { return ((NSArray (*)(GKGraphNode, SEL))bean_msgSend)(self, bean_sel("connectedNodes")); }
+static inline BOOL           GKGraphNode_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKGraphNode"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKGraphNode
+#define BEAN_ALLOC_GKGraphNode
+static inline GKGraphNode    GKGraphNode_Alloc(void)                                                                                    { return (GKGraphNode)bean_alloc(bean_cls("GKGraphNode")); }
+#endif
+#ifndef BEAN_NEW_GKGraphNode
+#define BEAN_NEW_GKGraphNode
+static inline GKGraphNode    GKGraphNode_New(void)                                                                                      { return (GKGraphNode)bean_new(bean_cls("GKGraphNode")); }
+#endif
 
 /* ===== GKMeshGraph ===== */
 #ifndef BEAN_TYPEDEF_GKMeshGraph
@@ -6326,6 +7030,14 @@ static inline CGFloat                         GKMeshGraph_BufferRadius(GKMeshGra
 static inline GKMeshGraphTriangulationMode    GKMeshGraph_TriangulationMode(GKMeshGraph self)                                                                                                               { return ((GKMeshGraphTriangulationMode (*)(GKMeshGraph, SEL))bean_msgSend)(self, bean_sel("triangulationMode")); }
 static inline void                            GKMeshGraph_SetTriangulationMode(GKMeshGraph self, GKMeshGraphTriangulationMode triangulationMode)                                                            { ((void (*)(GKMeshGraph, SEL, GKMeshGraphTriangulationMode))bean_msgSend)(self, bean_sel("setTriangulationMode:"), triangulationMode); }
 static inline NSUInteger                      GKMeshGraph_TriangleCount(GKMeshGraph self)                                                                                                                   { return ((NSUInteger (*)(GKMeshGraph, SEL))bean_msgSend)(self, bean_sel("triangleCount")); }
+#ifndef BEAN_ALLOC_GKMeshGraph
+#define BEAN_ALLOC_GKMeshGraph
+static inline GKMeshGraph                     GKMeshGraph_Alloc(void)                                                                                                                                       { return (GKMeshGraph)bean_alloc(bean_cls("GKMeshGraph")); }
+#endif
+#ifndef BEAN_NEW_GKMeshGraph
+#define BEAN_NEW_GKMeshGraph
+static inline GKMeshGraph                     GKMeshGraph_New(void)                                                                                                                                         { return (GKMeshGraph)bean_new(bean_cls("GKMeshGraph")); }
+#endif
 
 /* ===== GKNSPredicateRule ===== */
 #ifndef BEAN_TYPEDEF_GKNSPredicateRule
@@ -6335,6 +7047,14 @@ typedef bean_id GKNSPredicateRule;
 static inline GKNSPredicateRule    GKNSPredicateRule_InitWithPredicate(GKNSPredicateRule self, NSPredicate predicate)            { return ((GKNSPredicateRule (*)(GKNSPredicateRule, SEL, NSPredicate))bean_msgSend)(self, bean_sel("initWithPredicate:"), predicate); }
 static inline BOOL                 GKNSPredicateRule_EvaluatePredicateWithSystem(GKNSPredicateRule self, GKRuleSystem system)    { return ((BOOL (*)(GKNSPredicateRule, SEL, GKRuleSystem))bean_msgSend)(self, bean_sel("evaluatePredicateWithSystem:"), system); }
 static inline NSPredicate          GKNSPredicateRule_Predicate(GKNSPredicateRule self)                                           { return ((NSPredicate (*)(GKNSPredicateRule, SEL))bean_msgSend)(self, bean_sel("predicate")); }
+#ifndef BEAN_ALLOC_GKNSPredicateRule
+#define BEAN_ALLOC_GKNSPredicateRule
+static inline GKNSPredicateRule    GKNSPredicateRule_Alloc(void)                                                                 { return (GKNSPredicateRule)bean_alloc(bean_cls("GKNSPredicateRule")); }
+#endif
+#ifndef BEAN_NEW_GKNSPredicateRule
+#define BEAN_NEW_GKNSPredicateRule
+static inline GKNSPredicateRule    GKNSPredicateRule_New(void)                                                                   { return (GKNSPredicateRule)bean_new(bean_cls("GKNSPredicateRule")); }
+#endif
 
 /* ===== GKNoise ===== */
 #ifndef BEAN_TYPEDEF_GKNoise
@@ -6367,6 +7087,14 @@ static inline void            GKNoise_RaiseToPowerWithNoise(GKNoise self, GKNois
 static inline void            GKNoise_DisplaceXWithNoise_YWithNoise_ZWithNoise(GKNoise self, GKNoise xDisplacementNoise, GKNoise yDisplacementNoise, GKNoise zDisplacementNoise)                                         { ((void (*)(GKNoise, SEL, GKNoise, GKNoise, GKNoise))bean_msgSend)(self, bean_sel("displaceXWithNoise:yWithNoise:zWithNoise:"), xDisplacementNoise, yDisplacementNoise, zDisplacementNoise); }
 static inline NSDictionary    GKNoise_GradientColors(GKNoise self)                                                                                                                                                       { return ((NSDictionary (*)(GKNoise, SEL))bean_msgSend)(self, bean_sel("gradientColors")); }
 static inline void            GKNoise_SetGradientColors(GKNoise self, NSDictionary gradientColors)                                                                                                                       { ((void (*)(GKNoise, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setGradientColors:"), gradientColors); }
+#ifndef BEAN_ALLOC_GKNoise
+#define BEAN_ALLOC_GKNoise
+static inline GKNoise         GKNoise_Alloc(void)                                                                                                                                                                        { return (GKNoise)bean_alloc(bean_cls("GKNoise")); }
+#endif
+#ifndef BEAN_NEW_GKNoise
+#define BEAN_NEW_GKNoise
+static inline GKNoise         GKNoise_New(void)                                                                                                                                                                          { return (GKNoise)bean_new(bean_cls("GKNoise")); }
+#endif
 
 /* ===== GKNoiseMap ===== */
 #ifndef BEAN_TYPEDEF_GKNoiseMap
@@ -6386,6 +7114,14 @@ static inline void*         GKNoiseMap_Origin(GKNoiseMap self)                  
 static inline void*         GKNoiseMap_SampleCount(GKNoiseMap self)                                                                                                                  { return ((void* (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("sampleCount")); }
 static inline BOOL          GKNoiseMap_IsSeamless(GKNoiseMap self)                                                                                                                   { return ((BOOL (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("isSeamless")); }
 static inline BOOL          GKNoiseMap_Seamless(GKNoiseMap self)                                                                                                                     { return ((BOOL (*)(GKNoiseMap, SEL))bean_msgSend)(self, bean_sel("seamless")); }
+#ifndef BEAN_ALLOC_GKNoiseMap
+#define BEAN_ALLOC_GKNoiseMap
+static inline GKNoiseMap    GKNoiseMap_Alloc(void)                                                                                                                                   { return (GKNoiseMap)bean_alloc(bean_cls("GKNoiseMap")); }
+#endif
+#ifndef BEAN_NEW_GKNoiseMap
+#define BEAN_NEW_GKNoiseMap
+static inline GKNoiseMap    GKNoiseMap_New(void)                                                                                                                                     { return (GKNoiseMap)bean_new(bean_cls("GKNoiseMap")); }
+#endif
 
 /* ===== GKObstacleGraph ===== */
 #ifndef BEAN_TYPEDEF_GKObstacleGraph
@@ -6409,6 +7145,14 @@ static inline BOOL               GKObstacleGraph_IsConnectionLockedFromNode_ToNo
 static inline bean_class         GKObstacleGraph_ClassForGenericArgumentAtIndex(GKObstacleGraph self, NSUInteger index)                                                                        { return ((bean_class (*)(GKObstacleGraph, SEL, NSUInteger))bean_msgSend)(self, bean_sel("classForGenericArgumentAtIndex:"), index); }
 static inline NSArray            GKObstacleGraph_Obstacles(GKObstacleGraph self)                                                                                                               { return ((NSArray (*)(GKObstacleGraph, SEL))bean_msgSend)(self, bean_sel("obstacles")); }
 static inline CGFloat            GKObstacleGraph_BufferRadius(GKObstacleGraph self)                                                                                                            { return ((CGFloat (*)(GKObstacleGraph, SEL))bean_msgSend_fpret)(self, bean_sel("bufferRadius")); }
+#ifndef BEAN_ALLOC_GKObstacleGraph
+#define BEAN_ALLOC_GKObstacleGraph
+static inline GKObstacleGraph    GKObstacleGraph_Alloc(void)                                                                                                                                   { return (GKObstacleGraph)bean_alloc(bean_cls("GKObstacleGraph")); }
+#endif
+#ifndef BEAN_NEW_GKObstacleGraph
+#define BEAN_NEW_GKObstacleGraph
+static inline GKObstacleGraph    GKObstacleGraph_New(void)                                                                                                                                     { return (GKObstacleGraph)bean_new(bean_cls("GKObstacleGraph")); }
+#endif
 
 /* ===== GKOctree ===== */
 #ifndef BEAN_TYPEDEF_GKOctree
@@ -6423,6 +7167,14 @@ static inline NSArray         GKOctree_ElementsAtPoint(GKOctree self, void* poin
 static inline NSArray         GKOctree_ElementsInBox(GKOctree self, GKBox box)                                               { return ((NSArray (*)(GKOctree, SEL, GKBox))bean_msgSend)(self, bean_sel("elementsInBox:"), box); }
 static inline BOOL            GKOctree_RemoveElement(GKOctree self, NSObject element)                                        { return ((BOOL (*)(GKOctree, SEL, NSObject))bean_msgSend)(self, bean_sel("removeElement:"), element); }
 static inline BOOL            GKOctree_RemoveElement_WithNode(GKOctree self, NSObject element, GKOctreeNode node)            { return ((BOOL (*)(GKOctree, SEL, NSObject, GKOctreeNode))bean_msgSend)(self, bean_sel("removeElement:withNode:"), element, node); }
+#ifndef BEAN_ALLOC_GKOctree
+#define BEAN_ALLOC_GKOctree
+static inline GKOctree        GKOctree_Alloc(void)                                                                           { return (GKOctree)bean_alloc(bean_cls("GKOctree")); }
+#endif
+#ifndef BEAN_NEW_GKOctree
+#define BEAN_NEW_GKOctree
+static inline GKOctree        GKOctree_New(void)                                                                             { return (GKOctree)bean_new(bean_cls("GKOctree")); }
+#endif
 
 /* ===== GKPath ===== */
 static inline GKPath        GKPath_PathWithPoints_Count_Radius_Cyclical(vector_float2* points, NSUInteger count, CGFloat radius, BOOL cyclical)                       { return ((GKPath (*)(bean_class, SEL, vector_float2*, NSUInteger, CGFloat, BOOL))bean_msgSend)(bean_cls("GKPath"), bean_sel("pathWithPoints:count:radius:cyclical:"), points, count, radius, cyclical); }
@@ -6440,6 +7192,14 @@ static inline NSUInteger    GKPath_NumPoints(GKPath self)                       
 static inline BOOL          GKPath_IsCyclical(GKPath self)                                                                                                            { return ((BOOL (*)(GKPath, SEL))bean_msgSend)(self, bean_sel("isCyclical")); }
 static inline void          GKPath_SetCyclical(GKPath self, BOOL cyclical)                                                                                            { ((void (*)(GKPath, SEL, BOOL))bean_msgSend)(self, bean_sel("setCyclical:"), cyclical); }
 static inline BOOL          GKPath_Cyclical(GKPath self)                                                                                                              { return ((BOOL (*)(GKPath, SEL))bean_msgSend)(self, bean_sel("cyclical")); }
+#ifndef BEAN_ALLOC_GKPath
+#define BEAN_ALLOC_GKPath
+static inline GKPath        GKPath_Alloc(void)                                                                                                                        { return (GKPath)bean_alloc(bean_cls("GKPath")); }
+#endif
+#ifndef BEAN_NEW_GKPath
+#define BEAN_NEW_GKPath
+static inline GKPath        GKPath_New(void)                                                                                                                          { return (GKPath)bean_new(bean_cls("GKPath")); }
+#endif
 
 /* ===== GKQuadtree ===== */
 #ifndef BEAN_TYPEDEF_GKQuadtree
@@ -6454,6 +7214,14 @@ static inline NSArray           GKQuadtree_ElementsAtPoint(GKQuadtree self, void
 static inline NSArray           GKQuadtree_ElementsInQuad(GKQuadtree self, GKQuad quad)                                               { return ((NSArray (*)(GKQuadtree, SEL, GKQuad))bean_msgSend)(self, bean_sel("elementsInQuad:"), quad); }
 static inline BOOL              GKQuadtree_RemoveElement(GKQuadtree self, NSObject element)                                           { return ((BOOL (*)(GKQuadtree, SEL, NSObject))bean_msgSend)(self, bean_sel("removeElement:"), element); }
 static inline BOOL              GKQuadtree_RemoveElement_WithNode(GKQuadtree self, NSObject data, GKQuadtreeNode node)                { return ((BOOL (*)(GKQuadtree, SEL, NSObject, GKQuadtreeNode))bean_msgSend)(self, bean_sel("removeElement:withNode:"), data, node); }
+#ifndef BEAN_ALLOC_GKQuadtree
+#define BEAN_ALLOC_GKQuadtree
+static inline GKQuadtree        GKQuadtree_Alloc(void)                                                                                { return (GKQuadtree)bean_alloc(bean_cls("GKQuadtree")); }
+#endif
+#ifndef BEAN_NEW_GKQuadtree
+#define BEAN_NEW_GKQuadtree
+static inline GKQuadtree        GKQuadtree_New(void)                                                                                  { return (GKQuadtree)bean_new(bean_cls("GKQuadtree")); }
+#endif
 
 /* ===== GKRTree ===== */
 #ifndef BEAN_TYPEDEF_GKRTree
@@ -6467,6 +7235,14 @@ static inline void          GKRTree_RemoveElement_BoundingRectMin_BoundingRectMa
 static inline NSArray       GKRTree_ElementsInBoundingRectMin_RectMax(GKRTree self, void* rectMin, void* rectMax)                                                                                                 { return ((NSArray (*)(GKRTree, SEL, void*, void*))bean_msgSend)(self, bean_sel("elementsInBoundingRectMin:rectMax:"), rectMin, rectMax); }
 static inline NSUInteger    GKRTree_QueryReserve(GKRTree self)                                                                                                                                                    { return ((NSUInteger (*)(GKRTree, SEL))bean_msgSend)(self, bean_sel("queryReserve")); }
 static inline void          GKRTree_SetQueryReserve(GKRTree self, NSUInteger queryReserve)                                                                                                                        { ((void (*)(GKRTree, SEL, NSUInteger))bean_msgSend)(self, bean_sel("setQueryReserve:"), queryReserve); }
+#ifndef BEAN_ALLOC_GKRTree
+#define BEAN_ALLOC_GKRTree
+static inline GKRTree       GKRTree_Alloc(void)                                                                                                                                                                   { return (GKRTree)bean_alloc(bean_cls("GKRTree")); }
+#endif
+#ifndef BEAN_NEW_GKRTree
+#define BEAN_NEW_GKRTree
+static inline GKRTree       GKRTree_New(void)                                                                                                                                                                     { return (GKRTree)bean_new(bean_cls("GKRTree")); }
+#endif
 
 /* ===== GKRandomSource ===== */
 static inline GKRandomSource    GKRandomSource_Init(GKRandomSource self)                                             { return ((GKRandomSource (*)(GKRandomSource, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -6479,6 +7255,14 @@ static inline CGFloat           GKRandomSource_NextUniform(GKRandomSource self) 
 static inline BOOL              GKRandomSource_NextBool(GKRandomSource self)                                         { return ((BOOL (*)(GKRandomSource, SEL))bean_msgSend)(self, bean_sel("nextBool")); }
 static inline BOOL              GKRandomSource_SupportsSecureCoding(void)                                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKRandomSource"), bean_sel("supportsSecureCoding")); }
 static inline id                GKRandomSource_CopyWithZone(GKRandomSource self, NSZone* zone)                       { return ((id (*)(GKRandomSource, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_GKRandomSource
+#define BEAN_ALLOC_GKRandomSource
+static inline GKRandomSource    GKRandomSource_Alloc(void)                                                           { return (GKRandomSource)bean_alloc(bean_cls("GKRandomSource")); }
+#endif
+#ifndef BEAN_NEW_GKRandomSource
+#define BEAN_NEW_GKRandomSource
+static inline GKRandomSource    GKRandomSource_New(void)                                                             { return (GKRandomSource)bean_new(bean_cls("GKRandomSource")); }
+#endif
 
 /* ===== GKRule ===== */
 #ifndef BEAN_TYPEDEF_GKRule
@@ -6492,6 +7276,14 @@ static inline GKRule       GKRule_RuleWithPredicate_RetractingFact_Grade(NSPredi
 static inline GKRule       GKRule_RuleWithBlockPredicate_Action(void* predicate, void* action)                             { return ((GKRule (*)(bean_class, SEL, void*, void*))bean_msgSend)(bean_cls("GKRule"), bean_sel("ruleWithBlockPredicate:action:"), predicate, action); }
 static inline NSInteger    GKRule_Salience(GKRule self)                                                                    { return ((NSInteger (*)(GKRule, SEL))bean_msgSend)(self, bean_sel("salience")); }
 static inline void         GKRule_SetSalience(GKRule self, NSInteger salience)                                             { ((void (*)(GKRule, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSalience:"), salience); }
+#ifndef BEAN_ALLOC_GKRule
+#define BEAN_ALLOC_GKRule
+static inline GKRule       GKRule_Alloc(void)                                                                              { return (GKRule)bean_alloc(bean_cls("GKRule")); }
+#endif
+#ifndef BEAN_NEW_GKRule
+#define BEAN_NEW_GKRule
+static inline GKRule       GKRule_New(void)                                                                                { return (GKRule)bean_new(bean_cls("GKRule")); }
+#endif
 
 /* ===== GKRuleSystem ===== */
 static inline GKRuleSystem           GKRuleSystem_Init(GKRuleSystem self)                                         { return ((GKRuleSystem (*)(GKRuleSystem, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -6512,6 +7304,14 @@ static inline NSArray                GKRuleSystem_Rules(GKRuleSystem self)      
 static inline NSArray                GKRuleSystem_Agenda(GKRuleSystem self)                                       { return ((NSArray (*)(GKRuleSystem, SEL))bean_msgSend)(self, bean_sel("agenda")); }
 static inline NSArray                GKRuleSystem_Executed(GKRuleSystem self)                                     { return ((NSArray (*)(GKRuleSystem, SEL))bean_msgSend)(self, bean_sel("executed")); }
 static inline NSArray                GKRuleSystem_Facts(GKRuleSystem self)                                        { return ((NSArray (*)(GKRuleSystem, SEL))bean_msgSend)(self, bean_sel("facts")); }
+#ifndef BEAN_ALLOC_GKRuleSystem
+#define BEAN_ALLOC_GKRuleSystem
+static inline GKRuleSystem           GKRuleSystem_Alloc(void)                                                     { return (GKRuleSystem)bean_alloc(bean_cls("GKRuleSystem")); }
+#endif
+#ifndef BEAN_NEW_GKRuleSystem
+#define BEAN_NEW_GKRuleSystem
+static inline GKRuleSystem           GKRuleSystem_New(void)                                                       { return (GKRuleSystem)bean_new(bean_cls("GKRuleSystem")); }
+#endif
 
 /* ===== GKSCNNodeComponent ===== */
 #ifndef BEAN_TYPEDEF_GKSCNNodeComponent
@@ -6523,6 +7323,14 @@ static inline GKSCNNodeComponent    GKSCNNodeComponent_InitWithNode(GKSCNNodeCom
 static inline SCNNode               GKSCNNodeComponent_Node(GKSCNNodeComponent self)                              { return ((SCNNode (*)(GKSCNNodeComponent, SEL))bean_msgSend)(self, bean_sel("node")); }
 static inline void                  GKSCNNodeComponent_AgentWillUpdate(GKSCNNodeComponent self, GKAgent agent)    { ((void (*)(GKSCNNodeComponent, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentWillUpdate:"), agent); }
 static inline void                  GKSCNNodeComponent_AgentDidUpdate(GKSCNNodeComponent self, GKAgent agent)     { ((void (*)(GKSCNNodeComponent, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentDidUpdate:"), agent); }
+#ifndef BEAN_ALLOC_GKSCNNodeComponent
+#define BEAN_ALLOC_GKSCNNodeComponent
+static inline GKSCNNodeComponent    GKSCNNodeComponent_Alloc(void)                                                { return (GKSCNNodeComponent)bean_alloc(bean_cls("GKSCNNodeComponent")); }
+#endif
+#ifndef BEAN_NEW_GKSCNNodeComponent
+#define BEAN_NEW_GKSCNNodeComponent
+static inline GKSCNNodeComponent    GKSCNNodeComponent_New(void)                                                  { return (GKSCNNodeComponent)bean_new(bean_cls("GKSCNNodeComponent")); }
+#endif
 
 /* ===== GKSKNodeComponent ===== */
 #ifndef BEAN_TYPEDEF_GKSKNodeComponent
@@ -6535,6 +7343,14 @@ static inline SKNode               GKSKNodeComponent_Node(GKSKNodeComponent self
 static inline void                 GKSKNodeComponent_SetNode(GKSKNodeComponent self, SKNode node)              { ((void (*)(GKSKNodeComponent, SEL, SKNode))bean_msgSend)(self, bean_sel("setNode:"), node); }
 static inline void                 GKSKNodeComponent_AgentWillUpdate(GKSKNodeComponent self, GKAgent agent)    { ((void (*)(GKSKNodeComponent, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentWillUpdate:"), agent); }
 static inline void                 GKSKNodeComponent_AgentDidUpdate(GKSKNodeComponent self, GKAgent agent)     { ((void (*)(GKSKNodeComponent, SEL, GKAgent))bean_msgSend)(self, bean_sel("agentDidUpdate:"), agent); }
+#ifndef BEAN_ALLOC_GKSKNodeComponent
+#define BEAN_ALLOC_GKSKNodeComponent
+static inline GKSKNodeComponent    GKSKNodeComponent_Alloc(void)                                               { return (GKSKNodeComponent)bean_alloc(bean_cls("GKSKNodeComponent")); }
+#endif
+#ifndef BEAN_NEW_GKSKNodeComponent
+#define BEAN_NEW_GKSKNodeComponent
+static inline GKSKNodeComponent    GKSKNodeComponent_New(void)                                                 { return (GKSKNodeComponent)bean_new(bean_cls("GKSKNodeComponent")); }
+#endif
 
 /* ===== GKScene ===== */
 #ifndef BEAN_TYPEDEF_GKScene
@@ -6553,6 +7369,14 @@ static inline void            GKScene_SetRootNode(GKScene self, id rootNode)    
 static inline NSDictionary    GKScene_Graphs(GKScene self)                                           { return ((NSDictionary (*)(GKScene, SEL))bean_msgSend)(self, bean_sel("graphs")); }
 static inline id              GKScene_CopyWithZone(GKScene self, NSZone* zone)                       { return ((id (*)(GKScene, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL            GKScene_SupportsSecureCoding(void)                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("GKScene"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_GKScene
+#define BEAN_ALLOC_GKScene
+static inline GKScene         GKScene_Alloc(void)                                                    { return (GKScene)bean_alloc(bean_cls("GKScene")); }
+#endif
+#ifndef BEAN_NEW_GKScene
+#define BEAN_NEW_GKScene
+static inline GKScene         GKScene_New(void)                                                      { return (GKScene)bean_new(bean_cls("GKScene")); }
+#endif
 
 /* ===== GKState ===== */
 #ifndef BEAN_TYPEDEF_GKState
@@ -6566,6 +7390,14 @@ static inline void              GKState_DidEnterWithPreviousState(GKState self, 
 static inline void              GKState_UpdateWithDeltaTime(GKState self, CGFloat seconds)                { ((void (*)(GKState, SEL, CGFloat))bean_msgSend)(self, bean_sel("updateWithDeltaTime:"), seconds); }
 static inline void              GKState_WillExitWithNextState(GKState self, GKState nextState)            { ((void (*)(GKState, SEL, GKState))bean_msgSend)(self, bean_sel("willExitWithNextState:"), nextState); }
 static inline GKStateMachine    GKState_StateMachine(GKState self)                                        { return ((GKStateMachine (*)(GKState, SEL))bean_msgSend)(self, bean_sel("stateMachine")); }
+#ifndef BEAN_ALLOC_GKState
+#define BEAN_ALLOC_GKState
+static inline GKState           GKState_Alloc(void)                                                       { return (GKState)bean_alloc(bean_cls("GKState")); }
+#endif
+#ifndef BEAN_NEW_GKState
+#define BEAN_NEW_GKState
+static inline GKState           GKState_New(void)                                                         { return (GKState)bean_new(bean_cls("GKState")); }
+#endif
 
 /* ===== GKStateMachine ===== */
 static inline GKStateMachine    GKStateMachine_StateMachineWithStates(NSArray states)                       { return ((GKStateMachine (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("GKStateMachine"), bean_sel("stateMachineWithStates:"), states); }
@@ -6575,10 +7407,26 @@ static inline GKState           GKStateMachine_StateForClass(GKStateMachine self
 static inline BOOL              GKStateMachine_CanEnterState(GKStateMachine self, bean_class stateClass)    { return ((BOOL (*)(GKStateMachine, SEL, bean_class))bean_msgSend)(self, bean_sel("canEnterState:"), stateClass); }
 static inline BOOL              GKStateMachine_EnterState(GKStateMachine self, bean_class stateClass)       { return ((BOOL (*)(GKStateMachine, SEL, bean_class))bean_msgSend)(self, bean_sel("enterState:"), stateClass); }
 static inline GKState           GKStateMachine_CurrentState(GKStateMachine self)                            { return ((GKState (*)(GKStateMachine, SEL))bean_msgSend)(self, bean_sel("currentState")); }
+#ifndef BEAN_ALLOC_GKStateMachine
+#define BEAN_ALLOC_GKStateMachine
+static inline GKStateMachine    GKStateMachine_Alloc(void)                                                  { return (GKStateMachine)bean_alloc(bean_cls("GKStateMachine")); }
+#endif
+#ifndef BEAN_NEW_GKStateMachine
+#define BEAN_NEW_GKStateMachine
+static inline GKStateMachine    GKStateMachine_New(void)                                                    { return (GKStateMachine)bean_new(bean_cls("GKStateMachine")); }
+#endif
 
 /* ===== NSArray ===== */
 static inline NSArray    NSArray_ShuffledArrayWithRandomSource(NSArray self, GKRandomSource randomSource)    { return ((NSArray (*)(NSArray, SEL, GKRandomSource))bean_msgSend)(self, bean_sel("shuffledArrayWithRandomSource:"), randomSource); }
 static inline NSArray    NSArray_ShuffledArray(NSArray self)                                                 { return ((NSArray (*)(NSArray, SEL))bean_msgSend)(self, bean_sel("shuffledArray")); }
+#ifndef BEAN_ALLOC_NSArray
+#define BEAN_ALLOC_NSArray
+static inline NSArray    NSArray_Alloc(void)                                                                 { return (NSArray)bean_alloc(bean_cls("NSArray")); }
+#endif
+#ifndef BEAN_NEW_NSArray
+#define BEAN_NEW_NSArray
+static inline NSArray    NSArray_New(void)                                                                   { return (NSArray)bean_new(bean_cls("NSArray")); }
+#endif
 
 /* ===== NSAsynchronousFetchRequest ===== */
 #ifndef BEAN_TYPEDEF_NSAsynchronousFetchRequest
@@ -6590,6 +7438,14 @@ static inline NSFetchRequest                NSAsynchronousFetchRequest_FetchRequ
 static inline void*                         NSAsynchronousFetchRequest_CompletionBlock(NSAsynchronousFetchRequest self)                                                            { return ((void* (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("completionBlock")); }
 static inline NSInteger                     NSAsynchronousFetchRequest_EstimatedResultCount(NSAsynchronousFetchRequest self)                                                       { return ((NSInteger (*)(NSAsynchronousFetchRequest, SEL))bean_msgSend)(self, bean_sel("estimatedResultCount")); }
 static inline void                          NSAsynchronousFetchRequest_SetEstimatedResultCount(NSAsynchronousFetchRequest self, NSInteger estimatedResultCount)                    { ((void (*)(NSAsynchronousFetchRequest, SEL, NSInteger))bean_msgSend)(self, bean_sel("setEstimatedResultCount:"), estimatedResultCount); }
+#ifndef BEAN_ALLOC_NSAsynchronousFetchRequest
+#define BEAN_ALLOC_NSAsynchronousFetchRequest
+static inline NSAsynchronousFetchRequest    NSAsynchronousFetchRequest_Alloc(void)                                                                                                 { return (NSAsynchronousFetchRequest)bean_alloc(bean_cls("NSAsynchronousFetchRequest")); }
+#endif
+#ifndef BEAN_NEW_NSAsynchronousFetchRequest
+#define BEAN_NEW_NSAsynchronousFetchRequest
+static inline NSAsynchronousFetchRequest    NSAsynchronousFetchRequest_New(void)                                                                                                   { return (NSAsynchronousFetchRequest)bean_new(bean_cls("NSAsynchronousFetchRequest")); }
+#endif
 
 /* ===== NSAsynchronousFetchResult ===== */
 #ifndef BEAN_TYPEDEF_NSAsynchronousFetchResult
@@ -6598,6 +7454,14 @@ typedef bean_id NSAsynchronousFetchResult;
 #endif
 static inline NSAsynchronousFetchRequest    NSAsynchronousFetchResult_FetchRequest(NSAsynchronousFetchResult self)    { return ((NSAsynchronousFetchRequest (*)(NSAsynchronousFetchResult, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
 static inline NSArray                       NSAsynchronousFetchResult_FinalResult(NSAsynchronousFetchResult self)     { return ((NSArray (*)(NSAsynchronousFetchResult, SEL))bean_msgSend)(self, bean_sel("finalResult")); }
+#ifndef BEAN_ALLOC_NSAsynchronousFetchResult
+#define BEAN_ALLOC_NSAsynchronousFetchResult
+static inline NSAsynchronousFetchResult     NSAsynchronousFetchResult_Alloc(void)                                     { return (NSAsynchronousFetchResult)bean_alloc(bean_cls("NSAsynchronousFetchResult")); }
+#endif
+#ifndef BEAN_NEW_NSAsynchronousFetchResult
+#define BEAN_NEW_NSAsynchronousFetchResult
+static inline NSAsynchronousFetchResult     NSAsynchronousFetchResult_New(void)                                       { return (NSAsynchronousFetchResult)bean_new(bean_cls("NSAsynchronousFetchResult")); }
+#endif
 
 /* ===== NSAtomicStore ===== */
 #ifndef BEAN_TYPEDEF_NSAtomicStore
@@ -6616,6 +7480,14 @@ static inline NSAtomicStoreCacheNode    NSAtomicStore_CacheNodeForObjectID(NSAto
 static inline NSManagedObjectID         NSAtomicStore_ObjectIDForEntity_ReferenceObject(NSAtomicStore self, NSEntityDescription entity, id data)                                                                                                     { return ((NSManagedObjectID (*)(NSAtomicStore, SEL, NSEntityDescription, id))bean_msgSend)(self, bean_sel("objectIDForEntity:referenceObject:"), entity, data); }
 static inline id                        NSAtomicStore_NewReferenceObjectForManagedObject(NSAtomicStore self, NSManagedObject managedObject)                                                                                                          { return ((id (*)(NSAtomicStore, SEL, NSManagedObject))bean_msgSend)(self, bean_sel("newReferenceObjectForManagedObject:"), managedObject); }
 static inline id                        NSAtomicStore_ReferenceObjectForObjectID(NSAtomicStore self, NSManagedObjectID objectID)                                                                                                                     { return ((id (*)(NSAtomicStore, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("referenceObjectForObjectID:"), objectID); }
+#ifndef BEAN_ALLOC_NSAtomicStore
+#define BEAN_ALLOC_NSAtomicStore
+static inline NSAtomicStore             NSAtomicStore_Alloc(void)                                                                                                                                                                                    { return (NSAtomicStore)bean_alloc(bean_cls("NSAtomicStore")); }
+#endif
+#ifndef BEAN_NEW_NSAtomicStore
+#define BEAN_NEW_NSAtomicStore
+static inline NSAtomicStore             NSAtomicStore_New(void)                                                                                                                                                                                      { return (NSAtomicStore)bean_new(bean_cls("NSAtomicStore")); }
+#endif
 
 /* ===== NSAtomicStoreCacheNode ===== */
 static inline NSAtomicStoreCacheNode    NSAtomicStoreCacheNode_InitWithObjectID(NSAtomicStoreCacheNode self, NSManagedObjectID moid)               { return ((NSAtomicStoreCacheNode (*)(NSAtomicStoreCacheNode, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("initWithObjectID:"), moid); }
@@ -6624,6 +7496,14 @@ static inline void                      NSAtomicStoreCacheNode_SetValue_ForKey(N
 static inline NSManagedObjectID         NSAtomicStoreCacheNode_ObjectID(NSAtomicStoreCacheNode self)                                               { return ((NSManagedObjectID (*)(NSAtomicStoreCacheNode, SEL))bean_msgSend)(self, bean_sel("objectID")); }
 static inline NSMutableDictionary       NSAtomicStoreCacheNode_PropertyCache(NSAtomicStoreCacheNode self)                                          { return ((NSMutableDictionary (*)(NSAtomicStoreCacheNode, SEL))bean_msgSend)(self, bean_sel("propertyCache")); }
 static inline void                      NSAtomicStoreCacheNode_SetPropertyCache(NSAtomicStoreCacheNode self, NSMutableDictionary propertyCache)    { ((void (*)(NSAtomicStoreCacheNode, SEL, NSMutableDictionary))bean_msgSend)(self, bean_sel("setPropertyCache:"), propertyCache); }
+#ifndef BEAN_ALLOC_NSAtomicStoreCacheNode
+#define BEAN_ALLOC_NSAtomicStoreCacheNode
+static inline NSAtomicStoreCacheNode    NSAtomicStoreCacheNode_Alloc(void)                                                                         { return (NSAtomicStoreCacheNode)bean_alloc(bean_cls("NSAtomicStoreCacheNode")); }
+#endif
+#ifndef BEAN_NEW_NSAtomicStoreCacheNode
+#define BEAN_NEW_NSAtomicStoreCacheNode
+static inline NSAtomicStoreCacheNode    NSAtomicStoreCacheNode_New(void)                                                                           { return (NSAtomicStoreCacheNode)bean_new(bean_cls("NSAtomicStoreCacheNode")); }
+#endif
 
 /* ===== NSBatchDeleteRequest ===== */
 #ifndef BEAN_TYPEDEF_NSBatchDeleteRequest
@@ -6636,6 +7516,14 @@ static inline NSBatchDeleteRequest              NSBatchDeleteRequest_InitWithObj
 static inline NSBatchDeleteRequestResultType    NSBatchDeleteRequest_ResultType(NSBatchDeleteRequest self)                                                  { return ((NSBatchDeleteRequestResultType (*)(NSBatchDeleteRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 static inline void                              NSBatchDeleteRequest_SetResultType(NSBatchDeleteRequest self, NSBatchDeleteRequestResultType resultType)    { ((void (*)(NSBatchDeleteRequest, SEL, NSBatchDeleteRequestResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
 static inline NSFetchRequest                    NSBatchDeleteRequest_FetchRequest(NSBatchDeleteRequest self)                                                { return ((NSFetchRequest (*)(NSBatchDeleteRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
+#ifndef BEAN_ALLOC_NSBatchDeleteRequest
+#define BEAN_ALLOC_NSBatchDeleteRequest
+static inline NSBatchDeleteRequest              NSBatchDeleteRequest_Alloc(void)                                                                            { return (NSBatchDeleteRequest)bean_alloc(bean_cls("NSBatchDeleteRequest")); }
+#endif
+#ifndef BEAN_NEW_NSBatchDeleteRequest
+#define BEAN_NEW_NSBatchDeleteRequest
+static inline NSBatchDeleteRequest              NSBatchDeleteRequest_New(void)                                                                              { return (NSBatchDeleteRequest)bean_new(bean_cls("NSBatchDeleteRequest")); }
+#endif
 
 /* ===== NSBatchInsertRequest ===== */
 #ifndef BEAN_TYPEDEF_NSBatchInsertRequest
@@ -6662,6 +7550,14 @@ static inline void*                             NSBatchInsertRequest_ManagedObje
 static inline void                              NSBatchInsertRequest_SetManagedObjectHandler(NSBatchInsertRequest self, void* managedObjectHandler)                               { ((void (*)(NSBatchInsertRequest, SEL, void*))bean_msgSend)(self, bean_sel("setManagedObjectHandler:"), managedObjectHandler); }
 static inline NSBatchInsertRequestResultType    NSBatchInsertRequest_ResultType(NSBatchInsertRequest self)                                                                        { return ((NSBatchInsertRequestResultType (*)(NSBatchInsertRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 static inline void                              NSBatchInsertRequest_SetResultType(NSBatchInsertRequest self, NSBatchInsertRequestResultType resultType)                          { ((void (*)(NSBatchInsertRequest, SEL, NSBatchInsertRequestResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
+#ifndef BEAN_ALLOC_NSBatchInsertRequest
+#define BEAN_ALLOC_NSBatchInsertRequest
+static inline NSBatchInsertRequest              NSBatchInsertRequest_Alloc(void)                                                                                                  { return (NSBatchInsertRequest)bean_alloc(bean_cls("NSBatchInsertRequest")); }
+#endif
+#ifndef BEAN_NEW_NSBatchInsertRequest
+#define BEAN_NEW_NSBatchInsertRequest
+static inline NSBatchInsertRequest              NSBatchInsertRequest_New(void)                                                                                                    { return (NSBatchInsertRequest)bean_new(bean_cls("NSBatchInsertRequest")); }
+#endif
 
 /* ===== NSBatchUpdateRequest ===== */
 #ifndef BEAN_TYPEDEF_NSBatchUpdateRequest
@@ -6681,14 +7577,30 @@ static inline NSBatchUpdateRequestResultType    NSBatchUpdateRequest_ResultType(
 static inline void                              NSBatchUpdateRequest_SetResultType(NSBatchUpdateRequest self, NSBatchUpdateRequestResultType resultType)    { ((void (*)(NSBatchUpdateRequest, SEL, NSBatchUpdateRequestResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
 static inline NSDictionary                      NSBatchUpdateRequest_PropertiesToUpdate(NSBatchUpdateRequest self)                                          { return ((NSDictionary (*)(NSBatchUpdateRequest, SEL))bean_msgSend)(self, bean_sel("propertiesToUpdate")); }
 static inline void                              NSBatchUpdateRequest_SetPropertiesToUpdate(NSBatchUpdateRequest self, NSDictionary propertiesToUpdate)      { ((void (*)(NSBatchUpdateRequest, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setPropertiesToUpdate:"), propertiesToUpdate); }
+#ifndef BEAN_ALLOC_NSBatchUpdateRequest
+#define BEAN_ALLOC_NSBatchUpdateRequest
+static inline NSBatchUpdateRequest              NSBatchUpdateRequest_Alloc(void)                                                                            { return (NSBatchUpdateRequest)bean_alloc(bean_cls("NSBatchUpdateRequest")); }
+#endif
+#ifndef BEAN_NEW_NSBatchUpdateRequest
+#define BEAN_NEW_NSBatchUpdateRequest
+static inline NSBatchUpdateRequest              NSBatchUpdateRequest_New(void)                                                                              { return (NSBatchUpdateRequest)bean_new(bean_cls("NSBatchUpdateRequest")); }
+#endif
 
 /* ===== NSCompositeAttributeDescription ===== */
 #ifndef BEAN_TYPEDEF_NSCompositeAttributeDescription
 #define BEAN_TYPEDEF_NSCompositeAttributeDescription
 typedef bean_id NSCompositeAttributeDescription;
 #endif
-static inline NSArray    NSCompositeAttributeDescription_Elements(NSCompositeAttributeDescription self)                         { return ((NSArray (*)(NSCompositeAttributeDescription, SEL))bean_msgSend)(self, bean_sel("elements")); }
-static inline void       NSCompositeAttributeDescription_SetElements(NSCompositeAttributeDescription self, NSArray elements)    { ((void (*)(NSCompositeAttributeDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setElements:"), elements); }
+static inline NSArray                            NSCompositeAttributeDescription_Elements(NSCompositeAttributeDescription self)                         { return ((NSArray (*)(NSCompositeAttributeDescription, SEL))bean_msgSend)(self, bean_sel("elements")); }
+static inline void                               NSCompositeAttributeDescription_SetElements(NSCompositeAttributeDescription self, NSArray elements)    { ((void (*)(NSCompositeAttributeDescription, SEL, NSArray))bean_msgSend)(self, bean_sel("setElements:"), elements); }
+#ifndef BEAN_ALLOC_NSCompositeAttributeDescription
+#define BEAN_ALLOC_NSCompositeAttributeDescription
+static inline NSCompositeAttributeDescription    NSCompositeAttributeDescription_Alloc(void)                                                            { return (NSCompositeAttributeDescription)bean_alloc(bean_cls("NSCompositeAttributeDescription")); }
+#endif
+#ifndef BEAN_NEW_NSCompositeAttributeDescription
+#define BEAN_NEW_NSCompositeAttributeDescription
+static inline NSCompositeAttributeDescription    NSCompositeAttributeDescription_New(void)                                                              { return (NSCompositeAttributeDescription)bean_new(bean_cls("NSCompositeAttributeDescription")); }
+#endif
 
 /* ===== NSConstraintConflict ===== */
 #ifndef BEAN_TYPEDEF_NSConstraintConflict
@@ -6702,6 +7614,14 @@ static inline NSManagedObject         NSConstraintConflict_DatabaseObject(NSCons
 static inline NSDictionary            NSConstraintConflict_DatabaseSnapshot(NSConstraintConflict self)                                                                                                                                                                                                                          { return ((NSDictionary (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("databaseSnapshot")); }
 static inline NSArray                 NSConstraintConflict_ConflictingObjects(NSConstraintConflict self)                                                                                                                                                                                                                        { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("conflictingObjects")); }
 static inline NSArray                 NSConstraintConflict_ConflictingSnapshots(NSConstraintConflict self)                                                                                                                                                                                                                      { return ((NSArray (*)(NSConstraintConflict, SEL))bean_msgSend)(self, bean_sel("conflictingSnapshots")); }
+#ifndef BEAN_ALLOC_NSConstraintConflict
+#define BEAN_ALLOC_NSConstraintConflict
+static inline NSConstraintConflict    NSConstraintConflict_Alloc(void)                                                                                                                                                                                                                                                          { return (NSConstraintConflict)bean_alloc(bean_cls("NSConstraintConflict")); }
+#endif
+#ifndef BEAN_NEW_NSConstraintConflict
+#define BEAN_NEW_NSConstraintConflict
+static inline NSConstraintConflict    NSConstraintConflict_New(void)                                                                                                                                                                                                                                                            { return (NSConstraintConflict)bean_new(bean_cls("NSConstraintConflict")); }
+#endif
 
 /* ===== NSCoreDataCoreSpotlightDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSCoreDataCoreSpotlightDelegate
@@ -6721,6 +7641,14 @@ static inline void                               NSCoreDataCoreSpotlightDelegate
 static inline void                               NSCoreDataCoreSpotlightDelegate_SearchableIndex_ReindexSearchableItemsWithIdentifiers_AcknowledgementHandler(NSCoreDataCoreSpotlightDelegate self, CSSearchableIndex searchableIndex, NSArray identifiers, void* acknowledgementHandler)    { ((void (*)(NSCoreDataCoreSpotlightDelegate, SEL, CSSearchableIndex, NSArray, void*))bean_msgSend)(self, bean_sel("searchableIndex:reindexSearchableItemsWithIdentifiers:acknowledgementHandler:"), searchableIndex, identifiers, acknowledgementHandler); }
 static inline BOOL                               NSCoreDataCoreSpotlightDelegate_IsIndexingEnabled(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                     { return ((BOOL (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("isIndexingEnabled")); }
 static inline BOOL                               NSCoreDataCoreSpotlightDelegate_IndexingEnabled(NSCoreDataCoreSpotlightDelegate self)                                                                                                                                                       { return ((BOOL (*)(NSCoreDataCoreSpotlightDelegate, SEL))bean_msgSend)(self, bean_sel("indexingEnabled")); }
+#ifndef BEAN_ALLOC_NSCoreDataCoreSpotlightDelegate
+#define BEAN_ALLOC_NSCoreDataCoreSpotlightDelegate
+static inline NSCoreDataCoreSpotlightDelegate    NSCoreDataCoreSpotlightDelegate_Alloc(void)                                                                                                                                                                                                 { return (NSCoreDataCoreSpotlightDelegate)bean_alloc(bean_cls("NSCoreDataCoreSpotlightDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSCoreDataCoreSpotlightDelegate
+#define BEAN_NEW_NSCoreDataCoreSpotlightDelegate
+static inline NSCoreDataCoreSpotlightDelegate    NSCoreDataCoreSpotlightDelegate_New(void)                                                                                                                                                                                                   { return (NSCoreDataCoreSpotlightDelegate)bean_new(bean_cls("NSCoreDataCoreSpotlightDelegate")); }
+#endif
 
 /* ===== NSCustomMigrationStage ===== */
 #ifndef BEAN_TYPEDEF_NSCustomMigrationStage
@@ -6735,6 +7663,14 @@ static inline void*                            NSCustomMigrationStage_WillMigrat
 static inline void                             NSCustomMigrationStage_SetWillMigrateHandler(NSCustomMigrationStage self, void* willMigrateHandler)                                                                                          { ((void (*)(NSCustomMigrationStage, SEL, void*))bean_msgSend)(self, bean_sel("setWillMigrateHandler:"), willMigrateHandler); }
 static inline void*                            NSCustomMigrationStage_DidMigrateHandler(NSCustomMigrationStage self)                                                                                                                        { return ((void* (*)(NSCustomMigrationStage, SEL))bean_msgSend)(self, bean_sel("didMigrateHandler")); }
 static inline void                             NSCustomMigrationStage_SetDidMigrateHandler(NSCustomMigrationStage self, void* didMigrateHandler)                                                                                            { ((void (*)(NSCustomMigrationStage, SEL, void*))bean_msgSend)(self, bean_sel("setDidMigrateHandler:"), didMigrateHandler); }
+#ifndef BEAN_ALLOC_NSCustomMigrationStage
+#define BEAN_ALLOC_NSCustomMigrationStage
+static inline NSCustomMigrationStage           NSCustomMigrationStage_Alloc(void)                                                                                                                                                           { return (NSCustomMigrationStage)bean_alloc(bean_cls("NSCustomMigrationStage")); }
+#endif
+#ifndef BEAN_NEW_NSCustomMigrationStage
+#define BEAN_NEW_NSCustomMigrationStage
+static inline NSCustomMigrationStage           NSCustomMigrationStage_New(void)                                                                                                                                                             { return (NSCustomMigrationStage)bean_new(bean_cls("NSCustomMigrationStage")); }
+#endif
 
 /* ===== NSEntityDescription ===== */
 static inline NSEntityDescription     NSEntityDescription_EntityForName_InManagedObjectContext(NSString entityName, NSManagedObjectContext context)                                         { return ((NSEntityDescription (*)(bean_class, SEL, NSString, NSManagedObjectContext))bean_msgSend)(bean_cls("NSEntityDescription"), bean_sel("entityForName:inManagedObjectContext:"), entityName, context); }
@@ -6777,6 +7713,14 @@ static inline NSCoding                NSEntityDescription_InitWithCoder(NSEntity
 static inline id                      NSEntityDescription_CopyWithZone(NSEntityDescription self, NSZone* zone)                                                                              { return ((id (*)(NSEntityDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline NSUInteger              NSEntityDescription_CountByEnumeratingWithState_Objects_Count(NSEntityDescription self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSEntityDescription, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
 static inline BOOL                    NSEntityDescription_Abstract(NSEntityDescription self)                                                                                                { return ((BOOL (*)(NSEntityDescription, SEL))bean_msgSend)(self, bean_sel("abstract")); }
+#ifndef BEAN_ALLOC_NSEntityDescription
+#define BEAN_ALLOC_NSEntityDescription
+static inline NSEntityDescription     NSEntityDescription_Alloc(void)                                                                                                                       { return (NSEntityDescription)bean_alloc(bean_cls("NSEntityDescription")); }
+#endif
+#ifndef BEAN_NEW_NSEntityDescription
+#define BEAN_NEW_NSEntityDescription
+static inline NSEntityDescription     NSEntityDescription_New(void)                                                                                                                         { return (NSEntityDescription)bean_new(bean_cls("NSEntityDescription")); }
+#endif
 
 /* ===== NSEntityMapping ===== */
 #ifndef BEAN_TYPEDEF_NSEntityMapping
@@ -6805,19 +7749,35 @@ static inline NSDictionary           NSEntityMapping_UserInfo(NSEntityMapping se
 static inline void                   NSEntityMapping_SetUserInfo(NSEntityMapping self, NSDictionary userInfo)                                            { ((void (*)(NSEntityMapping, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
 static inline NSString               NSEntityMapping_EntityMigrationPolicyClassName(NSEntityMapping self)                                                { return ((NSString (*)(NSEntityMapping, SEL))bean_msgSend)(self, bean_sel("entityMigrationPolicyClassName")); }
 static inline void                   NSEntityMapping_SetEntityMigrationPolicyClassName(NSEntityMapping self, NSString entityMigrationPolicyClassName)    { ((void (*)(NSEntityMapping, SEL, NSString))bean_msgSend)(self, bean_sel("setEntityMigrationPolicyClassName:"), entityMigrationPolicyClassName); }
+#ifndef BEAN_ALLOC_NSEntityMapping
+#define BEAN_ALLOC_NSEntityMapping
+static inline NSEntityMapping        NSEntityMapping_Alloc(void)                                                                                         { return (NSEntityMapping)bean_alloc(bean_cls("NSEntityMapping")); }
+#endif
+#ifndef BEAN_NEW_NSEntityMapping
+#define BEAN_NEW_NSEntityMapping
+static inline NSEntityMapping        NSEntityMapping_New(void)                                                                                           { return (NSEntityMapping)bean_new(bean_cls("NSEntityMapping")); }
+#endif
 
 /* ===== NSEntityMigrationPolicy ===== */
 #ifndef BEAN_TYPEDEF_NSEntityMigrationPolicy
 #define BEAN_TYPEDEF_NSEntityMigrationPolicy
 typedef bean_id NSEntityMigrationPolicy;
 #endif
-static inline BOOL    NSEntityMigrationPolicy_BeginEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("beginEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_CreateDestinationInstancesForSourceInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject sInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)    { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createDestinationInstancesForSourceInstance:entityMapping:manager:error:"), sInstance, mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndInstanceCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                     { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endInstanceCreationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_CreateRelationshipsForDestinationInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject dInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createRelationshipsForDestinationInstance:entityMapping:manager:error:"), dInstance, mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndRelationshipCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endRelationshipCreationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_PerformCustomValidationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("performCustomValidationForEntityMapping:manager:error:"), mapping, manager, error); }
-static inline BOOL    NSEntityMigrationPolicy_EndEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                        { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_BeginEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("beginEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_CreateDestinationInstancesForSourceInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject sInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)    { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createDestinationInstancesForSourceInstance:entityMapping:manager:error:"), sInstance, mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_EndInstanceCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                     { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endInstanceCreationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_CreateRelationshipsForDestinationInstance_EntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSManagedObject dInstance, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)      { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSManagedObject, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("createRelationshipsForDestinationInstance:entityMapping:manager:error:"), dInstance, mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_EndRelationshipCreationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endRelationshipCreationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_PerformCustomValidationForEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                 { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("performCustomValidationForEntityMapping:manager:error:"), mapping, manager, error); }
+static inline BOOL                       NSEntityMigrationPolicy_EndEntityMapping_Manager_Error(NSEntityMigrationPolicy self, NSEntityMapping mapping, NSMigrationManager manager, NSError* error)                                                                        { return ((BOOL (*)(NSEntityMigrationPolicy, SEL, NSEntityMapping, NSMigrationManager, NSError*))bean_msgSend)(self, bean_sel("endEntityMapping:manager:error:"), mapping, manager, error); }
+#ifndef BEAN_ALLOC_NSEntityMigrationPolicy
+#define BEAN_ALLOC_NSEntityMigrationPolicy
+static inline NSEntityMigrationPolicy    NSEntityMigrationPolicy_Alloc(void)                                                                                                                                                                                              { return (NSEntityMigrationPolicy)bean_alloc(bean_cls("NSEntityMigrationPolicy")); }
+#endif
+#ifndef BEAN_NEW_NSEntityMigrationPolicy
+#define BEAN_NEW_NSEntityMigrationPolicy
+static inline NSEntityMigrationPolicy    NSEntityMigrationPolicy_New(void)                                                                                                                                                                                                { return (NSEntityMigrationPolicy)bean_new(bean_cls("NSEntityMigrationPolicy")); }
+#endif
 
 /* ===== NSEvent ===== */
 #ifndef BEAN_TYPEDEF_NSEvent
@@ -6825,6 +7785,14 @@ static inline BOOL    NSEntityMigrationPolicy_EndEntityMapping_Manager_Error(NSE
 typedef bean_id NSEvent;
 #endif
 static inline CGPoint    NSEvent_LocationInNode(NSEvent self, SKNode node)    { return ((CGPoint (*)(NSEvent, SEL, SKNode))bean_msgSend_stret)(self, bean_sel("locationInNode:"), node); }
+#ifndef BEAN_ALLOC_NSEvent
+#define BEAN_ALLOC_NSEvent
+static inline NSEvent    NSEvent_Alloc(void)                                  { return (NSEvent)bean_alloc(bean_cls("NSEvent")); }
+#endif
+#ifndef BEAN_NEW_NSEvent
+#define BEAN_NEW_NSEvent
+static inline NSEvent    NSEvent_New(void)                                    { return (NSEvent)bean_new(bean_cls("NSEvent")); }
+#endif
 
 /* ===== NSFetchIndexDescription ===== */
 #ifndef BEAN_TYPEDEF_NSFetchIndexDescription
@@ -6842,6 +7810,14 @@ static inline void                       NSFetchIndexDescription_SetPartialIndex
 static inline void                       NSFetchIndexDescription_EncodeWithCoder(NSFetchIndexDescription self, NSCoder coder)                                 { ((void (*)(NSFetchIndexDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding                   NSFetchIndexDescription_InitWithCoder(NSFetchIndexDescription self, NSCoder coder)                                   { return ((NSCoding (*)(NSFetchIndexDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                         NSFetchIndexDescription_CopyWithZone(NSFetchIndexDescription self, NSZone* zone)                                     { return ((id (*)(NSFetchIndexDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSFetchIndexDescription
+#define BEAN_ALLOC_NSFetchIndexDescription
+static inline NSFetchIndexDescription    NSFetchIndexDescription_Alloc(void)                                                                                  { return (NSFetchIndexDescription)bean_alloc(bean_cls("NSFetchIndexDescription")); }
+#endif
+#ifndef BEAN_NEW_NSFetchIndexDescription
+#define BEAN_NEW_NSFetchIndexDescription
+static inline NSFetchIndexDescription    NSFetchIndexDescription_New(void)                                                                                    { return (NSFetchIndexDescription)bean_new(bean_cls("NSFetchIndexDescription")); }
+#endif
 
 /* ===== NSFetchIndexElementDescription ===== */
 #ifndef BEAN_TYPEDEF_NSFetchIndexElementDescription
@@ -6860,6 +7836,14 @@ static inline void                              NSFetchIndexElementDescription_E
 static inline NSCoding                          NSFetchIndexElementDescription_InitWithCoder(NSFetchIndexElementDescription self, NSCoder coder)                                                                             { return ((NSCoding (*)(NSFetchIndexElementDescription, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                                NSFetchIndexElementDescription_CopyWithZone(NSFetchIndexElementDescription self, NSZone* zone)                                                                               { return ((id (*)(NSFetchIndexElementDescription, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                              NSFetchIndexElementDescription_Ascending(NSFetchIndexElementDescription self)                                                                                                { return ((BOOL (*)(NSFetchIndexElementDescription, SEL))bean_msgSend)(self, bean_sel("ascending")); }
+#ifndef BEAN_ALLOC_NSFetchIndexElementDescription
+#define BEAN_ALLOC_NSFetchIndexElementDescription
+static inline NSFetchIndexElementDescription    NSFetchIndexElementDescription_Alloc(void)                                                                                                                                   { return (NSFetchIndexElementDescription)bean_alloc(bean_cls("NSFetchIndexElementDescription")); }
+#endif
+#ifndef BEAN_NEW_NSFetchIndexElementDescription
+#define BEAN_NEW_NSFetchIndexElementDescription
+static inline NSFetchIndexElementDescription    NSFetchIndexElementDescription_New(void)                                                                                                                                     { return (NSFetchIndexElementDescription)bean_new(bean_cls("NSFetchIndexElementDescription")); }
+#endif
 
 /* ===== NSFetchRequest ===== */
 static inline NSFetchRequest              NSFetchRequest_FetchRequestWithEntityName(NSString entityName)                                                           { return ((NSFetchRequest (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("NSFetchRequest"), bean_sel("fetchRequestWithEntityName:"), entityName); }
@@ -6906,14 +7890,30 @@ static inline void                        NSFetchRequest_SetHavingPredicate(NSFe
 static inline void                        NSFetchRequest_EncodeWithCoder(NSFetchRequest self, NSCoder coder)                                                       { ((void (*)(NSFetchRequest, SEL, NSCoder))bean_msgSend)(self, bean_sel("encodeWithCoder:"), coder); }
 static inline NSCoding                    NSFetchRequest_InitWithCoder(NSFetchRequest self, NSCoder coder)                                                         { return ((NSCoding (*)(NSFetchRequest, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                          NSFetchRequest_CopyWithZone(NSFetchRequest self, NSZone* zone)                                                           { return ((id (*)(NSFetchRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSFetchRequest
+#define BEAN_ALLOC_NSFetchRequest
+static inline NSFetchRequest              NSFetchRequest_Alloc(void)                                                                                               { return (NSFetchRequest)bean_alloc(bean_cls("NSFetchRequest")); }
+#endif
+#ifndef BEAN_NEW_NSFetchRequest
+#define BEAN_NEW_NSFetchRequest
+static inline NSFetchRequest              NSFetchRequest_New(void)                                                                                                 { return (NSFetchRequest)bean_new(bean_cls("NSFetchRequest")); }
+#endif
 
 /* ===== NSFetchedPropertyDescription ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedPropertyDescription
 #define BEAN_TYPEDEF_NSFetchedPropertyDescription
 typedef bean_id NSFetchedPropertyDescription;
 #endif
-static inline NSFetchRequest    NSFetchedPropertyDescription_FetchRequest(NSFetchedPropertyDescription self)                                    { return ((NSFetchRequest (*)(NSFetchedPropertyDescription, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
-static inline void              NSFetchedPropertyDescription_SetFetchRequest(NSFetchedPropertyDescription self, NSFetchRequest fetchRequest)    { ((void (*)(NSFetchedPropertyDescription, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("setFetchRequest:"), fetchRequest); }
+static inline NSFetchRequest                  NSFetchedPropertyDescription_FetchRequest(NSFetchedPropertyDescription self)                                    { return ((NSFetchRequest (*)(NSFetchedPropertyDescription, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
+static inline void                            NSFetchedPropertyDescription_SetFetchRequest(NSFetchedPropertyDescription self, NSFetchRequest fetchRequest)    { ((void (*)(NSFetchedPropertyDescription, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("setFetchRequest:"), fetchRequest); }
+#ifndef BEAN_ALLOC_NSFetchedPropertyDescription
+#define BEAN_ALLOC_NSFetchedPropertyDescription
+static inline NSFetchedPropertyDescription    NSFetchedPropertyDescription_Alloc(void)                                                                        { return (NSFetchedPropertyDescription)bean_alloc(bean_cls("NSFetchedPropertyDescription")); }
+#endif
+#ifndef BEAN_NEW_NSFetchedPropertyDescription
+#define BEAN_NEW_NSFetchedPropertyDescription
+static inline NSFetchedPropertyDescription    NSFetchedPropertyDescription_New(void)                                                                          { return (NSFetchedPropertyDescription)bean_new(bean_cls("NSFetchedPropertyDescription")); }
+#endif
 
 /* ===== NSFetchedResultsController ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedResultsController
@@ -6936,29 +7936,53 @@ static inline void                          NSFetchedResultsController_SetDelega
 static inline NSArray                       NSFetchedResultsController_FetchedObjects(NSFetchedResultsController self)                                                                                                                                                                     { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("fetchedObjects")); }
 static inline NSArray                       NSFetchedResultsController_SectionIndexTitles(NSFetchedResultsController self)                                                                                                                                                                 { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sectionIndexTitles")); }
 static inline NSArray                       NSFetchedResultsController_Sections(NSFetchedResultsController self)                                                                                                                                                                           { return ((NSArray (*)(NSFetchedResultsController, SEL))bean_msgSend)(self, bean_sel("sections")); }
+#ifndef BEAN_ALLOC_NSFetchedResultsController
+#define BEAN_ALLOC_NSFetchedResultsController
+static inline NSFetchedResultsController    NSFetchedResultsController_Alloc(void)                                                                                                                                                                                                         { return (NSFetchedResultsController)bean_alloc(bean_cls("NSFetchedResultsController")); }
+#endif
+#ifndef BEAN_NEW_NSFetchedResultsController
+#define BEAN_NEW_NSFetchedResultsController
+static inline NSFetchedResultsController    NSFetchedResultsController_New(void)                                                                                                                                                                                                           { return (NSFetchedResultsController)bean_new(bean_cls("NSFetchedResultsController")); }
+#endif
 
 /* ===== NSFetchedResultsControllerDelegate ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedResultsControllerDelegate
 #define BEAN_TYPEDEF_NSFetchedResultsControllerDelegate
 typedef bean_id NSFetchedResultsControllerDelegate;
 #endif
-static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithSnapshot(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSDiffableDataSourceSnapshot snapshot)                                                                                      { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSDiffableDataSourceSnapshot))bean_msgSend)(self, bean_sel("controller:didChangeContentWithSnapshot:"), controller, snapshot); }
-static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithDifference(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSOrderedCollectionDifference diff)                                                                                       { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSOrderedCollectionDifference))bean_msgSend)(self, bean_sel("controller:didChangeContentWithDifference:"), controller, diff); }
-static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeObject_AtIndexPath_ForChangeType_NewIndexPath(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id anObject, NSIndexPath indexPath, NSFetchedResultsChangeType type, NSIndexPath newIndexPath)    { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSIndexPath, NSFetchedResultsChangeType, NSIndexPath))bean_msgSend)(self, bean_sel("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:"), controller, anObject, indexPath, type, newIndexPath); }
-static inline void        NSFetchedResultsControllerDelegate_Controller_DidChangeSection_AtIndex_ForChangeType(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id sectionInfo, NSUInteger sectionIndex, NSFetchedResultsChangeType type)                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSUInteger, NSFetchedResultsChangeType))bean_msgSend)(self, bean_sel("controller:didChangeSection:atIndex:forChangeType:"), controller, sectionInfo, sectionIndex, type); }
-static inline void        NSFetchedResultsControllerDelegate_ControllerWillChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerWillChangeContent:"), controller); }
-static inline void        NSFetchedResultsControllerDelegate_ControllerDidChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                          { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerDidChangeContent:"), controller); }
-static inline NSString    NSFetchedResultsControllerDelegate_Controller_SectionIndexTitleForSectionName(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSString sectionName)                                                                                                    { return ((NSString (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSString))bean_msgSend)(self, bean_sel("controller:sectionIndexTitleForSectionName:"), controller, sectionName); }
+static inline void                                  NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithSnapshot(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSDiffableDataSourceSnapshot snapshot)                                                                                      { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSDiffableDataSourceSnapshot))bean_msgSend)(self, bean_sel("controller:didChangeContentWithSnapshot:"), controller, snapshot); }
+static inline void                                  NSFetchedResultsControllerDelegate_Controller_DidChangeContentWithDifference(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSOrderedCollectionDifference diff)                                                                                       { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSOrderedCollectionDifference))bean_msgSend)(self, bean_sel("controller:didChangeContentWithDifference:"), controller, diff); }
+static inline void                                  NSFetchedResultsControllerDelegate_Controller_DidChangeObject_AtIndexPath_ForChangeType_NewIndexPath(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id anObject, NSIndexPath indexPath, NSFetchedResultsChangeType type, NSIndexPath newIndexPath)    { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSIndexPath, NSFetchedResultsChangeType, NSIndexPath))bean_msgSend)(self, bean_sel("controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:"), controller, anObject, indexPath, type, newIndexPath); }
+static inline void                                  NSFetchedResultsControllerDelegate_Controller_DidChangeSection_AtIndex_ForChangeType(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, id sectionInfo, NSUInteger sectionIndex, NSFetchedResultsChangeType type)                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, id, NSUInteger, NSFetchedResultsChangeType))bean_msgSend)(self, bean_sel("controller:didChangeSection:atIndex:forChangeType:"), controller, sectionInfo, sectionIndex, type); }
+static inline void                                  NSFetchedResultsControllerDelegate_ControllerWillChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                         { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerWillChangeContent:"), controller); }
+static inline void                                  NSFetchedResultsControllerDelegate_ControllerDidChangeContent(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller)                                                                                                                                          { ((void (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController))bean_msgSend)(self, bean_sel("controllerDidChangeContent:"), controller); }
+static inline NSString                              NSFetchedResultsControllerDelegate_Controller_SectionIndexTitleForSectionName(NSFetchedResultsControllerDelegate self, NSFetchedResultsController controller, NSString sectionName)                                                                                                    { return ((NSString (*)(NSFetchedResultsControllerDelegate, SEL, NSFetchedResultsController, NSString))bean_msgSend)(self, bean_sel("controller:sectionIndexTitleForSectionName:"), controller, sectionName); }
+#ifndef BEAN_ALLOC_NSFetchedResultsControllerDelegate
+#define BEAN_ALLOC_NSFetchedResultsControllerDelegate
+static inline NSFetchedResultsControllerDelegate    NSFetchedResultsControllerDelegate_Alloc(void)                                                                                                                                                                                                                                         { return (NSFetchedResultsControllerDelegate)bean_alloc(bean_cls("NSFetchedResultsControllerDelegate")); }
+#endif
+#ifndef BEAN_NEW_NSFetchedResultsControllerDelegate
+#define BEAN_NEW_NSFetchedResultsControllerDelegate
+static inline NSFetchedResultsControllerDelegate    NSFetchedResultsControllerDelegate_New(void)                                                                                                                                                                                                                                           { return (NSFetchedResultsControllerDelegate)bean_new(bean_cls("NSFetchedResultsControllerDelegate")); }
+#endif
 
 /* ===== NSFetchedResultsSectionInfo ===== */
 #ifndef BEAN_TYPEDEF_NSFetchedResultsSectionInfo
 #define BEAN_TYPEDEF_NSFetchedResultsSectionInfo
 typedef bean_id NSFetchedResultsSectionInfo;
 #endif
-static inline NSString      NSFetchedResultsSectionInfo_Name(NSFetchedResultsSectionInfo self)               { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("name")); }
-static inline NSString      NSFetchedResultsSectionInfo_IndexTitle(NSFetchedResultsSectionInfo self)         { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("indexTitle")); }
-static inline NSUInteger    NSFetchedResultsSectionInfo_NumberOfObjects(NSFetchedResultsSectionInfo self)    { return ((NSUInteger (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("numberOfObjects")); }
-static inline NSArray       NSFetchedResultsSectionInfo_Objects(NSFetchedResultsSectionInfo self)            { return ((NSArray (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("objects")); }
+static inline NSString                       NSFetchedResultsSectionInfo_Name(NSFetchedResultsSectionInfo self)               { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("name")); }
+static inline NSString                       NSFetchedResultsSectionInfo_IndexTitle(NSFetchedResultsSectionInfo self)         { return ((NSString (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("indexTitle")); }
+static inline NSUInteger                     NSFetchedResultsSectionInfo_NumberOfObjects(NSFetchedResultsSectionInfo self)    { return ((NSUInteger (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("numberOfObjects")); }
+static inline NSArray                        NSFetchedResultsSectionInfo_Objects(NSFetchedResultsSectionInfo self)            { return ((NSArray (*)(NSFetchedResultsSectionInfo, SEL))bean_msgSend)(self, bean_sel("objects")); }
+#ifndef BEAN_ALLOC_NSFetchedResultsSectionInfo
+#define BEAN_ALLOC_NSFetchedResultsSectionInfo
+static inline NSFetchedResultsSectionInfo    NSFetchedResultsSectionInfo_Alloc(void)                                          { return (NSFetchedResultsSectionInfo)bean_alloc(bean_cls("NSFetchedResultsSectionInfo")); }
+#endif
+#ifndef BEAN_NEW_NSFetchedResultsSectionInfo
+#define BEAN_NEW_NSFetchedResultsSectionInfo
+static inline NSFetchedResultsSectionInfo    NSFetchedResultsSectionInfo_New(void)                                            { return (NSFetchedResultsSectionInfo)bean_new(bean_cls("NSFetchedResultsSectionInfo")); }
+#endif
 
 /* ===== NSIncrementalStore ===== */
 #ifndef BEAN_TYPEDEF_NSIncrementalStore
@@ -6975,6 +7999,14 @@ static inline void                      NSIncrementalStore_ManagedObjectContextD
 static inline void                      NSIncrementalStore_ManagedObjectContextDidUnregisterObjectsWithIDs(NSIncrementalStore self, NSArray objectIDs)                                                                                                               { ((void (*)(NSIncrementalStore, SEL, NSArray))bean_msgSend)(self, bean_sel("managedObjectContextDidUnregisterObjectsWithIDs:"), objectIDs); }
 static inline NSManagedObjectID         NSIncrementalStore_NewObjectIDForEntity_ReferenceObject(NSIncrementalStore self, NSEntityDescription entity, id data)                                                                                                        { return ((NSManagedObjectID (*)(NSIncrementalStore, SEL, NSEntityDescription, id))bean_msgSend)(self, bean_sel("newObjectIDForEntity:referenceObject:"), entity, data); }
 static inline id                        NSIncrementalStore_ReferenceObjectForObjectID(NSIncrementalStore self, NSManagedObjectID objectID)                                                                                                                           { return ((id (*)(NSIncrementalStore, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("referenceObjectForObjectID:"), objectID); }
+#ifndef BEAN_ALLOC_NSIncrementalStore
+#define BEAN_ALLOC_NSIncrementalStore
+static inline NSIncrementalStore        NSIncrementalStore_Alloc(void)                                                                                                                                                                                               { return (NSIncrementalStore)bean_alloc(bean_cls("NSIncrementalStore")); }
+#endif
+#ifndef BEAN_NEW_NSIncrementalStore
+#define BEAN_NEW_NSIncrementalStore
+static inline NSIncrementalStore        NSIncrementalStore_New(void)                                                                                                                                                                                                 { return (NSIncrementalStore)bean_new(bean_cls("NSIncrementalStore")); }
+#endif
 
 /* ===== NSIncrementalStoreNode ===== */
 static inline NSIncrementalStoreNode    NSIncrementalStoreNode_InitWithObjectID_WithValues_Version(NSIncrementalStoreNode self, NSManagedObjectID objectID, NSDictionary values, unsigned long long version)    { return ((NSIncrementalStoreNode (*)(NSIncrementalStoreNode, SEL, NSManagedObjectID, NSDictionary, unsigned long long))bean_msgSend)(self, bean_sel("initWithObjectID:withValues:version:"), objectID, values, version); }
@@ -6982,6 +8014,14 @@ static inline void                      NSIncrementalStoreNode_UpdateWithValues_
 static inline id                        NSIncrementalStoreNode_ValueForPropertyDescription(NSIncrementalStoreNode self, NSPropertyDescription prop)                                                             { return ((id (*)(NSIncrementalStoreNode, SEL, NSPropertyDescription))bean_msgSend)(self, bean_sel("valueForPropertyDescription:"), prop); }
 static inline NSManagedObjectID         NSIncrementalStoreNode_ObjectID(NSIncrementalStoreNode self)                                                                                                            { return ((NSManagedObjectID (*)(NSIncrementalStoreNode, SEL))bean_msgSend)(self, bean_sel("objectID")); }
 static inline unsigned long long        NSIncrementalStoreNode_Version(NSIncrementalStoreNode self)                                                                                                             { return ((unsigned long long (*)(NSIncrementalStoreNode, SEL))bean_msgSend)(self, bean_sel("version")); }
+#ifndef BEAN_ALLOC_NSIncrementalStoreNode
+#define BEAN_ALLOC_NSIncrementalStoreNode
+static inline NSIncrementalStoreNode    NSIncrementalStoreNode_Alloc(void)                                                                                                                                      { return (NSIncrementalStoreNode)bean_alloc(bean_cls("NSIncrementalStoreNode")); }
+#endif
+#ifndef BEAN_NEW_NSIncrementalStoreNode
+#define BEAN_NEW_NSIncrementalStoreNode
+static inline NSIncrementalStoreNode    NSIncrementalStoreNode_New(void)                                                                                                                                        { return (NSIncrementalStoreNode)bean_new(bean_cls("NSIncrementalStoreNode")); }
+#endif
 
 /* ===== NSLightweightMigrationStage ===== */
 #ifndef BEAN_TYPEDEF_NSLightweightMigrationStage
@@ -6991,6 +8031,14 @@ typedef bean_id NSLightweightMigrationStage;
 static inline NSLightweightMigrationStage    NSLightweightMigrationStage_Init(NSLightweightMigrationStage self)                                                  { return ((NSLightweightMigrationStage (*)(NSLightweightMigrationStage, SEL))bean_msgSend)(self, bean_sel("init")); }
 static inline NSLightweightMigrationStage    NSLightweightMigrationStage_InitWithVersionChecksums(NSLightweightMigrationStage self, NSArray versionChecksums)    { return ((NSLightweightMigrationStage (*)(NSLightweightMigrationStage, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithVersionChecksums:"), versionChecksums); }
 static inline NSArray                        NSLightweightMigrationStage_VersionChecksums(NSLightweightMigrationStage self)                                      { return ((NSArray (*)(NSLightweightMigrationStage, SEL))bean_msgSend)(self, bean_sel("versionChecksums")); }
+#ifndef BEAN_ALLOC_NSLightweightMigrationStage
+#define BEAN_ALLOC_NSLightweightMigrationStage
+static inline NSLightweightMigrationStage    NSLightweightMigrationStage_Alloc(void)                                                                             { return (NSLightweightMigrationStage)bean_alloc(bean_cls("NSLightweightMigrationStage")); }
+#endif
+#ifndef BEAN_NEW_NSLightweightMigrationStage
+#define BEAN_NEW_NSLightweightMigrationStage
+static inline NSLightweightMigrationStage    NSLightweightMigrationStage_New(void)                                                                               { return (NSLightweightMigrationStage)bean_new(bean_cls("NSLightweightMigrationStage")); }
+#endif
 
 /* ===== NSManagedObject ===== */
 static inline NSEntityDescription       NSManagedObject_Entity(void)                                                                                                                                           { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSManagedObject"), bean_sel("entity")); }
@@ -7040,6 +8088,14 @@ static inline BOOL                      NSManagedObject_Inserted(NSManagedObject
 static inline BOOL                      NSManagedObject_Updated(NSManagedObject self)                                                                                                                          { return ((BOOL (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("updated")); }
 static inline BOOL                      NSManagedObject_Deleted(NSManagedObject self)                                                                                                                          { return ((BOOL (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("deleted")); }
 static inline BOOL                      NSManagedObject_Fault(NSManagedObject self)                                                                                                                            { return ((BOOL (*)(NSManagedObject, SEL))bean_msgSend)(self, bean_sel("fault")); }
+#ifndef BEAN_ALLOC_NSManagedObject
+#define BEAN_ALLOC_NSManagedObject
+static inline NSManagedObject           NSManagedObject_Alloc(void)                                                                                                                                            { return (NSManagedObject)bean_alloc(bean_cls("NSManagedObject")); }
+#endif
+#ifndef BEAN_NEW_NSManagedObject
+#define BEAN_NEW_NSManagedObject
+static inline NSManagedObject           NSManagedObject_New(void)                                                                                                                                              { return (NSManagedObject)bean_new(bean_cls("NSManagedObject")); }
+#endif
 
 /* ===== NSManagedObjectID ===== */
 static inline NSURL                  NSManagedObjectID_URIRepresentation(NSManagedObjectID self)             { return ((NSURL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("URIRepresentation")); }
@@ -7048,6 +8104,14 @@ static inline NSPersistentStore      NSManagedObjectID_PersistentStore(NSManaged
 static inline BOOL                   NSManagedObjectID_IsTemporaryID(NSManagedObjectID self)                 { return ((BOOL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("isTemporaryID")); }
 static inline id                     NSManagedObjectID_CopyWithZone(NSManagedObjectID self, NSZone* zone)    { return ((id (*)(NSManagedObjectID, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                   NSManagedObjectID_TemporaryID(NSManagedObjectID self)                   { return ((BOOL (*)(NSManagedObjectID, SEL))bean_msgSend)(self, bean_sel("temporaryID")); }
+#ifndef BEAN_ALLOC_NSManagedObjectID
+#define BEAN_ALLOC_NSManagedObjectID
+static inline NSManagedObjectID      NSManagedObjectID_Alloc(void)                                           { return (NSManagedObjectID)bean_alloc(bean_cls("NSManagedObjectID")); }
+#endif
+#ifndef BEAN_NEW_NSManagedObjectID
+#define BEAN_NEW_NSManagedObjectID
+static inline NSManagedObjectID      NSManagedObjectID_New(void)                                             { return (NSManagedObjectID)bean_new(bean_cls("NSManagedObjectID")); }
+#endif
 
 /* ===== NSManagedObjectModel ===== */
 static inline NSManagedObjectModel    NSManagedObjectModel_MergedModelFromBundles(NSArray bundles)                                                                                            { return ((NSManagedObjectModel (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("NSManagedObjectModel"), bean_sel("mergedModelFromBundles:"), bundles); }
@@ -7078,6 +8142,14 @@ static inline void                    NSManagedObjectModel_EncodeWithCoder(NSMan
 static inline NSCoding                NSManagedObjectModel_InitWithCoder(NSManagedObjectModel self, NSCoder coder)                                                                            { return ((NSCoding (*)(NSManagedObjectModel, SEL, NSCoder))bean_msgSend)(self, bean_sel("initWithCoder:"), coder); }
 static inline id                      NSManagedObjectModel_CopyWithZone(NSManagedObjectModel self, NSZone* zone)                                                                              { return ((id (*)(NSManagedObjectModel, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline NSUInteger              NSManagedObjectModel_CountByEnumeratingWithState_Objects_Count(NSManagedObjectModel self, NSFastEnumerationState* state, id* buffer, NSUInteger len)    { return ((NSUInteger (*)(NSManagedObjectModel, SEL, NSFastEnumerationState*, id*, NSUInteger))bean_msgSend)(self, bean_sel("countByEnumeratingWithState:objects:count:"), state, buffer, len); }
+#ifndef BEAN_ALLOC_NSManagedObjectModel
+#define BEAN_ALLOC_NSManagedObjectModel
+static inline NSManagedObjectModel    NSManagedObjectModel_Alloc(void)                                                                                                                        { return (NSManagedObjectModel)bean_alloc(bean_cls("NSManagedObjectModel")); }
+#endif
+#ifndef BEAN_NEW_NSManagedObjectModel
+#define BEAN_NEW_NSManagedObjectModel
+static inline NSManagedObjectModel    NSManagedObjectModel_New(void)                                                                                                                          { return (NSManagedObjectModel)bean_new(bean_cls("NSManagedObjectModel")); }
+#endif
 
 /* ===== NSManagedObjectModelReference ===== */
 static inline NSManagedObjectModelReference    NSManagedObjectModelReference_Init(NSManagedObjectModelReference self)                                                                                                                         { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -7087,6 +8159,14 @@ static inline NSManagedObjectModelReference    NSManagedObjectModelReference_Ini
 static inline NSManagedObjectModelReference    NSManagedObjectModelReference_InitWithName_InBundle_VersionChecksum(NSManagedObjectModelReference self, NSString modelName, NSBundle bundle, NSString versionChecksum)                         { return ((NSManagedObjectModelReference (*)(NSManagedObjectModelReference, SEL, NSString, NSBundle, NSString))bean_msgSend)(self, bean_sel("initWithName:inBundle:versionChecksum:"), modelName, bundle, versionChecksum); }
 static inline NSManagedObjectModel             NSManagedObjectModelReference_ResolvedModel(NSManagedObjectModelReference self)                                                                                                                { return ((NSManagedObjectModel (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("resolvedModel")); }
 static inline NSString                         NSManagedObjectModelReference_VersionChecksum(NSManagedObjectModelReference self)                                                                                                              { return ((NSString (*)(NSManagedObjectModelReference, SEL))bean_msgSend)(self, bean_sel("versionChecksum")); }
+#ifndef BEAN_ALLOC_NSManagedObjectModelReference
+#define BEAN_ALLOC_NSManagedObjectModelReference
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_Alloc(void)                                                                                                                                                      { return (NSManagedObjectModelReference)bean_alloc(bean_cls("NSManagedObjectModelReference")); }
+#endif
+#ifndef BEAN_NEW_NSManagedObjectModelReference
+#define BEAN_NEW_NSManagedObjectModelReference
+static inline NSManagedObjectModelReference    NSManagedObjectModelReference_New(void)                                                                                                                                                        { return (NSManagedObjectModelReference)bean_new(bean_cls("NSManagedObjectModelReference")); }
+#endif
 
 /* ===== NSMappingModel ===== */
 #ifndef BEAN_TYPEDEF_NSMappingModel
@@ -7099,6 +8179,14 @@ static inline NSMappingModel    NSMappingModel_InitWithContentsOfURL(NSMappingMo
 static inline NSArray           NSMappingModel_EntityMappings(NSMappingModel self)                                                                                                                   { return ((NSArray (*)(NSMappingModel, SEL))bean_msgSend)(self, bean_sel("entityMappings")); }
 static inline void              NSMappingModel_SetEntityMappings(NSMappingModel self, NSArray entityMappings)                                                                                        { ((void (*)(NSMappingModel, SEL, NSArray))bean_msgSend)(self, bean_sel("setEntityMappings:"), entityMappings); }
 static inline NSDictionary      NSMappingModel_EntityMappingsByName(NSMappingModel self)                                                                                                             { return ((NSDictionary (*)(NSMappingModel, SEL))bean_msgSend)(self, bean_sel("entityMappingsByName")); }
+#ifndef BEAN_ALLOC_NSMappingModel
+#define BEAN_ALLOC_NSMappingModel
+static inline NSMappingModel    NSMappingModel_Alloc(void)                                                                                                                                           { return (NSMappingModel)bean_alloc(bean_cls("NSMappingModel")); }
+#endif
+#ifndef BEAN_NEW_NSMappingModel
+#define BEAN_NEW_NSMappingModel
+static inline NSMappingModel    NSMappingModel_New(void)                                                                                                                                             { return (NSMappingModel)bean_new(bean_cls("NSMappingModel")); }
+#endif
 
 /* ===== NSMergeConflict ===== */
 #ifndef BEAN_TYPEDEF_NSMergeConflict
@@ -7113,6 +8201,14 @@ static inline NSDictionary       NSMergeConflict_CachedSnapshot(NSMergeConflict 
 static inline NSDictionary       NSMergeConflict_PersistedSnapshot(NSMergeConflict self)                                                                                                                                                                         { return ((NSDictionary (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("persistedSnapshot")); }
 static inline NSUInteger         NSMergeConflict_NewVersionNumber(NSMergeConflict self)                                                                                                                                                                          { return ((NSUInteger (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("newVersionNumber")); }
 static inline NSUInteger         NSMergeConflict_OldVersionNumber(NSMergeConflict self)                                                                                                                                                                          { return ((NSUInteger (*)(NSMergeConflict, SEL))bean_msgSend)(self, bean_sel("oldVersionNumber")); }
+#ifndef BEAN_ALLOC_NSMergeConflict
+#define BEAN_ALLOC_NSMergeConflict
+static inline NSMergeConflict    NSMergeConflict_Alloc(void)                                                                                                                                                                                                     { return (NSMergeConflict)bean_alloc(bean_cls("NSMergeConflict")); }
+#endif
+#ifndef BEAN_NEW_NSMergeConflict
+#define BEAN_NEW_NSMergeConflict
+static inline NSMergeConflict    NSMergeConflict_New(void)                                                                                                                                                                                                       { return (NSMergeConflict)bean_new(bean_cls("NSMergeConflict")); }
+#endif
 
 /* ===== NSMergePolicy ===== */
 #ifndef BEAN_TYPEDEF_NSMergePolicy
@@ -7130,6 +8226,14 @@ static inline NSMergePolicy        NSMergePolicy_OverwriteMergePolicy(void)     
 static inline NSMergePolicy        NSMergePolicy_MergeByPropertyObjectTrumpMergePolicy(void)                                                         { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("mergeByPropertyObjectTrumpMergePolicy")); }
 static inline NSMergePolicy        NSMergePolicy_MergeByPropertyStoreTrumpMergePolicy(void)                                                          { return ((NSMergePolicy (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSMergePolicy"), bean_sel("mergeByPropertyStoreTrumpMergePolicy")); }
 static inline NSMergePolicyType    NSMergePolicy_MergeType(NSMergePolicy self)                                                                       { return ((NSMergePolicyType (*)(NSMergePolicy, SEL))bean_msgSend)(self, bean_sel("mergeType")); }
+#ifndef BEAN_ALLOC_NSMergePolicy
+#define BEAN_ALLOC_NSMergePolicy
+static inline NSMergePolicy        NSMergePolicy_Alloc(void)                                                                                         { return (NSMergePolicy)bean_alloc(bean_cls("NSMergePolicy")); }
+#endif
+#ifndef BEAN_NEW_NSMergePolicy
+#define BEAN_NEW_NSMergePolicy
+static inline NSMergePolicy        NSMergePolicy_New(void)                                                                                           { return (NSMergePolicy)bean_new(bean_cls("NSMergePolicy")); }
+#endif
 
 /* ===== NSMigrationManager ===== */
 static inline NSMigrationManager        NSMigrationManager_InitWithSourceModel_DestinationModel(NSMigrationManager self, NSManagedObjectModel sourceModel, NSManagedObjectModel destinationModel)                                                                                                                                                                { return ((NSMigrationManager (*)(NSMigrationManager, SEL, NSManagedObjectModel, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithSourceModel:destinationModel:"), sourceModel, destinationModel); }
@@ -7152,6 +8256,14 @@ static inline NSEntityMapping           NSMigrationManager_CurrentEntityMapping(
 static inline CGFloat                   NSMigrationManager_MigrationProgress(NSMigrationManager self)                                                                                                                                                                                                                                                            { return ((CGFloat (*)(NSMigrationManager, SEL))bean_msgSend_fpret)(self, bean_sel("migrationProgress")); }
 static inline NSDictionary              NSMigrationManager_UserInfo(NSMigrationManager self)                                                                                                                                                                                                                                                                     { return ((NSDictionary (*)(NSMigrationManager, SEL))bean_msgSend)(self, bean_sel("userInfo")); }
 static inline void                      NSMigrationManager_SetUserInfo(NSMigrationManager self, NSDictionary userInfo)                                                                                                                                                                                                                                           { ((void (*)(NSMigrationManager, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setUserInfo:"), userInfo); }
+#ifndef BEAN_ALLOC_NSMigrationManager
+#define BEAN_ALLOC_NSMigrationManager
+static inline NSMigrationManager        NSMigrationManager_Alloc(void)                                                                                                                                                                                                                                                                                           { return (NSMigrationManager)bean_alloc(bean_cls("NSMigrationManager")); }
+#endif
+#ifndef BEAN_NEW_NSMigrationManager
+#define BEAN_NEW_NSMigrationManager
+static inline NSMigrationManager        NSMigrationManager_New(void)                                                                                                                                                                                                                                                                                             { return (NSMigrationManager)bean_new(bean_cls("NSMigrationManager")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainer ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainer
@@ -7166,6 +8278,14 @@ static inline NSDictionary                     NSPersistentCloudKitContainer_Rec
 static inline BOOL                             NSPersistentCloudKitContainer_CanUpdateRecordForManagedObjectWithID(NSPersistentCloudKitContainer self, NSManagedObjectID objectID)                                                              { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("canUpdateRecordForManagedObjectWithID:"), objectID); }
 static inline BOOL                             NSPersistentCloudKitContainer_CanDeleteRecordForManagedObjectWithID(NSPersistentCloudKitContainer self, NSManagedObjectID objectID)                                                              { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSManagedObjectID))bean_msgSend)(self, bean_sel("canDeleteRecordForManagedObjectWithID:"), objectID); }
 static inline BOOL                             NSPersistentCloudKitContainer_CanModifyManagedObjectsInStore(NSPersistentCloudKitContainer self, NSPersistentStore store)                                                                        { return ((BOOL (*)(NSPersistentCloudKitContainer, SEL, NSPersistentStore))bean_msgSend)(self, bean_sel("canModifyManagedObjectsInStore:"), store); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainer
+#define BEAN_ALLOC_NSPersistentCloudKitContainer
+static inline NSPersistentCloudKitContainer    NSPersistentCloudKitContainer_Alloc(void)                                                                                                                                                        { return (NSPersistentCloudKitContainer)bean_alloc(bean_cls("NSPersistentCloudKitContainer")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentCloudKitContainer
+#define BEAN_NEW_NSPersistentCloudKitContainer
+static inline NSPersistentCloudKitContainer    NSPersistentCloudKitContainer_New(void)                                                                                                                                                          { return (NSPersistentCloudKitContainer)bean_new(bean_cls("NSPersistentCloudKitContainer")); }
+#endif
 
 /* ===== NSPersistentCloudKitContainerEventRequest ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentCloudKitContainerEventRequest
@@ -7178,6 +8298,14 @@ static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudK
 static inline NSFetchRequest                                  NSPersistentCloudKitContainerEventRequest_FetchRequestForEvents(void)                                                                                               { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentCloudKitContainerEventRequest"), bean_sel("fetchRequestForEvents")); }
 static inline NSPersistentCloudKitContainerEventResultType    NSPersistentCloudKitContainerEventRequest_ResultType(NSPersistentCloudKitContainerEventRequest self)                                                                { return ((NSPersistentCloudKitContainerEventResultType (*)(NSPersistentCloudKitContainerEventRequest, SEL))bean_msgSend)(self, bean_sel("resultType")); }
 static inline void                                            NSPersistentCloudKitContainerEventRequest_SetResultType(NSPersistentCloudKitContainerEventRequest self, NSPersistentCloudKitContainerEventResultType resultType)    { ((void (*)(NSPersistentCloudKitContainerEventRequest, SEL, NSPersistentCloudKitContainerEventResultType))bean_msgSend)(self, bean_sel("setResultType:"), resultType); }
+#ifndef BEAN_ALLOC_NSPersistentCloudKitContainerEventRequest
+#define BEAN_ALLOC_NSPersistentCloudKitContainerEventRequest
+static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudKitContainerEventRequest_Alloc(void)                                                                                                               { return (NSPersistentCloudKitContainerEventRequest)bean_alloc(bean_cls("NSPersistentCloudKitContainerEventRequest")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentCloudKitContainerEventRequest
+#define BEAN_NEW_NSPersistentCloudKitContainerEventRequest
+static inline NSPersistentCloudKitContainerEventRequest       NSPersistentCloudKitContainerEventRequest_New(void)                                                                                                                 { return (NSPersistentCloudKitContainerEventRequest)bean_new(bean_cls("NSPersistentCloudKitContainerEventRequest")); }
+#endif
 
 /* ===== NSPersistentContainer ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentContainer
@@ -7198,6 +8326,14 @@ static inline NSManagedObjectModel            NSPersistentContainer_ManagedObjec
 static inline NSPersistentStoreCoordinator    NSPersistentContainer_PersistentStoreCoordinator(NSPersistentContainer self)                                                    { return ((NSPersistentStoreCoordinator (*)(NSPersistentContainer, SEL))bean_msgSend)(self, bean_sel("persistentStoreCoordinator")); }
 static inline NSArray                         NSPersistentContainer_PersistentStoreDescriptions(NSPersistentContainer self)                                                   { return ((NSArray (*)(NSPersistentContainer, SEL))bean_msgSend)(self, bean_sel("persistentStoreDescriptions")); }
 static inline void                            NSPersistentContainer_SetPersistentStoreDescriptions(NSPersistentContainer self, NSArray persistentStoreDescriptions)           { ((void (*)(NSPersistentContainer, SEL, NSArray))bean_msgSend)(self, bean_sel("setPersistentStoreDescriptions:"), persistentStoreDescriptions); }
+#ifndef BEAN_ALLOC_NSPersistentContainer
+#define BEAN_ALLOC_NSPersistentContainer
+static inline NSPersistentContainer           NSPersistentContainer_Alloc(void)                                                                                               { return (NSPersistentContainer)bean_alloc(bean_cls("NSPersistentContainer")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentContainer
+#define BEAN_NEW_NSPersistentContainer
+static inline NSPersistentContainer           NSPersistentContainer_New(void)                                                                                                 { return (NSPersistentContainer)bean_new(bean_cls("NSPersistentContainer")); }
+#endif
 
 /* ===== NSPersistentHistoryChange ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryChange
@@ -7214,6 +8350,14 @@ static inline NSDictionary                      NSPersistentHistoryChange_Tombst
 static inline NSPersistentHistoryTransaction    NSPersistentHistoryChange_Transaction(NSPersistentHistoryChange self)                     { return ((NSPersistentHistoryTransaction (*)(NSPersistentHistoryChange, SEL))bean_msgSend)(self, bean_sel("transaction")); }
 static inline NSSet                             NSPersistentHistoryChange_UpdatedProperties(NSPersistentHistoryChange self)               { return ((NSSet (*)(NSPersistentHistoryChange, SEL))bean_msgSend)(self, bean_sel("updatedProperties")); }
 static inline id                                NSPersistentHistoryChange_CopyWithZone(NSPersistentHistoryChange self, NSZone* zone)      { return ((id (*)(NSPersistentHistoryChange, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryChange
+#define BEAN_ALLOC_NSPersistentHistoryChange
+static inline NSPersistentHistoryChange         NSPersistentHistoryChange_Alloc(void)                                                     { return (NSPersistentHistoryChange)bean_alloc(bean_cls("NSPersistentHistoryChange")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryChange
+#define BEAN_NEW_NSPersistentHistoryChange
+static inline NSPersistentHistoryChange         NSPersistentHistoryChange_New(void)                                                       { return (NSPersistentHistoryChange)bean_new(bean_cls("NSPersistentHistoryChange")); }
+#endif
 
 /* ===== NSPersistentHistoryChangeRequest ===== */
 #ifndef BEAN_TYPEDEF_NSPersistentHistoryChangeRequest
@@ -7232,22 +8376,38 @@ static inline void                                NSPersistentHistoryChangeReque
 static inline NSPersistentHistoryToken            NSPersistentHistoryChangeRequest_Token(NSPersistentHistoryChangeRequest self)                                                      { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("token")); }
 static inline NSFetchRequest                      NSPersistentHistoryChangeRequest_FetchRequest(NSPersistentHistoryChangeRequest self)                                               { return ((NSFetchRequest (*)(NSPersistentHistoryChangeRequest, SEL))bean_msgSend)(self, bean_sel("fetchRequest")); }
 static inline void                                NSPersistentHistoryChangeRequest_SetFetchRequest(NSPersistentHistoryChangeRequest self, NSFetchRequest fetchRequest)               { ((void (*)(NSPersistentHistoryChangeRequest, SEL, NSFetchRequest))bean_msgSend)(self, bean_sel("setFetchRequest:"), fetchRequest); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryChangeRequest
+#define BEAN_ALLOC_NSPersistentHistoryChangeRequest
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_Alloc(void)                                                                                       { return (NSPersistentHistoryChangeRequest)bean_alloc(bean_cls("NSPersistentHistoryChangeRequest")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryChangeRequest
+#define BEAN_NEW_NSPersistentHistoryChangeRequest
+static inline NSPersistentHistoryChangeRequest    NSPersistentHistoryChangeRequest_New(void)                                                                                         { return (NSPersistentHistoryChangeRequest)bean_new(bean_cls("NSPersistentHistoryChangeRequest")); }
+#endif
 
 /* ===== NSPersistentHistoryTransaction ===== */
-static inline NSEntityDescription         NSPersistentHistoryTransaction_EntityDescriptionWithContext(NSManagedObjectContext context)       { return ((NSEntityDescription (*)(bean_class, SEL, NSManagedObjectContext))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescriptionWithContext:"), context); }
-static inline NSNotification              NSPersistentHistoryTransaction_ObjectIDNotification(NSPersistentHistoryTransaction self)          { return ((NSNotification (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("objectIDNotification")); }
-static inline NSEntityDescription         NSPersistentHistoryTransaction_EntityDescription(void)                                            { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescription")); }
-static inline NSFetchRequest              NSPersistentHistoryTransaction_FetchRequest(void)                                                 { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("fetchRequest")); }
-static inline NSDate                      NSPersistentHistoryTransaction_Timestamp(NSPersistentHistoryTransaction self)                     { return ((NSDate (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
-static inline NSArray                     NSPersistentHistoryTransaction_Changes(NSPersistentHistoryTransaction self)                       { return ((NSArray (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("changes")); }
-static inline long long                   NSPersistentHistoryTransaction_TransactionNumber(NSPersistentHistoryTransaction self)             { return ((long long (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("transactionNumber")); }
-static inline NSString                    NSPersistentHistoryTransaction_StoreID(NSPersistentHistoryTransaction self)                       { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("storeID")); }
-static inline NSString                    NSPersistentHistoryTransaction_BundleID(NSPersistentHistoryTransaction self)                      { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("bundleID")); }
-static inline NSString                    NSPersistentHistoryTransaction_ProcessID(NSPersistentHistoryTransaction self)                     { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("processID")); }
-static inline NSString                    NSPersistentHistoryTransaction_ContextName(NSPersistentHistoryTransaction self)                   { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("contextName")); }
-static inline NSString                    NSPersistentHistoryTransaction_Author(NSPersistentHistoryTransaction self)                        { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("author")); }
-static inline NSPersistentHistoryToken    NSPersistentHistoryTransaction_Token(NSPersistentHistoryTransaction self)                         { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("token")); }
-static inline id                          NSPersistentHistoryTransaction_CopyWithZone(NSPersistentHistoryTransaction self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryTransaction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+static inline NSEntityDescription               NSPersistentHistoryTransaction_EntityDescriptionWithContext(NSManagedObjectContext context)       { return ((NSEntityDescription (*)(bean_class, SEL, NSManagedObjectContext))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescriptionWithContext:"), context); }
+static inline NSNotification                    NSPersistentHistoryTransaction_ObjectIDNotification(NSPersistentHistoryTransaction self)          { return ((NSNotification (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("objectIDNotification")); }
+static inline NSEntityDescription               NSPersistentHistoryTransaction_EntityDescription(void)                                            { return ((NSEntityDescription (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("entityDescription")); }
+static inline NSFetchRequest                    NSPersistentHistoryTransaction_FetchRequest(void)                                                 { return ((NSFetchRequest (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentHistoryTransaction"), bean_sel("fetchRequest")); }
+static inline NSDate                            NSPersistentHistoryTransaction_Timestamp(NSPersistentHistoryTransaction self)                     { return ((NSDate (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("timestamp")); }
+static inline NSArray                           NSPersistentHistoryTransaction_Changes(NSPersistentHistoryTransaction self)                       { return ((NSArray (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("changes")); }
+static inline long long                         NSPersistentHistoryTransaction_TransactionNumber(NSPersistentHistoryTransaction self)             { return ((long long (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("transactionNumber")); }
+static inline NSString                          NSPersistentHistoryTransaction_StoreID(NSPersistentHistoryTransaction self)                       { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("storeID")); }
+static inline NSString                          NSPersistentHistoryTransaction_BundleID(NSPersistentHistoryTransaction self)                      { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("bundleID")); }
+static inline NSString                          NSPersistentHistoryTransaction_ProcessID(NSPersistentHistoryTransaction self)                     { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("processID")); }
+static inline NSString                          NSPersistentHistoryTransaction_ContextName(NSPersistentHistoryTransaction self)                   { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("contextName")); }
+static inline NSString                          NSPersistentHistoryTransaction_Author(NSPersistentHistoryTransaction self)                        { return ((NSString (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("author")); }
+static inline NSPersistentHistoryToken          NSPersistentHistoryTransaction_Token(NSPersistentHistoryTransaction self)                         { return ((NSPersistentHistoryToken (*)(NSPersistentHistoryTransaction, SEL))bean_msgSend)(self, bean_sel("token")); }
+static inline id                                NSPersistentHistoryTransaction_CopyWithZone(NSPersistentHistoryTransaction self, NSZone* zone)    { return ((id (*)(NSPersistentHistoryTransaction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPersistentHistoryTransaction
+#define BEAN_ALLOC_NSPersistentHistoryTransaction
+static inline NSPersistentHistoryTransaction    NSPersistentHistoryTransaction_Alloc(void)                                                        { return (NSPersistentHistoryTransaction)bean_alloc(bean_cls("NSPersistentHistoryTransaction")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentHistoryTransaction
+#define BEAN_NEW_NSPersistentHistoryTransaction
+static inline NSPersistentHistoryTransaction    NSPersistentHistoryTransaction_New(void)                                                          { return (NSPersistentHistoryTransaction)bean_new(bean_cls("NSPersistentHistoryTransaction")); }
+#endif
 
 /* ===== NSPersistentStore ===== */
 static inline NSDictionary                       NSPersistentStore_MetadataForPersistentStoreWithURL_Error(NSURL url, NSError* error)                                                                                                             { return ((NSDictionary (*)(bean_class, SEL, NSURL, NSError*))bean_msgSend)(bean_cls("NSPersistentStore"), bean_sel("metadataForPersistentStoreWithURL:error:"), url, error); }
@@ -7272,6 +8432,14 @@ static inline NSDictionary                       NSPersistentStore_Metadata(NSPe
 static inline void                               NSPersistentStore_SetMetadata(NSPersistentStore self, NSDictionary metadata)                                                                                                                     { ((void (*)(NSPersistentStore, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setMetadata:"), metadata); }
 static inline NSCoreDataCoreSpotlightDelegate    NSPersistentStore_CoreSpotlightExporter(NSPersistentStore self)                                                                                                                                  { return ((NSCoreDataCoreSpotlightDelegate (*)(NSPersistentStore, SEL))bean_msgSend)(self, bean_sel("coreSpotlightExporter")); }
 static inline BOOL                               NSPersistentStore_ReadOnly(NSPersistentStore self)                                                                                                                                               { return ((BOOL (*)(NSPersistentStore, SEL))bean_msgSend)(self, bean_sel("readOnly")); }
+#ifndef BEAN_ALLOC_NSPersistentStore
+#define BEAN_ALLOC_NSPersistentStore
+static inline NSPersistentStore                  NSPersistentStore_Alloc(void)                                                                                                                                                                    { return (NSPersistentStore)bean_alloc(bean_cls("NSPersistentStore")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStore
+#define BEAN_NEW_NSPersistentStore
+static inline NSPersistentStore                  NSPersistentStore_New(void)                                                                                                                                                                      { return (NSPersistentStore)bean_new(bean_cls("NSPersistentStore")); }
+#endif
 
 /* ===== NSPersistentStoreCoordinator ===== */
 static inline NSPersistentStoreCoordinator    NSPersistentStoreCoordinator_InitWithManagedObjectModel(NSPersistentStoreCoordinator self, NSManagedObjectModel model)                                                                                                                                                                                             { return ((NSPersistentStoreCoordinator (*)(NSPersistentStoreCoordinator, SEL, NSManagedObjectModel))bean_msgSend)(self, bean_sel("initWithManagedObjectModel:"), model); }
@@ -7311,12 +8479,28 @@ static inline NSArray                         NSPersistentStoreCoordinator_Persi
 static inline NSString                        NSPersistentStoreCoordinator_Name(NSPersistentStoreCoordinator self)                                                                                                                                                                                                                                               { return ((NSString (*)(NSPersistentStoreCoordinator, SEL))bean_msgSend)(self, bean_sel("name")); }
 static inline void                            NSPersistentStoreCoordinator_SetName(NSPersistentStoreCoordinator self, NSString name)                                                                                                                                                                                                                             { ((void (*)(NSPersistentStoreCoordinator, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 static inline NSDictionary                    NSPersistentStoreCoordinator_RegisteredStoreTypes(void)                                                                                                                                                                                                                                                            { return ((NSDictionary (*)(bean_class, SEL))bean_msgSend)(bean_cls("NSPersistentStoreCoordinator"), bean_sel("registeredStoreTypes")); }
+#ifndef BEAN_ALLOC_NSPersistentStoreCoordinator
+#define BEAN_ALLOC_NSPersistentStoreCoordinator
+static inline NSPersistentStoreCoordinator    NSPersistentStoreCoordinator_Alloc(void)                                                                                                                                                                                                                                                                           { return (NSPersistentStoreCoordinator)bean_alloc(bean_cls("NSPersistentStoreCoordinator")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStoreCoordinator
+#define BEAN_NEW_NSPersistentStoreCoordinator
+static inline NSPersistentStoreCoordinator    NSPersistentStoreCoordinator_New(void)                                                                                                                                                                                                                                                                             { return (NSPersistentStoreCoordinator)bean_new(bean_cls("NSPersistentStoreCoordinator")); }
+#endif
 
 /* ===== NSPersistentStoreRequest ===== */
 static inline NSArray                         NSPersistentStoreRequest_AffectedStores(NSPersistentStoreRequest self)                               { return ((NSArray (*)(NSPersistentStoreRequest, SEL))bean_msgSend)(self, bean_sel("affectedStores")); }
 static inline void                            NSPersistentStoreRequest_SetAffectedStores(NSPersistentStoreRequest self, NSArray affectedStores)    { ((void (*)(NSPersistentStoreRequest, SEL, NSArray))bean_msgSend)(self, bean_sel("setAffectedStores:"), affectedStores); }
 static inline NSPersistentStoreRequestType    NSPersistentStoreRequest_RequestType(NSPersistentStoreRequest self)                                  { return ((NSPersistentStoreRequestType (*)(NSPersistentStoreRequest, SEL))bean_msgSend)(self, bean_sel("requestType")); }
 static inline id                              NSPersistentStoreRequest_CopyWithZone(NSPersistentStoreRequest self, NSZone* zone)                   { return ((id (*)(NSPersistentStoreRequest, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_NSPersistentStoreRequest
+#define BEAN_ALLOC_NSPersistentStoreRequest
+static inline NSPersistentStoreRequest        NSPersistentStoreRequest_Alloc(void)                                                                 { return (NSPersistentStoreRequest)bean_alloc(bean_cls("NSPersistentStoreRequest")); }
+#endif
+#ifndef BEAN_NEW_NSPersistentStoreRequest
+#define BEAN_NEW_NSPersistentStoreRequest
+static inline NSPersistentStoreRequest        NSPersistentStoreRequest_New(void)                                                                   { return (NSPersistentStoreRequest)bean_new(bean_cls("NSPersistentStoreRequest")); }
+#endif
 
 /* ===== NSRelationshipDescription ===== */
 static inline NSEntityDescription          NSRelationshipDescription_DestinationEntity(NSRelationshipDescription self)                                                        { return ((NSEntityDescription (*)(NSRelationshipDescription, SEL))bean_msgSend)(self, bean_sel("destinationEntity")); }
@@ -7335,6 +8519,14 @@ static inline BOOL                         NSRelationshipDescription_IsOrdered(N
 static inline void                         NSRelationshipDescription_SetOrdered(NSRelationshipDescription self, BOOL ordered)                                                 { ((void (*)(NSRelationshipDescription, SEL, BOOL))bean_msgSend)(self, bean_sel("setOrdered:"), ordered); }
 static inline BOOL                         NSRelationshipDescription_ToMany(NSRelationshipDescription self)                                                                   { return ((BOOL (*)(NSRelationshipDescription, SEL))bean_msgSend)(self, bean_sel("toMany")); }
 static inline BOOL                         NSRelationshipDescription_Ordered(NSRelationshipDescription self)                                                                  { return ((BOOL (*)(NSRelationshipDescription, SEL))bean_msgSend)(self, bean_sel("ordered")); }
+#ifndef BEAN_ALLOC_NSRelationshipDescription
+#define BEAN_ALLOC_NSRelationshipDescription
+static inline NSRelationshipDescription    NSRelationshipDescription_Alloc(void)                                                                                              { return (NSRelationshipDescription)bean_alloc(bean_cls("NSRelationshipDescription")); }
+#endif
+#ifndef BEAN_NEW_NSRelationshipDescription
+#define BEAN_NEW_NSRelationshipDescription
+static inline NSRelationshipDescription    NSRelationshipDescription_New(void)                                                                                                { return (NSRelationshipDescription)bean_new(bean_cls("NSRelationshipDescription")); }
+#endif
 
 /* ===== NSStagedMigrationManager ===== */
 #ifndef BEAN_TYPEDEF_NSStagedMigrationManager
@@ -7345,10 +8537,26 @@ static inline NSStagedMigrationManager    NSStagedMigrationManager_Init(NSStaged
 static inline NSStagedMigrationManager    NSStagedMigrationManager_InitWithMigrationStages(NSStagedMigrationManager self, NSArray stages)    { return ((NSStagedMigrationManager (*)(NSStagedMigrationManager, SEL, NSArray))bean_msgSend)(self, bean_sel("initWithMigrationStages:"), stages); }
 static inline NSArray                     NSStagedMigrationManager_Stages(NSStagedMigrationManager self)                                     { return ((NSArray (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("stages")); }
 static inline NSPersistentContainer       NSStagedMigrationManager_Container(NSStagedMigrationManager self)                                  { return ((NSPersistentContainer (*)(NSStagedMigrationManager, SEL))bean_msgSend)(self, bean_sel("container")); }
+#ifndef BEAN_ALLOC_NSStagedMigrationManager
+#define BEAN_ALLOC_NSStagedMigrationManager
+static inline NSStagedMigrationManager    NSStagedMigrationManager_Alloc(void)                                                               { return (NSStagedMigrationManager)bean_alloc(bean_cls("NSStagedMigrationManager")); }
+#endif
+#ifndef BEAN_NEW_NSStagedMigrationManager
+#define BEAN_NEW_NSStagedMigrationManager
+static inline NSStagedMigrationManager    NSStagedMigrationManager_New(void)                                                                 { return (NSStagedMigrationManager)bean_new(bean_cls("NSStagedMigrationManager")); }
+#endif
 
 /* ===== SCNNode ===== */
 static inline GKEntity    SCNNode_Entity(SCNNode self)                        { return ((GKEntity (*)(SCNNode, SEL))bean_msgSend)(self, bean_sel("entity")); }
 static inline void        SCNNode_SetEntity(SCNNode self, GKEntity entity)    { ((void (*)(SCNNode, SEL, GKEntity))bean_msgSend)(self, bean_sel("setEntity:"), entity); }
+#ifndef BEAN_ALLOC_SCNNode
+#define BEAN_ALLOC_SCNNode
+static inline SCNNode     SCNNode_Alloc(void)                                 { return (SCNNode)bean_alloc(bean_cls("SCNNode")); }
+#endif
+#ifndef BEAN_NEW_SCNNode
+#define BEAN_NEW_SCNNode
+static inline SCNNode     SCNNode_New(void)                                   { return (SCNNode)bean_new(bean_cls("SCNNode")); }
+#endif
 
 /* ===== SK3DNode ===== */
 #ifndef BEAN_TYPEDEF_SK3DNode
@@ -7376,6 +8584,14 @@ static inline void        SK3DNode_SetPointOfView(SK3DNode self, SCNNode pointOf
 static inline BOOL        SK3DNode_AutoenablesDefaultLighting(SK3DNode self)                                        { return ((BOOL (*)(SK3DNode, SEL))bean_msgSend)(self, bean_sel("autoenablesDefaultLighting")); }
 static inline void        SK3DNode_SetAutoenablesDefaultLighting(SK3DNode self, BOOL autoenablesDefaultLighting)    { ((void (*)(SK3DNode, SEL, BOOL))bean_msgSend)(self, bean_sel("setAutoenablesDefaultLighting:"), autoenablesDefaultLighting); }
 static inline BOOL        SK3DNode_Playing(SK3DNode self)                                                           { return ((BOOL (*)(SK3DNode, SEL))bean_msgSend)(self, bean_sel("playing")); }
+#ifndef BEAN_ALLOC_SK3DNode
+#define BEAN_ALLOC_SK3DNode
+static inline SK3DNode    SK3DNode_Alloc(void)                                                                      { return (SK3DNode)bean_alloc(bean_cls("SK3DNode")); }
+#endif
+#ifndef BEAN_NEW_SK3DNode
+#define BEAN_NEW_SK3DNode
+static inline SK3DNode    SK3DNode_New(void)                                                                        { return (SK3DNode)bean_new(bean_cls("SK3DNode")); }
+#endif
 
 /* ===== SKAction ===== */
 #ifndef BEAN_TYPEDEF_SKAction
@@ -7487,14 +8703,30 @@ static inline SKAction              SKAction_ChangeOcclusionTo_Duration(CGFloat 
 static inline SKAction              SKAction_ChangeOcclusionBy_Duration(CGFloat v, CGFloat duration)                                                             { return ((SKAction (*)(bean_class, SEL, CGFloat, CGFloat))bean_msgSend)(bean_cls("SKAction"), bean_sel("changeOcclusionBy:duration:"), v, duration); }
 static inline id                    SKAction_CopyWithZone(SKAction self, NSZone* zone)                                                                           { return ((id (*)(SKAction, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                  SKAction_SupportsSecureCoding(void)                                                                                          { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKAction"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKAction
+#define BEAN_ALLOC_SKAction
+static inline SKAction              SKAction_Alloc(void)                                                                                                         { return (SKAction)bean_alloc(bean_cls("SKAction")); }
+#endif
+#ifndef BEAN_NEW_SKAction
+#define BEAN_NEW_SKAction
+static inline SKAction              SKAction_New(void)                                                                                                           { return (SKAction)bean_new(bean_cls("SKAction")); }
+#endif
 
 /* ===== SKCameraNode ===== */
 #ifndef BEAN_TYPEDEF_SKCameraNode
 #define BEAN_TYPEDEF_SKCameraNode
 typedef bean_id SKCameraNode;
 #endif
-static inline BOOL     SKCameraNode_ContainsNode(SKCameraNode self, SKNode node)    { return ((BOOL (*)(SKCameraNode, SEL, SKNode))bean_msgSend)(self, bean_sel("containsNode:"), node); }
-static inline NSSet    SKCameraNode_ContainedNodeSet(SKCameraNode self)             { return ((NSSet (*)(SKCameraNode, SEL))bean_msgSend)(self, bean_sel("containedNodeSet")); }
+static inline BOOL            SKCameraNode_ContainsNode(SKCameraNode self, SKNode node)    { return ((BOOL (*)(SKCameraNode, SEL, SKNode))bean_msgSend)(self, bean_sel("containsNode:"), node); }
+static inline NSSet           SKCameraNode_ContainedNodeSet(SKCameraNode self)             { return ((NSSet (*)(SKCameraNode, SEL))bean_msgSend)(self, bean_sel("containedNodeSet")); }
+#ifndef BEAN_ALLOC_SKCameraNode
+#define BEAN_ALLOC_SKCameraNode
+static inline SKCameraNode    SKCameraNode_Alloc(void)                                     { return (SKCameraNode)bean_alloc(bean_cls("SKCameraNode")); }
+#endif
+#ifndef BEAN_NEW_SKCameraNode
+#define BEAN_NEW_SKCameraNode
+static inline SKCameraNode    SKCameraNode_New(void)                                       { return (SKCameraNode)bean_new(bean_cls("SKCameraNode")); }
+#endif
 
 /* ===== SKConstraint ===== */
 #ifndef BEAN_TYPEDEF_SKConstraint
@@ -7517,14 +8749,30 @@ static inline SKNode          SKConstraint_ReferenceNode(SKConstraint self)     
 static inline void            SKConstraint_SetReferenceNode(SKConstraint self, SKNode referenceNode)                   { ((void (*)(SKConstraint, SEL, SKNode))bean_msgSend)(self, bean_sel("setReferenceNode:"), referenceNode); }
 static inline BOOL            SKConstraint_SupportsSecureCoding(void)                                                  { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKConstraint"), bean_sel("supportsSecureCoding")); }
 static inline id              SKConstraint_CopyWithZone(SKConstraint self, NSZone* zone)                               { return ((id (*)(SKConstraint, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_SKConstraint
+#define BEAN_ALLOC_SKConstraint
+static inline SKConstraint    SKConstraint_Alloc(void)                                                                 { return (SKConstraint)bean_alloc(bean_cls("SKConstraint")); }
+#endif
+#ifndef BEAN_NEW_SKConstraint
+#define BEAN_NEW_SKConstraint
+static inline SKConstraint    SKConstraint_New(void)                                                                   { return (SKConstraint)bean_new(bean_cls("SKConstraint")); }
+#endif
 
 /* ===== SKCropNode ===== */
 #ifndef BEAN_TYPEDEF_SKCropNode
 #define BEAN_TYPEDEF_SKCropNode
 typedef bean_id SKCropNode;
 #endif
-static inline SKNode    SKCropNode_MaskNode(SKCropNode self)                        { return ((SKNode (*)(SKCropNode, SEL))bean_msgSend)(self, bean_sel("maskNode")); }
-static inline void      SKCropNode_SetMaskNode(SKCropNode self, SKNode maskNode)    { ((void (*)(SKCropNode, SEL, SKNode))bean_msgSend)(self, bean_sel("setMaskNode:"), maskNode); }
+static inline SKNode        SKCropNode_MaskNode(SKCropNode self)                        { return ((SKNode (*)(SKCropNode, SEL))bean_msgSend)(self, bean_sel("maskNode")); }
+static inline void          SKCropNode_SetMaskNode(SKCropNode self, SKNode maskNode)    { ((void (*)(SKCropNode, SEL, SKNode))bean_msgSend)(self, bean_sel("setMaskNode:"), maskNode); }
+#ifndef BEAN_ALLOC_SKCropNode
+#define BEAN_ALLOC_SKCropNode
+static inline SKCropNode    SKCropNode_Alloc(void)                                      { return (SKCropNode)bean_alloc(bean_cls("SKCropNode")); }
+#endif
+#ifndef BEAN_NEW_SKCropNode
+#define BEAN_NEW_SKCropNode
+static inline SKCropNode    SKCropNode_New(void)                                        { return (SKCropNode)bean_new(bean_cls("SKCropNode")); }
+#endif
 
 /* ===== SKEffectNode ===== */
 #ifndef BEAN_TYPEDEF_SKEffectNode
@@ -7551,6 +8799,14 @@ static inline SKWarpGeometry      SKEffectNode_WarpGeometry(SKEffectNode self)  
 static inline void                SKEffectNode_SetWarpGeometry(SKEffectNode self, SKWarpGeometry warpGeometry)                        { ((void (*)(SKEffectNode, SEL, SKWarpGeometry))bean_msgSend)(self, bean_sel("setWarpGeometry:"), warpGeometry); }
 static inline NSInteger           SKEffectNode_SubdivisionLevels(SKEffectNode self)                                                   { return ((NSInteger (*)(SKEffectNode, SEL))bean_msgSend)(self, bean_sel("subdivisionLevels")); }
 static inline void                SKEffectNode_SetSubdivisionLevels(SKEffectNode self, NSInteger subdivisionLevels)                   { ((void (*)(SKEffectNode, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSubdivisionLevels:"), subdivisionLevels); }
+#ifndef BEAN_ALLOC_SKEffectNode
+#define BEAN_ALLOC_SKEffectNode
+static inline SKEffectNode        SKEffectNode_Alloc(void)                                                                            { return (SKEffectNode)bean_alloc(bean_cls("SKEffectNode")); }
+#endif
+#ifndef BEAN_NEW_SKEffectNode
+#define BEAN_NEW_SKEffectNode
+static inline SKEffectNode        SKEffectNode_New(void)                                                                              { return (SKEffectNode)bean_new(bean_cls("SKEffectNode")); }
+#endif
 
 /* ===== SKEmitterNode ===== */
 #ifndef BEAN_TYPEDEF_SKEmitterNode
@@ -7659,6 +8915,14 @@ static inline CGFloat                  SKEmitterNode_ParticleZPositionRange(SKEm
 static inline void                     SKEmitterNode_SetParticleZPositionRange(SKEmitterNode self, CGFloat particleZPositionRange)                                   { ((void (*)(SKEmitterNode, SEL, CGFloat))bean_msgSend)(self, bean_sel("setParticleZPositionRange:"), particleZPositionRange); }
 static inline CGFloat                  SKEmitterNode_ParticleZPositionSpeed(SKEmitterNode self)                                                                      { return ((CGFloat (*)(SKEmitterNode, SEL))bean_msgSend_fpret)(self, bean_sel("particleZPositionSpeed")); }
 static inline void                     SKEmitterNode_SetParticleZPositionSpeed(SKEmitterNode self, CGFloat particleZPositionSpeed)                                   { ((void (*)(SKEmitterNode, SEL, CGFloat))bean_msgSend)(self, bean_sel("setParticleZPositionSpeed:"), particleZPositionSpeed); }
+#ifndef BEAN_ALLOC_SKEmitterNode
+#define BEAN_ALLOC_SKEmitterNode
+static inline SKEmitterNode            SKEmitterNode_Alloc(void)                                                                                                     { return (SKEmitterNode)bean_alloc(bean_cls("SKEmitterNode")); }
+#endif
+#ifndef BEAN_NEW_SKEmitterNode
+#define BEAN_NEW_SKEmitterNode
+static inline SKEmitterNode            SKEmitterNode_New(void)                                                                                                       { return (SKEmitterNode)bean_new(bean_cls("SKEmitterNode")); }
+#endif
 
 /* ===== SKFieldNode ===== */
 #ifndef BEAN_TYPEDEF_SKFieldNode
@@ -7701,6 +8965,14 @@ static inline SKTexture      SKFieldNode_Texture(SKFieldNode self)              
 static inline void           SKFieldNode_SetTexture(SKFieldNode self, SKTexture texture)                                    { ((void (*)(SKFieldNode, SEL, SKTexture))bean_msgSend)(self, bean_sel("setTexture:"), texture); }
 static inline BOOL           SKFieldNode_Enabled(SKFieldNode self)                                                          { return ((BOOL (*)(SKFieldNode, SEL))bean_msgSend)(self, bean_sel("enabled")); }
 static inline BOOL           SKFieldNode_Exclusive(SKFieldNode self)                                                        { return ((BOOL (*)(SKFieldNode, SEL))bean_msgSend)(self, bean_sel("exclusive")); }
+#ifndef BEAN_ALLOC_SKFieldNode
+#define BEAN_ALLOC_SKFieldNode
+static inline SKFieldNode    SKFieldNode_Alloc(void)                                                                        { return (SKFieldNode)bean_alloc(bean_cls("SKFieldNode")); }
+#endif
+#ifndef BEAN_NEW_SKFieldNode
+#define BEAN_NEW_SKFieldNode
+static inline SKFieldNode    SKFieldNode_New(void)                                                                          { return (SKFieldNode)bean_new(bean_cls("SKFieldNode")); }
+#endif
 
 /* ===== SKKeyframeSequence ===== */
 static inline SKKeyframeSequence     SKKeyframeSequence_InitWithKeyframeValues_Times(SKKeyframeSequence self, NSArray values, NSArray times)                 { return ((SKKeyframeSequence (*)(SKKeyframeSequence, SEL, NSArray, NSArray))bean_msgSend)(self, bean_sel("initWithKeyframeValues:times:"), values, times); }
@@ -7722,6 +8994,14 @@ static inline SKRepeatMode           SKKeyframeSequence_RepeatMode(SKKeyframeSeq
 static inline void                   SKKeyframeSequence_SetRepeatMode(SKKeyframeSequence self, SKRepeatMode repeatMode)                                      { ((void (*)(SKKeyframeSequence, SEL, SKRepeatMode))bean_msgSend)(self, bean_sel("setRepeatMode:"), repeatMode); }
 static inline BOOL                   SKKeyframeSequence_SupportsSecureCoding(void)                                                                           { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKKeyframeSequence"), bean_sel("supportsSecureCoding")); }
 static inline id                     SKKeyframeSequence_CopyWithZone(SKKeyframeSequence self, NSZone* zone)                                                  { return ((id (*)(SKKeyframeSequence, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
+#ifndef BEAN_ALLOC_SKKeyframeSequence
+#define BEAN_ALLOC_SKKeyframeSequence
+static inline SKKeyframeSequence     SKKeyframeSequence_Alloc(void)                                                                                          { return (SKKeyframeSequence)bean_alloc(bean_cls("SKKeyframeSequence")); }
+#endif
+#ifndef BEAN_NEW_SKKeyframeSequence
+#define BEAN_NEW_SKKeyframeSequence
+static inline SKKeyframeSequence     SKKeyframeSequence_New(void)                                                                                            { return (SKKeyframeSequence)bean_new(bean_cls("SKKeyframeSequence")); }
+#endif
 
 /* ===== SKNode ===== */
 static inline SKNode                 SKNode_Init(SKNode self)                                                                                  { return ((SKNode (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("init")); }
@@ -7828,6 +9108,14 @@ static inline BOOL                   SKNode_Hidden(SKNode self)                 
 static inline BOOL                   SKNode_UserInteractionEnabled(SKNode self)                                                                { return ((BOOL (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("userInteractionEnabled")); }
 static inline BOOL                   SKNode_AccessibilityElement(SKNode self)                                                                  { return ((BOOL (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("accessibilityElement")); }
 static inline BOOL                   SKNode_AccessibilityEnabled(SKNode self)                                                                  { return ((BOOL (*)(SKNode, SEL))bean_msgSend)(self, bean_sel("accessibilityEnabled")); }
+#ifndef BEAN_ALLOC_SKNode
+#define BEAN_ALLOC_SKNode
+static inline SKNode                 SKNode_Alloc(void)                                                                                        { return (SKNode)bean_alloc(bean_cls("SKNode")); }
+#endif
+#ifndef BEAN_NEW_SKNode
+#define BEAN_NEW_SKNode
+static inline SKNode                 SKNode_New(void)                                                                                          { return (SKNode)bean_new(bean_cls("SKNode")); }
+#endif
 
 /* ===== SKPhysicsBody ===== */
 static inline SKPhysicsBody    SKPhysicsBody_BodyWithCircleOfRadius(CGFloat r)                                                              { return ((SKPhysicsBody (*)(bean_class, SEL, CGFloat))bean_msgSend)(bean_cls("SKPhysicsBody"), bean_sel("bodyWithCircleOfRadius:"), r); }
@@ -7894,38 +9182,70 @@ static inline id               SKPhysicsBody_CopyWithZone(SKPhysicsBody self, NS
 static inline BOOL             SKPhysicsBody_SupportsSecureCoding(void)                                                                     { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPhysicsBody"), bean_sel("supportsSecureCoding")); }
 static inline BOOL             SKPhysicsBody_Dynamic(SKPhysicsBody self)                                                                    { return ((BOOL (*)(SKPhysicsBody, SEL))bean_msgSend)(self, bean_sel("dynamic")); }
 static inline BOOL             SKPhysicsBody_Resting(SKPhysicsBody self)                                                                    { return ((BOOL (*)(SKPhysicsBody, SEL))bean_msgSend)(self, bean_sel("resting")); }
+#ifndef BEAN_ALLOC_SKPhysicsBody
+#define BEAN_ALLOC_SKPhysicsBody
+static inline SKPhysicsBody    SKPhysicsBody_Alloc(void)                                                                                    { return (SKPhysicsBody)bean_alloc(bean_cls("SKPhysicsBody")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsBody
+#define BEAN_NEW_SKPhysicsBody
+static inline SKPhysicsBody    SKPhysicsBody_New(void)                                                                                      { return (SKPhysicsBody)bean_new(bean_cls("SKPhysicsBody")); }
+#endif
 
 /* ===== SKPhysicsContact ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsContact
 #define BEAN_TYPEDEF_SKPhysicsContact
 typedef bean_id SKPhysicsContact;
 #endif
-static inline SKPhysicsBody    SKPhysicsContact_BodyA(SKPhysicsContact self)               { return ((SKPhysicsBody (*)(SKPhysicsContact, SEL))bean_msgSend)(self, bean_sel("bodyA")); }
-static inline SKPhysicsBody    SKPhysicsContact_BodyB(SKPhysicsContact self)               { return ((SKPhysicsBody (*)(SKPhysicsContact, SEL))bean_msgSend)(self, bean_sel("bodyB")); }
-static inline CGPoint          SKPhysicsContact_ContactPoint(SKPhysicsContact self)        { return ((CGPoint (*)(SKPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactPoint")); }
-static inline CGVector         SKPhysicsContact_ContactNormal(SKPhysicsContact self)       { return ((CGVector (*)(SKPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactNormal")); }
-static inline CGFloat          SKPhysicsContact_CollisionImpulse(SKPhysicsContact self)    { return ((CGFloat (*)(SKPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("collisionImpulse")); }
+static inline SKPhysicsBody       SKPhysicsContact_BodyA(SKPhysicsContact self)               { return ((SKPhysicsBody (*)(SKPhysicsContact, SEL))bean_msgSend)(self, bean_sel("bodyA")); }
+static inline SKPhysicsBody       SKPhysicsContact_BodyB(SKPhysicsContact self)               { return ((SKPhysicsBody (*)(SKPhysicsContact, SEL))bean_msgSend)(self, bean_sel("bodyB")); }
+static inline CGPoint             SKPhysicsContact_ContactPoint(SKPhysicsContact self)        { return ((CGPoint (*)(SKPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactPoint")); }
+static inline CGVector            SKPhysicsContact_ContactNormal(SKPhysicsContact self)       { return ((CGVector (*)(SKPhysicsContact, SEL))bean_msgSend_stret)(self, bean_sel("contactNormal")); }
+static inline CGFloat             SKPhysicsContact_CollisionImpulse(SKPhysicsContact self)    { return ((CGFloat (*)(SKPhysicsContact, SEL))bean_msgSend_fpret)(self, bean_sel("collisionImpulse")); }
+#ifndef BEAN_ALLOC_SKPhysicsContact
+#define BEAN_ALLOC_SKPhysicsContact
+static inline SKPhysicsContact    SKPhysicsContact_Alloc(void)                                { return (SKPhysicsContact)bean_alloc(bean_cls("SKPhysicsContact")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsContact
+#define BEAN_NEW_SKPhysicsContact
+static inline SKPhysicsContact    SKPhysicsContact_New(void)                                  { return (SKPhysicsContact)bean_new(bean_cls("SKPhysicsContact")); }
+#endif
 
 /* ===== SKPhysicsContactDelegate ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsContactDelegate
 #define BEAN_TYPEDEF_SKPhysicsContactDelegate
 typedef bean_id SKPhysicsContactDelegate;
 #endif
-static inline void    SKPhysicsContactDelegate_DidBeginContact(SKPhysicsContactDelegate self, SKPhysicsContact contact)    { ((void (*)(SKPhysicsContactDelegate, SEL, SKPhysicsContact))bean_msgSend)(self, bean_sel("didBeginContact:"), contact); }
-static inline void    SKPhysicsContactDelegate_DidEndContact(SKPhysicsContactDelegate self, SKPhysicsContact contact)      { ((void (*)(SKPhysicsContactDelegate, SEL, SKPhysicsContact))bean_msgSend)(self, bean_sel("didEndContact:"), contact); }
+static inline void                        SKPhysicsContactDelegate_DidBeginContact(SKPhysicsContactDelegate self, SKPhysicsContact contact)    { ((void (*)(SKPhysicsContactDelegate, SEL, SKPhysicsContact))bean_msgSend)(self, bean_sel("didBeginContact:"), contact); }
+static inline void                        SKPhysicsContactDelegate_DidEndContact(SKPhysicsContactDelegate self, SKPhysicsContact contact)      { ((void (*)(SKPhysicsContactDelegate, SEL, SKPhysicsContact))bean_msgSend)(self, bean_sel("didEndContact:"), contact); }
+#ifndef BEAN_ALLOC_SKPhysicsContactDelegate
+#define BEAN_ALLOC_SKPhysicsContactDelegate
+static inline SKPhysicsContactDelegate    SKPhysicsContactDelegate_Alloc(void)                                                                 { return (SKPhysicsContactDelegate)bean_alloc(bean_cls("SKPhysicsContactDelegate")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsContactDelegate
+#define BEAN_NEW_SKPhysicsContactDelegate
+static inline SKPhysicsContactDelegate    SKPhysicsContactDelegate_New(void)                                                                   { return (SKPhysicsContactDelegate)bean_new(bean_cls("SKPhysicsContactDelegate")); }
+#endif
 
 /* ===== SKPhysicsJoint ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsJoint
 #define BEAN_TYPEDEF_SKPhysicsJoint
 typedef bean_id SKPhysicsJoint;
 #endif
-static inline SKPhysicsBody    SKPhysicsJoint_BodyA(SKPhysicsJoint self)                            { return ((SKPhysicsBody (*)(SKPhysicsJoint, SEL))bean_msgSend)(self, bean_sel("bodyA")); }
-static inline void             SKPhysicsJoint_SetBodyA(SKPhysicsJoint self, SKPhysicsBody bodyA)    { ((void (*)(SKPhysicsJoint, SEL, SKPhysicsBody))bean_msgSend)(self, bean_sel("setBodyA:"), bodyA); }
-static inline SKPhysicsBody    SKPhysicsJoint_BodyB(SKPhysicsJoint self)                            { return ((SKPhysicsBody (*)(SKPhysicsJoint, SEL))bean_msgSend)(self, bean_sel("bodyB")); }
-static inline void             SKPhysicsJoint_SetBodyB(SKPhysicsJoint self, SKPhysicsBody bodyB)    { ((void (*)(SKPhysicsJoint, SEL, SKPhysicsBody))bean_msgSend)(self, bean_sel("setBodyB:"), bodyB); }
-static inline CGVector         SKPhysicsJoint_ReactionForce(SKPhysicsJoint self)                    { return ((CGVector (*)(SKPhysicsJoint, SEL))bean_msgSend_stret)(self, bean_sel("reactionForce")); }
-static inline CGFloat          SKPhysicsJoint_ReactionTorque(SKPhysicsJoint self)                   { return ((CGFloat (*)(SKPhysicsJoint, SEL))bean_msgSend_fpret)(self, bean_sel("reactionTorque")); }
-static inline BOOL             SKPhysicsJoint_SupportsSecureCoding(void)                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPhysicsJoint"), bean_sel("supportsSecureCoding")); }
+static inline SKPhysicsBody     SKPhysicsJoint_BodyA(SKPhysicsJoint self)                            { return ((SKPhysicsBody (*)(SKPhysicsJoint, SEL))bean_msgSend)(self, bean_sel("bodyA")); }
+static inline void              SKPhysicsJoint_SetBodyA(SKPhysicsJoint self, SKPhysicsBody bodyA)    { ((void (*)(SKPhysicsJoint, SEL, SKPhysicsBody))bean_msgSend)(self, bean_sel("setBodyA:"), bodyA); }
+static inline SKPhysicsBody     SKPhysicsJoint_BodyB(SKPhysicsJoint self)                            { return ((SKPhysicsBody (*)(SKPhysicsJoint, SEL))bean_msgSend)(self, bean_sel("bodyB")); }
+static inline void              SKPhysicsJoint_SetBodyB(SKPhysicsJoint self, SKPhysicsBody bodyB)    { ((void (*)(SKPhysicsJoint, SEL, SKPhysicsBody))bean_msgSend)(self, bean_sel("setBodyB:"), bodyB); }
+static inline CGVector          SKPhysicsJoint_ReactionForce(SKPhysicsJoint self)                    { return ((CGVector (*)(SKPhysicsJoint, SEL))bean_msgSend_stret)(self, bean_sel("reactionForce")); }
+static inline CGFloat           SKPhysicsJoint_ReactionTorque(SKPhysicsJoint self)                   { return ((CGFloat (*)(SKPhysicsJoint, SEL))bean_msgSend_fpret)(self, bean_sel("reactionTorque")); }
+static inline BOOL              SKPhysicsJoint_SupportsSecureCoding(void)                            { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPhysicsJoint"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKPhysicsJoint
+#define BEAN_ALLOC_SKPhysicsJoint
+static inline SKPhysicsJoint    SKPhysicsJoint_Alloc(void)                                           { return (SKPhysicsJoint)bean_alloc(bean_cls("SKPhysicsJoint")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsJoint
+#define BEAN_NEW_SKPhysicsJoint
+static inline SKPhysicsJoint    SKPhysicsJoint_New(void)                                             { return (SKPhysicsJoint)bean_new(bean_cls("SKPhysicsJoint")); }
+#endif
 
 /* ===== SKPhysicsJointFixed ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsJointFixed
@@ -7933,6 +9253,14 @@ static inline BOOL             SKPhysicsJoint_SupportsSecureCoding(void)        
 typedef bean_id SKPhysicsJointFixed;
 #endif
 static inline SKPhysicsJointFixed    SKPhysicsJointFixed_JointWithBodyA_BodyB_Anchor(SKPhysicsBody bodyA, SKPhysicsBody bodyB, CGPoint anchor)    { return ((SKPhysicsJointFixed (*)(bean_class, SEL, SKPhysicsBody, SKPhysicsBody, CGPoint))bean_msgSend)(bean_cls("SKPhysicsJointFixed"), bean_sel("jointWithBodyA:bodyB:anchor:"), bodyA, bodyB, anchor); }
+#ifndef BEAN_ALLOC_SKPhysicsJointFixed
+#define BEAN_ALLOC_SKPhysicsJointFixed
+static inline SKPhysicsJointFixed    SKPhysicsJointFixed_Alloc(void)                                                                              { return (SKPhysicsJointFixed)bean_alloc(bean_cls("SKPhysicsJointFixed")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsJointFixed
+#define BEAN_NEW_SKPhysicsJointFixed
+static inline SKPhysicsJointFixed    SKPhysicsJointFixed_New(void)                                                                                { return (SKPhysicsJointFixed)bean_new(bean_cls("SKPhysicsJointFixed")); }
+#endif
 
 /* ===== SKPhysicsJointLimit ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsJointLimit
@@ -7942,6 +9270,14 @@ typedef bean_id SKPhysicsJointLimit;
 static inline SKPhysicsJointLimit    SKPhysicsJointLimit_JointWithBodyA_BodyB_AnchorA_AnchorB(SKPhysicsBody bodyA, SKPhysicsBody bodyB, CGPoint anchorA, CGPoint anchorB)    { return ((SKPhysicsJointLimit (*)(bean_class, SEL, SKPhysicsBody, SKPhysicsBody, CGPoint, CGPoint))bean_msgSend)(bean_cls("SKPhysicsJointLimit"), bean_sel("jointWithBodyA:bodyB:anchorA:anchorB:"), bodyA, bodyB, anchorA, anchorB); }
 static inline CGFloat                SKPhysicsJointLimit_MaxLength(SKPhysicsJointLimit self)                                                                                 { return ((CGFloat (*)(SKPhysicsJointLimit, SEL))bean_msgSend_fpret)(self, bean_sel("maxLength")); }
 static inline void                   SKPhysicsJointLimit_SetMaxLength(SKPhysicsJointLimit self, CGFloat maxLength)                                                           { ((void (*)(SKPhysicsJointLimit, SEL, CGFloat))bean_msgSend)(self, bean_sel("setMaxLength:"), maxLength); }
+#ifndef BEAN_ALLOC_SKPhysicsJointLimit
+#define BEAN_ALLOC_SKPhysicsJointLimit
+static inline SKPhysicsJointLimit    SKPhysicsJointLimit_Alloc(void)                                                                                                         { return (SKPhysicsJointLimit)bean_alloc(bean_cls("SKPhysicsJointLimit")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsJointLimit
+#define BEAN_NEW_SKPhysicsJointLimit
+static inline SKPhysicsJointLimit    SKPhysicsJointLimit_New(void)                                                                                                           { return (SKPhysicsJointLimit)bean_new(bean_cls("SKPhysicsJointLimit")); }
+#endif
 
 /* ===== SKPhysicsJointPin ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsJointPin
@@ -7959,6 +9295,14 @@ static inline CGFloat              SKPhysicsJointPin_FrictionTorque(SKPhysicsJoi
 static inline void                 SKPhysicsJointPin_SetFrictionTorque(SKPhysicsJointPin self, CGFloat frictionTorque)                        { ((void (*)(SKPhysicsJointPin, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrictionTorque:"), frictionTorque); }
 static inline CGFloat              SKPhysicsJointPin_RotationSpeed(SKPhysicsJointPin self)                                                    { return ((CGFloat (*)(SKPhysicsJointPin, SEL))bean_msgSend_fpret)(self, bean_sel("rotationSpeed")); }
 static inline void                 SKPhysicsJointPin_SetRotationSpeed(SKPhysicsJointPin self, CGFloat rotationSpeed)                          { ((void (*)(SKPhysicsJointPin, SEL, CGFloat))bean_msgSend)(self, bean_sel("setRotationSpeed:"), rotationSpeed); }
+#ifndef BEAN_ALLOC_SKPhysicsJointPin
+#define BEAN_ALLOC_SKPhysicsJointPin
+static inline SKPhysicsJointPin    SKPhysicsJointPin_Alloc(void)                                                                              { return (SKPhysicsJointPin)bean_alloc(bean_cls("SKPhysicsJointPin")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsJointPin
+#define BEAN_NEW_SKPhysicsJointPin
+static inline SKPhysicsJointPin    SKPhysicsJointPin_New(void)                                                                                { return (SKPhysicsJointPin)bean_new(bean_cls("SKPhysicsJointPin")); }
+#endif
 
 /* ===== SKPhysicsJointSliding ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsJointSliding
@@ -7972,6 +9316,14 @@ static inline CGFloat                  SKPhysicsJointSliding_LowerDistanceLimit(
 static inline void                     SKPhysicsJointSliding_SetLowerDistanceLimit(SKPhysicsJointSliding self, CGFloat lowerDistanceLimit)                                { ((void (*)(SKPhysicsJointSliding, SEL, CGFloat))bean_msgSend)(self, bean_sel("setLowerDistanceLimit:"), lowerDistanceLimit); }
 static inline CGFloat                  SKPhysicsJointSliding_UpperDistanceLimit(SKPhysicsJointSliding self)                                                               { return ((CGFloat (*)(SKPhysicsJointSliding, SEL))bean_msgSend_fpret)(self, bean_sel("upperDistanceLimit")); }
 static inline void                     SKPhysicsJointSliding_SetUpperDistanceLimit(SKPhysicsJointSliding self, CGFloat upperDistanceLimit)                                { ((void (*)(SKPhysicsJointSliding, SEL, CGFloat))bean_msgSend)(self, bean_sel("setUpperDistanceLimit:"), upperDistanceLimit); }
+#ifndef BEAN_ALLOC_SKPhysicsJointSliding
+#define BEAN_ALLOC_SKPhysicsJointSliding
+static inline SKPhysicsJointSliding    SKPhysicsJointSliding_Alloc(void)                                                                                                  { return (SKPhysicsJointSliding)bean_alloc(bean_cls("SKPhysicsJointSliding")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsJointSliding
+#define BEAN_NEW_SKPhysicsJointSliding
+static inline SKPhysicsJointSliding    SKPhysicsJointSliding_New(void)                                                                                                    { return (SKPhysicsJointSliding)bean_new(bean_cls("SKPhysicsJointSliding")); }
+#endif
 
 /* ===== SKPhysicsJointSpring ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsJointSpring
@@ -7983,29 +9335,45 @@ static inline CGFloat                 SKPhysicsJointSpring_Damping(SKPhysicsJoin
 static inline void                    SKPhysicsJointSpring_SetDamping(SKPhysicsJointSpring self, CGFloat damping)                                                              { ((void (*)(SKPhysicsJointSpring, SEL, CGFloat))bean_msgSend)(self, bean_sel("setDamping:"), damping); }
 static inline CGFloat                 SKPhysicsJointSpring_Frequency(SKPhysicsJointSpring self)                                                                                { return ((CGFloat (*)(SKPhysicsJointSpring, SEL))bean_msgSend_fpret)(self, bean_sel("frequency")); }
 static inline void                    SKPhysicsJointSpring_SetFrequency(SKPhysicsJointSpring self, CGFloat frequency)                                                          { ((void (*)(SKPhysicsJointSpring, SEL, CGFloat))bean_msgSend)(self, bean_sel("setFrequency:"), frequency); }
+#ifndef BEAN_ALLOC_SKPhysicsJointSpring
+#define BEAN_ALLOC_SKPhysicsJointSpring
+static inline SKPhysicsJointSpring    SKPhysicsJointSpring_Alloc(void)                                                                                                         { return (SKPhysicsJointSpring)bean_alloc(bean_cls("SKPhysicsJointSpring")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsJointSpring
+#define BEAN_NEW_SKPhysicsJointSpring
+static inline SKPhysicsJointSpring    SKPhysicsJointSpring_New(void)                                                                                                           { return (SKPhysicsJointSpring)bean_new(bean_cls("SKPhysicsJointSpring")); }
+#endif
 
 /* ===== SKPhysicsWorld ===== */
 #ifndef BEAN_TYPEDEF_SKPhysicsWorld
 #define BEAN_TYPEDEF_SKPhysicsWorld
 typedef bean_id SKPhysicsWorld;
 #endif
-static inline void             SKPhysicsWorld_AddJoint(SKPhysicsWorld self, SKPhysicsJoint joint)                                                          { ((void (*)(SKPhysicsWorld, SEL, SKPhysicsJoint))bean_msgSend)(self, bean_sel("addJoint:"), joint); }
-static inline void             SKPhysicsWorld_RemoveJoint(SKPhysicsWorld self, SKPhysicsJoint joint)                                                       { ((void (*)(SKPhysicsWorld, SEL, SKPhysicsJoint))bean_msgSend)(self, bean_sel("removeJoint:"), joint); }
-static inline void             SKPhysicsWorld_RemoveAllJoints(SKPhysicsWorld self)                                                                         { ((void (*)(SKPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("removeAllJoints")); }
-static inline void*            SKPhysicsWorld_SampleFieldsAt(SKPhysicsWorld self, void* position)                                                          { return ((void* (*)(SKPhysicsWorld, SEL, void*))bean_msgSend)(self, bean_sel("sampleFieldsAt:"), position); }
-static inline SKPhysicsBody    SKPhysicsWorld_BodyAtPoint(SKPhysicsWorld self, CGPoint point)                                                              { return ((SKPhysicsBody (*)(SKPhysicsWorld, SEL, CGPoint))bean_msgSend)(self, bean_sel("bodyAtPoint:"), point); }
-static inline SKPhysicsBody    SKPhysicsWorld_BodyInRect(SKPhysicsWorld self, CGRect rect)                                                                 { return ((SKPhysicsBody (*)(SKPhysicsWorld, SEL, CGRect))bean_msgSend)(self, bean_sel("bodyInRect:"), rect); }
-static inline SKPhysicsBody    SKPhysicsWorld_BodyAlongRayStart_End(SKPhysicsWorld self, CGPoint start, CGPoint end)                                       { return ((SKPhysicsBody (*)(SKPhysicsWorld, SEL, CGPoint, CGPoint))bean_msgSend)(self, bean_sel("bodyAlongRayStart:end:"), start, end); }
-static inline void             SKPhysicsWorld_EnumerateBodiesAtPoint_UsingBlock(SKPhysicsWorld self, CGPoint point, void* block)                           { ((void (*)(SKPhysicsWorld, SEL, CGPoint, void*))bean_msgSend)(self, bean_sel("enumerateBodiesAtPoint:usingBlock:"), point, block); }
-static inline void             SKPhysicsWorld_EnumerateBodiesInRect_UsingBlock(SKPhysicsWorld self, CGRect rect, void* block)                              { ((void (*)(SKPhysicsWorld, SEL, CGRect, void*))bean_msgSend)(self, bean_sel("enumerateBodiesInRect:usingBlock:"), rect, block); }
-static inline void             SKPhysicsWorld_EnumerateBodiesAlongRayStart_End_UsingBlock(SKPhysicsWorld self, CGPoint start, CGPoint end, void* block)    { ((void (*)(SKPhysicsWorld, SEL, CGPoint, CGPoint, void*))bean_msgSend)(self, bean_sel("enumerateBodiesAlongRayStart:end:usingBlock:"), start, end, block); }
-static inline CGVector         SKPhysicsWorld_Gravity(SKPhysicsWorld self)                                                                                 { return ((CGVector (*)(SKPhysicsWorld, SEL))bean_msgSend_stret)(self, bean_sel("gravity")); }
-static inline void             SKPhysicsWorld_SetGravity(SKPhysicsWorld self, CGVector gravity)                                                            { ((void (*)(SKPhysicsWorld, SEL, CGVector))bean_msgSend)(self, bean_sel("setGravity:"), gravity); }
-static inline CGFloat          SKPhysicsWorld_Speed(SKPhysicsWorld self)                                                                                   { return ((CGFloat (*)(SKPhysicsWorld, SEL))bean_msgSend_fpret)(self, bean_sel("speed")); }
-static inline void             SKPhysicsWorld_SetSpeed(SKPhysicsWorld self, CGFloat speed)                                                                 { ((void (*)(SKPhysicsWorld, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
-static inline id               SKPhysicsWorld_ContactDelegate(SKPhysicsWorld self)                                                                         { return ((id (*)(SKPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("contactDelegate")); }
-static inline void             SKPhysicsWorld_SetContactDelegate(SKPhysicsWorld self, id contactDelegate)                                                  { ((void (*)(SKPhysicsWorld, SEL, id))bean_msgSend)(self, bean_sel("setContactDelegate:"), contactDelegate); }
-static inline BOOL             SKPhysicsWorld_SupportsSecureCoding(void)                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPhysicsWorld"), bean_sel("supportsSecureCoding")); }
+static inline void              SKPhysicsWorld_AddJoint(SKPhysicsWorld self, SKPhysicsJoint joint)                                                          { ((void (*)(SKPhysicsWorld, SEL, SKPhysicsJoint))bean_msgSend)(self, bean_sel("addJoint:"), joint); }
+static inline void              SKPhysicsWorld_RemoveJoint(SKPhysicsWorld self, SKPhysicsJoint joint)                                                       { ((void (*)(SKPhysicsWorld, SEL, SKPhysicsJoint))bean_msgSend)(self, bean_sel("removeJoint:"), joint); }
+static inline void              SKPhysicsWorld_RemoveAllJoints(SKPhysicsWorld self)                                                                         { ((void (*)(SKPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("removeAllJoints")); }
+static inline void*             SKPhysicsWorld_SampleFieldsAt(SKPhysicsWorld self, void* position)                                                          { return ((void* (*)(SKPhysicsWorld, SEL, void*))bean_msgSend)(self, bean_sel("sampleFieldsAt:"), position); }
+static inline SKPhysicsBody     SKPhysicsWorld_BodyAtPoint(SKPhysicsWorld self, CGPoint point)                                                              { return ((SKPhysicsBody (*)(SKPhysicsWorld, SEL, CGPoint))bean_msgSend)(self, bean_sel("bodyAtPoint:"), point); }
+static inline SKPhysicsBody     SKPhysicsWorld_BodyInRect(SKPhysicsWorld self, CGRect rect)                                                                 { return ((SKPhysicsBody (*)(SKPhysicsWorld, SEL, CGRect))bean_msgSend)(self, bean_sel("bodyInRect:"), rect); }
+static inline SKPhysicsBody     SKPhysicsWorld_BodyAlongRayStart_End(SKPhysicsWorld self, CGPoint start, CGPoint end)                                       { return ((SKPhysicsBody (*)(SKPhysicsWorld, SEL, CGPoint, CGPoint))bean_msgSend)(self, bean_sel("bodyAlongRayStart:end:"), start, end); }
+static inline void              SKPhysicsWorld_EnumerateBodiesAtPoint_UsingBlock(SKPhysicsWorld self, CGPoint point, void* block)                           { ((void (*)(SKPhysicsWorld, SEL, CGPoint, void*))bean_msgSend)(self, bean_sel("enumerateBodiesAtPoint:usingBlock:"), point, block); }
+static inline void              SKPhysicsWorld_EnumerateBodiesInRect_UsingBlock(SKPhysicsWorld self, CGRect rect, void* block)                              { ((void (*)(SKPhysicsWorld, SEL, CGRect, void*))bean_msgSend)(self, bean_sel("enumerateBodiesInRect:usingBlock:"), rect, block); }
+static inline void              SKPhysicsWorld_EnumerateBodiesAlongRayStart_End_UsingBlock(SKPhysicsWorld self, CGPoint start, CGPoint end, void* block)    { ((void (*)(SKPhysicsWorld, SEL, CGPoint, CGPoint, void*))bean_msgSend)(self, bean_sel("enumerateBodiesAlongRayStart:end:usingBlock:"), start, end, block); }
+static inline CGVector          SKPhysicsWorld_Gravity(SKPhysicsWorld self)                                                                                 { return ((CGVector (*)(SKPhysicsWorld, SEL))bean_msgSend_stret)(self, bean_sel("gravity")); }
+static inline void              SKPhysicsWorld_SetGravity(SKPhysicsWorld self, CGVector gravity)                                                            { ((void (*)(SKPhysicsWorld, SEL, CGVector))bean_msgSend)(self, bean_sel("setGravity:"), gravity); }
+static inline CGFloat           SKPhysicsWorld_Speed(SKPhysicsWorld self)                                                                                   { return ((CGFloat (*)(SKPhysicsWorld, SEL))bean_msgSend_fpret)(self, bean_sel("speed")); }
+static inline void              SKPhysicsWorld_SetSpeed(SKPhysicsWorld self, CGFloat speed)                                                                 { ((void (*)(SKPhysicsWorld, SEL, CGFloat))bean_msgSend)(self, bean_sel("setSpeed:"), speed); }
+static inline id                SKPhysicsWorld_ContactDelegate(SKPhysicsWorld self)                                                                         { return ((id (*)(SKPhysicsWorld, SEL))bean_msgSend)(self, bean_sel("contactDelegate")); }
+static inline void              SKPhysicsWorld_SetContactDelegate(SKPhysicsWorld self, id contactDelegate)                                                  { ((void (*)(SKPhysicsWorld, SEL, id))bean_msgSend)(self, bean_sel("setContactDelegate:"), contactDelegate); }
+static inline BOOL              SKPhysicsWorld_SupportsSecureCoding(void)                                                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKPhysicsWorld"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKPhysicsWorld
+#define BEAN_ALLOC_SKPhysicsWorld
+static inline SKPhysicsWorld    SKPhysicsWorld_Alloc(void)                                                                                                  { return (SKPhysicsWorld)bean_alloc(bean_cls("SKPhysicsWorld")); }
+#endif
+#ifndef BEAN_NEW_SKPhysicsWorld
+#define BEAN_NEW_SKPhysicsWorld
+static inline SKPhysicsWorld    SKPhysicsWorld_New(void)                                                                                                    { return (SKPhysicsWorld)bean_new(bean_cls("SKPhysicsWorld")); }
+#endif
 
 /* ===== SKReferenceNode ===== */
 #ifndef BEAN_TYPEDEF_SKReferenceNode
@@ -8019,6 +9387,14 @@ static inline SKReferenceNode    SKReferenceNode_ReferenceNodeWithFileNamed(NSSt
 static inline SKReferenceNode    SKReferenceNode_ReferenceNodeWithURL(NSURL referenceURL)                      { return ((SKReferenceNode (*)(bean_class, SEL, NSURL))bean_msgSend)(bean_cls("SKReferenceNode"), bean_sel("referenceNodeWithURL:"), referenceURL); }
 static inline void               SKReferenceNode_DidLoadReferenceNode(SKReferenceNode self, SKNode node)       { ((void (*)(SKReferenceNode, SEL, SKNode))bean_msgSend)(self, bean_sel("didLoadReferenceNode:"), node); }
 static inline void               SKReferenceNode_ResolveReferenceNode(SKReferenceNode self)                    { ((void (*)(SKReferenceNode, SEL))bean_msgSend)(self, bean_sel("resolveReferenceNode")); }
+#ifndef BEAN_ALLOC_SKReferenceNode
+#define BEAN_ALLOC_SKReferenceNode
+static inline SKReferenceNode    SKReferenceNode_Alloc(void)                                                   { return (SKReferenceNode)bean_alloc(bean_cls("SKReferenceNode")); }
+#endif
+#ifndef BEAN_NEW_SKReferenceNode
+#define BEAN_NEW_SKReferenceNode
+static inline SKReferenceNode    SKReferenceNode_New(void)                                                     { return (SKReferenceNode)bean_new(bean_cls("SKReferenceNode")); }
+#endif
 
 /* ===== SKRenderer ===== */
 #ifndef BEAN_TYPEDEF_SKRenderer
@@ -8045,6 +9421,14 @@ static inline BOOL          SKRenderer_ShowsPhysics(SKRenderer self)            
 static inline void          SKRenderer_SetShowsPhysics(SKRenderer self, BOOL showsPhysics)                                                                                                                                                    { ((void (*)(SKRenderer, SEL, BOOL))bean_msgSend)(self, bean_sel("setShowsPhysics:"), showsPhysics); }
 static inline BOOL          SKRenderer_ShowsFields(SKRenderer self)                                                                                                                                                                           { return ((BOOL (*)(SKRenderer, SEL))bean_msgSend)(self, bean_sel("showsFields")); }
 static inline void          SKRenderer_SetShowsFields(SKRenderer self, BOOL showsFields)                                                                                                                                                      { ((void (*)(SKRenderer, SEL, BOOL))bean_msgSend)(self, bean_sel("setShowsFields:"), showsFields); }
+#ifndef BEAN_ALLOC_SKRenderer
+#define BEAN_ALLOC_SKRenderer
+static inline SKRenderer    SKRenderer_Alloc(void)                                                                                                                                                                                            { return (SKRenderer)bean_alloc(bean_cls("SKRenderer")); }
+#endif
+#ifndef BEAN_NEW_SKRenderer
+#define BEAN_NEW_SKRenderer
+static inline SKRenderer    SKRenderer_New(void)                                                                                                                                                                                              { return (SKRenderer)bean_new(bean_cls("SKRenderer")); }
+#endif
 
 /* ===== SKScene ===== */
 static inline SKScene             SKScene_InitWithSize(SKScene self, CGSize size)                      { return ((SKScene (*)(SKScene, SEL, CGSize))bean_msgSend)(self, bean_sel("initWithSize:"), size); }
@@ -8077,17 +9461,33 @@ static inline CGPoint             SKScene_AnchorPoint(SKScene self)             
 static inline void                SKScene_SetAnchorPoint(SKScene self, CGPoint anchorPoint)            { ((void (*)(SKScene, SEL, CGPoint))bean_msgSend)(self, bean_sel("setAnchorPoint:"), anchorPoint); }
 static inline SKPhysicsWorld      SKScene_PhysicsWorld(SKScene self)                                   { return ((SKPhysicsWorld (*)(SKScene, SEL))bean_msgSend)(self, bean_sel("physicsWorld")); }
 static inline SKView              SKScene_View(SKScene self)                                           { return ((SKView (*)(SKScene, SEL))bean_msgSend)(self, bean_sel("view")); }
+#ifndef BEAN_ALLOC_SKScene
+#define BEAN_ALLOC_SKScene
+static inline SKScene             SKScene_Alloc(void)                                                  { return (SKScene)bean_alloc(bean_cls("SKScene")); }
+#endif
+#ifndef BEAN_NEW_SKScene
+#define BEAN_NEW_SKScene
+static inline SKScene             SKScene_New(void)                                                    { return (SKScene)bean_new(bean_cls("SKScene")); }
+#endif
 
 /* ===== SKSceneDelegate ===== */
 #ifndef BEAN_TYPEDEF_SKSceneDelegate
 #define BEAN_TYPEDEF_SKSceneDelegate
 typedef bean_id SKSceneDelegate;
 #endif
-static inline void    SKSceneDelegate_Update_ForScene(SKSceneDelegate self, CGFloat currentTime, SKScene scene)    { ((void (*)(SKSceneDelegate, SEL, CGFloat, SKScene))bean_msgSend)(self, bean_sel("update:forScene:"), currentTime, scene); }
-static inline void    SKSceneDelegate_DidEvaluateActionsForScene(SKSceneDelegate self, SKScene scene)              { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didEvaluateActionsForScene:"), scene); }
-static inline void    SKSceneDelegate_DidSimulatePhysicsForScene(SKSceneDelegate self, SKScene scene)              { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didSimulatePhysicsForScene:"), scene); }
-static inline void    SKSceneDelegate_DidApplyConstraintsForScene(SKSceneDelegate self, SKScene scene)             { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didApplyConstraintsForScene:"), scene); }
-static inline void    SKSceneDelegate_DidFinishUpdateForScene(SKSceneDelegate self, SKScene scene)                 { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didFinishUpdateForScene:"), scene); }
+static inline void               SKSceneDelegate_Update_ForScene(SKSceneDelegate self, CGFloat currentTime, SKScene scene)    { ((void (*)(SKSceneDelegate, SEL, CGFloat, SKScene))bean_msgSend)(self, bean_sel("update:forScene:"), currentTime, scene); }
+static inline void               SKSceneDelegate_DidEvaluateActionsForScene(SKSceneDelegate self, SKScene scene)              { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didEvaluateActionsForScene:"), scene); }
+static inline void               SKSceneDelegate_DidSimulatePhysicsForScene(SKSceneDelegate self, SKScene scene)              { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didSimulatePhysicsForScene:"), scene); }
+static inline void               SKSceneDelegate_DidApplyConstraintsForScene(SKSceneDelegate self, SKScene scene)             { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didApplyConstraintsForScene:"), scene); }
+static inline void               SKSceneDelegate_DidFinishUpdateForScene(SKSceneDelegate self, SKScene scene)                 { ((void (*)(SKSceneDelegate, SEL, SKScene))bean_msgSend)(self, bean_sel("didFinishUpdateForScene:"), scene); }
+#ifndef BEAN_ALLOC_SKSceneDelegate
+#define BEAN_ALLOC_SKSceneDelegate
+static inline SKSceneDelegate    SKSceneDelegate_Alloc(void)                                                                  { return (SKSceneDelegate)bean_alloc(bean_cls("SKSceneDelegate")); }
+#endif
+#ifndef BEAN_NEW_SKSceneDelegate
+#define BEAN_NEW_SKSceneDelegate
+static inline SKSceneDelegate    SKSceneDelegate_New(void)                                                                    { return (SKSceneDelegate)bean_new(bean_cls("SKSceneDelegate")); }
+#endif
 
 /* ===== SKShader ===== */
 static inline SKShader     SKShader_InitWithSource(SKShader self, NSString source)                               { return ((SKShader (*)(SKShader, SEL, NSString))bean_msgSend)(self, bean_sel("initWithSource:"), source); }
@@ -8107,6 +9507,14 @@ static inline NSArray      SKShader_Attributes(SKShader self)                   
 static inline void         SKShader_SetAttributes(SKShader self, NSArray attributes)                             { ((void (*)(SKShader, SEL, NSArray))bean_msgSend)(self, bean_sel("setAttributes:"), attributes); }
 static inline id           SKShader_CopyWithZone(SKShader self, NSZone* zone)                                    { return ((id (*)(SKShader, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL         SKShader_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKShader"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKShader
+#define BEAN_ALLOC_SKShader
+static inline SKShader     SKShader_Alloc(void)                                                                  { return (SKShader)bean_alloc(bean_cls("SKShader")); }
+#endif
+#ifndef BEAN_NEW_SKShader
+#define BEAN_NEW_SKShader
+static inline SKShader     SKShader_New(void)                                                                    { return (SKShader)bean_new(bean_cls("SKShader")); }
+#endif
 
 /* ===== SKShapeNode ===== */
 #ifndef BEAN_TYPEDEF_SKShapeNode
@@ -8158,6 +9566,14 @@ static inline void                SKShapeNode_SetStrokeShader(SKShapeNode self, 
 static inline NSDictionary        SKShapeNode_AttributeValues(SKShapeNode self)                                                     { return ((NSDictionary (*)(SKShapeNode, SEL))bean_msgSend)(self, bean_sel("attributeValues")); }
 static inline void                SKShapeNode_SetAttributeValues(SKShapeNode self, NSDictionary attributeValues)                    { ((void (*)(SKShapeNode, SEL, NSDictionary))bean_msgSend)(self, bean_sel("setAttributeValues:"), attributeValues); }
 static inline BOOL                SKShapeNode_Antialiased(SKShapeNode self)                                                         { return ((BOOL (*)(SKShapeNode, SEL))bean_msgSend)(self, bean_sel("antialiased")); }
+#ifndef BEAN_ALLOC_SKShapeNode
+#define BEAN_ALLOC_SKShapeNode
+static inline SKShapeNode         SKShapeNode_Alloc(void)                                                                           { return (SKShapeNode)bean_alloc(bean_cls("SKShapeNode")); }
+#endif
+#ifndef BEAN_NEW_SKShapeNode
+#define BEAN_NEW_SKShapeNode
+static inline SKShapeNode         SKShapeNode_New(void)                                                                             { return (SKShapeNode)bean_new(bean_cls("SKShapeNode")); }
+#endif
 
 /* ===== SKSpriteNode ===== */
 #ifndef BEAN_TYPEDEF_SKSpriteNode
@@ -8208,6 +9624,14 @@ static inline SKWarpGeometry      SKSpriteNode_WarpGeometry(SKSpriteNode self)  
 static inline void                SKSpriteNode_SetWarpGeometry(SKSpriteNode self, SKWarpGeometry warpGeometry)                                 { ((void (*)(SKSpriteNode, SEL, SKWarpGeometry))bean_msgSend)(self, bean_sel("setWarpGeometry:"), warpGeometry); }
 static inline NSInteger           SKSpriteNode_SubdivisionLevels(SKSpriteNode self)                                                            { return ((NSInteger (*)(SKSpriteNode, SEL))bean_msgSend)(self, bean_sel("subdivisionLevels")); }
 static inline void                SKSpriteNode_SetSubdivisionLevels(SKSpriteNode self, NSInteger subdivisionLevels)                            { ((void (*)(SKSpriteNode, SEL, NSInteger))bean_msgSend)(self, bean_sel("setSubdivisionLevels:"), subdivisionLevels); }
+#ifndef BEAN_ALLOC_SKSpriteNode
+#define BEAN_ALLOC_SKSpriteNode
+static inline SKSpriteNode        SKSpriteNode_Alloc(void)                                                                                     { return (SKSpriteNode)bean_alloc(bean_cls("SKSpriteNode")); }
+#endif
+#ifndef BEAN_NEW_SKSpriteNode
+#define BEAN_NEW_SKSpriteNode
+static inline SKSpriteNode        SKSpriteNode_New(void)                                                                                       { return (SKSpriteNode)bean_new(bean_cls("SKSpriteNode")); }
+#endif
 
 /* ===== SKTexture ===== */
 static inline SKTexture                 SKTexture_TextureWithImageNamed(NSString name)                                                                                   { return ((SKTexture (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithImageNamed:"), name); }
@@ -8234,6 +9658,14 @@ static inline void                      SKTexture_SetUsesMipmaps(SKTexture self,
 static inline SKTexture                 SKTexture_TextureWithNoiseMap(GKNoiseMap noiseMap)                                                                               { return ((SKTexture (*)(bean_class, SEL, GKNoiseMap))bean_msgSend)(bean_cls("SKTexture"), bean_sel("textureWithNoiseMap:"), noiseMap); }
 static inline id                        SKTexture_CopyWithZone(SKTexture self, NSZone* zone)                                                                             { return ((id (*)(SKTexture, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                      SKTexture_SupportsSecureCoding(void)                                                                                             { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTexture"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKTexture
+#define BEAN_ALLOC_SKTexture
+static inline SKTexture                 SKTexture_Alloc(void)                                                                                                            { return (SKTexture)bean_alloc(bean_cls("SKTexture")); }
+#endif
+#ifndef BEAN_NEW_SKTexture
+#define BEAN_NEW_SKTexture
+static inline SKTexture                 SKTexture_New(void)                                                                                                              { return (SKTexture)bean_new(bean_cls("SKTexture")); }
+#endif
 
 /* ===== SKTextureAtlas ===== */
 #ifndef BEAN_TYPEDEF_SKTextureAtlas
@@ -8248,6 +9680,14 @@ static inline void              SKTextureAtlas_PreloadTextureAtlasesNamed_WithCo
 static inline void              SKTextureAtlas_PreloadWithCompletionHandler(SKTextureAtlas self, void* completionHandler)                       { ((void (*)(SKTextureAtlas, SEL, void*))bean_msgSend)(self, bean_sel("preloadWithCompletionHandler:"), completionHandler); }
 static inline NSArray           SKTextureAtlas_TextureNames(SKTextureAtlas self)                                                                { return ((NSArray (*)(SKTextureAtlas, SEL))bean_msgSend)(self, bean_sel("textureNames")); }
 static inline BOOL              SKTextureAtlas_SupportsSecureCoding(void)                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTextureAtlas"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKTextureAtlas
+#define BEAN_ALLOC_SKTextureAtlas
+static inline SKTextureAtlas    SKTextureAtlas_Alloc(void)                                                                                      { return (SKTextureAtlas)bean_alloc(bean_cls("SKTextureAtlas")); }
+#endif
+#ifndef BEAN_NEW_SKTextureAtlas
+#define BEAN_NEW_SKTextureAtlas
+static inline SKTextureAtlas    SKTextureAtlas_New(void)                                                                                        { return (SKTextureAtlas)bean_new(bean_cls("SKTextureAtlas")); }
+#endif
 
 /* ===== SKTileDefinition ===== */
 #ifndef BEAN_TYPEDEF_SKTileDefinition
@@ -8286,6 +9726,14 @@ static inline BOOL                        SKTileDefinition_FlipHorizontally(SKTi
 static inline void                        SKTileDefinition_SetFlipHorizontally(SKTileDefinition self, BOOL flipHorizontally)                                                                                        { ((void (*)(SKTileDefinition, SEL, BOOL))bean_msgSend)(self, bean_sel("setFlipHorizontally:"), flipHorizontally); }
 static inline id                          SKTileDefinition_CopyWithZone(SKTileDefinition self, NSZone* zone)                                                                                                        { return ((id (*)(SKTileDefinition, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                        SKTileDefinition_SupportsSecureCoding(void)                                                                                                                               { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileDefinition"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKTileDefinition
+#define BEAN_ALLOC_SKTileDefinition
+static inline SKTileDefinition            SKTileDefinition_Alloc(void)                                                                                                                                              { return (SKTileDefinition)bean_alloc(bean_cls("SKTileDefinition")); }
+#endif
+#ifndef BEAN_NEW_SKTileDefinition
+#define BEAN_NEW_SKTileDefinition
+static inline SKTileDefinition            SKTileDefinition_New(void)                                                                                                                                                { return (SKTileDefinition)bean_new(bean_cls("SKTileDefinition")); }
+#endif
 
 /* ===== SKTileGroup ===== */
 #ifndef BEAN_TYPEDEF_SKTileGroup
@@ -8303,6 +9751,14 @@ static inline NSString       SKTileGroup_Name(SKTileGroup self)                 
 static inline void           SKTileGroup_SetName(SKTileGroup self, NSString name)                                     { ((void (*)(SKTileGroup, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 static inline id             SKTileGroup_CopyWithZone(SKTileGroup self, NSZone* zone)                                 { return ((id (*)(SKTileGroup, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL           SKTileGroup_SupportsSecureCoding(void)                                                   { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileGroup"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKTileGroup
+#define BEAN_ALLOC_SKTileGroup
+static inline SKTileGroup    SKTileGroup_Alloc(void)                                                                  { return (SKTileGroup)bean_alloc(bean_cls("SKTileGroup")); }
+#endif
+#ifndef BEAN_NEW_SKTileGroup
+#define BEAN_NEW_SKTileGroup
+static inline SKTileGroup    SKTileGroup_New(void)                                                                    { return (SKTileGroup)bean_new(bean_cls("SKTileGroup")); }
+#endif
 
 /* ===== SKTileGroupRule ===== */
 #ifndef BEAN_TYPEDEF_SKTileGroupRule
@@ -8319,6 +9775,14 @@ static inline NSString               SKTileGroupRule_Name(SKTileGroupRule self) 
 static inline void                   SKTileGroupRule_SetName(SKTileGroupRule self, NSString name)                                                                       { ((void (*)(SKTileGroupRule, SEL, NSString))bean_msgSend)(self, bean_sel("setName:"), name); }
 static inline id                     SKTileGroupRule_CopyWithZone(SKTileGroupRule self, NSZone* zone)                                                                   { return ((id (*)(SKTileGroupRule, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                   SKTileGroupRule_SupportsSecureCoding(void)                                                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileGroupRule"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKTileGroupRule
+#define BEAN_ALLOC_SKTileGroupRule
+static inline SKTileGroupRule        SKTileGroupRule_Alloc(void)                                                                                                        { return (SKTileGroupRule)bean_alloc(bean_cls("SKTileGroupRule")); }
+#endif
+#ifndef BEAN_NEW_SKTileGroupRule
+#define BEAN_NEW_SKTileGroupRule
+static inline SKTileGroupRule        SKTileGroupRule_New(void)                                                                                                          { return (SKTileGroupRule)bean_new(bean_cls("SKTileGroupRule")); }
+#endif
 
 /* ===== SKTileMapNode ===== */
 #ifndef BEAN_TYPEDEF_SKTileMapNode
@@ -8369,6 +9833,14 @@ static inline void                SKTileMapNode_SetEnableAutomapping(SKTileMapNo
 static inline NSArray             SKTileMapNode_TileMapNodesWithTileSet_Columns_Rows_TileSize_FromNoiseMap_TileTypeNoiseMapThresholds(SKTileSet tileSet, NSUInteger columns, NSUInteger rows, CGSize tileSize, GKNoiseMap noiseMap, NSArray thresholds)    { return ((NSArray (*)(bean_class, SEL, SKTileSet, NSUInteger, NSUInteger, CGSize, GKNoiseMap, NSArray))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("tileMapNodesWithTileSet:columns:rows:tileSize:fromNoiseMap:tileTypeNoiseMapThresholds:"), tileSet, columns, rows, tileSize, noiseMap, thresholds); }
 static inline id                  SKTileMapNode_CopyWithZone(SKTileMapNode self, NSZone* zone)                                                                                                                                                             { return ((id (*)(SKTileMapNode, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL                SKTileMapNode_SupportsSecureCoding(void)                                                                                                                                                                                 { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileMapNode"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKTileMapNode
+#define BEAN_ALLOC_SKTileMapNode
+static inline SKTileMapNode       SKTileMapNode_Alloc(void)                                                                                                                                                                                                { return (SKTileMapNode)bean_alloc(bean_cls("SKTileMapNode")); }
+#endif
+#ifndef BEAN_NEW_SKTileMapNode
+#define BEAN_NEW_SKTileMapNode
+static inline SKTileMapNode       SKTileMapNode_New(void)                                                                                                                                                                                                  { return (SKTileMapNode)bean_new(bean_cls("SKTileMapNode")); }
+#endif
 
 /* ===== SKTileSet ===== */
 static inline SKTileSet        SKTileSet_TileSetWithTileGroups(NSArray tileGroups)                                                        { return ((SKTileSet (*)(bean_class, SEL, NSArray))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("tileSetWithTileGroups:"), tileGroups); }
@@ -8389,6 +9861,14 @@ static inline CGSize           SKTileSet_DefaultTileSize(SKTileSet self)        
 static inline void             SKTileSet_SetDefaultTileSize(SKTileSet self, CGSize defaultTileSize)                                       { ((void (*)(SKTileSet, SEL, CGSize))bean_msgSend)(self, bean_sel("setDefaultTileSize:"), defaultTileSize); }
 static inline id               SKTileSet_CopyWithZone(SKTileSet self, NSZone* zone)                                                       { return ((id (*)(SKTileSet, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL             SKTileSet_SupportsSecureCoding(void)                                                                       { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKTileSet"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKTileSet
+#define BEAN_ALLOC_SKTileSet
+static inline SKTileSet        SKTileSet_Alloc(void)                                                                                      { return (SKTileSet)bean_alloc(bean_cls("SKTileSet")); }
+#endif
+#ifndef BEAN_NEW_SKTileSet
+#define BEAN_NEW_SKTileSet
+static inline SKTileSet        SKTileSet_New(void)                                                                                        { return (SKTileSet)bean_new(bean_cls("SKTileSet")); }
+#endif
 
 /* ===== SKUniform ===== */
 static inline SKUniform          SKUniform_UniformWithName(NSString name)                                                     { return ((SKUniform (*)(bean_class, SEL, NSString))bean_msgSend)(bean_cls("SKUniform"), bean_sel("uniformWithName:"), name); }
@@ -8453,6 +9933,14 @@ static inline matrix_float4x4    SKUniform_FloatMatrix4Value(SKUniform self)    
 static inline void               SKUniform_SetFloatMatrix4Value(SKUniform self, matrix_float4x4 floatMatrix4Value)            { ((void (*)(SKUniform, SEL, matrix_float4x4))bean_msgSend)(self, bean_sel("setFloatMatrix4Value:"), floatMatrix4Value); }
 static inline id                 SKUniform_CopyWithZone(SKUniform self, NSZone* zone)                                         { return ((id (*)(SKUniform, SEL, NSZone*))bean_msgSend)(self, bean_sel("copyWithZone:"), zone); }
 static inline BOOL               SKUniform_SupportsSecureCoding(void)                                                         { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKUniform"), bean_sel("supportsSecureCoding")); }
+#ifndef BEAN_ALLOC_SKUniform
+#define BEAN_ALLOC_SKUniform
+static inline SKUniform          SKUniform_Alloc(void)                                                                        { return (SKUniform)bean_alloc(bean_cls("SKUniform")); }
+#endif
+#ifndef BEAN_NEW_SKUniform
+#define BEAN_NEW_SKUniform
+static inline SKUniform          SKUniform_New(void)                                                                          { return (SKUniform)bean_new(bean_cls("SKUniform")); }
+#endif
 
 /* ===== SKView ===== */
 static inline void         SKView_PresentScene(SKView self, SKScene scene)                                        { ((void (*)(SKView, SEL, SKScene))bean_msgSend)(self, bean_sel("presentScene:"), scene); }
@@ -8497,13 +9985,29 @@ static inline SKScene      SKView_Scene(SKView self)                            
 static inline BOOL         SKView_SupportsSecureCoding(void)                                                      { return ((BOOL (*)(bean_class, SEL))bean_msgSend)(bean_cls("SKView"), bean_sel("supportsSecureCoding")); }
 static inline BOOL         SKView_Paused(SKView self)                                                             { return ((BOOL (*)(SKView, SEL))bean_msgSend)(self, bean_sel("paused")); }
 static inline BOOL         SKView_Asynchronous(SKView self)                                                       { return ((BOOL (*)(SKView, SEL))bean_msgSend)(self, bean_sel("asynchronous")); }
+#ifndef BEAN_ALLOC_SKView
+#define BEAN_ALLOC_SKView
+static inline SKView       SKView_Alloc(void)                                                                     { return (SKView)bean_alloc(bean_cls("SKView")); }
+#endif
+#ifndef BEAN_NEW_SKView
+#define BEAN_NEW_SKView
+static inline SKView       SKView_New(void)                                                                       { return (SKView)bean_new(bean_cls("SKView")); }
+#endif
 
 /* ===== SKViewDelegate ===== */
 #ifndef BEAN_TYPEDEF_SKViewDelegate
 #define BEAN_TYPEDEF_SKViewDelegate
 typedef bean_id SKViewDelegate;
 #endif
-static inline BOOL    SKViewDelegate_View_ShouldRenderAtTime(SKViewDelegate self, SKView view, CGFloat time)    { return ((BOOL (*)(SKViewDelegate, SEL, SKView, CGFloat))bean_msgSend)(self, bean_sel("view:shouldRenderAtTime:"), view, time); }
+static inline BOOL              SKViewDelegate_View_ShouldRenderAtTime(SKViewDelegate self, SKView view, CGFloat time)    { return ((BOOL (*)(SKViewDelegate, SEL, SKView, CGFloat))bean_msgSend)(self, bean_sel("view:shouldRenderAtTime:"), view, time); }
+#ifndef BEAN_ALLOC_SKViewDelegate
+#define BEAN_ALLOC_SKViewDelegate
+static inline SKViewDelegate    SKViewDelegate_Alloc(void)                                                                { return (SKViewDelegate)bean_alloc(bean_cls("SKViewDelegate")); }
+#endif
+#ifndef BEAN_NEW_SKViewDelegate
+#define BEAN_NEW_SKViewDelegate
+static inline SKViewDelegate    SKViewDelegate_New(void)                                                                  { return (SKViewDelegate)bean_new(bean_cls("SKViewDelegate")); }
+#endif
 
 
 #ifdef __cplusplus

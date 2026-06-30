@@ -102,10 +102,10 @@ int main(void) {
         NSView content = NSWindow_ContentView(window);
         CGRect bounds = NSView_Bounds(content);
 
-        WKWebViewConfiguration config = (WKWebViewConfiguration)bean_alloc(bean_cls("WKWebViewConfiguration"));
+        WKWebViewConfiguration config = WKWebViewConfiguration_Alloc();
         config = (WKWebViewConfiguration)bean_init(config);
 
-        WKWebView web_view = (WKWebView)bean_alloc(bean_cls("WKWebView"));
+        WKWebView web_view = WKWebView_Alloc();
         web_view = (WKWebView)WKWebView_InitWithFrame_Configuration(web_view, bounds, config);
         bean_example_add_fill_subview(content, (NSView)web_view);
 

@@ -63,7 +63,7 @@ static BOOL bean_eventkit_request_access(EKEventStore store) {
 }
 
 static NSString bean_eventkit_format_date(NSDate date) {
-    NSDateFormatter formatter = (NSDateFormatter)bean_new(bean_cls("NSDateFormatter"));
+    NSDateFormatter formatter = NSDateFormatter_New();
     NSDateFormatter_SetDateStyle(formatter, NSDateFormatterShortStyle);
     NSDateFormatter_SetTimeStyle(formatter, NSDateFormatterShortStyle);
     return NSDateFormatter_StringFromDate(formatter, date);
@@ -90,7 +90,7 @@ static int bean_eventkit_print_upcoming(EKEventStore store, int limit) {
     events = EKEventStore_EventsMatchingPredicate(store, predicate);
     count = events ? NSArray_Count(events) : 0;
 
-    day_formatter = (NSDateFormatter)bean_new(bean_cls("NSDateFormatter"));
+    day_formatter = NSDateFormatter_New();
     NSDateFormatter_SetDateStyle(day_formatter, NSDateFormatterFullStyle);
     NSDateFormatter_SetTimeStyle(day_formatter, NSDateFormatterNoStyle);
 
@@ -184,7 +184,7 @@ int main(void) {
             "Calendar authorization: %s\n",
             bean_eventkit_auth_status_name(status));
 
-        store = (EKEventStore)bean_new(bean_cls("EKEventStore"));
+        store = EKEventStore_New();
 
         if (!bean_eventkit_can_read_events(status)) {
             if (status == EKAuthorizationStatusDenied || status == EKAuthorizationStatusRestricted) {

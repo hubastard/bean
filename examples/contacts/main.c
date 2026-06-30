@@ -117,7 +117,7 @@ static int bean_contacts_print_sample(CNContactStore store, int limit) {
     keys_to_fetch = NSArray_ArrayWithObjects_Count(keys, 1);
 
     request = CNContactFetchRequest_InitWithKeysToFetch(
-        (CNContactFetchRequest)bean_alloc(bean_cls("CNContactFetchRequest")),
+        CNContactFetchRequest_Alloc(),
         keys_to_fetch);
 
     block = bean_block_create_2_id(&state, bean_contacts_print_contact);
@@ -156,7 +156,7 @@ int main(void) {
             "Contacts authorization: %s\n",
             bean_contacts_auth_status_name(status));
 
-        store = (CNContactStore)bean_new(bean_cls("CNContactStore"));
+        store = CNContactStore_New();
 
         if (!bean_contacts_is_authorized(status)) {
             if (status == CNAuthorizationStatusDenied || status == CNAuthorizationStatusRestricted) {
