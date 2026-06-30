@@ -3,7 +3,7 @@
 #include <bean/coredata.h>
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSManagedObjectModel model = (NSManagedObjectModel)bean_alloc(bean_cls("NSManagedObjectModel"));
         model = (NSManagedObjectModel)NSManagedObjectModel_Init(model);
         NSURL store_url = NSPersistentContainer_DefaultDirectoryURL();

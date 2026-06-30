@@ -13,7 +13,7 @@ static void bean_quartzcore_layout(NSView content, CGSize size) {
 }
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSWindow window = bean_example_window("Bean QuartzCore", 480.0, 320.0);
         NSView content = NSWindow_ContentView(window);
         NSView_SetWantsLayer(content, YES);

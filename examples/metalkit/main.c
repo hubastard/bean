@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSWindow window = bean_example_window("Bean MetalKit", 640.0, 480.0);
         NSView content = NSWindow_ContentView(window);
         CGRect bounds = NSView_Bounds(content);

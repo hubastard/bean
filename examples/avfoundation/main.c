@@ -165,7 +165,7 @@ static BOOL bean_avfoundation_play_with_audio_services(NSURL url, double duratio
 }
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSString path = bean_avfoundation_sample_path();
         NSURL url = NSURL_FileURLWithPath(path);
         double duration = 0.0;

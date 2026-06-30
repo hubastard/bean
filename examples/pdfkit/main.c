@@ -37,7 +37,7 @@ static NSString bean_pdfkit_sample_path(void) {
 }
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSString path = bean_pdfkit_sample_path();
         NSURL url = NSURL_FileURLWithPath(path);
 

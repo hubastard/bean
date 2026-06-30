@@ -3,7 +3,7 @@
 #include <bean/appkit.h>
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSApplication app = NSApplication_SharedApplication();
         NSApplication_SetActivationPolicy(app, NSApplicationActivationPolicyRegular);
 

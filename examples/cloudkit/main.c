@@ -3,7 +3,7 @@
 #include <bean/cloudkit.h>
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         /*
         * CKContainer APIs require a signed app with CloudKit entitlements.
         * This CLI example builds records locally instead.

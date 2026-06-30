@@ -19,7 +19,7 @@ Include the framework headers you need:
 #include <bean/appkit.h>
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSApplication app = NSApplication_SharedApplication();
         NSApplication_SetActivationPolicy(app, NSApplicationActivationPolicyRegular);
 
@@ -110,12 +110,6 @@ make clean                            # remove build/
 ```
 
 Pass any `bean_gen.py` flags through `GEN_ARGS` (see table below).
-
-### Conventions
-
-- Object types are `typedef bean_id NSWindow` — use `NSWindow self`, not `NSWindow*`.
-- Class lookup uses `bean_cls("ClassName")`, not `bean_class()` (name collision with the typedef).
-- Memory: `bean_alloc`, `bean_retain`, `bean_release`, `bean_autorelease_pool_push/pop`.
 
 ### Linking
 

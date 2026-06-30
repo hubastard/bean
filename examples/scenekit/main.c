@@ -32,7 +32,7 @@ static SCNNode bean_scn_light_node(void) {
 }
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSWindow window = bean_example_window("Bean SceneKit", 640.0, 480.0);
         NSView content = NSWindow_ContentView(window);
         CGRect bounds = NSView_Bounds(content);

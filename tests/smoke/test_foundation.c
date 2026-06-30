@@ -3,7 +3,7 @@
 #include <bean/foundation.h>
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSString hello = NSString_StringWithUTF8String("Hello from bean");
         const char* text = bean_nsstring_to_utf8(hello);
         printf("NSString: %s\n", text ? text : "(null)");

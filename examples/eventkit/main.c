@@ -175,7 +175,7 @@ static int bean_eventkit_print_calendars(EKEventStore store) {
 }
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         EKAuthorizationStatus status;
         EKEventStore store;
 

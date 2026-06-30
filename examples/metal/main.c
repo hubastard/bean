@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         MTLDevice device;
 
         device = (MTLDevice)MTLCreateSystemDefaultDevice();

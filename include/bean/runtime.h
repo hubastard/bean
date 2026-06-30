@@ -52,7 +52,7 @@ static inline bean_id bean_new(bean_class cls) {
     return bean_init(bean_alloc(cls));
 }
 
-#define BEAN_AUTORELEASE_POOL \
+#define autoreleasepool \
     for (bean_autorelease_pool_scope bean_pool__ = bean_autorelease_pool_push(), \
          *bean_pool_ptr__ = &bean_pool__; \
          bean_pool_ptr__; \

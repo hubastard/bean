@@ -147,7 +147,7 @@ static int bean_contacts_print_sample(CNContactStore store, int limit) {
 }
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         CNAuthorizationStatus status;
         CNContactStore store;
 

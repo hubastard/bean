@@ -97,7 +97,7 @@ static NSView bean_webkit_loading_label(void) {
 }
 
 int main(void) {
-    BEAN_AUTORELEASE_POOL {
+    autoreleasepool {
         NSWindow window = bean_example_window("Bean WebKit", 800.0, 600.0);
         NSView content = NSWindow_ContentView(window);
         CGRect bounds = NSView_Bounds(content);
