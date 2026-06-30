@@ -1,0 +1,2 @@
+# Codegen uses xcrun clang AST JSON plus YAML apinotes parsing.
+pyyaml>=6.0

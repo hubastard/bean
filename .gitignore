@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+
+# Build / validation artifacts
+/build/
+
+# macOS
+.DS_Store
+
+# Editor / local logs
+*.swp
+*.swo
+.gen-log.txt
