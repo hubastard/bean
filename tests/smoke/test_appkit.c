@@ -8,7 +8,7 @@ int main(void) {
         NSApplication_SetActivationPolicy(app, NSApplicationActivationPolicyRegular);
 
         NSWindow window = NSWindow_InitWithContentRect_StyleMask_Backing_Defer(
-            (NSWindow)bean_alloc(bean_cls("NSWindow")),
+            NSWindow_Alloc(),
             CGRectMake(0, 0, 320, 240),
             NSWindowStyleMaskTitled | NSWindowStyleMaskClosable,
             NSBackingStoreBuffered,

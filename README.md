@@ -25,7 +25,7 @@ int main(void) {
 
         CGRect frame = CGRectMake(100, 100, 640, 480);
         NSWindow window = NSWindow_InitWithContentRect_StyleMask_Backing_Defer(
-            (NSWindow)bean_alloc(bean_cls("NSWindow")),
+            NSWindow_Alloc(),
             frame,
             NSWindowStyleMaskTitled | NSWindowStyleMaskClosable,
             NSBackingStoreBuffered,
