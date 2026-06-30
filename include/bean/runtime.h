@@ -133,61 +133,133 @@ static inline BOOL bean_object_set_ivar(bean_id obj, const char* name, void* val
     return object_setInstanceVariable(obj, name, value) != NULL;
 }
 
-typedef void (*bean_block_fn0)(void* context);
-typedef void (*bean_block_fn1)(void* context, bean_id arg0);
-typedef void (*bean_block_fn2)(void* context, bean_id arg0, bean_id arg1);
+typedef void (*bean_block_fn0)(void* context, void* block);
+typedef void (*bean_block_fn1)(void* context, void* block, bean_id arg0);
+typedef void (*bean_block_fn2)(void* context, void* block, long arg0, bean_id arg1);
+typedef void (*bean_block_fn2_id)(void* context, void* block, bean_id arg0, bean_id arg1);
+
+struct bean_block_descriptor {
+    unsigned long int reserved;
+    unsigned long int size;
+};
 
 struct bean_block_literal_0 {
     void* isa;
     int flags;
     int reserved;
-    void (*invoke)(struct bean_block_literal_0*, void* context);
-    struct {
-        unsigned long int reserved;
-        unsigned long int size;
-        void (*copy_helper)(void* dst, const void* src);
-        void (*dispose_helper)(const void* src);
-        const char* signature;
-    } descriptor;
+    void (*invoke)(struct bean_block_literal_0*);
+    struct bean_block_descriptor* descriptor;
     void* context;
+    bean_block_fn0 user_fn;
 };
 
 struct bean_block_literal_1 {
     void* isa;
     int flags;
     int reserved;
-    void (*invoke)(struct bean_block_literal_1*, void* context, bean_id arg0);
-    struct {
-        unsigned long int reserved;
-        unsigned long int size;
-        void (*copy_helper)(void* dst, const void* src);
-        void (*dispose_helper)(const void* src);
-        const char* signature;
-    } descriptor;
+    void (*invoke)(struct bean_block_literal_1*, bean_id arg0);
+    struct bean_block_descriptor* descriptor;
     void* context;
+    bean_block_fn1 user_fn;
 };
 
-static inline void* bean_block_stack_isa(void) {
-    return (void*)objc_getClass("_NSConcreteStackBlock");
+struct bean_block_literal_2 {
+    void* isa;
+    int flags;
+    int reserved;
+    void (*invoke)(struct bean_block_literal_2*, long arg0, bean_id arg1);
+    struct bean_block_descriptor* descriptor;
+    void* context;
+    bean_block_fn2 user_fn;
+};
+
+struct bean_block_literal_2_id {
+    void* isa;
+    int flags;
+    int reserved;
+    void (*invoke)(struct bean_block_literal_2_id*, bean_id arg0, bean_id arg1);
+    struct bean_block_descriptor* descriptor;
+    void* context;
+    bean_block_fn2_id user_fn;
+};
+
+static void bean_block_invoke_0(struct bean_block_literal_0* block) {
+    if (block && block->user_fn) {
+        block->user_fn(block->context, block);
+    }
 }
 
-static inline void* bean_block_create_0(void* context, void (*fn)(void*, void*)) {
+static void bean_block_invoke_1(struct bean_block_literal_1* block, bean_id arg0) {
+    if (block && block->user_fn) {
+        block->user_fn(block->context, block, arg0);
+    }
+}
+
+static void bean_block_invoke_2(struct bean_block_literal_2* block, long arg0, bean_id arg1) {
+    if (block && block->user_fn) {
+        block->user_fn(block->context, block, arg0, arg1);
+    }
+}
+
+static void bean_block_invoke_2_id(
+    struct bean_block_literal_2_id* block,
+    bean_id arg0,
+    bean_id arg1
+) {
+    if (block && block->user_fn) {
+        block->user_fn(block->context, block, arg0, arg1);
+    }
+}
+
+static inline void* bean_block_stack_isa(void) {
+    return _NSConcreteStackBlock;
+}
+
+static inline void* bean_block_create_0(void* context, bean_block_fn0 fn) {
+    static struct bean_block_descriptor desc = { 0, sizeof(struct bean_block_literal_0) };
     struct bean_block_literal_0 block = {0};
     block.isa = bean_block_stack_isa();
-    block.flags = (1 << 25) | (1 << 26);
-    block.invoke = (void (*)(struct bean_block_literal_0*, void*))fn;
+    block.flags = 0;
+    block.invoke = bean_block_invoke_0;
+    block.descriptor = &desc;
     block.context = context;
-    block.descriptor.size = sizeof(struct bean_block_literal_0);
+    block.user_fn = fn;
     return Block_copy(&block);
 }
 
-static inline void* bean_block_create_1(void* context, void (*fn)(void*, void*, bean_id)) {
+static inline void* bean_block_create_1(void* context, bean_block_fn1 fn) {
+    static struct bean_block_descriptor desc = { 0, sizeof(struct bean_block_literal_1) };
     struct bean_block_literal_1 block = {0};
     block.isa = bean_block_stack_isa();
-    block.flags = (1 << 25) | (1 << 26);
-    block.invoke = (void (*)(struct bean_block_literal_1*, void*, bean_id))fn;
+    block.flags = 0;
+    block.invoke = bean_block_invoke_1;
+    block.descriptor = &desc;
     block.context = context;
-    block.descriptor.size = sizeof(struct bean_block_literal_1);
+    block.user_fn = fn;
+    return Block_copy(&block);
+}
+
+static inline void* bean_block_create_2(void* context, bean_block_fn2 fn) {
+    static struct bean_block_descriptor desc = { 0, sizeof(struct bean_block_literal_2) };
+    struct bean_block_literal_2 block = {0};
+    block.isa = bean_block_stack_isa();
+    block.flags = 0;
+    block.invoke = bean_block_invoke_2;
+    block.descriptor = &desc;
+    block.context = context;
+    block.user_fn = fn;
+    return Block_copy(&block);
+}
+
+static inline void* bean_block_create_2_id(void* context, bean_block_fn2_id fn) {
+    static struct bean_block_descriptor desc = { 0, sizeof(struct bean_block_literal_2_id) };
+    struct bean_block_literal_2_id block = {0};
+    block.isa = bean_block_stack_isa();
+    block.flags = 0;
+    block.invoke = bean_block_invoke_2_id;
+    block.descriptor = &desc;
+    block.context = context;
+    block.user_fn = fn;
     return Block_copy(&block);
 }
 

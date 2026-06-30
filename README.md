@@ -4,6 +4,41 @@ Pure-C99, headers-only wrappers for Apple Cocoa frameworks. Write macOS apps in 
 
 Bean gives you typed C functions for Objective-C selectors like `NSWindow_MakeKeyAndOrderFront` backed by a small runtime layer over `objc_msgSend`.
 
+## Requirements
+
+- macOS with Xcode Command Line Tools
+- Python 3.9+ (codegen only — not needed to consume the headers)
+
+## Usage
+
+Include the framework headers you need:
+
+```c
+#include <bean/appkit.h>
+
+int main(void) {
+    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
+
+    NSApplication app = NSApplication_SharedApplication();
+    NSApplication_SetActivationPolicy(app, NSApplicationActivationPolicyRegular);
+
+    CGRect frame = CGRectMake(100, 100, 640, 480);
+    NSWindow window = NSWindow_InitWithContentRect_StyleMask_Backing_Defer(
+        (NSWindow)bean_alloc(bean_cls("NSWindow")),
+        frame,
+        NSWindowStyleMaskTitled | NSWindowStyleMaskClosable,
+        NSBackingStoreBuffered,
+        NO);
+
+    NSWindow_SetTitle(window, NSString_StringWithUTF8String("Hello"));
+    NSWindow_MakeKeyAndOrderFront(window, NULL);
+    NSApplication_Run(app);
+
+    bean_autorelease_pool_pop(pool);
+    return 0;
+}
+```
+
 ## Supported frameworks
 
 27 frameworks are generated today, in dependency order:
@@ -36,42 +71,6 @@ Bean gives you typed C functions for Objective-C selectors like `NSWindow_MakeKe
 - QuickLook
 - StoreKit
 
-## Requirements
-
-- macOS with Xcode Command Line Tools
-- Python 3.9+ (codegen only — not needed to consume the headers)
-- **C99** — headers and validation use `-std=c99 -Wall -Wextra -Werror`
-
-## Usage
-
-Include the framework headers you need:
-
-```c
-#include <bean/appkit.h>
-
-int main(void) {
-    bean_autorelease_pool_scope pool = bean_autorelease_pool_push();
-
-    NSApplication app = NSApplication_SharedApplication();
-    NSApplication_SetActivationPolicy(app, NSApplicationActivationPolicyRegular);
-
-    CGRect frame = CGRectMake(100, 100, 640, 480);
-    NSWindow window = NSWindow_InitWithContentRect_StyleMask_Backing_Defer(
-        (NSWindow)bean_alloc(bean_cls("NSWindow")),
-        frame,
-        NSWindowStyleMaskTitled | NSWindowStyleMaskClosable,
-        NSBackingStoreBuffered,
-        false);
-
-    NSWindow_setTitle(window, NSString_StringWithUTF8String("Hello"));
-    NSWindow_MakeKeyAndOrderFront(window, NULL);
-    NSApplication_Run(app);
-
-    bean_autorelease_pool_pop(pool);
-    return 0;
-}
-```
-
 ## How the headers are generated
 
 **The framework headers in `include/bean/` are generated, not hand-written.**
@@ -91,11 +90,27 @@ Including the codegen scripts, these 2 header files are also maintained by hand:
 | `include/bean/runtime.h` | `objc_msgSend` helpers, autorelease pools, class lookup |
 | `include/bean/types.h` | Shared struct definitions and typedefs used across frameworks |
 
-When you upgrade Xcode, if the headers did not get updated yet, you can regenerate them yourself by running:
+When you upgrade Xcode, if the headers did not get updated yet, you can regenerate them yourself:
 
 ```bash
-./scripts/generate_all.sh
+make generate
 ```
+
+## Make targets
+
+```bash
+make help                             # list commands
+make venv                             # create .venv + install codegen deps
+make generate                         # regenerate all framework headers
+make generate GEN_ARGS="--framework foundation --framework appkit"
+make test                             # unit tests, smoke tests, examples, header checks
+make example NAME=foundation          # build and run one example
+make example appkit                   # same, positional form
+make examples                         # list example names
+make clean                            # remove build/
+```
+
+Pass any `bean_gen.py` flags through `GEN_ARGS` (see table below).
 
 ### Conventions
 
@@ -106,7 +121,8 @@ When you upgrade Xcode, if the headers did not get updated yet, you can regenera
 ### Linking
 
 ```bash
-clang -Iinclude main.c -framework AppKit
+clang -std=c99 -Wall -Wextra -Werror -Iinclude main.c \
+  -framework AppKit -framework Foundation -framework CoreGraphics
 ```
 
 Link the Apple frameworks your code uses; Bean itself is header-only.
@@ -116,14 +132,13 @@ Link the Apple frameworks your code uses; Bean itself is header-only.
 Prefer **targeted regeneration** when working on a single framework — each AST parse takes tens of seconds:
 
 ```bash
-cd tools/codegen
-python3 bean_gen.py --framework foundation --framework appkit
+make generate GEN_ARGS="--framework foundation --framework appkit"
 ```
 
 Full regeneration (all 27 frameworks + `unsupported.h` manifest):
 
 ```bash
-./scripts/generate_all.sh
+make generate
 ```
 
 | Flag | Effect |
@@ -135,19 +150,30 @@ Full regeneration (all 27 frameworks + `unsupported.h` manifest):
 
 Skipped APIs are listed with reasons in `include/bean/unsupported.h`.
 
+## Examples
+
+`examples/` has one small program per showcase framework. See [examples/README.md](examples/README.md) for the full list.
+
+```bash
+make example foundation
+make example appkit
+make examples    # list names
+```
+
+Low-level frameworks (CoreFoundation, CoreGraphics, CoreText, …) are skipped — they are covered indirectly as dependencies.
+
 ## Development
 
 ```bash
-./scripts/validate.sh                   # syntax-check every generated header + smoke tests
-cd tools/codegen && python3 -m pytest   # codegen unit tests
+make test    # unit tests, smoke tests, all examples, header syntax checks
 ```
 
-`validate.sh` prints the SDK path and Clang version in use — pin CI to a specific Xcode and rerun `./scripts/generate_all.sh` after SDK updates.
+Pin CI to a specific Xcode and rerun `make generate` after SDK updates.
 
 ## Contributing
 
 1. Make codegen changes in `tools/codegen/`.
-2. Regenerate affected headers with `bean_gen.py`.
-3. Run `./scripts/validate.sh` before opening a PR.
+2. Regenerate affected headers: `make generate GEN_ARGS="--framework …"`.
+3. Run `make test` before opening a PR.
 
 If you add a new framework, update `GENERATION_ORDER` and framework specs in `tools/codegen/bean/config.py`.
