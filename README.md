@@ -103,9 +103,8 @@ make venv                             # create .venv + install codegen deps
 make generate                         # regenerate all framework headers
 make generate GEN_ARGS="--framework foundation --framework appkit"
 make test                             # unit tests, smoke tests, examples, header checks
-make example NAME=foundation          # build and run one example
-make example appkit                   # same, positional form
 make examples                         # list example names
+make examples <name>                  # build and run one example
 make clean                            # remove build/
 ```
 
