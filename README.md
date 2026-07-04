@@ -89,7 +89,7 @@ Including the codegen scripts, these 2 header files are also maintained by hand:
 | `include/bean/runtime.h` | `objc_msgSend` helpers, autorelease pools, class lookup |
 | `include/bean/types.h` | Shared struct definitions and typedefs used across frameworks |
 
-When you upgrade Xcode, if the headers did not get updated yet, you can regenerate them yourself:
+When you upgrade Xcode, if the headers are not up to date, you can regenerate them yourself:
 
 ```bash
 make generate
@@ -101,55 +101,52 @@ make generate
 make help                             # list commands
 make venv                             # create .venv + install codegen deps
 make generate                         # regenerate all framework headers
-make generate GEN_ARGS="--framework foundation --framework appkit"
 make test                             # unit tests, smoke tests, examples, header checks
 make examples                         # list example names
 make examples <name>                  # build and run one example
 make clean                            # remove build/
 ```
 
-Pass any `bean_gen.py` flags through `GEN_ARGS` (see table below).
-
-### Linking
+### Linking example
 
 ```bash
-clang -std=c99 -Wall -Wextra -Werror -Iinclude main.c \
-  -framework AppKit -framework Foundation -framework CoreGraphics
+clang -Iinclude main.c -framework AppKit
 ```
 
 Link the Apple frameworks your code uses; Bean itself is header-only.
 
 ## Regenerating headers
 
-Prefer **targeted regeneration** when working on a single framework — each AST parse takes tens of seconds:
-
-```bash
-make generate GEN_ARGS="--framework foundation --framework appkit"
-```
-
-Full regeneration (all 27 frameworks + `unsupported.h` manifest):
+Full regeneration (all 26 frameworks + `unsupported.h` manifest):
 
 ```bash
 make generate
 ```
 
+You can pass extra arguments to the generate command by doing this:
+
+```bash
+make generate GEN_ARGS="--framework foundation --framework appkit"
+```
+
 | Flag | Effect |
 |------|--------|
-| `--framework <name>` | Regenerate one or more frameworks (repeatable) |
+| `--framework <name>` | Regenerate only one or more frameworks (repeatable) |
 | `--sdk <path>` | Pin to a specific MacOSX.sdk (default: `xcrun --show-sdk-path`) |
 | `--no-apinotes` | Skip `.apinotes` filtering |
 | `--with-docs` | Embed SDK header comments and `@see` links above wrappers |
 
-Skipped APIs are listed with reasons in `include/bean/unsupported.h`.
+Skipped APIs are listed with reasons in `include/bean/unsupported.h`. My goal is to be able to overtime reduce this unsupported list to zero to have full frameworks support.
 
 ## Examples
 
-`examples/` has one small program per showcase framework. See [examples/README.md](examples/README.md) for the full list.
+`examples/` has one small program to showcase framework usage. See [examples/README.md](examples/README.md) for the full list.
 
 ```bash
-make example foundation
-make example appkit
-make examples    # list names
+make examples   # list names
+
+make examples foundation
+make examples appkit
 ```
 
 Low-level frameworks (CoreFoundation, CoreGraphics, CoreText, …) are skipped — they are covered indirectly as dependencies.
