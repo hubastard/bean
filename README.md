@@ -4,7 +4,7 @@ Pure-C99, headers-only wrappers for Apple Cocoa frameworks. Write macOS apps in 
 
 Bean gives you typed C functions for Objective-C selectors like `NSWindow_MakeKeyAndOrderFront` backed by a small runtime layer over `objc_msgSend`.
 
-> **Note:** This project is a work in progress and may not be production ready. The API is still evolving — I'm actively working on improving it.
+> **Note:** This project is a work in progress and may not be production ready.
 
 ## Requirements
 
